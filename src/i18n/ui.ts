@@ -36,7 +36,70 @@ export type UIKey =
   | 'rewardEarned'
   | 'bankruptTitle'
   | 'bankruptDesc'
-  | 'language';
+  | 'language'
+  | 'rank'
+  | 'xpGained'
+  | 'promotion'
+  | 'bonus'
+  | 'streak'
+  | 'streakDays'
+  | 'hints'
+  | 'hintNote'
+  | 'hintCanvass'
+  | 'revealedContradiction'
+  | 'revealedClean'
+  | 'watchAd'
+  | 'allRevealed'
+  | 'achievements'
+  | 'achievementUnlocked'
+  | 'department'
+  | 'casesInWork'
+  | 'analytics'
+  | 'clientStatement'
+  | 'formCt1'
+  | 'circumstances'
+  | 'caseMaterials'
+  | 'documents'
+  | 'marked'
+  | 'openCaseAction'
+  | 'openDossier'
+  | 'viewedDossier'
+  | 'confidential'
+  | 'selectCasePrompt'
+  | 'truthOfCase'
+  | 'rewardRevealed'
+  | 'fee'
+  | 'companyBalance'
+  | 'investigationAccuracy'
+  | 'leaderboardWeek'
+  | 'verdictPrompt'
+  | 'rejectPayout'
+  | 'approvePayout'
+  | 'investigator'
+  | 'levelShort'
+  | 'xpToPromote'
+  | 'active'
+  | 'lockedStatus'
+  | 'lockedCaseToast'
+  | 'markAsContradiction'
+  | 'contradictionMarked'
+  | 'contradiction'
+  | 'tag_photo'
+  | 'tag_gps'
+  | 'tag_document'
+  | 'tag_witness'
+  | 'tag_camera'
+  | 'tag_log'
+  | 'casesWord'
+  | 'errorsWord'
+  | 'resultWinSub'
+  | 'resultLoseSub'
+  | 'rank_trainee'
+  | 'rank_junior'
+  | 'rank_inspector'
+  | 'rank_senior'
+  | 'rank_lead'
+  | 'rank_chief';
 
 export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
   approve: { ru: 'Одобрить', en: 'Approve', tr: 'Onayla', ar: 'الموافقة', kk: 'Мақұлдау' },
@@ -106,6 +169,297 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     kk: 'Балансты қалпына келтіру үшін жарнаманы көріңіз.',
   },
   language: { ru: 'Язык', en: 'Language', tr: 'Dil', ar: 'اللغة', kk: 'Тіл' },
+  rank: { ru: 'Ранг', en: 'Rank', tr: 'Rütbe', ar: 'الرتبة', kk: 'Дәреже' },
+  xpGained: { ru: 'Опыт', en: 'XP', tr: 'Tecrübe', ar: 'خبرة', kk: 'Тәжірибе' },
+  promotion: { ru: 'ПОВЫШЕНИЕ', en: 'PROMOTION', tr: 'TERFİ', ar: 'ترقية', kk: 'ЖОҒАРЫЛАТУ' },
+  bonus: { ru: 'Бонус', en: 'Bonus', tr: 'Bonus', ar: 'مكافأة', kk: 'Бонус' },
+  streak: { ru: 'Серия', en: 'Streak', tr: 'Seri', ar: 'سلسلة', kk: 'Серия' },
+  streakDays: { ru: 'дн.', en: 'days', tr: 'gün', ar: 'يوم', kk: 'күн' },
+  hints: { ru: 'Подсказки', en: 'Hints', tr: 'İpuçları', ar: 'تلميحات', kk: 'Кеңестер' },
+  hintNote: {
+    ru: 'Заметка инспектора',
+    en: 'Inspector Note',
+    tr: 'Müfettiş Notu',
+    ar: 'ملاحظة المفتش',
+    kk: 'Инспектор жазбасы',
+  },
+  hintCanvass: {
+    ru: 'Опрос свидетелей',
+    en: 'Witness Canvass',
+    tr: 'Tanık Görüşmesi',
+    ar: 'استجواب الشهود',
+    kk: 'Куәларды сұрау',
+  },
+  revealedContradiction: {
+    ru: 'Противоречие',
+    en: 'Contradiction',
+    tr: 'Çelişki',
+    ar: 'تناقض',
+    kk: 'Қайшылық',
+  },
+  revealedClean: {
+    ru: 'Без противоречий',
+    en: 'No contradiction',
+    tr: 'Çelişki yok',
+    ar: 'لا يوجد تناقض',
+    kk: 'Қайшылық жоқ',
+  },
+  watchAd: { ru: 'Реклама', en: 'Watch ad', tr: 'Reklam izle', ar: 'مشاهدة إعلان', kk: 'Жарнама' },
+  allRevealed: {
+    ru: 'Все улики раскрыты',
+    en: 'All evidence revealed',
+    tr: 'Tüm kanıtlar açıldı',
+    ar: 'تم كشف كل الأدلة',
+    kk: 'Барлық дәлел ашылды',
+  },
+  achievements: {
+    ru: 'Достижения',
+    en: 'Achievements',
+    tr: 'Başarılar',
+    ar: 'الإنجازات',
+    kk: 'Жетістіктер',
+  },
+  achievementUnlocked: {
+    ru: 'Достижение получено',
+    en: 'Achievement unlocked',
+    tr: 'Başarı kazanıldı',
+    ar: 'تم فتح إنجاز',
+    kk: 'Жетістік ашылды',
+  },
+  department: {
+    ru: 'ОТДЕЛ РАССЛЕДОВАНИЙ',
+    en: 'INVESTIGATIONS DEPT',
+    tr: 'SORUŞTURMA BİRİMİ',
+    ar: 'قسم التحقيقات',
+    kk: 'ТЕРГЕУ БӨЛІМІ',
+  },
+  casesInWork: {
+    ru: 'ДЕЛА В РАБОТЕ',
+    en: 'CASES IN PROGRESS',
+    tr: 'AÇIK DOSYALAR',
+    ar: 'قضايا قيد العمل',
+    kk: 'ЖҰМЫСТАҒЫ ІСТЕР',
+  },
+  analytics: { ru: 'АНАЛИТИКА', en: 'ANALYTICS', tr: 'ANALİTİK', ar: 'التحليلات', kk: 'АНАЛИТИКА' },
+  clientStatement: {
+    ru: 'ЗАЯВЛЕНИЕ КЛИЕНТА',
+    en: 'CLIENT STATEMENT',
+    tr: 'MÜŞTERİ BEYANI',
+    ar: 'بيان العميل',
+    kk: 'КЛИЕНТ ӨТІНІШІ',
+  },
+  formCt1: { ru: 'Форма СТ-1', en: 'Form CT-1', tr: 'Form CT-1', ar: 'نموذج CT-1', kk: 'СТ-1 нысаны' },
+  circumstances: {
+    ru: 'ИЗЛОЖЕНИЕ ОБСТОЯТЕЛЬСТВ',
+    en: 'STATEMENT OF FACTS',
+    tr: 'OLAYLARIN ANLATIMI',
+    ar: 'عرض الوقائع',
+    kk: 'МӘН-ЖАЙДЫ БАЯНДАУ',
+  },
+  caseMaterials: {
+    ru: 'МАТЕРИАЛЫ ДЕЛА',
+    en: 'CASE MATERIALS',
+    tr: 'DOSYA BELGELERİ',
+    ar: 'مواد القضية',
+    kk: 'ІС МАТЕРИАЛДАРЫ',
+  },
+  documents: { ru: 'документов', en: 'documents', tr: 'belge', ar: 'مستندات', kk: 'құжат' },
+  marked: { ru: 'отмечено', en: 'marked', tr: 'işaretli', ar: 'موسوم', kk: 'белгіленді' },
+  openCaseAction: {
+    ru: 'Открыть дело',
+    en: 'Open case',
+    tr: 'Dosyayı aç',
+    ar: 'فتح القضية',
+    kk: 'Істі ашу',
+  },
+  openDossier: {
+    ru: 'Открыть досье',
+    en: 'Open file',
+    tr: 'Dosyayı aç',
+    ar: 'فتح الملف',
+    kk: 'Іс қағазын ашу',
+  },
+  viewedDossier: {
+    ru: 'Просмотрено',
+    en: 'Reviewed',
+    tr: 'İncelendi',
+    ar: 'تمت المراجعة',
+    kk: 'Қаралды',
+  },
+  confidential: {
+    ru: 'КОНФИДЕНЦИАЛЬНО',
+    en: 'CONFIDENTIAL',
+    tr: 'GİZLİ',
+    ar: 'سري',
+    kk: 'ҚҰПИЯ',
+  },
+  selectCasePrompt: {
+    ru: 'ВЫБЕРИТЕ ДЕЛО ДЛЯ РАССЛЕДОВАНИЯ',
+    en: 'SELECT A CASE TO INVESTIGATE',
+    tr: 'SORUŞTURULACAK DOSYAYI SEÇİN',
+    ar: 'اختر قضية للتحقيق',
+    kk: 'ТЕРГЕУГЕ ІС ТАҢДАҢЫЗ',
+  },
+  truthOfCase: {
+    ru: 'ИСТИНА ПО ДЕЛУ',
+    en: 'THE TRUTH OF THE CASE',
+    tr: 'DOSYANIN GERÇEĞİ',
+    ar: 'حقيقة القضية',
+    kk: 'ІС БОЙЫНША АҚИҚАТ',
+  },
+  rewardRevealed: {
+    ru: 'Раскрыто вознаграждения',
+    en: 'Reward unlocked',
+    tr: 'Açılan ödül',
+    ar: 'المكافأة المكشوفة',
+    kk: 'Ашылған сыйақы',
+  },
+  fee: { ru: 'Гонорар', en: 'Fee', tr: 'Ücret', ar: 'الأتعاب', kk: 'Гонорар' },
+  companyBalance: {
+    ru: 'Баланс компании',
+    en: 'Company balance',
+    tr: 'Şirket bakiyesi',
+    ar: 'رصيد الشركة',
+    kk: 'Компания балансы',
+  },
+  investigationAccuracy: {
+    ru: 'Точность следствия',
+    en: 'Investigation accuracy',
+    tr: 'Soruşturma doğruluğu',
+    ar: 'دقة التحقيق',
+    kk: 'Тергеу дәлдігі',
+  },
+  leaderboardWeek: {
+    ru: 'ЛИДЕРБОРД · НЕДЕЛЯ',
+    en: 'LEADERBOARD · WEEK',
+    tr: 'LİDER TABLOSU · HAFTA',
+    ar: 'المتصدرون · الأسبوع',
+    kk: 'РЕЙТИНГ · АПТА',
+  },
+  verdictPrompt: {
+    ru: 'Вынесите вердикт. Отклонение требует обоснования уликами.',
+    en: 'Render your verdict. A rejection must be justified by evidence.',
+    tr: 'Kararınızı verin. Ret, kanıtla gerekçelendirilmelidir.',
+    ar: 'أصدر حكمك. يجب تبرير الرفض بالأدلة.',
+    kk: 'Шешім шығарыңыз. Бас тарту дәлелмен негізделуі тиіс.',
+  },
+  rejectPayout: {
+    ru: 'ОТКЛОНИТЬ ВЫПЛАТУ',
+    en: 'REJECT PAYOUT',
+    tr: 'ÖDEMEYİ REDDET',
+    ar: 'رفض الدفع',
+    kk: 'ТӨЛЕМДІ ҚАБЫЛДАМАУ',
+  },
+  approvePayout: {
+    ru: 'ОДОБРИТЬ ВЫПЛАТУ',
+    en: 'APPROVE PAYOUT',
+    tr: 'ÖDEMEYİ ONAYLA',
+    ar: 'الموافقة على الدفع',
+    kk: 'ТӨЛЕМДІ МАҚҰЛДАУ',
+  },
+  investigator: {
+    ru: 'Следователь',
+    en: 'Investigator',
+    tr: 'Müfettiş',
+    ar: 'المحقق',
+    kk: 'Тергеуші',
+  },
+  levelShort: { ru: 'ур.', en: 'lvl', tr: 'sv.', ar: 'مست.', kk: 'дең.' },
+  xpToPromote: {
+    ru: 'XP до повышения',
+    en: 'XP to promotion',
+    tr: 'terfiye XP',
+    ar: 'خبرة للترقية',
+    kk: 'жоғарылауға XP',
+  },
+  active: { ru: 'активно', en: 'active', tr: 'aktif', ar: 'نشط', kk: 'белсенді' },
+  lockedStatus: {
+    ru: 'заблокировано',
+    en: 'locked',
+    tr: 'kilitli',
+    ar: 'مقفل',
+    kk: 'құлыпталған',
+  },
+  lockedCaseToast: {
+    ru: 'Дело откроется на следующем уровне следователя.',
+    en: 'This case unlocks at the next investigator level.',
+    tr: 'Bu dosya bir sonraki müfettiş seviyesinde açılır.',
+    ar: 'تُفتح هذه القضية في مستوى المحقق التالي.',
+    kk: 'Бұл іс келесі тергеуші деңгейінде ашылады.',
+  },
+  markAsContradiction: {
+    ru: 'ОТМЕТИТЬ КАК ПРОТИВОРЕЧИЕ',
+    en: 'MARK AS CONTRADICTION',
+    tr: 'ÇELİŞKİ OLARAK İŞARETLE',
+    ar: 'وضع علامة تناقض',
+    kk: 'ҚАЙШЫЛЫҚ ДЕП БЕЛГІЛЕУ',
+  },
+  contradictionMarked: {
+    ru: 'ПРОТИВОРЕЧИЕ ОТМЕЧЕНО ✓ · убрать',
+    en: 'CONTRADICTION MARKED ✓ · remove',
+    tr: 'ÇELİŞKİ İŞARETLENDİ ✓ · kaldır',
+    ar: 'تم وسم التناقض ✓ · إزالة',
+    kk: 'ҚАЙШЫЛЫҚ БЕЛГІЛЕНДІ ✓ · алу',
+  },
+  contradiction: {
+    ru: 'ПРОТИВОРЕЧИЕ',
+    en: 'CONTRADICTION',
+    tr: 'ÇELİŞKİ',
+    ar: 'تناقض',
+    kk: 'ҚАЙШЫЛЫҚ',
+  },
+  tag_photo: { ru: 'ФОТО', en: 'PHOTO', tr: 'FOTO', ar: 'صورة', kk: 'ФОТО' },
+  tag_gps: { ru: 'GPS', en: 'GPS', tr: 'GPS', ar: 'GPS', kk: 'GPS' },
+  tag_document: { ru: 'ДОК', en: 'DOC', tr: 'BELGE', ar: 'مستند', kk: 'ҚҰЖ' },
+  tag_witness: { ru: 'ПОКАЗАНИЯ', en: 'WITNESS', tr: 'TANIK', ar: 'شهادة', kk: 'КУӘЛІК' },
+  tag_camera: { ru: 'ВИДЕО', en: 'VIDEO', tr: 'VİDEO', ar: 'فيديو', kk: 'ВИДЕО' },
+  tag_log: { ru: 'ЛОГ', en: 'LOG', tr: 'KAYIT', ar: 'سجل', kk: 'ЛОГ' },
+  casesWord: { ru: 'дел', en: 'cases', tr: 'dosya', ar: 'قضايا', kk: 'іс' },
+  errorsWord: { ru: 'ошибок', en: 'errors', tr: 'hata', ar: 'أخطاء', kk: 'қате' },
+  resultWinSub: {
+    ru: 'Дело закрыто · выплата обоснованно отклонена',
+    en: 'Case closed · payout justifiably rejected',
+    tr: 'Dosya kapandı · ödeme haklı olarak reddedildi',
+    ar: 'أُغلقت القضية · رُفض الدفع بشكل مبرر',
+    kk: 'Іс жабылды · төлем негізді түрде қабылданбады',
+  },
+  resultLoseSub: {
+    ru: 'Выплата одобрена мошеннику',
+    en: 'Payout approved to a fraudster',
+    tr: 'Ödeme bir dolandırıcıya onaylandı',
+    ar: 'تمت الموافقة على الدفع لمحتال',
+    kk: 'Төлем алаяққа мақұлданды',
+  },
+  rank_trainee: { ru: 'Стажёр', en: 'Trainee', tr: 'Stajyer', ar: 'متدرب', kk: 'Тағылымдамашы' },
+  rank_junior: {
+    ru: 'Мл. инспектор',
+    en: 'Junior Inspector',
+    tr: 'Kıdemsiz Müfettiş',
+    ar: 'مفتش مبتدئ',
+    kk: 'Кіші инспектор',
+  },
+  rank_inspector: { ru: 'Инспектор', en: 'Inspector', tr: 'Müfettiş', ar: 'مفتش', kk: 'Инспектор' },
+  rank_senior: {
+    ru: 'Ст. инспектор',
+    en: 'Senior Inspector',
+    tr: 'Kıdemli Müfettiş',
+    ar: 'مفتش أول',
+    kk: 'Аға инспектор',
+  },
+  rank_lead: {
+    ru: 'Ведущий следователь',
+    en: 'Lead Investigator',
+    tr: 'Baş Müfettiş',
+    ar: 'محقق رئيسي',
+    kk: 'Жетекші тергеуші',
+  },
+  rank_chief: {
+    ru: 'Главный следователь',
+    en: 'Chief Investigator',
+    tr: 'Şef Müfettiş',
+    ar: 'كبير المحققين',
+    kk: 'Бас тергеуші',
+  },
 };
 
 /** Native names + flags for the language selector (data-driven). */

@@ -13,6 +13,7 @@
 import { GAME_CONFIG } from '../config/gameConfig';
 import {
   DEFAULT_LANGUAGE,
+  type ActiveSession,
   type PersistedState,
   type PlayerStats,
 } from '../types';
@@ -30,6 +31,10 @@ export function makeDefaultStats(): PlayerStats {
     results: {},
     lastDailyClaimServerMs: null,
     isBankrupt: false,
+    xp: 0,
+    streakCount: 0,
+    lastPlayedServerDay: null,
+    unlockedAchievementIds: [],
   };
 }
 
@@ -44,18 +49,34 @@ export function makeDefaultSnapshot(): PersistedState {
 /* ----------------------------- Migration --------------------------------- */
 
 /**
- * Upgrade an older snapshot to the current schema. Today it is a no-op beyond
- * version stamping, but centralizing it means future shape changes never break
- * existing cloud saves.
+ * Upgrade an older snapshot to the current schema. Spreading defaults under the
+ * persisted values backfills any field added in a newer version, so older cloud
+ * saves load cleanly:
+ *   • v1 → v2 — adds xp / streakCount / lastPlayedServerDay /
+ *     unlockedAchievementIds to stats, and revealedEvidenceIds to the session.
  */
 function migrate(raw: unknown): PersistedState | null {
   if (!raw || typeof raw !== 'object') return null;
   const candidate = raw as Partial<PersistedState>;
   if (!candidate.stats) return null;
+
+  // Backfill the in-progress session's newer fields when one is present.
+  const rawSession = candidate.session as Partial<ActiveSession> | null | undefined;
+  const session: ActiveSession | null =
+    rawSession && rawSession.caseId
+      ? {
+          caseId: rawSession.caseId,
+          selectedEvidenceIds: rawSession.selectedEvidenceIds ?? [],
+          viewedEvidenceIds: rawSession.viewedEvidenceIds ?? [],
+          revealedEvidenceIds: rawSession.revealedEvidenceIds ?? [],
+          startedAtServerMs: rawSession.startedAtServerMs ?? 0,
+        }
+      : null;
+
   return {
     version: GAME_CONFIG.saveVersion,
     stats: { ...makeDefaultStats(), ...candidate.stats },
-    session: candidate.session ?? null,
+    session,
   };
 }
 

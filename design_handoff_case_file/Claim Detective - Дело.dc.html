@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;} body{margin:0;}</style>
+</helmet>
+
+<div style="width:max-content; min-width:100%; min-height:100vh; padding:48px; box-sizing:border-box; background:#e7e5df; font-family:'Inter',sans-serif;">
+
+  <div style="margin-bottom:40px; max-width:760px;">
+    <div style="font:600 12px 'IBM Plex Mono'; letter-spacing:3px; color:#9a8f7d; text-transform:uppercase;">Claim Detective · Yandex Games · MVP v1.1</div>
+    <div style="font:700 30px 'Inter'; color:#1c1a16; margin-top:10px;">Экран «Дело» — интерактивный концепт</div>
+    <div style="font:400 15px/1.6 'Inter'; color:#5d564b; margin-top:8px;">Кликабельный прототип полного цикла: выбор дела → изучение заявления → штамповка противоречий в уликах → вердикт → разбор результата. Кейс «Угон BMW» содержит реальное противоречие — найдите его в чеке АЗС и GPS-треке, отметьте и отклоните выплату. Ниже — два направления стиля папки, десктоп и мобайл.</div>
+    <div style="display:flex; gap:18px; margin-top:18px; flex-wrap:wrap;">
+      <div style="font:500 12px 'Inter'; color:#5d564b;"><span style="display:inline-block; width:10px; height:10px; border-radius:2px; background:#c2a161; margin-right:7px; vertical-align:middle;"></span>Вариант 1 — Манила</div>
+      <div style="font:500 12px 'Inter'; color:#5d564b;"><span style="display:inline-block; width:10px; height:10px; border-radius:2px; background:#3a4452; margin-right:7px; vertical-align:middle;"></span>Вариант 2 — Досье</div>
+    </div>
+  </div>
+
+  <div style="display:flex; flex-direction:column; gap:44px;">
+
+    <div>
+      <div style="display:inline-block; font:700 13px 'Inter'; letter-spacing:1px; color:#fff; background:#7a5c2e; padding:6px 14px; border-radius:4px; margin-bottom:16px;">ВАРИАНТ 1 · МАНИЛА — тёплый бумажный архив</div>
+      <div style="display:flex; gap:40px; align-items:flex-start;">
+        <div style="flex:none;">
+          <div style="font:600 11px 'IBM Plex Mono'; letter-spacing:1px; color:#857c6c; text-transform:uppercase; margin-bottom:10px;">Десктоп · 3 колонки · 1160×740</div>
+          <div style="width:1160px; height:740px; border-radius:4px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,.18), 0 30px 60px rgba(0,0,0,.14); border:1px solid #d3cfc6;">
+            <dc-import name="ClaimGame" mode="desktop" folder-look="manila" hint-size="1160px,740px" style="width:1160px; height:740px;"></dc-import>
+          </div>
+        </div>
+        <div style="flex:none;">
+          <div style="font:600 11px 'IBM Plex Mono'; letter-spacing:1px; color:#857c6c; text-transform:uppercase; margin-bottom:10px;">Мобайл · 1 колонка · 390×760</div>
+          <div style="width:390px; height:760px; border-radius:4px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,.18), 0 30px 60px rgba(0,0,0,.14); border:1px solid #d3cfc6;">
+            <dc-import name="ClaimGame" mode="mobile" folder-look="manila" hint-size="390px,760px" style="width:390px; height:760px;"></dc-import>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div style="display:inline-block; font:700 13px 'Inter'; letter-spacing:1px; color:#fff; background:#2563eb; padding:6px 14px; border-radius:4px; margin-bottom:16px;">ВАРИАНТ 2 · ДОСЬЕ — строгое корпоративное досье</div>
+      <div style="display:flex; gap:40px; align-items:flex-start;">
+        <div style="flex:none;">
+          <div style="font:600 11px 'IBM Plex Mono'; letter-spacing:1px; color:#857c6c; text-transform:uppercase; margin-bottom:10px;">Десктоп · 3 колонки · 1160×740</div>
+          <div style="width:1160px; height:740px; border-radius:4px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,.18), 0 30px 60px rgba(0,0,0,.14); border:1px solid #d3cfc6;">
+            <dc-import name="ClaimGame" mode="desktop" folder-look="dossier" hint-size="1160px,740px" style="width:1160px; height:740px;"></dc-import>
+          </div>
+        </div>
+        <div style="flex:none;">
+          <div style="font:600 11px 'IBM Plex Mono'; letter-spacing:1px; color:#857c6c; text-transform:uppercase; margin-bottom:10px;">Мобайл · 1 колонка · 390×760</div>
+          <div style="width:390px; height:760px; border-radius:4px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,.18), 0 30px 60px rgba(0,0,0,.14); border:1px solid #d3cfc6;">
+            <dc-import name="ClaimGame" mode="mobile" folder-look="dossier" hint-size="390px,760px" style="width:390px; height:760px;"></dc-import>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

@@ -28,10 +28,13 @@ Never store a `Case` inside `PlayerStats`, and never store player progress insid
 
 ## Architecture / data flow
 
-The store (`src/store/gameStore.ts`) is the single runtime authority and composes three lower layers it depends on (and which never depend on it):
+The store (`src/store/gameStore.ts`) is the single runtime authority and composes lower layers it depends on (and which never depend on it):
 
-- **`src/engine/rewardEngine.ts`** — pure scoring + daily-availability math. No state, no SDK, no side effects; every function is deterministic given its inputs. This is where the reward formula and daily cooldown live.
-- **`src/services/persistence.ts`** — owns *where* the snapshot lives and *when* it's written. Knows nothing about cases or rewards.
+- **`src/engine/rewardEngine.ts`** — pure scoring + daily-availability math. No state, no SDK, no side effects; every function is deterministic given its inputs. This is where the reward formula and daily cooldown live. Player-derived modifiers (rank/streak bonus %) are passed *in* as arguments so the engine stays pure.
+- **`src/engine/rankEngine.ts`** — pure career-progression math: `evaluateXpGain` (case → XP) and `evaluateRank` (cumulative XP → rank + progress).
+- **`src/engine/streakEngine.ts`** — pure daily-streak math: consecutive *server*-days → streak length + capped reward bonus.
+- **`src/engine/achievementsEngine.ts`** — pure unlock predicates keyed by achievement id, evaluated against post-case stats; catalog metadata (i18n text + bonuses) lives in `src/data/achievements.ts`.
+- **`src/services/persistence.ts`** — owns *where* the snapshot lives and *when* it's written. Knows nothing about cases or rewards. Also owns the save-version migration.
 - **`src/services/yandexSDK.ts`** — the **only** place that touches `window.YaGames`. The engine never calls the SDK directly; everything funnels through this adapter so a missing/failed SDK degrades to offline mode.
 
 `src/App.tsx` is the whole UI controller — it wires the store to the components, manages screen-local state (selected case, open modal, result sheet), and is the only component that calls store actions. Components in `src/components/` are presentational.
@@ -48,10 +51,16 @@ daily gating       → getServerTimeMs()                (NEVER device time)
 
 ## Non-obvious behaviors to preserve
 
-- **Reward formula** (`evaluateReward`): `BaseReward = claimAmount × (daily ? 5 : 1)`. Verdict component = 50% of base iff `decision === correctDecision`. Proof component = 50% of base × (correctStamps / totalContradictions). Penalty = 50 per *falsely* stamped card. Net total may be negative. A case with **zero** contradictions awards the full proof component automatically (guards divide-by-zero). All tuning lives in `src/config/gameConfig.ts` — adjust the economy there, not in the engine.
+- **Reward formula** (`evaluateReward`): `BaseReward = claimAmount × (daily ? 5 : 1)`. Verdict component = 50% of base iff `decision === correctDecision`. Proof component = 50% of base × (correctStamps / totalContradictions). **Bonus component** = (rank% + streak%) applied to the *positive* base only (verdict + proof, never the penalty). Penalty = 50 per *falsely* stamped card. Net total may be negative. A case with **zero** contradictions awards the full proof component automatically (guards divide-by-zero). All tuning lives in `src/config/gameConfig.ts` — adjust the economy there, not in the engine.
+- **Two economies, kept separate.** `balance` is the spendable currency (grows from rewards, spent on hints, reset by bankruptcy). `xp` is permanent career progress that only ever increases and drives the rank ladder. Never conflate them.
+- **Ranks & XP** (`rankEngine`). Each closed case grants XP (difficulty weight × proof quality, ×2 daily; a small flat award for a wrong verdict). Cumulative XP maps to a rank (`GAME_CONFIG.progression.ranks`), which grants an additive reward-bonus %. The rank bonus applied to a case is read *before* that case's XP is added (it reflects standing at solve time); promotion detection uses the *post*-bonus XP so an achievement bonus can also tip a threshold. Rank titles are i18n keys `rank_<id>`.
+- **Streaks** (`streakEngine`). Consecutive *server*-days with ≥1 closed case; +5%/day reward bonus capped at +50%. Same-day replays don't stack; a skipped day resets to 1. Evaluated only in `submitVerdict`, against server time.
+- **Hints** (`buyHint`). Two hints, both revealing the next unrevealed card's true status (appended to `session.revealedEvidenceIds`, so they survive resume; the reveal is shown on the EvidenceCard grid and in the StampModal). They differ only in unlock method: **Inspector Note** charges `balance` (20% of `claimAmount`, via `hints.inspectorNoteClaimPct`) and is a no-op when unaffordable; **Witness Canvass** is free but gated on a rewarded Yandex video (`showRewardedAd` → reveal on `onRewarded`; dev/offline grants instantly). Hints never trigger bankruptcy.
+- **Achievements** (`achievementsEngine` + `data/achievements.ts`). One-time unlocks evaluated against post-case stats after every verdict; each grants a one-time XP + currency bonus and is recorded in `stats.unlockedAchievementIds`. Newly unlocked ones surface on the ResultSheet; the full archive opens from the right sidebar.
 - **Server time only for daily gating.** Daily lock/unlock evaluates against `getServerTimeMs()` (Yandex `serverTime()`), never the device clock. Device time is used only as an offline fallback and is explicitly best-effort.
 - **Persistence is dual-write.** LocalStorage is written synchronously on every change (instant, offline-safe); the cloud write is debounced to ≤1 per 10s. Case closure and unload call `flushSync` to bypass the debounce. On load, cloud wins over local when present.
-- **Resume mid-case.** `ActiveSession` is persisted alongside stats, so quitting mid-investigation restores stamps and viewed cards. `startCase` deliberately does *not* wipe an existing session for the same case.
+- **Resume mid-case.** `ActiveSession` is persisted alongside stats, so quitting mid-investigation restores stamps, viewed cards, and bought hints (`revealedEvidenceIds` / `briefingRevealed`). `startCase` deliberately does *not* wipe an existing session for the same case.
+- **Save migration.** `GAME_CONFIG.saveVersion` is the persisted-snapshot schema version (currently **2**). `migrate()` in `persistence.ts` spreads current defaults under older saves to backfill new fields (v1→v2 added the xp/streak/achievement stats and the session's hint fields). Bump the version and extend `migrate()` whenever the persisted shape changes.
 - **Pause guard.** Any ad open/close (fullscreen or rewarded) broadcasts through `onPauseChange`, flipping the global `isPaused` flag that freezes the game and shows the pause overlay.
 - **Bankruptcy.** Balance ≤ 0 sets `isBankrupt`, which gates progression behind a rewarded-video "restore funds" → resets to 2000. In dev/offline, `showRewardedAd` grants the reward immediately so the game stays playable.
 - **Verdict gating** (`selectCaseInvestigationGate`): you may only *approve* after viewing every evidence card; you may only *reject* with at least one stamped card (or after a full review).
@@ -61,6 +70,8 @@ daily gating       → getServerTimeMs()                (NEVER device time)
 - **New case:** drop a JSON into `src/data/cases/` and add it to the `RAW_CASES` array in `src/data/caseLoader.ts`. Every case is Zod-validated at load (`src/data/caseSchema.ts`) — malformed content is logged and skipped, never silently accepted. Evidence ids must be unique within a case (enforced by a `superRefine`).
 - **New language:** add the code to `SUPPORTED_LANGUAGES` in `src/types/index.ts`, then fill that column in **every** case JSON and in `src/i18n/ui.ts`. The Zod `localizedShape` is `.strict()` and requires an entry for every supported language, so a missing translation fails loudly at load. RTL languages are listed in `RTL_LANGUAGES` (currently `ar`).
 - The schema in `caseSchema.ts` and the interfaces in `types/index.ts` are kept in lockstep by compile-time `AssertAssignable` guards — if you change one, change the other or `typecheck` breaks.
+- **New achievement:** add an entry to `ACHIEVEMENTS` in `src/data/achievements.ts` (id, icon, i18n title/desc — `LocalizedString` enforces all 5 languages at compile time — plus xp/currency bonus) **and** a matching predicate keyed by that id in `PREDICATES` (`src/engine/achievementsEngine.ts`). A missing predicate just never unlocks (safe). No store or UI changes needed.
+- **Economy tuning:** rank table, XP weights, streak %/cap, and hint costs all live under `GAME_CONFIG` (`progression` / `streak` / `hints`). The roadmap that introduced these is `DEVELOPMENT_PLAN.json`.
 
 ## Design language (the visual metaphor is a hard constraint)
 
@@ -83,7 +94,7 @@ Design tokens are wired into `tailwind.config.js` (do not hardcode hex — use t
 
 Fonts: `font-serif` (IBM Plex Serif) for document/headline text, `font-sans` (Inter) for UI chrome. Custom `shadow-folder` / `shadow-lift` give sheets physical depth.
 
-**Layout:** three-column "investigation desk" on desktop — left sidebar 280px (case nav + progress + language selector), centered case folder (max ~480px), right sidebar 280px (balance, accuracy %, leaderboard). Collapses to a single focused column on mobile (`md:` breakpoints in `App.tsx`).
+**Layout:** three-column "investigation desk" on desktop — left sidebar 280px (case nav + progress + language selector), centered case folder (max ~480px), right sidebar 280px (rank badge + XP bar, streak, balance, accuracy %, achievements archive button, leaderboard). Collapses to a single focused column on mobile (`md:` breakpoints in `App.tsx`).
 
 **Daily case** is visually premium: gold borders + an "URGENT" stamp on the folder cover, and it carries the ×5 reward multiplier.
 

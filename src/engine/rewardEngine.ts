@@ -33,11 +33,23 @@ export function classifyStamps(
 }
 
 /**
+ * Player-derived reward modifiers. Passing them in (rather than reading player
+ * state here) keeps this engine pure and deterministic — they are just inputs.
+ */
+export interface RewardModifiers {
+  /** Additive % bonus from the player's investigator rank. */
+  readonly rankBonusPct?: number;
+  /** Additive % bonus from the player's daily streak. */
+  readonly streakBonusPct?: number;
+}
+
+/**
  * The Multi-Tier Reward Math Engine.
  *
  * BaseReward = claimAmount, scaled ×dailyMultiplier for daily cases.
  *   • Verdict component: 50% of BaseReward iff decision === correctDecision.
  *   • Proof component:   50% of BaseReward × (correctStamps / totalContradictions).
+ *   • Bonus component:   (rank% + streak%) applied to the positive base.
  *   • Penalty:           falseStampPenalty per wrongly-stamped card.
  *
  * A wrong verdict still allows the proof component to reflect investigation
@@ -48,6 +60,7 @@ export function evaluateReward(
   caseData: Case,
   decision: Decision,
   selectedEvidenceIds: readonly string[],
+  modifiers: RewardModifiers = {},
 ): RewardBreakdown {
   const { reward } = GAME_CONFIG;
   const multiplier = caseData.type === 'daily' ? reward.dailyMultiplier : 1;
@@ -66,6 +79,12 @@ export function evaluateReward(
   const ratio = total === 0 ? 1 : correct / total;
   const proofComponent = reward.proofShare * baseReward * ratio;
 
+  // Rank + streak bonuses scale only the positive base (never the penalty).
+  const positive = Math.round(verdictComponent) + Math.round(proofComponent);
+  const bonusPct =
+    (modifiers.rankBonusPct ?? 0) + (modifiers.streakBonusPct ?? 0);
+  const bonusComponent = Math.round((positive * bonusPct) / 100);
+
   const penalty = falseStamps * reward.falseStampPenalty;
 
   return {
@@ -74,7 +93,9 @@ export function evaluateReward(
     proofComponent: Math.round(proofComponent),
     penalty,
     dailyMultiplierApplied: multiplier,
-    total: Math.round(verdictComponent + proofComponent - penalty),
+    bonusComponent,
+    bonusPct,
+    total: positive + bonusComponent - penalty,
   };
 }
 

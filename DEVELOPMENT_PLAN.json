@@ -1,0 +1,181 @@
+{
+  "meta": {
+    "name": "Claim Detective — Дорожная карта «Карьера следователя»",
+    "version": "1.0.0",
+    "createdOn": "2026-06-20",
+    "basedOn": ["CLAUDE.md", "CODE_REQUREMENTS.json", "DESIGN_REQUIREMENTS.json"],
+    "focus": ["мета-прогрессия", "экономика", "новые-геймплей-механики"],
+    "coreIdea": "Разделить единый постоянно растущий баланс на два контура: постоянный карьерный прогресс (XP/ранг) и расходуемую валюту (баланс), у которой наконец появляются стоки (подсказки). Это оздоравливает экономику и даёт долгосрочную мотивацию.",
+    "executionOrder": ["phase-1", "phase-2", "phase-3", "phase-4", "phase-5"],
+    "recommendedStart": ["phase-1", "phase-2"]
+  },
+  "invariants": {
+    "description": "Жёсткие архитектурные правила, которые обязана соблюдать каждая фаза. Нарушение любого из них — это дефект.",
+    "rules": [
+      "Вся математика подсчёта/таймингов живёт в чистых функциях engine/* (детерминированы, без SDK, без состояния, без побочных эффектов).",
+      "Весь тюнинг экономики живёт в src/config/gameConfig.ts — никогда не хардкодится в движке.",
+      "Статичный контент отделён от рантайм-состояния: никогда не хранить Case внутри PlayerStats и не хранить прогресс внутри Case.",
+      "Любой новый статичный контент типобезопасен и i18n-полон для ВСЕХ 5 языков (ru,en,tr,ar,kk); .strict() Zod-схемы падают громко при пропущенном переводе.",
+      "Изменения сохраняемой структуры бампят GAME_CONFIG.saveVersion и добавляют миграцию в services/persistence.ts.",
+      "Гейтинг daily/серий использует серверное время Yandex (getServerTimeMs()), никогда не часы устройства.",
+      "Дизайн-редлайны держатся: никакого неона, мультяшности, игровых градиентов, sci-fi/казино-эстетики. Только метафора документа/стола.",
+      "После каждой фазы: npm run typecheck зелёный и игра остаётся играбельной."
+    ]
+  },
+  "configProposals": {
+    "description": "Редактируемые числа экономики. Меняй свободно — они ложатся 1:1 в src/config/gameConfig.ts. Помечены ЧЕРНОВИК (DRAFT) до твоего утверждения.",
+    "saveVersion": { "from": 1, "to": 2 },
+    "xp": {
+      "difficultyWeight": { "easy": 10, "medium": 20, "hard": 35 },
+      "correctVerdictFormula": "weight * (0.5 + 0.5 * proofRatio)",
+      "wrongVerdictXp": 2,
+      "dailyXpMultiplier": 2
+    },
+    "ranks": {
+      "rewardBonusModel": "аддитивный % к награде за дело, по индексу ранга",
+      "table": [
+        { "index": 0, "id": "trainee",   "title_ru": "Стажёр",            "xpThreshold": 0,    "rewardBonusPct": 0 },
+        { "index": 1, "id": "junior",    "title_ru": "Мл. инспектор",     "xpThreshold": 50,   "rewardBonusPct": 2 },
+        { "index": 2, "id": "inspector", "title_ru": "Инспектор",         "xpThreshold": 150,  "rewardBonusPct": 5 },
+        { "index": 3, "id": "senior",    "title_ru": "Ст. инспектор",     "xpThreshold": 350,  "rewardBonusPct": 8 },
+        { "index": 4, "id": "lead",      "title_ru": "Ведущий следователь","xpThreshold": 700, "rewardBonusPct": 12 },
+        { "index": 5, "id": "chief",     "title_ru": "Главный следователь","xpThreshold": 1200,"rewardBonusPct": 18 }
+      ]
+    },
+    "streak": {
+      "model": "последовательные серверные дни с >=1 закрытым делом",
+      "bonusPctPerDay": 5,
+      "bonusCapPct": 50,
+      "resetOnSkippedDay": true
+    },
+    "hints": {
+      "caseBriefing": {
+        "id": "case-briefing",
+        "effect": "показать общее число противоречий в деле",
+        "costRub": 100,
+        "proofPenalty": false
+      },
+      "inspectorNote": {
+        "id": "inspector-note",
+        "effect": "раскрыть истинный статус противоречия у одной ещё не отмеченной улики",
+        "costRub": 250,
+        "fallbackToRewardedAdWhenInsufficient": true,
+        "proofPenalty": { "enabled": false, "note": "опционально: урезать proof-компонент при использовании — решить на этапе реализации" }
+      }
+    }
+  },
+  "phases": [
+    {
+      "id": "phase-1",
+      "title": "Фундамент данных (рантайм-поля + миграция сейвов)",
+      "goal": "Создать хранилище для нового прогресса, не ломая существующие облачные/локальные сейвы.",
+      "priority": "обязательно",
+      "dependsOn": [],
+      "changes": [
+        { "file": "src/types/index.ts", "action": "расширить PlayerStats полями xp:number, streakCount:number, lastPlayedServerDay:number|null, unlockedAchievementIds:string[]; расширить ActiveSession полем revealedEvidenceIds:string[]" },
+        { "file": "src/config/gameConfig.ts", "action": "поднять saveVersion 1 -> 2" },
+        { "file": "src/services/persistence.ts", "action": "добавить миграцию v1->v2 с заполнением новых полей дефолтами; обновить makeDefaultStats" },
+        { "file": "src/store/gameStore.ts", "action": "инициализировать новые поля там, где создаются сессии/статистика" }
+      ],
+      "acceptance": [
+        "npm run typecheck зелёный",
+        "Существующий снапшот v1 из LocalStorage грузится и апгрейдится до v2 с разумными дефолтами",
+        "Нет регрессии геймплея"
+      ]
+    },
+    {
+      "id": "phase-2",
+      "title": "Ранги и XP (мета-прогрессия)",
+      "goal": "Видимая карьерная лестница: решение дел даёт XP, XP открывает ранги, ранги дают небольшой бонус к награде.",
+      "priority": "обязательно",
+      "dependsOn": ["phase-1"],
+      "changes": [
+        { "file": "src/engine/rankEngine.ts", "action": "НОВЫЙ чистый модуль: evaluateXpGain(case, breakdown) и evaluateRank(xp) -> {rankIndex,title,xpInto,xpForNext,progress}" },
+        { "file": "src/config/gameConfig.ts", "action": "добавить таблицу рангов + веса XP из configProposals" },
+        { "file": "src/store/gameStore.ts", "action": "начислять XP внутри submitVerdict; применять rewardBonusPct ранга к дельте баланса" },
+        { "file": "src/components/RightSidebar.tsx", "action": "бейдж ранга + прогресс-бар XP" },
+        { "file": "src/components/ResultSheet.tsx", "action": "показ полученного XP; штамп-печать PROMOTION в стиле документа при повышении" },
+        { "file": "src/i18n/ui.ts", "action": "названия рангов + строки XP/повышения на всех 5 языках" }
+      ],
+      "acceptance": [
+        "npm run typecheck зелёный",
+        "XP растёт при закрытии дела и сохраняется",
+        "Пересечение порога показывает повышение и обновляет бейдж",
+        "Бонус к награде от ранга отражается в дельте баланса"
+      ]
+    },
+    {
+      "id": "phase-3",
+      "title": "Серии (streak) — ежедневная вовлечённость",
+      "goal": "Поощрять регулярную игру нарастающим множителем награды с капом; сброс при пропуске серверного дня.",
+      "priority": "желательно",
+      "dependsOn": ["phase-1"],
+      "changes": [
+        { "file": "src/engine/streakEngine.ts", "action": "НОВЫЙ чистый модуль: evaluateStreak(prevStreak,lastPlayedServerDay,nowServerDay)->{streak,multiplierPct}" },
+        { "file": "src/config/gameConfig.ts", "action": "добавить тюнинг серий из configProposals" },
+        { "file": "src/store/gameStore.ts", "action": "обновлять серию в closeCase/submitVerdict; пробрасывать множитель в награду" },
+        { "file": "src/components/RightSidebar.tsx", "action": "индикатор серии" },
+        { "file": "src/i18n/ui.ts", "action": "строки серий на всех 5 языках" }
+      ],
+      "acceptance": [
+        "npm run typecheck зелёный",
+        "Игра в последовательные серверные дни увеличивает серию; пропуск дня сбрасывает её",
+        "Множитель серии заметно влияет на награду"
+      ]
+    },
+    {
+      "id": "phase-4",
+      "title": "Подсказки (новая механика + сток валюты)",
+      "goal": "Стратегическое напряжение «риск против денег» и первый реальный сток баланса.",
+      "priority": "желательно",
+      "dependsOn": ["phase-1"],
+      "changes": [
+        { "file": "src/config/gameConfig.ts", "action": "добавить тюнинг подсказок из configProposals" },
+        { "file": "src/engine/rewardEngine.ts", "action": "если proofPenalty включён, урезать proof-компонент при использовании подсказок (опционально, решить при реализации)" },
+        { "file": "src/store/gameStore.ts", "action": "действие buyHint: списать баланс (или fallback на rewarded-ad), записать в ActiveSession.revealedEvidenceIds; персист" },
+        { "file": "src/components/CaseFile.tsx", "action": "кнопки подсказок (Сводка по делу / Заметка инспектора)" },
+        { "file": "src/components/StampModal.tsx", "action": "показ раскрытого статуса, если по карточке была подсказка" },
+        { "file": "src/i18n/ui.ts", "action": "строки подсказок на всех 5 языках" }
+      ],
+      "acceptance": [
+        "npm run typecheck зелёный",
+        "Покупка подсказки списывает баланс и раскрывает нужную информацию",
+        "Раскрытое состояние переживает выход/возврат в дело",
+        "Fallback на rewarded-ad работает в dev/offline"
+      ]
+    },
+    {
+      "id": "phase-5",
+      "title": "Достижения",
+      "goal": "Разовые цели с наградами XP/валютой для углубления долгого хвоста удержания.",
+      "priority": "желательно",
+      "dependsOn": ["phase-1", "phase-2"],
+      "changes": [
+        { "file": "src/data/achievements.ts", "action": "НОВЫЙ статичный каталог: id, иконка, i18n title/desc, бонус xp/rub (i18n-полный)" },
+        { "file": "src/engine/achievementsEngine.ts", "action": "НОВЫЕ чистые предикаты по id достижения, проверяются против PlayerStats/CaseResult" },
+        { "file": "src/store/gameStore.ts", "action": "проверять разблокировки после submitVerdict; начислять бонусы; персист" },
+        { "file": "src/components/RightSidebar.tsx", "action": "точка входа в панель достижений" },
+        { "file": "src/components/ResultSheet.tsx", "action": "показ только что разблокированных достижений" },
+        { "file": "src/i18n/ui.ts", "action": "строки UI-обвязки достижений на всех 5 языках" }
+      ],
+      "candidateAchievements": [
+        { "id": "first-fraud", "desc": "Разоблачить первое мошенничество" },
+        { "id": "solved-10", "desc": "Раскрыть 10 дел" },
+        { "id": "perfect-proof-hard", "desc": "100% точность доказательств на сложном деле" },
+        { "id": "streak-5", "desc": "Достичь серии в 5 дней" },
+        { "id": "clean-hands-10", "desc": "Закрыть 10 дел без единого ложного штампа" }
+      ],
+      "acceptance": [
+        "npm run typecheck зелёный",
+        "Выполнение условия разблокирует достижение один раз и начисляет его бонус",
+        "Разблокированные достижения сохраняются и отображаются в панели"
+      ]
+    }
+  ],
+  "openQuestions": [
+    "Утвердить ЧЕРНОВИКовые числа экономики в configProposals или дать свои?",
+    "Подсказки: использование подсказки должно урезать максимум proof-награды (proofPenalty) или стоить только валюту?",
+    "Ранги: гейтить ли дела повышенной сложности за ранг, или оставить всегда доступными?",
+    "Подтвердить порядок фаз 1->2->3->4->5."
+  ]
+}

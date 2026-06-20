@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import type { ActiveSession, Case, Language } from '../types';
+import type { HintKind } from '../store/gameStore';
+import { GAME_CONFIG } from '../config/gameConfig';
 import { loc, t } from '../i18n/ui';
 import { asset } from '../utils/asset';
 import { EvidenceCard } from './EvidenceCard';
@@ -11,7 +13,10 @@ interface Props {
   session: ActiveSession | null;
   lang: Language;
   canApprove: boolean;
+  /** Spendable balance — gates whether a hint is bought with cash or an ad. */
+  balance: number;
   onOpenEvidence: (id: string) => void;
+  onBuyHint: (kind: HintKind) => void;
   onApprove: () => void;
   /** Returns false if rejection is unjustified, triggering the prompt. */
   onReject: () => boolean;
@@ -25,7 +30,9 @@ export function CaseFile({
   session,
   lang,
   canApprove,
+  balance,
   onOpenEvidence,
+  onBuyHint,
   onApprove,
   onReject,
 }: Props) {
@@ -33,46 +40,109 @@ export function CaseFile({
   const [toast, setToast] = useState<string | null>(null);
   const isDaily = caseData.type === 'daily';
 
+  // Hint state. Both hints reveal one evidence card's true status; Inspector
+  // Note costs 20% of the claim, Witness Canvass is unlocked by a rewarded video.
+  const noteCost = Math.round(
+    caseData.claimAmount * GAME_CONFIG.hints.inspectorNoteClaimPct,
+  );
+  const canAffordNote = balance >= noteCost;
+  const allRevealed =
+    (session?.revealedEvidenceIds.length ?? 0) >= caseData.evidences.length;
+
+  const stampedCount = session?.selectedEvidenceIds.length ?? 0;
+  const evCount = caseData.evidences.length;
+
   const handleReject = () => {
-    const ok = onReject();
-    if (!ok) {
+    if (!onReject()) {
       setToast(t('rejectNeedsProof', lang));
-      window.setTimeout(() => setToast(null), 3500);
+      window.setTimeout(() => setToast(null), 3800);
     }
   };
 
+  const fmt = (n: number) => n.toLocaleString('ru-RU');
+
+  /* ---------------------------------- Statement sheet ----------------------- */
   const statement = (
-    <div>
-      <div className="flex items-start gap-3">
-        {caseData.personImage ? (
-          <img
-            src={asset(caseData.personImage)}
-            alt={loc(caseData.claim.person, lang)}
-            className="h-16 w-16 shrink-0 -rotate-1 rounded-sm border-2 border-ink/70 object-cover"
-          />
-        ) : (
-          <div className="flex h-16 w-16 shrink-0 -rotate-1 items-center justify-center rounded-sm border-2 border-ink/70 bg-black/5 text-2xl">
-            🧑
+    <div
+      className="overflow-hidden bg-paper shadow-doc"
+      style={{ borderRadius: 7 }}
+    >
+      {/* Dark folder-edge header */}
+      <div className="flex items-center justify-between bg-folder-edge px-[18px] py-[11px]">
+        <span className="text-xs font-semibold tracking-[1px] text-white">
+          {t('clientStatement', lang)}
+        </span>
+        <span className="font-mono text-[11px] text-white/70">
+          {t('formCt1', lang)}
+        </span>
+      </div>
+
+      <div className="p-5">
+        {/* Client ID block */}
+        <div className="flex items-center gap-3.5">
+          {caseData.personImage ? (
+            <img
+              src={asset(caseData.personImage)}
+              alt={loc(caseData.claim.person, lang)}
+              className="h-[72px] w-[58px] shrink-0 rounded-sm border border-[#b8b1a0] object-cover"
+            />
+          ) : (
+            <div
+              className="flex h-[72px] w-[58px] shrink-0 items-center justify-center rounded-sm border border-[#b8b1a0] text-center"
+              style={{
+                background:
+                  'repeating-linear-gradient(45deg,#d8d3c7 0 6px,#cfc9bb 6px 12px)',
+              }}
+            >
+              <span className="font-mono text-[8px] font-medium text-[#8a8472]">
+                ФОТО ID
+              </span>
+            </div>
+          )}
+          <div className="min-w-0 flex-1">
+            <div className="font-serif text-lg font-semibold text-ink">
+              {loc(caseData.claim.person, lang)}
+            </div>
+            <div className="mt-0.5 text-xs font-medium capitalize text-text-dim">
+              {caseData.difficulty}
+            </div>
+            <div className="mt-2 flex flex-wrap gap-2">
+              <span className="rounded bg-[#e5e7eb] px-[7px] py-[3px] font-mono text-[11px] font-medium text-[#374151]">
+                {caseData.id}
+              </span>
+            </div>
           </div>
-        )}
-        <div>
-          <p className="text-lg font-semibold text-ink">
-            {loc(caseData.claim.person, lang)}
-          </p>
-          <p className="text-sm text-ink/60">
-            {t('claimLabel', lang)}: ₽ {caseData.claimAmount.toLocaleString()}
-            {isDaily && <span className="ml-1 font-semibold text-gold">×5</span>}
-          </p>
+        </div>
+
+        <div className="my-[18px] h-px bg-[#d1cfc8]" />
+
+        <div className="mb-2 text-[11px] font-semibold tracking-[1px] text-text-muted">
+          {t('circumstances', lang)}
+        </div>
+        <p
+          className="m-0 font-serif text-[15px] leading-[1.7] text-ink"
+          style={{ textWrap: 'pretty' } as React.CSSProperties}
+        >
+          {loc(caseData.claim.story, lang)}
+        </p>
+
+        {/* Claim sum box */}
+        <div className="mt-[18px] flex items-center justify-between gap-3 rounded-md border border-dashed border-[#c7c2b6] bg-white px-[15px] py-[13px]">
+          <span className="text-xs font-medium text-text-dim">
+            {t('claimLabel', lang)}
+            {isDaily && <span className="ml-1 font-bold text-gold">×5</span>}
+          </span>
+          <span className="font-mono text-lg font-bold text-ink">
+            {fmt(caseData.claimAmount)} ₽
+          </span>
         </div>
       </div>
-      <p className="mt-4 font-serif text-[17px] leading-relaxed text-ink/90">
-        {loc(caseData.claim.story, lang)}
-      </p>
     </div>
   );
 
+  /* ---------------------------------- Evidence grid ------------------------- */
   const evidence = (
-    <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+    <div className="grid grid-cols-2 gap-3">
       {caseData.evidences.map((ev) => (
         <EvidenceCard
           key={ev.id}
@@ -80,75 +150,115 @@ export function CaseFile({
           lang={lang}
           viewed={session?.viewedEvidenceIds.includes(ev.id) ?? false}
           stamped={session?.selectedEvidenceIds.includes(ev.id) ?? false}
+          revealed={session?.revealedEvidenceIds.includes(ev.id) ?? false}
           onClick={() => onOpenEvidence(ev.id)}
         />
       ))}
     </div>
   );
 
+  const materialsHeader = (
+    <div className="my-[14px] flex items-center justify-between">
+      <span className="text-xs font-semibold tracking-[1px] text-[#d1d5db]">
+        {t('caseMaterials', lang)} · {evCount} {t('documents', lang)}
+      </span>
+      <span className="font-mono text-[11px] font-semibold text-stamp">
+        {stampedCount} / {evCount} {t('marked', lang)}
+      </span>
+    </div>
+  );
+
   return (
     <motion.div
       key={caseData.id}
-      initial={{ x: 60, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
-      className={`paper-sheet relative w-full max-w-[480px] p-6 ${
-        isDaily ? 'border-l-4 border-gold' : ''
-      }`}
+      className="relative w-full max-w-[480px]"
     >
-      {isDaily && (
-        <span
-          className="ink-stamp absolute -right-2 top-3 rotate-12 rounded border-2 border-gold px-2 py-0.5 text-xs text-gold"
-          aria-hidden
-        >
-          {t('urgent', lang)}
+      {/* Case header row */}
+      <div className="mb-3 flex items-center justify-between gap-2">
+        <span className="truncate font-mono text-[13px] font-semibold text-text-muted">
+          {caseData.id} · {loc(caseData.title, lang)}
         </span>
-      )}
-
-      {/* Folder tab header */}
-      <div className="mb-4 border-b border-black/10 pb-3">
-        <div className="font-mono text-xs uppercase text-ink/40">
-          {caseData.id} · {caseData.difficulty}
-        </div>
-        <h1 className="mt-1 text-2xl font-bold text-ink">
-          {loc(caseData.title, lang)}
-        </h1>
+        <span className="shrink-0 rounded-sm border border-stamp px-[7px] py-[3px] font-mono text-[10px] font-semibold text-stamp">
+          {t('confidential', lang)}
+        </span>
       </div>
 
-      {/* Folder cover art */}
-      <img
-        src={asset(caseData.coverImage)}
-        alt=""
-        className="mb-4 h-28 w-full rounded-sm border border-black/10 object-cover"
-      />
-
       {/* Mobile tabs */}
-      <div className="mb-4 flex gap-1 rounded-md bg-black/5 p-1 md:hidden">
+      <div className="mb-3 flex border-b border-border md:hidden">
         {(['statement', 'evidence'] as const).map((key) => (
           <button
             key={key}
             type="button"
             onClick={() => setTab(key)}
-            className={`flex-1 rounded py-2 text-sm font-medium transition-colors ${
-              tab === key ? 'bg-white text-ink shadow-sm' : 'text-ink/50'
+            className={`flex-1 border-b-2 py-3 text-center text-xs font-semibold transition-colors ${
+              tab === key
+                ? 'border-accent text-[#f3f4f6]'
+                : 'border-transparent text-text-dim'
             }`}
           >
-            {t(key, lang)}
+            {key === 'statement'
+              ? t('statement', lang)
+              : `${t('evidence', lang)} · ${stampedCount}/${evCount}`}
           </button>
         ))}
       </div>
 
       {/* Mobile: one panel at a time. Desktop: stacked. */}
-      <div className="md:hidden">{tab === 'statement' ? statement : evidence}</div>
+      <div className="md:hidden">
+        {tab === 'statement' ? (
+          statement
+        ) : (
+          <>
+            {materialsHeader}
+            {evidence}
+          </>
+        )}
+      </div>
       <div className="hidden md:block">
         {statement}
-        <h2 className="mb-3 mt-6 text-sm font-semibold uppercase tracking-widest text-ink/50">
-          {t('evidence', lang)}
-        </h2>
+        {materialsHeader}
         {evidence}
       </div>
 
-      <div className="mt-6 border-t border-black/10 pt-4">
+      {/* Paid investigation hints (extended feature, styled to the desk) */}
+      <div className="mt-[18px] rounded-[10px] border border-border bg-surface p-4">
+        <div className="mb-3 text-[11px] font-semibold tracking-[1px] text-text-dim">
+          {t('hints', lang)}
+        </div>
+        {allRevealed ? (
+          <div className="rounded-md border border-border bg-surface-2 px-3 py-2 text-center text-sm text-text-muted">
+            {t('allRevealed', lang)}
+          </div>
+        ) : (
+          <div className="flex flex-col gap-2 sm:flex-row">
+            <button
+              type="button"
+              disabled={!canAffordNote}
+              onClick={() => onBuyHint('note')}
+              className="flex flex-1 items-center justify-between gap-2 rounded-[9px] border border-accent/50 px-3 py-2.5 text-sm font-medium text-[#e5e7eb] transition-colors hover:bg-accent/10 disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              <span>{t('hintNote', lang)}</span>
+              <span className="font-mono text-text-muted">₽{noteCost}</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => onBuyHint('canvass')}
+              className="flex flex-1 items-center justify-between gap-2 rounded-[9px] border border-gold/50 px-3 py-2.5 text-sm font-medium text-[#e5e7eb] transition-colors hover:bg-gold/10"
+            >
+              <span>{t('hintCanvass', lang)}</span>
+              <span className="whitespace-nowrap text-gold">
+                ▶ {t('watchAd', lang)}
+              </span>
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* Verdict */}
+      <div className="mt-[18px]">
         <VerdictPanel
           lang={lang}
           canApprove={canApprove}
@@ -164,7 +274,7 @@ export function CaseFile({
             initial={{ y: 12, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 12, opacity: 0 }}
-            className="absolute inset-x-4 bottom-4 rounded-md bg-ink px-4 py-3 text-center text-sm text-paper shadow-lift"
+            className="fixed bottom-[22px] left-1/2 z-[60] max-w-[86%] -translate-x-1/2 rounded-[9px] border border-stamp bg-surface-2 px-[18px] py-3 text-center text-[13px] font-medium leading-snug text-[#fee2e2] shadow-lift"
           >
             {toast}
           </motion.div>

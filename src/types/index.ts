@@ -133,6 +133,17 @@ export interface PlayerStats {
   lastDailyClaimServerMs: number | null;
   /** True once balance hit <= 0 and the player must watch a rewarded ad. */
   isBankrupt: boolean;
+  /**
+   * Career experience. Permanent (never spent) — drives the investigator rank
+   * ladder. Distinct from `balance`, which is the spendable currency.
+   */
+  xp: number;
+  /** Consecutive *server*-days the player has closed at least one case. */
+  streakCount: number;
+  /** Server-day index of the last closed case — used by the streak evaluator. */
+  lastPlayedServerDay: number | null;
+  /** Ids of one-time achievements the player has unlocked. */
+  unlockedAchievementIds: string[];
 }
 
 /**
@@ -146,6 +157,12 @@ export interface ActiveSession {
   selectedEvidenceIds: string[];
   /** Evidence cards the player has opened/read at least once. */
   viewedEvidenceIds: string[];
+  /**
+   * Evidence cards whose true contradiction status was revealed by a hint
+   * (paid Inspector Note or ad-funded Witness Canvass). Persisted so a mid-case
+   * quit/resume keeps the reveal.
+   */
+  revealedEvidenceIds: string[];
   /** Server-time (ms) the investigation began — drives daily timers. */
   readonly startedAtServerMs: number;
 }
@@ -160,6 +177,10 @@ export interface RewardBreakdown {
   readonly proofComponent: number;
   readonly penalty: number;
   readonly dailyMultiplierApplied: number;
+  /** Extra reward from rank + streak bonuses applied to the positive base. */
+  readonly bonusComponent: number;
+  /** Total bonus percentage applied (rank + streak), for display. */
+  readonly bonusPct: number;
   /** Net delta applied to balance (may be negative). */
   readonly total: number;
 }

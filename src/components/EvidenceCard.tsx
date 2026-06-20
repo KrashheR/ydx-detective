@@ -1,65 +1,78 @@
 import { motion } from 'framer-motion';
 import type { Evidence, Language } from '../types';
 import { loc, t } from '../i18n/ui';
-import { EVIDENCE_ICON } from './icons';
+import { EVIDENCE_TAG_KEY } from './icons';
 
 interface Props {
   evidence: Evidence;
   lang: Language;
   viewed: boolean;
   stamped: boolean;
+  /** True if a hint revealed this card's true contradiction status. */
+  revealed: boolean;
   onClick: () => void;
 }
 
 /** A single physical evidence artifact in the investigation grid. */
-export function EvidenceCard({ evidence, lang, viewed, stamped, onClick }: Props) {
+export function EvidenceCard({
+  evidence,
+  lang,
+  viewed,
+  stamped,
+  revealed,
+  onClick,
+}: Props) {
   return (
     <motion.button
       type="button"
       onClick={onClick}
       whileHover={{ y: -4 }}
-      whileTap={{ scale: 0.98 }}
+      whileTap={{ scale: 0.99 }}
       transition={{ type: 'spring', stiffness: 300, damping: 24 }}
-      className={`relative flex min-h-[96px] flex-col gap-1 rounded-sm border bg-white p-3 text-left shadow-sm transition-shadow hover:shadow-lift ${
-        stamped ? 'border-danger ring-1 ring-danger' : 'border-black/10'
-      }`}
+      className="relative flex flex-col overflow-hidden rounded-[7px] border border-black/[0.08] bg-paper p-3.5 text-left shadow-card transition-shadow hover:shadow-card-hover"
     >
-      {/* Stamped corner fold + watermark */}
-      {stamped && (
-        <>
-          <span
-            aria-hidden
-            className="pointer-events-none absolute right-0 top-0 h-0 w-0 border-l-[18px] border-t-[18px] border-l-transparent border-t-danger"
-          />
-          <span
-            aria-hidden
-            className="ink-stamp pointer-events-none absolute inset-0 flex items-center justify-center text-[11px] text-danger/15"
-            style={{ transform: 'rotate(-12deg)' }}
-          >
-            {t('markContradiction', lang)}
-          </span>
-        </>
-      )}
+      {/* Mono chip-tag on the folder-edge colour */}
+      <span className="inline-block w-fit rounded font-mono text-[10px] font-bold uppercase tracking-wider text-white bg-folder-edge px-2 py-[3px]">
+        {t(EVIDENCE_TAG_KEY[evidence.type], lang)}
+      </span>
 
-      <div className="flex items-center gap-2">
-        <span className="text-lg" aria-hidden>
-          {EVIDENCE_ICON[evidence.type]}
-        </span>
-        <span className="text-[11px] font-medium uppercase tracking-wide text-ink/50">
-          {evidence.type.replace('_', ' ')}
-        </span>
-      </div>
-
-      <span className="text-sm font-semibold leading-snug text-ink">
+      <span className="mt-2.5 font-serif text-sm font-semibold leading-snug text-ink">
         {loc(evidence.title, lang)}
       </span>
 
-      {/* Read indicator — drives the "approve requires full review" gate */}
+      {/* Hint reveal — shows the card's true status once a hint exposed it */}
+      {revealed && (
+        <span
+          className={`mt-2 inline-flex w-fit items-center gap-1 rounded px-1.5 py-0.5 font-mono text-[10px] font-semibold ${
+            evidence.isContradiction
+              ? 'bg-stamp/10 text-stamp'
+              : 'bg-success/10 text-success'
+          }`}
+        >
+          {evidence.isContradiction
+            ? `⚠ ${t('revealedContradiction', lang)}`
+            : `✓ ${t('revealedClean', lang)}`}
+        </span>
+      )}
+
+      {/* CTA doubles as the read indicator (drives the "review-all" gate) */}
       <span
-        className={`mt-auto text-[11px] ${viewed ? 'text-ink/40' : 'text-accent'}`}
+        className={`mt-3 text-[11px] font-semibold ${
+          viewed ? 'text-ink/45' : 'text-accent'
+        }`}
       >
-        {viewed ? '✓' : '●'}
+        {viewed ? `${t('viewedDossier', lang)} ✓` : `${t('openDossier', lang)} →`}
       </span>
+
+      {/* Diagonal corner stamp once marked as a contradiction */}
+      {stamped && (
+        <span
+          aria-hidden
+          className="absolute right-[-26px] top-2 rotate-[34deg] bg-stamp px-7 py-[3px] font-mono text-[8px] font-bold uppercase tracking-wider text-white"
+        >
+          {t('contradiction', lang)}
+        </span>
+      )}
     </motion.button>
   );
 }

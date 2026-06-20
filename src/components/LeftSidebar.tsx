@@ -1,7 +1,6 @@
-import { motion } from 'framer-motion';
 import type { Case, Language } from '../types';
-import { loc, t } from '../i18n/ui';
-import { asset } from '../utils/asset';
+import { loc, t, type UIKey } from '../i18n/ui';
+import { evaluateRank } from '../engine/rankEngine';
 import { LanguageSelector } from './LanguageSelector';
 import { formatCountdown } from './icons';
 
@@ -13,11 +12,14 @@ interface Props {
   selectedId: string | null;
   completedIds: string[];
   lang: Language;
+  /** Cumulative career XP — drives the investigator progress card. */
+  xp: number;
   onSelect: (c: Case) => void;
+  onDailyLocked: () => void;
   onLanguage: (lang: Language) => void;
 }
 
-/** Left investigation-desk column: case list, daily banner, progress, language. */
+/** Left investigation-desk column: brand, language, case list, progress. */
 export function LeftSidebar({
   standardCases,
   dailyCase,
@@ -26,96 +28,118 @@ export function LeftSidebar({
   selectedId,
   completedIds,
   lang,
+  xp,
   onSelect,
+  onDailyLocked,
   onLanguage,
 }: Props) {
-  const total = standardCases.length + (dailyCase ? 1 : 0);
-  const solved = completedIds.length;
+  const rank = evaluateRank(xp);
+  const rankTitle = t(`rank_${rank.id}` as UIKey, lang);
 
   return (
-    <aside className="flex h-full w-full flex-col gap-5 overflow-y-auto bg-surface p-4">
+    <aside className="flex h-full w-full flex-col gap-[15px] overflow-y-auto rounded-xl border border-border bg-surface p-4 md:p-[18px]">
+      {/* Brand */}
       <div>
-        <h2 className="mb-2 text-xs font-semibold uppercase tracking-widest text-paper/50">
-          {t('cases', lang)}
-        </h2>
-        <ul className="space-y-1.5">
-          {standardCases.map((c) => {
-            const active = c.id === selectedId;
-            const done = completedIds.includes(c.id);
-            return (
-              <li key={c.id}>
-                <motion.button
-                  type="button"
-                  whileHover={{ x: 2 }}
-                  onClick={() => onSelect(c)}
-                  className={`flex w-full items-center gap-2.5 rounded-md px-2.5 py-2 text-left text-sm transition-colors ${
-                    active
-                      ? 'border-l-2 border-accent bg-accent/15 text-paper'
-                      : 'text-paper/80 hover:bg-white/5'
-                  }`}
-                >
-                  <img
-                    src={asset(c.coverImage)}
-                    alt=""
-                    className="h-8 w-12 shrink-0 rounded-sm border border-white/10 object-cover"
-                  />
-                  <span className="min-w-0 flex-1 truncate">{loc(c.title, lang)}</span>
-                  {done && <span className="text-success">✓</span>}
-                </motion.button>
-              </li>
-            );
-          })}
-        </ul>
+        <div className="text-[15px] font-bold tracking-[2px] text-[#f3f4f6]">
+          CLAIM DETECTIVE
+        </div>
+        <div className="mt-0.5 text-[11px] font-medium tracking-[1px] text-text-dim">
+          {t('department', lang)}
+        </div>
       </div>
 
-      {/* Daily case banner — gold, URGENT stamp */}
+      {/* Language selector */}
+      <LanguageSelector lang={lang} onChange={onLanguage} />
+
+      <div className="border-t border-border" />
+      <div className="text-[11px] font-semibold tracking-[1.5px] text-text-dim">
+        {t('casesInWork', lang)}
+      </div>
+
+      {/* Standard cases */}
+      {standardCases.map((c) => {
+        const active = c.id === selectedId;
+        const done = completedIds.includes(c.id);
+        return (
+          <button
+            key={c.id}
+            type="button"
+            onClick={() => onSelect(c)}
+            className={`rounded-[9px] border bg-surface-2 p-3 text-left transition-colors ${
+              active ? 'border-accent' : 'border-border hover:border-white/25'
+            }`}
+          >
+            <div className="flex items-center justify-between gap-2">
+              <span className="truncate text-[13px] font-semibold text-[#f3f4f6]">
+                {loc(c.title, lang)}
+              </span>
+              {active ? (
+                <span className="h-[7px] w-[7px] shrink-0 rounded-full bg-accent" />
+              ) : (
+                done && <span className="shrink-0 text-success">✓</span>
+              )}
+            </div>
+            <div className="mt-[3px] text-[11px] font-medium text-text-dim">
+              {c.id} · {active ? t('active', lang) : c.difficulty}
+            </div>
+          </button>
+        );
+      })}
+
+      {/* Daily case — gold, URGENT stamp */}
       {dailyCase && (
         <button
           type="button"
-          disabled={!dailyUnlocked}
-          onClick={() => dailyUnlocked && onSelect(dailyCase)}
-          className={`relative overflow-hidden rounded-md border p-3 text-left transition-colors ${
-            dailyUnlocked
-              ? 'border-gold/60 bg-gold/5 hover:border-gold'
-              : 'border-white/10 bg-white/5 opacity-70 grayscale'
+          onClick={() => (dailyUnlocked ? onSelect(dailyCase) : onDailyLocked())}
+          className={`relative overflow-hidden rounded-[9px] border p-3 text-left ${
+            dailyUnlocked ? 'border-gold' : 'border-border opacity-[0.55]'
           } ${dailyCase.id === selectedId ? 'ring-1 ring-gold' : ''}`}
+          style={
+            dailyUnlocked
+              ? { background: 'linear-gradient(135deg,#2a2113,#1f2937)' }
+              : { background: '#111827' }
+          }
         >
           {dailyUnlocked && (
             <span
-              className="ink-stamp absolute -right-4 top-2 rotate-12 rounded border-2 border-gold px-2 py-0.5 text-[10px] text-gold"
               aria-hidden
+              className="absolute -right-6 top-[9px] rotate-[34deg] bg-stamp px-[26px] py-0.5 font-mono text-[9px] font-bold tracking-wider text-white"
             >
               {t('urgent', lang)}
             </span>
           )}
-          <div className="text-xs font-semibold uppercase tracking-wide text-gold">
-            ⚡ {t('dailyCase', lang)}
+          <div className="text-xs font-bold tracking-[0.5px] text-gold-text">
+            {t('dailyCase', lang)}
           </div>
-          <div className="mt-1 truncate pr-12 text-sm font-medium text-paper">
-            {loc(dailyCase.title, lang)}
+          <div className="mt-[7px] flex items-center justify-between gap-2">
+            <span className="font-mono text-[11px] font-semibold text-gold">
+              {formatCountdown(dailyMsRemaining)}
+            </span>
+            <span className="rounded-[5px] bg-gold px-[7px] py-0.5 text-[11px] font-bold text-gold-dark">
+              ×5
+            </span>
           </div>
-          {!dailyUnlocked && (
-            <div className="mt-1 text-xs text-paper/60">
-              {t('returnsIn', lang)} {formatCountdown(dailyMsRemaining)}
-            </div>
-          )}
         </button>
       )}
 
-      <div className="mt-auto space-y-4 pt-4">
-        <div>
-          <h2 className="mb-1 text-xs font-semibold uppercase tracking-widest text-paper/50">
-            {t('progress', lang)}
-          </h2>
-          <p className="text-sm text-paper/80">
-            {solved}/{total} {t('solved', lang)}
-          </p>
+      {/* Investigator progress */}
+      <div className="mt-auto rounded-[9px] border border-border bg-surface-2 p-[13px]">
+        <div className="flex items-baseline justify-between gap-2">
+          <span className="text-xs font-semibold text-[#d1d5db]">
+            {t('investigator', lang)}
+          </span>
+          <span className="text-xs font-bold text-accent">{rankTitle}</span>
         </div>
-        <div>
-          <h2 className="mb-1 text-xs font-semibold uppercase tracking-widest text-paper/50">
-            {t('language', lang)}
-          </h2>
-          <LanguageSelector lang={lang} onChange={onLanguage} />
+        <div className="mt-[9px] h-[7px] overflow-hidden rounded bg-surface">
+          <div
+            className="h-full rounded bg-accent transition-[width] duration-500"
+            style={{ width: `${Math.round(rank.progress * 100)}%` }}
+          />
+        </div>
+        <div className="mt-1.5 text-[10px] font-medium text-text-dim">
+          {rank.isMax || rank.xpForNext === null
+            ? `${xp} ${t('xpGained', lang)}`
+            : `${rank.xpIntoRank} / ${rank.xpForNext} ${t('xpToPromote', lang)}`}
         </div>
       </div>
     </aside>

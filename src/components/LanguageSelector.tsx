@@ -8,7 +8,7 @@ interface Props {
   onChange: (lang: Language) => void;
 }
 
-/** Native-language dropdown with flags, per design spec (sidebar + menu). */
+/** Native-language dropdown (name + code) per the mockup's archive look. */
 export function LanguageSelector({ lang, onChange }: Props) {
   const [open, setOpen] = useState(false);
   const current = LANGUAGE_LABELS[lang];
@@ -18,15 +18,14 @@ export function LanguageSelector({ lang, onChange }: Props) {
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="flex w-full items-center justify-between gap-2 rounded-md border border-white/10 bg-bg px-3 py-2.5 text-sm hover:border-white/30 transition-colors"
+        className="flex w-full items-center justify-between gap-2 rounded-lg border border-border bg-surface-2 px-3 py-2.5 text-xs font-semibold text-[#d1d5db] transition-colors hover:border-white/30"
         aria-label={t('language', lang)}
         aria-expanded={open}
       >
-        <span className="flex items-center gap-2">
-          <span className="text-base">{current.flag}</span>
-          <span>{current.native}</span>
+        <span>
+          {t('language', lang)} · {current.native}
         </span>
-        <span className="text-white/50">▾</span>
+        <span className="text-[11px] text-text-dim">▾</span>
       </button>
 
       <AnimatePresence>
@@ -36,28 +35,25 @@ export function LanguageSelector({ lang, onChange }: Props) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 6 }}
             transition={{ duration: 0.16, ease: 'easeOut' }}
-            className="absolute z-30 mt-1 w-full overflow-hidden rounded-md border border-white/10 bg-surface shadow-lift"
+            className="absolute z-30 mt-1 w-full overflow-hidden rounded-lg border border-border bg-surface-2 shadow-lift"
           >
             {SUPPORTED_LANGUAGES.map((code) => {
               const label = LANGUAGE_LABELS[code];
               const active = code === lang;
               return (
-                <li key={code}>
+                <li key={code} className="border-b border-surface last:border-0">
                   <button
                     type="button"
                     onClick={() => {
                       onChange(code);
                       setOpen(false);
                     }}
-                    className={`flex w-full items-center justify-between gap-2 px-3 py-2.5 text-sm transition-colors hover:bg-white/5 ${
-                      active ? 'text-accent' : 'text-paper/90'
+                    className={`flex w-full items-center justify-between gap-2 px-3 py-2.5 text-xs font-medium transition-colors hover:bg-surface ${
+                      active ? 'text-accent' : 'text-[#d1d5db]'
                     }`}
                   >
-                    <span className="flex items-center gap-2">
-                      <span className="text-base">{label.flag}</span>
-                      <span>{label.native}</span>
-                    </span>
-                    {active && <span aria-hidden>✓</span>}
+                    <span>{label.native}</span>
+                    <span className="text-text-dim">{code.toUpperCase()}</span>
                   </button>
                 </li>
               );

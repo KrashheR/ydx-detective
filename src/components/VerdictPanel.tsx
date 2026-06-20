@@ -9,30 +9,35 @@ interface Props {
   onReject: () => void;
 }
 
-/** Permanent twin-verdict panel: Approve (green) / Reject (red). */
+/** Dark verdict panel: prompt + twin payout buttons (Reject / Approve). */
 export function VerdictPanel({ lang, canApprove, onApprove, onReject }: Props) {
   return (
-    <div className="flex gap-3">
-      <button
-        type="button"
-        onClick={onApprove}
-        disabled={!canApprove}
-        title={canApprove ? undefined : t('reviewAllFirst', lang)}
-        className={`flex h-14 flex-1 items-center justify-center gap-2 rounded-md text-base font-semibold text-white transition-all active:scale-[0.98] ${
-          canApprove
-            ? 'bg-success hover:bg-success/90'
-            : 'cursor-not-allowed bg-success/30'
-        }`}
-      >
-        ✓ {t('approve', lang)}
-      </button>
-      <button
-        type="button"
-        onClick={onReject}
-        className="flex h-14 flex-1 items-center justify-center gap-2 rounded-md bg-danger text-base font-semibold text-white transition-all hover:bg-danger/90 active:scale-[0.98]"
-      >
-        ✕ {t('reject', lang)}
-      </button>
+    <div className="rounded-[10px] border border-border bg-surface p-4">
+      <p className="mb-3 text-center text-xs text-text-muted">
+        {t('verdictPrompt', lang)}
+      </p>
+      <div className="grid grid-cols-2 gap-3">
+        <button
+          type="button"
+          onClick={onReject}
+          className="h-[54px] rounded-[9px] bg-danger text-sm font-bold uppercase tracking-wide text-white transition-[filter] hover:brightness-110"
+        >
+          {t('rejectPayout', lang)}
+        </button>
+        <button
+          type="button"
+          onClick={onApprove}
+          disabled={!canApprove}
+          title={canApprove ? undefined : t('reviewAllFirst', lang)}
+          className={`h-[54px] rounded-[9px] text-sm font-bold uppercase tracking-wide text-white transition-[filter] ${
+            canApprove
+              ? 'bg-success hover:brightness-110'
+              : 'cursor-not-allowed bg-success/30'
+          }`}
+        >
+          {t('approvePayout', lang)}
+        </button>
+      </div>
     </div>
   );
 }

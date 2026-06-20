@@ -1,12 +1,20 @@
 import type { Language } from '../types';
 import type { LeaderboardRow } from '../services/yandexSDK';
 import { t } from '../i18n/ui';
+import { ACHIEVEMENTS } from '../data/achievements';
 
 interface Props {
   lang: Language;
   balance: number;
   accuracyPct: number;
   solvedCount: number;
+  /** Wrong verdicts — shown next to total cases in the accuracy card. */
+  errorsCount: number;
+  /** Consecutive-day streak — shown when active (> 1). */
+  streak: number;
+  /** Ids of unlocked achievements — drives the archive button count. */
+  unlockedAchievementIds: string[];
+  onOpenAchievements: () => void;
   /** Real Yandex leaderboard rows, or null when unavailable (offline/dev). */
   leaderboard: LeaderboardRow[] | null;
 }
@@ -24,6 +32,10 @@ export function RightSidebar({
   balance,
   accuracyPct,
   solvedCount,
+  errorsCount,
+  streak,
+  unlockedAchievementIds,
+  onOpenAchievements,
   leaderboard,
 }: Props) {
   const rows: LeaderboardRow[] =
@@ -39,60 +51,111 @@ export function RightSidebar({
       }));
 
   return (
-    <aside className="flex h-full w-full flex-col gap-6 overflow-y-auto bg-surface p-4">
-      <Metric label={t('balance', lang)}>
-        <span className="text-2xl font-bold text-paper">
-          ₽ {balance.toLocaleString()}
-        </span>
-      </Metric>
+    <aside className="flex h-full w-full flex-col gap-3.5 overflow-y-auto rounded-xl border border-border bg-surface p-4 md:p-[18px]">
+      <div className="text-[11px] font-semibold tracking-[1.5px] text-text-dim">
+        {t('analytics', lang)}
+      </div>
 
-      <Metric label={t('accuracy', lang)}>
-        <div className="mt-1 h-2.5 w-full overflow-hidden rounded-full bg-white/10">
+      {/* Company balance */}
+      <Card>
+        <div className="text-[11px] font-medium text-text-dim">
+          {t('companyBalance', lang)}
+        </div>
+        <div className="mt-1 font-mono text-[21px] font-bold text-success">
+          ₽ {balance.toLocaleString('ru-RU')}
+        </div>
+      </Card>
+
+      {/* Investigation accuracy */}
+      <Card>
+        <div className="flex items-baseline justify-between">
+          <span className="text-[11px] font-medium text-text-dim">
+            {t('investigationAccuracy', lang)}
+          </span>
+          <span className="font-mono text-[18px] font-bold text-accent">
+            {accuracyPct}%
+          </span>
+        </div>
+        <div className="mt-[9px] h-[7px] overflow-hidden rounded bg-surface">
           <div
             className="h-full bg-accent transition-[width] duration-500"
             style={{ width: `${accuracyPct}%` }}
           />
         </div>
-        <span className="mt-1 block text-sm text-paper/70">
-          {accuracyPct}% · {solvedCount}
-        </span>
-      </Metric>
+        <div className="mt-1.5 text-[10px] font-medium text-text-dim">
+          {solvedCount} {t('casesWord', lang)} · {errorsCount} {t('errorsWord', lang)}
+        </div>
+      </Card>
 
-      <Metric label={t('leaderboard', lang)}>
-        <ol className="mt-1 space-y-1.5">
+      {/* Daily streak (kept from extended feature set) */}
+      {streak > 1 && (
+        <Card>
+          <div className="flex items-center gap-1.5 text-sm font-semibold text-gold">
+            <span aria-hidden>🔥</span>
+            <span>
+              {t('streak', lang)}: {streak} {t('streakDays', lang)}
+            </span>
+          </div>
+        </Card>
+      )}
+
+      {/* Achievements archive button */}
+      <button
+        type="button"
+        onClick={onOpenAchievements}
+        className="flex items-center justify-between rounded-[10px] border border-border bg-surface-2 px-3.5 py-3 text-left text-sm text-[#d1d5db] transition-colors hover:border-white/25"
+      >
+        <span className="flex items-center gap-2">
+          <span aria-hidden>🏅</span>
+          {t('achievements', lang)}
+        </span>
+        <span className="font-mono text-text-dim">
+          {unlockedAchievementIds.length} / {ACHIEVEMENTS.length}
+        </span>
+      </button>
+
+      {/* Weekly leaderboard */}
+      <Card>
+        <div className="mb-2 text-[11px] font-semibold tracking-[1px] text-text-dim">
+          {t('leaderboardWeek', lang)}
+        </div>
+        <ol>
           {rows.map((row) => (
             <li
               key={`${row.rank}-${row.name}`}
-              className={`flex items-center justify-between gap-2 rounded px-2 py-1 text-sm ${
-                row.isCurrentPlayer ? 'bg-accent/15 text-paper' : 'text-paper/75'
-              }`}
+              className="flex items-center gap-2.5 border-b border-surface py-[7px] last:border-0"
             >
-              <span className="flex min-w-0 items-center gap-2">
-                <span className="tabular-nums text-paper/50">{row.rank}.</span>
-                {row.avatar && (
-                  <img
-                    src={row.avatar}
-                    alt=""
-                    className="h-5 w-5 shrink-0 rounded-full object-cover"
-                  />
-                )}
-                <span className="truncate">{row.name}</span>
+              <span className="w-5 font-mono text-xs font-bold text-text-dim">
+                {String(row.rank).padStart(2, '0')}
               </span>
-              <span className="tabular-nums">{row.score.toLocaleString()}</span>
+              {row.avatar && (
+                <img
+                  src={row.avatar}
+                  alt=""
+                  className="h-5 w-5 shrink-0 rounded-full object-cover"
+                />
+              )}
+              <span
+                className={`min-w-0 flex-1 truncate text-xs font-semibold ${
+                  row.isCurrentPlayer ? 'text-accent' : 'text-[#e5e7eb]'
+                }`}
+              >
+                {row.name}
+              </span>
+              <span className="font-mono text-xs text-text-muted">
+                {row.score.toLocaleString('ru-RU')}
+              </span>
             </li>
           ))}
         </ol>
-      </Metric>
+      </Card>
     </aside>
   );
 }
 
-function Metric({ label, children }: { label: string; children: React.ReactNode }) {
+function Card({ children }: { children: React.ReactNode }) {
   return (
-    <div>
-      <h2 className="mb-1 text-xs font-semibold uppercase tracking-widest text-paper/50">
-        {label}
-      </h2>
+    <div className="rounded-[10px] border border-border bg-surface-2 p-3.5">
       {children}
     </div>
   );

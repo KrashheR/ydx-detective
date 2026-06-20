@@ -1,23 +1,33 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import type { Evidence, Language } from '../types';
 import { loc, t } from '../i18n/ui';
-import { EVIDENCE_ICON } from './icons';
+import { EVIDENCE_TAG_KEY } from './icons';
 
 interface Props {
   evidence: Evidence | null;
   lang: Language;
   stamped: boolean;
+  /** True if a paid "Inspector Note" hint revealed this card's true status. */
+  revealed: boolean;
   onToggle: () => void;
   onClose: () => void;
 }
 
 /** Full-screen evidence viewer with the "Mark as Contradiction" toggle. */
-export function StampModal({ evidence, lang, stamped, onToggle, onClose }: Props) {
+export function StampModal({
+  evidence,
+  lang,
+  stamped,
+  revealed,
+  onToggle,
+  onClose,
+}: Props) {
   return (
     <AnimatePresence>
       {evidence && (
         <motion.div
-          className="fixed inset-0 z-40 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm"
+          className="fixed inset-0 z-40 flex items-center justify-center p-5"
+          style={{ background: 'rgba(8,11,17,.8)' }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -25,63 +35,90 @@ export function StampModal({ evidence, lang, stamped, onToggle, onClose }: Props
           onClick={onClose}
         >
           <motion.div
-            className="paper-sheet relative w-full max-w-md p-6"
-            initial={{ scale: 0.96, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.96, opacity: 0 }}
-            transition={{ duration: 0.22, ease: 'easeOut' }}
+            className="relative flex max-h-full w-full max-w-[420px] flex-col overflow-auto bg-paper shadow-modal"
+            style={{ borderRadius: 9 }}
+            initial={{ opacity: 0, y: 16, scale: 0.985 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 16, scale: 0.985 }}
+            transition={{ duration: 0.28, ease: [0.2, 0.9, 0.3, 1] }}
             onClick={(e) => e.stopPropagation()}
           >
-            <button
-              type="button"
-              onClick={onClose}
-              className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full text-ink/60 hover:bg-black/5"
-              aria-label="Close"
-            >
-              ✕
-            </button>
-
-            <div className="mb-1 flex items-center gap-2 text-sm uppercase tracking-wide text-ink/50">
-              <span aria-hidden>{EVIDENCE_ICON[evidence.type]}</span>
-              {evidence.type.replace('_', ' ')}
+            {/* Dark folder-edge header */}
+            <div className="flex items-center justify-between gap-2 bg-folder-edge px-4 py-3">
+              <div className="flex min-w-0 items-center gap-2.5">
+                <span className="rounded bg-white/[0.18] px-1.5 py-[3px] font-mono text-[10px] font-bold uppercase tracking-wider text-white">
+                  {t(EVIDENCE_TAG_KEY[evidence.type], lang)}
+                </span>
+                <span className="truncate text-[13px] font-semibold text-white">
+                  {loc(evidence.title, lang)}
+                </span>
+              </div>
+              <button
+                type="button"
+                onClick={onClose}
+                aria-label="Close"
+                className="px-1.5 text-lg leading-none text-white/85 hover:text-white"
+              >
+                ✕
+              </button>
             </div>
-            <h3 className="mb-4 pr-8 text-xl font-semibold text-ink">
-              {loc(evidence.title, lang)}
-            </h3>
 
-            {/* Enlarged document body + ink stamp overlay */}
-            <div className="relative min-h-[160px] rounded-sm border border-black/10 bg-white p-4">
+            {/* Document body + ink stamp overlay */}
+            <div className="relative p-[18px]">
+              {/* Inspector-note reveal: the card's true status, bought with a hint */}
+              {revealed && (
+                <div
+                  className={`mb-3 rounded-md px-3 py-2 text-center font-mono text-xs font-semibold uppercase tracking-wide ${
+                    evidence.isContradiction
+                      ? 'bg-stamp/10 text-stamp'
+                      : 'bg-success/10 text-success'
+                  }`}
+                >
+                  {evidence.isContradiction
+                    ? `⚠ ${t('revealedContradiction', lang)}`
+                    : `✓ ${t('revealedClean', lang)}`}
+                </div>
+              )}
+
               <EvidenceBody evidence={evidence} lang={lang} />
 
-              <AnimatePresence>
-                {stamped && (
-                  <motion.div
-                    aria-hidden
-                    className="pointer-events-none absolute inset-0 flex items-center justify-center"
-                    initial={{ scale: 1.6, opacity: 0, rotate: -8 }}
-                    animate={{ scale: 1, opacity: 1, rotate: -8 }}
-                    exit={{ scale: 1.3, opacity: 0 }}
-                    transition={{ type: 'spring', stiffness: 420, damping: 18 }}
+              {stamped && (
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute left-1/2 top-[42%]"
+                  style={{ animation: 'stampIn .45s cubic-bezier(.2,1.3,.35,1)' }}
+                >
+                  <div
+                    className="rounded-[5px] border-4 border-stamp px-[18px] py-2 text-center font-mono text-[22px] font-semibold uppercase tracking-wide text-stamp"
+                    style={{
+                      transform: 'translate(-50%,-50%) rotate(-13deg)',
+                      opacity: 0.88,
+                      background: 'rgba(255,255,255,.04)',
+                    }}
                   >
-                    <span className="ink-stamp rounded-md border-4 border-danger px-4 py-2 text-2xl text-danger">
-                      ПРОТИВОРЕЧИЕ
-                    </span>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                    {t('contradiction', lang)}
+                    <div className="mt-0.5 text-[10px] tracking-[4px]">
+                      CONTRADICTION
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
 
-            <button
-              type="button"
-              onClick={onToggle}
-              className={`mt-5 flex h-14 w-full items-center justify-center gap-2 rounded-md border-2 text-base font-bold uppercase tracking-wide transition-colors ${
-                stamped
-                  ? 'border-danger bg-danger text-white'
-                  : 'border-danger bg-transparent text-danger hover:bg-danger/5'
-              }`}
-            >
-              🔴 {stamped ? t('unmarkContradiction', lang) : t('markContradiction', lang)}
-            </button>
+            {/* Mark / unmark toggle */}
+            <div className="px-[18px] pb-[18px]">
+              <button
+                type="button"
+                onClick={onToggle}
+                className={`h-[50px] w-full rounded-[9px] border-2 border-stamp text-[13px] font-bold uppercase tracking-wide transition-all ${
+                  stamped ? 'bg-stamp text-white' : 'bg-transparent text-stamp'
+                }`}
+              >
+                {stamped
+                  ? t('contradictionMarked', lang)
+                  : t('markAsContradiction', lang)}
+              </button>
+            </div>
           </motion.div>
         </motion.div>
       )}
@@ -89,20 +126,88 @@ export function StampModal({ evidence, lang, stamped, onToggle, onClose }: Props
   );
 }
 
+/** Renders the document body styled to its evidence type (data-driven). */
 function EvidenceBody({ evidence, lang }: { evidence: Evidence; lang: Language }) {
   const content = loc(evidence.content, lang);
-  if (Array.isArray(content)) {
+  const lines = Array.isArray(content) ? content : [content];
+
+  // GPS / tracker route — map placeholder + a mono coordinate table.
+  if (evidence.type === 'gps') {
     return (
-      <ul className="space-y-1 font-mono text-sm text-ink/90">
-        {content.map((line, i) => (
-          <li key={i} className="border-b border-dashed border-black/10 pb-1">
-            {line}
-          </li>
-        ))}
-      </ul>
+      <>
+        <div
+          className="flex h-[130px] items-center justify-center overflow-hidden rounded-md border border-[#c2c7ce]"
+          style={{
+            background:
+              'repeating-linear-gradient(45deg,#dfe3e8 0 8px,#d6dbe1 8px 16px)',
+          }}
+        >
+          <span className="font-mono text-[11px] text-ink/50">[ GPS ]</span>
+        </div>
+        <div className="mt-3 font-mono text-xs text-ink/90">
+          {lines.map((line, i) => (
+            <div
+              key={i}
+              className="flex justify-between gap-3 border-b border-black/10 py-[5px] last:border-0"
+            >
+              <span>{line}</span>
+            </div>
+          ))}
+        </div>
+      </>
     );
   }
+
+  // Photo / camera still — polaroid placeholder + serif caption.
+  if (evidence.type === 'photo' || evidence.type === 'camera_recording') {
+    return (
+      <div
+        className="rounded-md border border-black/10 bg-white px-3 pt-3 shadow-sm"
+        style={{ transform: 'rotate(-1.5deg)' }}
+      >
+        <div
+          className="flex h-[150px] items-center justify-center rounded-sm"
+          style={{
+            background:
+              'repeating-linear-gradient(45deg,#cfd3d8 0 9px,#c4c8cd 9px 18px)',
+          }}
+        >
+          <span className="font-mono text-[11px] text-ink/50">[ 📷 ]</span>
+        </div>
+        <div className="px-1 pb-3.5 pt-2.5 font-serif text-[13px] text-ink/80">
+          {lines.join(' ')}
+        </div>
+      </div>
+    );
+  }
+
+  // Witness statement — serif quote with a stamp-coloured rule.
+  if (evidence.type === 'witness_statement') {
+    return (
+      <div className="border-l-[3px] border-stamp bg-white px-4 py-3">
+        {lines.map((line, i) => (
+          <p
+            key={i}
+            className="mb-1.5 font-serif text-[15px] leading-relaxed text-ink/90 last:mb-0"
+          >
+            {line}
+          </p>
+        ))}
+      </div>
+    );
+  }
+
+  // Document / usage log — archive printout in a dashed mono box.
   return (
-    <p className="font-serif text-[17px] leading-relaxed text-ink/90">{content}</p>
+    <div className="rounded-md border border-dashed border-[#c7c2b6] bg-white p-4 font-mono text-[12.5px] leading-relaxed text-ink">
+      {lines.map((line, i) => (
+        <div
+          key={i}
+          className="border-b border-dashed border-black/10 py-1 last:border-0"
+        >
+          {line}
+        </div>
+      ))}
+    </div>
   );
 }

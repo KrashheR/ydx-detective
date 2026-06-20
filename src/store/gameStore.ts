@@ -26,6 +26,9 @@ import {
   totalContradictions,
   classifyStamps,
 } from '../engine/rewardEngine';
+import { evaluateRank, evaluateXpGain } from '../engine/rankEngine';
+import { evaluateStreak } from '../engine/streakEngine';
+import { evaluateNewUnlocks } from '../engine/achievementsEngine';
 import {
   flushSync,
   loadSnapshot,
@@ -52,6 +55,27 @@ import type {
 
 /* ----------------------------- Store contract ---------------------------- */
 
+/**
+ * Transient outcome of the most recent verdict, surfaced to the ResultSheet.
+ * Bundles the pure reward breakdown with the meta-progression deltas (XP gained
+ * and any rank promotion) the store computed alongside it.
+ */
+export type VerdictOutcome = RewardBreakdown & {
+  caseId: string;
+  xpGained: number;
+  /** Rank id the player was promoted *to* this case, or null if no promotion. */
+  promotedToRankId: string | null;
+  /** Achievement ids unlocked by closing this case (for the result sheet). */
+  newAchievementIds: string[];
+};
+
+/**
+ * Which hint the player is buying for the active case. Both reveal one card's
+ * true status; `note` is paid with balance, `canvass` is unlocked by a rewarded
+ * video. (See GAME_CONFIG.hints.)
+ */
+export type HintKind = 'note' | 'canvass';
+
 export interface GameStoreState {
   /* ---- persisted slice ---- */
   stats: PlayerStats;
@@ -63,7 +87,7 @@ export interface GameStoreState {
   /** True once cloud/local hydration has completed. */
   isHydrated: boolean;
   /** Result of the most recently submitted verdict (drives ResultScreen). */
-  lastResult: (RewardBreakdown & { caseId: string }) | null;
+  lastResult: VerdictOutcome | null;
 
   /* ---- lifecycle ---- */
   /** Boot the engine: init SDK, wire pause guard, hydrate snapshot. */
@@ -76,6 +100,14 @@ export interface GameStoreState {
   startCase: (caseData: Case) => void;
   markEvidenceAsViewed: (id: string) => void;
   toggleEvidenceStamp: (id: string) => void;
+  /**
+   * Reveal the next unrevealed evidence card's true status for the active case.
+   *   • `note`    — charges `balance` (20% of the claim); no-op if unaffordable.
+   *   • `canvass` — shows a rewarded Yandex video, revealing for free once watched.
+   * Returns false when there is nothing to do (wrong/absent case, all revealed,
+   * or `note` requested without enough balance).
+   */
+  buyHint: (caseData: Case, kind: HintKind) => boolean;
 
   /* ---- verdict & economy ---- */
   submitVerdict: (caseData: Case, decision: Decision) => RewardBreakdown;
@@ -157,6 +189,7 @@ export const useGameStore = create<GameStoreState>((set, get) => {
           caseId: caseData.id,
           selectedEvidenceIds: [],
           viewedEvidenceIds: [],
+          revealedEvidenceIds: [],
           startedAtServerMs: getServerTimeMs(),
         },
         lastResult: null,
@@ -192,56 +225,151 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       persist();
     },
 
+    buyHint(caseData, kind) {
+      const { session, stats } = get();
+      if (!session || session.caseId !== caseData.id) return false;
+
+      // Both hints reveal the next not-yet-revealed card (in case order).
+      const nextId =
+        caseData.evidences.find(
+          (e) => !session.revealedEvidenceIds.includes(e.id),
+        )?.id ?? null;
+      if (!nextId) return false; // every card already revealed
+
+      // `charge` is the amount to deduct (0 on the ad-funded path).
+      const reveal = (charge: number) => {
+        set((s) => {
+          if (!s.session || s.session.caseId !== caseData.id) return s;
+          if (s.session.revealedEvidenceIds.includes(nextId)) return s;
+          return {
+            stats: charge
+              ? { ...s.stats, balance: s.stats.balance - charge }
+              : s.stats,
+            session: {
+              ...s.session,
+              revealedEvidenceIds: [...s.session.revealedEvidenceIds, nextId],
+            },
+          };
+        });
+        persist();
+      };
+
+      if (kind === 'note') {
+        const cost = Math.round(
+          caseData.claimAmount * GAME_CONFIG.hints.inspectorNoteClaimPct,
+        );
+        if (stats.balance < cost) return false; // unaffordable — UI gates this
+        reveal(cost);
+        return true;
+      }
+
+      // kind === 'canvass' → rewarded Yandex video; reveal for free once watched.
+      // (Offline/dev: showRewardedAd grants immediately so it stays playable.)
+      showRewardedAd(() => reveal(0));
+      return true;
+    },
+
     submitVerdict(caseData, decision) {
       const { session, stats } = get();
       const selected = session?.selectedEvidenceIds ?? [];
 
-      // Pure scoring — see rewardEngine. Daily ×5 handled inside.
-      const breakdown = evaluateReward(caseData, decision, selected);
-      const { falseStamps } = classifyStamps(caseData, selected);
+      const total = totalContradictions(caseData);
+      const { correct, falseStamps } = classifyStamps(caseData, selected);
+      const proofRatio = total === 0 ? 1 : correct / total;
 
+      // The rank bonus reflects the player's standing *when they solved it*, so
+      // it is read from the rank held before this case's XP is added.
+      const rankBefore = evaluateRank(stats.xp);
+
+      // Continue (or reset) the daily streak against authoritative server time.
+      const nowServerDay = Math.floor(
+        getServerTimeMs() / GAME_CONFIG.daily.cooldownMs,
+      );
+      const streak = evaluateStreak(
+        stats.streakCount,
+        stats.lastPlayedServerDay,
+        nowServerDay,
+      );
+
+      // Pure scoring — see rewardEngine. Daily ×5, rank & streak bonus are inputs.
+      const breakdown = evaluateReward(caseData, decision, selected, {
+        rankBonusPct: rankBefore.rewardBonusPct,
+        streakBonusPct: streak.multiplierPct,
+      });
+
+      // Career XP, then detect whether this case crossed a rank threshold.
+      const xpGained = evaluateXpGain({
+        difficulty: caseData.difficulty,
+        verdictCorrect: breakdown.verdictCorrect,
+        proofRatio,
+        isDaily: caseData.type === 'daily',
+      });
       const result: CaseResult = {
         caseId: caseData.id,
         decision,
         verdictCorrect: breakdown.verdictCorrect,
-        correctlyMarkedContradictions:
-          totalContradictions(caseData) === 0
-            ? 0
-            : selected.filter(
-                (id) =>
-                  caseData.evidences.find((e) => e.id === id)?.isContradiction,
-              ).length,
-        totalContradictions: totalContradictions(caseData),
+        correctlyMarkedContradictions: total === 0 ? 0 : correct,
+        totalContradictions: total,
         falseStamps,
         rewardEarned: breakdown.total,
         closedAtServerMs: getServerTimeMs(),
       };
 
-      const newBalance = stats.balance + breakdown.total;
-      const isBankrupt = newBalance <= GAME_CONFIG.economy.bankruptcyThreshold;
+      // Post-case stats *before* achievement bonuses — what predicates evaluate.
+      const baseStats: PlayerStats = {
+        ...stats,
+        balance: stats.balance + breakdown.total,
+        xp: stats.xp + xpGained,
+        streakCount: streak.streak,
+        lastPlayedServerDay: nowServerDay,
+        completedCaseIds: stats.completedCaseIds.includes(caseData.id)
+          ? stats.completedCaseIds
+          : [...stats.completedCaseIds, caseData.id],
+        results: { ...stats.results, [caseData.id]: result },
+        // Record daily claim against authoritative server time for gating.
+        lastDailyClaimServerMs:
+          caseData.type === 'daily'
+            ? result.closedAtServerMs
+            : stats.lastDailyClaimServerMs,
+      };
 
-      set((s) => ({
-        stats: {
-          ...s.stats,
-          balance: newBalance,
-          isBankrupt,
-          completedCaseIds: s.stats.completedCaseIds.includes(caseData.id)
-            ? s.stats.completedCaseIds
-            : [...s.stats.completedCaseIds, caseData.id],
-          results: { ...s.stats.results, [caseData.id]: result },
-          // Record daily claim against authoritative server time for gating.
-          lastDailyClaimServerMs:
-            caseData.type === 'daily'
-              ? result.closedAtServerMs
-              : s.stats.lastDailyClaimServerMs,
+      // Achievements newly satisfied by this case grant one-time XP + currency.
+      const unlocks = evaluateNewUnlocks({ stats: baseStats, result, caseData });
+      const bonusXp = unlocks.reduce((n, a) => n + a.xpBonus, 0);
+      const bonusRub = unlocks.reduce((n, a) => n + a.rubBonus, 0);
+
+      const finalXp = baseStats.xp + bonusXp;
+      const finalBalance = baseStats.balance + bonusRub;
+      // Promotion accounts for achievement bonus XP too (it may tip a threshold).
+      const rankAfter = evaluateRank(finalXp);
+      const promotedToRankId =
+        rankAfter.index > rankBefore.index ? rankAfter.id : null;
+
+      const finalStats: PlayerStats = {
+        ...baseStats,
+        xp: finalXp,
+        balance: finalBalance,
+        isBankrupt: finalBalance <= GAME_CONFIG.economy.bankruptcyThreshold,
+        unlockedAchievementIds: unlocks.length
+          ? [...baseStats.unlockedAchievementIds, ...unlocks.map((a) => a.id)]
+          : baseStats.unlockedAchievementIds,
+      };
+
+      set({
+        stats: finalStats,
+        lastResult: {
+          ...breakdown,
+          caseId: caseData.id,
+          xpGained,
+          promotedToRankId,
+          newAchievementIds: unlocks.map((a) => a.id),
         },
-        lastResult: { ...breakdown, caseId: caseData.id },
-      }));
+      });
 
       // Case closure is a critical moment → immediate (un-debounced) cloud write.
       persist(true);
       // Publish the new balance to the global leaderboard (best-effort).
-      void submitLeaderboardScore(newBalance);
+      void submitLeaderboardScore(finalBalance);
       return breakdown;
     },
 

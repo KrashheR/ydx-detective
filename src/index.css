@@ -10,25 +10,69 @@
     height: 100%;
   }
   body {
-    @apply bg-bg text-paper font-sans antialiased;
+    @apply bg-bg font-sans antialiased;
+    color: #e5e7eb;
+  }
+
+  /* ---------------------------------------------------------------------- *
+   * Folder theme tokens. The mockup ships two looks switchable by a single
+   * root class (`theme-manila` warm archive / `theme-dossier` corporate).
+   * Values are space-separated RGB channels so Tailwind's /opacity works.
+   * ---------------------------------------------------------------------- */
+  :root,
+  .theme-manila {
+    --folder: 194 161 97; /* #c2a161 */
+    --folder-edge: 138 106 53; /* #8a6a35 */
+    --paper: 245 241 232; /* #f5f1e8 */
+    --accent: 59 130 246; /* #3b82f6 */
+    --stamp: 180 35 31; /* #b4231f */
+    --folder-ink: #1a1205;
+    --folder-ink-soft: rgba(0, 0, 0, 0.55);
+  }
+  .theme-dossier {
+    --folder: 58 68 82; /* #3a4452 */
+    --folder-edge: 35 44 55; /* #232c37 */
+    --paper: 243 244 246; /* #f3f4f6 */
+    --accent: 37 99 235; /* #2563eb */
+    --stamp: 220 38 38; /* #dc2626 */
+    --folder-ink: #f3f4f6;
+    --folder-ink-soft: rgba(243, 244, 246, 0.6);
+  }
+
+  /* Custom scrollbars to match the dark desk. */
+  ::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #374151;
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
   }
 }
 
 @layer components {
-  /* A physical sheet of paper on the detective's desk. */
+  /* A physical sheet of document paper on the detective's desk. */
   .paper-sheet {
-    @apply bg-paper text-ink rounded-sm shadow-folder;
-    background-image: radial-gradient(
-      circle at 20% 0%,
-      rgba(255, 255, 255, 0.6),
-      transparent 60%
-    );
+    @apply bg-paper text-ink;
+    border-radius: 7px;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45);
   }
 
   /* Retro ink stamp text. */
   .ink-stamp {
-    @apply font-sans font-extrabold uppercase tracking-widest select-none;
-    text-shadow: 0 0 1px currentColor;
+    @apply font-mono font-semibold uppercase tracking-wider select-none;
+  }
+
+  /* Subtle paper grain printed onto folder covers. */
+  .paper-grain {
+    background-image: repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.03) 0 2px,
+      transparent 2px 7px
+    );
   }
 }
 
