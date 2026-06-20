@@ -51,6 +51,8 @@ interface YandexLeaderboards {
 interface YandexSDK {
   getPlayer(options?: { scopes?: boolean }): Promise<YandexPlayer>;
   getLeaderboards(): Promise<YandexLeaderboards>;
+  /** Player/UI locale, e.g. 'ru', 'en', 'tr'. Source of the auto language. */
+  environment: { i18n: { lang: string } };
   serverTime(): number; // epoch ms, authoritative
   adv: {
     showFullscreenAdv(opts: { callbacks?: AdvCallbacks }): void;
@@ -168,6 +170,20 @@ export function getServerTimeMs(): number {
     }
   }
   return Date.now();
+}
+
+/**
+ * The player's Yandex locale (`environment.i18n.lang`), e.g. 'ru' / 'en' / 'tr'.
+ * Returns null when the SDK is unavailable (offline) or the field is missing, so
+ * callers can fall back to the default language. The store maps this onto the
+ * set of supported languages.
+ */
+export function getYandexLang(): string | null {
+  try {
+    return sdk?.environment?.i18n?.lang ?? null;
+  } catch {
+    return null;
+  }
 }
 
 /* ------------------------------ Cloud saves ------------------------------ */

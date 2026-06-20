@@ -13,6 +13,7 @@ interface Props {
   session: ActiveSession | null;
   lang: Language;
   canApprove: boolean;
+  canReject: boolean;
   /** Spendable balance — gates whether a hint is bought with cash or an ad. */
   balance: number;
   onOpenEvidence: (id: string) => void;
@@ -30,6 +31,7 @@ export function CaseFile({
   session,
   lang,
   canApprove,
+  canReject,
   balance,
   onOpenEvidence,
   onBuyHint,
@@ -262,6 +264,7 @@ export function CaseFile({
         <VerdictPanel
           lang={lang}
           canApprove={canApprove}
+          canReject={canReject}
           onApprove={onApprove}
           onReject={handleReject}
         />

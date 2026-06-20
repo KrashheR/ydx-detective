@@ -104,8 +104,14 @@ function localWrite(snapshot: PersistedState): void {
 /**
  * Resolve the authoritative starting snapshot. Cloud wins when present (it is
  * cross-device); otherwise LocalStorage; otherwise a fresh default.
+ *
+ * `isNew` is true only when no prior save existed anywhere (a first-time player),
+ * which is the store's signal to seed the language from the Yandex locale.
  */
-export async function loadSnapshot(): Promise<PersistedState> {
+export async function loadSnapshot(): Promise<{
+  snapshot: PersistedState;
+  isNew: boolean;
+}> {
   const local = localRead();
 
   if (canUseCloud()) {
@@ -114,14 +120,16 @@ export async function loadSnapshot(): Promise<PersistedState> {
       if (cloud) {
         // Cloud is source of truth across devices; refresh local cache.
         localWrite(cloud);
-        return cloud;
+        return { snapshot: cloud, isNew: false };
       }
     } catch {
       /* Network hiccup — fall back to local. */
     }
   }
 
-  return local ?? makeDefaultSnapshot();
+  return local
+    ? { snapshot: local, isNew: false }
+    : { snapshot: makeDefaultSnapshot(), isNew: true };
 }
 
 /* --------------------------------- Sync ---------------------------------- */

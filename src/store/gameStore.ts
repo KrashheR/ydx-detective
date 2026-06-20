@@ -37,21 +37,38 @@ import {
 } from '../services/persistence';
 import {
   getServerTimeMs,
+  getYandexLang,
   initYandex,
   onPauseChange,
   showRewardedAd,
   submitLeaderboardScore,
 } from '../services/yandexSDK';
-import type {
-  ActiveSession,
-  Case,
-  CaseResult,
-  Decision,
-  Language,
-  PersistedState,
-  PlayerStats,
-  RewardBreakdown,
+import {
+  SUPPORTED_LANGUAGES,
+  type ActiveSession,
+  type Case,
+  type CaseResult,
+  type Decision,
+  type Language,
+  type PersistedState,
+  type PlayerStats,
+  type RewardBreakdown,
 } from '../types';
+
+/**
+ * Map the Yandex locale onto a supported game language. Yandex reports a plain
+ * 2-letter code (occasionally region-tagged like 'pt-br'); we match the leading
+ * subtag and return null for anything we don't ship, so the caller keeps the
+ * default language.
+ */
+function detectYandexLanguage(): Language | null {
+  const raw = getYandexLang();
+  if (!raw) return null;
+  const code = raw.toLowerCase().split('-')[0] ?? '';
+  return (SUPPORTED_LANGUAGES as readonly string[]).includes(code)
+    ? (code as Language)
+    : null;
+}
 
 /* ----------------------------- Store contract ---------------------------- */
 
@@ -165,9 +182,18 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       onPauseChange((paused) => get().setPaused(paused));
 
       // 3) Hydrate from cloud (preferred) or LocalStorage.
-      const snapshot = await loadSnapshot();
+      const { snapshot, isNew } = await loadSnapshot();
+
+      // 4) First-time players inherit their Yandex UI language; returning players
+      //    keep whatever they last chose (persisted in the save).
+      let stats = snapshot.stats;
+      if (isNew) {
+        const detected = detectYandexLanguage();
+        if (detected) stats = { ...stats, language: detected };
+      }
+
       set({
-        stats: snapshot.stats,
+        stats,
         session: snapshot.session,
         isHydrated: true,
       });
@@ -427,6 +453,8 @@ export function selectCaseInvestigationGate(
 
   return {
     canApprove: allViewed, // approve only after studying the whole file
-    canReject: hasStampedContradiction || allViewed,
+    // Reject must be *justified*: enabled only once at least one contradiction
+    // has been stamped. A full review alone never unlocks an unproven rejection.
+    canReject: hasStampedContradiction,
   };
 }

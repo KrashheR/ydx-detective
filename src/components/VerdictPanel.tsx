@@ -4,13 +4,20 @@ import { t } from '../i18n/ui';
 interface Props {
   lang: Language;
   canApprove: boolean;
-  /** Reject stays clickable; the prompt is shown by the handler when unproven. */
+  /** Reject is gated on justification: disabled until a contradiction is stamped. */
+  canReject: boolean;
   onApprove: () => void;
   onReject: () => void;
 }
 
 /** Dark verdict panel: prompt + twin payout buttons (Reject / Approve). */
-export function VerdictPanel({ lang, canApprove, onApprove, onReject }: Props) {
+export function VerdictPanel({
+  lang,
+  canApprove,
+  canReject,
+  onApprove,
+  onReject,
+}: Props) {
   return (
     <div className="rounded-[10px] border border-border bg-surface p-4">
       <p className="mb-3 text-center text-xs text-text-muted">
@@ -20,7 +27,13 @@ export function VerdictPanel({ lang, canApprove, onApprove, onReject }: Props) {
         <button
           type="button"
           onClick={onReject}
-          className="h-[54px] rounded-[9px] bg-danger text-sm font-bold uppercase tracking-wide text-white transition-[filter] hover:brightness-110"
+          disabled={!canReject}
+          title={canReject ? undefined : t('rejectNeedsProof', lang)}
+          className={`h-[54px] rounded-[9px] text-sm font-bold uppercase tracking-wide text-white transition-[filter] ${
+            canReject
+              ? 'bg-danger hover:brightness-110'
+              : 'cursor-not-allowed bg-danger/30'
+          }`}
         >
           {t('rejectPayout', lang)}
         </button>

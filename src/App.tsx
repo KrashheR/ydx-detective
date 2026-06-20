@@ -31,7 +31,7 @@ import { formatCountdown } from './components/icons';
  * Folder visual theme. The mockup ships two looks; manila (warm archive) is the
  * default. Switch to 'dossier' for the corporate look — both are wired in CSS.
  */
-const FOLDER_LOOK: 'manila' | 'dossier' = 'manila';
+const FOLDER_LOOK: 'manila' | 'dossier' = 'dossier';
 
 export default function App() {
   const store = useGameStore();
@@ -191,6 +191,7 @@ export default function App() {
               session={session}
               lang={lang}
               canApprove={gate.canApprove}
+              canReject={gate.canReject}
               balance={stats.balance}
               onOpenEvidence={handleOpenEvidence}
               onBuyHint={(kind) => store.buyHint(selectedCase, kind)}
