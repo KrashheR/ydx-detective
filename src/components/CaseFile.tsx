@@ -8,6 +8,7 @@ import { formatCaseLabel, tDifficulty } from "../utils/caseDisplay";
 import { asset } from "../utils/asset";
 import { EvidenceCard } from "./EvidenceCard";
 import { VerdictPanel } from "./VerdictPanel";
+import { Tooltip } from "./Tooltip";
 
 interface Props {
   caseData: Case;
@@ -15,6 +16,12 @@ interface Props {
   lang: Language;
   canApprove: boolean;
   canReject: boolean;
+  /** Investigation budget for this case, or null if unlimited. */
+  budget: number | null;
+  /** Opens left before the budget is spent, or null if unlimited. */
+  opensRemaining: number | null;
+  /** True once a budgeted case has no opens left. */
+  budgetExhausted: boolean;
   /** Spendable balance — gates whether a hint is bought with cash or an ad. */
   balance: number;
   onOpenEvidence: (id: string) => void;
@@ -33,6 +40,9 @@ export function CaseFile({
   lang,
   canApprove,
   canReject,
+  budget,
+  opensRemaining,
+  budgetExhausted,
   balance,
   onOpenEvidence,
   onBuyHint,
@@ -146,28 +156,46 @@ export function CaseFile({
   /* ---------------------------------- Evidence grid ------------------------- */
   const evidence = (
     <div className="grid grid-cols-2 gap-3">
-      {caseData.evidences.map((ev) => (
-        <EvidenceCard
-          key={ev.id}
-          evidence={ev}
-          lang={lang}
-          viewed={session?.viewedEvidenceIds.includes(ev.id) ?? false}
-          stamped={session?.selectedEvidenceIds.includes(ev.id) ?? false}
-          revealed={session?.revealedEvidenceIds.includes(ev.id) ?? false}
-          onClick={() => onOpenEvidence(ev.id)}
-        />
-      ))}
+      {caseData.evidences.map((ev) => {
+        const viewed = session?.viewedEvidenceIds.includes(ev.id) ?? false;
+        return (
+          <EvidenceCard
+            key={ev.id}
+            evidence={ev}
+            lang={lang}
+            viewed={viewed}
+            stamped={session?.selectedEvidenceIds.includes(ev.id) ?? false}
+            revealed={session?.revealedEvidenceIds.includes(ev.id) ?? false}
+            // On a budgeted case, un-opened cards seal once the budget is spent.
+            sealed={budgetExhausted && !viewed}
+            onClick={() => onOpenEvidence(ev.id)}
+          />
+        );
+      })}
     </div>
   );
 
   const materialsHeader = (
-    <div className="my-[14px] flex items-center justify-between">
+    <div className="my-[14px] flex items-center justify-between gap-2">
       <span className="text-xs font-semibold tracking-[1px] text-[#d1d5db]">
         {t("caseMaterials", lang)} · {evCount} {t("documents", lang)}
       </span>
-      <span className="font-mono text-[11px] font-semibold text-stamp">
-        {stampedCount} / {evCount} {t("marked", lang)}
-      </span>
+      <div className="flex items-center gap-2.5">
+        {/* Investigation-budget counter — only on budgeted cases */}
+        {budget != null && (
+          <span
+            className={`font-mono text-[11px] font-semibold ${
+              budgetExhausted ? "text-stamp" : "text-gold"
+            }`}
+            title={t("budgetHint", lang)}
+          >
+            🔎 {opensRemaining ?? 0} / {budget} {t("budgetChecks", lang)}
+          </span>
+        )}
+        <span className="font-mono text-[11px] font-semibold text-stamp">
+          {stampedCount} / {evCount} {t("marked", lang)}
+        </span>
+      </div>
     </div>
   );
 
@@ -177,7 +205,7 @@ export function CaseFile({
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
-      className="relative w-full max-w-[480px]"
+      className="relative w-full max-w-[540px]"
     >
       {/* Case header row */}
       <div className="mb-3 flex items-center justify-between gap-2">
@@ -237,15 +265,27 @@ export function CaseFile({
           </div>
         ) : (
           <div className="flex flex-col gap-2 sm:flex-row">
-            <button
-              type="button"
-              disabled={!canAffordNote}
-              onClick={() => onBuyHint("note")}
-              className="flex flex-1 items-center justify-between gap-2 rounded-[9px] border border-accent/50 px-3 py-2.5 text-sm font-medium text-[#e5e7eb] transition-colors hover:bg-accent/10 disabled:cursor-not-allowed disabled:opacity-40"
+            <Tooltip
+              className="flex-1"
+              label={
+                canAffordNote
+                  ? null
+                  : t("tipNoteUnaffordable", lang).replace(
+                      "{amount}",
+                      fmt(noteCost),
+                    )
+              }
             >
-              <span>{t("hintNote", lang)}</span>
-              <span className="font-mono text-text-muted">₽{noteCost}</span>
-            </button>
+              <button
+                type="button"
+                disabled={!canAffordNote}
+                onClick={() => onBuyHint("note")}
+                className="flex w-full items-center justify-between gap-2 rounded-[9px] border border-accent/50 px-3 py-2.5 text-sm font-medium text-[#e5e7eb] transition-colors hover:bg-accent/10 disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                <span>{t("hintNote", lang)}</span>
+                <span className="font-mono text-text-muted">₽{noteCost}</span>
+              </button>
+            </Tooltip>
             <button
               type="button"
               onClick={() => onBuyHint("canvass")}
@@ -266,6 +306,11 @@ export function CaseFile({
           lang={lang}
           canApprove={canApprove}
           canReject={canReject}
+          approveBlockedReason={
+            budget != null
+              ? t("tipApproveBudget", lang)
+              : t("reviewAllFirst", lang)
+          }
           onApprove={onApprove}
           onReject={handleReject}
         />

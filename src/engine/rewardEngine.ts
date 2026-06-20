@@ -41,16 +41,25 @@ export interface RewardModifiers {
   readonly rankBonusPct?: number;
   /** Additive % bonus from the player's daily streak. */
   readonly streakBonusPct?: number;
+  /**
+   * How many evidence cards the player opened this case. Used only for the
+   * efficiency component on budgeted cases; ignored when the case has no
+   * `investigationBudget`. Defaults to "all opened" so an un-budgeted case is
+   * unaffected.
+   */
+  readonly opensUsed?: number;
 }
 
 /**
  * The Multi-Tier Reward Math Engine.
  *
  * BaseReward = claimAmount, scaled ×dailyMultiplier for daily cases.
- *   • Verdict component: 50% of BaseReward iff decision === correctDecision.
- *   • Proof component:   50% of BaseReward × (correctStamps / totalContradictions).
- *   • Bonus component:   (rank% + streak%) applied to the positive base.
- *   • Penalty:           falseStampPenalty per wrongly-stamped card.
+ *   • Verdict component:    verdictShare of BaseReward iff decision === correctDecision.
+ *   • Proof component:      proofShare of BaseReward × (correctStamps / totalContradictions).
+ *   • Efficiency component: efficiencyShare of BaseReward × (unusedOpens / budget),
+ *                           only on budgeted cases with a correct verdict.
+ *   • Bonus component:      (rank% + streak%) applied to the positive base.
+ *   • Penalty:              falseStampPenalty per wrongly-stamped card.
  *
  * A wrong verdict still allows the proof component to reflect investigation
  * skill, but you keep nothing if you also brute-forced stamps (penalty applies
@@ -66,10 +75,19 @@ export function evaluateReward(
   const multiplier = caseData.type === 'daily' ? reward.dailyMultiplier : 1;
   const baseReward = caseData.claimAmount * multiplier;
 
+  // Budgeted cases reallocate some verdict/proof weight into an efficiency
+  // component; un-budgeted cases keep the classic 50/50 split (no efficiency).
+  const budget = caseData.investigationBudget;
+  const isBudgeted = budget != null && budget > 0;
+  const verdictShare = isBudgeted
+    ? reward.budgeted.verdictShare
+    : reward.verdictShare;
+  const proofShare = isBudgeted
+    ? reward.budgeted.proofShare
+    : reward.proofShare;
+
   const verdictCorrect = decision === caseData.correctDecision;
-  const verdictComponent = verdictCorrect
-    ? reward.verdictShare * baseReward
-    : 0;
+  const verdictComponent = verdictCorrect ? verdictShare * baseReward : 0;
 
   const total = totalContradictions(caseData);
   const { correct, falseStamps } = classifyStamps(caseData, selectedEvidenceIds);
@@ -77,10 +95,23 @@ export function evaluateReward(
   // Guard the divide-by-zero: a case with no contradictions awards the full
   // proof component automatically (there was nothing to miss).
   const ratio = total === 0 ? 1 : correct / total;
-  const proofComponent = reward.proofShare * baseReward * ratio;
+  const proofComponent = proofShare * baseReward * ratio;
+
+  // Efficiency: reward a correct verdict reached with budget to spare. Only
+  // budgeted cases qualify; an un-budgeted case never awards this component.
+  let efficiencyComponent = 0;
+  if (verdictCorrect && isBudgeted) {
+    const opensUsed = Math.min(modifiers.opensUsed ?? budget, budget);
+    const unused = Math.max(0, budget - opensUsed);
+    efficiencyComponent =
+      reward.budgeted.efficiencyShare * baseReward * (unused / budget);
+  }
 
   // Rank + streak bonuses scale only the positive base (never the penalty).
-  const positive = Math.round(verdictComponent) + Math.round(proofComponent);
+  const positive =
+    Math.round(verdictComponent) +
+    Math.round(proofComponent) +
+    Math.round(efficiencyComponent);
   const bonusPct =
     (modifiers.rankBonusPct ?? 0) + (modifiers.streakBonusPct ?? 0);
   const bonusComponent = Math.round((positive * bonusPct) / 100);
@@ -91,6 +122,7 @@ export function evaluateReward(
     verdictCorrect,
     verdictComponent: Math.round(verdictComponent),
     proofComponent: Math.round(proofComponent),
+    efficiencyComponent: Math.round(efficiencyComponent),
     penalty,
     dailyMultiplierApplied: multiplier,
     bonusComponent,

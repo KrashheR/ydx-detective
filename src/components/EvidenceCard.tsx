@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import type { Evidence, Language } from '../types';
 import { loc, t } from '../i18n/ui';
 import { EVIDENCE_TAG_KEY } from './icons';
+import { Tooltip } from './Tooltip';
 
 interface Props {
   evidence: Evidence;
@@ -10,6 +11,11 @@ interface Props {
   stamped: boolean;
   /** True if a hint revealed this card's true contradiction status. */
   revealed: boolean;
+  /**
+   * True on a budgeted case when the investigation budget is spent and this
+   * card was never opened — it can no longer be inspected.
+   */
+  sealed?: boolean;
   onClick: () => void;
 }
 
@@ -20,16 +26,24 @@ export function EvidenceCard({
   viewed,
   stamped,
   revealed,
+  sealed = false,
   onClick,
 }: Props) {
   return (
+    <Tooltip
+      className="block h-full"
+      label={sealed ? t('tipSealedCard', lang) : null}
+    >
     <motion.button
       type="button"
       onClick={onClick}
-      whileHover={{ y: -4 }}
-      whileTap={{ scale: 0.99 }}
+      disabled={sealed}
+      whileHover={sealed ? undefined : { y: -4 }}
+      whileTap={sealed ? undefined : { scale: 0.99 }}
       transition={{ type: 'spring', stiffness: 300, damping: 24 }}
-      className="relative flex flex-col overflow-hidden rounded-[7px] border border-black/[0.08] bg-paper p-3.5 text-left shadow-card transition-shadow hover:shadow-card-hover"
+      className={`relative flex h-full w-full flex-col overflow-hidden rounded-[7px] border border-black/[0.08] bg-paper p-3.5 text-left shadow-card transition-shadow ${
+        sealed ? 'cursor-not-allowed opacity-50 grayscale' : 'hover:shadow-card-hover'
+      }`}
     >
       {/* Mono chip-tag on the folder-edge colour */}
       <span className="inline-block w-fit rounded font-mono text-[10px] font-bold uppercase tracking-wider text-white bg-folder-edge px-2 py-[3px]">
@@ -58,10 +72,14 @@ export function EvidenceCard({
       {/* CTA doubles as the read indicator (drives the "review-all" gate) */}
       <span
         className={`mt-3 text-[11px] font-semibold ${
-          viewed ? 'text-ink/45' : 'text-accent'
+          sealed ? 'text-ink/40' : viewed ? 'text-ink/45' : 'text-accent'
         }`}
       >
-        {viewed ? `${t('viewedDossier', lang)} ✓` : `${t('openDossier', lang)} →`}
+        {sealed
+          ? `🔒 ${t('sealedDossier', lang)}`
+          : viewed
+            ? `${t('viewedDossier', lang)} ✓`
+            : `${t('openDossier', lang)} →`}
       </span>
 
       {/* Diagonal corner stamp once marked as a contradiction */}
@@ -74,5 +92,6 @@ export function EvidenceCard({
         </span>
       )}
     </motion.button>
+    </Tooltip>
   );
 }

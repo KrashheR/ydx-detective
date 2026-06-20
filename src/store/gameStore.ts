@@ -116,7 +116,13 @@ export interface GameStoreState {
 
   /* ---- session ---- */
   startCase: (caseData: Case) => void;
-  markEvidenceAsViewed: (id: string) => void;
+  /**
+   * Record that the player opened an evidence card. On budgeted cases this is
+   * gated: opening a *new* card is a no-op once `investigationBudget` opens have
+   * been spent (already-opened cards may always be re-read). Returns whether the
+   * card is now considered open.
+   */
+  markEvidenceAsViewed: (id: string, caseData: Case) => boolean;
   toggleEvidenceStamp: (id: string) => void;
   /**
    * Reveal the next unrevealed evidence card's true status for the active case.
@@ -141,6 +147,15 @@ export interface GameStoreState {
 
   /* ---- pause guard (also driven by SDK callbacks) ---- */
   setPaused: (paused: boolean) => void;
+
+  /* ---- dev only ---- */
+  /**
+   * DEV-ONLY cheat: instantly grant balance + XP for manual testing. A no-op in
+   * production builds (`import.meta.env.DEV` guard), so it can never ship into a
+   * real player's economy. Defaults: a huge balance and enough XP to sit at the
+   * top rank. Pass overrides to dial in a specific balance/level.
+   */
+  devCheat: (opts?: { balance?: number; xp?: number }) => void;
 
   /* ---- rating prompt ---- */
   /** Record one "Not now" dismissal. Suppresses after GAME_CONFIG.rating.suppressAfterDismissals. */
@@ -234,9 +249,21 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       persist();
     },
 
-    markEvidenceAsViewed(id) {
+    markEvidenceAsViewed(id, caseData) {
+      const session = get().session;
+      if (!session || session.caseId !== caseData.id) return false;
+
+      // Already opened → always re-readable, no budget spent.
+      if (session.viewedEvidenceIds.includes(id)) return true;
+
+      // Budgeted case: refuse a *new* open once the budget is exhausted.
+      const budget = caseData.investigationBudget;
+      if (budget != null && session.viewedEvidenceIds.length >= budget) {
+        return false;
+      }
+
       set((s) => {
-        if (!s.session) return s;
+        if (!s.session || s.session.caseId !== caseData.id) return s;
         if (s.session.viewedEvidenceIds.includes(id)) return s;
         return {
           session: {
@@ -246,6 +273,7 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         };
       });
       persist();
+      return true;
     },
 
     toggleEvidenceStamp(id) {
@@ -332,6 +360,7 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       const breakdown = evaluateReward(caseData, decision, selected, {
         rankBonusPct: rankBefore.rewardBonusPct,
         streakBonusPct: streak.multiplierPct,
+        opensUsed: session?.viewedEvidenceIds.length ?? 0,
       });
 
       // Career XP, then detect whether this case crossed a rank threshold.
@@ -458,6 +487,28 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       set({ isPaused: paused });
     },
 
+    devCheat(opts) {
+      // Hard no-op in production — the cheat never touches a shipped economy.
+      if (!import.meta.env.DEV) return;
+
+      const ranks = GAME_CONFIG.progression.ranks;
+      const topXp = ranks[ranks.length - 1]?.xpThreshold ?? 0;
+      const balance = opts?.balance ?? 9_999_999;
+      const xp = opts?.xp ?? topXp;
+
+      set((s) => ({
+        stats: {
+          ...s.stats,
+          balance,
+          xp,
+          isBankrupt: balance <= GAME_CONFIG.economy.bankruptcyThreshold,
+        },
+      }));
+      persist(true);
+      // eslint-disable-next-line no-console
+      console.info(`[devCheat] balance=${balance} xp=${xp}`);
+    },
+
     dismissRating() {
       set((s) => ({
         stats: { ...s.stats, ratingDismissals: s.stats.ratingDismissals + 1 },
@@ -477,28 +528,70 @@ export const useGameStore = create<GameStoreState>((set, get) => {
   };
 });
 
+/* --------------------------- Dev console hook ---------------------------- */
+
+/**
+ * Expose the cheat on `window.__cheat` in dev builds so it can be fired straight
+ * from the browser console, e.g. `__cheat()` or `__cheat({ balance: 5_000_000,
+ * xp: 700 })`. Stripped from production by the `import.meta.env.DEV` guard.
+ */
+if (import.meta.env.DEV && typeof window !== 'undefined') {
+  (window as unknown as { __cheat?: GameStoreState['devCheat'] }).__cheat = (
+    opts,
+  ) => useGameStore.getState().devCheat(opts);
+}
+
 /* --------------------------- UI-gating selectors ------------------------- */
 
 /**
- * Button-enable logic for the verdict panel, derived from session + case.
- * Mirrors the product rule: you may only *approve* a fully-reviewed case, and
- * you may only *reject* with at least one stamped contradiction (or after a
- * full review). Pure selector → cheap to call in render.
+ * Button-enable logic + budget bookkeeping for the verdict panel, derived from
+ * session + case. Two product rules, selected by whether the case carries an
+ * `investigationBudget`:
+ *
+ *   • Un-budgeted (classic): *approve* only after the whole file is reviewed;
+ *     *reject* only with ≥1 stamped contradiction.
+ *   • Budgeted (deduction): information is scarce, so *approve* unlocks as soon
+ *     as ≥1 card is opened (decide under uncertainty); *reject* unchanged.
+ *
+ * Also exposes budget bookkeeping (`opensRemaining`, `budgetExhausted`) so the
+ * UI can seal un-opened cards and show a counter. Pure → cheap in render.
  */
 export function selectCaseInvestigationGate(
   caseData: Case,
   state: Pick<GameStoreState, 'session'>,
-): { canApprove: boolean; canReject: boolean } {
+): {
+  canApprove: boolean;
+  canReject: boolean;
+  budget: number | null;
+  opensRemaining: number | null;
+  budgetExhausted: boolean;
+} {
   const viewed = state.session?.viewedEvidenceIds ?? [];
   const stamped = state.session?.selectedEvidenceIds ?? [];
 
-  const allViewed = caseData.evidences.every((ev) => viewed.includes(ev.id));
   const hasStampedContradiction = stamped.length > 0;
+  const budget = caseData.investigationBudget ?? null;
 
+  if (budget != null) {
+    const opensRemaining = Math.max(0, budget - viewed.length);
+    return {
+      // Budgeted: decide as soon as you've inspected at least one card.
+      canApprove: viewed.length > 0,
+      canReject: hasStampedContradiction,
+      budget,
+      opensRemaining,
+      budgetExhausted: opensRemaining <= 0,
+    };
+  }
+
+  const allViewed = caseData.evidences.every((ev) => viewed.includes(ev.id));
   return {
     canApprove: allViewed, // approve only after studying the whole file
     // Reject must be *justified*: enabled only once at least one contradiction
     // has been stamped. A full review alone never unlocks an unproven rejection.
     canReject: hasStampedContradiction,
+    budget: null,
+    opensRemaining: null,
+    budgetExhausted: false,
   };
 }

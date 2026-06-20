@@ -2,8 +2,13 @@ import { motion } from 'framer-motion';
 import type { Case, Language } from '../types';
 import type { CaseUnlockInfo } from '../engine/caseUnlockEngine';
 import { loc, t } from '../i18n/ui';
-import { formatCaseLabel, formatCaseLockMessage } from '../utils/caseDisplay';
+import {
+  formatCaseLabel,
+  formatCaseLockMessage,
+  formatCaseLockTooltip,
+} from '../utils/caseDisplay';
 import { formatCountdown } from './icons';
+import { Tooltip } from './Tooltip';
 
 interface Props {
   standardCaseUnlocks: CaseUnlockInfo[];
@@ -37,12 +42,17 @@ export function CaseSelect({
 
       {/* Daily — pinned to top, premium gold cover */}
       {dailyCase && (
+        <Tooltip
+          className="block"
+          side="bottom"
+          label={dailyUnlocked ? null : t('tipDailyLocked', lang)}
+        >
         <motion.button
           type="button"
           onClick={() => (dailyUnlocked ? onSelect(dailyCase) : onDailyLocked())}
           whileHover={{ y: -6 }}
           transition={{ duration: 0.18, ease: 'easeOut' }}
-          className="relative block text-left"
+          className="relative block w-full text-left"
         >
           <span className="absolute -top-[13px] left-[26px] h-6 w-[130px] rounded-t-[7px] bg-[#a9781b]" />
           <div
@@ -94,6 +104,7 @@ export function CaseSelect({
             </div>
           </div>
         </motion.button>
+        </Tooltip>
       )}
       {standardCaseUnlocks.map((info) => {
         const c = info.caseData;
@@ -106,14 +117,19 @@ export function CaseSelect({
             : t('openCaseAction', lang);
 
         return (
-          <motion.button
+          <Tooltip
             key={c.id}
+            className="block"
+            side="bottom"
+            label={locked ? formatCaseLockTooltip(info, lang) : null}
+          >
+          <motion.button
             type="button"
             onClick={() => onSelectStandardCase(info)}
             aria-disabled={locked}
             whileHover={locked ? undefined : { y: -6 }}
             transition={{ duration: 0.18, ease: 'easeOut' }}
-            className={`relative block text-left ${locked ? 'opacity-55' : ''}`}
+            className={`relative block w-full text-left ${locked ? 'opacity-55' : ''}`}
           >
             {/* Protruding folder tab */}
             <span className="absolute -top-[13px] left-[26px] h-6 w-[130px] rounded-t-[7px] bg-folder-edge" />
@@ -168,6 +184,7 @@ export function CaseSelect({
               </div>
             </div>
           </motion.button>
+          </Tooltip>
         );
       })}
     </div>

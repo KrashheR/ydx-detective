@@ -180,7 +180,12 @@ describe('verdict gating', () => {
     fireEvent.click(rejectBtn);
 
     // The justification prompt appears and no verdict was submitted.
-    expect(await screen.findByText(RU('rejectNeedsProof'))).toBeInTheDocument();
+    // Ignore the (hidden) reject-button tooltip, which carries the same string.
+    expect(
+      await screen.findByText(RU('rejectNeedsProof'), {
+        ignore: '[role="tooltip"]',
+      }),
+    ).toBeInTheDocument();
     expect(useGameStore.getState().lastResult).toBeNull();
   });
 

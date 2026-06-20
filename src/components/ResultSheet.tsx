@@ -92,7 +92,8 @@ export function ResultSheet({
   const base = caseData.claimAmount * result.dailyMultiplierApplied || 1;
   const verdictPct = Math.round((result.verdictComponent / base) * 100);
   const proofPct = Math.round((result.proofComponent / base) * 100);
-  const rewardPct = verdictPct + proofPct;
+  const efficiencyPct = Math.round((result.efficiencyComponent / base) * 100);
+  const rewardPct = verdictPct + proofPct + efficiencyPct;
 
   // Animate the progress bar from 0 → rewardPct shortly after mount.
   const [barFill, setBarFill] = useState(0);
@@ -214,6 +215,13 @@ export function ResultSheet({
               label={t("proofReward", lang)}
               value={`+${proofPct}%`}
             />
+            {result.efficiencyComponent > 0 && (
+              <DotRow
+                got
+                label={t("efficiencyReward", lang)}
+                value={`+${efficiencyPct}%`}
+              />
+            )}
             {result.bonusComponent > 0 && (
               <DotRow
                 got

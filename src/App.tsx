@@ -75,6 +75,22 @@ export default function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // DEV-ONLY: Ctrl+Shift+M grants a big balance + top rank for manual testing.
+  // Compiled out of production by the `import.meta.env.DEV` guard.
+  useEffect(() => {
+    if (!import.meta.env.DEV) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && (e.key === 'M' || e.key === 'm')) {
+        e.preventDefault();
+        store.devCheat();
+        flashToast('💰 DEV: balance + max rank granted');
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   // Document direction, lang, and title follow the active language (RTL for Arabic).
   useEffect(() => {
     document.documentElement.lang = lang;
@@ -174,7 +190,14 @@ export default function App() {
   };
 
   const handleOpenEvidence = (id: string) => {
-    store.markEvidenceAsViewed(id);
+    if (!selectedCase) return;
+    // On budgeted cases, opening a *new* card may be refused once the budget is
+    // spent. Re-opening an already-viewed card always succeeds.
+    const opened = store.markEvidenceAsViewed(id, selectedCase);
+    if (!opened) {
+      flashToast(t('budgetExhausted', lang));
+      return;
+    }
     setModalEvidenceId(id);
   };
 
@@ -229,7 +252,13 @@ export default function App() {
 
   const gate = selectedCase
     ? selectCaseInvestigationGate(selectedCase, { session })
-    : { canApprove: false, canReject: false };
+    : {
+        canApprove: false,
+        canReject: false,
+        budget: null,
+        opensRemaining: null,
+        budgetExhausted: false,
+      };
 
   const modalEvidence =
     selectedCase?.evidences.find((e) => e.id === modalEvidenceId) ?? null;
@@ -273,6 +302,9 @@ export default function App() {
               lang={lang}
               canApprove={gate.canApprove}
               canReject={gate.canReject}
+              budget={gate.budget}
+              opensRemaining={gate.opensRemaining}
+              budgetExhausted={gate.budgetExhausted}
               balance={stats.balance}
               onOpenEvidence={handleOpenEvidence}
               onBuyHint={(kind) => store.buyHint(selectedCase, kind)}

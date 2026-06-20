@@ -66,6 +66,8 @@ export interface CaseOverrides {
   cleanCards?: number;
   /** Provide explicit evidences instead of generating from counts. */
   evidences?: Evidence[];
+  /** Optional investigation budget (max evidence opens before verdict). */
+  investigationBudget?: number;
 }
 
 /**
@@ -101,6 +103,9 @@ export function makeCase(overrides: CaseOverrides = {}): Case {
     evidences: safeEvidences,
     correctDecision: overrides.correctDecision ?? 'reject',
     explanation: localizedLines('Because of the contradiction.'),
+    ...(overrides.investigationBudget != null
+      ? { investigationBudget: overrides.investigationBudget }
+      : {}),
   };
 }
 

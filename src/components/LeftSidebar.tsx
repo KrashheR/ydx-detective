@@ -2,9 +2,15 @@ import type { Case, Language } from "../types";
 import type { CaseUnlockInfo } from "../engine/caseUnlockEngine";
 import { summarizeCaseUnlocks } from "../engine/caseUnlockEngine";
 import { formatInvestigatorLevel, loc, t } from "../i18n/ui";
-import { formatCaseLabel, formatCaseLockMessage, tDifficulty } from "../utils/caseDisplay";
+import {
+  formatCaseLabel,
+  formatCaseLockMessage,
+  formatCaseLockTooltip,
+  tDifficulty,
+} from "../utils/caseDisplay";
 import { evaluateRank } from "../engine/rankEngine";
 import { LanguageSelector } from "./LanguageSelector";
+import { Tooltip } from "./Tooltip";
 import { formatCountdown } from "./icons";
 
 interface Props {
@@ -66,12 +72,17 @@ export function LeftSidebar({
       <div className="mt-[15px] flex min-h-0 flex-1 flex-col gap-[15px] overflow-y-auto">
         {/* Daily case — pinned to top, gold URGENT stamp */}
         {dailyCase && (
+          <Tooltip
+            className="block shrink-0"
+            side="bottom"
+            label={dailyUnlocked ? null : t("tipDailyLocked", lang)}
+          >
           <button
             type="button"
             onClick={() =>
               dailyUnlocked ? onSelect(dailyCase) : onDailyLocked()
             }
-            className={`relative shrink-0 rounded-[9px] border p-3 pr-10 text-left overflow-hidden ${
+            className={`relative block w-full rounded-[9px] border p-3 pr-10 text-left overflow-hidden ${
               dailyUnlocked ? "border-gold" : "border-border opacity-[0.55]"
             } ${dailyCase.id === selectedId ? "ring-1 ring-gold" : ""}`}
             style={
@@ -100,6 +111,7 @@ export function LeftSidebar({
               </span>
             </div>
           </button>
+          </Tooltip>
         )}
 
         {standardCaseUnlocks.map((info) => {
@@ -108,12 +120,17 @@ export function LeftSidebar({
           const done = info.status === "completed";
           const locked = info.status === "locked";
           return (
-            <button
+            <Tooltip
               key={c.id}
+              className="block shrink-0"
+              side="bottom"
+              label={locked ? formatCaseLockTooltip(info, lang) : null}
+            >
+            <button
               type="button"
               onClick={() => onSelectStandardCase(info)}
               aria-disabled={locked}
-              className={`shrink-0 rounded-[9px] border bg-surface-2 p-3 text-left transition-colors ${
+              className={`block w-full rounded-[9px] border bg-surface-2 p-3 text-left transition-colors ${
                 active
                   ? "border-accent"
                   : locked
@@ -154,6 +171,7 @@ export function LeftSidebar({
                       : tDifficulty(c.difficulty, lang)}
               </div>
             </button>
+            </Tooltip>
           );
         })}
       </div>

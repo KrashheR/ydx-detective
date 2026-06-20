@@ -186,6 +186,73 @@ describe('evaluateReward', () => {
     expect(r.bonusPct).toBe(0);
     expect(r.bonusComponent).toBe(0);
   });
+
+  it('awards no efficiency component on un-budgeted cases', () => {
+    const c = makeCase({ claimAmount: 1000, contradictions: 1, cleanCards: 0 });
+    const r = evaluateReward(c, c.correctDecision, contradictionIds(c), {
+      opensUsed: 0,
+    });
+    expect(r.efficiencyComponent).toBe(0);
+    // Classic 50/50 split is preserved → 100% of base.
+    expect(r.total).toBe(1000);
+  });
+
+  it('reallocates to 40/40 and adds efficiency on a budgeted case', () => {
+    const c = makeCase({
+      claimAmount: 1000,
+      correctDecision: 'reject',
+      contradictions: 1,
+      cleanCards: 3,
+      investigationBudget: 2,
+    });
+    // Correct verdict, full proof, decided having opened only 1 of 2 budget.
+    const r = evaluateReward(c, 'reject', contradictionIds(c), { opensUsed: 1 });
+    const { budgeted } = reward;
+    expect(r.verdictComponent).toBe(budgeted.verdictShare * 1000); // 400
+    expect(r.proofComponent).toBe(budgeted.proofShare * 1000); // 400
+    // unused 1/2 → efficiency = 0.2 * 1000 * 0.5 = 100
+    expect(r.efficiencyComponent).toBe(100);
+    expect(r.total).toBe(900);
+  });
+
+  it('pays the full efficiency share when the verdict is reached with no opens used', () => {
+    const c = makeCase({
+      claimAmount: 1000,
+      correctDecision: 'reject',
+      contradictions: 0,
+      cleanCards: 3,
+      investigationBudget: 3,
+    });
+    // Zero contradictions → full proof; opensUsed 0 → full efficiency.
+    const r = evaluateReward(c, 'reject', [], { opensUsed: 0 });
+    expect(r.efficiencyComponent).toBe(reward.budgeted.efficiencyShare * 1000); // 200
+    expect(r.total).toBe(1000); // 400 + 400 + 200, ceiling preserved
+  });
+
+  it('awards no efficiency on a budgeted case with a wrong verdict', () => {
+    const c = makeCase({
+      claimAmount: 1000,
+      correctDecision: 'reject',
+      contradictions: 1,
+      cleanCards: 2,
+      investigationBudget: 3,
+    });
+    const r = evaluateReward(c, 'approve', [], { opensUsed: 0 });
+    expect(r.verdictComponent).toBe(0);
+    expect(r.efficiencyComponent).toBe(0);
+  });
+
+  it('defaults opensUsed to the full budget (no efficiency) when omitted', () => {
+    const c = makeCase({
+      claimAmount: 1000,
+      correctDecision: 'reject',
+      contradictions: 1,
+      cleanCards: 1,
+      investigationBudget: 2,
+    });
+    const r = evaluateReward(c, 'reject', contradictionIds(c));
+    expect(r.efficiencyComponent).toBe(0); // assumed all budget spent
+  });
 });
 
 describe('evaluateDailyAvailability', () => {

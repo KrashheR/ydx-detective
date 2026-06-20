@@ -25,4 +25,22 @@ export const formatCaseLockMessage = (
   return t('caseLocked', lang);
 };
 
+/**
+ * Fuller, actionable lock reason for a hover tooltip — states *why* a case is
+ * locked and *what* unlocks it (the inline label is terser by design).
+ */
+export const formatCaseLockTooltip = (
+  info: CaseUnlockInfo,
+  lang: Language,
+): string => {
+  if (info.reason === 'requires_level') {
+    return t('tipCaseLockedLevel', lang).replace(
+      '{level}',
+      String(info.requiredLevel),
+    );
+  }
+  if (info.reason === 'complete_previous') return t('completePreviousCase', lang);
+  return t('caseLocked', lang);
+};
+
 export { tDifficulty };

@@ -131,8 +131,8 @@ describe('markEvidenceAsViewed / toggleEvidenceStamp', () => {
     const c = makeCase();
     store().startCase(c);
     const id = c.evidences[0]!.id;
-    store().markEvidenceAsViewed(id);
-    store().markEvidenceAsViewed(id);
+    store().markEvidenceAsViewed(id, c);
+    store().markEvidenceAsViewed(id, c);
     expect(store().session?.viewedEvidenceIds).toEqual([id]);
   });
 
@@ -327,7 +327,7 @@ describe('selectCaseInvestigationGate', () => {
     const c = makeCase({ contradictions: 1, cleanCards: 1 });
     store().startCase(c);
     expect(selectCaseInvestigationGate(c, { session: store().session }).canApprove).toBe(false);
-    c.evidences.forEach((e) => store().markEvidenceAsViewed(e.id));
+    c.evidences.forEach((e) => store().markEvidenceAsViewed(e.id, c));
     expect(selectCaseInvestigationGate(c, { session: store().session }).canApprove).toBe(true);
   });
 
@@ -337,6 +337,57 @@ describe('selectCaseInvestigationGate', () => {
     expect(selectCaseInvestigationGate(c, { session: store().session }).canReject).toBe(false);
     store().toggleEvidenceStamp(c.evidences[0]!.id);
     expect(selectCaseInvestigationGate(c, { session: store().session }).canReject).toBe(true);
+  });
+
+  it('on a budgeted case, allows approve after one open (not full review)', () => {
+    const c = makeCase({ contradictions: 1, cleanCards: 3, investigationBudget: 2 });
+    store().startCase(c);
+    let gate = selectCaseInvestigationGate(c, { session: store().session });
+    expect(gate.canApprove).toBe(false); // nothing opened yet
+    expect(gate.budget).toBe(2);
+    expect(gate.opensRemaining).toBe(2);
+
+    store().markEvidenceAsViewed(c.evidences[0]!.id, c);
+    gate = selectCaseInvestigationGate(c, { session: store().session });
+    expect(gate.canApprove).toBe(true); // one open is enough on a budgeted case
+    expect(gate.opensRemaining).toBe(1);
+  });
+});
+
+describe('investigation budget — open limit', () => {
+  it('blocks opening new cards once the budget is spent', () => {
+    const c = makeCase({ contradictions: 2, cleanCards: 3, investigationBudget: 2 });
+    store().startCase(c);
+    expect(store().markEvidenceAsViewed(c.evidences[0]!.id, c)).toBe(true);
+    expect(store().markEvidenceAsViewed(c.evidences[1]!.id, c)).toBe(true);
+    // Budget (2) exhausted → opening a third *new* card is refused.
+    expect(store().markEvidenceAsViewed(c.evidences[2]!.id, c)).toBe(false);
+    expect(store().session?.viewedEvidenceIds).toEqual([
+      c.evidences[0]!.id,
+      c.evidences[1]!.id,
+    ]);
+    const gate = selectCaseInvestigationGate(c, { session: store().session });
+    expect(gate.budgetExhausted).toBe(true);
+    expect(gate.opensRemaining).toBe(0);
+  });
+
+  it('always allows re-reading an already-opened card after the budget is spent', () => {
+    const c = makeCase({ contradictions: 1, cleanCards: 2, investigationBudget: 1 });
+    store().startCase(c);
+    const first = c.evidences[0]!.id;
+    expect(store().markEvidenceAsViewed(first, c)).toBe(true);
+    // Re-opening the same card is free even though the budget is now spent.
+    expect(store().markEvidenceAsViewed(first, c)).toBe(true);
+    // A different, never-opened card is still blocked.
+    expect(store().markEvidenceAsViewed(c.evidences[1]!.id, c)).toBe(false);
+  });
+
+  it('does not gate opens on un-budgeted cases', () => {
+    const c = makeCase({ contradictions: 1, cleanCards: 4 });
+    store().startCase(c);
+    for (const e of c.evidences) {
+      expect(store().markEvidenceAsViewed(e.id, c)).toBe(true);
+    }
   });
 });
 
@@ -350,7 +401,7 @@ describe('end-to-end flow for every shipped case', () => {
     (_id, caseData) => {
       store().startCase(caseData);
       // Study every document, then stamp exactly the real contradictions.
-      caseData.evidences.forEach((e) => store().markEvidenceAsViewed(e.id));
+      caseData.evidences.forEach((e) => store().markEvidenceAsViewed(e.id, caseData));
       contradictionIds(caseData).forEach((id) => store().toggleEvidenceStamp(id));
 
       const xpBefore = store().stats.xp;

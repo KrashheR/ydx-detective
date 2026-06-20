@@ -98,6 +98,14 @@ export interface Case {
   readonly evidences: readonly Evidence[];
   readonly correctDecision: Decision;
   readonly explanation: LocalizedLines;
+  /**
+   * Maximum number of evidence cards the player may *open* before they must
+   * render a verdict — the "investigation budget". When set, information becomes
+   * a scarce resource: the player chooses which cards to inspect and decides
+   * under uncertainty (and may earn an efficiency bonus for deciding early).
+   * Omitted ⇒ unlimited opens and the classic "review everything" gate.
+   */
+  readonly investigationBudget?: number;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -185,6 +193,11 @@ export interface RewardBreakdown {
   readonly verdictCorrect: boolean;
   readonly verdictComponent: number;
   readonly proofComponent: number;
+  /**
+   * Reward for deciding correctly with investigation budget unspent. Always 0
+   * for un-budgeted cases or a wrong verdict. (See `Case.investigationBudget`.)
+   */
+  readonly efficiencyComponent: number;
   readonly penalty: number;
   readonly dailyMultiplierApplied: number;
   /** Extra reward from rank + streak bonuses applied to the positive base. */

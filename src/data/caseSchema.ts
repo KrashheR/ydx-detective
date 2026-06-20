@@ -93,6 +93,9 @@ export const caseSchema = z
     evidences: z.array(evidenceSchema).min(1),
     correctDecision: decision,
     explanation: localizedLines,
+    // Optional "investigation budget": max evidence cards the player may open
+    // before deciding. Omitted ⇒ unlimited (classic review-everything flow).
+    investigationBudget: z.number().int().positive().optional(),
   })
   .strict()
   // Cross-field invariant: evidence ids must be unique within a case so the

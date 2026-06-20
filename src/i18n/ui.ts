@@ -108,18 +108,29 @@ export type UIKey =
   | "difficulty_easy"
   | "difficulty_medium"
   | "difficulty_hard"
-  | "doubleReward"
-  | "rewardDoubled"
-  | "ratingEyebrow"
-  | "ratingRefNo"
-  | "ratingTitle"
-  | "ratingBody"
-  | "ratingCta"
-  | "ratingLater"
-  | "ratingNever"
-  | "ratingSubmitting"
-  | "ratingDoneTitle"
-  | "ratingDoneBody";
+  | "efficiencyReward"
+  | "budgetChecks"
+  | "budgetHint"
+  | "budgetExhausted"
+  | "sealedDossier"
+  | "tipApproveBudget"
+  | "tipNoteUnaffordable"
+  | "tipSealedCard"
+  | "tipDailyLocked"
+  | "tipCaseLockedLevel"
+    | "difficulty_hard"
+    | "doubleReward"
+    | "rewardDoubled"
+    | "ratingEyebrow"
+    | "ratingRefNo"
+    | "ratingTitle"
+    | "ratingBody"
+    | "ratingCta"
+    | "ratingLater"
+    | "ratingNever"
+    | "ratingSubmitting"
+    | "ratingDoneTitle"
+    | "ratingDoneBody";
 
 export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
   approve: {
@@ -727,6 +738,76 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     tr: "Zor",
     ar: "صعب",
     kk: "Қиын",
+  },
+  efficiencyReward: {
+    ru: "Эффективность",
+    en: "Efficiency",
+    tr: "Verimlilik",
+    ar: "الكفاءة",
+    kk: "Тиімділік",
+  },
+  budgetChecks: {
+    ru: "проверок",
+    en: "checks",
+    tr: "kontrol",
+    ar: "فحوصات",
+    kk: "тексеру",
+  },
+  budgetHint: {
+    ru: "Лимит проверок улик в этом деле. Чем меньше потратите при верном вердикте — тем выше бонус за эффективность.",
+    en: "Limit of evidence checks for this case. Spend fewer with a correct verdict to earn a bigger efficiency bonus.",
+    tr: "Bu dosya için delil kontrolü sınırı. Doğru kararda daha az harcarsanız verimlilik bonusu artar.",
+    ar: "حد فحوصات الأدلة لهذه القضية. أنفق أقل مع حكم صحيح لتحصل على مكافأة كفاءة أكبر.",
+    kk: "Осы істегі дәлелдемелерді тексеру шегі. Дұрыс үкімде азырақ жұмсасаңыз — тиімділік бонусы жоғары.",
+  },
+  budgetExhausted: {
+    ru: "Лимит проверок исчерпан — выносите вердикт.",
+    en: "Check limit reached — render your verdict.",
+    tr: "Kontrol sınırına ulaşıldı — kararınızı verin.",
+    ar: "تم بلوغ حد الفحص — أصدر حكمك.",
+    kk: "Тексеру шегі бітті — үкім шығарыңыз.",
+  },
+  sealedDossier: {
+    ru: "Опечатано",
+    en: "Sealed",
+    tr: "Mühürlü",
+    ar: "مختوم",
+    kk: "Мөрленген",
+  },
+  tipApproveBudget: {
+    ru: "Откройте хотя бы одну улику, чтобы вынести вердикт.",
+    en: "Open at least one piece of evidence to render a verdict.",
+    tr: "Karar verebilmek için en az bir kanıt açın.",
+    ar: "افتح دليلاً واحدًا على الأقل لإصدار الحكم.",
+    kk: "Шешім шығару үшін кемінде бір дәлелді ашыңыз.",
+  },
+  tipNoteUnaffordable: {
+    ru: "Недостаточно средств: нужно ₽{amount}. Закрывайте дела, чтобы пополнить баланс.",
+    en: "Not enough funds: ₽{amount} needed. Close cases to top up your balance.",
+    tr: "Yetersiz bakiye: ₽{amount} gerekli. Bakiyeni artırmak için dosyaları kapat.",
+    ar: "رصيد غير كافٍ: مطلوب ₽{amount}. أغلق القضايا لزيادة رصيدك.",
+    kk: "Қаражат жеткіліксіз: ₽{amount} қажет. Балансты толтыру үшін істерді жабыңыз.",
+  },
+  tipSealedCard: {
+    ru: "Лимит проверок исчерпан — улику уже не открыть. Выносите вердикт по собранным данным.",
+    en: "Check limit reached — this evidence can't be opened. Decide with what you have.",
+    tr: "Kontrol sınırına ulaşıldı — bu kanıt açılamaz. Eldeki bilgiyle karar ver.",
+    ar: "تم بلوغ حد الفحص — لا يمكن فتح هذا الدليل. احكم بما لديك.",
+    kk: "Тексеру шегі бітті — бұл дәлелді ашу мүмкін емес. Бар деректермен шешім шығарыңыз.",
+  },
+  tipDailyLocked: {
+    ru: "Дело дня на сегодня раскрыто. Новое откроется через 24 часа.",
+    en: "Today's daily case is done. A new one unlocks in 24 hours.",
+    tr: "Bugünün günlük dosyası tamamlandı. Yenisi 24 saat içinde açılır.",
+    ar: "قضية اليوم اكتملت. تُفتح قضية جديدة خلال 24 ساعة.",
+    kk: "Бүгінгі күн ісі шешілді. Жаңасы 24 сағаттан кейін ашылады.",
+  },
+  tipCaseLockedLevel: {
+    ru: "Откроется на {level}-м уровне следователя. Закрывайте дела и набирайте опыт.",
+    en: "Unlocks at investigator level {level}. Close cases to earn XP.",
+    tr: "Müfettiş seviyesi {level}'te açılır. XP kazanmak için dosyaları kapat.",
+    ar: "يُفتح عند مستوى المحقق {level}. أغلق القضايا لكسب الخبرة.",
+    kk: "Тергеуші {level}-деңгейінде ашылады. Тәжірибе жинау үшін істерді жабыңыз.",
   },
   doubleReward: {
     ru: "▶ Удвоить вознаграждение",

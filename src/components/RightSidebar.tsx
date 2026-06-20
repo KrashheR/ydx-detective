@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Language } from '../types';
 import type { LeaderboardRow } from '../services/yandexSDK';
 import { evaluateRank } from '../engine/rankEngine';
@@ -148,11 +149,19 @@ export function RightSidebar({
           {t('leaderboardWeek', lang)}
         </div>
         <ol>
-          {rows.map((row) => (
-            <li
-              key={`${row.rank}-${row.name}`}
-              className="flex items-center gap-2.5 border-b border-surface py-[7px] last:border-0"
-            >
+          {rows.map((row, i) => (
+            <React.Fragment key={`${row.rank}-${row.name}`}>
+              {i > 0 && row.rank > (rows[i - 1]?.rank ?? 0) + 1 && (
+                <li
+                  aria-hidden
+                  className="select-none py-0.5 text-center font-mono text-xs text-text-dim"
+                >
+                  ⋯
+                </li>
+              )}
+              <li
+                className="flex items-center gap-2.5 border-b border-surface py-[7px] last:border-0"
+              >
               <span className="w-5 font-mono text-xs font-bold text-text-dim">
                 {String(row.rank).padStart(2, '0')}
               </span>
@@ -173,7 +182,8 @@ export function RightSidebar({
               <span className="font-mono text-xs text-text-muted">
                 {row.score.toLocaleString('ru-RU')}
               </span>
-            </li>
+              </li>
+            </React.Fragment>
           ))}
         </ol>
       </Card>

@@ -11,6 +11,18 @@ export const GAME_CONFIG = {
     verdictShare: 0.5,
     /** Share of BaseReward scaled by contradiction-flagging precision. */
     proofShare: 0.5,
+    /**
+     * Reward split for *budgeted* cases (those with `Case.investigationBudget`).
+     * Some verdict/proof weight is reallocated to an efficiency component that
+     * rewards deciding correctly with budget to spare. The three shares sum to
+     * 1.0, so the positive ceiling stays at 100% of BaseReward — un-budgeted
+     * cases are unaffected and keep the classic 50/50 split above.
+     */
+    budgeted: {
+      verdictShare: 0.4,
+      proofShare: 0.4,
+      efficiencyShare: 0.2,
+    },
     /** Penalty per evidence card wrongly stamped as a contradiction. */
     falseStampPenalty: 50,
     /** Reward multiplier applied to `type === 'daily'` cases. */

@@ -40,12 +40,18 @@ interface YandexLeaderboardEntry {
   };
 }
 
+interface YandexLeaderboardEntries {
+  /** The requesting player's own rank, or 0 when they are not ranked yet. */
+  userRank: number;
+  entries: YandexLeaderboardEntry[];
+}
+
 interface YandexLeaderboards {
   setLeaderboardScore(name: string, score: number): Promise<void>;
   getLeaderboardEntries(
     name: string,
     opts?: { quantityTop?: number; includeUser?: boolean; quantityAround?: number },
-  ): Promise<{ entries: YandexLeaderboardEntry[] }>;
+  ): Promise<YandexLeaderboardEntries>;
 }
 
 interface YandexSDK {
@@ -326,25 +332,37 @@ export async function submitLeaderboardScore(score: number): Promise<void> {
 }
 
 /**
- * Fetch the top entries plus the current player. Returns null when the
- * leaderboard is unavailable so callers can fall back to a local view.
+ * Fetch the leaderboard window the UI renders: the global top `topN`, plus —
+ * when the player sits below that — a band of `around` rows on each side of
+ * them (so the default 5 / 2 yields the top 5 followed by "2 above ▸ you ▸ 2
+ * below"). Yandex returns both blocks in one `entries` array, already sorted by
+ * rank; when the player is inside the top the two blocks overlap and we dedupe.
+ *
+ * The current player is flagged via the response's `userRank` (matching by rank
+ * is robust even for anonymous players that share a blank public name). Returns
+ * null when the leaderboard is unavailable so callers fall back to a local view.
  */
 export async function fetchLeaderboard(
   topN = 5,
+  around = 2,
 ): Promise<LeaderboardRow[] | null> {
   if (!leaderboards) return null;
   try {
-    const { entries } = await leaderboards.getLeaderboardEntries(
+    const { entries, userRank } = await leaderboards.getLeaderboardEntries(
       LEADERBOARD_NAME,
-      { quantityTop: topN, includeUser: true, quantityAround: 1 },
+      { quantityTop: topN, includeUser: true, quantityAround: around },
     );
-    return entries.map((e) => ({
-      rank: e.rank,
-      name: e.player.publicName || 'Player',
-      score: e.score,
-      avatar: e.player.getAvatarSrc('small') ?? null,
-      isCurrentPlayer: false,
-    }));
+    const seen = new Set<number>();
+    return entries
+      .filter((e) => !seen.has(e.rank) && (seen.add(e.rank), true))
+      .sort((a, b) => a.rank - b.rank)
+      .map((e) => ({
+        rank: e.rank,
+        name: e.player.publicName || 'Player',
+        score: e.score,
+        avatar: e.player.getAvatarSrc('small') ?? null,
+        isCurrentPlayer: userRank > 0 && e.rank === userRank,
+      }));
   } catch {
     return null;
   }
