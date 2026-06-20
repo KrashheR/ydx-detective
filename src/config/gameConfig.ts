@@ -4,7 +4,7 @@
  */
 export const GAME_CONFIG = {
   /** Schema version of the persisted runtime snapshot. Bump on shape changes. */
-  saveVersion: 2,
+  saveVersion: 3,
 
   reward: {
     /** Share of BaseReward awarded for a correct macro-verdict. */
@@ -129,6 +129,13 @@ export const GAME_CONFIG = {
   daily: {
     /** A daily case resets every N ms of *server* time (24h). */
     cooldownMs: 24 * 60 * 60 * 1000,
+  },
+
+  rating: {
+    /** Minimum completed cases before the rating prompt is eligible to appear. */
+    minCasesForPrompt: 3,
+    /** After this many "Not now" dismissals the prompt is suppressed forever. */
+    suppressAfterDismissals: 3,
   },
 } as const;
 

@@ -58,6 +58,11 @@ interface YandexSDK {
     showFullscreenAdv(opts: { callbacks?: AdvCallbacks }): void;
     showRewardedVideo(opts: { callbacks?: AdvCallbacks }): void;
   };
+  /** Optional feedback (rating) API — absent on older SDK builds. */
+  feedback?: {
+    canReview(): Promise<{ value: boolean; reason?: string }>;
+    requestReview(): Promise<{ feedbackSent: boolean }>;
+  };
   features?: {
     LoadingAPI?: { ready(): void };
   };
@@ -256,6 +261,41 @@ export function showRewardedAd(onReward: () => void): void {
       onError: () => broadcastPause(false),
     },
   });
+}
+
+/* ------------------------------ Feedback --------------------------------- */
+
+/**
+ * Whether the player can currently rate the game via the Yandex native dialog.
+ * Returns false when the SDK is unavailable or canReview() says no
+ * (e.g. already rated, or not enough sessions logged by Yandex).
+ * In dev/offline mode always returns true so the modal stays testable.
+ */
+export async function canReview(): Promise<boolean> {
+  if (!sdk) return true; // offline / dev — always eligible for testing
+  if (!sdk.feedback) return false;
+  try {
+    const { value } = await sdk.feedback.canReview();
+    return value;
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Open the Yandex native rating dialog. Returns true when the player actually
+ * submitted a rating, false otherwise (dismissed or unavailable).
+ * In dev/offline mode resolves immediately with true so the flow is testable.
+ */
+export async function requestReview(): Promise<boolean> {
+  if (!sdk) return true; // offline / dev
+  if (!sdk.feedback) return false;
+  try {
+    const { feedbackSent } = await sdk.feedback.requestReview();
+    return feedbackSent;
+  } catch {
+    return false;
+  }
 }
 
 /* ----------------------------- Leaderboards ------------------------------ */

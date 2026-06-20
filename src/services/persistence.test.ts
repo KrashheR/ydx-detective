@@ -73,6 +73,7 @@ describe('loadSnapshot', () => {
         streakCount: 1,
         lastPlayedServerDay: 3,
         unlockedAchievementIds: [],
+        ratingDismissals: 0,
       },
       session: null,
     };
@@ -182,6 +183,7 @@ describe('sync (debounce + flush)', () => {
       streakCount: 0,
       lastPlayedServerDay: null,
       unlockedAchievementIds: [],
+      ratingDismissals: 0,
     },
     session: null,
   });

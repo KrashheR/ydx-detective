@@ -135,8 +135,18 @@ export interface GameStoreState {
   /* ---- daily ---- */
   isDailyUnlocked: () => boolean;
 
+  /* ---- ad-linked rewards ---- */
+  /** Add the total of the last verdict again to balance (rewarded-video double). */
+  doubleLastReward: () => void;
+
   /* ---- pause guard (also driven by SDK callbacks) ---- */
   setPaused: (paused: boolean) => void;
+
+  /* ---- rating prompt ---- */
+  /** Record one "Not now" dismissal. Suppresses after GAME_CONFIG.rating.suppressAfterDismissals. */
+  dismissRating: () => void;
+  /** Permanently suppress the rating prompt ("Don't ask again"). */
+  suppressRating: () => void;
 }
 
 /* ------------------------------ Helpers ---------------------------------- */
@@ -421,6 +431,22 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       });
     },
 
+    doubleLastReward() {
+      const { lastResult, stats } = get();
+      if (!lastResult || lastResult.total <= 0) return;
+      const bonus = lastResult.total;
+      const newBalance = stats.balance + bonus;
+      set((s) => ({
+        stats: {
+          ...s.stats,
+          balance: newBalance,
+          isBankrupt: newBalance <= GAME_CONFIG.economy.bankruptcyThreshold,
+        },
+      }));
+      persist(true);
+      void submitLeaderboardScore(newBalance);
+    },
+
     isDailyUnlocked() {
       const { lastDailyClaimServerMs } = get().stats;
       // Authoritative server time only — never the device clock.
@@ -430,6 +456,23 @@ export const useGameStore = create<GameStoreState>((set, get) => {
 
     setPaused(paused) {
       set({ isPaused: paused });
+    },
+
+    dismissRating() {
+      set((s) => ({
+        stats: { ...s.stats, ratingDismissals: s.stats.ratingDismissals + 1 },
+      }));
+      persist();
+    },
+
+    suppressRating() {
+      set((s) => ({
+        stats: {
+          ...s.stats,
+          ratingDismissals: GAME_CONFIG.rating.suppressAfterDismissals,
+        },
+      }));
+      persist();
     },
   };
 });

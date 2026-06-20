@@ -51,6 +51,10 @@ const evidenceType = z.enum([
   'witness_statement',
   'camera_recording',
   'usage_log',
+  'xray',
+  'bank_statement',
+  'phone_records',
+  'social_media',
 ]);
 
 /* -------------------------------------------------------------------------- */

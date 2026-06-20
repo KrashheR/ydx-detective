@@ -96,6 +96,10 @@ export type UIKey =
   | "tag_witness"
   | "tag_camera"
   | "tag_log"
+  | "tag_xray"
+  | "tag_bank"
+  | "tag_phone"
+  | "tag_social"
   | "casesWord"
   | "errorsWord"
   | "resultWinSub"
@@ -103,7 +107,19 @@ export type UIKey =
   | "caseNumber"
   | "difficulty_easy"
   | "difficulty_medium"
-  | "difficulty_hard";
+  | "difficulty_hard"
+  | "doubleReward"
+  | "rewardDoubled"
+  | "ratingEyebrow"
+  | "ratingRefNo"
+  | "ratingTitle"
+  | "ratingBody"
+  | "ratingCta"
+  | "ratingLater"
+  | "ratingNever"
+  | "ratingSubmitting"
+  | "ratingDoneTitle"
+  | "ratingDoneBody";
 
 export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
   approve: {
@@ -658,6 +674,10 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     kk: "ВИДЕО",
   },
   tag_log: { ru: "ЛОГ", en: "LOG", tr: "KAYIT", ar: "سجل", kk: "ЛОГ" },
+  tag_xray: { ru: "РЕНТГЕН", en: "X-RAY", tr: "RÖNTGEN", ar: "أشعة", kk: "РЕНТГЕН" },
+  tag_bank: { ru: "БАНК", en: "BANK", tr: "BANKA", ar: "بنك", kk: "БАНК" },
+  tag_phone: { ru: "ЗВОНКИ", en: "CALLS", tr: "ARAMALAR", ar: "مكالمات", kk: "ҚОҢЫРАУЛАР" },
+  tag_social: { ru: "СОЦСЕТЬ", en: "SOCIAL", tr: "SOSYAL", ar: "اجتماعي", kk: "ӘЛЕУМ." },
   casesWord: { ru: "дел", en: "cases", tr: "dosya", ar: "قضايا", kk: "іс" },
   errorsWord: {
     ru: "ошибок",
@@ -707,6 +727,92 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     tr: "Zor",
     ar: "صعب",
     kk: "Қиын",
+  },
+  doubleReward: {
+    ru: "▶ Удвоить вознаграждение",
+    en: "▶ Double Reward",
+    tr: "▶ Ödülü İkiye Katla",
+    ar: "▶ مضاعفة المكافأة",
+    kk: "▶ Сыйақыны екі еселеу",
+  },
+  rewardDoubled: {
+    ru: "Вознаграждение удвоено ✓",
+    en: "Reward doubled ✓",
+    tr: "Ödül iki katına çıktı ✓",
+    ar: "تضاعفت المكافأة ✓",
+    kk: "Сыйақы екі еселенді ✓",
+  },
+
+  /* ── Rating modal ─────────────────────────────────────────────────────── */
+  ratingEyebrow: {
+    ru: "ДЕПАРТАМЕНТ РАССЛЕДОВАНИЙ",
+    en: "INVESTIGATIONS DEPT",
+    tr: "SORUŞTURMA BİRİMİ",
+    ar: "إدارة التحقيقات",
+    kk: "ТЕРГЕУ ДЕПАРТАМЕНТІ",
+  },
+  ratingRefNo: {
+    ru: "Форма ОС-5 · обратная связь",
+    en: "Form OS-5 · Feedback",
+    tr: "Form OS-5 · Geri Bildirim",
+    ar: "نموذج الملاحظات OS-5",
+    kk: "ОС-5 нысаны · кері байланыс",
+  },
+  ratingTitle: {
+    ru: "Дело раскрыто. Отличная работа, детектив.",
+    en: "Case solved. Excellent work, detective.",
+    tr: "Dava çözüldü. Harika iş, dedektif.",
+    ar: "القضية محلولة. عمل ممتاز أيها المحقق.",
+    kk: "Іс шешілді. Тамаша жұмыс, детектив.",
+  },
+  ratingBody: {
+    ru: "Ваша внимательность помогает разоблачать мошенников. Понравилась игра? Оцените её — это поможет другим найти это расследование.",
+    en: "Your attention helps expose fraudsters. Enjoying the game? Rate it — this helps others discover this investigation.",
+    tr: "Dikkatiniz dolandırıcıları ifşa etmeye yardımcı oluyor. Oyundan memnun musunuz? Değerlendirin — bu diğerlerinin bu soruşturmayı keşfetmesine yardımcı olur.",
+    ar: "انتباهك يساعد في كشف المحتالين. هل تستمتع باللعبة؟ قيّمها — فهذا يساعد الآخرين على اكتشاف هذا التحقيق.",
+    kk: "Сіздің зейінділігіңіз алаяқтарды әшкерелеуге көмектеседі. Ойын ұнады ма? Бағалаңыз — бұл басқаларға осы тергеуді табуға көмектеседі.",
+  },
+  ratingCta: {
+    ru: "Оценить",
+    en: "Rate game",
+    tr: "Oyunu değerlendir",
+    ar: "قيّم اللعبة",
+    kk: "Бағалау",
+  },
+  ratingLater: {
+    ru: "Не сейчас",
+    en: "Not now",
+    tr: "Şimdi değil",
+    ar: "ليس الآن",
+    kk: "Қазір емес",
+  },
+  ratingNever: {
+    ru: "Больше не предлагать",
+    en: "Don't ask again",
+    tr: "Bir daha sorma",
+    ar: "لا تسأل مرة أخرى",
+    kk: "Бұдан әрі сұрама",
+  },
+  ratingSubmitting: {
+    ru: "Открываем оценку Яндекса…",
+    en: "Opening Yandex rating…",
+    tr: "Yandex değerlendirmesi açılıyor…",
+    ar: "جارٍ فتح تقييم Яндекс…",
+    kk: "Яндекс бағасы ашылуда…",
+  },
+  ratingDoneTitle: {
+    ru: "Спасибо за отзыв",
+    en: "Thanks for your review",
+    tr: "Yorumunuz için teşekkürler",
+    ar: "شكرًا على ملاحظاتك",
+    kk: "Пікіріңіз үшін рақмет",
+  },
+  ratingDoneBody: {
+    ru: "Это помогает другим найти игру.",
+    en: "This helps others find the game.",
+    tr: "Bu, başkalarının oyunu bulmasına yardımcı olur.",
+    ar: "هذا يساعد الآخرين في العثور على اللعبة.",
+    kk: "Бұл басқаларға ойынды табуға көмектеседі.",
   },
 };
 

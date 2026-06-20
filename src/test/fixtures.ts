@@ -127,6 +127,7 @@ export function makeStats(overrides: Partial<PlayerStats> = {}): PlayerStats {
     streakCount: 0,
     lastPlayedServerDay: null,
     unlockedAchievementIds: [],
+    ratingDismissals: 0,
     ...overrides,
   };
 }

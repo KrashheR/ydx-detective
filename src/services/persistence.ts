@@ -35,6 +35,7 @@ export function makeDefaultStats(): PlayerStats {
     streakCount: 0,
     lastPlayedServerDay: null,
     unlockedAchievementIds: [],
+    ratingDismissals: 0,
   };
 }
 

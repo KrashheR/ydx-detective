@@ -61,7 +61,11 @@ export type EvidenceType =
   | 'document'
   | 'witness_statement'
   | 'camera_recording'
-  | 'usage_log';
+  | 'usage_log'
+  | 'xray'
+  | 'bank_statement'
+  | 'phone_records'
+  | 'social_media';
 
 export interface Evidence {
   readonly id: string;
@@ -144,6 +148,12 @@ export interface PlayerStats {
   lastPlayedServerDay: number | null;
   /** Ids of one-time achievements the player has unlocked. */
   unlockedAchievementIds: string[];
+  /**
+   * How many times the player has dismissed the rating prompt ("Not now").
+   * At GAME_CONFIG.rating.suppressAfterDismissals the prompt is suppressed forever.
+   * "Don't ask again" sets this directly to the suppress threshold.
+   */
+  ratingDismissals: number;
 }
 
 /**

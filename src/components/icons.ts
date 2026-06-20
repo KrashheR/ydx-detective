@@ -9,6 +9,10 @@ export const EVIDENCE_ICON: Record<EvidenceType, string> = {
   witness_statement: '🗣️',
   camera_recording: '🎥',
   usage_log: '📊',
+  xray: '🩻',
+  bank_statement: '🏦',
+  phone_records: '📞',
+  social_media: '💬',
 };
 
 /** Short mono chip-tag i18n key per evidence type (the archive label). */
@@ -19,6 +23,10 @@ export const EVIDENCE_TAG_KEY: Record<EvidenceType, UIKey> = {
   witness_statement: 'tag_witness',
   camera_recording: 'tag_camera',
   usage_log: 'tag_log',
+  xray: 'tag_xray',
+  bank_statement: 'tag_bank',
+  phone_records: 'tag_phone',
+  social_media: 'tag_social',
 };
 
 /** Format ms remaining as HH:MM:SS for the daily-case cooldown. */

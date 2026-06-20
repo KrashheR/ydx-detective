@@ -76,6 +76,16 @@
   }
 }
 
+@keyframes recpulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
 /* Respect reduced-motion: framer-motion reads this, but kill CSS transitions too. */
 @media (prefers-reduced-motion: reduce) {
   * {

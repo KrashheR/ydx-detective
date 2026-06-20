@@ -24,6 +24,10 @@ interface Props {
   newAchievementIds: string[];
   /** Fired on mount so the host can flush an immediate cloud save. */
   onMounted: () => void;
+  /** Called when player taps "Double reward" — host handles the rewarded-ad flow. */
+  onDoubleReward: () => void;
+  /** True once the double has been claimed for this result — hides the button. */
+  rewardDoubled: boolean;
   onNext: () => void;
   onBackToDesk: () => void;
 }
@@ -37,6 +41,8 @@ export function ResultSheet({
   promotedToLevel,
   newAchievementIds,
   onMounted,
+  onDoubleReward,
+  rewardDoubled,
   onNext,
   onBackToDesk,
 }: Props) {
@@ -308,7 +314,25 @@ export function ResultSheet({
             </ol>
           </div>
 
-          <div className="mt-[18px] flex gap-2.5">
+          {result.total > 0 && (
+            <div className="mt-[18px]">
+              {rewardDoubled ? (
+                <div className="flex h-[46px] items-center justify-center rounded-[9px] border border-success/40 bg-success/10 text-sm font-semibold text-success">
+                  {t("rewardDoubled", lang)}
+                </div>
+              ) : (
+                <button
+                  type="button"
+                  onClick={onDoubleReward}
+                  className="h-[46px] w-full rounded-[9px] border border-gold/50 bg-gold/10 text-sm font-semibold text-gold hover:bg-gold/20"
+                >
+                  {t("doubleReward", lang)} (+{Math.abs(result.total).toLocaleString("ru-RU")} ₽)
+                </button>
+              )}
+            </div>
+          )}
+
+          <div className="mt-[14px] flex gap-2.5">
             <button
               type="button"
               onClick={onBackToDesk}

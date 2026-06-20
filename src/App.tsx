@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
   getDailyCase,
@@ -19,6 +19,10 @@ import { evaluateDailyAvailability } from './engine/rewardEngine';
 import {
   getServerTimeMs,
   fetchLeaderboard,
+  showFullscreenAd,
+  showRewardedAd,
+  canReview,
+  requestReview,
   type LeaderboardRow,
 } from './services/yandexSDK';
 import { GAME_CONFIG } from './config/gameConfig';
@@ -31,6 +35,7 @@ import { CaseSelect } from './components/CaseSelect';
 import { StampModal } from './components/StampModal';
 import { ResultSheet } from './components/ResultSheet';
 import { AchievementsModal } from './components/AchievementsModal';
+import { RatingModal } from './components/RatingModal';
 import { formatCountdown } from './components/icons';
 import { formatCaseLockMessage } from './utils/caseDisplay';
 
@@ -51,6 +56,13 @@ export default function App() {
   const [showAchievements, setShowAchievements] = useState(false);
   const [leaderboard, setLeaderboard] = useState<LeaderboardRow[] | null>(null);
   const [toast, setToast] = useState<string | null>(null);
+  const [rewardDoubled, setRewardDoubled] = useState(false);
+  const [showRating, setShowRating] = useState(false);
+  // Transient verdict counter — show fullscreen ad on every 3rd verdict.
+  const verdictCountRef = useRef(0);
+  // Gate: show rating modal at most once per session.
+  const ratingShownRef = useRef(false);
+  const AD_EVERY_N_VERDICTS = 3;
 
   const flashToast = (msg: string) => {
     setToast(msg);
@@ -75,9 +87,26 @@ export default function App() {
     if (isHydrated && session && !selectedId) setSelectedId(session.caseId);
   }, [isHydrated, session, selectedId]);
 
-  // A fresh verdict re-opens the result sheet.
+  // A fresh verdict re-opens the result sheet and resets the double-reward slot.
   useEffect(() => {
-    if (lastResult) setResultDismissed(false);
+    if (lastResult) {
+      setResultDismissed(false);
+      setRewardDoubled(false);
+    }
+  }, [lastResult]);
+
+  // Rating prompt: show after a correct verdict at the peak of pride.
+  useEffect(() => {
+    if (!lastResult?.verdictCorrect) return;
+    if (stats.completedCaseIds.length < GAME_CONFIG.rating.minCasesForPrompt) return;
+    if (stats.ratingDismissals >= GAME_CONFIG.rating.suppressAfterDismissals) return;
+    if (ratingShownRef.current) return;
+    void canReview().then((ok) => {
+      if (!ok) return;
+      ratingShownRef.current = true;
+      setShowRating(true);
+    });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lastResult]);
 
   // Pull the live leaderboard after hydration and whenever the balance changes.
@@ -149,16 +178,32 @@ export default function App() {
     setModalEvidenceId(id);
   };
 
-  const handleApprove = () => {
-    if (selectedCase) store.submitVerdict(selectedCase, 'approve');
+  const submitWithAdGate = (decision: 'approve' | 'reject') => {
+    if (!selectedCase) return;
+    verdictCountRef.current += 1;
+    if (verdictCountRef.current >= AD_EVERY_N_VERDICTS) {
+      verdictCountRef.current = 0;
+      showFullscreenAd(() => store.submitVerdict(selectedCase, decision));
+    } else {
+      store.submitVerdict(selectedCase, decision);
+    }
   };
+
+  const handleApprove = () => submitWithAdGate('approve');
 
   /** Returns false (→ show prompt) when rejecting without any stamped proof. */
   const handleReject = (): boolean => {
     if (!selectedCase) return true;
     if ((session?.selectedEvidenceIds.length ?? 0) === 0) return false;
-    store.submitVerdict(selectedCase, 'reject');
+    submitWithAdGate('reject');
     return true;
+  };
+
+  const handleDoubleReward = () => {
+    showRewardedAd(() => {
+      store.doubleLastReward();
+      setRewardDoubled(true);
+    });
   };
 
   const onDailyLocked = () =>
@@ -286,6 +331,8 @@ export default function App() {
             promotedToLevel={lastResult.promotedToLevel}
             newAchievementIds={lastResult.newAchievementIds}
             onMounted={() => undefined}
+            onDoubleReward={handleDoubleReward}
+            rewardDoubled={rewardDoubled}
             onNext={goToNextCase}
             onBackToDesk={backToDesk}
           />
@@ -299,6 +346,19 @@ export default function App() {
             lang={lang}
             unlockedIds={stats.unlockedAchievementIds}
             onClose={() => setShowAchievements(false)}
+          />
+        )}
+      </AnimatePresence>
+
+      {/* Rating prompt */}
+      <AnimatePresence>
+        {showRating && (
+          <RatingModal
+            lang={lang}
+            onRate={async () => { await requestReview(); }}
+            onDismiss={() => { store.dismissRating(); setShowRating(false); }}
+            onNever={() => { store.suppressRating(); setShowRating(false); }}
+            onRated={() => setShowRating(false)}
           />
         )}
       </AnimatePresence>
