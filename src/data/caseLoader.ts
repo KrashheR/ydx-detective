@@ -6,6 +6,7 @@
  * No engine, store, or component code changes. Every file is Zod-validated at
  * load time so malformed content fails fast and never reaches gameplay.
  */
+import { compareCasesByUnlockCriteria } from '../engine/caseUnlockEngine';
 import { parseCase, safeParseCases } from './caseSchema';
 import type { Case } from '../types';
 
@@ -62,7 +63,9 @@ export function getCaseById(id: string): Case | undefined {
 }
 
 export function getStandardCases(): Case[] {
-  return getAllCases().filter((c) => c.type === 'standard');
+  return getAllCases()
+    .filter((c) => c.type === 'standard')
+    .sort(compareCasesByUnlockCriteria);
 }
 
 /** All daily cases, deterministically ordered by id so rotation is stable. */

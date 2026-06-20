@@ -1,10 +1,10 @@
 /**
  * Career progression math — pure & deterministic, like the reward engine.
  * Converts case performance into XP, and cumulative XP into an investigator
- * rank. No state, no SDK; all tuning lives in `GAME_CONFIG.progression`.
+ * level. No state, no SDK; all tuning lives in `GAME_CONFIG.progression`.
  *
  * XP is permanent (never spent) and is kept strictly separate from `balance`,
- * the spendable currency. Ranks grant a small additive reward bonus, surfaced
+ * the spendable currency. Levels grant a small additive reward bonus, surfaced
  * to the player as a sense of growing seniority.
  */
 import { GAME_CONFIG } from '../config/gameConfig';
@@ -38,19 +38,21 @@ export function evaluateXpGain(input: XpGainInput): number {
 
 export interface RankInfo {
   readonly index: number;
+  /** 1-based investigator level shown to the player. */
+  readonly level: number;
   readonly id: string;
   readonly rewardBonusPct: number;
-  /** XP accumulated past this rank's threshold. */
+  /** XP accumulated past this level's threshold. */
   readonly xpIntoRank: number;
-  /** XP needed to reach the next rank, or null at max rank. */
+  /** XP needed to reach the next level, or null at max level. */
   readonly xpForNext: number | null;
-  /** Progress to the next rank, 0..1 (1 at max rank). */
+  /** Progress to the next level, 0..1 (1 at max level). */
   readonly progress: number;
   readonly isMax: boolean;
 }
 
 /**
- * Resolve cumulative XP into the current rank plus progress toward the next.
+ * Resolve cumulative XP into the current level plus progress toward the next.
  * The ranks table is assumed ascending by `xpThreshold` (it is, in config).
  */
 export function evaluateRank(xp: number): RankInfo {
@@ -76,6 +78,7 @@ export function evaluateRank(xp: number): RankInfo {
 
   return {
     index,
+    level: index + 1,
     id: current.id,
     rewardBonusPct: current.rewardBonusPct,
     xpIntoRank,

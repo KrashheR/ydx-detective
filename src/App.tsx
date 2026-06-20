@@ -9,6 +9,12 @@ import {
   useGameStore,
   selectCaseInvestigationGate,
 } from './store/gameStore';
+import {
+  evaluateCaseUnlocks,
+  getNextAvailableCase,
+  isCaseUnlocked,
+  type CaseUnlockInfo,
+} from './engine/caseUnlockEngine';
 import { evaluateDailyAvailability } from './engine/rewardEngine';
 import {
   getServerTimeMs,
@@ -26,6 +32,7 @@ import { StampModal } from './components/StampModal';
 import { ResultSheet } from './components/ResultSheet';
 import { AchievementsModal } from './components/AchievementsModal';
 import { formatCountdown } from './components/icons';
+import { formatCaseLockMessage } from './utils/caseDisplay';
 
 /**
  * Folder visual theme. The mockup ships two looks; manila (warm archive) is the
@@ -56,10 +63,11 @@ export default function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Document direction + lang follow the active language (RTL for Arabic).
+  // Document direction, lang, and title follow the active language (RTL for Arabic).
   useEffect(() => {
     document.documentElement.lang = lang;
     document.documentElement.dir = RTL_LANGUAGES.has(lang) ? 'rtl' : 'ltr';
+    document.title = t('gameTitle', lang);
   }, [lang]);
 
   // Resume an in-progress session after hydration so quitting mid-case restores.
@@ -85,6 +93,10 @@ export default function App() {
   }, [isHydrated, stats.balance]);
 
   const standardCases = useMemo(() => getStandardCases(), []);
+  const standardCaseUnlocks = useMemo(
+    () => evaluateCaseUnlocks(standardCases, stats),
+    [standardCases, stats],
+  );
   // Rotate the daily pool by server-day. Server time only (see CLAUDE.md).
   const serverNow = getServerTimeMs();
   const serverDay = Math.floor(serverNow / GAME_CONFIG.daily.cooldownMs);
@@ -107,9 +119,29 @@ export default function App() {
     [results],
   );
 
+  const formatLockedCaseMessage = (info: CaseUnlockInfo): string =>
+    formatCaseLockMessage(info, lang);
+
   const handleSelectCase = (c: Case) => {
+    if (c.type === 'standard') {
+      const unlock = standardCaseUnlocks.find((info) => info.caseData.id === c.id);
+      const isResumingActiveCase = session?.caseId === c.id;
+      if (unlock && !isCaseUnlocked(unlock) && !isResumingActiveCase) {
+        flashToast(formatLockedCaseMessage(unlock));
+        return;
+      }
+    }
+
     setSelectedId(c.id);
     store.startCase(c);
+  };
+
+  const handleSelectStandardCase = (info: CaseUnlockInfo) => {
+    if (!isCaseUnlocked(info)) {
+      flashToast(formatLockedCaseMessage(info));
+      return;
+    }
+    handleSelectCase(info.caseData);
   };
 
   const handleOpenEvidence = (id: string) => {
@@ -133,11 +165,15 @@ export default function App() {
     flashToast(`${t('returnsIn', lang)} ${formatCountdown(daily.msUntilUnlock)}`);
 
   const goToNextCase = () => {
-    const ordered = [...standardCases, ...(dailyCase ? [dailyCase] : [])];
-    const idx = ordered.findIndex((c) => c.id === selectedId);
-    const next = ordered[(idx + 1) % ordered.length];
+    const next = getNextAvailableCase(standardCaseUnlocks, selectedId);
     setResultDismissed(true);
-    void store.closeCase().then(() => next && handleSelectCase(next));
+    void store.closeCase().then(() => {
+      if (!next) {
+        setSelectedId(null);
+        return;
+      }
+      handleSelectCase(next);
+    });
   };
 
   const backToDesk = () => {
@@ -169,14 +205,14 @@ export default function App() {
         {/* Left desk column */}
         <div className="order-2 md:order-1 md:h-full md:w-[272px] md:shrink-0">
           <LeftSidebar
-            standardCases={standardCases}
+            standardCaseUnlocks={standardCaseUnlocks}
             dailyCase={dailyCase}
             dailyUnlocked={daily.unlocked}
             dailyMsRemaining={daily.msUntilUnlock}
             selectedId={selectedId}
-            completedIds={stats.completedCaseIds}
             lang={lang}
             xp={stats.xp}
+            onSelectStandardCase={handleSelectStandardCase}
             onSelect={handleSelectCase}
             onDailyLocked={onDailyLocked}
             onLanguage={store.setLanguage}
@@ -200,11 +236,12 @@ export default function App() {
             />
           ) : (
             <CaseSelect
-              standardCases={standardCases}
+              standardCaseUnlocks={standardCaseUnlocks}
               dailyCase={dailyCase}
               dailyUnlocked={daily.unlocked}
               dailyMsRemaining={daily.msUntilUnlock}
               lang={lang}
+              onSelectStandardCase={handleSelectStandardCase}
               onSelect={handleSelectCase}
               onDailyLocked={onDailyLocked}
             />
@@ -215,6 +252,7 @@ export default function App() {
         <div className="order-3 md:h-full md:w-[272px] md:shrink-0">
           <RightSidebar
             lang={lang}
+            xp={stats.xp}
             balance={stats.balance}
             accuracyPct={accuracyPct}
             solvedCount={stats.completedCaseIds.length}
@@ -245,7 +283,7 @@ export default function App() {
             caseData={selectedCase}
             lang={lang}
             xpGained={lastResult.xpGained}
-            promotedToRankId={lastResult.promotedToRankId}
+            promotedToLevel={lastResult.promotedToLevel}
             newAchievementIds={lastResult.newAchievementIds}
             onMounted={() => undefined}
             onNext={goToNextCase}

@@ -18,8 +18,8 @@ export const GAME_CONFIG = {
   },
 
   /**
-   * Career XP & investigator ranks (meta-progression). XP is permanent and
-   * never spent. Rank gives a small additive % bonus on the positive reward.
+   * Career XP & investigator levels (meta-progression). XP is permanent and
+   * never spent. Level gives a small additive % bonus on the positive reward.
    */
   progression: {
     /** Base XP weight by case difficulty. */
@@ -29,18 +29,68 @@ export const GAME_CONFIG = {
     /** XP multiplier for daily cases. */
     dailyXpMultiplier: 2,
     /**
-     * Rank ladder, ascending by `xpThreshold`. `rewardBonusPct` is an additive
+     * Level ladder, ascending by `xpThreshold`. `rewardBonusPct` is an additive
      * percentage applied to the positive reward (verdict + proof) of a case.
-     * Titles are localized in `src/i18n/ui.ts` keyed by `rank_<id>`.
      */
     ranks: [
-      { id: 'trainee', xpThreshold: 0, rewardBonusPct: 0 },
-      { id: 'junior', xpThreshold: 50, rewardBonusPct: 2 },
-      { id: 'inspector', xpThreshold: 150, rewardBonusPct: 5 },
-      { id: 'senior', xpThreshold: 350, rewardBonusPct: 8 },
-      { id: 'lead', xpThreshold: 700, rewardBonusPct: 12 },
-      { id: 'chief', xpThreshold: 1200, rewardBonusPct: 18 },
+      { id: 'level_01', xpThreshold: 0, rewardBonusPct: 0 },
+      { id: 'level_02', xpThreshold: 10, rewardBonusPct: 1 },
+      { id: 'level_03', xpThreshold: 25, rewardBonusPct: 2 },
+      { id: 'level_04', xpThreshold: 45, rewardBonusPct: 3 },
+      { id: 'level_05', xpThreshold: 65, rewardBonusPct: 4 },
+      { id: 'level_06', xpThreshold: 90, rewardBonusPct: 5 },
+      { id: 'level_07', xpThreshold: 115, rewardBonusPct: 6 },
+      { id: 'level_08', xpThreshold: 140, rewardBonusPct: 7 },
+      { id: 'level_09', xpThreshold: 165, rewardBonusPct: 8 },
+      { id: 'level_10', xpThreshold: 190, rewardBonusPct: 9 },
+      { id: 'level_11', xpThreshold: 215, rewardBonusPct: 10 },
+      { id: 'level_12', xpThreshold: 240, rewardBonusPct: 11 },
+      { id: 'level_13', xpThreshold: 265, rewardBonusPct: 12 },
+      { id: 'level_14', xpThreshold: 285, rewardBonusPct: 13 },
+      { id: 'level_15', xpThreshold: 295, rewardBonusPct: 14 },
+      { id: 'level_16', xpThreshold: 360, rewardBonusPct: 15 },
+      { id: 'level_17', xpThreshold: 430, rewardBonusPct: 16 },
+      { id: 'level_18', xpThreshold: 510, rewardBonusPct: 17 },
+      { id: 'level_19', xpThreshold: 600, rewardBonusPct: 18 },
+      { id: 'level_20', xpThreshold: 700, rewardBonusPct: 19 },
+      { id: 'level_21', xpThreshold: 820, rewardBonusPct: 20 },
+      { id: 'level_22', xpThreshold: 960, rewardBonusPct: 21 },
+      { id: 'level_23', xpThreshold: 1120, rewardBonusPct: 22 },
+      { id: 'level_24', xpThreshold: 1300, rewardBonusPct: 23 },
+      { id: 'level_25', xpThreshold: 1500, rewardBonusPct: 24 },
+      { id: 'level_26', xpThreshold: 1720, rewardBonusPct: 25 },
+      { id: 'level_27', xpThreshold: 1960, rewardBonusPct: 26 },
+      { id: 'level_28', xpThreshold: 2220, rewardBonusPct: 27 },
+      { id: 'level_29', xpThreshold: 2500, rewardBonusPct: 28 },
+      { id: 'level_30', xpThreshold: 2800, rewardBonusPct: 30 },
     ],
+  },
+
+  /**
+   * Standard-case campaign gates. Availability is derived at render time from
+   * immutable case data + PlayerStats, so no case content is persisted.
+   */
+  caseUnlocks: {
+    /** Fallback for newly authored standard cases before designers tune them. */
+    defaultRequiredLevel: 30,
+    /** Minimum investigator level needed to access each bundled standard case. */
+    standardCaseRequiredLevelById: {
+      'case-001': 1,
+      'case-003': 2,
+      'case-004': 3,
+      'case-005': 4,
+      'case-006': 5,
+      'case-007': 6,
+      'case-008': 7,
+      'case-009': 8,
+      'case-010': 9,
+      'case-011': 10,
+      'case-012': 11,
+      'case-013': 12,
+      'case-014': 13,
+      'case-015': 14,
+      'case-016': 15,
+    } as const,
   },
 
   /** Daily-engagement streak: consecutive server-days with a closed case. */

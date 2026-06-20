@@ -1,25 +1,29 @@
 import { motion } from 'framer-motion';
 import type { Case, Language } from '../types';
+import type { CaseUnlockInfo } from '../engine/caseUnlockEngine';
 import { loc, t } from '../i18n/ui';
+import { formatCaseLabel, formatCaseLockMessage } from '../utils/caseDisplay';
 import { formatCountdown } from './icons';
 
 interface Props {
-  standardCases: Case[];
+  standardCaseUnlocks: CaseUnlockInfo[];
   dailyCase: Case | undefined;
   dailyUnlocked: boolean;
   dailyMsRemaining: number;
   lang: Language;
+  onSelectStandardCase: (info: CaseUnlockInfo) => void;
   onSelect: (c: Case) => void;
   onDailyLocked: () => void;
 }
 
 /** Case-selection screen: physical folder covers laid out on the desk. */
 export function CaseSelect({
-  standardCases,
+  standardCaseUnlocks,
   dailyCase,
   dailyUnlocked,
   dailyMsRemaining,
   lang,
+  onSelectStandardCase,
   onSelect,
   onDailyLocked,
 }: Props) {
@@ -31,59 +35,7 @@ export function CaseSelect({
         {t('selectCasePrompt', lang)}
       </div>
 
-      {standardCases.map((c) => (
-        <motion.button
-          key={c.id}
-          type="button"
-          onClick={() => onSelect(c)}
-          whileHover={{ y: -6 }}
-          transition={{ duration: 0.18, ease: 'easeOut' }}
-          className="relative block text-left"
-        >
-          {/* Protruding folder tab */}
-          <span className="absolute -top-[13px] left-[26px] h-6 w-[130px] rounded-t-[7px] bg-folder-edge" />
-          {/* Folder cover */}
-          <div
-            className="paper-grain relative overflow-hidden border border-folder-edge bg-folder p-[24px_22px_26px] shadow-folder"
-            style={{ borderRadius: '3px 12px 12px 12px' }}
-          >
-            <span
-              aria-hidden
-              className="absolute right-3.5 top-[18px] rotate-[-7deg] rounded-sm border-2 border-stamp px-2 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider text-stamp opacity-85"
-            >
-              {t('confidential', lang)}
-            </span>
-            <div className="font-mono text-[11px] font-semibold tracking-[1px] text-folder-ink-soft">
-              {c.id}
-            </div>
-            <div className="mt-2 max-w-[80%] font-serif text-[22px] font-semibold text-folder-ink">
-              {loc(c.title, lang)}
-            </div>
-            <div className="mt-4 flex items-center gap-2.5">
-              <span className="h-[38px] w-[38px] shrink-0 rounded-full border border-black/25 bg-black/[0.18]" />
-              <div className="min-w-0">
-                <div className="truncate text-[13px] font-semibold text-folder-ink">
-                  {loc(c.claim.person, lang)}
-                </div>
-                <div className="text-[11px] font-medium text-folder-ink-soft">
-                  {fmt(c.claimAmount)} ₽
-                </div>
-              </div>
-            </div>
-            <div className="my-[14px] mt-[18px] h-px bg-black/[0.18]" />
-            <div className="flex items-center justify-between">
-              <span className="text-[11px] font-medium text-folder-ink-soft">
-                {c.evidences.length} {t('documents', lang)}
-              </span>
-              <span className="text-xs font-bold text-folder-ink">
-                {t('openCaseAction', lang)} →
-              </span>
-            </div>
-          </div>
-        </motion.button>
-      ))}
-
-      {/* Daily — premium gold cover */}
+      {/* Daily — pinned to top, premium gold cover */}
       {dailyCase && (
         <motion.button
           type="button"
@@ -143,6 +95,82 @@ export function CaseSelect({
           </div>
         </motion.button>
       )}
+
+      {standardCaseUnlocks.map((info) => {
+        const c = info.caseData;
+        const locked = info.status === 'locked';
+        const completed = info.status === 'completed';
+        const actionText = locked
+          ? formatCaseLockMessage(info, lang)
+          : completed
+            ? t('completedCase', lang)
+            : t('openCaseAction', lang);
+
+        return (
+          <motion.button
+            key={c.id}
+            type="button"
+            onClick={() => onSelectStandardCase(info)}
+            aria-disabled={locked}
+            whileHover={locked ? undefined : { y: -6 }}
+            transition={{ duration: 0.18, ease: 'easeOut' }}
+            className={`relative block text-left ${locked ? 'opacity-55' : ''}`}
+          >
+            {/* Protruding folder tab */}
+            <span className="absolute -top-[13px] left-[26px] h-6 w-[130px] rounded-t-[7px] bg-folder-edge" />
+            {/* Folder cover */}
+            <div
+              className={`paper-grain relative overflow-hidden border bg-folder p-[24px_22px_26px] shadow-folder ${
+                locked ? 'border-border grayscale' : 'border-folder-edge'
+              }`}
+              style={{ borderRadius: '3px 12px 12px 12px' }}
+            >
+              <span
+                aria-hidden
+                className={`absolute right-3.5 top-[18px] rotate-[-7deg] rounded-sm border-2 px-2 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider opacity-85 ${
+                  completed
+                    ? 'border-success text-success'
+                    : locked
+                      ? 'border-folder-ink-soft text-folder-ink-soft'
+                      : 'border-stamp text-stamp'
+                }`}
+              >
+                {completed
+                  ? t('completedCase', lang)
+                  : locked
+                    ? t('caseLocked', lang)
+                    : t('confidential', lang)}
+              </span>
+              <div className="font-mono text-[11px] font-semibold tracking-[1px] text-folder-ink-soft">
+                {formatCaseLabel(c, lang)}
+              </div>
+              <div className="mt-2 max-w-[80%] font-serif text-[22px] font-semibold text-folder-ink">
+                {loc(c.title, lang)}
+              </div>
+              <div className="mt-4 flex items-center gap-2.5">
+                <span className="h-[38px] w-[38px] shrink-0 rounded-full border border-black/25 bg-black/[0.18]" />
+                <div className="min-w-0">
+                  <div className="truncate text-[13px] font-semibold text-folder-ink">
+                    {loc(c.claim.person, lang)}
+                  </div>
+                  <div className="text-[11px] font-medium text-folder-ink-soft">
+                    {fmt(c.claimAmount)} ₽
+                  </div>
+                </div>
+              </div>
+              <div className="my-[14px] mt-[18px] h-px bg-black/[0.18]" />
+              <div className="flex items-center justify-between gap-4">
+                <span className="text-[11px] font-medium text-folder-ink-soft">
+                  {c.evidences.length} {t('documents', lang)}
+                </span>
+                <span className="text-right text-xs font-bold text-folder-ink">
+                  {actionText}{locked ? '' : ' →'}
+                </span>
+              </div>
+            </div>
+          </motion.button>
+        );
+      })}
     </div>
   );
 }

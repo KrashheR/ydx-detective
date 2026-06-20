@@ -1,10 +1,13 @@
 import type { Language } from '../types';
 import type { LeaderboardRow } from '../services/yandexSDK';
-import { t } from '../i18n/ui';
+import { evaluateRank } from '../engine/rankEngine';
+import { formatInvestigatorLevel, t } from '../i18n/ui';
 import { ACHIEVEMENTS } from '../data/achievements';
 
 interface Props {
   lang: Language;
+  /** Cumulative career XP — drives the investigator rank card. */
+  xp: number;
   balance: number;
   accuracyPct: number;
   solvedCount: number;
@@ -29,6 +32,7 @@ const LOCAL_BOARD = [
 /** Right column: live analytics dashboard. */
 export function RightSidebar({
   lang,
+  xp,
   balance,
   accuracyPct,
   solvedCount,
@@ -38,6 +42,9 @@ export function RightSidebar({
   onOpenAchievements,
   leaderboard,
 }: Props) {
+  const rank = evaluateRank(xp);
+  const levelTitle = formatInvestigatorLevel(rank.level, lang);
+
   const rows: LeaderboardRow[] =
     leaderboard ??
     [...LOCAL_BOARD, { name: 'you', score: balance }]
@@ -55,6 +62,27 @@ export function RightSidebar({
       <div className="text-[11px] font-semibold tracking-[1.5px] text-text-dim">
         {t('analytics', lang)}
       </div>
+
+      {/* Investigator rank — desktop analytics column */}
+      <Card className="hidden md:block">
+        <div className="flex items-baseline justify-between gap-2">
+          <span className="text-xs font-semibold text-[#d1d5db]">
+            {t('rank', lang)}
+          </span>
+          <span className="text-xs font-bold text-accent">{levelTitle}</span>
+        </div>
+        <div className="mt-[9px] h-[7px] overflow-hidden rounded bg-surface">
+          <div
+            className="h-full rounded bg-accent transition-[width] duration-500"
+            style={{ width: `${Math.round(rank.progress * 100)}%` }}
+          />
+        </div>
+        <div className="mt-1.5 text-[10px] font-medium text-text-dim">
+          {rank.isMax || rank.xpForNext === null
+            ? `${xp} ${t('xpGained', lang)}`
+            : `${rank.xpIntoRank} / ${rank.xpForNext} ${t('xpToPromote', lang)}`}
+        </div>
+      </Card>
 
       {/* Company balance */}
       <Card>
@@ -153,9 +181,17 @@ export function RightSidebar({
   );
 }
 
-function Card({ children }: { children: React.ReactNode }) {
+function Card({
+  children,
+  className = '',
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   return (
-    <div className="rounded-[10px] border border-border bg-surface-2 p-3.5">
+    <div
+      className={`rounded-[10px] border border-border bg-surface-2 p-3.5 ${className}`}
+    >
       {children}
     </div>
   );

@@ -1,4 +1,4 @@
-# Claim Detective
+# Где ложь? Симулятор детектива
 
 Data-driven insurance-investigation game for **Yandex Games**.
 React + TypeScript + Zustand + Zod + Tailwind + Framer Motion.

@@ -4,7 +4,7 @@ import { t } from '../i18n/ui';
 interface Props {
   lang: Language;
   canApprove: boolean;
-  /** Reject is gated on justification: disabled until a contradiction is stamped. */
+  /** Reject is gated in the handler so an unjustified click can show guidance. */
   canReject: boolean;
   onApprove: () => void;
   onReject: () => void;
@@ -27,12 +27,11 @@ export function VerdictPanel({
         <button
           type="button"
           onClick={onReject}
-          disabled={!canReject}
           title={canReject ? undefined : t('rejectNeedsProof', lang)}
           className={`h-[54px] rounded-[9px] text-sm font-bold uppercase tracking-wide text-white transition-[filter] ${
             canReject
               ? 'bg-danger hover:brightness-110'
-              : 'cursor-not-allowed bg-danger/30'
+              : 'bg-danger/60 hover:brightness-110'
           }`}
         >
           {t('rejectPayout', lang)}

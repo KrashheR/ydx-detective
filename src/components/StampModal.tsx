@@ -1,7 +1,15 @@
+import {
+  useEffect,
+  useRef,
+  type KeyboardEvent as ReactKeyboardEvent,
+} from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import type { Evidence, Language } from '../types';
 import { loc, t } from '../i18n/ui';
 import { EVIDENCE_TAG_KEY } from './icons';
+
+const FOCUSABLE_SELECTOR =
+  'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
 
 interface Props {
   evidence: Evidence | null;
@@ -22,6 +30,68 @@ export function StampModal({
   onToggle,
   onClose,
 }: Props) {
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const onCloseRef = useRef(onClose);
+  const titleId = evidence
+    ? `stamp-modal-title-${evidence.id.replace(/[^a-zA-Z0-9_-]/g, '-')}`
+    : undefined;
+
+  useEffect(() => {
+    onCloseRef.current = onClose;
+  }, [onClose]);
+
+  useEffect(() => {
+    if (!evidence) return undefined;
+
+    const previouslyFocused =
+      document.activeElement instanceof HTMLElement ? document.activeElement : null;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') onCloseRef.current();
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    window.setTimeout(() => closeButtonRef.current?.focus(), 0);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      previouslyFocused?.focus();
+    };
+  }, [evidence]);
+
+  const handleDialogKeyDown = (event: ReactKeyboardEvent<HTMLDivElement>) => {
+    if (event.key !== 'Tab') return;
+
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+
+    const focusableElements = Array.from(
+      dialog.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR),
+    ).filter((element) => !element.hasAttribute('disabled'));
+
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+    if (!firstElement || !lastElement) return;
+
+    if (event.shiftKey && document.activeElement === dialog) {
+      event.preventDefault();
+      lastElement.focus();
+      return;
+    }
+
+    if (event.shiftKey && document.activeElement === firstElement) {
+      event.preventDefault();
+      lastElement.focus();
+      return;
+    }
+
+    if (!event.shiftKey && document.activeElement === lastElement) {
+      event.preventDefault();
+      firstElement.focus();
+    }
+  };
+
   return (
     <AnimatePresence>
       {evidence && (
@@ -35,13 +105,19 @@ export function StampModal({
           onClick={onClose}
         >
           <motion.div
+            ref={dialogRef}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby={titleId}
             className="relative flex max-h-full w-full max-w-[420px] flex-col overflow-auto bg-paper shadow-modal"
             style={{ borderRadius: 9 }}
             initial={{ opacity: 0, y: 16, scale: 0.985 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.985 }}
             transition={{ duration: 0.28, ease: [0.2, 0.9, 0.3, 1] }}
+            tabIndex={-1}
             onClick={(e) => e.stopPropagation()}
+            onKeyDown={handleDialogKeyDown}
           >
             {/* Dark folder-edge header */}
             <div className="flex items-center justify-between gap-2 bg-folder-edge px-4 py-3">
@@ -49,11 +125,15 @@ export function StampModal({
                 <span className="rounded bg-white/[0.18] px-1.5 py-[3px] font-mono text-[10px] font-bold uppercase tracking-wider text-white">
                   {t(EVIDENCE_TAG_KEY[evidence.type], lang)}
                 </span>
-                <span className="truncate text-[13px] font-semibold text-white">
+                <span
+                  id={titleId}
+                  className="truncate text-[13px] font-semibold text-white"
+                >
                   {loc(evidence.title, lang)}
                 </span>
               </div>
               <button
+                ref={closeButtonRef}
                 type="button"
                 onClick={onClose}
                 aria-label="Close"

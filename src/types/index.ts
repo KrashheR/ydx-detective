@@ -1,5 +1,5 @@
 /**
- * Claim Detective — Core domain types.
+ * Где ложь? Симулятор детектива — Core domain types.
  *
  * These types describe two strictly separated concerns:
  *

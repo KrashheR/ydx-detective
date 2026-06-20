@@ -1,5 +1,5 @@
 /**
- * Claim Detective — central Zustand store.
+ * Где ложь? Симулятор детектива — central Zustand store.
  *
  * This is the single runtime authority for mutable player state. It composes:
  *   • the pure reward engine        (src/engine/rewardEngine.ts)
@@ -40,6 +40,7 @@ import {
   getYandexLang,
   initYandex,
   onPauseChange,
+  showFullscreenAd,
   showRewardedAd,
   submitLeaderboardScore,
 } from '../services/yandexSDK';
@@ -80,8 +81,8 @@ function detectYandexLanguage(): Language | null {
 export type VerdictOutcome = RewardBreakdown & {
   caseId: string;
   xpGained: number;
-  /** Rank id the player was promoted *to* this case, or null if no promotion. */
-  promotedToRankId: string | null;
+  /** Investigator level the player was promoted to this case, or null if no promotion. */
+  promotedToLevel: number | null;
   /** Achievement ids unlocked by closing this case (for the result sheet). */
   newAchievementIds: string[];
 };
@@ -285,7 +286,7 @@ export const useGameStore = create<GameStoreState>((set, get) => {
           caseData.claimAmount * GAME_CONFIG.hints.inspectorNoteClaimPct,
         );
         if (stats.balance < cost) return false; // unaffordable — UI gates this
-        reveal(cost);
+        showFullscreenAd(() => reveal(cost));
         return true;
       }
 
@@ -368,8 +369,8 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       const finalBalance = baseStats.balance + bonusRub;
       // Promotion accounts for achievement bonus XP too (it may tip a threshold).
       const rankAfter = evaluateRank(finalXp);
-      const promotedToRankId =
-        rankAfter.index > rankBefore.index ? rankAfter.id : null;
+      const promotedToLevel =
+        rankAfter.index > rankBefore.index ? rankAfter.level : null;
 
       const finalStats: PlayerStats = {
         ...baseStats,
@@ -387,7 +388,7 @@ export const useGameStore = create<GameStoreState>((set, get) => {
           ...breakdown,
           caseId: caseData.id,
           xpGained,
-          promotedToRankId,
+          promotedToLevel,
           newAchievementIds: unlocks.map((a) => a.id),
         },
       });

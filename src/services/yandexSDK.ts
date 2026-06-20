@@ -209,15 +209,25 @@ export async function cloudGet(): Promise<unknown | null> {
 
 /**
  * Show an interstitial. Wraps the open/close callbacks so the global pause flag
- * toggles automatically — the caller need not know about the pause system.
+ * toggles automatically. `onDone` lets callers continue the user action once
+ * the ad lifecycle has ended.
  */
-export function showFullscreenAd(): void {
-  if (!sdk) return;
+export function showFullscreenAd(onDone?: () => void): void {
+  if (!sdk) {
+    onDone?.();
+    return;
+  }
   sdk.adv.showFullscreenAdv({
     callbacks: {
       onOpen: () => broadcastPause(true),
-      onClose: () => broadcastPause(false),
-      onError: () => broadcastPause(false),
+      onClose: () => {
+        broadcastPause(false);
+        onDone?.();
+      },
+      onError: () => {
+        broadcastPause(false);
+        onDone?.();
+      },
     },
   });
 }
