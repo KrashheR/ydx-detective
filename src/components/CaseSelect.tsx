@@ -46,7 +46,7 @@ export function CaseSelect({
         >
           <span className="absolute -top-[13px] left-[26px] h-6 w-[130px] rounded-t-[7px] bg-[#a9781b]" />
           <div
-            className="relative overflow-hidden border border-[#a9781b] p-[24px_22px_26px] shadow-folder"
+            className="relative overflow-hidden border border-[#a9781b] p-[24px_22px_26px]"
             style={{
               borderRadius: '3px 12px 12px 12px',
               background: 'linear-gradient(135deg,#e6b85c,#d9a441)',
@@ -95,7 +95,6 @@ export function CaseSelect({
           </div>
         </motion.button>
       )}
-
       {standardCaseUnlocks.map((info) => {
         const c = info.caseData;
         const locked = info.status === 'locked';
@@ -120,7 +119,7 @@ export function CaseSelect({
             <span className="absolute -top-[13px] left-[26px] h-6 w-[130px] rounded-t-[7px] bg-folder-edge" />
             {/* Folder cover */}
             <div
-              className={`paper-grain relative overflow-hidden border bg-folder p-[24px_22px_26px] shadow-folder ${
+              className={`paper-grain relative overflow-hidden border bg-folder p-[24px_22px_26px] ${
                 locked ? 'border-border grayscale' : 'border-folder-edge'
               }`}
               style={{ borderRadius: '3px 12px 12px 12px' }}
