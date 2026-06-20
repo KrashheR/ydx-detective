@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" width="480" height="200" role="img" aria-label="Stolen car case cover">
+  <rect width="480" height="200" fill="#efe7d2"/>
+  <rect width="480" height="200" fill="url(#g2)"/>
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff7e6" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#d97706" stop-opacity=".12"/>
+    </linearGradient>
+  </defs>
+  <rect x="16" y="16" width="448" height="168" fill="none" stroke="#d97706" stroke-opacity=".5" stroke-width="2"/>
+  <g fill="#1f2937" fill-opacity=".5">
+    <path d="M150 120 l10 -34 q4 -12 16 -12 h88 q12 0 16 12 l10 34 z" fill="#374151" fill-opacity=".45"/>
+    <rect x="150" y="118" width="140" height="22" rx="6" fill="#374151" fill-opacity=".55"/>
+    <circle cx="176" cy="142" r="12" fill="#1f2937" fill-opacity=".6"/>
+    <circle cx="264" cy="142" r="12" fill="#1f2937" fill-opacity=".6"/>
+  </g>
+  <g transform="rotate(12 380 60)">
+    <rect x="330" y="44" width="100" height="34" fill="none" stroke="#d97706" stroke-width="4"/>
+    <text x="380" y="67" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" letter-spacing="2" fill="#d97706" font-weight="800">URGENT</text>
+  </g>
+  <text x="32" y="44" font-family="Inter, sans-serif" font-size="13" letter-spacing="3" fill="#d97706" font-weight="700">DAILY · 002</text>
+</svg>

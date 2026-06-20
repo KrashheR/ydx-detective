@@ -1,0 +1,191 @@
+{
+  "id": "case-011",
+  "type": "standard",
+  "difficulty": "hard",
+  "claimAmount": 8000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Кража драгоценностей в доме",
+    "en": "The Home Jewelry Burglary",
+    "tr": "Evdeki Mücevher Soygunu",
+    "ar": "سرقة المجوهرات من المنزل",
+    "kk": "Үйдегі зергерлік ұрлық"
+  },
+  "claim": {
+    "person": {
+      "ru": "Беатрис Колер",
+      "en": "Beatrice Kohler",
+      "tr": "Beatrice Kohler",
+      "ar": "بياتريس كولر",
+      "kk": "Беатрис Колер"
+    },
+    "story": {
+      "ru": "Пока меня не было дома в ночь на 8 мая, кто-то проник внутрь и украл все мои украшения из спальни. Сигнализация почему-то не сработала. Прошу выплату по описи драгоценностей.",
+      "en": "While I was away on the night of 8 May, someone broke in and took all my jewelry from the bedroom. For some reason the alarm never went off. I am claiming for the listed jewelry.",
+      "tr": "8 Mayıs gecesi evde yokken biri içeri girip yatak odasındaki tüm mücevherlerimi aldı. Nedense alarm hiç çalmadı. Listelenen mücevherler için talepte bulunuyorum.",
+      "ar": "بينما كنت خارج المنزل ليلة 8 مايو، اقتحم أحدهم المكان وأخذ كل مجوهراتي من غرفة النوم. لسبب ما لم ينطلق الإنذار أبدًا. أطالب بقيمة المجوهرات المدرجة.",
+      "kk": "8 мамырға қараған түні үйде болмағанымда біреу ішке кіріп, жатын бөлмемдегі барлық зергерлік бұйымдарымды алып кеткен. Неге екені белгісіз, дабыл мүлде қосылмаған. Тізімдегі зергерлік бұйымдар үшін төлем сұраймын."
+    }
+  },
+  "coverImage": "covers/case-011.svg",
+  "personImage": "people/beatrice.svg",
+  "evidences": [
+    {
+      "id": "ev-forensic",
+      "type": "document",
+      "title": {
+        "ru": "Заключение слесаря-криминалиста",
+        "en": "Locksmith Forensic Note",
+        "tr": "Çilingir Adli İnceleme Notu",
+        "ar": "تقرير فني الأقفال الجنائي",
+        "kk": "Құлыпшы-сарапшы қорытындысы"
+      },
+      "content": {
+        "ru": "Осмотр дверей и окон: следов взлома, отжима или повреждения замков нет. Журнал сигнализации показывает, что система была снята с охраны в 23:14 корректным кодом владельца, а не отключена силой.",
+        "en": "Inspection of doors and windows: no signs of forced entry, prying or lock damage. The alarm log shows the system was disarmed at 23:14 using the owner's correct code, not defeated by force.",
+        "tr": "Kapı ve pencerelerin incelemesi: zorla giriş, zorlama ya da kilit hasarı izi yok. Alarm kaydı, sistemin saat 23:14'te sahibinin doğru koduyla devre dışı bırakıldığını, zorla etkisiz hâle getirilmediğini gösteriyor.",
+        "ar": "فحص الأبواب والنوافذ: لا توجد آثار اقتحام أو عَنوة أو تلف في الأقفال. يُظهر سجل الإنذار أن النظام أُلغي تفعيله الساعة 23:14 باستخدام رمز المالك الصحيح، لا بالقوة.",
+        "kk": "Есік пен терезелерді тексеру: бұзып кіру, сындыру немесе құлыпты зақымдау іздері жоқ. Дабыл журналы жүйенің 23:14-те иесінің дұрыс кодымен ажыратылғанын, күшпен өшірілмегенін көрсетеді."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Нет следов взлома, а сигнализация снята личным кодом владелицы — это противоречит версии о проникновении чужого.",
+        "en": "There are no signs of a break-in and the alarm was disarmed with the owner's own code — contradicting the story of an intruder.",
+        "tr": "Zorla giriş izi yok ve alarm sahibinin kendi koduyla kapatılmış — bu, bir davetsiz misafir anlatımıyla çelişiyor.",
+        "ar": "لا توجد آثار اقتحام وأُلغي الإنذار برمز المالكة نفسها — وهذا يناقض رواية وجود متسلل.",
+        "kk": "Бұзып кіру іздері жоқ әрі дабыл иесінің жеке кодымен ажыратылған — бұл бөгде адамның кіруі туралы әңгімеге қайшы."
+      }
+    },
+    {
+      "id": "ev-doorbell",
+      "type": "camera_recording",
+      "title": {
+        "ru": "Журнал умного дверного звонка",
+        "en": "Smart Doorbell Log",
+        "tr": "Akıllı Kapı Zili Kaydı",
+        "ar": "سجل جرس الباب الذكي",
+        "kk": "Ақылды есік қоңырауының журналы"
+      },
+      "content": {
+        "ru": [
+          "7 мая, 22:48 — владелица выносит две закрытые коробки к багажнику автомобиля",
+          "7 мая, 22:53 — возвращается, выносит ещё одну коробку и сумку",
+          "7 мая, 23:10 — машина выезжает с подъездной дорожки",
+          "8 мая — за весь день у двери не зафиксировано посторонних"
+        ],
+        "en": [
+          "7 May, 22:48 — owner carries two sealed boxes to the car trunk",
+          "7 May, 22:53 — returns, carries out another box and a bag",
+          "7 May, 23:10 — the car leaves the driveway",
+          "8 May — no strangers detected at the door all day"
+        ],
+        "tr": [
+          "7 Mayıs, 22:48 — ev sahibi iki kapalı kutuyu aracın bagajına taşıyor",
+          "7 Mayıs, 22:53 — geri dönüyor, bir kutu ve bir çanta daha çıkarıyor",
+          "7 Mayıs, 23:10 — araç garaj yolundan ayrılıyor",
+          "8 Mayıs — gün boyunca kapıda yabancı tespit edilmedi"
+        ],
+        "ar": [
+          "7 مايو، 22:48 — المالكة تحمل صندوقين مغلقين إلى صندوق السيارة",
+          "7 مايو، 22:53 — تعود وتحمل صندوقًا آخر وحقيبة",
+          "7 مايو، 23:10 — السيارة تغادر الممر",
+          "8 مايو — لم يُرصد أي غريب عند الباب طوال اليوم"
+        ],
+        "kk": [
+          "7 мамыр, 22:48 — иесі екі жабық қорапты көліктің багажнигіне апарады",
+          "7 мамыр, 22:53 — қайтып келіп, тағы бір қорап пен сөмке шығарады",
+          "7 мамыр, 23:10 — көлік ауладан шығып кетеді",
+          "8 мамыр — күні бойы есік алдында бөгде адам байқалмады"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Владелица сама вывезла коробки за день до «кражи», и посторонних у двери не было — это опровергает версию о грабителе.",
+        "en": "The owner herself removed boxes the day before the 'burglary' and no strangers appeared — refuting the intruder story.",
+        "tr": "Ev sahibi 'soygundan' bir gün önce kutuları kendisi çıkarmış ve hiç yabancı görünmemiş — bu, soyguncu anlatımını çürütüyor.",
+        "ar": "المالكة نفسها أخرجت الصناديق قبل يوم من 'السرقة' ولم يظهر أي غريب — ما يدحض رواية اللص.",
+        "kk": "Иесінің өзі «ұрлықтан» бір күн бұрын қораптарды шығарған әрі бөгде адам көрінбеген — бұл ұры туралы әңгімені теріске шығарады."
+      }
+    },
+    {
+      "id": "ev-police",
+      "type": "document",
+      "title": {
+        "ru": "Полицейское заявление",
+        "en": "Police Report Filed",
+        "tr": "Verilen Polis Tutanağı",
+        "ar": "بلاغ الشرطة المقدّم",
+        "kk": "Полицияға берілген арыз"
+      },
+      "content": {
+        "ru": "8 мая в 09:20 заявительница официально подала заявление о краже со взломом, перечислив пропавшие украшения. Дело зарегистрировано под номером, открыто расследование.",
+        "en": "On 8 May at 09:20 the claimant formally filed a burglary report, listing the missing jewelry. The case was registered with a reference number and an investigation opened.",
+        "tr": "8 Mayıs saat 09:20'de talep sahibi resmî olarak hırsızlık ihbarında bulundu ve kayıp mücevherleri listeledi. Dava bir referans numarasıyla kaydedildi ve soruşturma açıldı.",
+        "ar": "في 8 مايو الساعة 09:20 قدّمت مقدّمة الطلب بلاغًا رسميًا عن السطو، وأدرجت المجوهرات المفقودة. سُجّلت القضية برقم مرجعي وفُتح تحقيق.",
+        "kk": "8 мамыр 09:20-да өтініш беруші ұрлық туралы ресми арыз беріп, жоғалған бұйымдарды тізімдеді. Іс тіркеу нөмірімен ашылып, тергеу басталды."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Само заявление в полицию реально, но лишь фиксирует слова заявительницы и не подтверждает факт взлома.",
+        "en": "The police filing is genuine but only records the claimant's account; it does not prove a break-in occurred.",
+        "tr": "Polis başvurusu gerçektir ancak yalnızca talep sahibinin beyanını kaydeder; bir soygunun gerçekleştiğini kanıtlamaz.",
+        "ar": "البلاغ حقيقي لكنه يسجّل فقط رواية مقدّمة الطلب ولا يثبت وقوع اقتحام.",
+        "kk": "Полицияға арыз шынайы, бірақ ол тек өтініш берушінің сөзін тіркейді, бұзып кіруді дәлелдемейді."
+      }
+    },
+    {
+      "id": "ev-appraisal",
+      "type": "document",
+      "title": {
+        "ru": "Оценка драгоценностей",
+        "en": "Jewelry Appraisal",
+        "tr": "Mücevher Değerlemesi",
+        "ar": "تقييم المجوهرات",
+        "kk": "Зергерлік бұйымдар бағалауы"
+      },
+      "content": {
+        "ru": "Сертифицированный геммолог оценил перечисленные изделия в феврале того же года в 7 800 €. Документ подлинный, описания соответствуют заявленному списку.",
+        "en": "A certified gemologist appraised the listed pieces in February of the same year at €7,800. The document is authentic and the descriptions match the claimed list.",
+        "tr": "Sertifikalı bir gemolog, listelenen parçaları aynı yılın şubat ayında 7.800 € olarak değerledi. Belge gerçektir ve açıklamalar talep edilen listeyle örtüşür.",
+        "ar": "قام خبير أحجار كريمة معتمد بتقييم القطع المدرجة في فبراير من العام نفسه بمبلغ 7,800 €. الوثيقة أصلية والأوصاف تطابق القائمة المطالب بها.",
+        "kk": "Сертификатталған геммолог тізімдегі бұйымдарды сол жылдың ақпанында 7 800 € деп бағалаған. Құжат түпнұсқа, сипаттамалар талап тізіміне сәйкес."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Оценка подлинная и подтверждает стоимость, но не говорит ничего о том, как именно вещи исчезли.",
+        "en": "The appraisal is genuine and confirms value, but says nothing about how the items actually disappeared.",
+        "tr": "Değerleme gerçektir ve değeri doğrular, ancak eşyaların gerçekte nasıl kaybolduğu hakkında hiçbir şey söylemez.",
+        "ar": "التقييم أصلي ويؤكد القيمة، لكنه لا يقول شيئًا عن كيفية اختفاء القطع فعليًا.",
+        "kk": "Бағалау түпнұсқа және құнды растайды, бірақ бұйымдардың қалай жоғалғаны туралы ештеңе айтпайды."
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Нет следов взлома, а сигнализация снята личным кодом владелицы.",
+      "Камера показывает, что она сама вывезла коробки за день до «кражи».",
+      "Заявление и оценка подлинны, но не доказывают факт ограбления — это инсценировка."
+    ],
+    "en": [
+      "No signs of forced entry and the alarm was disarmed with the owner's own code.",
+      "The camera shows she removed boxes herself the day before the 'burglary'.",
+      "The report and appraisal are real but prove no robbery — this is staged."
+    ],
+    "tr": [
+      "Zorla giriş izi yok ve alarm sahibinin kendi koduyla kapatılmış.",
+      "Kamera, 'soygundan' bir gün önce kutuları kendisinin çıkardığını gösteriyor.",
+      "Tutanak ve değerleme gerçek ama soygunu kanıtlamıyor — bu bir düzmece."
+    ],
+    "ar": [
+      "لا آثار اقتحام وأُلغي الإنذار برمز المالكة نفسها.",
+      "تُظهر الكاميرا أنها أخرجت الصناديق بنفسها قبل يوم من 'السرقة'.",
+      "البلاغ والتقييم حقيقيان لكنهما لا يثبتان السطو — العملية مفبركة."
+    ],
+    "kk": [
+      "Бұзып кіру іздері жоқ, дабыл иесінің жеке кодымен ажыратылған.",
+      "Камера оның «ұрлықтан» бір күн бұрын қораптарды өзі шығарғанын көрсетеді.",
+      "Арыз бен бағалау шынайы, бірақ ұрлықты дәлелдемейді — бұл қойылым."
+    ]
+  }
+}

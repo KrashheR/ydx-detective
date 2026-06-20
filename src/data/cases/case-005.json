@@ -1,0 +1,186 @@
+{
+  "id": "case-005",
+  "type": "standard",
+  "difficulty": "medium",
+  "claimAmount": 2200,
+  "truth": "fraud",
+  "title": {
+    "ru": "Полтергейст в прямом эфире",
+    "en": "The Live-Streamed Poltergeist",
+    "tr": "Canlı Yayındaki Poltergeist",
+    "ar": "شبح البث المباشر",
+    "kk": "Тікелей эфирдегі полтергейст"
+  },
+  "claim": {
+    "person": {
+      "ru": "Стас Гром, 24 года",
+      "en": "Stas Grom, 24",
+      "tr": "Stas Grom, 24",
+      "ar": "ستاس غروم، 24",
+      "kk": "Стас Гром, 24 жаста"
+    },
+    "story": {
+      "ru": "Во время паранормального явления полтергейст сбросил со стола мой игровой ноутбук и монитор. Прошу компенсацию за сверхъестественный ущерб технике.",
+      "en": "During a paranormal event, a poltergeist threw my gaming laptop and monitor off the desk. I request compensation for the supernatural damage to my equipment.",
+      "tr": "Paranormal bir olay sırasında bir poltergeist oyun bilgisayarımı ve monitörümü masadan attı. Ekipmanıma verilen doğaüstü hasar için tazminat talep ediyorum.",
+      "ar": "أثناء حدث خارق للطبيعة، ألقى شبح حاسوبي المحمول للألعاب وشاشتي عن المكتب. أطلب تعويضًا عن الضرر الخارق الذي لحق بمعداتي.",
+      "kk": "Паранормаль құбылыс кезінде полтергейст менің ойын ноутбугім мен мониторымды үстелден лақтырып жіберді. Техникама келген табиғаттан тыс зиян үшін өтемақы сұраймын."
+    }
+  },
+  "coverImage": "covers/case-005.svg",
+  "personImage": "people/stas.svg",
+  "evidences": [
+    {
+      "id": "ev-stream",
+      "type": "camera_recording",
+      "title": {
+        "ru": "Запись стрима",
+        "en": "Stream Recording",
+        "tr": "Yayın Kaydı",
+        "ar": "تسجيل البث",
+        "kk": "Стрим жазбасы"
+      },
+      "content": {
+        "ru": "Его собственный стрим: проиграв матч, он вскакивает и швыряет ноутбук через всю комнату.",
+        "en": "His own livestream: after losing a match, he leaps up and hurls the laptop across the room.",
+        "tr": "Kendi canlı yayını: maçı kaybettikten sonra ayağa fırlayıp dizüstü bilgisayarı odanın öbür ucuna fırlatıyor.",
+        "ar": "بثه المباشر الخاص: بعد خسارة مباراة، يقفز ويقذف الحاسوب المحمول عبر الغرفة.",
+        "kk": "Оның өз стримі: матчта жеңілгеннен кейін ол атып тұрып, ноутбукті бөлменің арғы шетіне лақтырады."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Технику разбил сам заявитель, а не полтергейст — это на видео.",
+        "en": "The claimant himself smashed the equipment, not a poltergeist — it's on video.",
+        "tr": "Ekipmanı poltergeist değil, talep sahibinin kendisi kırdı — videoda var.",
+        "ar": "مقدم الطلب نفسه هو من حطم المعدات، وليس شبحًا — الأمر مسجل بالفيديو.",
+        "kk": "Техниканы полтергейст емес, өтініш берушінің өзі сындырды — бұл видеода бар."
+      }
+    },
+    {
+      "id": "ev-sensor",
+      "type": "usage_log",
+      "title": {
+        "ru": "Лог умного дома",
+        "en": "Smart-Home Log",
+        "tr": "Akıllı Ev Kaydı",
+        "ar": "سجل المنزل الذكي",
+        "kk": "Смарт-үй логы"
+      },
+      "content": {
+        "ru": [
+          "23:46 — в квартире зафиксирован один человек",
+          "23:47 — сильный удар по столу",
+          "23:47 — иных аномалий нет"
+        ],
+        "en": [
+          "23:46 — one person detected in the flat",
+          "23:47 — hard impact on the desk",
+          "23:47 — no other anomalies"
+        ],
+        "tr": [
+          "23:46 — dairede bir kişi tespit edildi",
+          "23:47 — masaya sert darbe",
+          "23:47 — başka anormallik yok"
+        ],
+        "ar": [
+          "23:46 — تم رصد شخص واحد في الشقة",
+          "23:47 — ارتطام قوي بالمكتب",
+          "23:47 — لا توجد أي شذوذات أخرى"
+        ],
+        "kk": [
+          "23:46 — пәтерде бір адам тіркелді",
+          "23:47 — үстелге қатты соққы",
+          "23:47 — басқа ауытқу жоқ"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "В квартире был только он, и датчик зафиксировал удар, а не паранормальную активность.",
+        "en": "Only he was in the flat, and the sensor logged an impact — not paranormal activity.",
+        "tr": "Dairede yalnızca o vardı ve sensör paranormal değil, bir darbe kaydetti.",
+        "ar": "كان وحده في الشقة، وسجّل المستشعر ارتطامًا، لا نشاطًا خارقًا.",
+        "kk": "Пәтерде тек ол болды, әрі датчик паранормаль әрекетті емес, соққыны тіркеді."
+      }
+    },
+    {
+      "id": "ev-photo",
+      "type": "photo",
+      "title": {
+        "ru": "Фото с места",
+        "en": "Scene Photo",
+        "tr": "Olay Yeri Fotoğrafı",
+        "ar": "صورة المكان",
+        "kk": "Оқиға орнының суреті"
+      },
+      "content": {
+        "ru": "Ноутбук с трещиной на полу рядом с пролитым энергетиком и геймпадом.",
+        "en": "A cracked laptop on the floor beside a spilled energy drink and a gamepad.",
+        "tr": "Yerde, dökülmüş bir enerji içeceği ve bir oyun kolunun yanında çatlak bir dizüstü bilgisayar.",
+        "ar": "حاسوب محمول متصدع على الأرض بجوار مشروب طاقة مسكوب ووحدة تحكم ألعاب.",
+        "kk": "Еденде төгілген энергетик пен геймпадтың қасында жарықшағы бар ноутбук."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Фото подтверждает повреждение, но само по себе не указывает на причину.",
+        "en": "The photo confirms the damage but does not, on its own, point to a cause.",
+        "tr": "Fotoğraf hasarı doğruluyor ama tek başına nedeni göstermiyor.",
+        "ar": "تؤكد الصورة الضرر لكنها وحدها لا تشير إلى السبب.",
+        "kk": "Сурет зиянды растайды, бірақ өздігінен себепті көрсетпейді."
+      }
+    },
+    {
+      "id": "ev-receipt",
+      "type": "document",
+      "title": {
+        "ru": "Чек на ноутбук",
+        "en": "Laptop Receipt",
+        "tr": "Dizüstü Fişi",
+        "ar": "إيصال الحاسوب",
+        "kk": "Ноутбук түбіртегі"
+      },
+      "content": {
+        "ru": "Подлинный чек на покупку игрового ноутбука. Сумма соответствует заявленной.",
+        "en": "A genuine receipt for the gaming laptop. The amount matches the claim.",
+        "tr": "Oyun dizüstü bilgisayarı için gerçek bir fiş. Tutar talep ile uyuşuyor.",
+        "ar": "إيصال أصلي لشراء حاسوب الألعاب المحمول. المبلغ يطابق المطالبة.",
+        "kk": "Ойын ноутбугін сатып алуға арналған шынайы түбіртек. Сома мәлімделгенге сай."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Чек подлинный — техника действительно существует и стоила столько.",
+        "en": "The receipt is genuine — the equipment really exists and cost that much.",
+        "tr": "Fiş gerçek — ekipman gerçekten var ve bu kadara mal olmuş.",
+        "ar": "الإيصال أصلي — المعدات موجودة فعلًا وبهذه القيمة.",
+        "kk": "Түбіртек шынайы — техника шынымен бар әрі сонша тұрған."
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Стрим заявителя показывает, как он сам швыряет ноутбук.",
+      "Лог умного дома: в квартире был только он, зафиксирован удар, а не «полтергейст».",
+      "Ущерб умышленный — заявление мошенническое, отклонить."
+    ],
+    "en": [
+      "The claimant's own stream shows him throwing the laptop.",
+      "The smart-home log: only he was home, and it logged an impact, not a \"poltergeist\".",
+      "The damage was deliberate — the claim is fraudulent, reject."
+    ],
+    "tr": [
+      "Talep sahibinin kendi yayını, dizüstü bilgisayarı fırlattığını gösteriyor.",
+      "Akıllı ev kaydı: evde yalnızca o vardı ve \"poltergeist\" değil, bir darbe kaydedildi.",
+      "Hasar kasıtlı — talep hileli, reddedin."
+    ],
+    "ar": [
+      "بث مقدم الطلب نفسه يُظهره وهو يرمي الحاسوب.",
+      "سجل المنزل الذكي: كان وحده في المنزل، وسُجّل ارتطام لا \"شبح\".",
+      "الضرر متعمد — المطالبة احتيالية، ارفضها."
+    ],
+    "kk": [
+      "Өтініш берушінің өз стримі оның ноутбукті лақтырғанын көрсетеді.",
+      "Смарт-үй логы: үйде тек ол болды әрі «полтергейст» емес, соққы тіркелді.",
+      "Зиян әдейі жасалған — талап алаяқтық, қабылдамаңыз."
+    ]
+  }
+}

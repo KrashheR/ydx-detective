@@ -1,0 +1,166 @@
+{
+  "id": "case-003",
+  "type": "standard",
+  "difficulty": "medium",
+  "claimAmount": 4000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Пёс-гурман",
+    "en": "The Gourmet Dog",
+    "tr": "Gurme Köpek",
+    "ar": "الكلب الذواقة",
+    "kk": "Гурман ит"
+  },
+  "claim": {
+    "person": {
+      "ru": "Геннадий Бубликов, 52 года",
+      "en": "Gennady Bublikov, 52",
+      "tr": "Gennady Bublikov, 52",
+      "ar": "غينادي بوبليكوف، 52",
+      "kk": "Геннадий Бубликов, 52 жаста"
+    },
+    "story": {
+      "ru": "Мой французский бульдог Барон проглотил мои швейцарские часы за 4000 €. Ветеринар сделал снимок. Прошу компенсацию за бесценную семейную реликвию.",
+      "en": "My French bulldog Baron swallowed my Swiss watch worth €4,000. The vet took an X-ray. I request compensation for this priceless family heirloom.",
+      "tr": "Fransız buldoğum Baron, 4.000 €'luk İsviçre saatimi yuttu. Veteriner röntgen çekti. Bu paha biçilmez aile yadigârı için tazminat talep ediyorum.",
+      "ar": "ابتلع كلبي البلدغ الفرنسي بارون ساعتي السويسرية التي تبلغ قيمتها 4000 يورو. أخذ الطبيب البيطري صورة بالأشعة. أطلب تعويضًا عن هذا الإرث العائلي الذي لا يقدر بثمن.",
+      "kk": "Менің француз бульдогым Барон 4000 €-лық швейцариялық сағатымды жұтып қойды. Ветеринар рентген түсірді. Осы баға жетпес отбасылық жәдігер үшін өтемақы сұраймын."
+    }
+  },
+  "coverImage": "covers/case-003.svg",
+  "personImage": "people/gennady.svg",
+  "evidences": [
+    {
+      "id": "ev-xray",
+      "type": "photo",
+      "title": {
+        "ru": "Рентген собаки",
+        "en": "Dog X-Ray",
+        "tr": "Köpek Röntgeni",
+        "ar": "أشعة الكلب",
+        "kk": "Иттің рентгені"
+      },
+      "content": {
+        "ru": "На снимке в желудке пса видны теннисный мяч и один носок. Часов нет.",
+        "en": "The X-ray shows a tennis ball and a single sock in the dog's stomach. No watch.",
+        "tr": "Röntgende köpeğin midesinde bir tenis topu ve tek bir çorap görünüyor. Saat yok.",
+        "ar": "تُظهر الأشعة كرة تنس وجوربًا واحدًا في معدة الكلب. لا توجد ساعة.",
+        "kk": "Рентгенде иттің асқазанында теннис добы мен бір шұлық көрінеді. Сағат жоқ."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Если бы пёс съел часы, они были бы видны на снимке — но их там нет.",
+        "en": "If the dog had eaten the watch, it would appear on the X-ray — but it isn't there.",
+        "tr": "Köpek saati yeseydi röntgende görünürdü — ama orada değil.",
+        "ar": "لو ابتلع الكلب الساعة لظهرت في الأشعة، لكنها غير موجودة.",
+        "kk": "Ит сағатты жұтқан болса, ол рентгенде көрінер еді — бірақ онда жоқ."
+      }
+    },
+    {
+      "id": "ev-listing",
+      "type": "document",
+      "title": {
+        "ru": "Объявление о продаже",
+        "en": "Marketplace Listing",
+        "tr": "Satılık İlanı",
+        "ar": "إعلان للبيع",
+        "kk": "Сату хабарландыруы"
+      },
+      "content": {
+        "ru": "Объявление о продаже точно таких же часов от продавца «Хозяин Барона», размещено через два дня после «происшествия».",
+        "en": "An ad selling an identical watch from seller \"Baron's Owner\", posted two days after the alleged incident.",
+        "tr": "\"Baron'un Sahibi\" adlı satıcıdan aynı saatin satış ilanı, sözde olaydan iki gün sonra yayınlanmış.",
+        "ar": "إعلان لبيع ساعة مطابقة من البائع \"صاحب بارون\"، نُشر بعد يومين من الحادثة المزعومة.",
+        "kk": "Дәл сондай сағатты сататын «Баронның иесі» атты сатушының хабарландыруы, болжамды оқиғадан екі күн өткен соң жарияланған."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Часы, якобы съеденные собакой, выставлены на продажу самим заявителем.",
+        "en": "The watch supposedly eaten by the dog is being sold by the claimant himself.",
+        "tr": "Köpeğin yediği iddia edilen saat, talep sahibinin kendisi tarafından satılıyor.",
+        "ar": "الساعة التي يُزعم أن الكلب ابتلعها معروضة للبيع من قبل مقدم الطلب نفسه.",
+        "kk": "Ит жұтты деген сағатты өтініш берушінің өзі сатуға қойған."
+      }
+    },
+    {
+      "id": "ev-receipt",
+      "type": "document",
+      "title": {
+        "ru": "Чек на часы",
+        "en": "Watch Receipt",
+        "tr": "Saat Fişi",
+        "ar": "إيصال الساعة",
+        "kk": "Сағат түбіртегі"
+      },
+      "content": {
+        "ru": "Чек показывает, что «швейцарские часы» — это сувенирная реплика за 29 € из пляжного киоска.",
+        "en": "The receipt shows the \"Swiss watch\" is a €29 souvenir replica from a beach kiosk.",
+        "tr": "Fiş, \"İsviçre saatinin\" bir plaj büfesinden alınan 29 €'luk hatıra eşyası taklidi olduğunu gösteriyor.",
+        "ar": "يُظهر الإيصال أن \"الساعة السويسرية\" هي نسخة تذكارية مقلدة بسعر 29 يورو من كشك على الشاطئ.",
+        "kk": "Түбіртек «швейцариялық сағат» — жағажай дүңгіршегінен алынған 29 €-лық кәдесый көшірмесі екенін көрсетеді."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Заявленная стоимость 4000 € не соответствует чеку на 29 €.",
+        "en": "The claimed value of €4,000 does not match the €29 receipt.",
+        "tr": "İddia edilen 4.000 € değer, 29 €'luk fişle örtüşmüyor.",
+        "ar": "القيمة المزعومة البالغة 4000 يورو لا تتطابق مع الإيصال البالغ 29 يورو.",
+        "kk": "Мәлімделген 4000 € құны 29 €-лық түбіртекке сәйкес келмейді."
+      }
+    },
+    {
+      "id": "ev-vetbill",
+      "type": "document",
+      "title": {
+        "ru": "Счёт ветеринара",
+        "en": "Vet Bill",
+        "tr": "Veteriner Faturası",
+        "ar": "فاتورة الطبيب البيطري",
+        "kk": "Ветеринар шоты"
+      },
+      "content": {
+        "ru": "Официальный счёт за осмотр собаки. Барон здоров, аппетит отличный.",
+        "en": "Official bill for examining the dog. Baron is healthy with a great appetite.",
+        "tr": "Köpeğin muayenesi için resmi fatura. Baron sağlıklı ve iştahı yerinde.",
+        "ar": "فاتورة رسمية لفحص الكلب. بارون بصحة جيدة وشهيته ممتازة.",
+        "kk": "Итті тексеруге арналған ресми шот. Барон сау, тәбеті жақсы."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Счёт подлинный, пёс действительно был на осмотре — противоречия нет.",
+        "en": "The bill is genuine and the dog really was examined — no contradiction.",
+        "tr": "Fatura gerçek ve köpek gerçekten muayene edilmiş — çelişki yok.",
+        "ar": "الفاتورة أصلية والكلب فُحص بالفعل — لا يوجد تناقض.",
+        "kk": "Шот шынайы, ит шынымен тексеруден өткен — қайшылық жоқ."
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "На рентгене часов в собаке нет.",
+      "Те же часы заявитель выставил на продажу.",
+      "Это сувенир за 29 €, а не реликвия за 4000 €. Заявление мошенническое — отклонить."
+    ],
+    "en": [
+      "The X-ray shows no watch inside the dog.",
+      "The claimant listed the same watch for sale.",
+      "It is a €29 souvenir, not a €4,000 heirloom. The claim is fraudulent — reject."
+    ],
+    "tr": [
+      "Röntgende köpeğin içinde saat yok.",
+      "Talep sahibi aynı saati satışa çıkarmış.",
+      "Bu 4.000 €'luk yadigâr değil, 29 €'luk bir hatıra eşyası. Talep hileli — reddedin."
+    ],
+    "ar": [
+      "الأشعة لا تُظهر أي ساعة داخل الكلب.",
+      "عرض مقدم الطلب الساعة نفسها للبيع.",
+      "إنها تذكار بـ 29 يورو، وليست إرثًا بـ 4000 يورو. المطالبة احتيالية — ارفضها."
+    ],
+    "kk": [
+      "Рентгенде иттің ішінде сағат жоқ.",
+      "Өтініш беруші дәл сол сағатты сатуға қойған.",
+      "Бұл 4000 €-лық жәдігер емес, 29 €-лық кәдесый. Талап алаяқтық — қабылдамаңыз."
+    ]
+  }
+}

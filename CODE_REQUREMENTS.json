@@ -1,0 +1,41 @@
+Role: You are a Senior Frontend Engineer and Software Architect with expertise in React, TypeScript, and lightweight client-side state management (Zustand, Zod). You specialize in building robust, data-driven web games optimized for the Yandex Games platform.Task: Write the core architecture, TypeScript types, and a Zustand state manager for the browser game "Claim Detective". The solution must strictly separate static case data (loaded from JSON) from the runtime mutable player state.1. Architectural Rules & RequirementsData-Driven: Adding a new case or a new translation must be possible by creating/editing a single JSON file without modifying any React or Zustand logic.Yandex SDK Integration: State must prioritize Yandex Cloud Saves (ysdk.getPlayer().setData()).Offline Fallback: If the player is not authenticated or the network fails, seamlessly fallback to LocalStorage.Rate-Limit Protection (Debounce): Cloud sync must be throttled/debounced to execute a maximum of once every 10 seconds, or instantly upon mounting the ResultScreen (Case Closure).Game Pause Guard: Implement a global isPaused flag synced with Yandex Ad SDK lifecycles (onOpen and onClose) to safely mute audio contexts and freeze game progression.2. Full Data Specification & JSON Schema ReferenceYour state and types must natively support the following structural schema, including multi-language support (i18n) and evidence verification tokens:JSON{
+  "project": {
+    "name": "Claim Detective",
+    "version": "MVP v1.1",
+    "platform": "Yandex Games"
+  },
+  "localization_i18n": {
+    "supportedLanguages": ["ru", "en", "tr", "ar", "kk"],
+    "defaultLanguage": "ru"
+  },
+  "caseSchema_Blueprint": {
+    "id": "string",
+    "type": "standard | daily",
+    "difficulty": "easy | medium | hard",
+    "claimAmount": "number",
+    "truth": "valid | fraud",
+    "title": { "ru": "string", "en": "string", "tr": "string", "ar": "string", "kk": "string" },
+    "claim": {
+      "person": { "ru": "string", "en": "string", "tr": "string", "ar": "string", "kk": "string" },
+      "story": { "ru": "string", "en": "string", "tr": "string", "ar": "string", "kk": "string" }
+    },
+    "coverImage": "string",
+    "evidences": [
+      {
+        "id": "string",
+        "type": "photo | gps | document | witness_statement | camera_recording | usage_log",
+        "title": { "ru": "string", "en": "string", "tr": "string", "ar": "string", "kk": "string" },
+        "content": {
+          "ru": "string | string[]", "en": "string | string[]", "tr": "string | string[]", "ar": "string | string[]", "kk": "string | string[]"
+        },
+        "isContradiction": "boolean",
+        "contradictionExplanation": { "ru": "string", "en": "string", "tr": "string", "ar": "string", "kk": "string" }
+      }
+    ],
+    "correctDecision": "approve | reject",
+    "explanation": {
+      "ru": "string[]", "en": "string[]", "tr": "string[]", "ar": "string[]", "kk": "string[]"
+    }
+  }
+}
+3. Core Logic Specifications to ImplementA. The Multi-Tier Reward Math EngineThe game reward for a correct verdict is split between the macro-decision and structural proof precision:Verdict Base Component: 50% of claimAmount (or fixed standard score reward) is allocated strictly for matching playerDecision === case.correctDecision.Evidence Proof Component: The remaining 50% scales linearly based on the exact ratio of correctly flagged contradictions:$$\text{Proof Component} = 0.5 \times \text{BaseReward} \times \left( \frac{\text{CorrectlyMarkedContradictions}}{\text{TotalContradictionsInCase}} \right)$$Anti-Cheat Penalty: If a player stamps an evidence card as a contradiction when isContradiction === false, apply a safe penalty (e.g., -50 currency units) to block brute-force click spamming.Failure State Trigger: If balance <= 0, lock progression until rewarded_ad_restore_funds callback fires, restoring balance to a standard minimum of 2000.B. The Dynamic Daily Case EvaluatorServer Time Constraint: Daily case locking and unlocking triggers must evaluate against Yandex Server Time/Network API time strings, NOT the player's mutable local device time configuration.Complexity Modifier: If case.type === 'daily', multiplier metrics apply scaling rules (reward * 5).C. Drafting & Active Save StateStore currently toggled evidence selections inside a running session container selectedEvidenceIds: string[].Ensure exiting mid-game saves the exact state to local memory, allowing the investigator to resume exactly where they left off.4. Expected Code OutputsPlease write clean, production-grade code:Strict TypeScript Interfaces: Define Case, Evidence, Language, PlayerStats, and GameStoreState.Zod Validation Schema: Create an external validation schema parser to ensure runtime imported Case JSON streams align seamlessly with data rules.Zustand Store Module: Provide the full logic slice implementation containing:Action triggers for setting active language (setLanguage).Toggling evidence items as contradictions (toggleEvidenceStamp).Submitting verdicts and evaluating rewards (submitVerdict).Synchronization lifecycle triggers handling debounced async payloads destined for ysdk.player.setData.Ensure code includes informative TypeScript documentation comments explaining how the Yandex SDK hooks interact with the engine boundaries.

@@ -1,0 +1,186 @@
+{
+  "id": "case-102-daily",
+  "type": "daily",
+  "difficulty": "hard",
+  "claimAmount": 16000,
+  "truth": "valid",
+  "title": {
+    "ru": "Исчезнувший экскаватор",
+    "en": "The Vanishing Excavator",
+    "tr": "Kaybolan Ekskavatör",
+    "ar": "الحفّارة المتلاشية",
+    "kk": "Жоғалған экскаватор"
+  },
+  "claim": {
+    "person": {
+      "ru": "Дамир Сапаров",
+      "en": "Damir Saparov",
+      "tr": "Damir Saparov",
+      "ar": "دامير سابوروف",
+      "kk": "Дамир Сапаров"
+    },
+    "story": {
+      "ru": "Ночью с моей огороженной стройплощадки угнали экскаватор. Ворота были заперты, но утром машины не оказалось. Прошу возместить стоимость.",
+      "en": "My excavator was stolen overnight from my fenced construction site. The gate was locked, but in the morning the machine was gone. I'm requesting compensation for its value.",
+      "tr": "Ekskavatörüm gece çitli şantiyemden çalındı. Kapı kilitliydi ama sabah makine yoktu. Değerinin tazmin edilmesini talep ediyorum.",
+      "ar": "سُرقت حفّارتي ليلاً من موقع البناء المسيّج. كانت البوابة مقفلة، لكن في الصباح اختفت الآلة. أطلب التعويض عن قيمتها.",
+      "kk": "Қоршалған құрылыс алаңымнан түнде экскаватор ұрланды. Қақпа жабық еді, бірақ таңертең машина жоқ болды. Құнын өтеуді сұраймын."
+    }
+  },
+  "coverImage": "covers/case-102-daily.svg",
+  "personImage": "people/damir.svg",
+  "evidences": [
+    {
+      "id": "ev-gps",
+      "type": "gps",
+      "title": {
+        "ru": "Данные GPS-трекера машины",
+        "en": "Machine GPS Tracker Data",
+        "tr": "Makine GPS Takip Verileri",
+        "ar": "بيانات متعقّب GPS للآلة",
+        "kk": "Машинаның GPS-трекер деректері"
+      },
+      "content": {
+        "ru": [
+          "03:12 — Движение начато со стройплощадки (ул. Заводская, 7)",
+          "03:48 — Маршрут по объездной дороге",
+          "04:20 — Последний пинг: пункт приёма металлолома «Вторчермет», 28 км"
+        ],
+        "en": [
+          "03:12 — Movement begins from the site (7 Zavodskaya St.)",
+          "03:48 — Route along the bypass road",
+          "04:20 — Last ping: 'Vtorchermet' scrapyard, 28 km away"
+        ],
+        "tr": [
+          "03:12 — Hareket şantiyeden başlıyor (Zavodskaya Cd. 7)",
+          "03:48 — Çevre yolu boyunca rota",
+          "04:20 — Son sinyal: 'Vtorchermet' hurdalığı, 28 km uzakta"
+        ],
+        "ar": [
+          "03:12 — بدء الحركة من الموقع (شارع زافودسكايا 7)",
+          "03:48 — المسار على الطريق الالتفافي",
+          "04:20 — آخر إشارة: ساحة خردة 'فتورتشيرميت'، على بعد 28 كم"
+        ],
+        "kk": [
+          "03:12 — Қозғалыс алаңнан басталды (Заводская к-сі, 7)",
+          "03:48 — Айналма жол бойымен маршрут",
+          "04:20 — Соңғы пинг: «Вторчермет» металл қабылдау пункті, 28 км"
+        ]
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Трекер показывает вывоз машины со стройплощадки к скупке металла далеко от объекта — это согласуется с угоном.",
+        "en": "The tracker shows the machine hauled from the site to a scrapyard far away — consistent with theft.",
+        "tr": "Takip cihazı makinenin şantiyeden uzaktaki bir hurdalığa götürüldüğünü gösteriyor — hırsızlıkla tutarlı.",
+        "ar": "يُظهر المتعقّب نقل الآلة من الموقع إلى ساحة خردة بعيدة — متسق مع السرقة.",
+        "kk": "Трекер машинаның алаңнан алыс металл қабылдау орнына әкетілгенін көрсетеді — ұрлықпен сәйкес келеді."
+      }
+    },
+    {
+      "id": "ev-police",
+      "type": "document",
+      "title": {
+        "ru": "Заявление в полицию о краже",
+        "en": "Police Theft Report",
+        "tr": "Polis Hırsızlık Raporu",
+        "ar": "محضر شرطة عن السرقة",
+        "kk": "Полицияға ұрлық туралы арыз"
+      },
+      "content": {
+        "ru": "Протокол № 4471: зарегистрировано заявление о краже гусеничного экскаватора с охраняемой стройплощадки в ночь происшествия; возбуждено дело.",
+        "en": "Report No. 4471: a theft report for a tracked excavator from the guarded site was filed on the night in question; a case was opened.",
+        "tr": "Rapor No. 4471: söz konusu gece korumalı şantiyeden paletli ekskavatör hırsızlığı bildirimi yapıldı; soruşturma açıldı.",
+        "ar": "محضر رقم 4471: قُدِّم بلاغ عن سرقة حفّارة مجنزرة من الموقع المحروس في ليلة الحادث؛ وفُتح تحقيق.",
+        "kk": "Хаттама № 4471: оқиға болған түні күзетілетін алаңнан шынжыр табанды экскаватордың ұрлануы туралы арыз тіркелді; іс қозғалды."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Официальное заявление о краже поддано вовремя и совпадает с рассказом заявителя.",
+        "en": "The official theft report was filed promptly and matches the claimant's account.",
+        "tr": "Resmî hırsızlık raporu zamanında verildi ve talep sahibinin anlatımıyla örtüşüyor.",
+        "ar": "قُدِّم البلاغ الرسمي عن السرقة في الوقت المناسب ويتوافق مع رواية صاحب المطالبة.",
+        "kk": "Ресми ұрлық арызы уақытында берілді және өтініш берушінің әңгімесімен сәйкес келеді."
+      }
+    },
+    {
+      "id": "ev-cctv",
+      "type": "camera_recording",
+      "title": {
+        "ru": "Запись с камеры стройплощадки",
+        "en": "Site CCTV Footage",
+        "tr": "Şantiye Güvenlik Kamerası Görüntüsü",
+        "ar": "تسجيل كاميرا مراقبة الموقع",
+        "kk": "Алаң бейнебақылау жазбасы"
+      },
+      "content": {
+        "ru": "В 03:05 камера у ворот фиксирует неизвестный эвакуатор-платформу без номеров; двое в масках грузят экскаватор и уезжают в сторону объездной.",
+        "en": "At 03:05 the gate camera captures an unknown plate-less flatbed truck; two masked figures load the excavator and drive off toward the bypass.",
+        "tr": "03:05'te kapı kamerası plakasız bilinmeyen bir düz kasa kamyon yakalıyor; maskeli iki kişi ekskavatörü yükleyip çevre yoluna doğru gidiyor.",
+        "ar": "في الساعة 03:05 تلتقط كاميرا البوابة شاحنة مسطّحة مجهولة بلا لوحات؛ شخصان مقنّعان يحمّلان الحفّارة ويغادران نحو الطريق الالتفافي.",
+        "kk": "03:05-те қақпадағы камера нөмірсіз белгісіз платформа-эвакуаторды түсіреді; маска киген екеу экскаваторды тиеп, айналма жаққа кетеді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Видео независимо подтверждает кражу посторонними лицами и совпадает со временем GPS-трекера.",
+        "en": "The footage independently confirms the theft by outsiders and matches the GPS tracker timing.",
+        "tr": "Görüntüler hırsızlığı dışarıdan kişilerce bağımsız olarak doğruluyor ve GPS zamanlamasıyla örtüşüyor.",
+        "ar": "يؤكد التسجيل بشكل مستقل السرقة من قبل غرباء ويتطابق مع توقيت متعقّب GPS.",
+        "kk": "Бейне ұрлықты бөгде адамдардың жасағанын тәуелсіз растайды және GPS уақытына сәйкес келеді."
+      }
+    },
+    {
+      "id": "ev-registration",
+      "type": "document",
+      "title": {
+        "ru": "Документ о покупке и регистрации",
+        "en": "Purchase & Registration Document",
+        "tr": "Satın Alma ve Kayıt Belgesi",
+        "ar": "وثيقة الشراء والتسجيل",
+        "kk": "Сатып алу және тіркеу құжаты"
+      },
+      "content": {
+        "ru": "Договор купли-продажи и регистрационная карта самоходной машины на имя Д. Сапарова; серийный номер совпадает с трекером и протоколом полиции.",
+        "en": "Sale contract and self-propelled machine registration card in D. Saparov's name; the serial number matches the tracker and the police report.",
+        "tr": "D. Saparov adına satış sözleşmesi ve kendinden hareketli makine kayıt kartı; seri numarası takip cihazı ve polis raporuyla eşleşiyor.",
+        "ar": "عقد بيع وبطاقة تسجيل آلة ذاتية الدفع باسم د. سابوروف؛ الرقم التسلسلي يطابق المتعقّب ومحضر الشرطة.",
+        "kk": "Д. Сапаров атына сатып алу-сату шарты және өздігінен жүретін машинаның тіркеу картасы; сериялық нөмірі трекер мен полиция хаттамасына сәйкес келеді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Право собственности и серийный номер машины подтверждены документально и сходятся с другими уликами.",
+        "en": "Ownership and the machine's serial number are documented and consistent with the other evidence.",
+        "tr": "Mülkiyet ve makinenin seri numarası belgelenmiş ve diğer kanıtlarla tutarlıdır.",
+        "ar": "الملكية والرقم التسلسلي للآلة موثّقان ومتسقان مع بقية الأدلة.",
+        "kk": "Меншік құқығы мен машинаның сериялық нөмірі құжатталған және басқа дәлелдермен үйлеседі."
+      }
+    }
+  ],
+  "correctDecision": "approve",
+  "explanation": {
+    "ru": [
+      "GPS показывает вывоз машины к скупке металла далеко от площадки.",
+      "Видео и заявление в полицию подтверждают кражу посторонними.",
+      "Право собственности доказано — выплату одобрить."
+    ],
+    "en": [
+      "GPS shows the machine hauled to a scrapyard far from the site.",
+      "CCTV and the police report confirm theft by outsiders.",
+      "Ownership is proven — approve the payout."
+    ],
+    "tr": [
+      "GPS, makinenin şantiyeden uzaktaki hurdalığa götürüldüğünü gösteriyor.",
+      "Kamera ve polis raporu dışarıdan hırsızlığı doğruluyor.",
+      "Mülkiyet kanıtlandı — ödeme onaylanmalı."
+    ],
+    "ar": [
+      "يُظهر GPS نقل الآلة إلى ساحة خردة بعيدة عن الموقع.",
+      "الكاميرا ومحضر الشرطة يؤكدان السرقة من قبل غرباء.",
+      "الملكية مثبتة — يجب الموافقة على الدفع."
+    ],
+    "kk": [
+      "GPS машинаның алаңнан алыс металл қабылдау орнына әкетілгенін көрсетеді.",
+      "Бейне мен полиция арызы бөгде адамдардың ұрлағанын растайды.",
+      "Меншік дәлелденді — төлемді мақұлдау керек."
+    ]
+  }
+}

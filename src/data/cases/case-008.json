@@ -1,0 +1,191 @@
+{
+  "id": "case-008",
+  "type": "standard",
+  "difficulty": "medium",
+  "claimAmount": 6000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Травма спины",
+    "en": "The Back Injury",
+    "tr": "Bel Sakatlığı",
+    "ar": "إصابة الظهر",
+    "kk": "Арқа жарақаты"
+  },
+  "claim": {
+    "person": {
+      "ru": "Деян Ковач",
+      "en": "Dejan Kovac",
+      "tr": "Dejan Kovac",
+      "ar": "ديان كوفاتش",
+      "kk": "Деян Ковач"
+    },
+    "story": {
+      "ru": "Из-за тяжёлой травмы спины я не могу работать и почти не встаю с постели. Прошу выплату по защите дохода за три месяца нетрудоспособности.",
+      "en": "A severe back injury leaves me unable to work and mostly bedridden. I am claiming income-protection benefits for three months of incapacity.",
+      "tr": "Ağır bir bel sakatlığı yüzünden çalışamıyorum ve çoğunlukla yatağa bağımlıyım. Üç aylık iş göremezlik için gelir koruma ödeneği talep ediyorum.",
+      "ar": "إصابة شديدة في الظهر تجعلني غير قادر على العمل وملازماً للفراش غالباً. أطالب باستحقاقات حماية الدخل عن ثلاثة أشهر من العجز.",
+      "kk": "Ауыр арқа жарақатынан жұмыс істей алмаймын және көбіне төсек тартып жатырмын. Үш айлық еңбекке жарамсыздық үшін табысты қорғау төлемін сұраймын."
+    }
+  },
+  "coverImage": "covers/case-008.svg",
+  "personImage": "people/dejan.svg",
+  "evidences": [
+    {
+      "id": "ev-ernote",
+      "type": "document",
+      "title": {
+        "ru": "Справка из приёмного покоя",
+        "en": "ER Doctor's Note",
+        "tr": "Acil Servis Doktor Raporu",
+        "ar": "تقرير طبيب الطوارئ",
+        "kk": "Қабылдау бөлімінің анықтамасы"
+      },
+      "content": {
+        "ru": "10.03.2026: жалобы на боль в пояснице, рентген без перелома. Рекомендованы покой 5–7 дней и обезболивающее.",
+        "en": "10 Mar 2026: lower-back pain reported, X-ray shows no fracture. Rest for 5–7 days and pain relief advised.",
+        "tr": "10 Mar 2026: bel ağrısı şikâyeti, röntgende kırık yok. 5–7 gün istirahat ve ağrı kesici önerildi.",
+        "ar": "10 مارس 2026: ألم في أسفل الظهر، الأشعة لا تُظهر كسراً. يُنصح بالراحة 5–7 أيام ومسكّن للألم.",
+        "kk": "10.03.2026: бел ауырсынуы, рентгенде сынық жоқ. 5–7 күн тыныштық және ауырсынуды басатын дәрі ұсынылды."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Справка подлинная, но описывает лёгкую травму с покоем на неделю — она не подтверждает трёхмесячную нетрудоспособность.",
+        "en": "The note is genuine but describes a minor injury with one week of rest — it does not support three months of incapacity.",
+        "tr": "Rapor gerçek, ancak bir haftalık istirahat gerektiren hafif bir yaralanmayı tanımlıyor — üç aylık iş göremezliği desteklemiyor.",
+        "ar": "التقرير أصلي لكنه يصف إصابة بسيطة براحة أسبوع واحد — وهو لا يدعم عجزاً لمدة ثلاثة أشهر.",
+        "kk": "Анықтама шынайы, бірақ бір апта тыныштықпен жеңіл жарақатты сипаттайды — ол үш айлық жарамсыздықты растамайды."
+      }
+    },
+    {
+      "id": "ev-gym",
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал доступа в спортзал",
+        "en": "Gym Keycard Access Log",
+        "tr": "Spor Salonu Kart Giriş Kaydı",
+        "ar": "سجل دخول صالة الرياضة",
+        "kk": "Спортзалға кіру журналы"
+      },
+      "content": {
+        "ru": [
+          "18.03 07:02 — вход, зона свободных весов (62 мин)",
+          "25.03 06:58 — вход, зона свободных весов (71 мин)",
+          "01.04 07:10 — вход, становая тяга, личный рекорд 140 кг",
+          "09.04 06:55 — вход, зона свободных весов (68 мин)"
+        ],
+        "en": [
+          "18 Mar 07:02 — entry, free-weights area (62 min)",
+          "25 Mar 06:58 — entry, free-weights area (71 min)",
+          "01 Apr 07:10 — entry, deadlift session, PR 140 kg",
+          "09 Apr 06:55 — entry, free-weights area (68 min)"
+        ],
+        "tr": [
+          "18 Mar 07:02 — giriş, serbest ağırlık alanı (62 dk)",
+          "25 Mar 06:58 — giriş, serbest ağırlık alanı (71 dk)",
+          "01 Nis 07:10 — giriş, deadlift seansı, rekor 140 kg",
+          "09 Nis 06:55 — giriş, serbest ağırlık alanı (68 dk)"
+        ],
+        "ar": [
+          "18 مارس 07:02 — دخول، منطقة الأوزان الحرة (62 دقيقة)",
+          "25 مارس 06:58 — دخول، منطقة الأوزان الحرة (71 دقيقة)",
+          "1 أبريل 07:10 — دخول، تمرين الرفعة المميتة، رقم قياسي 140 كغ",
+          "9 أبريل 06:55 — دخول، منطقة الأوزان الحرة (68 دقيقة)"
+        ],
+        "kk": [
+          "18.03 07:02 — кіру, еркін салмақ аймағы (62 мин)",
+          "25.03 06:58 — кіру, еркін салмақ аймағы (71 мин)",
+          "01.04 07:10 — кіру, бел тарту, жеке рекорд 140 кг",
+          "09.04 06:55 — кіру, еркін салмақ аймағы (68 мин)"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Клиент заявляет, что прикован к постели, но карта доступа фиксирует регулярные тяжёлые тренировки в период больничного.",
+        "en": "The client claims to be bedridden, yet the keycard records regular heavy workouts during the sick-leave period.",
+        "tr": "Müşteri yatağa bağımlı olduğunu iddia ediyor, ancak kart, hastalık izni döneminde düzenli ağır antrenmanları kaydediyor.",
+        "ar": "يدّعي العميل أنه ملازم للفراش، لكن البطاقة تسجّل تمارين ثقيلة منتظمة خلال فترة الإجازة المرضية.",
+        "kk": "Клиент төсек тартып жатырмын дейді, бірақ кіру картасы ауырып жату кезеңінде тұрақты ауыр жаттығуларды тіркейді."
+      }
+    },
+    {
+      "id": "ev-marathon",
+      "type": "photo",
+      "title": {
+        "ru": "Фото с марафона",
+        "en": "Marathon Finish Photo",
+        "tr": "Maraton Bitiş Fotoğrafı",
+        "ar": "صورة خط نهاية الماراثون",
+        "kk": "Марафон фотосы"
+      },
+      "content": {
+        "ru": "Снимок из соцсети с датой 12.04.2026: клиент пересекает финиш городского марафона с медалью и временем 3:48.",
+        "en": "Dated social-media photo from 12 Apr 2026: the client crossing a city marathon finish line with a medal and a time of 3:48.",
+        "tr": "12 Nis 2026 tarihli sosyal medya fotoğrafı: müşteri madalya ve 3:48 derecesiyle şehir maratonu bitiş çizgisini geçiyor.",
+        "ar": "صورة مؤرخة من وسائل التواصل بتاريخ 12 أبريل 2026: العميل يعبر خط نهاية ماراثون المدينة بميدالية وزمن 3:48.",
+        "kk": "12.04.2026 күнімен әлеуметтік желідегі сурет: клиент қалалық марафонның мәресін медальмен әрі 3:48 нәтижемен кесіп өтеді."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Завершение марафона физически несовместимо с заявленной трёхмесячной прикованностью к постели из-за травмы спины.",
+        "en": "Completing a marathon is physically incompatible with the claimed three months of being bedridden from a back injury.",
+        "tr": "Bir maratonu tamamlamak, bel sakatlığı nedeniyle iddia edilen üç aylık yatağa bağımlılıkla fiziksel olarak bağdaşmaz.",
+        "ar": "إكمال ماراثون يتعارض جسدياً مع ادعاء ملازمة الفراش ثلاثة أشهر بسبب إصابة الظهر.",
+        "kk": "Марафонды аяқтау арқа жарақатынан үш ай төсек тартып жату туралы мәлімдемемен дене жағынан үйлеспейді."
+      }
+    },
+    {
+      "id": "ev-employer",
+      "type": "document",
+      "title": {
+        "ru": "Письмо работодателя",
+        "en": "Employer Statement",
+        "tr": "İşveren Beyanı",
+        "ar": "بيان صاحب العمل",
+        "kk": "Жұмыс берушінің хаты"
+      },
+      "content": {
+        "ru": "Отдел кадров подтверждает, что сотрудник находится на оплачиваемом больничном с 11.03.2026 и за этот период не выходил на работу.",
+        "en": "HR confirms the employee has been on paid sick leave since 11 Mar 2026 and has not attended work during this period.",
+        "tr": "İK, çalışanın 11 Mar 2026'dan beri ücretli hastalık izninde olduğunu ve bu dönemde işe gelmediğini doğruluyor.",
+        "ar": "تؤكد الموارد البشرية أن الموظف في إجازة مرضية مدفوعة منذ 11 مارس 2026 ولم يحضر للعمل خلال هذه الفترة.",
+        "kk": "Кадр бөлімі қызметкердің 11.03.2026 бастап ақылы ауру демалысында екенін және осы кезеңде жұмысқа шықпағанын растайды."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Письмо лишь подтверждает факт больничного и не противоречит истории — противоречие создают тренировки и марафон.",
+        "en": "The letter only confirms the sick leave and does not conflict with the story — the conflict comes from the workouts and marathon.",
+        "tr": "Mektup yalnızca hastalık iznini doğrular ve hikâyeyle çelişmez — çelişki antrenmanlardan ve maratondan kaynaklanır.",
+        "ar": "الرسالة تؤكد الإجازة المرضية فقط ولا تتعارض مع الرواية — التعارض يأتي من التمارين والماراثون.",
+        "kk": "Хат тек ауру демалысын растайды және әңгімеге қайшы келмейді — қайшылықты жаттығулар мен марафон тудырады."
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Карта доступа фиксирует регулярные тяжёлые тренировки во время больничного.",
+      "Датированное фото показывает завершённый марафон после травмы.",
+      "Заявление о прикованности к постели ложно — это мошенничество, отказать."
+    ],
+    "en": [
+      "The keycard log records regular heavy workouts during the sick leave.",
+      "A dated photo shows a completed marathon after the injury.",
+      "The bedridden claim is false — this is fraud, reject it."
+    ],
+    "tr": [
+      "Kart kaydı, hastalık izni sırasında düzenli ağır antrenmanları gösteriyor.",
+      "Tarihli bir fotoğraf, yaralanmadan sonra tamamlanmış bir maratonu gösteriyor.",
+      "Yatağa bağımlılık iddiası yanlış — bu dolandırıcılık, reddedin."
+    ],
+    "ar": [
+      "سجل البطاقة يوثّق تمارين ثقيلة منتظمة خلال الإجازة المرضية.",
+      "صورة مؤرخة تُظهر ماراثوناً مكتملاً بعد الإصابة.",
+      "ادعاء ملازمة الفراش كاذب — هذا احتيال، ارفضه."
+    ],
+    "kk": [
+      "Кіру журналы ауру демалысы кезінде тұрақты ауыр жаттығуларды тіркейді.",
+      "Күні көрсетілген фото жарақаттан кейін аяқталған марафонды көрсетеді.",
+      "Төсек тартып жату туралы мәлімдеме жалған — бұл алаяқтық, бас тарту."
+    ]
+  }
+}

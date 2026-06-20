@@ -1,0 +1,166 @@
+{
+  "id": "case-016",
+  "type": "standard",
+  "difficulty": "medium",
+  "claimAmount": 7000,
+  "truth": "valid",
+  "title": {
+    "ru": "Потоп в магазине",
+    "en": "The Flooded Shop",
+    "tr": "Su Basan Dükkân",
+    "ar": "المتجر الغارق",
+    "kk": "Су басқан дүкен"
+  },
+  "claim": {
+    "person": {
+      "ru": "Лейла Каримова, 38 лет",
+      "en": "Leyla Karimova, 38",
+      "tr": "Leyla Karimova, 38",
+      "ar": "ليلى كريموفا، 38",
+      "kk": "Лейла Каримова, 38 жаста"
+    },
+    "story": {
+      "ru": "На нашей улице прорвало водопровод, и мой магазин затопило. Товар испорчен, я не могла работать несколько дней. Прошу возместить ущерб и потерю дохода.",
+      "en": "A water main burst on our street and flooded my shop. The stock was ruined and I couldn't trade for several days. I request compensation for the damage and lost income.",
+      "tr": "Sokağımızda bir ana su borusu patladı ve dükkânımı su bastı. Mal bozuldu ve birkaç gün ticaret yapamadım. Hasar ve gelir kaybı için tazminat talep ediyorum.",
+      "ar": "انفجر أنبوب مياه رئيسي في شارعنا فغمر متجري. تلفت البضاعة ولم أستطع العمل لعدة أيام. أطلب تعويضًا عن الضرر وفقدان الدخل.",
+      "kk": "Біздің көшеде су құбыры жарылып, дүкенімді су басты. Тауар бүлінді, бірнеше күн жұмыс істей алмадым. Зиян мен табыс шығынын өтеуді сұраймын."
+    }
+  },
+  "coverImage": "covers/case-016.svg",
+  "personImage": "people/leyla.svg",
+  "evidences": [
+    {
+      "id": "ev-municipal",
+      "type": "document",
+      "title": {
+        "ru": "Справка городской службы",
+        "en": "Municipal Record",
+        "tr": "Belediye Kaydı",
+        "ar": "سجل البلدية",
+        "kk": "Қалалық қызмет анықтамасы"
+      },
+      "content": {
+        "ru": "Городской водоканал подтверждает аварийный прорыв магистрали на этой улице 3 апреля и аварийные работы в тот же день.",
+        "en": "The municipal water utility confirms an emergency main burst on this street on 3 April and emergency works the same day.",
+        "tr": "Belediye su idaresi, 3 Nisan'da bu sokakta acil bir ana boru patlaması ve aynı gün acil çalışmalar yapıldığını doğruluyor.",
+        "ar": "تؤكد هيئة المياه البلدية انفجارًا طارئًا للأنبوب الرئيسي في هذا الشارع في 3 أبريل وأعمال طوارئ في اليوم نفسه.",
+        "kk": "Қалалық су арнасы 3 сәуірде осы көшеде магистральдың апаттық жарылғанын және сол күні апаттық жұмыстарды растайды."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Официальная справка подтверждает причину и дату потопа из рассказа клиента.",
+        "en": "The official record confirms the cause and date of the flood from the client's account.",
+        "tr": "Resmi kayıt, müşterinin anlatımındaki selin nedenini ve tarihini doğruluyor.",
+        "ar": "يؤكد السجل الرسمي سبب وتاريخ الفيضان كما ورد في رواية العميلة.",
+        "kk": "Ресми анықтама клиент әңгімесіндегі су тасқынының себебі мен күнін растайды."
+      }
+    },
+    {
+      "id": "ev-photos",
+      "type": "photo",
+      "title": {
+        "ru": "Фото затопленного магазина",
+        "en": "Photos of the Flooded Shop",
+        "tr": "Su Basan Dükkân Fotoğrafları",
+        "ar": "صور المتجر الغارق",
+        "kk": "Су басқан дүкеннің суреттері"
+      },
+      "content": {
+        "ru": "Фотографии показывают залитый водой пол магазина и испорченный товар на нижних полках.",
+        "en": "The photos show a water-covered shop floor and ruined stock on the lower shelves.",
+        "tr": "Fotoğraflar, suyla kaplı dükkân zeminini ve alt raflardaki bozulmuş malları gösteriyor.",
+        "ar": "تُظهر الصور أرضية المتجر مغطاة بالماء وبضاعة تالفة على الرفوف السفلية.",
+        "kk": "Суреттер дүкеннің су басқан еденін және төменгі сөрелердегі бүлінген тауарды көрсетеді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Снимки соответствуют затоплению с уровня пола, как при прорыве водопровода.",
+        "en": "The images match floor-level flooding consistent with a burst water main.",
+        "tr": "Görüntüler, patlayan ana su borusuyla uyumlu zemin seviyesi su baskınıyla örtüşüyor.",
+        "ar": "تتوافق الصور مع فيضان من مستوى الأرض يتسق مع انفجار أنبوب رئيسي.",
+        "kk": "Суреттер су құбыры жарылғанда болатын еден деңгейіндегі су басуға сәйкес келеді."
+      }
+    },
+    {
+      "id": "ev-ledger",
+      "type": "document",
+      "title": {
+        "ru": "Книга учёта дохода",
+        "en": "Loss-of-Income Ledger",
+        "tr": "Gelir Kaybı Defteri",
+        "ar": "دفتر فقدان الدخل",
+        "kk": "Табыс шығыны кітабы"
+      },
+      "content": {
+        "ru": "Бухгалтер приложил выписку, показывающую обычную дневную выручку и нулевые продажи в четыре дня закрытия после аварии.",
+        "en": "The accountant provided a statement showing normal daily revenue and zero sales during the four closure days after the incident.",
+        "tr": "Muhasebeci, normal günlük geliri ve olaydan sonraki dört kapanış gününde sıfır satışı gösteren bir döküm sundu.",
+        "ar": "قدّم المحاسب كشفًا يوضّح الإيراد اليومي المعتاد ومبيعات صفرية خلال أيام الإغلاق الأربعة بعد الحادث.",
+        "kk": "Бухгалтер күнделікті қалыпты түсімді және оқиғадан кейінгі төрт жабылу күніндегі нөлдік сатылымды көрсететін үзінді берді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Учётные данные подтверждают потерю дохода именно за дни вынужденного закрытия.",
+        "en": "The ledger confirms lost income precisely for the forced-closure days.",
+        "tr": "Defter, zorunlu kapanış günlerine ait gelir kaybını tam olarak doğruluyor.",
+        "ar": "يؤكد الدفتر فقدان الدخل بالضبط في أيام الإغلاق الإجباري.",
+        "kk": "Кітап мәжбүрлі жабылу күндеріндегі табыс шығынын дәл растайды."
+      }
+    },
+    {
+      "id": "ev-restoration",
+      "type": "document",
+      "title": {
+        "ru": "Счёт компании по восстановлению",
+        "en": "Restoration Company Invoice",
+        "tr": "Restorasyon Şirketi Faturası",
+        "ar": "فاتورة شركة الترميم",
+        "kk": "Қалпына келтіру компаниясының шоты"
+      },
+      "content": {
+        "ru": "Счёт от клининговой компании за откачку воды, сушку и восстановление помещения после потопа.",
+        "en": "An invoice from a cleanup company for water extraction, drying and restoring the premises after the flood.",
+        "tr": "Sel sonrası su tahliyesi, kurutma ve mekânın restorasyonu için bir temizlik şirketinden fatura.",
+        "ar": "فاتورة من شركة تنظيف لشفط المياه والتجفيف وترميم المكان بعد الفيضان.",
+        "kk": "Су тасқынынан кейін суды сору, кептіру және үй-жайды қалпына келтіру үшін тазалау компаниясының шоты."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Счёт согласуется с характером и масштабом заявленного ущерба от воды.",
+        "en": "The invoice is consistent with the nature and scale of the claimed water damage.",
+        "tr": "Fatura, iddia edilen su hasarının niteliği ve ölçeğiyle tutarlı.",
+        "ar": "تتسق الفاتورة مع طبيعة وحجم الضرر المائي المُطالَب به.",
+        "kk": "Шот мәлімделген су зиянының сипаты мен көлеміне сәйкес келеді."
+      }
+    }
+  ],
+  "correctDecision": "approve",
+  "explanation": {
+    "ru": [
+      "Городская служба подтверждает прорыв водопровода на улице в нужный день.",
+      "Фото, бухгалтерия и счёт согласуются с ущербом и потерей дохода.",
+      "Заявление достоверно, его следует одобрить."
+    ],
+    "en": [
+      "The municipal record confirms the street's water-main burst on the date.",
+      "Photos, ledger and invoice all match the damage and lost income.",
+      "The claim is genuine and should be approved."
+    ],
+    "tr": [
+      "Belediye kaydı, sokaktaki ana boru patlamasını o tarihte doğruluyor.",
+      "Fotoğraflar, defter ve fatura hasar ve gelir kaybıyla örtüşüyor.",
+      "Talep gerçektir ve onaylanmalı."
+    ],
+    "ar": [
+      "يؤكد سجل البلدية انفجار الأنبوب الرئيسي في الشارع في ذلك التاريخ.",
+      "تتطابق الصور والدفتر والفاتورة مع الضرر وفقدان الدخل.",
+      "المطالبة صحيحة ويجب الموافقة عليها."
+    ],
+    "kk": [
+      "Қалалық қызмет көшедегі су құбырының жарылуын сол күні растайды.",
+      "Суреттер, бухгалтерия мен шот зиян мен табыс шығынына сәйкес.",
+      "Талап шынайы, оны мақұлдау керек."
+    ]
+  }
+}

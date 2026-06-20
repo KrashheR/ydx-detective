@@ -1,0 +1,160 @@
+{
+  "id": "case-001",
+  "type": "standard",
+  "difficulty": "easy",
+  "claimAmount": 1200,
+  "truth": "fraud",
+  "title": {
+    "ru": "Затопленная квартира",
+    "en": "The Flooded Apartment",
+    "tr": "Su Basan Daire",
+    "ar": "الشقة المغمورة بالمياه",
+    "kk": "Су басқан пәтер"
+  },
+  "claim": {
+    "person": {
+      "ru": "Игорь Семёнов, 41 год",
+      "en": "Igor Semyonov, 41",
+      "tr": "Igor Semyonov, 41",
+      "ar": "إيغور سيميونوف، 41",
+      "kk": "Игорь Семёнов, 41 жаста"
+    },
+    "story": {
+      "ru": "Я был в командировке всю неделю. Вернулся в пятницу и обнаружил, что лопнула труба и затопило гостиную. Прошу компенсацию за технику.",
+      "en": "I was away on a business trip all week. I returned Friday to find a burst pipe had flooded the living room. I request compensation for the electronics.",
+      "tr": "Tüm hafta iş seyahatindeydim. Cuma günü döndüğümde patlayan bir borunun oturma odasını su bastığını gördüm. Elektronik eşyalar için tazminat talep ediyorum.",
+      "ar": "كنت في رحلة عمل طوال الأسبوع. عدت يوم الجمعة لأجد أن أنبوبًا انفجر وأغرق غرفة المعيشة. أطلب تعويضًا عن الأجهزة الإلكترونية.",
+      "kk": "Мен бүкіл апта іссапарда болдым. Жұма күні оралғанда құбыр жарылып, қонақ бөлмесін су басқанын көрдім. Техника үшін өтемақы сұраймын."
+    }
+  },
+  "coverImage": "covers/case-001.svg",
+  "personImage": "people/igor.svg",
+  "evidences": [
+    {
+      "id": "ev-photo",
+      "type": "photo",
+      "title": {
+        "ru": "Фото места происшествия",
+        "en": "Scene Photo",
+        "tr": "Olay Yeri Fotoğrafı",
+        "ar": "صورة مكان الحادث",
+        "kk": "Оқиға орнының суреті"
+      },
+      "content": {
+        "ru": "На фото видна сухая, работающая электроника на полке над лужей воды.",
+        "en": "The photo shows dry, powered-on electronics on a shelf above the puddle.",
+        "tr": "Fotoğrafta su birikintisinin üzerindeki rafta kuru ve çalışır durumda elektronik eşyalar görülüyor.",
+        "ar": "تُظهر الصورة أجهزة إلكترونية جافة وتعمل على رف فوق البركة.",
+        "kk": "Суретте су шалшығының үстіндегі сөреде құрғақ, жұмыс істеп тұрған электроника көрінеді."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Заявленная повреждённой техника на фото сухая и включена.",
+        "en": "The electronics claimed as damaged are dry and powered on in the photo.",
+        "tr": "Hasarlı olduğu iddia edilen elektronik eşyalar fotoğrafta kuru ve açık.",
+        "ar": "الأجهزة المزعوم تلفها تظهر جافة وتعمل في الصورة.",
+        "kk": "Зақымдалған деп мәлімделген техника суретте құрғақ әрі қосулы."
+      }
+    },
+    {
+      "id": "ev-gps",
+      "type": "gps",
+      "title": {
+        "ru": "GPS-журнал телефона",
+        "en": "Phone GPS Log",
+        "tr": "Telefon GPS Kaydı",
+        "ar": "سجل GPS للهاتف",
+        "kk": "Телефонның GPS журналы"
+      },
+      "content": {
+        "ru": [
+          "Пн 08:14 — Аэропорт",
+          "Ср 19:42 — Домашний адрес",
+          "Чт 21:10 — Домашний адрес"
+        ],
+        "en": [
+          "Mon 08:14 — Airport",
+          "Wed 19:42 — Home address",
+          "Thu 21:10 — Home address"
+        ],
+        "tr": [
+          "Pzt 08:14 — Havaalanı",
+          "Çar 19:42 — Ev adresi",
+          "Per 21:10 — Ev adresi"
+        ],
+        "ar": [
+          "الاثنين 08:14 — المطار",
+          "الأربعاء 19:42 — عنوان المنزل",
+          "الخميس 21:10 — عنوان المنزل"
+        ],
+        "kk": [
+          "Дс 08:14 — Әуежай",
+          "Ср 19:42 — Үй мекенжайы",
+          "Бс 21:10 — Үй мекенжайы"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Клиент утверждал, что отсутствовал всю неделю, но GPS фиксирует его дома в среду и четверг.",
+        "en": "The client claimed to be away all week, yet GPS places him home on Wednesday and Thursday.",
+        "tr": "Müşteri tüm hafta uzakta olduğunu iddia etti, ancak GPS onu Çarşamba ve Perşembe evde gösteriyor.",
+        "ar": "ادعى العميل أنه كان غائبًا طوال الأسبوع، لكن GPS يضعه في المنزل يومي الأربعاء والخميس.",
+        "kk": "Клиент бүкіл апта болмадым деді, бірақ GPS оны сәрсенбі мен бейсенбіде үйде тіркеген."
+      }
+    },
+    {
+      "id": "ev-invoice",
+      "type": "document",
+      "title": {
+        "ru": "Счёт сантехника",
+        "en": "Plumber Invoice",
+        "tr": "Tesisatçı Faturası",
+        "ar": "فاتورة السباك",
+        "kk": "Сантехник шоты"
+      },
+      "content": {
+        "ru": "Официальный счёт за замену лопнувшей трубы, дата — пятница.",
+        "en": "Official invoice for replacing the burst pipe, dated Friday.",
+        "tr": "Patlayan borunun değiştirilmesi için resmi fatura, Cuma tarihli.",
+        "ar": "فاتورة رسمية لاستبدال الأنبوب المنفجر، بتاريخ الجمعة.",
+        "kk": "Жарылған құбырды ауыстыруға арналған ресми шот, жұма күнгі."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Документ подлинный и не противоречит делу.",
+        "en": "This document is genuine and consistent with the case.",
+        "tr": "Bu belge gerçek ve dava ile tutarlı.",
+        "ar": "هذا المستند أصلي ومتوافق مع القضية.",
+        "kk": "Бұл құжат шынайы және іске қайшы келмейді."
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "GPS-журнал опровергает алиби клиента об отсутствии.",
+      "На фото техника сухая и работает — ущерб инсценирован.",
+      "Заявление является мошенническим, его следует отклонить."
+    ],
+    "en": [
+      "The GPS log disproves the client's away-from-home alibi.",
+      "The photo shows dry, working electronics — the damage was staged.",
+      "The claim is fraudulent and should be rejected."
+    ],
+    "tr": [
+      "GPS kaydı, müşterinin evde olmama mazeretini çürütüyor.",
+      "Fotoğraf kuru ve çalışan elektronik gösteriyor — hasar sahnelenmiş.",
+      "Talep hileli ve reddedilmeli."
+    ],
+    "ar": [
+      "سجل GPS يدحض حجة غياب العميل عن المنزل.",
+      "الصورة تُظهر أجهزة جافة وتعمل — الضرر مفتعل.",
+      "المطالبة احتيالية ويجب رفضها."
+    ],
+    "kk": [
+      "GPS журналы клиенттің үйде болмадым деген алибиін теріске шығарады.",
+      "Суретте техника құрғақ әрі жұмыс істейді — зиян қойылған.",
+      "Талап алаяқтық, оны қабылдамау керек."
+    ]
+  }
+}

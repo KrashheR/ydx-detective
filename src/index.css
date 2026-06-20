@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts are loaded by the platform shell; fall back gracefully offline. */
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-bg text-paper font-sans antialiased;
+  }
+}
+
+@layer components {
+  /* A physical sheet of paper on the detective's desk. */
+  .paper-sheet {
+    @apply bg-paper text-ink rounded-sm shadow-folder;
+    background-image: radial-gradient(
+      circle at 20% 0%,
+      rgba(255, 255, 255, 0.6),
+      transparent 60%
+    );
+  }
+
+  /* Retro ink stamp text. */
+  .ink-stamp {
+    @apply font-sans font-extrabold uppercase tracking-widest select-none;
+    text-shadow: 0 0 1px currentColor;
+  }
+}
+
+/* Respect reduced-motion: framer-motion reads this, but kill CSS transitions too. */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "id": "case-007",
+  "type": "standard",
+  "difficulty": "medium",
+  "claimAmount": 2500,
+  "truth": "fraud",
+  "title": {
+    "ru": "Пропавший чемодан",
+    "en": "The Missing Suitcase",
+    "tr": "Kayıp Bavul",
+    "ar": "الحقيبة المفقودة",
+    "kk": "Жоғалған шабадан"
+  },
+  "claim": {
+    "person": {
+      "ru": "Лукас Феррейра",
+      "en": "Lucas Ferreira",
+      "tr": "Lucas Ferreira",
+      "ar": "لوكاس فيريرا",
+      "kk": "Лукас Феррейра"
+    },
+    "story": {
+      "ru": "Авиакомпания потеряла мой сданный в багаж чемодан с дорогой электроникой и часами. Я так и не получил его и требую возмещения полной стоимости содержимого.",
+      "en": "The airline lost my checked suitcase containing expensive electronics and watches. I never received it and I am claiming the full value of the contents.",
+      "tr": "Havayolu, pahalı elektronik ve saatlerle dolu kayıtlı bavulumu kaybetti. Bavulu hiç teslim almadım ve içindekilerin tam değerini talep ediyorum.",
+      "ar": "فقدت شركة الطيران حقيبتي المسجّلة التي تحتوي على إلكترونيات وساعات باهظة الثمن. لم أستلمها أبداً وأطالب بالقيمة الكاملة لمحتوياتها.",
+      "kk": "Әуекомпания қымбат электроника мен сағаттар салынған тіркелген шабаданымды жоғалтты. Мен оны мүлдем алмадым және құрамының толық құнын өтеуді талап етемін."
+    }
+  },
+  "coverImage": "covers/case-007.svg",
+  "personImage": "people/lucas.svg",
+  "evidences": [
+    {
+      "id": "ev-boarding",
+      "type": "document",
+      "title": {
+        "ru": "Посадочный талон",
+        "en": "Boarding Pass",
+        "tr": "Biniş Kartı",
+        "ar": "بطاقة الصعود",
+        "kk": "Отырғызу талоны"
+      },
+      "content": {
+        "ru": "Рейс TP1043, Лиссабон → Берлин, 02.05.2026, место 14C, посадка подтверждена.",
+        "en": "Flight TP1043, Lisbon → Berlin, 02 May 2026, seat 14C, boarding confirmed.",
+        "tr": "Uçuş TP1043, Lizbon → Berlin, 02 Mayıs 2026, koltuk 14C, biniş onaylandı.",
+        "ar": "الرحلة TP1043، لشبونة ← برلين، 2 مايو 2026، المقعد 14C، تم تأكيد الصعود.",
+        "kk": "TP1043 рейсі, Лиссабон → Берлин, 02.05.2026, 14C орны, отырғызу расталды."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Талон подлинный и подтверждает, что пассажир действительно летел этим рейсом — это не противоречие.",
+        "en": "The pass is genuine and confirms the passenger did fly on this flight — no contradiction here.",
+        "tr": "Kart gerçek ve yolcunun bu uçuşa bindiğini doğruluyor — burada çelişki yok.",
+        "ar": "البطاقة أصلية وتؤكد أن المسافر سافر فعلاً على هذه الرحلة — لا يوجد تناقض هنا.",
+        "kk": "Талон шынайы және жолаушының осы рейспен ұшқанын растайды — мұнда қайшылық жоқ."
+      }
+    },
+    {
+      "id": "ev-tracking",
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал отслеживания багажа",
+        "en": "Baggage Tracking Log",
+        "tr": "Bagaj Takip Kaydı",
+        "ar": "سجل تتبع الأمتعة",
+        "kk": "Багажды бақылау журналы"
+      },
+      "content": {
+        "ru": [
+          "02.05 14:12 — бирка BG884201 загружена в Лиссабоне",
+          "02.05 18:40 — выгружена в Берлине, выдана на ленте 3",
+          "03.05 11:05 — доставлена курьером по адресу клиента",
+          "03.05 11:07 — подпись получателя: L. Ferreira"
+        ],
+        "en": [
+          "02 May 14:12 — tag BG884201 loaded in Lisbon",
+          "02 May 18:40 — unloaded in Berlin, released on belt 3",
+          "03 May 11:05 — delivered by courier to client's address",
+          "03 May 11:07 — recipient signature: L. Ferreira"
+        ],
+        "tr": [
+          "02 May 14:12 — BG884201 etiketi Lizbon'da yüklendi",
+          "02 May 18:40 — Berlin'de boşaltıldı, 3. banttan verildi",
+          "03 May 11:05 — kuryeyle müşterinin adresine teslim edildi",
+          "03 May 11:07 — alıcı imzası: L. Ferreira"
+        ],
+        "ar": [
+          "2 مايو 14:12 — تم تحميل البطاقة BG884201 في لشبونة",
+          "2 مايو 18:40 — تم تفريغها في برلين، أُطلقت على الحزام 3",
+          "3 مايو 11:05 — تم تسليمها بواسطة مندوب إلى عنوان العميل",
+          "3 مايو 11:07 — توقيع المستلم: L. Ferreira"
+        ],
+        "kk": [
+          "02.05 14:12 — BG884201 биркасы Лиссабонда тиелді",
+          "02.05 18:40 — Берлинде түсірілді, 3-таспадан берілді",
+          "03.05 11:05 — курьермен клиенттің мекенжайына жеткізілді",
+          "03.05 11:07 — алушының қолы: L. Ferreira"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Клиент утверждает, что так и не получил чемодан, но журнал показывает доставку по его адресу с его подписью на следующий день.",
+        "en": "The client claims he never received the suitcase, yet the log shows it was delivered to his address and signed for the next day.",
+        "tr": "Müşteri bavulu hiç almadığını iddia ediyor, ancak kayıt ertesi gün adresine teslim edildiğini ve imzalandığını gösteriyor.",
+        "ar": "يدّعي العميل أنه لم يستلم الحقيبة أبداً، لكن السجل يُظهر أنها سُلّمت إلى عنوانه ووُقّع عليها في اليوم التالي.",
+        "kk": "Клиент шабаданды мүлдем алмадым дейді, бірақ журнал оның мекенжайына жеткізіліп, келесі күні қол қойылғанын көрсетеді."
+      }
+    },
+    {
+      "id": "ev-listing",
+      "type": "photo",
+      "title": {
+        "ru": "Объявление о перепродаже",
+        "en": "Resale Listing",
+        "tr": "Yeniden Satış İlanı",
+        "ar": "إعلان إعادة البيع",
+        "kk": "Қайта сату хабарландыруы"
+      },
+      "content": {
+        "ru": "Скриншот объявления от 06.05.2026: те же часы и ноутбук из списка содержимого выставлены клиентом на продажу как «новые, в коробке».",
+        "en": "Screenshot of a 06 May 2026 listing: the same watch and laptop from the contents list are offered for sale by the client as 'new, boxed'.",
+        "tr": "06 Mayıs 2026 tarihli ilan ekran görüntüsü: içerik listesindeki aynı saat ve dizüstü bilgisayar müşteri tarafından 'yeni, kutusunda' olarak satışa sunulmuş.",
+        "ar": "لقطة شاشة لإعلان بتاريخ 6 مايو 2026: نفس الساعة والحاسوب المحمول من قائمة المحتويات معروضان للبيع من قبل العميل بوصف 'جديد، في علبته'.",
+        "kk": "06.05.2026 хабарландыруының скриншоты: құрамы тізіміндегі дәл сол сағат пен ноутбук клиент тарапынан «жаңа, қорабында» деп сатуға қойылған."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Предметы, заявленные как утраченные вместе с чемоданом, спустя дни выставлены тем же клиентом на продажу как новые.",
+        "en": "Items declared lost with the suitcase are listed for sale as new by the same client days later.",
+        "tr": "Bavulla birlikte kaybolduğu beyan edilen eşyalar günler sonra aynı müşteri tarafından yeni olarak satışa çıkarılmış.",
+        "ar": "العناصر التي أُعلن عن فقدانها مع الحقيبة معروضة للبيع كجديدة من قبل العميل نفسه بعد أيام.",
+        "kk": "Шабаданмен бірге жоғалды деп мәлімделген заттар бірнеше күннен кейін сол клиент тарапынан жаңа ретінде сатуға қойылған."
+      }
+    },
+    {
+      "id": "ev-claimform",
+      "type": "document",
+      "title": {
+        "ru": "Заявление о пропаже",
+        "en": "Loss Report Form",
+        "tr": "Kayıp Bildirim Formu",
+        "ar": "نموذج الإبلاغ عن الفقدان",
+        "kk": "Жоғалу туралы өтініш"
+      },
+      "content": {
+        "ru": "Поданное клиентом заявление: «Багаж не доставлен, местонахождение неизвестно с момента прилёта 02.05».",
+        "en": "Client-filed report: 'Baggage not delivered, whereabouts unknown since arrival on 02 May'.",
+        "tr": "Müşterinin doldurduğu bildirim: 'Bagaj teslim edilmedi, 02 Mayıs varıştan beri yeri bilinmiyor'.",
+        "ar": "البلاغ المقدّم من العميل: 'لم تُسلَّم الأمتعة، مكانها مجهول منذ الوصول في 2 مايو'.",
+        "kk": "Клиент берген өтініш: «Багаж жеткізілмеді, 02.05 келгеннен бері орны белгісіз»."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Само заявление оформлено корректно; проблема в том, что оно опровергается журналом доставки, а не в самом бланке.",
+        "en": "The form itself is properly filled out; the issue is that it is refuted by the delivery log, not the form itself.",
+        "tr": "Formun kendisi düzgün doldurulmuş; sorun, formun değil, teslimat kaydının onu çürütmesidir.",
+        "ar": "النموذج نفسه مُعبّأ بشكل صحيح؛ المشكلة أنه مُكذّب بسجل التسليم وليس في النموذج ذاته.",
+        "kk": "Өтініштің өзі дұрыс толтырылған; мәселе оның бланкінде емес, жеткізу журналымен жоққа шығарылуында."
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Журнал багажа показывает доставку чемодана по адресу клиента с его подписью.",
+      "«Утраченные» дорогие предметы выставлены клиентом на перепродажу как новые.",
+      "Заявление о пропаже ложно — это мошенничество, в выплате отказать."
+    ],
+    "en": [
+      "The baggage log shows the suitcase was delivered and signed for at the client's address.",
+      "The 'lost' expensive items were listed for resale as new by the client.",
+      "The loss report is false — this is fraud, reject the claim."
+    ],
+    "tr": [
+      "Bagaj kaydı, bavulun müşterinin adresine teslim edilip imzalandığını gösteriyor.",
+      "'Kaybolan' pahalı eşyalar müşteri tarafından yeni olarak satışa çıkarılmış.",
+      "Kayıp bildirimi yanlış — bu bir dolandırıcılık, talebi reddedin."
+    ],
+    "ar": [
+      "سجل الأمتعة يُظهر تسليم الحقيبة والتوقيع عليها في عنوان العميل.",
+      "العناصر باهظة الثمن 'المفقودة' عرضها العميل لإعادة البيع كجديدة.",
+      "بلاغ الفقدان كاذب — هذا احتيال، ارفض المطالبة."
+    ],
+    "kk": [
+      "Багаж журналы шабаданның клиент мекенжайына жеткізіліп, қол қойылғанын көрсетеді.",
+      "«Жоғалған» қымбат заттар клиент тарапынан жаңа ретінде қайта сатуға қойылған.",
+      "Жоғалу туралы өтініш жалған — бұл алаяқтық, төлемнен бас тарту."
+    ]
+  }
+}

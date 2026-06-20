@@ -1,0 +1,191 @@
+{
+  "id": "case-015",
+  "type": "standard",
+  "difficulty": "hard",
+  "claimAmount": 18000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Затонувшая яхта",
+    "en": "The Sunken Yacht",
+    "tr": "Batan Yat",
+    "ar": "اليخت الغارق",
+    "kk": "Суға батқан яхта"
+  },
+  "claim": {
+    "person": {
+      "ru": "Рустам Бекетов, 47 лет",
+      "en": "Rustam Beketov, 47",
+      "tr": "Rustam Beketov, 47",
+      "ar": "رستم بيكيتوف، 47",
+      "kk": "Рустам Бекетов, 47 жаста"
+    },
+    "story": {
+      "ru": "В субботу я вышел в море на своей моторной яхте. В открытом море нас застал шторм, судно дало течь и затонуло. Я едва спасся. Прошу выплату за погибшую яхту.",
+      "en": "On Saturday I took my motor yacht out to sea. A storm caught us offshore, the vessel took on water and sank. I barely escaped. I request payment for the lost yacht.",
+      "tr": "Cumartesi motorlu yatımla denize açıldım. Açık denizde bir fırtınaya yakalandık, tekne su aldı ve battı. Zar zor kurtuldum. Kaybolan yat için ödeme talep ediyorum.",
+      "ar": "يوم السبت أخرجت يختي بمحرّك إلى البحر. باغتتنا عاصفة في عرض البحر، فتسرّب الماء إلى السفينة وغرقت. نجوت بالكاد. أطلب تعويضًا عن اليخت الضائع.",
+      "kk": "Сенбіде мен моторлы яхтаммен теңізге шықтым. Ашық теңізде бізді дауыл қуып жетті, кеме су алып, батып кетті. Әрең құтылдым. Жоғалған яхта үшін төлем сұраймын."
+    }
+  },
+  "coverImage": "covers/case-015.svg",
+  "personImage": "people/rustam.svg",
+  "evidences": [
+    {
+      "id": "ev-cctv",
+      "type": "camera_recording",
+      "title": {
+        "ru": "Журнал швартовки и CCTV гавани",
+        "en": "Harbor Mooring Log and CCTV",
+        "tr": "Liman Bağlama Kaydı ve CCTV",
+        "ar": "سجل الرسو وكاميرات الميناء",
+        "kk": "Айлақ журналы және айлақ CCTV"
+      },
+      "content": {
+        "ru": [
+          "Пт 18:00 — яхта пришвартована, причал B-7",
+          "Сб 09:30 — судно у причала, камера 3",
+          "Сб 16:10 — судно у причала, камера 3",
+          "Вс 08:00 — судно у причала, камера 3"
+        ],
+        "en": [
+          "Fri 18:00 — yacht moored, berth B-7",
+          "Sat 09:30 — vessel at berth, camera 3",
+          "Sat 16:10 — vessel at berth, camera 3",
+          "Sun 08:00 — vessel at berth, camera 3"
+        ],
+        "tr": [
+          "Cum 18:00 — yat bağlı, iskele B-7",
+          "Cmt 09:30 — tekne iskelede, kamera 3",
+          "Cmt 16:10 — tekne iskelede, kamera 3",
+          "Paz 08:00 — tekne iskelede, kamera 3"
+        ],
+        "ar": [
+          "الجمعة 18:00 — اليخت راسٍ، الرصيف B-7",
+          "السبت 09:30 — السفينة عند الرصيف، الكاميرا 3",
+          "السبت 16:10 — السفينة عند الرصيف، الكاميرا 3",
+          "الأحد 08:00 — السفينة عند الرصيف، الكاميرا 3"
+        ],
+        "kk": [
+          "Жм 18:00 — яхта айлаққа байланған, B-7",
+          "Сб 09:30 — кеме айлақта, 3-камера",
+          "Сб 16:10 — кеме айлақта, 3-камера",
+          "Жс 08:00 — кеме айлақта, 3-камера"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Камеры показывают яхту у причала всю субботу — в день, когда она якобы затонула в море.",
+        "en": "Cameras show the yacht at its berth all Saturday — the very day it supposedly sank at sea.",
+        "tr": "Kameralar yatı cumartesi boyunca iskelede gösteriyor — sözde denizde battığı gün.",
+        "ar": "تُظهر الكاميرات اليخت عند رصيفه طوال السبت — وهو اليوم الذي يُزعم أنه غرق فيه بالبحر.",
+        "kk": "Камералар яхтаны бүкіл сенбі бойы айлақта көрсетеді — оның теңізде батқан деген күні."
+      }
+    },
+    {
+      "id": "ev-ais",
+      "type": "gps",
+      "title": {
+        "ru": "Данные AIS-транспондера",
+        "en": "AIS Transponder Data",
+        "tr": "AIS Transponder Verisi",
+        "ar": "بيانات جهاز AIS",
+        "kk": "AIS транспондер деректері"
+      },
+      "content": {
+        "ru": "Последняя зафиксированная позиция транспондера судна — координаты причала B-7 в марине; выходов в открытое море за выходные не зарегистрировано.",
+        "en": "The vessel transponder's last recorded position is the marina berth B-7; no trips to open sea were logged over the weekend.",
+        "tr": "Teknenin transponderinin son kayıtlı konumu marina iskelesi B-7; hafta sonu açık denize çıkış kaydı yok.",
+        "ar": "آخر موقع مسجّل لجهاز السفينة هو رصيف المرسى B-7؛ ولم تُسجَّل أي رحلة إلى عرض البحر طوال عطلة الأسبوع.",
+        "kk": "Кеме транспондерінің соңғы тіркелген орны — маринадағы B-7 айлағы; демалыс күндері ашық теңізге шығу тіркелмеген."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Транспондер фиксирует судно только у причала, а не в открытом море, где оно якобы затонуло.",
+        "en": "The transponder places the vessel only at the berth, not at the open sea where it allegedly sank.",
+        "tr": "Transponder, tekneyi yalnızca iskelede konumlandırıyor, battığı iddia edilen açık denizde değil.",
+        "ar": "يحدد جهاز التتبّع موقع السفينة عند الرصيف فقط، لا في عرض البحر حيث يُزعم أنها غرقت.",
+        "kk": "Транспондер кемені тек айлақта тіркейді, ол батқан деген ашық теңізде емес."
+      }
+    },
+    {
+      "id": "ev-weather",
+      "type": "document",
+      "title": {
+        "ru": "Метеосводка по акватории",
+        "en": "Coastal Weather Report",
+        "tr": "Kıyı Hava Durumu Raporu",
+        "ar": "تقرير الطقس الساحلي",
+        "kk": "Жағалаудағы ауа райы анықтамасы"
+      },
+      "content": {
+        "ru": "Морская метеослужба сообщает о штиле в субботу: волнение 1 балл, ветер 3 м/с, штормовых предупреждений не было.",
+        "en": "The marine weather service reports calm conditions on Saturday: sea state 1, wind 3 m/s, with no storm warnings issued.",
+        "tr": "Deniz meteoroloji servisi cumartesi için sakin koşullar bildiriyor: deniz durumu 1, rüzgâr 3 m/s, fırtına uyarısı yok.",
+        "ar": "تفيد دائرة الأرصاد البحرية بأن الأحوال كانت هادئة يوم السبت: حالة البحر 1، الرياح 3 م/ث، دون أي تحذيرات من عواصف.",
+        "kk": "Теңіз метеоқызметі сенбіде тыныш ауа райын хабарлайды: толқын 1 балл, жел 3 м/с, дауыл ескертуі болмаған."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "В заявленный день стояла штилевая погода — шторм, на который ссылается клиент, не существовал.",
+        "en": "The claimed day had calm weather — the storm the client cites never existed.",
+        "tr": "İddia edilen gün hava sakindi — müşterinin öne sürdüğü fırtına hiç olmadı.",
+        "ar": "كان الطقس هادئًا في اليوم المزعوم — العاصفة التي يذكرها العميل لم تحدث.",
+        "kk": "Мәлімделген күні ауа райы тыныш болды — клиент сілтейтін дауыл болмаған."
+      }
+    },
+    {
+      "id": "ev-valuation",
+      "type": "document",
+      "title": {
+        "ru": "Оценка и регистрация судна",
+        "en": "Vessel Valuation and Registration",
+        "tr": "Tekne Değerleme ve Tescil",
+        "ar": "تقييم وتسجيل السفينة",
+        "kk": "Кеменің бағасы мен тіркеуі"
+      },
+      "content": {
+        "ru": "Подлинное регистрационное свидетельство и оценка судна на сумму около 18 000 евро.",
+        "en": "A genuine registration certificate and a vessel valuation of about 18,000 euros.",
+        "tr": "Gerçek bir tescil belgesi ve yaklaşık 18.000 avroluk bir tekne değerlemesi.",
+        "ar": "شهادة تسجيل أصلية وتقييم للسفينة بنحو 18000 يورو.",
+        "kk": "Шынайы тіркеу куәлігі және кеменің шамамен 18 000 еуролық бағасы."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Документ подлинный и лишь подтверждает стоимость судна, не противореча делу.",
+        "en": "The document is genuine and merely confirms the vessel's value, not conflicting with the case.",
+        "tr": "Belge gerçektir ve yalnızca teknenin değerini doğrular, davayla çelişmez.",
+        "ar": "المستند أصلي ويؤكد قيمة السفينة فقط، ولا يتعارض مع القضية.",
+        "kk": "Құжат шынайы әрі тек кеменің құнын растайды, іске қайшы келмейді."
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "CCTV и AIS показывают яхту у причала весь день предполагаемой гибели.",
+      "Метеосводка фиксирует штиль — заявленного шторма не было.",
+      "Заявление мошенническое, его следует отклонить."
+    ],
+    "en": [
+      "CCTV and AIS show the yacht at the berth all the supposed sinking day.",
+      "The weather report shows calm seas — the claimed storm never happened.",
+      "The claim is fraudulent and should be rejected."
+    ],
+    "tr": [
+      "CCTV ve AIS, yatı sözde batış günü boyunca iskelede gösteriyor.",
+      "Hava raporu sakin deniz gösteriyor — iddia edilen fırtına hiç olmadı.",
+      "Talep hileli ve reddedilmeli."
+    ],
+    "ar": [
+      "تُظهر الكاميرات وAIS اليخت عند الرصيف طوال يوم الغرق المزعوم.",
+      "يُظهر تقرير الطقس بحرًا هادئًا — العاصفة المزعومة لم تحدث.",
+      "المطالبة احتيالية ويجب رفضها."
+    ],
+    "kk": [
+      "CCTV мен AIS яхтаны болжамды апат күні бойы айлақта көрсетеді.",
+      "Метеоанықтама тыныштықты тіркейді — мәлімделген дауыл болмаған.",
+      "Талап алаяқтық, оны қабылдамау керек."
+    ]
+  }
+}

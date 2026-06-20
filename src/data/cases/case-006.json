@@ -1,0 +1,186 @@
+{
+  "id": "case-006",
+  "type": "standard",
+  "difficulty": "hard",
+  "claimAmount": 15000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Винный погреб",
+    "en": "The Wine Cellar",
+    "tr": "Şarap Mahzeni",
+    "ar": "قبو النبيذ",
+    "kk": "Шарап жертөлесі"
+  },
+  "claim": {
+    "person": {
+      "ru": "Эдуард Виноградов, 59 лет",
+      "en": "Eduard Vinogradov, 59",
+      "tr": "Eduard Vinogradov, 59",
+      "ar": "إدوارد فينوغرادوف، 59",
+      "kk": "Эдуард Виноградов, 59 жаста"
+    },
+    "story": {
+      "ru": "Трёхдневное отключение электричества вырубило охлаждение в моём погребе, и моя коллекция марочного вина за 15 000 € погибла. Прошу полную выплату.",
+      "en": "A three-day power outage knocked out the cooling in my cellar, and my €15,000 vintage wine collection was ruined. I request the full payout.",
+      "tr": "Üç günlük elektrik kesintisi mahzenimdeki soğutmayı devre dışı bıraktı ve 15.000 €'luk antika şarap koleksiyonum mahvoldu. Tam ödeme talep ediyorum.",
+      "ar": "أدى انقطاع التيار الكهربائي لمدة ثلاثة أيام إلى تعطل التبريد في قبوي، وأُتلفت مجموعة النبيذ المعتق التي تبلغ قيمتها 15000 يورو. أطلب التعويض الكامل.",
+      "kk": "Үш күндік электр өшуі жертөлемдегі салқындатуды істен шығарып, 15 000 €-лық марка шарап коллекциям бүлінді. Толық төлемді сұраймын."
+    }
+  },
+  "coverImage": "covers/case-006.svg",
+  "personImage": "people/eduard.svg",
+  "evidences": [
+    {
+      "id": "ev-utility",
+      "type": "document",
+      "title": {
+        "ru": "Справка энергокомпании",
+        "en": "Utility Company Notice",
+        "tr": "Elektrik Şirketi Belgesi",
+        "ar": "إشعار شركة الكهرباء",
+        "kk": "Энергокомпания анықтамасы"
+      },
+      "content": {
+        "ru": "Энергокомпания подтверждает отключение электричества на три дня в указанные даты.",
+        "en": "The utility company confirms a three-day power outage on the stated dates.",
+        "tr": "Elektrik şirketi, belirtilen tarihlerde üç günlük bir kesinti olduğunu doğruluyor.",
+        "ar": "تؤكد شركة الكهرباء انقطاع التيار لمدة ثلاثة أيام في التواريخ المذكورة.",
+        "kk": "Энергокомпания көрсетілген күндері электрдің үш күн өшкенін растайды."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Отключение действительно было — этот факт подлинный.",
+        "en": "The outage really did happen — this fact is genuine.",
+        "tr": "Kesinti gerçekten yaşandı — bu gerçek doğru.",
+        "ar": "حدث الانقطاع بالفعل — هذه الحقيقة صحيحة.",
+        "kk": "Электр шынымен өшкен — бұл факт шынайы."
+      }
+    },
+    {
+      "id": "ev-temp",
+      "type": "usage_log",
+      "title": {
+        "ru": "Лог температуры погреба",
+        "en": "Cellar Temperature Log",
+        "tr": "Mahzen Sıcaklık Kaydı",
+        "ar": "سجل درجة حرارة القبو",
+        "kk": "Жертөле температура логы"
+      },
+      "content": {
+        "ru": [
+          "День 1 — 13 °C",
+          "День 2 — 13 °C",
+          "День 3 — 13 °C"
+        ],
+        "en": [
+          "Day 1 — 13 °C",
+          "Day 2 — 13 °C",
+          "Day 3 — 13 °C"
+        ],
+        "tr": [
+          "1. Gün — 13 °C",
+          "2. Gün — 13 °C",
+          "3. Gün — 13 °C"
+        ],
+        "ar": [
+          "اليوم 1 — 13 °م",
+          "اليوم 2 — 13 °م",
+          "اليوم 3 — 13 °م"
+        ],
+        "kk": [
+          "1-күн — 13 °C",
+          "2-күн — 13 °C",
+          "3-күн — 13 °C"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Температура в погребе всё время оставалась идеальной — вино не могло испортиться от жары.",
+        "en": "The cellar held a perfect temperature the whole time — the wine could not have spoiled from heat.",
+        "tr": "Mahzen tüm süre boyunca ideal sıcaklığı korudu — şarap sıcaktan bozulamazdı.",
+        "ar": "حافظ القبو على درجة حرارة مثالية طوال الوقت — لم يكن للنبيذ أن يفسد من الحرارة.",
+        "kk": "Жертөле температурасы үнемі мінсіз болды — шарап ыстықтан бұзыла алмайды."
+      }
+    },
+    {
+      "id": "ev-neighbor",
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания соседа",
+        "en": "Neighbor Statement",
+        "tr": "Komşu İfadesi",
+        "ar": "إفادة الجار",
+        "kk": "Көршінің айғағы"
+      },
+      "content": {
+        "ru": "«Свет вырубили, но Эдуард все выходные гонял генератор без остановки».",
+        "en": "\"The power was out, but Eduard ran his generator non-stop all weekend.\"",
+        "tr": "\"Elektrik kesikti ama Eduard tüm hafta sonu jeneratörünü durmadan çalıştırdı.\"",
+        "ar": "«انقطع التيار، لكن إدوارد شغّل مولّده دون توقف طوال عطلة نهاية الأسبوع».",
+        "kk": "«Жарық өшті, бірақ Эдуард бүкіл демалыс күндері генераторын тоқтатпай қосып қойды»."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "У заявителя было резервное питание, поэтому охлаждение не прекращалось.",
+        "en": "The claimant had backup power, so the cooling never actually stopped.",
+        "tr": "Talep sahibinin yedek gücü vardı, bu yüzden soğutma aslında hiç durmadı.",
+        "ar": "كان لدى مقدم الطلب طاقة احتياطية، لذا لم يتوقف التبريد فعليًا.",
+        "kk": "Өтініш берушіде резервтік қуат болған, сондықтан салқындату нақты тоқтаған жоқ."
+      }
+    },
+    {
+      "id": "ev-appraisal",
+      "type": "document",
+      "title": {
+        "ru": "Оценка коллекции",
+        "en": "Collection Appraisal",
+        "tr": "Koleksiyon Değerlemesi",
+        "ar": "تقييم المجموعة",
+        "kk": "Коллекция бағасы"
+      },
+      "content": {
+        "ru": "Независимая оценка стоимости коллекции в 15 000 €. Документ подлинный.",
+        "en": "An independent appraisal valuing the collection at €15,000. The document is genuine.",
+        "tr": "Koleksiyonu 15.000 € değerinde gösteren bağımsız bir değerleme. Belge gerçek.",
+        "ar": "تقييم مستقل يقدّر قيمة المجموعة بـ 15000 يورو. المستند أصلي.",
+        "kk": "Коллекцияны 15 000 €-ға бағалаған тәуелсіз сараптама. Құжат шынайы."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Оценка подлинная — коллекция действительно столько стоит. Спор не о цене, а об ущербе.",
+        "en": "The appraisal is genuine — the collection really is worth that much. The dispute is about damage, not value.",
+        "tr": "Değerleme gerçek — koleksiyon gerçekten bu kadar değerinde. Anlaşmazlık değer değil, hasar hakkında.",
+        "ar": "التقييم أصلي — المجموعة تساوي هذا المبلغ فعلًا. النزاع حول الضرر لا القيمة.",
+        "kk": "Сараптама шынайы — коллекция шынымен сонша тұрады. Дау баға туралы емес, зиян туралы."
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Отключение и оценка коллекции — подлинные, и они отвлекают внимание.",
+      "Но лог показывает: в погребе всё время держалось 13 °C, а сосед видел работающий генератор.",
+      "Вино не пострадало — ущерба нет. Заявление мошенническое, отклонить."
+    ],
+    "en": [
+      "The outage and the appraisal are both genuine — and both are distractions.",
+      "But the log shows the cellar held 13 °C throughout, and the neighbor saw the generator running.",
+      "The wine was unharmed — there is no loss. The claim is fraudulent, reject."
+    ],
+    "tr": [
+      "Kesinti ve değerleme gerçek — ve ikisi de dikkat dağıtıcı.",
+      "Ama kayıt, mahzenin sürekli 13 °C'de kaldığını gösteriyor ve komşu jeneratörün çalıştığını gördü.",
+      "Şarap zarar görmedi — kayıp yok. Talep hileli, reddedin."
+    ],
+    "ar": [
+      "الانقطاع والتقييم كلاهما حقيقي — وكلاهما عامل تشتيت.",
+      "لكن السجل يُظهر أن القبو ظل عند 13 °م طوال الوقت، والجار رأى المولّد يعمل.",
+      "لم يتضرر النبيذ — لا توجد خسارة. المطالبة احتيالية، ارفضها."
+    ],
+    "kk": [
+      "Электрдің өшуі мен сараптама — екеуі де шынайы әрі екеуі де назар аудартатын алдамшы.",
+      "Бірақ лог жертөледе үнемі 13 °C сақталғанын көрсетеді, ал көрші генератордың жұмыс істегенін көрді.",
+      "Шарап зақымданбаған — зиян жоқ. Талап алаяқтық, қабылдамаңыз."
+    ]
+  }
+}

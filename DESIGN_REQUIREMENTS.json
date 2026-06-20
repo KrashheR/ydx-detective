@@ -1,0 +1,99 @@
+Role: You are a Senior Product Designer with deep expertise in UI/UX for browser-based web games, mobile responsive design, and targeting mature casual audiences (ages 30–60).
+
+Task: Design a comprehensive UI/UX concept and wireframe specification for the screen "Case File" (Экран "Дело") for the game "Claim Detective", which runs on the Yandex Games platform.
+
+1. Project Context & Product Vision
+Core Fantasy: The player acts as a professional insurance investigator auditing suspicious claims.
+
+Core Emotion: "I noticed the lie and exposed the fraudster."
+
+Visual Metaphor: The screen is not a flashy mobile game; it is an "Investigation Folder" laid out on a detective's desk. The UI looks like physical paper documents, official forms, official stamps, and archive archives.
+
+Target Audience: 30–60 years old. They appreciate high text readability, minimalist layout, clear data hierarchy, large hit targets, and an intuitive, slow-paced intellectual loop.
+
+Strict Design Red Lines: NO neon effects, cartoon graphics, gaming gradients, sci-fi/fantasy elements, or mobile casino aesthetics.
+
+2. Layout & Responsive Strategy
+Desktop Layout (Three-Column Investigation Desk):
+
+Left Sidebar (280px): Case navigation list (Standard cases stack + "Daily Case" dynamic banner), player progress overview, and native Language Selector Dropdown.
+
+Main Content (Max-width 480px): The active physical Case Folder.
+
+Right Sidebar (280px): Live Analytics/Stats Dashboard (Company Balance, Player Investigation Accuracy %, global Leaderboard module).
+
+Mobile Layout: Adapts into a focused Single Column. Uses an elegant tabbed or swipe navigation bar to switch fluidly between the main "Client Statement" view and the "Evidence Grid/Stack" to prevent information clutter.
+
+3. Comprehensive Master & Flow Data Specification
+Use the following structured definitions to design your design components, interactive states, and layouts:
+
+JSON
+{
+  "project": {
+    "name": "Claim Detective",
+    "version": "MVP v1.1",
+    "platform": "Yandex Games"
+  },
+  "localization_i18n": {
+    "system": "Data-Driven Internal i18n",
+    "languageSelectorUI": {
+      "location": "Main Menu & Left Sidebar Dropdown",
+      "type": "Dropdown with Native Language Text and Flags"
+    },
+    "supportedLanguages": ["ru", "en", "tr", "ar", "kk"]
+  },
+  "gameplayMechanics": {
+    "contradictionSystem": {
+      "requiresProofSelection": true,
+      "description": "To reject a claim, a player must open an evidence card and click 'Mark as Contradiction'. If they tap 'Reject' without marking any evidence, show an on-screen prompt: 'Rejection must be justified. Specify at least one contradiction in the documents.'"
+    },
+    "reward_math": {
+      "base_verdict_weight": 0.50,
+      "evidence_proof_weight": 0.50,
+      "rule": "50% reward is given for guessing the right verdict (Approve/Reject). The remaining 50% scales scale-proportionally based on how many real contradictions the player stamped before clicking Reject."
+    },
+    "dailyCaseSystem": {
+      "enabled": true,
+      "rewardMultiplier": 5,
+      "complexityMultiplier": 2,
+      "uiHighlight": "Gold borders, textured visual 'URGENT' stamp on the folder cover"
+    }
+  },
+  "visualDesign": {
+    "palette": {
+      "background": "#111827",
+      "surface": "#1F2937",
+      "paper": "#F3F4F6",
+      "accent": "#2563EB",
+      "success": "#16A34A",
+      "danger": "#DC2626",
+      "dailyGold": "#D97706"
+    },
+    "designPrinciples": ["Professional", "Highly Readable", "Document-focused", "Minimalist", "Information-first"]
+  }
+}
+4. Step-by-Step UI Flow to Map out
+Case Selection: Highlighting the distinct visuals between a standard grey case folder and the premium Daily Case folder (gold accents, urgent stamp effect).
+
+Reviewing Statement: Designing the top folder sheet containing Client Photo ID, Personal Bio, and the structured written narrative story block.
+
+The Investigation Layer: A dedicated grid area displaying diverse physical evidence artifacts (Receipts/Invoices, maps with GPS text coordinates, polaroid-styled Photo files, and tabular Chat Logs).
+
+The Stamping Interaction: A detailed mock of the Full-Screen Modal overlay when an evidence file is clicked. It must include the large actionable toggle button "Mark as Contradiction". Show the visual transformation when active (a retro ink stamp texture overlaying the document stating "ПРОТИВОРЕЧИЕ / CONTRADICTION").
+
+The Verdict Panel: Layout of the permanent "Approve Claim" (Success Green) and "Reject Claim" (Deep Professional Red) buttons.
+
+The Result & Breakdown Sheet: A post-decision overlay displaying a dynamic resolution stamp ("CASE CLOSED / FRAUD EXPOSED" or "INVESTIGATOR ERROR"), an incremental breakdown progress bar mapping how much of the reward was unlocked via exact evidence discovery, and an administrative textual breakdown explaining the true solution logic.
+
+5. Expected Output Delivery
+Please generate a comprehensive product design specification sheet for a React TailwindCSS engineer, including:
+
+Low-Fidelity Wireframe: Textual ASCII or structural layout matrix mapping out the positions of sections on Desktop vs Mobile screens.
+
+Mid-Fidelity Wireframe Description: Structural specifications, spacing guidelines, padding allocations, typography scale hierarchy recommendations (e.g., matching a high-contrast sans-serif like Inter or a professional serif like IBM Plex Serif).
+
+Component Interface States Matrix: Define explicit design tokens and styling shifts for elements across states: Default, Hover, Active/Selected (Stamped), and Disabled.
+
+Micro-animations Specification: Provide guidelines for smooth transitions using Framer Motion (e.g., card lifting up effects, smooth document slide-outs, ink stamp scaling dampeners).
+
+Proceed with generating the layout specifications in an analytical, structured, and developer-ready format.

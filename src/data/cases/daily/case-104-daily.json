@@ -1,0 +1,166 @@
+{
+  "id": "case-104-daily",
+  "type": "daily",
+  "difficulty": "hard",
+  "claimAmount": 12000,
+  "truth": "valid",
+  "title": {
+    "ru": "Сарай, поражённый молнией",
+    "en": "The Lightning-Struck Barn",
+    "tr": "Yıldırım Çarpan Ahır",
+    "ar": "الحظيرة التي ضربها البرق",
+    "kk": "Найзағай соққан қора"
+  },
+  "claim": {
+    "person": {
+      "ru": "Эльмира Жаксыбекова",
+      "en": "Elmira Jaksybekova",
+      "tr": "Elmira Jaksıbekova",
+      "ar": "إلميرا جاكسيبيكوفا",
+      "kk": "Эльмира Жақсыбекова"
+    },
+    "story": {
+      "ru": "Во время грозы молния ударила в мой сарай, и он сгорел дотла. Прошу возместить стоимость постройки и восстановление.",
+      "en": "During a thunderstorm, lightning struck my barn and it burned to the ground. I'm requesting compensation for the structure and its rebuild.",
+      "tr": "Fırtına sırasında yıldırım ahırıma çarptı ve yerle bir oldu. Yapı ve yeniden inşa için tazminat talep ediyorum.",
+      "ar": "أثناء عاصفة رعدية، ضرب البرق حظيرتي واحترقت بالكامل. أطلب تعويضاً عن المبنى وإعادة بنائه.",
+      "kk": "Найзағай кезінде менің қорама найзағай түсіп, ол түгел өртеніп кетті. Құрылыс пен қалпына келтіруге өтемақы сұраймын."
+    }
+  },
+  "coverImage": "covers/case-104-daily.svg",
+  "personImage": "people/elmira.svg",
+  "evidences": [
+    {
+      "id": "ev-strike-report",
+      "type": "document",
+      "title": {
+        "ru": "Метеоотчёт о разрядах молний",
+        "en": "Meteorological Strike-Detection Report",
+        "tr": "Meteorolojik Yıldırım Tespit Raporu",
+        "ar": "تقرير الأرصاد لرصد الصواعق",
+        "kk": "Метеорологиялық найзағай тіркеу есебі"
+      },
+      "content": {
+        "ru": "Сеть грозопеленгации зафиксировала разряд «облако-земля» силой 38 кА в 23:47 в радиусе 90 м от координат фермы (43.21N, 76.95E).",
+        "en": "The lightning-detection network logged a 38 kA cloud-to-ground strike at 23:47 within 90 m of the farm's coordinates (43.21N, 76.95E).",
+        "tr": "Yıldırım tespit ağı, 23:47'de çiftliğin koordinatlarına (43.21K, 76.95D) 90 m mesafede 38 kA'lık bir bulut-yer deşarjı kaydetti.",
+        "ar": "سجّلت شبكة رصد الصواعق صاعقة من السحابة إلى الأرض بقوة 38 كيلوأمبير عند الساعة 23:47 على بُعد 90 م من إحداثيات المزرعة (43.21 شمالاً، 76.95 شرقاً).",
+        "kk": "Найзағай пеленгациясы желісі 23:47-де ферма координаттарынан (43.21N, 76.95E) 90 м радиуста 38 кА «бұлт-жер» разрядын тіркеді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Независимая метеосеть подтверждает удар молнии у самой фермы в заявленное время.",
+        "en": "An independent meteorological network confirms a lightning strike right by the farm at the stated time.",
+        "tr": "Bağımsız meteoroloji ağı, belirtilen saatte çiftliğin hemen yanında bir yıldırım çarpmasını doğruluyor.",
+        "ar": "تؤكد شبكة أرصاد مستقلة وقوع صاعقة بجوار المزرعة في الوقت المذكور.",
+        "kk": "Тәуелсіз метеожелі көрсетілген уақытта ферма жанында найзағай түскенін растайды."
+      }
+    },
+    {
+      "id": "ev-fire-report",
+      "type": "document",
+      "title": {
+        "ru": "Отчёт пожарной службы",
+        "en": "Fire Department Report",
+        "tr": "İtfaiye Raporu",
+        "ar": "تقرير إدارة الإطفاء",
+        "kk": "Өрт сөндіру қызметінің есебі"
+      },
+      "content": {
+        "ru": "Заключение дознавателя: причина пожара — удар молнии в деревянную конструкцию; следов горючих веществ и поджога не обнаружено.",
+        "en": "Investigator's conclusion: cause of fire was a lightning strike to the wooden structure; no traces of accelerants or arson found.",
+        "tr": "Müfettiş sonucu: yangının nedeni ahşap yapıya yıldırım çarpması; hızlandırıcı madde veya kundaklama izi bulunmadı.",
+        "ar": "خلاصة المحقق: سبب الحريق هو ضربة برق على الهيكل الخشبي؛ لم تُعثر على آثار مواد مسرّعة أو إشعال متعمّد.",
+        "kk": "Тергеушінің қорытындысы: өрттің себебі — ағаш құрылысқа найзағай түсуі; жанғыш зат немесе қасақана өрт іздері табылмады."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Официальное дознание называет причиной именно молнию и исключает поджог.",
+        "en": "The official investigation names lightning as the cause and rules out arson.",
+        "tr": "Resmî soruşturma nedeni yıldırım olarak belirtiyor ve kundaklamayı dışlıyor.",
+        "ar": "يحدد التحقيق الرسمي البرق سبباً ويستبعد الإشعال المتعمّد.",
+        "kk": "Ресми тергеу себебін найзағай деп атап, қасақана өртті жоққа шығарады."
+      }
+    },
+    {
+      "id": "ev-photos",
+      "type": "photo",
+      "title": {
+        "ru": "Фото обгоревшей балки",
+        "en": "Photos of the Scorched Beam",
+        "tr": "Yanmış Kirişin Fotoğrafları",
+        "ar": "صور العارضة المتفحّمة",
+        "kk": "Күйген арқалықтың фотосы"
+      },
+      "content": {
+        "ru": "На фото главной балки виден характерный древовидный ожог Лихтенберга, расходящийся от точки удара — типичный след прохождения молнии.",
+        "en": "The photos of the main beam show a characteristic tree-like Lichtenberg burn radiating from the impact point — a typical trace of a lightning path.",
+        "tr": "Ana kirişin fotoğraflarında, çarpma noktasından yayılan karakteristik ağaç benzeri Lichtenberg yanığı görülüyor — yıldırım izinin tipik işareti.",
+        "ar": "تُظهر صور العارضة الرئيسية حرقاً شجري الشكل مميزاً من نوع ليختنبرغ ينتشر من نقطة التأثير — أثر نموذجي لمسار البرق.",
+        "kk": "Негізгі арқалықтың фотосында соққы нүктесінен таралатын ағаш тәрізді Лихтенберг күйігі көрінеді — найзағай жолының типтік ізі."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Узор Лихтенберга физически характерен именно для удара молнии и подтверждает версию.",
+        "en": "The Lichtenberg pattern is physically characteristic of a lightning strike and supports the account.",
+        "tr": "Lichtenberg deseni fiziksel olarak yıldırım çarpmasına özgüdür ve anlatımı destekler.",
+        "ar": "نمط ليختنبرغ مميز فيزيائياً لضربة البرق ويدعم الرواية.",
+        "kk": "Лихтенберг өрнегі физикалық тұрғыдан найзағай соққысына тән және әңгімені растайды."
+      }
+    },
+    {
+      "id": "ev-quote",
+      "type": "document",
+      "title": {
+        "ru": "Смета подрядчика на восстановление",
+        "en": "Contractor's Rebuild Quote",
+        "tr": "Müteahhit Yeniden İnşa Teklifi",
+        "ar": "عرض سعر المقاول لإعادة البناء",
+        "kk": "Мердігердің қалпына келтіру сметасы"
+      },
+      "content": {
+        "ru": "Смета строительной фирмы на восстановление сарая: каркас, кровля, ворота — итого 11 800 €, что соответствует заявленной сумме.",
+        "en": "A construction firm's quote to rebuild the barn: frame, roofing, gates — total €11,800, consistent with the claimed amount.",
+        "tr": "Bir inşaat firmasının ahırı yeniden inşa teklifi: iskelet, çatı, kapılar — toplam 11.800 €, talep edilen tutarla uyumlu.",
+        "ar": "عرض شركة بناء لإعادة بناء الحظيرة: الهيكل، السقف، البوابات — الإجمالي 11,800 يورو، متوافق مع المبلغ المطالَب به.",
+        "kk": "Құрылыс фирмасының қораны қалпына келтіру сметасы: қаңқа, шатыр, қақпа — барлығы 11 800 €, талап етілген сомаға сәйкес келеді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Смета разумна и соответствует размеру и типу постройки — завышения нет.",
+        "en": "The quote is reasonable and matches the size and type of the structure — no inflation.",
+        "tr": "Teklif makul ve yapının boyut ve türüne uygun — şişirme yok.",
+        "ar": "العرض معقول ويتناسب مع حجم ونوع المبنى — لا مبالغة فيه.",
+        "kk": "Смета орынды әрі құрылыстың көлемі мен түріне сай — асыра бағалау жоқ."
+      }
+    }
+  ],
+  "correctDecision": "approve",
+  "explanation": {
+    "ru": [
+      "Метеосеть зафиксировала разряд молнии у фермы в заявленное время.",
+      "Пожарные и узор Лихтенберга подтверждают: причина — молния, не поджог.",
+      "Смета адекватна — случай подлинный, выплату одобрить."
+    ],
+    "en": [
+      "The weather network logged a lightning strike at the farm at the stated time.",
+      "The fire report and Lichtenberg pattern confirm lightning, not arson.",
+      "The quote is reasonable — the case is genuine, approve the payout."
+    ],
+    "tr": [
+      "Meteoroloji ağı, belirtilen saatte çiftlikte yıldırım çarpmasını kaydetti.",
+      "İtfaiye raporu ve Lichtenberg deseni yıldırımı doğruluyor, kundaklama değil.",
+      "Teklif makul — durum gerçek, ödeme onaylanmalı."
+    ],
+    "ar": [
+      "سجّلت شبكة الأرصاد ضربة برق في المزرعة في الوقت المذكور.",
+      "تقرير الإطفاء ونمط ليختنبرغ يؤكدان البرق وليس الإشعال المتعمّد.",
+      "العرض معقول — الحالة حقيقية، يجب الموافقة على الدفع."
+    ],
+    "kk": [
+      "Метеожелі көрсетілген уақытта фермада найзағай түскенін тіркеді.",
+      "Өрт есебі мен Лихтенберг өрнегі найзағайды растайды, қасақана өрт емес.",
+      "Смета орынды — жағдай шынайы, төлемді мақұлдау керек."
+    ]
+  }
+}

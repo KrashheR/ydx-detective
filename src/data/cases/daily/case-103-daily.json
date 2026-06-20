@@ -1,0 +1,140 @@
+{
+  "id": "case-103-daily",
+  "type": "daily",
+  "difficulty": "hard",
+  "claimAmount": 9000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Показания попугая",
+    "en": "The Parrot's Testimony",
+    "tr": "Papağanın Tanıklığı",
+    "ar": "شهادة الببغاء",
+    "kk": "Тотықұстың куәлігі"
+  },
+  "claim": {
+    "person": {
+      "ru": "Лоренцо Бьянки",
+      "en": "Lorenzo Bianchi",
+      "tr": "Lorenzo Bianchi",
+      "ar": "لورنزو بيانكي",
+      "kk": "Лоренцо Бьянки"
+    },
+    "story": {
+      "ru": "Пока я был в отъезде, из моей квартиры украли ценную картину. Даже мой попугай был травмирован — он до сих пор пугается. Прошу выплату за картину.",
+      "en": "While I was away, a valuable painting was stolen from my flat. Even my parrot was traumatized — he still gets startled. I'm requesting a payout for the painting.",
+      "tr": "Ben uzaktayken dairemden değerli bir tablo çalındı. Papağanım bile travma geçirdi — hâlâ ürküyor. Tablo için ödeme talep ediyorum.",
+      "ar": "بينما كنت مسافراً، سُرقت لوحة ثمينة من شقتي. حتى ببغائي أُصيب بصدمة — لا يزال يفزع. أطلب تعويضاً عن اللوحة.",
+      "kk": "Мен жоқта пәтерімнен құнды сурет ұрланды. Тіпті тотықұсым да жарақат алды — әлі күнге дейін шошып кетеді. Сурет үшін төлем сұраймын."
+    }
+  },
+  "coverImage": "covers/case-103-daily.svg",
+  "personImage": "people/lorenzo.svg",
+  "evidences": [
+    {
+      "id": "ev-parrotcam",
+      "type": "camera_recording",
+      "title": {
+        "ru": "Запись с «ParrotCam»",
+        "en": "'ParrotCam' Recording",
+        "tr": "'ParrotCam' Kaydı",
+        "ar": "تسجيل 'ParrotCam'",
+        "kk": "«ParrotCam» жазбасы"
+      },
+      "content": {
+        "ru": "Камера слежения за питомцем в 09:10 в день «отъезда» снимает самого Лоренцо: он снимает картину со стены и заворачивает её в плёнку. Попугай повторяет его голос: «Тихо-тихо, никому ни слова».",
+        "en": "The pet-monitoring camera at 09:10 on the day of his 'absence' films Lorenzo himself taking the painting off the wall and wrapping it in plastic. The parrot mimics his voice: 'Quiet now, not a word to anyone.'",
+        "tr": "Evcil hayvan izleme kamerası 'yokluğu' günü 09:10'da bizzat Lorenzo'yu tabloyu duvardan indirip naylona sararken çekiyor. Papağan onun sesini taklit ediyor: 'Sessiz ol, kimseye tek kelime yok.'",
+        "ar": "كاميرا مراقبة الحيوان الأليف في الساعة 09:10 يوم 'غيابه' تصوّر لورنزو نفسه وهو ينزع اللوحة عن الجدار ويلفّها بالبلاستيك. الببغاء يقلّد صوته: 'اهدأ الآن، لا كلمة لأحد.'",
+        "kk": "Үй жануарын бақылау камерасы «жоқ болған» күні 09:10-де Лоренконың өзін түсіреді: ол суретті қабырғадан алып, пленкаға орайды. Тотықұс оның даусын қайталайды: «Тыныш бол, ешкімге тіс жарма»."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Камера показывает, что картину снял сам заявитель в тот самый день, когда он якобы был в отъезде — кражи не было.",
+        "en": "The camera shows the claimant himself took the painting on the very day he claimed to be away — there was no theft.",
+        "tr": "Kamera, talep sahibinin uzakta olduğunu iddia ettiği günde tabloyu bizzat aldığını gösteriyor — hırsızlık yoktu.",
+        "ar": "تُظهر الكاميرا أن صاحب المطالبة نفسه أخذ اللوحة في اليوم ذاته الذي زعم فيه غيابه — لم تكن هناك سرقة.",
+        "kk": "Камера өтініш берушінің суретті өзі жоқ деген күні алғанын көрсетеді — ұрлық болған жоқ."
+      }
+    },
+    {
+      "id": "ev-listing",
+      "type": "document",
+      "title": {
+        "ru": "Объявление на маркетплейсе",
+        "en": "Marketplace Listing",
+        "tr": "Pazaryeri İlanı",
+        "ar": "إعلان في سوق إلكتروني",
+        "kk": "Маркетплейстегі хабарландыру"
+      },
+      "content": {
+        "ru": "Скриншот: с аккаунта «l.bianchi» выставлена та же картина с подписью «срочно, частная продажа, без посредников», цена 7 200 €, опубликовано через два дня после «кражи».",
+        "en": "Screenshot: the same painting is listed from the account 'l.bianchi' captioned 'urgent, private sale, no middlemen', priced at €7,200, posted two days after the 'theft'.",
+        "tr": "Ekran görüntüsü: aynı tablo 'l.bianchi' hesabından 'acil, özel satış, aracısız' notuyla 7.200 € fiyatla listelenmiş, 'hırsızlıktan' iki gün sonra paylaşılmış.",
+        "ar": "لقطة شاشة: اللوحة نفسها معروضة من حساب 'l.bianchi' بعنوان 'عاجل، بيع خاص، بدون وسطاء'، بسعر 7,200 يورو، نُشر بعد يومين من 'السرقة'.",
+        "kk": "Скриншот: «l.bianchi» аккаунтынан дәл сол сурет «шұғыл, жеке сату, делдалсыз» деген жазумен, бағасы 7 200 €, «ұрлықтан» екі күн кейін жарияланған."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "«Украденную» картину продаёт сам владелец вскоре после заявления — это прямое доказательство обмана.",
+        "en": "The 'stolen' painting is being sold by the owner himself soon after the claim — direct proof of deception.",
+        "tr": "'Çalınan' tablo, talepten kısa süre sonra bizzat sahibi tarafından satılıyor — aldatmacanın doğrudan kanıtı.",
+        "ar": "اللوحة 'المسروقة' يبيعها المالك نفسه بعد المطالبة بفترة وجيزة — دليل مباشر على الخداع.",
+        "kk": "«Ұрланған» суретті иесінің өзі арыздан кейін көп ұзамай сатуда — алдаудың тікелей дәлелі."
+      }
+    },
+    {
+      "id": "ev-appraisal",
+      "type": "document",
+      "title": {
+        "ru": "Оценка картины",
+        "en": "Painting Appraisal",
+        "tr": "Tablo Değerleme Raporu",
+        "ar": "تقييم اللوحة",
+        "kk": "Суреттің бағалауы"
+      },
+      "content": {
+        "ru": "Заключение оценщика: масло, холст, ранний XX век, рыночная стоимость около 9 000 €. Подлинность подтверждена, провенанс в порядке.",
+        "en": "Appraiser's report: oil on canvas, early 20th century, market value about €9,000. Authenticity confirmed, provenance in order.",
+        "tr": "Eksper raporu: tuval üzerine yağlıboya, 20. yüzyıl başı, piyasa değeri yaklaşık 9.000 €. Orijinallik onaylandı, menşe kayıtları düzgün.",
+        "ar": "تقرير المثمّن: زيت على قماش، أوائل القرن العشرين، قيمة سوقية نحو 9,000 يورو. الأصالة مؤكدة، وسجل المصدر سليم.",
+        "kk": "Бағалаушының қорытындысы: кенепке май бояу, ХХ ғасыр басы, нарықтық құны шамамен 9 000 €. Түпнұсқалығы расталған, шығу тегі дұрыс."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Оценка лишь подтверждает ценность картины и сама по себе делу не противоречит.",
+        "en": "The appraisal merely confirms the painting's value and does not contradict the case on its own.",
+        "tr": "Değerleme yalnızca tablonun değerini doğrular ve tek başına davayla çelişmez.",
+        "ar": "التقييم يؤكد فقط قيمة اللوحة ولا يتعارض وحده مع القضية.",
+        "kk": "Бағалау тек суреттің құнын растайды және өздігінен іске қайшы келмейді."
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "ParrotCam снял, как сам Лоренцо снимает картину в день «отъезда».",
+      "Та же картина выставлена на продажу с его аккаунта после «кражи».",
+      "Кражи не было — заявление мошенническое, отказать."
+    ],
+    "en": [
+      "ParrotCam filmed Lorenzo himself taking the painting on his 'away' day.",
+      "The same painting is listed for sale from his account after the 'theft'.",
+      "There was no theft — the claim is fraudulent, reject."
+    ],
+    "tr": [
+      "ParrotCam, Lorenzo'yu 'yokluğu' günü tabloyu alırken çekti.",
+      "Aynı tablo 'hırsızlıktan' sonra hesabından satışa çıkarıldı.",
+      "Hırsızlık yoktu — talep sahte, reddet."
+    ],
+    "ar": [
+      "صوّرت ParrotCam لورنزو نفسه يأخذ اللوحة يوم 'غيابه'.",
+      "اللوحة نفسها معروضة للبيع من حسابه بعد 'السرقة'.",
+      "لم تكن هناك سرقة — المطالبة احتيالية، ارفض."
+    ],
+    "kk": [
+      "ParrotCam Лоренконың суретті «жоқ» күні алғанын түсірді.",
+      "Дәл сол сурет «ұрлықтан» кейін оның аккаунтынан сатылымда.",
+      "Ұрлық болған жоқ — талап алаяқтық, бас тарту."
+    ]
+  }
+}

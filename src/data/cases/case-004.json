@@ -1,0 +1,166 @@
+{
+  "id": "case-004",
+  "type": "standard",
+  "difficulty": "easy",
+  "claimAmount": 1500,
+  "truth": "valid",
+  "title": {
+    "ru": "Корова на крыше",
+    "en": "The Cow on the Roof",
+    "tr": "Çatıdaki İnek",
+    "ar": "البقرة على السطح",
+    "kk": "Шатырдағы сиыр"
+  },
+  "claim": {
+    "person": {
+      "ru": "Айгуль Нурланова, 47 лет",
+      "en": "Aigul Nurlanova, 47",
+      "tr": "Aygül Nurlanova, 47",
+      "ar": "أيغول نورلانوفا، 47",
+      "kk": "Айгүл Нұрланова, 47 жаста"
+    },
+    "story": {
+      "ru": "Воздушный шар низко прошёл над фермой и напугал мою корову. Она в панике залезла на сеновал, провалилась сквозь крышу и рухнула прямо в теплицу. Прошу компенсацию за разбитую теплицу.",
+      "en": "A hot-air balloon passed low over my farm and spooked my cow. She panicked, climbed onto the hay barn, fell through the roof, and crashed straight into my greenhouse. I request compensation for the wrecked greenhouse.",
+      "tr": "Sıcak hava balonu çiftliğimin üzerinden alçaktan geçti ve ineğimi ürküttü. Panikle saman ambarına tırmandı, çatıdan düştü ve doğrudan seramın içine çakıldı. Yıkılan sera için tazminat talep ediyorum.",
+      "ar": "مرّ منطاد هواء ساخن على ارتفاع منخفض فوق مزرعتي وأفزع بقرتي. أصيبت بالذعر فتسلقت حظيرة القش، وسقطت عبر السطح، واصطدمت مباشرة بصوبتي الزجاجية. أطلب تعويضًا عن الصوبة المحطمة.",
+      "kk": "Әуе шары фермамның үстінен төмен ұшып, сиырымды үркітті. Ол үрейленіп шөп қорасына шығып кетіп, шатырды тесіп өтіп, тікелей жылыжайыма құлады. Қираған жылыжай үшін өтемақы сұраймын."
+    }
+  },
+  "coverImage": "covers/case-004.svg",
+  "personImage": "people/aigul.svg",
+  "evidences": [
+    {
+      "id": "ev-witness",
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания организатора",
+        "en": "Festival Organizer Statement",
+        "tr": "Festival Organizatörü İfadesi",
+        "ar": "إفادة منظم المهرجان",
+        "kk": "Ұйымдастырушының айғағы"
+      },
+      "content": {
+        "ru": "Организатор фестиваля шаров подтверждает: один шар совершил аварийное снижение над фермой в то утро.",
+        "en": "The balloon festival organizer confirms that one balloon made an emergency low descent over the farm that morning.",
+        "tr": "Balon festivali organizatörü, o sabah bir balonun çiftlik üzerinde acil alçalış yaptığını doğruluyor.",
+        "ar": "يؤكد منظم مهرجان المناطيد أن أحد المناطيد قام بهبوط اضطراري منخفض فوق المزرعة في ذلك الصباح.",
+        "kk": "Шар фестивалінің ұйымдастырушысы сол таңда бір шардың ферма үстінде апаттық төмендеу жасағанын растайды."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Показания подтверждают версию заявителя.",
+        "en": "The statement supports the claimant's account.",
+        "tr": "İfade, talep sahibinin anlatımını destekliyor.",
+        "ar": "الإفادة تدعم رواية مقدم الطلب.",
+        "kk": "Айғақ өтініш берушінің нұсқасын растайды."
+      }
+    },
+    {
+      "id": "ev-vet",
+      "type": "document",
+      "title": {
+        "ru": "Заключение ветеринара",
+        "en": "Vet Report",
+        "tr": "Veteriner Raporu",
+        "ar": "تقرير الطبيب البيطري",
+        "kk": "Ветеринар қорытындысы"
+      },
+      "content": {
+        "ru": "Корова лечится от растяжения копыта. На крыше сеновала найдены отпечатки копыт.",
+        "en": "The cow is being treated for a sprained hoof. Hoofprints were found on the barn roof.",
+        "tr": "İnek burkulmuş toynak için tedavi görüyor. Ambar çatısında toynak izleri bulundu.",
+        "ar": "تخضع البقرة للعلاج من التواء في الحافر. وُجدت آثار حوافر على سطح الحظيرة.",
+        "kk": "Сиыр тұяғының созылуынан емделуде. Қора шатырынан тұяқ іздері табылды."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Травма и следы согласуются с падением коровы с крыши.",
+        "en": "The injury and prints are consistent with the cow falling off the roof.",
+        "tr": "Yaralanma ve izler, ineğin çatıdan düşmesiyle tutarlı.",
+        "ar": "الإصابة والآثار تتوافق مع سقوط البقرة من السطح.",
+        "kk": "Жарақат пен іздер сиырдың шатырдан құлағанымен үйлеседі."
+      }
+    },
+    {
+      "id": "ev-photo",
+      "type": "photo",
+      "title": {
+        "ru": "Фото теплицы",
+        "en": "Greenhouse Photo",
+        "tr": "Sera Fotoğrafı",
+        "ar": "صورة الصوبة",
+        "kk": "Жылыжай суреті"
+      },
+      "content": {
+        "ru": "В крыше теплицы дыра в форме коровы, среди помидоров стоит весьма растерянная корова.",
+        "en": "A cow-shaped hole in the greenhouse roof; a very confused cow stands among the tomatoes.",
+        "tr": "Sera çatısında inek şeklinde bir delik; domateslerin arasında oldukça şaşkın bir inek duruyor.",
+        "ar": "ثقب على شكل بقرة في سقف الصوبة؛ بقرة في غاية الحيرة تقف بين الطماطم.",
+        "kk": "Жылыжай шатырында сиыр пішінді тесік; қызанақтар арасында әбден абдыраған сиыр тұр."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Фото наглядно подтверждает ущерб и его причину.",
+        "en": "The photo plainly confirms the damage and its cause.",
+        "tr": "Fotoğraf, hasarı ve nedenini açıkça doğruluyor.",
+        "ar": "الصورة تؤكد بوضوح الضرر وسببه.",
+        "kk": "Сурет зиян мен оның себебін айқын растайды."
+      }
+    },
+    {
+      "id": "ev-invoice",
+      "type": "document",
+      "title": {
+        "ru": "Смета на ремонт",
+        "en": "Repair Quote",
+        "tr": "Onarım Teklifi",
+        "ar": "عرض سعر الإصلاح",
+        "kk": "Жөндеу сметасы"
+      },
+      "content": {
+        "ru": "Смета от местного подрядчика на восстановление теплицы. Сумма соразмерна ущербу.",
+        "en": "A local contractor's quote to rebuild the greenhouse. The amount is proportional to the damage.",
+        "tr": "Yerel bir müteahhitten seranın yeniden yapımı için teklif. Tutar, hasarla orantılı.",
+        "ar": "عرض سعر من مقاول محلي لإعادة بناء الصوبة. المبلغ متناسب مع الضرر.",
+        "kk": "Жергілікті мердігердің жылыжайды қалпына келтіруге арналған сметасы. Сома зиянға сай."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Смета достоверна и соответствует масштабу повреждений.",
+        "en": "The quote is credible and matches the scale of the damage.",
+        "tr": "Teklif güvenilir ve hasarın büyüklüğüyle örtüşüyor.",
+        "ar": "عرض السعر موثوق ويتناسب مع حجم الضرر.",
+        "kk": "Смета сенімді әрі зиянның көлеміне сай."
+      }
+    }
+  ],
+  "correctDecision": "approve",
+  "explanation": {
+    "ru": [
+      "История звучит абсурдно, но каждое доказательство её подтверждает.",
+      "Шар, травма коровы, следы на крыше и фото согласованы между собой.",
+      "Противоречий нет — заявление подлинное, его следует одобрить."
+    ],
+    "en": [
+      "The story sounds absurd, but every piece of evidence supports it.",
+      "The balloon, the cow's injury, the roof prints, and the photo all line up.",
+      "There are no contradictions — the claim is genuine and should be approved."
+    ],
+    "tr": [
+      "Hikâye saçma geliyor ama her kanıt onu destekliyor.",
+      "Balon, ineğin yaralanması, çatıdaki izler ve fotoğraf birbiriyle uyumlu.",
+      "Çelişki yok — talep gerçek ve onaylanmalı."
+    ],
+    "ar": [
+      "تبدو القصة سخيفة، لكن كل دليل يدعمها.",
+      "المنطاد وإصابة البقرة وآثار السطح والصورة كلها متوافقة.",
+      "لا توجد تناقضات — المطالبة حقيقية ويجب الموافقة عليها."
+    ],
+    "kk": [
+      "Оқиға күлкілі естіледі, бірақ әрбір дәлел оны растайды.",
+      "Шар, сиырдың жарақаты, шатырдағы іздер мен сурет бір-бірімен үйлеседі.",
+      "Қайшылық жоқ — талап шынайы, оны мақұлдау керек."
+    ]
+  }
+}

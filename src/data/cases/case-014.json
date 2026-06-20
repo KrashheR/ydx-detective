@@ -1,0 +1,166 @@
+{
+  "id": "case-014",
+  "type": "standard",
+  "difficulty": "medium",
+  "claimAmount": 13000,
+  "truth": "valid",
+  "title": {
+    "ru": "Град на пшеничном поле",
+    "en": "Hail on the Wheat Field",
+    "tr": "Buğday Tarlasında Dolu",
+    "ar": "البَرَد على حقل القمح",
+    "kk": "Бидай алқабындағы бұршақ"
+  },
+  "claim": {
+    "person": {
+      "ru": "Болат Жумабеков, 53 года",
+      "en": "Bolat Zhumabekov, 53",
+      "tr": "Bolat Jumabekov, 53",
+      "ar": "بولات جومابيكوف، 53",
+      "kk": "Болат Жұмабеков, 53 жаста"
+    },
+    "story": {
+      "ru": "В июле над моими полями прошёл сильный град. Колосья пшеницы полностью полегли и были выбиты. Прошу компенсацию за погибший урожай.",
+      "en": "In July a severe hailstorm passed over my fields. The wheat ears were completely flattened and beaten down. I request compensation for the lost harvest.",
+      "tr": "Temmuzda tarlalarımın üzerinden şiddetli bir dolu fırtınası geçti. Buğday başakları tamamen yatıp ezildi. Kaybolan hasat için tazminat talep ediyorum.",
+      "ar": "في يوليو مرّت عاصفة بَرَد شديدة فوق حقولي. تسطّحت سنابل القمح وتحطّمت تمامًا. أطلب تعويضًا عن المحصول الضائع.",
+      "kk": "Шілдеде менің егістігімнің үстінен қатты бұршақ өтті. Бидай масақтары толығымен жатып, ұрып тасталды. Жоғалған өнім үшін өтемақы сұраймын."
+    }
+  },
+  "coverImage": "covers/case-014.svg",
+  "personImage": "people/bolat.svg",
+  "evidences": [
+    {
+      "id": "ev-meteo",
+      "type": "document",
+      "title": {
+        "ru": "Метеорологическая сводка",
+        "en": "Meteorological Report",
+        "tr": "Meteoroloji Raporu",
+        "ar": "تقرير الأرصاد الجوية",
+        "kk": "Метеорологиялық анықтама"
+      },
+      "content": {
+        "ru": "Гидрометцентр подтверждает сильный град диаметром до 3 см над районом 12 июля, в день, указанный в заявлении.",
+        "en": "The weather service confirms severe hail up to 3 cm in diameter over the district on 12 July, the date stated in the claim.",
+        "tr": "Meteoroloji servisi, talepte belirtilen tarih olan 12 Temmuz'da bölge üzerinde 3 cm çapına varan şiddetli dolu olduğunu doğruluyor.",
+        "ar": "تؤكد دائرة الأرصاد سقوط بَرَد شديد يصل قطره إلى 3 سم فوق المنطقة في 12 يوليو، وهو التاريخ المذكور في المطالبة.",
+        "kk": "Гидрометорталық талапта көрсетілген 12 шілде күні аудан үстінде диаметрі 3 см дейінгі қатты бұршақ болғанын растайды."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Сводка совпадает с датой и местом происшествия и подтверждает рассказ фермера.",
+        "en": "The report matches the date and location and supports the farmer's account.",
+        "tr": "Rapor, olayın tarihi ve yeriyle örtüşüyor ve çiftçinin anlatımını destekliyor.",
+        "ar": "يتطابق التقرير مع تاريخ ومكان الحادث ويدعم رواية المزارع.",
+        "kk": "Анықтама оқиға күні мен орнына сәйкес келіп, фермердің әңгімесін растайды."
+      }
+    },
+    {
+      "id": "ev-aerial",
+      "type": "photo",
+      "title": {
+        "ru": "Снимки поля с дрона",
+        "en": "Aerial Field Photos",
+        "tr": "Havadan Tarla Fotoğrafları",
+        "ar": "صور جوية للحقل",
+        "kk": "Алқаптың дрондан түсірілген суреттері"
+      },
+      "content": {
+        "ru": "Аэрофотоснимки показывают полегшую пшеницу с характерным рисунком повреждений от града по всей площади поля.",
+        "en": "Aerial photos show flattened wheat with the characteristic hail-damage pattern across the entire field.",
+        "tr": "Havadan çekilen fotoğraflar, tüm tarla boyunca dolu hasarına özgü desenle yatmış buğdayı gösteriyor.",
+        "ar": "تُظهر الصور الجوية قمحًا متسطّحًا بنمط الضرر المميّز للبَرَد عبر الحقل بأكمله.",
+        "kk": "Әуеден түсірілген суреттер бүкіл алқап бойынша бұршаққа тән зақым өрнегімен жатқан бидайды көрсетеді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Картина повреждений соответствует граду и масштабу заявленного ущерба.",
+        "en": "The damage pattern matches hail and the scale of the claimed loss.",
+        "tr": "Hasar deseni doluyla ve iddia edilen kaybın ölçeğiyle uyumlu.",
+        "ar": "نمط الضرر يتوافق مع البَرَد ومع حجم الخسارة المُطالَب بها.",
+        "kk": "Зақым өрнегі бұршаққа және мәлімделген зиян көлеміне сәйкес келеді."
+      }
+    },
+    {
+      "id": "ev-agronomist",
+      "type": "document",
+      "title": {
+        "ru": "Заключение агронома",
+        "en": "Agronomist's Assessment",
+        "tr": "Ziraat Mühendisi Değerlendirmesi",
+        "ar": "تقييم المهندس الزراعي",
+        "kk": "Агроном қорытындысы"
+      },
+      "content": {
+        "ru": "Независимый агроном оценил потерю урожая на участке в 85% и стоимость ущерба около 13 000 евро.",
+        "en": "An independent agronomist assessed crop loss on the plot at 85% and the damage value at about 13,000 euros.",
+        "tr": "Bağımsız bir ziraat mühendisi, parseldeki ürün kaybını %85, hasar bedelini yaklaşık 13.000 avro olarak değerlendirdi.",
+        "ar": "قدّر مهندس زراعي مستقل خسارة المحصول في القطعة بنسبة 85% وقيمة الضرر بنحو 13000 يورو.",
+        "kk": "Тәуелсіз агроном телімдегі өнім шығынын 85% және зиян құнын шамамен 13 000 еуро деп бағалады."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Независимая оценка совпадает с заявленной суммой и подтверждает масштаб потерь.",
+        "en": "The independent assessment matches the claimed amount and confirms the scale of loss.",
+        "tr": "Bağımsız değerlendirme, talep edilen tutarla örtüşüyor ve kaybın ölçeğini doğruluyor.",
+        "ar": "يتطابق التقييم المستقل مع المبلغ المُطالَب به ويؤكد حجم الخسارة.",
+        "kk": "Тәуелсіз баға мәлімделген сомаға сәйкес келіп, шығын көлемін растайды."
+      }
+    },
+    {
+      "id": "ev-contract",
+      "type": "document",
+      "title": {
+        "ru": "Договор поставки урожая",
+        "en": "Harvest Supply Contract",
+        "tr": "Hasat Tedarik Sözleşmesi",
+        "ar": "عقد توريد المحصول",
+        "kk": "Өнім жеткізу шарты"
+      },
+      "content": {
+        "ru": "Заключённый ещё весной договор с зернотрейдером на поставку ожидаемого урожая с этого поля по согласованной цене.",
+        "en": "A contract signed back in spring with a grain trader to supply the field's expected harvest at an agreed price.",
+        "tr": "İlkbaharda bir tahıl tüccarıyla, tarlanın beklenen hasadını anlaşılan fiyattan tedarik etmek için imzalanmış bir sözleşme.",
+        "ar": "عقد موقّع في الربيع مع تاجر حبوب لتوريد المحصول المتوقع من الحقل بسعر متفق عليه.",
+        "kk": "Көктемде астық трейдерімен жасалған, осы алқаптан күтілетін өнімді келісілген бағамен жеткізу туралы шарт."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Договор подтверждает ожидаемую урожайность и обоснованность размера убытка.",
+        "en": "The contract confirms the expected yield and the reasonableness of the loss figure.",
+        "tr": "Sözleşme, beklenen verimi ve kayıp tutarının makul olduğunu doğruluyor.",
+        "ar": "يؤكد العقد الإنتاجية المتوقعة ومعقولية رقم الخسارة.",
+        "kk": "Шарт күтілетін өнімділікті және зиян мөлшерінің негізділігін растайды."
+      }
+    }
+  ],
+  "correctDecision": "approve",
+  "explanation": {
+    "ru": [
+      "Метеосводка подтверждает сильный град в день и место заявления.",
+      "Снимки и оценка агронома сходятся с масштабом потерь.",
+      "Заявление достоверно, его следует одобрить."
+    ],
+    "en": [
+      "The weather report confirms severe hail at the claim's date and place.",
+      "Photos and the agronomist's assessment match the scale of loss.",
+      "The claim is genuine and should be approved."
+    ],
+    "tr": [
+      "Meteoroloji raporu, talebin tarih ve yerinde şiddetli doluyu doğruluyor.",
+      "Fotoğraflar ve ziraat değerlendirmesi, kaybın ölçeğiyle örtüşüyor.",
+      "Talep gerçektir ve onaylanmalı."
+    ],
+    "ar": [
+      "يؤكد تقرير الطقس سقوط بَرَد شديد في تاريخ ومكان المطالبة.",
+      "تتطابق الصور وتقييم المهندس الزراعي مع حجم الخسارة.",
+      "المطالبة صحيحة ويجب الموافقة عليها."
+    ],
+    "kk": [
+      "Метеоанықтама талаптың күні мен орнында қатты бұршақты растайды.",
+      "Суреттер мен агроном бағасы шығын көлеміне сәйкес келеді.",
+      "Талап шынайы, оны мақұлдау керек."
+    ]
+  }
+}

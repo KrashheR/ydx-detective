@@ -1,0 +1,165 @@
+{
+  "id": "case-101-daily",
+  "type": "daily",
+  "difficulty": "hard",
+  "claimAmount": 8000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Пекарня с привидением",
+    "en": "The Haunted Bakery",
+    "tr": "Hayaletli Fırın",
+    "ar": "المخبز المسكون",
+    "kk": "Елес мекендеген наубайхана"
+  },
+  "claim": {
+    "person": {
+      "ru": "Тибо Ферран",
+      "en": "Thibault Ferrand",
+      "tr": "Thibault Ferrand",
+      "ar": "تيبو فيران",
+      "kk": "Тибо Ферран"
+    },
+    "story": {
+      "ru": "Ночью в пекарне завёлся полтергейст и уничтожил целую партию дорогих свадебных тортов. Утром я нашёл пустые подставки и прошу возместить ущерб.",
+      "en": "A poltergeist took over my bakery overnight and destroyed a whole batch of expensive wedding cakes. In the morning I found empty stands and I'm asking for compensation.",
+      "tr": "Gece fırnımı bir poltergeist ele geçirdi ve pahalı düğün pastalarımın tüm partisini yok etti. Sabah boş standları buldum ve tazminat talep ediyorum.",
+      "ar": "استولى شبح صاخب على مخبزي طوال الليل ودمّر دفعة كاملة من كعكات الزفاف باهظة الثمن. في الصباح وجدت الحوامل فارغة وأطلب التعويض.",
+      "kk": "Түнде наубайханама полтергейст кіріп, қымбат үйлену тойы торттарының бүкіл партиясын жойды. Таңертең бос тұғырларды таптым және өтемақы сұраймын."
+    }
+  },
+  "coverImage": "covers/case-101-daily.svg",
+  "personImage": "people/thibault.svg",
+  "evidences": [
+    {
+      "id": "ev-access-log",
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал доступа к двери",
+        "en": "Door Access Log",
+        "tr": "Kapı Erişim Kaydı",
+        "ar": "سجل الوصول إلى الباب",
+        "kk": "Есік қол жеткізу журналы"
+      },
+      "content": {
+        "ru": [
+          "21:40 — Вход: Т. Ферран (карта владельца)",
+          "02:00 — Выход через служебную дверь (доставка)",
+          "02:14 — Вход: Т. Ферран",
+          "Иных карт и взломов двери за ночь не зафиксировано"
+        ],
+        "en": [
+          "21:40 — Entry: T. Ferrand (owner card)",
+          "02:00 — Exit via service door (delivery)",
+          "02:14 — Entry: T. Ferrand",
+          "No other cards or forced entries recorded overnight"
+        ],
+        "tr": [
+          "21:40 — Giriş: T. Ferrand (sahip kartı)",
+          "02:00 — Servis kapısından çıkış (teslimat)",
+          "02:14 — Giriş: T. Ferrand",
+          "Gece boyunca başka kart veya zorla giriş kaydı yok"
+        ],
+        "ar": [
+          "21:40 — دخول: ت. فيران (بطاقة المالك)",
+          "02:00 — خروج عبر باب الخدمة (تسليم)",
+          "02:14 — دخول: ت. فيران",
+          "لم تُسجَّل أي بطاقات أخرى أو اقتحام طوال الليل"
+        ],
+        "kk": [
+          "21:40 — Кіру: Т. Ферран (иесінің картасы)",
+          "02:00 — Қызметтік есік арқылы шығу (жеткізу)",
+          "02:14 — Кіру: Т. Ферран",
+          "Түн бойы басқа карта немесе бұзып кіру тіркелмеген"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Только хозяин входил и выходил, а в 02:00 зафиксирован выход на доставку — никакого постороннего «полтергейста» не было.",
+        "en": "Only the owner came and went, and a delivery exit was logged at 02:00 — there was no outside 'poltergeist' at all.",
+        "tr": "Sadece sahibi girip çıktı ve 02:00'de bir teslimat çıkışı kaydedildi — dışarıdan hiçbir 'poltergeist' yoktu.",
+        "ar": "المالك وحده هو من دخل وخرج، وسُجِّل خروج للتسليم في الساعة 02:00 — لم يكن هناك أي 'شبح' خارجي.",
+        "kk": "Тек қожайын кіріп-шықты, ал 02:00-де жеткізуге шығу тіркелді — ешқандай бөгде «полтергейст» болған жоқ."
+      }
+    },
+    {
+      "id": "ev-thankyou",
+      "type": "document",
+      "title": {
+        "ru": "Благодарность и квитанция о доставке",
+        "en": "Thank-You Message & Delivery Receipt",
+        "tr": "Teşekkür Mesajı ve Teslimat Makbuzu",
+        "ar": "رسالة شكر وإيصال تسليم",
+        "kk": "Алғыс хаты және жеткізу түбіртегі"
+      },
+      "content": {
+        "ru": "Квитанция: 4 свадебных торта доставлены в банкетный зал «Лаванда» в 02:35. Сообщение от невесты: «Торты были волшебные, гости их обожали — спасибо, Тибо!»",
+        "en": "Receipt: 4 wedding cakes delivered to the 'Lavande' banquet hall at 02:35. Message from the bride: 'The cakes were magical, the guests adored them — thank you, Thibault!'",
+        "tr": "Makbuz: 4 düğün pastası 02:35'te 'Lavande' ziyafet salonuna teslim edildi. Gelinden mesaj: 'Pastalar büyüleyiciydi, misafirler bayıldı — teşekkürler Thibault!'",
+        "ar": "إيصال: تم تسليم 4 كعكات زفاف إلى قاعة 'لافاند' في الساعة 02:35. رسالة من العروس: 'كانت الكعكات ساحرة وأحبها الضيوف — شكراً تيبو!'",
+        "kk": "Түбіртек: 4 үйлену торты 02:35-те «Лаванда» банкет залына жеткізілді. Қалыңдықтан хабарлама: «Торттар керемет болды, қонақтар ұнатты — рахмет, Тибо!»"
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Торты не были уничтожены — их доставили на свадьбу и съели гости, что прямо опровергает рассказ об ущербе.",
+        "en": "The cakes were not destroyed — they were delivered to the wedding and eaten by guests, directly refuting the damage story.",
+        "tr": "Pastalar yok edilmedi — düğüne teslim edildi ve misafirler tarafından yendi, bu hasar hikâyesini doğrudan çürütüyor.",
+        "ar": "لم تُدمَّر الكعكات — بل سُلِّمت إلى الزفاف وأكلها الضيوف، مما يدحض رواية الضرر مباشرة.",
+        "kk": "Торттар жойылған жоқ — олар тойға жеткізіліп, қонақтар жеп қойды, бұл зиян туралы әңгімені тікелей жоққа шығарады."
+      }
+    },
+    {
+      "id": "ev-invoice",
+      "type": "document",
+      "title": {
+        "ru": "Счёт за ингредиенты",
+        "en": "Ingredients Invoice",
+        "tr": "Malzeme Faturası",
+        "ar": "فاتورة المكونات",
+        "kk": "Ингредиенттерге шот"
+      },
+      "content": {
+        "ru": "Счёт от поставщика: марципан, ваниль из Мадагаскара, бельгийский шоколад и сусальное золото на сумму 1 940 €, оплачено за три дня до события.",
+        "en": "Supplier invoice: marzipan, Madagascar vanilla, Belgian chocolate and edible gold leaf totalling €1,940, paid three days before the event.",
+        "tr": "Tedarikçi faturası: badem ezmesi, Madagaskar vanilyası, Belçika çikolatası ve yenilebilir altın varak toplam 1.940 €, etkinlikten üç gün önce ödendi.",
+        "ar": "فاتورة المورّد: مرزبان وفانيليا مدغشقر وشوكولاتة بلجيكية وورق ذهب صالح للأكل بإجمالي 1,940 يورو، دُفعت قبل ثلاثة أيام من الحدث.",
+        "kk": "Жеткізушінің шоты: марципан, Мадагаскар ванилі, бельгиялық шоколад және жеуге жарамды алтын жапырақ, барлығы 1 940 €, оқиғадан үш күн бұрын төленген."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Счёт подлинный и просто подтверждает закупку ингредиентов — сам по себе он не противоречит делу.",
+        "en": "The invoice is genuine and merely confirms the ingredient purchase — on its own it does not contradict the case.",
+        "tr": "Fatura gerçek ve yalnızca malzeme alımını doğruluyor — tek başına davayla çelişmiyor.",
+        "ar": "الفاتورة أصلية وتؤكد فقط شراء المكونات — وحدها لا تتعارض مع القضية.",
+        "kk": "Шот шынайы және тек ингредиенттер сатып алынғанын растайды — өздігінен іске қайшы келмейді."
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Журнал двери: входил только хозяин, в 02:00 — выход на доставку.",
+      "Квитанция и благодарность доказывают: торты доставлены и съедены на свадьбе.",
+      "Ущерба нет — заявление мошенническое, в выплате отказать."
+    ],
+    "en": [
+      "Door log: only the owner entered; at 02:00 a delivery exit was logged.",
+      "Receipt and thank-you prove the cakes were delivered and eaten at a wedding.",
+      "There was no damage — the claim is fraudulent, reject the payout."
+    ],
+    "tr": [
+      "Kapı kaydı: sadece sahibi girdi; 02:00'de bir teslimat çıkışı kaydedildi.",
+      "Makbuz ve teşekkür, pastaların düğüne teslim edilip yendiğini kanıtlıyor.",
+      "Hasar yok — talep sahte, ödeme reddedilmeli."
+    ],
+    "ar": [
+      "سجل الباب: المالك وحده دخل؛ وسُجِّل خروج تسليم في 02:00.",
+      "الإيصال ورسالة الشكر يثبتان أن الكعكات سُلِّمت وأُكلت في الزفاف.",
+      "لا يوجد ضرر — المطالبة احتيالية، يجب رفض الدفع."
+    ],
+    "kk": [
+      "Есік журналы: тек қожайын кірді; 02:00-де жеткізуге шығу тіркелді.",
+      "Түбіртек пен алғыс торттардың тойға жеткізіліп, желінгенін дәлелдейді.",
+      "Зиян жоқ — талап алаяқтық, төлемнен бас тарту керек."
+    ]
+  }
+}

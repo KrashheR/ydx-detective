@@ -1,0 +1,191 @@
+{
+  "id": "case-012",
+  "type": "standard",
+  "difficulty": "medium",
+  "claimAmount": 20000,
+  "truth": "valid",
+  "title": {
+    "ru": "Выплата по критическому заболеванию",
+    "en": "Critical-Illness Payout",
+    "tr": "Kritik Hastalık Ödemesi",
+    "ar": "تعويض المرض الخطير",
+    "kk": "Ауыр науқас бойынша төлем"
+  },
+  "claim": {
+    "person": {
+      "ru": "Хельга Новак",
+      "en": "Helga Novak",
+      "tr": "Helga Novak",
+      "ar": "هيلغا نوفاك",
+      "kk": "Хельга Новак"
+    },
+    "story": {
+      "ru": "В марте мне диагностировали рак молочной железы, я прошла операцию и сейчас на химиотерапии. Это заболевание входит в мой полис критических заболеваний. Прошу единовременную выплату.",
+      "en": "In March I was diagnosed with breast cancer, underwent surgery and am now in chemotherapy. This condition is covered by my critical-illness policy. I am requesting the lump-sum payout.",
+      "tr": "Mart ayında bana meme kanseri teşhisi kondu, ameliyat oldum ve şimdi kemoterapi görüyorum. Bu hastalık kritik hastalık poliçemin kapsamında. Toplu ödememi talep ediyorum.",
+      "ar": "في مارس شُخّصت بسرطان الثدي، وخضعت لعملية جراحية وأتلقى الآن العلاج الكيميائي. هذه الحالة مشمولة في وثيقة تأمين الأمراض الخطيرة الخاصة بي. أطلب الدفعة الإجمالية.",
+      "kk": "Наурызда маған сүт безі қатерлі ісігі диагнозы қойылды, операция жасалды, қазір химиотерапия алып жатырмын. Бұл ауру менің ауыр науқас полисіме кіреді. Біржолғы төлемді сұраймын."
+    }
+  },
+  "coverImage": "covers/case-012.svg",
+  "personImage": "people/helga.svg",
+  "evidences": [
+    {
+      "id": "ev-diagnosis",
+      "type": "document",
+      "title": {
+        "ru": "Больничный диагноз",
+        "en": "Hospital Diagnosis Record",
+        "tr": "Hastane Tanı Kaydı",
+        "ar": "سجل التشخيص بالمستشفى",
+        "kk": "Ауруханалық диагноз жазбасы"
+      },
+      "content": {
+        "ru": "Биопсия от 12 марта подтвердила инвазивную карциному молочной железы, стадия II. Гистология и протокол операции от 28 марта приложены к карте пациента.",
+        "en": "A biopsy on 12 March confirmed invasive breast carcinoma, stage II. Histology and the 28 March surgical report are attached to the patient file.",
+        "tr": "12 Mart tarihli biyopsi, evre II invaziv meme karsinomunu doğruladı. Histoloji ve 28 Mart ameliyat raporu hasta dosyasına eklenmiştir.",
+        "ar": "أكدت خزعة بتاريخ 12 مارس وجود سرطان ثدي غازٍ من المرحلة الثانية. أُرفقت نتائج علم الأنسجة وتقرير عملية 28 مارس بملف المريضة.",
+        "kk": "12 наурыздағы биопсия II сатыдағы инвазивті сүт безі карциномасын растады. Гистология мен 28 наурыздағы операция хаттамасы науқас картасына тіркелген."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Официальный диагноз с биопсией прямо подтверждает заявленное заболевание.",
+        "en": "The official biopsy-based diagnosis directly confirms the claimed condition.",
+        "tr": "Biyopsiye dayalı resmî tanı, talep edilen hastalığı doğrudan doğruluyor.",
+        "ar": "التشخيص الرسمي المبني على الخزعة يؤكد الحالة المطالب بها مباشرة.",
+        "kk": "Биопсияға негізделген ресми диагноз мәлімделген ауруды тікелей растайды."
+      }
+    },
+    {
+      "id": "ev-oncologist",
+      "type": "document",
+      "title": {
+        "ru": "Письмо онколога",
+        "en": "Oncologist's Letter",
+        "tr": "Onkolog Mektubu",
+        "ar": "خطاب طبيب الأورام",
+        "kk": "Онколог хаты"
+      },
+      "content": {
+        "ru": "Лечащий онколог подтверждает диагноз злокачественного новообразования молочной железы и проводимый курс химиотерапии. Состояние соответствует определению покрываемого заболевания в полисе.",
+        "en": "The treating oncologist confirms the diagnosis of malignant breast cancer and the ongoing course of chemotherapy. The condition matches the policy's definition of a covered illness.",
+        "tr": "Tedaviyi yürüten onkolog, kötü huylu meme kanseri tanısını ve süren kemoterapi kürünü doğrular. Durum, poliçenin kapsanan hastalık tanımıyla örtüşür.",
+        "ar": "يؤكد طبيب الأورام المعالِج تشخيص سرطان الثدي الخبيث ودورة العلاج الكيميائي الجارية. الحالة تطابق تعريف الوثيقة للمرض المشمول.",
+        "kk": "Емдеуші онколог сүт безінің қатерлі ісігі диагнозын және жүргізіліп жатқан химиотерапия курсын растайды. Жағдай полистегі қамтылатын ауру анықтамасына сәйкес келеді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Специалист прямо указывает, что состояние подпадает под покрытие полиса.",
+        "en": "The specialist explicitly states the condition falls within the policy's coverage.",
+        "tr": "Uzman, durumun poliçenin kapsamına girdiğini açıkça belirtiyor.",
+        "ar": "يذكر الأخصائي صراحةً أن الحالة تقع ضمن تغطية الوثيقة.",
+        "kk": "Маман жағдайдың полис қамтуына кіретінін анық көрсетеді."
+      }
+    },
+    {
+      "id": "ev-pharmacy",
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал выдачи лекарств",
+        "en": "Pharmacy Dispensing Log",
+        "tr": "Eczane Verme Kaydı",
+        "ar": "سجل صرف الأدوية",
+        "kk": "Дәріхана дәрі беру журналы"
+      },
+      "content": {
+        "ru": [
+          "2 апреля — выдан препарат для химиотерапии (цикл 1)",
+          "23 апреля — выдан противорвотный препарат и цикл 2",
+          "14 мая — цикл 3, сопроводительная терапия",
+          "Все назначения подписаны лечащим онкологом"
+        ],
+        "en": [
+          "2 April — chemotherapy agent dispensed (cycle 1)",
+          "23 April — antiemetic and cycle 2 dispensed",
+          "14 May — cycle 3, supportive medication",
+          "All prescriptions signed by the treating oncologist"
+        ],
+        "tr": [
+          "2 Nisan — kemoterapi ilacı verildi (kür 1)",
+          "23 Nisan — bulantı önleyici ve kür 2 verildi",
+          "14 Mayıs — kür 3, destekleyici ilaç",
+          "Tüm reçeteler tedavi eden onkolog tarafından imzalandı"
+        ],
+        "ar": [
+          "2 أبريل — صُرف دواء العلاج الكيميائي (الدورة 1)",
+          "23 أبريل — صُرف مضاد للقيء والدورة 2",
+          "14 مايو — الدورة 3، دواء داعم",
+          "جميع الوصفات موقّعة من طبيب الأورام المعالِج"
+        ],
+        "kk": [
+          "2 сәуір — химиотерапия дәрісі берілді (1-цикл)",
+          "23 сәуір — құсуға қарсы дәрі мен 2-цикл берілді",
+          "14 мамыр — 3-цикл, қосалқы ем",
+          "Барлық тағайындау емдеуші онкологпен қол қойылған"
+        ]
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Регулярная выдача химиопрепаратов соответствует заявленному лечению и срокам.",
+        "en": "The regular dispensing of chemotherapy drugs matches the claimed treatment and timeline.",
+        "tr": "Kemoterapi ilaçlarının düzenli verilmesi, talep edilen tedavi ve zaman çizelgesiyle uyumlu.",
+        "ar": "صرف أدوية العلاج الكيميائي بانتظام يتوافق مع العلاج والجدول الزمني المذكورين.",
+        "kk": "Химиопрепараттардың тұрақты берілуі мәлімделген ем мен мерзімдерге сәйкес келеді."
+      }
+    },
+    {
+      "id": "ev-policy",
+      "type": "document",
+      "title": {
+        "ru": "Полис критических заболеваний",
+        "en": "Critical-Illness Policy",
+        "tr": "Kritik Hastalık Poliçesi",
+        "ar": "وثيقة تأمين الأمراض الخطيرة",
+        "kk": "Ауыр науқас полисі"
+      },
+      "content": {
+        "ru": "Полис действует с прошлого года, взносы уплачены. В перечне покрываемых состояний прямо указан рак, требующий хирургии или химиотерапии. Период ожидания пройден.",
+        "en": "The policy has been active since last year with premiums paid. The list of covered conditions explicitly includes cancer requiring surgery or chemotherapy. The waiting period has been completed.",
+        "tr": "Poliçe geçen yıldan beri yürürlükte ve primler ödenmiş. Kapsanan durumlar listesinde ameliyat veya kemoterapi gerektiren kanser açıkça yer alıyor. Bekleme süresi tamamlanmış.",
+        "ar": "الوثيقة سارية منذ العام الماضي والأقساط مدفوعة. تتضمن قائمة الحالات المشمولة صراحةً السرطان الذي يتطلب جراحة أو علاجًا كيميائيًا. اكتملت فترة الانتظار.",
+        "kk": "Полис өткен жылдан бері жарамды, жарналар төленген. Қамтылатын жағдайлар тізімінде операция немесе химиотерапия қажет ететін қатерлі ісік анық көрсетілген. Күту мерзімі өтті."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Полис активен, период ожидания пройден, и заболевание прямо входит в покрытие.",
+        "en": "The policy is active, the waiting period is met, and the illness is explicitly covered.",
+        "tr": "Poliçe aktif, bekleme süresi dolmuş ve hastalık açıkça kapsam dahilinde.",
+        "ar": "الوثيقة سارية، وفترة الانتظار مستوفاة، والمرض مشمول صراحةً.",
+        "kk": "Полис белсенді, күту мерзімі өтті және ауру анық қамтылған."
+      }
+    }
+  ],
+  "correctDecision": "approve",
+  "explanation": {
+    "ru": [
+      "Биопсия и операция подтверждают рак молочной железы II стадии.",
+      "Письмо онколога и журнал аптеки соответствуют курсу химиотерапии.",
+      "Полис активен и прямо покрывает это заболевание — выплата обоснована."
+    ],
+    "en": [
+      "The biopsy and surgery confirm stage II breast cancer.",
+      "The oncologist's letter and pharmacy log match the chemotherapy course.",
+      "The policy is active and explicitly covers this illness — the payout is valid."
+    ],
+    "tr": [
+      "Biyopsi ve ameliyat evre II meme kanserini doğruluyor.",
+      "Onkolog mektubu ve eczane kaydı kemoterapi küründe örtüşüyor.",
+      "Poliçe aktif ve bu hastalığı açıkça kapsıyor — ödeme geçerli."
+    ],
+    "ar": [
+      "الخزعة والجراحة تؤكدان سرطان الثدي من المرحلة الثانية.",
+      "خطاب طبيب الأورام وسجل الصيدلية يتطابقان مع دورة العلاج الكيميائي.",
+      "الوثيقة سارية وتغطي هذا المرض صراحةً — التعويض مستحق."
+    ],
+    "kk": [
+      "Биопсия мен операция II сатыдағы сүт безі қатерлі ісігін растайды.",
+      "Онколог хаты мен дәріхана журналы химиотерапия курсына сәйкес.",
+      "Полис белсенді әрі бұл ауруды анық қамтиды — төлем негізді."
+    ]
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "id": "case-002-daily",
+  "type": "daily",
+  "difficulty": "hard",
+  "claimAmount": 800,
+  "truth": "valid",
+  "title": {
+    "ru": "Угон автомобиля",
+    "en": "The Stolen Car",
+    "tr": "Çalınan Araba",
+    "ar": "السيارة المسروقة",
+    "kk": "Ұрланған көлік"
+  },
+  "claim": {
+    "person": {
+      "ru": "Марина Власова, 38 лет",
+      "en": "Marina Vlasova, 38",
+      "tr": "Marina Vlasova, 38",
+      "ar": "مارينا فلاسوفا، 38",
+      "kk": "Марина Власова, 38 жаста"
+    },
+    "story": {
+      "ru": "Машину угнали с парковки у супермаркета во вторник вечером. Камеры зафиксировали момент. Прошу выплату по КАСКО.",
+      "en": "My car was stolen from the supermarket lot on Tuesday evening. The cameras caught it. I request my comprehensive payout.",
+      "tr": "Arabam Salı akşamı süpermarket otoparkından çalındı. Kameralar yakaladı. Kasko ödememi talep ediyorum.",
+      "ar": "سُرقت سيارتي من موقف السوبر ماركت مساء الثلاثاء. التقطتها الكاميرات. أطلب تعويض التأمين الشامل.",
+      "kk": "Көлігім сейсенбі кешінде супермаркет тұрағынан ұрланды. Камералар түсіріп алды. КАСКО бойынша төлемді сұраймын."
+    }
+  },
+  "coverImage": "covers/case-002.svg",
+  "personImage": "people/marina.svg",
+  "evidences": [
+    {
+      "id": "ev-camera",
+      "type": "camera_recording",
+      "title": {
+        "ru": "Запись камеры парковки",
+        "en": "Parking Camera Footage",
+        "tr": "Otopark Kamera Görüntüsü",
+        "ar": "تسجيل كاميرا الموقف",
+        "kk": "Тұрақ камерасының жазбасы"
+      },
+      "content": {
+        "ru": "Вт 21:03 — неизвестный вскрывает дверь и уезжает на автомобиле.",
+        "en": "Tue 21:03 — an unknown person forces the door and drives the car away.",
+        "tr": "Sal 21:03 — kimliği belirsiz biri kapıyı zorlayıp arabayı sürüp gidiyor.",
+        "ar": "الثلاثاء 21:03 — شخص مجهول يفتح الباب عنوة ويقود السيارة بعيدًا.",
+        "kk": "Сс 21:03 — белгісіз адам есікті ашып, көлікті айдап кетеді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Запись подтверждает факт угона.",
+        "en": "The footage confirms the theft.",
+        "tr": "Görüntü hırsızlığı doğruluyor.",
+        "ar": "التسجيل يؤكد السرقة.",
+        "kk": "Жазба ұрлық фактісін растайды."
+      }
+    },
+    {
+      "id": "ev-police",
+      "type": "document",
+      "title": {
+        "ru": "Протокол полиции",
+        "en": "Police Report",
+        "tr": "Polis Raporu",
+        "ar": "تقرير الشرطة",
+        "kk": "Полиция хаттамасы"
+      },
+      "content": {
+        "ru": "Заявление об угоне подано во вторник в 22:10, номер дела соответствует.",
+        "en": "Theft report filed Tuesday at 22:10; the case number matches.",
+        "tr": "Hırsızlık ihbarı Salı 22:10'da yapıldı; dosya numarası uyuşuyor.",
+        "ar": "تم تقديم بلاغ السرقة الثلاثاء الساعة 22:10؛ رقم القضية متطابق.",
+        "kk": "Ұрлық туралы өтініш сейсенбі 22:10-да берілді; іс нөмірі сәйкес келеді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Документ официальный и согласуется с записью камеры.",
+        "en": "An official document consistent with the camera footage.",
+        "tr": "Kamera görüntüsüyle tutarlı resmi belge.",
+        "ar": "مستند رسمي متوافق مع تسجيل الكاميرا.",
+        "kk": "Камера жазбасымен үйлесетін ресми құжат."
+      }
+    },
+    {
+      "id": "ev-log",
+      "type": "usage_log",
+      "title": {
+        "ru": "Лог брелока",
+        "en": "Key Fob Log",
+        "tr": "Anahtarlık Kaydı",
+        "ar": "سجل مفتاح السيارة",
+        "kk": "Кілт логы"
+      },
+      "content": {
+        "ru": [
+          "Вт 20:55 — машина заперта владельцем",
+          "Вт 21:03 — вскрытие без брелока"
+        ],
+        "en": [
+          "Tue 20:55 — car locked by owner",
+          "Tue 21:03 — opened without the fob"
+        ],
+        "tr": [
+          "Sal 20:55 — araç sahibi tarafından kilitlendi",
+          "Sal 21:03 — anahtarlık olmadan açıldı"
+        ],
+        "ar": [
+          "الثلاثاء 20:55 — قفل المالك السيارة",
+          "الثلاثاء 21:03 — فُتحت دون المفتاح"
+        ],
+        "kk": [
+          "Сс 20:55 — көлікті иесі құлыптады",
+          "Сс 21:03 — кілтсіз ашылды"
+        ]
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Лог согласуется с версией владельца.",
+        "en": "The log is consistent with the owner's account.",
+        "tr": "Kayıt, sahibinin ifadesiyle tutarlı.",
+        "ar": "السجل متوافق مع رواية المالك.",
+        "kk": "Лог иесінің нұсқасымен үйлеседі."
+      }
+    }
+  ],
+  "correctDecision": "approve",
+  "explanation": {
+    "ru": [
+      "Камера, протокол полиции и лог брелока согласованы по времени.",
+      "Признаков инсценировки нет — угон реальный.",
+      "Заявление подлинное, его следует одобрить."
+    ],
+    "en": [
+      "Camera, police report, and key-fob log all align in time.",
+      "There are no signs of staging — the theft is genuine.",
+      "The claim is valid and should be approved."
+    ],
+    "tr": [
+      "Kamera, polis raporu ve anahtarlık kaydı zaman olarak uyumlu.",
+      "Sahneleme belirtisi yok — hırsızlık gerçek.",
+      "Talep geçerli ve onaylanmalı."
+    ],
+    "ar": [
+      "الكاميرا وتقرير الشرطة وسجل المفتاح كلها متوافقة زمنيًا.",
+      "لا توجد علامات تمثيل — السرقة حقيقية.",
+      "المطالبة صحيحة ويجب الموافقة عليها."
+    ],
+    "kk": [
+      "Камера, полиция хаттамасы және кілт логы уақыт бойынша сәйкес.",
+      "Қойылым белгілері жоқ — ұрлық нақты.",
+      "Талап шынайы, оны мақұлдау керек."
+    ]
+  }
+}

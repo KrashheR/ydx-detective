@@ -1,0 +1,191 @@
+{
+  "id": "case-010",
+  "type": "standard",
+  "difficulty": "medium",
+  "claimAmount": 3500,
+  "truth": "valid",
+  "title": {
+    "ru": "Удар сзади на светофоре",
+    "en": "Rear-Ended at the Light",
+    "tr": "Kırmızı Işıkta Arkadan Çarpma",
+    "ar": "اصطدام من الخلف عند الإشارة",
+    "kk": "Бағдаршамда артынан соғылу"
+  },
+  "claim": {
+    "person": {
+      "ru": "Матеус Феррейра",
+      "en": "Mateus Ferreira",
+      "tr": "Mateus Ferreira",
+      "ar": "ماتيوس فيريرا",
+      "kk": "Матеус Феррейра"
+    },
+    "story": {
+      "ru": "Я стоял на красный свет, когда в мою машину сзади въехал другой автомобиль. У меня диагностировали хлыстовую травму шеи, и бампер пришлось чинить. Прошу компенсацию лечения и ремонта.",
+      "en": "I was stopped at a red light when another car drove into the back of my vehicle. I was diagnosed with whiplash and the rear of my car needed repairs. I am claiming for treatment and repair costs.",
+      "tr": "Kırmızı ışıkta durmuşken başka bir araç arkadan bana çarptı. Boyun incinmesi (whiplash) teşhisi kondu ve aracımın arkası tamir gerektirdi. Tedavi ve onarım masraflarını talep ediyorum.",
+      "ar": "كنت متوقفًا عند إشارة حمراء عندما اصطدمت سيارة أخرى بمؤخرة سيارتي. شُخّصت إصابتي بالتواء الرقبة واحتاجت مؤخرة السيارة إلى إصلاح. أطالب بتكاليف العلاج والإصلاح.",
+      "kk": "Қызыл шамда тұрғанымда басқа көлік артымнан соғып кетті. Маған мойын жарақаты (whiplash) диагнозы қойылды және көліктің артын жөндеу қажет болды. Емдеу мен жөндеу шығынын өтеуді сұраймын."
+    }
+  },
+  "coverImage": "covers/case-010.svg",
+  "personImage": "people/mateus.svg",
+  "evidences": [
+    {
+      "id": "ev-dashcam",
+      "type": "camera_recording",
+      "title": {
+        "ru": "Запись видеорегистратора",
+        "en": "Dashcam Footage",
+        "tr": "Araç Kamerası Kaydı",
+        "ar": "تسجيل كاميرا السيارة",
+        "kk": "Тіркеуіш жазбасы"
+      },
+      "content": {
+        "ru": [
+          "14:02:09 — автомобиль остановлен у стоп-линии, сигнал светофора красный",
+          "14:02:21 — в зеркале заднего вида приближается седан, не снижая скорости",
+          "14:02:23 — удар сзади, камера резко дёргается вперёд",
+          "14:02:40 — водитель второго авто выходит и признаёт вину"
+        ],
+        "en": [
+          "14:02:09 — vehicle stopped at the line, traffic light is red",
+          "14:02:21 — a sedan approaches in the rear mirror without slowing",
+          "14:02:23 — rear impact, camera jolts sharply forward",
+          "14:02:40 — the other driver gets out and admits fault"
+        ],
+        "tr": [
+          "14:02:09 — araç çizgide durmuş, trafik ışığı kırmızı",
+          "14:02:21 — dikiz aynasında bir sedan yavaşlamadan yaklaşıyor",
+          "14:02:23 — arkadan çarpma, kamera sertçe öne sarsılıyor",
+          "14:02:40 — diğer sürücü iniyor ve kusurunu kabul ediyor"
+        ],
+        "ar": [
+          "14:02:09 — السيارة متوقفة عند الخط، إشارة المرور حمراء",
+          "14:02:21 — سيارة سيدان تقترب في المرآة الخلفية دون أن تبطئ",
+          "14:02:23 — اصطدام خلفي، الكاميرا تهتز بقوة إلى الأمام",
+          "14:02:40 — السائق الآخر ينزل ويعترف بخطئه"
+        ],
+        "kk": [
+          "14:02:09 — көлік тоқтау сызығында тұр, бағдаршам қызыл",
+          "14:02:21 — артқы айнада седан баяуламай жақындап келеді",
+          "14:02:23 — артынан соққы, камера кілт алға шайқалады",
+          "14:02:40 — екінші жүргізуші шығып, кінәсін мойындайды"
+        ]
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Запись подтверждает версию: машина стояла на красный и получила удар сзади.",
+        "en": "The footage confirms the story: the car was stopped at a red light and struck from behind.",
+        "tr": "Kayıt anlatımı doğruluyor: araç kırmızı ışıkta duruyordu ve arkadan çarpıldı.",
+        "ar": "يؤكد التسجيل الرواية: كانت السيارة متوقفة عند إشارة حمراء وصُدمت من الخلف.",
+        "kk": "Жазба әңгімені растайды: көлік қызыл шамда тұрып, артынан соққы алды."
+      }
+    },
+    {
+      "id": "ev-er",
+      "type": "document",
+      "title": {
+        "ru": "Выписка из приёмного покоя",
+        "en": "ER Medical Record",
+        "tr": "Acil Servis Tıbbi Kaydı",
+        "ar": "تقرير قسم الطوارئ",
+        "kk": "Қабылдау бөлімінің құжаты"
+      },
+      "content": {
+        "ru": "Пациент поступил в 15:10 в день ДТП с болью в шее и ограничением подвижности. Диагноз: хлыстовая травма шейного отдела (растяжение связок). Назначены обезболивающие и физиотерапия.",
+        "en": "Patient presented at 15:10 on the day of the accident with neck pain and restricted mobility. Diagnosis: cervical whiplash (ligament strain). Analgesics and physiotherapy prescribed.",
+        "tr": "Hasta kaza günü saat 15:10'da boyun ağrısı ve hareket kısıtlılığı ile başvurdu. Tanı: servikal whiplash (bağ zorlanması). Ağrı kesici ve fizyoterapi reçete edildi.",
+        "ar": "حضر المريض الساعة 15:10 يوم الحادث يعاني من ألم في الرقبة ومحدودية الحركة. التشخيص: التواء الرقبة العنقي (إجهاد الأربطة). وُصفت مسكنات وعلاج طبيعي.",
+        "kk": "Науқас оқиға күні 15:10-да мойын ауырсынуымен және қозғалыс шектеуімен келді. Диагноз: мойын омыртқасының whiplash жарақаты (байлам созылуы). Ауырсынуды басатын дәрі мен физиотерапия тағайындалды."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Время и характер травмы соответствуют ДТП, зафиксированному на видео.",
+        "en": "The timing and nature of the injury match the accident captured on video.",
+        "tr": "Yaralanmanın zamanı ve niteliği videodaki kazayla örtüşüyor.",
+        "ar": "توقيت الإصابة وطبيعتها يتطابقان مع الحادث المسجّل في الفيديو.",
+        "kk": "Жарақаттың уақыты мен сипаты видеодағы оқиғаға сәйкес келеді."
+      }
+    },
+    {
+      "id": "ev-police",
+      "type": "document",
+      "title": {
+        "ru": "Протокол ДТП",
+        "en": "Police Accident Report",
+        "tr": "Polis Kaza Tutanağı",
+        "ar": "محضر الشرطة عن الحادث",
+        "kk": "Полиция жол оқиғасы хаттамасы"
+      },
+      "content": {
+        "ru": "Зарегистрировано столкновение на перекрёстке Авенида-Сентраль в 14:05. Вина возложена на водителя заднего автомобиля за несоблюдение дистанции. Заявитель указан как пострадавшая сторона.",
+        "en": "A collision was recorded at the Avenida Central intersection at 14:05. Fault assigned to the rear driver for failing to keep a safe distance. The claimant is listed as the injured party.",
+        "tr": "Avenida Central kavşağında saat 14:05'te bir çarpışma kaydedildi. Kusur, güvenli mesafeyi korumadığı için arkadaki sürücüye verildi. Talep sahibi mağdur taraf olarak belirtildi.",
+        "ar": "سُجّل اصطدام عند تقاطع أفينيدا سنترال الساعة 14:05. حُمّل السائق الخلفي المسؤولية لعدم احتفاظه بمسافة آمنة. ذُكر مقدّم الطلب كطرف متضرر.",
+        "kk": "Авенида-Сентраль қиылысында 14:05-те соқтығыс тіркелді. Қауіпсіз қашықтықты сақтамағаны үшін кінә арттағы жүргізушіге жүктелді. Өтініш беруші зардап шеккен тарап ретінде көрсетілген."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Официальный протокол подтверждает место, время и виновника, совпадая с показаниями.",
+        "en": "The official report confirms the location, time and at-fault party, matching the account.",
+        "tr": "Resmi tutanak yeri, zamanı ve kusurlu tarafı doğruluyor ve anlatımla örtüşüyor.",
+        "ar": "يؤكد المحضر الرسمي المكان والزمان والطرف المخطئ بما يتوافق مع الرواية.",
+        "kk": "Ресми хаттама орынды, уақытты және кінәлі тарапты растап, мәлімдемемен сәйкеседі."
+      }
+    },
+    {
+      "id": "ev-estimate",
+      "type": "document",
+      "title": {
+        "ru": "Смета автосервиса",
+        "en": "Body-Shop Repair Estimate",
+        "tr": "Servis Onarım Tahmini",
+        "ar": "تقدير إصلاح ورشة السيارات",
+        "kk": "Автосервис жөндеу сметасы"
+      },
+      "content": {
+        "ru": "Повреждения задней части: деформирован бампер, кронштейн и фонарь. Оценка ремонта — 2 100 €. Характер деформации соответствует удару сзади.",
+        "en": "Rear damage: deformed bumper, mounting bracket and tail light. Repair estimate — €2,100. The deformation pattern is consistent with a rear impact.",
+        "tr": "Arka hasar: deforme tampon, montaj braketi ve stop lambası. Onarım tahmini — 2.100 €. Deformasyon deseni arkadan çarpmayla uyumlu.",
+        "ar": "أضرار خلفية: مصد متشوّه ودعامة تثبيت ومصباح خلفي. تقدير الإصلاح — 2,100 €. نمط التشوّه يتوافق مع اصطدام خلفي.",
+        "kk": "Артқы зақым: майысқан бампер, бекіткіш кронштейн және артқы шам. Жөндеу бағасы — 2 100 €. Деформация сипаты артынан соққыға сәйкес келеді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Сумма и тип повреждений логично вытекают из зафиксированного столкновения.",
+        "en": "The amount and type of damage follow logically from the recorded collision.",
+        "tr": "Hasarın tutarı ve türü kaydedilen çarpışmadan mantıklı şekilde kaynaklanıyor.",
+        "ar": "مبلغ الضرر ونوعه ينبعان منطقيًا من الاصطدام المسجّل.",
+        "kk": "Зақымның сомасы мен түрі тіркелген соқтығыстан қисынды түрде шығады."
+      }
+    }
+  ],
+  "correctDecision": "approve",
+  "explanation": {
+    "ru": [
+      "Видеорегистратор показывает удар сзади на красный свет.",
+      "Медицинская выписка и протокол ДТП совпадают по времени и фактам.",
+      "Повреждения и смета соответствуют столкновению — претензия обоснована."
+    ],
+    "en": [
+      "The dashcam shows a rear impact at a red light.",
+      "The ER record and police report agree on timing and facts.",
+      "Damage and estimate match the collision — the claim is valid."
+    ],
+    "tr": [
+      "Araç kamerası kırmızı ışıkta arkadan çarpmayı gösteriyor.",
+      "Acil kaydı ve polis tutanağı zaman ve olgularda örtüşüyor.",
+      "Hasar ve tahmin çarpışmayla uyumlu — talep geçerli."
+    ],
+    "ar": [
+      "كاميرا السيارة تُظهر اصطدامًا خلفيًا عند إشارة حمراء.",
+      "تقرير الطوارئ ومحضر الشرطة يتفقان في التوقيت والوقائع.",
+      "الأضرار والتقدير يتطابقان مع الاصطدام — المطالبة صحيحة."
+    ],
+    "kk": [
+      "Тіркеуіш қызыл шамда артынан соққыны көрсетеді.",
+      "Медициналық құжат пен полиция хаттамасы уақыты мен фактілері бойынша сәйкеседі.",
+      "Зақым мен смета соқтығысқа сай — талап негізді."
+    ]
+  }
+}
