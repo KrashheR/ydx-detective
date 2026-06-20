@@ -12,10 +12,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 npm install
 npm run dev        # Vite dev server. SDK auto-falls back to LocalStorage when not on Yandex.
 npm run build      # Production bundle → dist/ (base './', ready to ZIP for Yandex)
-npm run typecheck  # tsc --noEmit — the only static gate; run this before considering work done
+npm run typecheck  # tsc --noEmit — static gate; run before considering work done
+npm test           # vitest run — full suite (~169 tests across engines, store, UI)
+npm run test:watch # vitest in watch mode
+npm run test:cov   # vitest run --coverage
 ```
 
-There is no test runner, linter config, or CI in this repo. `npm run typecheck` is the verification step — the engine is written to be deterministic and the type system + Zod are the safety net.
+**Verification = `npm run typecheck` AND `npm test`** — both must pass before work is done. There is a Vitest suite (`*.test.ts(x)` colocated next to sources; config lives in `vite.config.ts`, jsdom + Testing Library for `App.test.tsx`). There is no linter config or CI. The engine is written to be deterministic, so the type system + Zod + the test suite are the safety net.
 
 ## The one rule that shapes everything: static/runtime separation
 
@@ -52,7 +55,8 @@ daily gating       → getServerTimeMs()                (NEVER device time)
 
 ## Non-obvious behaviors to preserve
 
-- **Reward formula** (`evaluateReward`): `BaseReward = claimAmount × (daily ? 5 : 1)`. Verdict component = 50% of base iff `decision === correctDecision`. Proof component = 50% of base × (correctStamps / totalContradictions). **Bonus component** = (rank% + streak%) applied to the _positive_ base only (verdict + proof, never the penalty). Penalty = 50 per _falsely_ stamped card. Net total may be negative. A case with **zero** contradictions awards the full proof component automatically (guards divide-by-zero). All tuning lives in `src/config/gameConfig.ts` — adjust the economy there, not in the engine.
+- **Reward formula** (`evaluateReward`): `BaseReward = claimAmount × (daily ? 5 : 1)`. Verdict component = 50% of base iff `decision === correctDecision`. Proof component = 50% of base × (correctStamps / totalContradictions). **Bonus component** = (rank% + streak%) applied to the _positive_ base only (verdict + proof + efficiency, never the penalty). Penalty = 50 per _falsely_ stamped card. Net total may be negative. A case with **zero** contradictions awards the full proof component automatically (guards divide-by-zero). All tuning lives in `src/config/gameConfig.ts` — adjust the economy there, not in the engine.
+- **Investigation budget** (the budgeted-case variant — see `Case.investigationBudget`). When a case sets `investigationBudget: N`, the player may open at most N evidence cards before deciding, and the reward split shifts from 50/50 to **40 verdict / 40 proof / 20 efficiency** (`reward.budgeted` in `gameConfig.ts`; the three shares sum to 1.0 so the positive ceiling stays 100% of base). The **efficiency component** = `efficiencyShare × base × (unusedOpens / budget)`, paid **only** on a correct verdict; `opensUsed` is passed into `evaluateReward` from `session.viewedEvidenceIds.length` and **defaults to the full budget (zero efficiency) when omitted**. Un-budgeted cases are completely unaffected (no efficiency component, classic gate). Touch-points if you change this: `evaluateReward`, `selectCaseInvestigationGate`, `markEvidenceAsViewed`, `EvidenceCard`'s `sealed` prop, and `RewardBreakdown.efficiencyComponent`.
 - **Two economies, kept separate.** `balance` is the spendable currency (grows from rewards, spent on hints, reset by bankruptcy). `xp` is permanent career progress that only ever increases and drives the rank ladder. Never conflate them.
 - **Ranks & XP** (`rankEngine`). Each closed case grants XP (difficulty weight × proof quality, ×2 daily; a small flat award for a wrong verdict). Cumulative XP maps to a rank (`GAME_CONFIG.progression.ranks`), which grants an additive reward-bonus %. The rank bonus applied to a case is read _before_ that case's XP is added (it reflects standing at solve time); promotion detection uses the _post_-bonus XP so an achievement bonus can also tip a threshold. Rank titles are i18n keys `rank_<id>`.
 - **Streaks** (`streakEngine`). Consecutive _server_-days with ≥1 closed case; +5%/day reward bonus capped at +50%. Same-day replays don't stack; a skipped day resets to 1. Evaluated only in `submitVerdict`, against server time.
@@ -64,7 +68,9 @@ daily gating       → getServerTimeMs()                (NEVER device time)
 - **Save migration.** `GAME_CONFIG.saveVersion` is the persisted-snapshot schema version (currently **2**). `migrate()` in `persistence.ts` spreads current defaults under older saves to backfill new fields (v1→v2 added the xp/streak/achievement stats and the session's hint fields). Bump the version and extend `migrate()` whenever the persisted shape changes.
 - **Pause guard.** Any ad open/close (fullscreen or rewarded) broadcasts through `onPauseChange`, flipping the global `isPaused` flag that freezes the game and shows the pause overlay.
 - **Bankruptcy.** Balance ≤ 0 sets `isBankrupt`, which gates progression behind a rewarded-video "restore funds" → resets to 2000. In dev/offline, `showRewardedAd` grants the reward immediately so the game stays playable.
-- **Verdict gating** (`selectCaseInvestigationGate`): you may only _approve_ after viewing every evidence card; you may only _reject_ with at least one stamped card (or after a full review).
+- **Verdict gating** (`selectCaseInvestigationGate`): on a **classic (un-budgeted)** case you may only _approve_ after viewing every evidence card; you may only _reject_ with at least one stamped card. On a **budgeted** case, _approve_ unlocks as soon as ≥1 card is opened (decide under uncertainty); _reject_ is unchanged. The selector also returns `budget / opensRemaining / budgetExhausted` for the UI counter and card-sealing. `markEvidenceAsViewed(id, caseData)` now **takes the case and returns a boolean** — `false` means the open was refused (budget exhausted on a new card); `App.handleOpenEvidence` shows the `budgetExhausted` toast and skips opening the modal. Already-opened cards are always re-readable and never refused.
+- **`Tooltip` (`src/components/Tooltip.tsx`) duplicates its label into the DOM** as a hidden `<span role="tooltip">` (pure-CSS hover, works over `disabled` buttons). It wraps blocked controls (reject/approve buttons, sealed cards, unaffordable hints). **Test gotcha:** when a tooltip label reuses a string that also appears elsewhere (e.g. `rejectNeedsProof` shows in both the reject tooltip and the click toast), `findByText` finds two matches and throws — query with `{ ignore: '[role="tooltip"]' }` to target the visible element.
+- **`devCheat` is DEV-only.** `store.devCheat()` grants a huge balance + top-rank XP; bound to **Ctrl+Shift+M** and exposed as `window.__cheat()` in the console. Hard no-op in production (`import.meta.env.DEV` guard) — never reaches a shipped economy.
 
 ## Adding content
 
