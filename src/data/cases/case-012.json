@@ -131,6 +131,9 @@
         "tr": "Kemoterapi ilaçlarının düzenli verilmesi, talep edilen tedavi ve zaman çizelgesiyle uyumlu.",
         "ar": "صرف أدوية العلاج الكيميائي بانتظام يتوافق مع العلاج والجدول الزمني المذكورين.",
         "kk": "Химиопрепараттардың тұрақты берілуі мәлімделген ем мен мерзімдерге сәйкес келеді."
+      },
+      "meta": {
+        "logPrompt": "pharma@rxsys:~$ tail -f /var/log/dispensary.log"
       }
     },
     {

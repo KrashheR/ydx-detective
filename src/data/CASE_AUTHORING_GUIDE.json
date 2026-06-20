@@ -1,0 +1,228 @@
+{
+  "_comment": "Гайд по генерации дел для Claude. Читай полностью перед генерацией любого дела.",
+
+  "tl_dr": [
+    "1. Выбери уникальный страховой сценарий (избегай повторов из existing_cases).",
+    "2. Определи truth: fraud | valid. Fraud = 2+ улики-противоречия. Valid = 0 противоречий.",
+    "3. Придумай meta-поля для каждой улики типа photo/gps/camera/usage_log.",
+    "4. Напиши content на 5 языках (ru/en/tr/ar/kk). Для usage_log content — массив строк.",
+    "5. Проверь: все evidenceId уникальны, все 5 языков заполнены везде, correctDecision совпадает с truth."
+  ],
+
+  "schema_required_fields": {
+    "case_root": {
+      "id": "string — формат: case-NNN или case-NNN-daily",
+      "type": "standard | daily",
+      "difficulty": "easy | medium | hard",
+      "claimAmount": "number (EUR)",
+      "truth": "fraud | valid",
+      "title": "LocalizedString (5 языков)",
+      "claim": {
+        "person": "LocalizedString — имя + возраст",
+        "story": "LocalizedString — история заявителя от первого лица"
+      },
+      "coverImage": "covers/case-NNN.svg",
+      "personImage": "people/<firstname>.svg",
+      "evidences": "Evidence[]",
+      "correctDecision": "approve | reject",
+      "explanation": "LocalizedString[] — 3 коротких вывода для ResultSheet"
+    },
+    "evidence": {
+      "id": "string — уникален внутри дела",
+      "type": "photo | gps | document | witness_statement | camera_recording | usage_log | xray | bank_statement | phone_records | social_media",
+      "title": "LocalizedString",
+      "content": "LocalizedString (строка) ИЛИ LocalizedContent (массив строк для usage_log)",
+      "isContradiction": "boolean",
+      "contradictionExplanation": "LocalizedString — ВСЕГДА заполнять, даже если false",
+      "meta": "EvidenceMeta (optional) — см. meta_fields_by_type"
+    }
+  },
+
+  "meta_fields_by_type": {
+    "photo": {
+      "filename": "Имя файла фото. Формат: IMG_YYYYMMDD_HHMMSS.jpg или SCR_YYYYMMDD_HHMMSS.png или DJI_YYYYMMDD_HHMMSS.jpg (для дронов). Дата должна совпадать с хронологией дела.",
+      "example": { "filename": "IMG_20260315_143022.jpg" }
+    },
+    "gps": {
+      "company": "Название GPS-сервиса. Придумай реалистичное (не GeoGuard — он уже в case-001).",
+      "department": "Отдел внутри компании (5-7 слов, на русском).",
+      "requestId": "Формат: КОД-ГОД-ДАТА-БУКВА · Тип: <тип трека>. Пример: МОР-2026-0522-В · Тип: AIS-транспондер",
+      "gpsFooter": "Копирайт + точность. Формат: © <Company> <год> · GPS ACC: ±<N>m",
+      "example": {
+        "company": "АвиаТрек Системы",
+        "department": "Центр мониторинга воздушных судов",
+        "requestId": "АВИ-2026-0611-С · Тип: Полный маршрут рейса",
+        "gpsFooter": "© АвиаТрек 2026 · GPS ACC: ±8m"
+      }
+    },
+    "camera_recording": {
+      "cameraId": "Идентификатор камеры. Формат: CAM-XX, DVR-X, LIVE-CH, BELL-N, PET-NN и т.д. Уникален для дела.",
+      "cameraModel": "Реальная модель камеры · разрешение · кодек. Примеры: HIKVISION DS-2CD2143G2-I · 4K · H.265, Ring Video Doorbell Pro 2 · 1080p · H.264",
+      "example": {
+        "cameraId": "CAM-R3",
+        "cameraModel": "Dahua IPC-HFW2849S · 4K · H.265"
+      }
+    },
+    "usage_log": {
+      "logPrompt": "Строка терминала перед логами. Формат: <user>@<host>:~$ tail -f /var/log/<logname>.log. <user> и <host> отражают контекст дела.",
+      "example_scenarios": {
+        "аптека": "pharma@rxsys:~$ tail -f /var/log/dispensary.log",
+        "склад": "wms@warehouse:~$ tail -f /var/log/inventory.log",
+        "отель": "front@hotelnet:~$ tail -f /var/log/keycard.log",
+        "автомобиль": "canbus@vehicle:~$ tail -f /var/log/obd.log",
+        "производство": "plc@factory:~$ tail -f /var/log/machine.log"
+      }
+    },
+    "xray": {
+      "clinicName": "Название клиники/отдела. Формат: ООО «Название» · Отдел",
+      "example": { "clinicName": "ООО «КлиникаИмидж» · Рентген-диагностика" }
+    },
+    "bank_statement": {
+      "bankName": "Название банка.",
+      "accountMask": "Маскированный номер счёта. Формат: •••• •••• •••• XXXX",
+      "example": { "bankName": "ClearBank", "accountMask": "•••• •••• •••• 8832" }
+    },
+    "phone_records": {
+      "carrierName": "Название оператора.",
+      "phoneMask": "Маскированный номер. Формат: +7 (9••) •••-••-••",
+      "example": { "carrierName": "МобиЛинк", "phoneMask": "+7 (9••) •••-••-••" }
+    },
+    "social_media": {
+      "socialPlatform": "Домен платформы. Например: vk.com, t.me, ok.ru, instagram.com",
+      "example": { "socialPlatform": "ok.ru" }
+    },
+    "document": "meta не нужен — document рендерится как бумажный лист без header/footer переменных",
+    "witness_statement": "meta не нужен — протокол-заголовок свидетельства фиксированный"
+  },
+
+  "evidence_type_cheatsheet": {
+    "photo": "Любой снимок: место происшествия, товар, лицо, X-ray (если type=photo а не xray), скриншот. content — строка описания.",
+    "gps": "Трек/маршрут транспорта, судна, техники. content — массив строк с координатами/временем.",
+    "document": "Официальные бумаги: справки, счета, договоры, заключения. content — строка или список пунктов.",
+    "witness_statement": "Прямая речь свидетеля. content — строка в кавычках от первого лица.",
+    "camera_recording": "CCTV, dash-cam, петличная/pet-cam. content — описание того, что видно на записи.",
+    "usage_log": "Системный лог: доступ, сенсоры, IoT, CAN-шина. content — МАССИВ строк (каждая строка — запись лога с временем).",
+    "xray": "Медицинская рентгенограмма через специальный рендерер. content — строка описания снимка.",
+    "bank_statement": "Выписка банка. content — массив строк транзакций.",
+    "phone_records": "Детализация звонков. content — массив строк записей.",
+    "social_media": "Пост/профиль в соцсети. content — строка с описанием поста."
+  },
+
+  "localized_string_languages": ["ru", "en", "tr", "ar", "kk"],
+
+  "usage_log_content_format": {
+    "description": "Для type=usage_log content — это объект, где каждый язык содержит МАССИВ строк, а не строку.",
+    "example": {
+      "ru": ["10:14:22 — Открытие: карта #A-041 (Менеджер Петров)", "10:14:55 — Закрытие: карта #A-041"],
+      "en": ["10:14:22 — Open: card #A-041 (Manager Petrov)", "10:14:55 — Close: card #A-041"],
+      "tr": ["10:14:22 — Açılış: kart #A-041 (Müdür Petrov)", "10:14:55 — Kapanış: kart #A-041"],
+      "ar": ["10:14:22 — فتح: بطاقة #A-041 (المدير بيتروف)", "10:14:55 — إغلاق: بطاقة #A-041"],
+      "kk": ["10:14:22 — Ашу: карта #A-041 (Менеджер Петров)", "10:14:55 — Жабу: карта #A-041"]
+    }
+  },
+
+  "difficulty_guidelines": {
+    "easy": "Противоречия очевидны с первого взгляда. Valid-дело без сюрпризов. 3-4 улики. Хорошо для онбординга.",
+    "medium": "Нужно сопоставить 2-3 улики. Одна улика может казаться подозрительной, но при анализе совокупности — картина ясна. 4-5 улик.",
+    "hard": "Противоречие скрыто в деталях (время, цифры, технический факт). Или наоборот — история звучит дико, но все улики её подтверждают (case-004). 4-5 улик."
+  },
+
+  "fraud_patterns": [
+    "Заявитель сам продаёт 'украденную/утраченную' вещь (case-003, case-103-daily)",
+    "GPS/камера фиксирует заявителя на месте, где он 'не был' (case-002-daily)",
+    "Лог показывает: только заявитель мог это сделать (case-101-daily)",
+    "Даты/время не совпадают между уликами",
+    "Сумма ущерба не совпадает с документами (чек vs заявленная стоимость)",
+    "Физический факт исключает описанное событие (рентген без следов — case-003)",
+    "Заявитель был в отъезде, но камера/GPS его засекла",
+    "Страховой случай произошёл слишком скоро после оформления полиса"
+  ],
+
+  "valid_case_patterns": [
+    "Необычное но физически возможное событие (корова на крыше — case-004)",
+    "Природные катаклизмы с метеоподтверждением (case-014, case-104-daily, case-105-daily)",
+    "Пожар с отчётом дознавателя + свидетель + фото ущерба (case-009)",
+    "Кража с независимыми свидетелями и следами взлома",
+    "ДТП с dash-cam + протокол ГИБДД",
+    "Производственная травма с медзаключением + актом"
+  ],
+
+  "existing_cases": {
+    "standard": [
+      { "id": "case-001", "theme": "Угон автомобиля", "truth": "fraud" },
+      { "id": "case-002", "theme": "(читать файл)", "truth": "?" },
+      { "id": "case-003", "theme": "Пёс съел часы (рентген)", "truth": "fraud" },
+      { "id": "case-004", "theme": "Корова пробила теплицу через крышу сарая", "truth": "valid" },
+      { "id": "case-005", "theme": "Пожар от стрима / умный улей", "truth": "fraud" },
+      { "id": "case-006", "theme": "Вино в подвале (климат-лог)", "truth": "fraud" },
+      { "id": "case-007", "theme": "Утеря багажа в аэропорту", "truth": "fraud" },
+      { "id": "case-008", "theme": "Травма в спортзале / марафон", "truth": "fraud" },
+      { "id": "case-009", "theme": "Пожар из-за проводки на кухне", "truth": "valid" },
+      { "id": "case-010", "theme": "ДТП / dash-cam", "truth": "fraud" },
+      { "id": "case-011", "theme": "Кража со взломом / дверной звонок", "truth": "fraud" },
+      { "id": "case-012", "theme": "Аптека / лекарства", "truth": "fraud" },
+      { "id": "case-013", "theme": "Протечка / влажность", "truth": "fraud" },
+      { "id": "case-014", "theme": "Град на пшеничном поле (дрон)", "truth": "valid" },
+      { "id": "case-015", "theme": "Морской груз / AIS судно", "truth": "fraud" },
+      { "id": "case-016", "theme": "(читать файл)", "truth": "?" }
+    ],
+    "daily": [
+      { "id": "case-002-daily", "theme": "Угон авто / CAN-шина", "truth": "fraud" },
+      { "id": "case-101-daily", "theme": "Полтергейст в пекарне (торты)", "truth": "fraud" },
+      { "id": "case-102-daily", "theme": "Строительная техника GPS", "truth": "fraud" },
+      { "id": "case-103-daily", "theme": "Кража картины / попугай-камера", "truth": "fraud" },
+      { "id": "case-104-daily", "theme": "Молния в сарай (Лихтенберг)", "truth": "valid" },
+      { "id": "case-105-daily", "theme": "Батут через забор в оранжерею", "truth": "valid" }
+    ]
+  },
+
+  "unused_evidence_types": {
+    "note": "Эти типы поддержаны в рендерере, но пока не использованы ни в одном деле. Отличная возможность для новых кейсов.",
+    "types": ["xray", "bank_statement", "phone_records", "social_media"]
+  },
+
+  "generation_prompt_template": {
+    "description": "Минимальный промпт для Claude при генерации нового дела. Подставь переменные в {}.",
+    "prompt": "Сгенерируй JSON-дело для игры-детектива по страховым случаям. Параметры: theme={ТЕМА}, truth={fraud|valid}, difficulty={easy|medium|hard}, type={standard|daily}, claimAmount={СУММА}. Используй evidence types: {СПИСОК_ТИПОВ}. Для каждого photo добавь meta.filename (формат IMG_YYYYMMDD_HHMMSS.jpg, дата из хронологии дела). Для gps — meta с company/department/requestId/gpsFooter. Для camera_recording — meta с cameraId/cameraModel (реальная модель). Для usage_log — meta.logPrompt (формат user@host:~$ tail -f /var/log/xxx.log) И content как массив строк на каждом языке. Заполни все 5 языков: ru/en/tr/ar/kk. Evidence ids уникальны. correctDecision=reject если truth=fraud, approve если valid. Explanation — ровно 3 пункта. Следуй схеме из CASE_AUTHORING_GUIDE.json."
+  },
+
+  "quality_checklist": [
+    "[ ] id дела уникален и не совпадает с existing_cases",
+    "[ ] Все 5 языков (ru/en/tr/ar/kk) заполнены в каждом LocalizedString",
+    "[ ] usage_log content — массив строк, не строка",
+    "[ ] evidence ids уникальны внутри дела",
+    "[ ] meta добавлен к каждому evidence типа photo/gps/camera_recording/usage_log",
+    "[ ] meta.filename дата совпадает с хронологией дела",
+    "[ ] isContradiction=true только у улик, реально противоречащих заявлению",
+    "[ ] Количество isContradiction=true: для fraud ≥ 2, для valid = 0",
+    "[ ] correctDecision: reject если truth=fraud, approve если truth=valid",
+    "[ ] explanation ровно 3 пункта на каждом языке",
+    "[ ] coverImage и personImage указаны (SVG создаётся отдельно)"
+  ],
+
+  "meta_values_used": {
+    "note": "Не повторяй эти значения в новых делах — они уже заняты.",
+    "gps_companies": ["GeoGuard Solutions", "МореМонитор", "ТрекМаш PRO"],
+    "camera_models": [
+      "HIKVISION DS-2CD2143G2-I · 4K · H.265",
+      "AXIS P1448-LE · 4K · H.265",
+      "Reolink RLC-810A · 4K · H.265",
+      "Logitech C922 · 1080p · H.264",
+      "BlackVue DR900X · 4K · H.265",
+      "Ring Video Doorbell Pro 2 · 1080p · H.264",
+      "Dahua IPC-HFW3849H · 4K · H.265",
+      "Eufy Cam S220 · 2K · H.265"
+    ],
+    "log_prompts": [
+      "root@alarm:~$ tail -f /var/log/security.log",
+      "smartd@hive:~$ tail -f /var/log/sensors.log",
+      "vinotemp@cellar:~$ tail -f /var/log/climate.log",
+      "bagtrack@hub:~$ tail -f /var/log/baggage.log",
+      "access@gymnet:~$ tail -f /var/log/entry.log",
+      "pharma@rxsys:~$ tail -f /var/log/dispensary.log",
+      "mno@telecom:~$ tail -f /var/log/subscriber.log",
+      "canbus@vehicle:~$ tail -f /var/log/keycard.log",
+      "secure@bakery:~$ tail -f /var/log/access.log"
+    ]
+  }
+}

@@ -105,6 +105,9 @@
         "tr": "Müşteri bavulu hiç almadığını iddia ediyor, ancak kayıt ertesi gün adresine teslim edildiğini ve imzalandığını gösteriyor.",
         "ar": "يدّعي العميل أنه لم يستلم الحقيبة أبداً، لكن السجل يُظهر أنها سُلّمت إلى عنوانه ووُقّع عليها في اليوم التالي.",
         "kk": "Клиент шабаданды мүлдем алмадым дейді, бірақ журнал оның мекенжайына жеткізіліп, келесі күні қол қойылғанын көрсетеді."
+      },
+      "meta": {
+        "logPrompt": "bagtrack@hub:~$ tail -f /var/log/baggage.log"
       }
     },
     {
@@ -131,6 +134,9 @@
         "tr": "Bavulla birlikte kaybolduğu beyan edilen eşyalar günler sonra aynı müşteri tarafından yeni olarak satışa çıkarılmış.",
         "ar": "العناصر التي أُعلن عن فقدانها مع الحقيبة معروضة للبيع كجديدة من قبل العميل نفسه بعد أيام.",
         "kk": "Шабаданмен бірге жоғалды деп мәлімделген заттар бірнеше күннен кейін сол клиент тарапынан жаңа ретінде сатуға қойылған."
+      },
+      "meta": {
+        "filename": "SCR_20260506_142301.png"
       }
     },
     {

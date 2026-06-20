@@ -79,6 +79,9 @@
         "tr": "Sadece sahibi girip çıktı ve 02:00'de bir teslimat çıkışı kaydedildi — dışarıdan hiçbir 'poltergeist' yoktu.",
         "ar": "المالك وحده هو من دخل وخرج، وسُجِّل خروج للتسليم في الساعة 02:00 — لم يكن هناك أي 'شبح' خارجي.",
         "kk": "Тек қожайын кіріп-шықты, ал 02:00-де жеткізуге шығу тіркелді — ешқандай бөгде «полтергейст» болған жоқ."
+      },
+      "meta": {
+        "logPrompt": "secure@bakery:~$ tail -f /var/log/access.log"
       }
     },
     {

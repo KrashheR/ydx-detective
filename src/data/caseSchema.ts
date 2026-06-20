@@ -14,6 +14,7 @@ import {
   SUPPORTED_LANGUAGES,
   type Case,
   type Evidence,
+  type EvidenceMeta,
   type Language,
 } from '../types';
 
@@ -61,6 +62,30 @@ const evidenceType = z.enum([
 /*  Composite schemas                                                         */
 /* -------------------------------------------------------------------------- */
 
+const evidenceMetaSchema = z
+  .object({
+    company: z.string().optional(),
+    department: z.string().optional(),
+    requestId: z.string().optional(),
+    gpsFooter: z.string().optional(),
+    filename: z.string().optional(),
+    cameraId: z.string().optional(),
+    cameraModel: z.string().optional(),
+    docHeader: z.string().optional(),
+    docFooter: z.string().optional(),
+    logPrompt: z.string().optional(),
+    clinicName: z.string().optional(),
+    bankName: z.string().optional(),
+    accountMask: z.string().optional(),
+    carrierName: z.string().optional(),
+    phoneMask: z.string().optional(),
+    socialPlatform: z.string().optional(),
+  })
+  .strict();
+
+// Compile-time guard: schema inferred type must be assignable to EvidenceMeta.
+type _EvidenceMetaCheck = AssertAssignable<EvidenceMeta, z.infer<typeof evidenceMetaSchema>>;
+
 export const evidenceSchema = z
   .object({
     id: z.string().min(1),
@@ -69,6 +94,7 @@ export const evidenceSchema = z
     content: localizedContent,
     isContradiction: z.boolean(),
     contradictionExplanation: localizedString,
+    meta: evidenceMetaSchema.optional(),
   })
   .strict();
 

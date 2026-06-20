@@ -7,7 +7,7 @@ import {
   type MouseEvent as ReactMouseEvent,
 } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import type { Evidence, Language } from '../types';
+import type { Evidence, EvidenceMeta, Language } from '../types';
 import { loc, t } from '../i18n/ui';
 import { EVIDENCE_TAG_KEY } from './icons';
 
@@ -232,27 +232,28 @@ function EvidenceBody({ evidence, lang }: { evidence: Evidence; lang: Language }
   const content = loc(evidence.content, lang);
   const lines = Array.isArray(content) ? content : [content];
 
+  const meta = evidence.meta;
   switch (evidence.type) {
     case 'gps':
-      return <GpsBody lines={lines} />;
+      return <GpsBody lines={lines} meta={meta} />;
     case 'photo':
-      return <PhotoBody lines={lines} />;
+      return <PhotoBody lines={lines} meta={meta} />;
     case 'camera_recording':
-      return <CameraBody lines={lines} />;
+      return <CameraBody lines={lines} meta={meta} />;
     case 'witness_statement':
       return <WitnessBody lines={lines} />;
     case 'document':
-      return <DocumentBody lines={lines} />;
+      return <DocumentBody lines={lines} meta={meta} />;
     case 'usage_log':
-      return <UsageLogBody lines={lines} />;
+      return <UsageLogBody lines={lines} meta={meta} />;
     case 'xray':
-      return <XRayBody lines={lines} />;
+      return <XRayBody lines={lines} meta={meta} />;
     case 'bank_statement':
-      return <BankBody lines={lines} />;
+      return <BankBody lines={lines} meta={meta} />;
     case 'phone_records':
-      return <PhoneBody lines={lines} />;
+      return <PhoneBody lines={lines} meta={meta} />;
     case 'social_media':
-      return <SocialBody lines={lines} />;
+      return <SocialBody lines={lines} meta={meta} />;
     default:
       return <DefaultBody lines={lines} />;
   }
@@ -288,7 +289,7 @@ function buildRoutePoints(lines: string[]): Array<{ x: number; y: number }> {
   });
 }
 
-function GpsBody({ lines }: { lines: string[] }) {
+function GpsBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
   const [active, setActive] = useState<number | null>(null);
 
   const parsed = lines.map((l) => {
@@ -305,10 +306,10 @@ function GpsBody({ lines }: { lines: string[] }) {
         <div>
           <div className="flex items-center gap-1.5">
             <span className="font-mono text-[11px] text-ink/40">▣</span>
-            <span className="font-mono text-[11px] font-semibold text-ink/60">GeoGuard Solutions</span>
+            <span className="font-mono text-[11px] font-semibold text-ink/60">{meta?.company ?? 'GeoGuard Solutions'}</span>
           </div>
           <div className="mt-0.5 font-mono text-[9px] text-ink/40">
-            Отдел мониторинга транспортных средств
+            {meta?.department ?? 'Отдел мониторинга транспортных средств'}
           </div>
         </div>
         <span className="font-mono text-[8px] font-semibold text-stamp border border-stamp px-1.5 py-0.5 rounded">
@@ -317,7 +318,7 @@ function GpsBody({ lines }: { lines: string[] }) {
       </div>
       <div className="my-2.5 h-px bg-[#d1d5db]" />
       <div className="mb-2.5 font-mono text-[10px] text-ink/50">
-        Запрос: СТР-2026-0314-А · Тип: Полный трек
+        {`Запрос: ${meta?.requestId ?? 'СТР-2026-0314-А · Тип: Полный трек'}`}
       </div>
 
       {/* Map */}
@@ -376,7 +377,7 @@ function GpsBody({ lines }: { lines: string[] }) {
         })}
 
         <div className="absolute bottom-1.5 left-2 font-mono text-[8px] text-white/50">
-          © GeoGuard 2026 · GPS ACC: ±3m
+          {meta?.gpsFooter ?? '© GeoGuard 2026 · GPS ACC: ±3m'}
         </div>
       </div>
 
@@ -423,7 +424,7 @@ function GpsBody({ lines }: { lines: string[] }) {
 
 /* ── PHOTO (Polaroid flip) ───────────────────────────────────────────────── */
 
-function PhotoBody({ lines }: { lines: string[] }) {
+function PhotoBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
   const [flipped, setFlipped] = useState(false);
 
   // Lines after a "---EXIF---" marker are metadata; rest is caption
@@ -506,7 +507,7 @@ function PhotoBody({ lines }: { lines: string[] }) {
                 <span className="font-serif text-[11px] italic text-ink/80">{e.text}</span>
               </div>
             ))}
-            <div className="mt-3 font-mono text-[9px] text-ink/50">IMG_20260315_081402.jpg</div>
+            <div className="mt-3 font-mono text-[9px] text-ink/50">{meta?.filename ?? 'IMG_20260315_081402.jpg'}</div>
             <button
               type="button"
               onClick={() => setFlipped(false)}
@@ -530,7 +531,7 @@ const CAM_SHADES = [
   'repeating-linear-gradient(40deg,#1a1a18 0 11px,#141412 11px 22px)',
 ];
 
-function CameraBody({ lines }: { lines: string[] }) {
+function CameraBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
   const [frame, setFrame] = useState(0);
   const total = lines.length || 1;
 
@@ -583,7 +584,7 @@ function CameraBody({ lines }: { lines: string[] }) {
               <span className="font-mono text-[9px] font-semibold text-red-500">REC</span>
             </div>
             <div className="absolute right-2.5 top-2 font-mono text-[9px]" style={{ color: 'rgba(74,222,128,.6)' }}>
-              CAM-04
+              {meta?.cameraId ?? 'CAM-04'}
             </div>
 
             {/* Bottom bar */}
@@ -627,7 +628,7 @@ function CameraBody({ lines }: { lines: string[] }) {
         </div>
       </div>
       <div className="mt-2 text-center font-mono text-[8px] text-ink/30">
-        HIKVISION DS-2CD2143G2-I · IP-КАМЕРА · H.264
+        {meta?.cameraModel ?? 'HIKVISION DS-2CD2143G2-I · IP-КАМЕРА · H.264'}
       </div>
     </>
   );
@@ -664,12 +665,12 @@ function WitnessBody({ lines }: { lines: string[] }) {
 
 /* ── DOCUMENT ────────────────────────────────────────────────────────────── */
 
-function DocumentBody({ lines }: { lines: string[] }) {
+function DocumentBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
   return (
     <>
       <div className="-mx-[18px] -mt-[18px] mb-4 border-t-4 border-accent" />
       <div className="mb-2.5 font-mono text-[9px] font-semibold uppercase tracking-[2px] text-ink/40">
-        Официальный документ · исх. № ____-__/__ от __.__.__
+        {meta?.docHeader ?? 'Официальный документ · исх. № ____-__/__ от __.__.__'}
       </div>
       <div className="mb-3 border-b border-dashed border-[#c7c2b6]" />
       <div className="rounded-md border border-dashed border-[#c7c2b6] bg-white p-4 font-mono text-[12.5px] leading-relaxed text-ink">
@@ -680,7 +681,7 @@ function DocumentBody({ lines }: { lines: string[] }) {
         ))}
       </div>
       <div className="mt-4 text-right font-mono text-[10px] text-ink/50">
-        Документ заверен. МП _______________
+        {meta?.docFooter ?? 'Документ заверен. МП _______________'}
       </div>
     </>
   );
@@ -688,7 +689,7 @@ function DocumentBody({ lines }: { lines: string[] }) {
 
 /* ── USAGE LOG ───────────────────────────────────────────────────────────── */
 
-function UsageLogBody({ lines }: { lines: string[] }) {
+function UsageLogBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
   const tagged = lines.map((l) => {
     const isWarn = /warn|error|ошибк|открыт|снят/i.test(l);
     return { text: l, warn: isWarn };
@@ -697,7 +698,7 @@ function UsageLogBody({ lines }: { lines: string[] }) {
   return (
     <div className="rounded-md p-3" style={{ background: '#0d0d0d' }}>
       <div className="mb-2 font-mono text-[9px]" style={{ color: 'rgba(74,222,128,.6)' }}>
-        root@alarm:~$ tail -f /var/log/security.log
+        {meta?.logPrompt ?? 'root@alarm:~$ tail -f /var/log/security.log'}
       </div>
       {tagged.map((l, i) => (
         <div key={i} className="font-mono text-[11px] leading-[1.7]" style={{ color: '#4ade80' }}>
@@ -812,7 +813,7 @@ function XRayShapeLayer({ shapes, bright }: { shapes: XShape[]; bright: boolean 
   );
 }
 
-function XRayBody({ lines }: { lines: string[] }) {
+function XRayBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
   const [show, setShow] = useState(false);
   const [pos, setPos] = useState({ x: 140, y: 95 });
   const shapes = buildXRayShapes(lines);
@@ -866,7 +867,7 @@ function XRayBody({ lines }: { lines: string[] }) {
         </div>
       </div>
       <div className="mt-2.5 text-center font-mono text-[10px] text-ink/60">
-        ООО «МедИмидж» · Рентген-отдел · <span className="text-accent">наведите для лупы</span>
+        {meta?.clinicName ?? 'ООО «МедИмидж» · Рентген-отдел'} · <span className="text-accent">наведите для лупы</span>
       </div>
     </>
   );
@@ -874,7 +875,7 @@ function XRayBody({ lines }: { lines: string[] }) {
 
 /* ── BANK STATEMENT ──────────────────────────────────────────────────────── */
 
-function BankBody({ lines }: { lines: string[] }) {
+function BankBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
   // Each line: "DATE|DESC|AMT|BAL" or plain text
   const rows = lines.map((l, i) => {
     const parts = l.split('|');
@@ -896,7 +897,7 @@ function BankBody({ lines }: { lines: string[] }) {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-1.5">
           <span className="text-[12px] text-accent">■</span>
-          <span className="font-mono text-[12px] font-bold text-ink">FinSecure Bank</span>
+          <span className="font-mono text-[12px] font-bold text-ink">{meta?.bankName ?? 'FinSecure Bank'}</span>
         </div>
         <span
           className="rounded border font-mono text-[8px] font-semibold text-ink/55"
@@ -905,7 +906,7 @@ function BankBody({ lines }: { lines: string[] }) {
           ВЫПИСКА ПО СЧЁТУ
         </span>
       </div>
-      <div className="mt-2 font-mono text-[11px] text-ink/55">•••• •••• •••• 4721</div>
+      <div className="mt-2 font-mono text-[11px] text-ink/55">{meta?.accountMask ?? '•••• •••• •••• 4721'}</div>
 
       <div className="mt-3 overflow-hidden rounded-md border border-black/10">
         <div
@@ -944,7 +945,7 @@ function BankBody({ lines }: { lines: string[] }) {
 
 /* ── PHONE RECORDS ───────────────────────────────────────────────────────── */
 
-function PhoneBody({ lines }: { lines: string[] }) {
+function PhoneBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
   // Each line: "DATE|TIME|NUMBER|DUR|TYPE" or plain
   const rows = lines.map((l, i) => {
     const p = l.split('|');
@@ -964,9 +965,9 @@ function PhoneBody({ lines }: { lines: string[] }) {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-1.5">
           <span className="text-accent">◈</span>
-          <span className="font-mono text-[12px] font-bold text-ink">TeleLink</span>
+          <span className="font-mono text-[12px] font-bold text-ink">{meta?.carrierName ?? 'TeleLink'}</span>
         </div>
-        <span className="font-mono text-[10px] text-ink/55">+7 (9••) •••-••-••</span>
+        <span className="font-mono text-[10px] text-ink/55">{meta?.phoneMask ?? '+7 (9••) •••-••-••'}</span>
       </div>
 
       <div className="mt-3 overflow-hidden rounded-md border border-black/10">
@@ -997,7 +998,7 @@ function PhoneBody({ lines }: { lines: string[] }) {
       </div>
 
       <div className="mt-2.5 font-mono text-[9px] text-ink/40">
-        ПАО «ТелеЛинк» · детализация за период
+        ПАО «{meta?.carrierName ?? 'ТелеЛинк'}» · детализация за период
       </div>
     </>
   );
@@ -1022,7 +1023,7 @@ const AVATAR_GRADIENTS = [
  *   line 1…N-2: post body text
  *   line N-1 (optional): reactions like "👍 12 · 💬 3 · 🔁 1"
  */
-function SocialBody({ lines }: { lines: string[] }) {
+function SocialBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
   if (lines.length === 0) return <DefaultBody lines={lines} />;
 
   // Parse header
@@ -1059,7 +1060,7 @@ function SocialBody({ lines }: { lines: string[] }) {
       {/* Browser-bar */}
       <div className="flex items-center gap-1.5 border-b border-[#e5e7eb] bg-[#f3f4f6] px-3 py-2">
         <span className="text-[11px]">🔒</span>
-        <span className="font-mono text-[11px] text-ink/60">vk.com/id{urlSuffix}</span>
+        <span className="font-mono text-[11px] text-ink/60">{meta?.socialPlatform ?? 'vk.com'}/id{urlSuffix}</span>
       </div>
 
       <div className="p-3.5">

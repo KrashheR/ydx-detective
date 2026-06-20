@@ -67,6 +67,38 @@ export type EvidenceType =
   | 'phone_records'
   | 'social_media';
 
+/**
+ * Per-evidence renderer metadata. All fields are optional; renderers fall back
+ * to built-in defaults so existing cases without `meta` continue to work.
+ */
+export interface EvidenceMeta {
+  // gps renderer
+  company?: string;
+  department?: string;
+  requestId?: string;
+  gpsFooter?: string;
+  // photo renderer
+  filename?: string;
+  // camera_recording renderer
+  cameraId?: string;
+  cameraModel?: string;
+  // document renderer
+  docHeader?: string;
+  docFooter?: string;
+  // usage_log renderer
+  logPrompt?: string;
+  // xray renderer
+  clinicName?: string;
+  // bank_statement renderer
+  bankName?: string;
+  accountMask?: string;
+  // phone_records renderer
+  carrierName?: string;
+  phoneMask?: string;
+  // social_media renderer
+  socialPlatform?: string;
+}
+
 export interface Evidence {
   readonly id: string;
   readonly type: EvidenceType;
@@ -76,6 +108,8 @@ export interface Evidence {
   readonly isContradiction: boolean;
   /** Shown post-verdict to teach the player why it was (not) a contradiction. */
   readonly contradictionExplanation: LocalizedString;
+  /** Per-renderer display metadata — makes each evidence visually unique. */
+  readonly meta?: EvidenceMeta;
 }
 
 export interface Claim {

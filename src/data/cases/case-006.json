@@ -101,6 +101,9 @@
         "tr": "Mahzen tüm süre boyunca ideal sıcaklığı korudu — şarap sıcaktan bozulamazdı.",
         "ar": "حافظ القبو على درجة حرارة مثالية طوال الوقت — لم يكن للنبيذ أن يفسد من الحرارة.",
         "kk": "Жертөле температурасы үнемі мінсіз болды — шарап ыстықтан бұзыла алмайды."
+      },
+      "meta": {
+        "logPrompt": "vinotemp@cellar:~$ tail -f /var/log/climate.log"
       }
     },
     {
