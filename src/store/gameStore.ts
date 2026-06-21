@@ -654,13 +654,11 @@ if (import.meta.env.DEV && typeof window !== 'undefined') {
 
 /**
  * Button-enable logic + budget bookkeeping for the verdict panel, derived from
- * session + case. Two product rules, selected by whether the case carries an
- * `investigationBudget`:
+ * session + case. The product rule is asymmetric:
  *
- *   • Un-budgeted (classic): *approve* only after the whole file is reviewed;
- *     *reject* only with ≥1 stamped contradiction.
- *   • Budgeted (deduction): information is scarce, so *approve* unlocks as soon
- *     as ≥1 card is opened (decide under uncertainty); *reject* unchanged.
+ *   • *approve* is always available — paying out a claim is the default action
+ *     and needs no justification (budgeted or not).
+ *   • *reject* (blocking the payout) requires grounds: ≥1 stamped contradiction.
  *
  * Also exposes budget bookkeeping (`opensRemaining`, `budgetExhausted`) so the
  * UI can seal un-opened cards and show a counter. Pure → cheap in render.
@@ -684,8 +682,8 @@ export function selectCaseInvestigationGate(
   if (budget != null) {
     const opensRemaining = Math.max(0, budget - viewed.length);
     return {
-      // Budgeted: decide as soon as you've inspected at least one card.
-      canApprove: viewed.length > 0,
+      // Approving a payout is the default, low-stakes action — always available.
+      canApprove: true,
       canReject: hasStampedContradiction,
       budget,
       opensRemaining,
@@ -693,11 +691,11 @@ export function selectCaseInvestigationGate(
     };
   }
 
-  const allViewed = caseData.evidences.every((ev) => viewed.includes(ev.id));
   return {
-    canApprove: allViewed, // approve only after studying the whole file
+    // Approve is always available: paying out a claim needs no justification.
+    canApprove: true,
     // Reject must be *justified*: enabled only once at least one contradiction
-    // has been stamped. A full review alone never unlocks an unproven rejection.
+    // has been stamped. Blocking a payout always requires grounds.
     canReject: hasStampedContradiction,
     budget: null,
     opensRemaining: null,

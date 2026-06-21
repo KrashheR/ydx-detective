@@ -73,7 +73,7 @@ describe('evaluateReward', () => {
     expect(r.dailyMultiplierApplied).toBe(1);
   });
 
-  it('zeroes the verdict component on a wrong verdict but keeps proof', () => {
+  it('awards nothing at all on a wrong verdict, even with perfect stamping', () => {
     const c = makeCase({
       claimAmount: 1000,
       correctDecision: 'reject',
@@ -85,8 +85,11 @@ describe('evaluateReward', () => {
 
     expect(r.verdictCorrect).toBe(false);
     expect(r.verdictComponent).toBe(0);
-    expect(r.proofComponent).toBe(500); // full proof, ratio 1
-    expect(r.total).toBe(500);
+    expect(r.proofComponent).toBe(0); // proof is gated behind a correct verdict
+    expect(r.efficiencyComponent).toBe(0);
+    expect(r.bonusComponent).toBe(0);
+    expect(r.penalty).toBe(0); // no penalty either — the missed payout is the cost
+    expect(r.total).toBe(0);
   });
 
   it('scales the proof component by the stamped ratio', () => {
@@ -131,19 +134,19 @@ describe('evaluateReward', () => {
     expect(r.total).toBe(900);
   });
 
-  it('can produce a negative net total', () => {
+  it('can produce a negative net total when a correct verdict is brute-forced', () => {
     const c = makeCase({
       claimAmount: 100,
-      correctDecision: 'reject',
+      correctDecision: 'approve',
       contradictions: 0,
       cleanCards: 5,
     });
-    // Wrong verdict (approve a reject-case is wrong only if correctDecision is
-    // reject — here it is) and 5 false stamps.
+    // Correct verdict (approve), but every clean card is falsely stamped.
     const r = evaluateReward(c, 'approve', cleanIds(c));
-    // verdict 0, proof full (0 contradictions → ratio 1) = 0.5*100 = 50.
-    // penalty = 5 * 50 = 250 → total 50 - 250 = -200.
-    expect(r.total).toBe(-200);
+    // verdict 50 + proof full (0 contradictions → ratio 1) 50 = 100 positive.
+    // penalty = 5 * 50 = 250 → total 100 - 250 = -150.
+    expect(r.verdictCorrect).toBe(true);
+    expect(r.total).toBe(-150);
   });
 
   it('applies the ×5 daily multiplier to the base', () => {

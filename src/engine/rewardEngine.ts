@@ -61,9 +61,9 @@ export interface RewardModifiers {
  *   • Bonus component:      (rank% + streak%) applied to the positive base.
  *   • Penalty:              falseStampPenalty per wrongly-stamped card.
  *
- * A wrong verdict still allows the proof component to reflect investigation
- * skill, but you keep nothing if you also brute-forced stamps (penalty applies
- * unconditionally). The net total may be negative.
+ * A wrong verdict earns nothing at all: every component is zeroed and no
+ * penalty is charged (the missed payout is the entire consequence). Reward —
+ * proof, efficiency, bonuses — is gated behind getting the verdict right.
  */
 export function evaluateReward(
   caseData: Case,
@@ -74,6 +74,25 @@ export function evaluateReward(
   const { reward } = GAME_CONFIG;
   const multiplier = caseData.type === 'daily' ? reward.dailyMultiplier : 1;
   const baseReward = caseData.claimAmount * multiplier;
+
+  const verdictCorrect = decision === caseData.correctDecision;
+  const { correct, falseStamps } = classifyStamps(caseData, selectedEvidenceIds);
+
+  // A wrong verdict means no reward at all — short-circuit before any component
+  // math so investigation skill never pays out on a misjudged case.
+  if (!verdictCorrect) {
+    return {
+      verdictCorrect: false,
+      verdictComponent: 0,
+      proofComponent: 0,
+      efficiencyComponent: 0,
+      penalty: 0,
+      dailyMultiplierApplied: multiplier,
+      bonusComponent: 0,
+      bonusPct: 0,
+      total: 0,
+    };
+  }
 
   // Budgeted cases reallocate some verdict/proof weight into an efficiency
   // component; un-budgeted cases keep the classic 50/50 split (no efficiency).
@@ -86,11 +105,9 @@ export function evaluateReward(
     ? reward.budgeted.proofShare
     : reward.proofShare;
 
-  const verdictCorrect = decision === caseData.correctDecision;
-  const verdictComponent = verdictCorrect ? verdictShare * baseReward : 0;
+  const verdictComponent = verdictShare * baseReward;
 
   const total = totalContradictions(caseData);
-  const { correct, falseStamps } = classifyStamps(caseData, selectedEvidenceIds);
 
   // Guard the divide-by-zero: a case with no contradictions awards the full
   // proof component automatically (there was nothing to miss).
@@ -100,7 +117,7 @@ export function evaluateReward(
   // Efficiency: reward a correct verdict reached with budget to spare. Only
   // budgeted cases qualify; an un-budgeted case never awards this component.
   let efficiencyComponent = 0;
-  if (verdictCorrect && isBudgeted) {
+  if (isBudgeted) {
     const opensUsed = Math.min(modifiers.opensUsed ?? budget, budget);
     const unused = Math.max(0, budget - opensUsed);
     efficiencyComponent =

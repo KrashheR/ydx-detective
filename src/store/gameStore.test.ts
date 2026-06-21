@@ -257,13 +257,14 @@ describe('submitVerdict', () => {
     useGameStore.setState({ stats: makeStats({ balance: 10 }) });
     const c = makeCase({
       claimAmount: 100,
-      correctDecision: 'reject',
+      correctDecision: 'approve',
       contradictions: 0,
       cleanCards: 3,
     });
     store().startCase(c);
     cleanIds(c).forEach((id) => store().toggleEvidenceStamp(id)); // 3 false stamps
-    store().submitVerdict(c, 'approve'); // wrong verdict, heavy penalty
+    // Correct verdict, but brute-forced stamps: penalty (150) outweighs base (100).
+    store().submitVerdict(c, 'approve');
 
     expect(store().stats.balance).toBeLessThanOrEqual(0);
     expect(store().stats.isBankrupt).toBe(true);
@@ -323,10 +324,10 @@ describe('isDailyUnlocked', () => {
 });
 
 describe('selectCaseInvestigationGate', () => {
-  it('allows approve only after every card is viewed', () => {
+  it('always allows approve, even before any card is viewed', () => {
     const c = makeCase({ contradictions: 1, cleanCards: 1 });
     store().startCase(c);
-    expect(selectCaseInvestigationGate(c, { session: store().session }).canApprove).toBe(false);
+    expect(selectCaseInvestigationGate(c, { session: store().session }).canApprove).toBe(true);
     c.evidences.forEach((e) => store().markEvidenceAsViewed(e.id, c));
     expect(selectCaseInvestigationGate(c, { session: store().session }).canApprove).toBe(true);
   });
@@ -339,17 +340,17 @@ describe('selectCaseInvestigationGate', () => {
     expect(selectCaseInvestigationGate(c, { session: store().session }).canReject).toBe(true);
   });
 
-  it('on a budgeted case, allows approve after one open (not full review)', () => {
+  it('on a budgeted case, allows approve from the start and tracks budget', () => {
     const c = makeCase({ contradictions: 1, cleanCards: 3, investigationBudget: 2 });
     store().startCase(c);
     let gate = selectCaseInvestigationGate(c, { session: store().session });
-    expect(gate.canApprove).toBe(false); // nothing opened yet
+    expect(gate.canApprove).toBe(true); // approve is always available
     expect(gate.budget).toBe(2);
     expect(gate.opensRemaining).toBe(2);
 
     store().markEvidenceAsViewed(c.evidences[0]!.id, c);
     gate = selectCaseInvestigationGate(c, { session: store().session });
-    expect(gate.canApprove).toBe(true); // one open is enough on a budgeted case
+    expect(gate.canApprove).toBe(true);
     expect(gate.opensRemaining).toBe(1);
   });
 });
