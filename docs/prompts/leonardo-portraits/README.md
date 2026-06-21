@@ -1,0 +1,54 @@
+# Leonardo — портреты клиентов (по одному файлу на промпт)
+
+Каждый `NN-<имя>.txt` — **готовый промпт целиком**. Открой файл, выдели всё (Cmd+A),
+скопируй и вставь в поле **Prompt** в Leonardo. Стиль уже вшит в каждый файл — ничего
+дописывать не нужно.
+
+## Как генерировать
+
+1. **Negative Prompt** (одинаковый для всех) — один раз вставь из `_NEGATIVE.txt` и оставь.
+2. Настройки: **Aspect Ratio 4:5** (вертикаль), фотореалистичная модель (*Leonardo Phoenix* /
+   *PhotoReal*), PhotoReal вкл.
+3. Открой нужный `NN-<имя>.txt` → выдели всё → вставь в **Prompt** → Generate.
+4. Сохрани результат под именем из колонки «Файл» (напр. `public/people/igor.jpg`).
+
+## Подключение к игре
+
+После генерации замени в делах расширение `.svg` → `.jpg`:
+грепни `personImage` по `src/data/cases/` и поправь путь (`people/igor.svg` → `people/igor.jpg`).
+`object-cover` в `CaseFile.tsx` сам обрежет фото под рамку — больше ничего не нужно.
+
+> **↻ Один файл — несколько дел.** Где в колонке «Дела» больше одной записи, портрет
+> переиспользуется под разными фамилиями/возрастами; возраст в промпте взят усреднённый.
+> Хочешь развести образы — сгенерируй второй файл и поправь `personImage` в нужном деле.
+
+Полный бриф со стилем и обоснованием — `../DESIGN_PROMPT_PORTRAITS.md`.
+
+## Соответствие
+
+| Промпт | Файл (сохранить как) | Дела |
+| ------ | -------------------- | ---- |
+| `01-igor.txt` | `public/people/igor.jpg` | case-001 |
+| `02-gennady.txt` | `public/people/gennady.jpg` | case-003, case-033 |
+| `03-aigul.txt` | `public/people/aigul.jpg` | case-004, case-031 |
+| `04-stas.txt` | `public/people/stas.jpg` | case-005 |
+| `05-eduard.txt` | `public/people/eduard.jpg` | case-006, case-026 |
+| `06-lucas.txt` | `public/people/lucas.jpg` | case-007 |
+| `07-dejan.txt` | `public/people/dejan.jpg` | case-008, case-030 |
+| `08-helena.txt` | `public/people/helena.jpg` | case-009, case-029 |
+| `09-mateus.txt` | `public/people/mateus.jpg` | case-010 |
+| `10-beatrice.txt` | `public/people/beatrice.jpg` | case-011 |
+| `11-helga.txt` | `public/people/helga.jpg` | case-012 |
+| `12-timur.txt` | `public/people/timur.jpg` | case-013, case-032 |
+| `13-bolat.txt` | `public/people/bolat.jpg` | case-014, case-027 |
+| `14-rustam.txt` | `public/people/rustam.jpg` | case-015, case-023 |
+| `15-leyla.txt` | `public/people/leyla.jpg` | case-016 |
+| `16-marina.txt` | `public/people/marina.jpg` | case-024, case-002-daily |
+| `17-lorenzo.txt` | `public/people/lorenzo.jpg` | case-025, case-103-daily |
+| `18-damir.txt` | `public/people/damir.jpg` | case-028, case-102-daily |
+| `19-thibault.txt` | `public/people/thibault.jpg` | case-101-daily |
+| `20-elmira.txt` | `public/people/elmira.jpg` | case-104-daily |
+| `21-sinead.txt` | `public/people/sinead.jpg` | case-105-daily |
+| `22-anatoly.txt` | `public/people/anatoly.jpg` | case-017, case-018, case-019 |
+| `23-orest.txt` | `public/people/orest.jpg` | case-020 |
+| `24-khariton.txt` | `public/people/khariton.jpg` | case-021, case-022, case-034 |
