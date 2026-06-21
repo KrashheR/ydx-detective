@@ -1,0 +1,147 @@
+{
+  "id": "case-019",
+  "type": "standard",
+  "difficulty": "medium",
+  "claimAmount": 850,
+  "truth": "valid",
+  "title": {
+    "ru": "Газонокосилка без водителя",
+    "en": "The Driverless Lawnmower",
+    "tr": "Sürücüsüz Çim Biçme Makinesi",
+    "ar": "جزّازة العشب بلا سائق",
+    "kk": "Жүргізушісіз шөп шапқыш"
+  },
+  "claim": {
+    "person": {
+      "ru": "Анатолий Степанович, 71 год",
+      "en": "Anatoly Stepanovich, 71",
+      "tr": "Anatoly Stepanovich, 71",
+      "ar": "أناتولي ستيبانوفيتش، 71",
+      "kk": "Анатолий Степанович, 71 жаста"
+    },
+    "story": {
+      "ru": "Настоящим уведомляю о причинении ущерба транспортному средству. В ночное время мой премиальный садовый трактор-газонокосилка самостоятельно завёлся, выехал на дорогу общего пользования и совершил наезд на мой же припаркованный автомобиль, повредив передний бампер. За рулём косилки никто не находился. Прошу возместить стоимость ремонта.",
+      "en": "I hereby notify you of damage to a vehicle. During the night, my premium ride-on lawnmower started itself, drove onto the public road, and collided with my own parked car, damaging the front bumper. No one was at the controls of the mower. I request compensation for the cost of repairs.",
+      "tr": "İşbu belgeyle bir araçta meydana gelen hasarı bildiririm. Gece vakti, premium binicili çim biçme makinem kendi kendine çalıştı, kamu yoluna çıktı ve park halindeki kendi arabama çarparak ön tamponu hasara uğrattı. Makinenin başında kimse yoktu. Onarım maliyetinin tazmin edilmesini talep ederim.",
+      "ar": "أُبلغكم بموجب هذا عن ضرر لحق بمركبة. أثناء الليل، تشغّلت جزّازة العشب الفاخرة القابلة للركوب من تلقاء نفسها، وخرجت إلى الطريق العام، واصطدمت بسيارتي المتوقفة، فأتلفت المصد الأمامي. لم يكن أحد عند مقود الجزّازة. أطلب تعويض تكلفة الإصلاح.",
+      "kk": "Осы арқылы көлік құралына зиян келтірілгені туралы хабарлаймын. Түнгі уақытта менің премиум отырып басқарылатын шөп шапқышым өздігінен оталып, ортақ пайдаланудағы жолға шығып, өзімнің тұрған автокөлігіме соғылып, алдыңғы бамперді зақымдады. Шапқыштың рульінде ешкім болмады. Жөндеу құнын өтеуді сұраймын."
+    }
+  },
+  "coverImage": "covers/case-019.svg",
+  "personImage": "people/anatoly.svg",
+  "evidences": [
+    {
+      "id": "ev-police",
+      "type": "document",
+      "title": {
+        "ru": "Протокол ГИБДД",
+        "en": "Traffic Police Report",
+        "tr": "Trafik Polisi Raporu",
+        "ar": "محضر شرطة المرور",
+        "kk": "Жол полициясының хаттамасы"
+      },
+      "content": {
+        "ru": "Из протокола: «Столкновение совершено беспилотным сельскохозяйственным транспортным средством. Водитель на месте происшествия не установлен. Алкоголь и иные участники движения исключены». Время — 03:40.",
+        "en": "From the report: \"The collision was caused by an unmanned agricultural vehicle. No driver was identified at the scene. Alcohol and other road users are ruled out.\" Time — 03:40.",
+        "tr": "Rapordan: \"Çarpışma, insansız bir tarım aracı tarafından gerçekleştirildi. Olay yerinde sürücü tespit edilemedi. Alkol ve diğer yol kullanıcıları elendi.\" Saat — 03:40.",
+        "ar": "من المحضر: «وقع الاصطدام بفعل مركبة زراعية بدون سائق. لم يُحدَّد أي سائق في مكان الحادث. استُبعد الكحول وسائر مستخدمي الطريق». الوقت — 03:40.",
+        "kk": "Хаттамадан: «Соқтығысу ұшқышсыз ауылшаруашылық көлік құралымен жасалды. Оқиға орнында жүргізуші анықталмады. Алкоголь мен басқа жол қозғалысына қатысушылар жоққа шығарылды». Уақыты — 03:40."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Официальный протокол прямо фиксирует наезд беспилотной техники — это подтверждает заявление.",
+        "en": "The official report explicitly records a collision by an unmanned vehicle — this supports the claim.",
+        "tr": "Resmi rapor, insansız bir aracın çarpışmasını açıkça kaydediyor — bu, talebi destekliyor.",
+        "ar": "المحضر الرسمي يسجّل صراحةً اصطداماً بمركبة بدون سائق — وهذا يدعم المطالبة.",
+        "kk": "Ресми хаттама ұшқышсыз техниканың соғылуын тікелей тіркейді — бұл өтінішті растайды."
+      }
+    },
+    {
+      "id": "ev-photo",
+      "type": "photo",
+      "title": {
+        "ru": "Фото места ДТП",
+        "en": "Accident Scene Photo",
+        "tr": "Kaza Yeri Fotoğrafı",
+        "ar": "صورة مكان الحادث",
+        "kk": "Жол оқиғасы орнының суреті"
+      },
+      "content": {
+        "ru": "Газонокосилка застряла под передним бампером автомобиля. Рулевое колесо и сиденье косилки сплошь покрыты грязными отпечатками маленьких лап. Рядом — осыпавшаяся слива.",
+        "en": "The lawnmower is wedged under the car's front bumper. The mower's steering wheel and seat are covered with muddy little paw prints. Nearby lie fallen plums.",
+        "tr": "Çim biçme makinesi, arabanın ön tamponunun altına sıkışmış. Makinenin direksiyonu ve koltuğu çamurlu küçük pati izleriyle kaplı. Yakında dökülmüş erikler var.",
+        "ar": "جزّازة العشب محشورة تحت المصد الأمامي للسيارة. عجلة قيادة الجزّازة ومقعدها مغطّيان بآثار مخالب صغيرة موحلة. وبالقرب منها برقوق متساقط.",
+        "kk": "Шөп шапқыш автокөліктің алдыңғы бамперінің астына қыстырылып қалған. Шапқыштың рулі мен орындығы лай болған кішкентай табан іздерімен толған. Қасында түсіп қалған өрік жатыр."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Следы лап на руле и слива рядом объясняют, что косилку привело в движение животное.",
+        "en": "The paw prints on the wheel and the plums nearby explain that an animal set the mower in motion.",
+        "tr": "Direksiyondaki pati izleri ve yakındaki erikler, makineyi bir hayvanın harekete geçirdiğini açıklıyor.",
+        "ar": "آثار المخالب على المقود والبرقوق القريب يفسّران أن حيواناً هو من حرّك الجزّازة.",
+        "kk": "Рульдегі табан іздері мен қасындағы өрік шапқышты жануар қозғалысқа келтіргенін түсіндіреді."
+      },
+      "meta": {
+        "filename": "IMG_20260509_034208.jpg"
+      }
+    },
+    {
+      "id": "ev-camera",
+      "type": "camera_recording",
+      "title": {
+        "ru": "Запись дворовой камеры",
+        "en": "Yard Camera Recording",
+        "tr": "Bahçe Kamerası Kaydı",
+        "ar": "تسجيل كاميرا الفناء",
+        "kk": "Аула камерасының жазбасы"
+      },
+      "content": {
+        "ru": "Ночная запись: енот забирается на косилку под сливовым деревом, тянется к ветке и задевает рычаг передачи. Машина дёргается вперёд, енот кубарем падает, а косилка катится со двора на дорогу и упирается в бампер автомобиля.",
+        "en": "Night footage: a raccoon climbs onto the mower under the plum tree, reaches for a branch, and knocks the gear lever. The machine lurches forward, the raccoon tumbles off, and the mower rolls out of the yard onto the road and into the car's bumper.",
+        "tr": "Gece görüntüsü: bir rakun erik ağacının altındaki makineye tırmanıyor, bir dala uzanıyor ve vites koluna çarpıyor. Makine ileri fırlıyor, rakun yuvarlanarak düşüyor ve makine bahçeden yola çıkıp arabanın tamponuna toslıyor.",
+        "ar": "تسجيل ليلي: راكون يتسلق الجزّازة تحت شجرة البرقوق، يمدّ يده نحو غصن، فيصطدم بذراع نقل السرعة. تندفع الآلة إلى الأمام، يتدحرج الراكون ساقطاً، وتخرج الجزّازة من الفناء إلى الطريق فترتطم بمصد السيارة.",
+        "kk": "Түнгі жазба: енот өрік ағашының астындағы шапқышқа мініп, бұтаққа созылады да, беріліс тұтқасын қағып кетеді. Машина алға ұмтылады, енот домалап түсіп қалады, ал шапқыш аула ішінен жолға шығып, автокөліктің бамперіне тіреледі."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Запись по кадрам показывает причину: енот случайно включил передачу. Полностью согласуется с делом.",
+        "en": "The footage shows the cause frame by frame: the raccoon accidentally engaged the gear. Fully consistent with the case.",
+        "tr": "Görüntü, nedeni kare kare gösteriyor: rakun yanlışlıkla vitesi devreye soktu. Davayla tamamen tutarlı.",
+        "ar": "التسجيل يُظهر السبب لقطة بلقطة: الراكون أدخل ناقل الحركة عن طريق الخطأ. متوافق تماماً مع القضية.",
+        "kk": "Жазба себебін кадрлап көрсетеді: енот байқаусызда берілісті қосып жіберген. Іспен толық үйлеседі."
+      },
+      "meta": {
+        "cameraId": "CAM-YD2",
+        "cameraModel": "Imou Cruiser 2 · 4K · H.265"
+      }
+    }
+  ],
+  "correctDecision": "approve",
+  "explanation": {
+    "ru": [
+      "Самоходная газонокосилка звучит как выдумка, но протокол, фото и видео сходятся.",
+      "На самом деле Жорик залез на косилку, чтобы дотянуться до сливы, случайно сдвинул рычаг передачи и свалился.",
+      "Машина без водителя выкатилась на дорогу и врезалась в бампер. Противоречий нет — заявление подлинное, одобряем."
+    ],
+    "en": [
+      "A self-driving lawnmower sounds made up, but the report, photo, and video all agree.",
+      "In reality, Zhorik climbed onto the mower to reach the plums, accidentally shifted the gear lever, and fell off.",
+      "The driverless machine rolled onto the road and hit the bumper. No contradictions — the claim is genuine, approve it."
+    ],
+    "tr": [
+      "Kendi kendine giden bir çim biçme makinesi uydurma gibi geliyor ama rapor, fotoğraf ve video birbirini doğruluyor.",
+      "Gerçekte Zhorik eriklere uzanmak için makineye tırmandı, yanlışlıkla vites koluna çarptı ve düştü.",
+      "Sürücüsüz makine yola çıkıp tampona çarptı. Çelişki yok — talep gerçek, onaylayın."
+    ],
+    "ar": [
+      "جزّازة تسير من تلقاء نفسها تبدو ملفّقة، لكن المحضر والصورة والفيديو كلها متوافقة.",
+      "في الحقيقة تسلّق جوريك الجزّازة ليصل إلى البرقوق، فحرّك ذراع نقل السرعة عن طريق الخطأ وسقط.",
+      "تدحرجت الآلة بلا سائق إلى الطريق واصطدمت بالمصد. لا توجد تناقضات — المطالبة حقيقية، وافق عليها."
+    ],
+    "kk": [
+      "Өздігінен жүретін шөп шапқыш ойдан шығарылғандай естіледі, бірақ хаттама, сурет пен бейне сәйкеседі.",
+      "Шын мәнінде Жорик өрікке жету үшін шапқышқа мініп, байқаусызда беріліс тұтқасын жылжытып, құлап түсті.",
+      "Жүргізушісіз машина жолға шығып, бамперге соғылды. Қайшылық жоқ — талап шынайы, мақұлдаңыз."
+    ]
+  }
+}

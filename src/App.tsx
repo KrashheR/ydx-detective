@@ -43,7 +43,7 @@ import { formatCaseLockMessage } from './utils/caseDisplay';
  * Folder visual theme. The mockup ships two looks; manila (warm archive) is the
  * default. Switch to 'dossier' for the corporate look — both are wired in CSS.
  */
-const FOLDER_LOOK: 'manila' | 'dossier' = 'dossier';
+const FOLDER_LOOK: 'manila' | 'dossier' = 'manila';
 
 export default function App() {
   const store = useGameStore();
@@ -402,7 +402,7 @@ export default function App() {
             initial={{ y: 12, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 12, opacity: 0 }}
-            className="fixed bottom-[22px] left-1/2 z-[60] max-w-[86%] -translate-x-1/2 rounded-[9px] border border-stamp bg-surface-2 px-[18px] py-3 text-center text-[13px] font-medium leading-snug text-[#fee2e2] shadow-lift"
+            className="fixed bottom-[22px] left-1/2 z-[60] max-w-[86%] -translate-x-1/2 rounded-[9px] border border-stamp bg-[#2b2018] px-[18px] py-3 text-center text-[13px] font-medium leading-snug text-[#fee2e2] shadow-lift"
           >
             {toast}
           </motion.div>

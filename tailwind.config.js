@@ -4,20 +4,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        // --- Fixed desk chrome (theme-independent) ---
-        bg: '#111827', // desk background
-        surface: '#1F2937', // sidebars / panels
-        'surface-2': '#111827', // nested blocks inside panels
-        border: '#374151', // panel / block borders
-        ink: '#1F2937', // text on paper
+        // --- Fixed desk chrome (theme-independent) — warm manila archive ---
+        bg: '#ECE3D2', // desk background (cream paper)
+        surface: '#F6EFE1', // sidebars / panels (light archive paper)
+        'surface-2': '#E2D7C2', // nested blocks inside panels
+        border: '#D2C4A8', // panel / block borders
+        ink: '#1F2937', // text on white document paper
         success: '#16A34A',
         danger: '#DC2626',
         gold: '#D9A441', // daily-case highlight
         'gold-dark': '#3A2705',
         'gold-text': '#F0C46B',
-        'text-light': '#E5E7EB',
-        'text-muted': '#9CA3AF',
-        'text-dim': '#6B7280',
+        'text-light': '#3A3024', // primary text on cream chrome
+        'text-muted': '#7A6C54', // secondary text on cream chrome
+        'text-dim': '#7A6C54', // muted labels on cream chrome
 
         // --- Folder theme (manila | dossier) via CSS vars ---
         // RGB channels so Tailwind's /opacity modifier keeps working.

@@ -67,7 +67,7 @@ export function RightSidebar({
       {/* Investigator rank — desktop analytics column */}
       <Card className="hidden md:block">
         <div className="flex items-baseline justify-between gap-2">
-          <span className="text-xs font-semibold text-[#d1d5db]">
+          <span className="text-xs font-semibold text-text-light">
             {t('rank', lang)}
           </span>
           <span className="text-xs font-bold text-accent">{levelTitle}</span>
@@ -132,7 +132,7 @@ export function RightSidebar({
       <button
         type="button"
         onClick={onOpenAchievements}
-        className="flex items-center justify-between rounded-[10px] border border-border bg-surface-2 px-3.5 py-3 text-left text-sm text-[#d1d5db] transition-colors hover:border-white/25"
+        className="flex items-center justify-between rounded-[10px] border border-border bg-surface-2 px-3.5 py-3 text-left text-sm text-text-light transition-colors hover:border-black/15"
       >
         <span className="flex items-center gap-2">
           <span aria-hidden>🏅</span>
@@ -160,7 +160,7 @@ export function RightSidebar({
                 </li>
               )}
               <li
-                className="flex items-center gap-2.5 border-b border-surface py-[7px] last:border-0"
+                className="flex items-center gap-2.5 border-b border-border py-[7px] last:border-0"
               >
               <span className="w-5 font-mono text-xs font-bold text-text-dim">
                 {String(row.rank).padStart(2, '0')}
@@ -174,7 +174,7 @@ export function RightSidebar({
               )}
               <span
                 className={`min-w-0 flex-1 truncate text-xs font-semibold ${
-                  row.isCurrentPlayer ? 'text-accent' : 'text-[#e5e7eb]'
+                  row.isCurrentPlayer ? 'text-accent' : 'text-text-light'
                 }`}
               >
                 {row.name}

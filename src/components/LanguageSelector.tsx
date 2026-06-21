@@ -18,7 +18,7 @@ export function LanguageSelector({ lang, onChange }: Props) {
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="flex w-full items-center justify-between gap-2 rounded-lg border border-border bg-surface-2 px-3 py-2.5 text-xs font-semibold text-[#d1d5db] transition-colors hover:border-white/30"
+        className="flex w-full items-center justify-between gap-2 rounded-lg border border-border bg-surface-2 px-3 py-2.5 text-xs font-semibold text-text-light transition-colors hover:border-black/20"
         aria-label={t('language', lang)}
         aria-expanded={open}
       >
@@ -41,7 +41,7 @@ export function LanguageSelector({ lang, onChange }: Props) {
               const label = LANGUAGE_LABELS[code];
               const active = code === lang;
               return (
-                <li key={code} className="border-b border-surface last:border-0">
+                <li key={code} className="border-b border-border last:border-0">
                   <button
                     type="button"
                     onClick={() => {
@@ -49,7 +49,7 @@ export function LanguageSelector({ lang, onChange }: Props) {
                       setOpen(false);
                     }}
                     className={`flex w-full items-center justify-between gap-2 px-3 py-2.5 text-xs font-medium transition-colors hover:bg-surface ${
-                      active ? 'text-accent' : 'text-[#d1d5db]'
+                      active ? 'text-accent' : 'text-text-light'
                     }`}
                   >
                     <span>{label.native}</span>

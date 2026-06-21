@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
-import type { Evidence, Language } from '../types';
-import { loc, t } from '../i18n/ui';
-import { EVIDENCE_TAG_KEY } from './icons';
-import { Tooltip } from './Tooltip';
+import { motion } from "framer-motion";
+import type { Evidence, Language } from "../types";
+import { loc, t } from "../i18n/ui";
+import { EVIDENCE_TAG_KEY } from "./icons";
+import { Tooltip } from "./Tooltip";
 
 interface Props {
   evidence: Evidence;
@@ -32,66 +32,68 @@ export function EvidenceCard({
   return (
     <Tooltip
       className="block h-full"
-      label={sealed ? t('tipSealedCard', lang) : null}
+      label={sealed ? t("tipSealedCard", lang) : null}
     >
-    <motion.button
-      type="button"
-      onClick={onClick}
-      disabled={sealed}
-      whileHover={sealed ? undefined : { y: -4 }}
-      whileTap={sealed ? undefined : { scale: 0.99 }}
-      transition={{ type: 'spring', stiffness: 300, damping: 24 }}
-      className={`relative flex h-full w-full flex-col overflow-hidden rounded-[7px] border border-black/[0.08] bg-paper p-3.5 text-left shadow-card transition-shadow ${
-        sealed ? 'cursor-not-allowed opacity-50 grayscale' : 'hover:shadow-card-hover'
-      }`}
-    >
-      {/* Mono chip-tag on the folder-edge colour */}
-      <span className="inline-block w-fit rounded font-mono text-[10px] font-bold uppercase tracking-wider text-white bg-folder-edge px-2 py-[3px]">
-        {t(EVIDENCE_TAG_KEY[evidence.type], lang)}
-      </span>
-
-      <span className="mt-2.5 font-serif text-sm font-semibold leading-snug text-ink">
-        {loc(evidence.title, lang)}
-      </span>
-
-      {/* Hint reveal — shows the card's true status once a hint exposed it */}
-      {revealed && (
-        <span
-          className={`mt-2 inline-flex w-fit items-center gap-1 rounded px-1.5 py-0.5 font-mono text-[10px] font-semibold ${
-            evidence.isContradiction
-              ? 'bg-stamp/10 text-stamp'
-              : 'bg-success/10 text-success'
-          }`}
-        >
-          {evidence.isContradiction
-            ? `⚠ ${t('revealedContradiction', lang)}`
-            : `✓ ${t('revealedClean', lang)}`}
-        </span>
-      )}
-
-      {/* CTA doubles as the read indicator (drives the "review-all" gate) */}
-      <span
-        className={`mt-3 text-[11px] font-semibold ${
-          sealed ? 'text-ink/40' : viewed ? 'text-ink/45' : 'text-accent'
+      <motion.button
+        type="button"
+        onClick={onClick}
+        disabled={sealed}
+        whileHover={sealed ? undefined : { y: -4 }}
+        whileTap={sealed ? undefined : { scale: 0.99 }}
+        transition={{ type: "spring", stiffness: 300, damping: 24 }}
+        className={`relative flex h-full w-full flex-col overflow-hidden rounded-[7px] border border-black/[0.08] bg-paper p-3.5 text-left shadow-card transition-shadow ${
+          sealed
+            ? "cursor-not-allowed opacity-50 grayscale"
+            : "hover:shadow-card-hover"
         }`}
       >
-        {sealed
-          ? `🔒 ${t('sealedDossier', lang)}`
-          : viewed
-            ? `${t('viewedDossier', lang)} ✓`
-            : `${t('openDossier', lang)} →`}
-      </span>
-
-      {/* Diagonal corner stamp once marked as a contradiction */}
-      {stamped && (
-        <span
-          aria-hidden
-          className="absolute right-[-26px] top-2 rotate-[34deg] bg-stamp px-7 py-[3px] font-mono text-[8px] font-bold uppercase tracking-wider text-white"
-        >
-          {t('contradiction', lang)}
+        {/* Mono chip-tag on the folder-edge colour */}
+        <span className="inline-block w-fit rounded font-mono text-[10px] font-bold uppercase tracking-wider text-white bg-folder-edge px-2 py-[3px]">
+          {t(EVIDENCE_TAG_KEY[evidence.type], lang)}
         </span>
-      )}
-    </motion.button>
+
+        <span className="mt-2.5 font-serif text-sm font-semibold leading-snug text-ink">
+          {loc(evidence.title, lang)}
+        </span>
+
+        {/* Hint reveal — shows the card's true status once a hint exposed it */}
+        {revealed && (
+          <span
+            className={`mt-2 inline-flex w-fit items-center gap-1 rounded px-1.5 py-0.5 font-mono text-[10px] font-semibold ${
+              evidence.isContradiction
+                ? "bg-stamp/10 text-stamp"
+                : "bg-success/10 text-success"
+            }`}
+          >
+            {evidence.isContradiction
+              ? `⚠ ${t("revealedContradiction", lang)}`
+              : `✓ ${t("revealedClean", lang)}`}
+          </span>
+        )}
+
+        {/* CTA doubles as the read indicator (drives the "review-all" gate) */}
+        <span
+          className={`mt-3 text-[11px] font-semibold ${
+            sealed ? "text-ink/40" : viewed ? "text-ink/45" : "text-accent"
+          }`}
+        >
+          {sealed
+            ? `🔒 ${t("sealedDossier", lang)}`
+            : viewed
+              ? `${t("viewedDossier", lang)} ✓`
+              : `${t("openDossier", lang)} →`}
+        </span>
+
+        {/* Diagonal corner stamp once marked as a contradiction */}
+        {stamped && (
+          <span
+            aria-hidden
+            className="absolute right-[-26px] top-3 rotate-[34deg] bg-stamp px-7 py-[3px] font-mono text-[8px] font-bold uppercase tracking-wider text-white"
+          >
+            {t("contradiction", lang)}
+          </span>
+        )}
+      </motion.button>
     </Tooltip>
   );
 }

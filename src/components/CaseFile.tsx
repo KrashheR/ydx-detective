@@ -177,7 +177,7 @@ export function CaseFile({
 
   const materialsHeader = (
     <div className="my-[14px] flex items-center justify-between gap-2">
-      <span className="text-xs font-semibold tracking-[1px] text-[#d1d5db]">
+      <span className="text-xs font-semibold tracking-[1px] text-text-light">
         {t("caseMaterials", lang)} · {evCount} {t("documents", lang)}
       </span>
       <div className="flex items-center gap-2.5">
@@ -226,7 +226,7 @@ export function CaseFile({
             onClick={() => setTab(key)}
             className={`flex-1 border-b-2 py-3 text-center text-xs font-semibold transition-colors ${
               tab === key
-                ? "border-accent text-[#f3f4f6]"
+                ? "border-accent text-text-light"
                 : "border-transparent text-text-dim"
             }`}
           >
@@ -280,7 +280,7 @@ export function CaseFile({
                 type="button"
                 disabled={!canAffordNote}
                 onClick={() => onBuyHint("note")}
-                className="flex w-full items-center justify-between gap-2 rounded-[9px] border border-accent/50 px-3 py-2.5 text-sm font-medium text-[#e5e7eb] transition-colors hover:bg-accent/10 disabled:cursor-not-allowed disabled:opacity-40"
+                className="flex w-full items-center justify-between gap-2 rounded-[9px] border border-accent/50 px-3 py-2.5 text-sm font-medium text-text-light transition-colors hover:bg-accent/10 disabled:cursor-not-allowed disabled:opacity-40"
               >
                 <span>{t("hintNote", lang)}</span>
                 <span className="font-mono text-text-muted">₽{noteCost}</span>
@@ -289,7 +289,7 @@ export function CaseFile({
             <button
               type="button"
               onClick={() => onBuyHint("canvass")}
-              className="flex flex-1 items-center justify-between gap-2 rounded-[9px] border border-gold/50 px-3 py-2.5 text-sm font-medium text-[#e5e7eb] transition-colors hover:bg-gold/10 overflow-hidden"
+              className="flex flex-1 items-center justify-between gap-2 rounded-[9px] border border-gold/50 px-3 py-2.5 text-sm font-medium text-text-light transition-colors hover:bg-gold/10 overflow-hidden"
             >
               <span>{t("hintCanvass", lang)}</span>
               <span className="whitespace-nowrap text-gold">
@@ -323,7 +323,7 @@ export function CaseFile({
             initial={{ y: 12, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 12, opacity: 0 }}
-            className="fixed bottom-[22px] left-1/2 z-[60] max-w-[86%] -translate-x-1/2 rounded-[9px] border border-stamp bg-surface-2 px-[18px] py-3 text-center text-[13px] font-medium leading-snug text-[#fee2e2] shadow-lift"
+            className="fixed bottom-[22px] left-1/2 z-[60] max-w-[86%] -translate-x-1/2 rounded-[9px] border border-stamp bg-[#2b2018] px-[18px] py-3 text-center text-[13px] font-medium leading-snug text-[#fee2e2] shadow-lift"
           >
             {toast}
           </motion.div>

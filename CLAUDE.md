@@ -6,6 +6,25 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **Где ложь? Симулятор детектива** (*Where is the Lie? Detective Simulator*) — a data-driven insurance-investigation game built for the **Yandex Games** platform. React + TypeScript + Zustand + Zod + Tailwind + Framer Motion, bundled with Vite. The player reviews a claim file, opens evidence cards, stamps the ones that contradict the claim, and renders an approve/reject verdict; reward is scored on both the verdict and the precision of the stamping
 
+## 📚 Documentation map (read these to save tokens)
+
+Detailed, up-to-date docs live in **`docs/`**. This file is the rules + condensed map; jump straight to the targeted doc instead of re-deriving from source. Index: **[docs/README.md](docs/README.md)**.
+
+| Doc | Read when |
+| --- | --------- |
+| [docs/01-overview.md](docs/01-overview.md) | Need product context, audience, game loop |
+| [docs/02-architecture.md](docs/02-architecture.md) | Touching architecture, store, engines, data flow, lifecycle |
+| [docs/03-gameplay.md](docs/03-gameplay.md) | Changing the investigation flow, stamping, verdict gating, budget, hints, campaign unlocks |
+| [docs/04-economy-progression.md](docs/04-economy-progression.md) | Tuning reward formula, XP/levels, streaks, achievements, daily, bankruptcy |
+| [docs/05-design.md](docs/05-design.md) | Changing UI/visuals/tokens/evidence renderers/components |
+| [docs/06-yandex-platform.md](docs/06-yandex-platform.md) | Touching SDK, cloud saves, server time, ads, leaderboard, rating, persistence |
+| [docs/07-authoring-content.md](docs/07-authoring-content.md) | Adding a case, language, achievement, or evidence type (+ `src/data/CASE_AUTHORING_GUIDE.json`) |
+| [docs/08-build-test-deploy.md](docs/08-build-test-deploy.md) | Build, test, verify, deploy to Yandex |
+
+The non-obvious behaviors below remain the authoritative quick-reference for engine/store rules; `docs/` expands on each. If a doc and the source disagree, **source wins** — fix the doc.
+
+> **🔄 Keep the docs current (required).** After any change that alters behavior, architecture, mechanics, economy/config, design tokens, the Yandex integration, or the content-authoring process, update the matching `docs/*.md` file **in the same change** — and this `CLAUDE.md` if a non-obvious behavior or the doc map shifted. Treat the docs as part of "done": a change isn't finished until the docs describing it match. When you add a new doc, also add it to the map above and to `docs/README.md`. Keep edits surgical — fix the affected lines, don't rewrite whole files. If you discover a doc that already drifted from the code, correct it as you pass through.
+
 ## Commands
 
 ```bash
@@ -58,16 +77,17 @@ daily gating       → getServerTimeMs()                (NEVER device time)
 - **Reward formula** (`evaluateReward`): `BaseReward = claimAmount × (daily ? 5 : 1)`. Verdict component = 50% of base iff `decision === correctDecision`. Proof component = 50% of base × (correctStamps / totalContradictions). **Bonus component** = (rank% + streak%) applied to the _positive_ base only (verdict + proof + efficiency, never the penalty). Penalty = 50 per _falsely_ stamped card. Net total may be negative. A case with **zero** contradictions awards the full proof component automatically (guards divide-by-zero). All tuning lives in `src/config/gameConfig.ts` — adjust the economy there, not in the engine.
 - **Investigation budget** (the budgeted-case variant — see `Case.investigationBudget`). When a case sets `investigationBudget: N`, the player may open at most N evidence cards before deciding, and the reward split shifts from 50/50 to **40 verdict / 40 proof / 20 efficiency** (`reward.budgeted` in `gameConfig.ts`; the three shares sum to 1.0 so the positive ceiling stays 100% of base). The **efficiency component** = `efficiencyShare × base × (unusedOpens / budget)`, paid **only** on a correct verdict; `opensUsed` is passed into `evaluateReward` from `session.viewedEvidenceIds.length` and **defaults to the full budget (zero efficiency) when omitted**. Un-budgeted cases are completely unaffected (no efficiency component, classic gate). Touch-points if you change this: `evaluateReward`, `selectCaseInvestigationGate`, `markEvidenceAsViewed`, `EvidenceCard`'s `sealed` prop, and `RewardBreakdown.efficiencyComponent`.
 - **Two economies, kept separate.** `balance` is the spendable currency (grows from rewards, spent on hints, reset by bankruptcy). `xp` is permanent career progress that only ever increases and drives the rank ladder. Never conflate them.
-- **Ranks & XP** (`rankEngine`). Each closed case grants XP (difficulty weight × proof quality, ×2 daily; a small flat award for a wrong verdict). Cumulative XP maps to a rank (`GAME_CONFIG.progression.ranks`), which grants an additive reward-bonus %. The rank bonus applied to a case is read _before_ that case's XP is added (it reflects standing at solve time); promotion detection uses the _post_-bonus XP so an achievement bonus can also tip a threshold. Rank titles are i18n keys `rank_<id>`.
+- **Ranks & XP** (`rankEngine`). Each closed case grants XP (difficulty weight × proof quality, ×2 daily; a small flat award for a wrong verdict). Cumulative XP maps to an investigator level (`GAME_CONFIG.progression.ranks`, the `level_01`…`level_30` ladder), which grants an additive reward-bonus %. The level bonus applied to a case is read _before_ that case's XP is added (it reflects standing at solve time); promotion detection uses the _post_-bonus XP so an achievement bonus can also tip a threshold. Level titles are i18n keys `level_<id>` (e.g. `level_01`).
 - **Streaks** (`streakEngine`). Consecutive _server_-days with ≥1 closed case; +5%/day reward bonus capped at +50%. Same-day replays don't stack; a skipped day resets to 1. Evaluated only in `submitVerdict`, against server time.
 - **Hints** (`buyHint`). Two hints, both revealing the next unrevealed card's true status (appended to `session.revealedEvidenceIds`, so they survive resume; the reveal is shown on the EvidenceCard grid and in the StampModal). They differ only in unlock method: **Inspector Note** charges `balance` (20% of `claimAmount`, via `hints.inspectorNoteClaimPct`) and is a no-op when unaffordable; **Witness Canvass** is free but gated on a rewarded Yandex video (`showRewardedAd` → reveal on `onRewarded`; dev/offline grants instantly). Hints never trigger bankruptcy.
 - **Achievements** (`achievementsEngine` + `data/achievements.ts`). One-time unlocks evaluated against post-case stats after every verdict; each grants a one-time XP + currency bonus and is recorded in `stats.unlockedAchievementIds`. Newly unlocked ones surface on the ResultSheet; the full archive opens from the right sidebar.
 - **Server time only for daily gating.** Daily lock/unlock evaluates against `getServerTimeMs()` (Yandex `serverTime()`), never the device clock. Device time is used only as an offline fallback and is explicitly best-effort.
 - **Persistence is dual-write.** LocalStorage is written synchronously on every change (instant, offline-safe); the cloud write is debounced to ≤1 per 10s. Case closure and unload call `flushSync` to bypass the debounce. On load, cloud wins over local when present.
 - **Resume mid-case.** `ActiveSession` is persisted alongside stats, so quitting mid-investigation restores stamps, viewed cards, and bought hints (`revealedEvidenceIds` / `briefingRevealed`). `startCase` deliberately does _not_ wipe an existing session for the same case.
-- **Save migration.** `GAME_CONFIG.saveVersion` is the persisted-snapshot schema version (currently **2**). `migrate()` in `persistence.ts` spreads current defaults under older saves to backfill new fields (v1→v2 added the xp/streak/achievement stats and the session's hint fields). Bump the version and extend `migrate()` whenever the persisted shape changes.
+- **Save migration.** `GAME_CONFIG.saveVersion` is the persisted-snapshot schema version (currently **3**). `migrate()` in `persistence.ts` spreads current defaults under older saves to backfill new fields (v1→v2 added the xp/streak/achievement stats and the session's hint fields; v2→v3 added `ratingDismissals`). Bump the version and extend `migrate()` whenever the persisted shape changes.
 - **Pause guard.** Any ad open/close (fullscreen or rewarded) broadcasts through `onPauseChange`, flipping the global `isPaused` flag that freezes the game and shows the pause overlay.
 - **Bankruptcy.** Balance ≤ 0 sets `isBankrupt`, which gates progression behind a rewarded-video "restore funds" → resets to 2000. In dev/offline, `showRewardedAd` grants the reward immediately so the game stays playable.
+- **Campaign unlocks** (`caseUnlockEngine`). Standard cases are gated by an investigator-level requirement (`GAME_CONFIG.caseUnlocks.standardCaseRequiredLevelById`, falling back to `defaultRequiredLevel`) **and** strict sequence (the previous case must be completed). Daily cases are gated only by the 24h cooldown, never by level. Locked cases surface a reason toast (`formatCaseLockMessage`). Availability is derived at render time from immutable case data + `PlayerStats`, so no case content is persisted.
 - **Verdict gating** (`selectCaseInvestigationGate`): on a **classic (un-budgeted)** case you may only _approve_ after viewing every evidence card; you may only _reject_ with at least one stamped card. On a **budgeted** case, _approve_ unlocks as soon as ≥1 card is opened (decide under uncertainty); _reject_ is unchanged. The selector also returns `budget / opensRemaining / budgetExhausted` for the UI counter and card-sealing. `markEvidenceAsViewed(id, caseData)` now **takes the case and returns a boolean** — `false` means the open was refused (budget exhausted on a new card); `App.handleOpenEvidence` shows the `budgetExhausted` toast and skips opening the modal. Already-opened cards are always re-readable and never refused.
 - **`Tooltip` (`src/components/Tooltip.tsx`) duplicates its label into the DOM** as a hidden `<span role="tooltip">` (pure-CSS hover, works over `disabled` buttons). It wraps blocked controls (reject/approve buttons, sealed cards, unaffordable hints). **Test gotcha:** when a tooltip label reuses a string that also appears elsewhere (e.g. `rejectNeedsProof` shows in both the reject tooltip and the click toast), `findByText` finds two matches and throws — query with `{ ignore: '[role="tooltip"]' }` to target the visible element.
 - **`devCheat` is DEV-only.** `store.devCheat()` grants a huge balance + top-rank XP; bound to **Ctrl+Shift+M** and exposed as `window.__cheat()` in the console. Hard no-op in production (`import.meta.env.DEV` guard) — never reaches a shipped economy.
@@ -86,18 +106,25 @@ The product is deliberately **not** a flashy mobile game. The screen is an _"Inv
 
 **Red lines — do not introduce:** neon effects, cartoon graphics, gaming/sci-fi gradients, fantasy elements, or mobile-casino aesthetics. Core emotion to serve: _"I noticed the lie and exposed the fraudster."_
 
-Design tokens are wired into `tailwind.config.js` (do not hardcode hex — use these names):
+Design tokens are wired into `tailwind.config.js` (do not hardcode hex — use these names).
+The chrome was redesigned from a dark night-desk to a warm **cream "manila archive"** per the
+Claude Design mockup (`ClaimGame.dc.html`), and the accent moved blue → teal:
 
-| Token     | Hex       | Use                  |
-| --------- | --------- | -------------------- |
-| `bg`      | `#111827` | desk background      |
-| `surface` | `#1F2937` | sidebars / panels    |
-| `paper`   | `#F3F4F6` | document sheets      |
-| `ink`     | `#1F2937` | text on paper        |
-| `accent`  | `#2563EB` | primary actions      |
-| `success` | `#16A34A` | Approve              |
-| `danger`  | `#DC2626` | Reject               |
-| `gold`    | `#D97706` | daily-case highlight |
+| Token        | Hex       | Use                                |
+| ------------ | --------- | ---------------------------------- |
+| `bg`         | `#ECE3D2` | desk background (cream)            |
+| `surface`    | `#F6EFE1` | sidebars / panels                  |
+| `surface-2`  | `#E2D7C2` | nested blocks inside panels        |
+| `border`     | `#D2C4A8` | panel / block borders              |
+| `paper`      | `#F5F1E8` | document sheets (`--paper`)        |
+| `ink`        | `#1F2937` | text on white document paper       |
+| `text-light` | `#3A3024` | primary text on cream chrome       |
+| `text-muted`/`text-dim` | `#7A6C54` | secondary text on chrome |
+| `accent`     | `#2F8F83` | primary actions (desk teal)        |
+| `success`    | `#16A34A` | Approve                            |
+| `danger`     | `#DC2626` | Reject                             |
+| `gold`       | `#D9A441` | daily-case highlight               |
+| `stamp`      | `#B4231F` | ink "contradiction" stamp (`--stamp`) |
 
 Fonts: `font-serif` (IBM Plex Serif) for document/headline text, `font-sans` (Inter) for UI chrome. Custom `shadow-folder` / `shadow-lift` give sheets physical depth.
 

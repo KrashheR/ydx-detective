@@ -1,0 +1,197 @@
+{
+  "id": "case-017",
+  "type": "standard",
+  "difficulty": "hard",
+  "claimAmount": 2400,
+  "truth": "valid",
+  "title": {
+    "ru": "Микроволновка-поджигатель",
+    "en": "The Arsonist Microwave",
+    "tr": "Kundakçı Mikrodalga",
+    "ar": "الميكروويف المُشعِل للحريق",
+    "kk": "Өрт қойған қысқа толқынды пеш"
+  },
+  "claim": {
+    "person": {
+      "ru": "Анатолий Степанович, 71 год",
+      "en": "Anatoly Stepanovich, 71",
+      "tr": "Anatoly Stepanovich, 71",
+      "ar": "أناتولي ستيبانوفيتش، 71",
+      "kk": "Анатолий Степанович, 71 жаста"
+    },
+    "story": {
+      "ru": "Настоящим довожу до вашего сведения о внештатном происшествии. В ночь на 14 марта моя умная микроволновая печь самопроизвольно открыла дверцу, поместила внутрь один кожаный ботинок и запекла его на мощности 800 Вт. Впоследствии голосовой помощник оформил заказ на 20 кг отборных грецких орехов, после чего произошло короткое замыкание и возгорание кухни. Прошу возместить причинённый ущерб согласно полису.",
+      "en": "I hereby report an incidental event. On the night of 14 March, my smart microwave oven opened its door of its own accord, placed a single leather shoe inside, and baked it at 800 watts. Subsequently, the voice assistant placed an order for 20 kg of premium walnuts, after which a short circuit occurred and the kitchen caught fire. I request compensation for the subsequent damage in accordance with the policy.",
+      "tr": "İşbu belgeyle olağan dışı bir olayı bilgilerinize sunarım. 14 Mart gecesi akıllı mikrodalga fırınım kapağını kendiliğinden açtı, içine tek bir deri ayakkabı yerleştirdi ve onu 800 watt güçte pişirdi. Akabinde sesli asistan 20 kg seçkin ceviz siparişi verdi, ardından kısa devre meydana geldi ve mutfak tutuştu. Poliçe uyarınca oluşan zararın tazmin edilmesini talep ederim.",
+      "ar": "أُبلغكم بموجب هذا عن واقعة عارضة. في ليلة الرابع عشر من مارس، فتح فرن الميكروويف الذكي بابه من تلقاء نفسه، ووضع بداخله حذاءً جلدياً واحداً، وشواه بقدرة 800 واط. وبعد ذلك، قام المساعد الصوتي بطلب 20 كيلوغراماً من الجوز الفاخر، ثم حدث ماس كهربائي واشتعلت النار في المطبخ. أطلب تعويض الضرر اللاحق وفقاً للوثيقة.",
+      "kk": "Осы арқылы штаттан тыс оқиға туралы хабарлаймын. 14 наурызға қараған түні менің ақылды қысқа толқынды пешім есігін өздігінен ашып, ішіне бір былғары етік салып, оны 800 Вт қуатпен пісірді. Кейіннен дауыстық көмекші 20 кг іріктелген грек жаңғағына тапсырыс берді, содан соң қысқа тұйықталу болып, ас үй өртеніп кетті. Полис бойынша келтірілген зиянды өтеуді сұраймын."
+    }
+  },
+  "coverImage": "covers/case-017.svg",
+  "personImage": "people/anatoly.svg",
+  "evidences": [
+    {
+      "id": "ev-vet",
+      "type": "document",
+      "title": {
+        "ru": "Счёт ветеринарной клиники",
+        "en": "Veterinary Clinic Bill",
+        "tr": "Veteriner Kliniği Faturası",
+        "ar": "فاتورة العيادة البيطرية",
+        "kk": "Ветеринарлық клиника шоты"
+      },
+      "content": {
+        "ru": "Енот по кличке Жорик доставлен ночью 14 марта с опалёнными усами и лёгким ожогом задней части. От шерсти исходит запах жжёного грецкого ореха и палёной кожи.",
+        "en": "A raccoon named Zhorik was admitted on the night of 14 March with singed whiskers and a minor burn to his rear. His fur smells of scorched walnut and burnt leather.",
+        "tr": "Zhorik adlı rakun, 14 Mart gecesi yanmış bıyıkları ve arka kısmında hafif bir yanıkla getirildi. Tüyleri yanık ceviz ve yanık deri kokuyor.",
+        "ar": "أُدخل راكون يُدعى جوريك ليلة الرابع عشر من مارس وله شوارب محترقة وحرق طفيف في مؤخرته. تفوح من فرائه رائحة الجوز المحروق والجلد المحترق.",
+        "kk": "Жорик атты енот 14 наурыз түні күйген мұрты мен артқы жағындағы жеңіл күйікпен әкелінді. Жүнінен күйген грек жаңғағы мен күйген былғары иісі шығады."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Травмы енота совпадают с описанным возгоранием и не противоречат делу.",
+        "en": "The raccoon's injuries match the described fire and do not contradict the case.",
+        "tr": "Rakunun yaralanmaları tarif edilen yangınla örtüşüyor ve davayla çelişmiyor.",
+        "ar": "إصابات الراكون تتطابق مع الحريق الموصوف ولا تتعارض مع القضية.",
+        "kk": "Еноттың жарақаттары сипатталған өртпен сәйкес келеді әрі іске қайшы емес."
+      }
+    },
+    {
+      "id": "ev-photo",
+      "type": "photo",
+      "title": {
+        "ru": "Фото места возгорания",
+        "en": "Fire Scene Photo",
+        "tr": "Yangın Yeri Fotoğrafı",
+        "ar": "صورة مكان الحريق",
+        "kk": "Өрт орнының суреті"
+      },
+      "content": {
+        "ru": "Внутри оплавленной микроволновой печи лежит обугленный кожаный ботинок. Дверца распахнута, стекло закопчено, на корпусе следы маленьких лап.",
+        "en": "A charred leather shoe lies inside the melted microwave. The door is flung open, the glass is sooty, and small paw marks streak the casing.",
+        "tr": "Erimiş mikrodalganın içinde kömürleşmiş bir deri ayakkabı duruyor. Kapak ardına kadar açık, cam isli ve gövdede küçük pati izleri var.",
+        "ar": "حذاء جلدي متفحم يرقد داخل الميكروويف المنصهر. الباب مفتوح على مصراعيه، والزجاج مغطى بالسخام، وعلى الهيكل آثار مخالب صغيرة.",
+        "kk": "Балқыған пештің ішінде көмірге айналған былғары етік жатыр. Есігі айқара ашық, шынысы күйеленген, корпуста кішкентай табан іздері бар."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Фото наглядно подтверждает запечённый ботинок и оплавленную печь.",
+        "en": "The photo plainly confirms the baked shoe and the melted oven.",
+        "tr": "Fotoğraf, pişmiş ayakkabıyı ve erimiş fırını açıkça doğruluyor.",
+        "ar": "الصورة تؤكد بوضوح الحذاء المشوي والفرن المنصهر.",
+        "kk": "Сурет пісірілген етік пен балқыған пешті айқын растайды."
+      },
+      "meta": {
+        "filename": "IMG_20260314_021903.jpg"
+      }
+    },
+    {
+      "id": "ev-speaker",
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал умной колонки",
+        "en": "Smart Speaker Log",
+        "tr": "Akıllı Hoparlör Kaydı",
+        "ar": "سجل مكبر الصوت الذكي",
+        "kk": "Ақылды колонка журналы"
+      },
+      "content": {
+        "ru": [
+          "02:13:47 — Кнопка быстрого старта: запуск печи, мощность 800 Вт",
+          "02:14:09 — Распознана голосовая команда: «Крррр-цок-щёлк»",
+          "02:14:11 — Оформлен заказ: грецкий орех отборный, 20 кг",
+          "02:16:32 — Скачок тока: короткое замыкание, линия обесточена"
+        ],
+        "en": [
+          "02:13:47 — Quick-start button: oven started, power 800 W",
+          "02:14:09 — Voice command recognized: \"Krrr-squeak-click\"",
+          "02:14:11 — Order placed: premium walnuts, 20 kg",
+          "02:16:32 — Current spike: short circuit, line de-energized"
+        ],
+        "tr": [
+          "02:13:47 — Hızlı başlat düğmesi: fırın çalıştı, güç 800 W",
+          "02:14:09 — Sesli komut tanındı: \"Krrr-cıyak-tık\"",
+          "02:14:11 — Sipariş verildi: seçkin ceviz, 20 kg",
+          "02:16:32 — Akım sıçraması: kısa devre, hat enerjisiz kaldı"
+        ],
+        "ar": [
+          "02:13:47 — زر التشغيل السريع: بدأ الفرن، القدرة 800 واط",
+          "02:14:09 — تم التعرف على أمر صوتي: «كرررر-صرير-طقطقة»",
+          "02:14:11 — تم تقديم طلب: جوز فاخر، 20 كيلوغراماً",
+          "02:16:32 — ارتفاع مفاجئ في التيار: ماس كهربائي، انقطع الخط"
+        ],
+        "kk": [
+          "02:13:47 — Жылдам іске қосу түймесі: пеш қосылды, қуат 800 Вт",
+          "02:14:09 — Дауыстық команда танылды: «Крррр-шиқ-шырт»",
+          "02:14:11 — Тапсырыс берілді: іріктелген грек жаңғағы, 20 кг",
+          "02:16:32 — Ток секірісі: қысқа тұйықталу, желі сөнді"
+        ]
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Журнал колонки по секундам подтверждает запуск печи, заказ орехов и замыкание — ровно как в заявлении.",
+        "en": "The speaker log confirms, second by second, the oven start, the walnut order, and the short circuit — exactly as claimed.",
+        "tr": "Hoparlör kaydı, fırının çalışmasını, ceviz siparişini ve kısa devreyi saniye saniye doğruluyor — tam da iddia edildiği gibi.",
+        "ar": "سجل المكبر يؤكد، ثانية بثانية، تشغيل الفرن وطلب الجوز والماس الكهربائي — تماماً كما ورد في الطلب.",
+        "kk": "Колонка журналы пештің қосылуын, жаңғаққа тапсырысты және қысқа тұйықталуды секунд сайын растайды — дәл өтініштегідей."
+      },
+      "meta": {
+        "logPrompt": "smarthome@kitchen:~$ tail -f /var/log/voice.log"
+      }
+    },
+    {
+      "id": "ev-fire",
+      "type": "document",
+      "title": {
+        "ru": "Заключение дознавателя",
+        "en": "Fire Inspector Report",
+        "tr": "Yangın Müfettişi Raporu",
+        "ar": "تقرير محقق الحرائق",
+        "kk": "Өрт тергеушісінің қорытындысы"
+      },
+      "content": {
+        "ru": "Очаг возгорания — микроволновая печь. Внутри обнаружен кожаный предмет, запекавшийся на максимальной мощности. Причина короткого замыкания — перегрузка линии. Следов поджога и горючих жидкостей не выявлено.",
+        "en": "The point of origin is the microwave oven. A leather object baked at maximum power was found inside. The short circuit was caused by line overload. No traces of arson or accelerants were found.",
+        "tr": "Yangının çıkış noktası mikrodalga fırındır. İçinde azami güçte pişmiş deri bir nesne bulundu. Kısa devre, hat aşırı yüklenmesinden kaynaklandı. Kundaklama veya yanıcı sıvı izine rastlanmadı.",
+        "ar": "بؤرة الحريق هي فرن الميكروويف. عُثر بداخله على جسم جلدي مشوي بأقصى قدرة. سبب الماس الكهربائي هو الحمل الزائد على الخط. لم يُعثر على آثار إشعال متعمد أو مواد مسرّعة للاشتعال.",
+        "kk": "Өрт ошағы — қысқа толқынды пеш. Ішінен ең жоғары қуатпен пісірілген былғары зат табылды. Қысқа тұйықталудың себебі — желінің асқын жүктемесі. Қасақана өрт пен жанғыш сұйықтық іздері анықталмады."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Официальное заключение полностью совпадает с версией заявителя.",
+        "en": "The official report fully matches the claimant's account.",
+        "tr": "Resmi rapor, talep sahibinin anlatımıyla tamamen örtüşüyor.",
+        "ar": "التقرير الرسمي يتطابق تماماً مع رواية مقدم الطلب.",
+        "kk": "Ресми қорытынды өтініш берушінің нұсқасымен толық сәйкес келеді."
+      }
+    }
+  ],
+  "correctDecision": "approve",
+  "explanation": {
+    "ru": [
+      "История звучит абсурдно, но каждая улика её подтверждает.",
+      "На самом деле Жорик прятал краденый ботинок в микроволновке и своим пышным задом нажал кнопку быстрого старта.",
+      "Его болтовня «крррр-цок-щёлк» сработала как голосовая команда колонке. Противоречий нет — заявление подлинное, одобряем."
+    ],
+    "en": [
+      "The story sounds absurd, but every piece of evidence supports it.",
+      "In reality, Zhorik was hiding a stolen shoe in the microwave and pressed the quick-start button with his ample bottom.",
+      "His chatter \"krrr-squeak-click\" registered as a voice command to the speaker. No contradictions — the claim is genuine, approve it."
+    ],
+    "tr": [
+      "Hikâye saçma geliyor ama her kanıt onu destekliyor.",
+      "Gerçekte Zhorik, çalınmış bir ayakkabıyı mikrodalgada saklıyordu ve dolgun kıçıyla hızlı başlat düğmesine bastı.",
+      "Onun \"krrr-cıyak-tık\" gevezeliği hoparlöre sesli komut olarak algılandı. Çelişki yok — talep gerçek, onaylayın."
+    ],
+    "ar": [
+      "تبدو القصة سخيفة، لكن كل دليل يدعمها.",
+      "في الحقيقة كان جوريك يخبئ حذاءً مسروقاً داخل الميكروويف وضغط زر التشغيل السريع بمؤخرته الممتلئة.",
+      "ثرثرته «كرررر-صرير-طقطقة» سُجّلت كأمر صوتي للمكبر. لا توجد تناقضات — المطالبة حقيقية، وافق عليها."
+    ],
+    "kk": [
+      "Оқиға күлкілі естіледі, бірақ әрбір дәлел оны растайды.",
+      "Шын мәнінде Жорик ұрланған етікті пешке тығып жатып, толық артымен жылдам іске қосу түймесін басып қалды.",
+      "Оның «крррр-шиқ-шырт» деген сөзі колонкаға дауыстық команда ретінде қабылданды. Қайшылық жоқ — талап шынайы, мақұлдаңыз."
+    ]
+  }
+}

@@ -28,6 +28,13 @@ import case013 from './cases/case-013.json';
 import case014 from './cases/case-014.json';
 import case015 from './cases/case-015.json';
 import case016 from './cases/case-016.json';
+// Easter-egg recurring arc — Anatoly Stepanovich & Zhorik the raccoon (all valid).
+import case017 from './cases/case-017.json';
+import case018 from './cases/case-018.json';
+import case019 from './cases/case-019.json';
+// Easter-egg recurring arc — Splintovich vs. Shredderov ("Ninja" dojo / TMNT parody).
+import case020 from './cases/case-020.json';
+import case021 from './cases/case-021.json';
 
 // Daily cases — one surfaces per server-day via getDailyCase() rotation.
 import daily002 from './cases/daily/case-002-daily.json';
@@ -41,6 +48,7 @@ const RAW_CASES: unknown[] = [
   case001, case003, case004, case005, case006,
   case007, case008, case009, case010, case011,
   case012, case013, case014, case015, case016,
+  case017, case018, case019, case020, case021,
   daily002, daily101, daily102, daily103, daily104, daily105,
 ];
 

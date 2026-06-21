@@ -1,0 +1,222 @@
+{
+  "id": "case-020",
+  "type": "standard",
+  "difficulty": "medium",
+  "claimAmount": 3500,
+  "truth": "fraud",
+  "title": {
+    "ru": "Пицца-Погром",
+    "en": "The Pizza Pogrom",
+    "tr": "Pizza Yağması",
+    "ar": "مذبحة البيتزا",
+    "kk": "Пицца-Погром"
+  },
+  "claim": {
+    "person": {
+      "ru": "Орест Шреддеров, 48 лет",
+      "en": "Orest Shredderov, 48",
+      "tr": "Orest Shredderov, 48",
+      "ar": "أوريست شريدروف، 48",
+      "kk": "Орест Шреддеров, 48 жаста"
+    },
+    "story": {
+      "ru": "Заявляю о вопиющем акте вандализма и коммерческой кражи. В 02:00 группа малолетних хулиганов из подвальной секции карате «Ниндзя» разбила витрину моего премиального фреш-бара сети «КЛАН ФУТ» и похитила 40 семейных пицц пепперони, заготовленных для корпоративного банкета. Требую возмещения ущерба в полном объёме и настаиваю на закрытии этой рассадницы преступности.",
+      "en": "I report a flagrant act of vandalism and commercial theft. At 02:00 a gang of juvenile hooligans from the basement karate dojo \"Ninja\" smashed the window of my premium juice bar of the \"FOOT CLAN\" network and stole 40 family-sized pepperoni pizzas prepared for a corporate banquet. I demand full compensation and insist this den of crime be shut down.",
+      "tr": "Bariz bir vandalizm ve ticari hırsızlık olayını bildiriyorum. Saat 02:00'de bodrum kattaki \"Ninja\" karate salonundan bir grup genç holigan, \"FOOT CLAN\" ağına ait premium meyve suyu barımın camını kırdı ve kurumsal ziyafet için hazırlanmış 40 aile boyu pepperoni pizzayı çaldı. Zararın tamamının tazminini talep ediyor ve bu suç yuvasının kapatılmasında ısrar ediyorum.",
+      "ar": "أُبلغ عن عمل تخريبي صارخ وسرقة تجارية. في الساعة 02:00 قامت عصابة من المراهقين المشاغبين من نادي الكاراتيه القابع في القبو «نينجا» بتحطيم واجهة بار العصائر الفاخر التابع لشبكتي «فوت كلان» وسرقة 40 بيتزا بيبروني بالحجم العائلي أُعدّت لمأدبة شركة. أطالب بالتعويض الكامل وأُصرّ على إغلاق وكر الجريمة هذا.",
+      "kk": "Дөрекі вандализм мен коммерциялық ұрлық туралы мәлімдеймін. Сағат 02:00-де «Ниндзя» атты жертөледегі карате секциясының жасөспірім бұзақылары менің «КЛАН ФУТ» желісіндегі премиум фреш-барымның витринасын сындырып, корпоративтік банкетке дайындалған 40 отбасылық пепперони пиццасын ұрлап әкетті. Зиянды толық өтеуді талап етемін және осы қылмыс ұясын жабуды талап етемін."
+    }
+  },
+  "coverImage": "covers/case-020.svg",
+  "personImage": "people/orest.svg",
+  "evidences": [
+    {
+      "id": "ev-cctv",
+      "type": "camera_recording",
+      "title": {
+        "ru": "Запись камеры фреш-бара",
+        "en": "Juice Bar CCTV",
+        "tr": "Meyve Suyu Barı Kamerası",
+        "ar": "كاميرا بار العصائر",
+        "kk": "Фреш-бар камерасы"
+      },
+      "content": {
+        "ru": [
+          "02:04:58 · Фигура в маске-бандане ОРАНЖЕВОГО цвета у разбитой витрины",
+          "02:05:12 · На запястьях фигуры блестят серебряные запонки и дорогие часы",
+          "02:05:40 · Фигура выносит стопку коробок с пиццей и садится в чёрный внедорожник"
+        ],
+        "en": [
+          "02:04:58 · A figure in an ORANGE bandana mask by the smashed window",
+          "02:05:12 · Silver cufflinks and an expensive watch glint on the figure's wrists",
+          "02:05:40 · The figure carries off a stack of pizza boxes into a black SUV"
+        ],
+        "tr": [
+          "02:04:58 · Kırık camın yanında TURUNCU bandana maskeli bir figür",
+          "02:05:12 · Figürün bileklerinde gümüş kol düğmeleri ve pahalı bir saat parlıyor",
+          "02:05:40 · Figür bir yığın pizza kutusunu siyah bir SUV'a taşıyor"
+        ],
+        "ar": [
+          "02:04:58 · شخص يرتدي قناع باندانا برتقالي اللون قرب الواجهة المحطمة",
+          "02:05:12 · يلمع على معصمَي الشخص أزرار أكمام فضية وساعة باهظة الثمن",
+          "02:05:40 · الشخص يحمل كومة من علب البيتزا إلى سيارة دفع رباعي سوداء"
+        ],
+        "kk": [
+          "02:04:58 · Сынған витрина қасында САРҒЫШ-ҚЫЗҒЫЛТ бандана маскалы тұлға",
+          "02:05:12 · Тұлғаның білегінде күміс түйме мен қымбат сағат жылтырайды",
+          "02:05:40 · Тұлға пицца қораптарын көтеріп, қара внедорожникке отырады"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Подросток из подвальной секции не носит серебряные запонки и дорогие часы — это приметы самого Шреддерова. «Взлом» инсценирован.",
+        "en": "A teen from a basement dojo doesn't wear silver cufflinks and a luxury watch — those are Shredderov's own markers. The \"break-in\" was staged.",
+        "tr": "Bodrum salonundan bir genç gümüş kol düğmesi ve lüks saat takmaz — bunlar bizzat Shredderov'un işaretleri. \"Soygun\" sahnelenmiş.",
+        "ar": "مراهق من نادٍ في قبو لا يرتدي أزرار أكمام فضية وساعة فاخرة — تلك علامات شريدروف نفسه. «الاقتحام» كان مفبركاً.",
+        "kk": "Жертөледегі секцияның жасөспірімі күміс түйме мен қымбат сағат тақпайды — бұл Шреддеровтың өзінің белгілері. «Тонау» қойылған."
+      },
+      "meta": {
+        "cameraId": "CAM-FC1",
+        "cameraModel": "Hikvision DS-2CD2087G2-LU · 4K · H.265"
+      }
+    },
+    {
+      "id": "ev-receipt",
+      "type": "document",
+      "title": {
+        "ru": "Чек доставки пиццы",
+        "en": "Pizza Delivery Receipt",
+        "tr": "Pizza Teslimat Fişi",
+        "ar": "إيصال توصيل البيتزا",
+        "kk": "Пицца жеткізу чегі"
+      },
+      "content": {
+        "ru": [
+          "Мега-Пицца Экспресс · электронный чек № MP-77431",
+          "Заказ: пицца «Пепперони», семейная — 40 шт.",
+          "Оплачено: 01:50, личной картой (Микеле, ученик секции «Ниндзя», оранжевая маска)",
+          "Адрес доставки: ул. Подвальная, 4 — додзё «Ниндзя» (НЕ фреш-бар «КЛАН ФУТ»)",
+          "Статус: доставлено 02:08, получено лично"
+        ],
+        "en": [
+          "Mega-Pizza Express · e-receipt No. MP-77431",
+          "Order: \"Pepperoni\" pizza, family size — 40 pcs.",
+          "Paid: 01:50, personal card (Michele, \"Ninja\" dojo student, orange mask)",
+          "Delivery address: 4 Basement St. — \"Ninja\" dojo (NOT the \"FOOT CLAN\" juice bar)",
+          "Status: delivered 02:08, received in person"
+        ],
+        "tr": [
+          "Mega-Pizza Express · e-fiş No. MP-77431",
+          "Sipariş: \"Pepperoni\" pizza, aile boyu — 40 adet.",
+          "Ödendi: 01:50, kişisel kart (Michele, \"Ninja\" salonu öğrencisi, turuncu maske)",
+          "Teslimat adresi: Bodrum Sok. No:4 — \"Ninja\" salonu (FOOT CLAN meyve suyu barı DEĞİL)",
+          "Durum: 02:08'de teslim edildi, bizzat alındı"
+        ],
+        "ar": [
+          "ميغا-بيتزا إكسبرس · إيصال إلكتروني رقم MP-77431",
+          "الطلب: بيتزا «بيبروني»، حجم عائلي — 40 قطعة.",
+          "الدفع: 01:50، ببطاقة شخصية (ميكيلي، طالب نادي «نينجا»، قناع برتقالي)",
+          "عنوان التوصيل: شارع القبو 4 — نادي «نينجا» (وليس بار «فوت كلان» للعصائر)",
+          "الحالة: تم التوصيل 02:08، استُلم شخصياً"
+        ],
+        "kk": [
+          "Мега-Пицца Экспресс · электрондық чек № MP-77431",
+          "Тапсырыс: «Пепперони» пиццасы, отбасылық — 40 дана.",
+          "Төленді: 01:50, жеке картамен (Микеле, «Ниндзя» секциясының оқушысы, сарғыш маска)",
+          "Жеткізу мекенжайы: Подвальная к-сі, 4 — «Ниндзя» додзёсы (КЛАН ФУТ фреш-бары ЕМЕС)",
+          "Күйі: 02:08-де жеткізілді, өз қолына алынды"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "40 пицц были легально куплены учеником в 01:50 и доставлены в додзё — их не похищали из бара.",
+        "en": "The 40 pizzas were legally bought by the student at 01:50 and delivered to the dojo — they were never stolen from the bar.",
+        "tr": "40 pizza, öğrenci tarafından 01:50'de yasal olarak satın alındı ve salona teslim edildi — bardan çalınmadı.",
+        "ar": "الـ40 بيتزا اشتراها الطالب بشكل قانوني في 01:50 وسُلّمت إلى النادي — لم تُسرق من البار.",
+        "kk": "40 пицца оқушы 01:50-де заңды түрде сатып алып, додзёға жеткізілген — олар бардан ұрланбаған."
+      },
+      "meta": {
+        "docHeader": "Мега-Пицца Экспресс · электронный чек · оплата подтверждена"
+      }
+    },
+    {
+      "id": "ev-medical",
+      "type": "document",
+      "title": {
+        "ru": "Справка приёмного отделения",
+        "en": "ER Admission Record",
+        "tr": "Acil Servis Kaydı",
+        "ar": "سجل قسم الطوارئ",
+        "kk": "Қабылдау бөлімінің анықтамасы"
+      },
+      "content": {
+        "ru": [
+          "Городская клиника · приёмное отделение",
+          "Пациент: Микеле, 16 лет, ученик секции «Ниндзя» (маска оранжевая)",
+          "Поступил: 02:00. Диагноз: острый гастрит, переедание (≈12 кусков пиццы)",
+          "Под наблюдением капельницы до утра, передвижение исключено"
+        ],
+        "en": [
+          "City clinic · emergency department",
+          "Patient: Michele, 16, \"Ninja\" dojo student (orange mask)",
+          "Admitted: 02:00. Diagnosis: acute gastritis, overeating (≈12 slices of pizza)",
+          "On a drip under observation until morning, movement ruled out"
+        ],
+        "tr": [
+          "Şehir kliniği · acil servis",
+          "Hasta: Michele, 16, \"Ninja\" salonu öğrencisi (turuncu maske)",
+          "Kabul: 02:00. Tanı: akut gastrit, aşırı yeme (≈12 dilim pizza)",
+          "Sabaha kadar serum altında gözlemde, hareket etmesi imkânsız"
+        ],
+        "ar": [
+          "عيادة المدينة · قسم الطوارئ",
+          "المريض: ميكيلي، 16 عاماً، طالب نادي «نينجا» (قناع برتقالي)",
+          "الدخول: 02:00. التشخيص: التهاب معدة حاد، إفراط في الأكل (≈12 شريحة بيتزا)",
+          "تحت المراقبة والمحلول حتى الصباح، الحركة مستبعدة"
+        ],
+        "kk": [
+          "Қалалық клиника · қабылдау бөлімі",
+          "Науқас: Микеле, 16 жаста, «Ниндзя» секциясының оқушысы (сарғыш маска)",
+          "Түскен уақыты: 02:00. Диагноз: жедел гастрит, шамадан тыс жеу (≈12 тілім пицца)",
+          "Таңға дейін тамшылатқыш астында бақылауда, қозғалуы мүмкін емес"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Ученик в оранжевой маске с 02:00 лежит в приёмном — он физически не мог быть «грабителем» в 02:05.",
+        "en": "The orange-mask student has been in the ER since 02:00 — he physically could not be the \"burglar\" at 02:05.",
+        "tr": "Turuncu maskeli öğrenci 02:00'den beri acil serviste — 02:05'teki \"soyguncu\" olması fiziksel olarak imkânsız.",
+        "ar": "الطالب ذو القناع البرتقالي في الطوارئ منذ 02:00 — يستحيل جسدياً أن يكون «اللص» في 02:05.",
+        "kk": "Сарғыш маскалы оқушы 02:00-ден бері қабылдауда жатыр — ол 02:05-те «тонаушы» бола алмайды."
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Это пародия на «Черепашек-ниндзя»: Шреддеров и его «КЛАН ФУТ» (Foot Clan) подставляют учеников Сплинтовича.",
+      "Оранжевая маска — это Микеле, но в 01:50 он сам купил и заказал 40 пицц в додзё, а в 02:00 уже лежал в приёмном с перееданием.",
+      "«Грабитель» на камере носит серебряные запонки Шреддерова — он инсценировал взлом сам. Это мошенничество, заявление отклоняем."
+    ],
+    "en": [
+      "This is a parody of the Ninja Turtles: Shredderov and his \"FOOT CLAN\" frame Splintovich's students.",
+      "The orange mask is Michele, but at 01:50 he bought and ordered the 40 pizzas to the dojo himself, and by 02:00 he was in the ER from overeating.",
+      "The \"burglar\" on camera wears Shredderov's silver cufflinks — he staged the break-in himself. This is fraud; reject the claim."
+    ],
+    "tr": [
+      "Bu, Ninja Kaplumbağalar parodisidir: Shredderov ve \"FOOT CLAN\"i, Splintovich'in öğrencilerine komplo kuruyor.",
+      "Turuncu maske Michele'dir, ama 01:50'de 40 pizzayı kendisi salona sipariş edip ödedi ve 02:00'de aşırı yemekten acil serviste yatıyordu.",
+      "Kameradaki \"soyguncu\" Shredderov'un gümüş kol düğmelerini takıyor — soygunu kendisi sahneledi. Bu bir dolandırıcılık; talebi reddedin."
+    ],
+    "ar": [
+      "هذه محاكاة ساخرة لسلاحف النينجا: شريدروف و«فوت كلان» يلفّقون التهمة لطلاب سبلينتوفيتش.",
+      "القناع البرتقالي هو ميكيلي، لكنه في 01:50 اشترى وطلب الـ40 بيتزا إلى النادي بنفسه، وبحلول 02:00 كان في الطوارئ بسبب الإفراط في الأكل.",
+      "«اللص» في الكاميرا يرتدي أزرار أكمام شريدروف الفضية — لقد فبرك الاقتحام بنفسه. هذا احتيال؛ ارفض المطالبة."
+    ],
+    "kk": [
+      "Бұл «Ниндзя тасбақалардың» пародиясы: Шреддеров пен оның «КЛАН ФУТ»-ы Сплинтовичтің оқушыларын жалаға іліктіреді.",
+      "Сарғыш маска — Микеле, бірақ ол 01:50-де 40 пиццаны өзі додзёға тапсырыс беріп сатып алған, ал 02:00-де шамадан тыс жеуден қабылдауда жатқан.",
+      "Камерадағы «тонаушы» Шреддеровтың күміс түймелерін таққан — тонауды өзі қойған. Бұл алаяқтық, өтінішті қабылдамаймыз."
+    ]
+  }
+}

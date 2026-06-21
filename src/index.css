@@ -11,7 +11,7 @@
   }
   body {
     @apply bg-bg font-sans antialiased;
-    color: #e5e7eb;
+    color: #3a3024;
   }
 
   /* ---------------------------------------------------------------------- *
@@ -24,7 +24,7 @@
     --folder: 194 161 97; /* #c2a161 */
     --folder-edge: 138 106 53; /* #8a6a35 */
     --paper: 245 241 232; /* #f5f1e8 */
-    --accent: 59 130 246; /* #3b82f6 */
+    --accent: 47 143 131; /* #2f8f83 desk teal */
     --stamp: 180 35 31; /* #b4231f */
     --folder-ink: #1a1205;
     --folder-ink-soft: rgba(0, 0, 0, 0.55);
@@ -39,13 +39,13 @@
     --folder-ink-soft: rgba(243, 244, 246, 0.6);
   }
 
-  /* Custom scrollbars to match the dark desk. */
+  /* Custom scrollbars to match the warm archive desk. */
   ::-webkit-scrollbar {
     width: 9px;
     height: 9px;
   }
   ::-webkit-scrollbar-thumb {
-    background: #374151;
+    background: #c9b89a;
     border-radius: 6px;
   }
   ::-webkit-scrollbar-track {

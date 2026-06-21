@@ -50,7 +50,7 @@ export function LeftSidebar({
     <aside className="flex h-full w-full flex-col rounded-xl border border-border bg-surface p-4 md:p-[18px]">
       {/* Brand */}
       <div className="shrink-0">
-        <div className="text-[13px] font-bold leading-snug tracking-wide text-[#f3f4f6]">
+        <div className="text-[13px] font-bold leading-snug tracking-wide text-text-light">
           {t("gameTitle", lang)}
         </div>
         <div className="mt-0.5 text-[11px] font-medium tracking-[1px] text-text-dim">
@@ -83,12 +83,12 @@ export function LeftSidebar({
               dailyUnlocked ? onSelect(dailyCase) : onDailyLocked()
             }
             className={`relative block w-full rounded-[9px] border p-3 pr-10 text-left overflow-hidden ${
-              dailyUnlocked ? "border-gold" : "border-border opacity-[0.55]"
+              dailyUnlocked ? "border-[#c79a3a]" : "border-border opacity-[0.55]"
             } ${dailyCase.id === selectedId ? "ring-1 ring-gold" : ""}`}
             style={
               dailyUnlocked
-                ? { background: "linear-gradient(135deg,#2a2113,#1f2937)" }
-                : { background: "#111827" }
+                ? { background: "linear-gradient(135deg,#f0d48f,#e3b75a)" }
+                : { background: "#e2d7c2" }
             }
           >
             {dailyUnlocked && (
@@ -99,11 +99,11 @@ export function LeftSidebar({
                 {t("urgent", lang)}
               </span>
             )}
-            <div className="text-xs font-bold tracking-[0.5px] text-gold-text">
+            <div className="text-xs font-bold tracking-[0.5px] text-[#5c3f08]">
               {t("dailyCase", lang)}
             </div>
             <div className="mt-[7px] flex items-center justify-between gap-2">
-              <span className="truncate font-mono text-[11px] font-semibold text-gold">
+              <span className="truncate font-mono text-[11px] font-semibold text-[#7a5410]">
                 {formatCountdown(dailyMsRemaining)}
               </span>
               <span className="shrink-0 rounded-[5px] bg-gold px-[7px] py-0.5 text-[11px] font-bold text-gold-dark">
@@ -135,11 +135,11 @@ export function LeftSidebar({
                   ? "border-accent"
                   : locked
                     ? "border-border opacity-[0.55]"
-                    : "border-border hover:border-white/25"
+                    : "border-border hover:border-black/15"
               }`}
             >
               <div className="flex items-center justify-between gap-2">
-                <span className="truncate text-[13px] font-semibold text-[#f3f4f6]">
+                <span className="truncate text-[13px] font-semibold text-text-light">
                   {loc(c.title, lang)}
                 </span>
                 {active ? (
@@ -179,7 +179,7 @@ export function LeftSidebar({
       {/* Investigator progress — mobile only; desktop shows in RightSidebar */}
       <div className="mt-[15px] shrink-0 rounded-[9px] border border-border bg-surface-2 p-[13px] md:hidden">
         <div className="flex items-baseline justify-between gap-2">
-          <span className="text-xs font-semibold text-[#d1d5db]">
+          <span className="text-xs font-semibold text-text-light">
             {t("rank", lang)}
           </span>
           <span className="text-xs font-bold text-accent">{levelTitle}</span>

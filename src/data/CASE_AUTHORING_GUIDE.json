@@ -164,7 +164,12 @@
       { "id": "case-013", "theme": "Протечка / влажность", "truth": "fraud" },
       { "id": "case-014", "theme": "Град на пшеничном поле (дрон)", "truth": "valid" },
       { "id": "case-015", "theme": "Морской груз / AIS судно", "truth": "fraud" },
-      { "id": "case-016", "theme": "(читать файл)", "truth": "?" }
+      { "id": "case-016", "theme": "(читать файл)", "truth": "?" },
+      { "id": "case-017", "theme": "Анатолий и енот Жорик: микроволновка-поджигатель", "truth": "valid" },
+      { "id": "case-018", "theme": "Анатолий и енот Жорик: дрон-похититель кольца", "truth": "valid" },
+      { "id": "case-019", "theme": "Анатолий и енот Жорик: газонокосилка без водителя", "truth": "valid" },
+      { "id": "case-020", "theme": "Сплинтович vs Шреддеров (TMNT): подстава с пиццей", "truth": "fraud" },
+      { "id": "case-021", "theme": "Сплинтович vs Шреддеров (TMNT): взрыв газа в додзё", "truth": "fraud" }
     ],
     "daily": [
       { "id": "case-002-daily", "theme": "Угон авто / CAN-шина", "truth": "fraud" },
@@ -202,7 +207,7 @@
 
   "meta_values_used": {
     "note": "Не повторяй эти значения в новых делах — они уже заняты.",
-    "gps_companies": ["GeoGuard Solutions", "МореМонитор", "ТрекМаш PRO"],
+    "gps_companies": ["GeoGuard Solutions", "МореМонитор", "ТрекМаш PRO", "АэроСлед Навигация"],
     "camera_models": [
       "HIKVISION DS-2CD2143G2-I · 4K · H.265",
       "AXIS P1448-LE · 4K · H.265",
@@ -211,7 +216,10 @@
       "BlackVue DR900X · 4K · H.265",
       "Ring Video Doorbell Pro 2 · 1080p · H.264",
       "Dahua IPC-HFW3849H · 4K · H.265",
-      "Eufy Cam S220 · 2K · H.265"
+      "Eufy Cam S220 · 2K · H.265",
+      "TP-Link Tapo C520WS · 2K · H.264",
+      "Imou Cruiser 2 · 4K · H.265",
+      "Hikvision DS-2CD2087G2-LU · 4K · H.265"
     ],
     "log_prompts": [
       "root@alarm:~$ tail -f /var/log/security.log",
@@ -222,7 +230,8 @@
       "pharma@rxsys:~$ tail -f /var/log/dispensary.log",
       "mno@telecom:~$ tail -f /var/log/subscriber.log",
       "canbus@vehicle:~$ tail -f /var/log/keycard.log",
-      "secure@bakery:~$ tail -f /var/log/access.log"
+      "secure@bakery:~$ tail -f /var/log/access.log",
+      "smarthome@kitchen:~$ tail -f /var/log/voice.log"
     ]
   }
 }
