@@ -7,8 +7,10 @@
 ## Как генерировать
 
 1. **Negative Prompt** (одинаковый для всех) — один раз вставь из `_NEGATIVE.txt` и оставь.
-2. Настройки: **Aspect Ratio 4:5** (вертикаль), фотореалистичная модель (*Leonardo Phoenix* /
-   *PhotoReal*), PhotoReal вкл.
+2. Настройки: **Aspect Ratio 4:5** (вертикаль). Стиль — **стилизованная иллюстрация в духе
+   _Papers, Please_** (рисованный портрет, не фото). Бери иллюстративную модель (*Leonardo
+   Phoenix* / *Illustrative* / *Anime XL* с низким стилем), **PhotoReal выключи**. Можно
+   приложить кадр из Papers, Please как Image Guidance / Style Reference для попадания в стиль.
 3. Открой нужный `NN-<имя>.txt` → выдели всё → вставь в **Prompt** → Generate.
 4. Сохрани результат под именем из колонки «Файл» (напр. `public/people/igor.jpg`).
 

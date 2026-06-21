@@ -6,7 +6,8 @@
 `object-cover`, скруглённые углы, тонкая рамка рисуется кодом поверх.
 
 > **Что меняем.** Сейчас в `public/people/*.svg` лежат абстрактные плейсхолдеры (серый силуэт
-> в рамке). Задача — заменить каждого на **уникальный фотопортрет**, чтобы у каждого героя было
+> в рамке). Задача — заменить каждого на **уникальный рисованный портрет** (стилизация под
+> _Papers, Please_, не фото), чтобы у каждого героя было
 > своё лицо. Предыдущая версия этого брифа (слоистая SVG-система из частей) **отменена** —
 > идём через растровые портреты из Leonardo.
 
@@ -32,22 +33,27 @@
 
 ## 2. Единый стиль (вставляй в КАЖДЫЙ промпт дословно)
 
-> **STYLE:** vintage government photo-ID portrait in the style of a 1970s Eastern-European
-> passport or insurance-archive document. Head-and-shoulders, facing the camera, plain flat
-> backdrop. Photographic, realistic, slightly aged film look with fine grain. Soft even frontal
-> lighting, no hard shadows, no glamour. Muted, desaturated **warm sepia / toasted-paper palette**:
-> background a flat toasted archive-paper tone (#E5D7BD–#D7C6A5), skin natural and slightly warm,
-> clothing in muted earth tones — terracotta (#884A28), olive (#5C7A33), ochre (#C98A2E), faded
-> slate, cream. Neutral, calm, slightly wary everyday expression — an ordinary person photographed
-> for an insurance file, not a model. Dignified, serious, document-like.
+> **STYLE:** stylized illustrated character portrait in the art style of the video game
+> *Papers, Please* — a hand-painted semi-realistic digital illustration with visible paint
+> texture and soft brush strokes, simplified low-detail features, a slightly grainy retro print
+> look, clearly an illustration **NOT a photograph**. Head-and-shoulders, facing the camera,
+> plain flat backdrop, framed like a 1970s Eastern-European passport / insurance-archive photo-ID.
+> Soft flat even lighting, no hard shadows. Muted, desaturated **warm sepia / toasted-paper
+> palette**: background a flat toasted archive-paper tone (#E5D7BD–#D7C6A5), skin natural and
+> slightly warm, clothing in muted earth tones — terracotta (#884A28), olive (#5C7A33), ochre
+> (#C98A2E), faded slate, cream. **Warmer and softer than the original game — serious but not
+> grim or oppressive.** Neutral, calm, slightly wary everyday expression — an ordinary person at
+> an insurance office, not a model. Dignified, document-like.
 >
-> **Negative:** neon, cartoon, anime, 3d render, cgi, sci-fi, glamour photo, beauty retouch,
-> heavy makeup, big toothy smile, fantasy, text, caption, watermark, logo, frame, border,
-> oversaturated, modern selfie, fisheye, oppressive dark mood.
+> **Negative:** photorealistic, photograph, glossy photo, pixel art, neon, cartoon, anime, chibi,
+> 3d render, cgi, sci-fi, glamour, beauty retouch, heavy makeup, big toothy smile, fantasy, text,
+> caption, watermark, logo, frame, border, oversaturated, fisheye, oppressive dark mood.
 
 **Параметры Leonardo (ориентир):**
 - **Aspect ratio `4:5`** (вертикаль; кадрируется до 58×72). Можно `832×1040` / `768×960`.
-- Модель — фотореалистичная (напр. *Leonardo Phoenix* / *Photoreal*), PhotoReal вкл., Alchemy по вкусу.
+- Стиль — **стилизованная иллюстрация в духе _Papers, Please_** (рисованный портрет, не фото).
+  Иллюстративная модель (*Leonardo Phoenix* / *Illustrative*), **PhotoReal выключен**. По
+  возможности — кадр из _Papers, Please_ как Image Guidance / Style Reference.
 - Голова и плечи в кадре, лицо по центру верхней трети (как на документе), смотрит в объектив.
 - Фон — однотонный, без сцен и предметов.
 
