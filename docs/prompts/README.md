@@ -10,4 +10,5 @@
 | `rating-modal-prompt.md` | Бриф модалки «Оцените игру» |
 | `DESIGN_PROMPT_EVIDENCE_CARDS.md` | Бриф редизайна карточек улик |
 | `DESIGN_PROMPT_PORTRAITS.md` | Leonardo-промпты на портреты клиентов (по герою) |
-| `LEONARDO_EVIDENCE_PHOTOS.md` | Leonardo-промпты на фото-улики |
+| `LEONARDO_EVIDENCE_PHOTOS.md` | Leonardo-промпты на фото-улики (сводный бриф) |
+| `leonardo-evidence/` | По одному `.txt` на улику — готово к вставке в Leonardo |

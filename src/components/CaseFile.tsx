@@ -1,10 +1,10 @@
-import { useRef, useState } from "react";
+import { Fragment, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import type { ActiveSession, Case, Language } from "../types";
 import type { HintKind } from "../store/gameStore";
 import { GAME_CONFIG } from "../config/gameConfig";
 import { loc, t } from "../i18n/ui";
-import { formatCaseLabel, tDifficulty } from "../utils/caseDisplay";
+import { formatCaseLabel } from "../utils/caseDisplay";
 import { asset } from "../utils/asset";
 import { EvidenceCard } from "./EvidenceCard";
 import { VerdictPanel } from "./VerdictPanel";
@@ -127,38 +127,73 @@ export function CaseFile({
 
       <div className="p-5">
         {/* Client ID block */}
-        <div className="flex items-center gap-3.5">
-          {caseData.personImage ? (
-            <img
-              src={asset(caseData.personImage)}
-              alt={loc(caseData.claim.person, lang)}
-              className="h-[72px] w-[58px] shrink-0 rounded-sm border border-[#b8b1a0] object-cover"
-            />
-          ) : (
-            <div
-              className="flex h-[72px] w-[58px] shrink-0 items-center justify-center rounded-sm border border-[#b8b1a0] text-center"
-              style={{
-                background:
-                  "repeating-linear-gradient(45deg,#d8d3c7 0 6px,#cfc9bb 6px 12px)",
-              }}
-            >
-              <span className="font-mono text-[8px] font-medium text-[#8a8472]">
-                ФОТО ID
-              </span>
+        <div className="flex gap-[18px] items-start md:gap-[18px]">
+          {/* Photo column */}
+          <div className="w-[104px] md:w-[124px] shrink-0">
+            {caseData.personImage ? (
+              <div
+                className="overflow-hidden rounded-[4px] border border-[#b8b1a0] bg-[#d8d3c7]"
+                style={{ boxShadow: "0 3px 9px rgba(0,0,0,.2)" }}
+              >
+                <img
+                  src={asset(caseData.personImage)}
+                  alt={loc(caseData.claim.person, lang)}
+                  style={{
+                    width: "100%",
+                    aspectRatio: "1 / 1.2",
+                    objectFit: "cover",
+                    objectPosition: "center top",
+                    display: "block",
+                    filter: "saturate(.9) contrast(.97)",
+                  }}
+                />
+              </div>
+            ) : (
+              <div
+                className="flex items-center justify-center overflow-hidden rounded-[4px] border border-[#b8b1a0] bg-[#d8d3c7]"
+                style={{
+                  aspectRatio: "1 / 1.2",
+                  boxShadow: "0 3px 9px rgba(0,0,0,.2)",
+                  background:
+                    "repeating-linear-gradient(45deg,#d8d3c7 0 6px,#cfc9bb 6px 12px)",
+                }}
+              />
+            )}
+            <div className="mt-[5px] text-center font-mono text-[7px] font-medium tracking-[1.5px] text-[#8a8472] md:text-[8px]">
+              ФОТО · ID
             </div>
-          )}
+          </div>
+
+          {/* Name + meta column */}
           <div className="min-w-0 flex-1">
-            <div className="font-serif text-lg font-semibold text-ink">
+            <div className="font-serif text-[18px] font-semibold leading-[1.15] text-[#1f2937] md:text-[20px]">
               {loc(caseData.claim.person, lang)}
             </div>
-            <div className="mt-0.5 text-xs font-medium text-text-dim">
-              {tDifficulty(caseData.difficulty, lang)}
-            </div>
-            <div className="mt-2 flex flex-wrap gap-2">
-              <span className="rounded bg-[#e5e7eb] px-[7px] py-[3px] font-mono text-[11px] font-medium text-[#374151]">
-                {formatCaseLabel(caseData, lang)}
-              </span>
-            </div>
+            {caseData.client && (
+              <div className="mt-[3px] text-[11px] font-medium text-[#6b7280] md:text-[12px]">
+                {loc(caseData.client.role, lang)}
+              </div>
+            )}
+            {caseData.client?.meta && caseData.client.meta.length > 0 && (
+              <div
+                className="mt-[11px] grid md:mt-[14px]"
+                style={{
+                  gridTemplateColumns: "auto 1fr",
+                  gap: "5px 12px",
+                }}
+              >
+                {caseData.client.meta.map((row, i) => (
+                  <Fragment key={i}>
+                    <div className="whitespace-nowrap text-[10px] font-medium text-[#9ca3af] md:text-[11px]">
+                      {row.k}
+                    </div>
+                    <div className="font-mono text-[10px] font-semibold text-[#374151] md:text-[11px]">
+                      {row.v}
+                    </div>
+                  </Fragment>
+                ))}
+              </div>
+            )}
           </div>
         </div>
 

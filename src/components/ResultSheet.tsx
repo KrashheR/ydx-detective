@@ -255,9 +255,9 @@ export function ResultSheet({
               positive={result.total >= 0}
             />
             <Tile
-              label={t("companyBalance", lang)}
-              value={`${win ? "+ " : "− "}${fmt(caseData.claimAmount)} ₽`}
-              positive={win}
+              label={t("claimValue", lang)}
+              value={`${fmt(caseData.claimAmount)} ₽`}
+              neutral
             />
           </div>
 
@@ -410,19 +410,22 @@ function Tile({
   label,
   value,
   positive,
+  neutral,
 }: {
   label: string;
   value: string;
-  positive: boolean;
+  positive?: boolean;
+  neutral?: boolean;
 }) {
+  const valueColor = neutral
+    ? "text-ink/70"
+    : positive
+      ? "text-success"
+      : "text-danger";
   return (
     <div className="flex-1 rounded-lg border border-black/10 bg-white p-[11px] text-center">
       <div className="text-[10px] font-medium text-text-dim">{label}</div>
-      <div
-        className={`mt-0.5 font-mono text-sm font-bold ${
-          positive ? "text-success" : "text-danger"
-        }`}
-      >
+      <div className={`mt-0.5 font-mono text-sm font-bold ${valueColor}`}>
         {value}
       </div>
     </div>

@@ -117,6 +117,20 @@ export interface Claim {
   readonly story: LocalizedString;
 }
 
+/** One row in the client metadata table shown on the statement card. */
+export interface ClientMetaRow {
+  readonly k: string;
+  readonly v: string;
+}
+
+/** Extended client identity block shown in the statement header. */
+export interface ClientInfo {
+  /** Role subtitle, e.g. "Заявитель · физ. лицо". */
+  readonly role: LocalizedString;
+  /** Key-value rows rendered as a grid under the client name. */
+  readonly meta: ReadonlyArray<ClientMetaRow>;
+}
+
 export interface Case {
   readonly id: string;
   readonly type: CaseType;
@@ -129,6 +143,8 @@ export interface Case {
   readonly coverImage: string;
   /** Optional client photo-ID portrait (path under `public/`). */
   readonly personImage?: string;
+  /** New client identity block — role subtitle + metadata table. */
+  readonly client?: ClientInfo;
   readonly evidences: readonly Evidence[];
   readonly correctDecision: Decision;
   readonly explanation: LocalizedLines;

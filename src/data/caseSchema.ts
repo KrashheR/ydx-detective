@@ -13,6 +13,8 @@ import { z } from 'zod';
 import {
   SUPPORTED_LANGUAGES,
   type Case,
+  type ClientInfo,
+  type ClientMetaRow,
   type Evidence,
   type EvidenceMeta,
   type Language,
@@ -105,6 +107,21 @@ export const claimSchema = z
   })
   .strict();
 
+const clientMetaRowSchema = z
+  .object({ k: z.string().min(1), v: z.string().min(1) })
+  .strict();
+
+type _ClientMetaRowCheck = AssertAssignable<ClientMetaRow, z.infer<typeof clientMetaRowSchema>>;
+
+export const clientInfoSchema = z
+  .object({
+    role: localizedString,
+    meta: z.array(clientMetaRowSchema),
+  })
+  .strict();
+
+type _ClientInfoCheck = AssertAssignable<ClientInfo, z.infer<typeof clientInfoSchema>>;
+
 export const caseSchema = z
   .object({
     id: z.string().min(1),
@@ -116,6 +133,7 @@ export const caseSchema = z
     claim: claimSchema,
     coverImage: z.string().min(1),
     personImage: z.string().min(1).optional(),
+    client: clientInfoSchema.optional(),
     evidences: z.array(evidenceSchema).min(1),
     correctDecision: decision,
     explanation: localizedLines,

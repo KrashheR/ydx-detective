@@ -73,6 +73,7 @@ export type UIKey =
   | "rewardRevealed"
   | "fee"
   | "companyBalance"
+  | "claimValue"
   | "investigationAccuracy"
   | "leaderboardWeek"
   | "verdictPrompt"
@@ -555,6 +556,13 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     tr: "Şirket bakiyesi",
     ar: "رصيد الشركة",
     kk: "Компания балансы",
+  },
+  claimValue: {
+    ru: "Сумма иска",
+    en: "Claim amount",
+    tr: "Talep tutarı",
+    ar: "مبلغ المطالبة",
+    kk: "Талап сомасы",
   },
   investigationAccuracy: {
     ru: "Точность следствия",
