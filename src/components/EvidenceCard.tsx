@@ -41,7 +41,7 @@ export function EvidenceCard({
         whileHover={sealed ? undefined : { y: -4 }}
         whileTap={sealed ? undefined : { scale: 0.99 }}
         transition={{ type: "spring", stiffness: 300, damping: 24 }}
-        className={`relative flex h-full w-full flex-col overflow-hidden rounded-[7px] border border-black/[0.08] bg-paper p-3.5 text-left shadow-card transition-shadow ${
+        className={`relative flex h-full w-full flex-col overflow-hidden rounded-[7px] border border-black/[0.08] bg-paper p-3.5 text-left md:shadow-card transition-shadow ${
           sealed
             ? "cursor-not-allowed opacity-50 grayscale"
             : "hover:shadow-card-hover"

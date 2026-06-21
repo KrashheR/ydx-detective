@@ -159,10 +159,10 @@ export function ResultSheet({
         onKeyDown={handleDialogKeyDown}
       >
         {/* Resolution stamp */}
-        <div className="border-b border-[#d8d3c7] px-[22px] pb-5 pt-[26px] text-center">
+        <div className="border-b border-[#d8d3c7] px-[22px] pb-[26px] pt-[36px] text-center">
           <motion.span
             id={resultTitleId}
-            className={`inline-block rounded-md border-4 px-[18px] py-2.5 font-mono text-[19px] font-bold uppercase tracking-wide p-4 ${
+            className={`inline-block rounded-md border-4 px-8 py-4 font-mono text-[19px] font-bold uppercase tracking-wide ${
               win ? "border-success text-success" : "border-danger text-danger"
             }`}
             style={{ opacity: 0.94 }}
@@ -177,7 +177,7 @@ export function ResultSheet({
           >
             {stampText}
           </motion.span>
-          <div id={resultDescId} className="mt-3.5 text-[13px] text-text-dim">
+          <div id={resultDescId} className="mt-6 text-[13px] text-text-dim">
             {win ? t("resultWinSub", lang) : t("resultLoseSub", lang)}
           </div>
         </div>
@@ -234,11 +234,18 @@ export function ResultSheet({
               <DotRow
                 got={false}
                 danger
-                label={t("penalty", lang)}
-                value={`− ${result.penalty}`}
+                label={`${t("penaltyFalseStamps", lang)} ×${result.falseStamps}`}
+                value={`− ${fmt(result.penalty)} ₽`}
               />
             )}
           </div>
+
+          {/* Why money was deducted — shown only when a false-stamp penalty applied. */}
+          {result.penalty > 0 && (
+            <p className="mt-2.5 rounded border-l-[3px] border-danger bg-danger/5 px-3 py-2 text-[12px] leading-snug text-danger">
+              {t("penaltyFalseStampsHint", lang)}
+            </p>
+          )}
 
           {/* Fee + company balance tiles */}
           <div className="mt-[18px] flex gap-2.5">
@@ -334,7 +341,8 @@ export function ResultSheet({
                   onClick={onDoubleReward}
                   className="h-[46px] w-full rounded-[9px] border border-gold/50 bg-gold/10 text-sm font-semibold text-gold hover:bg-gold/20"
                 >
-                  {t("doubleReward", lang)} (+{Math.abs(result.total).toLocaleString("ru-RU")} ₽)
+                  {t("doubleReward", lang)} (+
+                  {Math.abs(result.total).toLocaleString("ru-RU")} ₽)
                 </button>
               )}
             </div>

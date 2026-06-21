@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import type { ActiveSession, Case, Language } from "../types";
 import type { HintKind } from "../store/gameStore";
@@ -33,6 +33,13 @@ interface Props {
 
 type Tab = "statement" | "evidence";
 
+/** Horizontal slide for the swipeable mobile panels; `dir` sets the direction. */
+const slideVariants = {
+  enter: (dir: number) => ({ x: dir > 0 ? "100%" : "-100%", opacity: 0 }),
+  center: { x: 0, opacity: 1 },
+  exit: (dir: number) => ({ x: dir > 0 ? "-100%" : "100%", opacity: 0 }),
+};
+
 /** The active physical Case Folder — main column. */
 export function CaseFile({
   caseData,
@@ -50,7 +57,35 @@ export function CaseFile({
   onReject,
 }: Props) {
   const [tab, setTab] = useState<Tab>("statement");
+  // Slide direction for the mobile panel swap: +1 → reveal evidence, −1 → statement.
+  const [dir, setDir] = useState(0);
+  const touchStart = useRef<{ x: number; y: number } | null>(null);
   const [toast, setToast] = useState<string | null>(null);
+
+  const goToTab = (next: Tab) => {
+    if (next === tab) return;
+    setDir(next === "evidence" ? 1 : -1);
+    setTab(next);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    const p = e.touches[0];
+    if (!p) return;
+    touchStart.current = { x: p.clientX, y: p.clientY };
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    const start = touchStart.current;
+    touchStart.current = null;
+    const p = e.changedTouches[0];
+    if (!start || !p) return;
+    const dx = p.clientX - start.x;
+    const dy = p.clientY - start.y;
+    // Only react to a clearly horizontal flick, so vertical scrolling is untouched.
+    if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
+    if (dx < 0) goToTab("evidence");
+    else goToTab("statement");
+  };
   const isDaily = caseData.type === "daily";
 
   // Hint state. Both hints reveal one evidence card's true status; Inspector
@@ -77,7 +112,7 @@ export function CaseFile({
   /* ---------------------------------- Statement sheet ----------------------- */
   const statement = (
     <div
-      className="overflow-hidden bg-paper shadow-doc"
+      className="overflow-hidden bg-paper md:shadow-doc"
       style={{ borderRadius: 7 }}
     >
       {/* Dark folder-edge header */}
@@ -223,7 +258,7 @@ export function CaseFile({
           <button
             key={key}
             type="button"
-            onClick={() => setTab(key)}
+            onClick={() => goToTab(key)}
             className={`flex-1 border-b-2 py-3 text-center text-xs font-semibold transition-colors ${
               tab === key
                 ? "border-accent text-text-light"
@@ -237,16 +272,32 @@ export function CaseFile({
         ))}
       </div>
 
-      {/* Mobile: one panel at a time. Desktop: stacked. */}
-      <div className="md:hidden">
-        {tab === "statement" ? (
-          statement
-        ) : (
-          <>
-            {materialsHeader}
-            {evidence}
-          </>
-        )}
+      {/* Mobile: one panel at a time, swipeable left/right. Desktop: stacked. */}
+      <div
+        className="overflow-hidden md:hidden"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
+        <AnimatePresence initial={false} mode="wait" custom={dir}>
+          <motion.div
+            key={tab}
+            custom={dir}
+            variants={slideVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{ duration: 0.22, ease: [0.4, 0, 0.2, 1] }}
+          >
+            {tab === "statement" ? (
+              statement
+            ) : (
+              <>
+                {materialsHeader}
+                {evidence}
+              </>
+            )}
+          </motion.div>
+        </AnimatePresence>
       </div>
       <div className="hidden md:block">
         {statement}

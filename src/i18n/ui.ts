@@ -33,6 +33,8 @@ export type UIKey =
   | "verdictReward"
   | "proofReward"
   | "penalty"
+  | "penaltyFalseStamps"
+  | "penaltyFalseStampsHint"
   | "rewardEarned"
   | "bankruptTitle"
   | "bankruptDesc"
@@ -315,6 +317,20 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     tr: "Ceza",
     ar: "غرامة",
     kk: "Айыппұл",
+  },
+  penaltyFalseStamps: {
+    ru: "Штраф за ложные штампы",
+    en: "False-stamp penalty",
+    tr: "Yanlış damga cezası",
+    ar: "غرامة الأختام الخاطئة",
+    kk: "Жалған мөртабан айыппұлы",
+  },
+  penaltyFalseStampsHint: {
+    ru: "Вы пометили чистые улики как противоречия — за каждую снимают часть гонорара.",
+    en: "You stamped clean evidence as a contradiction — each one costs part of your fee.",
+    tr: "Temiz kanıtları çelişki olarak damgaladınız — her biri ücretinizden kesinti yapar.",
+    ar: "لقد ختمت أدلة سليمة كتناقض — كل واحدة تقتطع جزءًا من أتعابك.",
+    kk: "Сіз таза дәлелдерді қайшылық деп белгіледіңіз — әрқайсысы гонорардың бір бөлігін алады.",
   },
   rewardEarned: {
     ru: "Итого",

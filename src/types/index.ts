@@ -233,6 +233,8 @@ export interface RewardBreakdown {
    */
   readonly efficiencyComponent: number;
   readonly penalty: number;
+  /** How many cards were wrongly stamped — the cause of `penalty`, for display. */
+  readonly falseStamps: number;
   readonly dailyMultiplierApplied: number;
   /** Extra reward from rank + streak bonuses applied to the positive base. */
   readonly bonusComponent: number;

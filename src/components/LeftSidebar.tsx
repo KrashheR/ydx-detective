@@ -69,7 +69,7 @@ export function LeftSidebar({
       </div>
 
       {/* Scrollable case list — keeps daily card from being crushed by flex shrink */}
-      <div className="mt-[15px] flex min-h-0 flex-1 flex-col gap-[15px] overflow-y-auto">
+      <div className="mt-[15px] flex min-h-0 max-h-[600px] flex-1 flex-col gap-[15px] overflow-y-auto md:max-h-none">
         {/* Daily case — pinned to top, gold URGENT stamp */}
         {dailyCase && (
           <Tooltip
