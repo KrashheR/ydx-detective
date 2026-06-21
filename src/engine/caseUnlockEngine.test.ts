@@ -28,7 +28,7 @@ describe('getRequiredLevel', () => {
 describe('compareCasesByUnlockCriteria', () => {
   it('orders by required level, then by case number', () => {
     const c1 = makeCase({ id: 'case-001' }); // level 1
-    const c3 = makeCase({ id: 'case-003' }); // level 2
+    const c3 = makeCase({ id: 'case-013' }); // level 2
     expect(compareCasesByUnlockCriteria(c1, c3)).toBeLessThan(0);
     expect(compareCasesByUnlockCriteria(c3, c1)).toBeGreaterThan(0);
   });
@@ -36,7 +36,7 @@ describe('compareCasesByUnlockCriteria', () => {
 
 describe('evaluateCaseUnlocks', () => {
   const c1 = makeCase({ id: 'case-001' }); // requires level 1
-  const c3 = makeCase({ id: 'case-003' }); // requires level 2
+  const c3 = makeCase({ id: 'case-013' }); // requires level 2 (next tier after case-001)
 
   it('marks a completed case as completed', () => {
     const stats = makeStats({ completedCaseIds: ['case-001'] });
@@ -70,8 +70,8 @@ describe('evaluateCaseUnlocks', () => {
 });
 
 describe('isCaseUnlocked / getNextAvailableCase / summarize', () => {
-  const c1 = makeCase({ id: 'case-001' });
-  const c3 = makeCase({ id: 'case-003' });
+  const c1 = makeCase({ id: 'case-001' }); // level 1
+  const c3 = makeCase({ id: 'case-013' }); // level 2
 
   it('treats only locked cases as not unlocked', () => {
     const stats = makeStats({ xp: 0 });
@@ -83,7 +83,7 @@ describe('isCaseUnlocked / getNextAvailableCase / summarize', () => {
     const stats = makeStats({ xp: 10, completedCaseIds: ['case-001'] });
     const unlocks = evaluateCaseUnlocks([c1, c3], stats);
     // c1 is completed (not 'available'); c3 is available → it is "next".
-    expect(getNextAvailableCase(unlocks, 'case-001')?.id).toBe('case-003');
+    expect(getNextAvailableCase(unlocks, 'case-001')?.id).toBe('case-013');
   });
 
   it('returns null when no other case is available', () => {

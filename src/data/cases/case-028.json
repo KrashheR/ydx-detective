@@ -1,0 +1,238 @@
+{
+  "id": "case-028",
+  "type": "standard",
+  "difficulty": "hard",
+  "claimAmount": 18000,
+  "truth": "fraud",
+  "investigationBudget": 3,
+  "title": {
+    "ru": "Поджог склада",
+    "en": "The Warehouse Arson",
+    "tr": "Depo Kundaklaması",
+    "ar": "حريق المستودع المُتعمَّد",
+    "kk": "Қойманы өртеу"
+  },
+  "claim": {
+    "person": {
+      "ru": "Дамир Аскаров, 47 лет",
+      "en": "Damir Askarov, 47",
+      "tr": "Damir Askarov, 47",
+      "ar": "دامير أسكاروف، 47",
+      "kk": "Дамир Асқаров, 47 жаста"
+    },
+    "story": {
+      "ru": "В ночь на 14 апреля мой склад сгорел дотла. Я был дома и узнал о пожаре только утром от пожарных. Сигнализация почему-то не сработала. Прошу выплатить страховку за здание и товар — 18000 евро.",
+      "en": "On the night of 14 April my warehouse burned to the ground. I was at home and only learned about the fire in the morning from the firefighters. For some reason the alarm did not go off. I request the insurance for the building and goods — €18,000.",
+      "tr": "14 Nisan gecesi deponun tamamı yandı. Evdeydim ve yangını ancak sabah itfaiyeden öğrendim. Alarm nedense çalmadı. Bina ve mallar için sigortayı talep ediyorum — 18.000 avro.",
+      "ar": "في ليلة 14 أبريل احترق مستودعي بالكامل. كنت في المنزل ولم أعلم بالحريق إلا صباحًا من رجال الإطفاء. لسبب ما لم ينطلق الإنذار. أطلب التأمين عن المبنى والبضائع — 18000 يورو.",
+      "kk": "14 сәуірге қараған түні қоймам толық өртеніп кетті. Үйде едім, өрт туралы тек таңертең өрт сөндірушілерден білдім. Дабыл неге екені белгісіз қосылмады. Ғимарат пен тауар үшін сақтандыруды төлеуді сұраймын — 18000 еуро."
+    }
+  },
+  "coverImage": "covers/case-028.svg",
+  "personImage": "people/damir.svg",
+  "evidences": [
+    {
+      "id": "ev-cam",
+      "type": "camera_recording",
+      "title": {
+        "ru": "Запись CCTV",
+        "en": "CCTV Recording",
+        "tr": "CCTV Kaydı",
+        "ar": "تسجيل كاميرا المراقبة",
+        "kk": "CCTV жазбасы"
+      },
+      "content": {
+        "ru": "Запись наружной камеры от 14 апреля, 02:38. В кадре Дамир один подходит к складу, открывает дверь своим ключом и заходит внутрь. Через девять минут он выходит и быстро уезжает. В 02:54 из окон виден отблеск пламени.",
+        "en": "Footage from the exterior camera, 14 April, 02:38. Damir approaches the warehouse alone, opens the door with his own key and goes inside. Nine minutes later he comes out and drives off quickly. At 02:54 a glow of flames is visible through the windows.",
+        "tr": "Dış kameranın 14 Nisan 02:38 kaydı. Damir tek başına depoya yaklaşıyor, kendi anahtarıyla kapıyı açıp içeri giriyor. Dokuz dakika sonra çıkıp hızla uzaklaşıyor. 02:54'te pencerelerden alev parıltısı görülüyor.",
+        "ar": "تسجيل الكاميرا الخارجية بتاريخ 14 أبريل، 02:38. يقترب دامير من المستودع وحده، يفتح الباب بمفتاحه الخاص ويدخل. بعد تسع دقائق يخرج ويبتعد مسرعًا. عند 02:54 يظهر وهج اللهب عبر النوافذ.",
+        "kk": "Сыртқы камераның 14 сәуір, 02:38-дегі жазбасы. Дамир жалғыз қоймаға жақындап, есікті өз кілтімен ашып, ішке кіреді. Тоғыз минуттан соң шығып, тез кетіп қалады. 02:54-те терезелерден жалынның жарығы көрінеді."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Дамир утверждал, что был дома, но камера показывает, как он сам заходит на склад за минуты до возгорания.",
+        "en": "Damir claimed to be at home, yet the camera shows him entering the warehouse himself minutes before the fire started.",
+        "tr": "Damir evde olduğunu iddia etti, ancak kamera onun yangından dakikalar önce depoya bizzat girdiğini gösteriyor.",
+        "ar": "ادعى دامير أنه كان في المنزل، لكن الكاميرا تُظهره يدخل المستودع بنفسه قبل دقائق من اندلاع الحريق.",
+        "kk": "Дамир үйде болдым деді, бірақ камера оның өрттен бірнеше минут бұрын қоймаға өзі кіргенін көрсетеді."
+      },
+      "meta": {
+        "cameraId": "CAM-W7",
+        "cameraModel": "Hikvision DS-2CD2387G2 · 4K · H.265"
+      }
+    },
+    {
+      "id": "ev-alarm",
+      "type": "usage_log",
+      "title": {
+        "ru": "Лог охранной сигнализации",
+        "en": "Intrusion Alarm Log",
+        "tr": "Hırsız Alarmı Kaydı",
+        "ar": "سجل إنذار الاقتحام",
+        "kk": "Күзет дабылының журналы"
+      },
+      "content": {
+        "ru": [
+          "14.04 02:37 — Система ВЗВЕДЕНА · режим «Ночь»",
+          "14.04 02:39 — СНЯТИЕ С ОХРАНЫ · код пользователя U-01 (владелец: Д. Аскаров)",
+          "14.04 02:39 — Зона «Главный вход»: открыта",
+          "14.04 02:48 — Движение в зоне «Склад» · детекторы заглушены вручную",
+          "14.04 02:49 — Дверь закрыта · постановка пропущена",
+          "14.04 02:56 — Датчик дыма: СБОЙ ПИТАНИЯ"
+        ],
+        "en": [
+          "14.04 02:37 — System ARMED · \"Night\" mode",
+          "14.04 02:39 — DISARMED · user code U-01 (owner: D. Askarov)",
+          "14.04 02:39 — Zone \"Main entrance\": opened",
+          "14.04 02:48 — Motion in zone \"Storage\" · detectors muted manually",
+          "14.04 02:49 — Door closed · re-arming skipped",
+          "14.04 02:56 — Smoke sensor: POWER FAULT"
+        ],
+        "tr": [
+          "14.04 02:37 — Sistem KURULDU · \"Gece\" modu",
+          "14.04 02:39 — DEVRE DIŞI · kullanıcı kodu U-01 (sahip: D. Askarov)",
+          "14.04 02:39 — Bölge \"Ana giriş\": açıldı",
+          "14.04 02:48 — \"Depo\" bölgesinde hareket · dedektörler elle susturuldu",
+          "14.04 02:49 — Kapı kapandı · yeniden kurma atlandı",
+          "14.04 02:56 — Duman sensörü: GÜÇ ARIZASI"
+        ],
+        "ar": [
+          "14.04 02:37 — النظام مُفعَّل · وضع «الليل»",
+          "14.04 02:39 — تعطيل · رمز المستخدم U-01 (المالك: د. أسكاروف)",
+          "14.04 02:39 — المنطقة «المدخل الرئيسي»: فُتحت",
+          "14.04 02:48 — حركة في منطقة «المخزن» · كُتمت أجهزة الكشف يدويًا",
+          "14.04 02:49 — أُغلق الباب · تخطّي إعادة التفعيل",
+          "14.04 02:56 — مستشعر الدخان: عطل في الطاقة"
+        ],
+        "kk": [
+          "14.04 02:37 — Жүйе ҚОСУЛЫ · «Түн» режимі",
+          "14.04 02:39 — КҮЗЕТТЕН АЛЫНДЫ · пайдаланушы коды U-01 (иесі: Д. Асқаров)",
+          "14.04 02:39 — «Басты кіреберіс» аймағы: ашылды",
+          "14.04 02:48 — «Қойма» аймағында қозғалыс · детекторлар қолмен өшірілді",
+          "14.04 02:49 — Есік жабылды · қайта қосу өткізіп жіберілді",
+          "14.04 02:56 — Түтін датчигі: ҚУАТ АҚАУЫ"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Сигнализация не «не сработала» сама — её сняли с охраны личным кодом владельца за минуты до пожара, а детекторы заглушили вручную.",
+        "en": "The alarm did not simply \"fail\" — it was disarmed with the owner's personal code minutes before the fire, and the detectors were muted by hand.",
+        "tr": "Alarm öylece \"çalışmadı\" değil — yangından dakikalar önce sahibinin kişisel koduyla devre dışı bırakıldı ve dedektörler elle susturuldu.",
+        "ar": "لم «يفشل» الإنذار من تلقاء نفسه — بل عُطِّل برمز المالك الشخصي قبل دقائق من الحريق، وكُتمت أجهزة الكشف يدويًا.",
+        "kk": "Дабыл өзі «істемей қалған» жоқ — ол өрттен бірнеше минут бұрын иесінің жеке кодымен күзеттен алынып, детекторлар қолмен өшірілген."
+      },
+      "meta": {
+        "logPrompt": "alarmsys@unit:~$ tail -f /var/log/intrusion.log"
+      }
+    },
+    {
+      "id": "ev-fire",
+      "type": "document",
+      "title": {
+        "ru": "Отчёт пожарной службы",
+        "en": "Fire Report",
+        "tr": "İtfaiye Raporu",
+        "ar": "تقرير الإطفاء",
+        "kk": "Өрт қызметінің есебі"
+      },
+      "content": {
+        "ru": "Дознаватель установил, что очаг возгорания находился в центре складского помещения. В пробах обнаружены следы горючей жидкости (ускорителя), что указывает на умышленный поджог. Конкретное лицо в отчёте не названо.",
+        "en": "The investigator established that the seat of the fire was in the centre of the storage area. Traces of an accelerant (flammable liquid) were found in samples, indicating deliberate arson. No specific person is named in the report.",
+        "tr": "Müfettiş, yangının çıkış noktasının depo alanının ortasında olduğunu belirledi. Numunelerde hızlandırıcı (yanıcı sıvı) izleri bulundu; bu, kasıtlı kundaklamaya işaret ediyor. Raporda belirli bir kişi adı geçmiyor.",
+        "ar": "أثبت المحقق أن مصدر الحريق كان في وسط منطقة التخزين. عُثر في العينات على آثار مادة مُسرِّعة (سائل قابل للاشتعال)، ما يشير إلى حريق متعمَّد. لم يُذكر شخص بعينه في التقرير.",
+        "kk": "Тергеуші өрт ошағы қойма бөлмесінің ортасында болғанын анықтады. Сынамалардан жанғыш сұйықтық (жеделдеткіш) іздері табылды, бұл қасақана өртеуді көрсетеді. Есепте нақты тұлға аталмаған."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Отчёт подлинный и указывает на поджог, но сам по себе не называет виновного — он лишь подтверждает умышленный характер пожара.",
+        "en": "The report is genuine and points to arson, but on its own it names no culprit — it only confirms the fire was deliberate.",
+        "tr": "Rapor gerçektir ve kundaklamaya işaret eder, ancak tek başına bir suçlu adı vermez — yalnızca yangının kasıtlı olduğunu doğrular.",
+        "ar": "التقرير أصلي ويشير إلى الحريق المتعمَّد، لكنه بمفرده لا يُسمّي جانيًا — يؤكد فقط أن الحريق كان متعمَّدًا.",
+        "kk": "Есеп шынайы әрі өртеуге нұсқайды, бірақ өздігінен кінәліні атамайды — ол тек өрттің қасақана болғанын растайды."
+      }
+    },
+    {
+      "id": "ev-photo",
+      "type": "photo",
+      "title": {
+        "ru": "Фото пожарища",
+        "en": "Photo of the Burned Interior",
+        "tr": "Yanmış İç Mekân Fotoğrafı",
+        "ar": "صورة الداخل المحترق",
+        "kk": "Өрт орнының суреті"
+      },
+      "content": {
+        "ru": "Снимок внутри сгоревшего склада: обугленные стены и потолок, прогоревшие стеллажи, копоть по всей площади. Помещение полностью выгорело.",
+        "en": "A shot inside the burned warehouse: charred walls and ceiling, burned-through shelving, soot across the whole area. The premises are completely gutted.",
+        "tr": "Yanmış deponun içinden bir kare: kömürleşmiş duvarlar ve tavan, yanıp delinmiş raflar, tüm alana yayılmış is. Mekân tamamen kül olmuş.",
+        "ar": "لقطة داخل المستودع المحترق: جدران وسقف متفحّمة، رفوف احترقت بالكامل، سُخام في كل المساحة. المكان مدمَّر تمامًا.",
+        "kk": "Өртенген қойманың ішіндегі сурет: күйген қабырғалар мен төбе, жанып кеткен сөрелер, бүкіл аумақтағы күйе. Бөлме толық өртеніп кеткен."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Фото лишь документирует масштаб пожара и не противоречит заявлению; оно не указывает на причину или виновного.",
+        "en": "The photo merely documents the extent of the fire and does not contradict the claim; it points to neither cause nor culprit.",
+        "tr": "Fotoğraf yalnızca yangının boyutunu belgeler ve talebe aykırı değildir; ne nedene ne de suçluya işaret eder.",
+        "ar": "الصورة توثّق فقط حجم الحريق ولا تتعارض مع المطالبة؛ ولا تشير إلى سبب أو جانٍ.",
+        "kk": "Сурет тек өрттің көлемін тіркейді әрі арызға қайшы келмейді; ол себепті де, кінәліні де көрсетпейді."
+      },
+      "meta": {
+        "filename": "IMG_20260414_093150.jpg"
+      }
+    },
+    {
+      "id": "ev-inventory",
+      "type": "document",
+      "title": {
+        "ru": "Опись товара",
+        "en": "Inventory List",
+        "tr": "Envanter Listesi",
+        "ar": "قائمة الجرد",
+        "kk": "Тауар тізімі"
+      },
+      "content": {
+        "ru": "Складская опись с перечнем хранившегося товара и его заявленной стоимостью на общую сумму около 18000 евро. Документ оформлен заявителем и отражает остатки на дату до пожара.",
+        "en": "A warehouse inventory listing the stored goods and their stated value, totalling roughly €18,000. The document was prepared by the claimant and reflects stock as of a date before the fire.",
+        "tr": "Depolanan malları ve beyan edilen değerlerini, toplam yaklaşık 18.000 avro olarak listeleyen bir depo envanteri. Belge başvuran tarafından hazırlanmış ve yangından önceki bir tarihteki stoğu yansıtır.",
+        "ar": "قائمة جرد للمستودع تُدرج البضائع المخزَّنة وقيمتها المعلنة بإجمالي نحو 18000 يورو. أعدّ المستند المُطالِب ويعكس المخزون بتاريخ سابق للحريق.",
+        "kk": "Қоймада сақталған тауар мен оның мәлімделген құнын тізімдейтін опись, жалпы сомасы шамамен 18000 еуро. Құжатты арыз беруші дайындаған және өрттен бұрынғы күнгі қалдықты көрсетеді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Опись только перечисляет товар и его стоимость; она не противоречит заявлению и не свидетельствует о поджоге.",
+        "en": "The inventory merely lists goods and their value; it does not contradict the claim and does not evidence arson.",
+        "tr": "Envanter yalnızca malları ve değerlerini listeler; talebe aykırı değildir ve kundaklamaya kanıt teşkil etmez.",
+        "ar": "القائمة تُدرج البضائع وقيمتها فقط؛ لا تتعارض مع المطالبة ولا تُثبت الحريق المتعمَّد.",
+        "kk": "Опись тек тауар мен оның құнын тізімдейді; ол арызға қайшы келмейді әрі өртеуді дәлелдемейді."
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "CCTV фиксирует, как сам владелец заходит на склад за минуты до возгорания.",
+      "Сигнализацию сняли личным кодом владельца и заглушили датчики вручную.",
+      "Это поджог ради страховки — заявление следует отклонить."
+    ],
+    "en": [
+      "CCTV captures the owner himself entering the warehouse minutes before ignition.",
+      "The alarm was disarmed with the owner's personal code and the sensors muted by hand.",
+      "This is arson for the insurance — the claim should be rejected."
+    ],
+    "tr": [
+      "CCTV, sahibinin tutuşmadan dakikalar önce depoya girdiğini yakalıyor.",
+      "Alarm sahibinin kişisel koduyla devre dışı bırakılmış ve sensörler elle susturulmuş.",
+      "Bu, sigorta için kundaklamadır — talep reddedilmeli."
+    ],
+    "ar": [
+      "تلتقط كاميرا المراقبة المالك نفسه وهو يدخل المستودع قبل دقائق من الاشتعال.",
+      "عُطِّل الإنذار برمز المالك الشخصي وكُتمت أجهزة الاستشعار يدويًا.",
+      "هذا حريق متعمَّد من أجل التأمين — يجب رفض المطالبة."
+    ],
+    "kk": [
+      "CCTV иесінің өрттен бірнеше минут бұрын қоймаға кіргенін түсіреді.",
+      "Дабыл иесінің жеке кодымен күзеттен алынып, датчиктер қолмен өшірілген.",
+      "Бұл сақтандыру үшін өртеу — талапты қабылдамау керек."
+    ]
+  }
+}

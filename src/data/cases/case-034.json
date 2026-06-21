@@ -1,0 +1,331 @@
+{
+  "id": "case-034",
+  "type": "standard",
+  "difficulty": "hard",
+  "claimAmount": 30000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Большой пожар на складе",
+    "en": "The Great Warehouse Fire",
+    "tr": "Büyük Depo Yangını",
+    "ar": "حريق المستودع الكبير",
+    "kk": "Қоймадағы үлкен өрт"
+  },
+  "claim": {
+    "person": {
+      "ru": "Харитон Велижанин, 55 лет",
+      "en": "Khariton Velizhanin, 55",
+      "tr": "Khariton Velizhanin, 55",
+      "ar": "خاريتون فيليجانين، 55",
+      "kk": "Харитон Велижанин, 55 жаста"
+    },
+    "story": {
+      "ru": "В ночь на 20 мая мой торговый склад полностью выгорел. Сгорел весь товар — электроника и бытовая техника на тридцать тысяч евро. Это был несчастный случай, проводка. Прошу выплату по полису в полном объёме.",
+      "en": "On the night of 20 May my trade warehouse burned down completely. All the stock was lost — electronics and appliances worth thirty thousand euros. It was an accident, the wiring. I request the full payout under my policy.",
+      "tr": "20 Mayıs gecesi ticari depom tamamen yandı. Tüm mal kaybedildi — otuz bin euro değerinde elektronik ve beyaz eşya. Bir kazaydı, kablolar. Poliçem kapsamında tam ödeme talep ediyorum.",
+      "ar": "في ليلة 20 مايو احترق مستودعي التجاري بالكامل. فُقدت كل البضائع — إلكترونيات وأجهزة منزلية بقيمة ثلاثين ألف يورو. كان حادثًا، الأسلاك. أطلب التعويض الكامل بموجب وثيقتي.",
+      "kk": "20 мамырға қараған түні менің сауда қоймам толық өртеніп кетті. Барлық тауар — отыз мың еуроға электроника мен тұрмыстық техника жанып кетті. Бұл жазатайым оқиға, сым еді. Полис бойынша толық төлемді сұраймын."
+    }
+  },
+  "coverImage": "covers/case-034.svg",
+  "personImage": "people/khariton.svg",
+  "evidences": [
+    {
+      "id": "ev-cam",
+      "type": "camera_recording",
+      "title": {
+        "ru": "Запись камеры склада",
+        "en": "Warehouse Camera Recording",
+        "tr": "Depo Kamerası Kaydı",
+        "ar": "تسجيل كاميرا المستودع",
+        "kk": "Қойма камерасының жазбасы"
+      },
+      "content": {
+        "ru": "19 мая, 22:10–23:40 — на записи видно, как двое сотрудников под руководством Харитона грузят коробки с телевизорами и техникой в фургон и вывозят их со склада. К утру стеллажи в кадре стоят почти пустыми, ещё до пожара.",
+        "en": "19 May, 22:10–23:40 — the footage shows two staff, directed by Khariton, loading boxes of televisions and appliances into a van and driving them out of the warehouse. By morning the shelves on camera stand nearly empty — before the fire.",
+        "tr": "19 Mayıs, 22:10–23:40 — görüntüde, Khariton'un yönetiminde iki çalışanın televizyon ve eşya kutularını bir kamyonete yükleyip depodan çıkardığı görülüyor. Sabaha kadar kameradaki raflar neredeyse boş — yangından önce.",
+        "ar": "19 مايو، 22:10–23:40 — يُظهر التسجيل موظفَين، بتوجيه من خاريتون، يحمّلان صناديق التلفزيونات والأجهزة في شاحنة صغيرة ويخرجانها من المستودع. وبحلول الصباح تبدو الرفوف في الكاميرا شبه فارغة — قبل الحريق.",
+        "kk": "19 мамыр, 22:10–23:40 — жазбада Харитонның басшылығымен екі қызметкердің теледидарлар мен техника салынған қораптарды фургонға тиеп, қоймадан шығарып әкеткені көрінеді. Таңға қарай кадрдағы сөрелер өрттен бұрын дерлік бос тұр."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Накануне пожара ценный товар вывезли со склада — гореть «на тридцать тысяч» было уже нечему.",
+        "en": "The night before the fire the valuable stock was removed — there was nothing worth 'thirty thousand' left to burn.",
+        "tr": "Yangından önceki gece değerli mallar depodan çıkarıldı — yanacak 'otuz bin euroluk' bir şey kalmamıştı.",
+        "ar": "في الليلة السابقة للحريق نُقلت البضائع الثمينة — لم يبق ما يساوي 'ثلاثين ألفًا' ليحترق.",
+        "kk": "Өрттен бір түн бұрын құнды тауар қоймадан шығарылды — «отыз мыңға» жанатын ештеңе қалмаған."
+      },
+      "meta": {
+        "cameraId": "CAM-F1",
+        "cameraModel": "Uniview IPC3614SB · 4K · H.265"
+      }
+    },
+    {
+      "id": "ev-panel",
+      "type": "usage_log",
+      "title": {
+        "ru": "Лог пожарной панели",
+        "en": "Fire-Panel Log",
+        "tr": "Yangın Paneli Kaydı",
+        "ar": "سجل لوحة الإنذار من الحريق",
+        "kk": "Өрт панелінің журналы"
+      },
+      "content": {
+        "ru": [
+          "19.05 21:58 — Вход в меню обслуживания (код администратора)",
+          "19.05 22:01 — Зона 1–6: детекторы дыма ПЕРЕВЕДЕНЫ В РУЧНОЕ ОТКЛЮЧЕНИЕ",
+          "19.05 22:02 — Звуковое оповещение и автонабор 101 ОТКЛЮЧЕНЫ",
+          "19.05 22:03 — Выход из меню обслуживания",
+          "20.05 02:14 — Зона 4: тепловой порог превышен (детектор заглушен, тревоги нет)",
+          "20.05 02:41 — Зона 2: тепловой порог превышен (тревоги нет)",
+          "20.05 03:05 — Внешний вызов 101 с улицы (прохожий)"
+        ],
+        "en": [
+          "19.05 21:58 — Maintenance menu entered (admin code)",
+          "19.05 22:01 — Zones 1–6: smoke detectors SET TO MANUAL DISABLE",
+          "19.05 22:02 — Sounder and auto-dial 101 DISABLED",
+          "19.05 22:03 — Maintenance menu exited",
+          "20.05 02:14 — Zone 4: heat threshold exceeded (detector muted, no alarm)",
+          "20.05 02:41 — Zone 2: heat threshold exceeded (no alarm)",
+          "20.05 03:05 — External 101 call from the street (passerby)"
+        ],
+        "tr": [
+          "19.05 21:58 — Bakım menüsüne giriş (yönetici kodu)",
+          "19.05 22:01 — Bölge 1–6: duman dedektörleri MANUEL DEVRE DIŞI bırakıldı",
+          "19.05 22:02 — Siren ve otomatik 101 araması DEVRE DIŞI",
+          "19.05 22:03 — Bakım menüsünden çıkış",
+          "20.05 02:14 — Bölge 4: ısı eşiği aşıldı (dedektör susturulmuş, alarm yok)",
+          "20.05 02:41 — Bölge 2: ısı eşiği aşıldı (alarm yok)",
+          "20.05 03:05 — Sokaktan dış 101 araması (yoldan geçen)"
+        ],
+        "ar": [
+          "19.05 21:58 — الدخول إلى قائمة الصيانة (رمز المسؤول)",
+          "19.05 22:01 — المناطق 1–6: تم تعطيل كاشفات الدخان يدويًا",
+          "19.05 22:02 — تم تعطيل صفّارة الإنذار والاتصال التلقائي بـ101",
+          "19.05 22:03 — الخروج من قائمة الصيانة",
+          "20.05 02:14 — المنطقة 4: تجاوز عتبة الحرارة (الكاشف مكتوم، لا إنذار)",
+          "20.05 02:41 — المنطقة 2: تجاوز عتبة الحرارة (لا إنذار)",
+          "20.05 03:05 — اتصال خارجي بـ101 من الشارع (أحد المارة)"
+        ],
+        "kk": [
+          "19.05 21:58 — Қызмет көрсету мәзіріне кіру (әкімші коды)",
+          "19.05 22:01 — 1–6 аймақтар: түтін детекторлары ҚОЛМЕН ӨШІРІЛДІ",
+          "19.05 22:02 — Дыбыстық дабыл мен 101 автотерілуі ӨШІРІЛДІ",
+          "19.05 22:03 — Қызмет көрсету мәзірінен шығу",
+          "20.05 02:14 — 4-аймақ: жылу шегі асып кетті (детектор өшірулі, дабыл жоқ)",
+          "20.05 02:41 — 2-аймақ: жылу шегі асып кетті (дабыл жоқ)",
+          "20.05 03:05 — Көшеден сыртқы 101 қоңырауы (өтіп бара жатқан адам)"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "За четыре часа до пожара пожарные датчики и автодозвон были вручную отключены под кодом администратора — пожар не мог быть случайным.",
+        "en": "Four hours before the fire the smoke detectors and auto-dial were manually disabled under the admin code — the fire could not have been accidental.",
+        "tr": "Yangından dört saat önce duman dedektörleri ve otomatik arama yönetici koduyla manuel olarak devre dışı bırakıldı — yangın kazara olamazdı.",
+        "ar": "قبل أربع ساعات من الحريق عُطّلت كاشفات الدخان والاتصال التلقائي يدويًا برمز المسؤول — لا يمكن أن يكون الحريق عرضيًا.",
+        "kk": "Өрттен төрт сағат бұрын түтін детекторлары мен автотерілу әкімші кодымен қолмен өшірілген — өрт кездейсоқ бола алмайды."
+      },
+      "meta": {
+        "logPrompt": "scada@plant:~$ tail -f /var/log/fire-panel.log"
+      }
+    },
+    {
+      "id": "ev-bank",
+      "type": "bank_statement",
+      "title": {
+        "ru": "Банковская выписка",
+        "en": "Bank Statement",
+        "tr": "Banka Ekstresi",
+        "ar": "كشف حساب بنكي",
+        "kk": "Банк үзіндісі"
+      },
+      "content": {
+        "ru": [
+          "01.05 — Остаток по счёту: −1 250 000 ₽ (овердрафт)",
+          "05.05 — Просрочен платёж по кредиту, начислена пеня",
+          "12.05 — Списание: арендная плата за склад НЕ ПРОШЛА (недостаточно средств)",
+          "17.05 — УВЕДОМЛЕНИЕ БАНКА: дефолт по кредиту, требование о погашении",
+          "18.05 — Заблокирована кредитная линия предприятия"
+        ],
+        "en": [
+          "01.05 — Account balance: −1,250,000 ₽ (overdraft)",
+          "05.05 — Loan payment overdue, penalty charged",
+          "12.05 — Debit: warehouse rent FAILED (insufficient funds)",
+          "17.05 — BANK NOTICE: loan default, demand for repayment",
+          "18.05 — Company credit line frozen"
+        ],
+        "tr": [
+          "01.05 — Hesap bakiyesi: −1.250.000 ₽ (ek hesap)",
+          "05.05 — Kredi ödemesi gecikti, ceza işlendi",
+          "12.05 — Borç: depo kirası BAŞARISIZ (yetersiz bakiye)",
+          "17.05 — BANKA BİLDİRİMİ: kredi temerrüdü, geri ödeme talebi",
+          "18.05 — Şirket kredi limiti donduruldu"
+        ],
+        "ar": [
+          "01.05 — رصيد الحساب: −1,250,000 ₽ (سحب على المكشوف)",
+          "05.05 — تأخّر سداد القرض، فُرضت غرامة",
+          "12.05 — خصم: إيجار المستودع فشل (رصيد غير كافٍ)",
+          "17.05 — إشعار من البنك: تعثّر القرض، مطالبة بالسداد",
+          "18.05 — تم تجميد خط ائتمان الشركة"
+        ],
+        "kk": [
+          "01.05 — Шот қалдығы: −1 250 000 ₽ (овердрафт)",
+          "05.05 — Несие төлемі мерзімінен өтті, өсімпұл есептелді",
+          "12.05 — Шегерім: қойма жалдау ақысы ӨТПЕДІ (қаражат жеткіліксіз)",
+          "17.05 — БАНК ХАБАРЛАМАСЫ: несие дефолты, өтеу талабы",
+          "18.05 — Кәсіпорынның несие желісі бұғатталды"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "За три дня до пожара бизнес был в дефолте по кредиту с миллионным долгом — налицо финансовый мотив поджога.",
+        "en": "Three days before the fire the business was in loan default with a million-rouble debt — a clear financial motive for arson.",
+        "tr": "Yangından üç gün önce işletme milyonluk borçla kredi temerrüdündeydi — kundaklama için açık bir mali güdü.",
+        "ar": "قبل ثلاثة أيام من الحريق كان العمل متعثّرًا في القرض بدين بالملايين — دافع مالي واضح للحريق المتعمّد.",
+        "kk": "Өрттен үш күн бұрын бизнес миллиондық қарызбен несие дефолтында болды — өртеудің айқын қаржылық себебі."
+      },
+      "meta": {
+        "bankName": "МеридианБанк",
+        "accountMask": "•••• •••• •••• 1129"
+      }
+    },
+    {
+      "id": "ev-phone",
+      "type": "phone_records",
+      "title": {
+        "ru": "Детализация звонков",
+        "en": "Call Records",
+        "tr": "Arama Kayıtları",
+        "ar": "سجل المكالمات",
+        "kk": "Қоңыраулар детализациясы"
+      },
+      "content": {
+        "ru": [
+          "19.05 19:20 — Исходящий, поставщик, 5 мин",
+          "20.05 03:10 — Исходящий, 101 (пожарные), 4 мин",
+          "20.05 07:45 — Входящий, страховая, 8 мин",
+          "20.05 12:30 — Исходящий, бухгалтер, 6 мин"
+        ],
+        "en": [
+          "19.05 19:20 — Outgoing, supplier, 5 min",
+          "20.05 03:10 — Outgoing, 101 (fire brigade), 4 min",
+          "20.05 07:45 — Incoming, insurer, 8 min",
+          "20.05 12:30 — Outgoing, accountant, 6 min"
+        ],
+        "tr": [
+          "19.05 19:20 — Giden, tedarikçi, 5 dk",
+          "20.05 03:10 — Giden, 101 (itfaiye), 4 dk",
+          "20.05 07:45 — Gelen, sigortacı, 8 dk",
+          "20.05 12:30 — Giden, muhasebeci, 6 dk"
+        ],
+        "ar": [
+          "19.05 19:20 — صادرة، المورّد، 5 دقائق",
+          "20.05 03:10 — صادرة، 101 (الإطفاء)، 4 دقائق",
+          "20.05 07:45 — واردة، شركة التأمين، 8 دقائق",
+          "20.05 12:30 — صادرة، المحاسب، 6 دقائق"
+        ],
+        "kk": [
+          "19.05 19:20 — Шығыс, жеткізуші, 5 мин",
+          "20.05 03:10 — Шығыс, 101 (өрт сөндіру), 4 мин",
+          "20.05 07:45 — Кіріс, сақтандыру, 8 мин",
+          "20.05 12:30 — Шығыс, бухгалтер, 6 мин"
+        ]
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Звонки обычные — поставщик, пожарные, страховая, бухгалтер. Сами по себе они ничего не выдают.",
+        "en": "The calls are ordinary — supplier, fire brigade, insurer, accountant. On their own they reveal nothing.",
+        "tr": "Aramalar sıradan — tedarikçi, itfaiye, sigortacı, muhasebeci. Tek başlarına bir şey ele vermiyor.",
+        "ar": "المكالمات عادية — المورّد، الإطفاء، التأمين، المحاسب. وهي بحد ذاتها لا تكشف شيئًا.",
+        "kk": "Қоңыраулар қарапайым — жеткізуші, өрт сөндіру, сақтандыру, бухгалтер. Олар өздігінен ештеңе ашпайды."
+      },
+      "meta": {
+        "carrierName": "ЛайнКом",
+        "phoneMask": "+7 (9••) •••-••-•4"
+      }
+    },
+    {
+      "id": "ev-fire",
+      "type": "document",
+      "title": {
+        "ru": "Заключение дознавателя",
+        "en": "Fire Investigator's Report",
+        "tr": "Yangın Müfettişi Raporu",
+        "ar": "تقرير محقّق الحرائق",
+        "kk": "Өрт сарапшысының қорытындысы"
+      },
+      "content": {
+        "ru": "Акт пожарно-технической экспертизы от 22 мая: очаг возгорания — в торговом зале, в нескольких независимых точках. Обнаружены следы интенсификатора горения (нефтепродукт). Версия о неисправности проводки не подтверждена. Конкретные лица в акте не названы.",
+        "en": "Fire-technical expert report, 22 May: the seat of the fire was in the sales floor, at several independent points. Traces of an accelerant (petroleum product) were found. The faulty-wiring theory is not confirmed. No specific persons are named in the report.",
+        "tr": "Yangın teknik bilirkişi raporu, 22 Mayıs: yangının başlangıç noktası satış alanında, birkaç bağımsız noktada. Yangın hızlandırıcı (petrol ürünü) izleri bulundu. Arızalı kablo teorisi doğrulanmadı. Raporda belirli kişi adı geçmiyor.",
+        "ar": "تقرير الخبير الفني للحرائق، 22 مايو: كان منشأ الحريق في صالة البيع، في عدة نقاط مستقلة. عُثر على آثار مادة مسرّعة للاشتعال (منتج بترولي). لم تتأكّد نظرية عطل الأسلاك. لا يُذكر في التقرير أشخاص محدّدون.",
+        "kk": "22 мамырдағы өрт-техникалық сараптама актісі: өрт ошағы — сауда залында, бірнеше тәуелсіз нүктеде. Жану интенсификаторының (мұнай өнімі) іздері табылды. Сым ақаулығы туралы нұсқа расталмады. Актіде нақты тұлғалар аталмаған."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Эксперт фиксирует следы поджога, но не называет виновника — сам по себе документ не уличает заявителя.",
+        "en": "The expert records signs of arson but names no culprit — on its own the document does not incriminate the claimant.",
+        "tr": "Bilirkişi kundaklama belirtileri kaydediyor ancak fail belirtmiyor — belge tek başına başvuranı suçlamıyor.",
+        "ar": "يسجّل الخبير علامات حريق متعمّد لكنه لا يسمّي جانيًا — لا يدين المستند المطالب بحد ذاته.",
+        "kk": "Сарапшы өрттеу белгілерін тіркейді, бірақ кінәліні атамайды — құжаттың өзі арыз берушіні әшкерелемейді."
+      }
+    },
+    {
+      "id": "ev-social",
+      "type": "social_media",
+      "title": {
+        "ru": "Удалённый пост в соцсети",
+        "en": "Deleted Social-Media Post",
+        "tr": "Silinmiş Sosyal Medya Paylaşımı",
+        "ar": "منشور محذوف على وسائل التواصل",
+        "kk": "Жойылған әлеуметтік желі жазбасы"
+      },
+      "content": {
+        "ru": "Сохранённый скриншот поста Харитона от 13 мая (позже удалён): «Со складом столько головной боли… ну ничего, скоро страховая всё починит 🔥😉». Под постом — реакции знакомых.",
+        "en": "An archived screenshot of Khariton's post from 13 May (later deleted): \"This warehouse is such a headache… never mind, the insurance will fix everything soon 🔥😉\". Friends reacted under the post.",
+        "tr": "Khariton'un 13 Mayıs tarihli paylaşımının arşivlenmiş ekran görüntüsü (sonradan silinmiş): \"Bu depo tam bir baş ağrısı… neyse, yakında sigorta her şeyi halleder 🔥😉\". Paylaşımın altında tanıdıkların tepkileri var.",
+        "ar": "لقطة شاشة محفوظة لمنشور خاريتون بتاريخ 13 مايو (حُذف لاحقًا): «هذا المستودع صداع حقيقي… لا بأس، قريبًا سيصلح التأمين كل شيء 🔥😉». تفاعل المعارف أسفل المنشور.",
+        "kk": "Харитонның 13 мамырдағы жазбасының сақталған скриншоты (кейін жойылған): «Қоймамен бас ауыртатын дүние көп… ештеңе етпес, жақында сақтандыру бәрін жөндейді 🔥😉». Жазба астында таныстарының реакциясы бар."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "За неделю до пожара Харитон публично шутит, что «страховая всё починит» — это указывает на заранее задуманный поджог.",
+        "en": "A week before the fire Khariton publicly jokes that 'the insurance will fix everything' — pointing to a premeditated arson.",
+        "tr": "Yangından bir hafta önce Khariton 'sigorta her şeyi halleder' diye açıkça şaka yapıyor — önceden tasarlanmış bir kundaklamaya işaret ediyor.",
+        "ar": "قبل أسبوع من الحريق يمزح خاريتون علنًا بأن 'التأمين سيصلح كل شيء' — ما يشير إلى حريق متعمّد مدبّر مسبقًا.",
+        "kk": "Өрттен бір апта бұрын Харитон «сақтандыру бәрін жөндейді» деп ашық әзілдейді — бұл алдын ала ойластырылған өртеуді көрсетеді."
+      },
+      "meta": {
+        "socialPlatform": "vk.com"
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Накануне пожара со склада вывезли весь ценный товар, а пожарные датчики вручную отключили.",
+      "Банк показывает дефолт и миллионный долг — мотив, а удалённый пост раскрывает умысел.",
+      "Это спланированный поджог ради страховки — в выплате отказать."
+    ],
+    "en": [
+      "The night before the fire all valuable stock was removed and the smoke detectors were manually disabled.",
+      "The bank shows a default and a million-rouble debt — the motive — while the deleted post reveals intent.",
+      "This is a planned insurance arson — the claim must be rejected."
+    ],
+    "tr": [
+      "Yangından önceki gece tüm değerli mallar çıkarıldı ve duman dedektörleri elle devre dışı bırakıldı.",
+      "Banka temerrüt ve milyonluk borç gösteriyor — güdü — silinmiş paylaşım ise niyeti ortaya koyuyor.",
+      "Bu, sigorta için planlanmış bir kundaklama — talep reddedilmeli."
+    ],
+    "ar": [
+      "في الليلة السابقة للحريق نُقلت كل البضائع الثمينة وعُطّلت كاشفات الدخان يدويًا.",
+      "يُظهر البنك تعثّرًا ودينًا بالملايين — الدافع — بينما يكشف المنشور المحذوف النية.",
+      "هذا حريق متعمّد مخطّط له من أجل التأمين — يجب رفض المطالبة."
+    ],
+    "kk": [
+      "Өрттен бір түн бұрын барлық құнды тауар шығарылып, түтін детекторлары қолмен өшірілді.",
+      "Банк дефолт пен миллиондық қарызды көрсетеді — себеп, ал жойылған жазба ниетті ашады.",
+      "Бұл сақтандыру үшін жоспарланған өртеу — төлемнен бас тарту керек."
+    ]
+  }
+}

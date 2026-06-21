@@ -1,5 +1,7 @@
 # 07 · Авторинг контента
 
+> **🗺️ Ключевые файлы:** `src/data/CASE_AUTHORING_GUIDE.json` (первоисточник), `src/data/cases/*.json`, `src/data/caseLoader.ts` (реестр), `src/data/caseSchema.ts` (Zod), `src/types/index.ts`, `src/i18n/ui.ts`, `src/data/achievements.ts`.
+
 Контент — это данные. Машиночитаемый первоисточник для генерации дел —
 `src/data/CASE_AUTHORING_GUIDE.json` (схема, meta-поля по типам, шпаргалки, чек-листы,
 уже занятые значения, промпт-шаблон). Этот документ — человекочитаемая обвязка над ним.
@@ -70,11 +72,32 @@ meta-поля по типам (детали и примеры — в `CASE_AUTHO
 3. Положи обложку `public/covers/case-NNN.svg` (и при наличии `public/people/<name>.svg`).
 4. Для **стандартного** дела задай требование уровня в
    `GAME_CONFIG.caseUnlocks.standardCaseRequiredLevelById` (иначе оно получит
-   `defaultRequiredLevel = 30` и будет почти недоступно).
+   `defaultRequiredLevel = 30` и будет почти недоступно). Этот уровень задаёт и **позицию
+   в кампании** (сортировка `(requiredLevel, caseNumber)`) — см. кривую сложности ниже.
 5. Прогон: `npm run typecheck && npm test`. Невалидное дело логируется и пропускается при
    загрузке — оно просто не появится в игре.
 
 Чек-лист качества — `CASE_AUTHORING_GUIDE.json` → `quality_checklist`.
+
+### Кривая сложности — обязательный инвариант
+
+Кампания нарастает по сложности (механика и тир-таблица — [03-gameplay.md](03-gameplay.md)).
+Тест `src/data/campaignProgression.test.ts` требует, чтобы по порядку кампании:
+
+- число улик **не убывало** (онбординг 2 улики → экспертные 6);
+- первые два дела использовали **только** `photo`/`document`;
+- продвинутые типы (`bank_statement`, `phone_records`, `social_media`) дебютировали
+  **поздно** (позиция ≥ 18);
+- `requiredLevel` не убывал и оставался ≤ 16 (без XP-стены).
+
+Подбирай `requiredLevel` нового дела так, чтобы оно встало в нужный тир по числу улик и не
+нарушило монотонность.
+
+### Уже задействованные типы улик
+
+`bank_statement`, `phone_records`, `social_media` ранее не использовались; теперь они
+работают в экспертном тире (case-023…034). Их рендереры (`BankBody`/`PhoneBody`/`SocialBody`
+в `StampModal.tsx`), иконки и i18n-ярлыки уже на месте — достаточно сослаться на тип в JSON.
 
 ### Бюджетное дело
 

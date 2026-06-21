@@ -169,7 +169,20 @@
       { "id": "case-018", "theme": "Анатолий и енот Жорик: дрон-похититель кольца", "truth": "valid" },
       { "id": "case-019", "theme": "Анатолий и енот Жорик: газонокосилка без водителя", "truth": "valid" },
       { "id": "case-020", "theme": "Сплинтович vs Шреддеров (TMNT): подстава с пиццей", "truth": "fraud" },
-      { "id": "case-021", "theme": "Сплинтович vs Шреддеров (TMNT): взрыв газа в додзё", "truth": "fraud" }
+      { "id": "case-021", "theme": "Сплинтович vs Шреддеров (TMNT): взрыв газа в додзё", "truth": "fraud" },
+      { "id": "case-022", "theme": "Сплинтович vs Шреддеров (TMNT): кража в додзё (FOOT CLAN)", "truth": "valid" },
+      { "id": "case-023", "theme": "Карта украдена за границей / банковская выписка (bank_statement дебют)", "truth": "fraud" },
+      { "id": "case-024", "theme": "ДТП / детализация звонков (phone_records дебют)", "truth": "valid" },
+      { "id": "case-025", "theme": "Пожар в кафе / пост очевидца (social_media дебют)", "truth": "valid" },
+      { "id": "case-026", "theme": "Кража часов / соцсети выдают", "truth": "fraud" },
+      { "id": "case-027", "theme": "Затопление склада ливнем", "truth": "valid" },
+      { "id": "case-028", "theme": "Поджог склада ради страховки (бюджет 3)", "truth": "fraud" },
+      { "id": "case-029", "theme": "Удар молнии в дом / электроника", "truth": "valid" },
+      { "id": "case-030", "theme": "ДТП-подстава со сговором", "truth": "fraud" },
+      { "id": "case-031", "theme": "Градобой теплицы", "truth": "valid" },
+      { "id": "case-032", "theme": "Поддельная кража авто (GPS/камера/банк)", "truth": "fraud" },
+      { "id": "case-033", "theme": "Производственная травма (рентген, бюджет 4)", "truth": "valid" },
+      { "id": "case-034", "theme": "Масштабная афера / пожар бизнеса (финал)", "truth": "fraud" }
     ],
     "daily": [
       { "id": "case-002-daily", "theme": "Угон авто / CAN-шина", "truth": "fraud" },
@@ -182,8 +195,25 @@
   },
 
   "unused_evidence_types": {
-    "note": "Эти типы поддержаны в рендерере, но пока не использованы ни в одном деле. Отличная возможность для новых кейсов.",
-    "types": ["xray", "bank_statement", "phone_records", "social_media"]
+    "note": "Все 10 типов улик теперь задействованы хотя бы в одном деле (xray/bank_statement/phone_records/social_media введены в экспертном тире, case-023..034). Новых типов вводить не нужно.",
+    "types": []
+  },
+
+  "complexity_curve": {
+    "note": "Кампания нарастает по сложности (удержание игрока). Инвариант закреплён тестом src/data/campaignProgression.test.ts. Порядок кампании = сортировка по (requiredLevel, caseNumber) из gameConfig.standardCaseRequiredLevelById.",
+    "rules": [
+      "Число улик НЕ убывает по порядку кампании (онбординг 2 → экспертные 6).",
+      "Первые два дела (case-001, case-009) используют ТОЛЬКО photo/document.",
+      "Продвинутые типы bank_statement/phone_records/social_media дебютируют поздно (позиция ≥ 18).",
+      "requiredLevel не убывает и ≤ 16 (тир сложности, а не XP-стена)."
+    ],
+    "tiers": {
+      "L1 (2 улики)": ["case-001", "case-009"],
+      "L2-3 (3 улики)": ["case-013", "case-018", "case-019", "case-020", "case-021"],
+      "L4-11 (4 улики)": ["case-003", "case-004", "case-005", "case-006", "case-007", "case-008", "case-010", "case-011", "case-012", "case-014", "case-015", "case-016", "case-017", "case-022", "case-023", "case-024"],
+      "L12-13 (5 улик)": ["case-025", "case-026", "case-027", "case-028"],
+      "L14-16 (6 улик)": ["case-029", "case-030", "case-031", "case-032", "case-033", "case-034"]
+    }
   },
 
   "generation_prompt_template": {
@@ -207,7 +237,10 @@
 
   "meta_values_used": {
     "note": "Не повторяй эти значения в новых делах — они уже заняты.",
-    "gps_companies": ["GeoGuard Solutions", "МореМонитор", "ТрекМаш PRO", "АэроСлед Навигация"],
+    "gps_companies": ["GeoGuard Solutions", "МореМонитор", "ТрекМаш PRO", "АэроСлед Навигация", "ГеоТрек Авто"],
+    "bank_names": ["СтолицаБанк", "ВестаКредит", "НордБанк", "ПримаБанк", "АкваФинанс", "МеридианБанк"],
+    "carrier_names": ["ВолнаМобайл", "СигналТел", "ОрбитаСвязь", "ЛайнКом"],
+    "social_platforms": ["t.me", "instagram.com", "ok.ru", "vk.com"],
     "camera_models": [
       "HIKVISION DS-2CD2143G2-I · 4K · H.265",
       "AXIS P1448-LE · 4K · H.265",
@@ -219,7 +252,11 @@
       "Eufy Cam S220 · 2K · H.265",
       "TP-Link Tapo C520WS · 2K · H.264",
       "Imou Cruiser 2 · 4K · H.265",
-      "Hikvision DS-2CD2087G2-LU · 4K · H.265"
+      "Hikvision DS-2CD2087G2-LU · 4K · H.265",
+      "Hikvision DS-2CD2387G2 · 4K · H.265",
+      "Garmin Dash Cam 67W · 1440p · H.264",
+      "Lorex 4K E893AB · 4K · H.265",
+      "Uniview IPC3614SB · 4K · H.265"
     ],
     "log_prompts": [
       "root@alarm:~$ tail -f /var/log/security.log",
@@ -231,7 +268,13 @@
       "mno@telecom:~$ tail -f /var/log/subscriber.log",
       "canbus@vehicle:~$ tail -f /var/log/keycard.log",
       "secure@bakery:~$ tail -f /var/log/access.log",
-      "smarthome@kitchen:~$ tail -f /var/log/voice.log"
+      "smarthome@kitchen:~$ tail -f /var/log/voice.log",
+      "iot@depot:~$ tail -f /var/log/flood-sensor.log",
+      "alarmsys@unit:~$ tail -f /var/log/intrusion.log",
+      "meter@grid:~$ tail -f /var/log/surge.log",
+      "greenhouse@farm:~$ tail -f /var/log/climate2.log",
+      "plc@assembly:~$ tail -f /var/log/press.log",
+      "scada@plant:~$ tail -f /var/log/fire-panel.log"
     ]
   }
 }

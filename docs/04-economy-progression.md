@@ -1,5 +1,7 @@
 # 04 · Экономика и прогрессия
 
+> **🗺️ Ключевые файлы:** `src/config/gameConfig.ts` (весь тюнинг), `src/engine/rewardEngine.ts`, `src/engine/rankEngine.ts`, `src/engine/streakEngine.ts`, `src/engine/achievementsEngine.ts` + `src/data/achievements.ts`.
+
 Весь тюнинг живёт в `src/config/gameConfig.ts` (`GAME_CONFIG`) — правь экономику там,
 не в движках. Движки (`engine/*`) — чистые детерминированные функции.
 

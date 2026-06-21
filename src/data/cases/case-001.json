@@ -20,11 +20,11 @@
       "kk": "Игорь Семёнов, 41 жаста"
     },
     "story": {
-      "ru": "Я был в командировке всю неделю. Вернулся в пятницу и обнаружил, что лопнула труба и затопило гостиную. Прошу компенсацию за технику.",
-      "en": "I was away on a business trip all week. I returned Friday to find a burst pipe had flooded the living room. I request compensation for the electronics.",
-      "tr": "Tüm hafta iş seyahatindeydim. Cuma günü döndüğümde patlayan bir borunun oturma odasını su bastığını gördüm. Elektronik eşyalar için tazminat talep ediyorum.",
-      "ar": "كنت في رحلة عمل طوال الأسبوع. عدت يوم الجمعة لأجد أن أنبوبًا انفجر وأغرق غرفة المعيشة. أطلب تعويضًا عن الأجهزة الإلكترونية.",
-      "kk": "Мен бүкіл апта іссапарда болдым. Жұма күні оралғанда құбыр жарылып, қонақ бөлмесін су басқанын көрдім. Техника үшін өтемақы сұраймын."
+      "ru": "Лопнула труба и затопила гостиную, телевизор и техника погибли. Прошу компенсацию за повреждённую электронику.",
+      "en": "A pipe burst and flooded the living room; the TV and electronics were destroyed. I request compensation for the damaged equipment.",
+      "tr": "Bir boru patladı ve oturma odasını su bastı; televizyon ve elektronik eşyalar gitti. Hasarlı cihazlar için tazminat talep ediyorum.",
+      "ar": "انفجر أنبوب وأغرق غرفة المعيشة؛ تلف التلفاز والأجهزة الإلكترونية. أطلب تعويضًا عن المعدات المتضررة.",
+      "kk": "Құбыр жарылып, қонақ бөлмесін су басты; теледидар мен техника істен шықты. Зақымдалған электроника үшін өтемақы сұраймын."
     }
   },
   "coverImage": "covers/case-001.svg",
@@ -41,128 +41,76 @@
         "kk": "Оқиға орнының суреті"
       },
       "content": {
-        "ru": "На фото видна сухая, работающая электроника на полке над лужей воды.",
-        "en": "The photo shows dry, powered-on electronics on a shelf above the puddle.",
-        "tr": "Fotoğrafta su birikintisinin üzerindeki rafta kuru ve çalışır durumda elektronik eşyalar görülüyor.",
-        "ar": "تُظهر الصورة أجهزة إلكترونية جافة وتعمل على رف فوق البركة.",
-        "kk": "Суретте су шалшығының үстіндегі сөреде құрғақ, жұмыс істеп тұрған электроника көрінеді."
+        "ru": "На фото видна сухая, включённая электроника на полке над лужей воды — индикаторы горят, экран телевизора работает.",
+        "en": "The photo shows dry, powered-on electronics on a shelf above the puddle — indicator lights are on and the TV screen is working.",
+        "tr": "Fotoğrafta su birikintisinin üzerindeki rafta kuru ve açık elektronik eşyalar görülüyor — ışıklar yanıyor, televizyon ekranı çalışıyor.",
+        "ar": "تُظهر الصورة أجهزة إلكترونية جافة وتعمل على رف فوق البركة — المؤشرات مضاءة وشاشة التلفاز تعمل.",
+        "kk": "Суретте су шалшығының үстіндегі сөреде құрғақ әрі қосулы электроника көрінеді — индикаторлар жанып тұр, теледидар экраны жұмыс істейді."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Заявленная повреждённой техника на фото сухая и включена.",
-        "en": "The electronics claimed as damaged are dry and powered on in the photo.",
-        "tr": "Hasarlı olduğu iddia edilen elektronik eşyalar fotoğrafta kuru ve açık.",
-        "ar": "الأجهزة المزعوم تلفها تظهر جافة وتعمل في الصورة.",
-        "kk": "Зақымдалған деп мәлімделген техника суретте құрғақ әрі қосулы."
+        "ru": "Заявленная повреждённой техника на фото сухая и включена — ущерб инсценирован.",
+        "en": "The electronics claimed as damaged are dry and powered on in the photo — the damage is staged.",
+        "tr": "Hasarlı olduğu iddia edilen elektronik eşyalar fotoğrafta kuru ve açık — hasar sahnelenmiş.",
+        "ar": "الأجهزة المزعوم تلفها تظهر جافة وتعمل في الصورة — الضرر مفتعل.",
+        "kk": "Зақымдалған деп мәлімделген техника суретте құрғақ әрі қосулы — зиян қойылған."
       },
       "meta": {
         "filename": "IMG_20260314_091402.jpg"
       }
     },
     {
-      "id": "ev-gps",
-      "type": "gps",
+      "id": "ev-listing",
+      "type": "document",
       "title": {
-        "ru": "GPS-журнал телефона",
-        "en": "Phone GPS Log",
-        "tr": "Telefon GPS Kaydı",
-        "ar": "سجل GPS للهاتف",
-        "kk": "Телефонның GPS журналы"
+        "ru": "Объявление о продаже",
+        "en": "Resale Listing",
+        "tr": "Satış İlanı",
+        "ar": "إعلان بيع",
+        "kk": "Сату хабарландыруы"
       },
       "content": {
-        "ru": [
-          "Пн 08:14 — Аэропорт",
-          "Ср 19:42 — Домашний адрес",
-          "Чт 21:10 — Домашний адрес"
-        ],
-        "en": [
-          "Mon 08:14 — Airport",
-          "Wed 19:42 — Home address",
-          "Thu 21:10 — Home address"
-        ],
-        "tr": [
-          "Pzt 08:14 — Havaalanı",
-          "Çar 19:42 — Ev adresi",
-          "Per 21:10 — Ev adresi"
-        ],
-        "ar": [
-          "الاثنين 08:14 — المطار",
-          "الأربعاء 19:42 — عنوان المنزل",
-          "الخميس 21:10 — عنوان المنزل"
-        ],
-        "kk": [
-          "Дс 08:14 — Әуежай",
-          "Ср 19:42 — Үй мекенжайы",
-          "Бс 21:10 — Үй мекенжайы"
-        ]
+        "ru": "Распечатка объявления с доски: тот же телевизор выставлен на продажу как «полностью рабочий, как новый», дата публикации — через два дня после потопа.",
+        "en": "Printout of a marketplace listing: the same TV is offered for sale as 'fully working, like new', posted two days after the flood.",
+        "tr": "İlan panosundan çıktı: aynı televizyon 'tamamen çalışır, yeni gibi' diye satışa çıkarılmış, yayın tarihi su baskınından iki gün sonra.",
+        "ar": "نسخة مطبوعة من إعلان بيع: التلفاز نفسه معروض للبيع بوصف «يعمل بالكامل، كالجديد»، نُشر بعد يومين من الفيضان.",
+        "kk": "Хабарландыру тақтасынан басып шығарылған: дәл сол теледидар «толық жұмыс істейді, жаңадай» деп сатуға қойылған, жарияланған күні — су тасқынынан екі күн өткенде."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Клиент утверждал, что отсутствовал всю неделю, но GPS фиксирует его дома в среду и четверг.",
-        "en": "The client claimed to be away all week, yet GPS places him home on Wednesday and Thursday.",
-        "tr": "Müşteri tüm hafta uzakta olduğunu iddia etti, ancak GPS onu Çarşamba ve Perşembe evde gösteriyor.",
-        "ar": "ادعى العميل أنه كان غائبًا طوال الأسبوع، لكن GPS يضعه في المنزل يومي الأربعاء والخميس.",
-        "kk": "Клиент бүкіл апта болмадым деді, бірақ GPS оны сәрсенбі мен бейсенбіде үйде тіркеген."
-      },
-      "meta": {
-        "company": "GeoGuard Solutions",
-        "department": "Отдел мониторинга транспортных средств",
-        "requestId": "СТР-2026-0314-А · Тип: Полный трек",
-        "gpsFooter": "© GeoGuard 2026 · GPS ACC: ±3m"
-      }
-    },
-    {
-      "id": "ev-invoice",
-      "type": "document",
-      "title": {
-        "ru": "Счёт сантехника",
-        "en": "Plumber Invoice",
-        "tr": "Tesisatçı Faturası",
-        "ar": "فاتورة السباك",
-        "kk": "Сантехник шоты"
-      },
-      "content": {
-        "ru": "Официальный счёт за замену лопнувшей трубы, дата — пятница.",
-        "en": "Official invoice for replacing the burst pipe, dated Friday.",
-        "tr": "Patlayan borunun değiştirilmesi için resmi fatura, Cuma tarihli.",
-        "ar": "فاتورة رسمية لاستبدال الأنبوب المنفجر، بتاريخ الجمعة.",
-        "kk": "Жарылған құбырды ауыстыруға арналған ресми шот, жұма күнгі."
-      },
-      "isContradiction": false,
-      "contradictionExplanation": {
-        "ru": "Документ подлинный и не противоречит делу.",
-        "en": "This document is genuine and consistent with the case.",
-        "tr": "Bu belge gerçek ve dava ile tutarlı.",
-        "ar": "هذا المستند أصلي ومتوافق مع القضية.",
-        "kk": "Бұл құжат шынайы және іске қайшы келмейді."
+        "ru": "Клиент продаёт «погибший» телевизор как исправный — техника не пострадала.",
+        "en": "The client is selling the 'destroyed' TV as fully functional — the equipment was not damaged.",
+        "tr": "Müşteri 'gitti' dediği televizyonu çalışır halde satıyor — cihaz zarar görmemiş.",
+        "ar": "العميل يبيع التلفاز «التالف» على أنه يعمل — الجهاز لم يتضرر.",
+        "kk": "Клиент «істен шықты» деген теледидарды жарамды деп сатуда — техника зақымданбаған."
       }
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "GPS-журнал опровергает алиби клиента об отсутствии.",
-      "На фото техника сухая и работает — ущерб инсценирован.",
+      "На фото техника сухая и включена — ущерб инсценирован.",
+      "Объявление показывает: тот же телевизор продаётся как рабочий.",
       "Заявление является мошенническим, его следует отклонить."
     ],
     "en": [
-      "The GPS log disproves the client's away-from-home alibi.",
       "The photo shows dry, working electronics — the damage was staged.",
+      "The listing shows the same TV being sold as fully working.",
       "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "GPS kaydı, müşterinin evde olmama mazeretini çürütüyor.",
       "Fotoğraf kuru ve çalışan elektronik gösteriyor — hasar sahnelenmiş.",
+      "İlan, aynı televizyonun çalışır halde satıldığını gösteriyor.",
       "Talep hileli ve reddedilmeli."
     ],
     "ar": [
-      "سجل GPS يدحض حجة غياب العميل عن المنزل.",
       "الصورة تُظهر أجهزة جافة وتعمل — الضرر مفتعل.",
+      "الإعلان يُظهر التلفاز نفسه معروضًا للبيع وهو يعمل.",
       "المطالبة احتيالية ويجب رفضها."
     ],
     "kk": [
-      "GPS журналы клиенттің үйде болмадым деген алибиін теріске шығарады.",
-      "Суретте техника құрғақ әрі жұмыс істейді — зиян қойылған.",
+      "Суретте техника құрғақ әрі қосулы — зиян қойылған.",
+      "Хабарландыру дәл сол теледидардың жұмыс істейтін күйде сатылып жатқанын көрсетеді.",
       "Талап алаяқтық, оны қабылдамау керек."
     ]
   }

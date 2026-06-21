@@ -1,5 +1,7 @@
 # 02 · Архитектура и поток данных
 
+> **🗺️ Ключевые файлы:** `src/store/gameStore.ts` (рантайм-авторитет), `src/App.tsx` (UI-контроллер), `src/engine/*.ts` (чистые движки), `src/services/persistence.ts`, `src/services/yandexSDK.ts`, `src/types/index.ts`.
+
 ## Правило №1, формирующее всё: разделение static / runtime
 
 Две сущности строго разделены и **никогда не смешиваются**:

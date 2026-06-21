@@ -1,5 +1,7 @@
 # 01 · Обзор продукта
 
+> **🗺️ Ключевые файлы:** `src/App.tsx` (контроллер игры), `src/data/cases/*.json` (контент дел), `src/i18n/ui.ts` (строки UI).
+
 ## Что это
 
 **«Где ложь? Симулятор детектива»** (*Where is the Lie? Detective Simulator*) —

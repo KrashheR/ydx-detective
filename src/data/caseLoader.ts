@@ -35,6 +35,20 @@ import case019 from './cases/case-019.json';
 // Easter-egg recurring arc — Splintovich vs. Shredderov ("Ninja" dojo / TMNT parody).
 import case020 from './cases/case-020.json';
 import case021 from './cases/case-021.json';
+import case022 from './cases/case-022.json';
+// Expert tier — progressive curve cases introducing bank_statement / phone_records / social_media.
+import case023 from './cases/case-023.json';
+import case024 from './cases/case-024.json';
+import case025 from './cases/case-025.json';
+import case026 from './cases/case-026.json';
+import case027 from './cases/case-027.json';
+import case028 from './cases/case-028.json';
+import case029 from './cases/case-029.json';
+import case030 from './cases/case-030.json';
+import case031 from './cases/case-031.json';
+import case032 from './cases/case-032.json';
+import case033 from './cases/case-033.json';
+import case034 from './cases/case-034.json';
 
 // Daily cases — one surfaces per server-day via getDailyCase() rotation.
 import daily002 from './cases/daily/case-002-daily.json';
@@ -49,6 +63,9 @@ const RAW_CASES: unknown[] = [
   case007, case008, case009, case010, case011,
   case012, case013, case014, case015, case016,
   case017, case018, case019, case020, case021,
+  case022, case023, case024, case025, case026,
+  case027, case028, case029, case030, case031,
+  case032, case033, case034,
   daily002, daily101, daily102, daily103, daily104, daily105,
 ];
 

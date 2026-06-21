@@ -1,0 +1,233 @@
+{
+  "id": "case-027",
+  "type": "standard",
+  "difficulty": "medium",
+  "claimAmount": 4000,
+  "truth": "valid",
+  "title": {
+    "ru": "Затопленный склад",
+    "en": "The Flooded Warehouse",
+    "tr": "Su Basan Depo",
+    "ar": "المستودع المغمور بالمياه",
+    "kk": "Су басқан қойма"
+  },
+  "claim": {
+    "person": {
+      "ru": "Болат Жумабеков, 41 год",
+      "en": "Bolat Zhumabekov, 41",
+      "tr": "Bolat Zhumabekov, 41",
+      "ar": "بولات جوماباييف، 41",
+      "kk": "Болат Жұмабеков, 41 жаста"
+    },
+    "story": {
+      "ru": "Ночью 5 июня на район обрушился сильнейший ливень. Вода прорвалась в мой складской бокс и затопила нижние стеллажи с товаром. Я понёс убытки и прошу компенсацию в 4000 евро.",
+      "en": "On the night of 5 June a violent cloudburst hit the area. Water broke into my storage unit and flooded the lower shelving with goods. I suffered losses and request €4,000 in compensation.",
+      "tr": "5 Haziran gecesi bölgeye şiddetli bir sağanak vurdu. Su, depo bölmeme girdi ve alt raflardaki malları su bastı. Zarara uğradım ve 4.000 avro tazminat talep ediyorum.",
+      "ar": "في ليلة 5 يونيو ضربت المنطقة عاصفة مطرية عنيفة. اقتحم الماء وحدة التخزين الخاصة بي وأغرق الرفوف السفلية بالبضائع. تكبّدت خسائر وأطلب تعويضًا قدره 4000 يورو.",
+      "kk": "5 маусымға қараған түні ауданды қатты нөсер басты. Су менің қойма бөлмеме кіріп, төменгі сөрелердегі тауарды басып қалды. Зиян шектім және 4000 еуро өтемақы сұраймын."
+    }
+  },
+  "coverImage": "covers/case-027.svg",
+  "personImage": "people/bolat.svg",
+  "evidences": [
+    {
+      "id": "ev-meteo",
+      "type": "document",
+      "title": {
+        "ru": "Метеорологическая справка",
+        "en": "Meteorological Report",
+        "tr": "Meteoroloji Raporu",
+        "ar": "تقرير الأرصاد الجوية",
+        "kk": "Метеорологиялық анықтама"
+      },
+      "content": {
+        "ru": "Гидрометцентр подтверждает: в ночь с 5 на 6 июня в районе выпало 78 мм осадков за три часа — экстремальный ливень. Зафиксированы локальные подтопления и переполнение ливневой канализации.",
+        "en": "The weather service confirms that on the night of 5–6 June the area received 78 mm of rainfall in three hours — an extreme cloudburst. Local flooding and storm-drain overflow were recorded.",
+        "tr": "Meteoroloji servisi, 5–6 Haziran gecesi bölgeye üç saatte 78 mm yağış düştüğünü doğruluyor — aşırı bir sağanak. Yerel su baskınları ve yağmur suyu kanalizasyonu taşması kaydedildi.",
+        "ar": "تؤكد خدمة الأرصاد أنه في ليلة 5–6 يونيو هطل على المنطقة 78 ملم من الأمطار خلال ثلاث ساعات — عاصفة مطرية شديدة. سُجِّلت فيضانات محلية وطفح في مجاري الأمطار.",
+        "kk": "Гидрометорталық растайды: 5-тен 6 маусымға қараған түні ауданға үш сағатта 78 мм жауын-шашын түскен — қатты нөсер. Жергілікті су басу мен нөсер кәрізінің толып кетуі тіркелген."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Справка официальная и подтверждает экстремальный ливень в заявленную ночь — полностью согласуется с историей.",
+        "en": "The report is official and confirms an extreme cloudburst on the stated night — fully consistent with the account.",
+        "tr": "Rapor resmidir ve belirtilen gecede aşırı bir sağanağı doğrular — anlatımla tamamen tutarlı.",
+        "ar": "التقرير رسمي ويؤكد عاصفة مطرية شديدة في الليلة المذكورة — متوافق تمامًا مع الرواية.",
+        "kk": "Анықтама ресми әрі көрсетілген түні қатты нөсер болғанын растайды — әңгімеге толық сәйкес келеді."
+      }
+    },
+    {
+      "id": "ev-photo",
+      "type": "photo",
+      "title": {
+        "ru": "Фото затопления",
+        "en": "Flooding Photo",
+        "tr": "Su Baskını Fotoğrafı",
+        "ar": "صورة الغمر بالمياه",
+        "kk": "Су басу суреті"
+      },
+      "content": {
+        "ru": "На снимке — стоячая вода по щиколотку в проходе склада, размокшие картонные коробки на нижних полках и тёмная линия подтопления на стене. Верхние стеллажи остались сухими.",
+        "en": "The photo shows ankle-deep standing water in the warehouse aisle, soaked cardboard boxes on the lower shelves and a dark waterline on the wall. The upper shelving stayed dry.",
+        "tr": "Fotoğrafta depo koridorunda bilek hizasında durgun su, alt raflarda ıslanmış karton kutular ve duvarda koyu bir su çizgisi görülüyor. Üst raflar kuru kalmış.",
+        "ar": "تُظهر الصورة مياهًا راكدة حتى الكاحل في ممر المستودع، وصناديق كرتونية مبلَّلة على الرفوف السفلية، وخط ماء داكن على الجدار. بقيت الرفوف العلوية جافة.",
+        "kk": "Суретте қойма дәлізінде тобыққа дейінгі тұрып қалған су, төменгі сөрелердегі суланған картон қораптар және қабырғадағы қара су сызығы көрінеді. Жоғарғы сөрелер құрғақ қалған."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Фото показывает реальное подтопление нижних полок, что согласуется с заявлением о затоплении товара.",
+        "en": "The photo shows genuine flooding of the lower shelves, consistent with the claim that the goods were flooded.",
+        "tr": "Fotoğraf, alt rafların gerçekten su altında kaldığını gösterir; malların su bastığı iddiasıyla tutarlıdır.",
+        "ar": "تُظهر الصورة غمرًا حقيقيًا للرفوف السفلية، بما يتوافق مع ادعاء غمر البضائع.",
+        "kk": "Сурет төменгі сөрелердің шынымен су басқанын көрсетеді, бұл тауардың су астында қалғаны туралы арызға сәйкес келеді."
+      },
+      "meta": {
+        "filename": "IMG_20260606_071240.jpg"
+      }
+    },
+    {
+      "id": "ev-sensor",
+      "type": "usage_log",
+      "title": {
+        "ru": "Лог датчика подтопления",
+        "en": "Flood Sensor Log",
+        "tr": "Su Baskını Sensörü Kaydı",
+        "ar": "سجل مستشعر الفيضان",
+        "kk": "Су басу датчигінің журналы"
+      },
+      "content": {
+        "ru": [
+          "05.06 23:58 — Уровень воды: 0 мм · норма",
+          "06.06 00:41 — Уровень воды: 12 мм · ВНИМАНИЕ",
+          "06.06 00:53 — Уровень воды: 47 мм · ТРЕВОГА",
+          "06.06 01:10 — Уровень воды: 86 мм · ТРЕВОГА · сработала сирена",
+          "06.06 02:35 — Уровень воды: 90 мм · пик",
+          "06.06 05:20 — Уровень воды: 31 мм · спад"
+        ],
+        "en": [
+          "05.06 23:58 — Water level: 0 mm · normal",
+          "06.06 00:41 — Water level: 12 mm · WARNING",
+          "06.06 00:53 — Water level: 47 mm · ALARM",
+          "06.06 01:10 — Water level: 86 mm · ALARM · siren triggered",
+          "06.06 02:35 — Water level: 90 mm · peak",
+          "06.06 05:20 — Water level: 31 mm · receding"
+        ],
+        "tr": [
+          "05.06 23:58 — Su seviyesi: 0 mm · normal",
+          "06.06 00:41 — Su seviyesi: 12 mm · UYARI",
+          "06.06 00:53 — Su seviyesi: 47 mm · ALARM",
+          "06.06 01:10 — Su seviyesi: 86 mm · ALARM · siren çaldı",
+          "06.06 02:35 — Su seviyesi: 90 mm · zirve",
+          "06.06 05:20 — Su seviyesi: 31 mm · çekiliyor"
+        ],
+        "ar": [
+          "05.06 23:58 — منسوب الماء: 0 ملم · طبيعي",
+          "06.06 00:41 — منسوب الماء: 12 ملم · تحذير",
+          "06.06 00:53 — منسوب الماء: 47 ملم · إنذار",
+          "06.06 01:10 — منسوب الماء: 86 ملم · إنذار · انطلقت الصفّارة",
+          "06.06 02:35 — منسوب الماء: 90 ملم · الذروة",
+          "06.06 05:20 — منسوب الماء: 31 ملم · انحسار"
+        ],
+        "kk": [
+          "05.06 23:58 — Су деңгейі: 0 мм · қалыпты",
+          "06.06 00:41 — Су деңгейі: 12 мм · НАЗАР",
+          "06.06 00:53 — Су деңгейі: 47 мм · ДАБЫЛ",
+          "06.06 01:10 — Су деңгейі: 86 мм · ДАБЫЛ · сирена қосылды",
+          "06.06 02:35 — Су деңгейі: 90 мм · шыңы",
+          "06.06 05:20 — Су деңгейі: 31 мм · төмендеу"
+        ]
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Лог датчика фиксирует резкий подъём воды именно в ночь ливня — это объективно подтверждает затопление склада.",
+        "en": "The sensor log records a sharp rise in water on the very night of the cloudburst — objectively confirming the warehouse flooding.",
+        "tr": "Sensör kaydı, suyun tam sağanak gecesinde keskin biçimde yükseldiğini gösterir — depo su baskınını nesnel olarak doğrular.",
+        "ar": "يسجّل المستشعر ارتفاعًا حادًا في الماء في ليلة العاصفة نفسها — ما يؤكد موضوعيًا غمر المستودع.",
+        "kk": "Датчик журналы нөсер болған дәл сол түні судың күрт көтерілгенін тіркейді — бұл қойманың су басқанын объективті растайды."
+      },
+      "meta": {
+        "logPrompt": "iot@depot:~$ tail -f /var/log/flood-sensor.log"
+      }
+    },
+    {
+      "id": "ev-witness",
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания охранника",
+        "en": "Guard's Statement",
+        "tr": "Güvenlik Görevlisinin İfadesi",
+        "ar": "إفادة الحارس",
+        "kk": "Күзетшінің айғағы"
+      },
+      "content": {
+        "ru": "«Я дежурил той ночью. После полуночи ливень был такой, что вода пошла под ворота боксов. Я слышал сирену датчика в боксе Болата и видел, как вода стоит на полу до утра. Откачивать начали только на рассвете».",
+        "en": "\"I was on duty that night. After midnight the rain was so heavy that water came in under the unit doors. I heard the sensor siren in Bolat's unit and saw water standing on the floor until morning. We only started pumping it out at dawn.\"",
+        "tr": "\"O gece nöbetteydim. Gece yarısından sonra yağmur o kadar şiddetliydi ki su bölme kapılarının altından girdi. Bolat'ın bölmesindeki sensör sirenini duydum ve sabaha kadar zeminde duran suyu gördüm. Suyu ancak şafakta boşaltmaya başladık.\"",
+        "ar": "«كنت في الخدمة تلك الليلة. بعد منتصف الليل اشتد المطر حتى دخل الماء من تحت أبواب الوحدات. سمعت صفّارة المستشعر في وحدة بولات ورأيت الماء راكدًا على الأرض حتى الصباح. لم نبدأ بضخّه إلا عند الفجر.»",
+        "kk": "«Ол түні кезекшілікте болдым. Түн ортасынан кейін жаңбыр сондай қатты болды, су бөлмелердің қақпасының астынан кірді. Болаттың бөлмесіндегі датчик сиренасын естідім және таңға дейін еденде тұрған суды көрдім. Суды тек таң ата сорып бастадық.»"
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Показания охранника независимо подтверждают факт затопления бокса в заявленную ночь.",
+        "en": "The guard's statement independently confirms the unit was flooded on the stated night.",
+        "tr": "Güvenlik görevlisinin ifadesi, bölmenin belirtilen gecede su bastığını bağımsız olarak doğrular.",
+        "ar": "تؤكد إفادة الحارس بشكل مستقل غمر الوحدة في الليلة المذكورة.",
+        "kk": "Күзетшінің айғағы бөлменің көрсетілген түні су басқанын тәуелсіз растайды."
+      }
+    },
+    {
+      "id": "ev-invoice",
+      "type": "document",
+      "title": {
+        "ru": "Счёт за восстановление",
+        "en": "Restoration Invoice",
+        "tr": "Onarım Faturası",
+        "ar": "فاتورة الترميم",
+        "kk": "Қалпына келтіру шоты"
+      },
+      "content": {
+        "ru": "Счёт от клининговой и ремонтной компании: откачка воды, сушка помещения, утилизация испорченного товара и замена нижних стеллажей. Итоговая сумма — 3 980 евро, что соответствует заявленным убыткам.",
+        "en": "An invoice from a cleaning and repair company: water pump-out, drying of the premises, disposal of spoiled goods and replacement of the lower shelving. The total is €3,980, consistent with the claimed losses.",
+        "tr": "Bir temizlik ve onarım şirketinden fatura: suyun boşaltılması, mekânın kurutulması, bozulan malların imhası ve alt rafların değişimi. Toplam 3.980 avro olup talep edilen zararla tutarlı.",
+        "ar": "فاتورة من شركة تنظيف وإصلاح: ضخّ الماء، تجفيف المكان، التخلّص من البضائع التالفة واستبدال الرفوف السفلية. الإجمالي 3,980 يورو، بما يتوافق مع الخسائر المُطالَب بها.",
+        "kk": "Тазалау және жөндеу компаниясының шоты: суды сору, үй-жайды кептіру, бүлінген тауарды жою және төменгі сөрелерді ауыстыру. Жалпы сома — 3 980 еуро, мәлімделген зиянға сәйкес келеді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Счёт на восстановление соответствует характеру ущерба и заявленной сумме; противоречий нет.",
+        "en": "The restoration invoice matches the nature of the damage and the claimed amount; there is no contradiction.",
+        "tr": "Onarım faturası, hasarın niteliği ve talep edilen tutarla örtüşür; çelişki yoktur.",
+        "ar": "فاتورة الترميم تتطابق مع طبيعة الضرر والمبلغ المُطالَب به؛ لا يوجد تناقض.",
+        "kk": "Қалпына келтіру шоты зиянның сипатына және мәлімделген сомаға сәйкес келеді; қайшылық жоқ."
+      }
+    }
+  ],
+  "correctDecision": "approve",
+  "explanation": {
+    "ru": [
+      "Метеосправка и лог датчика подтверждают ливень и резкий подъём воды.",
+      "Фото и показания охранника независимо доказывают затопление склада.",
+      "Заявление достоверное — его следует одобрить."
+    ],
+    "en": [
+      "The weather report and sensor log confirm the cloudburst and the sharp water rise.",
+      "The photo and the guard's statement independently prove the warehouse flooding.",
+      "The claim is genuine and should be approved."
+    ],
+    "tr": [
+      "Meteoroloji raporu ve sensör kaydı sağanağı ve suyun keskin yükselişini doğruluyor.",
+      "Fotoğraf ve güvenlik görevlisinin ifadesi depo su baskınını bağımsız olarak kanıtlıyor.",
+      "Talep gerçektir ve onaylanmalı."
+    ],
+    "ar": [
+      "تقرير الأرصاد وسجل المستشعر يؤكدان العاصفة المطرية والارتفاع الحاد للماء.",
+      "الصورة وإفادة الحارس تُثبتان بشكل مستقل غمر المستودع.",
+      "المطالبة صحيحة ويجب الموافقة عليها."
+    ],
+    "kk": [
+      "Метеоанықтама мен датчик журналы нөсер мен судың күрт көтерілуін растайды.",
+      "Сурет пен күзетшінің айғағы қойманың су басқанын тәуелсіз дәлелдейді.",
+      "Талап шынайы — оны мақұлдау керек."
+    ]
+  }
+}

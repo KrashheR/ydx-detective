@@ -1,0 +1,288 @@
+{
+  "id": "case-030",
+  "type": "standard",
+  "difficulty": "hard",
+  "claimAmount": 15000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Подстроенное ДТП",
+    "en": "The Staged Collision",
+    "tr": "Düzmece Kaza",
+    "ar": "تصادم مُدبَّر",
+    "kk": "Ұйымдастырылған жол апаты"
+  },
+  "claim": {
+    "person": {
+      "ru": "Деян Маркович, 44 года",
+      "en": "Dejan Markovic, 44",
+      "tr": "Dejan Markovic, 44",
+      "ar": "ديان ماركوفيتش، 44",
+      "kk": "Деян Маркович, 44 жаста"
+    },
+    "story": {
+      "ru": "Я ехал по своей полосе, когда впереди идущая машина внезапно затормозила без всякой причины. Я не успел остановиться и въехал в неё. Это полностью вина другого водителя. Прошу возместить ремонт моего автомобиля.",
+      "en": "I was driving in my lane when the car ahead suddenly braked for no reason. I couldn't stop in time and rear-ended it. It's entirely the other driver's fault. I request compensation for repairing my car.",
+      "tr": "Kendi şeridimde gidiyordum ki öndeki araç sebepsiz yere aniden fren yaptı. Zamanında duramadım ve arkadan çarptım. Tamamen diğer sürücünün hatası. Aracımın onarımı için tazminat talep ediyorum.",
+      "ar": "كنت أقود في مساري عندما كبحت السيارة التي أمامي فجأة دون سبب. لم أتمكن من التوقف في الوقت المناسب واصطدمت بها من الخلف. الخطأ بالكامل على السائق الآخر. أطلب تعويض إصلاح سيارتي.",
+      "kk": "Мен өз жолағыммен келе жатқанда, алдымдағы көлік ешбір себепсіз кенет тежеді. Уақытында тоқтай алмай, оған соғылып қалдым. Бұл толықтай басқа жүргізушінің кінәсі. Көлігімді жөндеуге өтемақы сұраймын."
+    }
+  },
+  "coverImage": "covers/case-030.svg",
+  "personImage": "people/dejan.svg",
+  "evidences": [
+    {
+      "id": "ev-cam",
+      "type": "camera_recording",
+      "title": {
+        "ru": "Запись видеорегистратора",
+        "en": "Dashcam Recording",
+        "tr": "Araç Kamerası Kaydı",
+        "ar": "تسجيل كاميرا السيارة",
+        "kk": "Видеотіркегіш жазбасы"
+      },
+      "content": {
+        "ru": "На записи самого Деяна видно, как передняя машина заранее включает аварийку и плавно сбрасывает скорость на пустой дороге. В тот же момент Деян, вместо торможения, заметно прибавляет газ и направленно въезжает в задний бампер. Тормозных огней его машины почти не видно.",
+        "en": "Dejan's own footage shows the car ahead switching on its hazards early and smoothly slowing on an empty road. At the same moment Dejan, instead of braking, visibly accelerates and drives straight into the rear bumper. His brake lights barely appear.",
+        "tr": "Dejan'ın kendi kaydında öndeki araç dörtlüleri erkenden yakıp boş yolda yumuşakça yavaşlıyor. Aynı anda Dejan, fren yapmak yerine gözle görülür şekilde gaza basıp doğrudan arka tampona giriyor. Fren lambaları neredeyse hiç görünmüyor.",
+        "ar": "يُظهر تسجيل ديان نفسه السيارة الأمامية تُشغّل أضواء التحذير مبكرًا وتبطئ بسلاسة على طريق خالٍ. في اللحظة ذاتها، بدلًا من الكبح، يزيد ديان السرعة بوضوح ويصطدم مباشرة بالمصد الخلفي. أضواء فراملِه لا تكاد تظهر.",
+        "kk": "Деянның өз жазбасында алдыңғы көлік бос жолда апаттық белгісін алдын ала қосып, біркелкі баяулайды. Дәл сол сәтте Деян тежеудің орнына байқалатындай газ қосып, артқы бамперге тура соғылады. Оның тежегіш оттары әрең көрінеді."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Запись опровергает версию: Деян не тормозил, а ускорился и сам въехал в заранее замедлившуюся машину.",
+        "en": "The footage disproves the story: Dejan did not brake but accelerated and drove into a car that had slowed in advance.",
+        "tr": "Kayıt hikâyeyi çürütüyor: Dejan fren yapmadı, hızlandı ve önceden yavaşlayan araca girdi.",
+        "ar": "يدحض التسجيل الرواية: لم يكبح ديان بل سرّع واصطدم بسيارة أبطأت مسبقًا.",
+        "kk": "Жазба нұсқаны теріске шығарады: Деян тежеген жоқ, газ қосып, алдын ала баяулаған көлікке өзі соғылды."
+      },
+      "meta": {
+        "cameraId": "DVR-2",
+        "cameraModel": "Garmin Dash Cam 67W · 1440p · H.264"
+      }
+    },
+    {
+      "id": "ev-phone",
+      "type": "phone_records",
+      "title": {
+        "ru": "Детализация звонков",
+        "en": "Phone Records",
+        "tr": "Arama Kayıtları",
+        "ar": "سجل المكالمات",
+        "kk": "Қоңыраулар детализациясы"
+      },
+      "content": {
+        "ru": [
+          "16:02 — Входящий, номер «Гараж» — 1 мин 12 с",
+          "16:48 — Исходящий, «А. (другой водитель)» — 3 мин 41 с",
+          "16:59 — ДТП (по протоколу)",
+          "17:05 — Исходящий, страховая линия — 6 мин 20 с",
+          "18:20 — Исходящий, «А. (другой водитель)» — 2 мин 08 с"
+        ],
+        "en": [
+          "16:02 — Incoming, \"Garage\" — 1 min 12 s",
+          "16:48 — Outgoing, \"A. (other driver)\" — 3 min 41 s",
+          "16:59 — Collision (per report)",
+          "17:05 — Outgoing, insurance line — 6 min 20 s",
+          "18:20 — Outgoing, \"A. (other driver)\" — 2 min 08 s"
+        ],
+        "tr": [
+          "16:02 — Gelen, \"Garaj\" — 1 dk 12 sn",
+          "16:48 — Giden, \"A. (diğer sürücü)\" — 3 dk 41 sn",
+          "16:59 — Kaza (rapora göre)",
+          "17:05 — Giden, sigorta hattı — 6 dk 20 sn",
+          "18:20 — Giden, \"A. (diğer sürücü)\" — 2 dk 08 sn"
+        ],
+        "ar": [
+          "16:02 — وارد، «الكراج» — 1 د 12 ث",
+          "16:48 — صادر، «أ. (السائق الآخر)» — 3 د 41 ث",
+          "16:59 — التصادم (حسب المحضر)",
+          "17:05 — صادر، خط التأمين — 6 د 20 ث",
+          "18:20 — صادر، «أ. (السائق الآخر)» — 2 د 08 ث"
+        ],
+        "kk": [
+          "16:02 — Кіріс, «Гараж» нөмірі — 1 мин 12 с",
+          "16:48 — Шығыс, «А. (басқа жүргізуші)» — 3 мин 41 с",
+          "16:59 — Жол апаты (хаттама бойынша)",
+          "17:05 — Шығыс, сақтандыру желісі — 6 мин 20 с",
+          "18:20 — Шығыс, «А. (басқа жүргізуші)» — 2 мин 08 с"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "За 11 минут до «случайного» ДТП Деян звонил «другому водителю» — они были знакомы и заранее общались.",
+        "en": "Eleven minutes before the \"accidental\" crash, Dejan called the \"other driver\" — they knew each other and coordinated beforehand.",
+        "tr": "\"Kazadan\" 11 dakika önce Dejan \"diğer sürücüyü\" aradı — birbirlerini tanıyor ve önceden anlaşmışlardı.",
+        "ar": "قبل 11 دقيقة من التصادم «العرضي» اتصل ديان بـ«السائق الآخر» — كانا يعرفان بعضهما ونسّقا مسبقًا.",
+        "kk": "«Кездейсоқ» жол апатынан 11 минут бұрын Деян «басқа жүргізушіге» қоңырау шалды — олар таныс әрі алдын ала келіскен."
+      },
+      "meta": {
+        "carrierName": "СигналТел",
+        "phoneMask": "+7 (9••) •••-••-•2"
+      }
+    },
+    {
+      "id": "ev-police",
+      "type": "document",
+      "title": {
+        "ru": "Протокол ГИБДД",
+        "en": "Police Report",
+        "tr": "Trafik Polisi Tutanağı",
+        "ar": "محضر الشرطة",
+        "kk": "Жол полициясы хаттамасы"
+      },
+      "content": {
+        "ru": "Инспектор зафиксировал столкновение в 16:59 на участке без камер. Повреждения: задний бампер передней машины и передняя часть автомобиля Деяна. Вина в протоколе не установлена — стороны дали противоречивые объяснения, дело оставлено для разбирательства страховой.",
+        "en": "The officer recorded a collision at 16:59 on a stretch without cameras. Damage: rear bumper of the front car and front end of Dejan's vehicle. No fault was assigned — the parties gave conflicting accounts, the matter left for the insurer to resolve.",
+        "tr": "Memur, kamerasız bir kesimde 16:59'da bir çarpışma kaydetti. Hasar: öndeki aracın arka tamponu ve Dejan'ın aracının ön kısmı. Kusur belirlenmedi — taraflar çelişkili ifadeler verdi, konu sigortacıya bırakıldı.",
+        "ar": "سجّل الضابط تصادمًا الساعة 16:59 في مقطع بلا كاميرات. الأضرار: المصد الخلفي للسيارة الأمامية ومقدمة سيارة ديان. لم يُحدَّد الخطأ — قدّم الطرفان روايات متضاربة، وتُرك الأمر لشركة التأمين.",
+        "kk": "Инспектор камерасыз учаскеде 16:59-да соқтығысуды тіркеді. Зақым: алдыңғы көліктің артқы бамперіне және Деян көлігінің алдыңғы бөлігіне. Кінә хаттамада анықталмады — тараптар қарама-қайшы түсініктеме берді, іс сақтандырушыға қалдырылды."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Протокол лишь фиксирует факт ДТП и не определяет виновного — сам по себе он не уличает заявителя.",
+        "en": "The report only records that a collision happened and assigns no fault — on its own it does not incriminate the claimant.",
+        "tr": "Tutanak yalnızca çarpışmanın olduğunu kaydeder ve kusur atamaz — tek başına başvuranı suçlamaz.",
+        "ar": "يُسجّل المحضر فقط وقوع التصادم ولا يحدد الخطأ — وحده لا يُدين مقدّم الطلب.",
+        "kk": "Хаттама тек жол апатының болғанын тіркейді, кінәліні анықтамайды — өздігінен өтініш берушіні әшкерелемейді."
+      }
+    },
+    {
+      "id": "ev-photo",
+      "type": "photo",
+      "title": {
+        "ru": "Фото повреждений",
+        "en": "Damage Photo",
+        "tr": "Hasar Fotoğrafı",
+        "ar": "صورة الأضرار",
+        "kk": "Зақымданудың суреті"
+      },
+      "content": {
+        "ru": "Снимок передней части автомобиля Деяна: смята решётка радиатора, разбита левая фара, на бампере следы краски второй машины. Повреждения умеренные, соответствуют невысокой скорости.",
+        "en": "A shot of the front of Dejan's car: crumpled grille, broken left headlight, paint transfer from the other car on the bumper. The damage is moderate, consistent with low speed.",
+        "tr": "Dejan'ın aracının ön kısmının fotoğrafı: ezilmiş ızgara, kırık sol far, tamponda diğer aracın boya izi. Hasar orta düzeyde, düşük hızla uyumlu.",
+        "ar": "صورة لمقدمة سيارة ديان: شبك مهشّم، مصباح أمامي أيسر مكسور، وأثر طلاء السيارة الأخرى على المصد. الضرر متوسط ويتوافق مع سرعة منخفضة.",
+        "kk": "Деян көлігінің алдыңғы бөлігінің суреті: радиатор торы мыжылған, сол жақ фарасы сынған, бамперде екінші көліктің бояу іздері. Зақым орташа, төмен жылдамдыққа сәйкес."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Фото лишь подтверждает наличие повреждений; оно не показывает, кто виноват.",
+        "en": "The photo only confirms that damage exists; it does not show who is at fault.",
+        "tr": "Fotoğraf yalnızca hasarın varlığını doğrular; kimin kusurlu olduğunu göstermez.",
+        "ar": "تؤكد الصورة وجود الضرر فقط؛ ولا تُظهر المُخطئ.",
+        "kk": "Сурет тек зақымның бар екенін растайды; кінәлінің кім екенін көрсетпейді."
+      },
+      "meta": {
+        "filename": "IMG_20260530_171522.jpg"
+      }
+    },
+    {
+      "id": "ev-bank",
+      "type": "bank_statement",
+      "title": {
+        "ru": "Банковская выписка",
+        "en": "Bank Statement",
+        "tr": "Banka Ekstresi",
+        "ar": "كشف حساب بنكي",
+        "kk": "Банк үзіндісі"
+      },
+      "content": {
+        "ru": [
+          "30.05.2026 — Заправка, АЗС «Орбита» — 54,00 €",
+          "31.05.2026 — Перевод «А. Войнич» (другой водитель) — 1 500,00 €",
+          "31.05.2026 — Комментарий к переводу: «за помощь»",
+          "02.06.2026 — Магазин автозапчастей — 210,40 €"
+        ],
+        "en": [
+          "30.05.2026 — Fuel, \"Orbita\" station — €54.00",
+          "31.05.2026 — Transfer to \"A. Voynich\" (other driver) — €1,500.00",
+          "31.05.2026 — Transfer note: \"for the help\"",
+          "02.06.2026 — Auto parts store — €210.40"
+        ],
+        "tr": [
+          "30.05.2026 — Yakıt, \"Orbita\" istasyonu — 54,00 €",
+          "31.05.2026 — \"A. Voynich\" (diğer sürücü) havalesi — 1.500,00 €",
+          "31.05.2026 — Havale notu: \"yardım için\"",
+          "02.06.2026 — Oto yedek parça mağazası — 210,40 €"
+        ],
+        "ar": [
+          "30.05.2026 — وقود، محطة «أوربيتا» — 54٫00 €",
+          "31.05.2026 — تحويل إلى «أ. فوينيتش» (السائق الآخر) — 1٬500٫00 €",
+          "31.05.2026 — ملاحظة التحويل: «مقابل المساعدة»",
+          "02.06.2026 — متجر قطع غيار سيارات — 210٫40 €"
+        ],
+        "kk": [
+          "30.05.2026 — Жанармай, «Орбита» АЖС — 54,00 €",
+          "31.05.2026 — «А. Войнич» (басқа жүргізуші) аударымы — 1 500,00 €",
+          "31.05.2026 — Аударым түсініктемесі: «көмек үшін»",
+          "02.06.2026 — Автобөлшектер дүкені — 210,40 €"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "На следующий день после ДТП Деян перевёл «другому водителю» 1500 € с пометкой «за помощь» — оплата за участие в инсценировке.",
+        "en": "The day after the crash Dejan transferred €1,500 to the \"other driver\" marked \"for the help\" — payment for taking part in the staging.",
+        "tr": "Kazadan bir gün sonra Dejan \"diğer sürücüye\" \"yardım için\" notuyla 1.500 € gönderdi — düzmeceye katılım ödemesi.",
+        "ar": "في اليوم التالي للتصادم حوّل ديان 1٬500 € إلى «السائق الآخر» بملاحظة «مقابل المساعدة» — أجرٌ على المشاركة في التمثيلية.",
+        "kk": "Жол апатынан кейінгі күні Деян «басқа жүргізушіге» «көмек үшін» белгісімен 1500 € аударды — қойылымға қатысқаны үшін төлем."
+      },
+      "meta": {
+        "bankName": "ПримаБанк",
+        "accountMask": "•••• •••• •••• 8806"
+      }
+    },
+    {
+      "id": "ev-witness",
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания прохожего",
+        "en": "Bystander's Statement",
+        "tr": "Yoldan Geçenin İfadesi",
+        "ar": "إفادة أحد المارة",
+        "kk": "Жолаушының айғағы"
+      },
+      "content": {
+        "ru": "«Я шёл по тротуару и услышал глухой удар. Обернулся — две машины стоят, передняя помята сзади. Кто был виноват, не знаю, я увидел уже после столкновения. Водители вышли спокойно, без криков.»",
+        "en": "\"I was walking on the pavement and heard a dull thud. I turned around — two cars stopped, the front one dented at the back. Who was at fault I don't know, I only saw it after the impact. The drivers got out calmly, no shouting.\"",
+        "tr": "\"Kaldırımda yürüyordum, boğuk bir gümbürtü duydum. Döndüm — iki araç durmuş, öndeki arkadan ezilmişti. Kimin kusurlu olduğunu bilmiyorum, ancak çarpışmadan sonra gördüm. Sürücüler sakince indi, bağırış yoktu.\"",
+        "ar": "«كنت أسير على الرصيف وسمعت صوت ارتطام خافت. التفتُّ — سيارتان متوقفتان، الأمامية منبعجة من الخلف. لا أعرف من المخطئ، رأيت ذلك بعد الاصطدام فقط. نزل السائقان بهدوء دون صياح.»",
+        "kk": "«Тротуармен келе жатып, тұйық соққыны естідім. Артыма бұрылдым — екі көлік тұр, алдыңғысы артынан мыжылған. Кім кінәлі екенін білмеймін, соқтығыстан кейін ғана көрдім. Жүргізушілер айқай-шусыз, тыныш шықты.»"
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Свидетель видел лишь последствия и не противоречит заявлению — его показания нейтральны.",
+        "en": "The witness only saw the aftermath and does not contradict the claim — the statement is neutral.",
+        "tr": "Tanık yalnızca sonrasını gördü ve iddiayla çelişmiyor — ifade tarafsız.",
+        "ar": "رأى الشاهد ما بعد الحادث فقط ولا يتعارض مع المطالبة — إفادته محايدة.",
+        "kk": "Куә тек салдарын көрді әрі өтінішке қайшы келмейді — айғағы бейтарап."
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Видеорегистратор показывает, что Деян сам ускорился и въехал в заранее затормозившую машину.",
+      "Звонок «другому водителю» до ДТП и перевод 1500 € после доказывают сговор.",
+      "Заявление мошенническое — его следует отклонить."
+    ],
+    "en": [
+      "The dashcam shows Dejan accelerated and drove into a car that had braked in advance.",
+      "The call to the \"other driver\" before the crash and the €1,500 transfer afterward prove collusion.",
+      "The claim is fraudulent and should be rejected."
+    ],
+    "tr": [
+      "Araç kamerası, Dejan'ın hızlanıp önceden fren yapan araca girdiğini gösteriyor.",
+      "Kazadan önce \"diğer sürücüye\" arama ve sonrasında 1.500 € havale, iş birliğini kanıtlıyor.",
+      "Talep hileli — reddedilmeli."
+    ],
+    "ar": [
+      "تُظهر كاميرا السيارة أن ديان سرّع واصطدم بسيارة كبحت مسبقًا.",
+      "الاتصال بـ«السائق الآخر» قبل التصادم وتحويل 1٬500 € بعده يثبتان التواطؤ.",
+      "المطالبة احتيالية ويجب رفضها."
+    ],
+    "kk": [
+      "Видеотіркегіш Деянның газ қосып, алдын ала тежеген көлікке соғылғанын көрсетеді.",
+      "Жол апатына дейін «басқа жүргізушіге» қоңырау мен одан кейінгі 1500 € аударым сөз байласуды дәлелдейді.",
+      "Талап алаяқтық — оны қабылдамау керек."
+    ]
+  }
+}

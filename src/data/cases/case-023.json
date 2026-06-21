@@ -1,0 +1,203 @@
+{
+  "id": "case-023",
+  "type": "standard",
+  "difficulty": "medium",
+  "claimAmount": 3500,
+  "truth": "fraud",
+  "title": {
+    "ru": "Карта украдена за границей",
+    "en": "Card Stolen Abroad",
+    "tr": "Yurt Dışında Çalınan Kart",
+    "ar": "بطاقة مسروقة في الخارج",
+    "kk": "Шетелде ұрланған карта"
+  },
+  "claim": {
+    "person": {
+      "ru": "Рустам Назаров, 38 лет",
+      "en": "Rustam Nazarov, 38",
+      "tr": "Rustam Nazarov, 38",
+      "ar": "رستم نزاروف، 38",
+      "kk": "Рустам Назаров, 38 жаста"
+    },
+    "story": {
+      "ru": "Я был в отпуске за границей с 10 по 17 марта. Где-то там у меня украли и, видимо, склонировали карту: с неё сняли 3500 евро, пока я отдыхал. Я ничего не снимал, дома меня не было. Прошу вернуть похищенные средства.",
+      "en": "I was on holiday abroad from March 10 to 17. Somewhere there my card was stolen and apparently cloned: €3,500 was withdrawn while I was away. I withdrew nothing and was not at home. I request the stolen funds be returned.",
+      "tr": "10-17 Mart arasında yurt dışında tatildeydim. Orada bir yerde kartım çalındı ve anlaşılan kopyalandı: ben yokken 3.500 avro çekilmiş. Hiçbir şey çekmedim ve evde değildim. Çalınan paranın iadesini talep ediyorum.",
+      "ar": "كنت في إجازة بالخارج من 10 إلى 17 مارس. هناك في مكان ما سُرقت بطاقتي ويبدو أنها استُنسخت: سُحب 3500 يورو أثناء غيابي. لم أسحب شيئًا ولم أكن في المنزل. أطلب إعادة الأموال المسروقة.",
+      "kk": "Мен 10-17 наурыз аралығында шетелде демалыста болдым. Сол жерде картам ұрланып, көшірілген сияқты: мен жоқта одан 3500 еуро алынған. Мен ештеңе алмадым, үйде болмадым. Ұрланған қаражатты қайтаруды сұраймын."
+    }
+  },
+  "coverImage": "covers/case-023.svg",
+  "personImage": "people/rustam.svg",
+  "evidences": [
+    {
+      "id": "ev-bank",
+      "type": "bank_statement",
+      "title": {
+        "ru": "Банковская выписка",
+        "en": "Bank Statement",
+        "tr": "Banka Ekstresi",
+        "ar": "كشف حساب بنكي",
+        "kk": "Банк үзіндісі"
+      },
+      "content": {
+        "ru": [
+          "12.03 09:14 — Снятие наличных, банкомат «Столица-217», ул. Садовая 4 (250 м от дома): −1 500,00 €",
+          "12.03 09:21 — Снятие наличных, банкомат «Столица-217», ул. Садовая 4: −1 000,00 €",
+          "14.03 18:02 — Перевод на счёт •••• 4471 (собственный счёт держателя): −1 000,00 €",
+          "Авторизация: чип + ПИН, подтверждено для всех операций",
+          "Итого оспаривается: −3 500,00 €"
+        ],
+        "en": [
+          "12 Mar 09:14 — Cash withdrawal, ATM “Stolitsa-217”, 4 Sadovaya St. (250 m from home): −€1,500.00",
+          "12 Mar 09:21 — Cash withdrawal, ATM “Stolitsa-217”, 4 Sadovaya St.: −€1,000.00",
+          "14 Mar 18:02 — Transfer to account •••• 4471 (holder's own account): −€1,000.00",
+          "Authorization: chip + PIN, confirmed for all operations",
+          "Total disputed: −€3,500.00"
+        ],
+        "tr": [
+          "12 Mar 09:14 — Nakit çekme, ATM “Stolitsa-217”, Sadovaya Cad. 4 (evden 250 m): −1.500,00 €",
+          "12 Mar 09:21 — Nakit çekme, ATM “Stolitsa-217”, Sadovaya Cad. 4: −1.000,00 €",
+          "14 Mar 18:02 — •••• 4471 numaralı hesaba transfer (kart sahibinin kendi hesabı): −1.000,00 €",
+          "Yetkilendirme: çip + PIN, tüm işlemler için onaylandı",
+          "Toplam itiraz edilen: −3.500,00 €"
+        ],
+        "ar": [
+          "12 مارس 09:14 — سحب نقدي، صراف «ستوليتسا-217»، شارع سادوفايا 4 (على بُعد 250 م من المنزل): −1٬500٫00 €",
+          "12 مارس 09:21 — سحب نقدي، صراف «ستوليتسا-217»، شارع سادوفايا 4: −1٬000٫00 €",
+          "14 مارس 18:02 — تحويل إلى الحساب •••• 4471 (حساب صاحب البطاقة نفسه): −1٬000٫00 €",
+          "التفويض: شريحة + رقم سري، مؤكَّد لجميع العمليات",
+          "إجمالي المتنازع عليه: −3٬500٫00 €"
+        ],
+        "kk": [
+          "12.03 09:14 — Қолма-қол ақша алу, «Столица-217» банкоматы, Садовая көш. 4 (үйден 250 м): −1 500,00 €",
+          "12.03 09:21 — Қолма-қол ақша алу, «Столица-217» банкоматы, Садовая көш. 4: −1 000,00 €",
+          "14.03 18:02 — •••• 4471 шотына аударым (карта иесінің өз шоты): −1 000,00 €",
+          "Авторизация: чип + ПИН, барлық операцияға расталды",
+          "Барлығы дауланады: −3 500,00 €"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Операции совершены в банкомате в 250 м от дома 12 марта, когда клиент якобы был за границей, а 1000 € переведены на его же счёт •••• 4471 — деньги не похищены, а переведены себе.",
+        "en": "The transactions were made at an ATM 250 m from his home on March 12, when the client claimed to be abroad, and €1,000 went to his own account •••• 4471 — the money was not stolen but moved to himself.",
+        "tr": "İşlemler, müşterinin yurt dışında olduğunu iddia ettiği 12 Mart'ta evine 250 m mesafedeki bir ATM'de yapıldı ve 1.000 € kendi hesabı •••• 4471'e gitti — para çalınmadı, kendisine aktarıldı.",
+        "ar": "أُجريت العمليات في صراف على بُعد 250 م من منزله في 12 مارس، حين زعم العميل أنه بالخارج، وحُوّل 1000 € إلى حسابه الخاص •••• 4471 — لم تُسرق الأموال بل نُقلت إليه نفسه.",
+        "kk": "Операциялар клиент шетелде деген 12 наурызда үйден 250 м қашықтықтағы банкоматта жасалған, ал 1000 € оның өз шоты •••• 4471-ге аударылған — ақша ұрланбаған, өзіне көшірілген."
+      },
+      "meta": {
+        "bankName": "СтолицаБанк",
+        "accountMask": "•••• •••• •••• 4471"
+      }
+    },
+    {
+      "id": "ev-police",
+      "type": "document",
+      "title": {
+        "ru": "Заявление в полицию",
+        "en": "Police Report",
+        "tr": "Polis Tutanağı",
+        "ar": "محضر الشرطة",
+        "kk": "Полицияға арыз"
+      },
+      "content": {
+        "ru": "Зарегистрированное заявление о краже банковской карты от 18 марта. Содержит описание со слов заявителя; факт хищения средств полицией не подтверждён, ведётся проверка.",
+        "en": "A registered report of a stolen bank card filed on March 18. It records the claimant's own account; the theft of funds is not confirmed by police and an inquiry is ongoing.",
+        "tr": "18 Mart'ta verilen, banka kartı hırsızlığına ilişkin kayıtlı bir tutanak. Başvuranın kendi beyanını içerir; para hırsızlığı polisçe doğrulanmamış olup inceleme sürüyor.",
+        "ar": "بلاغ مسجّل عن سرقة بطاقة مصرفية قُدّم في 18 مارس. يتضمن رواية مقدّم الطلب نفسه؛ ولم تؤكد الشرطة سرقة الأموال والتحقيق جارٍ.",
+        "kk": "18 наурызда берілген банк картасының ұрлануы туралы тіркелген арыз. Онда арыз иесінің сөзінен жазылған; қаражаттың ұрлануын полиция растамаған, тексеру жүргізілуде."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Заявление подлинное и лишь фиксирует слова клиента; само по себе оно не доказывает ни кражу, ни мошенничество.",
+        "en": "The report is genuine and merely records the client's statement; on its own it proves neither theft nor fraud.",
+        "tr": "Tutanak gerçektir ve yalnızca müşterinin beyanını kaydeder; tek başına ne hırsızlığı ne de dolandırıcılığı kanıtlar.",
+        "ar": "المحضر أصلي ويسجّل فقط أقوال العميل؛ وهو بمفرده لا يثبت سرقة ولا احتيالًا.",
+        "kk": "Арыз шынайы әрі тек клиенттің сөзін тіркейді; өздігінен ол ұрлықты да, алаяқтықты да дәлелдемейді."
+      }
+    },
+    {
+      "id": "ev-atm",
+      "type": "photo",
+      "title": {
+        "ru": "Снимок зоны банкомата",
+        "en": "ATM Area Still",
+        "tr": "ATM Bölgesi Karesi",
+        "ar": "لقطة منطقة الصراف",
+        "kk": "Банкомат аймағының суреті"
+      },
+      "content": {
+        "ru": "Кадр охранной камеры у банкомата «Столица-217» на ул. Садовой: видна зона выдачи купюр и спина клиента в момент операции 12 марта. Лица не разобрать, но локация и время совпадают с выпиской.",
+        "en": "A security-camera frame at ATM “Stolitsa-217” on Sadovaya St.: the cash-dispense area and a customer's back are visible during the March 12 operation. The face is unclear, but the location and time match the statement.",
+        "tr": "Sadovaya Caddesi'ndeki “Stolitsa-217” ATM'sinde bir güvenlik kamerası karesi: 12 Mart işlemi sırasında para verme alanı ve bir müşterinin sırtı görülüyor. Yüz net değil ama konum ve zaman ekstreyle örtüşüyor.",
+        "ar": "لقطة من كاميرا مراقبة عند صراف «ستوليتسا-217» في شارع سادوفايا: تظهر منطقة صرف النقد وظهر زبون أثناء عملية 12 مارس. الوجه غير واضح، لكن الموقع والوقت يطابقان الكشف.",
+        "kk": "Садовая көшесіндегі «Столица-217» банкоматындағы күзет камерасының кадры: 12 наурыздағы операция кезінде ақша беру аймағы мен клиенттің арқасы көрінеді. Беті анық емес, бірақ орны мен уақыты үзіндіге сәйкес келеді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Снимок подлинный и подтверждает место и время операции; сам по себе он не уличает заявителя, так как лицо неразличимо.",
+        "en": "The still is genuine and confirms the place and time of the operation; on its own it does not incriminate the claimant since the face is indistinct.",
+        "tr": "Kare gerçektir ve işlemin yerini ve zamanını doğrular; yüz seçilemediği için tek başına başvuranı suçlamaz.",
+        "ar": "اللقطة أصلية وتؤكد مكان العملية ووقتها؛ ولا تُدين مقدّم الطلب بمفردها لأن الوجه غير واضح.",
+        "kk": "Сурет шынайы әрі операцияның орны мен уақытын растайды; беті анық болмағандықтан, өздігінен арыз иесін әшкерелемейді."
+      },
+      "meta": {
+        "filename": "IMG_20260312_091418.jpg"
+      }
+    },
+    {
+      "id": "ev-issuer",
+      "type": "document",
+      "title": {
+        "ru": "Письмо банка-эмитента",
+        "en": "Card Issuer Letter",
+        "tr": "Kart Çıkaran Banka Mektubu",
+        "ar": "خطاب الجهة المُصدِرة للبطاقة",
+        "kk": "Карта эмитентінің хаты"
+      },
+      "content": {
+        "ru": "Платёжный департамент подтверждает: все оспариваемые операции выполнены физическим чипом карты с вводом корректного ПИН-кода. Признаков клонирования, скимминга или операций без чипа не выявлено. Карта в момент операций не была заблокирована.",
+        "en": "The payments department confirms: all disputed operations were performed with the card's physical chip and the correct PIN entered. No signs of cloning, skimming, or card-not-present operations were found. The card was not blocked at the time of the operations.",
+        "tr": "Ödeme departmanı doğruluyor: itiraz edilen tüm işlemler kartın fiziksel çipiyle ve doğru PIN girilerek yapıldı. Kopyalama, skimming veya çipsiz işlem belirtisi bulunamadı. Kart işlemler sırasında bloke değildi.",
+        "ar": "تؤكد إدارة المدفوعات: نُفِّذت جميع العمليات المتنازع عليها بالشريحة الفعلية للبطاقة مع إدخال الرقم السري الصحيح. لم تُكتشف أي علامات استنساخ أو نسخ مغناطيسي أو عمليات بدون بطاقة. ولم تكن البطاقة محظورة وقت العمليات.",
+        "kk": "Төлем департаменті растайды: дауланатын барлық операция картаның физикалық чипімен әрі дұрыс ПИН-код енгізумен орындалған. Көшіру, скимминг немесе чипсіз операция белгілері табылмаған. Карта операция кезінде бұғатталмаған."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Эмитент подтверждает чип + ПИН по всем операциям — карту нельзя было использовать без оригинала и кода, что опровергает версию о краже и клонировании.",
+        "en": "The issuer confirms chip + PIN on every operation — the card could not be used without the original and the code, which refutes the stolen-and-cloned story.",
+        "tr": "İhraççı her işlemde çip + PIN'i doğruluyor — kart, orijinali ve kod olmadan kullanılamazdı; bu da çalınma ve kopyalama iddiasını çürütüyor.",
+        "ar": "تؤكد الجهة المُصدِرة الشريحة + الرقم السري في كل عملية — لم يكن ممكنًا استخدام البطاقة دون الأصل والرمز، ما يدحض رواية السرقة والاستنساخ.",
+        "kk": "Эмитент әр операцияда чип + ПИН расталғанын растайды — картаны түпнұсқа мен кодсыз қолдану мүмкін емес, бұл ұрлау мен көшіру нұсқасын теріске шығарады."
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Снятия сделаны в банкомате в 250 м от дома, а 1000 € ушли на собственный счёт клиента.",
+      "Эмитент подтвердил чип + ПИН по всем операциям — кражи и клонирования не было.",
+      "Заявление мошенническое, его следует отклонить."
+    ],
+    "en": [
+      "The withdrawals were made at an ATM 250 m from his home, and €1,000 went to the client's own account.",
+      "The issuer confirmed chip + PIN on every operation — there was no theft or cloning.",
+      "The claim is fraudulent and should be rejected."
+    ],
+    "tr": [
+      "Para çekmeler evine 250 m mesafedeki bir ATM'de yapıldı ve 1.000 € müşterinin kendi hesabına gitti.",
+      "İhraççı her işlemde çip + PIN'i doğruladı — hırsızlık ya da kopyalama yoktu.",
+      "Talep hileli ve reddedilmeli."
+    ],
+    "ar": [
+      "تمت عمليات السحب في صراف على بُعد 250 م من منزله، وذهب 1000 € إلى حساب العميل الخاص.",
+      "أكدت الجهة المُصدِرة الشريحة + الرقم السري في كل عملية — لم تكن هناك سرقة ولا استنساخ.",
+      "المطالبة احتيالية ويجب رفضها."
+    ],
+    "kk": [
+      "Ақша үйден 250 м қашықтықтағы банкоматтан алынған, ал 1000 € клиенттің өз шотына кеткен.",
+      "Эмитент әр операцияда чип + ПИН растады — ұрлық та, көшіру де болмаған.",
+      "Талап алаяқтық, оны қабылдамау керек."
+    ]
+  }
+}

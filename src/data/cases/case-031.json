@@ -1,0 +1,262 @@
+{
+  "id": "case-031",
+  "type": "standard",
+  "difficulty": "hard",
+  "claimAmount": 7000,
+  "truth": "valid",
+  "title": {
+    "ru": "Град уничтожил теплицу",
+    "en": "Hailstorm Destroyed the Greenhouse",
+    "tr": "Dolu Serayı Yok Etti",
+    "ar": "عاصفة بَرَد دمّرت الدفيئة",
+    "kk": "Бұршақ жылыжайды қиратты"
+  },
+  "claim": {
+    "person": {
+      "ru": "Айгуль Сапарова, 36 лет",
+      "en": "Aigul Saparova, 36",
+      "tr": "Aigül Saparova, 36",
+      "ar": "آيغول ساباروفا، 36",
+      "kk": "Айгүл Сапарова, 36 жаста"
+    },
+    "story": {
+      "ru": "Днём налетел сильнейший град — куски льда размером с грецкий орех. За двадцать минут он пробил поликарбонатную крышу моей теплицы и побил весь урожай томатов и огурцов. Прошу возместить погибшую продукцию и ремонт теплицы.",
+      "en": "In the afternoon a violent hailstorm hit — chunks of ice the size of walnuts. In twenty minutes it punched through the polycarbonate roof of my greenhouse and shredded the whole crop of tomatoes and cucumbers. I request compensation for the lost produce and the greenhouse repair.",
+      "tr": "Öğleden sonra şiddetli bir dolu yağışı oldu — ceviz büyüklüğünde buz parçaları. Yirmi dakikada seramın polikarbonat çatısını deldi ve tüm domates ve salatalık ürününü parçaladı. Kaybolan ürün ve sera onarımı için tazminat talep ediyorum.",
+      "ar": "بعد الظهر ضربت عاصفة بَرَد عنيفة — قطع ثلجية بحجم الجوز. في عشرين دقيقة اخترقت سقف الدفيئة المصنوع من البولي كربونات وأتلفت محصول الطماطم والخيار كاملًا. أطلب تعويضًا عن المحصول التالف وإصلاح الدفيئة.",
+      "kk": "Күндіз қатты бұршақ жауды — жаңғақтай мұз кесектері. Жиырма минут ішінде ол менің жылыжайымның поликарбонат шатырын тесіп өтіп, барлық қызанақ пен қияр өнімін қиратты. Жойылған өнім мен жылыжай жөндеуіне өтемақы сұраймын."
+    }
+  },
+  "coverImage": "covers/case-031.svg",
+  "personImage": "people/aigul.svg",
+  "evidences": [
+    {
+      "id": "ev-meteo",
+      "type": "document",
+      "title": {
+        "ru": "Метеорологическая справка",
+        "en": "Meteorological Report",
+        "tr": "Meteoroloji Raporu",
+        "ar": "تقرير الأرصاد الجوية",
+        "kk": "Метеорологиялық анықтама"
+      },
+      "content": {
+        "ru": "Метеослужба подтверждает: 15 июня в 14:10–14:35 в районе хозяйства прошёл сильный град с диаметром градин до 28 мм при шквалистом ветре до 19 м/с. Объявлялось штормовое предупреждение второго уровня.",
+        "en": "The weather service confirms that on June 15, 14:10–14:35, a severe hailstorm with hailstones up to 28 mm in diameter and gusts up to 19 m/s passed over the farm area. A level-two storm warning had been issued.",
+        "tr": "Meteoroloji servisi, 15 Haziran 14:10–14:35 arasında çiftlik bölgesinde 28 mm çapına kadar dolu taneleriyle ve 19 m/s'ye varan rüzgârla şiddetli dolu yağdığını doğruluyor. İkinci seviye fırtına uyarısı verilmişti.",
+        "ar": "تؤكد دائرة الأرصاد أنه في 15 يونيو بين 14:10 و14:35 مرّت عاصفة بَرَد شديدة بقطر حبّات يصل إلى 28 مم ورياح تصل إلى 19 م/ث فوق منطقة المزرعة. وكان قد صدر تحذير عاصفة من المستوى الثاني.",
+        "kk": "Метеоқызмет растайды: 15 маусымда 14:10–14:35 аралығында шаруашылық ауданында диаметрі 28 мм-ге дейінгі бұршақпен, 19 м/с-қа дейінгі екпінді желмен қатты бұршақ жауды. Екінші деңгейлі дауыл туралы ескерту жарияланды."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Справка независимо подтверждает сильный град в заявленное время и месте.",
+        "en": "The report independently confirms the severe hail at the stated time and place.",
+        "tr": "Rapor, belirtilen zaman ve yerde şiddetli doluyu bağımsız olarak doğruluyor.",
+        "ar": "يؤكد التقرير بشكل مستقل عاصفة البَرَد الشديدة في الوقت والمكان المذكورين.",
+        "kk": "Анықтама қатты бұршақты аталған уақыт пен орында тәуелсіз растайды."
+      }
+    },
+    {
+      "id": "ev-photo",
+      "type": "photo",
+      "title": {
+        "ru": "Аэрофото теплицы",
+        "en": "Aerial Photo of the Greenhouse",
+        "tr": "Seranın Havadan Fotoğrafı",
+        "ar": "صورة جوية للدفيئة",
+        "kk": "Жылыжайдың әуеден түсірілген суреті"
+      },
+      "content": {
+        "ru": "Снимок с дрона сверху: крыша теплицы испещрена сотнями пробоин, листы поликарбоната проломлены и провисли внутрь. На грядках видны побитые, переломанные растения и слой нерастаявших градин на земле.",
+        "en": "Top-down drone shot: the greenhouse roof is peppered with hundreds of punctures, the polycarbonate sheets broken and sagging inward. The beds show battered, snapped plants and a layer of unmelted hailstones on the ground.",
+        "tr": "Yukarıdan dron çekimi: sera çatısı yüzlerce delikle delik deşik, polikarbonat levhalar kırılmış ve içeri çökmüş. Yataklarda ezilmiş, kırılmış bitkiler ve yerde erimemiş dolu tabakası görülüyor.",
+        "ar": "لقطة بطائرة مسيّرة من الأعلى: سقف الدفيئة مثقوب بمئات الثقوب، وألواح البولي كربونات مكسورة ومتدلية إلى الداخل. تُظهر الأحواض نباتات مهشّمة ومكسورة وطبقة من حبّات البَرَد غير الذائبة على الأرض.",
+        "kk": "Дрондан түсірілген жоғарыдан сурет: жылыжай шатыры жүздеген тесіктермен шұбарланған, поликарбонат табақтары сынып, ішке салбырап тұр. Жүйектерде сabылған, сынған өсімдіктер мен жердегі ерімеген бұршақ қабаты көрінеді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Картина повреждений сверху полностью соответствует ударам града по крыше.",
+        "en": "The overhead damage pattern fully matches hail impacts on the roof.",
+        "tr": "Yukarıdan görülen hasar deseni, çatıya dolu çarpmalarıyla tamamen uyumlu.",
+        "ar": "نمط الضرر من الأعلى يتوافق تمامًا مع ارتطامات البَرَد بالسقف.",
+        "kk": "Жоғарыдан көрінген зақым суреті шатырға тиген бұршақ соққыларына толық сәйкес келеді."
+      },
+      "meta": {
+        "filename": "DJI_20260615_150218.jpg"
+      }
+    },
+    {
+      "id": "ev-social",
+      "type": "social_media",
+      "title": {
+        "ru": "Посты соседей",
+        "en": "Neighbours' Posts",
+        "tr": "Komşuların Paylaşımları",
+        "ar": "منشورات الجيران",
+        "kk": "Көршілердің жазбалары"
+      },
+      "content": {
+        "ru": "В сельской группе несколько односельчан выложили фото и видео того же града: лёд на капотах машин, побитые огороды, разбитые парники. Записи отмечены 15 июня, 14:20–14:30, тот же населённый пункт. Десятки комментариев жалуются на ущерб.",
+        "en": "In the village group several locals posted photos and videos of the same hail: ice on car hoods, battered vegetable patches, smashed cold frames. The posts are tagged June 15, 14:20–14:30, the same village. Dozens of comments complain of damage.",
+        "tr": "Köy grubunda birkaç yerli, aynı dolunun fotoğraf ve videolarını paylaştı: araç kaputlarında buz, dövülmüş bostanlar, kırılmış küçük seralar. Paylaşımlar 15 Haziran 14:20–14:30, aynı köy olarak etiketlenmiş. Onlarca yorum hasardan şikâyet ediyor.",
+        "ar": "في مجموعة القرية نشر عدة سكان صورًا ومقاطع للبَرَد نفسه: ثلج على أغطية محركات السيارات، حدائق خضار محطّمة، أنفاق زراعية مكسورة. المنشورات موسومة بـ15 يونيو، 14:20–14:30، القرية نفسها. عشرات التعليقات تشكو من الأضرار.",
+        "kk": "Ауыл тобында бірнеше ауылдас осы бұршақтың фото-видеосын жариялады: көлік капоттарындағы мұз, сабылған бақшалар, сынған парниктер. Жазбалар 15 маусым, 14:20–14:30, сол елді мекен деп белгіленген. Ондаған пікірде зиян туралы шағымданады."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Независимые посты других жителей подтверждают тот же град в то же время и в том же месте.",
+        "en": "Independent posts by other residents confirm the same hail at the same time and place.",
+        "tr": "Diğer sakinlerin bağımsız paylaşımları, aynı yer ve zamanda aynı doluyu doğruluyor.",
+        "ar": "تؤكد منشورات سكان آخرين مستقلة وقوع البَرَد نفسه في الوقت والمكان نفسيهما.",
+        "kk": "Басқа тұрғындардың тәуелсіз жазбалары сол бұршақты сол уақыт пен орында растайды."
+      },
+      "meta": {
+        "socialPlatform": "ok.ru"
+      }
+    },
+    {
+      "id": "ev-witness",
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания работника",
+        "en": "Farmhand's Statement",
+        "tr": "Tarım İşçisinin İfadesi",
+        "ar": "إفادة عامل المزرعة",
+        "kk": "Жұмысшының айғағы"
+      },
+      "content": {
+        "ru": "«Я был во дворе, когда небо потемнело и посыпался град — крупный, как орехи, бил больно. Мы с Айгуль еле успели забежать под навес. Сквозь крышу теплицы было слышно, как лёд пробивает поликарбонат. Когда стихло, всё внутри было разбито.»",
+        "en": "\"I was in the yard when the sky darkened and hail came down — big as nuts, it hurt. Aigul and I barely made it under the shed. Through the greenhouse roof you could hear the ice punching through the polycarbonate. When it stopped, everything inside was smashed.\"",
+        "tr": "\"Avludaydım, gökyüzü karardı ve dolu yağmaya başladı — ceviz kadar büyüktü, acıtıyordu. Aigül'le güçbela barakanın altına sığındık. Sera çatısından buzun polikarbonatı deldiği duyuluyordu. Dindiğinde içerideki her şey paramparçaydı.\"",
+        "ar": "«كنت في الفناء حين أظلمت السماء وتساقط البَرَد — بحجم الجوز، كان مؤلمًا. أنا وآيغول بالكاد وصلنا تحت السقيفة. عبر سقف الدفيئة كان يُسمع البَرَد يخترق البولي كربونات. حين توقف، كان كل ما في الداخل محطّمًا.»",
+        "kk": "«Аула ішінде едім, аспан қарауытып, бұршақ жауды — жаңғақтай ірі, ауыртып тиді. Айгүл екеуміз әрең күрке астына кіріп үлгердік. Жылыжай шатыры арқылы мұздың поликарбонатты тесіп өткені естілді. Басылғанда ішіндегінің бәрі қиратылған еді.»"
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Очевидец подтверждает силу града и разрушение теплицы изнутри хозяйства.",
+        "en": "The eyewitness confirms the hail's force and the greenhouse destruction from inside the farm.",
+        "tr": "Görgü tanığı, dolunun şiddetini ve seranın yıkımını çiftliğin içinden doğruluyor.",
+        "ar": "يؤكد الشاهد العيان قوة البَرَد وتدمير الدفيئة من داخل المزرعة.",
+        "kk": "Куә бұршақтың күшін және жылыжайдың қиратылғанын шаруашылық ішінен растайды."
+      }
+    },
+    {
+      "id": "ev-sensor",
+      "type": "usage_log",
+      "title": {
+        "ru": "Лог климат-датчика теплицы",
+        "en": "Greenhouse Climate Sensor Log",
+        "tr": "Sera İklim Sensörü Kaydı",
+        "ar": "سجل مستشعر مناخ الدفيئة",
+        "kk": "Жылыжай климат датчигінің журналы"
+      },
+      "content": {
+        "ru": [
+          "14:08:30 — Темп: +29.4°C, влажность 61%, кровля: целостность OK",
+          "14:11:02 — Внешний шум: резкий рост (удары по кровле)",
+          "14:12:47 — ТРЕВОГА: датчик кровли — нарушение целостности секции C",
+          "14:13:10 — Темп: +24.1°C (резкое падение), влажность 88%",
+          "14:18:55 — Темп: +18.7°C, открытый контур: разгерметизация",
+          "14:36:20 — Шум стих, темп +17.9°C, кровля: 6 секций повреждены"
+        ],
+        "en": [
+          "14:08:30 — Temp: +29.4°C, humidity 61%, roof: integrity OK",
+          "14:11:02 — External noise: sharp rise (impacts on roof)",
+          "14:12:47 — ALARM: roof sensor — integrity breach, section C",
+          "14:13:10 — Temp: +24.1°C (sharp drop), humidity 88%",
+          "14:18:55 — Temp: +18.7°C, open loop: depressurised",
+          "14:36:20 — Noise subsided, temp +17.9°C, roof: 6 sections damaged"
+        ],
+        "tr": [
+          "14:08:30 — Sıcaklık: +29.4°C, nem %61, çatı: bütünlük OK",
+          "14:11:02 — Dış gürültü: keskin artış (çatıya çarpmalar)",
+          "14:12:47 — ALARM: çatı sensörü — bütünlük ihlali, bölüm C",
+          "14:13:10 — Sıcaklık: +24.1°C (keskin düşüş), nem %88",
+          "14:18:55 — Sıcaklık: +18.7°C, açık devre: basınç kaybı",
+          "14:36:20 — Gürültü dindi, sıcaklık +17.9°C, çatı: 6 bölüm hasarlı"
+        ],
+        "ar": [
+          "14:08:30 — الحرارة: +29.4°م، الرطوبة 61%، السقف: السلامة جيدة",
+          "14:11:02 — ضوضاء خارجية: ارتفاع حاد (ارتطامات على السقف)",
+          "14:12:47 — إنذار: مستشعر السقف — خرق السلامة، القسم C",
+          "14:13:10 — الحرارة: +24.1°م (هبوط حاد)، الرطوبة 88%",
+          "14:18:55 — الحرارة: +18.7°م، دائرة مفتوحة: فقدان الضغط",
+          "14:36:20 — هدأت الضوضاء، الحرارة +17.9°م، السقف: 6 أقسام متضررة"
+        ],
+        "kk": [
+          "14:08:30 — Темп: +29.4°C, ылғалдылық 61%, шатыр: тұтастық OK",
+          "14:11:02 — Сыртқы шу: күрт өсу (шатырға соққылар)",
+          "14:12:47 — ДАБЫЛ: шатыр датчигі — C секциясының тұтастығы бұзылды",
+          "14:13:10 — Темп: +24.1°C (күрт төмендеу), ылғалдылық 88%",
+          "14:18:55 — Темп: +18.7°C, ашық контур: герметизация бұзылды",
+          "14:36:20 — Шу басылды, темп +17.9°C, шатыр: 6 секция зақымдалған"
+        ]
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Лог фиксирует удары по кровле, пробой секции и резкое падение температуры ровно во время града.",
+        "en": "The log records roof impacts, a section breach, and a sharp temperature drop exactly during the hail.",
+        "tr": "Kayıt, dolu sırasında tam olarak çatı darbelerini, bir bölümün delinmesini ve keskin sıcaklık düşüşünü gösteriyor.",
+        "ar": "يسجّل السجل ارتطامات السقف وخرق القسم وهبوطًا حادًا في الحرارة في أثناء البَرَد بالضبط.",
+        "kk": "Журнал бұршақ жауған дәл сәтте шатырға соққыларды, секцияның тесілуін және температураның күрт төмендеуін тіркейді."
+      },
+      "meta": {
+        "logPrompt": "greenhouse@farm:~$ tail -f /var/log/climate2.log"
+      }
+    },
+    {
+      "id": "ev-agro",
+      "type": "document",
+      "title": {
+        "ru": "Заключение агронома",
+        "en": "Agronomist's Assessment",
+        "tr": "Ziraat Mühendisi Değerlendirmesi",
+        "ar": "تقييم المهندس الزراعي",
+        "kk": "Агроном қорытындысы"
+      },
+      "content": {
+        "ru": "Сертифицированный агроном обследовал хозяйство. Подтверждена гибель около 90% посадок томатов и огурцов от механических повреждений градом на стадии плодоношения. Оценка потерь урожая и стоимости восстановления кровли соответствует заявленной сумме.",
+        "en": "A certified agronomist surveyed the farm. About 90% of the tomato and cucumber plantings are confirmed lost to mechanical hail damage at the fruiting stage. The valuation of the crop loss and roof restoration matches the claimed amount.",
+        "tr": "Sertifikalı bir ziraat mühendisi çiftliği inceledi. Domates ve salatalık ekiminin yaklaşık %90'ının meyve verme aşamasında dolu kaynaklı mekanik hasarla kaybedildiği doğrulandı. Ürün kaybı ve çatı onarımı değerlemesi talep edilen tutarla uyumlu.",
+        "ar": "عاين مهندس زراعي معتمد المزرعة. تأكّد فقدان نحو 90% من زراعات الطماطم والخيار بسبب الضرر الميكانيكي للبَرَد في مرحلة الإثمار. تقدير خسارة المحصول وكلفة ترميم السقف يتوافق مع المبلغ المطالَب به.",
+        "kk": "Сертификатталған агроном шаруашылықты тексерді. Қызанақ пен қияр егістерінің шамамен 90%-ы жеміс беру кезеңінде бұршақтың механикалық зақымынан жойылғаны расталды. Өнім шығыны мен шатырды қалпына келтіру құнының бағасы мәлімделген сомаға сәйкес."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Экспертная оценка подтверждает объём ущерба и обоснованность заявленной суммы.",
+        "en": "The expert assessment confirms the extent of the damage and the validity of the claimed amount.",
+        "tr": "Uzman değerlendirmesi, hasarın boyutunu ve talep edilen tutarın geçerliliğini doğruluyor.",
+        "ar": "يؤكد التقييم الفني حجم الضرر وصحة المبلغ المطالَب به.",
+        "kk": "Сараптамалық баға зиян көлемі мен мәлімделген соманың негізділігін растайды."
+      }
+    }
+  ],
+  "correctDecision": "approve",
+  "explanation": {
+    "ru": [
+      "Метеосправка, посты соседей и показания работника подтверждают сильный град.",
+      "Аэрофото, лог датчика и заключение агронома доказывают разрушение теплицы и гибель урожая.",
+      "Заявление обоснованно — его следует одобрить."
+    ],
+    "en": [
+      "The weather report, neighbours' posts and the farmhand's statement confirm the severe hail.",
+      "The aerial photo, sensor log and agronomist's assessment prove the greenhouse destruction and crop loss.",
+      "The claim is legitimate and should be approved."
+    ],
+    "tr": [
+      "Meteoroloji raporu, komşuların paylaşımları ve işçinin ifadesi şiddetli doluyu doğruluyor.",
+      "Havadan fotoğraf, sensör kaydı ve ziraat mühendisi değerlendirmesi sera yıkımını ve ürün kaybını kanıtlıyor.",
+      "Talep meşru — onaylanmalı."
+    ],
+    "ar": [
+      "يؤكد تقرير الأرصاد ومنشورات الجيران وإفادة العامل عاصفة البَرَد الشديدة.",
+      "تثبت الصورة الجوية وسجل المستشعر وتقييم المهندس الزراعي تدمير الدفيئة وفقدان المحصول.",
+      "المطالبة مشروعة ويجب الموافقة عليها."
+    ],
+    "kk": [
+      "Метеоанықтама, көршілердің жазбалары мен жұмысшының айғағы қатты бұршақты растайды.",
+      "Әуеден түсірілген сурет, датчик журналы мен агроном қорытындысы жылыжайдың қиратылуын және өнімнің жойылуын дәлелдейді.",
+      "Талап негізді — оны қабылдау керек."
+    ]
+  }
+}

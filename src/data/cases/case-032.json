@@ -1,0 +1,319 @@
+{
+  "id": "case-032",
+  "type": "standard",
+  "difficulty": "hard",
+  "claimAmount": 22000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Исчезнувший внедорожник",
+    "en": "The Vanished SUV",
+    "tr": "Kaybolan Arazi Aracı",
+    "ar": "سيارة الدفع الرباعي المختفية",
+    "kk": "Жоғалған джип"
+  },
+  "claim": {
+    "person": {
+      "ru": "Тимур Расулов, 52 года",
+      "en": "Timur Rasulov, 52",
+      "tr": "Timur Rasulov, 52",
+      "ar": "تيمور رسولوف، 52",
+      "kk": "Тимур Расулов, 52 жаста"
+    },
+    "story": {
+      "ru": "В ночь на 12 июля у меня угнали внедорожник прямо от гаража. Утром парковочное место было пустым. Я сразу обратился в полицию. Прошу полную страховую выплату за машину.",
+      "en": "On the night of 12 July my SUV was stolen right outside my garage. In the morning the parking spot was empty. I went to the police immediately. I request full insurance payout for the vehicle.",
+      "tr": "12 Temmuz gecesi arazi aracım garajımın hemen önünden çalındı. Sabah park yeri boştu. Hemen polise gittim. Araç için tam sigorta ödemesi talep ediyorum.",
+      "ar": "في ليلة 12 يوليو سُرقت سيارتي رباعية الدفع من أمام مرآبي مباشرة. في الصباح كان مكان الوقوف فارغًا. ذهبت إلى الشرطة فورًا. أطلب تعويضًا تأمينيًا كاملًا عن السيارة.",
+      "kk": "12 шілдеге қараған түні менің джипім гараждың дәл алдынан ұрланды. Таңертең тұрақ орны бос болды. Мен бірден полицияға хабарластым. Көлік үшін толық сақтандыру төлемін сұраймын."
+    }
+  },
+  "coverImage": "covers/case-032.svg",
+  "personImage": "people/timur.svg",
+  "evidences": [
+    {
+      "id": "ev-gps",
+      "type": "gps",
+      "title": {
+        "ru": "Трекер автомобиля",
+        "en": "Vehicle Tracker",
+        "tr": "Araç Takip Cihazı",
+        "ar": "جهاز تتبع السيارة",
+        "kk": "Көлік трекері"
+      },
+      "content": {
+        "ru": [
+          "11.07 22:48 — Гараж, ул. Садовая (паркинг)",
+          "12.07 00:15 — Гараж, ул. Садовая (двигатель заглушен)",
+          "12.07 03:30 — Гараж, ул. Садовая (без движения)",
+          "12.07 06:02 — Гараж, ул. Садовая (без движения)",
+          "12.07 08:40 — Гараж, ул. Садовая (без движения)"
+        ],
+        "en": [
+          "11.07 22:48 — Garage, Sadovaya St. (parked)",
+          "12.07 00:15 — Garage, Sadovaya St. (engine off)",
+          "12.07 03:30 — Garage, Sadovaya St. (stationary)",
+          "12.07 06:02 — Garage, Sadovaya St. (stationary)",
+          "12.07 08:40 — Garage, Sadovaya St. (stationary)"
+        ],
+        "tr": [
+          "11.07 22:48 — Garaj, Sadovaya Sok. (park edildi)",
+          "12.07 00:15 — Garaj, Sadovaya Sok. (motor kapalı)",
+          "12.07 03:30 — Garaj, Sadovaya Sok. (hareketsiz)",
+          "12.07 06:02 — Garaj, Sadovaya Sok. (hareketsiz)",
+          "12.07 08:40 — Garaj, Sadovaya Sok. (hareketsiz)"
+        ],
+        "ar": [
+          "11.07 22:48 — المرآب، شارع سادوفايا (متوقفة)",
+          "12.07 00:15 — المرآب، شارع سادوفايا (المحرك متوقف)",
+          "12.07 03:30 — المرآب، شارع سادوفايا (ثابتة)",
+          "12.07 06:02 — المرآب، شارع سادوفايا (ثابتة)",
+          "12.07 08:40 — المرآب، شارع سادوفايا (ثابتة)"
+        ],
+        "kk": [
+          "11.07 22:48 — Гараж, Садовая к-сі (тұрақта)",
+          "12.07 00:15 — Гараж, Садовая к-сі (қозғалтқыш сөнді)",
+          "12.07 03:30 — Гараж, Садовая к-сі (қозғалыссыз)",
+          "12.07 06:02 — Гараж, Садовая к-сі (қозғалыссыз)",
+          "12.07 08:40 — Гараж, Садовая к-сі (қозғалыссыз)"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Штатный трекер показывает, что машина всю ночь простояла у гаража и ни разу не сдвинулась — никакого угона не было.",
+        "en": "The factory tracker shows the car stayed parked at the garage all night and never moved — no theft took place.",
+        "tr": "Fabrika takip cihazı, aracın tüm gece garajda park halinde kaldığını ve hiç hareket etmediğini gösteriyor — hırsızlık yok.",
+        "ar": "يُظهر جهاز التتبع الأصلي أن السيارة بقيت متوقفة في المرآب طوال الليل ولم تتحرك أبدًا — لم تقع أي سرقة.",
+        "kk": "Зауыттық трекер көліктің түні бойы гаражда тұрғанын және бір рет те қозғалмағанын көрсетеді — ешқандай ұрлық болмаған."
+      },
+      "meta": {
+        "company": "ГеоТрек Авто",
+        "department": "Отдел мониторинга автопарка",
+        "requestId": "АВТ-2026-0712-Д · Тип: Полный трек",
+        "gpsFooter": "© ГеоТрек 2026 · GPS ACC: ±4m"
+      }
+    },
+    {
+      "id": "ev-cam",
+      "type": "camera_recording",
+      "title": {
+        "ru": "Запись уличной камеры",
+        "en": "Street Camera Recording",
+        "tr": "Sokak Kamerası Kaydı",
+        "ar": "تسجيل كاميرا الشارع",
+        "kk": "Көше камерасының жазбасы"
+      },
+      "content": {
+        "ru": "14 июля в 17:22 камера на перекрёстке у рынка фиксирует тот же внедорожник с теми же номерами. За рулём — Тимур, он спокойно проезжает перекрёсток через два дня после «угона».",
+        "en": "On 14 July at 17:22 the camera at the market crossroads records the same SUV with the same plates. Timur is at the wheel, calmly driving through the intersection two days after the 'theft'.",
+        "tr": "14 Temmuz saat 17:22'de pazar kavşağındaki kamera, aynı plakalı aynı arazi aracını kaydediyor. Direksiyonda Timur var, 'hırsızlıktan' iki gün sonra kavşaktan sakince geçiyor.",
+        "ar": "في 14 يوليو الساعة 17:22 تسجل كاميرا تقاطع السوق نفس سيارة الدفع الرباعي بنفس اللوحات. تيمور خلف المقود، يقود بهدوء عبر التقاطع بعد يومين من 'السرقة'.",
+        "kk": "14 шілдеде сағат 17:22-де базар қиылысындағы камера дәл сол нөмірлі сол джипті түсіреді. Рульде — Тимур, ол «ұрлықтан» екі күн өткен соң қиылыстан байсалды өтіп барады."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Спустя два дня после заявленного угона Тимур сам управляет «угнанной» машиной — заявление ложное.",
+        "en": "Two days after the reported theft, Timur is personally driving the 'stolen' car — the claim is false.",
+        "tr": "Bildirilen hırsızlıktan iki gün sonra Timur 'çalınan' arabayı bizzat kullanıyor — iddia yanlış.",
+        "ar": "بعد يومين من السرقة المبلّغ عنها، يقود تيمور بنفسه السيارة 'المسروقة' — الادعاء كاذب.",
+        "kk": "Мәлімделген ұрлықтан екі күн өткенде Тимур «ұрланған» көлікті өзі жүргізіп жүр — мәлімдеме жалған."
+      },
+      "meta": {
+        "cameraId": "CAM-S5",
+        "cameraModel": "Lorex 4K E893AB · 4K · H.265"
+      }
+    },
+    {
+      "id": "ev-police",
+      "type": "document",
+      "title": {
+        "ru": "Заявление об угоне",
+        "en": "Theft Report",
+        "tr": "Hırsızlık Tutanağı",
+        "ar": "بلاغ السرقة",
+        "kk": "Ұрлық туралы өтініш"
+      },
+      "content": {
+        "ru": "Официальное заявление об угоне, поданное в отдел полиции 12 июля. Указаны марка, цвет и государственный номер автомобиля, время обнаружения пропажи — около 08:40.",
+        "en": "Official theft report filed at the police station on 12 July. It lists the make, colour and registration number of the car, with the discovery time noted as around 08:40.",
+        "tr": "12 Temmuz'da karakola verilen resmi hırsızlık tutanağı. Aracın markası, rengi ve plaka numarası ile kaybın fark edilme saati yaklaşık 08:40 olarak belirtilmiş.",
+        "ar": "بلاغ سرقة رسمي قُدّم إلى مركز الشرطة في 12 يوليو. يذكر طراز السيارة ولونها ورقم لوحتها، مع تحديد وقت اكتشاف الاختفاء بنحو 08:40.",
+        "kk": "12 шілдеде полиция бөліміне берілген ресми ұрлық туралы өтініш. Көліктің маркасы, түсі және мемлекеттік нөмірі, жоғалуы байқалған уақыт — шамамен 08:40 көрсетілген."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Заявление в полицию подано по форме и само по себе ничего не доказывает — подача заявления не подтверждает факт угона.",
+        "en": "The police report is properly filed and proves nothing on its own — filing a report does not confirm a theft occurred.",
+        "tr": "Polis tutanağı usulüne uygun verilmiş ve tek başına hiçbir şey kanıtlamaz — tutanak vermek hırsızlığı doğrulamaz.",
+        "ar": "البلاغ مقدَّم وفق الأصول ولا يثبت شيئًا بحد ذاته — تقديم بلاغ لا يؤكد وقوع سرقة.",
+        "kk": "Полицияға өтініш дұрыс берілген және өзі ештеңе дәлелдемейді — өтініш беру ұрлық болғанын растамайды."
+      }
+    },
+    {
+      "id": "ev-phone",
+      "type": "phone_records",
+      "title": {
+        "ru": "Детализация звонков",
+        "en": "Call Records",
+        "tr": "Arama Kayıtları",
+        "ar": "سجل المكالمات",
+        "kk": "Қоңыраулар детализациясы"
+      },
+      "content": {
+        "ru": [
+          "11.07 20:14 — Исходящий, жена, 4 мин",
+          "12.07 08:51 — Исходящий, 102 (полиция), 6 мин",
+          "12.07 11:30 — Входящий, страховая, 9 мин",
+          "13.07 18:05 — Исходящий, СТО, 3 мин"
+        ],
+        "en": [
+          "11.07 20:14 — Outgoing, wife, 4 min",
+          "12.07 08:51 — Outgoing, 102 (police), 6 min",
+          "12.07 11:30 — Incoming, insurer, 9 min",
+          "13.07 18:05 — Outgoing, garage, 3 min"
+        ],
+        "tr": [
+          "11.07 20:14 — Giden, eş, 4 dk",
+          "12.07 08:51 — Giden, 102 (polis), 6 dk",
+          "12.07 11:30 — Gelen, sigortacı, 9 dk",
+          "13.07 18:05 — Giden, servis, 3 dk"
+        ],
+        "ar": [
+          "11.07 20:14 — صادرة، الزوجة، 4 دقائق",
+          "12.07 08:51 — صادرة، 102 (الشرطة)، 6 دقائق",
+          "12.07 11:30 — واردة، شركة التأمين، 9 دقائق",
+          "13.07 18:05 — صادرة، ورشة، 3 دقائق"
+        ],
+        "kk": [
+          "11.07 20:14 — Шығыс, жұбайы, 4 мин",
+          "12.07 08:51 — Шығыс, 102 (полиция), 6 мин",
+          "12.07 11:30 — Кіріс, сақтандыру, 9 мин",
+          "13.07 18:05 — Шығыс, СТО, 3 мин"
+        ]
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Звонки обычные — жена, полиция, страховая, автосервис. Ничего подозрительного в детализации нет.",
+        "en": "The calls are ordinary — wife, police, insurer, garage. There is nothing suspicious in the records.",
+        "tr": "Aramalar sıradan — eş, polis, sigortacı, servis. Kayıtlarda şüpheli bir şey yok.",
+        "ar": "المكالمات عادية — الزوجة، الشرطة، التأمين، الورشة. لا شيء مريب في السجل.",
+        "kk": "Қоңыраулар қарапайым — жұбайы, полиция, сақтандыру, автосервис. Детализацияда күмәнді ештеңе жоқ."
+      },
+      "meta": {
+        "carrierName": "ОрбитаСвязь",
+        "phoneMask": "+7 (9••) •••-••-•3"
+      }
+    },
+    {
+      "id": "ev-bank",
+      "type": "bank_statement",
+      "title": {
+        "ru": "Банковская выписка",
+        "en": "Bank Statement",
+        "tr": "Banka Ekstresi",
+        "ar": "كشف حساب بنكي",
+        "kk": "Банк үзіндісі"
+      },
+      "content": {
+        "ru": [
+          "15.07 — Входящий перевод, +180 000 ₽, назначение: «Продажа двигателя и КПП»",
+          "16.07 — Входящий перевод, +95 000 ₽, назначение: «Колёса, диски, оптика»",
+          "18.07 — Входящий перевод, +120 000 ₽, назначение: «Кузовные детали, авторазбор»",
+          "19.07 — Перевод физлицу «Авторазбор СВ», +60 000 ₽"
+        ],
+        "en": [
+          "15.07 — Incoming transfer, +180,000 ₽, ref: 'Sale of engine and gearbox'",
+          "16.07 — Incoming transfer, +95,000 ₽, ref: 'Wheels, rims, headlights'",
+          "18.07 — Incoming transfer, +120,000 ₽, ref: 'Body parts, auto dismantling'",
+          "19.07 — Transfer from individual 'Auto-Dismantling SV', +60,000 ₽"
+        ],
+        "tr": [
+          "15.07 — Gelen havale, +180.000 ₽, açıklama: 'Motor ve şanzıman satışı'",
+          "16.07 — Gelen havale, +95.000 ₽, açıklama: 'Jantlar, lastikler, farlar'",
+          "18.07 — Gelen havale, +120.000 ₽, açıklama: 'Kaporta parçaları, oto söküm'",
+          "19.07 — Şahıstan havale 'Oto Söküm SV', +60.000 ₽"
+        ],
+        "ar": [
+          "15.07 — تحويل وارد، +180,000 ₽، البيان: 'بيع المحرك وعلبة التروس'",
+          "16.07 — تحويل وارد، +95,000 ₽، البيان: 'العجلات، الجنوط، المصابيح'",
+          "18.07 — تحويل وارد، +120,000 ₽، البيان: 'قطع الهيكل، تفكيك السيارات'",
+          "19.07 — تحويل من فرد 'تفكيك سيارات SV'، +60,000 ₽"
+        ],
+        "kk": [
+          "15.07 — Кіріс аударым, +180 000 ₽, мақсаты: «Қозғалтқыш пен КПП сату»",
+          "16.07 — Кіріс аударым, +95 000 ₽, мақсаты: «Дөңгелектер, дискілер, оптика»",
+          "18.07 — Кіріс аударым, +120 000 ₽, мақсаты: «Кузов бөлшектері, авторазбор»",
+          "19.07 — Жеке тұлғаға аударым «Авторазбор СВ», +60 000 ₽"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "После «угона» на счёт поступают деньги за продажу двигателя, колёс и кузовных деталей — машину разобрали и продали по частям.",
+        "en": "After the 'theft', money arrives for the sale of the engine, wheels and body parts — the car was stripped and sold for parts.",
+        "tr": "'Hırsızlıktan' sonra hesaba motor, jant ve kaporta parçalarının satışından para geliyor — araç sökülüp parça parça satılmış.",
+        "ar": "بعد 'السرقة' تصل أموال مقابل بيع المحرك والعجلات وقطع الهيكل — فُكّكت السيارة وبيعت قطعًا.",
+        "kk": "«Ұрлықтан» кейін шотқа қозғалтқыш, дөңгелектер мен кузов бөлшектерін сатудан ақша түседі — көлік бөлшектеліп, бөлшектеп сатылған."
+      },
+      "meta": {
+        "bankName": "АкваФинанс",
+        "accountMask": "•••• •••• •••• 6643"
+      }
+    },
+    {
+      "id": "ev-photo",
+      "type": "photo",
+      "title": {
+        "ru": "Фото пустого паркоместа",
+        "en": "Empty Parking Spot Photo",
+        "tr": "Boş Park Yeri Fotoğrafı",
+        "ar": "صورة مكان الوقوف الفارغ",
+        "kk": "Бос тұрақ орнының суреті"
+      },
+      "content": {
+        "ru": "Снимок пустого парковочного места у гаража, сделанный утром 12 июля. Видны лишь масляные пятна на асфальте и закрытые ворота гаража.",
+        "en": "A photo of the empty parking spot by the garage, taken on the morning of 12 July. Only oil stains on the asphalt and the closed garage gate are visible.",
+        "tr": "12 Temmuz sabahı çekilen, garajın yanındaki boş park yerinin fotoğrafı. Asfaltta yalnızca yağ lekeleri ve kapalı garaj kapısı görülüyor.",
+        "ar": "صورة لمكان الوقوف الفارغ بجانب المرآب، التُقطت صباح 12 يوليو. لا يظهر سوى بقع زيت على الإسفلت وبوابة المرآب المغلقة.",
+        "kk": "12 шілде таңында түсірілген, гараж жанындағы бос тұрақ орнының суреті. Тек асфальттегі май дақтары мен жабық гараж қақпасы көрінеді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Фото лишь показывает пустое место и само по себе не доказывает угон — машина могла отсутствовать по любой причине.",
+        "en": "The photo merely shows an empty spot and proves nothing on its own — the car could be absent for any reason.",
+        "tr": "Fotoğraf yalnızca boş bir yer gösteriyor ve tek başına hırsızlığı kanıtlamaz — araç herhangi bir nedenle yokken çekilmiş olabilir.",
+        "ar": "الصورة تُظهر فقط مكانًا فارغًا ولا تثبت شيئًا بذاتها — قد تكون السيارة غائبة لأي سبب.",
+        "kk": "Сурет тек бос орынды көрсетеді және өзі ұрлықты дәлелдемейді — көлік кез келген себеппен болмауы мүмкін."
+      },
+      "meta": {
+        "filename": "IMG_20260712_084112.jpg"
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Трекер фиксирует машину у гаража всю ночь — угона не было.",
+      "Камера снимает Тимура за рулём «угнанного» авто через два дня, а на счёт поступают деньги за проданные запчасти.",
+      "Заявление мошенническое и подлежит отклонению."
+    ],
+    "en": [
+      "The tracker places the car at the garage all night — there was no theft.",
+      "The camera films Timur driving the 'stolen' car two days later, while money arrives for sold parts.",
+      "The claim is fraudulent and should be rejected."
+    ],
+    "tr": [
+      "Takip cihazı aracı tüm gece garajda gösteriyor — hırsızlık yok.",
+      "Kamera iki gün sonra Timur'u 'çalınan' aracı sürerken çekiyor, hesaba ise satılan parçaların parası geliyor.",
+      "Talep hileli ve reddedilmeli."
+    ],
+    "ar": [
+      "جهاز التتبع يضع السيارة في المرآب طوال الليل — لم تقع سرقة.",
+      "الكاميرا تصوّر تيمور يقود السيارة 'المسروقة' بعد يومين، بينما تصل أموال مقابل القطع المباعة.",
+      "المطالبة احتيالية ويجب رفضها."
+    ],
+    "kk": [
+      "Трекер көлікті түні бойы гаражда тіркейді — ұрлық болмаған.",
+      "Камера екі күннен кейін Тимурды «ұрланған» көлікте жүргізіп жүргенін түсіреді, ал шотқа сатылған бөлшектердің ақшасы түседі.",
+      "Мәлімдеме алаяқтық және қабылданбауы тиіс."
+    ]
+  }
+}

@@ -1,5 +1,7 @@
 # 08 · Сборка, тесты, деплой
 
+> **🗺️ Ключевые файлы:** `package.json` (скрипты), `vite.config.ts` (бандл + vitest), `src/test/setup.ts` + `src/test/fixtures.ts`, `tsconfig.json`.
+
 ## Команды
 
 ```bash

@@ -1,5 +1,7 @@
 # 06 · Платформа Yandex и персистенс
 
+> **🗺️ Ключевые файлы:** `src/services/yandexSDK.ts` (единственный адаптер `window.YaGames`), `src/services/persistence.ts` (снапшот + миграция), `src/config/gameConfig.ts` (`saveVersion`).
+
 `src/services/yandexSDK.ts` — **единственное** место, трогающее `window.YaGames`. Движок
 никогда не зовёт SDK напрямую. Любой сбой/отсутствие SDK молча переводит в офлайн-режим;
 геймплей никогда не блокируется отсутствием SDK.

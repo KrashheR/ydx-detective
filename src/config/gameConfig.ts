@@ -85,23 +85,65 @@ export const GAME_CONFIG = {
   caseUnlocks: {
     /** Fallback for newly authored standard cases before designers tune them. */
     defaultRequiredLevel: 30,
-    /** Minimum investigator level needed to access each bundled standard case. */
+    /**
+     * Minimum investigator level needed to access each bundled standard case.
+     *
+     * This map ALSO defines the canonical campaign order: cases are sorted by
+     * (requiredLevel, caseNumber) — see `compareCasesByUnlockCriteria`. The
+     * required level is therefore a *complexity tier*, not a hard XP wall:
+     * levels stay low (max 16, always reachable) so the strict sequence gate is
+     * the real lock and a linear player is never blocked by under-leveling.
+     *
+     * The tiers encode the progressive-difficulty curve (player retention):
+     * evidence count is non-decreasing along the campaign order, so each level
+     * band introduces harder cases with more evidence to inspect:
+     *   L1     → 2-evidence onboarding   (case-001, 009)
+     *   L2-3   → 3-evidence basics       (case-013, 018, 019, 020, 021)
+     *   L4-11  → 4-evidence standard     (case-003..024)
+     *   L12-13 → 5-evidence advanced     (case-025..028)
+     *   L14-16 → 6-evidence expert       (case-029..034)
+     * New evidence types debut late: bank_statement (case-023, ~pos 22),
+     * phone_records (case-024, ~pos 23), social_media (case-025, ~pos 24).
+     */
     standardCaseRequiredLevelById: {
+      // L1 — 2-evidence onboarding
       'case-001': 1,
-      'case-003': 2,
-      'case-004': 3,
-      'case-005': 4,
+      'case-009': 1,
+      // L2-3 — 3-evidence basics
+      'case-013': 2,
+      'case-018': 2,
+      'case-019': 3,
+      'case-020': 3,
+      'case-021': 3,
+      // L4-11 — 4-evidence standard
+      'case-003': 4,
+      'case-004': 4,
+      'case-005': 5,
       'case-006': 5,
       'case-007': 6,
-      'case-008': 7,
-      'case-009': 8,
-      'case-010': 9,
-      'case-011': 10,
-      'case-012': 11,
-      'case-013': 12,
-      'case-014': 13,
-      'case-015': 14,
-      'case-016': 15,
+      'case-008': 6,
+      'case-010': 7,
+      'case-011': 7,
+      'case-012': 8,
+      'case-014': 8,
+      'case-015': 9,
+      'case-016': 9,
+      'case-017': 10,
+      'case-022': 10,
+      'case-023': 11,
+      'case-024': 11,
+      // L12-13 — 5-evidence advanced
+      'case-025': 12,
+      'case-026': 12,
+      'case-027': 13,
+      'case-028': 13,
+      // L14-16 — 6-evidence expert
+      'case-029': 14,
+      'case-030': 14,
+      'case-031': 15,
+      'case-032': 15,
+      'case-033': 16,
+      'case-034': 16,
     } as const,
   },
 

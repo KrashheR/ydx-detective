@@ -57,32 +57,6 @@
       }
     },
     {
-      "id": "ev-neighbor",
-      "type": "witness_statement",
-      "title": {
-        "ru": "Показания соседа",
-        "en": "Neighbor's Statement",
-        "tr": "Komşunun İfadesi",
-        "ar": "إفادة الجار",
-        "kk": "Көршінің айғағы"
-      },
-      "content": {
-        "ru": "«Около двух ночи увидел дым из кухонного окна Хелены и вызвал пожарных. Она выбежала на улицу в халате, сама была в шоке».",
-        "en": "'Around 2 a.m. I saw smoke from Helena's kitchen window and called the fire brigade. She ran outside in her robe, clearly shaken'.",
-        "tr": "'Gece iki civarı Helena'nın mutfak penceresinden duman gördüm ve itfaiyeyi aradım. Sabahlığıyla dışarı koştu, belli ki sarsılmıştı'.",
-        "ar": "«حوالي الساعة الثانية صباحاً رأيت دخاناً من نافذة مطبخ هيلينا واتصلت بالإطفاء. خرجت مسرعة بردائها وكانت مصدومة بوضوح».",
-        "kk": "«Түнгі екілерде Хеленаның асхана терезесінен түтін көрдім де өрт сөндірушілерді шақырдым. Ол халатпен далаға жүгіріп шықты, қатты абыржыған еді»."
-      },
-      "isContradiction": false,
-      "contradictionExplanation": {
-        "ru": "Независимый свидетель подтверждает время и факт пожара, согласуясь с отчётом и историей клиента.",
-        "en": "An independent witness confirms the time and the fact of the fire, consistent with the report and the client's story.",
-        "tr": "Bağımsız bir tanık, yangının zamanını ve gerçekleştiğini doğrular; rapor ve müşterinin anlatımıyla tutarlıdır.",
-        "ar": "شاهد مستقل يؤكد وقت الحريق وحدوثه، بما يتسق مع التقرير ورواية العميل.",
-        "kk": "Тәуелсіз куә өрттің уақыты мен болғанын растайды, бұл есеп пен клиент әңгімесіне сай келеді."
-      }
-    },
-    {
       "id": "ev-scenephotos",
       "type": "photo",
       "title": {
@@ -110,60 +84,34 @@
       "meta": {
         "filename": "IMG_20260522_021805.jpg"
       }
-    },
-    {
-      "id": "ev-invoice",
-      "type": "document",
-      "title": {
-        "ru": "Счёт от электрика",
-        "en": "Electrician's Repair Invoice",
-        "tr": "Elektrikçi Onarım Faturası",
-        "ar": "فاتورة إصلاح الكهربائي",
-        "kk": "Электриктің жөндеу шоты"
-      },
-      "content": {
-        "ru": "Счёт от лицензированного электрика (лиц. №EL-3391): замена сгоревшей проводки и розеток на кухне, восстановление щитка — 8 740 €.",
-        "en": "Invoice from a licensed electrician (lic. #EL-3391): replacement of burnt wiring and sockets in the kitchen and panel restoration — €8,740.",
-        "tr": "Lisanslı elektrikçiden fatura (lisans #EL-3391): mutfaktaki yanmış kabloların ve prizlerin değişimi, pano onarımı — 8.740 €.",
-        "ar": "فاتورة من كهربائي مرخّص (ترخيص #EL-3391): استبدال الأسلاك والمقابس المحترقة في المطبخ وإصلاح اللوحة — 8,740 يورو.",
-        "kk": "Лицензиялы электриктен шот (лиц. №EL-3391): асханадағы күйген сым мен розеткаларды ауыстыру, қалқанды қалпына келтіру — 8 740 €."
-      },
-      "isContradiction": false,
-      "contradictionExplanation": {
-        "ru": "Сумма счёта соответствует заявленным повреждениям и не превышает страховую сумму — расходы обоснованы.",
-        "en": "The invoice total matches the declared damage and stays within the insured sum — the costs are justified.",
-        "tr": "Fatura tutarı beyan edilen hasarla örtüşür ve sigorta bedelinin içinde kalır — masraflar haklıdır.",
-        "ar": "إجمالي الفاتورة يتطابق مع الأضرار المُعلنة ويبقى ضمن المبلغ المؤمَّن — التكاليف مبرّرة.",
-        "kk": "Шот сомасы мәлімделген зақымға сай келеді және сақтандыру сомасынан аспайды — шығындар негізді."
-      }
     }
   ],
   "correctDecision": "approve",
   "explanation": {
     "ru": [
       "Отчёт пожарных подтверждает причину — неисправную проводку, без поджога.",
-      "Сосед и фото с места согласуются с рассказом клиента.",
-      "Счёт электрика обоснован и в пределах суммы — выплату одобрить."
+      "Фото с места согласуются с очагом у розетки и рассказом клиента.",
+      "Противоречий нет — выплату следует одобрить."
     ],
     "en": [
       "The fire report confirms the cause — faulty wiring, no arson.",
-      "The neighbor and scene photos are consistent with the client's account.",
-      "The electrician's invoice is justified and within the sum — approve the claim."
+      "The scene photos match an origin at the socket and the client's account.",
+      "There are no contradictions — the claim should be approved."
     ],
     "tr": [
       "İtfaiye raporu nedeni — arızalı kablolamayı, kundaklama olmadan doğrular.",
-      "Komşu ve olay yeri fotoğrafları müşterinin anlatımıyla tutarlıdır.",
-      "Elektrikçi faturası haklı ve bedel içinde — talebi onaylayın."
+      "Olay yeri fotoğrafları prizdeki çıkış noktası ve müşterinin anlatımıyla örtüşür.",
+      "Çelişki yok — talep onaylanmalı."
     ],
     "ar": [
       "تقرير الإطفاء يؤكد السبب — أسلاك معطوبة، دون إضرام متعمد.",
-      "الجار وصور الموقع متسقان مع رواية العميل.",
-      "فاتورة الكهربائي مبرّرة وضمن المبلغ — اعتمد المطالبة."
+      "صور الموقع تتطابق مع منشأ عند المقبس ومع رواية العميل.",
+      "لا توجد تناقضات — يجب اعتماد المطالبة."
     ],
     "kk": [
       "Өрт есебі себепті — ақаулы сымды, өртеусіз растайды.",
-      "Көрші мен оқиға орны фотосы клиент әңгімесіне сай келеді.",
-      "Электрик шоты негізді әрі сома шегінде — төлемді мақұлдау."
+      "Оқиға орны фотосы розеткадағы ошаққа және клиент әңгімесіне сай келеді.",
+      "Қайшылық жоқ — төлемді мақұлдау керек."
     ]
   }
 }

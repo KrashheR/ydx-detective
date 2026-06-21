@@ -1,0 +1,203 @@
+{
+  "id": "case-024",
+  "type": "standard",
+  "difficulty": "medium",
+  "claimAmount": 2000,
+  "truth": "valid",
+  "title": {
+    "ru": "Лёгкое ДТП на перекрёстке",
+    "en": "Minor Crash at the Junction",
+    "tr": "Kavşakta Küçük Kaza",
+    "ar": "حادث بسيط عند التقاطع",
+    "kk": "Қиылыста болған жеңіл ЖКО"
+  },
+  "claim": {
+    "person": {
+      "ru": "Марина Гордеева, 34 года",
+      "en": "Marina Gordeeva, 34",
+      "tr": "Marina Gordeeva, 34",
+      "ar": "مارينا غورديفا، 34",
+      "kk": "Марина Гордеева, 34 жаста"
+    },
+    "story": {
+      "ru": "22 апреля около 17:40 на перекрёстке Ленина и Парковой в меня сзади въехал другой автомобиль. Удар был несильным, но помят бампер и разбит задний фонарь. Я сразу позвонила в экстренную службу со своего телефона. Прошу компенсацию ремонта.",
+      "en": "On April 22 around 17:40, at the junction of Lenina and Parkovaya, another car rear-ended me. The impact was light, but my bumper was dented and the rear light broken. I immediately called emergency services from my phone. I request compensation for the repair.",
+      "tr": "22 Nisan, saat 17:40 sularında Lenina ve Parkovaya kavşağında bir başka araç bana arkadan çarptı. Darbe hafifti ama tamponum ezildi ve arka stop lambası kırıldı. Hemen telefonumdan acil servisi aradım. Onarım için tazminat talep ediyorum.",
+      "ar": "في 22 أبريل حوالي الساعة 17:40، عند تقاطع لينينا وباركوفايا، اصطدمت بي سيارة أخرى من الخلف. كانت الصدمة خفيفة، لكن انبعج المصد وانكسر الضوء الخلفي. اتصلت فورًا بخدمة الطوارئ من هاتفي. أطلب تعويض الإصلاح.",
+      "kk": "22 сәуірде шамамен 17:40-та Ленина мен Парковая қиылысында артымнан басқа көлік соғылды. Соққы қатты болмады, бірақ бампер мыжылып, артқы шам сынды. Мен бірден телефонымнан жедел қызметке қоңырау шалдым. Жөндеу үшін өтемақы сұраймын."
+    }
+  },
+  "coverImage": "covers/case-024.svg",
+  "personImage": "people/marina.svg",
+  "evidences": [
+    {
+      "id": "ev-phone",
+      "type": "phone_records",
+      "title": {
+        "ru": "Детализация звонков",
+        "en": "Phone Records",
+        "tr": "Arama Dökümü",
+        "ar": "سجل المكالمات",
+        "kk": "Қоңыраулар детализациясы"
+      },
+      "content": {
+        "ru": [
+          "22.04 16:58 — Входящий, абонент «Работа», 02:11",
+          "22.04 17:42 — Исходящий, экстренная служба 112, 03:48 (вышка: Ленина/Парковая)",
+          "22.04 17:51 — Исходящий, абонент «Муж», 01:20 (вышка: Ленина/Парковая)",
+          "22.04 18:30 — Входящий, абонент «Эвакуатор», 00:54",
+          "Все звонки 22 апреля, регион — город заявителя"
+        ],
+        "en": [
+          "22 Apr 16:58 — Incoming, contact “Work”, 02:11",
+          "22 Apr 17:42 — Outgoing, emergency 112, 03:48 (cell: Lenina/Parkovaya)",
+          "22 Apr 17:51 — Outgoing, contact “Husband”, 01:20 (cell: Lenina/Parkovaya)",
+          "22 Apr 18:30 — Incoming, contact “Tow truck”, 00:54",
+          "All calls on April 22, region — claimant's city"
+        ],
+        "tr": [
+          "22 Nis 16:58 — Gelen, kişi “İş”, 02:11",
+          "22 Nis 17:42 — Giden, acil servis 112, 03:48 (baz: Lenina/Parkovaya)",
+          "22 Nis 17:51 — Giden, kişi “Eş”, 01:20 (baz: Lenina/Parkovaya)",
+          "22 Nis 18:30 — Gelen, kişi “Çekici”, 00:54",
+          "Tüm aramalar 22 Nisan, bölge — başvuranın şehri"
+        ],
+        "ar": [
+          "22 أبريل 16:58 — وارد، جهة الاتصال «العمل»، 02:11",
+          "22 أبريل 17:42 — صادر، الطوارئ 112، 03:48 (الخلية: لينينا/باركوفايا)",
+          "22 أبريل 17:51 — صادر، جهة الاتصال «الزوج»، 01:20 (الخلية: لينينا/باركوفايا)",
+          "22 أبريل 18:30 — وارد، جهة الاتصال «شاحنة السحب»، 00:54",
+          "كل المكالمات في 22 أبريل، المنطقة — مدينة مقدِّمة الطلب"
+        ],
+        "kk": [
+          "22.04 16:58 — Кіріс, «Жұмыс» абоненті, 02:11",
+          "22.04 17:42 — Шығыс, жедел қызмет 112, 03:48 (мұнара: Ленина/Парковая)",
+          "22.04 17:51 — Шығыс, «Күйеу» абоненті, 01:20 (мұнара: Ленина/Парковая)",
+          "22.04 18:30 — Кіріс, «Эвакуатор» абоненті, 00:54",
+          "Барлық қоңырау 22 сәуірде, аймақ — арыз иесінің қаласы"
+        ]
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Детализация подтверждает звонок в 112 в 17:42 от вышки на перекрёстке Ленина/Парковая — это совпадает с заявленным временем и местом ДТП.",
+        "en": "The records confirm the 112 call at 17:42 from the Lenina/Parkovaya cell — matching the claimed time and place of the crash.",
+        "tr": "Döküm, 17:42'de Lenina/Parkovaya bazından yapılan 112 aramasını doğruluyor — kazanın beyan edilen zaman ve yerine uyuyor.",
+        "ar": "يؤكد السجل مكالمة 112 الساعة 17:42 من خلية لينينا/باركوفايا — وهو يطابق زمان ومكان الحادث المُبلَّغ عنهما.",
+        "kk": "Детализация 17:42-те Ленина/Парковая мұнарасынан 112-ге қоңырауды растайды — бұл ЖКО-ның мәлімделген уақыты мен орнына сай."
+      },
+      "meta": {
+        "carrierName": "ВолнаМобайл",
+        "phoneMask": "+7 (9••) •••-••-•1"
+      }
+    },
+    {
+      "id": "ev-police",
+      "type": "document",
+      "title": {
+        "ru": "Протокол ГИБДД",
+        "en": "Traffic Police Report",
+        "tr": "Trafik Polisi Tutanağı",
+        "ar": "محضر شرطة المرور",
+        "kk": "ЖПИ хаттамасы"
+      },
+      "content": {
+        "ru": "Протокол от 22 апреля, перекрёсток Ленина/Парковая, время 17:40. Зафиксировано столкновение «попутное, удар сзади»; виновником признан водитель второго автомобиля, не соблюдавший дистанцию. Повреждения автомобиля заявителя: задний бампер, левый задний фонарь.",
+        "en": "Report dated April 22, Lenina/Parkovaya junction, time 17:40. A rear-end collision was recorded; the driver of the second car was found at fault for not keeping a safe distance. Damage to the claimant's car: rear bumper, left rear light.",
+        "tr": "22 Nisan tarihli tutanak, Lenina/Parkovaya kavşağı, saat 17:40. Arkadan çarpma kaydedildi; ikinci aracın sürücüsü mesafe korumadığı için kusurlu bulundu. Başvuranın aracındaki hasar: arka tampon, sol arka stop lambası.",
+        "ar": "محضر بتاريخ 22 أبريل، تقاطع لينينا/باركوفايا، الساعة 17:40. سُجِّل اصطدام من الخلف؛ ووُجِد سائق السيارة الثانية مخطئًا لعدم الحفاظ على المسافة. أضرار سيارة مقدِّمة الطلب: المصد الخلفي، الضوء الخلفي الأيسر.",
+        "kk": "22 сәуірдегі хаттама, Ленина/Парковая қиылысы, уақыты 17:40. Артынан соғылу тіркелген; кінәлі — арақашықтықты сақтамаған екінші көлік жүргізушісі. Арыз иесінің көлігінің зақымы: артқы бампер, сол жақ артқы шам."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Протокол совпадает с рассказом по времени, месту и характеру повреждений; вина возложена на другого водителя.",
+        "en": "The report matches the account in time, place and nature of damage; fault is assigned to the other driver.",
+        "tr": "Tutanak; zaman, yer ve hasarın niteliği bakımından anlatımla örtüşür; kusur diğer sürücüye yüklenmiştir.",
+        "ar": "يتطابق المحضر مع الرواية في الزمان والمكان وطبيعة الضرر؛ والخطأ منسوب إلى السائق الآخر.",
+        "kk": "Хаттама әңгімеге уақыты, орны және зақым сипаты бойынша сай; кінә басқа жүргізушіге жүктелген."
+      }
+    },
+    {
+      "id": "ev-photo",
+      "type": "photo",
+      "title": {
+        "ru": "Фото повреждений",
+        "en": "Damage Photo",
+        "tr": "Hasar Fotoğrafı",
+        "ar": "صورة الأضرار",
+        "kk": "Зақым суреті"
+      },
+      "content": {
+        "ru": "Снимок задней части автомобиля при дневном свете: вмятина на бампере и расколотый левый задний фонарь. Характер повреждений типичен для несильного удара сзади.",
+        "en": "A daytime shot of the car's rear: a dent on the bumper and a cracked left rear light. The damage is typical of a light rear-end impact.",
+        "tr": "Aracın arkasının gündüz çekilmiş fotoğrafı: tamponda ezik ve kırılmış sol arka stop lambası. Hasar, hafif arkadan çarpmaya tipik.",
+        "ar": "لقطة نهارية لمؤخرة السيارة: انبعاج في المصد وضوء خلفي أيسر متشقق. الأضرار نموذجية لصدمة خلفية خفيفة.",
+        "kk": "Көліктің артқы бөлігінің күндізгі суреті: бамперде мыжылу және сынған сол жақ артқы шам. Зақым жеңіл артқы соққыға тән."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Повреждения на фото соответствуют протоколу ГИБДД и заявленному характеру ДТП.",
+        "en": "The damage in the photo matches the traffic-police report and the described nature of the crash.",
+        "tr": "Fotoğraftaki hasar, trafik polisi tutanağına ve kazanın anlatılan niteliğine uyuyor.",
+        "ar": "تتوافق الأضرار في الصورة مع محضر شرطة المرور وطبيعة الحادث الموصوفة.",
+        "kk": "Суреттегі зақым ЖПИ хаттамасына және ЖКО-ның сипатына сай."
+      },
+      "meta": {
+        "filename": "IMG_20260422_181205.jpg"
+      }
+    },
+    {
+      "id": "ev-estimate",
+      "type": "document",
+      "title": {
+        "ru": "Смета на ремонт",
+        "en": "Repair Estimate",
+        "tr": "Onarım Tahmini",
+        "ar": "تقدير الإصلاح",
+        "kk": "Жөндеу сметасы"
+      },
+      "content": {
+        "ru": "Калькуляция автосервиса: замена заднего бампера и левого заднего фонаря, окраска, нормо-часы. Итоговая сумма — 2000 евро, что соответствует заявленной компенсации.",
+        "en": "A garage calculation: replacement of the rear bumper and the left rear light, painting, labour hours. Total — €2,000, matching the requested compensation.",
+        "tr": "Servis hesabı: arka tampon ve sol arka stop lambasının değişimi, boya, işçilik saatleri. Toplam — 2.000 avro, talep edilen tazminatla uyumlu.",
+        "ar": "حساب الورشة: استبدال المصد الخلفي والضوء الخلفي الأيسر، الطلاء، ساعات العمل. الإجمالي — 2000 يورو، مطابق للتعويض المطلوب.",
+        "kk": "Автосервис калькуляциясы: артқы бампер мен сол жақ артқы шамды ауыстыру, бояу, норма-сағаттар. Жалпы сома — 2000 еуро, сұралған өтемақыға сай."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Перечень работ соответствует зафиксированным повреждениям, а сумма совпадает с заявленной.",
+        "en": "The list of works matches the recorded damage, and the amount equals the claimed sum.",
+        "tr": "İşler listesi kaydedilen hasarla örtüşür ve tutar talep edilen meblağa eşittir.",
+        "ar": "تتوافق قائمة الأعمال مع الأضرار المسجَّلة، والمبلغ يساوي المبلغ المطالب به.",
+        "kk": "Жұмыстар тізімі тіркелген зақымға сай, ал сома мәлімделгенмен бірдей."
+      }
+    }
+  ],
+  "correctDecision": "approve",
+  "explanation": {
+    "ru": [
+      "Детализация подтверждает звонок в 112 с места и в момент ДТП.",
+      "Протокол ГИБДД, фото и смета согласованы между собой и с рассказом.",
+      "Заявление достоверное, его следует одобрить."
+    ],
+    "en": [
+      "The phone records confirm the 112 call from the scene at the time of the crash.",
+      "The traffic-police report, photo and estimate all agree with each other and the account.",
+      "The claim is genuine and should be approved."
+    ],
+    "tr": [
+      "Arama dökümü, kaza anında olay yerinden yapılan 112 aramasını doğruluyor.",
+      "Trafik polisi tutanağı, fotoğraf ve tahmin birbiriyle ve anlatımla uyumlu.",
+      "Talep gerçek ve onaylanmalı."
+    ],
+    "ar": [
+      "يؤكد سجل المكالمات مكالمة 112 من موقع الحادث وقت وقوعه.",
+      "محضر شرطة المرور والصورة والتقدير متوافقة فيما بينها ومع الرواية.",
+      "المطالبة صحيحة ويجب الموافقة عليها."
+    ],
+    "kk": [
+      "Детализация ЖКО кезінде оқиға орнынан 112-ге қоңырауды растайды.",
+      "ЖПИ хаттамасы, сурет пен смета өзара әрі әңгімемен үйлеседі.",
+      "Талап шынайы, оны мақұлдау керек."
+    ]
+  }
+}

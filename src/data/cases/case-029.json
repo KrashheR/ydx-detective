@@ -1,0 +1,288 @@
+{
+  "id": "case-029",
+  "type": "standard",
+  "difficulty": "hard",
+  "claimAmount": 9000,
+  "truth": "valid",
+  "title": {
+    "ru": "Удар молнии в дом",
+    "en": "Lightning Strike at the House",
+    "tr": "Eve Yıldırım Düşmesi",
+    "ar": "صاعقة برق تضرب المنزل",
+    "kk": "Үйге найзағай соққысы"
+  },
+  "claim": {
+    "person": {
+      "ru": "Хелена Краузе, 39 лет",
+      "en": "Helena Krause, 39",
+      "tr": "Helena Krause, 39",
+      "ar": "هيلينا كراوزه، 39",
+      "kk": "Хелена Краузе, 39 жаста"
+    },
+    "story": {
+      "ru": "Во время вечерней грозы молния ударила прямо в мой дом. Раздался оглушительный треск, и почти вся электроника сгорела — телевизор, роутер, холодильник. Прошу компенсацию за повреждённую технику.",
+      "en": "During an evening thunderstorm, lightning struck my house directly. There was a deafening crack and almost all my electronics burned out — the TV, the router, the fridge. I request compensation for the damaged equipment.",
+      "tr": "Akşam fırtınası sırasında evime doğrudan yıldırım düştü. Sağır edici bir çatırtı oldu ve neredeyse tüm elektronik eşyalarım yandı — televizyon, modem, buzdolabı. Hasarlı cihazlar için tazminat talep ediyorum.",
+      "ar": "أثناء عاصفة رعدية مسائية، ضربت صاعقة منزلي مباشرة. سُمع صوت طقطقة مدوٍّ واحترقت معظم أجهزتي الإلكترونية — التلفاز والراوتر والثلاجة. أطلب تعويضًا عن الأجهزة المتضررة.",
+      "kk": "Кешкі найзағай кезінде менің үйіме найзағай тікелей соқты. Құлақты тұндырар сартыл естіліп, барлық дерлік электроникам күйіп кетті — теледидар, роутер, тоңазытқыш. Зақымдалған техника үшін өтемақы сұраймын."
+    }
+  },
+  "coverImage": "covers/case-029.svg",
+  "personImage": "people/helena.svg",
+  "evidences": [
+    {
+      "id": "ev-meteo",
+      "type": "document",
+      "title": {
+        "ru": "Метеорологическая справка",
+        "en": "Meteorological Report",
+        "tr": "Meteoroloji Raporu",
+        "ar": "تقرير الأرصاد الجوية",
+        "kk": "Метеорологиялық анықтама"
+      },
+      "content": {
+        "ru": "Гидрометцентр подтверждает: в районе адреса заявителя 18 июня в 21:30 зафиксирована сильная грозовая активность. Датчик грозопеленгации зарегистрировал прямой разряд «облако-земля» в радиусе 40 метров от строения.",
+        "en": "The weather service confirms severe thunderstorm activity near the claimant's address on June 18 at 21:30. A lightning-detection sensor logged a direct cloud-to-ground strike within 40 metres of the building.",
+        "tr": "Meteoroloji servisi, 18 Haziran saat 21:30'da başvuranın adresi yakınında şiddetli fırtına aktivitesini doğruluyor. Yıldırım algılama sensörü, binanın 40 metre yarıçapında doğrudan bir bulut-yer deşarjı kaydetti.",
+        "ar": "تؤكد دائرة الأرصاد نشاطًا عاصفًا شديدًا قرب عنوان مقدّمة الطلب في 18 يونيو الساعة 21:30. سجّل جهاز رصد الصواعق ضربة مباشرة من السحابة إلى الأرض ضمن 40 مترًا من المبنى.",
+        "kk": "Гидрометорталық растайды: өтініш берушінің мекенжайы маңында 18 маусымда 21:30-да күшті найзағай белсенділігі тіркелді. Найзағай пеленгациясы датчигі ғимараттан 40 метр радиуста тікелей «бұлт-жер» разрядын тіркеді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Справка независимо подтверждает удар молнии в заявленное время и место.",
+        "en": "The report independently confirms the lightning strike at the stated time and place.",
+        "tr": "Rapor, belirtilen zaman ve yerde yıldırım düşmesini bağımsız olarak doğruluyor.",
+        "ar": "يؤكد التقرير بشكل مستقل ضربة الصاعقة في الوقت والمكان المذكورين.",
+        "kk": "Анықтама найзағай соққысын аталған уақыт пен орында тәуелсіз растайды."
+      }
+    },
+    {
+      "id": "ev-photo",
+      "type": "photo",
+      "title": {
+        "ru": "Фото повреждений",
+        "en": "Damage Photo",
+        "tr": "Hasar Fotoğrafı",
+        "ar": "صورة الأضرار",
+        "kk": "Зақымданудың суреті"
+      },
+      "content": {
+        "ru": "Обугленная стенная розетка с чёрными подпалинами, рядом — телевизор с потрескавшейся матрицей и оплавленным сетевым разъёмом. Виден характерный след перегрева на проводке.",
+        "en": "A charred wall outlet with black scorch marks, beside it a TV with a cracked panel and a melted power connector. A characteristic overheating trace is visible on the wiring.",
+        "tr": "Siyah is izleriyle kömürleşmiş bir duvar prizi, yanında çatlak panelli ve erimiş güç konektörlü bir televizyon. Kablolarda tipik aşırı ısınma izi görülüyor.",
+        "ar": "مقبس حائط متفحم بآثار احتراق سوداء، وبجانبه تلفاز بشاشة متشققة وموصل طاقة منصهر. يظهر أثر ارتفاع حرارة مميز على الأسلاك.",
+        "kk": "Қара күйік іздері бар көмірленген қабырға розеткасы, қасында — жарылған матрицасы мен балқыған желілік ұясы бар теледидар. Сымдарда қызып кетудің тән ізі көрінеді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Характер повреждений соответствует электрическому перенапряжению от удара молнии.",
+        "en": "The damage pattern matches an electrical overvoltage from a lightning strike.",
+        "tr": "Hasar deseni, yıldırım düşmesinden kaynaklanan elektriksel aşırı gerilimle uyumlu.",
+        "ar": "نمط الضرر يتوافق مع فرط الجهد الكهربائي الناتج عن ضربة صاعقة.",
+        "kk": "Зақымдану сипаты найзағай соққысынан болған электр асқын кернеуіне сәйкес келеді."
+      },
+      "meta": {
+        "filename": "IMG_20260618_214507.jpg"
+      }
+    },
+    {
+      "id": "ev-surge",
+      "type": "usage_log",
+      "title": {
+        "ru": "Лог умного счётчика",
+        "en": "Smart Meter Log",
+        "tr": "Akıllı Sayaç Kaydı",
+        "ar": "سجل العداد الذكي",
+        "kk": "Ақылды есептегіш журналы"
+      },
+      "content": {
+        "ru": [
+          "21:28:50 — Напряжение: 231 В (норма)",
+          "21:30:11 — ПРЕДУПРЕЖДЕНИЕ: скачок 231 В → 4180 В",
+          "21:30:11 — Сработала защита от перенапряжения",
+          "21:30:12 — Нагрузка отключена: КЗ на линии L2",
+          "21:30:14 — Потеря связи со счётчиком",
+          "21:46:03 — Питание восстановлено: 229 В"
+        ],
+        "en": [
+          "21:28:50 — Voltage: 231 V (normal)",
+          "21:30:11 — WARNING: surge 231 V → 4180 V",
+          "21:30:11 — Overvoltage protection tripped",
+          "21:30:12 — Load disconnected: short circuit on line L2",
+          "21:30:14 — Lost connection to meter",
+          "21:46:03 — Power restored: 229 V"
+        ],
+        "tr": [
+          "21:28:50 — Gerilim: 231 V (normal)",
+          "21:30:11 — UYARI: ani yükselme 231 V → 4180 V",
+          "21:30:11 — Aşırı gerilim koruması devreye girdi",
+          "21:30:12 — Yük kesildi: L2 hattında kısa devre",
+          "21:30:14 — Sayaç ile bağlantı kesildi",
+          "21:46:03 — Güç geri geldi: 229 V"
+        ],
+        "ar": [
+          "21:28:50 — الجهد: 231 فولت (طبيعي)",
+          "21:30:11 — تحذير: ارتفاع مفاجئ 231 فولت ← 4180 فولت",
+          "21:30:11 — تفعيل الحماية من فرط الجهد",
+          "21:30:12 — فصل الحمل: دائرة قصر على الخط L2",
+          "21:30:14 — انقطاع الاتصال بالعداد",
+          "21:46:03 — استعادة الطاقة: 229 فولت"
+        ],
+        "kk": [
+          "21:28:50 — Кернеу: 231 В (қалыпты)",
+          "21:30:11 — ЕСКЕРТУ: секіріс 231 В → 4180 В",
+          "21:30:11 — Асқын кернеуден қорғаныс іске қосылды",
+          "21:30:12 — Жүктеме ажыратылды: L2 желісінде қысқа тұйықталу",
+          "21:30:14 — Есептегішпен байланыс үзілді",
+          "21:46:03 — Қуат қалпына келтірілді: 229 В"
+        ]
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Лог фиксирует резкий скачок напряжения ровно в момент удара молнии — это и есть причина повреждений.",
+        "en": "The log records a sharp voltage surge exactly at the strike moment — the very cause of the damage.",
+        "tr": "Kayıt, yıldırım anında tam olarak keskin bir gerilim yükselmesini gösteriyor — hasarın asıl nedeni budur.",
+        "ar": "يسجّل السجل ارتفاعًا حادًا في الجهد في لحظة الضربة بالضبط — وهو سبب الضرر نفسه.",
+        "kk": "Журнал найзағай соққан сәтте дәл кернеудің күрт секіруін тіркейді — зақымданудың себебі осы."
+      },
+      "meta": {
+        "logPrompt": "meter@grid:~$ tail -f /var/log/surge.log"
+      }
+    },
+    {
+      "id": "ev-witness",
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания соседа",
+        "en": "Neighbour's Statement",
+        "tr": "Komşunun İfadesi",
+        "ar": "إفادة الجار",
+        "kk": "Көршінің айғағы"
+      },
+      "content": {
+        "ru": "«Я как раз закрывал ставни, когда грохнуло так, что заложило уши. Вспышка была прямо над домом Хелены, и сразу у неё в окнах погас свет. У нас тоже на минуту моргнула лампа.»",
+        "en": "\"I was just closing the shutters when there was a bang so loud my ears rang. The flash was right over Helena's house, and her windows went dark immediately. Even our lamp flickered for a moment.\"",
+        "tr": "\"Tam panjurları kapatıyordum ki kulaklarımı çınlatan bir patlama oldu. Parıltı tam Helena'nın evinin üzerindeydi ve pencereleri hemen karardı. Bizim lamba bile bir an titredi.\"",
+        "ar": "«كنت أُغلق المصاريع حين سُمع دويّ عالٍ جعل أذنيّ تطنّان. كان الومضان فوق منزل هيلينا مباشرة، وأظلمت نوافذها على الفور. حتى مصباحنا ارتجف للحظة.»",
+        "kk": "«Дәл терезе қақпағын жауып жатқанымда құлағым тұнып қалатындай гүрсіл естілді. Жарқыл Хеленаның үйінің дәл үстінде болды, терезелеріндегі жарық бірден сөнді. Бізде де шам бір сәт жыпылықтады.»"
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Очевидец независимо подтверждает удар молнии и мгновенное отключение электричества.",
+        "en": "The eyewitness independently confirms the lightning strike and the instant power loss.",
+        "tr": "Görgü tanığı, yıldırım düşmesini ve anında elektrik kesintisini bağımsız olarak doğruluyor.",
+        "ar": "يؤكد الشاهد العيان بشكل مستقل ضربة الصاعقة وانقطاع الكهرباء الفوري.",
+        "kk": "Куә найзағай соққысын және электрдің лезде сөнгенін тәуелсіз растайды."
+      }
+    },
+    {
+      "id": "ev-electrician",
+      "type": "document",
+      "title": {
+        "ru": "Заключение электрика",
+        "en": "Electrician's Report",
+        "tr": "Elektrikçi Raporu",
+        "ar": "تقرير الكهربائي",
+        "kk": "Электриктің қорытындысы"
+      },
+      "content": {
+        "ru": "Сертифицированный электрик осмотрел проводку и приборы. Вывод: причина выхода из строя техники — импульсное перенапряжение в сети, типичное для грозового разряда. Сетевые фильтры выгорели первыми, что подтверждает внешний источник скачка.",
+        "en": "A certified electrician inspected the wiring and appliances. Conclusion: the equipment failed due to a transient overvoltage in the grid, typical of a lightning discharge. The surge protectors burned out first, confirming an external source of the spike.",
+        "tr": "Sertifikalı bir elektrikçi tesisatı ve cihazları inceledi. Sonuç: ekipman, yıldırım deşarjına özgü ani bir aşırı gerilim nedeniyle arızalandı. Akım koruyucular önce yandı, bu da yükselmenin dış kaynaklı olduğunu doğruluyor.",
+        "ar": "فحص كهربائي معتمد الأسلاك والأجهزة. الخلاصة: تعطّلت الأجهزة بسبب فرط جهد عابر في الشبكة، وهو نموذجي لتفريغ صاعقة. احترقت واقيات التيار أولًا، ما يؤكد مصدرًا خارجيًا للارتفاع.",
+        "kk": "Сертификатталған электрик сымдар мен аспаптарды тексерді. Қорытынды: техниканың істен шығу себебі — желідегі импульстік асқын кернеу, найзағай разрядына тән. Желілік сүзгілер бірінші күйіп кетті, бұл секірудің сыртқы көзін растайды."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Экспертное заключение прямо связывает поломку с грозовым перенапряжением.",
+        "en": "The expert report directly attributes the failure to the storm overvoltage.",
+        "tr": "Uzman raporu, arızayı doğrudan fırtına aşırı gerilimine bağlıyor.",
+        "ar": "ينسب التقرير الفني العطل مباشرة إلى فرط جهد العاصفة.",
+        "kk": "Сараптамалық қорытынды бұзылуды тікелей найзағай асқын кернеуімен байланыстырады."
+      }
+    },
+    {
+      "id": "ev-bank",
+      "type": "bank_statement",
+      "title": {
+        "ru": "Банковская выписка",
+        "en": "Bank Statement",
+        "tr": "Banka Ekstresi",
+        "ar": "كشف حساب بنكي",
+        "kk": "Банк үзіндісі"
+      },
+      "content": {
+        "ru": [
+          "12.02.2026 — «ТехноМаркет», покупка телевизора — 2 990,00 €",
+          "12.02.2026 — Гарантийная регистрация устройства — 0,00 €",
+          "03.03.2026 — Оплата ЖКХ — 142,30 €",
+          "19.06.2026 — Вызов электрика (осмотр) — 80,00 €"
+        ],
+        "en": [
+          "12.02.2026 — \"TechnoMarket\", TV purchase — €2,990.00",
+          "12.02.2026 — Device warranty registration — €0.00",
+          "03.03.2026 — Utility payment — €142.30",
+          "19.06.2026 — Electrician call-out (inspection) — €80.00"
+        ],
+        "tr": [
+          "12.02.2026 — \"TechnoMarket\", televizyon alımı — 2.990,00 €",
+          "12.02.2026 — Cihaz garanti kaydı — 0,00 €",
+          "03.03.2026 — Fatura ödemesi — 142,30 €",
+          "19.06.2026 — Elektrikçi çağrısı (inceleme) — 80,00 €"
+        ],
+        "ar": [
+          "12.02.2026 — «تكنومـاركت»، شراء تلفاز — 2٬990٫00 €",
+          "12.02.2026 — تسجيل ضمان الجهاز — 0٫00 €",
+          "03.03.2026 — دفع فواتير الخدمات — 142٫30 €",
+          "19.06.2026 — استدعاء كهربائي (فحص) — 80٫00 €"
+        ],
+        "kk": [
+          "12.02.2026 — «ТехноМаркет», теледидар сатып алу — 2 990,00 €",
+          "12.02.2026 — Құрылғы кепілдігін тіркеу — 0,00 €",
+          "03.03.2026 — Коммуналдық төлем — 142,30 €",
+          "19.06.2026 — Электрик шақыру (тексеру) — 80,00 €"
+        ]
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Выписка доказывает, что заявитель действительно купила повреждённый телевизор за несколько месяцев до происшествия.",
+        "en": "The statement proves the claimant genuinely bought the damaged TV months before the incident.",
+        "tr": "Ekstre, başvuranın hasarlı televizyonu olaydan aylar önce gerçekten satın aldığını kanıtlıyor.",
+        "ar": "يثبت الكشف أن مقدّمة الطلب اشترت التلفاز المتضرر فعلًا قبل أشهر من الحادث.",
+        "kk": "Үзінді өтініш берушінің зақымдалған теледидарды оқиғадан бірнеше ай бұрын шынымен сатып алғанын дәлелдейді."
+      },
+      "meta": {
+        "bankName": "НордБанк",
+        "accountMask": "•••• •••• •••• 3357"
+      }
+    }
+  ],
+  "correctDecision": "approve",
+  "explanation": {
+    "ru": [
+      "Метеосправка и показания соседа подтверждают удар молнии.",
+      "Лог счётчика и заключение электрика доказывают перенапряжение как причину поломки.",
+      "Заявление обоснованно — его следует одобрить."
+    ],
+    "en": [
+      "The weather report and the neighbour's statement confirm the lightning strike.",
+      "The meter log and the electrician's report prove the overvoltage caused the failure.",
+      "The claim is legitimate and should be approved."
+    ],
+    "tr": [
+      "Meteoroloji raporu ve komşunun ifadesi yıldırım düşmesini doğruluyor.",
+      "Sayaç kaydı ve elektrikçi raporu, arızanın nedeninin aşırı gerilim olduğunu kanıtlıyor.",
+      "Talep meşru ve onaylanmalı."
+    ],
+    "ar": [
+      "يؤكد تقرير الأرصاد وإفادة الجار ضربة الصاعقة.",
+      "يثبت سجل العداد وتقرير الكهربائي أن فرط الجهد سبّب العطل.",
+      "المطالبة مشروعة ويجب الموافقة عليها."
+    ],
+    "kk": [
+      "Метеоанықтама мен көршінің айғағы найзағай соққысын растайды.",
+      "Есептегіш журналы мен электриктің қорытындысы бұзылудың себебі асқын кернеу екенін дәлелдейді.",
+      "Талап негізді — оны қабылдау керек."
+    ]
+  }
+}
