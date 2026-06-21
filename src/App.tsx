@@ -63,6 +63,8 @@ export default function App() {
   const verdictCountRef = useRef(0);
   // Gate: show rating modal at most once per session.
   const ratingShownRef = useRef(false);
+  // Gate: auto-open first story case only once per app load (not after back-to-desk).
+  const autoStartedRef = useRef(false);
   const AD_EVERY_N_VERDICTS = 3;
 
   const flashToast = (msg: string) => {
@@ -100,8 +102,22 @@ export default function App() {
   }, [lang]);
 
   // Resume an in-progress session after hydration so quitting mid-case restores.
+  // On first load with no session, auto-open the next available story case.
   useEffect(() => {
-    if (isHydrated && session && !selectedId) setSelectedId(session.caseId);
+    if (!isHydrated) return;
+    if (session && !selectedId) {
+      setSelectedId(session.caseId);
+      return;
+    }
+    if (!session && !selectedId && !autoStartedRef.current) {
+      autoStartedRef.current = true;
+      const next = getNextAvailableCase(standardCaseUnlocks, null);
+      if (next) {
+        setSelectedId(next.id);
+        store.startCase(next);
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isHydrated, session, selectedId]);
 
   // A fresh verdict re-opens the result sheet and resets the double-reward slot.
@@ -144,7 +160,12 @@ export default function App() {
     [standardCases, stats],
   );
   // Rotate the daily pool by server-day. Server time only (see CLAUDE.md).
-  const serverNow = getServerTimeMs();
+  // State-driven so the countdown timer re-renders every second.
+  const [serverNow, setServerNow] = useState(() => getServerTimeMs());
+  useEffect(() => {
+    const id = window.setInterval(() => setServerNow(getServerTimeMs()), 1000);
+    return () => window.clearInterval(id);
+  }, []);
   const serverDay = Math.floor(serverNow / GAME_CONFIG.daily.cooldownMs);
   const dailyCase = useMemo(() => getDailyCase(serverDay), [serverDay]);
   const selectedCase = selectedId ? getCaseById(selectedId) : undefined;

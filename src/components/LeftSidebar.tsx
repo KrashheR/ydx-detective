@@ -104,7 +104,9 @@ export function LeftSidebar({
             </div>
             <div className="mt-[7px] flex items-center justify-between gap-2">
               <span className="truncate font-mono text-[11px] font-semibold text-[#7a5410]">
-                {formatCountdown(dailyMsRemaining)}
+                {dailyUnlocked
+                  ? t("openCaseAction", lang)
+                  : formatCountdown(dailyMsRemaining)}
               </span>
               <span className="shrink-0 rounded-[5px] bg-gold px-[7px] py-0.5 text-[11px] font-bold text-gold-dark">
                 ×5

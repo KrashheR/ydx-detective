@@ -106,31 +106,28 @@ beforeEach(() => {
   });
 });
 
-/** Render and wait until hydration completes (case-select prompt visible). */
+/** Render and wait until hydration completes (first story case is auto-opened). */
 async function renderHydrated() {
   const utils = render(<App />);
-  await screen.findByText(RU('selectCasePrompt'));
+  // After hydration the first story case is auto-opened — wait for its verdict panel.
+  await screen.findByRole('button', { name: new RegExp(RU('rejectPayout')) });
   return utils;
 }
 
-/** Open the first case folder in the main column → CaseFile. */
+/** First story case is auto-opened on hydration — wait for CaseFile's verdict panel. */
 async function openFirstCase() {
-  const main = screen.getByRole('main');
-  const folders = within(main)
-    .getAllByRole('button')
-    .filter((b) => b.textContent?.includes(RU('openCaseAction')));
-  fireEvent.click(folders[0]!);
-  // CaseFile shows the verdict panel.
   return screen.findByRole('button', { name: new RegExp(RU('rejectPayout')) });
 }
 
 describe('hydration', () => {
-  it('shows the loading placeholder before hydration, then the case desk', async () => {
+  it('shows the loading placeholder before hydration, then auto-opens the first case', async () => {
     render(<App />);
     // Synchronous first render: store not hydrated yet.
     expect(screen.getByText('…')).toBeInTheDocument();
-    // After init resolves, the case-select desk appears.
-    expect(await screen.findByText(RU('selectCasePrompt'))).toBeInTheDocument();
+    // After init resolves, the first story case is auto-opened.
+    expect(
+      await screen.findByRole('button', { name: new RegExp(RU('rejectPayout')) }),
+    ).toBeInTheDocument();
   });
 });
 

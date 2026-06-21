@@ -106,6 +106,7 @@ export function CaseSelect({
         </motion.button>
         </Tooltip>
       )}
+
       {standardCaseUnlocks.map((info) => {
         const c = info.caseData;
         const locked = info.status === 'locked';
