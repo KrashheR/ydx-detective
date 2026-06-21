@@ -59,7 +59,7 @@ export function CaseSelect({
             className="relative overflow-hidden border border-[#a9781b] p-[24px_22px_26px]"
             style={{
               borderRadius: '3px 12px 12px 12px',
-              background: 'linear-gradient(135deg,#e6b85c,#d9a441)',
+              background: 'linear-gradient(135deg,#dca54a,#c98a2e)',
             }}
           >
             <span

@@ -87,8 +87,8 @@ export function LeftSidebar({
             } ${dailyCase.id === selectedId ? "ring-1 ring-gold" : ""}`}
             style={
               dailyUnlocked
-                ? { background: "linear-gradient(135deg,#f0d48f,#e3b75a)" }
-                : { background: "#e2d7c2" }
+                ? { background: "linear-gradient(135deg,#e6c87e,#d29e44)" }
+                : { background: "#d7c6a5" }
             }
           >
             {dailyUnlocked && (

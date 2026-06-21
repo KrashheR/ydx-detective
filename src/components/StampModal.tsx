@@ -885,7 +885,7 @@ function BankBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
       const isNeg = amt.startsWith('-') || amt.startsWith('−');
       return {
         date: p0.trim(), desc: p1.trim(), amt, bal: p3.trim(),
-        amtColor: isNeg ? 'var(--danger, #dc2626)' : 'var(--success, #16a34a)',
+        amtColor: isNeg ? 'var(--danger, #b23a2e)' : 'var(--success, #5c7a33)',
         bg: i % 2 ? 'rgba(0,0,0,.02)' : '#fff',
       };
     }

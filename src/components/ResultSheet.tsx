@@ -197,7 +197,7 @@ export function ResultSheet({
               className="h-full rounded-md"
               style={{
                 width: `${barFill}%`,
-                background: "linear-gradient(90deg,rgb(var(--accent)),#16a34a)",
+                background: "linear-gradient(90deg,rgb(var(--accent)),#5c7a33)",
                 transition: "width .9s cubic-bezier(.2,.8,.2,1)",
               }}
             />
@@ -376,11 +376,11 @@ function DotRow({
   danger?: boolean;
 }) {
   const color = danger
-    ? "#dc2626"
+    ? "#b23a2e"
     : gold
-      ? "#d9a441"
+      ? "#c98a2e"
       : got
-        ? "#16a34a"
+        ? "#5c7a33"
         : "#9ca3af";
   return (
     <div className="flex items-center gap-2.5">

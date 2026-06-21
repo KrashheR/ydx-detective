@@ -4,20 +4,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        // --- Fixed desk chrome (theme-independent) — warm manila archive ---
-        bg: '#ECE3D2', // desk background (cream paper)
-        surface: '#F6EFE1', // sidebars / panels (light archive paper)
-        'surface-2': '#E2D7C2', // nested blocks inside panels
-        border: '#D2C4A8', // panel / block borders
-        ink: '#1F2937', // text on white document paper
-        success: '#16A34A',
-        danger: '#DC2626',
-        gold: '#D9A441', // daily-case highlight
+        // --- Fixed desk chrome (theme-independent) — sepia 1970s archive ---
+        bg: '#E5D7BD', // desk background (toasted archive paper)
+        surface: '#F1E7D1', // sidebars / panels (light archive paper)
+        'surface-2': '#D7C6A5', // nested blocks inside panels
+        border: '#C5AF87', // panel / block borders
+        ink: '#2A2117', // text on white document paper
+        success: '#5C7A33', // Approve (retro olive green)
+        danger: '#B23A2E', // Reject
+        gold: '#C98A2E', // daily-case highlight (fill/border/icon only)
         'gold-dark': '#3A2705',
         'gold-text': '#F0C46B',
-        'text-light': '#3A3024', // primary text on cream chrome
-        'text-muted': '#7A6C54', // secondary text on cream chrome
-        'text-dim': '#7A6C54', // muted labels on cream chrome
+        'text-light': '#3D3119', // primary text on sepia chrome
+        'text-muted': '#6B5733', // secondary text on sepia chrome
+        'text-dim': '#6B5733', // muted labels on sepia chrome
 
         // --- Folder theme (manila | dossier) via CSS vars ---
         // RGB channels so Tailwind's /opacity modifier keeps working.
