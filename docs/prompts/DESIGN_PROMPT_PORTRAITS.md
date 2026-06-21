@@ -1,182 +1,203 @@
-# Design brief — Layered claimant portraits (photo-ID system)
+# Leonardo — портреты клиентов (фото-ID для бланка заявления)
 
-Бриф для **Claude Design**. Задача — нарисовать **библиотеку SVG-частей**, из которых
-портрет каждого клиента собирается слоями по JSON-описанию. Главный принцип:
-**никаких координат в JSON** — каждая часть рисуется сразу на своём месте на общем
-холсте, а сборка на рантайме = простая стопка слоёв в фиксированном z-порядке.
+ТЗ для генерации **портретов всех персонажей** в Leonardo.ai. Проект — «Где ложь? Симулятор
+детектива» для Yandex Games. Портрет показывается как **«паспортное фото в архиве»** в шапке
+бланка заявления клиента (`CaseFile.tsx`): на экране ≈ **58×72 px**, вертикальный кадроформат,
+`object-cover`, скруглённые углы, тонкая рамка рисуется кодом поверх.
 
-Проект — «Где ложь? Симулятор детектива» для Yandex Games. Портрет показывается как
-«фото из паспорта» в бланке заявления клиента (~58×72 px на экране).
-
----
-
-## 1. Жёсткие ограничения (красные линии проекта)
-
-Метафора всего продукта — «папка с делом на столе детектива»; портрет — «паспортное
-фото в архиве». Аудитория 30–60 лет, **серьёзный тон**.
-
-**Нельзя:** неон, мультяшность, sci-fi/игровые градиенты, объёмные тени, блёстки,
-казино-эстетика.
-
-**Стиль обычных клиентов:** плоская приглушённая заливка (как текущие
-`public/people/*.svg`) — один-два тона на часть, тонкие контурные линии цветом
-`#1F2937` с пониженной opacity (0.4–0.6), без градиентов и теней. Палитра — тёплый
-кремовый «архив манилы».
+> **Что меняем.** Сейчас в `public/people/*.svg` лежат абстрактные плейсхолдеры (серый силуэт
+> в рамке). Задача — заменить каждого на **уникальный фотопортрет**, чтобы у каждого героя было
+> своё лицо. Предыдущая версия этого брифа (слоистая SVG-система из частей) **отменена** —
+> идём через растровые портреты из Leonardo.
 
 ---
 
-## 2. Холст и сетка (ОДИНАКОВЫ для всех частей)
+## 1. Референс и тон
 
-- `viewBox="0 0 120 120"`, width/height 120.
-- Рамку фото-ID рисует код поверх — **в частях НЕ дублировать**:
-  `<rect x="6" y="6" width="108" height="108" fill="none" stroke="#1f2937" stroke-opacity=".4" stroke-width="3"/>`
-- Опорные зоны (лицо центрировано) — выравнивай части строго по ним:
+- **Главный референс — _Papers, Please_:** казённое архивное фото-удостоверение, восточно-/
+  центральноевропейская бюрократия 1970-х, человек снят анфас «на документ», без позирования.
+- **Но без чернухи.** У Lucas Pope кадр мрачный, серо-зелёный, давящий. Нам нужно **теплее и
+  достойнее**: тёплая сепия архивной бумаги, мягкий ровный свет, лица читаются спокойно. Не
+  угнетающе, не глянцево. Аудитория 30–60, серьёзный тон «папки следователя».
+- Эмоция продукта: _«я заметил ложь и разоблачил мошенника»_ — но **на самом портрете нельзя
+  «играть злодея»**. Среди клиентов есть и честные, и мошенники; лицо должно быть нейтрально-
+  настороженным, обычный человек на приёме у страховой. Никаких ухмылок-злодеев, подмигиваний,
+  карикатуры.
 
-| Часть | Зона на холсте |
-| ----- | -------------- |
-| Голова/лицо | круг ≈ `cx60 cy46 r24` → лицо y22–y70, x36–x84 |
-| Брови | y ≈ 38–40 |
-| Глаза | y ≈ 42–46, центры x ≈ 50 и x ≈ 70 |
-| Нос | y ≈ 46–54, по центру x60 |
-| Рот | y ≈ 56–60 |
-| Борода/усы | y ≈ 48–74 (обрамляют рот и подбородок) |
-| Очки | поверх глаз, y ≈ 40–48 |
-| Головной убор | y ≈ 14–44 (на/над волосами) |
-| Плечи/одежда | path от y ≈ 82 вниз, основание y116, ширина x20–x100 |
-
-> Текущие референс-файлы для пропорций: `public/people/igor.svg` (база),
-> `public/people/anatoly.svg` и `khariton.svg` (уже с бровями/усами/очками инлайном).
+**Красные линии (negative):** неон, мультяшность/аниме, 3D-рендер/CGI, sci-fi и игровые
+градиенты, глянцевая бьюти-ретушь, студийный гламур, фэнтези, гипер-улыбки, зубы напоказ,
+текст/подписи/водяные знаки, современный селфи-вид.
 
 ---
 
-## 3. Z-порядок слоёв (снизу вверх)
+## 2. Единый стиль (вставляй в КАЖДЫЙ промпт дословно)
 
-```
-bg → shoulders(одежда) → base(голова+шея+уши, несёт кожу) → hair →
-brows → eyes → nose → mouth → facial(борода/усы) → glasses → headwear → accents[]
-```
+> **STYLE:** vintage government photo-ID portrait in the style of a 1970s Eastern-European
+> passport or insurance-archive document. Head-and-shoulders, facing the camera, plain flat
+> backdrop. Photographic, realistic, slightly aged film look with fine grain. Soft even frontal
+> lighting, no hard shadows, no glamour. Muted, desaturated **warm sepia / toasted-paper palette**:
+> background a flat toasted archive-paper tone (#E5D7BD–#D7C6A5), skin natural and slightly warm,
+> clothing in muted earth tones — terracotta (#884A28), olive (#5C7A33), ochre (#C98A2E), faded
+> slate, cream. Neutral, calm, slightly wary everyday expression — an ordinary person photographed
+> for an insurance file, not a model. Dignified, serious, document-like.
+>
+> **Negative:** neon, cartoon, anime, 3d render, cgi, sci-fi, glamour photo, beauty retouch,
+> heavy makeup, big toothy smile, fantasy, text, caption, watermark, logo, frame, border,
+> oversaturated, modern selfie, fisheye, oppressive dark mood.
 
----
-
-## 4. Перекраска через CSS-переменные (это множит разнообразие)
-
-Части используют **CSS-переменные** вместо хардкод-цветов — код подставит их из
-палитры дела. Одна «борода» × N оттенков `--hair` = N разных людей.
-
-| Переменная | Что красит |
-| ---------- | ---------- |
-| `var(--skin)` | кожа (база головы, уши, нос, кисти) |
-| `var(--hair)` | волосы И борода/усы и брови |
-| `var(--cloth)` | одежда/плечи и тканевые головные уборы |
-| `var(--bg)` | фон фото |
-| `var(--band)` | (спец) бандана черепашек |
-
-Контуры/линии — фикс `#1F2937` с opacity, **не переменная**. Рисуй части так, чтобы
-они читались на любом разумном оттенке (не полагайся на конкретный цвет заливки).
-
-Ориентир-пресеты палитр (для авторов дел):
-- skin: `#e6c8a8 #c9a07a #a8794f #f0d8c0 #8a5a36`
-- hair: `#2b2b2b #5a4632 #8a8a8a #c9a14a #d9d2c4`
-- cloth/bg — приглушённые тёплые тона.
+**Параметры Leonardo (ориентир):**
+- **Aspect ratio `4:5`** (вертикаль; кадрируется до 58×72). Можно `832×1040` / `768×960`.
+- Модель — фотореалистичная (напр. *Leonardo Phoenix* / *Photoreal*), PhotoReal вкл., Alchemy по вкусу.
+- Голова и плечи в кадре, лицо по центру верхней трети (как на документе), смотрит в объектив.
+- Фон — однотонный, без сцен и предметов.
 
 ---
 
-## 5. Формат поставки
+## 3. Имена файлов
 
-Один спрайт-файл `public/people/parts.svg`, внутри — по одному `<symbol>` на часть:
+Сохраняй как `public/people/<name>.jpg` — имя совпадает с текущим SVG. После генерации замени
+расширение в делах: `personImage: "people/igor.svg"` → `"people/igor.jpg"` (грепни `personImage`
+по `src/data/cases/`). `object-cover` сам обрежет под рамку, дополнительная вёрстка не нужна.
 
-```xml
-<svg xmlns="http://www.w3.org/2000/svg">
-  <symbol id="base-male" viewBox="0 0 120 120"> … геометрия только этого слоя … </symbol>
-  <symbol id="hair-short" viewBox="0 0 120 120"> … </symbol>
-  <!-- и т.д. -->
-</svg>
-```
-
-Код рендерит части как `<use href="parts.svg#hair-short"/>`. В каждом `<symbol>` —
-**только геометрия своего слоя, на своём месте**, без фона и рамки.
-
-**Id — финальные.** Их использует и JSON дел, и код. Добавлять части можно, молча
-переименовывать — нельзя.
+> **Важно — один файл = несколько дел.** Часть портретов переиспользуется в разных делах под
+> разными фамилиями и возрастами (помечено ниже «↻»). Лицо должно правдоподобно подходить под
+> весь диапазон возрастов — поэтому в ТЗ указан **усреднённый возраст**. Если захочешь развести
+> совсем разные образы (напр. Болат 53 и 41) — заведи второй файл и поправь `personImage` в том деле.
 
 ---
 
-## 6. Состав библиотеки v1 (расширенный, ~70+ частей)
+## 4. Стандартная кампания
 
-- **base** (форма головы+шея+уши, тон `--skin`):
-  `base-male`, `base-female`, `base-male-round`, `base-female-round`, `base-male-narrow` — (5)
-- **hair** (`--hair`):
-  `hair-none`, `hair-short`, `hair-side-part`, `hair-buzz`, `hair-bald-fringe`,
-  `hair-long`, `hair-bun`, `hair-ponytail`, `hair-curly`, `hair-receding` — (10)
-- **brows** (`--hair`): `brows-neutral`, `brows-thick`, `brows-thin`, `brows-raised` — (4)
-- **eyes**: `eyes-open`, `eyes-narrow`, `eyes-tired`, `eyes-wide` — (4)
-- **nose** (`--skin`): `nose-straight`, `nose-wide`, `nose-small` — (3)
-- **mouth**: `mouth-neutral`, `mouth-smile`, `mouth-frown`, `mouth-pressed` — (4)
-- **facial** (`--hair`):
-  `facial-none`, `facial-stubble`, `facial-mustache`, `facial-goatee`,
-  `facial-beard-short`, `facial-beard-full`, `facial-mutton` — (7)
-- **glasses**: `glasses-none`, `glasses-round`, `glasses-rect`, `glasses-reading`, `glasses-sun` — (5)
-- **headwear** (`--cloth`):
-  `headwear-none`, `headwear-flatcap`, `headwear-beanie`, `headwear-fedora`,
-  `headwear-hardhat`, `headwear-headscarf`, `headwear-ushanka` — (7)
-- **cloth/плечи** (`--cloth`):
-  `cloth-tshirt`, `cloth-suit`, `cloth-hoodie`, `cloth-coat`, `cloth-uniform`,
-  `cloth-blouse`, `cloth-overalls` — (7)
-- **accents** (массив, поверх всего):
-  `accent-mole-left`, `accent-scar-brow`, `accent-earring`, `accent-bandage`, `accent-freckles` — (5)
+Регион/этнотип взят из имени и фамилии — он должен читаться в лице. Профессия/контекст — из
+истории дела, чтобы герой выглядел «своим».
 
-Итого ~61 + добавь по вкусу вариаций hair/cloth и 2–3 этнических тона кожи до 70+.
+**igor** · Igor Semyonov, 41 · РФ · *затопленная квартира, погибла электроника*
+> A 41-year-old Russian man, ordinary city renter, oval face, short thinning dark-brown hair,
+> light stubble, tired eyes, plain grey-olive collared shirt. Slightly resigned everyday look. + STYLE
+
+**gennady** ↻ · Gennady (Bublikov 52 / Orlov 49) · РФ · *собака съела часы / оператор пресса, травма руки*
+> A ~50-year-old Russian working-class man, broad heavy face, short grey-flecked hair, bushy
+> brows, deep nasolabial lines, weathered skin, plain dark-blue work shirt. Stolid, guarded. + STYLE
+
+**aigul** ↻ · Aigul (Nurlanova 47 / Saparova 36) · Казахстан, село · *корова на крыше / град*
+> A ~42-year-old Kazakh rural woman, round sun-weathered face, dark almond eyes, dark hair pulled
+> back under a simple muted-ochre headscarf, no makeup, faded earth-tone blouse. Calm, plain. + STYLE
+
+**stas** · Stas Grom, 24 · РФ · *геймер, ноутбук «разбил полтергейст»*
+> A 24-year-old Russian young man, narrow face, messy mid-length dark hair, faint patchy stubble,
+> dark-olive hoodie. Slightly cocky, defensive look, pale skin from indoor life. + STYLE
+
+**eduard** ↻ · Eduard (Vinogradov 59 / Kravets 50) · РФ · *коллекция вина / краденые часы*
+> A ~55-year-old affluent Russian man, well-groomed, full head of greying hair combed back,
+> trimmed grey beard, thin rectangular reading glasses, terracotta-brown jacket over a shirt.
+> Composed, slightly self-important. + STYLE
+
+**lucas** · Lucas Ferreira · Бразилия/Португалия · *авиакомпания потеряла чемодан*
+> A ~35-year-old Brazilian man, warm tan skin, short dark wavy hair, light stubble, easy-going
+> but tired expression, plain cream short-sleeve shirt. + STYLE
+
+**dejan** ↻ · Dejan (Kovac / Markovic 44) · Балканы (серб/хорват) · *травма спины / ДТП*
+> A ~44-year-old Balkan man, square rugged jaw, short cropped dark hair greying at temples,
+> stubble, heavy brow, faded olive work jacket. Stoic, slightly sceptical. + STYLE
+
+**helena** ↻ · Helena (Brandt / Krause 39) · Германия · *пожар на кухне / удар молнии*
+> A 39-year-old German woman, tidy shoulder-length light-brown hair, fair skin, light freckles,
+> minimal makeup, muted slate-blue blouse. Composed, slightly anxious. + STYLE
+
+**mateus** · Mateus Ferreira · Бразилия · *ДТП, хлыстовая травма шеи*
+> A ~32-year-old Brazilian man, dark curly short hair, warm brown skin, clean-shaven round face,
+> plain ochre-brown t-shirt. Mild, a bit evasive. (Visibly different from `lucas`.) + STYLE
+
+**beatrice** · Beatrice Kohler · Германия/Швейцария · *кража ювелирки*
+> A ~55-year-old elegant European woman, silver-grey hair set neatly, fine wrinkles, refined
+> features, single string of pearls, cream-and-terracotta blouse. Dignified, reserved. + STYLE
+
+**helga** · Helga Novak · Германия/Австрия · *онкология, химиотерапия (честный, сочувственный кейс)*
+> A ~50-year-old European woman during chemotherapy, gentle tired face, very short thin hair or
+> a soft muted headscarf, pale skin, kind sincere eyes, simple olive cardigan. Quiet dignity,
+> not pitiful, treated with respect. + STYLE
+
+**timur** ↻ · Timur (Ashirov 29 / Rasulov 52) · Татарстан/Центр. Азия · *телефон в озере / угон внедорожника*
+> A ~40-year-old Central-Asian / Tatar man, oval face, straight black hair, neat short beard,
+> dark almond eyes, plain dark-grey shirt. Even, businesslike. + STYLE
+
+**bolat** ↻ · Bolat Zhumabekov (53 / 41) · Казахстан · *градобой пшеницы / затопленный склад*
+> A ~47-year-old Kazakh farmer, broad sun-tanned face, high cheekbones, short black hair greying
+> at sides, thick black brows, faded khaki work shirt. Weathered, straightforward. + STYLE
+
+**rustam** ↻ · Rustam (Beketov 47 / Nazarov 38) · Центр. Азия · *затонула яхта / клонировали карту*
+> A ~42-year-old Central-Asian man, lean face, black hair, full black moustache, tan skin,
+> terracotta-brown casual jacket. Confident, slightly cagey. + STYLE
+
+**leyla** · Leyla Karimova, 38 · Центр. Азия/Азербайджан · *прорвало водопровод, затопило магазин*
+> A 38-year-old Central-Asian woman, long dark hair loosely tied, warm olive skin, dark
+> expressive eyes, modest gold earrings, muted teal-grey blouse. Tense, businesslike (shop owner). + STYLE
+
+**marina** ↻ · Marina (Gordeeva 34 / Vlasova 38) · РФ · *ДТП / угон авто*
+> A ~36-year-old Russian woman, straight dark-blonde shoulder-length hair, fair skin, light
+> makeup, muted mustard-ochre blouse, small earrings. Urban, slightly defensive. + STYLE
+
+**lorenzo** ↻ · Lorenzo (Conti 45 / Bianchi) · Италия · *пожар в кафе / кража картины*
+> A ~45-year-old Italian man, olive skin, dark hair greying at temples swept back, salt-and-pepper
+> stubble, dark expressive eyes, open-collar terracotta shirt. Charismatic but watchful. + STYLE
+
+**damir** ↻ · Damir (Askarov 47 / Saparov) · Казахстан · *сгорел склад / угнали экскаватор*
+> A ~47-year-old Central-Asian man, square face, short black hair, trimmed beard, tan weathered
+> skin, faded olive-green work jacket (small-business / construction). Solid, reserved. + STYLE
 
 ---
 
-## 7. Спец-трек — отдельные «несерьёзные» дела (TMNT / Шреддер / Анатолий)
+## 5. Ежедневные дела
 
-**Решение по проекту:** обычные клиенты — строго в фото-ID стиле; а дела с TMNT и
-Шреддером оформляются как **явно несерьёзные отдельные дела с собственным ярким
-визуалом** — им разрешено отступление от красных линий как намеренной пасхалке.
+**marina** — см. выше (`case-002-daily`, переиспользуется).
 
-Поставка — отдельный спрайт `public/people/special.svg`, собирается тем же слоистым
-движком (чтобы переиспользовать код):
+**thibault** · Thibault Ferrand · Франция · *пекарня, «полтергейст» загубил торты*
+> A ~40-year-old French man, round friendly face, short brown hair, light stubble, ruddy cheeks
+> (a baker), plain cream collared shirt. Earnest, a little flustered. + STYLE
 
-- **base**: `base-turtle`, `base-shredder`, `base-anatoly`.
-- Черепашки различаются только **цветом банданы** `--band` + accent-оружием:
-  `accent-katana`, `accent-sai`, `accent-bo`, `accent-nunchaku` (Лео/Раф/Донни/Микки).
-- Shredder: шлем-база + лезвия (headwear/accents).
-- Палитры спец-дел могут уходить от кремовой (яркая бандана и т.п.) — это сознательно.
+**lorenzo** — см. выше (`case-103-daily`, переиспользуется).
 
----
+**damir** — см. выше (`case-102-daily`, переиспользуется).
 
-## 8. Чек выравнивания перед сдачей (главная причина брака)
+**elmira** · Elmira Jaksybekova · Казахстан, село · *молния сожгла амбар*
+> A ~45-year-old Kazakh rural woman, kind weathered round face, dark hair under a soft cream-ochre
+> headscarf, dark warm eyes, simple earth-tone dress. Plain, sincere. (Distinct from `aigul`.) + STYLE
 
-Собери 5–6 тестовых лиц и проверь, что слои **совпадают по сетке**:
-1. мужское лицо: `base-male` + `hair-short` + `glasses-round` + `facial-beard-full` + `headwear-flatcap` + `cloth-suit`;
-2. женское: `base-female` + `hair-long` + `accent-earring` + `cloth-blouse`;
-3. лысое: `base-male-round` + `hair-bald-fringe` + `facial-mustache`;
-4. черепашка: `base-turtle` + бандана `--band` + `accent-katana`;
-5. Шреддер.
-
-Очки должны лежать на глазах, борода — вокруг рта, шапка — на макушке, плечи — не
-залезать на лицо. Проверь читаемость каждой части на 2–3 разных оттенках её
-CSS-переменной.
+**sinead** · Sinead O'Brien · Ирландия · *буря, чужой батут разбил окно*
+> A ~40-year-old Irish woman, fair pale skin, wavy auburn-red hair, light freckles, green-grey
+> eyes, muted moss-green blouse. Friendly but worried. + STYLE
 
 ---
 
-## Приложение — пример JSON-описания портрета в деле
+## 6. Квирки-трек (лёгкие пасхалки — тот же стиль, чуть характернее)
 
-Для справки (так это будет задаваться в `src/data/cases/*.json`):
+Это намеренно эксцентричные персонажи (пародийная нотка), но **рендерим их в той же фото-ID
+эстетике** — без отрыва от стиля, иначе сломают единство галереи. Характер передаём чертами,
+а не сменой стилистики.
 
-```jsonc
-"portrait": {
-  "palette": { "skin": "#c9a07a", "hair": "#3a3024", "cloth": "#445566", "bg": "#d8d2c4" },
-  "base": "male",
-  "hair": "short",
-  "brows": "thick",
-  "eyes": "open",
-  "nose": "straight",
-  "mouth": "neutral",
-  "facial": "beard-full",
-  "glasses": "round",
-  "headwear": "flatcap",
-  "accents": ["mole-left"]
-}
-```
+**anatoly** ↻ · Anatoly Stepanovich, 71 · РФ · *эксцентричный пенсионер: «умная» микроволновка, дрон, газонокосилка*
+> A 71-year-old Russian pensioner, eccentric inventor type, thin lined face, wild grey hair,
+> bushy grey moustache and eyebrows, large old-fashioned thick glasses, knitted olive cardigan.
+> Earnest, slightly batty but endearing. + STYLE
+
+**orest** · Orest Shredderov, 48 · РФ · *«вандализм и кража» на металлобазе* (отсылка к Шреддеру)
+> A 48-year-old Russian man, stern intimidating scrap-yard boss, hard angular face, shaved head
+> or very short hair, heavy jaw, cold grey eyes, dark slate work jacket. Severe, humourless —
+> but still a plain document photo, no villain theatrics. + STYLE
+
+**khariton** ↻ · Khariton (Splintovich 69 / Velizhanin 55) · *сэнсэй додзё / склад* (отсылка к Сплинтеру)
+> A ~65-year-old wise old martial-arts sensei, narrow lined face, long wispy thin grey beard and
+> moustache, calm half-closed eyes, grey topknot or bald crown, muted clay-brown kimono-style
+> collar. Serene, dignified, slightly mischievous. + STYLE
+
+---
+
+## 7. Чек перед сдачей
+
+1. Все портреты **в одном свете и одной сепия-палитре** — выложи 24 рядом, галерея смотрится единым архивом.
+2. Везде **анфас, голова+плечи, однотонный тёплый фон**, без сцен и предметов.
+3. Лица **различимы** между собой (особенно пары одного региона: `lucas`/`mateus`, `aigul`/`elmira`,
+   `timur`/`rustam`/`damir`).
+4. Никакого текста, рамок, водяных знаков (рамку рисует код).
+5. Тон серьёзный, но **не мрачный** — теплее, чем _Papers, Please_.
+6. `helga` — достоинство, не жалость.
