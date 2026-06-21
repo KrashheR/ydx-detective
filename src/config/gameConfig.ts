@@ -191,6 +191,20 @@ export const GAME_CONFIG = {
     /** After this many "Not now" dismissals the prompt is suppressed forever. */
     suppressAfterDismissals: 3,
   },
+
+  analytics: {
+    /**
+     * Yandex Metrica counter ID. Replace the placeholder with the real counter
+     * created in the Metrica console (https://metrika.yandex.ru). A falsy id
+     * (0) keeps tracking a silent no-op — safe for local dev and non-Yandex
+     * builds where the counter script never loads. Single source of truth: the
+     * `<script>` in index.html only defines `window.ym`; the actual
+     * `ym(id, 'init', …)` call reads this value from `src/services/metrica.ts`.
+     */
+    counterId: 110041851, // TODO: set the real Yandex Metrica counter ID
+    /** Enable Webvisor session recording on init. */
+    webvisor: true,
+  },
 } as const;
 
 export type GameConfig = typeof GAME_CONFIG;

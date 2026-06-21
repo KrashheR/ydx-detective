@@ -1,6 +1,6 @@
 # 06 · Платформа Yandex и персистенс
 
-> **🗺️ Ключевые файлы:** `src/services/yandexSDK.ts` (единственный адаптер `window.YaGames`), `src/services/persistence.ts` (снапшот + миграция), `src/config/gameConfig.ts` (`saveVersion`).
+> **🗺️ Ключевые файлы:** `src/services/yandexSDK.ts` (единственный адаптер `window.YaGames`), `src/services/metrica.ts` (единственный адаптер `window.ym` — аналитика), `src/services/persistence.ts` (снапшот + миграция), `src/config/gameConfig.ts` (`saveVersion`, `analytics`).
 
 `src/services/yandexSDK.ts` — **единственное** место, трогающее `window.YaGames`. Движок
 никогда не зовёт SDK напрямую. Любой сбой/отсутствие SDK молча переводит в офлайн-режим;
@@ -75,6 +75,52 @@ null при недоступности → UI фолбэчит.
 `getYandexLang()` → `environment.i18n.lang`. Стор маппит ведущий сабтег (напр. `pt-br` →
 `pt`) на поддерживаемый язык; для первого игрока язык засевается из локали Yandex,
 вернувшийся игрок сохраняет выбранный.
+
+## Аналитика (Yandex Metrica)
+
+`src/services/metrica.ts` — **единственное** место, трогающее `window.ym` (аналитический
+близнец `yandexSDK.ts`). Цель — детально логировать игровой опыт каждого игрока, чтобы
+тюнить экономику/геймплей по реальному поведению. Контракт деградации тот же: нет счётчика
+/ `counterId` плейсхолдер → каждый вызов трекинга — молчаливый no-op, геймплей не блокируется,
+тесты не требуют реального счётчика.
+
+**Счётчик и инициализация.** ID счётчика — единый источник истины в
+`GAME_CONFIG.analytics.counterId` (плейсхолдер `0` = выключено). `index.html` содержит
+только лоадер, определяющий очередь `window.ym` и подгружающий `tag.js`; сам
+`ym(id, 'init', …)` зовётся из `initMetrica()` (в `gameStore.init()`, после `initYandex()`).
+`initMetrica()` идемпотентна; при falsy id или отсутствии `window.ym` адаптер остаётся
+выключенным.
+
+**Поверхность адаптера:**
+- `initMetrica()` — поднять счётчик (один раз).
+- `trackGoal(name, params?)` → `ym(id, 'reachGoal', …)` — событие воронки.
+- `setUserParams(params)` → `ym(id, 'userParams', …)` — профиль игрока (уровень, баланс,
+  xp, число дел, серия, язык, банкротство). Шлётся на буте и после действий, меняющих эти
+  величины (`submitVerdict`, `restoreFunds`, `doubleLastReward`).
+
+**Где эмитятся события.** Стор — эмиттер (как и для лидерборда): цели зовутся из действий
+`gameStore.ts`, где уже посчитаны payload'ы. Имена целей — каталог `GOAL` в `metrica.ts`
+(единый источник, держать в лок-степе с этой таблицей; переименование цели обнуляет её
+историю в консоли Метрики).
+
+| Цель (`GOAL`) | Откуда | Ключевые параметры |
+| --- | --- | --- |
+| `case_start` | `startCase` | caseId, type, difficulty, claimAmount, evidenceCount, budget |
+| `evidence_view` | `markEvidenceAsViewed` (только реально новое открытие) | caseId, evidenceId, evidenceType, viewedCount, budget |
+| `evidence_stamp` | `toggleEvidenceStamp` | caseId, evidenceId, stamped, stampCount |
+| `hint_buy` | `buyHint` (в колбэке реального раскрытия) | caseId, kind, cost, revealedId, balanceAfter |
+| `verdict_submit` | `submitVerdict` | decision, verdictCorrect, verdict/proof/efficiency-компоненты, penalty, bonusPct, dailyMultiplierApplied, total, xpGained, proofRatio, falseStamps, opensUsed |
+| `achievement_unlock` | `submitVerdict` (по одному на каждый новый ачив) | achievementId, caseId |
+| `rank_up` | `submitVerdict` (при `promotedToLevel`) | newLevel, xp |
+| `daily_claim` | `submitVerdict` (`type === 'daily'`) | caseId, total |
+| `bankruptcy` | `submitVerdict` (когда `isBankrupt` переходит в true) | caseId, balance |
+| `reward_double` | `doubleLastReward` | caseId, amount, balanceAfter |
+| `funds_restore` | `restoreFunds` (в колбэке rewarded-видео) | previousBalance, restoredTo |
+| `rating_action` | `dismissRating` / `suppressRating` / `App.tsx` (onRate) | action (`dismiss`/`never`/`rate`), dismissals |
+
+**Конфиг** (`GAME_CONFIG.analytics`): `counterId` (заменить плейсхолдер на реальный после
+создания счётчика в [metrika.yandex.ru](https://metrika.yandex.ru)), `webvisor`. Персист не
+меняется — трекинг always-on, без opt-out, `saveVersion` не бампается.
 
 ## Деплой
 

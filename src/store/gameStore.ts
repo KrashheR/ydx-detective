@@ -44,6 +44,7 @@ import {
   showRewardedAd,
   submitLeaderboardScore,
 } from '../services/yandexSDK';
+import { GOAL, initMetrica, setUserParams, trackGoal } from '../services/metrica';
 import {
   SUPPORTED_LANGUAGES,
   type ActiveSession,
@@ -178,6 +179,23 @@ function snapshotOf(state: {
   };
 }
 
+/**
+ * Per-player Metrica profile derived from the runtime stats. Pushed on boot and
+ * after any action that moves level/balance/xp/case-count, so each player's
+ * standing is queryable in the Metrica console (segmentation, cohorts).
+ */
+function reportUserParams(stats: PlayerStats): void {
+  setUserParams({
+    level: evaluateRank(stats.xp).level,
+    balance: stats.balance,
+    xp: stats.xp,
+    completedCases: stats.completedCaseIds.length,
+    streak: stats.streakCount,
+    isBankrupt: stats.isBankrupt,
+    language: stats.language,
+  });
+}
+
 /* -------------------------------- Store ---------------------------------- */
 
 export const useGameStore = create<GameStoreState>((set, get) => {
@@ -201,6 +219,9 @@ export const useGameStore = create<GameStoreState>((set, get) => {
     async init() {
       // 1) Bring up the SDK (no-op-safe if unavailable → offline mode).
       await initYandex();
+      // 1b) Bring up Yandex Metrica (silent no-op if the counter never loaded
+      //     or the configured id is a placeholder).
+      initMetrica();
 
       // 2) Wire the global pause guard to ad lifecycles. Ad open/close anywhere
       //    in the app now flips `isPaused`, which the audio manager & game loop
@@ -223,6 +244,9 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         session: snapshot.session,
         isHydrated: true,
       });
+
+      // Seed the player profile in Metrica from the hydrated stats.
+      reportUserParams(stats);
     },
 
     setLanguage(lang) {
@@ -247,6 +271,15 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         lastResult: null,
       });
       persist();
+
+      trackGoal(GOAL.caseStart, {
+        caseId: caseData.id,
+        type: caseData.type,
+        difficulty: caseData.difficulty,
+        claimAmount: caseData.claimAmount,
+        evidenceCount: caseData.evidences.length,
+        budget: caseData.investigationBudget ?? null,
+      });
     },
 
     markEvidenceAsViewed(id, caseData) {
@@ -273,6 +306,14 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         };
       });
       persist();
+
+      trackGoal(GOAL.evidenceView, {
+        caseId: caseData.id,
+        evidenceId: id,
+        evidenceType: caseData.evidences.find((e) => e.id === id)?.type ?? null,
+        viewedCount: get().session?.viewedEvidenceIds.length ?? 0,
+        budget: budget ?? null,
+      });
       return true;
     },
 
@@ -288,6 +329,16 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         };
       });
       persist();
+
+      const after = get().session;
+      if (after) {
+        trackGoal(GOAL.evidenceStamp, {
+          caseId: after.caseId,
+          evidenceId: id,
+          stamped: after.selectedEvidenceIds.includes(id),
+          stampCount: after.selectedEvidenceIds.length,
+        });
+      }
     },
 
     buyHint(caseData, kind) {
@@ -317,6 +368,14 @@ export const useGameStore = create<GameStoreState>((set, get) => {
           };
         });
         persist();
+
+        trackGoal(GOAL.hintBuy, {
+          caseId: caseData.id,
+          kind,
+          cost: charge,
+          revealedId: nextId,
+          balanceAfter: get().stats.balance,
+        });
       };
 
       if (kind === 'note') {
@@ -436,6 +495,39 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       persist(true);
       // Publish the new balance to the global leaderboard (best-effort).
       void submitLeaderboardScore(finalBalance);
+
+      // ── Analytics: the verdict is the richest signal for economy tuning. ──
+      trackGoal(GOAL.verdictSubmit, {
+        caseId: caseData.id,
+        decision,
+        difficulty: caseData.difficulty,
+        type: caseData.type,
+        verdictCorrect: breakdown.verdictCorrect,
+        verdictComponent: breakdown.verdictComponent,
+        proofComponent: breakdown.proofComponent,
+        efficiencyComponent: breakdown.efficiencyComponent,
+        penalty: breakdown.penalty,
+        bonusPct: breakdown.bonusPct,
+        dailyMultiplierApplied: breakdown.dailyMultiplierApplied,
+        total: breakdown.total,
+        xpGained,
+        proofRatio,
+        falseStamps,
+        opensUsed: session?.viewedEvidenceIds.length ?? 0,
+      });
+      for (const a of unlocks) {
+        trackGoal(GOAL.achievement, { achievementId: a.id, caseId: caseData.id });
+      }
+      if (promotedToLevel != null) {
+        trackGoal(GOAL.rankUp, { newLevel: promotedToLevel, xp: finalXp });
+      }
+      if (caseData.type === 'daily') {
+        trackGoal(GOAL.dailyClaim, { caseId: caseData.id, total: breakdown.total });
+      }
+      if (!stats.isBankrupt && finalStats.isBankrupt) {
+        trackGoal(GOAL.bankruptcy, { caseId: caseData.id, balance: finalBalance });
+      }
+      reportUserParams(finalStats);
       return breakdown;
     },
 
@@ -447,6 +539,7 @@ export const useGameStore = create<GameStoreState>((set, get) => {
     restoreFunds() {
       // Failure-state recovery is gated behind a rewarded ad. The reward
       // callback only fires if the player actually watched it.
+      const previousBalance = get().stats.balance;
       showRewardedAd(() => {
         set((s) => ({
           stats: {
@@ -457,6 +550,11 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         }));
         persist(true);
         void submitLeaderboardScore(GAME_CONFIG.economy.restoreFundsTo);
+        trackGoal(GOAL.fundsRestore, {
+          previousBalance,
+          restoredTo: GAME_CONFIG.economy.restoreFundsTo,
+        });
+        reportUserParams(get().stats);
       });
     },
 
@@ -474,6 +572,12 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       }));
       persist(true);
       void submitLeaderboardScore(newBalance);
+      trackGoal(GOAL.rewardDouble, {
+        caseId: lastResult.caseId,
+        amount: bonus,
+        balanceAfter: newBalance,
+      });
+      reportUserParams(get().stats);
     },
 
     isDailyUnlocked() {
@@ -514,6 +618,10 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         stats: { ...s.stats, ratingDismissals: s.stats.ratingDismissals + 1 },
       }));
       persist();
+      trackGoal(GOAL.rating, {
+        action: 'dismiss',
+        dismissals: get().stats.ratingDismissals,
+      });
     },
 
     suppressRating() {
@@ -524,6 +632,7 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         },
       }));
       persist();
+      trackGoal(GOAL.rating, { action: 'never' });
     },
   };
 });

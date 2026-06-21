@@ -25,6 +25,7 @@ import {
   requestReview,
   type LeaderboardRow,
 } from './services/yandexSDK';
+import { GOAL, trackGoal } from './services/metrica';
 import { GAME_CONFIG } from './config/gameConfig';
 import { RTL_LANGUAGES, t } from './i18n/ui';
 import type { Case } from './types';
@@ -387,7 +388,7 @@ export default function App() {
         {showRating && (
           <RatingModal
             lang={lang}
-            onRate={async () => { await requestReview(); }}
+            onRate={async () => { trackGoal(GOAL.rating, { action: 'rate' }); await requestReview(); }}
             onDismiss={() => { store.dismissRating(); setShowRating(false); }}
             onNever={() => { store.suppressRating(); setShowRating(false); }}
             onRated={() => setShowRating(false)}

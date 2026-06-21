@@ -43,6 +43,7 @@ Paths are stable. Read the matching doc for *why*, then the source for *how*.
 | All economy/tuning constants (reward split, ranks, streak, hints, saveVersion) | `src/config/gameConfig.ts` |
 | Persistence: where/when snapshot is written + save migration | `src/services/persistence.ts` |
 | The **only** `window.YaGames` adapter (SDK, cloud, ads, leaderboard, server time) | `src/services/yandexSDK.ts` |
+| The **only** `window.ym` adapter (Yandex Metrica analytics: goals + user params) | `src/services/metrica.ts` |
 | Types (`Case`/`Evidence`/`PlayerStats`/`ActiveSession`/`PersistedState`) | `src/types/index.ts` |
 | Case Zod validation (kept in lockstep with types) | `src/data/caseSchema.ts` |
 | Case registry (add new case JSON here) | `src/data/caseLoader.ts` + `src/data/cases/*.json` |
@@ -90,7 +91,9 @@ These cut across the whole codebase; everything else lives in the docs above.
 3. **Server time only for daily gating** — `getServerTimeMs()` (Yandex `serverTime()`), never device clock
    (offline fallback only). Details: [docs/06](docs/06-yandex-platform.md).
 4. **`src/services/yandexSDK.ts` is the only place that touches `window.YaGames`** — a missing/failed SDK
-   must degrade to offline mode. Engines never call the SDK directly. Details: [docs/06](docs/06-yandex-platform.md).
+   must degrade to offline mode. Engines never call the SDK directly. The same single-adapter rule applies to
+   analytics: **`src/services/metrica.ts` is the only place that touches `window.ym`** (Yandex Metrica), and a
+   missing counter / placeholder `counterId` makes every track call a silent no-op. Details: [docs/06](docs/06-yandex-platform.md).
 5. **All economy tuning lives in `src/config/gameConfig.ts`**, not in the engines — and bump
    `GAME_CONFIG.saveVersion` + extend `migrate()` whenever the persisted shape changes. Details: [docs/04](docs/04-economy-progression.md) / [docs/06](docs/06-yandex-platform.md).
 6. **The standard campaign is a difficulty curve.** 33 cases ordered by `(requiredLevel, caseNumber)`;
