@@ -133,7 +133,18 @@ export type UIKey =
     | "ratingNever"
     | "ratingSubmitting"
     | "ratingDoneTitle"
-    | "ratingDoneBody";
+    | "ratingDoneBody"
+    | "yourFee"
+    | "budgetSaved"
+    | "companyLoss"
+    | "accuracyBreakdown"
+    | "whatYouMissed"
+    | "howItWas"
+    | "replayCase"
+    | "bonusIdealCase"
+    | "xpLabel"
+    | "fraudMissed"
+    | "verdictItem";
 
 export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
   approve: {
@@ -918,6 +929,85 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     tr: "Bu, başkalarının oyunu bulmasına yardımcı olur.",
     ar: "هذا يساعد الآخرين في العثور على اللعبة.",
     kk: "Бұл басқаларға ойынды табуға көмектеседі.",
+  },
+
+  /* ── Result sheet v2 ──────────────────────────────────────────────────── */
+  yourFee: {
+    ru: "ВАШ ГОНОРАР",
+    en: "YOUR FEE",
+    tr: "ÜCRETİNİZ",
+    ar: "أتعابك",
+    kk: "СІЗДІҢ ГОНОРАРЫҢЫЗ",
+  },
+  budgetSaved: {
+    ru: "Бюджету спасено",
+    en: "Budget saved",
+    tr: "Bütçeye kurtarılan",
+    ar: "وُفِّر من الميزانية",
+    kk: "Бюджетке сақталды",
+  },
+  companyLoss: {
+    ru: "УЩЕРБ БЮДЖЕТУ КОМПАНИИ",
+    en: "COMPANY BUDGET LOSS",
+    tr: "ŞİRKET BÜTÇE ZARARI",
+    ar: "خسارة ميزانية الشركة",
+    kk: "КОМПАНИЯ БЮДЖЕТІНЕ ЗИЯН",
+  },
+  accuracyBreakdown: {
+    ru: "Точность раскрытия",
+    en: "Detection accuracy",
+    tr: "Tespit doğruluğu",
+    ar: "دقة الكشف",
+    kk: "Анықтау дәлдігі",
+  },
+  whatYouMissed: {
+    ru: "ЧТО ВЫ УПУСТИЛИ",
+    en: "WHAT YOU MISSED",
+    tr: "GÖZDEn KAÇIRDIKLARINız",
+    ar: "ما فاتك",
+    kk: "СІЗ ЖІБЕРІП АЛҒАНДАР",
+  },
+  howItWas: {
+    ru: "КАК БЫЛО НА САМОМ ДЕЛЕ",
+    en: "HOW IT ACTUALLY WAS",
+    tr: "GERÇEKTE NE OLDU",
+    ar: "كيف كان الأمر فعلاً",
+    kk: "ІСКЕ ШЫН МӘН",
+  },
+  replayCase: {
+    ru: "↺ Расследовать заново",
+    en: "↺ Reinvestigate",
+    tr: "↺ Yeniden soruştur",
+    ar: "↺ أعد التحقيق",
+    kk: "↺ Қайта тергеу",
+  },
+  bonusIdealCase: {
+    ru: "Бонус за идеальное дело",
+    en: "Perfect case bonus",
+    tr: "Mükemmel dava bonusu",
+    ar: "مكافأة القضية المثالية",
+    kk: "Мінсіз іс үшін бонус",
+  },
+  xpLabel: {
+    ru: "Опыт",
+    en: "XP",
+    tr: "XP",
+    ar: "نقاط خبرة",
+    kk: "Тәжірибе",
+  },
+  fraudMissed: {
+    ru: "ВЫ УПУСТИЛИ МОШЕННИКА",
+    en: "FRAUDSTER ESCAPED",
+    tr: "DOLANDIRICI KAÇTI",
+    ar: "أفلت المحتال",
+    kk: "АЛАЯҚ ҚАШЫП КЕТТІ",
+  },
+  verdictItem: {
+    ru: "Верный вердикт",
+    en: "Correct verdict",
+    tr: "Doğru karar",
+    ar: "الحكم الصحيح",
+    kk: "Дұрыс шешім",
   },
 };
 

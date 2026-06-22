@@ -86,6 +86,8 @@ export type VerdictOutcome = RewardBreakdown & {
   promotedToLevel: number | null;
   /** Achievement ids unlocked by closing this case (for the result sheet). */
   newAchievementIds: string[];
+  /** Evidence IDs the player stamped as contradictions (for the result breakdown). */
+  stampedEvidenceIds: string[];
 };
 
 /**
@@ -488,6 +490,7 @@ export const useGameStore = create<GameStoreState>((set, get) => {
           xpGained,
           promotedToLevel,
           newAchievementIds: unlocks.map((a) => a.id),
+          stampedEvidenceIds: [...selected],
         },
       });
 
