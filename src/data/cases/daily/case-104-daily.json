@@ -2,168 +2,180 @@
   "id": "case-104-daily",
   "type": "daily",
   "difficulty": "hard",
-  "claimAmount": 12000,
-  "truth": "valid",
+  "claimAmount": 180000,
+  "truth": "fraud",
   "title": {
-    "ru": "Сарай, поражённый молнией",
-    "en": "The Lightning-Struck Barn",
-    "tr": "Yıldırım Çarpan Ahır",
-    "ar": "الحظيرة التي ضربها البرق",
-    "kk": "Найзағай соққан қора"
+    "ru": "Угон по-крупному",
+    "en": "Grand Theft Auto",
+    "tr": "Büyük Çaplı Hırsızlık",
+    "ar": "سرقة كبرى",
+    "kk": "Ірі ұрлық"
   },
   "claim": {
     "person": {
-      "ru": "Эльмира Жаксыбекова",
-      "en": "Elmira Jaksybekova",
-      "tr": "Elmira Jaksıbekova",
-      "ar": "إلميرا جاكسيبيكوفا",
-      "kk": "Эльмира Жақсыбекова"
+      "ru": "Роман Таксидис, 31 год",
+      "en": "Roman Taxidis, 31",
+      "tr": "Roman Taxidis, 31",
+      "ar": "رومان تاكسيديس، 31",
+      "kk": "Роман Таксидис, 31 жаста"
     },
     "story": {
-      "ru": "Во время грозы молния ударила в мой сарай, и он сгорел дотла. Прошу возместить стоимость постройки и восстановление.",
-      "en": "During a thunderstorm, lightning struck my barn and it burned to the ground. I'm requesting compensation for the structure and its rebuild.",
-      "tr": "Fırtına sırasında yıldırım ahırıma çarptı ve yerle bir oldu. Yapı ve yeniden inşa için tazminat talep ediyorum.",
-      "ar": "أثناء عاصفة رعدية، ضرب البرق حظيرتي واحترقت بالكامل. أطلب تعويضاً عن المبنى وإعادة بنائه.",
-      "kk": "Найзағай кезінде менің қорама найзағай түсіп, ол түгел өртеніп кетті. Құрылыс пен қалпына келтіруге өтемақы сұраймын."
+      "ru": "Мой таксопарк — одна машина, Lada Priora, госномер GTA-777. В ночь со вторника на среду автомобиль угнали с парковки у торгового центра. Утром полицейские нашли машину на дне портовой акватории. Прошу компенсацию по КАСКО на 180 000 рублей.",
+      "en": "My taxi fleet — one car, a Lada Priora, plate GTA-777. On the night of Tuesday to Wednesday the car was stolen from the shopping centre parking lot. In the morning police found it at the bottom of the harbour basin. I request KASKO compensation of 180,000 roubles.",
+      "tr": "Taksi filom — bir araç, Lada Priora, plaka GTA-777. Salı'dan Çarşamba'ya geçen gece araç alışveriş merkezi otoparkından çalındı. Sabah polis onu liman havzasının dibinde buldu. 180.000 ruble KASKO tazminatı talep ediyorum.",
+      "ar": "أسطول سياراتي للأجرة — سيارة واحدة، لادا بريورا، لوحة GTA-777. في ليلة الثلاثاء-الأربعاء سُرقت السيارة من موقف مركز التسوق. في الصباح وجدتها الشرطة في قاع حوض الميناء. أطلب تعويض KASKO بقيمة 180,000 روبل.",
+      "kk": "Менің таксопаркім — бір көлік, Lada Priora, мемлекеттік нөмірі GTA-777. Сейсенбіден сәрсенбіге өткен түнде автомобиль сауда орталығының тұрағынан ұрланды. Таңертеңде полиция оны порт акваториясының түбінен тапты. КАСКО бойынша 180 000 рубль өтемақы сұраймын."
     }
   },
   "coverImage": "covers/case-104-daily.svg",
-  "personImage": "people/elmira.svg",
+  "personImage": "people/roman-taxi.webp",
   "evidences": [
     {
-      "id": "ev-strike-report",
-      "type": "document",
+      "id": "ev-gps",
+      "type": "gps",
       "title": {
-        "ru": "Метеоотчёт о разрядах молний",
-        "en": "Meteorological Strike-Detection Report",
-        "tr": "Meteorolojik Yıldırım Tespit Raporu",
-        "ar": "تقرير الأرصاد لرصد الصواعق",
-        "kk": "Метеорологиялық найзағай тіркеу есебі"
+        "ru": "GPS-трек Lada Priora GTA-777",
+        "en": "GPS Track — Lada Priora GTA-777",
+        "tr": "GPS İzi — Lada Priora GTA-777",
+        "ar": "مسار GPS — لادا بريورا GTA-777",
+        "kk": "GPS-бағыты — Lada Priora GTA-777"
       },
       "content": {
-        "ru": "Сеть грозопеленгации зафиксировала разряд «облако-земля» силой 38 кА в 23:47 в радиусе 90 м от координат фермы (43.21N, 76.95E).",
-        "en": "The lightning-detection network logged a 38 kA cloud-to-ground strike at 23:47 within 90 m of the farm's coordinates (43.21N, 76.95E).",
-        "tr": "Yıldırım tespit ağı, 23:47'de çiftliğin koordinatlarına (43.21K, 76.95D) 90 m mesafede 38 kA'lık bir bulut-yer deşarjı kaydetti.",
-        "ar": "سجّلت شبكة رصد الصواعق صاعقة من السحابة إلى الأرض بقوة 38 كيلوأمبير عند الساعة 23:47 على بُعد 90 م من إحداثيات المزرعة (43.21 شمالاً، 76.95 شرقاً).",
-        "kk": "Найзағай пеленгациясы желісі 23:47-де ферма координаттарынан (43.21N, 76.95E) 90 м радиуста 38 кА «бұлт-жер» разрядын тіркеді."
+        "ru": [
+          "Вт 01:09 — стоянка ТЦ «Мега» (последняя метка до предполагаемого угона)",
+          "Вт 01:15 — металлоломный пункт «СтальКом», ул. Портовая, 7",
+          "Вт 01:22 — последний GPS-пинг: адрес «СтальКом»",
+          "Вт 03:22 — Таксидис Р.Г. подаёт заявление об угоне (полицейский участок №3)",
+          "Ср 03:55 — полиция: автомобиль обнаружен в портовой акватории"
+        ],
+        "en": [
+          "Tue 01:09 — Mega shopping centre car park (last ping before alleged theft)",
+          "Tue 01:15 — ScrapCom metal yard, Portovaya St 7",
+          "Tue 01:22 — last GPS ping: ScrapCom address",
+          "Tue 03:22 — Taxidis R.G. files theft report (Police Station #3)",
+          "Wed 03:55 — Police: car found at bottom of harbour basin"
+        ],
+        "tr": [
+          "Sal 01:09 — Mega alışveriş merkezi otoparkı (iddia edilen hırsızlıktan önceki son ping)",
+          "Sal 01:15 — ScrapCom hurdalık, Portovaya Cad. 7",
+          "Sal 01:22 — son GPS pinge: ScrapCom adresi",
+          "Sal 03:22 — Taxidis R.G. hırsızlık ihbarı dosyalar (Polis Karakolu #3)",
+          "Çar 03:55 — Polis: araç liman havzasının dibinde bulundu"
+        ],
+        "ar": [
+          "الثلاثاء 01:09 — موقف مركز تسوق ميغا (آخر إشارة قبل السرقة المزعومة)",
+          "الثلاثاء 01:15 — ساحة خردة ScrapCom، شارع بورتوفايا 7",
+          "الثلاثاء 01:22 — آخر إشارة GPS: عنوان ScrapCom",
+          "الثلاثاء 03:22 — تاكسيديس ر.غ. يقدم بلاغ سرقة (مركز شرطة #3)",
+          "الأربعاء 03:55 — الشرطة: وُجدت السيارة في قاع حوض الميناء"
+        ],
+        "kk": [
+          "Сс 01:09 — «Мега» СО тұрағы (болжамды ұрлықтан бұрынғы соңғы белгі)",
+          "Сс 01:15 — «СтальКом» металл сынықтары пункті, Портовая к., 7",
+          "Сс 01:22 — соңғы GPS-пинг: «СтальКом» мекенжайы",
+          "Сс 03:22 — Таксидис Р.Г. ұрлық туралы өтініш береді (№3 полиция бөлімшесі)",
+          "Ср 03:55 — полиция: автомобиль порт акваториясының түбінен табылды"
+        ]
       },
-      "isContradiction": false,
+      "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Независимая метеосеть подтверждает удар молнии у самой фермы в заявленное время.",
-        "en": "An independent meteorological network confirms a lightning strike right by the farm at the stated time.",
-        "tr": "Bağımsız meteoroloji ağı, belirtilen saatte çiftliğin hemen yanında bir yıldırım çarpmasını doğruluyor.",
-        "ar": "تؤكد شبكة أرصاد مستقلة وقوع صاعقة بجوار المزرعة في الوقت المذكور.",
-        "kk": "Тәуелсіз метеожелі көрсетілген уақытта ферма жанында найзағай түскенін растайды."
-      }
-    },
-    {
-      "id": "ev-fire-report",
-      "type": "document",
-      "title": {
-        "ru": "Отчёт пожарной службы",
-        "en": "Fire Department Report",
-        "tr": "İtfaiye Raporu",
-        "ar": "تقرير إدارة الإطفاء",
-        "kk": "Өрт сөндіру қызметінің есебі"
-      },
-      "content": {
-        "ru": "Заключение дознавателя: причина пожара — удар молнии в деревянную конструкцию; следов горючих веществ и поджога не обнаружено.",
-        "en": "Investigator's conclusion: cause of fire was a lightning strike to the wooden structure; no traces of accelerants or arson found.",
-        "tr": "Müfettiş sonucu: yangının nedeni ahşap yapıya yıldırım çarpması; hızlandırıcı madde veya kundaklama izi bulunmadı.",
-        "ar": "خلاصة المحقق: سبب الحريق هو ضربة برق على الهيكل الخشبي؛ لم تُعثر على آثار مواد مسرّعة أو إشعال متعمّد.",
-        "kk": "Тергеушінің қорытындысы: өрттің себебі — ағаш құрылысқа найзағай түсуі; жанғыш зат немесе қасақана өрт іздері табылмады."
-      },
-      "isContradiction": false,
-      "contradictionExplanation": {
-        "ru": "Официальное дознание называет причиной именно молнию и исключает поджог.",
-        "en": "The official investigation names lightning as the cause and rules out arson.",
-        "tr": "Resmî soruşturma nedeni yıldırım olarak belirtiyor ve kundaklamayı dışlıyor.",
-        "ar": "يحدد التحقيق الرسمي البرق سبباً ويستبعد الإشعال المتعمّد.",
-        "kk": "Ресми тергеу себебін найзағай деп атап, қасақана өртті жоққа шығарады."
-      }
-    },
-    {
-      "id": "ev-photos",
-      "type": "photo",
-      "title": {
-        "ru": "Фото обгоревшей балки",
-        "en": "Photos of the Scorched Beam",
-        "tr": "Yanmış Kirişin Fotoğrafları",
-        "ar": "صور العارضة المتفحّمة",
-        "kk": "Күйген арқалықтың фотосы"
-      },
-      "content": {
-        "ru": "На фото главной балки виден характерный древовидный ожог Лихтенберга, расходящийся от точки удара — типичный след прохождения молнии.",
-        "en": "The photos of the main beam show a characteristic tree-like Lichtenberg burn radiating from the impact point — a typical trace of a lightning path.",
-        "tr": "Ana kirişin fotoğraflarında, çarpma noktasından yayılan karakteristik ağaç benzeri Lichtenberg yanığı görülüyor — yıldırım izinin tipik işareti.",
-        "ar": "تُظهر صور العارضة الرئيسية حرقاً شجري الشكل مميزاً من نوع ليختنبرغ ينتشر من نقطة التأثير — أثر نموذجي لمسار البرق.",
-        "kk": "Негізгі арқалықтың фотосында соққы нүктесінен таралатын ағаш тәрізді Лихтенберг күйігі көрінеді — найзағай жолының типтік ізі."
-      },
-      "isContradiction": false,
-      "contradictionExplanation": {
-        "ru": "Узор Лихтенберга физически характерен именно для удара молнии и подтверждает версию.",
-        "en": "The Lichtenberg pattern is physically characteristic of a lightning strike and supports the account.",
-        "tr": "Lichtenberg deseni fiziksel olarak yıldırım çarpmasına özgüdür ve anlatımı destekler.",
-        "ar": "نمط ليختنبرغ مميز فيزيائياً لضربة البرق ويدعم الرواية.",
-        "kk": "Лихтенберг өрнегі физикалық тұрғыдан найзағай соққысына тән және әңгімені растайды."
+        "ru": "Машина была на пункте металлолома в 01:15 — за два часа до того, как Таксидис заявил об угоне. GPS опровергает хронологию.",
+        "en": "The car was at the scrap yard at 01:15 — two hours before Taxidis reported the theft. GPS refutes the timeline.",
+        "tr": "Araç, Taxidis hırsızlığı bildirmeden iki saat önce 01:15'te hurdacıdaydı. GPS zaman çizelgesini çürütüyor.",
+        "ar": "كانت السيارة في ساحة الخردة الساعة 01:15 — قبل ساعتين من إبلاغ تاكسيديس عن السرقة. GPS يدحض الجدول الزمني.",
+        "kk": "Автомобиль Таксидис ұрлық туралы хабарлаудан екі сағат бұрын — 01:15-те металл сынықтары пунктінде болды. GPS хронологияны жоққа шығарады."
       },
       "meta": {
-        "filename": "IMG_20260321_064015.jpg"
+        "company": "ГлонасТакси",
+        "department": "Транспортный мониторинг",
+        "requestId": "GT-104-777",
+        "gpsFooter": "Данные подтверждены системой ГЛОНАСС"
       }
     },
     {
-      "id": "ev-quote",
+      "id": "ev-receipt",
       "type": "document",
       "title": {
-        "ru": "Смета подрядчика на восстановление",
-        "en": "Contractor's Rebuild Quote",
-        "tr": "Müteahhit Yeniden İnşa Teklifi",
-        "ar": "عرض سعر المقاول لإعادة البناء",
-        "kk": "Мердігердің қалпына келтіру сметасы"
+        "ru": "Квитанция пункта приёма металлолома",
+        "en": "Scrap Metal Yard Receipt",
+        "tr": "Hurdalık Makbuzu",
+        "ar": "إيصال ساحة الخردة",
+        "kk": "Металл сынықтары пункті түбіртегі"
       },
       "content": {
-        "ru": "Смета строительной фирмы на восстановление сарая: каркас, кровля, ворота — итого 11 800 €, что соответствует заявленной сумме.",
-        "en": "A construction firm's quote to rebuild the barn: frame, roofing, gates — total €11,800, consistent with the claimed amount.",
-        "tr": "Bir inşaat firmasının ahırı yeniden inşa teklifi: iskelet, çatı, kapılar — toplam 11.800 €, talep edilen tutarla uyumlu.",
-        "ar": "عرض شركة بناء لإعادة بناء الحظيرة: الهيكل، السقف، البوابات — الإجمالي 11,800 يورو، متوافق مع المبلغ المطالَب به.",
-        "kk": "Құрылыс фирмасының қораны қалпына келтіру сметасы: қаңқа, шатыр, қақпа — барлығы 11 800 €, талап етілген сомаға сәйкес келеді."
+        "ru": "ООО «СтальКом», ул. Портовая, 7. Принято: 1 (один) легковой автомобиль Lada Priora, г/н GTA-777. Состояние: на ходу. Сдал: Таксидис Р.Г. (паспорт предъявлен, серия/номер занесены в реестр). Оплачено владельцу: 25 000 рублей наличными. Дата/время: ВТ 01:18.",
+        "en": "ScrapCom LLC, Portovaya St 7. Received: 1 (one) passenger car Lada Priora, plate GTA-777. Condition: running. Surrendered by: Taxidis R.G. (passport presented, series/number entered in register). Paid to owner: 25,000 roubles cash. Date/time: TUE 01:18.",
+        "tr": "ScrapCom LLC, Portovaya Cad. 7. Alındı: 1 (bir) binek otomobil Lada Priora, plaka GTA-777. Durum: çalışır. Teslim eden: Taxidis R.G. (pasaport ibraz edildi, seri/numara kayıt defterine girildi). Sahibine ödenen: 25.000 ruble nakit. Tarih/saat: SAL 01:18.",
+        "ar": "شركة ScrapCom، شارع بورتوفايا 7. مُستلَم: 1 (سيارة ركاب واحدة) لادا بريورا، لوحة GTA-777. الحالة: تعمل. سلّمه: تاكسيديس ر.غ. (جواز السفر مُقدَّم، السلسلة/الرقم مسجلان في السجل). المدفوع للمالك: 25,000 روبل نقدًا. التاريخ/الوقت: الثلاثاء 01:18.",
+        "kk": "«СтальКом» ЖШС, Портовая к., 7. Қабылданды: 1 (бір) Lada Priora жеңіл автомобилі, м/н GTA-777. Жағдайы: жүріп тұр. Өткізді: Таксидис Р.Г. (паспорт ұсынылды, серия/нөмірі тізілімге енгізілді). Иесіне төленді: 25 000 рубль қолма-қол. Күні/уақыты: СС 01:18."
       },
-      "isContradiction": false,
+      "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Смета разумна и соответствует размеру и типу постройки — завышения нет.",
-        "en": "The quote is reasonable and matches the size and type of the structure — no inflation.",
-        "tr": "Teklif makul ve yapının boyut ve türüne uygun — şişirme yok.",
-        "ar": "العرض معقول ويتناسب مع حجم ونوع المبنى — لا مبالغة فيه.",
-        "kk": "Смета орынды әрі құрылыстың көлемі мен түріне сай — асыра бағалау жоқ."
+        "ru": "Таксидис лично продал автомобиль за металлолом в 01:18 — за два часа до заявления об «угоне».",
+        "en": "Taxidis personally sold the car for scrap at 01:18 — two hours before reporting it 'stolen'.",
+        "tr": "Taxidis, arabayı kişisel olarak 01:18'de hurda olarak sattı — 'çalındığını' bildirmeden iki saat önce.",
+        "ar": "باع تاكسيديس السيارة شخصيًا كخردة في 01:18 — قبل ساعتين من الإبلاغ عن 'سرقتها'.",
+        "kk": "Таксидис автомобильді 01:18-де металл сынығы ретінде жеке сатты — «ұрланды» деп хабарлаудан екі сағат бұрын."
+      }
+    },
+    {
+      "id": "ev-harbor",
+      "type": "witness_statement",
+      "title": {
+        "ru": "Рапорт портовой охраны",
+        "en": "Harbour Patrol Report",
+        "tr": "Liman Devriye Raporu",
+        "ar": "تقرير دورية الميناء",
+        "kk": "Порт күзеті рапорты"
+      },
+      "content": {
+        "ru": "Около 03:50 наблюдал движение на пирсе Б. Один автомобиль медленно съехал с края и ушёл под воду. Водителя в салоне не было — машина явно двигалась под уклон. На переднем бампере обнаружены следы буксировочного троса (характерные царапины от металлического крюка).",
+        "en": "Around 03:50 I observed movement on Pier B. One vehicle slowly rolled off the edge and went under water. No driver in the cabin — the car was clearly rolling under gradient. Tow-rope marks found on the front bumper (characteristic scratches from a metal hook).",
+        "tr": "Saat 03:50 civarında B İskele'de hareket gözlemledim. Bir araç yavaşça kenardan kayıp suya gitti. Kabinde sürücü yoktu — araba açıkça eğimli ilerleyerek gidiyordu. Ön tamponda çekme halatı izleri bulundu (metal kancadan kaynaklanan karakteristik çizikler).",
+        "ar": "حوالي الساعة 03:50 لاحظت حركة على الرصيف B. انزلقت سيارة ببطء عن الحافة وغرقت تحت الماء. لم يكن في المقصورة أي سائق — كانت السيارة تتحرك بوضوح على منحدر. وُجدت على الصدام الأمامي آثار حبل سحب (خدوش مميزة من خطاف معدني).",
+        "kk": "Шамамен 03:50-де Б пирсінде қозғалыс байқадым. Бір автомобиль жай жылдамдықпен шеттен мүлгіп, суға кетті. Салонда жүргізуші болмады — машина анық еңістіктен жылжыды. Алдыңғы бампердан буксирлеу тросының іздері табылды (металл ілгектен тән сызықтар)."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Машина была отбуксирована на пирс и столкнута в воду — инсценировка «угона» после продажи в металлолом.",
+        "en": "The car was towed to the pier and pushed into the water — staging a 'theft' after selling it for scrap.",
+        "tr": "Araç iskelaya çekilip suya atıldı — hurda olarak satıldıktan sonra 'hırsızlık' sahnelendi.",
+        "ar": "سُحبت السيارة إلى الرصيف ودُفعت إلى الماء — لإخراج مشهد 'السرقة' بعد بيعها كخردة.",
+        "kk": "Автомобиль пирсқа сүйреп апарылып, суға итерілді — металл сынығы ретінде сатқаннан кейін «ұрлықты» қоюлау."
       }
     }
   ],
-  "correctDecision": "approve",
+  "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Метеосеть зафиксировала разряд молнии у фермы в заявленное время.",
-      "Пожарные и узор Лихтенберга подтверждают: причина — молния, не поджог.",
-      "Смета адекватна — случай подлинный, выплату одобрить."
+      "GPS фиксирует машину на металлоломном пункте в 01:15 — за 2 часа до заявления об угоне.",
+      "Квитанция подтверждает: Таксидис лично сдал авто за наличные и расписался.",
+      "Портовая охрана видела буксируемую и намеренно утопленную машину — без водителя.",
+      "Схема: продать → инсценировать угон → получить КАСКО. В выплате отказать."
     ],
     "en": [
-      "The weather network logged a lightning strike at the farm at the stated time.",
-      "The fire report and Lichtenberg pattern confirm lightning, not arson.",
-      "The quote is reasonable — the case is genuine, approve the payout."
+      "GPS records the car at the scrap yard at 01:15 — 2 hours before the theft report.",
+      "The receipt confirms Taxidis personally handed over the car for cash and signed.",
+      "Harbour patrol saw the car towed and deliberately sunk — without a driver.",
+      "The scheme: sell → stage theft → collect KASKO. Reject the claim."
     ],
     "tr": [
-      "Meteoroloji ağı, belirtilen saatte çiftlikte yıldırım çarpmasını kaydetti.",
-      "İtfaiye raporu ve Lichtenberg deseni yıldırımı doğruluyor, kundaklama değil.",
-      "Teklif makul — durum gerçek, ödeme onaylanmalı."
+      "GPS, arabayı 01:15'te hurdacıda kaydediyor — hırsızlık ihbarından 2 saat önce.",
+      "Makbuz doğruluyor: Taxidis arabayı nakit karşılığında kişisel olarak teslim etti ve imzaladı.",
+      "Liman devriyesi, sürücüsüz çekilen ve kasıtlı olarak batırılan arabayı gördü.",
+      "Şema: sat → hırsızlık sahne koy → KASKO tahsil et. Talebi reddedin."
     ],
     "ar": [
-      "سجّلت شبكة الأرصاد ضربة برق في المزرعة في الوقت المذكور.",
-      "تقرير الإطفاء ونمط ليختنبرغ يؤكدان البرق وليس الإشعال المتعمّد.",
-      "العرض معقول — الحالة حقيقية، يجب الموافقة على الدفع."
+      "يسجل GPS السيارة في ساحة الخردة الساعة 01:15 — قبل ساعتين من بلاغ السرقة.",
+      "يؤكد الإيصال: سلّم تاكسيديس السيارة شخصيًا مقابل نقود ووقّع.",
+      "رأت دورية الميناء السيارة تُسحب وتُغرق عمدًا — بدون سائق.",
+      "المخطط: بيع ← تمثيل السرقة ← تحصيل KASKO. رفض المطالبة."
     ],
     "kk": [
-      "Метеожелі көрсетілген уақытта фермада найзағай түскенін тіркеді.",
-      "Өрт есебі мен Лихтенберг өрнегі найзағайды растайды, қасақана өрт емес.",
-      "Смета орынды — жағдай шынайы, төлемді мақұлдау керек."
+      "GPS автомобильді 01:15-те металл сынықтары пунктінде тіркейді — ұрлық туралы хабарлаудан 2 сағат бұрын.",
+      "Түбіртек растайды: Таксидис автоны қолма-қол ақшаға жеке өткізіп, қол қойды.",
+      "Порт күзеті жүргізушісіз сүйретілген және қасақана батырылған машинаны көрді.",
+      "Схема: сат → ұрлықты ойна → КАСКО жина. Талаптан бас тарту."
     ]
   }
 }

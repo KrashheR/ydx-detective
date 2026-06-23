@@ -185,7 +185,7 @@ export function CaseFile({
                 {caseData.client.meta.map((row, i) => (
                   <Fragment key={i}>
                     <div className="whitespace-nowrap text-[10px] font-medium text-[#9ca3af] md:text-[11px]">
-                      {row.k}
+                      {loc(row.k, lang)}
                     </div>
                     <div className="font-mono text-[10px] font-semibold text-[#374151] md:text-[11px]">
                       {row.v}

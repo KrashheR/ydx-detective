@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  @keyframes sheetIn{from{transform:translateY(26px) rotate(-3deg) scale(.96)}to{transform:translateY(0) rotate(-1deg) scale(1)}}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @keyframes checkPop{0%{opacity:0;transform:scale(.4)}60%{transform:scale(1.12)}100%{opacity:1;transform:scale(1)}}
+</style>
+</helmet>
+
+<div dir="{{ dir }}" style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; padding:24px; background:rgba(17,24,39,.8); font-family:'Inter',sans-serif;">
+  <div style="position:relative; width:100%; max-width:380px; background:#f3f4f6; border-radius:9px; box-shadow:0 1px 2px rgba(0,0,0,.3), 0 26px 60px rgba(0,0,0,.55); padding:28px 26px 22px; transform:rotate(-1deg); animation:sheetIn .42s cubic-bezier(.2,.9,.3,1) both; text-align:start;">
+
+    <!-- seal + eyebrow -->
+    <div style="display:flex; align-items:center; gap:11px;">
+      <div style="width:38px; height:38px; flex:none; border-radius:50%; border:2px solid #2563eb; display:flex; align-items:center; justify-content:center; transform:rotate(-8deg);">
+        <div style="width:26px; height:26px; border-radius:50%; border:1px solid #2563eb; display:flex; align-items:center; justify-content:center; font:700 13px 'IBM Plex Serif'; color:#2563eb;">★</div>
+      </div>
+      <div>
+        <div style="font:600 11px 'IBM Plex Serif'; letter-spacing:2.5px; color:#1f2937; text-transform:uppercase;">{{ eyebrow }}</div>
+        <div style="font:400 10px 'Inter'; letter-spacing:1px; color:#9ca3af; margin-top:1px;">{{ refNo }}</div>
+      </div>
+    </div>
+    <div style="height:1px; background:#d1d5db; margin:16px 0 18px;"></div>
+
+    <sc-if value="{{ isResult }}" hint-placeholder-val="{{ true }}">
+      <div style="font:600 22px/1.3 'IBM Plex Serif'; color:#1f2937; text-wrap:pretty;">{{ title }}</div>
+      <p style="margin:11px 0 0; font:400 14px/1.6 'Inter'; color:rgba(31,41,55,.72);">{{ body }}</p>
+
+      <!-- decorative ink stars -->
+      <div style="display:flex; gap:7px; justify-content:center; margin:20px 0 22px;">
+        <svg width="30" height="30" viewBox="0 0 24 24" style="transform:rotate(-6deg); opacity:.92;"><path d="M12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21z" fill="#d97706"/></svg>
+        <svg width="30" height="30" viewBox="0 0 24 24" style="transform:rotate(3deg);"><path d="M12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21z" fill="#d97706"/></svg>
+        <svg width="30" height="30" viewBox="0 0 24 24" style="transform:rotate(-3deg); opacity:.96;"><path d="M12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21z" fill="#d97706"/></svg>
+        <svg width="30" height="30" viewBox="0 0 24 24" style="transform:rotate(5deg); opacity:.9;"><path d="M12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21z" fill="#d97706"/></svg>
+        <svg width="30" height="30" viewBox="0 0 24 24" style="transform:rotate(-7deg); opacity:.88;"><path d="M12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21z" fill="#d97706"/></svg>
+      </div>
+
+      <button onClick="{{ onRate }}" style="width:100%; min-height:50px; border:none; border-radius:9px; background:#2563eb; color:#fff; font:700 15px 'Inter'; letter-spacing:.3px; cursor:pointer; transition:filter .15s ease;" style-hover="filter:brightness(1.1)">{{ cta }}</button>
+      <button onClick="{{ onDismiss }}" style="width:100%; min-height:48px; margin-top:10px; border:1.5px solid #c9cdd3; border-radius:9px; background:transparent; color:#374151; font:600 14px 'Inter'; cursor:pointer; transition:background .15s ease;" style-hover="background:rgba(0,0,0,.04)">{{ later }}</button>
+      <div onClick="{{ onNever }}" style="text-align:center; margin-top:14px; font:500 12px 'Inter'; color:#9ca3af; cursor:pointer; text-decoration:underline; text-underline-offset:2px;">{{ never }}</div>
+    </sc-if>
+
+    <sc-if value="{{ isSubmitting }}" hint-placeholder-val="{{ false }}">
+      <div style="padding:26px 0 30px; display:flex; flex-direction:column; align-items:center; gap:18px;">
+        <div style="width:40px; height:40px; border-radius:50%; border:3px solid #d1d5db; border-top-color:#2563eb; animation:spin .8s linear infinite;"></div>
+        <div style="font:500 14px 'Inter'; color:rgba(31,41,55,.7); text-align:center;">{{ submittingText }}</div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isDone }}" hint-placeholder-val="{{ false }}">
+      <div style="padding:22px 0 28px; display:flex; flex-direction:column; align-items:center; gap:16px;">
+        <div style="width:54px; height:54px; border-radius:50%; background:#16a34a; display:flex; align-items:center; justify-content:center; animation:checkPop .4s cubic-bezier(.2,1.3,.35,1); font-size:26px; color:#fff;">✓</div>
+        <div style="font:600 18px 'IBM Plex Serif'; color:#1f2937; text-align:center;">{{ doneTitle }}</div>
+        <p style="margin:0; font:400 13px/1.55 'Inter'; color:rgba(31,41,55,.65); text-align:center;">{{ doneBody }}</p>
+      </div>
+    </sc-if>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:440,&quot;height&quot;:520},&quot;dir&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;ltr&quot;,&quot;rtl&quot;],&quot;default&quot;:&quot;ltr&quot;,&quot;tsType&quot;:&quot;'ltr'|'rtl'&quot;},&quot;forcedState&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;result&quot;,&quot;submitting&quot;,&quot;done&quot;],&quot;default&quot;:&quot;result&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;eyebrow&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;ДЕПАРТАМЕНТ РАССЛЕДОВАНИЙ&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;title&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Дело раскрыто. Отличная работа, детектив.&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;body&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Ваша внимательность помогает разоблачать мошенников. Понравилась игра? Оцените её — это поможет другим найти это расследование.&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;cta&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Оценить&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;later&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Не сейчас&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;never&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Больше не предлагать&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { phase: null };
+
+  phaseNow(){ return this.state.phase || this.props.forcedState || 'result'; }
+
+  onRate = () => {
+    this.setState({ phase:'submitting' });
+    clearTimeout(this._a); clearTimeout(this._b);
+    this._a = setTimeout(() => this.setState({ phase:'done' }), 1400);
+    this._b = setTimeout(() => this.setState({ phase:'result' }), 4200);
+  };
+  onDismiss = () => { this.setState({ phase:'done2' }); clearTimeout(this._c); this._c = setTimeout(() => this.setState({ phase:'result' }), 1400); };
+  onNever = () => { this.setState({ phase:'done2' }); clearTimeout(this._c); this._c = setTimeout(() => this.setState({ phase:'result' }), 1600); };
+
+  renderVals(){
+    const p = this.phaseNow();
+    return {
+      dir: this.props.dir || 'ltr',
+      eyebrow: this.props.eyebrow ?? 'ДЕПАРТАМЕНТ РАССЛЕДОВАНИЙ',
+      refNo: this.props.refNo ?? 'Форма ОС-5 · обратная связь',
+      title: this.props.title ?? 'Дело раскрыто. Отличная работа, детектив.',
+      body: this.props.body ?? 'Ваша внимательность помогает разоблачать мошенников. Понравилась игра? Оцените её — это поможет другим найти это расследование.',
+      cta: this.props.cta ?? 'Оценить',
+      later: this.props.later ?? 'Не сейчас',
+      never: this.props.never ?? 'Больше не предлагать',
+      submittingText: this.props.submittingText ?? 'Открываем оценку Яндекса…',
+      doneTitle: this.props.doneTitle ?? 'Спасибо за отзыв',
+      doneBody: this.props.doneBody ?? 'Это помогает другим найти игру.',
+      isResult: p === 'result',
+      isSubmitting: p === 'submitting',
+      isDone: p === 'done' || p === 'done2',
+      onRate: this.onRate, onDismiss: this.onDismiss, onNever: this.onNever,
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -157,18 +157,18 @@ export function ResultSheet({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
-      {/* Dark outer wrapper matching design */}
+      {/* Neutral wrapper: the cream result sheet stands on its own without a dark frame. */}
       <motion.div
         ref={dialogRef}
         role="dialog"
         aria-modal="true"
         aria-labelledby={resultTitleId}
         aria-describedby={resultDescId}
-        className="relative max-h-full w-full max-w-[430px] overflow-auto"
+        className="relative max-h-full w-full max-w-[430px] overflow-auto focus:outline-none"
         style={{
-          background: "#1f1812",
-          borderRadius: 18,
-          padding: 22,
+          background: "transparent",
+          borderRadius: 11,
+          padding: 0,
           boxShadow: "0 24px 60px rgba(0,0,0,.5)",
         }}
         initial={{ y: 16, opacity: 0, scale: 0.985 }}

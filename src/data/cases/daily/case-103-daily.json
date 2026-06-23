@@ -2,143 +2,210 @@
   "id": "case-103-daily",
   "type": "daily",
   "difficulty": "hard",
-  "claimAmount": 9000,
+  "claimAmount": 3800000,
   "truth": "fraud",
   "title": {
-    "ru": "Показания попугая",
-    "en": "The Parrot's Testimony",
-    "tr": "Papağanın Tanıklığı",
-    "ar": "شهادة الببغاء",
-    "kk": "Тотықұстың куәлігі"
+    "ru": "Лицензия на убыток",
+    "en": "Licence to Lose",
+    "tr": "Kayıp Lisansı",
+    "ar": "رخصة للخسارة",
+    "kk": "Шығынға лицензия"
   },
   "claim": {
     "person": {
-      "ru": "Лоренцо Бьянки",
-      "en": "Lorenzo Bianchi",
-      "tr": "Lorenzo Bianchi",
-      "ar": "لورنزو بيانكي",
-      "kk": "Лоренцо Бьянки"
+      "ru": "Джеймс Бондаренко, 42 года",
+      "en": "James Bondarenko, 42",
+      "tr": "James Bondarenko, 42",
+      "ar": "جيمس بونداريكو، 42",
+      "kk": "Джеймс Бондаренко, 42 жаста"
     },
     "story": {
-      "ru": "Пока я был в отъезде, из моей квартиры украли ценную картину. Даже мой попугай был травмирован — он до сих пор пугается. Прошу выплату за картину.",
-      "en": "While I was away, a valuable painting was stolen from my flat. Even my parrot was traumatized — he still gets startled. I'm requesting a payout for the painting.",
-      "tr": "Ben uzaktayken dairemden değerli bir tablo çalındı. Papağanım bile travma geçirdi — hâlâ ürküyor. Tablo için ödeme talep ediyorum.",
-      "ar": "بينما كنت مسافراً، سُرقت لوحة ثمينة من شقتي. حتى ببغائي أُصيب بصدمة — لا يزال يفزع. أطلب تعويضاً عن اللوحة.",
-      "kk": "Мен жоқта пәтерімнен құнды сурет ұрланды. Тіпті тотықұсым да жарақат алды — әлі күнге дейін шошып кетеді. Сурет үшін төлем сұраймын."
+      "ru": "Я корпоративный консультант по безопасности компании «МИ-7 Консалтинг». В ходе оперативного преследования враждебных агентов мой автомобиль «Астон Фантини DB9» был намеренно протаранен чёрным внедорожником и сброшен с моста Новый Ваксхолл. Прошу полного возмещения: 3 800 000 рублей.",
+      "en": "I am a corporate security consultant for MI-7 Consulting. During an operational pursuit of hostile agents, my Aston Fantini DB9 was deliberately rammed by a black SUV and pushed off the New Vauxhall Bridge. I request full compensation: 3,800,000 roubles.",
+      "tr": "MI-7 Consulting şirketinin kurumsal güvenlik danışmanıyım. Düşman ajanlarının operasyonel takibi sırasında Aston Fantini DB9 aracım siyah bir SUV tarafından kasıtlı olarak çarptı ve Yeni Vauxhall Köprüsü'nden düşürüldü. Tam tazminat talep ediyorum: 3.800.000 ruble.",
+      "ar": "أنا مستشار أمني مؤسسي لشركة MI-7 Consulting. خلال ملاحقة تشغيلية للعملاء المعادين، اصطدم أستون فانتيني DB9 الخاص بي عمدًا بمركبة SUV سوداء وأُسقط من جسر فوكسهول الجديد. أطلب تعويضًا كاملاً: 3,800,000 روبل.",
+      "kk": "Мен «МИ-7 Консалтинг» компаниясының корпоративтік қауіпсіздік кеңесшісімін. Жауласушы агенттерді оперативтік қудалау барысында «Астон Фантини DB9» автомобилім қара джиппен қасақана соғылып, Жаңа Ваксхолл көпірінен лақтырылды. Толық өтемақы сұраймын: 3 800 000 рубль."
     }
   },
   "coverImage": "covers/case-103-daily.svg",
-  "personImage": "people/lorenzo.svg",
+  "personImage": "people/james-bon.webp",
   "evidences": [
     {
-      "id": "ev-parrotcam",
-      "type": "camera_recording",
+      "id": "ev-witness",
+      "type": "witness_statement",
       "title": {
-        "ru": "Запись с «ParrotCam»",
-        "en": "'ParrotCam' Recording",
-        "tr": "'ParrotCam' Kaydı",
-        "ar": "تسجيل 'ParrotCam'",
-        "kk": "«ParrotCam» жазбасы"
+        "ru": "Показания охранника моста",
+        "en": "Bridge Security Guard Statement",
+        "tr": "Köprü Güvenlik Görevlisi İfadesi",
+        "ar": "إفادة حارس الجسر",
+        "kk": "Көпір күзетшісінің жауабы"
       },
       "content": {
-        "ru": "Камера слежения за питомцем в 09:10 в день «отъезда» снимает самого Лоренцо: он снимает картину со стены и заворачивает её в плёнку. Попугай повторяет его голос: «Тихо-тихо, никому ни слова».",
-        "en": "The pet-monitoring camera at 09:10 on the day of his 'absence' films Lorenzo himself taking the painting off the wall and wrapping it in plastic. The parrot mimics his voice: 'Quiet now, not a word to anyone.'",
-        "tr": "Evcil hayvan izleme kamerası 'yokluğu' günü 09:10'da bizzat Lorenzo'yu tabloyu duvardan indirip naylona sararken çekiyor. Papağan onun sesini taklit ediyor: 'Sessiz ol, kimseye tek kelime yok.'",
-        "ar": "كاميرا مراقبة الحيوان الأليف في الساعة 09:10 يوم 'غيابه' تصوّر لورنزو نفسه وهو ينزع اللوحة عن الجدار ويلفّها بالبلاستيك. الببغاء يقلّد صوته: 'اهدأ الآن، لا كلمة لأحد.'",
-        "kk": "Үй жануарын бақылау камерасы «жоқ болған» күні 09:10-де Лоренконың өзін түсіреді: ол суретті қабырғадан алып, пленкаға орайды. Тотықұс оның даусын қайталайды: «Тыныш бол, ешкімге тіс жарма»."
+        "ru": "Никакого чёрного внедорожника не было. Я дежурю на мосту с 22:00. Около 23:48 увидел мужчину в смокинге, который разогнался и с разгона влетел в парапет. Перед этим он позвонил кому-то и что-то кричал про «невероятный трюк». На другом берегу стояла женщина с бокалом шампанского. Она захлопала в ладоши.",
+        "en": "There was no black SUV. I have been on duty on the bridge since 22:00. At around 23:48 I saw a man in a tuxedo who accelerated and drove straight into the parapet. Before that he called someone and was shouting something about an 'incredible stunt'. A woman with a glass of champagne was standing on the other side. She clapped.",
+        "tr": "Siyah bir SUV yoktu. Köprüde 22:00'den beri nöbetteyim. Yaklaşık 23:48'de smokin giyen bir adamın hızlanıp parasamuşa çarptığını gördüm. Öncesinde birini arayıp 'inanılmaz bir numara' hakkında bir şeyler bağırıyordu. Öte yanda elinde bir şampanya kadehi olan bir kadın duruyordu. Alkışladı.",
+        "ar": "لم تكن هناك سيارة SUV سوداء. أنا في الخدمة على الجسر منذ الساعة 22:00. حوالي الساعة 23:48 رأيت رجلاً يرتدي بدلة سهرة يسرع ويندفع مباشرة نحو الحاجز. قبل ذلك اتصل بشخص ما وكان يصرخ عن 'حيلة رائعة'. كانت امرأة تحمل كأس شامبانيا تقف على الجانب الآخر. صفّقت.",
+        "kk": "Ешқандай қара джип болмады. Мен 22:00-ден бері көпірде кезекте тұрмын. Шамамен 23:48-де фрак киген ер адам жылдамдатып, парапетке тіке кірді. Алдын ала ол біреуге қоңырау шалып, «ғажайып трюк» туралы бірдеңе айқайлады. Арғы жақта шампан стаканымен тұрған әйел болды. Ол қол шапалақтады."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Камера показывает, что картину снял сам заявитель в тот самый день, когда он якобы был в отъезде — кражи не было.",
-        "en": "The camera shows the claimant himself took the painting on the very day he claimed to be away — there was no theft.",
-        "tr": "Kamera, talep sahibinin uzakta olduğunu iddia ettiği günde tabloyu bizzat aldığını gösteriyor — hırsızlık yoktu.",
-        "ar": "تُظهر الكاميرا أن صاحب المطالبة نفسه أخذ اللوحة في اليوم ذاته الذي زعم فيه غيابه — لم تكن هناك سرقة.",
-        "kk": "Камера өтініш берушінің суретті өзі жоқ деген күні алғанын көрсетеді — ұрлық болған жоқ."
+        "ru": "Свидетель видел не таран, а намеренное падение с моста — без какого-либо второго автомобиля.",
+        "en": "The witness saw not a ram, but a deliberate plunge off the bridge — with no second vehicle involved.",
+        "tr": "Tanık, çarpışmayı değil, ikinci bir araç olmaksızın köprüden kasıtlı düşüşü gördü.",
+        "ar": "شهد الشاهد ليس اصطدامًا بل سقوطًا متعمدًا من الجسر — دون أي مركبة ثانية.",
+        "kk": "Куәгер соқтығысты емес, ешқандай екінші автомобильсіз көпірден қасақана түсуді көрді."
+      }
+    },
+    {
+      "id": "ev-gps",
+      "type": "gps",
+      "title": {
+        "ru": "GPS-трек автомобиля",
+        "en": "Vehicle GPS Track",
+        "tr": "Araç GPS İzi",
+        "ar": "مسار GPS للمركبة",
+        "kk": "Автомобильдің GPS-бағыты"
+      },
+      "content": {
+        "ru": [
+          "22:30 — Казино «Роял-7», Невский просп. (стоянка)",
+          "23:44 — Мост Новый Ваксхолл (въезд со стороны казино)",
+          "23:48 — [сигнал потерян: падение с моста]",
+          "Второй автомобиль в радиусе 200 м на мосту: не зафиксирован",
+          "Скорость перед падением: 87 км/ч (ускорение от 40 км/ч за 14 сек)"
+        ],
+        "en": [
+          "22:30 — Casino Royal-7, Nevsky Ave (parking)",
+          "23:44 — New Vauxhall Bridge (approach from casino side)",
+          "23:48 — [signal lost: bridge plunge]",
+          "Second vehicle within 200 m radius on the bridge: none detected",
+          "Speed before plunge: 87 km/h (accelerating from 40 km/h over 14 sec)"
+        ],
+        "tr": [
+          "22:30 — Royal-7 Kumarhane, Nevsky Bulvarı (otopark)",
+          "23:44 — Yeni Vauxhall Köprüsü (kumarhaneden yaklaşım)",
+          "23:48 — [sinyal kayboldu: köprüden düşüş]",
+          "Köprüde 200 m yarıçapında ikinci araç: tespit edilmedi",
+          "Düşüşten önceki hız: 87 km/s (14 saniyede 40 km/s'den hızlanma)"
+        ],
+        "ar": [
+          "22:30 — كازينو رويال-7، شارع نيفسكي (موقف سيارات)",
+          "23:44 — جسر فوكسهول الجديد (اقتراب من جانب الكازينو)",
+          "23:48 — [فُقد الإشارة: السقوط من الجسر]",
+          "مركبة ثانية في نطاق 200 م على الجسر: لم تُرصد",
+          "السرعة قبل السقوط: 87 كم/ساعة (تسريع من 40 كم/ساعة خلال 14 ثانية)"
+        ],
+        "kk": [
+          "22:30 — «Роял-7» казиносы, Невский даңғылы (тұрақ)",
+          "23:44 — Жаңа Ваксхолл көпірі (казино жағынан жақындау)",
+          "23:48 — [сигнал жоғалды: көпірден құлау]",
+          "Көпірдегі 200 м радиусындағы екінші автомобиль: тіркелмеді",
+          "Құлаудан бұрынғы жылдамдық: 87 км/с (14 секундта 40 км/с-тен жеделдету)"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "GPS фиксирует преднамеренное ускорение и отсутствие второго автомобиля. Сначала — казино, потом — мост. Оперативного задания не было.",
+        "en": "GPS records deliberate acceleration and the absence of a second vehicle. Casino first, then bridge. No operational mission.",
+        "tr": "GPS, kasıtlı hızlanmayı ve ikinci araç yokluğunu kaydediyor. Önce kumarhane, sonra köprü. Operasyonel görev yok.",
+        "ar": "يسجل GPS التسريع المتعمد وغياب مركبة ثانية. الكازينو أولاً ثم الجسر. لا مهمة تشغيلية.",
+        "kk": "GPS қасақана жеделдетуді және екінші автомобильдің жоқтығын тіркейді. Алдымен казино, содан соң көпір. Оперативтік тапсырма болмады."
       },
       "meta": {
-        "cameraId": "PET-01",
-        "cameraModel": "Eufy Cam S220 · 2K · H.265"
+        "company": "МИ-7 Трекинг",
+        "department": "Корпоративная безопасность",
+        "requestId": "MI7-103-007",
+        "gpsFooter": "Спутниковые точки подтверждены"
       }
     },
     {
-      "id": "ev-listing",
-      "type": "document",
+      "id": "ev-phone",
+      "type": "phone_records",
       "title": {
-        "ru": "Объявление на маркетплейсе",
-        "en": "Marketplace Listing",
-        "tr": "Pazaryeri İlanı",
-        "ar": "إعلان في سوق إلكتروني",
-        "kk": "Маркетплейстегі хабарландыру"
+        "ru": "Детализация звонков",
+        "en": "Call Records",
+        "tr": "Arama Kayıtları",
+        "ar": "سجلات المكالمات",
+        "kk": "Қоңырау жазбалары"
       },
       "content": {
-        "ru": "Скриншот: с аккаунта «l.bianchi» выставлена та же картина с подписью «срочно, частная продажа, без посредников», цена 7 200 €, опубликовано через два дня после «кражи».",
-        "en": "Screenshot: the same painting is listed from the account 'l.bianchi' captioned 'urgent, private sale, no middlemen', priced at €7,200, posted two days after the 'theft'.",
-        "tr": "Ekran görüntüsü: aynı tablo 'l.bianchi' hesabından 'acil, özel satış, aracısız' notuyla 7.200 € fiyatla listelenmiş, 'hırsızlıktan' iki gün sonra paylaşılmış.",
-        "ar": "لقطة شاشة: اللوحة نفسها معروضة من حساب 'l.bianchi' بعنوان 'عاجل، بيع خاص، بدون وسطاء'، بسعر 7,200 يورو، نُشر بعد يومين من 'السرقة'.",
-        "kk": "Скриншот: «l.bianchi» аккаунтынан дәл сол сурет «шұғыл, жеке сату, делдалсыз» деген жазумен, бағасы 7 200 €, «ұрлықтан» екі күн кейін жарияланған."
+        "ru": [
+          "23:45 — исходящий, контакт «Манипени Я.», 47 сек.",
+          "Голосовое сообщение (расшифровка): «Смотри. Сейчас я сделаю кое-что невероятное. Это будет красиво. Помни меня.»",
+          "23:49 — входящий от Манипени Я.: «Джеймс! Ты что — идиот?!»",
+          "Звонков в экстренные службы с аппарата не зафиксировано"
+        ],
+        "en": [
+          "23:45 — outgoing, contact 'Manipeni Y.', 47 sec.",
+          "Voice message (transcript): 'Watch. I am going to do something incredible right now. It will be beautiful. Remember me.'",
+          "23:49 — incoming from Manipeni Y.: 'James! Are you an idiot?!'",
+          "No emergency calls made from the device"
+        ],
+        "tr": [
+          "23:45 — giden, kişi 'Manipeni Y.', 47 sn.",
+          "Sesli mesaj (transkript): 'Bak. Şu an inanılmaz bir şey yapacağım. Güzel olacak. Beni hatırla.'",
+          "23:49 — Manipeni Y.'den gelen: 'James! Sen aptal mısın?!'",
+          "Cihazdan acil servis araması kaydedilmedi"
+        ],
+        "ar": [
+          "23:45 — صادر، جهة الاتصال 'مانيبيني ي.'، 47 ثانية.",
+          "رسالة صوتية (نص): 'انظري. سأفعل شيئًا رائعًا الآن. سيكون جميلاً. تذكريني.'",
+          "23:49 — وارد من مانيبيني ي.: 'جيمس! هل أنت أحمق؟!'",
+          "لم تُسجَّل أي مكالمات طوارئ من الجهاز"
+        ],
+        "kk": [
+          "23:45 — шығыс, «Манипени Я.» контакты, 47 сек.",
+          "Дауыстық хабар (транскрипция): «Қара. Мен қазір бірдеңе ғажайып жасаймын. Бұл әдемі болады. Мені есте сақта.»",
+          "23:49 — Манипени Я.-дан кіріс: «Джеймс! Сен ақымақ па?!»",
+          "Аппараттан жедел қызметтерге қоңырау тіркелмеді"
+        ]
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "«Украденную» картину продаёт сам владелец вскоре после заявления — это прямое доказательство обмана.",
-        "en": "The 'stolen' painting is being sold by the owner himself soon after the claim — direct proof of deception.",
-        "tr": "'Çalınan' tablo, talepten kısa süre sonra bizzat sahibi tarafından satılıyor — aldatmacanın doğrudan kanıtı.",
-        "ar": "اللوحة 'المسروقة' يبيعها المالك نفسه بعد المطالبة بفترة وجيزة — دليل مباشر على الخداع.",
-        "kk": "«Ұрланған» суретті иесінің өзі арыздан кейін көп ұзамай сатуда — алдаудың тікелей дәлелі."
-      }
-    },
-    {
-      "id": "ev-appraisal",
-      "type": "document",
-      "title": {
-        "ru": "Оценка картины",
-        "en": "Painting Appraisal",
-        "tr": "Tablo Değerleme Raporu",
-        "ar": "تقييم اللوحة",
-        "kk": "Суреттің бағалауы"
+        "ru": "За три минуты до падения с моста Бондаренко позвонил женщине и прямо сказал, что собирается «сделать кое-что невероятное». Это трюк, не погоня.",
+        "en": "Three minutes before driving off the bridge, Bondarenko called a woman and plainly announced he was going to 'do something incredible'. It was a stunt, not a chase.",
+        "tr": "Köprüden düşmeden üç dakika önce Bondarenko bir kadını aradı ve açıkça 'inanılmaz bir şey yapacağını' duyurdu. Bu bir gösteriş, takip değil.",
+        "ar": "قبل ثلاث دقائق من القفز عن الجسر، اتصل بونداريكو بامرأة وأعلن صراحةً أنه سيفعل 'شيئًا رائعًا'. كان استعراضًا لا مطاردة.",
+        "kk": "Көпірден секірмес бұрын үш минут бұрын Бондаренко бір әйелге қоңырау шалып, «бірдеңе ғажайып жасайтынын» тікелей хабарлады. Бұл трюк болды, қуу емес."
       },
-      "content": {
-        "ru": "Заключение оценщика: масло, холст, ранний XX век, рыночная стоимость около 9 000 €. Подлинность подтверждена, провенанс в порядке.",
-        "en": "Appraiser's report: oil on canvas, early 20th century, market value about €9,000. Authenticity confirmed, provenance in order.",
-        "tr": "Eksper raporu: tuval üzerine yağlıboya, 20. yüzyıl başı, piyasa değeri yaklaşık 9.000 €. Orijinallik onaylandı, menşe kayıtları düzgün.",
-        "ar": "تقرير المثمّن: زيت على قماش، أوائل القرن العشرين، قيمة سوقية نحو 9,000 يورو. الأصالة مؤكدة، وسجل المصدر سليم.",
-        "kk": "Бағалаушының қорытындысы: кенепке май бояу, ХХ ғасыр басы, нарықтық құны шамамен 9 000 €. Түпнұсқалығы расталған, шығу тегі дұрыс."
-      },
-      "isContradiction": false,
-      "contradictionExplanation": {
-        "ru": "Оценка лишь подтверждает ценность картины и сама по себе делу не противоречит.",
-        "en": "The appraisal merely confirms the painting's value and does not contradict the case on its own.",
-        "tr": "Değerleme yalnızca tablonun değerini doğrular ve tek başına davayla çelişmez.",
-        "ar": "التقييم يؤكد فقط قيمة اللوحة ولا يتعارض وحده مع القضية.",
-        "kk": "Бағалау тек суреттің құнын растайды және өздігінен іске қайшы келмейді."
+      "meta": {
+        "operator": "МегаСвязь",
+        "period": "23:00–24:00",
+        "requestId": "MS-DETAIL-103-007"
       }
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "ParrotCam снял, как сам Лоренцо снимает картину в день «отъезда».",
-      "Та же картина выставлена на продажу с его аккаунта после «кражи».",
-      "Кражи не было — заявление мошенническое, отказать."
+      "Охранник моста не видел никакого внедорожника — только мужчину в смокинге, который сам разогнался и прыгнул с моста.",
+      "GPS подтверждает: заезд с казино, умышленное ускорение до 87 км/ч, никакого второго автомобиля.",
+      "Звонок за три минуты до падения — прямое подтверждение: это был спланированный трюк, а не погоня.",
+      "Лицензии на убыток не выдаём. В выплате отказать."
     ],
     "en": [
-      "ParrotCam filmed Lorenzo himself taking the painting on his 'away' day.",
-      "The same painting is listed for sale from his account after the 'theft'.",
-      "There was no theft — the claim is fraudulent, reject."
+      "The bridge guard saw no SUV — only a man in a tuxedo who deliberately accelerated and launched himself off the bridge.",
+      "GPS confirms: approach from the casino, intentional acceleration to 87 km/h, no second vehicle.",
+      "A call three minutes before the plunge is direct evidence: it was a planned stunt, not a chase.",
+      "We don't issue licences to lose. Reject the claim."
     ],
     "tr": [
-      "ParrotCam, Lorenzo'yu 'yokluğu' günü tabloyu alırken çekti.",
-      "Aynı tablo 'hırsızlıktan' sonra hesabından satışa çıkarıldı.",
-      "Hırsızlık yoktu — talep sahte, reddet."
+      "Köprü bekçisi hiçbir SUV görmedi — sadece kasıtlı olarak hızlanan ve köprüden atlamaya kendini atan smokolu bir adam.",
+      "GPS doğruluyor: kumarhane yaklaşımı, 87 km/s'ye kasıtlı hızlanma, ikinci araç yok.",
+      "Düşüşten üç dakika önce yapılan arama doğrudan kanıt: planlı bir gösteriş, takip değil.",
+      "Kayıp lisansı vermiyoruz. Talebi reddedin."
     ],
     "ar": [
-      "صوّرت ParrotCam لورنزو نفسه يأخذ اللوحة يوم 'غيابه'.",
-      "اللوحة نفسها معروضة للبيع من حسابه بعد 'السرقة'.",
-      "لم تكن هناك سرقة — المطالبة احتيالية، ارفض."
+      "لم ير حارس الجسر أي سيارة SUV — فقط رجلاً يرتدي بدلة سهرة سرّع بتعمد وأطلق نفسه عن الجسر.",
+      "يؤكد GPS: الاقتراب من الكازينو، التسريع المتعمد إلى 87 كم/ساعة، لا مركبة ثانية.",
+      "مكالمة قبل ثلاث دقائق من السقوط دليل مباشر: كانت حيلة مخططة لا مطاردة.",
+      "لا نصدر رخص الخسارة. رفض المطالبة."
     ],
     "kk": [
-      "ParrotCam Лоренконың суретті «жоқ» күні алғанын түсірді.",
-      "Дәл сол сурет «ұрлықтан» кейін оның аккаунтынан сатылымда.",
-      "Ұрлық болған жоқ — талап алаяқтық, бас тарту."
+      "Көпір күзетшісі ешқандай джип көрмеді — тек фрак киген ер адам қасақана жылдамдатып, өзін көпірден лақтырды.",
+      "GPS растайды: казинодан жақындау, 87 км/с-ке қасақана жеделдету, екінші автомобиль жоқ.",
+      "Құлаудан үш минут бұрын жасалған қоңырау — тікелей дәлел: бұл жоспарланған трюк болды, қуу емес.",
+      "Шығынға лицензия бермейміз. Талаптан бас тарту."
     ]
   }
 }

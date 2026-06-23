@@ -27,9 +27,9 @@ function debutPosition(type: EvidenceType): number | null {
 describe('campaign difficulty curve', () => {
   it('ships the full expected standard roster (catches silently-skipped cases)', () => {
     // 33 standard cases: 21 reordered originals (incl. the once-orphan case-022)
-    // + 12 new expert-tier cases (case-023..034). A drop below this means a case
+    // + 17 expert-tier cases (case-023..039). A drop below this means a case
     // failed Zod validation at load and was silently skipped.
-    expect(standard.length).toBe(33);
+    expect(standard.length).toBe(38);
   });
 
   it('opens with two 2-evidence onboarding cases using only photo/document', () => {

@@ -96,7 +96,7 @@ These cut across the whole codebase; everything else lives in the docs above.
    missing counter / placeholder `counterId` makes every track call a silent no-op. Details: [docs/06](docs/06-yandex-platform.md).
 5. **All economy tuning lives in `src/config/gameConfig.ts`**, not in the engines — and bump
    `GAME_CONFIG.saveVersion` + extend `migrate()` whenever the persisted shape changes. Details: [docs/04](docs/04-economy-progression.md) / [docs/06](docs/06-yandex-platform.md).
-6. **The standard campaign is a difficulty curve.** 33 cases ordered by `(requiredLevel, caseNumber)`;
+6. **The standard campaign is a difficulty curve.** 38 cases ordered by `(requiredLevel, caseNumber)`;
    evidence count is **non-decreasing** along that order (2-evidence onboarding → 6-evidence expert),
    the first two cases use only `photo`/`document`, and the advanced types (`bank_statement`,
    `phone_records`, `social_media`) debut late (≥ pos 18). `requiredLevel` is a complexity tier capped at

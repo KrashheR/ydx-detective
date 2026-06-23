@@ -49,6 +49,12 @@ import case031 from './cases/case-031.json';
 import case032 from './cases/case-032.json';
 import case033 from './cases/case-033.json';
 import case034 from './cases/case-034.json';
+// Expert fan-service anthology — original insurance parodies of cult genre films.
+import case035 from './cases/case-035.json';
+import case036 from './cases/case-036.json';
+import case037 from './cases/case-037.json';
+import case038 from './cases/case-038.json';
+import case039 from './cases/case-039.json';
 
 // Daily cases — one surfaces per server-day via getDailyCase() rotation.
 import daily002 from './cases/daily/case-002-daily.json';
@@ -65,7 +71,8 @@ const RAW_CASES: unknown[] = [
   case017, case018, case019, case020, case021,
   case022, case023, case024, case025, case026,
   case027, case028, case029, case030, case031,
-  case032, case033, case034,
+  case032, case033, case034, case035, case036,
+  case037, case038, case039,
   daily002, daily101, daily102, daily103, daily104, daily105,
 ];
 

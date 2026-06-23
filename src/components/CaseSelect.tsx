@@ -96,9 +96,9 @@ export function CaseSelect({
               ) : (
                 <>
                   <span className="font-mono text-xs font-semibold text-[#5c3f08]">
-                    {t('returnsIn', lang)} {formatCountdown(dailyMsRemaining)}
+                    ▶ {t('watchAd', lang)}
                   </span>
-                  <span className="text-xs font-bold text-[#3a2705]">⏳</span>
+                  <span className="text-xs font-bold text-[#3a2705]">→</span>
                 </>
               )}
             </div>

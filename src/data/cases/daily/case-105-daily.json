@@ -1,169 +1,144 @@
 {
   "id": "case-105-daily",
   "type": "daily",
-  "difficulty": "medium",
-  "claimAmount": 4500,
+  "difficulty": "hard",
+  "claimAmount": 280000,
   "truth": "valid",
   "title": {
-    "ru": "Сбежавший батут",
-    "en": "The Runaway Trampoline",
-    "tr": "Kaçak Trambolin",
-    "ar": "الترامبولين الهارب",
-    "kk": "Қашқан батут"
+    "ru": "Взрыв соседнего блока",
+    "en": "The Neighbour's Block Exploded",
+    "tr": "Komşu Blok Patladı",
+    "ar": "انفجر بلوك الجار",
+    "kk": "Көршінің блогы жарылды"
   },
   "claim": {
     "person": {
-      "ru": "Шинейд О’Брайен",
-      "en": "Sinead O'Brien",
-      "tr": "Sinead O'Brien",
-      "ar": "شينيد أوبراين",
-      "kk": "Шинейд О’Брайен"
+      "ru": "Стив Блоков, 22 года",
+      "en": "Steve Blokov, 22",
+      "tr": "Steve Blokov, 22",
+      "ar": "ستيف بلوكوف، 22",
+      "kk": "Стив Блоков, 22 жаста"
     },
     "story": {
-      "ru": "Во время сильного шторма соседский батут перелетел через забор и пробил стеклянную крышу моей оранжереи. Прошу оплатить ремонт.",
-      "en": "During a severe windstorm, my neighbour's trampoline flew over the fence and smashed through the glass roof of my conservatory. I'm requesting payment for the repair.",
-      "tr": "Şiddetli bir fırtınada komşumun trambolini çitin üzerinden uçtu ve seramın cam çatısını kırarak içeri girdi. Onarım için ödeme talep ediyorum.",
-      "ar": "أثناء عاصفة هوائية شديدة، طار ترامبولين جاري فوق السياج واخترق السقف الزجاجي لشرفتي الزجاجية. أطلب دفع تكاليف الإصلاح.",
-      "kk": "Қатты дауыл кезінде көршінің батуты қоршаудан ұшып өтіп, менің шынылы верандамның төбесін бұзып өтті. Жөндеу ақысын төлеуді сұраймын."
+      "ru": "Я контент-криэйтор и стример. 14 апреля из-за газовой аварии в квартире соседа снизу (кв. 18) произошёл взрыв, уничтоживший мою стриминговую студию: игровой ПК, три монитора, аудиоинтерфейс и две профессиональные камеры. Общий ущерб — 280 000 рублей. Прошу возмещения по полису имущественного страхования.",
+      "en": "I am a content creator and streamer. On 14 April a gas accident in the apartment below mine (flat 18) caused an explosion that destroyed my streaming studio: gaming PC, three monitors, audio interface, and two professional cameras. Total damage — 280,000 roubles. I request compensation under the property insurance policy.",
+      "tr": "İçerik üreticisi ve yayıncıyım. 14 Nisan'da aşağımdaki komşunun dairesinde (daire 18) gaz kazası nedeniyle bir patlama meydana geldi ve yayın stüdyomu yok etti: oyun bilgisayarı, üç monitör, ses arabirimi ve iki profesyonel kamera. Toplam hasar — 280.000 ruble. Mülk sigortası kapsamında tazminat talep ediyorum.",
+      "ar": "أنا منشئ محتوى ومبثّ مباشر. في 14 أبريل، تسبّب حادث غاز في شقة الجار أسفل شقتي (شقة 18) في انفجار دمّر استوديو البث الخاص بي: حاسوب للألعاب وثلاثة شاشات وواجهة صوتية وكاميرتان احترافيتان. إجمالي الضرر — 280,000 روبل. أطلب تعويضًا بموجب وثيقة التأمين على الممتلكات.",
+      "kk": "Мен контент-криэйтор және стримермін. 14 сәуірде астарта көршімнің пәтеріндегі (18-пәтер) газ авариясы салдарынан жарылыс болды, менің стриминг студиямды жойды: ойын ПК, үш монитор, аудиоинтерфейс және екі кәсіби камера. Жалпы зиян — 280 000 рубль. Мүліктік сақтандыру полисі бойынша өтемақы сұраймын."
     }
   },
   "coverImage": "covers/case-105-daily.svg",
-  "personImage": "people/sinead.svg",
+  "personImage": "people/stiv.webp",
   "evidences": [
     {
-      "id": "ev-weather",
+      "id": "ev-gas-report",
       "type": "document",
       "title": {
-        "ru": "Сводка погоды",
-        "en": "Weather Report",
-        "tr": "Hava Durumu Raporu",
-        "ar": "تقرير الطقس",
-        "kk": "Ауа райы сводкасы"
+        "ru": "Акт аварийной газовой службы",
+        "en": "Gas Emergency Service Report",
+        "tr": "Gaz Acil Servis Raporu",
+        "ar": "تقرير خدمة الطوارئ للغاز",
+        "kk": "Газ авариялық қызметінің актісі"
       },
       "content": {
-        "ru": "Метеослужба: в указанный вечер штормовой ветер с порывами до 92 км/ч, объявлено оранжевое предупреждение об опасности.",
-        "en": "Met service: on the evening in question, gale-force winds with gusts up to 92 km/h, an orange weather warning was in effect.",
-        "tr": "Meteoroloji: söz konusu akşam 92 km/s'ye varan rüzgâr fırtınası, turuncu hava uyarısı yürürlükteydi.",
-        "ar": "هيئة الأرصاد: في المساء المعني، رياح عاصفة بهبّات تصل إلى 92 كم/س، وكان تحذير برتقالي ساري المفعول.",
-        "kk": "Метеоқызмет: аталған кеште желдің екпіні 92 км/сағ дейін жеткен дауыл, қызғылт сары қауіп туралы ескерту жарияланған."
+        "ru": "Выезд бригады «ГорГаз» 14.04 в 03:17. Адрес: ул. Пиксельная, 18. Квартира 18 (наниматель Крипер А.В.): разрыв газовой трубы вследствие коррозии. Очаг взрыва — кухня кв. 18. Волна разрушений распространилась на квартиры 17 и 19. Структурные повреждения перекрытий подтверждены. Причина — изношенность труб 1987 года постройки.",
+        "en": "GorGaz emergency team call-out 14.04 at 03:17. Address: Pixelnaya St, 18. Flat 18 (tenant Creeper A.V.): gas pipe rupture due to corrosion. Explosion seat — flat 18 kitchen. Destruction wave spread to flats 17 and 19. Structural damage to floors confirmed. Cause — worn pipes built in 1987.",
+        "tr": "GorGaz acil ekibi çağrısı 14.04, 03:17. Adres: Pixelnaya Cad., 18. Daire 18 (kiracı Creeper A.V.): korozyon nedeniyle gaz borusu kırılması. Patlama odağı — daire 18 mutfak. Yıkım dalgası 17 ve 19 numaralı dairelere yayıldı. Döşemelerde yapısal hasar doğrulandı. Neden — 1987 yapımı aşınmış borular.",
+        "ar": "استجابة فريق طوارئ GorGaz 14.04 الساعة 03:17. العنوان: شارع بيكسلنايا 18. الشقة 18 (المستأجر كريبر أ.ف.): تمزق أنبوب الغاز بسبب التآكل. بؤرة الانفجار — مطبخ الشقة 18. امتدت موجة الدمار إلى الشقتين 17 و19. تأكّدت الأضرار الهيكلية في الأسقف. السبب — أنابيب متهالكة من بناء عام 1987.",
+        "kk": "«ГорГаз» бригадасының шығуы 14.04-те 03:17-де. Мекенжайы: Пиксельная к., 18. 18-пәтер (жалдаушы Крипер А.В.): тот басудан газ құбырының жарылуы. Жарылыс ошағы — 18-пәтер асханасы. Қиратудың толқыны 17 және 19-пәтерлерге тарады. Еден жабындарының конструктивтік зақымдары расталды. Себеп — 1987 жылғы ескірген құбырлар."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Сильный ветер той ночью подтверждён официально и делает рассказ правдоподобным.",
-        "en": "The strong winds that night are officially confirmed, making the account plausible.",
-        "tr": "O gece güçlü rüzgârlar resmî olarak doğrulandı ve anlatımı makul kılıyor.",
-        "ar": "الرياح القوية تلك الليلة مؤكدة رسمياً، مما يجعل الرواية معقولة.",
-        "kk": "Сол түнгі қатты жел ресми расталған және әңгімені сенімді етеді."
+        "ru": "Официальный акт подтверждает реальную газовую аварию в соседней квартире и распространение разрушений на квартиру Блокова.",
+        "en": "The official report confirms a real gas accident in the neighbouring flat and damage spreading to Blokov's apartment.",
+        "tr": "Resmi rapor, komşu dairede gerçek bir gaz kazasını ve hasarın Blokov'un dairesine yayıldığını doğruluyor.",
+        "ar": "يؤكد التقرير الرسمي حادث غاز حقيقي في الشقة المجاورة وانتشار الضرر إلى شقة بلوكوف.",
+        "kk": "Ресми акт көршілес пәтердегі нақты газ авариясын және қиратудың Блоков пәтеріне таралуын растайды."
       }
     },
     {
-      "id": "ev-neighbour",
-      "type": "witness_statement",
+      "id": "ev-neighbor-claim",
+      "type": "document",
       "title": {
-        "ru": "Показания соседа",
-        "en": "Neighbour's Statement",
-        "tr": "Komşunun İfadesi",
-        "ar": "إفادة الجار",
-        "kk": "Көршінің куәлігі"
+        "ru": "Страховое заявление соседа",
+        "en": "Neighbour's Insurance Claim",
+        "tr": "Komşunun Sigorta Başvurusu",
+        "ar": "مطالبة تأمين الجار",
+        "kk": "Көршінің сақтандыру өтінімі"
       },
       "content": {
-        "ru": "Сосед: «Да, это мой батут. Я не закрепил его перед бурей. Утром нашёл его в её оранжерее — мне очень жаль».",
-        "en": "Neighbour: 'Yes, it's my trampoline. I hadn't anchored it before the storm. I found it in her conservatory in the morning — I'm so sorry.'",
-        "tr": "Komşu: 'Evet, o benim trambolinim. Fırtınadan önce sabitlememiştim. Sabah onu serasında buldum — çok üzgünüm.'",
-        "ar": "الجار: 'نعم، إنه ترامبولينّي. لم أثبّته قبل العاصفة. وجدته في شرفتها الزجاجية في الصباح — أنا آسف جداً.'",
-        "kk": "Көрші: «Иә, бұл менің батутым. Дауылдан бұрын бекітпеген едім. Таңертең оны оның верандасынан таптым — өте өкінемін»."
+        "ru": "Крипер Андрей Викторович, кв. 18. Утверждает: газовая плита взорвалась в 03:12. Он попытался «заблокировать вентиль» лопаткой для пиццы. Пожарные подтвердили его версию. Подаёт параллельное страховое заявление на ремонт квартиры. Дата и время инцидента совпадают с заявлением Блокова С.М.",
+        "en": "Creeper Andrei Viktorovich, flat 18. States: gas stove exploded at 03:12. He tried to 'block the valve' with a pizza spatula. Firefighters confirmed his account. Filing a parallel insurance claim for flat repairs. Date and time of incident match Blokov S.M.'s claim.",
+        "tr": "Creeper Andrei Viktorovich, daire 18. Beyan ediyor: gaz sobası 03:12'de patladı. Vanayı pizza spatulasıyla 'bloke etmeye' çalıştı. İtfaiye ekipleri ifadesini doğruladı. Daire tamiri için paralel sigorta başvurusu yapıyor. Olayın tarihi ve saati Blokov S.M.'nin başvurusuyla örtüşüyor.",
+        "ar": "كريبر أندريه فيكتوروفيتش، شقة 18. يؤكد: انفجر موقد الغاز في 03:12. حاول 'سد الصمام' بملعقة البيتزا. أكّد رجال الإطفاء روايته. يقدم مطالبة تأمين موازية لإصلاح الشقة. تاريخ ووقت الحادثة يتطابقان مع مطالبة بلوكوف س.م.",
+        "kk": "Крипер Андрей Викторович, 18-пәтер. Мәлімдейді: газ плитасы 03:12-де жарылды. Ол «тығынды» пицца күрегімен «бекітуге» тырысты. Өрт сөндірушілер оның нұсқасын растады. Пәтерді жөндеу бойынша параллель сақтандыру өтінімін береді. Оқиғаның күні мен уақыты Блоков С.М. өтінімімен сәйкес келеді."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Сосед прямо признаёт, что батут его и что он не был закреплён — это подтверждает версию.",
-        "en": "The neighbour openly admits the trampoline is his and was not anchored — this corroborates the account.",
-        "tr": "Komşu, trambolinin kendisine ait olduğunu ve sabitlenmediğini açıkça kabul ediyor — bu anlatımı destekliyor.",
-        "ar": "يعترف الجار صراحة بأن الترامبولين له ولم يكن مثبّتاً — وهذا يؤكد الرواية.",
-        "kk": "Көрші батуттың өзінікі екенін және бекітілмегенін ашық мойындайды — бұл әңгімені растайды."
+        "ru": "Сосед независимо подтверждает инцидент: дата, время и место совпадают с заявлением Блокова. Противоречий нет.",
+        "en": "The neighbour independently confirms the incident: date, time, and location match Blokov's claim. No contradictions.",
+        "tr": "Komşu olayı bağımsız olarak doğruluyor: tarih, saat ve konum Blokov'un başvurusuyla örtüşüyor. Çelişki yok.",
+        "ar": "يؤكد الجار الحادثة بشكل مستقل: التاريخ والوقت والموقع يتطابقان مع مطالبة بلوكوف. لا تناقضات.",
+        "kk": "Көрші оқиғаны тәуелсіз растайды: күні, уақыты және орны Блоков өтінімімен сәйкес. Қайшылық жоқ."
       }
     },
     {
       "id": "ev-photo",
       "type": "photo",
       "title": {
-        "ru": "Фото с места",
-        "en": "Photo from the Scene",
-        "tr": "Olay Yerinden Fotoğraf",
-        "ar": "صورة من الموقع",
-        "kk": "Оқиға орнынан фото"
+        "ru": "Фото уничтоженной студии",
+        "en": "Photo of Destroyed Studio",
+        "tr": "Tahrip Edilmiş Stüdyo Fotoğrafı",
+        "ar": "صورة الاستوديو المدمر",
+        "kk": "Жойылған студияның фотосы"
       },
       "content": {
-        "ru": "На снимке круглый садовый батут застрял в разбитой стеклянной крыше оранжереи, вокруг — осколки стекла и погнутый каркас рамы.",
-        "en": "The photo shows a round garden trampoline lodged in the smashed glass roof of the conservatory, surrounded by shards and a bent frame rail.",
-        "tr": "Fotoğrafta yuvarlak bahçe trambolini, seranın kırılmış cam çatısına saplanmış; etrafta cam kırıkları ve bükülmüş çerçeve rayı var.",
-        "ar": "تُظهر الصورة ترامبولين حديقة دائرياً عالقاً في السقف الزجاجي المحطّم للشرفة، تحيط به الشظايا وقضيب إطار ملتوٍ.",
-        "kk": "Суретте дөңгелек бақша батуты веранданың сынған шыны төбесіне қыстырылып қалған, айналасында шыны сынықтары мен иілген жақтау бар."
+        "ru": "Системный блок ПК оплавлен, боковая панель вырвана взрывной волной. На уцелевшем фрагменте корпуса — инвентарный стикер SB-BLOKOV-2024-PC1 (совпадает с полисом). На одном из мониторов, вдавленном в стену, различима надпись «GAME OVER» на оплавленном экране. На полу — пепел от акустических панелей.",
+        "en": "The PC tower is melted, the side panel torn off by the blast wave. On an intact fragment of the casing — inventory sticker SB-BLOKOV-2024-PC1 (matches the policy). On one of the monitors pushed into the wall, the words 'GAME OVER' are visible on the melted screen. Ash from acoustic panels on the floor.",
+        "tr": "PC kasası erimiş, yan panel patlama dalgası tarafından koparılmış. Kasanın sağlam bir parçasında — envanter etiketi SB-BLOKOV-2024-PC1 (poliçeyle eşleşiyor). Duvara gömülmüş monitörlerden birinde, erimiş ekranda 'GAME OVER' yazısı seçiliyor. Yerde akustik panellerden kül.",
+        "ar": "برج الحاسوب منصهر، الجانب الجانبي مُقتلَع بموجة الانفجار. على جزء سليم من الهيكل — ملصق المخزون SB-BLOKOV-2024-PC1 (مطابق للوثيقة). على إحدى الشاشات المدفوعة في الجدار، تظهر كلمات 'GAME OVER' على الشاشة المنصهرة. رماد الألواح الصوتية على الأرض.",
+        "kk": "ПК жүйелік блогы балқыған, бүйір панель жарылыс толқынымен жұлынып кеткен. Корпустың аман қалған бөлігінде — инвентарлық жапсырма SB-BLOKOV-2024-PC1 (полиспен сәйкес). Қабырғаға кіріп кеткен мониторлардың бірінде балқыған экранда «GAME OVER» жазуы көрінеді. Акустикалық панелдерден күл еденде жатыр."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Фото наглядно показывает батут в пробитой крыше — повреждение реально.",
-        "en": "The photo clearly shows the trampoline in the broken roof — the damage is real.",
-        "tr": "Fotoğraf, trambolini kırık çatıda açıkça gösteriyor — hasar gerçek.",
-        "ar": "تُظهر الصورة بوضوح الترامبولين في السقف المكسور — الضرر حقيقي.",
-        "kk": "Фото батуттың сынған төбедегі бейнесін анық көрсетеді — зақым нақты."
+        "ru": "Серийный номер оборудования совпадает с полисом. Характер повреждений — взрывная волна и термическое воздействие — соответствует описанной аварии.",
+        "en": "Equipment serial number matches the policy. The damage pattern — blast wave and heat — matches the described accident.",
+        "tr": "Ekipman seri numarası poliçeyle eşleşiyor. Hasar deseni — patlama dalgası ve ısı etkisi — tanımlanan kazayla uyumlu.",
+        "ar": "الرقم التسلسلي للمعدات مطابق للوثيقة. نمط الضرر — موجة الانفجار والتأثير الحراري — يتوافق مع الحادث الموصوف.",
+        "kk": "Жабдықтың сериялық нөмірі полиспен сәйкес. Зақым сипаты — жарылыс толқыны және жылулық әсер — сипатталған апатқа сәйкес."
       },
       "meta": {
-        "filename": "IMG_20260317_080349.jpg"
-      }
-    },
-    {
-      "id": "ev-quote",
-      "type": "document",
-      "title": {
-        "ru": "Смета на ремонт",
-        "en": "Repair Quote",
-        "tr": "Onarım Teklifi",
-        "ar": "عرض سعر الإصلاح",
-        "kk": "Жөндеу сметасы"
-      },
-      "content": {
-        "ru": "Смета остеклителя: замена закалённых стеклопакетов крыши и правка алюминиевой рамы оранжереи — итого 4 350 €.",
-        "en": "Glazier's quote: replacing the roof's tempered glass panels and straightening the conservatory's aluminium frame — total €4,350.",
-        "tr": "Camcı teklifi: çatının temperli cam panellerinin değişimi ve seranın alüminyum çerçevesinin düzeltilmesi — toplam 4.350 €.",
-        "ar": "عرض الزجّاج: استبدال ألواح السقف الزجاجية المقسّاة وتقويم إطار الشرفة الألمنيومي — الإجمالي 4,350 يورو.",
-        "kk": "Шынышының сметасы: төбенің шыңдалған шыны панельдерін ауыстыру және веранданың алюминий жақтауын түзеу — барлығы 4 350 €."
-      },
-      "isContradiction": false,
-      "contradictionExplanation": {
-        "ru": "Смета соответствует характеру повреждений и не превышает заявленную сумму.",
-        "en": "The quote matches the nature of the damage and does not exceed the claimed amount.",
-        "tr": "Teklif, hasarın niteliğine uygun ve talep edilen tutarı aşmıyor.",
-        "ar": "العرض يتناسب مع طبيعة الضرر ولا يتجاوز المبلغ المطالَب به.",
-        "kk": "Смета зақым сипатына сай және талап етілген сомадан аспайды."
+        "filename": "IMG_20260414_035507.jpg",
+        "imageUrl": "evidence/case-105-daily-ev-photo.png"
       }
     }
   ],
   "correctDecision": "approve",
   "explanation": {
     "ru": [
-      "Метеосводка подтверждает штормовой ветер той ночью.",
-      "Сосед признал свой батут, фото показывает его в пробитой крыше.",
-      "Смета адекватна — случай подлинный, выплату одобрить."
+      "Акт газовой службы официально подтверждает взрыв в кв. 18 и распространение разрушений на кв. 19 (Блоков).",
+      "Независимое заявление соседа Крипера совпадает по дате, времени и характеру аварии.",
+      "Инвентарный стикер на ПК совпадает с полисом; характер повреждений — взрывная волна. Заявление подлинное, одобряем."
     ],
     "en": [
-      "The weather report confirms gale-force winds that night.",
-      "The neighbour admitted it was his trampoline; the photo shows it in the broken roof.",
-      "The quote is reasonable — the case is genuine, approve the payout."
+      "The gas service report officially confirms the explosion in flat 18 and damage spreading to flat 19 (Blokov).",
+      "The independent claim from neighbour Creeper matches in date, time, and accident description.",
+      "Inventory sticker on the PC matches the policy; damage pattern is blast wave. Claim is genuine, approve."
     ],
     "tr": [
-      "Hava raporu o gece şiddetli rüzgârı doğruluyor.",
-      "Komşu trambolinin kendisine ait olduğunu kabul etti; fotoğraf onu kırık çatıda gösteriyor.",
-      "Teklif makul — durum gerçek, ödeme onaylanmalı."
+      "Gaz servisi raporu, daire 18'deki patlamayı ve hasarın daire 19'a (Blokov) yayılmasını resmi olarak doğruluyor.",
+      "Komşu Creeper'ın bağımsız başvurusu tarih, saat ve kaza açıklamasında örtüşüyor.",
+      "PC'deki envanter etiketi poliçeyle eşleşiyor; hasar deseni patlama dalgası. Talep gerçek, onaylayın."
     ],
     "ar": [
-      "يؤكد تقرير الطقس وجود رياح عاصفة تلك الليلة.",
-      "اعترف الجار بأن الترامبولين له؛ والصورة تُظهره في السقف المكسور.",
-      "العرض معقول — الحالة حقيقية، يجب الموافقة على الدفع."
+      "يؤكد تقرير خدمة الغاز رسميًا الانفجار في الشقة 18 وانتشار الضرر إلى الشقة 19 (بلوكوف).",
+      "مطالبة الجار كريبر المستقلة تتطابق في التاريخ والوقت ووصف الحادث.",
+      "ملصق المخزون على الحاسوب مطابق للوثيقة؛ نمط الضرر موجة انفجار. المطالبة حقيقية، وافق عليها."
     ],
     "kk": [
-      "Ауа райы сводкасы сол түнгі дауылды растайды.",
-      "Көрші батуттың өзінікі екенін мойындады; фото оны сынған төбеде көрсетеді.",
-      "Смета орынды — жағдай шынайы, төлемді мақұлдау керек."
+      "Газ қызметінің актісі 18-пәтердегі жарылысты және зақымның 19-пәтерге (Блоков) таралуын ресми растайды.",
+      "Көрші Кріпердің тәуелсіз өтінімі күні, уақыты және апат сипаттамасы бойынша сәйкес.",
+      "ПК-дегі инвентарлық жапсырма полиспен сәйкес; зақым сипаты — жарылыс толқыны. Талап шынайы, мақұлдаңыз."
     ]
   }
 }

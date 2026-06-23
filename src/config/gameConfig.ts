@@ -101,7 +101,7 @@ export const GAME_CONFIG = {
      *   L2-3   → 3-evidence basics       (case-013, 018, 019, 020, 021)
      *   L4-11  → 4-evidence standard     (case-003..024)
      *   L12-13 → 5-evidence advanced     (case-025..028)
-     *   L14-16 → 6-evidence expert       (case-029..034)
+     *   L14-16 → 6-evidence expert       (case-029..039)
      * New evidence types debut late: bank_statement (case-023, ~pos 22),
      * phone_records (case-024, ~pos 23), social_media (case-025, ~pos 24).
      */
@@ -144,6 +144,11 @@ export const GAME_CONFIG = {
       'case-032': 15,
       'case-033': 16,
       'case-034': 16,
+      'case-035': 16,
+      'case-036': 16,
+      'case-037': 16,
+      'case-038': 16,
+      'case-039': 16,
     } as const,
   },
 

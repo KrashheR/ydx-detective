@@ -52,6 +52,7 @@ export const GOAL = {
   rankUp: 'rank_up',
   bankruptcy: 'bankruptcy',
   dailyClaim: 'daily_claim',
+  dailyAdUnlock: 'daily_ad_unlock',
   rating: 'rating_action',
 } as const;
 

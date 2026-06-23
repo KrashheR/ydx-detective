@@ -55,7 +55,8 @@ async function freshOnline(opts?: { mode?: 'lite' | '' }) {
 
 /** Pull the callbacks the adapter handed to a rewarded-video call. */
 function lastRewardedCallbacks(adv: MockAdv): AdvCallbacksCapture {
-  const call = adv.showRewardedVideo.mock.calls.at(-1)?.[0];
+  const calls = adv.showRewardedVideo.mock.calls;
+  const call = calls[calls.length - 1]?.[0];
   return call.callbacks;
 }
 
@@ -175,8 +176,8 @@ describe('fullscreen-ad lifecycle (online)', () => {
     const onDone = vi.fn();
 
     mod.showFullscreenAd(onDone);
-    const cbs = adv.showFullscreenAdv.mock.calls.at(-1)?.[0]
-      .callbacks as AdvCallbacksCapture;
+    const calls = adv.showFullscreenAdv.mock.calls;
+    const cbs = calls[calls.length - 1]?.[0].callbacks as AdvCallbacksCapture;
 
     cbs.onOpen?.();
     expect(listener).toHaveBeenLastCalledWith(true);

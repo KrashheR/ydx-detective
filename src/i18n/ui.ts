@@ -831,11 +831,11 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     kk: "Тексеру шегі бітті — бұл дәлелді ашу мүмкін емес. Бар деректермен шешім шығарыңыз.",
   },
   tipDailyLocked: {
-    ru: "Дело дня на сегодня раскрыто. Новое откроется через 24 часа.",
-    en: "Today's daily case is done. A new one unlocks in 24 hours.",
-    tr: "Bugünün günlük dosyası tamamlandı. Yenisi 24 saat içinde açılır.",
-    ar: "قضية اليوم اكتملت. تُفتح قضية جديدة خلال 24 ساعة.",
-    kk: "Бүгінгі күн ісі шешілді. Жаңасы 24 сағаттан кейін ашылады.",
+    ru: "Нажмите, чтобы посмотреть рекламу и открыть следующее дело прямо сейчас.",
+    en: "Tap to watch an ad and unlock the next case right now.",
+    tr: "Reklam izlemek ve sonraki dosyayı hemen açmak için dokunun.",
+    ar: "اضغط لمشاهدة إعلان وفتح القضية التالية الآن.",
+    kk: "Жарнама көру және келесі істі қазір ашу үшін басыңыз.",
   },
   tipCaseLockedLevel: {
     ru: "Откроется на {level}-м уровне следователя. Закрывайте дела и набирайте опыт.",

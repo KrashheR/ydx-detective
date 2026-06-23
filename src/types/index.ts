@@ -79,6 +79,7 @@ export interface EvidenceMeta {
   gpsFooter?: string;
   // photo renderer
   filename?: string;
+  imageUrl?: string;
   // camera_recording renderer
   cameraId?: string;
   cameraModel?: string;
@@ -119,7 +120,7 @@ export interface Claim {
 
 /** One row in the client metadata table shown on the statement card. */
 export interface ClientMetaRow {
-  readonly k: string;
+  readonly k: LocalizedString;
   readonly v: string;
 }
 

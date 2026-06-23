@@ -143,6 +143,8 @@ export interface GameStoreState {
 
   /* ---- daily ---- */
   isDailyUnlocked: () => boolean;
+  /** Watch a rewarded ad to skip the 24h cooldown and unlock the next daily case. */
+  unlockDailyViaAd: () => void;
 
   /* ---- ad-linked rewards ---- */
   /** Add the total of the last verdict again to balance (rewarded-video double). */
@@ -588,6 +590,17 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       // Authoritative server time only — never the device clock.
       return evaluateDailyAvailability(lastDailyClaimServerMs, getServerTimeMs())
         .unlocked;
+    },
+
+    unlockDailyViaAd() {
+      showRewardedAd(() => {
+        // Reset lastDailyClaimServerMs to 0 so the daily is immediately available.
+        set((s) => ({
+          stats: { ...s.stats, lastDailyClaimServerMs: 0 },
+        }));
+        persist(true);
+        trackGoal(GOAL.dailyAdUnlock, {});
+      });
     },
 
     setPaused(paused) {

@@ -251,8 +251,7 @@ export default function App() {
     });
   };
 
-  const onDailyLocked = () =>
-    flashToast(`${t('returnsIn', lang)} ${formatCountdown(daily.msUntilUnlock)}`);
+  const onDailyLocked = () => store.unlockDailyViaAd();
 
   const goToNextCase = () => {
     const next = getNextAvailableCase(standardCaseUnlocks, selectedId);

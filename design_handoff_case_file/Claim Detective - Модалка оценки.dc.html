@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;} body{margin:0;}</style>
+</helmet>
+
+<div style="width:max-content; min-width:100%; min-height:100vh; padding:48px; box-sizing:border-box; background:#e7e5df; font-family:'Inter',sans-serif;">
+
+  <div style="max-width:900px; margin:0 auto 38px;">
+    <div style="font:600 12px 'Inter'; letter-spacing:3px; color:#9a8f7d; text-transform:uppercase;">Claim Detective · Yandex Games · Soft-ask</div>
+    <div style="font:700 30px 'Inter'; color:#1c1a16; margin-top:10px;">Модалка оценки — «Благодарность от Департамента»</div>
+    <div style="font:400 15px/1.6 'Inter'; color:#5d564b; margin-top:8px; max-width:820px;">Мягкое приглашение оценить игру в стиле ведомственного бланка обратной связи. Звёзды — декоративный чернильный якорь: реальный ввод оценки происходит в нативном диалоге Яндекса (<code style="font-family:monospace;font-size:13px;">ysdk.feedback.requestReview()</code>). Нажмите «Оценить» в любом кадре — увидите состояние <i>submitting</i> → <i>done</i>. Без наград за отзыв, вторичная кнопка читаема, есть «Больше не предлагать».</div>
+  </div>
+
+  <div style="display:flex; flex-wrap:wrap; gap:40px; align-items:flex-start; max-width:900px; margin:0 auto;">
+
+    <div style="flex:none;">
+      <div style="font:600 11px 'Inter'; letter-spacing:1px; color:#857c6c; text-transform:uppercase; margin-bottom:10px;">Десктоп · LTR · idle</div>
+      <div style="position:relative; width:560px; height:480px; border-radius:6px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,.16), 0 26px 50px rgba(0,0,0,.14);">
+        <div style="position:absolute; inset:0; background:#111827; background-image:radial-gradient(circle at 30% 20%,rgba(37,99,235,.08),transparent 60%);"></div>
+        <div style="position:absolute; inset:0; opacity:.5;">
+          <div style="position:absolute; top:40px; left:40px; right:40px; height:60px; background:#1f2937; border-radius:8px;"></div>
+          <div style="position:absolute; top:120px; left:40px; width:200px; bottom:40px; background:#1f2937; border-radius:8px;"></div>
+        </div>
+        <dc-import name="RatingModal" dir="ltr" forced-state="result" hint-size="560px,480px" style="position:absolute; inset:0;"></dc-import>
+      </div>
+    </div>
+
+    <div style="flex:none;">
+      <div style="font:600 11px 'Inter'; letter-spacing:1px; color:#857c6c; text-transform:uppercase; margin-bottom:10px;">Мобайл · LTR · idle</div>
+      <div style="position:relative; width:300px; height:600px; border-radius:24px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,.16), 0 26px 50px rgba(0,0,0,.14); border:7px solid #0c0f16;">
+        <div style="position:absolute; inset:0; background:#111827;"></div>
+        <div style="position:absolute; inset:0; opacity:.5;">
+          <div style="position:absolute; top:30px; left:18px; right:18px; height:54px; background:#1f2937; border-radius:8px;"></div>
+          <div style="position:absolute; top:100px; left:18px; right:18px; height:120px; background:#1f2937; border-radius:8px;"></div>
+        </div>
+        <dc-import name="RatingModal" dir="ltr" forced-state="result" hint-size="300px,600px" style="position:absolute; inset:0;"></dc-import>
+      </div>
+    </div>
+
+    <div style="flex:none;">
+      <div style="font:600 11px 'Inter'; letter-spacing:1px; color:#857c6c; text-transform:uppercase; margin-bottom:10px;">Десктоп · RTL (العربية) · idle</div>
+      <div style="position:relative; width:560px; height:480px; border-radius:6px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,.16), 0 26px 50px rgba(0,0,0,.14);">
+        <div style="position:absolute; inset:0; background:#111827; background-image:radial-gradient(circle at 70% 20%,rgba(37,99,235,.08),transparent 60%);"></div>
+        <div style="position:absolute; inset:0; opacity:.5;">
+          <div style="position:absolute; top:40px; left:40px; right:40px; height:60px; background:#1f2937; border-radius:8px;"></div>
+          <div style="position:absolute; top:120px; right:40px; width:200px; bottom:40px; background:#1f2937; border-radius:8px;"></div>
+        </div>
+        <dc-import name="RatingModal" dir="rtl" forced-state="result" eyebrow="إدارة التحقيقات" ref-no="نموذج الملاحظات OS-5" title="القضية محلولة. عمل ممتاز أيها المحقق." body="انتباهك يساعد في كشف المحتالين. هل تستمتع باللعبة؟ قيّمها — فهذا يساعد الآخرين على اكتشاف هذا التحقيق." cta="قيّم اللعبة" later="ليس الآن" never="لا تسأل مرة أخرى" submitting-text="جارٍ فتح تقييم Яндекс…" done-title="شكرًا على ملاحظاتك" done-body="هذا يساعد الآخرين في العثور على اللعبة." hint-size="560px,480px" style="position:absolute; inset:0;"></dc-import>
+      </div>
+    </div>
+
+    <div style="flex:none;">
+      <div style="font:600 11px 'Inter'; letter-spacing:1px; color:#857c6c; text-transform:uppercase; margin-bottom:10px;">Состояние · submitting</div>
+      <div style="position:relative; width:560px; height:480px; border-radius:6px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,.16), 0 26px 50px rgba(0,0,0,.14);">
+        <div style="position:absolute; inset:0; background:#111827;"></div>
+        <div style="position:absolute; inset:0; opacity:.5;">
+          <div style="position:absolute; top:40px; left:40px; right:40px; height:60px; background:#1f2937; border-radius:8px;"></div>
+        </div>
+        <dc-import name="RatingModal" dir="ltr" forced-state="submitting" hint-size="560px,480px" style="position:absolute; inset:0;"></dc-import>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="max-width:900px; margin:42px auto 0; padding:22px 24px; background:#fff; border:1px solid #e1dccf; border-radius:8px;">
+    <div style="font:700 13px 'Inter'; letter-spacing:1px; color:#1c1a16; text-transform:uppercase; margin-bottom:14px;">Чек-лист соответствия Яндекс.Играм</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px 28px;">
+      <div style="display:flex; gap:9px; font:400 13px/1.5 'Inter'; color:#3f3a31;"><span style="color:#16a34a; font-weight:700;">✓</span> Оценка собирается нативным диалогом — мы не имитируем ввод звёзд</div>
+      <div style="display:flex; gap:9px; font:400 13px/1.5 'Inter'; color:#3f3a31;"><span style="color:#16a34a; font-weight:700;">✓</span> Перед показом — <code style="font-family:monospace;font-size:12px;">canReview()</code>; при <code style="font-family:monospace;font-size:12px;">false</code> модалку не показываем</div>
+      <div style="display:flex; gap:9px; font:400 13px/1.5 'Inter'; color:#3f3a31;"><span style="color:#16a34a; font-weight:700;">✓</span> Никаких наград за отзыв (incentivized review запрещён)</div>
+      <div style="display:flex; gap:9px; font:400 13px/1.5 'Inter'; color:#3f3a31;"><span style="color:#16a34a; font-weight:700;">✓</span> Триггер на пике гордости: верный вердикт, ≥3 закрытых дел</div>
+      <div style="display:flex; gap:9px; font:400 13px/1.5 'Inter'; color:#3f3a31;"><span style="color:#16a34a; font-weight:700;">✓</span> Максимум 1 показ за сессию; после 2–3 отказов — <code style="font-family:monospace;font-size:12px;">suppressed</code></div>
+      <div style="display:flex; gap:9px; font:400 13px/1.5 'Inter'; color:#3f3a31;"><span style="color:#16a34a; font-weight:700;">✓</span> Вторичная кнопка читаема; Esc / клик по фону = «Не сейчас»; RTL</div>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

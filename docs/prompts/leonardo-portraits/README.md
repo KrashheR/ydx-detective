@@ -16,9 +16,8 @@
 
 ## Подключение к игре
 
-После генерации сохрани портрет как `public/people/<имя>.webp` и замени в делах расширение
-`.svg` → `.webp`: грепни `personImage` по `src/data/cases/` и поправь путь
-(`people/igor.svg` → `people/igor.webp`).
+После генерации сохрани портрет как `public/people/<имя>.webp`: грепни `personImage` по
+`src/data/cases/` и укажи соответствующий путь (например, `people/igor.webp`).
 `object-cover` в `CaseFile.tsx` сам обрежет фото под рамку — больше ничего не нужно.
 
 **Статус.** Подключены (`.webp`): igor, gennady, aigul, stas, eduard, lucas, dejan, mateus,

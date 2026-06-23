@@ -20,7 +20,7 @@
 | `title` | LocalizedString | 5 языков |
 | `claim` | `{ person, story }` | имя+возраст и история от первого лица (LocalizedString) |
 | `coverImage` | string | путь под `public/`, напр. `covers/case-NNN.svg` |
-| `personImage` | string? | опц. портрет, напр. `people/<firstname>.svg` |
+| `personImage` | string? | опц. портрет WebP, напр. `people/<firstname>.webp` |
 | `evidences` | Evidence[] | улики |
 | `correctDecision` | `approve \| reject` | `reject` если fraud, `approve` если valid |
 | `explanation` | LocalizedLines | ровно 3 коротких вывода для ResultSheet (массив строк, 5 языков) |
@@ -69,7 +69,7 @@ meta-поля по типам (детали и примеры — в `CASE_AUTHO
 1. Создай JSON в `src/data/cases/` (стандартное) или `src/data/cases/daily/` (ежедневное).
    Следуй схеме выше; заполни **все 5 языков** (`ru/en/tr/ar/kk`) во **всех** LocalizedString.
 2. Импортируй файл в `src/data/caseLoader.ts` и добавь в массив `RAW_CASES`.
-3. Положи обложку `public/covers/case-NNN.svg` (и при наличии `public/people/<name>.svg`).
+3. Положи обложку `public/covers/case-NNN.svg` (и при наличии портрет `public/people/<name>.webp`).
 4. Для **стандартного** дела задай требование уровня в
    `GAME_CONFIG.caseUnlocks.standardCaseRequiredLevelById` (иначе оно получит
    `defaultRequiredLevel = 30` и будет почти недоступно). Этот уровень задаёт и **позицию
@@ -96,7 +96,7 @@ meta-поля по типам (детали и примеры — в `CASE_AUTHO
 ### Уже задействованные типы улик
 
 `bank_statement`, `phone_records`, `social_media` ранее не использовались; теперь они
-работают в экспертном тире (case-023…034). Их рендереры (`BankBody`/`PhoneBody`/`SocialBody`
+работают в экспертном тире (case-023…039). Их рендереры (`BankBody`/`PhoneBody`/`SocialBody`
 в `StampModal.tsx`), иконки и i18n-ярлыки уже на месте — достаточно сослаться на тип в JSON.
 
 ### Бюджетное дело

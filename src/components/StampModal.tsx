@@ -471,10 +471,14 @@ function PhotoBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
             style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', padding: '12px 12px 0', transform: 'rotate(-1.5deg)' }}
           >
             <div
-              className="flex h-[165px] items-center justify-center rounded-sm"
-              style={{ background: 'repeating-linear-gradient(45deg,#cbd0d6 0 9px,#c0c5cc 9px 18px)' }}
+              className="flex h-[165px] items-center justify-center rounded-sm overflow-hidden"
+              style={meta?.imageUrl ? undefined : { background: 'repeating-linear-gradient(45deg,#cbd0d6 0 9px,#c0c5cc 9px 18px)' }}
             >
-              <span className="text-3xl opacity-40">📷</span>
+              {meta?.imageUrl ? (
+                <img src={meta.imageUrl} alt="" className="h-full w-full object-cover" />
+              ) : (
+                <span className="text-3xl opacity-40">📷</span>
+              )}
             </div>
             <div className="px-1 pt-2.5 font-serif text-[12px] italic text-ink/70 text-center">
               {caption}

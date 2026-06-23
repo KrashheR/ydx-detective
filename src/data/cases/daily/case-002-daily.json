@@ -2,161 +2,173 @@
   "id": "case-002-daily",
   "type": "daily",
   "difficulty": "hard",
-  "claimAmount": 800,
-  "truth": "valid",
+  "claimAmount": 45000,
+  "truth": "fraud",
   "title": {
-    "ru": "Угон автомобиля",
-    "en": "The Stolen Car",
-    "tr": "Çalınan Araba",
-    "ar": "السيارة المسروقة",
-    "kk": "Ұрланған көлік"
+    "ru": "Синтез нейлона",
+    "en": "The Nylon Synthesis",
+    "tr": "Naylon Sentezi",
+    "ar": "تخليق النايلون",
+    "kk": "Нейлон синтезі"
   },
   "claim": {
     "person": {
-      "ru": "Марина Власова, 38 лет",
-      "en": "Marina Vlasova, 38",
-      "tr": "Marina Vlasova, 38",
-      "ar": "مارينا فلاسوفا، 38",
-      "kk": "Марина Власова, 38 жаста"
+      "ru": "Уолтер Харт, 51 год",
+      "en": "Walter Hart, 51",
+      "tr": "Walter Hart, 51",
+      "ar": "والتر هارت، 51",
+      "kk": "Уолтер Харт, 51 жаста"
     },
     "story": {
-      "ru": "Машину угнали с парковки у супермаркета во вторник вечером. Камеры зафиксировали момент. Прошу выплату по КАСКО.",
-      "en": "My car was stolen from the supermarket lot on Tuesday evening. The cameras caught it. I request my comprehensive payout.",
-      "tr": "Arabam Salı akşamı süpermarket otoparkından çalındı. Kameralar yakaladı. Kasko ödememi talep ediyorum.",
-      "ar": "سُرقت سيارتي من موقف السوبر ماركت مساء الثلاثاء. التقطتها الكاميرات. أطلب تعويض التأمين الشامل.",
-      "kk": "Көлігім сейсенбі кешінде супермаркет тұрағынан ұрланды. Камералар түсіріп алды. КАСКО бойынша төлемді сұраймын."
+      "ru": "Я учитель химии в школе №34. Во время демонстрационного опыта по синтезу нейлона произошёл непредвиденный взрыв. Уничтожены автоклав, центрифуга и масс-спектрометр на общую сумму 45 000 рублей. Прошу возмещения по полису страхования оборудования.",
+      "en": "I am a chemistry teacher at school No. 34. During a nylon synthesis demonstration, an unforeseen explosion occurred. An autoclave, centrifuge, and mass spectrometer were destroyed totalling 45,000 roubles. I request compensation under the equipment insurance policy.",
+      "tr": "34 numaralı okulda kimya öğretmeniyim. Naylon sentezi deneyi sırasında beklenmedik bir patlama yaşandı. Toplam 45.000 ruble değerinde otoklas, santrifüj ve kütle spektrometresi yok edildi. Ekipman sigortası kapsamında tazminat talep ediyorum.",
+      "ar": "أنا مدرّس كيمياء في المدرسة رقم 34. خلال تجربة تخليق النايلون، وقع انفجار غير متوقع. تم تدمير أتوكلاف وجهاز طرد مركزي ومطياف الكتلة بقيمة إجمالية 45,000 روبل. أطلب تعويضًا بموجب وثيقة تأمين المعدات.",
+      "kk": "Мен 34-мектептің химия мұғалімімін. Нейлон синтезін көрсету кезінде болжанбаған жарылыс болды. Жалпы 45 000 рубльге автоклав, центрифуга және масс-спектрометр жойылды. Жабдық сақтандыру полисі бойынша өтемақы сұраймын."
     }
   },
   "coverImage": "covers/case-002.svg",
-  "personImage": "people/marina.svg",
+  "personImage": "people/walter.webp",
   "evidences": [
     {
-      "id": "ev-camera",
-      "type": "camera_recording",
-      "title": {
-        "ru": "Запись камеры парковки",
-        "en": "Parking Camera Footage",
-        "tr": "Otopark Kamera Görüntüsü",
-        "ar": "تسجيل كاميرا الموقف",
-        "kk": "Тұрақ камерасының жазбасы"
-      },
-      "content": {
-        "ru": "Вт 21:03 — неизвестный вскрывает дверь и уезжает на автомобиле.",
-        "en": "Tue 21:03 — an unknown person forces the door and drives the car away.",
-        "tr": "Sal 21:03 — kimliği belirsiz biri kapıyı zorlayıp arabayı sürüp gidiyor.",
-        "ar": "الثلاثاء 21:03 — شخص مجهول يفتح الباب عنوة ويقود السيارة بعيدًا.",
-        "kk": "Сс 21:03 — белгісіз адам есікті ашып, көлікті айдап кетеді."
-      },
-      "isContradiction": false,
-      "contradictionExplanation": {
-        "ru": "Запись подтверждает факт угона.",
-        "en": "The footage confirms the theft.",
-        "tr": "Görüntü hırsızlığı doğruluyor.",
-        "ar": "التسجيل يؤكد السرقة.",
-        "kk": "Жазба ұрлық фактісін растайды."
-      },
-      "meta": {
-        "cameraId": "CAM-P3",
-        "cameraModel": "Dahua IPC-HFW3849H · 4K · H.265"
-      }
-    },
-    {
-      "id": "ev-police",
+      "id": "ev-lab-analysis",
       "type": "document",
       "title": {
-        "ru": "Протокол полиции",
-        "en": "Police Report",
-        "tr": "Polis Raporu",
-        "ar": "تقرير الشرطة",
-        "kk": "Полиция хаттамасы"
+        "ru": "Экспертный анализ остатков",
+        "en": "Residue Expert Analysis",
+        "tr": "Kalıntı Uzman Analizi",
+        "ar": "تحليل خبير المخلفات",
+        "kk": "Қалдықтардың сараптамалық талдауы"
       },
       "content": {
-        "ru": "Заявление об угоне подано во вторник в 22:10, номер дела соответствует.",
-        "en": "Theft report filed Tuesday at 22:10; the case number matches.",
-        "tr": "Hırsızlık ihbarı Salı 22:10'da yapıldı; dosya numarası uyuşuyor.",
-        "ar": "تم تقديم بلاغ السرقة الثلاثاء الساعة 22:10؛ رقم القضية متطابق.",
-        "kk": "Ұрлық туралы өтініш сейсенбі 22:10-да берілді; іс нөмірі сәйкес келеді."
+        "ru": "В пробах, изъятых с места взрыва, обнаружены: метиламин (0-метил-эфедрин), фенилацетон, псевдоэфедрин. Нейлон-6,6 и его прекурсоры не выявлены. Соотношение реагентов характерно для синтеза метамфетамина. Синий кристаллический порошок обнаружен на полу лаборатории (97,6% чистоты).",
+        "en": "Samples taken from the blast site show: methylamine (0-methyl-ephedrine), phenylacetone, pseudoephedrine. No nylon-6,6 or its precursors found. Reagent ratios are consistent with methamphetamine synthesis. Blue crystalline powder found on the lab floor (97.6% purity).",
+        "tr": "Patlama mahallinden alınan örneklerde şunlar tespit edildi: metilamin (0-metil-efedrin), fenilaseton, psödoefedrin. Naylon-6,6 veya öncüleri bulunamadı. Reaktif oranları metamfetamin sentezi ile uyumlu. Laboratuvar zemininde mavi kristal toz bulundu (%97,6 saflık).",
+        "ar": "كشفت العينات المأخوذة من موقع الانفجار عن: ميثيلامين (0-ميثيل-إيفيدرين)، فينيل أسيتون، سودوإيفيدرين. لم يُعثر على النايلون-6,6 أو سلائفه. نسب الكواشف متوافقة مع تخليق الميثامفيتامين. عُثر على مسحوق بلوري أزرق على أرضية المختبر (نقاء 97.6%).",
+        "kk": "Жарылыс орнынан алынған үлгілерде табылды: метиламин (0-метил-эфедрин), фенилацетон, псевдоэфедрин. Нейлон-6,6 немесе оның прекурсорлары табылмады. Реагенттер қатынасы метамфетамин синтезіне тән. Зертхана еденінде көк кристалды ұнтақ табылды (97,6% тазалық)."
       },
-      "isContradiction": false,
+      "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Документ официальный и согласуется с записью камеры.",
-        "en": "An official document consistent with the camera footage.",
-        "tr": "Kamera görüntüsüyle tutarlı resmi belge.",
-        "ar": "مستند رسمي متوافق مع تسجيل الكاميرا.",
-        "kk": "Камера жазбасымен үйлесетін ресми құжат."
+        "ru": "Найденные вещества и синий кристаллический порошок не имеют отношения к синтезу нейлона — это маркеры нелегальной нарколаборатории.",
+        "en": "The substances found and the blue crystalline powder have no connection to nylon synthesis — these are markers of an illegal drug lab.",
+        "tr": "Bulunan maddeler ve mavi kristal toz, naylon sentezi ile hiçbir ilgisi yoktur — bunlar yasadışı bir uyuşturucu laboratuvarının göstergeleridir.",
+        "ar": "المواد الموجودة والمسحوق البلوري الأزرق ليس لهما صلة بتخليق النايلون — هذه مؤشرات على مختبر مخدرات غير قانوني.",
+        "kk": "Табылған заттар мен көк кристалды ұнтақ нейлон синтезіне қатысы жоқ — бұл заңсыз есірткі зертханасының белгілері."
       }
     },
     {
-      "id": "ev-log",
-      "type": "usage_log",
+      "id": "ev-witness",
+      "type": "witness_statement",
       "title": {
-        "ru": "Лог брелока",
-        "en": "Key Fob Log",
-        "tr": "Anahtarlık Kaydı",
-        "ar": "سجل مفتاح السيارة",
-        "kk": "Кілт логы"
+        "ru": "Показания уборщика",
+        "en": "Janitor Statement",
+        "tr": "Temizlikçi İfadesi",
+        "ar": "إفادة عامل النظافة",
+        "kk": "Тазалаушы жауабы"
+      },
+      "content": {
+        "ru": "Харт приходил по ночам трижды за последний месяц. Привозил что-то в автодоме — сказал, это «личный склад». Из лаборатории воняло кошачьей едой и тухлыми яйцами. Один раз видел, как он продавал что-то у ворот какому-то лысому в жёлтой куртке.",
+        "en": "Hart came in at night three times last month. He brought something in a motorhome — said it was 'personal storage'. The lab smelled of cat food and rotten eggs. Once I saw him sell something at the gate to a bald man in a yellow jacket.",
+        "tr": "Hart geçen ay üç kez geceleri geldi. Bir karavanla bir şeyler getirdi — 'kişisel depo' dedi. Laboratuvardan kedi maması ve çürük yumurta kokusu geliyordu. Bir keresinde kapıda sarı ceketli kel bir adama bir şeyler sattığını gördüm.",
+        "ar": "جاء هارت ليلاً ثلاث مرات الشهر الماضي. أحضر شيئًا في منزل متنقل — قال إنه «مستودع شخصي». كانت المختبر تفوح منه رائحة طعام القطط والبيض الفاسد. مرة واحدة رأيته يبيع شيئًا عند البوابة لرجل أصلع يرتدي جاكيتًا أصفر.",
+        "kk": "Харт өткен айда үш рет түнде келді. Автоүйде бір нәрсе әкелді — «жеке қойма» деді. Зертханадан мысық тамағы мен шіріген жұмыртқа иісі шықты. Бір рет сарғыш куртка киген ешқылдық адамға қақпа жанында бір нәрсе сатып жатқанын көрдім."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Автодом, химический запах и ночные визиты — признаки мобильной нарколаборатории, а не школьных опытов.",
+        "en": "The motorhome, chemical smell, and night-time visits are signs of a mobile drug lab, not a school experiment.",
+        "tr": "Karavan, kimyasal koku ve gece ziyaretleri, okul deneyi değil, mobil bir uyuşturucu laboratuvarının belirtileridir.",
+        "ar": "المنزل المتنقل والرائحة الكيميائية والزيارات الليلية علامات على مختبر مخدرات متنقل، وليست تجربة مدرسية.",
+        "kk": "Автоүй, химиялық иіс және түнгі барулар — бұл мектеп тәжірибесі емес, жылжымалы есірткі зертханасының белгілері."
+      }
+    },
+    {
+      "id": "ev-bank",
+      "type": "bank_statement",
+      "title": {
+        "ru": "Выписка с банковского счёта",
+        "en": "Bank Account Statement",
+        "tr": "Banka Hesap Ekstresi",
+        "ar": "كشف حساب بنكي",
+        "kk": "Банктік шот үзіндісі"
       },
       "content": {
         "ru": [
-          "Вт 20:55 — машина заперта владельцем",
-          "Вт 21:03 — вскрытие без брелока"
+          "За 2 недели до взрыва: пополнение наличными +15 000 ₽ (источник не указан)",
+          "За 10 дней: пополнение наличными +22 000 ₽ (источник не указан)",
+          "За 3 дня: пополнение наличными +31 000 ₽ (источник не указан)",
+          "Зарплата учителя за месяц: 38 000 ₽"
         ],
         "en": [
-          "Tue 20:55 — car locked by owner",
-          "Tue 21:03 — opened without the fob"
+          "2 weeks before explosion: cash deposit +15,000 ₽ (source unspecified)",
+          "10 days before: cash deposit +22,000 ₽ (source unspecified)",
+          "3 days before: cash deposit +31,000 ₽ (source unspecified)",
+          "Monthly teacher salary: 38,000 ₽"
         ],
         "tr": [
-          "Sal 20:55 — araç sahibi tarafından kilitlendi",
-          "Sal 21:03 — anahtarlık olmadan açıldı"
+          "Patlamadan 2 hafta önce: nakit yatırma +15.000 ₽ (kaynak belirtilmemiş)",
+          "10 gün önce: nakit yatırma +22.000 ₽ (kaynak belirtilmemiş)",
+          "3 gün önce: nakit yatırma +31.000 ₽ (kaynak belirtilmemiş)",
+          "Aylık öğretmen maaşı: 38.000 ₽"
         ],
         "ar": [
-          "الثلاثاء 20:55 — قفل المالك السيارة",
-          "الثلاثاء 21:03 — فُتحت دون المفتاح"
+          "قبل أسبوعين من الانفجار: إيداع نقدي +15,000 ₽ (المصدر غير محدد)",
+          "قبل 10 أيام: إيداع نقدي +22,000 ₽ (المصدر غير محدد)",
+          "قبل 3 أيام: إيداع نقدي +31,000 ₽ (المصدر غير محدد)",
+          "الراتب الشهري للمعلم: 38,000 ₽"
         ],
         "kk": [
-          "Сс 20:55 — көлікті иесі құлыптады",
-          "Сс 21:03 — кілтсіз ашылды"
+          "Жарылыстан 2 апта бұрын: қолма-қол салым +15 000 ₽ (дерек көзі көрсетілмеген)",
+          "10 күн бұрын: қолма-қол салым +22 000 ₽ (дерек көзі көрсетілмеген)",
+          "3 күн бұрын: қолма-қол салым +31 000 ₽ (дерек көзі көрсетілмеген)",
+          "Ай сайынғы мұғалім жалақысы: 38 000 ₽"
         ]
       },
-      "isContradiction": false,
+      "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Лог согласуется с версией владельца.",
-        "en": "The log is consistent with the owner's account.",
-        "tr": "Kayıt, sahibinin ifadesiyle tutarlı.",
-        "ar": "السجل متوافق مع رواية المالك.",
-        "kk": "Лог иесінің нұсқасымен үйлеседі."
+        "ru": "Три крупных наличных пополнения сверх зарплаты перед инцидентом указывают на доход от незаконной деятельности.",
+        "en": "Three large cash deposits on top of the salary before the incident point to income from illegal activity.",
+        "tr": "Olaydan önce maaşın üzerinde üç büyük nakit yatırma, yasadışı faaliyetten elde edilen geliri işaret etmektedir.",
+        "ar": "ثلاثة إيداعات نقدية كبيرة فوق الراتب قبل الحادثة تشير إلى دخل من نشاط غير قانوني.",
+        "kk": "Оқиғаға дейін жалақыдан тыс үш ірі қолма-қол салым заңсыз қызметтен түскен кірісті көрсетеді."
       },
       "meta": {
-        "logPrompt": "canbus@vehicle:~$ tail -f /var/log/keycard.log"
+        "bankName": "СберХим-Банк",
+        "accountMask": "•• 3404"
       }
     }
   ],
-  "correctDecision": "approve",
+  "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Камера, протокол полиции и лог брелока согласованы по времени.",
-      "Признаков инсценировки нет — угон реальный.",
-      "Заявление подлинное, его следует одобрить."
+      "Лабораторный анализ обнаружил прекурсоры метамфетамина и синий кристалл вместо нейлона.",
+      "Уборщик видел автодом, химический запах и подозрительные ночные продажи.",
+      "Три крупных наличных депозита без объяснения источника за две недели до взрыва.",
+      "«Синтез нейлона» — прикрытие нелегальной лаборатории. В выплате отказать."
     ],
     "en": [
-      "Camera, police report, and key-fob log all align in time.",
-      "There are no signs of staging — the theft is genuine.",
-      "The claim is valid and should be approved."
+      "Lab analysis found methamphetamine precursors and blue crystals instead of nylon.",
+      "The janitor witnessed the motorhome, chemical smell, and suspicious night-time sales.",
+      "Three large unexplained cash deposits in the two weeks before the explosion.",
+      "'Nylon synthesis' was a cover for an illegal lab. Reject the claim."
     ],
     "tr": [
-      "Kamera, polis raporu ve anahtarlık kaydı zaman olarak uyumlu.",
-      "Sahneleme belirtisi yok — hırsızlık gerçek.",
-      "Talep geçerli ve onaylanmalı."
+      "Laboratuvar analizi, naylon yerine metamfetamin öncüllerini ve mavi kristalleri ortaya çıkardı.",
+      "Temizlikçi karavanı, kimyasal kokuyu ve şüpheli gece satışlarını gördü.",
+      "Patlamadan iki hafta önce kaynağı açıklanamayan üç büyük nakit yatırma.",
+      "'Naylon sentezi' yasadışı bir laboratuvar için kapaktı. Talebi reddedin."
     ],
     "ar": [
-      "الكاميرا وتقرير الشرطة وسجل المفتاح كلها متوافقة زمنيًا.",
-      "لا توجد علامات تمثيل — السرقة حقيقية.",
-      "المطالبة صحيحة ويجب الموافقة عليها."
+      "كشف تحليل المختبر عن سلائف الميثامفيتامين وبلورات زرقاء بدلاً من النايلون.",
+      "شهد عامل النظافة المنزل المتنقل والرائحة الكيميائية والمبيعات الليلية المشبوهة.",
+      "ثلاثة إيداعات نقدية كبيرة غير مفسرة في الأسبوعين السابقين للانفجار.",
+      "كان 'تخليق النايلون' غطاءً لمختبر غير قانوني. رفض المطالبة."
     ],
     "kk": [
-      "Камера, полиция хаттамасы және кілт логы уақыт бойынша сәйкес.",
-      "Қойылым белгілері жоқ — ұрлық нақты.",
-      "Талап шынайы, оны мақұлдау керек."
+      "Зертханалық талдау нейлон орнына метамфетамин прекурсорлары мен көк кристалдар тапты.",
+      "Тазалаушы автоүйді, химиялық иісті және күдікті түнгі сатуды көрді.",
+      "Жарылыстан екі апта бұрын көзі түсіндірілмеген үш ірі қолма-қол салым.",
+      "«Нейлон синтезі» заңсыз зертхананың желеуі болды. Талаптан бас тарту."
     ]
   }
 }

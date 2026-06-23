@@ -71,6 +71,7 @@ const evidenceMetaSchema = z
     requestId: z.string().optional(),
     gpsFooter: z.string().optional(),
     filename: z.string().optional(),
+    imageUrl: z.string().optional(),
     cameraId: z.string().optional(),
     cameraModel: z.string().optional(),
     docHeader: z.string().optional(),
@@ -108,7 +109,7 @@ export const claimSchema = z
   .strict();
 
 const clientMetaRowSchema = z
-  .object({ k: z.string().min(1), v: z.string().min(1) })
+  .object({ k: localizedString, v: z.string().min(1) })
   .strict();
 
 type _ClientMetaRowCheck = AssertAssignable<ClientMetaRow, z.infer<typeof clientMetaRowSchema>>;

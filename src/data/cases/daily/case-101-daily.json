@@ -2,167 +2,176 @@
   "id": "case-101-daily",
   "type": "daily",
   "difficulty": "hard",
-  "claimAmount": 8000,
-  "truth": "fraud",
+  "claimAmount": 85000,
+  "truth": "valid",
   "title": {
-    "ru": "Пекарня с привидением",
-    "en": "The Haunted Bakery",
-    "tr": "Hayaletli Fırın",
-    "ar": "المخبز المسكون",
-    "kk": "Елес мекендеген наубайхана"
+    "ru": "Сбой в матрице",
+    "en": "Matrix Failure",
+    "tr": "Matris Arızası",
+    "ar": "عطل في المصفوفة",
+    "kk": "Матрицадағы ақау"
   },
   "claim": {
     "person": {
-      "ru": "Тибо Ферран",
-      "en": "Thibault Ferrand",
-      "tr": "Thibault Ferrand",
-      "ar": "تيبو فيران",
-      "kk": "Тибо Ферран"
+      "ru": "Нэо Ковалёв, 33 года",
+      "en": "Neo Kovalyov, 33",
+      "tr": "Neo Kovalyov, 33",
+      "ar": "نيو كوفاليوف، 33",
+      "kk": "Нэо Ковалёв, 33 жаста"
     },
     "story": {
-      "ru": "Ночью в пекарне завёлся полтергейст и уничтожил целую партию дорогих свадебных тортов. Утром я нашёл пустые подставки и прошу возместить ущерб.",
-      "en": "A poltergeist took over my bakery overnight and destroyed a whole batch of expensive wedding cakes. In the morning I found empty stands and I'm asking for compensation.",
-      "tr": "Gece fırnımı bir poltergeist ele geçirdi ve pahalı düğün pastalarımın tüm partisini yok etti. Sabah boş standları buldum ve tazminat talep ediyorum.",
-      "ar": "استولى شبح صاخب على مخبزي طوال الليل ودمّر دفعة كاملة من كعكات الزفاف باهظة الثمن. في الصباح وجدت الحوامل فارغة وأطلب التعويض.",
-      "kk": "Түнде наубайханама полтергейст кіріп, қымбат үйлену тойы торттарының бүкіл партиясын жойды. Таңертең бос тұғырларды таптым және өтемақы сұраймын."
+      "ru": "Работаю старшим разработчиком в «ГринКод Системс». Во время ночной смены система охлаждения серверной вышла из строя. Перегрев уничтожил мой рабочий ноутбук с уникальными наработками. Прошу компенсацию 85 000 рублей по полису страхования профессионального оборудования.",
+      "en": "I work as a senior developer at GreenCode Systems. During a night shift, the server room cooling system failed. The overheating destroyed my work laptop with unique project assets. I request 85,000 roubles compensation under the professional equipment insurance policy.",
+      "tr": "GreenCode Systems'da kıdemli geliştirici olarak çalışıyorum. Gece vardiyası sırasında sunucu odası soğutma sistemi arızalandı. Aşırı ısınma, benzersiz proje çalışmalarıyla birlikte dizüstü bilgisayarımı yok etti. Profesyonel ekipman sigortası kapsamında 85.000 ruble tazminat talep ediyorum.",
+      "ar": "أعمل كمطور أول في GreenCode Systems. خلال نوبة ليلية، تعطّل نظام تبريد غرفة الخوادم. أتلف الحرارة الزائدة حاسوبي المحمول الخاص بالعمل ومعه أصول مشروع فريدة. أطلب تعويضًا بقيمة 85,000 روبل بموجب وثيقة تأمين المعدات المهنية.",
+      "kk": "«ГринКод Системс» компаниясында аға әзірлеуші болып жұмыс істеймін. Түнгі ауысым кезінде сервер бөлмесінің салқындату жүйесі істен шықты. Қызып кету бірегей жобалық деректермен бірге жұмыс ноутбугымды жойды. Кәсіптік жабдық сақтандыру полисі бойынша 85 000 рубль өтемақы сұраймын."
     }
   },
   "coverImage": "covers/case-101-daily.svg",
-  "personImage": "people/thibault.svg",
+  "personImage": "people/neo.webp",
   "evidences": [
     {
-      "id": "ev-access-log",
+      "id": "ev-temp-log",
       "type": "usage_log",
       "title": {
-        "ru": "Журнал доступа к двери",
-        "en": "Door Access Log",
-        "tr": "Kapı Erişim Kaydı",
-        "ar": "سجل الوصول إلى الباب",
-        "kk": "Есік қол жеткізу журналы"
+        "ru": "Журнал температур серверной",
+        "en": "Server Room Temperature Log",
+        "tr": "Sunucu Odası Sıcaklık Kaydı",
+        "ar": "سجل درجة حرارة غرفة الخوادم",
+        "kk": "Сервер бөлмесі температура журналы"
       },
       "content": {
         "ru": [
-          "21:40 — Вход: Т. Ферран (карта владельца)",
-          "02:00 — Выход через служебную дверь (доставка)",
-          "02:14 — Вход: Т. Ферран",
-          "Иных карт и взломов двери за ночь не зафиксировано"
+          "02:00 — температура: 22°C (норма)",
+          "02:45 — температура: 41°C (предупреждение)",
+          "03:10 — температура: 63°C (критично)",
+          "03:28 — температура: 87°C (аварийное отключение оборудования)",
+          "03:29 — система охлаждения ВЫКЛ: отказ подшипника насоса #2"
         ],
         "en": [
-          "21:40 — Entry: T. Ferrand (owner card)",
-          "02:00 — Exit via service door (delivery)",
-          "02:14 — Entry: T. Ferrand",
-          "No other cards or forced entries recorded overnight"
+          "02:00 — temperature: 22°C (normal)",
+          "02:45 — temperature: 41°C (warning)",
+          "03:10 — temperature: 63°C (critical)",
+          "03:28 — temperature: 87°C (emergency equipment shutdown)",
+          "03:29 — cooling system OFF: pump bearing #2 failure"
         ],
         "tr": [
-          "21:40 — Giriş: T. Ferrand (sahip kartı)",
-          "02:00 — Servis kapısından çıkış (teslimat)",
-          "02:14 — Giriş: T. Ferrand",
-          "Gece boyunca başka kart veya zorla giriş kaydı yok"
+          "02:00 — sıcaklık: 22°C (normal)",
+          "02:45 — sıcaklık: 41°C (uyarı)",
+          "03:10 — sıcaklık: 63°C (kritik)",
+          "03:28 — sıcaklık: 87°C (acil ekipman kapatma)",
+          "03:29 — soğutma sistemi KAPALI: pompa yatağı #2 arızası"
         ],
         "ar": [
-          "21:40 — دخول: ت. فيران (بطاقة المالك)",
-          "02:00 — خروج عبر باب الخدمة (تسليم)",
-          "02:14 — دخول: ت. فيران",
-          "لم تُسجَّل أي بطاقات أخرى أو اقتحام طوال الليل"
+          "02:00 — درجة الحرارة: 22°C (طبيعي)",
+          "02:45 — درجة الحرارة: 41°C (تحذير)",
+          "03:10 — درجة الحرارة: 63°C (حرج)",
+          "03:28 — درجة الحرارة: 87°C (إيقاف طارئ للمعدات)",
+          "03:29 — نظام التبريد مغلق: عطل محمل مضخة #2"
         ],
         "kk": [
-          "21:40 — Кіру: Т. Ферран (иесінің картасы)",
-          "02:00 — Қызметтік есік арқылы шығу (жеткізу)",
-          "02:14 — Кіру: Т. Ферран",
-          "Түн бойы басқа карта немесе бұзып кіру тіркелмеген"
+          "02:00 — температура: 22°C (норма)",
+          "02:45 — температура: 41°C (ескерту)",
+          "03:10 — температура: 63°C (сыни)",
+          "03:28 — температура: 87°C (жабдықты авариялық сөндіру)",
+          "03:29 — салқындату жүйесі ӨШІРУ: №2 сорғы мойынтіректің бұзылуы"
         ]
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Только хозяин входил и выходил, а в 02:00 зафиксирован выход на доставку — никакого постороннего «полтергейста» не было.",
-        "en": "Only the owner came and went, and a delivery exit was logged at 02:00 — there was no outside 'poltergeist' at all.",
-        "tr": "Sadece sahibi girip çıktı ve 02:00'de bir teslimat çıkışı kaydedildi — dışarıdan hiçbir 'poltergeist' yoktu.",
-        "ar": "المالك وحده هو من دخل وخرج، وسُجِّل خروج للتسليم في الساعة 02:00 — لم يكن هناك أي 'شبح' خارجي.",
-        "kk": "Тек қожайын кіріп-шықты, ал 02:00-де жеткізуге шығу тіркелді — ешқандай бөгде «полтергейст» болған жоқ."
-      },
-      "meta": {
-        "logPrompt": "secure@bakery:~$ tail -f /var/log/access.log"
-      }
-    },
-    {
-      "id": "ev-thankyou",
-      "type": "document",
-      "title": {
-        "ru": "Благодарность и квитанция о доставке",
-        "en": "Thank-You Message & Delivery Receipt",
-        "tr": "Teşekkür Mesajı ve Teslimat Makbuzu",
-        "ar": "رسالة شكر وإيصال تسليم",
-        "kk": "Алғыс хаты және жеткізу түбіртегі"
-      },
-      "content": {
-        "ru": "Квитанция: 4 свадебных торта доставлены в банкетный зал «Лаванда» в 02:35. Сообщение от невесты: «Торты были волшебные, гости их обожали — спасибо, Тибо!»",
-        "en": "Receipt: 4 wedding cakes delivered to the 'Lavande' banquet hall at 02:35. Message from the bride: 'The cakes were magical, the guests adored them — thank you, Thibault!'",
-        "tr": "Makbuz: 4 düğün pastası 02:35'te 'Lavande' ziyafet salonuna teslim edildi. Gelinden mesaj: 'Pastalar büyüleyiciydi, misafirler bayıldı — teşekkürler Thibault!'",
-        "ar": "إيصال: تم تسليم 4 كعكات زفاف إلى قاعة 'لافاند' في الساعة 02:35. رسالة من العروس: 'كانت الكعكات ساحرة وأحبها الضيوف — شكراً تيبو!'",
-        "kk": "Түбіртек: 4 үйлену торты 02:35-те «Лаванда» банкет залына жеткізілді. Қалыңдықтан хабарлама: «Торттар керемет болды, қонақтар ұнатты — рахмет, Тибо!»"
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Торты не были уничтожены — их доставили на свадьбу и съели гости, что прямо опровергает рассказ об ущербе.",
-        "en": "The cakes were not destroyed — they were delivered to the wedding and eaten by guests, directly refuting the damage story.",
-        "tr": "Pastalar yok edilmedi — düğüne teslim edildi ve misafirler tarafından yendi, bu hasar hikâyesini doğrudan çürütüyor.",
-        "ar": "لم تُدمَّر الكعكات — بل سُلِّمت إلى الزفاف وأكلها الضيوف، مما يدحض رواية الضرر مباشرة.",
-        "kk": "Торттар жойылған жоқ — олар тойға жеткізіліп, қонақтар жеп қойды, бұл зиян туралы әңгімені тікелей жоққа шығарады."
-      }
-    },
-    {
-      "id": "ev-invoice",
-      "type": "document",
-      "title": {
-        "ru": "Счёт за ингредиенты",
-        "en": "Ingredients Invoice",
-        "tr": "Malzeme Faturası",
-        "ar": "فاتورة المكونات",
-        "kk": "Ингредиенттерге шот"
-      },
-      "content": {
-        "ru": "Счёт от поставщика: марципан, ваниль из Мадагаскара, бельгийский шоколад и сусальное золото на сумму 1 940 €, оплачено за три дня до события.",
-        "en": "Supplier invoice: marzipan, Madagascar vanilla, Belgian chocolate and edible gold leaf totalling €1,940, paid three days before the event.",
-        "tr": "Tedarikçi faturası: badem ezmesi, Madagaskar vanilyası, Belçika çikolatası ve yenilebilir altın varak toplam 1.940 €, etkinlikten üç gün önce ödendi.",
-        "ar": "فاتورة المورّد: مرزبان وفانيليا مدغشقر وشوكولاتة بلجيكية وورق ذهب صالح للأكل بإجمالي 1,940 يورو، دُفعت قبل ثلاثة أيام من الحدث.",
-        "kk": "Жеткізушінің шоты: марципан, Мадагаскар ванилі, бельгиялық шоколад және жеуге жарамды алтын жапырақ, барлығы 1 940 €, оқиғадан үш күн бұрын төленген."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Счёт подлинный и просто подтверждает закупку ингредиентов — сам по себе он не противоречит делу.",
-        "en": "The invoice is genuine and merely confirms the ingredient purchase — on its own it does not contradict the case.",
-        "tr": "Fatura gerçek ve yalnızca malzeme alımını doğruluyor — tek başına davayla çelişmiyor.",
-        "ar": "الفاتورة أصلية وتؤكد فقط شراء المكونات — وحدها لا تتعارض مع القضية.",
-        "kk": "Шот шынайы және тек ингредиенттер сатып алынғанын растайды — өздігінен іске қайшы келмейді."
+        "ru": "Журнал подтверждает: система охлаждения вышла из строя, температура достигла 87°C — уничтожение оборудования объяснимо.",
+        "en": "The log confirms: the cooling system failed and the temperature reached 87°C — equipment destruction is explained.",
+        "tr": "Kayıt şunu doğruluyor: soğutma sistemi arızalandı ve sıcaklık 87°C'ye ulaştı — ekipmanın imhası açıklanmış.",
+        "ar": "يؤكد السجل: تعطّل نظام التبريد ووصلت درجة الحرارة إلى 87°C — تدمير المعدات مفسَّر.",
+        "kk": "Журнал растайды: салқындату жүйесі істен шықты, температура 87°C жетті — жабдықтың жойылуы түсіндірілген."
+      },
+      "meta": {
+        "logPrompt": "hvac@datacenter:~$ tail -f /var/log/thermal.log"
+      }
+    },
+    {
+      "id": "ev-engineer",
+      "type": "document",
+      "title": {
+        "ru": "Акт технической инспекции",
+        "en": "Technical Inspection Report",
+        "tr": "Teknik Denetim Raporu",
+        "ar": "تقرير التفتيش الفني",
+        "kk": "Техникалық инспекция актісі"
+      },
+      "content": {
+        "ru": "Насос охлаждения #2 вышел из строя вследствие усталостного разрушения подшипника. Признаков преднамеренного повреждения нет. Код неисправности системы: 4221. Сообщение журнала ошибок: «There is no spoon». Потеря охлаждения была неизбежна с момента разрушения подшипника.",
+        "en": "Cooling pump #2 failed due to bearing fatigue fracture. No signs of deliberate damage. System fault code: 4221. Error log message: 'There is no spoon'. Cooling loss was inevitable from the moment of bearing failure.",
+        "tr": "Soğutma pompası #2, yatak yorulma kırığı nedeniyle arızalandı. Kasıtlı hasar belirtisi yok. Sistem arıza kodu: 4221. Hata günlüğü mesajı: 'There is no spoon'. Soğutma kaybı, yatak arızası anından itibaren kaçınılmazdı.",
+        "ar": "تعطّلت مضخة التبريد #2 بسبب كسر إجهاد المحمل. لا توجد علامات ضرر متعمد. رمز عطل النظام: 4221. رسالة سجل الأخطاء: 'There is no spoon'. كان فقدان التبريد حتميًا من لحظة فشل المحمل.",
+        "kk": "#2 салқындату сорғысы мойынтіректің шаршаудан сынуы салдарынан істен шықты. Қасақана зиян белгілері жоқ. Жүйенің бұзылу коды: 4221. Қате журналы хабары: «There is no spoon». Мойынтірек бұзылған сәттен бастап салқындатудың жоғалуы сөзсіз болды."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Официальный акт подтверждает случайную поломку без следов умысла.",
+        "en": "The official report confirms an accidental breakdown with no traces of intent.",
+        "tr": "Resmi rapor, kasıt izleri olmaksızın kazara yaşanan arızayı doğruluyor.",
+        "ar": "يؤكد التقرير الرسمي أنه عطل عرضي دون آثار لأي قصد.",
+        "kk": "Ресми акт ниет іздерінсіз кездейсоқ бұзылуды растайды."
+      }
+    },
+    {
+      "id": "ev-photo",
+      "type": "photo",
+      "title": {
+        "ru": "Фото уничтоженного ноутбука",
+        "en": "Photo of Destroyed Laptop",
+        "tr": "Tahrip Edilmiş Dizüstü Bilgisayar Fotoğrafı",
+        "ar": "صورة الحاسوب المحمول المدمر",
+        "kk": "Жойылған ноутбуктың фотосы"
+      },
+      "content": {
+        "ru": "На экране оплавленного ноутбука — россыпь зелёных символов на чёрном фоне. Серийный номер на шильдике: GC-2026-NEO-7749. Корпус деформирован, порты оплавлены. Следов физического удара или вскрытия нет.",
+        "en": "On the melted laptop screen — a cascade of green symbols on a black background. Serial number on the tag: GC-2026-NEO-7749. The casing is deformed, ports are melted. No traces of physical impact or tampering.",
+        "tr": "Erimiş dizüstü bilgisayarın ekranında siyah bir arka plan üzerinde yeşil semboller dizisi. Etiketteki seri numarası: GC-2026-NEO-7749. Gövde deforme olmuş, portlar erimiş. Fiziksel darbe veya kurcalama izi yok.",
+        "ar": "على شاشة الحاسوب المنصهر — شلال من الرموز الخضراء على خلفية سوداء. الرقم التسلسلي على الملصق: GC-2026-NEO-7749. الهيكل مشوه والمنافذ منصهرة. لا آثار لصدمة جسدية أو عبث.",
+        "kk": "Балқыған ноутбук экранында қара фонда жасыл символдар шашылғаны. Жапсырмадағы сериялық нөмір: GC-2026-NEO-7749. Корпус деформацияланған, порттар балқыған. Физикалық соққы немесе ашу іздері жоқ."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Серийный номер совпадает с полисом. Характер повреждений соответствует тепловому удару, а не умышленному разрушению.",
+        "en": "The serial number matches the policy. The damage pattern corresponds to thermal shock, not deliberate destruction.",
+        "tr": "Seri numarası poliçeyle eşleşiyor. Hasar deseni, kasıtlı yıkım değil, termal şokla uyumlu.",
+        "ar": "الرقم التسلسلي مطابق للوثيقة. نمط الضرر يتوافق مع الصدمة الحرارية لا التدمير المتعمد.",
+        "kk": "Сериялық нөмір полиспен сәйкес келеді. Зақым сипаты қасақана жою емес, жылулық соққыға сәйкес."
+      },
+      "meta": {
+        "filename": "IMG_20260315_034102.jpg",
+        "imageUrl": "evidence/case-101-daily-ev-photo.jpg"
       }
     }
   ],
-  "correctDecision": "reject",
+  "correctDecision": "approve",
   "explanation": {
     "ru": [
-      "Журнал двери: входил только хозяин, в 02:00 — выход на доставку.",
-      "Квитанция и благодарность доказывают: торты доставлены и съедены на свадьбе.",
-      "Ущерба нет — заявление мошенническое, в выплате отказать."
+      "Температурный журнал фиксирует рост от 22°C до 87°C за 88 минут — типичная картина отказа охлаждения.",
+      "Акт инспекции подтверждает случайное разрушение подшипника без следов умысла.",
+      "Серийный номер ноутбука совпадает с полисом, характер повреждений — тепловой. Заявление подлинное, одобряем."
     ],
     "en": [
-      "Door log: only the owner entered; at 02:00 a delivery exit was logged.",
-      "Receipt and thank-you prove the cakes were delivered and eaten at a wedding.",
-      "There was no damage — the claim is fraudulent, reject the payout."
+      "The temperature log records a rise from 22°C to 87°C over 88 minutes — the classic cooling failure pattern.",
+      "The inspection report confirms accidental bearing failure with no signs of intent.",
+      "The laptop serial number matches the policy; the damage is thermal. Claim is genuine, approve."
     ],
     "tr": [
-      "Kapı kaydı: sadece sahibi girdi; 02:00'de bir teslimat çıkışı kaydedildi.",
-      "Makbuz ve teşekkür, pastaların düğüne teslim edilip yendiğini kanıtlıyor.",
-      "Hasar yok — talep sahte, ödeme reddedilmeli."
+      "Sıcaklık kaydı 88 dakika içinde 22°C'den 87°C'ye yükselişi kaydediyor — klasik soğutma arızası tablosu.",
+      "Denetim raporu, kasıt belirtisi olmaksızın kazara yatak arızasını doğruluyor.",
+      "Dizüstünün seri numarası poliçeyle eşleşiyor; hasar termal. Talep gerçek, onaylayın."
     ],
     "ar": [
-      "سجل الباب: المالك وحده دخل؛ وسُجِّل خروج تسليم في 02:00.",
-      "الإيصال ورسالة الشكر يثبتان أن الكعكات سُلِّمت وأُكلت في الزفاف.",
-      "لا يوجد ضرر — المطالبة احتيالية، يجب رفض الدفع."
+      "يسجل سجل الحرارة ارتفاعًا من 22°C إلى 87°C خلال 88 دقيقة — نمط فشل التبريد الكلاسيكي.",
+      "يؤكد تقرير التفتيش فشل المحمل العرضي دون أي دلائل على قصد.",
+      "الرقم التسلسلي للحاسوب مطابق للوثيقة؛ الضرر حراري. المطالبة حقيقية، وافق عليها."
     ],
     "kk": [
-      "Есік журналы: тек қожайын кірді; 02:00-де жеткізуге шығу тіркелді.",
-      "Түбіртек пен алғыс торттардың тойға жеткізіліп, желінгенін дәлелдейді.",
-      "Зиян жоқ — талап алаяқтық, төлемнен бас тарту керек."
+      "Температура журналы 88 минут ішінде 22°C-тен 87°C-ке дейін өсуді тіркейді — салқындату бұзылуының классикалық үлгісі.",
+      "Инспекция актісі ниет белгілерінсіз кездейсоқ мойынтірек бұзылуын растайды.",
+      "Ноутбуктың сериялық нөмірі полиспен сәйкес; зақым жылулық. Талап шынайы, мақұлдаңыз."
     ]
   }
 }
