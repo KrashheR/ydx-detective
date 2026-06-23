@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-import { SUPPORTED_LANGUAGES, type Language } from '../types';
-import { LANGUAGE_LABELS, t } from '../i18n/ui';
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { SUPPORTED_LANGUAGES, type Language } from "../types";
+import { LANGUAGE_LABELS, t } from "../i18n/ui";
 
 interface Props {
   lang: Language;
@@ -19,13 +19,11 @@ export function LanguageSelector({ lang, onChange }: Props) {
         type="button"
         onClick={() => setOpen((v) => !v)}
         className="flex w-full items-center justify-between gap-2 rounded-lg border border-border bg-surface-2 px-3 py-2.5 text-xs font-semibold text-text-light transition-colors hover:border-black/20"
-        aria-label={t('language', lang)}
+        aria-label={t("language", lang)}
         aria-expanded={open}
       >
-        <span>
-          {t('language', lang)} · {current.native}
-        </span>
-        <span className="text-[11px] text-text-dim">▾</span>
+        <span>{current.native}</span>
+        <span className="text-[14px] text-text-dim">▾</span>
       </button>
 
       <AnimatePresence>
@@ -34,7 +32,7 @@ export function LanguageSelector({ lang, onChange }: Props) {
             initial={{ opacity: 0, y: 6 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 6 }}
-            transition={{ duration: 0.16, ease: 'easeOut' }}
+            transition={{ duration: 0.16, ease: "easeOut" }}
             className="absolute z-30 mt-1 w-full overflow-hidden rounded-lg border border-border bg-surface-2 shadow-lift"
           >
             {SUPPORTED_LANGUAGES.map((code) => {
@@ -49,7 +47,7 @@ export function LanguageSelector({ lang, onChange }: Props) {
                       setOpen(false);
                     }}
                     className={`flex w-full items-center justify-between gap-2 px-3 py-2.5 text-xs font-medium transition-colors hover:bg-surface ${
-                      active ? 'text-accent' : 'text-text-light'
+                      active ? "text-accent" : "text-text-light"
                     }`}
                   >
                     <span>{label.native}</span>

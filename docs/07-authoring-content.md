@@ -19,6 +19,7 @@
 | `truth` | `valid \| fraud` | истина дела; для авторинга/аналитики |
 | `title` | LocalizedString | 5 языков |
 | `claim` | `{ person, story }` | имя+возраст и история от первого лица (LocalizedString) |
+| `client` | `{ role, meta[] }` | `role`, ключ `meta[].k` и значение `meta[].v` — LocalizedString на 5 языках |
 | `coverImage` | string | путь под `public/`, напр. `covers/case-NNN.svg` |
 | `personImage` | string? | опц. портрет WebP, напр. `people/<firstname>.webp` |
 | `evidences` | Evidence[] | улики |
@@ -59,6 +60,11 @@ meta-поля по типам (детали и примеры — в `CASE_AUTHO
 - `bank_statement` → `bankName` / `accountMask`
 - `phone_records` → `carrierName` / `phoneMask`
 - `social_media` → `socialPlatform`
+
+Видимые текстовые meta-поля (`company`, `department`, `requestId`, `gpsFooter`, `docHeader`,
+`docFooter`, `clinicName`, `bankName`, `carrierName`) — **LocalizedString на 5 языках**. Технические
+значения (`filename`, `imageUrl`, `cameraId`, `cameraModel`, `logPrompt`, маски счетов/телефонов,
+`socialPlatform`) остаются обычными строками.
 - `document` / `witness_statement` → meta не нужен
 
 > Не переиспользуй уже занятые значения (названия GPS-сервисов, модели камер, log-промпты)
@@ -67,7 +73,8 @@ meta-поля по типам (детали и примеры — в `CASE_AUTHO
 ## Как добавить новое дело
 
 1. Создай JSON в `src/data/cases/` (стандартное) или `src/data/cases/daily/` (ежедневное).
-   Следуй схеме выше; заполни **все 5 языков** (`ru/en/tr/ar/kk`) во **всех** LocalizedString.
+   Следуй схеме выше; заполни **все 5 языков** (`ru/en/tr/ar/kk`) во **всех** LocalizedString,
+   включая `client.meta[].v` и видимые текстовые поля `evidence.meta`.
 2. Импортируй файл в `src/data/caseLoader.ts` и добавь в массив `RAW_CASES`.
 3. Положи обложку `public/covers/case-NNN.svg` (и при наличии портрет `public/people/<name>.webp`).
 4. Для **стандартного** дела задай требование уровня в

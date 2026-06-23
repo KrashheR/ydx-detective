@@ -21,6 +21,7 @@
 | [06-yandex-platform.md](06-yandex-platform.md) | SDK, облачные сейвы, серверное время, реклама, лидерборд, рейтинг, аналитика Yandex Metrica | Трогаешь платформенную интеграцию/persistence/аналитику |
 | [07-authoring-content.md](07-authoring-content.md) | Как добавить дело, язык, ачивку, тип улики | Добавляешь контент |
 | [08-build-test-deploy.md](08-build-test-deploy.md) | Команды, верификация, тесты, сборка, выкладка на Yandex | Собираешь/тестишь/деплоишь |
+| [09-synthetic-playtesting.md](09-synthetic-playtesting.md) | 10 синтетических персон, браузерный прогон и отчеты | Исследуешь UX через LLM-агентов |
 
 ## Связанные документы в корне
 

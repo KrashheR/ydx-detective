@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import type { ActiveSession, Case, Language } from "../types";
 import type { HintKind } from "../store/gameStore";
 import { GAME_CONFIG } from "../config/gameConfig";
-import { loc, t } from "../i18n/ui";
+import { RTL_LANGUAGES, loc, t } from "../i18n/ui";
 import { formatCaseLabel } from "../utils/caseDisplay";
 import { asset } from "../utils/asset";
 import { EvidenceCard } from "./EvidenceCard";
@@ -29,6 +29,7 @@ interface Props {
   onApprove: () => void;
   /** Returns false if rejection is unjustified, triggering the prompt. */
   onReject: () => boolean;
+  onBackToDesk?: () => void;
 }
 
 type Tab = "statement" | "evidence";
@@ -55,7 +56,9 @@ export function CaseFile({
   onBuyHint,
   onApprove,
   onReject,
+  onBackToDesk,
 }: Props) {
+  const isRTL = RTL_LANGUAGES.has(lang);
   const [tab, setTab] = useState<Tab>("statement");
   // Slide direction for the mobile panel swap: +1 → reveal evidence, −1 → statement.
   const [dir, setDir] = useState(0);
@@ -188,7 +191,7 @@ export function CaseFile({
                       {loc(row.k, lang)}
                     </div>
                     <div className="font-mono text-[10px] font-semibold text-[#374151] md:text-[11px]">
-                      {row.v}
+                      {loc(row.v, lang)}
                     </div>
                   </Fragment>
                 ))}
@@ -277,14 +280,57 @@ export function CaseFile({
       transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
       className="relative w-full max-w-[540px]"
     >
-      {/* Case header row */}
-      <div className="mb-3 flex items-center justify-between gap-2">
-        <span className="truncate font-mono text-[13px] font-semibold text-text-muted">
-          {formatCaseLabel(caseData, lang)} · {loc(caseData.title, lang)}
-        </span>
+      {/* ── Desktop header: pill + breadcrumb + badge ── */}
+      <div className="mb-3 hidden items-center justify-between gap-2 md:flex">
+        <div className="flex min-w-0 items-center gap-3">
+          {onBackToDesk && (
+            <button
+              type="button"
+              onClick={onBackToDesk}
+              className="flex shrink-0 items-center gap-[7px] rounded-[9px] border border-border bg-surface py-[7px] pr-[13px] pl-[11px] text-[12.5px] font-semibold text-text-muted transition-colors hover:border-accent hover:bg-surface-2 hover:text-ink"
+            >
+              <span className="text-[15px] leading-none" aria-hidden>
+                {isRTL ? "→" : "←"}
+              </span>
+              {t("backToDesk", lang)}
+            </button>
+          )}
+          <span className="truncate font-mono text-[13px] font-semibold text-text-muted">
+            {formatCaseLabel(caseData, lang)} · {loc(caseData.title, lang)}
+          </span>
+        </div>
         <span className="shrink-0 rounded-sm border border-stamp px-[7px] py-[3px] font-mono text-[10px] font-semibold text-stamp">
           {t("confidential", lang)}
         </span>
+      </div>
+
+      {/* ── Mobile header: app-bar pill + badge, then case label + title ── */}
+      <div className="mb-3 border-b border-border pb-[14px] md:hidden">
+        <div className="flex items-center justify-between gap-2">
+          {onBackToDesk && (
+            <button
+              type="button"
+              onClick={onBackToDesk}
+              className="flex shrink-0 items-center gap-[7px] rounded-[11px] border border-border bg-surface py-[9px] pr-[15px] pl-[12px] text-[13px] font-bold text-text-muted active:bg-surface-2"
+            >
+              <span className="text-[17px] leading-none" aria-hidden>
+                {isRTL ? "→" : "←"}
+              </span>
+              {t("backToDesk", lang)}
+            </button>
+          )}
+          <span className="shrink-0 rounded-sm border border-stamp px-[8px] py-[4px] font-mono text-[9.5px] font-semibold text-stamp">
+            {t("confidential", lang)}
+          </span>
+        </div>
+        <div className="mt-[14px]">
+          <div className="font-mono text-[11px] font-semibold uppercase tracking-[.1em] text-text-muted">
+            {formatCaseLabel(caseData, lang)}
+          </div>
+          <div className="mt-[3px] font-serif text-[22px] font-bold leading-[1.15] text-ink">
+            {loc(caseData.title, lang)}
+          </div>
+        </div>
       </div>
 
       {/* Mobile tabs */}

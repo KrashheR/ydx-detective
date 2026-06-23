@@ -73,10 +73,10 @@ export type EvidenceType =
  */
 export interface EvidenceMeta {
   // gps renderer
-  company?: string;
-  department?: string;
-  requestId?: string;
-  gpsFooter?: string;
+  company?: LocalizedString;
+  department?: LocalizedString;
+  requestId?: LocalizedString;
+  gpsFooter?: LocalizedString;
   // photo renderer
   filename?: string;
   imageUrl?: string;
@@ -84,17 +84,17 @@ export interface EvidenceMeta {
   cameraId?: string;
   cameraModel?: string;
   // document renderer
-  docHeader?: string;
-  docFooter?: string;
+  docHeader?: LocalizedString;
+  docFooter?: LocalizedString;
   // usage_log renderer
   logPrompt?: string;
   // xray renderer
-  clinicName?: string;
+  clinicName?: LocalizedString;
   // bank_statement renderer
-  bankName?: string;
+  bankName?: LocalizedString;
   accountMask?: string;
   // phone_records renderer
-  carrierName?: string;
+  carrierName?: LocalizedString;
   phoneMask?: string;
   // social_media renderer
   socialPlatform?: string;
@@ -121,7 +121,7 @@ export interface Claim {
 /** One row in the client metadata table shown on the statement card. */
 export interface ClientMetaRow {
   readonly k: LocalizedString;
-  readonly v: string;
+  readonly v: LocalizedString;
 }
 
 /** Extended client identity block shown in the statement header. */

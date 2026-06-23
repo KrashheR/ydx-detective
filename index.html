@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Где ложь? Симулятор детектива</title>
 
+    <!-- Loaded before JavaScript so the first rendered frame is the game loader. -->
+    <link rel="stylesheet" href="/src/index.css" />
+    <link rel="stylesheet" href="/src/components/GameLoader/GameLoader.css" />
+
     <!-- Typography: sans (UI chrome) + serif (documents) + mono (archive data) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,7 +46,77 @@
     </script>
   </head>
   <body>
+    <section
+      id="static-game-loader"
+      class="game-loader game-loader--static theme-manila"
+      hidden
+      role="status"
+      aria-live="polite"
+      aria-label="Загружаем игру"
+    >
+      <picture class="game-loader__background" aria-hidden="true">
+        <source
+          media="(max-width: 700px), (orientation: portrait)"
+          srcset="./game-loader/loader-bg-mobile.webp"
+        />
+        <img src="./game-loader/loader-bg-desktop.webp" alt="" draggable="false" />
+      </picture>
+      <div class="game-loader__wash" aria-hidden="true"></div>
+      <div class="game-loader__vignette" aria-hidden="true"></div>
+      <div class="game-loader__brand">
+        <h1 class="game-loader__title">
+          <span data-loader-copy="title">Где ложь</span>
+          <span class="game-loader__question" aria-hidden="true">?</span>
+        </h1>
+        <div class="game-loader__subtitle" data-loader-copy="subtitle">
+          Симулятор детектива
+        </div>
+        <div class="game-loader__stamp" data-loader-copy="stamp">Дело загружается</div>
+      </div>
+      <div class="game-loader__status-card">
+        <div class="game-loader__status-row">
+          <span data-loader-copy="phase">Загружаем игру…</span>
+          <span class="game-loader__percent" aria-hidden="true">…</span>
+        </div>
+        <div
+          class="game-loader__track"
+          role="progressbar"
+          aria-label="Загружаем игру"
+        >
+          <div class="game-loader__fill"></div>
+        </div>
+        <p class="game-loader__tip">
+          <span aria-hidden="true" class="game-loader__tip-icon">⌕</span>
+          <span data-loader-copy="tip">
+            Отказ в выплате требует доказательств. Найди и отметь противоречие.
+          </span>
+        </p>
+      </div>
+    </section>
     <div id="root"></div>
+    <script>
+      // This compact copy table mirrors loader keys in src/i18n/ui.ts because it
+      // must run before the TypeScript bundle exists.
+      (function () {
+        var copies = {
+          ru: ['Где ложь', 'Симулятор детектива', 'Дело загружается', 'Загружаем игру…', 'Отказ в выплате требует доказательств. Найди и отметь противоречие.'],
+          en: ['Where Is the Lie', 'Detective Simulator', 'Loading case', 'Loading game…', 'A rejected claim needs proof. Find and mark a contradiction.'],
+          tr: ['Yalan Nerede', 'Dedektif Simülatörü', 'Dosya yükleniyor', 'Oyun yükleniyor…', 'Ödemeyi reddetmek için kanıt gerekir. Çelişkiyi bul ve işaretle.'],
+          ar: ['أين الكذبة', 'محاكي المحقق', 'جارٍ تحميل القضية', 'جارٍ تحميل اللعبة…', 'رفض التعويض يحتاج إلى دليل. اعثر على التناقض وحدده.'],
+          kk: ['Өтірік қайда', 'Детектив симуляторы', 'Іс жүктелуде', 'Ойын жүктелуде…', 'Төлемнен бас тарту үшін дәлел керек. Қайшылықты тауып, белгіле.']
+        };
+        var detected = String(navigator.language || 'ru').slice(0, 2).toLowerCase();
+        var locale = Object.prototype.hasOwnProperty.call(copies, detected) ? detected : 'ru';
+        var copy = copies[locale];
+        var splash = document.getElementById('static-game-loader');
+        var fields = splash.querySelectorAll('[data-loader-copy]');
+        for (var i = 0; i < fields.length; i += 1) fields[i].textContent = copy[i];
+        splash.dir = locale === 'ar' ? 'rtl' : 'ltr';
+        splash.querySelector('.game-loader__question').textContent = locale === 'ar' ? '؟' : '?';
+        splash.setAttribute('aria-label', copy[3]);
+        splash.querySelector('[role="progressbar"]').setAttribute('aria-label', copy[3]);
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

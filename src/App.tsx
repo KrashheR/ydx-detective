@@ -33,6 +33,7 @@ import { LeftSidebar } from './components/LeftSidebar';
 import { RightSidebar } from './components/RightSidebar';
 import { CaseFile } from './components/CaseFile';
 import { CaseSelect } from './components/CaseSelect';
+import { MobileDeskMenu } from './components/MobileDeskMenu';
 import { StampModal } from './components/StampModal';
 import { ResultSheet } from './components/ResultSheet';
 import { AchievementsModal } from './components/AchievementsModal';
@@ -63,8 +64,6 @@ export default function App() {
   const verdictCountRef = useRef(0);
   // Gate: show rating modal at most once per session.
   const ratingShownRef = useRef(false);
-  // Gate: auto-open first story case only once per app load (not after back-to-desk).
-  const autoStartedRef = useRef(false);
   const AD_EVERY_N_VERDICTS = 3;
 
   const flashToast = (msg: string) => {
@@ -100,25 +99,6 @@ export default function App() {
     document.documentElement.dir = RTL_LANGUAGES.has(lang) ? 'rtl' : 'ltr';
     document.title = t('gameTitle', lang);
   }, [lang]);
-
-  // Resume an in-progress session after hydration so quitting mid-case restores.
-  // On first load with no session, auto-open the next available story case.
-  useEffect(() => {
-    if (!isHydrated) return;
-    if (session && !selectedId) {
-      setSelectedId(session.caseId);
-      return;
-    }
-    if (!session && !selectedId && !autoStartedRef.current) {
-      autoStartedRef.current = true;
-      const next = getNextAvailableCase(standardCaseUnlocks, null);
-      if (next) {
-        setSelectedId(next.id);
-        store.startCase(next);
-      }
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isHydrated, session, selectedId]);
 
   // A fresh verdict re-opens the result sheet and resets the double-reward slot.
   useEffect(() => {
@@ -296,7 +276,27 @@ export default function App() {
 
   return (
     <div className={`theme-${FOLDER_LOOK} min-h-full bg-bg md:h-full md:overflow-hidden`}>
-      <div className="flex flex-col gap-4 p-4 md:h-full md:flex-row">
+      {/* Mobile-only grouped desk menu (replaces sidebar + folder grid on small screens) */}
+      {!selectedCase && (
+        <div className="md:hidden">
+          <MobileDeskMenu
+            standardCaseUnlocks={standardCaseUnlocks}
+            dailyCase={dailyCase}
+            dailyUnlocked={daily.unlocked}
+            dailyMsRemaining={daily.msUntilUnlock}
+            lang={lang}
+            balance={stats.balance}
+            results={stats.results}
+            onSelectStandardCase={handleSelectStandardCase}
+            onSelect={handleSelectCase}
+            onDailyLocked={onDailyLocked}
+            onLanguage={store.setLanguage}
+          />
+        </div>
+      )}
+
+      {/* Desktop 3-column layout; also used on mobile when a case is open */}
+      <div className={`flex flex-col gap-4 p-4 md:h-full md:flex-row ${!selectedCase ? 'hidden md:flex' : 'flex'}`}>
         {/* Left desk column */}
         <div className="order-2 md:order-1 md:h-full md:w-[272px] md:shrink-0">
           <LeftSidebar
@@ -331,6 +331,7 @@ export default function App() {
               onBuyHint={(kind) => store.buyHint(selectedCase, kind)}
               onApprove={handleApprove}
               onReject={handleReject}
+              onBackToDesk={backToDesk}
             />
           ) : (
             <CaseSelect

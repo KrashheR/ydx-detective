@@ -26,6 +26,7 @@ Index: **[docs/README.md](docs/README.md)**. Each doc starts with a "Ключе�
 | [docs/06-yandex-platform.md](docs/06-yandex-platform.md) | SDK, cloud saves, server time, ads, leaderboard, rating, persistence, save migration |
 | [docs/07-authoring-content.md](docs/07-authoring-content.md) | Adding a case, language, achievement, or evidence type (+ `src/data/CASE_AUTHORING_GUIDE.json`) |
 | [docs/08-build-test-deploy.md](docs/08-build-test-deploy.md) | Build, test, verify, deploy, devCheat |
+| [docs/09-synthetic-playtesting.md](docs/09-synthetic-playtesting.md) | Synthetic personas, browser playtest runner, report artifacts |
 
 ### 🗺️ Key file map (jump here, don't grep)
 
@@ -96,7 +97,13 @@ These cut across the whole codebase; everything else lives in the docs above.
    missing counter / placeholder `counterId` makes every track call a silent no-op. Details: [docs/06](docs/06-yandex-platform.md).
 5. **All economy tuning lives in `src/config/gameConfig.ts`**, not in the engines — and bump
    `GAME_CONFIG.saveVersion` + extend `migrate()` whenever the persisted shape changes. Details: [docs/04](docs/04-economy-progression.md) / [docs/06](docs/06-yandex-platform.md).
-6. **The standard campaign is a difficulty curve.** 38 cases ordered by `(requiredLevel, caseNumber)`;
+6. **All user-facing text must go through i18n — never hardcode strings in components or engines.**
+   Every new UI string belongs in `src/i18n/ui.ts`: add it as a `UIKey`, then provide translations for
+   **all five languages** (`ru`, `en`, `tr`, `ar`, `kk`). Case content (titles, evidence text, claim
+   body) is localized inside the case JSON itself using `LocalizedString`/`LocalizedContent` (see
+   `src/types/index.ts`). A missing key in any language is a bug — the `Language` type is the exhaustive
+   list; don't add a key for only some locales. Details: [docs/07](docs/07-authoring-content.md).
+7. **The standard campaign is a difficulty curve.** 38 cases ordered by `(requiredLevel, caseNumber)`;
    evidence count is **non-decreasing** along that order (2-evidence onboarding → 6-evidence expert),
    the first two cases use only `photo`/`document`, and the advanced types (`bank_statement`,
    `phone_records`, `social_media`) debut late (≥ pos 18). `requiredLevel` is a complexity tier capped at

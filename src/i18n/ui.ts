@@ -4,6 +4,7 @@
  * translations live inside each case JSON; this file covers only the shell.
  */
 import type { Difficulty, Language } from "../types";
+import type { LoaderCopy } from "../components/GameLoader/types";
 
 export type UIKey =
   | "approve"
@@ -55,6 +56,15 @@ export type UIKey =
   | "achievements"
   | "achievementUnlocked"
   | "gameTitle"
+  | "loaderTitle"
+  | "loaderSubtitle"
+  | "loaderStamp"
+  | "loaderPhaseBundle"
+  | "loaderPhaseSdk"
+  | "loaderPhaseSave"
+  | "loaderPhaseContent"
+  | "loaderPhaseReady"
+  | "loaderTip"
   | "department"
   | "casesInWork"
   | "analytics"
@@ -89,6 +99,7 @@ export type UIKey =
   | "completedCase"
   | "unlockedCases"
   | "lockedStatus"
+  | "availableStatus"
   | "lockedCaseToast"
   | "markAsContradiction"
   | "contradictionMarked"
@@ -144,7 +155,9 @@ export type UIKey =
     | "bonusIdealCase"
     | "xpLabel"
     | "fraudMissed"
-    | "verdictItem";
+    | "verdictItem"
+    | "dailyRewardBadge"
+    | "dailyDifficultyBadge";
 
 export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
   approve: {
@@ -448,6 +461,69 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     ar: "أين الكذبة؟ محاكي المحقق",
     kk: "Өтірік қайда? Тіміскі симуляторы",
   },
+  loaderTitle: {
+    ru: "Где ложь?",
+    en: "Where Is the Lie?",
+    tr: "Yalan Nerede?",
+    ar: "أين الكذبة؟",
+    kk: "Өтірік қайда?",
+  },
+  loaderSubtitle: {
+    ru: "Симулятор детектива",
+    en: "Detective Simulator",
+    tr: "Dedektif Simülatörü",
+    ar: "محاكي المحقق",
+    kk: "Детектив симуляторы",
+  },
+  loaderStamp: {
+    ru: "Дело загружается",
+    en: "Loading case",
+    tr: "Dosya yükleniyor",
+    ar: "جارٍ تحميل القضية",
+    kk: "Іс жүктелуде",
+  },
+  loaderPhaseBundle: {
+    ru: "Загружаем игру…",
+    en: "Loading game…",
+    tr: "Oyun yükleniyor…",
+    ar: "جارٍ تحميل اللعبة…",
+    kk: "Ойын жүктелуде…",
+  },
+  loaderPhaseSdk: {
+    ru: "Связываемся с архивом…",
+    en: "Contacting the archive…",
+    tr: "Arşive bağlanılıyor…",
+    ar: "جارٍ الاتصال بالأرشيف…",
+    kk: "Мұрағатпен байланыс орнатылуда…",
+  },
+  loaderPhaseSave: {
+    ru: "Восстанавливаем материалы дела…",
+    en: "Restoring case materials…",
+    tr: "Dosya belgeleri geri yükleniyor…",
+    ar: "جارٍ استعادة مستندات القضية…",
+    kk: "Іс материалдары қалпына келтірілуде…",
+  },
+  loaderPhaseContent: {
+    ru: "Изучаем документы…",
+    en: "Examining documents…",
+    tr: "Belgeler inceleniyor…",
+    ar: "جارٍ فحص المستندات…",
+    kk: "Құжаттар зерттелуде…",
+  },
+  loaderPhaseReady: {
+    ru: "Дело готово",
+    en: "Case ready",
+    tr: "Dosya hazır",
+    ar: "القضية جاهزة",
+    kk: "Іс дайын",
+  },
+  loaderTip: {
+    ru: "Отказ в выплате требует доказательств. Найди и отметь противоречие.",
+    en: "A rejected claim needs proof. Find and mark a contradiction.",
+    tr: "Ödemeyi reddetmek için kanıt gerekir. Çelişkiyi bul ve işaretle.",
+    ar: "رفض التعويض يحتاج إلى دليل. اعثر على التناقض وحدده.",
+    kk: "Төлемнен бас тарту үшін дәлел керек. Қайшылықты тауып, белгіле.",
+  },
   department: {
     ru: "ОТДЕЛ РАССЛЕДОВАНИЙ",
     en: "INVESTIGATIONS DEPT",
@@ -673,6 +749,13 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     tr: "kilitli",
     ar: "مقفل",
     kk: "құлыпталған",
+  },
+  availableStatus: {
+    ru: "ДОСТУПНО",
+    en: "AVAILABLE",
+    tr: "AÇIK",
+    ar: "متاح",
+    kk: "АШЫҚ",
   },
   lockedCaseToast: {
     ru: "Дело откроется на следующем уровне следователя.",
@@ -1009,6 +1092,20 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     ar: "الحكم الصحيح",
     kk: "Дұрыс шешім",
   },
+  dailyRewardBadge: {
+    ru: "Награда ×5",
+    en: "Reward ×5",
+    tr: "Ödül ×5",
+    ar: "المكافأة ×5",
+    kk: "Сыйақы ×5",
+  },
+  dailyDifficultyBadge: {
+    ru: "Сложность ×2",
+    en: "Difficulty ×2",
+    tr: "Zorluk ×2",
+    ar: "الصعوبة ×2",
+    kk: "Күрделілік ×2",
+  },
 };
 
 /** Native names + flags for the language selector (data-driven). */
@@ -1029,6 +1126,22 @@ export const RTL_LANGUAGES: ReadonlySet<Language> = new Set<Language>(["ar"]);
 /** Convenience translator bound to the active language. */
 export function t(key: UIKey, lang: Language): string {
   return UI_STRINGS[key][lang];
+}
+
+/** Copy used by both the boot loader and its static HTML precursor. */
+export function getLoaderCopy(lang: Language): LoaderCopy {
+  return {
+    title: t("loaderTitle", lang),
+    subtitle: t("loaderSubtitle", lang),
+    stamp: t("loaderStamp", lang),
+    phases: {
+      sdk: t("loaderPhaseSdk", lang),
+      save: t("loaderPhaseSave", lang),
+      content: t("loaderPhaseContent", lang),
+      ready: t("loaderPhaseReady", lang),
+    },
+    tip: t("loaderTip", lang),
+  };
 }
 
 /** Localized "Case 1" / "Дело 1" label for the standard-case list order. */

@@ -111,6 +111,13 @@ describe('offline mode (no SDK present)', () => {
 });
 
 describe('online mode (mocked SDK)', () => {
+  it('notifies LoadingAPI only when the game explicitly reports readiness', async () => {
+    const { mod, mockSdk } = await freshOnline();
+    expect(mockSdk.features.LoadingAPI.ready).not.toHaveBeenCalled();
+    mod.notifyGameReady();
+    expect(mockSdk.features.LoadingAPI.ready).toHaveBeenCalledTimes(1);
+  });
+
   it('initializes the cloud for an authenticated player', async () => {
     const { mod } = await freshOnline({ mode: '' });
     expect(mod.canUseCloud()).toBe(true);

@@ -66,21 +66,21 @@ const evidenceType = z.enum([
 
 const evidenceMetaSchema = z
   .object({
-    company: z.string().optional(),
-    department: z.string().optional(),
-    requestId: z.string().optional(),
-    gpsFooter: z.string().optional(),
+    company: localizedString.optional(),
+    department: localizedString.optional(),
+    requestId: localizedString.optional(),
+    gpsFooter: localizedString.optional(),
     filename: z.string().optional(),
     imageUrl: z.string().optional(),
     cameraId: z.string().optional(),
     cameraModel: z.string().optional(),
-    docHeader: z.string().optional(),
-    docFooter: z.string().optional(),
+    docHeader: localizedString.optional(),
+    docFooter: localizedString.optional(),
     logPrompt: z.string().optional(),
-    clinicName: z.string().optional(),
-    bankName: z.string().optional(),
+    clinicName: localizedString.optional(),
+    bankName: localizedString.optional(),
     accountMask: z.string().optional(),
-    carrierName: z.string().optional(),
+    carrierName: localizedString.optional(),
     phoneMask: z.string().optional(),
     socialPlatform: z.string().optional(),
   })
@@ -109,7 +109,7 @@ export const claimSchema = z
   .strict();
 
 const clientMetaRowSchema = z
-  .object({ k: localizedString, v: z.string().min(1) })
+  .object({ k: localizedString, v: localizedString })
   .strict();
 
 type _ClientMetaRowCheck = AssertAssignable<ClientMetaRow, z.infer<typeof clientMetaRowSchema>>;

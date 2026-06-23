@@ -39,6 +39,37 @@ describe('case registry', () => {
     const ids = getDailyCases().map((c) => c.id);
     expect(ids).toEqual([...ids].sort((a, b) => a.localeCompare(b)));
   });
+
+  it('does not leak Cyrillic text into non-Cyrillic locales', () => {
+    const languageKeys = ['ru', 'en', 'tr', 'ar', 'kk'];
+    const cyrillic = /[А-Яа-яЁё]/;
+    const leaks: string[] = [];
+
+    const visit = (value: unknown, path: string): void => {
+      if (Array.isArray(value)) {
+        value.forEach((item, index) => visit(item, `${path}[${index}]`));
+        return;
+      }
+      if (!value || typeof value !== 'object') return;
+
+      const record = value as Record<string, unknown>;
+      if (languageKeys.every((lang) => lang in record)) {
+        for (const lang of ['en', 'tr', 'ar']) {
+          const entries = Array.isArray(record[lang]) ? record[lang] : [record[lang]];
+          entries.forEach((entry, index) => {
+            if (typeof entry === 'string' && cyrillic.test(entry)) {
+              leaks.push(`${path}.${lang}${entries.length > 1 ? `[${index}]` : ''}`);
+            }
+          });
+        }
+      }
+
+      Object.entries(record).forEach(([key, child]) => visit(child, `${path}.${key}`));
+    };
+
+    getAllCases().forEach((caseData) => visit(caseData, caseData.id));
+    expect(leaks).toEqual([]);
+  });
 });
 
 describe('getDailyCase rotation', () => {

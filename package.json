@@ -10,7 +10,9 @@
     "dev": "vite",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:cov": "vitest run --coverage"
+    "test:cov": "vitest run --coverage",
+    "playtest:validate": "node scripts/synthetic-playtest.mjs --validate",
+    "playtest:run": "node scripts/synthetic-playtest.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",

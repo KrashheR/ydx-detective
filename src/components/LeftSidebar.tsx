@@ -69,7 +69,7 @@ export function LeftSidebar({
       </div>
 
       {/* Scrollable case list — keeps daily card from being crushed by flex shrink */}
-      <div className="mt-[15px] flex min-h-0 max-h-[600px] flex-1 flex-col gap-[15px] overflow-y-auto md:max-h-none">
+      <div className="mt-[15px] flex min-h-0 max-h-[600px] flex-1 flex-col gap-[15px] overflow-y-auto md:max-h-none pr-4">
         {/* Daily case — pinned to top, gold URGENT stamp */}
         {dailyCase && (
           <Tooltip
@@ -77,42 +77,44 @@ export function LeftSidebar({
             side="bottom"
             label={dailyUnlocked ? null : t("tipDailyLocked", lang)}
           >
-          <button
-            type="button"
-            onClick={() =>
-              dailyUnlocked ? onSelect(dailyCase) : onDailyLocked()
-            }
-            className={`relative block w-full rounded-[9px] border p-3 pr-10 text-left overflow-hidden ${
-              dailyUnlocked ? "border-[#c79a3a]" : "border-border opacity-[0.55]"
-            } ${dailyCase.id === selectedId ? "ring-1 ring-gold" : ""}`}
-            style={
-              dailyUnlocked
-                ? { background: "linear-gradient(135deg,#e6c87e,#d29e44)" }
-                : { background: "#d7c6a5" }
-            }
-          >
-            {dailyUnlocked && (
-              <span
-                aria-hidden
-                className="pointer-events-none absolute -right-6 top-[9px] rotate-[34deg] bg-stamp px-[26px] py-0.5 font-mono text-[9px] font-bold tracking-wider text-white"
-              >
-                {t("urgent", lang)}
-              </span>
-            )}
-            <div className="text-xs font-bold tracking-[0.5px] text-[#5c3f08]">
-              {t("dailyCase", lang)}
-            </div>
-            <div className="mt-[7px] flex items-center justify-between gap-2">
-              <span className="truncate font-mono text-[11px] font-semibold text-[#7a5410]">
-                {dailyUnlocked
-                  ? t("openCaseAction", lang)
-                  : `▶ ${t("watchAd", lang)}`}
-              </span>
-              <span className="shrink-0 rounded-[5px] bg-gold px-[7px] py-0.5 text-[11px] font-bold text-gold-dark">
-                ×5
-              </span>
-            </div>
-          </button>
+            <button
+              type="button"
+              onClick={() =>
+                dailyUnlocked ? onSelect(dailyCase) : onDailyLocked()
+              }
+              className={`relative block w-full rounded-[9px] border p-3 pr-10 text-left overflow-hidden ${
+                dailyUnlocked
+                  ? "border-[#c79a3a]"
+                  : "border-border opacity-[0.55]"
+              } ${dailyCase.id === selectedId ? "ring-1 ring-gold" : ""}`}
+              style={
+                dailyUnlocked
+                  ? { background: "linear-gradient(135deg,#e6c87e,#d29e44)" }
+                  : { background: "#d7c6a5" }
+              }
+            >
+              {dailyUnlocked && (
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute -right-6 top-[9px] rotate-[34deg] bg-stamp px-[26px] py-0.5 font-mono text-[9px] font-bold tracking-wider text-white"
+                >
+                  {t("urgent", lang)}
+                </span>
+              )}
+              <div className="text-xs font-bold tracking-[0.5px] text-[#5c3f08]">
+                {t("dailyCase", lang)}
+              </div>
+              <div className="mt-[7px] flex items-center justify-between gap-2">
+                <span className="truncate font-mono text-[11px] font-semibold text-[#7a5410]">
+                  {dailyUnlocked
+                    ? t("openCaseAction", lang)
+                    : `▶ ${t("watchAd", lang)}`}
+                </span>
+                <span className="shrink-0 rounded-[5px] bg-gold px-[7px] py-0.5 text-[11px] font-bold text-gold-dark">
+                  ×5
+                </span>
+              </div>
+            </button>
           </Tooltip>
         )}
 
@@ -128,51 +130,51 @@ export function LeftSidebar({
               side="bottom"
               label={locked ? formatCaseLockTooltip(info, lang) : null}
             >
-            <button
-              type="button"
-              onClick={() => onSelectStandardCase(info)}
-              aria-disabled={locked}
-              className={`block w-full rounded-[9px] border bg-surface-2 p-3 text-left transition-colors ${
-                active
-                  ? "border-accent"
-                  : locked
-                    ? "border-border opacity-[0.55]"
-                    : "border-border hover:border-black/15"
-              }`}
-            >
-              <div className="flex items-center justify-between gap-2">
-                <span className="truncate text-[13px] font-semibold text-text-light">
-                  {loc(c.title, lang)}
-                </span>
-                {active ? (
-                  <span
-                    className="h-[7px] w-[7px] shrink-0 rounded-full bg-accent"
-                    aria-hidden
-                  />
-                ) : done ? (
-                  <span
-                    className="inline-flex h-[7px] w-[7px] shrink-0 items-center justify-center text-[12px] font-bold leading-none text-success"
-                    aria-hidden
-                  >
-                    ✓
+              <button
+                type="button"
+                onClick={() => onSelectStandardCase(info)}
+                aria-disabled={locked}
+                className={`block w-full rounded-[9px] border bg-surface-2 p-3 text-left transition-colors ${
+                  active
+                    ? "border-accent"
+                    : locked
+                      ? "border-border opacity-[0.55]"
+                      : "border-border hover:border-black/15"
+                }`}
+              >
+                <div className="flex items-center justify-between gap-2">
+                  <span className="truncate text-[13px] font-semibold text-text-light">
+                    {loc(c.title, lang)}
                   </span>
-                ) : locked ? (
-                  <span className="shrink-0 font-mono text-[10px] text-text-dim">
-                    {t("lockedStatus", lang)}
-                  </span>
-                ) : null}
-              </div>
-              <div className="mt-[3px] text-[11px] font-medium text-text-dim">
-                {formatCaseLabel(c, lang)} ·{" "}
-                {locked
-                  ? formatCaseLockMessage(info, lang)
-                  : active
-                    ? t("active", lang)
-                    : done
-                      ? t("completedCase", lang)
-                      : tDifficulty(c.difficulty, lang)}
-              </div>
-            </button>
+                  {active ? (
+                    <span
+                      className="h-[7px] w-[7px] shrink-0 rounded-full bg-accent"
+                      aria-hidden
+                    />
+                  ) : done ? (
+                    <span
+                      className="inline-flex h-[7px] w-[7px] shrink-0 items-center justify-center text-[12px] font-bold leading-none text-success"
+                      aria-hidden
+                    >
+                      ✓
+                    </span>
+                  ) : locked ? (
+                    <span className="shrink-0 font-mono text-[10px] text-text-dim">
+                      {t("lockedStatus", lang)}
+                    </span>
+                  ) : null}
+                </div>
+                <div className="mt-[3px] text-[11px] font-medium text-text-dim">
+                  {formatCaseLabel(c, lang)} ·{" "}
+                  {locked
+                    ? formatCaseLockMessage(info, lang)
+                    : active
+                      ? t("active", lang)
+                      : done
+                        ? t("completedCase", lang)
+                        : tDifficulty(c.difficulty, lang)}
+                </div>
+              </button>
             </Tooltip>
           );
         })}

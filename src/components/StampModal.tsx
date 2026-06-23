@@ -235,7 +235,7 @@ function EvidenceBody({ evidence, lang }: { evidence: Evidence; lang: Language }
   const meta = evidence.meta;
   switch (evidence.type) {
     case 'gps':
-      return <GpsBody lines={lines} meta={meta} />;
+      return <GpsBody lines={lines} meta={meta} lang={lang} />;
     case 'photo':
       return <PhotoBody lines={lines} meta={meta} />;
     case 'camera_recording':
@@ -243,15 +243,15 @@ function EvidenceBody({ evidence, lang }: { evidence: Evidence; lang: Language }
     case 'witness_statement':
       return <WitnessBody lines={lines} />;
     case 'document':
-      return <DocumentBody lines={lines} meta={meta} />;
+      return <DocumentBody lines={lines} meta={meta} lang={lang} />;
     case 'usage_log':
       return <UsageLogBody lines={lines} meta={meta} />;
     case 'xray':
-      return <XRayBody lines={lines} meta={meta} />;
+      return <XRayBody lines={lines} meta={meta} lang={lang} />;
     case 'bank_statement':
-      return <BankBody lines={lines} meta={meta} />;
+      return <BankBody lines={lines} meta={meta} lang={lang} />;
     case 'phone_records':
-      return <PhoneBody lines={lines} meta={meta} />;
+      return <PhoneBody lines={lines} meta={meta} lang={lang} />;
     case 'social_media':
       return <SocialBody lines={lines} meta={meta} />;
     default:
@@ -289,7 +289,7 @@ function buildRoutePoints(lines: string[]): Array<{ x: number; y: number }> {
   });
 }
 
-function GpsBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
+function GpsBody({ lines, meta, lang }: { lines: string[]; meta?: EvidenceMeta; lang: Language }) {
   const [active, setActive] = useState<number | null>(null);
 
   const parsed = lines.map((l) => {
@@ -306,10 +306,10 @@ function GpsBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
         <div>
           <div className="flex items-center gap-1.5">
             <span className="font-mono text-[11px] text-ink/40">▣</span>
-            <span className="font-mono text-[11px] font-semibold text-ink/60">{meta?.company ?? 'GeoGuard Solutions'}</span>
+            <span className="font-mono text-[11px] font-semibold text-ink/60">{meta?.company ? loc(meta.company, lang) : 'GeoGuard Solutions'}</span>
           </div>
           <div className="mt-0.5 font-mono text-[9px] text-ink/40">
-            {meta?.department ?? 'Отдел мониторинга транспортных средств'}
+            {meta?.department ? loc(meta.department, lang) : t('department', lang)}
           </div>
         </div>
         <span className="font-mono text-[8px] font-semibold text-stamp border border-stamp px-1.5 py-0.5 rounded">
@@ -318,7 +318,7 @@ function GpsBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
       </div>
       <div className="my-2.5 h-px bg-[#d1d5db]" />
       <div className="mb-2.5 font-mono text-[10px] text-ink/50">
-        {`Запрос: ${meta?.requestId ?? 'СТР-2026-0314-А · Тип: Полный трек'}`}
+        {meta?.requestId ? loc(meta.requestId, lang) : 'STR-2026-0314-A'}
       </div>
 
       {/* Map */}
@@ -377,7 +377,7 @@ function GpsBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
         })}
 
         <div className="absolute bottom-1.5 left-2 font-mono text-[8px] text-white/50">
-          {meta?.gpsFooter ?? '© GeoGuard 2026 · GPS ACC: ±3m'}
+          {meta?.gpsFooter ? loc(meta.gpsFooter, lang) : '© GeoGuard 2026 · GPS ACC: ±3m'}
         </div>
       </div>
 
@@ -669,12 +669,12 @@ function WitnessBody({ lines }: { lines: string[] }) {
 
 /* ── DOCUMENT ────────────────────────────────────────────────────────────── */
 
-function DocumentBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
+function DocumentBody({ lines, meta, lang }: { lines: string[]; meta?: EvidenceMeta; lang: Language }) {
   return (
     <>
       <div className="-mx-[18px] -mt-[18px] mb-4 border-t-4 border-accent" />
       <div className="mb-2.5 font-mono text-[9px] font-semibold uppercase tracking-[2px] text-ink/40">
-        {meta?.docHeader ?? 'Официальный документ · исх. № ____-__/__ от __.__.__'}
+        {meta?.docHeader ? loc(meta.docHeader, lang) : t('tag_document', lang)}
       </div>
       <div className="mb-3 border-b border-dashed border-[#c7c2b6]" />
       <div className="rounded-md border border-dashed border-[#c7c2b6] bg-white p-4 font-mono text-[12.5px] leading-relaxed text-ink">
@@ -685,7 +685,7 @@ function DocumentBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta })
         ))}
       </div>
       <div className="mt-4 text-right font-mono text-[10px] text-ink/50">
-        {meta?.docFooter ?? 'Документ заверен. МП _______________'}
+        {meta?.docFooter ? loc(meta.docFooter, lang) : '______________'}
       </div>
     </>
   );
@@ -817,7 +817,7 @@ function XRayShapeLayer({ shapes, bright }: { shapes: XShape[]; bright: boolean 
   );
 }
 
-function XRayBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
+function XRayBody({ lines, meta, lang }: { lines: string[]; meta?: EvidenceMeta; lang: Language }) {
   const [show, setShow] = useState(false);
   const [pos, setPos] = useState({ x: 140, y: 95 });
   const shapes = buildXRayShapes(lines);
@@ -871,7 +871,7 @@ function XRayBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
         </div>
       </div>
       <div className="mt-2.5 text-center font-mono text-[10px] text-ink/60">
-        {meta?.clinicName ?? 'ООО «МедИмидж» · Рентген-отдел'} · <span className="text-accent">наведите для лупы</span>
+        {meta?.clinicName ? loc(meta.clinicName, lang) : 'MedImage'}
       </div>
     </>
   );
@@ -879,7 +879,7 @@ function XRayBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
 
 /* ── BANK STATEMENT ──────────────────────────────────────────────────────── */
 
-function BankBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
+function BankBody({ lines, meta, lang }: { lines: string[]; meta?: EvidenceMeta; lang: Language }) {
   // Each line: "DATE|DESC|AMT|BAL" or plain text
   const rows = lines.map((l, i) => {
     const parts = l.split('|');
@@ -901,7 +901,7 @@ function BankBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-1.5">
           <span className="text-[12px] text-accent">■</span>
-          <span className="font-mono text-[12px] font-bold text-ink">{meta?.bankName ?? 'FinSecure Bank'}</span>
+          <span className="font-mono text-[12px] font-bold text-ink">{meta?.bankName ? loc(meta.bankName, lang) : 'FinSecure Bank'}</span>
         </div>
         <span
           className="rounded border font-mono text-[8px] font-semibold text-ink/55"
@@ -949,7 +949,7 @@ function BankBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
 
 /* ── PHONE RECORDS ───────────────────────────────────────────────────────── */
 
-function PhoneBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
+function PhoneBody({ lines, meta, lang }: { lines: string[]; meta?: EvidenceMeta; lang: Language }) {
   // Each line: "DATE|TIME|NUMBER|DUR|TYPE" or plain
   const rows = lines.map((l, i) => {
     const p = l.split('|');
@@ -969,7 +969,7 @@ function PhoneBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-1.5">
           <span className="text-accent">◈</span>
-          <span className="font-mono text-[12px] font-bold text-ink">{meta?.carrierName ?? 'TeleLink'}</span>
+          <span className="font-mono text-[12px] font-bold text-ink">{meta?.carrierName ? loc(meta.carrierName, lang) : 'TeleLink'}</span>
         </div>
         <span className="font-mono text-[10px] text-ink/55">{meta?.phoneMask ?? '+7 (9••) •••-••-••'}</span>
       </div>
@@ -1002,7 +1002,7 @@ function PhoneBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
       </div>
 
       <div className="mt-2.5 font-mono text-[9px] text-ink/40">
-        ПАО «{meta?.carrierName ?? 'ТелеЛинк'}» · детализация за период
+        {meta?.carrierName ? loc(meta.carrierName, lang) : 'TeleLink'}
       </div>
     </>
   );

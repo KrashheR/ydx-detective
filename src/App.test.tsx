@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { render, screen, fireEvent, within, act } from '@testing-library/react';
 import { GAME_CONFIG } from './config/gameConfig';
-import { t } from './i18n/ui';
+import { loc, t } from './i18n/ui';
 
 /* --------------------------------------------------------------------------
  * UI-smoke layer. These tests verify the wiring between the DOM and the store
@@ -79,6 +79,7 @@ vi.mock('./services/persistence', async (importOriginal) => {
 import App from './App';
 import { useGameStore } from './store/gameStore';
 import { makeDefaultStats } from './services/persistence';
+import { getStandardCases } from './data/caseLoader';
 
 const RU = (key: Parameters<typeof t>[0]) => t(key, 'ru');
 
@@ -106,28 +107,55 @@ beforeEach(() => {
   });
 });
 
-/** Render and wait until hydration completes (first story case is auto-opened). */
+/** Render and wait until hydration completes on the desk. */
 async function renderHydrated() {
   const utils = render(<App />);
-  // After hydration the first story case is auto-opened — wait for its verdict panel.
-  await screen.findByRole('button', { name: new RegExp(RU('rejectPayout')) });
+  await screen.findAllByText(RU('selectCasePrompt'));
   return utils;
 }
 
-/** First story case is auto-opened on hydration — wait for CaseFile's verdict panel. */
+/** Open the first story case from the desk and wait for its verdict panel. */
 async function openFirstCase() {
+  const firstCaseTitle = loc(getStandardCases()[0]!.title, 'ru');
+  const caseButtons = within(screen.getByRole('main')).getAllByRole('button', {
+    name: new RegExp(firstCaseTitle),
+  });
+  fireEvent.click(caseButtons[0]!);
   return screen.findByRole('button', { name: new RegExp(RU('rejectPayout')) });
 }
 
 describe('hydration', () => {
-  it('shows the loading placeholder before hydration, then auto-opens the first case', async () => {
+  it('shows the loading placeholder before hydration, then opens the desk', async () => {
     render(<App />);
     // Synchronous first render: store not hydrated yet.
     expect(screen.getByText('…')).toBeInTheDocument();
-    // After init resolves, the first story case is auto-opened.
-    expect(
-      await screen.findByRole('button', { name: new RegExp(RU('rejectPayout')) }),
-    ).toBeInTheDocument();
+    // A fresh game waits for explicit case selection.
+    expect((await screen.findAllByText(RU('selectCasePrompt'))).length).toBeGreaterThan(0);
+    expect(screen.queryByRole('button', { name: new RegExp(RU('rejectPayout')) })).not.toBeInTheDocument();
+    expect(useGameStore.getState().session).toBeNull();
+  });
+
+  it('stays on the desk with a saved investigation until the player selects it', async () => {
+    const firstCase = getStandardCases()[0]!;
+    const savedSession = {
+      caseId: firstCase.id,
+      selectedEvidenceIds: [firstCase.evidences[0]!.id],
+      viewedEvidenceIds: [firstCase.evidences[0]!.id],
+      revealedEvidenceIds: [],
+      startedAtServerMs: 0,
+    };
+    persist.loadSnapshot.mockResolvedValue({
+      snapshot: { ...defaultSnapshot(), session: savedSession },
+      isNew: false,
+    });
+
+    await renderHydrated();
+
+    expect(screen.queryByRole('button', { name: new RegExp(RU('rejectPayout')) })).not.toBeInTheDocument();
+    expect(useGameStore.getState().session).toEqual(savedSession);
+
+    await openFirstCase();
+    expect(useGameStore.getState().session).toEqual(savedSession);
   });
 });
 
@@ -209,7 +237,7 @@ describe('verdict gating', () => {
 
     // The result sheet appears (Back-to-Desk action present).
     expect(
-      await screen.findByRole('button', { name: new RegExp(RU('backToDesk')) }),
+      (await screen.findAllByRole('button', { name: new RegExp(RU('backToDesk')) }))[0],
     ).toBeInTheDocument();
     expect(useGameStore.getState().lastResult).not.toBeNull();
   });

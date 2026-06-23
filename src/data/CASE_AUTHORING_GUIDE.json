@@ -21,6 +21,7 @@
         "person": "LocalizedString — имя + возраст",
         "story": "LocalizedString — история заявителя от первого лица"
       },
+      "client": "optional — role, meta[].k и meta[].v являются LocalizedString на 5 языках",
       "coverImage": "covers/case-NNN.svg",
       "personImage": "people/<firstname>.webp",
       "evidences": "Evidence[]",
@@ -39,6 +40,7 @@
   },
 
   "meta_fields_by_type": {
+    "_localization_rule": "Видимые поля company/department/requestId/gpsFooter/docHeader/docFooter/clinicName/bankName/carrierName — LocalizedString (ru/en/tr/ar/kk). Технические идентификаторы, filename, imageUrl, cameraId, cameraModel, logPrompt, accountMask, phoneMask и socialPlatform — обычные строки.",
     "photo": {
       "filename": "Имя файла фото. Формат: IMG_YYYYMMDD_HHMMSS.jpg или SCR_YYYYMMDD_HHMMSS.png или DJI_YYYYMMDD_HHMMSS.jpg (для дронов). Дата должна совпадать с хронологией дела.",
       "example": { "filename": "IMG_20260315_143022.jpg" }

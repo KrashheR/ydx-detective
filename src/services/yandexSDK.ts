@@ -151,7 +151,6 @@ export function initYandex(): Promise<void> {
       } catch {
         leaderboards = null;
       }
-      sdk.features?.LoadingAPI?.ready();
     } catch {
       sdk = null;
       player = null;
@@ -160,6 +159,11 @@ export function initYandex(): Promise<void> {
     }
   })();
   return initPromise;
+}
+
+/** Notify Yandex only after the loader has reached 100% and the UI is ready. */
+export function notifyGameReady(): void {
+  sdk?.features?.LoadingAPI?.ready();
 }
 
 /** True only when cloud persistence is actually available. */
