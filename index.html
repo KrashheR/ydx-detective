@@ -52,7 +52,6 @@
       hidden
       role="status"
       aria-live="polite"
-      aria-label="Загружаем игру"
     >
       <picture class="game-loader__background" aria-hidden="true">
         <source
@@ -65,31 +64,26 @@
       <div class="game-loader__vignette" aria-hidden="true"></div>
       <div class="game-loader__brand">
         <h1 class="game-loader__title">
-          <span data-loader-copy="title">Где ложь</span>
-          <span class="game-loader__question" aria-hidden="true">?</span>
+          <span data-loader-copy="title"></span>
+          <span class="game-loader__question" aria-hidden="true"></span>
         </h1>
-        <div class="game-loader__subtitle" data-loader-copy="subtitle">
-          Симулятор детектива
-        </div>
-        <div class="game-loader__stamp" data-loader-copy="stamp">Дело загружается</div>
+        <div class="game-loader__subtitle" data-loader-copy="subtitle"></div>
+        <div class="game-loader__stamp" data-loader-copy="stamp"></div>
       </div>
       <div class="game-loader__status-card">
         <div class="game-loader__status-row">
-          <span data-loader-copy="phase">Загружаем игру…</span>
+          <span data-loader-copy="phase"></span>
           <span class="game-loader__percent" aria-hidden="true">…</span>
         </div>
         <div
           class="game-loader__track"
           role="progressbar"
-          aria-label="Загружаем игру"
         >
           <div class="game-loader__fill"></div>
         </div>
         <p class="game-loader__tip">
           <span aria-hidden="true" class="game-loader__tip-icon">⌕</span>
-          <span data-loader-copy="tip">
-            Отказ в выплате требует доказательств. Найди и отметь противоречие.
-          </span>
+          <span data-loader-copy="tip"></span>
         </p>
       </div>
     </section>
@@ -105,13 +99,22 @@
           ar: ['أين الكذبة', 'محاكي المحقق', 'جارٍ تحميل القضية', 'جارٍ تحميل اللعبة…', 'رفض التعويض يحتاج إلى دليل. اعثر على التناقض وحدده.'],
           kk: ['Өтірік қайда', 'Детектив симуляторы', 'Іс жүктелуде', 'Ойын жүктелуде…', 'Төлемнен бас тарту үшін дәлел керек. Қайшылықты тауып, белгіле.']
         };
-        var detected = String(navigator.language || 'ru').slice(0, 2).toLowerCase();
-        var locale = Object.prototype.hasOwnProperty.call(copies, detected) ? detected : 'ru';
+        var savedLocale = '';
+        try {
+          var saved = JSON.parse(localStorage.getItem('claimDetectiveSave') || 'null');
+          savedLocale = saved && saved.stats ? saved.stats.language : '';
+        } catch (_) {}
+        var browserLocale = String(navigator.language || '').slice(0, 2).toLowerCase();
+        var locale = Object.prototype.hasOwnProperty.call(copies, savedLocale)
+          ? savedLocale
+          : (Object.prototype.hasOwnProperty.call(copies, browserLocale) ? browserLocale : 'ru');
         var copy = copies[locale];
         var splash = document.getElementById('static-game-loader');
         var fields = splash.querySelectorAll('[data-loader-copy]');
         for (var i = 0; i < fields.length; i += 1) fields[i].textContent = copy[i];
         splash.dir = locale === 'ar' ? 'rtl' : 'ltr';
+        document.documentElement.lang = locale;
+        document.documentElement.dir = locale === 'ar' ? 'rtl' : 'ltr';
         splash.querySelector('.game-loader__question').textContent = locale === 'ar' ? '؟' : '?';
         splash.setAttribute('aria-label', copy[3]);
         splash.querySelector('[role="progressbar"]').setAttribute('aria-label', copy[3]);

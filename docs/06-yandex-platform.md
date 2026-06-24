@@ -11,9 +11,9 @@
 `initYandex()` идемпотентна (`initPromise`). Опрашивает `window.YaGames` до 4с
 (`<script>` грузится `async`), затем `getPlayer({ scopes: false })` (без промпта прав).
 `canUseCloud()` истинно только когда SDK+player готовы и игрок не `lite` (анонимный).
-`features.LoadingAPI.ready()` не вызывается сразу после SDK. Пока загрузчик временно
-отключён, оболочка в `main.tsx` вызывает `notifyGameReady()` после гидратации
-сохранения; при включённом загрузчике это делает `BootScreen` после достижения 100%.
+`features.LoadingAPI.ready()` не вызывается сразу после SDK. Пока loader временно
+отключён, оболочка в `main.tsx` вызывает `notifyGameReady()` сразу после гидратации.
+При включённом loader это делает `BootScreen` после достижения 100%.
 
 Используемая поверхность SDK:
 - `getPlayer()` → `player.setData / getData` (облачные сейвы)

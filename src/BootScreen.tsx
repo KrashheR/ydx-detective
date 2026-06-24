@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useMemo, useRef, useState, type ComponentType } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type ComponentType } from 'react';
 import {
   GameLoader,
   areBootSignalsReady,
@@ -9,6 +9,7 @@ import {
 } from './components/GameLoader';
 import { initYandex, notifyGameReady } from './services/yandexSDK';
 import { useGameStore } from './store/gameStore';
+import { detectInitialLanguage } from './utils/initialLanguage';
 
 const appModulePromise = import('./App');
 
@@ -40,11 +41,14 @@ async function waitForCriticalAssets(): Promise<void> {
 }
 
 export default function BootScreen() {
-  const language = useGameStore((state) => state.stats.language);
   const isHydrated = useGameStore((state) => state.isHydrated);
+  // Freeze the pre-hydration locale for the whole splash lifetime. Otherwise
+  // Zustand's default `ru` flashes between the localized static and hydrated UI.
+  const [loaderLanguage] = useState(detectInitialLanguage);
   const [AppComponent, setAppComponent] = useState<ComponentType | null>(null);
   const [loaderVisible, setLoaderVisible] = useState(true);
   const readyNotified = useRef(false);
+  const dismissTimer = useRef<number | null>(null);
   const [signals, setSignals] = useState<BootSignals>({
     sdkReady: false,
     playerReady: false,
@@ -99,17 +103,32 @@ export default function BootScreen() {
   const progress = useSmoothedProgress(rawProgress, ready, { initialValue: 10 });
   const phase = getBootPhase(signals);
 
-  useEffect(() => {
-    if (!ready || progress < 99.5 || readyNotified.current) return;
+  const finishLoading = useCallback(() => {
+    if (readyNotified.current) return;
     readyNotified.current = true;
+    notifyGameReady();
+    setLoaderVisible(false);
+  }, []);
 
-    const timeout = window.setTimeout(() => {
-      notifyGameReady();
-      setLoaderVisible(false);
-    }, 350);
+  useEffect(() => {
+    if (!ready || progress < 99.5 || readyNotified.current || dismissTimer.current !== null) {
+      return;
+    }
+    // Do not return a progress-dependent cleanup here: progress can render once
+    // more before 100%, which previously cancelled this timer forever.
+    dismissTimer.current = window.setTimeout(finishLoading, 350);
+  }, [finishLoading, progress, ready]);
 
+  useEffect(() => {
+    if (!AppComponent || !isHydrated || readyNotified.current) return;
+    // Safety net for a browser that never settles document.fonts/image decode.
+    const timeout = window.setTimeout(finishLoading, 8000);
     return () => window.clearTimeout(timeout);
-  }, [progress, ready]);
+  }, [AppComponent, finishLoading, isHydrated]);
+
+  useEffect(() => () => {
+    if (dismissTimer.current !== null) window.clearTimeout(dismissTimer.current);
+  }, []);
 
   return (
     <>
@@ -118,7 +137,7 @@ export default function BootScreen() {
         visible={loaderVisible}
         progress={progress}
         phase={phase}
-        locale={language}
+        locale={loaderLanguage}
       />
     </>
   );

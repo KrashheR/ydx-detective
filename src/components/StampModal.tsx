@@ -140,7 +140,7 @@ export function StampModal({
                 type="button"
                 onClick={onClose}
                 aria-label="Close"
-                className="px-1.5 text-lg leading-none text-white/85 hover:text-white"
+                className="px-1.5 text-lg leading-none text-white/85 hover:text-white focus:outline-none focus-visible:outline-none"
               >
                 ✕
               </button>
@@ -450,7 +450,7 @@ function PhotoBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
 
   return (
     <div className="flex justify-center py-2">
-      <div className="relative" style={{ width: 230, height: 290, perspective: 1200 }}>
+      <div className="relative" style={{ width: 230, minHeight: 290, perspective: 1200 }}>
         {/* Paperclip */}
         <div
           className="absolute z-10 rounded-full border-2 border-[#9ca3af]"
@@ -458,7 +458,7 @@ function PhotoBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
         />
 
         <div
-          className="relative h-full w-full"
+          className="relative w-full"
           style={{
             transformStyle: 'preserve-3d',
             transition: 'transform 0.6s cubic-bezier(.4,.2,.2,1)',
@@ -467,8 +467,8 @@ function PhotoBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
         >
           {/* Front */}
           <div
-            className="absolute inset-0 rounded-sm bg-white shadow-lift"
-            style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', padding: '12px 12px 0', transform: 'rotate(-1.5deg)' }}
+            className="relative w-full rounded-sm bg-white shadow-lift"
+            style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', padding: '12px 12px 32px', transform: 'rotate(-1.5deg)' }}
           >
             <div
               className="flex h-[165px] items-center justify-center rounded-sm overflow-hidden"

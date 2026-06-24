@@ -65,8 +65,8 @@ export function GameLoader({
 
           <motion.div
             className="game-loader__brand"
-            initial={reduceMotion ? false : { opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={reduceMotion ? false : { opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ delay: 0.08, duration: 0.42, ease: 'easeOut' }}
           >
             <h1 className="game-loader__title">
@@ -95,8 +95,8 @@ export function GameLoader({
 
           <motion.div
             className="game-loader__status-card"
-            initial={reduceMotion ? false : { opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={reduceMotion ? false : { opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ delay: 0.16, duration: 0.38, ease: 'easeOut' }}
           >
             <div className="game-loader__status-row">

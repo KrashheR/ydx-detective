@@ -14,9 +14,10 @@ npm run test:watch # vitest в watch-режиме
 npm run test:cov   # vitest run --coverage
 ```
 
-`BootScreen.tsx` умеет загружать `App.tsx` динамическим чанком и продолжать статический
-splash из `index.html` React-лоадером. Сейчас загрузчик временно отключён: `main.tsx`
-импортирует `App` напрямую, а splash скрыт. Фоны остаются в `public/game-loader/`.
+`BootScreen.tsx` загружает `App.tsx` динамическим чанком и продолжает статический
+splash из `index.html` React-лоадером до завершения SDK/сейва/контента. Фоны остаются
+в `public/game-loader/` и выбираются через responsive `<picture>`. Сейчас loader
+временно отключён: entry point импортирует `App` напрямую, splash скрыт.
 
 ## Верификация = `npm run typecheck` И `npm test`
 

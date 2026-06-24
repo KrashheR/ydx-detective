@@ -1,8 +1,8 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App';
-import { notifyGameReady } from './services/yandexSDK';
-import { useGameStore } from './store/gameStore';
+import React from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App";
+import { notifyGameReady } from "./services/yandexSDK";
+import { useGameStore } from "./store/gameStore";
 
 function AppWithoutLoader() {
   const isHydrated = useGameStore((state) => state.isHydrated);
@@ -17,7 +17,7 @@ function AppWithoutLoader() {
   return <App />;
 }
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <AppWithoutLoader />
   </React.StrictMode>,

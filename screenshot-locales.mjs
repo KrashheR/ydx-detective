@@ -13,6 +13,7 @@
 import { spawn } from 'node:child_process';
 import { mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import sharp from 'sharp';
 
 const ROOT = process.cwd();
 const BASE_URL = 'http://127.0.0.1:4173';
@@ -255,7 +256,8 @@ async function main() {
         fromSurface: true,
         captureBeyondViewport: false,
       });
-      await writeFile(path.join(dir, `${name}.png`), Buffer.from(data, 'base64'));
+      const webp = await sharp(Buffer.from(data, 'base64')).webp({ lossless: true, effort: 6 }).toBuffer();
+      await writeFile(path.join(dir, `${name}.webp`), webp);
     };
 
     const clickButton = async (needle) => {
@@ -315,11 +317,16 @@ async function main() {
       await sleep(500);
     };
 
-    const openCaseById = async (caseId) => {
+    const openCaseById = async (caseId, completedIds = []) => {
       await evaluate(`(() => {
         const raw = localStorage.getItem('claimDetectiveSave');
         if (!raw) return false;
         const save = JSON.parse(raw);
+        if (save.stats && ${JSON.stringify(completedIds)}.length) {
+          const done = new Set(save.stats.completedCaseIds || []);
+          ${JSON.stringify(completedIds)}.forEach(id => done.add(id));
+          save.stats.completedCaseIds = [...done];
+        }
         save.session = {
           caseId: ${JSON.stringify(caseId)},
           selectedEvidenceIds: [],
@@ -384,13 +391,14 @@ async function main() {
       await mkdir(desktopDir, { recursive: true });
       await mkdir(mobileDir, { recursive: true });
 
-      await initLocale(lang);
-
       for (const [index, caseData] of selectedCases.entries()) {
-      const title = caseData.title[lang] ?? caseData.title.ru;
+        const title = caseData.title[lang] ?? caseData.title.ru;
 
-      console.log(`  [${index + 1}/${selectedCases.length}] ${caseData.id}`);
+        console.log(`  [${index + 1}/${selectedCases.length}] ${caseData.id}`);
 
+        await initLocale(lang);
+        const prevIds = selectedCases.slice(0, index).map(c => c.id);
+        await openCaseById(caseData.id, prevIds);
         await waitForJs(`document.body.innerText.includes(${JSON.stringify(strings.selectCasePrompt)})`).catch(() => undefined);
         await clickCaseCard(title);
 
@@ -411,6 +419,7 @@ async function main() {
 
         // Reset to the same case for the mobile flow
         await initLocale(lang);
+        await openCaseById(caseData.id, prevIds);
         await waitForJs(`document.body.innerText.includes(${JSON.stringify(strings.selectCasePrompt)})`).catch(() => undefined);
         await clickCaseCard(title);
         await waitForJs(`document.body.innerText.includes(${JSON.stringify(title)})`);
