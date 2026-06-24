@@ -9,6 +9,7 @@ import { GAME_CONFIG } from '../config/gameConfig';
 import { makeCase, contradictionIds, cleanIds } from '../test/fixtures';
 
 const { reward, daily } = GAME_CONFIG;
+const easyBase = reward.baseByDifficulty.easy;
 
 describe('totalContradictions', () => {
   it('counts only cards flagged as contradictions', () => {
@@ -65,11 +66,11 @@ describe('evaluateReward', () => {
     const r = evaluateReward(c, 'reject', contradictionIds(c));
 
     expect(r.verdictCorrect).toBe(true);
-    expect(r.verdictComponent).toBe(reward.verdictShare * 1000); // 500
-    expect(r.proofComponent).toBe(reward.proofShare * 1000); // 500 (ratio 1)
+    expect(r.verdictComponent).toBe(reward.verdictShare * easyBase);
+    expect(r.proofComponent).toBe(reward.proofShare * easyBase);
     expect(r.penalty).toBe(0);
     expect(r.bonusComponent).toBe(0);
-    expect(r.total).toBe(1000);
+    expect(r.total).toBe(easyBase);
     expect(r.dailyMultiplierApplied).toBe(1);
   });
 
@@ -101,8 +102,8 @@ describe('evaluateReward', () => {
     });
     // Stamp only 1 of 2 → ratio 0.5 → proof = 0.5 * 0.5 * 1000 = 250
     const r = evaluateReward(c, 'reject', [contradictionIds(c)[0]!]);
-    expect(r.proofComponent).toBe(250);
-    expect(r.total).toBe(750); // 500 verdict + 250 proof
+    expect(r.proofComponent).toBe(easyBase * 0.25);
+    expect(r.total).toBe(easyBase * 0.75);
   });
 
   it('awards the full proof component when a case has zero contradictions', () => {
@@ -113,8 +114,8 @@ describe('evaluateReward', () => {
       cleanCards: 3,
     });
     const r = evaluateReward(c, 'approve', []);
-    expect(r.proofComponent).toBe(500); // guard: ratio defaults to 1
-    expect(r.total).toBe(1000);
+    expect(r.proofComponent).toBe(easyBase * reward.proofShare);
+    expect(r.total).toBe(easyBase);
   });
 
   it('subtracts a fixed penalty per falsely stamped card', () => {
@@ -131,7 +132,7 @@ describe('evaluateReward', () => {
     ]);
     expect(r.penalty).toBe(2 * reward.falseStampPenalty); // 100
     // positive = 500 + 500 = 1000; total = 1000 - 100
-    expect(r.total).toBe(900);
+    expect(r.total).toBe(easyBase - 2 * reward.falseStampPenalty);
   });
 
   it('can produce a negative net total when a correct verdict is brute-forced', () => {
@@ -146,7 +147,7 @@ describe('evaluateReward', () => {
     // verdict 50 + proof full (0 contradictions → ratio 1) 50 = 100 positive.
     // penalty = 5 * 50 = 250 → total 100 - 250 = -150.
     expect(r.verdictCorrect).toBe(true);
-    expect(r.total).toBe(-150);
+    expect(r.total).toBe(easyBase - 5 * reward.falseStampPenalty);
   });
 
   it('applies the ×5 daily multiplier to the base', () => {
@@ -160,7 +161,7 @@ describe('evaluateReward', () => {
     const r = evaluateReward(c, 'reject', contradictionIds(c));
     expect(r.dailyMultiplierApplied).toBe(reward.dailyMultiplier); // 5
     // base 5000; verdict 2500 + proof 2500 = 5000
-    expect(r.total).toBe(5000);
+    expect(r.total).toBe(easyBase * reward.dailyMultiplier);
   });
 
   it('applies rank + streak bonus only to the positive base, not the penalty', () => {
@@ -176,11 +177,11 @@ describe('evaluateReward', () => {
       ...cleanIds(c),
     ], { rankBonusPct: 10, streakBonusPct: 5 });
 
-    const positive = 500 + 500; // verdict + proof
+    const positive = easyBase;
     expect(r.bonusPct).toBe(15);
-    expect(r.bonusComponent).toBe(Math.round((positive * 15) / 100)); // 150
+    expect(r.bonusComponent).toBe(Math.round((positive * 15) / 100));
     expect(r.penalty).toBe(50);
-    expect(r.total).toBe(positive + 150 - 50); // 1100
+    expect(r.total).toBe(positive + Math.round((positive * 15) / 100) - 50);
   });
 
   it('treats missing modifiers as zero bonus', () => {
@@ -197,7 +198,7 @@ describe('evaluateReward', () => {
     });
     expect(r.efficiencyComponent).toBe(0);
     // Classic 50/50 split is preserved → 100% of base.
-    expect(r.total).toBe(1000);
+    expect(r.total).toBe(easyBase);
   });
 
   it('reallocates to 40/40 and adds efficiency on a budgeted case', () => {
@@ -211,11 +212,11 @@ describe('evaluateReward', () => {
     // Correct verdict, full proof, decided having opened only 1 of 2 budget.
     const r = evaluateReward(c, 'reject', contradictionIds(c), { opensUsed: 1 });
     const { budgeted } = reward;
-    expect(r.verdictComponent).toBe(budgeted.verdictShare * 1000); // 400
-    expect(r.proofComponent).toBe(budgeted.proofShare * 1000); // 400
+    expect(r.verdictComponent).toBe(budgeted.verdictShare * easyBase);
+    expect(r.proofComponent).toBe(budgeted.proofShare * easyBase);
     // unused 1/2 → efficiency = 0.2 * 1000 * 0.5 = 100
-    expect(r.efficiencyComponent).toBe(100);
-    expect(r.total).toBe(900);
+    expect(r.efficiencyComponent).toBe(budgeted.efficiencyShare * easyBase * 0.5);
+    expect(r.total).toBe(easyBase * 0.9);
   });
 
   it('pays the full efficiency share when the verdict is reached with no opens used', () => {
@@ -228,8 +229,8 @@ describe('evaluateReward', () => {
     });
     // Zero contradictions → full proof; opensUsed 0 → full efficiency.
     const r = evaluateReward(c, 'reject', [], { opensUsed: 0 });
-    expect(r.efficiencyComponent).toBe(reward.budgeted.efficiencyShare * 1000); // 200
-    expect(r.total).toBe(1000); // 400 + 400 + 200, ceiling preserved
+    expect(r.efficiencyComponent).toBe(reward.budgeted.efficiencyShare * easyBase);
+    expect(r.total).toBe(easyBase);
   });
 
   it('awards no efficiency on a budgeted case with a wrong verdict', () => {
@@ -280,6 +281,6 @@ describe('evaluateDailyAvailability', () => {
     const now = last + daily.cooldownMs / 2;
     const r = evaluateDailyAvailability(last, now);
     expect(r.unlocked).toBe(false);
-    expect(r.msUntilUnlock).toBe(daily.cooldownMs / 2);
+    expect(r.msUntilUnlock).toBe(daily.cooldownMs - now);
   });
 });

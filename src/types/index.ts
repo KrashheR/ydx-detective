@@ -54,6 +54,28 @@ export type Truth = 'valid' | 'fraud';
 
 /** What the player is asked to decide. */
 export type Decision = 'approve' | 'reject';
+export type MasteryLevel = 'none' | 'bronze' | 'silver' | 'gold';
+export type DepartmentId = 'archive' | 'field' | 'lab';
+export type InvestigationService = 'archive_check' | 'extra_clearance' | 'expert_opinion';
+export type EvidenceRelation = 'supports' | 'contradicts' | 'context';
+
+export interface ClaimThesis {
+  readonly id: string;
+  readonly text: LocalizedString;
+}
+export type WeeklyTaskId = 'correct_3' | 'perfect_2' | 'no_hints_2' | 'efficient_1' | 'variety_3';
+
+export interface WeeklyProgress {
+  serverWeek: number;
+  countedCaseIds: string[];
+  correctCount: number;
+  perfectCount: number;
+  noHintsCount: number;
+  efficientCount: number;
+  difficulties: Difficulty[];
+  completedTaskIds: WeeklyTaskId[];
+  rewardClaimed: boolean;
+}
 
 export type EvidenceType =
   | 'photo'
@@ -111,6 +133,8 @@ export interface Evidence {
   readonly contradictionExplanation: LocalizedString;
   /** Per-renderer display metadata — makes each evidence visually unique. */
   readonly meta?: EvidenceMeta;
+  readonly thesisId?: string;
+  readonly relation?: EvidenceRelation;
 }
 
 export interface Claim {
@@ -157,6 +181,7 @@ export interface Case {
    * Omitted ⇒ unlimited opens and the classic "review everything" gate.
    */
   readonly investigationBudget?: number;
+  readonly claimTheses?: readonly ClaimThesis[];
 }
 
 /* -------------------------------------------------------------------------- */
@@ -177,6 +202,8 @@ export interface CaseResult {
   readonly totalContradictions: number;
   readonly falseStamps: number;
   readonly rewardEarned: number;
+  /** Best mastery ever achieved; replays may improve this without rewards. */
+  readonly mastery: MasteryLevel;
   /** Yandex *server* time (ms) at closure — never device time. */
   readonly closedAtServerMs: number;
 }
@@ -194,6 +221,9 @@ export interface PlayerStats {
    * evaluator to decide whether today's daily is available again.
    */
   lastDailyClaimServerMs: number | null;
+  lastDailyCaseId: string | null;
+  dailyAdUnlockServerDay: number | null;
+  dailyAdCaseId: string | null;
   /** True once balance hit <= 0 and the player must watch a rewarded ad. */
   isBankrupt: boolean;
   /**
@@ -213,6 +243,12 @@ export interface PlayerStats {
    * "Don't ask again" sets this directly to the suppress threshold.
    */
   ratingDismissals: number;
+  /** Purchased department levels, 0..3. */
+  departmentLevels: Record<DepartmentId, number>;
+  /** Last server-day when each level-3 free service was consumed. */
+  serviceFreeUseServerDay: Partial<Record<InvestigationService, number>>;
+  weeklyProgress: WeeklyProgress | null;
+  collectibleStampIds: string[];
 }
 
 /**
@@ -232,6 +268,14 @@ export interface ActiveSession {
    * quit/resume keeps the reveal.
    */
   revealedEvidenceIds: string[];
+  /** One pre-investigation service; immutable once evidence has been opened. */
+  selectedService: InvestigationService | null;
+  /** Number of paid/ad hints used, required for gold mastery. */
+  hintsUsed: number;
+  canvassUsed: boolean;
+  /** Extra budget openings granted by Additional Clearance. */
+  extraOpens: number;
+  evidenceThesisLinks: Record<string, string>;
   /** Server-time (ms) the investigation began — drives daily timers. */
   readonly startedAtServerMs: number;
 }

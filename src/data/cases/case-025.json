@@ -11,6 +11,28 @@
     "ar": "حريق في المقهى",
     "kk": "Кафедегі өрт"
   },
+  "claimTheses": [
+    {
+      "id": "incident",
+      "text": {
+        "ru": "Заявленное событие произошло именно при описанных обстоятельствах.",
+        "en": "The reported incident happened under the described circumstances.",
+        "tr": "Bildirilen olay, açıklanan koşullar altında gerçekleşti.",
+        "ar": "وقعت الحادثة المبلغ عنها في الظروف الموصوفة.",
+        "kk": "Мәлімделген оқиға сипатталған жағдайда болды."
+      }
+    },
+    {
+      "id": "damage",
+      "text": {
+        "ru": "Заявленный ущерб возник из-за этого события и подтверждён документами.",
+        "en": "The claimed damage resulted from that incident and is documented.",
+        "tr": "Talep edilen zarar bu olaydan kaynaklandı ve belgelenmiştir.",
+        "ar": "نتج الضرر المطالب به عن تلك الحادثة وهو موثق.",
+        "kk": "Мәлімделген залал сол оқиғадан туындаған және құжатпен расталған."
+      }
+    }
+  ],
   "claim": {
     "person": {
       "ru": "Лоренцо Конти, 45 лет",
@@ -123,6 +145,8 @@
   "evidences": [
     {
       "id": "ev-fire",
+      "thesisId": "incident",
+      "relation": "supports",
       "type": "document",
       "title": {
         "ru": "Отчёт пожарной службы",
@@ -149,6 +173,8 @@
     },
     {
       "id": "ev-photo",
+      "thesisId": "damage",
+      "relation": "supports",
       "type": "photo",
       "title": {
         "ru": "Фото ущерба",
@@ -179,6 +205,8 @@
     },
     {
       "id": "ev-social",
+      "thesisId": "incident",
+      "relation": "context",
       "type": "social_media",
       "title": {
         "ru": "Пост прохожего",
@@ -208,6 +236,8 @@
     },
     {
       "id": "ev-witness",
+      "thesisId": "incident",
+      "relation": "supports",
       "type": "witness_statement",
       "title": {
         "ru": "Показания соседа",
@@ -234,6 +264,8 @@
     },
     {
       "id": "ev-ledger",
+      "thesisId": "damage",
+      "relation": "supports",
       "type": "document",
       "title": {
         "ru": "Книга доходов и убытков",

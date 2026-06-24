@@ -37,6 +37,9 @@ export function classifyStamps(
  * state here) keeps this engine pure and deterministic — they are just inputs.
  */
 export interface RewardModifiers {
+  /** Replays are training and never pay currency. */
+  readonly rewardEligible?: boolean;
+  readonly evidenceThesisLinks?: Readonly<Record<string, string>>;
   /** Additive % bonus from the player's investigator rank. */
   readonly rankBonusPct?: number;
   /** Additive % bonus from the player's daily streak. */
@@ -73,16 +76,31 @@ export function evaluateReward(
 ): RewardBreakdown {
   const { reward } = GAME_CONFIG;
   const multiplier = caseData.type === 'daily' ? reward.dailyMultiplier : 1;
-  const baseReward = caseData.claimAmount * multiplier;
+  const baseReward = reward.baseByDifficulty[caseData.difficulty] * multiplier;
 
   const verdictCorrect = decision === caseData.correctDecision;
-  const { correct, falseStamps } = classifyStamps(caseData, selectedEvidenceIds);
+  const classified = classifyStamps(caseData, selectedEvidenceIds);
+  const { correct, falseStamps } = caseData.claimTheses?.length
+    ? selectedEvidenceIds.reduce(
+        (acc, id) => {
+          const evidence = caseData.evidences.find((item) => item.id === id);
+          if (
+            evidence?.isContradiction &&
+            evidence.relation === 'contradicts' &&
+            evidence.thesisId === modifiers.evidenceThesisLinks?.[id]
+          ) acc.correct += 1;
+          else acc.falseStamps += 1;
+          return acc;
+        },
+        { correct: 0, falseStamps: 0 },
+      )
+    : classified;
 
   // A wrong verdict means no reward at all — short-circuit before any component
   // math so investigation skill never pays out on a misjudged case.
-  if (!verdictCorrect) {
+  if (!verdictCorrect || modifiers.rewardEligible === false) {
     return {
-      verdictCorrect: false,
+      verdictCorrect,
       verdictComponent: 0,
       proofComponent: 0,
       efficiencyComponent: 0,
@@ -162,9 +180,12 @@ export function evaluateDailyAvailability(
   nowServerMs: number,
 ): { unlocked: boolean; msUntilUnlock: number } {
   if (lastClaimServerMs == null) return { unlocked: true, msUntilUnlock: 0 };
-  const elapsed = nowServerMs - lastClaimServerMs;
-  const remaining = GAME_CONFIG.daily.cooldownMs - elapsed;
-  return remaining <= 0
-    ? { unlocked: true, msUntilUnlock: 0 }
-    : { unlocked: false, msUntilUnlock: remaining };
+  const dayMs = GAME_CONFIG.daily.cooldownMs;
+  const lastDay = Math.floor(lastClaimServerMs / dayMs);
+  const currentDay = Math.floor(nowServerMs / dayMs);
+  if (currentDay > lastDay) return { unlocked: true, msUntilUnlock: 0 };
+  return {
+    unlocked: false,
+    msUntilUnlock: Math.max(0, (currentDay + 1) * dayMs - nowServerMs),
+  };
 }

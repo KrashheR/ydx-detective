@@ -2,7 +2,13 @@ import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 
 /* The counter id is read from gameConfig at call time, so we mock the config to
    flip between "disabled" (placeholder 0) and "enabled" (real id) per test. */
-const config = vi.hoisted(() => ({ counterId: 0, webvisor: true }));
+const config = vi.hoisted(() => ({
+  counterId: 0,
+  webvisor: true,
+  economyVersion: 'test-economy',
+  contentVersion: 'test-content',
+  experimentGroup: 'control',
+}));
 vi.mock('../config/gameConfig', () => ({
   GAME_CONFIG: { analytics: config },
 }));
@@ -70,6 +76,9 @@ describe('metrica adapter — enabled', () => {
     m.initMetrica();
     m.trackGoal(m.GOAL.hintBuy, { kind: 'note', cost: 200 });
     expect(ym).toHaveBeenCalledWith(99, 'reachGoal', 'hint_buy', {
+      economyVersion: 'test-economy',
+      contentVersion: 'test-content',
+      experimentGroup: 'control',
       kind: 'note',
       cost: 200,
     });
@@ -79,6 +88,9 @@ describe('metrica adapter — enabled', () => {
     m.initMetrica();
     m.setUserParams({ level: 5, balance: 1000 });
     expect(ym).toHaveBeenCalledWith(99, 'userParams', {
+      economyVersion: 'test-economy',
+      contentVersion: 'test-content',
+      experimentGroup: 'control',
       level: 5,
       balance: 1000,
     });
@@ -87,5 +99,20 @@ describe('metrica adapter — enabled', () => {
   it('does not track before init (enabled flag is off)', () => {
     m.trackGoal(m.GOAL.caseStart, {});
     expect(ym).not.toHaveBeenCalled();
+  });
+
+  it('records active-time boundaries when an ad pauses play', () => {
+    m.initMetrica();
+    ym.mockClear();
+
+    m.setAnalyticsAdPaused(true);
+    m.setAnalyticsAdPaused(false);
+
+    const goals = ym.mock.calls
+      .filter((call) => call[1] === 'reachGoal')
+      .map((call) => call[2]);
+    expect(goals).toContain('active_interval');
+    expect(goals).toContain('session_pause');
+    expect(goals).toContain('session_resume');
   });
 });

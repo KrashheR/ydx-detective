@@ -12,6 +12,28 @@
     "ar": "منذ زمن في تعاونية بعيدة",
     "kk": "Баяғыда алыс кооперативте"
   },
+  "claimTheses": [
+    {
+      "id": "incident",
+      "text": {
+        "ru": "Заявленное событие произошло именно при описанных обстоятельствах.",
+        "en": "The reported incident happened under the described circumstances.",
+        "tr": "Bildirilen olay, açıklanan koşullar altında gerçekleşti.",
+        "ar": "وقعت الحادثة المبلغ عنها في الظروف الموصوفة.",
+        "kk": "Мәлімделген оқиға сипатталған жағдайда болды."
+      }
+    },
+    {
+      "id": "damage",
+      "text": {
+        "ru": "Заявленный ущерб возник из-за этого события и подтверждён документами.",
+        "en": "The claimed damage resulted from that incident and is documented.",
+        "tr": "Talep edilen zarar bu olaydan kaynaklandı ve belgelenmiştir.",
+        "ar": "نتج الضرر المطالب به عن تلك الحادثة وهو موثق.",
+        "kk": "Мәлімделген залал сол оқиғадан туындаған және құжатпен расталған."
+      }
+    }
+  ],
   "claim": {
     "person": {
       "ru": "Лука Скайуокеров, 38 лет",
@@ -92,6 +114,8 @@
   "evidences": [
     {
       "id": "ev-camera",
+      "thesisId": "incident",
+      "relation": "contradicts",
       "type": "camera_recording",
       "title": {
         "ru": "Камера ангара",
@@ -122,6 +146,8 @@
     },
     {
       "id": "ev-log",
+      "thesisId": "incident",
+      "relation": "contradicts",
       "type": "usage_log",
       "title": {
         "ru": "Журнал сервисного робота",
@@ -176,6 +202,8 @@
     },
     {
       "id": "ev-bank",
+      "thesisId": "damage",
+      "relation": "context",
       "type": "bank_statement",
       "title": {
         "ru": "Долг фермы",
@@ -227,6 +255,8 @@
     },
     {
       "id": "ev-document",
+      "thesisId": "damage",
+      "relation": "contradicts",
       "type": "document",
       "title": {
         "ru": "Экспертиза резов",
@@ -253,6 +283,8 @@
     },
     {
       "id": "ev-gps",
+      "thesisId": "incident",
+      "relation": "contradicts",
       "type": "gps",
       "title": {
         "ru": "Метка робота",
@@ -324,6 +356,8 @@
     },
     {
       "id": "ev-witness",
+      "thesisId": "incident",
+      "relation": "context",
       "type": "witness_statement",
       "title": {
         "ru": "Показания соседа",

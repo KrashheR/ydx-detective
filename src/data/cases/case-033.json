@@ -12,6 +12,28 @@
     "ar": "اليد في المكبس",
     "kk": "Престегі қол"
   },
+  "claimTheses": [
+    {
+      "id": "incident",
+      "text": {
+        "ru": "Заявленное событие произошло именно при описанных обстоятельствах.",
+        "en": "The reported incident happened under the described circumstances.",
+        "tr": "Bildirilen olay, açıklanan koşullar altında gerçekleşti.",
+        "ar": "وقعت الحادثة المبلغ عنها في الظروف الموصوفة.",
+        "kk": "Мәлімделген оқиға сипатталған жағдайда болды."
+      }
+    },
+    {
+      "id": "damage",
+      "text": {
+        "ru": "Заявленный ущерб возник из-за этого события и подтверждён документами.",
+        "en": "The claimed damage resulted from that incident and is documented.",
+        "tr": "Talep edilen zarar bu olaydan kaynaklandı ve belgelenmiştir.",
+        "ar": "نتج الضرر المطالب به عن تلك الحادثة وهو موثق.",
+        "kk": "Мәлімделген залал сол оқиғадан туындаған және құжатпен расталған."
+      }
+    }
+  ],
   "claim": {
     "person": {
       "ru": "Геннадий Орлов, 49 лет",
@@ -124,6 +146,8 @@
   "evidences": [
     {
       "id": "ev-medical",
+      "thesisId": "incident",
+      "relation": "supports",
       "type": "document",
       "title": {
         "ru": "Заключение приёмного отделения",
@@ -150,6 +174,8 @@
     },
     {
       "id": "ev-photo",
+      "thesisId": "damage",
+      "relation": "supports",
       "type": "photo",
       "title": {
         "ru": "Фото пресса",
@@ -180,6 +206,8 @@
     },
     {
       "id": "ev-machine",
+      "thesisId": "damage",
+      "relation": "supports",
       "type": "usage_log",
       "title": {
         "ru": "Лог пресса (PLC)",
@@ -249,6 +277,8 @@
     },
     {
       "id": "ev-witness",
+      "thesisId": "incident",
+      "relation": "supports",
       "type": "witness_statement",
       "title": {
         "ru": "Показания напарника",
@@ -275,6 +305,8 @@
     },
     {
       "id": "ev-xray",
+      "thesisId": "damage",
+      "relation": "supports",
       "type": "xray",
       "title": {
         "ru": "Рентгеновский снимок кисти",
@@ -311,6 +343,8 @@
     },
     {
       "id": "ev-safety",
+      "thesisId": "incident",
+      "relation": "context",
       "type": "document",
       "title": {
         "ru": "Акт проверки охраны труда",

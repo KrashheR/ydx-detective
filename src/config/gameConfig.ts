@@ -4,9 +4,11 @@
  */
 export const GAME_CONFIG = {
   /** Schema version of the persisted runtime snapshot. Bump on shape changes. */
-  saveVersion: 3,
+  saveVersion: 4,
 
   reward: {
+    /** Fixed payout by difficulty; claimAmount remains a narrative stake. */
+    baseByDifficulty: { easy: 1200, medium: 2500, hard: 5000 } as const,
     /** Share of BaseReward awarded for a correct macro-verdict. */
     verdictShare: 0.5,
     /** Share of BaseReward scaled by contradiction-flagging precision. */
@@ -26,7 +28,7 @@ export const GAME_CONFIG = {
     /** Penalty per evidence card wrongly stamped as a contradiction. */
     falseStampPenalty: 50,
     /** Reward multiplier applied to `type === 'daily'` cases. */
-    dailyMultiplier: 5,
+    dailyMultiplier: 2,
   },
 
   /**
@@ -171,6 +173,28 @@ export const GAME_CONFIG = {
     inspectorNoteClaimPct: 0.2,
   },
 
+  services: {
+    archive_check: { department: 'archive', pricePct: 0.15 },
+    extra_clearance: { department: 'field', pricePct: 0.25 },
+    expert_opinion: { department: 'lab', pricePct: 0.5 },
+    discountAtLevel: 2,
+    discountPct: 20,
+    freeDailyAtLevel: 3,
+  },
+
+  departments: {
+    archive: [10_000, 30_000, 60_000],
+    field: [15_000, 40_000, 80_000],
+    lab: [25_000, 60_000, 120_000],
+  },
+
+  weekly: {
+    unlockAfterStandardCases: 5,
+    reward: 7_500,
+    tasksRequired: 3,
+    msPerWeek: 7 * 24 * 60 * 60 * 1000,
+  },
+
   economy: {
     /** Balance at/below which progression is locked. */
     bankruptcyThreshold: 0,
@@ -197,7 +221,16 @@ export const GAME_CONFIG = {
     suppressAfterDismissals: 3,
   },
 
+  advertising: {
+    interstitialMinCompletedCases: 3,
+    interstitialMinActiveMs: 10 * 60 * 1000,
+  },
+
   analytics: {
+    /** Stable release dimensions attached to every goal and user profile. */
+    economyVersion: 'legacy-v1',
+    contentVersion: 'campaign-38-v1',
+    experimentGroup: 'baseline',
     /**
      * Yandex Metrica counter ID. Replace the placeholder with the real counter
      * created in the Metrica console (https://metrika.yandex.ru). A falsy id

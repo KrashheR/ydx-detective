@@ -21,11 +21,12 @@ import {
   fetchLeaderboard,
   showFullscreenAd,
   showRewardedAd,
+  trackAdOffer,
   canReview,
   requestReview,
   type LeaderboardRow,
 } from './services/yandexSDK';
-import { GOAL, trackGoal } from './services/metrica';
+import { GOAL, getAnalyticsActiveTotalMs, trackGoal } from './services/metrica';
 import { GAME_CONFIG } from './config/gameConfig';
 import { RTL_LANGUAGES, t } from './i18n/ui';
 import type { Case } from './types';
@@ -60,11 +61,9 @@ export default function App() {
   const [toast, setToast] = useState<string | null>(null);
   const [rewardDoubled, setRewardDoubled] = useState(false);
   const [showRating, setShowRating] = useState(false);
-  // Transient verdict counter — show fullscreen ad on every 3rd verdict.
-  const verdictCountRef = useRef(0);
+  const lastInterstitialActiveMsRef = useRef(0);
   // Gate: show rating modal at most once per session.
   const ratingShownRef = useRef(false);
-  const AD_EVERY_N_VERDICTS = 3;
 
   const flashToast = (msg: string) => {
     setToast(msg);
@@ -105,8 +104,13 @@ export default function App() {
     if (lastResult) {
       setResultDismissed(false);
       setRewardDoubled(false);
+      if (lastResult.total > 0) trackAdOffer('rewarded', 'double_reward');
     }
   }, [lastResult]);
+
+  useEffect(() => {
+    if (stats.isBankrupt) trackAdOffer('rewarded', 'restore_funds');
+  }, [stats.isBankrupt]);
 
   // Rating prompt: show after a correct verdict at the peak of pride.
   useEffect(() => {
@@ -147,13 +151,24 @@ export default function App() {
     return () => window.clearInterval(id);
   }, []);
   const serverDay = Math.floor(serverNow / GAME_CONFIG.daily.cooldownMs);
-  const dailyCase = useMemo(() => getDailyCase(serverDay), [serverDay]);
+  const baseDailyCase = useMemo(() => getDailyCase(serverDay), [serverDay]);
+  const adDailyCase = useMemo(
+    () => getDailyCase(serverDay + 1),
+    [serverDay],
+  );
+  const dailyCase = stats.dailyAdUnlockServerDay === serverDay && stats.dailyAdCaseId
+    ? getCaseById(stats.dailyAdCaseId) ?? baseDailyCase
+    : baseDailyCase;
   const selectedCase = selectedId ? getCaseById(selectedId) : undefined;
 
   const daily = evaluateDailyAvailability(
     stats.lastDailyClaimServerMs,
     serverNow,
   );
+
+  useEffect(() => {
+    if (isHydrated && !daily.unlocked) trackAdOffer('rewarded', 'daily_unlock');
+  }, [daily.unlocked, isHydrated, serverDay]);
 
   const results = useMemo(() => Object.values(stats.results), [stats.results]);
   const accuracyPct = useMemo(() => {
@@ -181,6 +196,9 @@ export default function App() {
 
     setSelectedId(c.id);
     store.startCase(c);
+    trackGoal(GOAL.serviceView, { caseId: c.id, service: 'inspector_note' });
+    trackGoal(GOAL.serviceView, { caseId: c.id, service: 'witness_canvass' });
+    trackAdOffer('rewarded', 'witness_canvass');
   };
 
   const handleSelectStandardCase = (info: CaseUnlockInfo) => {
@@ -205,13 +223,7 @@ export default function App() {
 
   const submitWithAdGate = (decision: 'approve' | 'reject') => {
     if (!selectedCase) return;
-    verdictCountRef.current += 1;
-    if (verdictCountRef.current >= AD_EVERY_N_VERDICTS) {
-      verdictCountRef.current = 0;
-      showFullscreenAd(() => store.submitVerdict(selectedCase, decision));
-    } else {
-      store.submitVerdict(selectedCase, decision);
-    }
+    store.submitVerdict(selectedCase, decision);
   };
 
   const handleApprove = () => submitWithAdGate('approve');
@@ -228,27 +240,46 @@ export default function App() {
     showRewardedAd(() => {
       store.doubleLastReward();
       setRewardDoubled(true);
-    });
+    }, 'double_reward');
   };
 
-  const onDailyLocked = () => store.unlockDailyViaAd();
+  const onDailyLocked = () => {
+    if (adDailyCase) store.unlockDailyViaAd(adDailyCase.id);
+  };
 
   const goToNextCase = () => {
     const next = getNextAvailableCase(standardCaseUnlocks, selectedId);
     setResultDismissed(true);
-    void store.closeCase().then(() => {
+    const transition = () => void store.closeCase().then(() => {
       if (!next) {
         setSelectedId(null);
         return;
       }
       handleSelectCase(next);
     });
+    const activeMs = getAnalyticsActiveTotalMs();
+    if (
+      stats.completedCaseIds.length >= GAME_CONFIG.advertising.interstitialMinCompletedCases &&
+      activeMs - lastInterstitialActiveMsRef.current >= GAME_CONFIG.advertising.interstitialMinActiveMs
+    ) {
+      lastInterstitialActiveMsRef.current = activeMs;
+      showFullscreenAd(transition, 'verdict');
+    } else transition();
   };
 
   const backToDesk = () => {
     setResultDismissed(true);
     setSelectedId(null);
-    void store.closeCase();
+    const transition = () => void store.closeCase();
+    const activeMs = getAnalyticsActiveTotalMs();
+    if (
+      lastResult &&
+      stats.completedCaseIds.length >= GAME_CONFIG.advertising.interstitialMinCompletedCases &&
+      activeMs - lastInterstitialActiveMsRef.current >= GAME_CONFIG.advertising.interstitialMinActiveMs
+    ) {
+      lastInterstitialActiveMsRef.current = activeMs;
+      showFullscreenAd(transition, 'verdict');
+    } else transition();
   };
 
   const gate = selectedCase
@@ -370,7 +401,9 @@ export default function App() {
         lang={lang}
         stamped={session?.selectedEvidenceIds.includes(modalEvidenceId ?? '') ?? false}
         revealed={session?.revealedEvidenceIds.includes(modalEvidenceId ?? '') ?? false}
-        onToggle={() => modalEvidenceId && store.toggleEvidenceStamp(modalEvidenceId)}
+        theses={selectedCase?.claimTheses}
+        linkedThesisId={modalEvidenceId ? session?.evidenceThesisLinks[modalEvidenceId] : undefined}
+        onToggle={(thesisId) => modalEvidenceId && store.toggleEvidenceStamp(modalEvidenceId, thesisId)}
         onClose={() => setModalEvidenceId(null)}
       />
 

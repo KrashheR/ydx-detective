@@ -41,7 +41,14 @@ declare global {
  * values: renaming one orphans its history in the Metrica console.
  */
 export const GOAL = {
+  sessionStart: 'session_start',
+  sessionEnd: 'session_end',
+  activeInterval: 'active_interval',
+  sessionPause: 'session_pause',
+  sessionResume: 'session_resume',
   caseStart: 'case_start',
+  investigationInterrupt: 'investigation_interrupt',
+  investigationResume: 'investigation_resume',
   evidenceView: 'evidence_view',
   evidenceStamp: 'evidence_stamp',
   hintBuy: 'hint_buy',
@@ -54,6 +61,22 @@ export const GOAL = {
   dailyClaim: 'daily_claim',
   dailyAdUnlock: 'daily_ad_unlock',
   rating: 'rating_action',
+  adOffer: 'ad_offer',
+  adAccept: 'ad_accept',
+  adOpen: 'ad_open',
+  adClose: 'ad_close',
+  adReward: 'ad_reward',
+  adError: 'ad_error',
+  serviceView: 'service_view',
+  serviceSelect: 'service_select',
+  serviceBuy: 'service_buy',
+  serviceUse: 'service_use',
+  shopView: 'shop_view',
+  productView: 'product_view',
+  purchaseStart: 'purchase_start',
+  purchaseSuccess: 'purchase_success',
+  purchaseError: 'purchase_error',
+  purchaseRestore: 'purchase_restore',
 } as const;
 
 export type GoalName = (typeof GOAL)[keyof typeof GOAL];
@@ -63,6 +86,80 @@ export type GoalName = (typeof GOAL)[keyof typeof GOAL];
 /** Set once init runs; false keeps every track call a silent no-op. */
 let enabled = false;
 let initialized = false;
+
+const releaseParams = () => ({
+  economyVersion: GAME_CONFIG.analytics.economyVersion,
+  contentVersion: GAME_CONFIG.analytics.contentVersion,
+  experimentGroup: GAME_CONFIG.analytics.experimentGroup,
+});
+
+let lifecycleInstalled = false;
+let sessionOpen = false;
+let activeSinceMs: number | null = null;
+let activeTotalMs = 0;
+let adPaused = false;
+let lastAdClosedAtMs: number | null = null;
+
+function isPageActive(): boolean {
+  return typeof document === 'undefined' || document.visibilityState === 'visible';
+}
+
+function emitActiveInterval(reason: string): void {
+  if (activeSinceMs == null) return;
+  const durationMs = Math.max(0, Date.now() - activeSinceMs);
+  activeSinceMs = null;
+  activeTotalMs += durationMs;
+  trackGoal(GOAL.activeInterval, { durationMs, activeTotalMs, reason });
+}
+
+function pauseSession(reason: 'background' | 'ad'): void {
+  if (!sessionOpen || activeSinceMs == null) return;
+  emitActiveInterval(reason);
+  trackGoal(GOAL.sessionPause, { reason, activeTotalMs });
+}
+
+function resumeSession(reason: 'foreground' | 'ad_closed' | 'pageshow'): void {
+  if (!sessionOpen || activeSinceMs != null || adPaused || !isPageActive()) return;
+  activeSinceMs = Date.now();
+  trackGoal(GOAL.sessionResume, { reason, activeTotalMs });
+}
+
+function endSession(reason: 'pagehide' | 'beforeunload'): void {
+  if (!sessionOpen) return;
+  emitActiveInterval(reason);
+  const msSinceAdClose = lastAdClosedAtMs == null ? null : Date.now() - lastAdClosedAtMs;
+  trackGoal(GOAL.sessionEnd, {
+    reason,
+    activeTotalMs,
+    msSinceAdClose,
+    exitedAfterAd: msSinceAdClose != null && msSinceAdClose <= 10_000,
+  });
+  sessionOpen = false;
+}
+
+function installSessionLifecycle(): void {
+  if (lifecycleInstalled || typeof window === 'undefined' || typeof document === 'undefined') return;
+  lifecycleInstalled = true;
+  sessionOpen = true;
+  activeTotalMs = 0;
+  activeSinceMs = isPageActive() ? Date.now() : null;
+  trackGoal(GOAL.sessionStart, { visibility: document.visibilityState });
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') resumeSession('foreground');
+    else pauseSession('background');
+  });
+  window.addEventListener('pagehide', () => endSession('pagehide'));
+  window.addEventListener('beforeunload', () => endSession('beforeunload'));
+  window.addEventListener('pageshow', () => {
+    if (!sessionOpen) {
+      sessionOpen = true;
+      activeTotalMs = 0;
+      trackGoal(GOAL.sessionStart, { visibility: document.visibilityState, restored: true });
+    }
+    resumeSession('pageshow');
+  });
+}
 
 /** Safe access to the counter; null when the loader script never defined it. */
 function ym(): YmFn | null {
@@ -97,6 +194,7 @@ export function initMetrica(): void {
       accurateTrackBounce: true,
     });
     enabled = true;
+    installSessionLifecycle();
   } catch {
     enabled = false;
   }
@@ -115,7 +213,10 @@ export function trackGoal(
   const counter = ym();
   if (!enabled || !counter) return;
   try {
-    counter(GAME_CONFIG.analytics.counterId, 'reachGoal', name, params);
+    counter(GAME_CONFIG.analytics.counterId, 'reachGoal', name, {
+      ...releaseParams(),
+      ...params,
+    });
   } catch {
     /* swallow — analytics is best-effort */
   }
@@ -129,8 +230,26 @@ export function setUserParams(params: Record<string, unknown>): void {
   const counter = ym();
   if (!enabled || !counter) return;
   try {
-    counter(GAME_CONFIG.analytics.counterId, 'userParams', params);
+    counter(GAME_CONFIG.analytics.counterId, 'userParams', {
+      ...releaseParams(),
+      ...params,
+    });
   } catch {
     /* swallow — analytics is best-effort */
   }
+}
+
+/** Excludes fullscreen advertising from measured active play time. */
+export function setAnalyticsAdPaused(paused: boolean): void {
+  if (adPaused === paused) return;
+  adPaused = paused;
+  if (paused) pauseSession('ad');
+  else {
+    lastAdClosedAtMs = Date.now();
+    resumeSession('ad_closed');
+  }
+}
+
+export function getAnalyticsActiveTotalMs(): number {
+  return activeTotalMs + (activeSinceMs == null ? 0 : Math.max(0, Date.now() - activeSinceMs));
 }

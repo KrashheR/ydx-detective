@@ -13,6 +13,8 @@
  *   ysdk.adv.showFullscreenAdv / showRewardedVideo → ad lifecycle (pause guard)
  */
 
+import { GOAL, setAnalyticsAdPaused, trackGoal } from './metrica';
+
 /* ----------------------------- Minimal SDK typings ------------------------ */
 // We type only what we consume. The real SDK exposes far more.
 
@@ -227,20 +229,43 @@ export async function cloudGet(): Promise<unknown | null> {
  * toggles automatically. `onDone` lets callers continue the user action once
  * the ad lifecycle has ended.
  */
-export function showFullscreenAd(onDone?: () => void): void {
+export type AdPlacement =
+  | 'verdict'
+  | 'inspector_note'
+  | 'double_reward'
+  | 'restore_funds'
+  | 'witness_canvass'
+  | 'daily_unlock'
+  | 'unknown';
+
+export function trackAdOffer(kind: 'fullscreen' | 'rewarded', placement: AdPlacement): void {
+  trackGoal(GOAL.adOffer, { kind, placement });
+}
+
+export function showFullscreenAd(onDone?: () => void, placement: AdPlacement = 'unknown'): void {
+  trackGoal(GOAL.adAccept, { kind: 'fullscreen', placement });
   if (!sdk) {
+    trackGoal(GOAL.adClose, { kind: 'fullscreen', placement, wasShown: false, offline: true });
     onDone?.();
     return;
   }
   sdk.adv.showFullscreenAdv({
     callbacks: {
-      onOpen: () => broadcastPause(true),
-      onClose: () => {
+      onOpen: () => {
+        setAnalyticsAdPaused(true);
+        broadcastPause(true);
+        trackGoal(GOAL.adOpen, { kind: 'fullscreen', placement });
+      },
+      onClose: (wasShown) => {
         broadcastPause(false);
+        setAnalyticsAdPaused(false);
+        trackGoal(GOAL.adClose, { kind: 'fullscreen', placement, wasShown });
         onDone?.();
       },
-      onError: () => {
+      onError: (error) => {
         broadcastPause(false);
+        setAnalyticsAdPaused(false);
+        trackGoal(GOAL.adError, { kind: 'fullscreen', placement, error: String(error) });
         onDone?.();
       },
     },
@@ -251,24 +276,39 @@ export function showFullscreenAd(onDone?: () => void): void {
  * Show a rewarded video. `onReward` fires only when the player earned the
  * reward (e.g. "restore funds"). Pause is managed automatically.
  */
-export function showRewardedAd(onReward: () => void): void {
+export function showRewardedAd(onReward: () => void, placement: AdPlacement = 'unknown'): void {
+  trackGoal(GOAL.adAccept, { kind: 'rewarded', placement });
   if (!sdk) {
     // Offline / no SDK: in dev we grant the reward so the game stays playable.
     onReward();
+    trackGoal(GOAL.adReward, { kind: 'rewarded', placement, offline: true });
     return;
   }
   let rewarded = false;
   sdk.adv.showRewardedVideo({
     callbacks: {
-      onOpen: () => broadcastPause(true),
+      onOpen: () => {
+        setAnalyticsAdPaused(true);
+        broadcastPause(true);
+        trackGoal(GOAL.adOpen, { kind: 'rewarded', placement });
+      },
       onRewarded: () => {
         rewarded = true;
       },
-      onClose: () => {
+      onClose: (wasShown) => {
         broadcastPause(false);
-        if (rewarded) onReward();
+        setAnalyticsAdPaused(false);
+        trackGoal(GOAL.adClose, { kind: 'rewarded', placement, wasShown, rewarded });
+        if (rewarded) {
+          onReward();
+          trackGoal(GOAL.adReward, { kind: 'rewarded', placement });
+        }
       },
-      onError: () => broadcastPause(false),
+      onError: (error) => {
+        broadcastPause(false);
+        setAnalyticsAdPaused(false);
+        trackGoal(GOAL.adError, { kind: 'rewarded', placement, error: String(error) });
+      },
     },
   });
 }
@@ -311,7 +351,7 @@ export async function requestReview(): Promise<boolean> {
 /* ----------------------------- Leaderboards ------------------------------ */
 
 /** Name of the leaderboard configured in the Yandex developer console. */
-export const LEADERBOARD_NAME = 'balance';
+export const LEADERBOARD_NAME = 'xp';
 
 /** Normalized leaderboard row consumed by the UI. */
 export interface LeaderboardRow {

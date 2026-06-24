@@ -29,6 +29,8 @@ import {
 import { evaluateRank, evaluateXpGain } from '../engine/rankEngine';
 import { evaluateStreak } from '../engine/streakEngine';
 import { evaluateNewUnlocks } from '../engine/achievementsEngine';
+import { bestMastery, evaluateMastery } from '../engine/masteryEngine';
+import { updateWeeklyProgress } from '../engine/weeklyEngine';
 import {
   flushSync,
   loadSnapshot,
@@ -40,8 +42,8 @@ import {
   getYandexLang,
   initYandex,
   onPauseChange,
-  showFullscreenAd,
   showRewardedAd,
+  trackAdOffer,
   submitLeaderboardScore,
 } from '../services/yandexSDK';
 import { GOAL, initMetrica, setUserParams, trackGoal } from '../services/metrica';
@@ -52,6 +54,7 @@ import {
   type CaseResult,
   type Decision,
   type Language,
+  type InvestigationService,
   type PersistedState,
   type PlayerStats,
   type RewardBreakdown,
@@ -88,6 +91,7 @@ export type VerdictOutcome = RewardBreakdown & {
   newAchievementIds: string[];
   /** Evidence IDs the player stamped as contradictions (for the result breakdown). */
   stampedEvidenceIds: string[];
+  mastery: 'none' | 'bronze' | 'silver' | 'gold';
 };
 
 /**
@@ -126,7 +130,7 @@ export interface GameStoreState {
    * card is now considered open.
    */
   markEvidenceAsViewed: (id: string, caseData: Case) => boolean;
-  toggleEvidenceStamp: (id: string) => void;
+  toggleEvidenceStamp: (id: string, thesisId?: string) => void;
   /**
    * Reveal the next unrevealed evidence card's true status for the active case.
    *   • `note`    — charges `balance` (20% of the claim); no-op if unaffordable.
@@ -135,6 +139,8 @@ export interface GameStoreState {
    * or `note` requested without enough balance).
    */
   buyHint: (caseData: Case, kind: HintKind) => boolean;
+  selectInvestigationService: (caseData: Case, service: InvestigationService) => boolean;
+  upgradeDepartment: (department: 'archive' | 'field' | 'lab') => boolean;
 
   /* ---- verdict & economy ---- */
   submitVerdict: (caseData: Case, decision: Decision) => RewardBreakdown;
@@ -144,7 +150,7 @@ export interface GameStoreState {
   /* ---- daily ---- */
   isDailyUnlocked: () => boolean;
   /** Watch a rewarded ad to skip the 24h cooldown and unlock the next daily case. */
-  unlockDailyViaAd: () => void;
+  unlockDailyViaAd: (caseId: string) => void;
 
   /* ---- ad-linked rewards ---- */
   /** Add the total of the last verdict again to balance (rewarded-video double). */
@@ -262,7 +268,21 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       // Resume an in-progress session for the same case rather than wiping it,
       // so re-entering a case mid-investigation restores stamps & viewed cards.
       const existing = get().session;
-      if (existing && existing.caseId === caseData.id) return;
+      if (existing && existing.caseId === caseData.id) {
+        trackGoal(GOAL.investigationResume, {
+          caseId: caseData.id,
+          viewedCount: existing.viewedEvidenceIds.length,
+          stampCount: existing.selectedEvidenceIds.length,
+        });
+        return;
+      }
+      if (existing) {
+        trackGoal(GOAL.investigationInterrupt, {
+          caseId: existing.caseId,
+          reason: 'switch_case',
+          viewedCount: existing.viewedEvidenceIds.length,
+        });
+      }
 
       set({
         session: {
@@ -270,6 +290,11 @@ export const useGameStore = create<GameStoreState>((set, get) => {
           selectedEvidenceIds: [],
           viewedEvidenceIds: [],
           revealedEvidenceIds: [],
+          selectedService: null,
+          hintsUsed: 0,
+          canvassUsed: false,
+          extraOpens: 0,
+          evidenceThesisLinks: {},
           startedAtServerMs: getServerTimeMs(),
         },
         lastResult: null,
@@ -295,7 +320,7 @@ export const useGameStore = create<GameStoreState>((set, get) => {
 
       // Budgeted case: refuse a *new* open once the budget is exhausted.
       const budget = caseData.investigationBudget;
-      if (budget != null && session.viewedEvidenceIds.length >= budget) {
+      if (budget != null && session.viewedEvidenceIds.length >= budget + session.extraOpens) {
         return false;
       }
 
@@ -306,6 +331,14 @@ export const useGameStore = create<GameStoreState>((set, get) => {
           session: {
             ...s.session,
             viewedEvidenceIds: [...s.session.viewedEvidenceIds, id],
+            revealedEvidenceIds:
+              s.session.selectedService === 'expert_opinion' && s.session.revealedEvidenceIds.length === 0
+                ? [...s.session.revealedEvidenceIds, id]
+                : s.session.revealedEvidenceIds,
+            hintsUsed:
+              s.session.selectedService === 'expert_opinion' && s.session.revealedEvidenceIds.length === 0
+                ? s.session.hintsUsed + 1
+                : s.session.hintsUsed,
           },
         };
       });
@@ -321,15 +354,18 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       return true;
     },
 
-    toggleEvidenceStamp(id) {
+    toggleEvidenceStamp(id, thesisId) {
       set((s) => {
         if (!s.session) return s;
         const selected = s.session.selectedEvidenceIds;
         const next = selected.includes(id)
           ? selected.filter((x) => x !== id)
           : [...selected, id];
+        const links = { ...s.session.evidenceThesisLinks };
+        if (next.includes(id) && thesisId) links[id] = thesisId;
+        else delete links[id];
         return {
-          session: { ...s.session, selectedEvidenceIds: next },
+          session: { ...s.session, selectedEvidenceIds: next, evidenceThesisLinks: links },
         };
       });
       persist();
@@ -348,6 +384,9 @@ export const useGameStore = create<GameStoreState>((set, get) => {
     buyHint(caseData, kind) {
       const { session, stats } = get();
       if (!session || session.caseId !== caseData.id) return false;
+      const service = kind === 'note' ? 'inspector_note' : 'witness_canvass';
+      if (kind === 'canvass' && session.canvassUsed) return false;
+      trackGoal(GOAL.serviceSelect, { caseId: caseData.id, service });
 
       // Both hints reveal the next not-yet-revealed card (in case order).
       const nextId =
@@ -368,6 +407,8 @@ export const useGameStore = create<GameStoreState>((set, get) => {
             session: {
               ...s.session,
               revealedEvidenceIds: [...s.session.revealedEvidenceIds, nextId],
+              hintsUsed: s.session.hintsUsed + 1,
+              canvassUsed: kind === 'canvass' ? true : s.session.canvassUsed,
             },
           };
         });
@@ -380,6 +421,12 @@ export const useGameStore = create<GameStoreState>((set, get) => {
           revealedId: nextId,
           balanceAfter: get().stats.balance,
         });
+        trackGoal(GOAL.serviceUse, {
+          caseId: caseData.id,
+          service,
+          cost: charge,
+          balanceAfter: get().stats.balance,
+        });
       };
 
       if (kind === 'note') {
@@ -387,23 +434,100 @@ export const useGameStore = create<GameStoreState>((set, get) => {
           caseData.claimAmount * GAME_CONFIG.hints.inspectorNoteClaimPct,
         );
         if (stats.balance < cost) return false; // unaffordable — UI gates this
-        showFullscreenAd(() => reveal(cost));
+        trackGoal(GOAL.serviceBuy, {
+          caseId: caseData.id,
+          service,
+          cost,
+          balanceBefore: stats.balance,
+        });
+        reveal(cost);
         return true;
       }
 
       // kind === 'canvass' → rewarded Yandex video; reveal for free once watched.
       // (Offline/dev: showRewardedAd grants immediately so it stays playable.)
-      showRewardedAd(() => reveal(0));
+      showRewardedAd(() => reveal(0), 'witness_canvass');
+      return true;
+    },
+
+    selectInvestigationService(caseData, service) {
+      const { session, stats } = get();
+      if (!session || session.caseId !== caseData.id || session.viewedEvidenceIds.length > 0) return false;
+      if (session.selectedService) return false;
+      if (service === 'extra_clearance' && caseData.investigationBudget == null) return false;
+
+      const department = GAME_CONFIG.services[service].department;
+      const level = stats.departmentLevels[department];
+      if (level < 1) return false;
+      const nowDay = Math.floor(getServerTimeMs() / GAME_CONFIG.daily.cooldownMs);
+      const free = level >= GAME_CONFIG.services.freeDailyAtLevel &&
+        stats.serviceFreeUseServerDay[service] !== nowDay;
+      const discount = level >= GAME_CONFIG.services.discountAtLevel
+        ? 1 - GAME_CONFIG.services.discountPct / 100
+        : 1;
+      const base = GAME_CONFIG.reward.baseByDifficulty[caseData.difficulty];
+      const cost = free ? 0 : Math.round(base * GAME_CONFIG.services[service].pricePct * discount);
+      if (stats.balance < cost) return false;
+
+      set((s) => ({
+        stats: {
+          ...s.stats,
+          balance: s.stats.balance - cost,
+          serviceFreeUseServerDay: free
+            ? { ...s.stats.serviceFreeUseServerDay, [service]: nowDay }
+            : s.stats.serviceFreeUseServerDay,
+        },
+        session: s.session && s.session.caseId === caseData.id
+          ? {
+              ...s.session,
+              selectedService: service,
+              extraOpens: service === 'extra_clearance' ? 1 : 0,
+            }
+          : s.session,
+      }));
+      persist();
+      trackGoal(GOAL.serviceBuy, { caseId: caseData.id, service, cost, free, level });
+      return true;
+    },
+
+    upgradeDepartment(department) {
+      const { stats } = get();
+      const level = stats.departmentLevels[department];
+      const cost = GAME_CONFIG.departments[department][level];
+      if (cost == null || stats.balance < cost) return false;
+      set((s) => ({
+        stats: {
+          ...s.stats,
+          balance: s.stats.balance - cost,
+          departmentLevels: { ...s.stats.departmentLevels, [department]: level + 1 },
+        },
+      }));
+      persist(true);
+      trackGoal(GOAL.serviceBuy, { service: 'department_upgrade', department, level: level + 1, cost });
       return true;
     },
 
     submitVerdict(caseData, decision) {
       const { session, stats } = get();
+      const isReplay = stats.completedCaseIds.includes(caseData.id);
       const selected = session?.selectedEvidenceIds ?? [];
 
       const total = totalContradictions(caseData);
-      const { correct, falseStamps } = classifyStamps(caseData, selected);
+      const binary = classifyStamps(caseData, selected);
+      const linkedCorrect = caseData.claimTheses?.length
+        ? selected.filter((id) => {
+            const evidence = caseData.evidences.find((item) => item.id === id);
+            return evidence?.relation === 'contradicts' &&
+              evidence.thesisId === session?.evidenceThesisLinks[id];
+          }).length
+        : binary.correct;
+      const correct = linkedCorrect;
+      const falseStamps = caseData.claimTheses?.length
+        ? selected.length - linkedCorrect
+        : binary.falseStamps;
       const proofRatio = total === 0 ? 1 : correct / total;
+      const mastery = evaluateMastery(caseData, decision, session);
+      const previousMastery = stats.results[caseData.id]?.mastery ?? 'none';
 
       // The rank bonus reflects the player's standing *when they solved it*, so
       // it is read from the rank held before this case's XP is added.
@@ -424,10 +548,12 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         rankBonusPct: rankBefore.rewardBonusPct,
         streakBonusPct: streak.multiplierPct,
         opensUsed: session?.viewedEvidenceIds.length ?? 0,
+        rewardEligible: !isReplay,
+        evidenceThesisLinks: session?.evidenceThesisLinks,
       });
 
       // Career XP, then detect whether this case crossed a rank threshold.
-      const xpGained = evaluateXpGain({
+      const xpGained = isReplay ? 0 : evaluateXpGain({
         difficulty: caseData.difficulty,
         verdictCorrect: breakdown.verdictCorrect,
         proofRatio,
@@ -441,13 +567,39 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         totalContradictions: total,
         falseStamps,
         rewardEarned: breakdown.total,
+        mastery: bestMastery(previousMastery, mastery),
         closedAtServerMs: getServerTimeMs(),
       };
+      const weeklyProgress = caseData.type === 'standard'
+        ? updateWeeklyProgress({
+            current: stats.weeklyProgress,
+            serverMs: result.closedAtServerMs,
+            caseData,
+            mastery,
+            verdictCorrect: breakdown.verdictCorrect,
+            hintsUsed: session?.hintsUsed ?? 0,
+            opensUsed: session?.viewedEvidenceIds.length ?? 0,
+          })
+        : stats.weeklyProgress;
+      const standardCompleted = new Set([
+        ...stats.completedCaseIds.filter((id) => !id.endsWith('-daily')),
+        ...(caseData.type === 'standard' ? [caseData.id] : []),
+      ]).size;
+      const weeklyEarned = weeklyProgress != null &&
+        standardCompleted >= GAME_CONFIG.weekly.unlockAfterStandardCases &&
+        weeklyProgress.completedTaskIds.length >= GAME_CONFIG.weekly.tasksRequired &&
+        !weeklyProgress.rewardClaimed;
+      const finalWeekly = weeklyEarned && weeklyProgress
+        ? { ...weeklyProgress, rewardClaimed: true }
+        : weeklyProgress;
+      const weeklyStampId = weeklyEarned && finalWeekly
+        ? `weekly-${finalWeekly.serverWeek}`
+        : null;
 
       // Post-case stats *before* achievement bonuses — what predicates evaluate.
       const baseStats: PlayerStats = {
         ...stats,
-        balance: stats.balance + breakdown.total,
+        balance: stats.balance + breakdown.total + (weeklyEarned ? GAME_CONFIG.weekly.reward : 0),
         xp: stats.xp + xpGained,
         streakCount: streak.streak,
         lastPlayedServerDay: nowServerDay,
@@ -455,11 +607,17 @@ export const useGameStore = create<GameStoreState>((set, get) => {
           ? stats.completedCaseIds
           : [...stats.completedCaseIds, caseData.id],
         results: { ...stats.results, [caseData.id]: result },
+        weeklyProgress: finalWeekly,
+        collectibleStampIds: weeklyStampId
+          ? [...stats.collectibleStampIds, weeklyStampId]
+          : stats.collectibleStampIds,
         // Record daily claim against authoritative server time for gating.
         lastDailyClaimServerMs:
           caseData.type === 'daily'
             ? result.closedAtServerMs
             : stats.lastDailyClaimServerMs,
+        lastDailyCaseId: caseData.type === 'daily' ? caseData.id : stats.lastDailyCaseId,
+        dailyAdCaseId: caseData.type === 'daily' ? null : stats.dailyAdCaseId,
       };
 
       // Achievements newly satisfied by this case grant one-time XP + currency.
@@ -493,13 +651,14 @@ export const useGameStore = create<GameStoreState>((set, get) => {
           promotedToLevel,
           newAchievementIds: unlocks.map((a) => a.id),
           stampedEvidenceIds: [...selected],
+          mastery: result.mastery,
         },
       });
 
       // Case closure is a critical moment → immediate (un-debounced) cloud write.
       persist(true);
-      // Publish the new balance to the global leaderboard (best-effort).
-      void submitLeaderboardScore(finalBalance);
+      // The leaderboard tracks permanent career progress, never spendable balance.
+      void submitLeaderboardScore(finalXp);
 
       // ── Analytics: the verdict is the richest signal for economy tuning. ──
       trackGoal(GOAL.verdictSubmit, {
@@ -514,6 +673,8 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         penalty: breakdown.penalty,
         bonusPct: breakdown.bonusPct,
         dailyMultiplierApplied: breakdown.dailyMultiplierApplied,
+        isReplay,
+        rewardSource: isReplay ? 'training' : caseData.type,
         total: breakdown.total,
         xpGained,
         proofRatio,
@@ -537,6 +698,14 @@ export const useGameStore = create<GameStoreState>((set, get) => {
     },
 
     async closeCase() {
+      const { session, lastResult } = get();
+      if (session && !lastResult) {
+        trackGoal(GOAL.investigationInterrupt, {
+          caseId: session.caseId,
+          reason: 'back_to_desk',
+          viewedCount: session.viewedEvidenceIds.length,
+        });
+      }
       set({ session: null });
       await flushSync(snapshotOf(get()));
     },
@@ -554,13 +723,12 @@ export const useGameStore = create<GameStoreState>((set, get) => {
           },
         }));
         persist(true);
-        void submitLeaderboardScore(GAME_CONFIG.economy.restoreFundsTo);
         trackGoal(GOAL.fundsRestore, {
           previousBalance,
           restoredTo: GAME_CONFIG.economy.restoreFundsTo,
         });
         reportUserParams(get().stats);
-      });
+      }, 'restore_funds');
     },
 
     doubleLastReward() {
@@ -576,7 +744,6 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         },
       }));
       persist(true);
-      void submitLeaderboardScore(newBalance);
       trackGoal(GOAL.rewardDouble, {
         caseId: lastResult.caseId,
         amount: bonus,
@@ -586,21 +753,29 @@ export const useGameStore = create<GameStoreState>((set, get) => {
     },
 
     isDailyUnlocked() {
-      const { lastDailyClaimServerMs } = get().stats;
+      const { lastDailyClaimServerMs, dailyAdUnlockServerDay, dailyAdCaseId } = get().stats;
+      const today = Math.floor(getServerTimeMs() / GAME_CONFIG.daily.cooldownMs);
+      if (dailyAdCaseId && dailyAdUnlockServerDay === today) return true;
       // Authoritative server time only — never the device clock.
       return evaluateDailyAvailability(lastDailyClaimServerMs, getServerTimeMs())
         .unlocked;
     },
 
-    unlockDailyViaAd() {
+    unlockDailyViaAd(caseId) {
+      const today = Math.floor(getServerTimeMs() / GAME_CONFIG.daily.cooldownMs);
+      if (get().stats.dailyAdUnlockServerDay === today) return;
+      trackAdOffer('rewarded', 'daily_unlock');
       showRewardedAd(() => {
-        // Reset lastDailyClaimServerMs to 0 so the daily is immediately available.
         set((s) => ({
-          stats: { ...s.stats, lastDailyClaimServerMs: 0 },
+          stats: {
+            ...s.stats,
+            dailyAdUnlockServerDay: today,
+            dailyAdCaseId: caseId,
+          },
         }));
         persist(true);
         trackGoal(GOAL.dailyAdUnlock, {});
-      });
+      }, 'daily_unlock');
     },
 
     setPaused(paused) {
@@ -692,8 +867,11 @@ export function selectCaseInvestigationGate(
   const viewed = state.session?.viewedEvidenceIds ?? [];
   const stamped = state.session?.selectedEvidenceIds ?? [];
 
-  const hasStampedContradiction = stamped.length > 0;
-  const budget = caseData.investigationBudget ?? null;
+  const hasStampedContradiction = caseData.claimTheses?.length
+    ? stamped.some((id) => Boolean(state.session?.evidenceThesisLinks[id]))
+    : stamped.length > 0;
+  const baseBudget = caseData.investigationBudget ?? null;
+  const budget = baseBudget == null ? null : baseBudget + (state.session?.extraOpens ?? 0);
 
   if (budget != null) {
     const opensRemaining = Math.max(0, budget - viewed.length);

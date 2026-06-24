@@ -83,6 +83,10 @@ export type UIKey =
   | "rewardRevealed"
   | "fee"
   | "companyBalance"
+  | "mastery"
+  | "masteryBronze"
+  | "masterySilver"
+  | "masteryGold"
   | "claimValue"
   | "investigationAccuracy"
   | "leaderboardWeek"
@@ -644,6 +648,10 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     ar: "رصيد الشركة",
     kk: "Компания балансы",
   },
+  mastery: { ru: "Мастерство", en: "Mastery", tr: "Ustalık", ar: "الإتقان", kk: "Шеберлік" },
+  masteryBronze: { ru: "Бронза", en: "Bronze", tr: "Bronz", ar: "برونزي", kk: "Қола" },
+  masterySilver: { ru: "Серебро", en: "Silver", tr: "Gümüş", ar: "فضي", kk: "Күміс" },
+  masteryGold: { ru: "Золото", en: "Gold", tr: "Altın", ar: "ذهبي", kk: "Алтын" },
   claimValue: {
     ru: "Сумма иска",
     en: "Claim amount",

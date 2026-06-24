@@ -39,11 +39,13 @@
 
 ## Миграция сейвов
 
-`GAME_CONFIG.saveVersion` — текущая версия схемы персиста (сейчас **3**). `migrate()` в
+`GAME_CONFIG.saveVersion` — текущая версия схемы персиста (сейчас **4**). `migrate()` в
 `persistence.ts` спредит текущие дефолты под старые сейвы, добивая новые поля:
 - v1 → v2: добавлены xp / streakCount / lastPlayedServerDay / unlockedAchievementIds в
   stats и revealedEvidenceIds в сессию.
 - v2 → v3: добавлен `ratingDismissals` (бэкфиллится через `makeDefaultStats`).
+- v3 → v4: добавлены mastery, отдел/услуги, недельный прогресс, daily-ad slot и
+  thesis-links активной сессии.
 
 Бампай версию и расширяй `migrate()` при любом изменении формы персиста.
 
@@ -57,6 +59,8 @@
 
 Любое открытие/закрытие рекламы (fullscreen или rewarded) вещает через `onPauseChange`,
 переключая глобальный `isPaused`, который замораживает игру и показывает оверлей паузы.
+Каждый вызов размечен стабильным `placement`; адаптер отдельно фиксирует принятие предложения,
+реальный показ, закрытие, награду и ошибку. Время открытой рекламы не входит в active time.
 
 - `showFullscreenAd(onDone)` — интерстишл; `onDone` продолжает действие после закрытия.
   Применяется: каждый 3-й вердикт (`AD_EVERY_N_VERDICTS`), Inspector Note.
@@ -66,7 +70,7 @@
 
 ## Лидерборд
 
-Имя — `LEADERBOARD_NAME = 'balance'` (`services/yandexSDK.ts`), должен быть создан в
+Имя — `LEADERBOARD_NAME = 'xp'` (`services/yandexSDK.ts`), должен быть создан в
 консоли разработчика, иначе no-op. `submitLeaderboardScore(balance)` — fire-and-forget
 после вердикта/restore/double. `fetchLeaderboard(topN=5, around=2)` тянет окно: глобальный
 топ + полоса вокруг игрока (дедуп по rank, флаг текущего игрока по `userRank`). Возвращает
@@ -99,6 +103,13 @@ null при недоступности → UI фолбэчит.
 - `setUserParams(params)` → `ym(id, 'userParams', …)` — профиль игрока (уровень, баланс,
   xp, число дел, серия, язык, банкротство). Шлётся на буте и после действий, меняющих эти
   величины (`submitVerdict`, `restoreFunds`, `doubleLastReward`).
+- `setAnalyticsAdPaused(paused)` — исключить рекламу из активного времени. Адаптер также
+  слушает `visibilitychange`, `pagehide`, `pageshow` и `beforeunload`, фиксируя старт/конец
+  сессии, интервалы активной игры и причины паузы/возобновления.
+
+Каждая цель и профиль автоматически получают `economyVersion`, `contentVersion` и
+`experimentGroup` из `GAME_CONFIG.analytics`; эти значения меняются только при выпуске
+соответствующей версии или запуске эксперимента.
 
 **Где эмитятся события.** Стор — эмиттер (как и для лидерборда): цели зовутся из действий
 `gameStore.ts`, где уже посчитаны payload'ы. Имена целей — каталог `GOAL` в `metrica.ts`
@@ -107,7 +118,10 @@ null при недоступности → UI фолбэчит.
 
 | Цель (`GOAL`) | Откуда | Ключевые параметры |
 | --- | --- | --- |
+| `session_start`, `session_end` | lifecycle Метрики | visibility, restored, reason, activeTotalMs, exitedAfterAd |
+| `active_interval`, `session_pause`, `session_resume` | visibility / реклама | durationMs, activeTotalMs, reason |
 | `case_start` | `startCase` | caseId, type, difficulty, claimAmount, evidenceCount, budget |
+| `investigation_interrupt`, `investigation_resume` | смена/закрытие/повторный вход в дело | caseId, reason, viewedCount, stampCount |
 | `evidence_view` | `markEvidenceAsViewed` (только реально новое открытие) | caseId, evidenceId, evidenceType, viewedCount, budget |
 | `evidence_stamp` | `toggleEvidenceStamp` | caseId, evidenceId, stamped, stampCount |
 | `hint_buy` | `buyHint` (в колбэке реального раскрытия) | caseId, kind, cost, revealedId, balanceAfter |
@@ -119,9 +133,12 @@ null при недоступности → UI фолбэчит.
 | `reward_double` | `doubleLastReward` | caseId, amount, balanceAfter |
 | `funds_restore` | `restoreFunds` (в колбэке rewarded-видео) | previousBalance, restoredTo |
 | `rating_action` | `dismissRating` / `suppressRating` / `App.tsx` (onRate) | action (`dismiss`/`never`/`rate`), dismissals |
+| `ad_offer`, `ad_accept`, `ad_open`, `ad_close`, `ad_reward`, `ad_error` | UI + `yandexSDK.ts` | kind, placement, wasShown, rewarded, error |
+| `service_view`, `service_select`, `service_buy`, `service_use` | `App.tsx` / `buyHint` | service, caseId, cost, balanceBefore/After |
+| `shop_view`, `product_view`, `purchase_start`, `purchase_success`, `purchase_error`, `purchase_restore` | будущая поверхность магазина | productId, price, error |
 
-**Конфиг** (`GAME_CONFIG.analytics`): `counterId` (заменить плейсхолдер на реальный после
-создания счётчика в [metrika.yandex.ru](https://metrika.yandex.ru)), `webvisor`. Персист не
+**Конфиг** (`GAME_CONFIG.analytics`): `counterId`, `webvisor`, `economyVersion`,
+`contentVersion`, `experimentGroup`. Персист не
 меняется — трекинг always-on, без opt-out, `saveVersion` не бампается.
 
 ## Деплой

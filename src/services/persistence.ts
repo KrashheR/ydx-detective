@@ -30,12 +30,19 @@ export function makeDefaultStats(): PlayerStats {
     completedCaseIds: [],
     results: {},
     lastDailyClaimServerMs: null,
+    lastDailyCaseId: null,
+    dailyAdUnlockServerDay: null,
+    dailyAdCaseId: null,
     isBankrupt: false,
     xp: 0,
     streakCount: 0,
     lastPlayedServerDay: null,
     unlockedAchievementIds: [],
     ratingDismissals: 0,
+    departmentLevels: { archive: 0, field: 0, lab: 0 },
+    serviceFreeUseServerDay: {},
+    weeklyProgress: null,
+    collectibleStampIds: [],
   };
 }
 
@@ -70,6 +77,11 @@ function migrate(raw: unknown): PersistedState | null {
           selectedEvidenceIds: rawSession.selectedEvidenceIds ?? [],
           viewedEvidenceIds: rawSession.viewedEvidenceIds ?? [],
           revealedEvidenceIds: rawSession.revealedEvidenceIds ?? [],
+          selectedService: rawSession.selectedService ?? null,
+          hintsUsed: rawSession.hintsUsed ?? 0,
+          canvassUsed: rawSession.canvassUsed ?? false,
+          extraOpens: rawSession.extraOpens ?? 0,
+          evidenceThesisLinks: rawSession.evidenceThesisLinks ?? {},
           startedAtServerMs: rawSession.startedAtServerMs ?? 0,
         }
       : null;

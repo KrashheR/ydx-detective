@@ -11,6 +11,28 @@
     "ar": "صاعقة برق تضرب المنزل",
     "kk": "Үйге найзағай соққысы"
   },
+  "claimTheses": [
+    {
+      "id": "incident",
+      "text": {
+        "ru": "Заявленное событие произошло именно при описанных обстоятельствах.",
+        "en": "The reported incident happened under the described circumstances.",
+        "tr": "Bildirilen olay, açıklanan koşullar altında gerçekleşti.",
+        "ar": "وقعت الحادثة المبلغ عنها في الظروف الموصوفة.",
+        "kk": "Мәлімделген оқиға сипатталған жағдайда болды."
+      }
+    },
+    {
+      "id": "damage",
+      "text": {
+        "ru": "Заявленный ущерб возник из-за этого события и подтверждён документами.",
+        "en": "The claimed damage resulted from that incident and is documented.",
+        "tr": "Talep edilen zarar bu olaydan kaynaklandı ve belgelenmiştir.",
+        "ar": "نتج الضرر المطالب به عن تلك الحادثة وهو موثق.",
+        "kk": "Мәлімделген залал сол оқиғадан туындаған және құжатпен расталған."
+      }
+    }
+  ],
   "claim": {
     "person": {
       "ru": "Хелена Краузе, 39 лет",
@@ -123,6 +145,8 @@
   "evidences": [
     {
       "id": "ev-meteo",
+      "thesisId": "incident",
+      "relation": "supports",
       "type": "document",
       "title": {
         "ru": "Метеорологическая справка",
@@ -149,6 +173,8 @@
     },
     {
       "id": "ev-photo",
+      "thesisId": "damage",
+      "relation": "supports",
       "type": "photo",
       "title": {
         "ru": "Фото повреждений",
@@ -179,6 +205,8 @@
     },
     {
       "id": "ev-surge",
+      "thesisId": "incident",
+      "relation": "supports",
       "type": "usage_log",
       "title": {
         "ru": "Лог умного счётчика",
@@ -243,6 +271,8 @@
     },
     {
       "id": "ev-witness",
+      "thesisId": "incident",
+      "relation": "supports",
       "type": "witness_statement",
       "title": {
         "ru": "Показания соседа",
@@ -269,6 +299,8 @@
     },
     {
       "id": "ev-electrician",
+      "thesisId": "damage",
+      "relation": "supports",
       "type": "document",
       "title": {
         "ru": "Заключение электрика",
@@ -295,6 +327,8 @@
     },
     {
       "id": "ev-bank",
+      "thesisId": "damage",
+      "relation": "context",
       "type": "bank_statement",
       "title": {
         "ru": "Банковская выписка",

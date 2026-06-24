@@ -6,6 +6,7 @@ import {
 } from "react";
 import { motion } from "framer-motion";
 import type { Case, Language, RewardBreakdown } from "../types";
+import { GAME_CONFIG } from "../config/gameConfig";
 import { ACHIEVEMENTS_BY_ID } from "../data/achievements";
 import { formatInvestigatorLevel, loc, t } from "../i18n/ui";
 
@@ -18,6 +19,7 @@ interface Props {
     promotedToLevel: number | null;
     newAchievementIds: string[];
     stampedEvidenceIds: string[];
+    mastery: "none" | "bronze" | "silver" | "gold";
   };
   caseData: Case;
   lang: Language;
@@ -87,7 +89,7 @@ export function ResultSheet({
       ? t("fraudMissed", lang)
       : t("investigatorError", lang);
 
-  const base = caseData.claimAmount * result.dailyMultiplierApplied || 1;
+  const base = GAME_CONFIG.reward.baseByDifficulty[caseData.difficulty] * result.dailyMultiplierApplied || 1;
   const verdictPct = Math.round((result.verdictComponent / base) * 100);
   const proofPct = Math.round((result.proofComponent / base) * 100);
   const efficiencyPct = Math.round((result.efficiencyComponent / base) * 100);
@@ -282,6 +284,19 @@ export function ResultSheet({
                 ? `+${fmt(Math.abs(result.total))} ₽`
                 : `− ${fmt(caseData.claimAmount)} ₽`}
             </div>
+
+            {result.mastery !== "none" && (
+              <div className="mx-auto mt-3 w-fit rotate-[-2deg] border-2 border-folder-edge px-3 py-1 font-mono text-xs font-bold uppercase tracking-[.18em] text-folder-edge">
+                {t("mastery", lang)} · {t(
+                  result.mastery === "gold"
+                    ? "masteryGold"
+                    : result.mastery === "silver"
+                      ? "masterySilver"
+                      : "masteryBronze",
+                  lang,
+                )}
+              </div>
+            )}
 
             {/* Bonus badge (win + bonus) */}
             {win && result.bonusComponent > 0 && (
@@ -626,7 +641,7 @@ export function ResultSheet({
                           flexShrink: 0,
                         }}
                       >
-                        РЕКЛАМА
+                        {t("watchAd", lang)}
                       </span>
                     </div>
                   </div>

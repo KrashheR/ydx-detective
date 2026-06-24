@@ -11,6 +11,28 @@
     "ar": "قَدَر المجاري",
     "kk": "Кәріз Тажалы"
   },
+  "claimTheses": [
+    {
+      "id": "incident",
+      "text": {
+        "ru": "Заявленное событие произошло именно при описанных обстоятельствах.",
+        "en": "The reported incident happened under the described circumstances.",
+        "tr": "Bildirilen olay, açıklanan koşullar altında gerçekleşti.",
+        "ar": "وقعت الحادثة المبلغ عنها في الظروف الموصوفة.",
+        "kk": "Мәлімделген оқиға сипатталған жағдайда болды."
+      }
+    },
+    {
+      "id": "damage",
+      "text": {
+        "ru": "Заявленный ущерб возник из-за этого события и подтверждён документами.",
+        "en": "The claimed damage resulted from that incident and is documented.",
+        "tr": "Talep edilen zarar bu olaydan kaynaklandı ve belgelenmiştir.",
+        "ar": "نتج الضرر المطالب به عن تلك الحادثة وهو موثق.",
+        "kk": "Мәлімделген залал сол оқиғадан туындаған және құжатпен расталған."
+      }
+    }
+  ],
   "claim": {
     "person": {
       "ru": "Харитон Сплинтович, 69 лет",
@@ -123,6 +145,8 @@
   "evidences": [
     {
       "id": "ev-debris",
+      "thesisId": "incident",
+      "relation": "contradicts",
       "type": "photo",
       "title": {
         "ru": "Фото затопленного подвала",
@@ -153,6 +177,8 @@
     },
     {
       "id": "ev-chat",
+      "thesisId": "incident",
+      "relation": "contradicts",
       "type": "document",
       "title": {
         "ru": "Распечатка переписки",
@@ -208,6 +234,8 @@
     },
     {
       "id": "ev-invoice",
+      "thesisId": "damage",
+      "relation": "contradicts",
       "type": "document",
       "title": {
         "ru": "Чек хозяйственного магазина",

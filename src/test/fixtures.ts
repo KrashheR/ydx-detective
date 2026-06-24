@@ -127,12 +127,19 @@ export function makeStats(overrides: Partial<PlayerStats> = {}): PlayerStats {
     completedCaseIds: [],
     results: {},
     lastDailyClaimServerMs: null,
+    lastDailyCaseId: null,
+    dailyAdUnlockServerDay: null,
+    dailyAdCaseId: null,
     isBankrupt: false,
     xp: 0,
     streakCount: 0,
     lastPlayedServerDay: null,
     unlockedAchievementIds: [],
     ratingDismissals: 0,
+    departmentLevels: { archive: 0, field: 0, lab: 0 },
+    serviceFreeUseServerDay: {},
+    weeklyProgress: null,
+    collectibleStampIds: [],
     ...overrides,
   };
 }
@@ -147,6 +154,7 @@ export function makeResult(overrides: Partial<CaseResult> = {}): CaseResult {
     totalContradictions: 1,
     falseStamps: 0,
     rewardEarned: 100,
+    mastery: 'bronze',
     closedAtServerMs: 0,
     ...overrides,
   };

@@ -18,6 +18,7 @@ const sdk = vi.hoisted(() => ({
   showRewardedAd: vi.fn((cb: () => void) => cb()),
   // Inspector Note now runs behind a fullscreen ad; offline/dev grants `onDone`.
   showFullscreenAd: vi.fn((onDone?: () => void) => onDone?.()),
+  trackAdOffer: vi.fn(),
   submitLeaderboardScore: vi.fn(async () => undefined),
 }));
 vi.mock('../services/yandexSDK', () => sdk);
@@ -155,7 +156,7 @@ describe('buyHint', () => {
     store().startCase(c);
     const ok = store().buyHint(c, 'note');
     expect(ok).toBe(true);
-    expect(sdk.showFullscreenAd).toHaveBeenCalledTimes(1);
+    expect(sdk.showFullscreenAd).not.toHaveBeenCalled();
     expect(store().stats.balance).toBe(GAME_CONFIG.economy.startingBalance - 200);
     expect(store().session?.revealedEvidenceIds).toEqual([c.evidences[0]!.id]);
   });
@@ -216,7 +217,7 @@ describe('submitVerdict', () => {
     expect(store().stats.results[c.id]?.verdictCorrect).toBe(true);
     expect(store().lastResult?.caseId).toBe(c.id);
     expect(persist.flushSync).toHaveBeenCalled();
-    expect(sdk.submitLeaderboardScore).toHaveBeenCalledWith(store().stats.balance);
+    expect(sdk.submitLeaderboardScore).toHaveBeenCalledWith(store().stats.xp);
   });
 
   it('starts the daily streak at 1 against server time', () => {
@@ -253,7 +254,7 @@ describe('submitVerdict', () => {
     expect(store().lastResult?.newAchievementIds).toContain('first-fraud');
   });
 
-  it('flips the bankruptcy flag when the balance drops to zero', () => {
+  it('uses the fixed difficulty payout instead of a tiny claim amount', () => {
     useGameStore.setState({ stats: makeStats({ balance: 10 }) });
     const c = makeCase({
       claimAmount: 100,
@@ -263,11 +264,10 @@ describe('submitVerdict', () => {
     });
     store().startCase(c);
     cleanIds(c).forEach((id) => store().toggleEvidenceStamp(id)); // 3 false stamps
-    // Correct verdict, but brute-forced stamps: penalty (150) outweighs base (100).
     store().submitVerdict(c, 'approve');
 
-    expect(store().stats.balance).toBeLessThanOrEqual(0);
-    expect(store().stats.isBankrupt).toBe(true);
+    expect(store().stats.balance).toBeGreaterThan(0);
+    expect(store().stats.isBankrupt).toBe(false);
   });
 
   it('records a daily claim timestamp for daily cases', () => {
@@ -316,9 +316,9 @@ describe('isDailyUnlocked', () => {
   });
 
   it('is locked within the cooldown window', () => {
-    const now = 10 * GAME_CONFIG.daily.cooldownMs;
+    const now = 10 * GAME_CONFIG.daily.cooldownMs + 1000;
     sdk.getServerTimeMs.mockReturnValue(now);
-    useGameStore.setState({ stats: makeStats({ lastDailyClaimServerMs: now - 1000 }) });
+    useGameStore.setState({ stats: makeStats({ lastDailyClaimServerMs: now - 500 }) });
     expect(store().isDailyUnlocked()).toBe(false);
   });
 });
@@ -403,7 +403,10 @@ describe('end-to-end flow for every shipped case', () => {
       store().startCase(caseData);
       // Study every document, then stamp exactly the real contradictions.
       caseData.evidences.forEach((e) => store().markEvidenceAsViewed(e.id, caseData));
-      contradictionIds(caseData).forEach((id) => store().toggleEvidenceStamp(id));
+      contradictionIds(caseData).forEach((id) => {
+        const evidence = caseData.evidences.find((item) => item.id === id);
+        store().toggleEvidenceStamp(id, evidence?.thesisId);
+      });
 
       const xpBefore = store().stats.xp;
       const breakdown = store().submitVerdict(caseData, caseData.correctDecision);
