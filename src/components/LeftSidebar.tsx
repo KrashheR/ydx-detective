@@ -1,4 +1,4 @@
-import type { Case, Language } from "../types";
+import type { Case, Language, PlayerStats } from "../types";
 import type { CaseUnlockInfo } from "../engine/caseUnlockEngine";
 import { summarizeCaseUnlocks } from "../engine/caseUnlockEngine";
 import { formatInvestigatorLevel, loc, t } from "../i18n/ui";
@@ -11,7 +11,7 @@ import {
 import { evaluateRank } from "../engine/rankEngine";
 import { LanguageSelector } from "./LanguageSelector";
 import { Tooltip } from "./Tooltip";
-import { formatCountdown } from "./icons";
+import { SpecialArchivesEntry } from "./SpecialArchivesEntry";
 
 interface Props {
   standardCaseUnlocks: CaseUnlockInfo[];
@@ -22,10 +22,15 @@ interface Props {
   lang: Language;
   /** Cumulative career XP — drives the investigator progress card. */
   xp: number;
+  archiveStats: Pick<
+    PlayerStats,
+    "archivePurchasedPackIds" | "archiveUnlockedCaseIds"
+  >;
   onSelect: (c: Case) => void;
   onSelectStandardCase: (info: CaseUnlockInfo) => void;
   onDailyLocked: () => void;
   onLanguage: (lang: Language) => void;
+  onOpenSpecialArchives: () => void;
 }
 
 /** Left investigation-desk column: brand, language, case list, progress. */
@@ -37,10 +42,12 @@ export function LeftSidebar({
   selectedId,
   lang,
   xp,
+  archiveStats,
   onSelect,
   onSelectStandardCase,
   onDailyLocked,
   onLanguage,
+  onOpenSpecialArchives,
 }: Props) {
   const rank = evaluateRank(xp);
   const levelTitle = formatInvestigatorLevel(rank.level, lang);
@@ -70,7 +77,15 @@ export function LeftSidebar({
 
       {/* Scrollable case list — keeps daily card from being crushed by flex shrink */}
       <div className="mt-[15px] flex min-h-0 max-h-[600px] flex-1 flex-col gap-[15px] overflow-y-auto md:max-h-none pr-4">
-        {/* Daily case — pinned to top, gold URGENT stamp */}
+        {/* Special archives — pinned first */}
+        <SpecialArchivesEntry
+          lang={lang}
+          stats={archiveStats}
+          caseUnlocks={standardCaseUnlocks}
+          onOpen={onOpenSpecialArchives}
+        />
+
+        {/* Daily case — gold URGENT stamp */}
         {dailyCase && (
           <Tooltip
             className="block shrink-0"

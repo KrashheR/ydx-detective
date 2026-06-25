@@ -1,0 +1,395 @@
+﻿{
+    "id":  "case-051",
+    "type":  "standard",
+    "difficulty":  "hard",
+    "claimAmount":  19700,
+    "truth":  "fraud",
+    "investigationBudget":  4,
+    "title":  {
+                  "ru":  "Угон фургона с уличной электроникой",
+                  "en":  "Van Hijack with Street Electronics",
+                  "tr":  "Van Hijack with Street Electronics",
+                  "ar":  "Van Hijack with Street Electronics",
+                  "kk":  "Угон фургона с уличной электроникой"
+              },
+    "claim":  {
+                  "person":  {
+                                 "ru":  "Роман Драй, 33 года",
+                                 "en":  "Roman Dray, 33",
+                                 "tr":  "Roman Dray, 33",
+                                 "ar":  "رومان دراي، 33",
+                                 "kk":  "Роман Драй, 33 жаста"
+                             },
+                  "story":  {
+                                "ru":  "Организованная банда перехватила мой фургон с сенсорами для уличной электроники. Водителя вытолкнули, груз исчез, а трекер молчал почти час.",
+                                "en":  "An organized gang hijacked my van carrying street-electronics sensors. The driver was thrown out, the cargo disappeared, and the tracker was silent for nearly an hour.",
+                                "tr":  "Örgütlü bir ekip sokak elektroniği sensörleri taşıyan minibüsümü kaçırdı. Sürücü atıldı, yük kayboldu ve takip cihazı neredeyse bir saat sustu.",
+                                "ar":  "اختطفت عصابة منظمة شاحنتي المحملة بحساسات إلكترونيات الشارع. أُخرج السائق، واختفت الشحنة، وصمت المتتبع قرابة ساعة.",
+                                "kk":  "Ұйымдасқан топ көше электроникасы сенсорлары бар фургонымды айдап әкетті. Жүргізушіні шығарып тастады, жүк жоғалды, трекер бір сағатқа жуық үнсіз болды."
+                            }
+              },
+    "coverImage":  "covers/case-051.svg",
+    "personImage":  "people/roman-dray.webp",
+    "client":  {
+                   "role":  {
+                                "ru":  "Поставщик уличной электроники",
+                                "en":  "Street electronics supplier",
+                                "tr":  "Sokak elektroniği tedarikçisi",
+                                "ar":  "مورد إلكترونيات الشارع",
+                                "kk":  "Көше электроникасы жеткізушісі"
+                            },
+                   "meta":  [
+                                {
+                                    "k":  {
+                                              "ru":  "Архив",
+                                              "en":  "Archive",
+                                              "tr":  "Arşiv",
+                                              "ar":  "الأرشيف",
+                                              "kk":  "Архив"
+                                          },
+                                    "v":  {
+                                              "ru":  "Подземный Отдел",
+                                              "en":  "Underground Department",
+                                              "tr":  "Yeraltı Dairesi",
+                                              "ar":  "القسم الجوفي",
+                                              "kk":  "Жерасты бөлімі"
+                                          }
+                                },
+                                {
+                                    "k":  {
+                                              "ru":  "Застрахованный риск",
+                                              "en":  "Insured risk",
+                                              "tr":  "Sigortalı risk",
+                                              "ar":  "الخطر المؤمن عليه",
+                                              "kk":  "Сақтандырылған тәуекел"
+                                          },
+                                    "v":  {
+                                              "ru":  "Угон фургона",
+                                              "en":  "Van hijack",
+                                              "tr":  "Minibüs kaçırma",
+                                              "ar":  "اختطاف شاحنة",
+                                              "kk":  "Фургонды айдап кету"
+                                          }
+                                },
+                                {
+                                    "k":  {
+                                              "ru":  "Архивная связка",
+                                              "en":  "Archive thread",
+                                              "tr":  "Arşiv bağı",
+                                              "ar":  "خيط الأرشيف",
+                                              "kk":  "Архив байланысы"
+                                          },
+                                    "v":  {
+                                              "ru":  "Повторяющийся след: East Yard — скупка, где старое оборудование и украденные модули превращают в страховые истории.",
+                                              "en":  "Recurring lead: East Yard, the consignment yard turning old equipment and stolen modules into insurance stories.",
+                                              "tr":  "Tekrarlayan iz: East Yard; eski ekipmanı ve çalıntı modülleri sigorta hikâyelerine çeviren komisyon alanı.",
+                                              "ar":  "خيط متكرر: East Yard، ساحة البيع التي تحول المعدات القديمة والوحدات المسروقة إلى قصص تأمين.",
+                                              "kk":  "Қайталанатын із: East Yard — ескі жабдық пен ұрланған модульдерді сақтандыру оқиғасына айналдыратын алаң."
+                                          }
+                                }
+                            ]
+               },
+    "evidences":  [
+                      {
+                          "id":  "photo-51",
+                          "type":  "photo",
+                          "title":  {
+                                        "ru":  "Кузов без следов борьбы",
+                                        "en":  "Cargo bay without struggle marks",
+                                        "tr":  "Mücadele izi olmayan kasa",
+                                        "ar":  "صندوق بلا آثار مقاومة",
+                                        "kk":  "Күрес ізі жоқ кузов"
+                                    },
+                          "content":  {
+                                          "ru":  "Стяжки груза аккуратно сложены на полу. Нет следов резкого торможения, крови или сорванных креплений.",
+                                          "en":  "Cargo straps are neatly folded on the floor. There are no hard-brake marks, blood, or torn mounts.",
+                                          "tr":  "Yük bağları zeminde düzgün katlanmış. Sert fren izi, kan veya kopmuş bağlantı yok.",
+                                          "ar":  "أحزمة الحمولة مطوية بعناية على الأرض. لا آثار فرملة قوية أو دم أو حوامل ممزقة.",
+                                          "kk":  "Жүк баулары еденде ұқыпты жиналған. Қатты тежелу, қан немесе жұлынған бекітпе ізі жоқ."
+                                      },
+                          "isContradiction":  true,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Салон выглядит разгруженным спокойно, а не после нападения.",
+                                                           "en":  "The cargo bay looks calmly unloaded, not attacked.",
+                                                           "tr":  "Kasa saldırıya uğramış değil sakin boşaltılmış görünüyor.",
+                                                           "ar":  "يبدو الصندوق مفرغاً بهدوء لا بعد هجوم.",
+                                                           "kk":  "Кузов шабуылдан кейін емес, тыныш түсірілгендей көрінеді."
+                                                       },
+                          "meta":  {
+                                       "filename":  "IMG_20260651_081500.jpg",
+                                       "imageUrl":  "evidence/case-051-photo-51.webp"
+                                   },
+                          "relation":  "contradicts"
+                      },
+                      {
+                          "id":  "document-51",
+                          "type":  "document",
+                          "title":  {
+                                        "ru":  "Накладная на сенсоры",
+                                        "en":  "Sensor consignment note",
+                                        "tr":  "Sensör irsaliyesi",
+                                        "ar":  "إيصال شحنة الحساسات",
+                                        "kk":  "Сенсор жүкқұжаты"
+                                    },
+                          "content":  {
+                                          "ru":  "Накладная подтверждает 48 сенсорных блоков. Серийные номера совпадают с партией, позже замеченной на комиссионной площадке.",
+                                          "en":  "The note confirms 48 sensor blocks. Serial numbers match a batch later seen at a consignment yard.",
+                                          "tr":  "İrsaliye 48 sensör bloğunu doğrular. Seri numaraları daha sonra komisyon alanında görülen partiyle eşleşiyor.",
+                                          "ar":  "يثبت الإيصال 48 وحدة حساس. تتطابق الأرقام التسلسلية مع دفعة شوهدت لاحقاً في ساحة بيع.",
+                                          "kk":  "Жүкқұжат 48 сенсор блогын растайды. Сериялық нөмірлер кейін комиссия алаңынан көрінген партиямен сәйкес."
+                                      },
+                          "isContradiction":  false,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Материал важен для проверки версии, но сам по себе не является противоречием.",
+                                                           "en":  "The material matters to the review but is not a contradiction by itself.",
+                                                           "tr":  "Bu kayıt inceleme için önemlidir, ancak tek başına çelişki değildir.",
+                                                           "ar":  "هذه المادة مهمة للمراجعة لكنها ليست تناقضاً بحد ذاتها.",
+                                                           "kk":  "Материал тексеру үшін маңызды, бірақ өздігінен қайшылық емес."
+                                                       },
+                          "relation":  "context"
+                      },
+                      {
+                          "id":  "camera-51",
+                          "type":  "camera_recording",
+                          "title":  {
+                                        "ru":  "Камера тоннельной рампы",
+                                        "en":  "Tunnel ramp camera",
+                                        "tr":  "Tünel rampası kamerası",
+                                        "ar":  "كاميرا منحدر النفق",
+                                        "kk":  "Туннель рампасы камерасы"
+                                    },
+                          "content":  {
+                                          "ru":  "Фургон въезжает на рампу без заноса и аварийных огней. За рулём человек в куртке Драя.",
+                                          "en":  "The van enters the ramp without swerving or hazard lights. The driver wears Dray jacket.",
+                                          "tr":  "Minibüs rampaya savrulmadan ve flaşörsüz giriyor. Sürücü Dray’in ceketiyle.",
+                                          "ar":  "تدخل الشاحنة المنحدر بلا انحراف أو أضواء طوارئ. السائق يرتدي سترة دراي.",
+                                          "kk":  "Фургон рампаға сырғымай, апат шамынсыз кіреді. Рөлдегі адам Драйдың күртешесін киген."
+                                      },
+                          "isContradiction":  true,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Камера не показывает силовой перехват.",
+                                                           "en":  "The camera does not show a forced hijack.",
+                                                           "tr":  "Kamera zorla kaçırmayı göstermiyor.",
+                                                           "ar":  "لا تظهر الكاميرا اختطافاً بالقوة.",
+                                                           "kk":  "Камера күшпен басып алуды көрсетпейді."
+                                                       },
+                          "meta":  {
+                                       "cameraId":  "ARC-51",
+                                       "cameraModel":  "Axis P3265-LV - 1080p - H.264"
+                                   },
+                          "relation":  "contradicts"
+                      },
+                      {
+                          "id":  "log-51",
+                          "type":  "usage_log",
+                          "title":  {
+                                        "ru":  "Журнал телематики фургона",
+                                        "en":  "Van telematics log",
+                                        "tr":  "Minibüs telematik kaydı",
+                                        "ar":  "سجل تليماتيك الشاحنة",
+                                        "kk":  "Фургон телематика журналы"
+                                    },
+                          "content":  {
+                                          "ru":  [
+                                                     "21:08 — водительский профиль: DRAY-R",
+                                                     "21:11 — трекер переведён в режим приватной доставки",
+                                                     "21:57 — маршрут завершён у площадки East Yard"
+                                                 ],
+                                          "en":  [
+                                                     "21:08 — driver profile: DRAY-R",
+                                                     "21:11 — tracker switched to private delivery mode",
+                                                     "21:57 — route ended at East Yard"
+                                                 ],
+                                          "tr":  [
+                                                     "21:08 — sürücü profili: DRAY-R",
+                                                     "21:11 — takip cihazı özel teslimat moduna alındı",
+                                                     "21:57 — rota East Yard’da bitti"
+                                                 ],
+                                          "ar":  [
+                                                     "21:08 — ملف السائق: DRAY-R",
+                                                     "21:11 — تحويل المتتبع إلى وضع تسليم خاص",
+                                                     "21:57 — انتهاء المسار في East Yard"
+                                                 ],
+                                          "kk":  [
+                                                     "21:08 — жүргізуші профилі: DRAY-R",
+                                                     "21:11 — трекер жеке жеткізу режиміне ауысты",
+                                                     "21:57 — бағыт East Yard-та аяқталды"
+                                                 ]
+                                      },
+                          "isContradiction":  true,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Телематика показывает штатный маршрут с профилем Драя.",
+                                                           "en":  "Telematics shows a normal route under Dray profile.",
+                                                           "tr":  "Telematik Dray profiliyle normal rota gösteriyor.",
+                                                           "ar":  "تظهر التليماتيك مساراً عادياً بملف دراي.",
+                                                           "kk":  "Телематика Драй профилімен штаттық бағытты көрсетеді."
+                                                       },
+                          "meta":  {
+                                       "logPrompt":  "archive@log-51:~$ tail -f /var/log/archive.log"
+                                   },
+                          "relation":  "contradicts"
+                      },
+                      {
+                          "id":  "bank-51",
+                          "type":  "bank_statement",
+                          "title":  {
+                                        "ru":  "Поступление от комиссионера",
+                                        "en":  "Consignment yard payment",
+                                        "tr":  "Komisyon alanı ödemesi",
+                                        "ar":  "دفعة من ساحة بيع",
+                                        "kk":  "Комиссия алаңынан төлем"
+                                    },
+                          "content":  {
+                                          "ru":  [
+                                                     "Через 40 минут после «угона» — входящий платёж от East Yard Consign",
+                                                     "Назначение: «электронные модули, партия 48»",
+                                                     "Это уже не косвенный след: East Yard платит ровно за 48 модулей из накладной."
+                                                 ],
+                                          "en":  [
+                                                     "40 minutes after the \"hijack\" — incoming payment from East Yard Consign",
+                                                     "Memo: \"electronic modules, batch 48\"",
+                                                     "This is no longer an indirect lead: East Yard pays for exactly 48 modules from the consignment note."
+                                                 ],
+                                          "tr":  [
+                                                     "\"Kaçırmadan\" 40 dakika sonra — East Yard Consign ödemesi",
+                                                     "Açıklama: \"elektronik modüller, parti 48\"",
+                                                     "Bu artık dolaylı iz değil: East Yard irsaliyedeki tam 48 modül için ödeme yapıyor."
+                                                 ],
+                                          "ar":  [
+                                                     "بعد 40 دقيقة من \"الاختطاف\" — دفعة واردة من East Yard Consign",
+                                                     "الوصف: \"وحدات إلكترونية، دفعة 48\"",
+                                                     "لم يعد هذا خيطاً غير مباشر: تدفع East Yard مقابل 48 وحدة بالضبط من الإيصال."
+                                                 ],
+                                          "kk":  [
+                                                     "\"Айдап әкетуден\" 40 минут кейін — East Yard Consign төлемі",
+                                                     "Мақсаты: \"электрондық модульдер, партия 48\"",
+                                                     "Бұл енді жанама із емес: East Yard жүкқұжаттағы дәл 48 модуль үшін төлейді."
+                                                 ]
+                                      },
+                          "isContradiction":  true,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Платёж совпадает с количеством заявленного груза.",
+                                                           "en":  "The payment matches the claimed cargo quantity.",
+                                                           "tr":  "Ödeme bildirilen yük miktarıyla eşleşiyor.",
+                                                           "ar":  "تطابق الدفعة كمية الشحنة المبلغ عنها.",
+                                                           "kk":  "Төлем мәлімделген жүк санымен сәйкес."
+                                                       },
+                          "meta":  {
+                                       "bankName":  {
+                                                        "ru":  "Municipal Credit",
+                                                        "en":  "Municipal Credit",
+                                                        "tr":  "Municipal Credit",
+                                                        "ar":  "Municipal Credit",
+                                                        "kk":  "Municipal Credit"
+                                                    },
+                                       "accountMask":  "**** **** **** 51"
+                                   },
+                          "relation":  "contradicts"
+                      },
+                      {
+                          "id":  "gps-51",
+                          "type":  "gps",
+                          "title":  {
+                                        "ru":  "GPS-трек без остановки",
+                                        "en":  "GPS track without stop",
+                                        "tr":  "Duraksız GPS izi",
+                                        "ar":  "مسار GPS بلا توقف",
+                                        "kk":  "Тоқтаусыз GPS-трек"
+                                    },
+                          "content":  {
+                                          "ru":  [
+                                                     "21:07 — склад Драя, старт",
+                                                     "21:22 — тоннель D4, скорость 42 км/ч",
+                                                     "21:57 — East Yard, штатная парковка"
+                                                 ],
+                                          "en":  [
+                                                     "21:07 — Dray warehouse, start",
+                                                     "21:22 — tunnel D4, speed 42 km/h",
+                                                     "21:57 — East Yard, normal parking"
+                                                 ],
+                                          "tr":  [
+                                                     "21:07 — Dray deposu, başlangıç",
+                                                     "21:22 — D4 tüneli, hız 42 km/s",
+                                                     "21:57 — East Yard, normal park"
+                                                 ],
+                                          "ar":  [
+                                                     "21:07 — مستودع دراي، انطلاق",
+                                                     "21:22 — النفق D4، السرعة 42 كم/س",
+                                                     "21:57 — East Yard، توقف نظامي"
+                                                 ],
+                                          "kk":  [
+                                                     "21:07 — Драй қоймасы, бастау",
+                                                     "21:22 — D4 туннелі, жылдамдық 42 км/сағ",
+                                                     "21:57 — East Yard, штаттық тұрақ"
+                                                 ]
+                                      },
+                          "isContradiction":  true,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Маршрут не содержит остановки или резкого отклонения для угона.",
+                                                           "en":  "The route has no stop or sharp deviation for a hijack.",
+                                                           "tr":  "Rotada kaçırmaya uygun duraklama veya keskin sapma yok.",
+                                                           "ar":  "لا يحتوي المسار على توقف أو انحراف حاد لاختطاف.",
+                                                           "kk":  "Бағытта айдап әкетуге тән тоқтау не күрт ауытқу жоқ."
+                                                       },
+                          "meta":  {
+                                       "company":  {
+                                                       "ru":  "TrackLine Cargo",
+                                                       "en":  "TrackLine Cargo",
+                                                       "tr":  "TrackLine Cargo",
+                                                       "ar":  "TrackLine Cargo",
+                                                       "kk":  "TrackLine Cargo"
+                                                   },
+                                       "department":  {
+                                                          "ru":  "Центр грузового мониторинга",
+                                                          "en":  "Cargo Monitoring Center",
+                                                          "tr":  "Kargo İzleme Merkezi",
+                                                          "ar":  "مركز مراقبة الشحن",
+                                                          "kk":  "Жүк мониторингі орталығы"
+                                                      },
+                                       "requestId":  {
+                                                         "ru":  "TLC-2026-0612-D · Тип: маршрут",
+                                                         "en":  "TLC-2026-0612-D · Type: route",
+                                                         "tr":  "TLC-2026-0612-D · Tür: rota",
+                                                         "ar":  "TLC-2026-0612-D · النوع: مسار",
+                                                         "kk":  "TLC-2026-0612-D · Түрі: бағыт"
+                                                     },
+                                       "gpsFooter":  {
+                                                         "ru":  "© TrackLine 2026 · GPS ACC: ±7m",
+                                                         "en":  "© TrackLine 2026 · GPS ACC: ±7m",
+                                                         "tr":  "© TrackLine 2026 · GPS ACC: ±7m",
+                                                         "ar":  "© TrackLine 2026 · GPS ACC: ±7m",
+                                                         "kk":  "© TrackLine 2026 · GPS ACC: ±7m"
+                                                     }
+                                   },
+                          "relation":  "contradicts"
+                      }
+                  ],
+    "correctDecision":  "reject",
+    "explanation":  {
+                        "ru":  [
+                                   "Телематика и GPS показывают штатный маршрут до East Yard.",
+                                   "Банковский платёж совпадает с партией сенсоров и закрывает цепочку отдела.",
+                                   "Угон фургона не подтверждён: вердикт — отказ."
+                               ],
+                        "en":  [
+                                   "Telematics and GPS show a normal route to East Yard.",
+                                   "The bank payment matches the sensor batch and closes the department chain.",
+                                   "The van hijack is unsupported: reject the claim."
+                               ],
+                        "tr":  [
+                                   "Telematik ve GPS East Yard’a normal rota gösteriyor.",
+                                   "Banka ödemesi sensör partisiyle eşleşiyor ve bölüm zincirini kapatıyor.",
+                                   "Minibüs kaçırma iddiası desteklenmiyor: ödeme reddedilir."
+                               ],
+                        "ar":  [
+                                   "تظهر التليماتيك وGPS مساراً عادياً إلى East Yard.",
+                                   "تطابق الدفعة البنكية دفعة الحساسات وتغلق سلسلة القسم.",
+                                   "اختطاف الشاحنة غير مثبت: القرار رفض."
+                               ],
+                        "kk":  [
+                                   "Телематика мен GPS East Yard-қа штаттық бағытты көрсетеді.",
+                                   "Банк төлемі сенсор партиясымен сәйкес және бөлім тізбегін жабады.",
+                                   "Фургонды айдап кету расталмады: вердикт — бас тарту."
+                               ]
+                    }
+}

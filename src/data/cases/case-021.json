@@ -1,322 +1,297 @@
-{
-  "id": "case-021",
-  "type": "standard",
-  "difficulty": "hard",
-  "claimAmount": 1900,
-  "truth": "fraud",
-  "title": {
-    "ru": "Канализационный Рок",
-    "en": "Sewer Doom",
-    "tr": "Kanalizasyon Kıyameti",
-    "ar": "قَدَر المجاري",
-    "kk": "Кәріз Тажалы"
-  },
-  "claimTheses": [
-    {
-      "id": "incident",
-      "text": {
-        "ru": "Заявленное событие произошло именно при описанных обстоятельствах.",
-        "en": "The reported incident happened under the described circumstances.",
-        "tr": "Bildirilen olay, açıklanan koşullar altında gerçekleşti.",
-        "ar": "وقعت الحادثة المبلغ عنها في الظروف الموصوفة.",
-        "kk": "Мәлімделген оқиға сипатталған жағдайда болды."
-      }
-    },
-    {
-      "id": "damage",
-      "text": {
-        "ru": "Заявленный ущерб возник из-за этого события и подтверждён документами.",
-        "en": "The claimed damage resulted from that incident and is documented.",
-        "tr": "Talep edilen zarar bu olaydan kaynaklandı ve belgelenmiştir.",
-        "ar": "نتج الضرر المطالب به عن تلك الحادثة وهو موثق.",
-        "kk": "Мәлімделген залал сол оқиғадан туындаған және құжатпен расталған."
-      }
-    }
-  ],
-  "claim": {
-    "person": {
-      "ru": "Харитон Сплинтович, 69 лет",
-      "en": "Khariton Splintovich, 69",
-      "tr": "Khariton Splintovich, 69",
-      "ar": "خاريتون سبلينتوفيتش، 69",
-      "kk": "Харитон Сплинтович, 69 жаста"
-    },
-    "story": {
-      "ru": "Со смирением и скорбью извещаю о форс-мажоре. Городская канализационная труба под моим додзё самопроизвольно воспламенилась и затопила помещение, уничтожив тренировочный инвентарь, татами и исторические японские знамёна, передававшиеся из поколения в поколение. Полагаю это аварией муниципальной инфраструктуры и прошу возместить ущерб согласно полису.",
-      "en": "With humility and sorrow I report a force majeure. The city sewage pipe beneath my dojo spontaneously combusted and flooded the premises, destroying training equipment, tatami mats, and historic Japanese banners passed down through generations. I deem this a municipal infrastructure failure and request compensation under the policy.",
-      "tr": "Tevazu ve kederle bir mücbir sebebi bildiriyorum. Salonumun altındaki şehir kanalizasyon borusu kendiliğinden tutuştu ve mekânı su bastı; antrenman ekipmanını, tatami minderlerini ve nesilden nesile aktarılan tarihî Japon sancaklarını yok etti. Bunu bir belediye altyapı arızası sayıyor ve poliçe kapsamında tazminat talep ediyorum.",
-      "ar": "بكل تواضع وحزن أُبلغ عن قوة قاهرة. اشتعل أنبوب مجاري المدينة أسفل ناديي من تلقاء نفسه وأغرق المكان، مدمّراً معدات التدريب وحصائر التاتامي والرايات اليابانية التاريخية المتوارثة عبر الأجيال. أعتبر هذا عطلاً في البنية التحتية البلدية وأطلب التعويض وفق الوثيقة.",
-      "kk": "Кішіпейілдік пен қайғымен форс-мажор туралы хабарлаймын. Менің додзёмның астындағы қалалық кәріз құбыры өздігінен от алып, бөлмені су басып, жаттығу мүкәммалын, татами төсеніштерін және ұрпақтан-ұрпаққа берілген тарихи жапон тулaрын жойды. Мұны муниципалдық инфрақұрылым апаты деп санаймын және полис бойынша зиянды өтеуді сұраймын."
-    }
-  },
-  "coverImage": "covers/case-021.svg",
-  "personImage": "people/khariton.webp",
-  "client": {
-    "role": {
-      "ru": "Заявитель · физ. лицо",
-      "en": "Claimant · individual",
-      "tr": "Başvuru sahibi · gerçek kişi",
-      "ar": "مقدم الطلب · شخص طبيعي",
-      "kk": "Өтініш беруші · жеке тұлға"
-    },
-    "meta": [
-      {
-        "k": {
-          "ru": "Возраст",
-          "en": "Age",
-          "tr": "Yaş",
-          "ar": "العمر",
-          "kk": "Жасы"
-        },
-        "v": {
-          "ru": "69 лет",
-          "en": "69 years old",
-          "tr": "69 yaşında",
-          "ar": "69 عامًا",
-          "kk": "69 жаста"
-        }
-      },
-      {
-        "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
-        },
-        "v": {
-          "ru": "Нижний Новгород",
-          "en": "Nizhny Novgorod",
-          "tr": "Nijni Novgorod",
-          "ar": "نيجني نوفغورود",
-          "kk": "Нижний Новгород"
-        }
-      },
-      {
-        "k": {
-          "ru": "Клиент с",
-          "en": "Client since",
-          "tr": "Müşteri",
-          "ar": "عميل منذ",
-          "kk": "Клиент"
-        },
-        "v": {
-          "ru": "2008 г.",
-          "en": "2008",
-          "tr": "2008",
-          "ar": "2008",
-          "kk": "2008 ж."
-        }
-      },
-      {
-        "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
-        },
-        "v": {
-          "ru": "Имущество · ИМ-21256239-X5",
-          "en": "Property · IM-21256239-X5",
-          "tr": "Mülk · IM-21256239-X5",
-          "ar": "الممتلكات · IM-21256239-X5",
-          "kk": "Мүлік · ИМ-21256239-X5"
-        }
-      },
-      {
-        "k": {
-          "ru": "Документ",
-          "en": "Document",
-          "tr": "Belge",
-          "ar": "الوثيقة",
-          "kk": "Құжат"
-        },
-        "v": {
-          "ru": "Паспорт 2207-69 №212562391-05",
-          "en": "Passport 2207-69 №212562391-05",
-          "tr": "Pasaport 2207-69 №212562391-05",
-          "ar": "جواز السفر 2207-69 №212562391-05",
-          "kk": "Паспорт 2207-69 №212562391-05"
-        }
-      }
-    ]
-  },
-  "evidences": [
-    {
-      "id": "ev-debris",
-      "thesisId": "incident",
-      "relation": "contradicts",
-      "type": "photo",
-      "title": {
-        "ru": "Фото затопленного подвала",
-        "en": "Flooded Basement Photo",
-        "tr": "Su Basan Bodrum Fotoğrafı",
-        "ar": "صورة القبو المغمور",
-        "kk": "Су басқан жертөле суреті"
-      },
-      "content": {
-        "ru": "Среди размокших татами лежит огромное моторизованное колесо, выкрашенное ФИОЛЕТОВОЙ краской. Рядом — чертёж с подписью «Пати-Вагон» и фиолетовым оттиском печати. Городской трубы в кадре не видно — труба пробита изнутри.",
-        "en": "Among the soaked tatami lies a giant motorized wheel painted PURPLE. Beside it is a blueprint signed \"Party Wagon\" with a purple ink stamp. No city pipe is visible in frame — the pipe was breached from the inside.",
-        "tr": "Islanmış tatamilerin arasında MOR renge boyanmış dev bir motorlu tekerlek duruyor. Yanında \"Parti Vagonu\" yazılı, mor mürekkep mühürlü bir teknik çizim var. Karede şehir borusu görünmüyor — boru içeriden delinmiş.",
-        "ar": "بين حصائر التاتامي المبللة تقبع عجلة آلية ضخمة مطلية باللون البنفسجي. بجانبها مخطط موقّع باسم «عربة الحفلة» مع ختم حبر بنفسجي. لا يظهر أنبوب المدينة في الصورة — فقد ثُقب الأنبوب من الداخل.",
-        "kk": "Су болған татамилер арасында КҮЛГІН түске боялған алып моторлы дөңгелек жатыр. Қасында «Пати-Вагон» деп қол қойылған, күлгін мөр басылған сызба бар. Кадрда қалалық құбыр көрінбейді — құбыр іштен тесілген."
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Разрушения вызваны самодельным моторным «вагоном» с фиолетовой краской, а не аварией городской трубы.",
-        "en": "The damage was caused by a homemade motorized \"wagon\" with purple paint, not by a city pipe failure.",
-        "tr": "Hasar, şehir borusunun arızasından değil, mor boyalı el yapımı motorlu bir \"vagon\"dan kaynaklandı.",
-        "ar": "الضرر سببه «عربة» آلية محلية الصنع بطلاء بنفسجي، لا عطل في أنبوب المدينة.",
-        "kk": "Зақым қалалық құбыр апатынан емес, күлгін бояулы қолдан жасалған моторлы «вагоннан» болған."
-      },
-      "meta": {
-        "filename": "IMG_20260618_233117.jpg",
-        "imageUrl": "evidence/case-021-ev-debris.jpg"
-      }
-    },
-    {
-      "id": "ev-chat",
-      "thesisId": "incident",
-      "relation": "contradicts",
-      "type": "document",
-      "title": {
-        "ru": "Распечатка переписки",
-        "en": "Chat Log Printout",
-        "tr": "Sohbet Kaydı Çıktısı",
-        "ar": "مطبوعة سجل المحادثة",
-        "kk": "Хат-хабар басылымы"
-      },
-      "content": {
-        "ru": [
-          "[22:15] Донато (фиолетовая маска): Сэнсэй, нитро-двигатель на «вагоне» нестабилен — трясёт всю трубу под нами.",
-          "[22:18] Х. Сплинтович: Не ищи лёгких путей, сын мой. Сосредоточься на ката. И НЕ ТРОГАЙ главный вентиль.",
-          "[22:19] Донато (фиолетовая маска): Уже тронул. Кажется, искрит…"
-        ],
-        "en": [
-          "[22:15] Donato (purple mask): Master, the nitro engine on the \"wagon\" is unstable — it's shaking the whole pipe under us.",
-          "[22:18] K. Splintovich: Do not seek shortcuts, my son. Focus on your katas. And DO NOT touch the main valve.",
-          "[22:19] Donato (purple mask): Already touched it. It seems to be sparking…"
-        ],
-        "tr": [
-          "[22:15] Donato (mor maske): Usta, \"vagon\"daki nitro motor dengesiz — altımızdaki tüm boruyu sarsıyor.",
-          "[22:18] K. Splintovich: Kestirme yollar arama evladım. Katalarına odaklan. Ve ana vanaya DOKUNMA.",
-          "[22:19] Donato (mor maske): Çoktan dokundum. Galiba kıvılcım çıkarıyor…"
-        ],
-        "ar": [
-          "[22:15] دوناتو (قناع بنفسجي): يا معلّم، محرك النيترو في «العربة» غير مستقر — إنه يهز الأنبوب كله تحتنا.",
-          "[22:18] ك. سبلينتوفيتش: لا تبحث عن الطرق المختصرة يا بنيّ. ركّز على الكاتا. ولا تلمس الصمام الرئيسي.",
-          "[22:19] دوناتو (قناع بنفسجي): لقد لمسته بالفعل. يبدو أنه يُطلق شرراً…"
-        ],
-        "kk": [
-          "[22:15] Донато (күлгін маска): Сэнсэй, «вагондағы» нитро-қозғалтқыш тұрақсыз — астымыздағы бүкіл құбырды сілкілейді.",
-          "[22:18] Х. Сплинтович: Жеңіл жол іздеме, балам. Катаңа шоғырлан. Және басты вентильге ТИМЕ.",
-          "[22:19] Донато (күлгін маска): Тиіп те қойдым. Ұшқын шашып тұрған сияқты…"
-        ]
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Тренер знал, что самодельный двигатель трясёт трубу, и предупреждал про вентиль — это не самовозгорание городской сети, а он покрывает ученика.",
-        "en": "The coach knew the homemade engine was shaking the pipe and warned about the valve — this is not a spontaneous city failure; he is covering for his student.",
-        "tr": "Antrenör, el yapımı motorun boruyu sarstığını biliyordu ve vana konusunda uyardı — bu, kendiliğinden bir şehir arızası değil; öğrencisini koruyor.",
-        "ar": "كان المدرب يعلم أن المحرك المنزلي يهز الأنبوب وحذّر بشأن الصمام — هذا ليس عطلاً تلقائياً في الشبكة؛ إنه يتستر على طالبه.",
-        "kk": "Жаттықтырушы қолдан жасалған қозғалтқыш құбырды сілкілейтінін білген әрі вентиль туралы ескерткен — бұл қалалық желінің өздігінен жануы емес, ол оқушысын жасырып отыр."
-      },
-      "meta": {
-        "docHeader": {
-          "ru": "Экспорт переписки из мессенджера · стр. 1/1",
-          "en": "Messenger conversation export · page 1/1",
-          "tr": "Mesajlaşma dışa aktarımı · sayfa 1/1",
-          "ar": "تصدير محادثة المراسلة · الصفحة 1/1",
-          "kk": "Мессенджер хаттарын экспорттау · 1/1 бет"
-        }
-      }
-    },
-    {
-      "id": "ev-invoice",
-      "thesisId": "damage",
-      "relation": "contradicts",
-      "type": "document",
-      "title": {
-        "ru": "Чек хозяйственного магазина",
-        "en": "Hardware Store Receipt",
-        "tr": "Hırdavat Mağazası Fişi",
-        "ar": "إيصال متجر الأدوات",
-        "kk": "Шаруашылық дүкенінің чегі"
-      },
-      "content": {
-        "ru": [
-          "Хозмаг «Всё для мастера» · товарный чек",
-          "Покупатель: секция карате «Ниндзя» (Х. Сплинтович)",
-          "Дата: за 3 часа до взрыва",
-          "Проволока сварочная промышленная — 50 м",
-          "Баллон метан-пропеллант топливный — 4 шт."
-        ],
-        "en": [
-          "Hardware store \"Master's Choice\" · sales receipt",
-          "Buyer: \"Ninja\" karate dojo (K. Splintovich)",
-          "Date: 3 hours before the blast",
-          "Industrial welding wire — 50 m",
-          "Methane fuel propellant canister — 4 pcs."
-        ],
-        "tr": [
-          "Hırdavatçı \"Ustanın Tercihi\" · satış fişi",
-          "Alıcı: \"Ninja\" karate salonu (K. Splintovich)",
-          "Tarih: patlamadan 3 saat önce",
-          "Endüstriyel kaynak teli — 50 m",
-          "Metan yakıt iticisi tüpü — 4 adet."
-        ],
-        "ar": [
-          "متجر الأدوات «خيار المعلّم» · إيصال بيع",
-          "المشتري: نادي الكاراتيه «نينجا» (ك. سبلينتوفيتش)",
-          "التاريخ: قبل 3 ساعات من الانفجار",
-          "سلك لحام صناعي — 50 م",
-          "أسطوانة وقود الميثان الدافع — 4 قطع."
-        ],
-        "kk": [
-          "«Шебердің таңдауы» шаруашылық дүкені · тауар чегі",
-          "Сатып алушы: «Ниндзя» карате секциясы (Х. Сплинтович)",
-          "Күні: жарылыстан 3 сағат бұрын",
-          "Өнеркәсіптік дәнекерлеу сымы — 50 м",
-          "Метан-пропеллант отын баллоны — 4 дана."
-        ]
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Само додзё за 3 часа до взрыва купило сварочную проволоку и 4 баллона метана — это и есть газ, который взорвался. Ущерб самопричинён.",
-        "en": "The dojo itself bought welding wire and 4 methane canisters 3 hours before the blast — that is the gas that exploded. The damage is self-inflicted.",
-        "tr": "Salonun kendisi patlamadan 3 saat önce kaynak teli ve 4 metan tüpü aldı — patlayan gaz işte budur. Hasar kendi kendine verilmiş.",
-        "ar": "النادي نفسه اشترى سلك لحام و4 أسطوانات ميثان قبل الانفجار بـ3 ساعات — وهذا هو الغاز الذي انفجر. الضرر ذاتي التسبّب.",
-        "kk": "Додзёның өзі жарылыстан 3 сағат бұрын дәнекерлеу сымы мен 4 баллон метан сатып алған — жарылған газ нақ осы. Зиян өзі келтірілген."
-      }
-    }
-  ],
-  "correctDecision": "reject",
-  "explanation": {
-    "ru": [
-      "Это отсылка к «Черепашкам-ниндзя»: Донато (фиолетовый) = Донателло, гений-механик, строил в подвале «Пати-Вагон».",
-      "Труба не загорелась сама: ученик в фиолетовой маске пробил газовую линию самодельным нитро-картом — это подтверждают колесо, чертёж и чек на метан и проволоку.",
-      "Из переписки видно: Сплинтович знал про двигатель и вентиль и теперь покрывает ученика, выдавая аварию за форс-мажор. Это мошенничество, отклоняем."
-    ],
-    "en": [
-      "This is a Ninja Turtles reference: Donato (purple) = Donatello, the mechanic genius, building a \"Party Wagon\" in the basement.",
-      "The pipe did not ignite on its own: the purple-mask student breached the gas line with a homemade nitro kart — confirmed by the wheel, the blueprint, and the methane-and-wire receipt.",
-      "The chat shows Splintovich knew about the engine and the valve and is now covering for his student by passing it off as force majeure. This is fraud; reject."
-    ],
-    "tr": [
-      "Bu bir Ninja Kaplumbağalar göndermesidir: Donato (mor) = Donatello, makine dehası, bodrumda bir \"Parti Vagonu\" yapıyordu.",
-      "Boru kendiliğinden tutuşmadı: mor maskeli öğrenci, el yapımı bir nitro kartla gaz hattını deldi — tekerlek, teknik çizim ve metan-tel fişi bunu doğruluyor.",
-      "Sohbet, Splintovich'in motoru ve vanayı bildiğini ve şimdi olayı mücbir sebep gibi göstererek öğrencisini koruduğunu gösteriyor. Bu bir dolandırıcılık; reddedin."
-    ],
-    "ar": [
-      "هذه إشارة إلى سلاحف النينجا: دوناتو (البنفسجي) = دوناتيلو، عبقري الميكانيكا، كان يبني «عربة الحفلة» في القبو.",
-      "الأنبوب لم يشتعل من تلقاء نفسه: الطالب ذو القناع البنفسجي ثقب خط الغاز بعربة نيترو منزلية الصنع — تؤكده العجلة والمخطط وإيصال الميثان والسلك.",
-      "تُظهر المحادثة أن سبلينتوفيتش كان يعلم بالمحرك والصمام وهو الآن يتستر على طالبه بادّعاء القوة القاهرة. هذا احتيال؛ ارفض."
-    ],
-    "kk": [
-      "Бұл «Ниндзя тасбақаларға» сілтеме: Донато (күлгін) = Донателло, механик-данышпан, жертөледе «Пати-Вагон» жасап жатқан.",
-      "Құбыр өздігінен от алған жоқ: күлгін маскалы оқушы газ желісін қолдан жасалған нитро-картпен тескен — мұны дөңгелек, сызба және метан мен сым чегі растайды.",
-      "Хат-хабардан Сплинтович қозғалтқыш пен вентиль туралы білгені көрінеді, енді ол оқиғаны форс-мажор деп көрсетіп, оқушысын жасырып отыр. Бұл алаяқтық, қабылдамаймыз."
-    ]
-  }
+﻿{
+    "id":  "case-021",
+    "type":  "standard",
+    "difficulty":  "hard",
+    "claimAmount":  1900,
+    "truth":  "fraud",
+    "title":  {
+                  "ru":  "Канализационный Рок",
+                  "en":  "Sewer Doom",
+                  "tr":  "Kanalizasyon Kıyameti",
+                  "ar":  "قَدَر المجاري",
+                  "kk":  "Кәріз Тажалы"
+              },
+    "claim":  {
+                  "person":  {
+                                 "ru":  "Харитон Сплинтович, 69 лет",
+                                 "en":  "Khariton Splintovich, 69",
+                                 "tr":  "Khariton Splintovich, 69",
+                                 "ar":  "خاريتون سبلينتوفيتش، 69",
+                                 "kk":  "Харитон Сплинтович, 69 жаста"
+                             },
+                  "story":  {
+                                "ru":  "Со смирением и скорбью извещаю о форс-мажоре. Городская канализационная труба под моим додзё самопроизвольно воспламенилась и затопила помещение, уничтожив тренировочный инвентарь, татами и исторические японские знамёна, передававшиеся из поколения в поколение. Полагаю это аварией муниципальной инфраструктуры и прошу возместить ущерб согласно полису.",
+                                "en":  "With humility and sorrow I report a force majeure. The city sewage pipe beneath my dojo spontaneously combusted and flooded the premises, destroying training equipment, tatami mats, and historic Japanese banners passed down through generations. I deem this a municipal infrastructure failure and request compensation under the policy.",
+                                "tr":  "Tevazu ve kederle bir mücbir sebebi bildiriyorum. Salonumun altındaki şehir kanalizasyon borusu kendiliğinden tutuştu ve mekânı su bastı; antrenman ekipmanını, tatami minderlerini ve nesilden nesile aktarılan tarihî Japon sancaklarını yok etti. Bunu bir belediye altyapı arızası sayıyor ve poliçe kapsamında tazminat talep ediyorum.",
+                                "ar":  "بكل تواضع وحزن أُبلغ عن قوة قاهرة. اشتعل أنبوب مجاري المدينة أسفل ناديي من تلقاء نفسه وأغرق المكان، مدمّراً معدات التدريب وحصائر التاتامي والرايات اليابانية التاريخية المتوارثة عبر الأجيال. أعتبر هذا عطلاً في البنية التحتية البلدية وأطلب التعويض وفق الوثيقة.",
+                                "kk":  "Кішіпейілдік пен қайғымен форс-мажор туралы хабарлаймын. Менің додзёмның астындағы қалалық кәріз құбыры өздігінен от алып, бөлмені су басып, жаттығу мүкәммалын, татами төсеніштерін және ұрпақтан-ұрпаққа берілген тарихи жапон тулaрын жойды. Мұны муниципалдық инфрақұрылым апаты деп санаймын және полис бойынша зиянды өтеуді сұраймын."
+                            }
+              },
+    "coverImage":  "covers/case-021.svg",
+    "personImage":  "people/khariton.webp",
+    "client":  {
+                   "role":  {
+                                "ru":  "Заявитель · физ. лицо",
+                                "en":  "Claimant · individual",
+                                "tr":  "Başvuru sahibi · gerçek kişi",
+                                "ar":  "مقدم الطلب · شخص طبيعي",
+                                "kk":  "Өтініш беруші · жеке тұлға"
+                            },
+                   "meta":  [
+                                {
+                                    "k":  {
+                                              "ru":  "Возраст",
+                                              "en":  "Age",
+                                              "tr":  "Yaş",
+                                              "ar":  "العمر",
+                                              "kk":  "Жасы"
+                                          },
+                                    "v":  {
+                                              "ru":  "69 лет",
+                                              "en":  "69 years old",
+                                              "tr":  "69 yaşında",
+                                              "ar":  "69 عامًا",
+                                              "kk":  "69 жаста"
+                                          }
+                                },
+                                {
+                                    "k":  {
+                                              "ru":  "Город",
+                                              "en":  "City",
+                                              "tr":  "Şehir",
+                                              "ar":  "المدينة",
+                                              "kk":  "Қала"
+                                          },
+                                    "v":  {
+                                              "ru":  "Нижний Новгород",
+                                              "en":  "Nizhny Novgorod",
+                                              "tr":  "Nijni Novgorod",
+                                              "ar":  "نيجني نوفغورود",
+                                              "kk":  "Нижний Новгород"
+                                          }
+                                },
+                                {
+                                    "k":  {
+                                              "ru":  "Клиент с",
+                                              "en":  "Client since",
+                                              "tr":  "Müşteri",
+                                              "ar":  "عميل منذ",
+                                              "kk":  "Клиент"
+                                          },
+                                    "v":  {
+                                              "ru":  "2008 г.",
+                                              "en":  "2008",
+                                              "tr":  "2008",
+                                              "ar":  "2008",
+                                              "kk":  "2008 ж."
+                                          }
+                                },
+                                {
+                                    "k":  {
+                                              "ru":  "Полис",
+                                              "en":  "Policy",
+                                              "tr":  "Poliçe",
+                                              "ar":  "البوليصة",
+                                              "kk":  "Полис"
+                                          },
+                                    "v":  {
+                                              "ru":  "Имущество · ИМ-21256239-X5",
+                                              "en":  "Property · IM-21256239-X5",
+                                              "tr":  "Mülk · IM-21256239-X5",
+                                              "ar":  "الممتلكات · IM-21256239-X5",
+                                              "kk":  "Мүлік · ИМ-21256239-X5"
+                                          }
+                                },
+                                {
+                                    "k":  {
+                                              "ru":  "Документ",
+                                              "en":  "Document",
+                                              "tr":  "Belge",
+                                              "ar":  "الوثيقة",
+                                              "kk":  "Құжат"
+                                          },
+                                    "v":  {
+                                              "ru":  "Паспорт 2207-69 №212562391-05",
+                                              "en":  "Passport 2207-69 №212562391-05",
+                                              "tr":  "Pasaport 2207-69 №212562391-05",
+                                              "ar":  "جواز السفر 2207-69 №212562391-05",
+                                              "kk":  "Паспорт 2207-69 №212562391-05"
+                                          }
+                                }
+                            ]
+               },
+    "evidences":  [
+                      {
+                          "id":  "ev-debris",
+                          "relation":  "contradicts",
+                          "type":  "photo",
+                          "title":  {
+                                        "ru":  "Фото затопленного подвала",
+                                        "en":  "Flooded Basement Photo",
+                                        "tr":  "Su Basan Bodrum Fotoğrafı",
+                                        "ar":  "صورة القبو المغمور",
+                                        "kk":  "Су басқан жертөле суреті"
+                                    },
+                          "content":  {
+                                          "ru":  "Среди размокших татами лежит огромное моторизованное колесо, выкрашенное ФИОЛЕТОВОЙ краской. Рядом — чертёж с подписью «Пати-Вагон» и фиолетовым оттиском печати. Городской трубы в кадре не видно — труба пробита изнутри.",
+                                          "en":  "Among the soaked tatami lies a giant motorized wheel painted PURPLE. Beside it is a blueprint signed \"Party Wagon\" with a purple ink stamp. No city pipe is visible in frame — the pipe was breached from the inside.",
+                                          "tr":  "Islanmış tatamilerin arasında MOR renge boyanmış dev bir motorlu tekerlek duruyor. Yanında \"Parti Vagonu\" yazılı, mor mürekkep mühürlü bir teknik çizim var. Karede şehir borusu görünmüyor — boru içeriden delinmiş.",
+                                          "ar":  "بين حصائر التاتامي المبللة تقبع عجلة آلية ضخمة مطلية باللون البنفسجي. بجانبها مخطط موقّع باسم «عربة الحفلة» مع ختم حبر بنفسجي. لا يظهر أنبوب المدينة في الصورة — فقد ثُقب الأنبوب من الداخل.",
+                                          "kk":  "Су болған татамилер арасында КҮЛГІН түске боялған алып моторлы дөңгелек жатыр. Қасында «Пати-Вагон» деп қол қойылған, күлгін мөр басылған сызба бар. Кадрда қалалық құбыр көрінбейді — құбыр іштен тесілген."
+                                      },
+                          "isContradiction":  true,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Разрушения вызваны самодельным моторным «вагоном» с фиолетовой краской, а не аварией городской трубы.",
+                                                           "en":  "The damage was caused by a homemade motorized \"wagon\" with purple paint, not by a city pipe failure.",
+                                                           "tr":  "Hasar, şehir borusunun arızasından değil, mor boyalı el yapımı motorlu bir \"vagon\"dan kaynaklandı.",
+                                                           "ar":  "الضرر سببه «عربة» آلية محلية الصنع بطلاء بنفسجي، لا عطل في أنبوب المدينة.",
+                                                           "kk":  "Зақым қалалық құбыр апатынан емес, күлгін бояулы қолдан жасалған моторлы «вагоннан» болған."
+                                                       },
+                          "meta":  {
+                                       "filename":  "IMG_20260618_233117.jpg",
+                                       "imageUrl":  "evidence/case-021-ev-debris.jpg"
+                                   }
+                      },
+                      {
+                          "id":  "ev-chat",
+                          "relation":  "contradicts",
+                          "type":  "document",
+                          "title":  {
+                                        "ru":  "Распечатка переписки",
+                                        "en":  "Chat Log Printout",
+                                        "tr":  "Sohbet Kaydı Çıktısı",
+                                        "ar":  "مطبوعة سجل المحادثة",
+                                        "kk":  "Хат-хабар басылымы"
+                                    },
+                          "content":  {
+                                          "ru":  [
+                                                     "[22:15] Донато (фиолетовая маска): Сэнсэй, нитро-двигатель на «вагоне» нестабилен — трясёт всю трубу под нами.",
+                                                     "[22:18] Х. Сплинтович: Не ищи лёгких путей, сын мой. Сосредоточься на ката. И НЕ ТРОГАЙ главный вентиль.",
+                                                     "[22:19] Донато (фиолетовая маска): Уже тронул. Кажется, искрит…"
+                                                 ],
+                                          "en":  [
+                                                     "[22:15] Donato (purple mask): Master, the nitro engine on the \"wagon\" is unstable — it\u0027s shaking the whole pipe under us.",
+                                                     "[22:18] K. Splintovich: Do not seek shortcuts, my son. Focus on your katas. And DO NOT touch the main valve.",
+                                                     "[22:19] Donato (purple mask): Already touched it. It seems to be sparking…"
+                                                 ],
+                                          "tr":  [
+                                                     "[22:15] Donato (mor maske): Usta, \"vagon\"daki nitro motor dengesiz — altımızdaki tüm boruyu sarsıyor.",
+                                                     "[22:18] K. Splintovich: Kestirme yollar arama evladım. Katalarına odaklan. Ve ana vanaya DOKUNMA.",
+                                                     "[22:19] Donato (mor maske): Çoktan dokundum. Galiba kıvılcım çıkarıyor…"
+                                                 ],
+                                          "ar":  [
+                                                     "[22:15] دوناتو (قناع بنفسجي): يا معلّم، محرك النيترو في «العربة» غير مستقر — إنه يهز الأنبوب كله تحتنا.",
+                                                     "[22:18] ك. سبلينتوفيتش: لا تبحث عن الطرق المختصرة يا بنيّ. ركّز على الكاتا. ولا تلمس الصمام الرئيسي.",
+                                                     "[22:19] دوناتو (قناع بنفسجي): لقد لمسته بالفعل. يبدو أنه يُطلق شرراً…"
+                                                 ],
+                                          "kk":  [
+                                                     "[22:15] Донато (күлгін маска): Сэнсэй, «вагондағы» нитро-қозғалтқыш тұрақсыз — астымыздағы бүкіл құбырды сілкілейді.",
+                                                     "[22:18] Х. Сплинтович: Жеңіл жол іздеме, балам. Катаңа шоғырлан. Және басты вентильге ТИМЕ.",
+                                                     "[22:19] Донато (күлгін маска): Тиіп те қойдым. Ұшқын шашып тұрған сияқты…"
+                                                 ]
+                                      },
+                          "isContradiction":  true,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Тренер знал, что самодельный двигатель трясёт трубу, и предупреждал про вентиль — это не самовозгорание городской сети, а он покрывает ученика.",
+                                                           "en":  "The coach knew the homemade engine was shaking the pipe and warned about the valve — this is not a spontaneous city failure; he is covering for his student.",
+                                                           "tr":  "Antrenör, el yapımı motorun boruyu sarstığını biliyordu ve vana konusunda uyardı — bu, kendiliğinden bir şehir arızası değil; öğrencisini koruyor.",
+                                                           "ar":  "كان المدرب يعلم أن المحرك المنزلي يهز الأنبوب وحذّر بشأن الصمام — هذا ليس عطلاً تلقائياً في الشبكة؛ إنه يتستر على طالبه.",
+                                                           "kk":  "Жаттықтырушы қолдан жасалған қозғалтқыш құбырды сілкілейтінін білген әрі вентиль туралы ескерткен — бұл қалалық желінің өздігінен жануы емес, ол оқушысын жасырып отыр."
+                                                       },
+                          "meta":  {
+                                       "docHeader":  {
+                                                         "ru":  "Экспорт переписки из мессенджера · стр. 1/1",
+                                                         "en":  "Messenger conversation export · page 1/1",
+                                                         "tr":  "Mesajlaşma dışa aktarımı · sayfa 1/1",
+                                                         "ar":  "تصدير محادثة المراسلة · الصفحة 1/1",
+                                                         "kk":  "Мессенджер хаттарын экспорттау · 1/1 бет"
+                                                     }
+                                   }
+                      },
+                      {
+                          "id":  "ev-invoice",
+                          "relation":  "contradicts",
+                          "type":  "document",
+                          "title":  {
+                                        "ru":  "Чек хозяйственного магазина",
+                                        "en":  "Hardware Store Receipt",
+                                        "tr":  "Hırdavat Mağazası Fişi",
+                                        "ar":  "إيصال متجر الأدوات",
+                                        "kk":  "Шаруашылық дүкенінің чегі"
+                                    },
+                          "content":  {
+                                          "ru":  [
+                                                     "Хозмаг «Всё для мастера» · товарный чек",
+                                                     "Покупатель: секция карате «Ниндзя» (Х. Сплинтович)",
+                                                     "Дата: за 3 часа до взрыва",
+                                                     "Проволока сварочная промышленная — 50 м",
+                                                     "Баллон метан-пропеллант топливный — 4 шт."
+                                                 ],
+                                          "en":  [
+                                                     "Hardware store \"Master\u0027s Choice\" · sales receipt",
+                                                     "Buyer: \"Ninja\" karate dojo (K. Splintovich)",
+                                                     "Date: 3 hours before the blast",
+                                                     "Industrial welding wire — 50 m",
+                                                     "Methane fuel propellant canister — 4 pcs."
+                                                 ],
+                                          "tr":  [
+                                                     "Hırdavatçı \"Ustanın Tercihi\" · satış fişi",
+                                                     "Alıcı: \"Ninja\" karate salonu (K. Splintovich)",
+                                                     "Tarih: patlamadan 3 saat önce",
+                                                     "Endüstriyel kaynak teli — 50 m",
+                                                     "Metan yakıt iticisi tüpü — 4 adet."
+                                                 ],
+                                          "ar":  [
+                                                     "متجر الأدوات «خيار المعلّم» · إيصال بيع",
+                                                     "المشتري: نادي الكاراتيه «نينجا» (ك. سبلينتوفيتش)",
+                                                     "التاريخ: قبل 3 ساعات من الانفجار",
+                                                     "سلك لحام صناعي — 50 م",
+                                                     "أسطوانة وقود الميثان الدافع — 4 قطع."
+                                                 ],
+                                          "kk":  [
+                                                     "«Шебердің таңдауы» шаруашылық дүкені · тауар чегі",
+                                                     "Сатып алушы: «Ниндзя» карате секциясы (Х. Сплинтович)",
+                                                     "Күні: жарылыстан 3 сағат бұрын",
+                                                     "Өнеркәсіптік дәнекерлеу сымы — 50 м",
+                                                     "Метан-пропеллант отын баллоны — 4 дана."
+                                                 ]
+                                      },
+                          "isContradiction":  true,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Само додзё за 3 часа до взрыва купило сварочную проволоку и 4 баллона метана — это и есть газ, который взорвался. Ущерб самопричинён.",
+                                                           "en":  "The dojo itself bought welding wire and 4 methane canisters 3 hours before the blast — that is the gas that exploded. The damage is self-inflicted.",
+                                                           "tr":  "Salonun kendisi patlamadan 3 saat önce kaynak teli ve 4 metan tüpü aldı — patlayan gaz işte budur. Hasar kendi kendine verilmiş.",
+                                                           "ar":  "النادي نفسه اشترى سلك لحام و4 أسطوانات ميثان قبل الانفجار بـ3 ساعات — وهذا هو الغاز الذي انفجر. الضرر ذاتي التسبّب.",
+                                                           "kk":  "Додзёның өзі жарылыстан 3 сағат бұрын дәнекерлеу сымы мен 4 баллон метан сатып алған — жарылған газ нақ осы. Зиян өзі келтірілген."
+                                                       }
+                      }
+                  ],
+    "correctDecision":  "reject",
+    "explanation":  {
+                        "ru":  [
+                                   "Это отсылка к «Черепашкам-ниндзя»: Донато (фиолетовый) = Донателло, гений-механик, строил в подвале «Пати-Вагон».",
+                                   "Труба не загорелась сама: ученик в фиолетовой маске пробил газовую линию самодельным нитро-картом — это подтверждают колесо, чертёж и чек на метан и проволоку.",
+                                   "Из переписки видно: Сплинтович знал про двигатель и вентиль и теперь покрывает ученика, выдавая аварию за форс-мажор. Это мошенничество, отклоняем."
+                               ],
+                        "en":  [
+                                   "This is a Ninja Turtles reference: Donato (purple) = Donatello, the mechanic genius, building a \"Party Wagon\" in the basement.",
+                                   "The pipe did not ignite on its own: the purple-mask student breached the gas line with a homemade nitro kart — confirmed by the wheel, the blueprint, and the methane-and-wire receipt.",
+                                   "The chat shows Splintovich knew about the engine and the valve and is now covering for his student by passing it off as force majeure. This is fraud; reject."
+                               ],
+                        "tr":  [
+                                   "Bu bir Ninja Kaplumbağalar göndermesidir: Donato (mor) = Donatello, makine dehası, bodrumda bir \"Parti Vagonu\" yapıyordu.",
+                                   "Boru kendiliğinden tutuşmadı: mor maskeli öğrenci, el yapımı bir nitro kartla gaz hattını deldi — tekerlek, teknik çizim ve metan-tel fişi bunu doğruluyor.",
+                                   "Sohbet, Splintovich\u0027in motoru ve vanayı bildiğini ve şimdi olayı mücbir sebep gibi göstererek öğrencisini koruduğunu gösteriyor. Bu bir dolandırıcılık; reddedin."
+                               ],
+                        "ar":  [
+                                   "هذه إشارة إلى سلاحف النينجا: دوناتو (البنفسجي) = دوناتيلو، عبقري الميكانيكا، كان يبني «عربة الحفلة» في القبو.",
+                                   "الأنبوب لم يشتعل من تلقاء نفسه: الطالب ذو القناع البنفسجي ثقب خط الغاز بعربة نيترو منزلية الصنع — تؤكده العجلة والمخطط وإيصال الميثان والسلك.",
+                                   "تُظهر المحادثة أن سبلينتوفيتش كان يعلم بالمحرك والصمام وهو الآن يتستر على طالبه بادّعاء القوة القاهرة. هذا احتيال؛ ارفض."
+                               ],
+                        "kk":  [
+                                   "Бұл «Ниндзя тасбақаларға» сілтеме: Донато (күлгін) = Донателло, механик-данышпан, жертөледе «Пати-Вагон» жасап жатқан.",
+                                   "Құбыр өздігінен от алған жоқ: күлгін маскалы оқушы газ желісін қолдан жасалған нитро-картпен тескен — мұны дөңгелек, сызба және метан мен сым чегі растайды.",
+                                   "Хат-хабардан Сплинтович қозғалтқыш пен вентиль туралы білгені көрінеді, енді ол оқиғаны форс-мажор деп көрсетіп, оқушысын жасырып отыр. Бұл алаяқтық, қабылдамаймыз."
+                               ]
+                    }
 }

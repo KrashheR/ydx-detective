@@ -24,12 +24,18 @@ import {
   trackAdOffer,
   canReview,
   requestReview,
+  isPaymentsAvailable,
+  fetchPaymentsCatalog,
+  purchaseProduct,
+  restorePurchasedProductIds,
   type LeaderboardRow,
+  type PaymentsProduct,
 } from './services/yandexSDK';
 import { GOAL, getAnalyticsActiveTotalMs, trackGoal } from './services/metrica';
 import { GAME_CONFIG } from './config/gameConfig';
 import { RTL_LANGUAGES, t } from './i18n/ui';
 import type { Case } from './types';
+import { THEMATIC_PACKS, type ThematicPack } from './data/thematicPacks';
 import { LeftSidebar } from './components/LeftSidebar';
 import { RightSidebar } from './components/RightSidebar';
 import { CaseFile } from './components/CaseFile';
@@ -39,6 +45,7 @@ import { StampModal } from './components/StampModal';
 import { ResultSheet } from './components/ResultSheet';
 import { AchievementsModal } from './components/AchievementsModal';
 import { RatingModal } from './components/RatingModal';
+import { ThematicPacksModal } from './components/ThematicPacksModal';
 import { formatCountdown } from './components/icons';
 import { formatCaseLockMessage } from './utils/caseDisplay';
 
@@ -57,10 +64,12 @@ export default function App() {
   const [modalEvidenceId, setModalEvidenceId] = useState<string | null>(null);
   const [resultDismissed, setResultDismissed] = useState(false);
   const [showAchievements, setShowAchievements] = useState(false);
+  const [showSpecialArchives, setShowSpecialArchives] = useState(false);
   const [leaderboard, setLeaderboard] = useState<LeaderboardRow[] | null>(null);
   const [toast, setToast] = useState<string | null>(null);
   const [rewardDoubled, setRewardDoubled] = useState(false);
   const [showRating, setShowRating] = useState(false);
+  const [archiveCatalog, setArchiveCatalog] = useState<Record<string, PaymentsProduct>>({});
   const lastInterstitialActiveMsRef = useRef(0);
   // Gate: show rating modal at most once per session.
   const ratingShownRef = useRef(false);
@@ -126,7 +135,7 @@ export default function App() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lastResult]);
 
-  // Pull the live leaderboard after hydration and whenever the balance changes.
+  // Pull the live leaderboard after hydration and whenever career XP changes.
   useEffect(() => {
     if (!isHydrated) return;
     let active = true;
@@ -136,7 +145,7 @@ export default function App() {
     return () => {
       active = false;
     };
-  }, [isHydrated, stats.balance]);
+  }, [isHydrated, stats.xp]);
 
   const standardCases = useMemo(() => getStandardCases(), []);
   const standardCaseUnlocks = useMemo(
@@ -170,6 +179,25 @@ export default function App() {
     if (isHydrated && !daily.unlocked) trackAdOffer('rewarded', 'daily_unlock');
   }, [daily.unlocked, isHydrated, serverDay]);
 
+  useEffect(() => {
+    if (!showSpecialArchives) return;
+    trackGoal(GOAL.shopView, { surface: 'special_archives' });
+    if (!isPaymentsAvailable()) {
+      setArchiveCatalog({});
+      return;
+    }
+    let active = true;
+    void fetchPaymentsCatalog().then((products) => {
+      if (!active) return;
+      setArchiveCatalog(
+        Object.fromEntries(products.map((product) => [product.id, product])),
+      );
+    });
+    return () => {
+      active = false;
+    };
+  }, [showSpecialArchives]);
+
   const results = useMemo(() => Object.values(stats.results), [stats.results]);
   const accuracyPct = useMemo(() => {
     if (results.length === 0) return 0;
@@ -184,8 +212,8 @@ export default function App() {
   const formatLockedCaseMessage = (info: CaseUnlockInfo): string =>
     formatCaseLockMessage(info, lang);
 
-  const handleSelectCase = (c: Case) => {
-    if (c.type === 'standard') {
+  const openCase = (c: Case, opts?: { skipStandardGate?: boolean }) => {
+    if (c.type === 'standard' && !opts?.skipStandardGate) {
       const unlock = standardCaseUnlocks.find((info) => info.caseData.id === c.id);
       const isResumingActiveCase = session?.caseId === c.id;
       if (unlock && !isCaseUnlocked(unlock) && !isResumingActiveCase) {
@@ -201,12 +229,35 @@ export default function App() {
     trackAdOffer('rewarded', 'witness_canvass');
   };
 
+  const handleSelectCase = (c: Case) => openCase(c);
+
   const handleSelectStandardCase = (info: CaseUnlockInfo) => {
     if (!isCaseUnlocked(info)) {
       flashToast(formatLockedCaseMessage(info));
       return;
     }
     handleSelectCase(info.caseData);
+  };
+
+  const handleSelectArchiveCase = (c: Case) => {
+    setShowSpecialArchives(false);
+    openCase(c, { skipStandardGate: true });
+  };
+
+  const handlePurchaseArchive = async (pack: ThematicPack): Promise<boolean> => {
+    trackGoal(GOAL.productView, { productId: pack.productId, archiveId: pack.id });
+    const purchased = await purchaseProduct(pack.productId);
+    if (purchased) store.grantArchivePurchase(pack.id);
+    return purchased;
+  };
+
+  const handleRestoreArchivePurchases = async (): Promise<number> => {
+    const purchasedProductIds = await restorePurchasedProductIds();
+    const packIds = THEMATIC_PACKS
+      .filter((pack) => purchasedProductIds.includes(pack.productId))
+      .map((pack) => pack.id);
+    store.grantArchivePurchases(packIds);
+    return packIds.length;
   };
 
   const handleOpenEvidence = (id: string) => {
@@ -317,11 +368,13 @@ export default function App() {
             dailyMsRemaining={daily.msUntilUnlock}
             lang={lang}
             balance={stats.balance}
+            archiveStats={stats}
             results={stats.results}
             onSelectStandardCase={handleSelectStandardCase}
             onSelect={handleSelectCase}
             onDailyLocked={onDailyLocked}
             onLanguage={store.setLanguage}
+            onOpenSpecialArchives={() => setShowSpecialArchives(true)}
           />
         </div>
       )}
@@ -338,10 +391,12 @@ export default function App() {
             selectedId={selectedId}
             lang={lang}
             xp={stats.xp}
+            archiveStats={stats}
             onSelectStandardCase={handleSelectStandardCase}
             onSelect={handleSelectCase}
             onDailyLocked={onDailyLocked}
             onLanguage={store.setLanguage}
+            onOpenSpecialArchives={() => setShowSpecialArchives(true)}
           />
         </div>
 
@@ -388,6 +443,7 @@ export default function App() {
             solvedCount={stats.completedCaseIds.length}
             errorsCount={errorsCount}
             streak={stats.streakCount}
+            perfectStreak={stats.perfectCaseStreakCount}
             unlockedAchievementIds={stats.unlockedAchievementIds}
             onOpenAchievements={() => setShowAchievements(true)}
             leaderboard={leaderboard}
@@ -433,6 +489,24 @@ export default function App() {
             lang={lang}
             unlockedIds={stats.unlockedAchievementIds}
             onClose={() => setShowAchievements(false)}
+          />
+        )}
+      </AnimatePresence>
+
+      {/* Special archives prototype shelf */}
+      <AnimatePresence>
+        {showSpecialArchives && (
+          <ThematicPacksModal
+            lang={lang}
+            stats={stats}
+            caseUnlocks={standardCaseUnlocks}
+            paymentsAvailable={isPaymentsAvailable()}
+            catalogByProductId={archiveCatalog}
+            onSelectCase={handleSelectArchiveCase}
+            onPurchasePack={handlePurchaseArchive}
+            onRestorePurchases={handleRestoreArchivePurchases}
+            onUnlockCaseWithAd={(packId, caseId) => store.unlockArchiveCaseViaAd(packId, caseId)}
+            onClose={() => setShowSpecialArchives(false)}
           />
         )}
       </AnimatePresence>

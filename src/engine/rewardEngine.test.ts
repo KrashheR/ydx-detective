@@ -184,6 +184,18 @@ describe('evaluateReward', () => {
     expect(r.total).toBe(positive + Math.round((positive * 15) / 100) - 50);
   });
 
+  it('includes the perfect-case streak bonus in the additive reward bonus', () => {
+    const c = makeCase({ contradictions: 1, cleanCards: 0 });
+    const r = evaluateReward(c, c.correctDecision, contradictionIds(c), {
+      rankBonusPct: 10,
+      streakBonusPct: 5,
+      perfectStreakBonusPct: 6,
+    });
+
+    expect(r.bonusPct).toBe(21);
+    expect(r.bonusComponent).toBe(Math.round((easyBase * 21) / 100));
+  });
+
   it('treats missing modifiers as zero bonus', () => {
     const c = makeCase({ contradictions: 1, cleanCards: 0 });
     const r = evaluateReward(c, c.correctDecision, contradictionIds(c));

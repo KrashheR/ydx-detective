@@ -16,6 +16,8 @@ interface Props {
   errorsCount: number;
   /** Consecutive-day streak — shown when active (> 1). */
   streak: number;
+  /** Consecutive first-time 100%-proof cases — shown when active (> 0). */
+  perfectStreak: number;
   /** Ids of unlocked achievements — drives the archive button count. */
   unlockedAchievementIds: string[];
   onOpenAchievements: () => void;
@@ -39,6 +41,7 @@ export function RightSidebar({
   solvedCount,
   errorsCount,
   streak,
+  perfectStreak,
   unlockedAchievementIds,
   onOpenAchievements,
   leaderboard,
@@ -48,7 +51,7 @@ export function RightSidebar({
 
   const rows: LeaderboardRow[] =
     leaderboard ??
-    [...LOCAL_BOARD, { name: 'you', score: balance }]
+    [...LOCAL_BOARD, { name: 'you', score: xp }]
       .sort((a, b) => b.score - a.score)
       .map((r, i) => ({
         rank: i + 1,
@@ -124,6 +127,14 @@ export function RightSidebar({
             <span>
               {t('streak', lang)}: {streak} {t('streakDays', lang)}
             </span>
+          </div>
+        </Card>
+      )}
+
+      {perfectStreak > 0 && (
+        <Card>
+          <div className="text-sm font-semibold text-accent">
+            {t('perfectStreak', lang)}: {perfectStreak}
           </div>
         </Card>
       )}

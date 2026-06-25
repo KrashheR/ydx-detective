@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  .lift{transition:transform .18s ease, box-shadow .18s ease;}
+  .lift:hover{transform:translateY(-4px);}
+  .scr::-webkit-scrollbar{width:0;height:0;}
+</style>
+</helmet>
+
+<!-- ===================== HEADER / LEGEND ===================== -->
+<div style="position:absolute; left:0; top:0; width:1080px;">
+  <div data-drags-parent="1" style="font:600 11px/1 'IBM Plex Mono'; letter-spacing:.18em; text-transform:uppercase; color:#6e5630; margin-bottom:10px;">Claim Detective · MR · Особые архивы + Услуги расследования</div>
+  <div style="background:#fff; border-radius:2px; box-shadow:0 1px 3px rgba(0,0,0,.08); padding:34px 36px;">
+    <div style="font:600 12px 'IBM Plex Mono'; letter-spacing:.2em; text-transform:uppercase; color:#95431F;">Где ложь? · Симулятор детектива · UI-пасс</div>
+    <h1 style="font:700 32px/1.14 'IBM Plex Serif',serif; color:#2A2014; margin:11px 0 12px; letter-spacing:-.01em;">Особые архивы, услуги расследования и план отдела</h1>
+    <p style="margin:0 0 24px; max-width:780px; font:400 14.5px/1.62 'Inter'; color:#3A2C16; text-wrap:pretty;">Палитра <b>«Сепия 1970-х»</b> поверх существующей метафоры «папка с делом на столе». Никаких баннеров и давления: входы — это физические архивные объекты, покупка читается как удобство, бесплатный путь так же заметен, как платный. Desktop, mobile и RTL-арабский. Всё на токенах темы — без новых цветов.</p>
+
+    <div style="display:flex; gap:40px; flex-wrap:wrap; align-items:flex-start;">
+      <!-- palette -->
+      <div>
+        <div style="font:600 10px 'IBM Plex Mono'; letter-spacing:.16em; text-transform:uppercase; color:#6e5630; margin-bottom:11px;">Токены темы · Сепия 1970-х</div>
+        <div style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:7px 20px;">
+          <sc-for list="{{ tokens }}" as="t" hint-placeholder-count="12">
+            <div style="display:flex; align-items:center; gap:9px;">
+              <span style="width:18px; height:18px; flex:none; border-radius:4px; background:{{ t.hex }}; border:1px solid rgba(0,0,0,.16);"></span>
+              <span style="font:500 11px 'IBM Plex Mono'; color:#3A2C16; min-width:78px;">{{ t.k }}</span>
+              <span style="font:400 11px 'IBM Plex Mono'; color:#9a8a66;">{{ t.hex }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <!-- type + rules -->
+      <div style="flex:1; min-width:300px;">
+        <div style="font:600 10px 'IBM Plex Mono'; letter-spacing:.16em; text-transform:uppercase; color:#6e5630; margin-bottom:11px;">Типографика · роли</div>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div style="display:flex; align-items:baseline; gap:12px;"><span style="font:700 19px 'IBM Plex Serif',serif; color:#2A2014; width:118px;">Serif</span><span style="font:400 12.5px 'Inter'; color:#3A2C16;">заголовки папок, документов, штампов</span></div>
+          <div style="display:flex; align-items:baseline; gap:12px;"><span style="font:600 17px 'Inter'; color:#2A2014; width:118px;">Inter Sans</span><span style="font:400 12.5px 'Inter'; color:#3A2C16;">обычный UI, описания, кнопки</span></div>
+          <div style="display:flex; align-items:baseline; gap:12px;"><span style="font:500 14px 'IBM Plex Mono'; color:#2A2014; width:118px;">Mono</span><span style="font:400 12.5px 'Inter'; color:#3A2C16;">номера, статусы, служебные метки, суммы</span></div>
+        </div>
+        <div style="height:1px; background:#E7D8B6; margin:18px 0;"></div>
+        <div style="display:flex; flex-direction:column; gap:7px;">
+          <sc-for list="{{ chapters }}" as="c" hint-placeholder-count="4">
+            <div style="display:flex; gap:10px; align-items:baseline;"><span style="font:600 11px 'IBM Plex Mono'; color:#95431F; flex:none;">{{ c.no }}</span><span style="font:500 12.5px 'Inter'; color:#3A2C16;">{{ c.t }}</span></div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== CH.1 · SpecialArchivesEntry ===================== -->
+
+<!-- F1 · desktop left sidebar context -->
+<div style="position:absolute; left:0; top:600px; width:300px;">
+  <div data-drags-parent="1" style="font:600 11px/1 'IBM Plex Mono'; letter-spacing:.14em; text-transform:uppercase; color:#5d564b; margin-bottom:10px;">01 · Вход · десктоп · левый сайдбар</div>
+  <div style="background:#fff; border-radius:2px; box-shadow:0 1px 3px rgba(0,0,0,.08); padding:14px;">
+    <div style="background:#EFE2C6; border:1px solid #BFA776; border-radius:10px; padding:14px 13px; display:flex; flex-direction:column; gap:12px;">
+      <div>
+        <div style="font:700 13px 'Inter'; letter-spacing:.06em; color:#3A2C16;">ГДЕ ЛОЖЬ?</div>
+        <div style="font:600 8px 'IBM Plex Mono'; letter-spacing:.14em; color:#6E5630; margin-top:2px;">ОТДЕЛ РАССЛЕДОВАНИЙ</div>
+      </div>
+      <div style="font:600 9px 'IBM Plex Mono'; letter-spacing:.14em; color:#6E5630;">ДЕЛА В РАБОТЕ</div>
+      <!-- daily case -->
+      <div style="position:relative; background:linear-gradient(135deg,#ddba6a,#C58A24); border:1px solid #a9781b; border-radius:8px; padding:9px 11px; overflow:hidden;">
+        <div style="position:absolute; top:7px; right:-22px; transform:rotate(34deg); background:#A8201C; color:#fff; font:700 7px 'IBM Plex Mono'; letter-spacing:.1em; padding:2px 24px;">СРОЧНО</div>
+        <div style="font:700 8px 'IBM Plex Mono'; color:#5c3f08; letter-spacing:.06em;">ДЕЛО ДНЯ · 04:12</div>
+        <div style="font:700 13px 'IBM Plex Serif',serif; color:#3a2705; margin-top:3px;">Кто из нас самозванец?</div>
+      </div>
+      <!-- ENTRY (stack of folders) -->
+      <div class="lift" style="position:relative; cursor:pointer; margin-top:2px;">
+        <div style="position:absolute; top:-6px; left:11px; right:-5px; height:58px; background:#6E8475; border-radius:3px 8px 0 0; border:1px solid #3A5141;"></div>
+        <div style="position:absolute; top:-3px; left:6px; right:-2px; height:62px; background:#b98f73; border-radius:3px 8px 0 0; border:1px solid #7a5a52;"></div>
+        <div style="position:relative;">
+          <div style="position:absolute; top:-9px; left:14px; width:92px; height:14px; background:#876520; border-radius:6px 6px 0 0;"></div>
+          <div style="position:relative; background:#CBA85E; border:1px solid #876520; border-radius:2px 10px 10px 10px; padding:12px 13px; box-shadow:0 10px 22px rgba(40,28,10,.22);">
+            <div style="position:absolute; top:11px; right:11px; font:700 8px 'IBM Plex Mono'; letter-spacing:.12em; color:#fff; background:#95431F; padding:3px 7px; border-radius:4px;">НОВОЕ</div>
+            <div style="font:700 15px 'IBM Plex Serif',serif; color:#2A2014;">Особые архивы</div>
+            <div style="font:500 11px/1.4 'Inter'; color:#5a4220; margin-top:3px; max-width:175px;">Новые расследования и оформление стола</div>
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:8px; margin-top:11px; padding-top:10px; border-top:1px solid rgba(135,101,32,.45);">
+              <span style="font:600 9px 'IBM Plex Mono'; letter-spacing:.07em; color:#5a4220;">ОТКРЫТО 1 ИЗ 4</span>
+              <span style="font:600 9px 'IBM Plex Mono'; color:#fff; background:#95431F; padding:3px 7px; border-radius:4px; white-space:nowrap;">Первое дело бесплатно</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- campaign cases -->
+      <div style="font:600 9px 'IBM Plex Mono'; letter-spacing:.14em; color:#6E5630; margin-top:2px;">КАМПАНИЯ</div>
+      <div style="display:flex; align-items:center; gap:9px; background:#F6ECD6; border:1px solid #BFA776; border-radius:8px; padding:9px 10px;">
+        <span style="width:8px; height:8px; border-radius:50%; background:#95431F; flex:none;"></span>
+        <div style="flex:1; min-width:0;"><div style="font:600 12px 'IBM Plex Serif',serif; color:#2A2014;">Пожар в доме</div><div style="font:500 9px 'IBM Plex Mono'; color:#6E5630;">Дело 2 · ДОСТУПНО</div></div>
+      </div>
+      <div style="display:flex; align-items:center; gap:9px; background:#ece0c4; border:1px solid #cdbf9e; border-radius:8px; padding:9px 10px; opacity:.7;">
+        <span style="font-size:10px; flex:none;">🔒</span>
+        <div style="flex:1; min-width:0;"><div style="font:600 12px 'IBM Plex Serif',serif; color:#7a7058;">Утонувший смартфон</div><div style="font:500 9px 'IBM Plex Mono'; color:#a89a80;">Дело 3 · закрыто</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- F2 · entry anatomy + variants -->
+<div style="position:absolute; left:360px; top:600px; width:312px;">
+  <div data-drags-parent="1" style="font:600 11px/1 'IBM Plex Mono'; letter-spacing:.14em; text-transform:uppercase; color:#5d564b; margin-bottom:10px;">01 · Вход · объект и варианты</div>
+  <div style="background:#fff; border-radius:2px; box-shadow:0 1px 3px rgba(0,0,0,.08); padding:18px;">
+    <!-- variant: all open, no NEW -->
+    <div style="font:600 9px 'IBM Plex Mono'; letter-spacing:.12em; color:#6E5630; margin-bottom:9px;">ВАРИАНТ · ВСЁ ОТКРЫТО</div>
+    <div class="lift" style="position:relative; cursor:pointer; margin-bottom:24px;">
+      <div style="position:absolute; top:-9px; left:14px; width:92px; height:14px; background:#876520; border-radius:6px 6px 0 0;"></div>
+      <div style="position:relative; background:#CBA85E; border:1px solid #876520; border-radius:2px 10px 10px 10px; padding:13px 14px; box-shadow:0 10px 22px rgba(40,28,10,.2);">
+        <div style="font:700 16px 'IBM Plex Serif',serif; color:#2A2014;">Особые архивы</div>
+        <div style="font:500 11px/1.4 'Inter'; color:#5a4220; margin-top:3px;">Новые расследования и оформление стола</div>
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:8px; margin-top:11px; padding-top:10px; border-top:1px solid rgba(135,101,32,.45);">
+          <span style="font:600 9px 'IBM Plex Mono'; letter-spacing:.07em; color:#5a4220;">ОТКРЫТО 4 ИЗ 4</span>
+          <span style="font:600 9px 'IBM Plex Mono'; color:#5E7A2E; border:1px solid #5E7A2E; padding:3px 7px; border-radius:4px;">Все паки открыты</span>
+        </div>
+      </div>
+    </div>
+    <!-- anatomy notes -->
+    <div style="font:600 9px 'IBM Plex Mono'; letter-spacing:.12em; color:#6E5630; margin-bottom:9px;">ПРАВИЛА</div>
+    <div style="display:flex; flex-direction:column; gap:9px;">
+      <div style="font:400 12px/1.5 'Inter'; color:#3A2C16;"><b style="color:#2A2014;">Это архивный объект, не баннер.</b> Стопка папок с вкладкой и сургучом, а не рекламная плашка.</div>
+      <div style="font:400 12px/1.5 'Inter'; color:#3A2C16;"><b style="color:#2A2014;">Кликабелен целиком.</b> Десктоп: после «дела дня», перед делами кампании. Мобайл: после «дела дня» в меню.</div>
+      <div style="font:400 12px/1.5 'Inter'; color:#3A2C16;"><b style="color:#2A2014;">Виден, но не спорит</b> с активным и дневным делом — спокойный медовый тон папки.</div>
+      <div style="font:400 12px/1.5 'Inter'; color:#3A2C16;"><b style="color:#2A2014;">Бесплатный путь — на входе:</b> чип «Первое дело бесплатно» одного веса с «НОВОЕ».</div>
+    </div>
+  </div>
+</div>
+
+<!-- F3 · mobile menu -->
+<div style="position:absolute; left:720px; top:600px; width:300px;">
+  <div data-drags-parent="1" style="font:600 11px/1 'IBM Plex Mono'; letter-spacing:.14em; text-transform:uppercase; color:#5d564b; margin-bottom:10px;">01 · Вход · мобильное меню</div>
+  <div style="background:#fff; border-radius:2px; box-shadow:0 1px 3px rgba(0,0,0,.08); padding:11px;">
+    <div style="background:#1a1205; border-radius:30px; padding:9px; box-shadow:0 18px 40px rgba(40,28,10,.26);">
+      <div style="background:#E3D2B0; border-radius:24px; overflow:hidden;">
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:11px 18px 5px;">
+          <span style="font:600 11px 'Inter'; color:#2A2014;">9:41</span>
+          <span style="width:15px; height:8px; background:#2A2014; border-radius:2px; opacity:.6;"></span>
+        </div>
+        <div style="padding:6px 14px 10px; background:#EFE2C6; border-bottom:1px solid #BFA776;">
+          <div style="font:700 12px 'Inter'; letter-spacing:.06em; color:#3A2C16;">ГДЕ ЛОЖЬ?</div>
+        </div>
+        <div style="padding:13px 14px 18px; display:flex; flex-direction:column; gap:12px;">
+          <div style="font:600 9px 'IBM Plex Mono'; letter-spacing:.14em; color:#6E5630;">ДЕЛО ДНЯ</div>
+          <div style="position:relative; background:linear-gradient(135deg,#ddba6a,#C58A24); border:1px solid #a9781b; border-radius:9px; padding:11px 13px; overflow:hidden;">
+            <div style="position:absolute; top:9px; right:-24px; transform:rotate(34deg); background:#A8201C; color:#fff; font:700 8px 'IBM Plex Mono'; letter-spacing:.1em; padding:3px 26px;">СРОЧНО</div>
+            <div style="font:700 8px 'IBM Plex Mono'; color:#5c3f08;">ДО КОНЦА · 04:12:33</div>
+            <div style="font:700 16px 'IBM Plex Serif',serif; color:#3a2705; margin-top:4px;">Кто из нас самозванец?</div>
+          </div>
+          <!-- entry -->
+          <div class="lift" style="position:relative; cursor:pointer;">
+            <div style="position:absolute; top:-6px; left:12px; right:-5px; height:62px; background:#6E8475; border-radius:3px 8px 0 0; border:1px solid #3A5141;"></div>
+            <div style="position:absolute; top:-3px; left:6px; right:-2px; height:66px; background:#b98f73; border-radius:3px 8px 0 0; border:1px solid #7a5a52;"></div>
+            <div style="position:relative;">
+              <div style="position:absolute; top:-9px; left:16px; width:104px; height:15px; background:#876520; border-radius:6px 6px 0 0;"></div>
+              <div style="position:relative; background:#CBA85E; border:1px solid #876520; border-radius:2px 11px 11px 11px; padding:14px 15px; box-shadow:0 12px 24px rgba(40,28,10,.24);">
+                <div style="position:absolute; top:13px; right:13px; font:700 9px 'IBM Plex Mono'; letter-spacing:.12em; color:#fff; background:#95431F; padding:3px 8px; border-radius:4px;">НОВОЕ</div>
+                <div style="font:700 17px 'IBM Plex Serif',serif; color:#2A2014;">Особые архивы</div>
+                <div style="font:500 12px/1.4 'Inter'; color:#5a4220; margin-top:4px; max-width:185px;">Новые расследования и оформление стола</div>
+                <div style="display:flex; align-items:center; justify-content:space-between; gap:8px; margin-top:13px; padding-top:11px; border-top:1px solid rgba(135,101,32,.45);">
+                  <span style="font:600 10px 'IBM Plex Mono'; letter-spacing:.06em; color:#5a4220;">ОТКРЫТО 1 ИЗ 4</span>
+                  <span style="font:600 10px 'IBM Plex Mono'; color:#fff; background:#95431F; padding:4px 8px; border-radius:5px; white-space:nowrap;">Первое дело бесплатно</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="font:600 9px 'IBM Plex Mono'; letter-spacing:.14em; color:#6E5630; margin-top:2px;">КАМПАНИЯ</div>
+          <div style="display:flex; align-items:center; gap:10px; background:#F6ECD6; border:1px solid #BFA776; border-radius:9px; padding:11px 12px;">
+            <span style="width:9px; height:9px; border-radius:50%; background:#95431F; flex:none;"></span>
+            <div style="flex:1;"><div style="font:600 13px 'IBM Plex Serif',serif; color:#2A2014;">Пожар в доме</div><div style="font:500 10px 'IBM Plex Mono'; color:#6E5630;">Дело 2 · ДОСТУПНО</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- F4 · RTL entry -->
+<div style="position:absolute; left:1068px; top:600px; width:300px;">
+  <div data-drags-parent="1" style="font:600 11px/1 'IBM Plex Mono'; letter-spacing:.14em; text-transform:uppercase; color:#5d564b; margin-bottom:10px;">01 · Вход · RTL · العربية</div>
+  <div style="background:#fff; border-radius:2px; box-shadow:0 1px 3px rgba(0,0,0,.08); padding:14px;" dir="rtl">
+    <div style="background:#EFE2C6; border:1px solid #BFA776; border-radius:10px; padding:14px 13px; display:flex; flex-direction:column; gap:12px;">
+      <div style="font:700 13px 'Inter'; color:#3A2C16; text-align:right;">أين الكذب؟</div>
+      <div style="font:600 9px 'IBM Plex Mono'; letter-spacing:.06em; color:#6E5630; text-align:right;">قضية اليوم</div>
+      <div style="position:relative; background:linear-gradient(225deg,#ddba6a,#C58A24); border:1px solid #a9781b; border-radius:8px; padding:9px 11px; overflow:hidden;">
+        <div style="position:absolute; top:7px; left:-22px; transform:rotate(-34deg); background:#A8201C; color:#fff; font:700 7px 'IBM Plex Mono'; letter-spacing:.06em; padding:2px 24px;">عاجل</div>
+        <div style="font:700 13px 'IBM Plex Serif',serif; color:#3a2705; text-align:right;">من المُحتال بيننا؟</div>
+      </div>
+      <!-- entry mirrored -->
+      <div class="lift" style="position:relative; cursor:pointer; margin-top:2px;">
+        <div style="position:absolute; top:-6px; right:11px; left:-5px; height:58px; background:#6E8475; border-radius:8px 3px 0 0; border:1px solid #3A5141;"></div>
+        <div style="position:absolute; top:-3px; right:6px; left:-2px; height:62px; background:#b98f73; border-radius:8px 3px 0 0; border:1px solid #7a5a52;"></div>
+        <div style="position:relative;">
+          <div style="position:absolute; top:-9px; right:14px; width:92px; height:14px; background:#876520; border-radius:6px 6px 0 0;"></div>
+          <div style="position:relative; background:#CBA85E; border:1px solid #876520; border-radius:10px 2px 10px 10px; padding:12px 13px; box-shadow:0 10px 22px rgba(40,28,10,.22); text-align:right;">
+            <div style="position:absolute; top:11px; left:11px; font:700 8px 'IBM Plex Mono'; letter-spacing:.04em; color:#fff; background:#95431F; padding:3px 7px; border-radius:4px;">جديد</div>
+            <div style="font:700 15px 'IBM Plex Serif',serif; color:#2A2014;">الأرشيف الخاص</div>
+            <div style="font:500 11px/1.5 'Inter'; color:#5a4220; margin-top:3px;">تحقيقات جديدة وتصميم للمكتب</div>
+            <div style="display:flex; flex-direction:row-reverse; align-items:center; justify-content:space-between; gap:8px; margin-top:11px; padding-top:10px; border-top:1px solid rgba(135,101,32,.45);">
+              <span style="font:600 9px 'IBM Plex Mono'; color:#5a4220;">مفتوح ١ من ٤</span>
+              <span style="font:600 9px 'Inter'; color:#fff; background:#95431F; padding:3px 8px; border-radius:4px; white-space:nowrap;">القضية الأولى مجانية</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; flex-direction:row-reverse; align-items:center; gap:9px; background:#F6ECD6; border:1px solid #BFA776; border-radius:8px; padding:9px 10px;">
+        <span style="width:8px; height:8px; border-radius:50%; background:#95431F; flex:none;"></span>
+        <div style="flex:1; text-align:right;"><div style="font:600 12px 'IBM Plex Serif',serif; color:#2A2014;">حريق في المنزل</div><div style="font:500 9px 'IBM Plex Mono'; color:#6E5630;">القضية ٢ · متاح</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== CH.2 · ThematicPacksModal ===================== -->
+
+<!-- F5 · desktop modal -->
+<div style="position:absolute; left:0; top:1200px; width:952px;">
+  <div data-drags-parent="1" style="font:600 11px/1 'IBM Plex Mono'; letter-spacing:.14em; text-transform:uppercase; color:#5d564b; margin-bottom:10px;">02 · ThematicPacksModal · десктоп · витрина-каталог</div>
+  <div style="background:#fff; border-radius:2px; box-shadow:0 1px 3px rgba(0,0,0,.08); padding:20px;">
+    <!-- backdrop hint -->
+    <div style="background:#D4C09C; border-radius:14px; padding:16px;">
+    <div role="dialog" aria-modal="true" aria-label="Особые архивы" style="background:#EFE2C6; border:1px solid #BFA776; border-radius:11px; overflow:hidden; box-shadow:0 30px 70px rgba(40,28,10,.4);">
+
+      <!-- header -->
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; padding:17px 20px; background:#876520;">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div style="width:34px; height:34px; border-radius:7px; background:#CBA85E; border:1px solid #a9781b; display:flex; align-items:center; justify-content:center; font:700 14px 'IBM Plex Serif',serif; color:#3a2705;">★</div>
+          <div>
+            <div style="font:700 19px 'IBM Plex Serif',serif; color:#F6ECD6; line-height:1.1;">Особые архивы</div>
+            <div style="font:600 9px 'IBM Plex Mono'; letter-spacing:.14em; color:rgba(246,236,214,.78); margin-top:2px;">ТЕМАТИЧЕСКИЕ АРХИВЫ · ВЫДВИЖНОЙ КАТАЛОГ</div>
+          </div>
+        </div>
+        <button aria-label="Закрыть" style="width:44px; height:44px; flex:none; border:1px solid rgba(246,236,214,.4); background:rgba(0,0,0,.12); border-radius:9px; color:#F6ECD6; font:400 20px 'Inter'; cursor:pointer; line-height:1;">✕</button>
+      </div>
+
+      <!-- body -->
+      <div style="display:grid; grid-template-columns:268px 1fr; gap:18px; padding:18px;">
+
+        <!-- pack list -->
+        <div>
+          <div style="font:600 9px 'IBM Plex Mono'; letter-spacing:.14em; color:#6E5630; margin-bottom:10px;">АРХИВЫ · ОТКРЫТ 1 ИЗ 4</div>
+          <div style="display:flex; flex-direction:column; gap:11px;">
+            <sc-for list="{{ packs }}" as="p" hint-placeholder-count="3">
+              <div class="lift" style="position:relative; display:flex; gap:11px; cursor:pointer; background:{{ p.selBg }}; border:1.5px solid {{ p.selBd }}; border-radius:3px 9px 9px 9px; padding:12px 13px; box-shadow:0 6px 16px rgba(40,28,10,.12);">
+                <div style="width:30px; flex:none; border-radius:3px; background:{{ p.cover }}; border:1px solid {{ p.spine }}; position:relative;">
+                  <div style="position:absolute; left:0; top:0; bottom:0; width:7px; background:{{ p.spine }}; border-radius:3px 0 0 3px;"></div>
+                </div>
+                <div style="flex:1; min-width:0;">
+                  <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:6px;">
+                    <span style="font:600 8px 'IBM Plex Mono'; letter-spacing:.1em; color:{{ p.tagInk }};">{{ p.tag }}</span>
+                    <span style="font:600 9px 'IBM Plex Mono'; color:#6E5630;">{{ p.cases }}</span>
+                  </div>
+                  <div style="font:700 13px/1.2 'IBM Plex Serif',serif; color:{{ p.selInk }}; margin-top:3px;">{{ p.name }}</div>
+                  <div style="font:500 10px 'Inter'; color:#6E5630; margin-top:3px;">{{ p.meta }}</div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <!-- selected pack detail -->
+        <div style="display:flex; flex-direction:column; gap:14px; min-width:0;">
+
+          <!-- cover + theme -->
+          <div style="border:1px solid #BFA776; border-radius:8px; overflow:hidden; background:#F6ECD6;">
+            <div style="display:flex; justify-content:space-between; align-items:center; background:#876520; padding:8px 14px;">
+              <span style="font:700 11px 'IBM Plex Mono'; letter-spacing:.1em; color:#F6ECD6;">АРХИВ НЕОБЫЧНЫХ ПРОИСШЕСТВИЙ</span>
+              <span style="font:500 9px 'IBM Plex Mono'; color:rgba(246,236,214,.82);">Форма АР-1</span>
+            </div>
+            <div style="padding:13px 15px; display:flex; gap:13px; align-items:flex-start;">
+              <div style="width:54px; height:64px; flex:none; border-radius:3px; background:#CBA85E; border:1px solid #876520; position:relative; box-shadow:0 6px 14px rgba(40,28,10,.2);">
+                <div style="position:absolute; left:0; top:0; bottom:0; width:11px; background:#876520; border-radius:3px 0 0 3px;"></div>
+                <div style="position:absolute; right:7px; bottom:8px; width:18px; height:18px; border-radius:50%; background:#8a3a2a; border:2px solid #6f2e22;"></div>
+              </div>
+              <div style="min-width:0;">
+                <div style="font:600 9px 'IBM Plex Mono'; letter-spacing:.1em; color:#6E5630;">ТЕМА</div>
+                <p style="margin:4px 0 0; font:400 13px/1.55 'IBM Plex Serif',serif; color:#2A2014;">Закрытая академия прикладных практик: лаборатории, редкие коллекции и необычно аккуратные объяснения. Восковая лента, латунная лампа, запечатанные документы.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- case list -->
+          <div>
+            <div style="display:flex; align-items:baseline; gap:8px; margin-bottom:9px;">
+              <span style="font:600 9px 'IBM Plex Mono'; letter-spacing:.14em; color:#6E5630;">ДЕЛА В ПАКЕ</span>
+              <span style="font:600 9px 'IBM Plex Mono'; color:#95431F;">1 / 6</span>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+              <sc-for list="{{ packCases }}" as="c" hint-placeholder-count="6">
+                <div style="display:flex; align-items:center; gap:9px; background:{{ c.rowBg }}; border:1px solid {{ c.rowBd }}; border-radius:7px; padding:9px 10px;">
+                  <div style="width:22px; height:22px; flex:none; border-radius:50%; background:{{ c.icoBg }}; border:1px solid {{ c.icoBd }}; display:flex; align-items:center; justify-content:center; font:700 10px 'IBM Plex Mono'; color:{{ c.icoInk }};">{{ c.ico }}</div>
+                  <div style="flex:1; min-width:0;">
+                    <div style="font:600 12px 'IBM Plex Serif',serif; color:{{ c.tInk }}; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">{{ c.t }}</div>
+                    <div style="font:500 9px 'IBM Plex Mono'; color:{{ c.mInk }}; margin-top:1px;">{{ c.n }}</div>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+
+          <!-- skins + stamp row -->
+          <div style="display:grid; grid-template-columns:1fr 200px; gap:14px;">
+            <div>
+              <div style="font:600 9px 'IBM Plex Mono'; letter-spacing:.14em; color:#6E5630; margin-bottom:9px;">ОФОРМЛЕНИЕ СТОЛА</div>
+              <div style="display:flex; flex-direction:column; gap:7px;">
+                <sc-for list="{{ skins }}" as="s" hint-placeholder-count="3">
+                  <div style="display:flex; align-items:center; gap:10px; background:#F6ECD6; border:1px solid #BFA776; border-radius:7px; padding:8px 10px;">
+                    <span style="width:24px; height:24px; flex:none; border-radius:5px; background:{{ s.sw }}; border:1px solid rgba(0,0,0,.18);"></span>
+                    <span style="flex:1; font:600 12px 'Inter'; color:#2A2014;">{{ s.t }}</span>
+                    <span style="font:600 8px 'IBM Plex Mono'; letter-spacing:.08em; color:#6E5630; border:1px solid #BFA776; padding:2px 6px; border-radius:4px;">{{ s.tag }}</span>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+            <div>
+              <div style="font:600 9px 'IBM Plex Mono'; letter-spacing:.14em; color:#6E5630; margin-bottom:9px;">КОЛЛЕКЦИОННАЯ ПЕЧАТЬ</div>
+              <div style="background:#F6ECD6; border:1px solid #BFA776; border-radius:7px; padding:13px; display:flex; flex-direction:column; align-items:center; gap:8px; text-align:center;">
+                <div style="width:58px; height:58px; border-radius:50%; background:#8a3a2a; border:3px solid #6f2e22; display:flex; align-items:center; justify-content:center; box-shadow:inset 0 2px 6px rgba(0,0,0,.3); opacity:.45;">
+                  <span style="font:700 15px 'IBM Plex Serif',serif; color:#f1d9cf;">АНП</span>
+                </div>
+                <div style="font:500 10px/1.45 'Inter'; color:#6E5630;">Получите печать, закрыв все 6 дел пака.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- action area -->
+          <div style="background:#F6ECD6; border:1px solid #BFA776; border-radius:9px; padding:14px;">
+            <div style="display:flex; gap:11px; align-items:stretch;">
+              <button style="flex:1; min-height:48px; border:none; border-radius:8px; background:#95431F; color:#fff; font:700 14px 'Inter'; cursor:pointer; padding:0 16px;">Купить архив целиком · 299 ₽</button>
+              <button style="flex:1; min-height:48px; border:1.5px solid #95431F; border-radius:8px; background:transparent; color:#95431F; font:700 13px 'Inter'; cursor:pointer; padding:0 14px;">Открыть следующее дело за рекламу</button>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-top:11px;">
+              <span style="font:500 11px 'IBM Plex Mono'; color:#6E5630;">Дело останется открытым навсегда</span>
+              <button style="background:none; border:none; font:600 12px 'Inter'; color:#95431F; cursor:pointer; padding:6px 4px; text-decoration:underline; text-underline-offset:2px;">Восстановить покупки</button>
+            </div>
+            <div style="margin-top:12px; padding-top:12px; border-top:1px dashed #BFA776; display:flex; align-items:center; justify-content:space-between; gap:14px;">
+              <div style="min-width:0;">
+                <div style="font:600 9px 'IBM Plex Mono'; letter-spacing:.1em; color:#6E5630;">ВЕСЬ ОТДЕЛ · 4 АРХИВА</div>
+                <div style="font:500 11.5px 'Inter'; color:#3A2C16; margin-top:2px;">Комплектом выгоднее, чем по отдельности</div>
+              </div>
+              <button style="flex:none; min-height:44px; border:1.5px solid #95431F; border-radius:8px; background:transparent; color:#95431F; font:700 12.5px 'Inter'; cursor:pointer; padding:0 14px; white-space:nowrap;">Купить все · 899 ₽</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!-- F6 · mobile full-screen sheet -->
+<div style="position:absolute; left:1012px; top:1200px; width:300px;">
+  <div data-drags-parent="1" style="font:600 11px/1 'IBM Plex Mono'; letter-spacing:.14em; text-transform:uppercase; color:#5d564b; margin-bottom:10px;">02 · Modal · мобайл · полноэкранный лист</div>
+  <div style="background:#fff; border-radius:2px; box-shadow:0 1px 3px rgba(0,0,0,.08); padding:11px;">
+    <div style="background:#1a1205; border-radius:30px; padding:9px; box-shadow:0 18px 40px rgba(40,28,10,.26);">
+      <div class="scr" style="background:#E3D2B0; border-radius:24px; overflow:hidden; height:744px; display:flex; flex-direction:column;">
+        <!-- header -->
+        <div style="flex:none; background:#876520; padding:13px 16px 14px;">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font:600 8px 'Inter'; color:rgba(246,236,214,.85);">9:41</span>
+            <button aria-label="Закрыть" style="width:30px; height:30px; border:1px solid rgba(246,236,214,.4); background:rgba(0,0,0,.14); border-radius:8px; color:#F6ECD6; font-size:15px; cursor:pointer; line-height:1;">✕</button>
+          </div>
+          <div style="font:700 18px 'IBM Plex Serif',serif; color:#F6ECD6; margin-top:6px;">Особые архивы</div>
+          <div style="font:600 8px 'IBM Plex Mono'; letter-spacing:.12em; color:rgba(246,236,214,.78); margin-top:2px;">ОТКРЫТ 1 ИЗ 4</div>
+        </div>
+        <!-- scroll -->
+        <div class="scr" style="flex:1; overflow:auto; padding:13px 14px 14px;">
+          <div style="display:flex; flex-direction:column; gap:9px;">
+            <sc-for list="{{ packs }}" as="p" hint-placeholder-count="3">
+              <div style="display:flex; gap:11px; align-items:center; background:{{ p.selBg }}; border:1.5px solid {{ p.selBd }}; border-radius:3px 9px 9px 9px; padding:11px 12px; min-height:48px;">
+                <div style="width:26px; height:34px; flex:none; border-radius:3px; background:{{ p.cover }}; border:1px solid {{ p.spine }}; position:relative;"><div style="position:absolute; left:0; top:0; bottom:0; width:6px; background:{{ p.spine }}; border-radius:3px 0 0 3px;"></div></div>
+                <div style="flex:1; min-width:0;">
+                  <div style="font:700 13px 'IBM Plex Serif',serif; color:{{ p.selInk }};">{{ p.name }}</div>
+                  <div style="font:500 9px 'IBM Plex Mono'; color:#6E5630; margin-top:2px;">{{ p.cases }} · {{ p.tag }}</div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+
+          <!-- expanded selected -->
+          <div style="margin-top:15px; border:1px solid #BFA776; border-radius:8px; overflow:hidden; background:#F6ECD6;">
+            <div style="background:#876520; padding:8px 12px; font:700 10px 'IBM Plex Mono'; letter-spacing:.08em; color:#F6ECD6;">АРХИВ НЕОБЫЧНЫХ ПРОИСШЕСТВИЙ</div>
+            <p style="margin:0; padding:11px 12px; font:400 12px/1.5 'IBM Plex Serif',serif; color:#2A2014;">Закрытая академия прикладных практик: редкие коллекции и аккуратные объяснения.</p>
+          </div>
+
+          <div style="font:600 9px 'IBM Plex Mono'; letter-spacing:.14em; color:#6E5630; margin:14px 0 8px;">ДЕЛА · 1 / 6</div>
+          <div style="display:flex; flex-direction:column; gap:7px;">
+            <sc-for list="{{ packCases }}" as="c" hint-placeholder-count="6">
+              <div style="display:flex; align-items:center; gap:10px; background:{{ c.rowBg }}; border:1px solid {{ c.rowBd }}; border-radius:7px; padding:10px 11px; min-height:46px;">
+                <div style="width:24px; height:24px; flex:none; border-radius:50%; background:{{ c.icoBg }}; border:1px solid {{ c.icoBd }}; display:flex; align-items:center; justify-content:center; font:700 11px 'IBM Plex Mono'; color:{{ c.icoInk }};">{{ c.ico }}</div>
+                <div style="flex:1; min-width:0;"><div style="font:600 13px 'IBM Plex Serif',serif; color:{{ c.tInk }}; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">{{ c.t }}</div><div style="font:500 9px 'IBM Plex Mono'; color:{{ c.mInk }};">{{ c.n }}</div></div>
+                <span style="flex:none; font:600 8px 'IBM Plex Mono'; color:{{ c.pInk }}; border:1px solid {{ c.pBd }}; background:{{ c.pBg }}; padding:3px 6px; border-radius:4px;">{{ c.pill }}</span>
+              </div>
+            </sc-for>
+          </div>
+
+          <div style="font:600 9px 'IBM Plex Mono'; letter-spacing:.14em; color:#6E5630; margin:14px 0 8px;">ОФОРМЛЕНИЕ СТОЛА</div>
+          <div style="display:flex; flex-direction:column; gap:7px;">
+            <sc-for list="{{ skins }}" as="s" hint-placeholder-count="3">
+              <div style="display:flex; align-items:center; gap:10px; background:#F6ECD6; border:1px solid #BFA776; border-radius:7px; padding:9px 10px; min-height:44px;">
+                <span style="width:24px; height:24px; flex:none; border-radius:5px; background:{{ s.sw }}; border:1px solid rgba(0,0,0,.18);"></span>
+                <span style="flex:1; font:600 12px 'Inter'; color:#2A2014;">{{ s.t }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+        <!-- sticky action -->
+        <div style="flex:none; background:#EFE2C6; border-top:1px solid #BFA776; padding:11px 14px;">
+          <button style="width:100%; min-height:50px; border:none; border-radius:9px; background:#95431F; color:#fff; font:700 14px 'Inter'; cursor:pointer;">Купить архив целиком · 299 ₽</button>
+          <button style="width:100%; min-height:48px; margin-top:8px; border:1.5px solid #95431F; border-radius:9px; background:transparent; color:#95431F; font:700 13px 'Inter'; cursor:pointer;">Открыть следующее за рекламу</button>
+          <div style="text-align:center; font:500 10px 'IBM Plex Mono'; color:#6E5630; margin-top:8px;">Дело останется открытым навсегда</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- F7 · RTL modal -->
+<div style="position:absolute; left:1352px; top:1200px; width:560px;">
+  <div data-drags-parent="1" style="font:600 11px/1 'IBM Plex Mono'; letter-spacing:.14em; text-transform:uppercase; color:#5d564b; margin-bottom:10px;">02 · Modal · RTL · العربية</div>
+  <div style="background:#fff; border-radius:2px; box-shadow:0 1px 3px rgba(0,0,0,.08); padding:18px;">
+    <div dir="rtl" style="background:#EFE2C6; border:1px solid #BFA776; border-radius:11px; overflow:hidden; box-shadow:0 24px 56px rgba(40,28,10,.34);">
+      <div style="display:flex; flex-direction:row-reverse; align-items:center; justify-content:space-between; gap:14px; padding:15px 18px; background:#876520;">
+        <div style="text-align:right;">
+          <div style="font:700 18px 'IBM Plex Serif',serif; color:#F6ECD6;">الأرشيف الخاص</div>
+          <div style="font:600 9px 'IBM Plex Mono'; color:rgba(246,236,214,.78); margin-top:2px;">مفتوح ١ من ٤</div>
+        </div>
+        <button aria-label="إغلاق" style="width:44px; height:44px; flex:none; border:1px solid rgba(246,236,214,.4); background:rgba(0,0,0,.12); border-radius:9px; color:#F6ECD6; font-size:18px; cursor:pointer;">✕</button>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 200px; gap:16px; padding:16px;">
+        <!-- detail (right side in RTL flow) -->
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+          <div style="border:1px solid #BFA776; border-radius:8px; overflow:hidden; background:#F6ECD6;">
+            <div style="background:#876520; padding:8px 13px; font:700 10px 'IBM Plex Mono'; color:#F6ECD6; text-align:right;">أرشيف الحوادث غير المعتادة</div>
+            <p style="margin:0; padding:11px 13px; font:400 13px/1.6 'IBM Plex Serif',serif; color:#2A2014; text-align:right;">أكاديمية مغلقة للممارسات التطبيقية: مختبرات ومجموعات نادرة وتفسيرات مرتبة بشكل غير معتاد.</p>
+          </div>
+          <div style="font:600 9px 'IBM Plex Mono'; color:#6E5630; text-align:right;">القضايا · ١ / ٦</div>
+          <div style="display:flex; flex-direction:column; gap:7px;">
+            <div style="display:flex; flex-direction:row-reverse; align-items:center; gap:9px; background:#F6ECD6; border:1px solid #5E7A2E; border-radius:7px; padding:9px 11px; min-height:46px;">
+              <div style="width:22px; height:22px; flex:none; border-radius:50%; background:#eef0dd; border:1px solid #5E7A2E; display:flex; align-items:center; justify-content:center; font:700 11px 'IBM Plex Mono'; color:#5E7A2E;">✓</div>
+              <div style="flex:1; text-align:right;"><div style="font:600 12px 'IBM Plex Serif',serif; color:#2A2014;">القضية الأولى</div></div>
+              <span style="font:600 8px 'Inter'; color:#5E7A2E; border:1px solid #5E7A2E; padding:3px 7px; border-radius:4px;">مفتوح</span>
+            </div>
+            <div style="display:flex; flex-direction:row-reverse; align-items:center; gap:9px; background:#f7ead9; border:1px solid #95431F; border-radius:7px; padding:9px 11px; min-height:46px;">
+              <div style="width:22px; height:22px; flex:none; border-radius:50%; background:#f7ead9; border:1px solid #95431F; display:flex; align-items:center; justify-content:center; font:700 11px 'IBM Plex Mono'; color:#95431F;">٢</div>
+              <div style="flex:1; text-align:right;"><div style="font:600 12px 'IBM Plex Serif',serif; color:#2A2014;">القضية التالية</div></div>
+              <span style="font:600 8px 'Inter'; color:#fff; background:#95431F; padding:3px 7px; border-radius:4px;">التالي</span>
+            </div>
+          </div>
+        </div>
+        <!-- pack list -->
+        <div>
+          <div style="font:600 9px 'IBM Plex Mono'; color:#6E5630; margin-bottom:9px; text-align:right;">الأرشيفات</div>
+          <div style="display:flex; flex-direction:column; gap:9px;">
+            <div style="display:flex; flex-direction:row-reverse; gap:9px; align-items:center; background:#f7ead9; border:1.5px solid #95431F; border-radius:9px 3px 9px 9px; padding:10px 11px;">
+              <div style="width:24px; height:30px; flex:none; border-radius:3px; background:#CBA85E; border:1px solid #876520;"></div>
+              <div style="flex:1; text-align:right;"><div style="font:700 11px 'IBM Plex Serif',serif; color:#2A2014;">الحوادث غير المعتادة</div></div>
+            </div>
+            <div style="display:flex; flex-direction:row-reverse; gap:9px; align-items:center; background:#EFE2C6; border:1.5px solid #BFA776; border-radius:9px 3px 9px 9px; padding:10px 11px;">
+              <div style="width:24px; height:30px; flex:none; border-radius:3px; background:#6E8475; border:1px solid #3A5141;"></div>
+              <div style="flex:1; text-align:right;"><div style="font:700 11px 'IBM Plex Serif',serif; color:#3A2C16;">البروتوكول القطبي</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="padding:0 16px 16px;">
+        <div style="background:#F6ECD6; border:1px solid #BFA776; border-radius:9px; padding:13px;">
+          <button style="width:100%; min-height:48px; border:none; border-radius:8px; background:#95431F; color:#fff; font:700 14px 'Inter'; cursor:pointer;">شراء الأرشيف كاملاً · ٢٩٩ ₽</button>
+          <button style="width:100%; min-height:46px; margin-top:8px; border:1.5px solid #95431F; border-radius:8px; background:transparent; color:#95431F; font:700 13px 'Inter'; cursor:pointer;">افتح القضية التالية عبر إعلان</button>
+          <div style="text-align:center; font:500 10px 'IBM Plex Mono'; color:#6E5630; margin-top:9px;">ستبقى القضية مفتوحة للأبد</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- F7b · BUNDLE window · desktop -->
+<div style="position:absolute; left:1952px; top:1200px; width:452px;">
+  <div data-drags-parent="1" style="font:600 11px/1 'IBM Plex Mono'; letter-spacing:.14em; text-transform:uppercase; color:#5d564b; margin-bottom:10px;">02c · Купить все архивы · отдельное окно «комплект»</div>
+  <div style="background:#fff; border-radius:2px; box-shadow:0 1px 3px rgba(0,0,0,.08); padding:18px;">
+    <div style="background:#D4C09C; border-radius:13px; padding:14px;">
+      <div role="dialog" aria-modal="true" aria-label="Купить все архивы" style="background:#EFE2C6; border:1px solid #BFA776; border-radius:10px; overflow:hidden; box-shadow:0 26px 60px rgba(40,28,10,.36);">
+        <!-- header -->
+        <div style="background:#876520; padding:14px 16px; display:flex; align-items:center; justify-content:space-between; gap:12px;">
+          <div>
+            <div style="font:700 17px 'IBM Plex Serif',serif; color:#F6ECD6; line-height:1.1;">Полный архивный отдел</div>
+            <div style="font:600 8px 'IBM Plex Mono'; letter-spacing:.12em; color:rgba(246,236,214,.78); margin-top:3px;">ВСЕ ОСОБЫЕ АРХИВЫ ОДНИМ КОМПЛЕКТОМ</div>
+          </div>
+          <button aria-label="Закрыть" style="width:40px; height:40px; flex:none; border:1px solid rgba(246,236,214,.4); background:rgba(0,0,0,.12); border-radius:9px; color:#F6ECD6; font-size:17px; cursor:pointer;">✕</button>
+        </div>
+        <div style="padding:16px;">
+          <!-- folder fan -->
+          <div style="position:relative; height:74px; margin:2px 0 16px;">
+            <div style="position:absolute; left:50%; top:8px; transform:translateX(-50%) rotate(-9deg); width:54px; height:62px; border-radius:3px; background:#6f6a86; border:1px solid #3a3550;"></div>
+            <div style="position:absolute; left:calc(50% - 38px); top:5px; transform:rotate(-4deg); width:54px; height:64px; border-radius:3px; background:#7a5a52; border:1px solid #3a2c2c;"></div>
+            <div style="position:absolute; left:calc(50% + 6px); top:6px; transform:rotate(5deg); width:54px; height:64px; border-radius:3px; background:#6E8475; border:1px solid #3A5141;"></div>
+            <div style="position:absolute; left:50%; top:2px; transform:translateX(-50%); width:58px; height:68px; border-radius:3px; background:#CBA85E; border:1px solid #876520; box-shadow:0 8px 18px rgba(40,28,10,.26);"><div style="position:absolute; left:0; top:0; bottom:0; width:11px; background:#876520; border-radius:3px 0 0 3px;"></div></div>
+            <!-- wax band -->
+            <div style="position:absolute; left:50%; top:30px; transform:translateX(-50%); width:128px; height:14px; background:#8a3a2a; border:1px solid #6f2e22; border-radius:3px; display:flex; align-items:center; justify-content:center;"><span style="font:600 7px 'IBM Plex Mono'; letter-spacing:.14em; color:#f1d9cf;">КОМПЛЕКТ</span></div>
+          </div>
+
+          <!-- included list -->
+          <div style="font:600 9px 'IBM Plex Mono'; letter-spacing:.14em; color:#6E5630; margin-bottom:9px;">В КОМПЛЕКТЕ · 4 АРХИВА</div>
+          <div style="display:flex; flex-direction:column; gap:7px;">
+            <sc-for list="{{ bundlePacks }}" as="b" hint-placeholder-count="4">
+              <div style="display:flex; align-items:center; gap:11px; background:#F6ECD6; border:1px solid #BFA776; border-radius:7px; padding:9px 11px; opacity:{{ b.op }};">
+                <div style="width:22px; height:28px; flex:none; border-radius:3px; background:{{ b.cover }}; border:1px solid {{ b.spine }}; position:relative;"><div style="position:absolute; left:0; top:0; bottom:0; width:6px; background:{{ b.spine }}; border-radius:3px 0 0 3px;"></div></div>
+                <div style="flex:1; min-width:0;"><div style="font:600 12.5px 'IBM Plex Serif',serif; color:#2A2014; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">{{ b.name }}</div><div style="font:500 9px 'IBM Plex Mono'; color:#6E5630; margin-top:1px;">{{ b.cases }}</div></div>
+                <span style="flex:none; font:600 7.5px 'IBM Plex Mono'; letter-spacing:.06em; color:{{ b.tagInk }}; border:1px solid currentColor; padding:2px 6px; border-radius:4px; opacity:.9;">{{ b.tag }}</span>
+              </div>
+            </sc-for>
+          </div>
+
+          <!-- totals -->
+          <div style="display:flex; gap:7px; margin-top:13px;">
+            <div style="flex:1; text-align:center; background:#F6ECD6; border:1px solid #E7D8B6; border-radius:6px; padding:8px 4px;"><div style="font:600 15px 'IBM Plex Mono'; color:#2A2014;">21</div><div style="font:500 8px 'IBM Plex Mono'; color:#6E5630; margin-top:1px;">ДЕЛО</div></div>
+            <div style="flex:1; text-align:center; background:#F6ECD6; border:1px solid #E7D8B6; border-radius:6px; padding:8px 4px;"><div style="font:600 15px 'IBM Plex Mono'; color:#2A2014;">8</div><div style="font:500 8px 'IBM Plex Mono'; color:#6E5630; margin-top:1px;">ОФОРМЛЕНИЙ</div></div>
+            <div style="flex:1; text-align:center; background:#F6ECD6; border:1px solid #E7D8B6; border-radius:6px; padding:8px 4px;"><div style="font:600 15px 'IBM Plex Mono'; color:#2A2014;">4</div><div style="font:500 8px 'IBM Plex Mono'; color:#6E5630; margin-top:1px;">ПЕЧАТИ</div></div>
+          </div>
+
+          <!-- honest price compare -->
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:13px; padding:11px 13px; background:#F6ECD6; border:1px solid #BFA776; border-radius:8px;">
+            <div>
+              <div style="font:500 11px 'IBM Plex Mono'; color:#9a8a66; text-decoration:line-through;">По отдельности 1 196 ₽</div>
+              <div style="font:700 17px 'IBM Plex Mono'; color:#2A2014; margin-top:2px;">Комплектом 899 ₽</div>
+            </div>
+            <span style="flex:none; font:600 10px 'IBM Plex Mono'; letter-spacing:.04em; color:#5E7A2E; background:#eef0dd; border:1px solid #5E7A2E; padding:5px 9px; border-radius:5px;">экономия 297 ₽</span>
+          </div>
+
+          <!-- actions -->
+          <button style="width:100%; min-height:50px; margin-top:13px; border:none; border-radius:8px; background:#95431F; color:#fff; font:700 14px 'Inter'; cursor:pointer;">Купить все архивы · 899 ₽</button>
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-top:10px;">
+            <span style="font:500 10.5px 'IBM Plex Mono'; color:#6E5630;">Все дела и оформление — навсегда</span>
+            <button style="background:none; border:none; font:600 11.5px 'Inter'; color:#95431F; cursor:pointer; text-decoration:underline; text-underline-offset:2px; padding:4px 2px;">Восстановить покупки</button>
+          </div>
+          <div style="font:500 9.5px/1.4 'IBM Plex Mono'; color:#9a8a66; margin-top:10px;">«Городской архив» добавится в комплект бесплатно при выходе. Действуют те же состояния покупки, что и у одиночного архива.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- F7c · BUNDLE window · mobile -->
+<div style="position:absolute; left:2436px; top:1200px; width:300px;">
+  <div data-drags-parent="1" style="font:600 11px/1 'IBM Plex Mono'; letter-spacing:.14em; text-transform:uppercase; color:#5d564b; margin-bottom:10px;">02c · Комплект · мобайл</div>
+  <div style="background:#fff; border-radius:2px; box-shadow:0 1px 3px rgba(0,0,0,.08); padding:11px;">
+    <div style="background:#1a1205; border-radius:30px; padding:9px; box-shadow:0 18px 40px rgba(40,28,10,.26);">
+      <div style="background:#E3D2B0; border-radius:24px; overflow:hidden;">
+        <div style="background:#876520; padding:13px 16px;">
+          <div style="display:flex; justify-content:space-between; align-items:center;"><span style="font:600 8px 'Inter'; color:rgba(246,236,214,.85);">9:41</span><button aria-label="Закрыть" style="width:30px; height:30px; border:1px solid rgba(246,236,214,.4); background:rgba(0,0,0,.14); border-radius:8px; color:#F6ECD6; font-size:15px; cursor:pointer;">✕</button></div>
+          <div style="font:700 16px 'IBM Plex Serif',serif; color:#F6ECD6; margin-top:6px;">Полный архивный отдел</div>
+          <div style="font:600 8px 'IBM Plex Mono'; letter-spacing:.1em; color:rgba(246,236,214,.78); margin-top:2px;">ВСЕ 4 АРХИВА КОМПЛЕКТОМ</div>
+        </div>
+        <div style="padding:13px 14px 14px;">
+          <div style="display:flex; flex-direction:column; gap:7px;">
+            <sc-for list="{{ bundlePacks }}" as="b" hint-placeholder-count="4">
+              <div style="display:flex; align-items:center; gap:11px; background:#F6ECD6; border:1px solid #BFA776; border-radius:7px; padding:10px 11px; opacity:{{ b.op }}; min-height:46px;">
+                <div style="width:22px; height:28px; flex:none; border-radius:3px; background:{{ b.cover }}; border:1px solid {{ b.spine }};"></div>
+                <div style="flex:1; min-width:0;"><div style="font:600 13px 'IBM Plex Serif',serif; color:#2A2014; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">{{ b.name }}</div><div style="font:500 9px 'IBM Plex Mono'; color:#6E5630;">{{ b.cases }}</div></div>
+                <span style="flex:none; font:600 7px 'IBM Plex Mono'; color:{{ b.tagInk }}; border:1px solid currentColor; padding:2px 5px; border-radius:4px;">{{ b.tag }}</span>
+              </div>
+            </sc-for>
+          </div>
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:12px; padding:11px 12px; background:#F6ECD6; border:1px solid #BFA776; border-radius:8px;">
+            <div><div style="font:500 10px 'IBM Plex Mono'; color:#9a8a66; text-decoration:line-through;">1 196 ₽</div><div style="font:700 16px 'IBM Plex Mono'; color:#2A2014;">899 ₽</div></div>
+            <span style="font:600 9px 'IBM Plex Mono'; color:#5E7A2E; background:#eef0dd; border:1px solid #5E7A2E; padding:4px 8px; border-radius:5px;">−297 ₽</span>
+          </div>
+          <button style="width:100%; min-height:50px; margin-top:12px; border:none; border-radius:9px; background:#95431F; color:#fff; font:700 14px 'Inter'; cursor:pointer;">Купить все архивы · 899 ₽</button>
+          <div style="text-align:center; font:500 10px 'IBM Plex Mono'; color:#6E5630; margin-top:9px;">Все дела и оформление — навсегда</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== CH.2b · Pack states matrix ===================== -->
+<div style="position:absolute; left:0; top:2160px; width:1212px;">
+  <div data-drags-parent="1" style="font:600 11px/1 'IBM Plex Mono'; letter-spacing:.14em; text-transform:uppercase; color:#5d564b; margin-bottom:10px;">02 · ThematicPacksModal · полная матрица состояний (13)</div>
+  <div style="background:#fff; border-radius:2px; box-shadow:0 1px 3px rgba(0,0,0,.08); padding:22px;">
+    <p style="margin:0 0 16px; max-width:760px; font:400 13px/1.55 'Inter'; color:#3A2C16;">Зона действий модалки во всех состояниях жизненного цикла пака. Бесплатный путь (реклама) визуально равен платному; ошибки и прототип объяснены спокойно, без тревожных красных плашек.</p>
+    <div style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:13px;">
+      <sc-for list="{{ packStates }}" as="s" hint-placeholder-count="13">
+        <div style="border:1.5px solid {{ s.toneBd }}; background:{{ s.toneBg }}; border-radius:9px; padding:13px; display:flex; flex-direction:column;">
+          <span style="align-self:flex-start; font:600 8px 'IBM Plex Mono'; letter-spacing:.1em; color:{{ s.toneLab }}; border:1px solid {{ s.toneBd }}; padding:3px 7px; border-radius:4px;">{{ s.lab }}</span>
+          <div style="font:700 15px/1.2 'IBM Plex Serif',serif; color:#2A2014; margin-top:9px;">{{ s.t }}</div>
+          <div style="font:400 11.5px/1.5 'Inter'; color:#3A2C16; margin-top:6px; flex:1;">{{ s.d }}</div>
+          <button style="margin-top:11px; min-height:42px; border:1.5px solid {{ s.btnBd }}; border-radius:7px; background:{{ s.btnBg }}; color:{{ s.btnInk }}; font:700 11.5px 'Inter'; cursor:pointer; padding:0 10px; width:100%;">{{ s.btn }}</button>
+          <div style="font:500 9px/1.4 'IBM Plex Mono'; color:#6E5630; margin-top:8px;">{{ s.help }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== CH.3 · InvestigationServiceOrder ===================== -->
+
+<!-- F8 · desktop order sheet -->
+<div style="position:absolute; left:0; top:3260px; width:572px;">
+  <div data-drags-parent="1" style="font:600 11px/1 'IBM Plex Mono'; letter-spacing:.14em; text-transform:uppercase; color:#5d564b; margin-bottom:10px;">03 · InvestigationServiceOrder · десктоп · бланк</div>
+  <div style="background:#fff; border-radius:2px; box-shadow:0 1px 3px rgba(0,0,0,.08); padding:18px;">
+    <div style="border:1px solid #BFA776; border-radius:9px; overflow:hidden; background:#F6ECD6; box-shadow:0 14px 32px rgba(40,28,10,.16);">
+      <!-- form header -->
+      <div style="background:#876520; padding:11px 16px; display:flex; justify-content:space-between; align-items:center;">
+        <span style="font:700 12px 'IBM Plex Mono'; letter-spacing:.08em; color:#F6ECD6;">РАСПОРЯЖЕНИЕ НА РАССЛЕДОВАНИЕ</span>
+        <span style="font:500 9px 'IBM Plex Mono'; color:rgba(246,236,214,.82);">Форма Р-7</span>
+      </div>
+      <div style="padding:14px 16px 16px;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:14px; margin-bottom:13px;">
+          <p style="margin:0; max-width:330px; font:400 12px/1.5 'Inter'; color:#3A2C16;">Выберите <b>одну</b> услугу до вскрытия первой улики. После первого вскрытия бланк закрывается. Услуги помогают планировать — но не раскрывают вердикт.</p>
+          <div style="flex:none; text-align:right; border:1px solid #E7D8B6; border-radius:6px; padding:7px 10px; background:#fff;">
+            <div style="font:500 8px 'IBM Plex Mono'; letter-spacing:.1em; color:#6E5630;">БЮДЖЕТ ОТДЕЛА</div>
+            <div style="font:600 14px 'IBM Plex Mono'; color:#95431F; margin-top:1px;">₽ 4 200</div>
+          </div>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <sc-for list="{{ sheetServices }}" as="s" hint-placeholder-count="3">
+            <div style="display:flex; gap:12px; border:1.5px solid {{ s.bd }}; background:{{ s.bg }}; border-radius:9px; padding:12px 13px; opacity:{{ s.op }};">
+              <div style="width:26px; height:26px; flex:none; margin-top:1px; border-radius:7px; border:2px solid {{ s.checkBd }}; background:{{ s.check }}; display:flex; align-items:center; justify-content:center; font:700 13px 'IBM Plex Mono'; color:{{ s.markInk }};">{{ s.mark }}</div>
+              <div style="flex:1; min-width:0;">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:10px;">
+                  <span style="font:700 15px 'IBM Plex Serif',serif; color:{{ s.ink }};">{{ s.t }}</span>
+                  <span style="flex:none; font:600 8px 'IBM Plex Mono'; letter-spacing:.06em; color:{{ s.pillInk }}; background:{{ s.pillBg }}; border:1px solid {{ s.pillBd }}; padding:3px 7px; border-radius:4px; white-space:nowrap;">{{ s.pill }}</span>
+                </div>
+                <div style="font:600 8px 'IBM Plex Mono'; letter-spacing:.08em; color:#6E5630; margin-top:3px;">ОТДЕЛ · {{ s.dept }}</div>
+                <div style="font:400 12px/1.45 'Inter'; color:{{ s.ink }}; margin-top:6px;">{{ s.desc }}</div>
+                <div style="display:flex; justify-content:flex-end; margin-top:7px;"><span style="font:600 11px 'IBM Plex Mono'; color:{{ s.costInk }};">{{ s.cost }}</span></div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:14px; padding-top:13px; border-top:1px solid #E7D8B6;">
+          <span style="font:500 10px 'IBM Plex Mono'; color:#6E5630;">Услуга не показывает итоговый вердикт</span>
+          <button style="background:none; border:none; font:700 13px 'Inter'; color:#95431F; cursor:pointer; text-decoration:underline; text-underline-offset:2px; padding:6px 2px;">Продолжить без услуги →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- F9 · mobile order sheet -->
+<div style="position:absolute; left:632px; top:3260px; width:300px;">
+  <div data-drags-parent="1" style="font:600 11px/1 'IBM Plex Mono'; letter-spacing:.14em; text-transform:uppercase; color:#5d564b; margin-bottom:10px;">03 · Бланк · мобайл</div>
+  <div style="background:#fff; border-radius:2px; box-shadow:0 1px 3px rgba(0,0,0,.08); padding:11px;">
+    <div style="background:#1a1205; border-radius:30px; padding:9px; box-shadow:0 18px 40px rgba(40,28,10,.26);">
+      <div style="background:#E3D2B0; border-radius:24px; overflow:hidden;">
+        <div style="padding:11px 16px 5px; display:flex; justify-content:space-between; align-items:center;"><span style="font:600 11px 'Inter'; color:#2A2014;">9:41</span><span style="width:15px; height:8px; background:#2A2014; border-radius:2px; opacity:.6;"></span></div>
+        <div style="padding:9px 13px 14px;">
+          <div style="border:1px solid #BFA776; border-radius:9px; overflow:hidden; background:#F6ECD6;">
+            <div style="background:#876520; padding:9px 13px; font:700 9.5px 'IBM Plex Mono'; letter-spacing:.06em; color:#F6ECD6; display:flex; justify-content:space-between;"><span>РАСПОРЯЖЕНИЕ Р-7</span><span style="opacity:.8;">₽ 4 200</span></div>
+            <div style="padding:12px 13px 14px;">
+              <p style="margin:0 0 12px; font:400 11.5px/1.5 'Inter'; color:#3A2C16;">Одна услуга до вскрытия первой улики. Вердикт не раскрывается.</p>
+              <div style="display:flex; flex-direction:column; gap:9px;">
+                <sc-for list="{{ sheetServices }}" as="s" hint-placeholder-count="3">
+                  <div style="display:flex; gap:11px; border:1.5px solid {{ s.bd }}; background:{{ s.bg }}; border-radius:9px; padding:11px 12px; opacity:{{ s.op }}; min-height:48px;">
+                    <div style="width:24px; height:24px; flex:none; border-radius:6px; border:2px solid {{ s.checkBd }}; background:{{ s.check }}; display:flex; align-items:center; justify-content:center; font:700 12px 'IBM Plex Mono'; color:{{ s.markInk }};">{{ s.mark }}</div>
+                    <div style="flex:1; min-width:0;">
+                      <div style="display:flex; justify-content:space-between; gap:8px;"><span style="font:700 13px 'IBM Plex Serif',serif; color:{{ s.ink }};">{{ s.t }}</span><span style="flex:none; font:600 7.5px 'IBM Plex Mono'; color:{{ s.pillInk }}; background:{{ s.pillBg }}; border:1px solid {{ s.pillBd }}; padding:2px 5px; border-radius:4px;">{{ s.pill }}</span></div>
+                      <div style="font:400 11px/1.4 'Inter'; color:{{ s.ink }}; margin-top:5px;">{{ s.desc }}</div>
+                      <div style="font:600 10px 'IBM Plex Mono'; color:{{ s.costInk }}; margin-top:6px;">{{ s.cost }}</div>
+                    </div>
+                  </div>
+                </sc-for>
+              </div>
+              <button style="width:100%; margin-top:13px; min-height:46px; background:none; border:1.5px solid #95431F; border-radius:8px; color:#95431F; font:700 12px 'Inter'; cursor:pointer;">Продолжить без услуги →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- F10 · RTL order sheet -->
+<div style="position:absolute; left:972px; top:3260px; width:430px;">
+  <div data-drags-parent="1" style="font:600 11px/1 'IBM Plex Mono'; letter-spacing:.14em; text-transform:uppercase; color:#5d564b; margin-bottom:10px;">03 · Бланк · RTL · العربية</div>
+  <div style="background:#fff; border-radius:2px; box-shadow:0 1px 3px rgba(0,0,0,.08); padding:18px;">
+    <div dir="rtl" style="border:1px solid #BFA776; border-radius:9px; overflow:hidden; background:#F6ECD6;">
+      <div style="background:#876520; padding:11px 15px; display:flex; flex-direction:row-reverse; justify-content:space-between; align-items:center;">
+        <span style="font:700 12px 'IBM Plex Mono'; color:#F6ECD6;">أمر التحقيق</span>
+        <span style="font:500 9px 'IBM Plex Mono'; color:rgba(246,236,214,.82);">نموذج Р-7</span>
+      </div>
+      <div style="padding:14px 15px 15px;">
+        <p style="margin:0 0 13px; font:400 12px/1.6 'Inter'; color:#3A2C16; text-align:right;">اختر خدمة واحدة قبل فتح أول دليل. لا تكشف الخدمات الحكم النهائي.</p>
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <!-- selected -->
+          <div style="display:flex; flex-direction:row-reverse; gap:11px; border:1.5px solid #95431F; background:#f7ead9; border-radius:9px; padding:12px 13px;">
+            <div style="width:26px; height:26px; flex:none; border-radius:7px; border:2px solid #95431F; background:#95431F; display:flex; align-items:center; justify-content:center; font:700 13px 'IBM Plex Mono'; color:#fff;">✓</div>
+            <div style="flex:1; text-align:right;">
+              <div style="display:flex; flex-direction:row-reverse; justify-content:space-between; gap:8px;"><span style="font:700 14px 'IBM Plex Serif',serif; color:#2A2014;">فحص الأرشيف</span><span style="font:600 8px 'Inter'; color:#fff; background:#95431F; padding:3px 7px; border-radius:4px;">مُختار</span></div>
+              <div style="font:400 11.5px/1.45 'Inter'; color:#2A2014; margin-top:5px;">يُظهر عدد التناقضات في القضية فقط.</div>
+              <div style="font:600 10px 'IBM Plex Mono'; color:#95431F; margin-top:6px;">١ ٠٠٠ ₽</div>
+            </div>
+          </div>
+          <!-- free daily -->
+          <div style="display:flex; flex-direction:row-reverse; gap:11px; border:1.5px solid #5E7A2E; background:#eef0dd; border-radius:9px; padding:12px 13px;">
+            <div style="width:26px; height:26px; flex:none; border-radius:7px; border:2px solid #5E7A2E; background:#fff;"></div>
+            <div style="flex:1; text-align:right;">
+              <div style="display:flex; flex-direction:row-reverse; justify-content:space-between; gap:8px;"><span style="font:700 14px 'IBM Plex Serif',serif; color:#2A2014;">رأي الخبير</span><span style="font:600 8px 'Inter'; color:#fff; background:#5E7A2E; padding:3px 7px; border-radius:4px;">مجاني اليوم</span></div>
+              <div style="font:400 11.5px/1.45 'Inter'; color:#2A2014; margin-top:5px;">يكشف حالة أول دليل تختاره.</div>
+              <div style="font:600 10px 'IBM Plex Mono'; color:#5E7A2E; margin-top:6px;">مجاني</div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:left; margin-top:13px;"><button style="background:none; border:none; font:700 13px 'Inter'; color:#95431F; cursor:pointer; text-decoration:underline; text-underline-offset:2px;">المتابعة بدون خدمة →</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- F11 · 7 service states -->
+<div style="position:absolute; left:1442px; top:3260px; width:440px;">
+  <div data-drags-parent="1" style="font:600 11px/1 'IBM Plex Mono'; letter-spacing:.14em; text-transform:uppercase; color:#5d564b; margin-bottom:10px;">03 · Состояния услуги (7)</div>
+  <div style="background:#fff; border-radius:2px; box-shadow:0 1px 3px rgba(0,0,0,.08); padding:18px;">
+    <div style="display:flex; flex-direction:column; gap:9px;">
+      <sc-for list="{{ serviceStates }}" as="s" hint-placeholder-count="7">
+        <div style="display:flex; gap:11px; border:1.5px solid {{ s.bd }}; background:{{ s.bg }}; border-radius:9px; padding:11px 12px; opacity:{{ s.op }};">
+          <div style="width:24px; height:24px; flex:none; margin-top:1px; border-radius:6px; border:2px solid {{ s.checkBd }}; background:{{ s.check }};"></div>
+          <div style="flex:1; min-width:0;">
+            <div style="display:flex; justify-content:space-between; align-items:center; gap:8px;">
+              <span style="font:600 8px 'IBM Plex Mono'; letter-spacing:.1em; color:{{ s.labInk }};">{{ s.lab }}</span>
+              <span style="flex:none; font:600 8px 'IBM Plex Mono'; color:{{ s.pillInk }}; background:{{ s.pillBg }}; border:1px solid {{ s.pillBd }}; padding:2px 6px; border-radius:4px;">{{ s.pill }}</span>
+            </div>
+            <div style="font:700 13px 'IBM Plex Serif',serif; color:{{ s.ink }}; margin-top:3px;">{{ s.t }}</div>
+            <div style="font:400 11px/1.4 'Inter'; color:{{ s.ink }}; margin-top:3px;">{{ s.d }}</div>
+            <div style="font:600 10px 'IBM Plex Mono'; color:{{ s.costInk }}; margin-top:5px;">{{ s.cost }}</div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== CH.4 · DepartmentPlan ===================== -->
+
+<!-- F12 · desktop right sidebar -->
+<div style="position:absolute; left:0; top:3860px; width:320px;">
+  <div data-drags-parent="1" style="font:600 11px/1 'IBM Plex Mono'; letter-spacing:.14em; text-transform:uppercase; color:#5d564b; margin-bottom:10px;">04 · DepartmentPlan · десктоп · правый сайдбар</div>
+  <div style="background:#fff; border-radius:2px; box-shadow:0 1px 3px rgba(0,0,0,.08); padding:14px;">
+    <div style="background:#EFE2C6; border:1px solid #BFA776; border-radius:12px; padding:15px 14px;">
+      <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:4px;">
+        <span style="font:700 13px 'IBM Plex Serif',serif; color:#2A2014;">План отдела</span>
+        <span style="font:600 9px 'IBM Plex Mono'; letter-spacing:.1em; color:#6E5630;">БЮДЖЕТ ₽ 37 085</span>
+      </div>
+      <p style="margin:0 0 14px; font:400 10.5px/1.45 'Inter'; color:#6E5630;">Развитие отделов открывает услуги расследования, скидки и бесплатные вызовы.</p>
+      <div style="display:flex; flex-direction:column; gap:11px;">
+        <sc-for list="{{ departments }}" as="d" hint-placeholder-count="3">
+          <div style="border:1px solid {{ d.bd }}; background:{{ d.bg }}; border-radius:9px; padding:12px;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="font:700 14px 'IBM Plex Serif',serif; color:#2A2014;">{{ d.name }}</span>
+              <span style="font:600 11px 'IBM Plex Mono'; color:#6E5630;">{{ d.lvl }}/3</span>
+            </div>
+            <div style="display:flex; gap:5px; margin-top:8px;">
+              <sc-for list="{{ d.segs }}" as="g" hint-placeholder-count="3">
+                <span style="flex:1; height:6px; border-radius:3px; background:{{ g.bg }}; border:1px solid {{ g.bd }};"></span>
+              </sc-for>
+            </div>
+            <div style="font:500 9px 'IBM Plex Mono'; color:#6E5630; margin-top:8px;">{{ d.sub }}</div>
+            <div style="display:flex; align-items:center; gap:7px; margin-top:8px; padding:7px 9px; background:#F6ECD6; border:1px solid #E7D8B6; border-radius:6px;">
+              <span style="font:600 8px 'IBM Plex Mono'; letter-spacing:.08em; color:#6E5630; flex:none;">ДАЛЬШЕ</span>
+              <span style="font:500 10.5px/1.3 'Inter'; color:#3A2C16;">{{ d.next }}</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:10px;">
+              <span style="font:600 12px 'IBM Plex Mono'; color:#2A2014;">{{ d.cost }}</span>
+              <button style="min-height:38px; border:1.5px solid {{ d.btnBd }}; border-radius:7px; background:{{ d.btnBg }}; color:{{ d.btnInk }}; font:700 11px 'Inter'; cursor:pointer; padding:0 13px;">{{ d.btn }}</button>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- F13 · states: max level -->
+<div style="position:absolute; left:380px; top:3860px; width:320px;">
+  <div data-drags-parent="1" style="font:600 11px/1 'IBM Plex Mono'; letter-spacing:.14em; text-transform:uppercase; color:#5d564b; margin-bottom:10px;">04 · Состояния отдела</div>
+  <div style="background:#fff; border-radius:2px; box-shadow:0 1px 3px rgba(0,0,0,.08); padding:18px; display:flex; flex-direction:column; gap:14px;">
+    <!-- max -->
+    <div>
+      <div style="font:600 9px 'IBM Plex Mono'; letter-spacing:.12em; color:#5E7A2E; margin-bottom:8px;">МАКС. УРОВЕНЬ</div>
+      <div style="border:1px solid #5E7A2E; background:#eef0dd; border-radius:9px; padding:12px;">
+        <div style="display:flex; justify-content:space-between; align-items:center;"><span style="font:700 14px 'IBM Plex Serif',serif; color:#2A2014;">Архив</span><span style="font:600 11px 'IBM Plex Mono'; color:#5E7A2E;">3/3</span></div>
+        <div style="display:flex; gap:5px; margin-top:8px;">
+          <sc-for list="{{ deptMax.segs }}" as="g" hint-placeholder-count="3"><span style="flex:1; height:6px; border-radius:3px; background:#5E7A2E;"></span></sc-for>
+        </div>
+        <div style="font:500 9px 'IBM Plex Mono'; color:#6E5630; margin-top:8px;">Скидка 20% + 1 бесплатный вызов / день</div>
+        <button style="width:100%; min-height:38px; margin-top:10px; border:1.5px solid #5E7A2E; border-radius:7px; background:transparent; color:#5E7A2E; font:700 11px 'Inter'; cursor:default;">Отдел развит полностью ✓</button>
+      </div>
+    </div>
+    <!-- insufficient -->
+    <div>
+      <div style="font:600 9px 'IBM Plex Mono'; letter-spacing:.12em; color:#6E5630; margin-bottom:8px;">НЕДОСТАТОЧНО СРЕДСТВ</div>
+      <div style="border:1px solid #BFA776; background:#EFE2C6; border-radius:9px; padding:12px;">
+        <div style="display:flex; justify-content:space-between; align-items:center;"><span style="font:700 14px 'IBM Plex Serif',serif; color:#2A2014;">Лаборатория</span><span style="font:600 11px 'IBM Plex Mono'; color:#6E5630;">2/3</span></div>
+        <div style="display:flex; gap:5px; margin-top:8px;"><span style="flex:1; height:6px; border-radius:3px; background:#95431F;"></span><span style="flex:1; height:6px; border-radius:3px; background:#95431F;"></span><span style="flex:1; height:6px; border-radius:3px; background:transparent; border:1px solid #cdbf9e;"></span></div>
+        <div style="display:flex; align-items:center; gap:7px; margin-top:8px; padding:7px 9px; background:#F6ECD6; border:1px solid #E7D8B6; border-radius:6px;"><span style="font:600 8px 'IBM Plex Mono'; color:#6E5630;">ДАЛЬШЕ</span><span style="font:500 10.5px 'Inter'; color:#3A2C16;">Ур. 3 · 1 бесплатный вызов в день</span></div>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:10px;"><span style="font:600 12px 'IBM Plex Mono'; color:#B23A2E;">120 000 ₽</span><button style="min-height:38px; border:1.5px solid #cdbf9e; border-radius:7px; background:transparent; color:#a89a80; font:700 11px 'Inter'; cursor:not-allowed; padding:0 13px;">Не хватает средств</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- F14 · mobile department plan -->
+<div style="position:absolute; left:760px; top:3860px; width:300px;">
+  <div data-drags-parent="1" style="font:600 11px/1 'IBM Plex Mono'; letter-spacing:.14em; text-transform:uppercase; color:#5d564b; margin-bottom:10px;">04 · План отдела · мобайл</div>
+  <div style="background:#fff; border-radius:2px; box-shadow:0 1px 3px rgba(0,0,0,.08); padding:11px;">
+    <div style="background:#1a1205; border-radius:30px; padding:9px; box-shadow:0 18px 40px rgba(40,28,10,.26);">
+      <div style="background:#E3D2B0; border-radius:24px; overflow:hidden;">
+        <div style="padding:11px 16px 5px; display:flex; justify-content:space-between; align-items:center;"><span style="font:600 11px 'Inter'; color:#2A2014;">9:41</span><span style="width:15px; height:8px; background:#2A2014; border-radius:2px; opacity:.6;"></span></div>
+        <div style="padding:10px 13px 14px;">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:11px;"><span style="font:700 15px 'IBM Plex Serif',serif; color:#2A2014;">План отдела</span><span style="font:600 9px 'IBM Plex Mono'; color:#6E5630;">₽ 37 085</span></div>
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <sc-for list="{{ departments }}" as="d" hint-placeholder-count="3">
+              <div style="border:1px solid {{ d.bd }}; background:{{ d.bg }}; border-radius:9px; padding:12px;">
+                <div style="display:flex; justify-content:space-between; align-items:center;"><span style="font:700 14px 'IBM Plex Serif',serif; color:#2A2014;">{{ d.name }}</span><span style="font:600 11px 'IBM Plex Mono'; color:#6E5630;">{{ d.lvl }}/3</span></div>
+                <div style="display:flex; gap:5px; margin-top:8px;"><sc-for list="{{ d.segs }}" as="g" hint-placeholder-count="3"><span style="flex:1; height:6px; border-radius:3px; background:{{ g.bg }}; border:1px solid {{ g.bd }};"></span></sc-for></div>
+                <div style="display:flex; align-items:center; gap:7px; margin-top:8px; padding:7px 9px; background:#F6ECD6; border:1px solid #E7D8B6; border-radius:6px;"><span style="font:600 8px 'IBM Plex Mono'; color:#6E5630;">ДАЛЬШЕ</span><span style="font:500 10px/1.3 'Inter'; color:#3A2C16;">{{ d.next }}</span></div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:9px;"><span style="font:600 12px 'IBM Plex Mono'; color:#2A2014;">{{ d.cost }}</span><button style="min-height:44px; border:1.5px solid {{ d.btnBd }}; border-radius:7px; background:{{ d.btnBg }}; color:{{ d.btnInk }}; font:700 11px 'Inter'; cursor:pointer; padding:0 14px;">{{ d.btn }}</button></div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- F15 · RTL department plan -->
+<div style="position:absolute; left:1120px; top:3860px; width:320px;">
+  <div data-drags-parent="1" style="font:600 11px/1 'IBM Plex Mono'; letter-spacing:.14em; text-transform:uppercase; color:#5d564b; margin-bottom:10px;">04 · План отдела · RTL · العربية</div>
+  <div style="background:#fff; border-radius:2px; box-shadow:0 1px 3px rgba(0,0,0,.08); padding:14px;">
+    <div dir="rtl" style="background:#EFE2C6; border:1px solid #BFA776; border-radius:12px; padding:15px 14px;">
+      <div style="display:flex; flex-direction:row-reverse; justify-content:space-between; align-items:baseline; margin-bottom:12px;"><span style="font:700 14px 'IBM Plex Serif',serif; color:#2A2014;">خطة القسم</span><span style="font:600 9px 'IBM Plex Mono'; color:#6E5630;">₽ ٣٧ ٠٨٥</span></div>
+      <div style="display:flex; flex-direction:column; gap:11px;">
+        <!-- archive -->
+        <div style="border:1px solid #BFA776; background:#EFE2C6; border-radius:9px; padding:12px;">
+          <div style="display:flex; flex-direction:row-reverse; justify-content:space-between; align-items:center;"><span style="font:700 14px 'IBM Plex Serif',serif; color:#2A2014;">الأرشيف</span><span style="font:600 11px 'IBM Plex Mono'; color:#6E5630;">١/٣</span></div>
+          <div style="display:flex; gap:5px; margin-top:8px;"><span style="flex:1; height:6px; border-radius:3px; background:#95431F;"></span><span style="flex:1; height:6px; border-radius:3px; background:transparent; border:1px solid #cdbf9e;"></span><span style="flex:1; height:6px; border-radius:3px; background:transparent; border:1px solid #cdbf9e;"></span></div>
+          <div style="display:flex; flex-direction:row-reverse; align-items:center; gap:7px; margin-top:8px; padding:7px 9px; background:#F6ECD6; border:1px solid #E7D8B6; border-radius:6px;"><span style="font:600 8px 'IBM Plex Mono'; color:#6E5630;">التالي</span><span style="font:500 10.5px 'Inter'; color:#3A2C16;">المستوى ٢ · خصم ٢٠٪</span></div>
+          <div style="display:flex; flex-direction:row-reverse; justify-content:space-between; align-items:center; margin-top:10px;"><span style="font:600 12px 'IBM Plex Mono'; color:#2A2014;">٣٠ ٠٠٠ ₽</span><button style="min-height:44px; border:1.5px solid #95431F; border-radius:7px; background:#95431F; color:#fff; font:700 11px 'Inter'; cursor:pointer; padding:0 14px;">تطوير القسم</button></div>
+        </div>
+        <!-- lab insufficient -->
+        <div style="border:1px solid #BFA776; background:#EFE2C6; border-radius:9px; padding:12px;">
+          <div style="display:flex; flex-direction:row-reverse; justify-content:space-between; align-items:center;"><span style="font:700 14px 'IBM Plex Serif',serif; color:#2A2014;">المختبر</span><span style="font:600 11px 'IBM Plex Mono'; color:#6E5630;">٢/٣</span></div>
+          <div style="display:flex; gap:5px; margin-top:8px;"><span style="flex:1; height:6px; border-radius:3px; background:#95431F;"></span><span style="flex:1; height:6px; border-radius:3px; background:#95431F;"></span><span style="flex:1; height:6px; border-radius:3px; background:transparent; border:1px solid #cdbf9e;"></span></div>
+          <div style="display:flex; flex-direction:row-reverse; justify-content:space-between; align-items:center; margin-top:10px;"><span style="font:600 12px 'IBM Plex Mono'; color:#B23A2E;">١٢٠ ٠٠٠ ₽</span><button style="min-height:44px; border:1.5px solid #cdbf9e; border-radius:7px; background:transparent; color:#a89a80; font:700 11px 'Inter'; cursor:not-allowed; padding:0 14px;">رصيد غير كافٍ</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" rx="14" fill="#E3D2B0"/>
+    <rect x="24" y="30" width="52" height="44" rx="4" fill="#876520"/>
+    <rect x="20" y="36" width="56" height="42" rx="4" fill="#CBA85E" stroke="#876520" stroke-width="1.5"/>
+    <rect x="20" y="30" width="26" height="9" rx="3" fill="#876520"/>
+    <circle cx="64" cy="60" r="8" fill="#A8201C"/>
+  </svg>
+</template>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const T = {
+      bg:'#E3D2B0', surface:'#EFE2C6', surface2:'#D4C09C', border:'#BFA776',
+      ink:'#2A2014', textLight:'#3A2C16', textMuted:'#6E5630', paper:'#F6ECD6',
+      paperLine:'#E7D8B6', accent:'#95431F', stamp:'#A8201C', folder:'#CBA85E',
+      folderEdge:'#876520', gold:'#C58A24', success:'#5E7A2E', danger:'#B23A2E'
+    };
+
+    const tokens = [
+      {k:'bg',hex:T.bg},{k:'surface',hex:T.surface},{k:'surface-2',hex:T.surface2},
+      {k:'border',hex:T.border},{k:'paper',hex:T.paper},{k:'ink',hex:T.ink},
+      {k:'accent',hex:T.accent},{k:'folder',hex:T.folder},{k:'folder-edge',hex:T.folderEdge},
+      {k:'gold',hex:T.gold},{k:'stamp',hex:T.stamp},{k:'success',hex:T.success},
+      {k:'danger',hex:T.danger},{k:'text-muted',hex:T.textMuted},
+    ];
+
+    const chapters = [
+      {no:'01', t:'SpecialArchivesEntry — вход в сайдбаре и мобильном меню'},
+      {no:'02', t:'ThematicPacksModal — витрина паков + полная матрица состояний'},
+      {no:'03', t:'InvestigationServiceOrder — бланк-распоряжение, 7 состояний услуг'},
+      {no:'04', t:'DepartmentPlan — план отдела в правом сайдбаре'},
+    ];
+
+    // ---- Thematic packs ----
+    const packs = [
+      { id:'oddities', name:'Архив необычных происшествий', meta:'6 дел · 3 оформления · печать',
+        spine:'#876520', cover:'#CBA85E', cases:'1 / 6', sel:true,
+        selBg:'#f7ead9', selBd:'#95431F', selInk:'#2A2014', tag:'ОТКРЫТ', tagInk:'#95431F' },
+      { id:'polar', name:'Полярный протокол', meta:'5 дел · 2 оформления · печать',
+        spine:'#3A5141', cover:'#6E8475', cases:'0 / 5', sel:false,
+        selBg:'#EFE2C6', selBd:'#BFA776', selInk:'#3A2C16', tag:'НОВОЕ', tagInk:'#6E5630' },
+      { id:'cliff', name:'Особняк на утёсе', meta:'5 дел · 3 оформления · печать',
+        spine:'#3a2c2c', cover:'#7a5a52', cases:'0 / 5', sel:false,
+        selBg:'#EFE2C6', selBd:'#BFA776', selInk:'#3A2C16', tag:'НОВОЕ', tagInk:'#6E5630' },
+    ];
+
+    const caseStyle = (st) => {
+      if (st==='open') return { rowBg:'#F6ECD6', rowBd:'#BFA776', icoBg:'#eef0dd', icoBd:'#5E7A2E', icoInk:'#5E7A2E', ico:'✓', tInk:'#2A2014', mInk:'#5E7A2E', pill:'ОТКРЫТО', pInk:'#5E7A2E', pBd:'#5E7A2E', pBg:'transparent' };
+      if (st==='next') return { rowBg:'#f7ead9', rowBd:'#95431F', icoBg:'#f7ead9', icoBd:'#95431F', icoInk:'#95431F', ico:'2', tInk:'#2A2014', mInk:'#95431F', pill:'СЛЕДУЮЩЕЕ', pInk:'#fff', pBd:'#95431F', pBg:'#95431F' };
+      return { rowBg:'#ece0c4', rowBd:'#cdbf9e', icoBg:'rgba(0,0,0,.04)', icoBd:'#cdbf9e', icoInk:'#9a8a66', ico:'🔒', tInk:'#7a7058', mInk:'#a89a80', pill:'В АРХИВЕ', pInk:'#9a8a66', pBd:'#cdbf9e', pBg:'transparent' };
+    };
+    const packCases = [
+      { n:'Дело 1', t:'Слишком тихая лаборатория', meta:'Открыто · бесплатно', st:'open' },
+      { n:'Дело 2', t:'Опись редкой коллекции',     meta:'Открыть за рекламу или в архиве', st:'next' },
+      { n:'Дело 3', t:'Аккуратное объяснение',      meta:'В архиве', st:'lock' },
+      { n:'Дело 4', t:'Восковая лента',             meta:'В архиве', st:'lock' },
+      { n:'Дело 5', t:'Лампа на латунной ноге',     meta:'В архиве', st:'lock' },
+      { n:'Дело 6', t:'Запечатанные документы',     meta:'В архиве', st:'lock' },
+    ].map(c => ({ ...c, ...caseStyle(c.st) }));
+
+    const skins = [
+      { t:'Сукно с восковой лентой', tag:'СТОЛ', sw:'#7a5a36' },
+      { t:'Латунная настольная лампа', tag:'СВЕТ', sw:'#C58A24' },
+      { t:'Папка с сургучом', tag:'ПАПКА', sw:'#8a3a2a' },
+    ];
+
+    // ---- 13 pack states ----
+    const ST = {
+      neutral:{bd:T.border, bg:T.paper, lab:T.textMuted},
+      accent:{bd:T.accent, bg:'#f7ead9', lab:T.accent},
+      good:{bd:T.success, bg:'#eef0dd', lab:T.success},
+      mute:{bd:'#cdbf9e', bg:'#ece0c4', lab:'#9a8a66'},
+    };
+    const packStates = [
+      { key:'free_available', lab:'НОВЫЙ ИГРОК', t:'Первое дело — бесплатно',
+        d:'Стартовое дело пака открыто без оплаты. Бесплатный путь подан так же крупно, как платный.',
+        btn:'Открыть первое дело', btnKind:'accent', help:'Дело останется открытым навсегда', tone:ST.accent },
+      { key:'ad_available', lab:'РЕКЛАМА ДОСТУПНА', t:'Открыть следующее за рекламу',
+        d:'Бесплатное дело пройдено. Следующее можно открыть навсегда за один просмотр рекламы.',
+        btn:'Открыть следующее дело за рекламу', btnKind:'ghost', help:'Дело останется открытым навсегда', tone:ST.neutral },
+      { key:'ad_in_progress', lab:'РЕКЛАМА ИДЁТ', t:'Реклама воспроизводится',
+        d:'Спокойный индикатор без таймера-давления. Действия временно заблокированы.',
+        btn:'Реклама… 0:12', btnKind:'disabled', help:'Не закрывайте окно до конца ролика', tone:ST.mute },
+      { key:'ad_success', lab:'РАЗБЛОКИРОВАНО', t:'Дело открыто',
+        d:'Печать снята, вкладка дела выдвинулась. Тихая анимация успеха, без конфетти.',
+        btn:'Перейти к делу', btnKind:'good', help:'Дело останется открытым навсегда', tone:ST.good },
+      { key:'ad_error', lab:'РЕКЛАМА НЕДОСТУПНА', t:'Сейчас не получилось',
+        d:'Спокойное объяснение вместо тревоги. Платный путь и повтор остаются доступны.',
+        btn:'Повторить позже', btnKind:'ghost', help:'Можно открыть дело покупкой архива', tone:ST.neutral },
+      { key:'ad_limit_used', lab:'ЛИМИТ НА СЕГОДНЯ', t:'Бесплатные разблокировки на сегодня',
+        d:'Дневной лимит рекламных разблокировок исчерпан. Завтра снова доступно.',
+        btn:'Доступно завтра', btnKind:'disabled', help:'Или открыть покупкой архива', tone:ST.mute },
+      { key:'purchase_available', lab:'ПОКУПКА', t:'Купить архив целиком',
+        d:'Покупка как удобство: открывает все дела пака сразу. Цена честная, без зачёркиваний.',
+        btn:'Купить архив целиком · 299 ₽', btnKind:'accent', help:'Все дела и оформление открываются навсегда', tone:ST.accent },
+      { key:'purchase_pending', lab:'ОБРАБОТКА', t:'Покупка обрабатывается',
+        d:'Платёж в процессе. Кнопки заблокированы, спокойный индикатор.',
+        btn:'Покупка…', btnKind:'disabled', help:'Это займёт несколько секунд', tone:ST.mute },
+      { key:'purchased', lab:'КУПЛЕНО', t:'Архив открыт полностью',
+        d:'Все дела и оформление доступны. Печать «оплачено» поставлена аккуратно.',
+        btn:'Открыть архив', btnKind:'good', help:'Спасибо! Доступ сохранён навсегда', tone:ST.good },
+      { key:'restored', lab:'ВОССТАНОВЛЕНО', t:'Покупки восстановлены',
+        d:'Прошлая покупка найдена и возвращена на этом устройстве.',
+        btn:'Открыть архив', btnKind:'good', help:'Доступ восстановлен на этом аккаунте', tone:ST.good },
+      { key:'completed', lab:'ПРОЙДЕНО', t:'Архив пройден',
+        d:'Все дела закрыты, печать-коллекция получена. Пак уходит в раздел «завершённые».',
+        btn:'Посмотреть печать', btnKind:'ghost', help:'Коллекционная печать добавлена в стол', tone:ST.neutral },
+      { key:'skin_trial_active', lab:'ПРОБА ОФОРМЛЕНИЯ', t:'Оформление активно до конца дня',
+        d:'Косметика пака примеряется на столе до конца игрового дня без покупки.',
+        btn:'Оставить навсегда', btnKind:'accent', help:'Проба действует до конца дня', tone:ST.accent },
+      { key:'platform_unavailable', lab:'ПРОТОТИП', t:'Действия пока отключены',
+        d:'Платформа недоступна или режим прототипа. Спокойное объяснение, без ошибок-тревог.',
+        btn:'Действия недоступны', btnKind:'disabled', help:'Покупки и рекламная разблокировка будут подключены позже', tone:ST.mute },
+    ].map(s => {
+      const b = {
+        accent:{ btnBg:'#95431F', btnInk:'#fff', btnBd:'#95431F' },
+        ghost:{ btnBg:'transparent', btnInk:'#95431F', btnBd:'#95431F' },
+        good:{ btnBg:'#5E7A2E', btnInk:'#fff', btnBd:'#5E7A2E' },
+        disabled:{ btnBg:'#ece0c4', btnInk:'#9a8a66', btnBd:'#cdbf9e' },
+      }[s.btnKind];
+      return { ...s, toneBd:s.tone.bd, toneBg:s.tone.bg, toneLab:s.tone.lab, ...b };
+    });
+
+    // ---- Investigation services (rows in the order sheet) ----
+    const svcStyle = (kind) => {
+      switch(kind){
+        case 'available': return { bd:T.border, bg:'#fbf4e4', ink:T.ink, pillBg:'transparent', pillBd:T.border, pillInk:T.textMuted, costInk:T.textMuted, labInk:T.textMuted, check:'#fff', checkBd:T.border, op:'1' };
+        case 'selected': return { bd:T.accent, bg:'#f7ead9', ink:T.ink, pillBg:T.accent, pillBd:T.accent, pillInk:'#fff', costInk:T.accent, labInk:T.accent, check:T.accent, checkBd:T.accent, op:'1' };
+        case 'locked': return { bd:'#cdbf9e', bg:'#ece0c4', ink:'#9a8a66', pillBg:'transparent', pillBd:'#cdbf9e', pillInk:'#9a8a66', costInk:'#9a8a66', labInk:'#9a8a66', check:'#e6d9bb', checkBd:'#cdbf9e', op:'.92' };
+        case 'unaffordable': return { bd:T.border, bg:'#fbf4e4', ink:T.ink, pillBg:'transparent', pillBd:T.danger, pillInk:T.danger, costInk:T.danger, labInk:T.danger, check:'#fff', checkBd:T.border, op:'.96' };
+        case 'discounted': return { bd:T.border, bg:'#fbf4e4', ink:T.ink, pillBg:'#eef0dd', pillBd:T.success, pillInk:T.success, costInk:T.success, labInk:T.success, check:'#fff', checkBd:T.border, op:'1' };
+        case 'free_daily': return { bd:T.success, bg:'#eef0dd', ink:T.ink, pillBg:T.success, pillBd:T.success, pillInk:'#fff', costInk:T.success, labInk:T.success, check:'#fff', checkBd:T.success, op:'1' };
+        case 'not_applicable': return { bd:'#cdbf9e', bg:'#ece0c4', ink:'#9a8a66', pillBg:'transparent', pillBd:'#cdbf9e', pillInk:'#9a8a66', costInk:'#9a8a66', labInk:'#9a8a66', check:'#e6d9bb', checkBd:'#cdbf9e', op:'.92' };
+        default: return { bd:T.border, bg:T.paper, ink:T.ink, pillBg:'transparent', pillBd:T.border, pillInk:T.textMuted, costInk:T.textMuted, labInk:T.textMuted, check:'#fff', checkBd:T.border, op:'1' };
+      }
+    };
+    // sheet preview rows (mixed realistic states)
+    const sheetServices = [
+      { id:'archive', no:'У-1', t:'Архивная проверка', dept:'Архив', desc:'Покажет только число противоречий в деле.',
+        kind:'selected', cost:'1 000 ₽', pill:'ВЫБРАНО', sel:true },
+      { id:'clearance', no:'У-2', t:'Дополнительный допуск', dept:'Выезд', desc:'Один доп. вскрытие улики — только в бюджетных делах.',
+        kind:'not_applicable', cost:'—', pill:'НЕПРИМЕНИМО', sel:false },
+      { id:'expert', no:'У-3', t:'Экспертное заключение', dept:'Лаборатория', desc:'Раскроет статус первой выбранной улики.',
+        kind:'free_daily', cost:'Бесплатно сегодня', pill:'1 БЕСПЛАТНО / ДЕНЬ', sel:false },
+    ].map(s => { const st = svcStyle(s.kind); return { ...s, ...st, mark: s.sel ? '✓' : '', markInk: st.check==='#95431F' ? '#fff' : st.ink }; });
+
+    // 7 service states matrix
+    const serviceStates = [
+      { kind:'locked', lab:'LOCKED', t:'Заблокировано', d:'Отдел уровня 0. Услуга появится после развития отдела.', cost:'Ур. 1 отдела', pill:'УР. 0' },
+      { kind:'available', lab:'AVAILABLE', t:'Доступно', d:'Услугу можно выбрать до вскрытия первой улики.', cost:'1 000 ₽', pill:'ДОСТУПНО' },
+      { kind:'selected', lab:'SELECTED', t:'Выбрано', d:'Одна услуга на дело. Повторный тап снимает выбор.', cost:'1 000 ₽', pill:'ВЫБРАНО' },
+      { kind:'unaffordable', lab:'UNAFFORDABLE', t:'Недостаточно средств', d:'Баланс отдела меньше стоимости услуги.', cost:'1 000 ₽', pill:'НЕ ХВАТАЕТ' },
+      { kind:'not_applicable', lab:'NOT APPLICABLE', t:'Неприменимо', d:'Напр. доп. допуск в небюджетном деле.', cost:'—', pill:'НЕПРИМЕНИМО' },
+      { kind:'discounted', lab:'DISCOUNTED', t:'Со скидкой', d:'Отдел уровня 2 — скидка 20% на услугу.', cost:'800 ₽', pill:'−20%' },
+      { kind:'free_daily', lab:'FREE DAILY', t:'Бесплатно за день', d:'Отдел уровня 3 — один бесплатный вызов в день.', cost:'Бесплатно', pill:'1 / ДЕНЬ' },
+    ].map(s => ({ ...s, ...svcStyle(s.kind) }));
+
+    // ---- Department plan ----
+    const deptStyle = (kind) => {
+      switch(kind){
+        case 'ready': return { bd:T.border, bg:T.surface, btnBg:T.accent, btnInk:'#fff', btnBd:T.accent, dis:false };
+        case 'insufficient': return { bd:T.border, bg:T.surface, btnBg:'transparent', btnInk:'#a89a80', btnBd:'#cdbf9e', dis:true };
+        case 'max': return { bd:T.success, bg:'#eef0dd', btnBg:'transparent', btnInk:T.success, btnBd:T.success, dis:true };
+        default: return { bd:T.border, bg:T.surface, btnBg:T.accent, btnInk:'#fff', btnBd:T.accent, dis:false };
+      }
+    };
+    const departments = [
+      { id:'archive', name:'Архив', lvl:1, dots:[1,1,0], next:'Ур. 2 · скидка 20% на услуги',
+        cost:'30 000 ₽', kind:'ready', btn:'Развить отдел', sub:'Услуга: «Архивная проверка»' },
+      { id:'field', name:'Выезд / допуск', lvl:0, dots:[0,0,0], next:'Ур. 1 · открывает услугу «Доп. допуск»',
+        cost:'15 000 ₽', kind:'ready', btn:'Развить отдел', sub:'Услуга пока не открыта' },
+      { id:'lab', name:'Лаборатория', lvl:2, dots:[1,1,0], next:'Ур. 3 · 1 бесплатный вызов в день',
+        cost:'120 000 ₽', kind:'insufficient', btn:'Недостаточно средств', sub:'Услуга: «Экспертное заключение»' },
+    ].map(d => {
+      const fill = d.kind==='max' ? '#5E7A2E' : '#95431F';
+      const segs = [0,1,2].map(i => i < d.lvl
+        ? { bg:fill, bd:fill }
+        : { bg:'transparent', bd:'#cdbf9e' });
+      return { ...d, ...deptStyle(d.kind), segs };
+    });
+
+    const deptMax = (() => {
+      const segs = [0,1,2].map(() => ({ bg:'#5E7A2E', bd:'#5E7A2E' }));
+      return { id:'archive', name:'Архив', lvl:3, next:'Максимальный уровень достигнут',
+        cost:'—', kind:'max', btn:'Отдел развит полностью', sub:'Скидка 20% + 1 бесплатный вызов в день', ...deptStyle('max'), segs };
+    })();
+
+    const bundlePacks = [
+      { name:'Архив необычных происшествий', cases:'6 дел · 1 открыто', spine:'#876520', cover:'#CBA85E', tag:'ОТКРЫТ', tagInk:'#95431F', op:'1' },
+      { name:'Полярный протокол',            cases:'5 дел',            spine:'#3A5141', cover:'#6E8475', tag:'НОВОЕ', tagInk:'#6E5630', op:'1' },
+      { name:'Особняк на утёсе',             cases:'5 дел',            spine:'#3a2c2c', cover:'#7a5a52', tag:'НОВОЕ', tagInk:'#6E5630', op:'1' },
+      { name:'Городской архив',              cases:'5 дел · скоро',    spine:'#3a3550', cover:'#6f6a86', tag:'СКОРО', tagInk:'#9a8a66', op:'.62' },
+    ];
+
+    return { tokens, chapters, packs, packCases, skins, packStates, sheetServices, serviceStates, departments, deptMax, bundlePacks };
+  }
+}
+</script>
+</body>
+</html>

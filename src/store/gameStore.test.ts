@@ -16,6 +16,10 @@ const sdk = vi.hoisted(() => ({
   getServerTimeMs: vi.fn(() => 0),
   getYandexLang: vi.fn((): string | null => null),
   showRewardedAd: vi.fn((cb: () => void) => cb()),
+  isPaymentsAvailable: vi.fn(() => false),
+  fetchPaymentsCatalog: vi.fn(async () => []),
+  purchaseProduct: vi.fn(async () => false),
+  restorePurchasedProductIds: vi.fn(async () => []),
   // Inspector Note now runs behind a fullscreen ad; offline/dev grants `onDone`.
   showFullscreenAd: vi.fn((onDone?: () => void) => onDone?.()),
   trackAdOffer: vi.fn(),
@@ -229,6 +233,35 @@ describe('submitVerdict', () => {
     expect(store().stats.lastPlayedServerDay).toBe(5);
   });
 
+  it('builds a 100%-case streak on silver-or-better closures', () => {
+    const c = makeCase({ correctDecision: 'approve', contradictions: 0, cleanCards: 1 });
+    store().startCase(c);
+    store().submitVerdict(c, 'approve');
+    expect(store().stats.perfectCaseStreakCount).toBe(1);
+  });
+
+  it('resets the 100%-case streak after a first-time imperfect closure', () => {
+    useGameStore.setState({ stats: makeStats({ perfectCaseStreakCount: 3 }) });
+    const c = makeCase({ correctDecision: 'reject', contradictions: 1, cleanCards: 1 });
+    store().startCase(c);
+    cleanIds(c).forEach((id) => store().toggleEvidenceStamp(id));
+    store().submitVerdict(c, 'reject');
+    expect(store().stats.perfectCaseStreakCount).toBe(0);
+  });
+
+  it('does not let replays farm the 100%-case streak', () => {
+    const c = makeCase({ id: 'case-replay', correctDecision: 'approve', contradictions: 0, cleanCards: 1 });
+    useGameStore.setState({
+      stats: makeStats({
+        perfectCaseStreakCount: 2,
+        completedCaseIds: [c.id],
+      }),
+    });
+    store().startCase(c);
+    store().submitVerdict(c, 'approve');
+    expect(store().stats.perfectCaseStreakCount).toBe(2);
+  });
+
   it('detects a rank promotion across an XP threshold', () => {
     // level_02 starts at 10 XP; a fresh player earning a clean easy case (+10)
     // crosses from level_01 into level_02.
@@ -305,6 +338,39 @@ describe('restoreFunds', () => {
     store().restoreFunds();
     expect(store().stats.balance).toBe(0);
     expect(store().stats.isBankrupt).toBe(true);
+  });
+});
+
+describe('archive unlocks', () => {
+  it('grants the purchased pack permanently', () => {
+    store().grantArchivePurchase('frontier-sector');
+    expect(store().stats.archivePurchasedPackIds).toContain('frontier-sector');
+  });
+
+  it('restores multiple purchased packs without duplicates', () => {
+    useGameStore.setState({
+      stats: makeStats({ archivePurchasedPackIds: ['frontier-sector'] }),
+    });
+    store().grantArchivePurchases(['frontier-sector', 'closed-collegium']);
+    expect(store().stats.archivePurchasedPackIds).toEqual([
+      'frontier-sector',
+      'closed-collegium',
+    ]);
+  });
+
+  it('unlocks one archive case via rewarded ad and records the server day', () => {
+    sdk.getServerTimeMs.mockReturnValue(2 * GAME_CONFIG.daily.cooldownMs);
+    const ok = store().unlockArchiveCaseViaAd('closed-collegium', 'case-045');
+    expect(ok).toBe(true);
+    expect(store().stats.archiveUnlockedCaseIds).toContain('case-045');
+    expect(store().stats.archiveAdUnlockServerDayByPack['closed-collegium']).toBe(2);
+  });
+
+  it('refuses a second rewarded unlock from the same pack on the same day', () => {
+    sdk.getServerTimeMs.mockReturnValue(3 * GAME_CONFIG.daily.cooldownMs);
+    expect(store().unlockArchiveCaseViaAd('closed-collegium', 'case-045')).toBe(true);
+    expect(store().unlockArchiveCaseViaAd('closed-collegium', 'case-046')).toBe(false);
+    expect(store().stats.archiveUnlockedCaseIds).toEqual(['case-045']);
   });
 });
 

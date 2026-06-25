@@ -1,0 +1,345 @@
+﻿{
+    "id":  "case-047",
+    "type":  "standard",
+    "difficulty":  "hard",
+    "claimAmount":  14200,
+    "truth":  "valid",
+    "investigationBudget":  4,
+    "title":  {
+                  "ru":  "Ночной побег из общежития",
+                  "en":  "Night Escape from the Dormitory",
+                  "tr":  "Night Escape from the Dormitory",
+                  "ar":  "Night Escape from the Dormitory",
+                  "kk":  "Ночной побег из общежития"
+              },
+    "claim":  {
+                  "person":  {
+                                 "ru":  "Аделия Варн, 16 лет",
+                                 "en":  "Adelia Varn, 16",
+                                 "tr":  "Adelia Varn, 16",
+                                 "ar":  "أديليا فارن، 16",
+                                 "kk":  "Аделия Варн, 16 жаста"
+                             },
+                  "story":  {
+                                "ru":  "Мен не сбегала. Ночью в комнате погас свет, окно открылось снаружи, а потом я очнулась у старого склада. Прошу возместить вещи и расходы поиска.",
+                                "en":  "I did not run away. The room went dark at night, the window opened from outside, and I later woke near an old warehouse. I request compensation for belongings and search costs.",
+                                "tr":  "Kaçmadım. Gece odada ışık söndü, pencere dışarıdan açıldı ve sonra eski bir depo yakınında uyandım. Eşyalar ve arama masrafları için ödeme istiyorum.",
+                                "ar":  "لم أهرب. انطفأ الضوء ليلاً، وفُتحت النافذة من الخارج، ثم استيقظت قرب مخزن قديم. أطلب تعويض المتعلقات وتكاليف البحث.",
+                                "kk":  "Мен қашқан жоқпын. Түнде бөлмеде жарық өшіп, терезе сырттан ашылды, кейін ескі қойма маңында есімді жидым. Заттар мен іздеу шығынын өтеуді сұраймын."
+                            }
+              },
+    "coverImage":  "covers/case-047.svg",
+    "personImage":  "people/adelia-varn.webp",
+    "client":  {
+                   "role":  {
+                                "ru":  "Воспитанница закрытого общежития",
+                                "en":  "Locked dormitory student",
+                                "tr":  "Kapalı yurt öğrencisi",
+                                "ar":  "طالبة السكن المغلق",
+                                "kk":  "Жабық жатақхана тәрбиеленушісі"
+                            },
+                   "meta":  [
+                                {
+                                    "k":  {
+                                              "ru":  "Архив",
+                                              "en":  "Archive",
+                                              "tr":  "Arşiv",
+                                              "ar":  "الأرشيف",
+                                              "kk":  "Архив"
+                                          },
+                                    "v":  {
+                                              "ru":  "Закрытый Коллегиум",
+                                              "en":  "Closed Collegium",
+                                              "tr":  "Kapalı Kolej",
+                                              "ar":  "الكلية المغلقة",
+                                              "kk":  "Жабық коллегиум"
+                                          }
+                                },
+                                {
+                                    "k":  {
+                                              "ru":  "Застрахованный риск",
+                                              "en":  "Insured risk",
+                                              "tr":  "Sigortalı risk",
+                                              "ar":  "الخطر المؤمن عليه",
+                                              "kk":  "Сақтандырылған тәуекел"
+                                          },
+                                    "v":  {
+                                              "ru":  "Похищение из общежития",
+                                              "en":  "Dormitory abduction",
+                                              "tr":  "Yurttan kaçırılma",
+                                              "ar":  "اختطاف من السكن",
+                                              "kk":  "Жатақханадан ұрлау"
+                                          }
+                                },
+                                {
+                                    "k":  {
+                                              "ru":  "Архивная связка",
+                                              "en":  "Archive thread",
+                                              "tr":  "Arşiv bağı",
+                                              "ar":  "خيط الأرشيف",
+                                              "kk":  "Архив байланысы"
+                                          },
+                                    "v":  {
+                                              "ru":  "Повторяющийся след: серая восковая лента; часть заявителей её имитирует, но часть дел выводит на настоящую группу.",
+                                              "en":  "Recurring lead: gray wax ribbon; some claimants imitate it, but some files point to a real group.",
+                                              "tr":  "Tekrarlayan iz: gri mum şerit; bazı başvuranlar taklit ediyor, bazı dosyalar gerçek bir gruba işaret ediyor.",
+                                              "ar":  "خيط متكرر: شريط شمعي رمادي؛ بعض أصحاب المطالبات يقلدونه، لكن بعض الملفات تقود إلى جماعة حقيقية.",
+                                              "kk":  "Қайталанатын із: сұр балауыз лента; кейбір өтініш берушілер оны қолдан жасайды, ал кейбір істер нақты топқа апарады."
+                                          }
+                                }
+                            ]
+               },
+    "evidences":  [
+                      {
+                          "id":  "photo-47",
+                          "type":  "photo",
+                          "title":  {
+                                        "ru":  "След инструмента на раме",
+                                        "en":  "Tool mark on frame",
+                                        "tr":  "Çerçevede alet izi",
+                                        "ar":  "أثر أداة على الإطار",
+                                        "kk":  "Жақтаудағы құрал ізі"
+                                    },
+                          "content":  {
+                                          "ru":  "На внешней стороне оконной рамы есть свежая вмятина. Внутренняя защёлка погнута внутрь комнаты.",
+                                          "en":  "The outside of the window frame has a fresh dent. The inner latch is bent into the room.",
+                                          "tr":  "Pencere çerçevesinin dışında yeni ezik var. İç mandal odanın içine doğru bükülmüş.",
+                                          "ar":  "على خارج إطار النافذة انبعاج جديد. المزلاج الداخلي منثنٍ إلى داخل الغرفة.",
+                                          "kk":  "Терезе жақтауының сыртында жаңа майысу бар. Ішкі ілмек бөлме ішіне қарай бүгілген."
+                                      },
+                          "isContradiction":  false,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Улика поддерживает заявленную версию и не требует штампа противоречия.",
+                                                           "en":  "This evidence supports the claim and should not be stamped as a contradiction.",
+                                                           "tr":  "Bu kanıt başvuruyu destekler ve çelişki damgası gerektirmez.",
+                                                           "ar":  "يدعم هذا الدليل المطالبة ولا يجب ختمه كتعارض.",
+                                                           "kk":  "Бұл айғақ өтінішті қолдайды және қайшылық ретінде белгіленбеуі керек."
+                                                       },
+                          "meta":  {
+                                       "filename":  "IMG_20260647_081500.jpg",
+                                       "imageUrl":  "evidence/case-047-photo-47.webp"
+                                   },
+                          "relation":  "supports"
+                      },
+                      {
+                          "id":  "document-47",
+                          "type":  "document",
+                          "title":  {
+                                        "ru":  "Реестр пропавших вещей",
+                                        "en":  "Missing items register",
+                                        "tr":  "Kayıp eşya listesi",
+                                        "ar":  "سجل المتعلقات المفقودة",
+                                        "kk":  "Жоғалған заттар тізімі"
+                                    },
+                          "content":  {
+                                          "ru":  "Реестр совпадает с вещами, найденными позже у склада: сумка, планшет, форменная куртка. Личных продаж не зафиксировано.",
+                                          "en":  "The register matches items later found near the warehouse: bag, tablet, uniform jacket. No personal sales are recorded.",
+                                          "tr":  "Liste, daha sonra depo yakınında bulunan çanta, tablet ve üniforma ceketiyle eşleşiyor. Kişisel satış kaydı yok.",
+                                          "ar":  "يطابق السجل الأشياء التي عُثر عليها لاحقاً قرب المخزن: حقيبة وجهاز لوحي وسترة رسمية. لا توجد مبيعات شخصية.",
+                                          "kk":  "Тізім кейін қойма маңынан табылған заттарға сәйкес: сөмке, планшет, форма күртеше. Жеке сату тіркелмеген."
+                                      },
+                          "isContradiction":  false,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Улика поддерживает заявленную версию и не требует штампа противоречия.",
+                                                           "en":  "This evidence supports the claim and should not be stamped as a contradiction.",
+                                                           "tr":  "Bu kanıt başvuruyu destekler ve çelişki damgası gerektirmez.",
+                                                           "ar":  "يدعم هذا الدليل المطالبة ولا يجب ختمه كتعارض.",
+                                                           "kk":  "Бұл айғақ өтінішті қолдайды және қайшылық ретінде белгіленбеуі керек."
+                                                       },
+                          "relation":  "context"
+                      },
+                      {
+                          "id":  "camera-47",
+                          "type":  "camera_recording",
+                          "title":  {
+                                        "ru":  "Камера западного карниза",
+                                        "en":  "West ledge camera",
+                                        "tr":  "Batı pervaz kamerası",
+                                        "ar":  "كاميرا الحافة الغربية",
+                                        "kk":  "Батыс ернеу камерасы"
+                                    },
+                          "content":  {
+                                          "ru":  "00:38: две фигуры с капюшонами поднимают Аделию через окно. Она не идёт сама и не несёт сумку.",
+                                          "en":  "00:38: two hooded figures lift Adelia through the window. She is not walking and is not carrying a bag.",
+                                          "tr":  "00:38: kapüşonlu iki kişi Adelia’yı pencereden kaldırıyor. Kendi yürümüyor ve çanta taşımıyor.",
+                                          "ar":  "00:38 يرفع شخصان بغطاء رأس أديليا عبر النافذة. لا تمشي بنفسها ولا تحمل حقيبة.",
+                                          "kk":  "00:38-де капюшон киген екі адам Аделияны терезеден көтеріп шығарады. Ол өзі жүрмейді және сөмке ұстамаған."
+                                      },
+                          "isContradiction":  false,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Улика поддерживает заявленную версию и не требует штампа противоречия.",
+                                                           "en":  "This evidence supports the claim and should not be stamped as a contradiction.",
+                                                           "tr":  "Bu kanıt başvuruyu destekler ve çelişki damgası gerektirmez.",
+                                                           "ar":  "يدعم هذا الدليل المطالبة ولا يجب ختمه كتعارض.",
+                                                           "kk":  "Бұл айғақ өтінішті қолдайды және қайшылық ретінде белгіленбеуі керек."
+                                                       },
+                          "meta":  {
+                                       "cameraId":  "ARC-47",
+                                       "cameraModel":  "Axis P3265-LV - 1080p - H.264"
+                                   },
+                          "relation":  "supports"
+                      },
+                      {
+                          "id":  "log-47",
+                          "type":  "usage_log",
+                          "title":  {
+                                        "ru":  "Журнал питания этажа",
+                                        "en":  "Floor power log",
+                                        "tr":  "Kat elektrik kaydı",
+                                        "ar":  "سجل كهرباء الطابق",
+                                        "kk":  "Қабат қуаты журналы"
+                                    },
+                          "content":  {
+                                          "ru":  [
+                                                     "00:36 — локальное отключение света в крыле C",
+                                                     "00:37 — замок комнаты 3-18: аварийный сброс",
+                                                     "00:41 — сигнал тревоги заблокирован внешним реле",
+                                                     "Внешнее реле подписано серой лентой с тем же тройным оттиском, что на записи кубка."
+                                                 ],
+                                          "en":  [
+                                                     "00:36 — local lights cut in wing C",
+                                                     "00:37 — room 3-18 lock: emergency reset",
+                                                     "00:41 — alarm signal blocked by external relay",
+                                                     "The external relay is tagged with a gray ribbon bearing the same triple seal as in the cup footage."
+                                                 ],
+                                          "tr":  [
+                                                     "00:36 — C kanadında yerel ışık kesintisi",
+                                                     "00:37 — oda 3-18 kilidi: acil sıfırlama",
+                                                     "00:41 — alarm sinyali dış röleyle engellendi",
+                                                     "Dış rölede kupa görüntüsündeki aynı üçlü mühürlü gri şerit var."
+                                                 ],
+                                          "ar":  [
+                                                     "00:36 — قطع محلي للإنارة في الجناح C",
+                                                     "00:37 — قفل الغرفة 3-18: إعادة ضبط طارئة",
+                                                     "00:41 — حجب إشارة الإنذار بمرحل خارجي",
+                                                     "وُسم المرحل الخارجي بشريط رمادي يحمل الختم الثلاثي نفسه في تسجيل الكأس."
+                                                 ],
+                                          "kk":  [
+                                                     "00:36 — C қанатында жарық жергілікті өшірілді",
+                                                     "00:37 — 3-18 бөлме құлпы: апаттық қалпына келтіру",
+                                                     "00:41 — дабыл сигналы сыртқы релемен бұғатталды",
+                                                     "Сыртқы реледе кубок жазбасындағыдай үш мөрлі сұр лента бар."
+                                                 ]
+                                      },
+                          "isContradiction":  false,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Улика поддерживает заявленную версию и не требует штампа противоречия.",
+                                                           "en":  "This evidence supports the claim and should not be stamped as a contradiction.",
+                                                           "tr":  "Bu kanıt başvuruyu destekler ve çelişki damgası gerektirmez.",
+                                                           "ar":  "يدعم هذا الدليل المطالبة ولا يجب ختمه كتعارض.",
+                                                           "kk":  "Бұл айғақ өтінішті қолдайды және қайшылық ретінде белгіленбеуі керек."
+                                                       },
+                          "meta":  {
+                                       "logPrompt":  "archive@log-47:~$ tail -f /var/log/archive.log"
+                                   },
+                          "relation":  "supports"
+                      },
+                      {
+                          "id":  "bank-47",
+                          "type":  "bank_statement",
+                          "title":  {
+                                        "ru":  "Финансовая проверка",
+                                        "en":  "Financial check",
+                                        "tr":  "Finans kontrolü",
+                                        "ar":  "فحص مالي",
+                                        "kk":  "Қаржылық тексеріс"
+                                    },
+                          "content":  {
+                                          "ru":  [
+                                                     "За месяц — только школьные расходы и стипендия",
+                                                     "После исчезновения — нет переводов перевозчикам или ломбардам"
+                                                 ],
+                                          "en":  [
+                                                     "Past month — school expenses and stipend only",
+                                                     "After disappearance — no transfers to carriers or pawn shops"
+                                                 ],
+                                          "tr":  [
+                                                     "Son ay — yalnız okul giderleri ve burs",
+                                                     "Kaybolma sonrası — taşıyıcı veya rehinci ödemesi yok"
+                                                 ],
+                                          "ar":  [
+                                                     "الشهر الماضي — مصاريف مدرسية ومنحة فقط",
+                                                     "بعد الاختفاء — لا تحويلات لناقلين أو محال رهن"
+                                                 ],
+                                          "kk":  [
+                                                     "Соңғы ай — тек оқу шығыны мен стипендия",
+                                                     "Жоғалғаннан кейін — тасымалдаушыға немесе ломбардқа аударым жоқ"
+                                                 ]
+                                      },
+                          "isContradiction":  false,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Материал важен для проверки версии, но сам по себе не является противоречием.",
+                                                           "en":  "The material matters to the review but is not a contradiction by itself.",
+                                                           "tr":  "Bu kayıt inceleme için önemlidir, ancak tek başına çelişki değildir.",
+                                                           "ar":  "هذه المادة مهمة للمراجعة لكنها ليست تناقضاً بحد ذاتها.",
+                                                           "kk":  "Материал тексеру үшін маңызды, бірақ өздігінен қайшылық емес."
+                                                       },
+                          "meta":  {
+                                       "bankName":  {
+                                                        "ru":  "Municipal Credit",
+                                                        "en":  "Municipal Credit",
+                                                        "tr":  "Municipal Credit",
+                                                        "ar":  "Municipal Credit",
+                                                        "kk":  "Municipal Credit"
+                                                    },
+                                       "accountMask":  "**** **** **** 47"
+                                   },
+                          "relation":  "context"
+                      },
+                      {
+                          "id":  "witness-47",
+                          "type":  "witness_statement",
+                          "title":  {
+                                        "ru":  "Вахтёр третьего этажа",
+                                        "en":  "Third floor attendant",
+                                        "tr":  "Üçüncü kat görevlisi",
+                                        "ar":  "مراقب الطابق الثالث",
+                                        "kk":  "Үшінші қабат кезекшісі"
+                                    },
+                          "content":  {
+                                          "ru":  "«Я услышала короткий крик и стук по раме. Через минуту свет вернулся, а комната уже была пуста».",
+                                          "en":  "\"I heard a short cry and a hit on the frame. A minute later the lights returned, and the room was already empty.\"",
+                                          "tr":  "\"Kısa bir çığlık ve çerçeveye vurma sesi duydum. Bir dakika sonra ışık geldi, oda boştu.\"",
+                                          "ar":  "«سمعت صرخة قصيرة وضربة على الإطار. بعد دقيقة عاد الضوء وكانت الغرفة فارغة».",
+                                          "kk":  "«Қысқа айқай мен жақтауға соққы естідім. Бір минуттан соң жарық келді, бөлме бос еді»."
+                                      },
+                          "isContradiction":  false,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Улика поддерживает заявленную версию и не требует штампа противоречия.",
+                                                           "en":  "This evidence supports the claim and should not be stamped as a contradiction.",
+                                                           "tr":  "Bu kanıt başvuruyu destekler ve çelişki damgası gerektirmez.",
+                                                           "ar":  "يدعم هذا الدليل المطالبة ولا يجب ختمه كتعارض.",
+                                                           "kk":  "Бұл айғақ өтінішті қолдайды және қайшылық ретінде белгіленбеуі керек."
+                                                       },
+                          "relation":  "supports"
+                      }
+                  ],
+    "correctDecision":  "approve",
+    "explanation":  {
+                        "ru":  [
+                                   "Окно, камера и журнал показывают внешнее проникновение.",
+                                   "Тройная печать серой ленты связывает похищение с кражей кубка.",
+                                   "Похищение и ущерб подтверждены: вердикт — выплатить."
+                               ],
+                        "en":  [
+                                   "The window, camera, and log show outside entry.",
+                                   "The gray ribbon triple seal ties the abduction to the cup theft.",
+                                   "The abduction and losses are supported: approve the payout."
+                               ],
+                        "tr":  [
+                                   "Pencere, kamera ve kayıt dışarıdan girişi gösteriyor.",
+                                   "Gri şeridin üçlü mührü kaçırmayı kupa hırsızlığına bağlıyor.",
+                                   "Kaçırılma ve zarar doğrulandı: ödeme onaylanır."
+                               ],
+                        "ar":  [
+                                   "تظهر النافذة والكاميرا والسجل دخولاً من الخارج.",
+                                   "يربط الختم الثلاثي للشريط الرمادي الاختطاف بسرقة الكأس.",
+                                   "الاختطاف والخسائر مثبتة: القرار دفع التعويض."
+                               ],
+                        "kk":  [
+                                   "Терезе, камера және журнал сырттан кіруді көрсетеді.",
+                                   "Сұр лентаның үш мөрі ұрлауды кубок ісімен байланыстырады.",
+                                   "Ұрлау мен шығын расталды: вердикт — төлеу."
+                               ]
+                    }
+}

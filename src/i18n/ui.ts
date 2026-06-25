@@ -46,6 +46,7 @@ export type UIKey =
   | "bonus"
   | "streak"
   | "streakDays"
+  | "perfectStreak"
   | "hints"
   | "hintNote"
   | "hintCanvass"
@@ -65,6 +66,28 @@ export type UIKey =
   | "loaderPhaseContent"
   | "loaderPhaseReady"
   | "loaderTip"
+  | "specialArchives"
+  | "specialArchivesSubtitle"
+  | "firstCaseFree"
+  | "openedCases"
+  | "buyArchive"
+  | "unlockNextWithAd"
+  | "unlockForeverHint"
+  | "nextUnlockTomorrow"
+  | "adUnavailableTryLater"
+  | "purchaseRestored"
+  | "tryDeskSkin"
+  | "availableUntilEndOfDay"
+  | "purchasedArchivesNoForcedAds"
+  | "newArchive"
+  | "purchased"
+  | "wholeArchiveComingSoon"
+  | "platformUnavailable"
+  | "close"
+  | "includedCases"
+  | "includedSkins"
+  | "collectibleStamp"
+  | "restorePurchases"
   | "department"
   | "casesInWork"
   | "analytics"
@@ -161,7 +184,34 @@ export type UIKey =
     | "fraudMissed"
     | "verdictItem"
     | "dailyRewardBadge"
-    | "dailyDifficultyBadge";
+    | "dailyDifficultyBadge"
+    | "serviceOrder"
+    | "preInvestigation"
+    | "serviceArchive"
+    | "serviceArchiveEffect"
+    | "serviceClearance"
+    | "serviceClearanceEffect"
+    | "serviceExpert"
+    | "serviceExpertEffect"
+    | "departmentArchive"
+    | "departmentField"
+    | "departmentLab"
+    | "serviceSelected"
+    | "serviceLocked"
+    | "serviceNotApplicable"
+    | "serviceUnaffordable"
+    | "serviceFreeDailyHint"
+    | "serviceDiscountHint"
+    | "serviceAvailable"
+    | "serviceUnavailableToast"
+    | "departmentPlan"
+    | "approvedStamp"
+    | "departmentEffectUnlock"
+    | "departmentEffectDiscount"
+    | "departmentEffectFree"
+    | "departmentMaxed"
+    | "upgradeDepartment"
+    | "departmentUpgradeUnavailable";
 
 export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
   approve: {
@@ -395,6 +445,13 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
   bonus: { ru: "Бонус", en: "Bonus", tr: "Bonus", ar: "مكافأة", kk: "Бонус" },
   streak: { ru: "Серия", en: "Streak", tr: "Seri", ar: "سلسلة", kk: "Серия" },
   streakDays: { ru: "дн.", en: "days", tr: "gün", ar: "يوم", kk: "күн" },
+  perfectStreak: {
+    ru: "100% серия",
+    en: "100% streak",
+    tr: "%100 seri",
+    ar: "سلسلة 100٪",
+    kk: "100% серия",
+  },
   hints: {
     ru: "Подсказки",
     en: "Hints",
@@ -527,6 +584,160 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     tr: "Ödemeyi reddetmek için kanıt gerekir. Çelişkiyi bul ve işaretle.",
     ar: "رفض التعويض يحتاج إلى دليل. اعثر على التناقض وحدده.",
     kk: "Төлемнен бас тарту үшін дәлел керек. Қайшылықты тауып, белгіле.",
+  },
+  specialArchives: {
+    ru: "Особые архивы",
+    en: "Special Archives",
+    tr: "Özel Arşivler",
+    ar: "الأرشيفات الخاصة",
+    kk: "Арнайы архивтер",
+  },
+  specialArchivesSubtitle: {
+    ru: "Новые расследования и оформление стола",
+    en: "New investigations and desk styling",
+    tr: "Yeni soruşturmalar ve masa düzeni",
+    ar: "تحقيقات جديدة وتنسيق للمكتب",
+    kk: "Жаңа тергеулер және үстел безендіруі",
+  },
+  firstCaseFree: {
+    ru: "Первое дело бесплатно",
+    en: "First case free",
+    tr: "İlk dosya ücretsiz",
+    ar: "القضية الأولى مجانية",
+    kk: "Бірінші іс тегін",
+  },
+  openedCases: {
+    ru: "Открыто {opened} из {total}",
+    en: "Opened {opened} of {total}",
+    tr: "{total} dosyadan {opened} açık",
+    ar: "مفتوح {opened} من {total}",
+    kk: "{total} істің {opened} ашылды",
+  },
+  buyArchive: {
+    ru: "Купить архив целиком",
+    en: "Buy full archive",
+    tr: "Arşivin tamamını satın al",
+    ar: "شراء الأرشيف كاملًا",
+    kk: "Архивті толық сатып алу",
+  },
+  unlockNextWithAd: {
+    ru: "Открыть следующее дело за рекламу",
+    en: "Unlock next case with an ad",
+    tr: "Sonraki dosyayı reklamla aç",
+    ar: "فتح القضية التالية بإعلان",
+    kk: "Келесі істі жарнамамен ашу",
+  },
+  unlockForeverHint: {
+    ru: "Дело останется открытым навсегда.",
+    en: "The case stays unlocked permanently.",
+    tr: "Dosya kalıcı olarak açık kalır.",
+    ar: "ستبقى القضية مفتوحة دائمًا.",
+    kk: "Іс тұрақты ашық қалады.",
+  },
+  nextUnlockTomorrow: {
+    ru: "Следующее открытие — завтра",
+    en: "Next unlock tomorrow",
+    tr: "Sonraki açılış yarın",
+    ar: "الفتح التالي غدًا",
+    kk: "Келесі ашу ертең",
+  },
+  adUnavailableTryLater: {
+    ru: "Реклама сейчас недоступна. Попробуйте позже.",
+    en: "Ads are unavailable now. Try again later.",
+    tr: "Reklam şu anda yok. Daha sonra deneyin.",
+    ar: "الإعلانات غير متاحة الآن. حاول لاحقًا.",
+    kk: "Жарнама қазір қолжетімсіз. Кейін көріңіз.",
+  },
+  purchaseRestored: {
+    ru: "Покупка восстановлена",
+    en: "Purchase restored",
+    tr: "Satın alma geri yüklendi",
+    ar: "تمت استعادة الشراء",
+    kk: "Сатып алу қалпына келді",
+  },
+  tryDeskSkin: {
+    ru: "Примерить оформление",
+    en: "Try desk style",
+    tr: "Masa stilini dene",
+    ar: "تجربة تنسيق المكتب",
+    kk: "Үстел стилін көру",
+  },
+  availableUntilEndOfDay: {
+    ru: "Доступно до конца дня",
+    en: "Available until end of day",
+    tr: "Gün sonuna kadar geçerli",
+    ar: "متاح حتى نهاية اليوم",
+    kk: "Күн соңына дейін қолжетімді",
+  },
+  purchasedArchivesNoForcedAds: {
+    ru: "В купленных архивах нет обязательной рекламы",
+    en: "Purchased archives have no forced ads",
+    tr: "Satın alınan arşivlerde zorunlu reklam yok",
+    ar: "لا توجد إعلانات إجبارية في الأرشيفات المشتراة",
+    kk: "Сатып алынған архивтерде міндетті жарнама жоқ",
+  },
+  newArchive: {
+    ru: "Новое",
+    en: "New",
+    tr: "Yeni",
+    ar: "جديد",
+    kk: "Жаңа",
+  },
+  purchased: {
+    ru: "Куплено",
+    en: "Purchased",
+    tr: "Satın alındı",
+    ar: "تم الشراء",
+    kk: "Сатып алынды",
+  },
+  wholeArchiveComingSoon: {
+    ru: "Покупки и рекламная разблокировка будут включены после product ids и финальных паков.",
+    en: "Purchases and ad unlocks will be enabled after product ids and final packs are ready.",
+    tr: "Satın alma ve reklamla açma, product id ve son paketler hazır olduğunda açılacak.",
+    ar: "سيتم تفعيل الشراء والفتح بالإعلانات بعد جاهزية معرفات المنتجات والحزم النهائية.",
+    kk: "Сатып алу және жарнамамен ашу product id мен соңғы пактер дайын болғанда қосылады.",
+  },
+  platformUnavailable: {
+    ru: "Витрина подготовлена как прототип: платежи и постоянные права доступа пока не подключены.",
+    en: "This shelf is a prototype: payments and permanent access rights are not connected yet.",
+    tr: "Bu vitrin prototiptir: ödemeler ve kalıcı erişim hakları henüz bağlı değil.",
+    ar: "هذه الواجهة نموذج أولي: لم يتم ربط المدفوعات وحقوق الوصول الدائمة بعد.",
+    kk: "Бұл витрина прототип: төлемдер мен тұрақты қолжетімділік әлі қосылмаған.",
+  },
+  close: {
+    ru: "Закрыть",
+    en: "Close",
+    tr: "Kapat",
+    ar: "إغلاق",
+    kk: "Жабу",
+  },
+  includedCases: {
+    ru: "Состав дел",
+    en: "Included cases",
+    tr: "Dahil dosyalar",
+    ar: "القضايا المضمنة",
+    kk: "Істер құрамы",
+  },
+  includedSkins: {
+    ru: "Оформление",
+    en: "Desk styling",
+    tr: "Masa düzeni",
+    ar: "تنسيق المكتب",
+    kk: "Безендіру",
+  },
+  collectibleStamp: {
+    ru: "Коллекционный штамп",
+    en: "Collectible stamp",
+    tr: "Koleksiyon damgası",
+    ar: "ختم قابل للجمع",
+    kk: "Коллекциялық мөр",
+  },
+  restorePurchases: {
+    ru: "Восстановить покупки",
+    en: "Restore purchases",
+    tr: "Satın almaları geri yükle",
+    ar: "استعادة المشتريات",
+    kk: "Сатып алуларды қалпына келтіру",
   },
   department: {
     ru: "ОТДЕЛ РАССЛЕДОВАНИЙ",
@@ -1113,6 +1324,195 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     tr: "Zorluk ×2",
     ar: "الصعوبة ×2",
     kk: "Күрделілік ×2",
+  },
+  serviceOrder: {
+    ru: "Распоряжение на расследование",
+    en: "Investigation order",
+    tr: "Soruşturma emri",
+    ar: "أمر التحقيق",
+    kk: "Тергеу тапсырмасы",
+  },
+  preInvestigation: {
+    ru: "До улик",
+    en: "Before evidence",
+    tr: "Kanıttan önce",
+    ar: "قبل الأدلة",
+    kk: "Айғаққа дейін",
+  },
+  serviceArchive: {
+    ru: "Архивная справка",
+    en: "Archive check",
+    tr: "Arşiv kontrolü",
+    ar: "فحص الأرشيف",
+    kk: "Архив анықтамасы",
+  },
+  serviceArchiveEffect: {
+    ru: "Показывает число настоящих противоречий.",
+    en: "Shows the number of real contradictions.",
+    tr: "Gerçek çelişki sayısını gösterir.",
+    ar: "يعرض عدد التناقضات الحقيقية.",
+    kk: "Нақты қайшылық санын көрсетеді.",
+  },
+  serviceClearance: {
+    ru: "Дополнительное разрешение",
+    en: "Extra clearance",
+    tr: "Ek yetki",
+    ar: "تصريح إضافي",
+    kk: "Қосымша рұқсат",
+  },
+  serviceClearanceEffect: {
+    ru: "+1 открытие в бюджетном деле.",
+    en: "+1 opening in a budgeted case.",
+    tr: "Bütçeli dosyada +1 açılış.",
+    ar: "+1 فتح في قضية محدودة.",
+    kk: "Бюджетті істе +1 ашу.",
+  },
+  serviceExpert: {
+    ru: "Экспертное заключение",
+    en: "Expert opinion",
+    tr: "Uzman görüşü",
+    ar: "رأي خبير",
+    kk: "Сарапшы қорытындысы",
+  },
+  serviceExpertEffect: {
+    ru: "Раскрывает статус первой выбранной улики.",
+    en: "Reveals the first selected evidence status.",
+    tr: "İlk seçilen kanıtın durumunu açar.",
+    ar: "يكشف حالة أول دليل تختاره.",
+    kk: "Алғаш таңдалған айғақ мәртебесін ашады.",
+  },
+  departmentArchive: {
+    ru: "Архив",
+    en: "Archive",
+    tr: "Arşiv",
+    ar: "الأرشيف",
+    kk: "Архив",
+  },
+  departmentField: {
+    ru: "Выездная группа",
+    en: "Field team",
+    tr: "Saha ekibi",
+    ar: "الفريق الميداني",
+    kk: "Далалық топ",
+  },
+  departmentLab: {
+    ru: "Лаборатория",
+    en: "Laboratory",
+    tr: "Laboratuvar",
+    ar: "المختبر",
+    kk: "Зертхана",
+  },
+  serviceSelected: {
+    ru: "Выбрано",
+    en: "Selected",
+    tr: "Seçildi",
+    ar: "محدد",
+    kk: "Таңдалды",
+  },
+  serviceLocked: {
+    ru: "Отдел ур. 0",
+    en: "Dept. level 0",
+    tr: "Birim sv. 0",
+    ar: "القسم مستوى 0",
+    kk: "Бөлім 0-деңг.",
+  },
+  serviceNotApplicable: {
+    ru: "Не нужно",
+    en: "Not applicable",
+    tr: "Uygun değil",
+    ar: "غير مناسب",
+    kk: "Қолданылмайды",
+  },
+  serviceUnaffordable: {
+    ru: "Не хватает бюджета",
+    en: "Insufficient budget",
+    tr: "Bütçe yetersiz",
+    ar: "الميزانية غير كافية",
+    kk: "Бюджет жетпейді",
+  },
+  serviceFreeDailyHint: {
+    ru: "1 раз в день бесплатно",
+    en: "1 free use today",
+    tr: "Bugün 1 ücretsiz",
+    ar: "استخدام مجاني اليوم",
+    kk: "Бүгін 1 тегін",
+  },
+  serviceDiscountHint: {
+    ru: "Скидка 20%",
+    en: "20% discount",
+    tr: "%20 indirim",
+    ar: "خصم 20%",
+    kk: "20% жеңілдік",
+  },
+  serviceAvailable: {
+    ru: "Доступно",
+    en: "Available",
+    tr: "Mevcut",
+    ar: "متاح",
+    kk: "Қолжетімді",
+  },
+  serviceUnavailableToast: {
+    ru: "Услугу нельзя выбрать для этого расследования.",
+    en: "This service cannot be selected for this investigation.",
+    tr: "Bu hizmet bu soruşturma için seçilemez.",
+    ar: "لا يمكن اختيار هذه الخدمة لهذا التحقيق.",
+    kk: "Бұл тергеуге қызмет таңдалмайды.",
+  },
+  departmentPlan: {
+    ru: "План отдела",
+    en: "Department plan",
+    tr: "Birim planı",
+    ar: "خطة القسم",
+    kk: "Бөлім жоспары",
+  },
+  approvedStamp: {
+    ru: "Согласовано",
+    en: "Approved",
+    tr: "Onaylandı",
+    ar: "معتمد",
+    kk: "Келісілді",
+  },
+  departmentEffectUnlock: {
+    ru: "Открывает услугу",
+    en: "Unlocks service",
+    tr: "Hizmeti açar",
+    ar: "يفتح الخدمة",
+    kk: "Қызметті ашады",
+  },
+  departmentEffectDiscount: {
+    ru: "Следом скидка 20%",
+    en: "Next: 20% discount",
+    tr: "Sırada %20 indirim",
+    ar: "التالي: خصم 20%",
+    kk: "Келесі: 20% жеңілдік",
+  },
+  departmentEffectFree: {
+    ru: "Следом бесплатный вызов",
+    en: "Next: free daily use",
+    tr: "Sırada ücretsiz çağrı",
+    ar: "التالي: استخدام مجاني",
+    kk: "Келесі: тегін шақыру",
+  },
+  departmentMaxed: {
+    ru: "Уровень максимальный",
+    en: "Max level",
+    tr: "Azami seviye",
+    ar: "المستوى الأقصى",
+    kk: "Ең жоғары деңгей",
+  },
+  upgradeDepartment: {
+    ru: "Улучшить",
+    en: "Upgrade",
+    tr: "Yükselt",
+    ar: "ترقية",
+    kk: "Жақсарту",
+  },
+  departmentUpgradeUnavailable: {
+    ru: "Улучшение отдела сейчас недоступно.",
+    en: "Department upgrade is not available now.",
+    tr: "Birim yükseltmesi şu anda yok.",
+    ar: "ترقية القسم غير متاحة الآن.",
+    kk: "Бөлімді жақсарту қазір қолжетімсіз.",
   },
 };
 

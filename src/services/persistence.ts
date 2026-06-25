@@ -37,12 +37,16 @@ export function makeDefaultStats(): PlayerStats {
     xp: 0,
     streakCount: 0,
     lastPlayedServerDay: null,
+    perfectCaseStreakCount: 0,
     unlockedAchievementIds: [],
     ratingDismissals: 0,
     departmentLevels: { archive: 0, field: 0, lab: 0 },
     serviceFreeUseServerDay: {},
     weeklyProgress: null,
     collectibleStampIds: [],
+    archivePurchasedPackIds: [],
+    archiveUnlockedCaseIds: [],
+    archiveAdUnlockServerDayByPack: {},
   };
 }
 

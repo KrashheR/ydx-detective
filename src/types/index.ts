@@ -235,6 +235,8 @@ export interface PlayerStats {
   streakCount: number;
   /** Server-day index of the last closed case — used by the streak evaluator. */
   lastPlayedServerDay: number | null;
+  /** Consecutive first-time cases closed with 100% proof accuracy (silver+). */
+  perfectCaseStreakCount: number;
   /** Ids of one-time achievements the player has unlocked. */
   unlockedAchievementIds: string[];
   /**
@@ -249,6 +251,12 @@ export interface PlayerStats {
   serviceFreeUseServerDay: Partial<Record<InvestigationService, number>>;
   weeklyProgress: WeeklyProgress | null;
   collectibleStampIds: string[];
+  /** Archive packs permanently unlocked via Yandex IAP. */
+  archivePurchasedPackIds: string[];
+  /** Individual archive cases permanently unlocked via rewarded ads. */
+  archiveUnlockedCaseIds: string[];
+  /** Last server-day when this archive pack granted its rewarded unlock. */
+  archiveAdUnlockServerDayByPack: Record<string, number>;
 }
 
 /**
