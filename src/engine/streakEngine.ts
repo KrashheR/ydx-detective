@@ -42,3 +42,26 @@ export function evaluateStreak(
 
   return { streak, multiplierPct };
 }
+
+/**
+ * Recompute the consecutive 100%-proof streak after a case closes.
+ *   • Replay / non-rewarded closure → unchanged; this mode is training only.
+ *   • First-time silver/gold closure → streak + 1.
+ *   • First-time non-perfect closure → reset to 0.
+ */
+export function evaluatePerfectCaseStreak(
+  prevStreak: number,
+  isPerfectCase: boolean,
+  rewardEligible: boolean,
+): StreakResult {
+  const streak = rewardEligible
+    ? isPerfectCase ? prevStreak + 1 : 0
+    : prevStreak;
+
+  const { bonusPctPerCase, bonusCapPct } = GAME_CONFIG.perfectCaseStreak;
+  const multiplierPct = isPerfectCase && rewardEligible
+    ? Math.min(streak * bonusPctPerCase, bonusCapPct)
+    : 0;
+
+  return { streak, multiplierPct };
+}

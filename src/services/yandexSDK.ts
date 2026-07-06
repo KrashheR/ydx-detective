@@ -56,9 +56,32 @@ interface YandexLeaderboards {
   ): Promise<YandexLeaderboardEntries>;
 }
 
+interface YandexPaymentsProduct {
+  id: string;
+  title?: string;
+  description?: string;
+  imageURI?: string;
+  price?: string;
+  priceValue?: string;
+  priceCurrencyCode?: string;
+}
+
+interface YandexPurchase {
+  productID?: string;
+  productId?: string;
+  purchaseToken?: string;
+}
+
+interface YandexPayments {
+  getCatalog(): Promise<YandexPaymentsProduct[] | { products?: YandexPaymentsProduct[] }>;
+  getPurchases(): Promise<YandexPurchase[] | { purchases?: YandexPurchase[] }>;
+  purchase(opts: { id: string }): Promise<YandexPurchase>;
+}
+
 interface YandexSDK {
   getPlayer(options?: { scopes?: boolean }): Promise<YandexPlayer>;
   getLeaderboards(): Promise<YandexLeaderboards>;
+  getPayments?(options?: { signed?: boolean }): Promise<YandexPayments>;
   /** Player/UI locale, e.g. 'ru', 'en', 'tr'. Source of the auto language. */
   environment: { i18n: { lang: string } };
   serverTime(): number; // epoch ms, authoritative
@@ -106,6 +129,7 @@ function broadcastPause(paused: boolean): void {
 let sdk: YandexSDK | null = null;
 let player: YandexPlayer | null = null;
 let leaderboards: YandexLeaderboards | null = null;
+let payments: YandexPayments | null = null;
 let isAuthenticated = false;
 
 /** Resolves once init has been attempted (success or fail). Idempotent. */
@@ -153,10 +177,18 @@ export function initYandex(): Promise<void> {
       } catch {
         leaderboards = null;
       }
+      try {
+        payments = sdk.getPayments
+          ? await sdk.getPayments({ signed: true })
+          : null;
+      } catch {
+        payments = null;
+      }
     } catch {
       sdk = null;
       player = null;
       leaderboards = null;
+      payments = null;
       isAuthenticated = false;
     }
   })();
@@ -236,6 +268,7 @@ export type AdPlacement =
   | 'restore_funds'
   | 'witness_canvass'
   | 'daily_unlock'
+  | 'archive_unlock'
   | 'unknown';
 
 export function trackAdOffer(kind: 'fullscreen' | 'rewarded', placement: AdPlacement): void {
@@ -345,6 +378,78 @@ export async function requestReview(): Promise<boolean> {
     return feedbackSent;
   } catch {
     return false;
+  }
+}
+
+/* ------------------------------- Payments -------------------------------- */
+
+export interface PaymentsProduct {
+  id: string;
+  title: string;
+  price: string | null;
+  priceValue: string | null;
+  priceCurrencyCode: string | null;
+}
+
+function normalizeCatalogProducts(
+  result: YandexPaymentsProduct[] | { products?: YandexPaymentsProduct[] },
+): YandexPaymentsProduct[] {
+  return Array.isArray(result) ? result : result.products ?? [];
+}
+
+function normalizePurchases(
+  result: YandexPurchase[] | { purchases?: YandexPurchase[] },
+): YandexPurchase[] {
+  return Array.isArray(result) ? result : result.purchases ?? [];
+}
+
+function getPurchasedProductId(purchase: YandexPurchase): string | null {
+  return purchase.productID ?? purchase.productId ?? null;
+}
+
+export function isPaymentsAvailable(): boolean {
+  return payments !== null;
+}
+
+export async function fetchPaymentsCatalog(): Promise<PaymentsProduct[]> {
+  if (!payments) return [];
+  try {
+    return normalizeCatalogProducts(await payments.getCatalog()).map((product) => ({
+      id: product.id,
+      title: product.title ?? product.id,
+      price: product.price ?? null,
+      priceValue: product.priceValue ?? null,
+      priceCurrencyCode: product.priceCurrencyCode ?? null,
+    }));
+  } catch {
+    return [];
+  }
+}
+
+export async function purchaseProduct(productId: string): Promise<boolean> {
+  if (!payments) return false;
+  trackGoal(GOAL.purchaseStart, { productId });
+  try {
+    await payments.purchase({ id: productId });
+    trackGoal(GOAL.purchaseSuccess, { productId });
+    return true;
+  } catch (error) {
+    trackGoal(GOAL.purchaseError, { productId, error: String(error) });
+    return false;
+  }
+}
+
+export async function restorePurchasedProductIds(): Promise<string[]> {
+  if (!payments) return [];
+  try {
+    const ids = normalizePurchases(await payments.getPurchases())
+      .map(getPurchasedProductId)
+      .filter((productId): productId is string => Boolean(productId));
+    trackGoal(GOAL.purchaseRestore, { count: ids.length, productIds: ids });
+    return ids;
+  } catch (error) {
+    trackGoal(GOAL.purchaseError, { source: 'restore', error: String(error) });
+    return [];
   }
 }
 

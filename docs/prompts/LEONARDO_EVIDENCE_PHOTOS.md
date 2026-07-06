@@ -195,6 +195,82 @@
 > /sunroom, surrounded by shattered glass shards, the trampoline's frame rail bent; daytime garden
 > in the background. + STYLE
 
+## Особые архивы
+
+**27. case-040 / photo-hangar** · «Сгоревший груз на лунной ферме»
+`evidence/case-040-photo-hangar.jpg`
+> Interior of a utilitarian cargo hangar after a fire: the deepest charring and collapse centered
+> around an internal metal workbench with scattered crates, while the large outer gate in the
+> background is visibly less burned. Dry soot, scorched floor, harsh industrial lighting, no
+> people, grounded retro-futurist farm infrastructure. + STYLE
+
+**28. case-041 / crash-photo** · «Потерянный перехватчик в ледяном каньоне»
+`evidence/case-041-crash-photo.jpg`
+> A crash-landed small interceptor craft resting in an icy canyon; hull sides mostly intact, but
+> the underside and landing area show heavy impact damage from a hard belly landing. No blast
+> holes, no projectile marks, cold overcast light, snow and blue ice around the wreck. + STYLE
+
+**29. case-042 / display-photo** · «Пропавший церемониальный клинок»
+`evidence/case-042-display-photo.jpg`
+> Museum-style display case with intact glass and an undamaged lock, photographed straight-on; on
+> the dark velvet inside, a clean blade-shaped indentation and fastening marks show where a
+> ceremonial sword was carefully removed. Quiet archive lighting, no readable signage. + STYLE
+
+**30. case-043 / cache-photo** · «Исчезнувший ученик навигатора»
+`evidence/case-043-cache-photo.jpg`
+> A hidden cache behind a plain station bench: a ration pack, a folded spare jacket, and a neat
+> stack of cash credits tucked out of sight, clearly prepared in advance rather than dropped in a
+> panic. Dusty transit-outpost setting, candid evidence-shot framing. + STYLE
+
+**31. case-044 / photo-44** · «Пожар в теплице редких мандрагор» · ⚠️ улика-противоречие
+`evidence/case-044-photo-44.jpg`
+> Inside a greenhouse after a fire: the burn origin is concentrated around a ceramic mixing bowl on
+> a worktable with spilled growth-accelerant residue, while the nearby root bed of rare plants is
+> visibly less damaged. Soot, cracked glass, scorched potting surfaces, natural daylight through
+> the greenhouse frame. + STYLE
+
+**32. case-045 / photo-45** · «Пропавший экзаменационный кубок» · ⚠️ улика-противоречие
+`evidence/case-045-photo-45.jpg`
+> Close-up evidence photo of a brass display-case hinge: a fresh crescent-shaped cutter mark on the
+> OUTSIDE edge of the hinge, while the inner lock area remains intact and undisturbed. Museum case
+> materials, shallow depth of field, forensic close framing. + STYLE
+
+**33. case-046 / photo-46** · «Падение с учебной башни» · ⚠️ улика-противоречие
+`evidence/case-046-photo-46.jpg`
+> Close-up of a climbing safety ring with a tamper seal: the seal edge is clean and even, like it
+> was sliced with a thin blade, not jagged or torn by a sudden load. Training-tower metal hardware,
+> rope fibers nearby, neutral daylight, documentary detail. + STYLE
+
+**34. case-047 / photo-47** · «Ночной побег из общежития» · ⚠️ улика-противоречие
+`evidence/case-047-photo-47.jpg`
+> Open dormitory window seen from inside: the OUTSIDE frame has a fresh dent and tool impact mark,
+> while the inner latch is bent inward toward the room. Night-escape aftermath, plain institutional
+> interior, restrained evidence framing. + STYLE
+
+**35. case-048 / photo-48** · «Разгром пиццерии после ночной драки» · ⚠️ улика-противоречие
+`evidence/case-048-photo-48.jpg`
+> Commercial pizza oven and adjacent cabinet after a fire: beneath fresh soot there is old baked-on
+> grease and long-term wear, and the so-called "new" unit clearly lacks factory protective film.
+> Kitchen backroom lighting, stainless steel surfaces, realistic grime and scorch detail. + STYLE
+
+**36. case-049 / photo-49** · «Кража лабораторного мутагена» · ⚠️ улика-противоречие
+`evidence/case-049-photo-49.jpg`
+> Interior lab wall vent in close-up: the grate screws are lying on the INSIDE floor beneath the
+> opening, and scratch marks on the frame run from inside outward. Sterile laboratory textures,
+> muted lighting, no fantasy glow, strict forensic composition. + STYLE
+
+**37. case-050 / photo-50** · «Пожар в антикварном додзё» · ⚠️ улика-противоречие
+`evidence/case-050-photo-50.jpg`
+> Burn trail near a service door of an old dojo: a charred fuse-like line clearly runs from the
+> outside yard across the threshold inward, showing the fire started at the door rather than deep in
+> the storage room. Worn wood, tatami-adjacent corridor, restrained fire damage. + STYLE
+
+**38. case-051 / photo-51** · «Угон фургона с уличной электроникой» · ⚠️ улика-противоречие
+`evidence/case-051-photo-51.jpg`
+> Rear cargo bay of a delivery van: cargo straps are neatly folded on the floor, mounts are intact,
+> and there are no signs of violent struggle, blood, or emergency braking displacement. Boxes and
+> fixtures look orderly, suggesting a staged disappearance. + STYLE
+
 ---
 
 ## Рентгены (отдельная стилистика — НЕ documentary photo)

@@ -20,6 +20,7 @@
 - `serverTime()` → авторитетное время для дейли-гейтинга
 - `adv.showFullscreenAdv / showRewardedVideo` → жизненный цикл рекламы (pause guard)
 - `getLeaderboards()` → лидерборд (best-effort)
+- `getPayments()` → каталог IAP, покупка архива, restore purchases (best-effort)
 - `feedback.canReview / requestReview` → нативный рейтинг (может отсутствовать)
 - `environment.i18n.lang` → автоопределение языка
 
@@ -39,13 +40,16 @@
 
 ## Миграция сейвов
 
-`GAME_CONFIG.saveVersion` — текущая версия схемы персиста (сейчас **4**). `migrate()` в
+`GAME_CONFIG.saveVersion` — текущая версия схемы персиста (сейчас **6**). `migrate()` в
 `persistence.ts` спредит текущие дефолты под старые сейвы, добивая новые поля:
 - v1 → v2: добавлены xp / streakCount / lastPlayedServerDay / unlockedAchievementIds в
   stats и revealedEvidenceIds в сессию.
 - v2 → v3: добавлен `ratingDismissals` (бэкфиллится через `makeDefaultStats`).
 - v3 → v4: добавлены mastery, отдел/услуги, недельный прогресс, daily-ad slot и
   thesis-links активной сессии.
+- v4 → v5: добавлен `perfectCaseStreakCount` для подряд закрытых 100%-дел.
+- v5 → v6: добавлены `archivePurchasedPackIds`, `archiveUnlockedCaseIds` и
+  `archiveAdUnlockServerDayByPack` для прав доступа витрины архивов.
 
 Бампай версию и расширяй `migrate()` при любом изменении формы персиста.
 
@@ -65,8 +69,20 @@
 - `showFullscreenAd(onDone)` — интерстишл; `onDone` продолжает действие после закрытия.
   Применяется: каждый 3-й вердикт (`AD_EVERY_N_VERDICTS`), Inspector Note.
 - `showRewardedAd(onReward)` — rewarded-видео; `onReward` срабатывает только при реальной
-  награде. Применяется: restore funds, удвоение награды, Witness Canvass. В офлайн/dev (нет
-  SDK) награда выдаётся мгновенно.
+  награде. Применяется: restore funds, удвоение награды, Witness Canvass и
+  permanent unlock следующего архивного дела. В офлайн/dev (нет SDK) награда выдаётся мгновенно.
+
+## In-app purchases
+
+`yandexSDK.ts` поднимает `payments` best-effort через `getPayments({ signed: true })`.
+Если payments API недоступен, витрина архивов остаётся browse-only: каталог можно открыть,
+но покупка и restore уходят в no-op UI без блокировки геймплея.
+
+- `fetchPaymentsCatalog()` — читает каталог продуктов и цену для кнопки покупки архива.
+- `purchaseProduct(productId)` — инициирует покупку полного архива; после успешного ответа UI
+  пишет entitlement в `stats.archivePurchasedPackIds`.
+- `restorePurchasedProductIds()` — читает уже купленные продукты платформы; UI маппит product ids
+  на thematic packs и восстанавливает права локально/в облачном сейве.
 
 ## Лидерборд
 
@@ -135,7 +151,7 @@ null при недоступности → UI фолбэчит.
 | `rating_action` | `dismissRating` / `suppressRating` / `App.tsx` (onRate) | action (`dismiss`/`never`/`rate`), dismissals |
 | `ad_offer`, `ad_accept`, `ad_open`, `ad_close`, `ad_reward`, `ad_error` | UI + `yandexSDK.ts` | kind, placement, wasShown, rewarded, error |
 | `service_view`, `service_select`, `service_buy`, `service_use` | `App.tsx` / `buyHint` | service, caseId, cost, balanceBefore/After |
-| `shop_view`, `product_view`, `purchase_start`, `purchase_success`, `purchase_error`, `purchase_restore` | будущая поверхность магазина | productId, price, error |
+| `shop_view`, `product_view`, `purchase_start`, `purchase_success`, `purchase_error`, `purchase_restore` | `ThematicPacksModal` + `yandexSDK.ts` | productId, archiveId, price, error |
 
 **Конфиг** (`GAME_CONFIG.analytics`): `counterId`, `webvisor`, `economyVersion`,
 `contentVersion`, `experimentGroup`. Персист не

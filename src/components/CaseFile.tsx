@@ -1,6 +1,10 @@
 import { Fragment, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import type { ActiveSession, Case, Language } from "../types";
+import type {
+  ActiveSession,
+  Case,
+  Language,
+} from "../types";
 import type { HintKind } from "../store/gameStore";
 import { GAME_CONFIG } from "../config/gameConfig";
 import { RTL_LANGUAGES, loc, t } from "../i18n/ui";
@@ -102,6 +106,7 @@ export function CaseFile({
 
   const stampedCount = session?.selectedEvidenceIds.length ?? 0;
   const evCount = caseData.evidences.length;
+  const contradictionCount = caseData.evidences.filter((ev) => ev.isContradiction).length;
 
   const handleReject = () => {
     if (!onReject()) {
@@ -216,7 +221,7 @@ export function CaseFile({
         <div className="mt-[18px] flex items-center justify-between gap-3 rounded-md border border-dashed border-[#c7c2b6] bg-white px-[15px] py-[13px]">
           <span className="text-xs font-medium text-text-dim">
             {t("claimLabel", lang)}
-            {isDaily && <span className="ml-1 font-bold text-gold">×5</span>}
+            {isDaily && <span className="ml-1 font-bold text-gold">×2</span>}
           </span>
           <span className="font-mono text-lg font-bold text-ink">
             {fmt(caseData.claimAmount)} ₽

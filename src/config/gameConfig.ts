@@ -4,7 +4,7 @@
  */
 export const GAME_CONFIG = {
   /** Schema version of the persisted runtime snapshot. Bump on shape changes. */
-  saveVersion: 4,
+  saveVersion: 6,
 
   reward: {
     /** Fixed payout by difficulty; claimAmount remains a narrative stake. */
@@ -103,7 +103,7 @@ export const GAME_CONFIG = {
      *   L2-3   → 3-evidence basics       (case-013, 018, 019, 020, 021)
      *   L4-11  → 4-evidence standard     (case-003..024)
      *   L12-13 → 5-evidence advanced     (case-025..028)
-     *   L14-16 → 6-evidence expert       (case-029..039)
+     *   L14-16 → 6-evidence expert       (case-029..051)
      * New evidence types debut late: bank_statement (case-023, ~pos 22),
      * phone_records (case-024, ~pos 23), social_media (case-025, ~pos 24).
      */
@@ -151,6 +151,18 @@ export const GAME_CONFIG = {
       'case-037': 16,
       'case-038': 16,
       'case-039': 16,
+      'case-040': 16,
+      'case-041': 16,
+      'case-042': 16,
+      'case-043': 16,
+      'case-044': 16,
+      'case-045': 16,
+      'case-046': 16,
+      'case-047': 16,
+      'case-048': 16,
+      'case-049': 16,
+      'case-050': 16,
+      'case-051': 16,
     } as const,
   },
 
@@ -160,6 +172,14 @@ export const GAME_CONFIG = {
     bonusPctPerDay: 5,
     /** Maximum streak bonus (cap). */
     bonusCapPct: 50,
+  },
+
+  /** Consecutive first-time cases solved with 100% proof accuracy (silver+). */
+  perfectCaseStreak: {
+    /** Reward bonus added per consecutive flawless case. */
+    bonusPctPerCase: 3,
+    /** Maximum flawless-case streak bonus (cap). */
+    bonusCapPct: 30,
   },
 
   /**
@@ -214,6 +234,11 @@ export const GAME_CONFIG = {
     cooldownMs: 24 * 60 * 60 * 1000,
   },
 
+  specialArchives: {
+    /** One rewarded archive-case unlock per archive pack per server day. */
+    adUnlocksPerPackPerDay: 1,
+  },
+
   rating: {
     /** Minimum completed cases before the rating prompt is eligible to appear. */
     minCasesForPrompt: 3,
@@ -229,7 +254,7 @@ export const GAME_CONFIG = {
   analytics: {
     /** Stable release dimensions attached to every goal and user profile. */
     economyVersion: 'legacy-v1',
-    contentVersion: 'campaign-38-v1',
+    contentVersion: 'campaign-50-v3',
     experimentGroup: 'baseline',
     /**
      * Yandex Metrica counter ID. Replace the placeholder with the real counter

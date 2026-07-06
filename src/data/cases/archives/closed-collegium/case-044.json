@@ -1,0 +1,340 @@
+﻿{
+    "id":  "case-044",
+    "type":  "standard",
+    "difficulty":  "hard",
+    "claimAmount":  19200,
+    "truth":  "fraud",
+    "investigationBudget":  4,
+    "title":  {
+                  "ru":  "Пожар в теплице редких мандрагор",
+                  "en":  "Greenhouse Fire of Rare Mandragoras",
+                  "tr":  "Greenhouse Fire of Rare Mandragoras",
+                  "ar":  "Greenhouse Fire of Rare Mandragoras",
+                  "kk":  "Пожар в теплице редких мандрагор"
+              },
+    "claim":  {
+                  "person":  {
+                                 "ru":  "Эвелина Морн, 49 лет",
+                                 "en":  "Evelina Morn, 49",
+                                 "tr":  "Evelina Morn, 49",
+                                 "ar":  "إيفيلينا مورن، 49",
+                                 "kk":  "Эвелина Морн, 49 жаста"
+                             },
+                  "story":  {
+                                "ru":  "Редкие корни вспыхнули сами: перегрев теплицы, стекло, дым, вся партия погибла за одну ночь. У меня не было причин рисковать коллекцией перед весенним смотром.",
+                                "en":  "The rare roots ignited on their own: greenhouse heat, glass, smoke, and the whole batch gone in one night. I had no reason to risk the collection before the spring review.",
+                                "tr":  "Nadir kökler kendiliğinden tutuştu: sera ısısı, cam, duman ve bütün parti bir gecede yok oldu. Bahar denetimi öncesi koleksiyonu riske atmam için sebep yoktu.",
+                                "ar":  "اشتعلت الجذور النادرة من تلقاء نفسها: حرارة الدفيئة والزجاج والدخان وضاعت الدفعة كلها في ليلة واحدة. لم يكن لدي سبب للمخاطرة بالمجموعة قبل مراجعة الربيع.",
+                                "kk":  "Сирек тамырлар өздігінен тұтанды: жылыжай қызуы, әйнек, түтін, бүкіл партия бір түнде жойылды. Көктемгі тексеріс алдында коллекцияны тәуекелге тігетін себебім болған жоқ."
+                            }
+              },
+    "coverImage":  "covers/case-044.svg",
+    "personImage":  "people/evelina-morn.webp",
+    "client":  {
+                   "role":  {
+                                "ru":  "Куратор редких теплиц",
+                                "en":  "Rare greenhouse curator",
+                                "tr":  "Nadir sera küratörü",
+                                "ar":  "قيّمة الدفيئات النادرة",
+                                "kk":  "Сирек жылыжайлар кураторы"
+                            },
+                   "meta":  [
+                                {
+                                    "k":  {
+                                              "ru":  "Архив",
+                                              "en":  "Archive",
+                                              "tr":  "Arşiv",
+                                              "ar":  "الأرشيف",
+                                              "kk":  "Архив"
+                                          },
+                                    "v":  {
+                                              "ru":  "Закрытый Коллегиум",
+                                              "en":  "Closed Collegium",
+                                              "tr":  "Kapalı Kolej",
+                                              "ar":  "الكلية المغلقة",
+                                              "kk":  "Жабық коллегиум"
+                                          }
+                                },
+                                {
+                                    "k":  {
+                                              "ru":  "Застрахованный риск",
+                                              "en":  "Insured risk",
+                                              "tr":  "Sigortalı risk",
+                                              "ar":  "الخطر المؤمن عليه",
+                                              "kk":  "Сақтандырылған тәуекел"
+                                          },
+                                    "v":  {
+                                              "ru":  "Утрата редких корней",
+                                              "en":  "Loss of rare roots",
+                                              "tr":  "Nadir kök kaybı",
+                                              "ar":  "فقدان جذور نادرة",
+                                              "kk":  "Сирек тамырлардың жоғалуы"
+                                          }
+                                },
+                                {
+                                    "k":  {
+                                              "ru":  "Архивная связка",
+                                              "en":  "Archive thread",
+                                              "tr":  "Arşiv bağı",
+                                              "ar":  "خيط الأرشيف",
+                                              "kk":  "Архив байланысы"
+                                          },
+                                    "v":  {
+                                              "ru":  "Повторяющийся след: серая восковая лента; часть заявителей её имитирует, но часть дел выводит на настоящую группу.",
+                                              "en":  "Recurring lead: gray wax ribbon; some claimants imitate it, but some files point to a real group.",
+                                              "tr":  "Tekrarlayan iz: gri mum şerit; bazı başvuranlar taklit ediyor, bazı dosyalar gerçek bir gruba işaret ediyor.",
+                                              "ar":  "خيط متكرر: شريط شمعي رمادي؛ بعض أصحاب المطالبات يقلدونه، لكن بعض الملفات تقود إلى جماعة حقيقية.",
+                                              "kk":  "Қайталанатын із: сұр балауыз лента; кейбір өтініш берушілер оны қолдан жасайды, ал кейбір істер нақты топқа апарады."
+                                          }
+                                }
+                            ]
+               },
+    "evidences":  [
+                      {
+                          "id":  "photo-44",
+                          "type":  "photo",
+                          "title":  {
+                                        "ru":  "Очаг у стола смешивания",
+                                        "en":  "Burn mark at the mixing table",
+                                        "tr":  "Karıştırma masasındaki yanık izi",
+                                        "ar":  "أثر الحريق عند طاولة الخلط",
+                                        "kk":  "Араластыру үстеліндегі күйік ізі"
+                                    },
+                          "content":  {
+                                          "ru":  "Ожог начинается вокруг керамической чаши с остатками ускорителя роста, а не внутри грядки с корнями.",
+                                          "en":  "The burn starts around a ceramic bowl with growth-accelerant residue, not inside the root bed.",
+                                          "tr":  "Yanık, kök yatağında değil büyüme hızlandırıcı kalıntılı seramik kâsenin çevresinde başlıyor.",
+                                          "ar":  "يبدأ الاحتراق حول وعاء خزفي عليه بقايا منشط نمو، لا داخل حوض الجذور.",
+                                          "kk":  "Күйік тамыр төсегінде емес, өсу үдеткіші қалған керамикалық тостаған маңынан басталады."
+                                      },
+                          "isContradiction":  true,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Очаг пожара не совпадает с версией о самовозгорании растений.",
+                                                           "en":  "The fire origin does not match spontaneous plant ignition.",
+                                                           "tr":  "Yangın noktası bitkilerin kendiliğinden tutuşmasıyla uyuşmuyor.",
+                                                           "ar":  "نقطة بدء الحريق لا تطابق اشتعال النباتات تلقائياً.",
+                                                           "kk":  "Өрт ошағы өсімдіктің өздігінен тұтану нұсқасына сай емес."
+                                                       },
+                          "meta":  {
+                                       "filename":  "IMG_20260644_081500.jpg",
+                                       "imageUrl":  "evidence/case-044-photo-44.webp"
+                                   },
+                          "relation":  "contradicts"
+                      },
+                      {
+                          "id":  "document-44",
+                          "type":  "document",
+                          "title":  {
+                                        "ru":  "Акт фитосанитарной комиссии",
+                                        "en":  "Plant health commission report",
+                                        "tr":  "Bitki sağlığı komisyon raporu",
+                                        "ar":  "تقرير لجنة صحة النبات",
+                                        "kk":  "Фитосанитарлық комиссия акті"
+                                    },
+                          "content":  {
+                                          "ru":  "За два дня до пожара комиссия отметила: 37% корней поражены плесенью, рыночная стоимость партии снижена.",
+                                          "en":  "Two days before the fire, the commission noted: 37% of roots were mold-damaged and the batch value was reduced.",
+                                          "tr":  "Yangından iki gün önce komisyon köklerin %37’sinde küf olduğunu ve parti değerinin düştüğünü kaydetti.",
+                                          "ar":  "قبل الحريق بيومين سجلت اللجنة أن 37% من الجذور تضررت بالعفن وانخفضت قيمة الدفعة.",
+                                          "kk":  "Өрттен екі күн бұрын комиссия тамырлардың 37% көгергенін және партия құны төмендегенін тіркеді."
+                                      },
+                          "isContradiction":  false,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Материал важен для проверки версии, но сам по себе не является противоречием.",
+                                                           "en":  "The material matters to the review but is not a contradiction by itself.",
+                                                           "tr":  "Bu kayıt inceleme için önemlidir, ancak tek başına çelişki değildir.",
+                                                           "ar":  "هذه المادة مهمة للمراجعة لكنها ليست تناقضاً بحد ذاتها.",
+                                                           "kk":  "Материал тексеру үшін маңызды, бірақ өздігінен қайшылық емес."
+                                                       },
+                          "relation":  "context"
+                      },
+                      {
+                          "id":  "camera-44",
+                          "type":  "camera_recording",
+                          "title":  {
+                                        "ru":  "Ночная камера теплицы",
+                                        "en":  "Night greenhouse camera",
+                                        "tr":  "Gece sera kamerası",
+                                        "ar":  "كاميرا الدفيئة الليلية",
+                                        "kk":  "Түнгі жылыжай камерасы"
+                                    },
+                          "content":  {
+                                          "ru":  "02:18: Морн заносит закрытый термобокс. Через четыре минуты камера ослеплена паром изнутри теплицы.",
+                                          "en":  "02:18: Morn carries in a sealed thermal case. Four minutes later the camera is blinded by steam from inside the greenhouse.",
+                                          "tr":  "02:18: Morn kapalı bir termo kutu taşıyor. Dört dakika sonra kamera seranın içinden gelen buharla kapanıyor.",
+                                          "ar":  "02:18 تدخل مورن صندوقاً حرارياً مغلقاً. بعد أربع دقائق تُحجب الكاميرا ببخار من داخل الدفيئة.",
+                                          "kk":  "02:18-де Морн жабық термобокс әкеледі. Төрт минуттан соң камера жылыжай ішінен шыққан бумен тұманданады."
+                                      },
+                          "isContradiction":  true,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Камера показывает подготовку внутри теплицы до заявленного перегрева.",
+                                                           "en":  "The camera shows preparation inside the greenhouse before the reported overheating.",
+                                                           "tr":  "Kamera, bildirilen aşırı ısınmadan önce seranın içinde hazırlık yapıldığını gösteriyor.",
+                                                           "ar":  "تظهر الكاميرا تحضيراً داخل الدفيئة قبل السخونة المبلغ عنها.",
+                                                           "kk":  "Камера мәлімделген қызып кетуге дейін жылыжай ішіндегі дайындықты көрсетеді."
+                                                       },
+                          "meta":  {
+                                       "cameraId":  "ARC-44",
+                                       "cameraModel":  "Axis P3265-LV - 1080p - H.264"
+                                   },
+                          "relation":  "contradicts"
+                      },
+                      {
+                          "id":  "log-44",
+                          "type":  "usage_log",
+                          "title":  {
+                                        "ru":  "Климатический журнал",
+                                        "en":  "Climate control log",
+                                        "tr":  "İklim kontrol kaydı",
+                                        "ar":  "سجل التحكم بالمناخ",
+                                        "kk":  "Климат бақылау журналы"
+                                    },
+                          "content":  {
+                                          "ru":  [
+                                                     "01:52 — ручной режим: вентиляция отключена",
+                                                     "02:06 — датчик влажности переведён в сервис",
+                                                     "02:24 — тревога подавлена локальным ключом"
+                                                 ],
+                                          "en":  [
+                                                     "01:52 — manual mode: ventilation disabled",
+                                                     "02:06 — humidity sensor moved to service",
+                                                     "02:24 — alarm suppressed by local key"
+                                                 ],
+                                          "tr":  [
+                                                     "01:52 — manuel mod: havalandırma kapatıldı",
+                                                     "02:06 — nem sensörü servise alındı",
+                                                     "02:24 — alarm yerel anahtarla susturuldu"
+                                                 ],
+                                          "ar":  [
+                                                     "01:52 — وضع يدوي: تعطيل التهوية",
+                                                     "02:06 — نقل حساس الرطوبة إلى الصيانة",
+                                                     "02:24 — كتم الإنذار بمفتاح محلي"
+                                                 ],
+                                          "kk":  [
+                                                     "01:52 — қол режимі: желдету өшірілді",
+                                                     "02:06 — ылғал датчигі сервиске ауысты",
+                                                     "02:24 — дабыл жергілікті кілтпен басылды"
+                                                 ]
+                                      },
+                          "isContradiction":  true,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Журнал показывает ручное подавление защитных систем.",
+                                                           "en":  "The log shows manual suppression of safety systems.",
+                                                           "tr":  "Kayıt, güvenlik sistemlerinin elle susturulduğunu gösteriyor.",
+                                                           "ar":  "يوضح السجل تعطيل أنظمة السلامة يدوياً.",
+                                                           "kk":  "Журнал қорғаныс жүйелерінің қолмен басылғанын көрсетеді."
+                                                       },
+                          "meta":  {
+                                       "logPrompt":  "archive@log-44:~$ tail -f /var/log/archive.log"
+                                   },
+                          "relation":  "contradicts"
+                      },
+                      {
+                          "id":  "bank-44",
+                          "type":  "bank_statement",
+                          "title":  {
+                                        "ru":  "Покупка ускорителя",
+                                        "en":  "Accelerant purchase",
+                                        "tr":  "Hızlandırıcı alımı",
+                                        "ar":  "شراء منشط",
+                                        "kk":  "Үдеткіш сатып алу"
+                                    },
+                          "content":  {
+                                          "ru":  [
+                                                     "За сутки до пожара — покупка термогеля и ускорителя роста",
+                                                     "После пожара — аванс за новую партию корней"
+                                                 ],
+                                          "en":  [
+                                                     "One day before the fire — thermal gel and growth accelerant purchase",
+                                                     "After the fire — advance payment for a new root batch"
+                                                 ],
+                                          "tr":  [
+                                                     "Yangından bir gün önce — termal jel ve büyüme hızlandırıcı alımı",
+                                                     "Yangından sonra — yeni kök partisi için avans"
+                                                 ],
+                                          "ar":  [
+                                                     "قبل الحريق بيوم — شراء جل حراري ومنشط نمو",
+                                                     "بعد الحريق — دفعة مقدمة لدفعة جذور جديدة"
+                                                 ],
+                                          "kk":  [
+                                                     "Өрттен бір күн бұрын — термогель мен өсу үдеткіші сатып алынған",
+                                                     "Өрттен кейін — жаңа тамыр партиясына аванс"
+                                                 ]
+                                      },
+                          "isContradiction":  true,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Покупки связывают пожар с подготовленной химической реакцией.",
+                                                           "en":  "The purchases tie the fire to a prepared chemical reaction.",
+                                                           "tr":  "Alımlar yangını hazırlanmış kimyasal tepkimeye bağlıyor.",
+                                                           "ar":  "تربط المشتريات الحريق بتفاعل كيميائي مُحضّر.",
+                                                           "kk":  "Сатып алулар өртті дайындалған химиялық реакциямен байланыстырады."
+                                                       },
+                          "meta":  {
+                                       "bankName":  {
+                                                        "ru":  "Municipal Credit",
+                                                        "en":  "Municipal Credit",
+                                                        "tr":  "Municipal Credit",
+                                                        "ar":  "Municipal Credit",
+                                                        "kk":  "Municipal Credit"
+                                                    },
+                                       "accountMask":  "**** **** **** 44"
+                                   },
+                          "relation":  "contradicts"
+                      },
+                      {
+                          "id":  "witness-44",
+                          "type":  "witness_statement",
+                          "title":  {
+                                        "ru":  "Показания ночного садовника",
+                                        "en":  "Night gardener statement",
+                                        "tr":  "Gece bahçıvanı ifadesi",
+                                        "ar":  "إفادة البستاني الليلي",
+                                        "kk":  "Түнгі бағбанның жауабы"
+                                    },
+                          "content":  {
+                                          "ru":  "«Перед дымом пахло не корнями, а горячим лаком. Морн велела мне не трогать вентиляционный щит». На ручке тепличного шкафа нашли серую восковую ленту, но она расплавлена только с одной стороны.",
+                                          "en":  "\"Before the smoke, it smelled like hot varnish, not roots. Morn told me not to touch the ventilation panel.\" A gray wax ribbon was found on the greenhouse cabinet handle, but it melted on only one side.",
+                                          "tr":  "\"Dumandan önce kök değil sıcak vernik kokusu vardı. Morn havalandırma panosuna dokunmamamı söyledi.\" Sera dolabı kolunda gri mum şerit bulundu, ancak yalnızca bir tarafı erimişti.",
+                                          "ar":  "«قبل الدخان كانت الرائحة ورنيشاً ساخناً لا جذوراً. طلبت مني مورن ألا ألمس لوحة التهوية». وُجد شريط شمعي رمادي على مقبض خزانة الدفيئة، لكنه ذاب من جانب واحد فقط.",
+                                          "kk":  "«Түтінге дейін тамыр емес, қызған лак иісі шықты. Морн желдету қалқанын ұстамауды айтты». Жылыжай шкафының тұтқасынан сұр балауыз лента табылды, бірақ ол тек бір жағынан еріген."
+                                      },
+                          "isContradiction":  true,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Свидетель подтверждает искусственный источник дыма и запрет на вентиляцию.",
+                                                           "en":  "The witness confirms an artificial smoke source and a ban on ventilation.",
+                                                           "tr":  "Tanık yapay duman kaynağını ve havalandırma yasağını doğruluyor.",
+                                                           "ar":  "يؤكد الشاهد مصدر دخان اصطناعي ومنع التهوية.",
+                                                           "kk":  "Куә жасанды түтін көзін және желдетуге тыйымды растайды."
+                                                       },
+                          "relation":  "contradicts"
+                      }
+                  ],
+    "correctDecision":  "reject",
+    "explanation":  {
+                        "ru":  [
+                                   "Очаг и климатический журнал указывают на ручную подготовку пожара.",
+                                   "Серая лента здесь выглядит подброшенной приманкой, а не следом настоящей группы.",
+                                   "Самовозгорание редких корней не подтверждено: вердикт — отказ."
+                               ],
+                        "en":  [
+                                   "The burn mark and climate log point to a manually prepared fire.",
+                                   "The gray ribbon here looks planted, not like a true group trace.",
+                                   "Spontaneous ignition of the rare roots is unsupported: reject the claim."
+                               ],
+                        "tr":  [
+                                   "Yanık izi ve iklim kaydı yangının elle hazırlandığını gösteriyor.",
+                                   "Buradaki gri şerit gerçek grup izi değil, bırakılmış yem gibi duruyor.",
+                                   "Nadir köklerin kendiliğinden tutuştuğu desteklenmiyor: ödeme reddedilir."
+                               ],
+                        "ar":  [
+                                   "يشير أثر الحريق وسجل المناخ إلى حريق مُحضّر يدوياً.",
+                                   "يبدو الشريط الرمادي هنا طُعماً مزروعاً لا أثراً حقيقياً للجماعة.",
+                                   "اشتعال الجذور النادرة تلقائياً غير مثبت: القرار رفض."
+                               ],
+                        "kk":  [
+                                   "Өрт ізі мен климат журналы қолмен дайындалған өртті көрсетеді.",
+                                   "Бұл жердегі сұр лента нақты топ ізі емес, әдейі тасталған алдамшы белгі сияқты.",
+                                   "Сирек тамырлардың өздігінен тұтануы расталмады: вердикт — бас тарту."
+                               ]
+                    }
+}

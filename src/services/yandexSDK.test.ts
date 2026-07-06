@@ -39,9 +39,15 @@ async function freshOnline(opts?: { mode?: 'lite' | '' }) {
     setLeaderboardScore: vi.fn(async () => undefined),
     getLeaderboardEntries: vi.fn(async () => ({ entries: [] })),
   };
+  const payments = {
+    getCatalog: vi.fn(async () => []),
+    getPurchases: vi.fn(async () => []),
+    purchase: vi.fn(async () => ({ productID: 'archive.frontier-sector' })),
+  };
   const mockSdk = {
     getPlayer: vi.fn(async () => player),
     getLeaderboards: vi.fn(async () => leaderboards),
+    getPayments: vi.fn(async () => payments),
     environment: { i18n: { lang: 'en' } },
     serverTime: vi.fn(() => 1_700_000_000_000),
     adv,
@@ -50,7 +56,7 @@ async function freshOnline(opts?: { mode?: 'lite' | '' }) {
   (window as any).YaGames = { init: vi.fn(async () => mockSdk) };
   const mod = await import('./yandexSDK');
   await mod.initYandex();
-  return { mod, adv, player, leaderboards, mockSdk };
+  return { mod, adv, player, leaderboards, payments, mockSdk };
 }
 
 /** Pull the callbacks the adapter handed to a rewarded-video call. */
@@ -108,6 +114,14 @@ describe('offline mode (no SDK present)', () => {
     await expect(mod.submitLeaderboardScore(100)).resolves.toBeUndefined();
     await expect(mod.fetchLeaderboard()).resolves.toBeNull();
   });
+
+  it('payment calls degrade to empty/no-op without the SDK', async () => {
+    const mod = await freshOffline();
+    expect(mod.isPaymentsAvailable()).toBe(false);
+    await expect(mod.fetchPaymentsCatalog()).resolves.toEqual([]);
+    await expect(mod.restorePurchasedProductIds()).resolves.toEqual([]);
+    await expect(mod.purchaseProduct('archive.frontier-sector')).resolves.toBe(false);
+  });
 });
 
 describe('online mode (mocked SDK)', () => {
@@ -145,6 +159,38 @@ describe('online mode (mocked SDK)', () => {
       { claimDetectiveSave: { hello: 'world' } },
       true,
     );
+  });
+
+  it('exposes the payments catalog and restore surface when available', async () => {
+    const { mod, payments } = await freshOnline();
+    payments.getCatalog.mockResolvedValueOnce([
+      { id: 'archive.frontier-sector', title: 'Frontier', price: '₽299' },
+    ] as any);
+    payments.getPurchases.mockResolvedValueOnce([
+      { productID: 'archive.frontier-sector' },
+      { productId: 'archive.closed-collegium' },
+    ] as any);
+
+    expect(mod.isPaymentsAvailable()).toBe(true);
+    await expect(mod.fetchPaymentsCatalog()).resolves.toEqual([
+      {
+        id: 'archive.frontier-sector',
+        title: 'Frontier',
+        price: '₽299',
+        priceValue: null,
+        priceCurrencyCode: null,
+      },
+    ]);
+    await expect(mod.restorePurchasedProductIds()).resolves.toEqual([
+      'archive.frontier-sector',
+      'archive.closed-collegium',
+    ]);
+  });
+
+  it('runs a product purchase through the payments API', async () => {
+    const { mod, payments } = await freshOnline();
+    await expect(mod.purchaseProduct('archive.frontier-sector')).resolves.toBe(true);
+    expect(payments.purchase).toHaveBeenCalledWith({ id: 'archive.frontier-sector' });
   });
 });
 

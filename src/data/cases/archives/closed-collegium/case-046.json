@@ -1,0 +1,345 @@
+﻿{
+    "id":  "case-046",
+    "type":  "standard",
+    "difficulty":  "hard",
+    "claimAmount":  16800,
+    "truth":  "fraud",
+    "investigationBudget":  4,
+    "title":  {
+                  "ru":  "Падение с учебной башни",
+                  "en":  "Fall from the Training Tower",
+                  "tr":  "Fall from the Training Tower",
+                  "ar":  "Fall from the Training Tower",
+                  "kk":  "Падение с учебной башни"
+              },
+    "claim":  {
+                  "person":  {
+                                 "ru":  "Ника Рейн, 18 лет",
+                                 "en":  "Nika Rein, 18",
+                                 "tr":  "Nika Rein, 18",
+                                 "ar":  "نيكا راين، 18",
+                                 "kk":  "Ника Рейн, 18 жаста"
+                             },
+                  "story":  {
+                                "ru":  "Защитная система учебной башни сорвалась во время зачётного прыжка. Я упала, пропустила финал отбора и прошу оплатить лечение и потерю стипендии.",
+                                "en":  "The training tower safety system failed during my qualifying jump. I fell, missed the final selection, and request medical and scholarship compensation.",
+                                "tr":  "Eğitim kulesinin güvenlik sistemi seçme atlayışımda arızalandı. Düştüm, final seçmesini kaçırdım; tedavi ve burs kaybı tazmini istiyorum.",
+                                "ar":  "تعطل نظام أمان برج التدريب أثناء قفزتي التأهيلية. سقطت وفاتني الاختيار النهائي وأطلب تعويض العلاج والمنحة.",
+                                "kk":  "Оқу мұнарасының қорғаныс жүйесі сынақ секірісі кезінде істен шықты. Құладым, финал іріктеуінен қалдым, ем мен стипендия шығынын сұраймын."
+                            }
+              },
+    "coverImage":  "covers/case-046.svg",
+    "personImage":  "people/nika-rein.webp",
+    "client":  {
+                   "role":  {
+                                "ru":  "Курсант навигационной башни",
+                                "en":  "Training tower cadet",
+                                "tr":  "Eğitim kulesi öğrencisi",
+                                "ar":  "متدربة برج التدريب",
+                                "kk":  "Оқу мұнарасының курсанты"
+                            },
+                   "meta":  [
+                                {
+                                    "k":  {
+                                              "ru":  "Архив",
+                                              "en":  "Archive",
+                                              "tr":  "Arşiv",
+                                              "ar":  "الأرشيف",
+                                              "kk":  "Архив"
+                                          },
+                                    "v":  {
+                                              "ru":  "Закрытый Коллегиум",
+                                              "en":  "Closed Collegium",
+                                              "tr":  "Kapalı Kolej",
+                                              "ar":  "الكلية المغلقة",
+                                              "kk":  "Жабық коллегиум"
+                                          }
+                                },
+                                {
+                                    "k":  {
+                                              "ru":  "Застрахованный риск",
+                                              "en":  "Insured risk",
+                                              "tr":  "Sigortalı risk",
+                                              "ar":  "الخطر المؤمن عليه",
+                                              "kk":  "Сақтандырылған тәуекел"
+                                          },
+                                    "v":  {
+                                              "ru":  "Учебная травма",
+                                              "en":  "Training injury",
+                                              "tr":  "Eğitim yaralanması",
+                                              "ar":  "إصابة تدريب",
+                                              "kk":  "Оқу жарақаты"
+                                          }
+                                },
+                                {
+                                    "k":  {
+                                              "ru":  "Архивная связка",
+                                              "en":  "Archive thread",
+                                              "tr":  "Arşiv bağı",
+                                              "ar":  "خيط الأرشيف",
+                                              "kk":  "Архив байланысы"
+                                          },
+                                    "v":  {
+                                              "ru":  "Повторяющийся след: серая восковая лента; часть заявителей её имитирует, но часть дел выводит на настоящую группу.",
+                                              "en":  "Recurring lead: gray wax ribbon; some claimants imitate it, but some files point to a real group.",
+                                              "tr":  "Tekrarlayan iz: gri mum şerit; bazı başvuranlar taklit ediyor, bazı dosyalar gerçek bir gruba işaret ediyor.",
+                                              "ar":  "خيط متكرر: شريط شمعي رمادي؛ بعض أصحاب المطالبات يقلدونه، لكن بعض الملفات تقود إلى جماعة حقيقية.",
+                                              "kk":  "Қайталанатын із: сұр балауыз лента; кейбір өтініш берушілер оны қолдан жасайды, ал кейбір істер нақты топқа апарады."
+                                          }
+                                }
+                            ]
+               },
+    "evidences":  [
+                      {
+                          "id":  "photo-46",
+                          "type":  "photo",
+                          "title":  {
+                                        "ru":  "Пломба страховочного кольца",
+                                        "en":  "Safety ring seal",
+                                        "tr":  "Emniyet halkası mührü",
+                                        "ar":  "ختم حلقة الأمان",
+                                        "kk":  "Қауіпсіздік сақинасының мөрі"
+                                    },
+                          "content":  {
+                                          "ru":  "Пломба не сорвана нагрузкой: край ровный, как после среза тонким ножом.",
+                                          "en":  "The seal was not torn by load: the edge is even, like a cut made by a thin blade.",
+                                          "tr":  "Mühür yükle yırtılmamış; kenarı ince bıçakla kesilmiş gibi düz.",
+                                          "ar":  "لم يتمزق الختم بالشد؛ حافته مستوية كأنها قُطعت بشفرة رفيعة.",
+                                          "kk":  "Мөр салмақтан үзілмеген; жиегі жұқа пышақпен кескендей тегіс."
+                                      },
+                          "isContradiction":  true,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Пломба снята вручную, а не разрушена отказом системы.",
+                                                           "en":  "The seal was removed by hand, not destroyed by system failure.",
+                                                           "tr":  "Mühür sistem arızasıyla değil elle çıkarılmış.",
+                                                           "ar":  "أزيل الختم يدوياً لا بسبب عطل النظام.",
+                                                           "kk":  "Мөр жүйе ақауынан емес, қолмен алынған."
+                                                       },
+                          "meta":  {
+                                       "filename":  "IMG_20260646_081500.jpg",
+                                       "imageUrl":  "evidence/case-046-photo-46.webp"
+                                   },
+                          "relation":  "contradicts"
+                      },
+                      {
+                          "id":  "document-46",
+                          "type":  "document",
+                          "title":  {
+                                        "ru":  "Медицинское заключение",
+                                        "en":  "Medical report",
+                                        "tr":  "Tıbbi rapor",
+                                        "ar":  "تقرير طبي",
+                                        "kk":  "Медициналық қорытынды"
+                                    },
+                          "content":  {
+                                          "ru":  "Снимки подтверждают ушиб плеча без перелома. Давность синяка — не менее суток до заявленного падения.",
+                                          "en":  "Scans confirm a shoulder bruise with no fracture. Bruise age: at least one day before the reported fall.",
+                                          "tr":  "Görüntüler kırık olmadan omuz morluğunu doğruluyor. Morluk yaşı: bildirilen düşüşten en az bir gün önce.",
+                                          "ar":  "تؤكد الصور كدمة كتف بلا كسر. عمر الكدمة يوم واحد على الأقل قبل السقوط المبلغ عنه.",
+                                          "kk":  "Суреттер иықтың көгергенін растайды, сыну жоқ. Көгеру жасы мәлімделген құлаудан кемінде бір күн бұрын."
+                                      },
+                          "isContradiction":  true,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Травма не совпадает по времени с заявленным падением.",
+                                                           "en":  "The injury timing does not match the reported fall.",
+                                                           "tr":  "Yaralanma zamanı bildirilen düşüşle uyuşmuyor.",
+                                                           "ar":  "توقيت الإصابة لا يطابق السقوط المبلغ عنه.",
+                                                           "kk":  "Жарақат уақыты мәлімделген құлаумен сәйкес емес."
+                                                       },
+                          "relation":  "contradicts"
+                      },
+                      {
+                          "id":  "camera-46",
+                          "type":  "camera_recording",
+                          "title":  {
+                                        "ru":  "Камера площадки B",
+                                        "en":  "Platform B camera",
+                                        "tr":  "Platform B kamerası",
+                                        "ar":  "كاميرا المنصة B",
+                                        "kk":  "B алаңы камерасы"
+                                    },
+                          "content":  {
+                                          "ru":  "Рейн дважды проверяет, смотрит ли инструктор вниз, затем сама отщёлкивает страховочное кольцо перед прыжком.",
+                                          "en":  "Rein checks twice whether the instructor is looking down, then unclips the safety ring herself before jumping.",
+                                          "tr":  "Rein eğitmenin aşağı bakıp bakmadığını iki kez kontrol ediyor, sonra atlamadan önce emniyet halkasını kendisi açıyor.",
+                                          "ar":  "تتأكد راين مرتين من أن المدرب ينظر إلى الأسفل، ثم تفك حلقة الأمان بنفسها قبل القفز.",
+                                          "kk":  "Рейн нұсқаушы төмен қарап тұрғанын екі рет тексеріп, секірер алдында сақинаны өзі ағытады."
+                                      },
+                          "isContradiction":  true,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Запись показывает сознательное отключение страховки.",
+                                                           "en":  "The footage shows deliberate safety disconnection.",
+                                                           "tr":  "Görüntü emniyetin bilinçli kapatıldığını gösteriyor.",
+                                                           "ar":  "تظهر اللقطات تعطيل الأمان عمداً.",
+                                                           "kk":  "Жазба қауіпсіздіктің әдейі ажыратылғанын көрсетеді."
+                                                       },
+                          "meta":  {
+                                       "cameraId":  "ARC-46",
+                                       "cameraModel":  "Axis P3265-LV - 1080p - H.264"
+                                   },
+                          "relation":  "contradicts"
+                      },
+                      {
+                          "id":  "log-46",
+                          "type":  "usage_log",
+                          "title":  {
+                                        "ru":  "Журнал страховочной линии",
+                                        "en":  "Safety line log",
+                                        "tr":  "Emniyet hattı kaydı",
+                                        "ar":  "سجل خط الأمان",
+                                        "kk":  "Қауіпсіздік желісі журналы"
+                                    },
+                          "content":  {
+                                          "ru":  [
+                                                     "17:42 — личный жетон R-46: сервисный режим",
+                                                     "17:43 — кольцо B-12 отключено локально",
+                                                     "17:44 — падение зарегистрировано после отключения"
+                                                 ],
+                                          "en":  [
+                                                     "17:42 — personal token R-46: service mode",
+                                                     "17:43 — ring B-12 locally disabled",
+                                                     "17:44 — fall recorded after disable"
+                                                 ],
+                                          "tr":  [
+                                                     "17:42 — kişisel jeton R-46: servis modu",
+                                                     "17:43 — B-12 halkası yerelde devre dışı",
+                                                     "17:44 — düşüş kapatma sonrası kaydedildi"
+                                                 ],
+                                          "ar":  [
+                                                     "17:42 — الرمز الشخصي R-46: وضع صيانة",
+                                                     "17:43 — تعطيل الحلقة B-12 محلياً",
+                                                     "17:44 — تسجيل السقوط بعد التعطيل"
+                                                 ],
+                                          "kk":  [
+                                                     "17:42 — жеке жетон R-46: сервис режимі",
+                                                     "17:43 — B-12 сақинасы жергілікті өшірілді",
+                                                     "17:44 — құлау өшіруден кейін тіркелді"
+                                                 ]
+                                      },
+                          "isContradiction":  true,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Отключение выполнено личным жетоном заявительницы.",
+                                                           "en":  "The disable action used the claimant personal token.",
+                                                           "tr":  "Devre dışı bırakma işlemi başvuranın kişisel jetonuyla yapıldı.",
+                                                           "ar":  "تم التعطيل برمز صاحبة المطالبة الشخصي.",
+                                                           "kk":  "Өшіру өтініш берушінің жеке жетонымен жасалған."
+                                                       },
+                          "meta":  {
+                                       "logPrompt":  "archive@log-46:~$ tail -f /var/log/archive.log"
+                                   },
+                          "relation":  "contradicts"
+                      },
+                      {
+                          "id":  "bank-46",
+                          "type":  "bank_statement",
+                          "title":  {
+                                        "ru":  "Платёж тренеру отбора",
+                                        "en":  "Selection coach payment",
+                                        "tr":  "Seçme koçu ödemesi",
+                                        "ar":  "دفعة لمدرب الاختيار",
+                                        "kk":  "Іріктеу жаттықтырушысына төлем"
+                                    },
+                          "content":  {
+                                          "ru":  [
+                                                     "За день до падения — перевод частному тренеру за «экстренный допуск»",
+                                                     "После падения — запрос возврата вступительного взноса",
+                                                     "Платёж тренеру помечен фразой «лента откроет второй шанс» — той же, что ходит после кражи кубка."
+                                                 ],
+                                          "en":  [
+                                                     "Day before fall — payment to private coach for \"emergency eligibility\"",
+                                                     "After fall — entry fee refund request",
+                                                     "The coach payment is marked \"the ribbon opens a second chance,\" the phrase circulating after the cup theft."
+                                                 ],
+                                          "tr":  [
+                                                     "Düşüşten bir gün önce — özel koça \"acil uygunluk\" ödemesi",
+                                                     "Düşüşten sonra — giriş ücreti iade talebi",
+                                                     "Koç ödemesinde kupa hırsızlığından sonra yayılan \"şerit ikinci şansı açar\" ifadesi var."
+                                                 ],
+                                          "ar":  [
+                                                     "قبل السقوط بيوم — دفعة لمدرب خاص مقابل \"أهلية طارئة\"",
+                                                     "بعد السقوط — طلب استرداد رسوم الدخول",
+                                                     "تحمل دفعة المدرب عبارة \"الشريط يفتح فرصة ثانية\"، وهي العبارة المنتشرة بعد سرقة الكأس."
+                                                 ],
+                                          "kk":  [
+                                                     "Құлаудан бір күн бұрын — жеке жаттықтырушыға \"шұғыл рұқсат\" үшін төлем",
+                                                     "Құлаудан кейін — кіру жарнасын қайтару сұрауы",
+                                                     "Жаттықтырушы төлемінде кубок ұрлығынан кейін тараған \"лента екінші мүмкіндік ашады\" деген сөз бар."
+                                                 ]
+                                      },
+                          "isContradiction":  false,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Материал важен для проверки версии, но сам по себе не является противоречием.",
+                                                           "en":  "The material matters to the review but is not a contradiction by itself.",
+                                                           "tr":  "Bu kayıt inceleme için önemlidir, ancak tek başına çelişki değildir.",
+                                                           "ar":  "هذه المادة مهمة للمراجعة لكنها ليست تناقضاً بحد ذاتها.",
+                                                           "kk":  "Материал тексеру үшін маңызды, бірақ өздігінен қайшылық емес."
+                                                       },
+                          "meta":  {
+                                       "bankName":  {
+                                                        "ru":  "Municipal Credit",
+                                                        "en":  "Municipal Credit",
+                                                        "tr":  "Municipal Credit",
+                                                        "ar":  "Municipal Credit",
+                                                        "kk":  "Municipal Credit"
+                                                    },
+                                       "accountMask":  "**** **** **** 46"
+                                   },
+                          "relation":  "context"
+                      },
+                      {
+                          "id":  "witness-46",
+                          "type":  "witness_statement",
+                          "title":  {
+                                        "ru":  "Показания ассистента",
+                                        "en":  "Assistant statement",
+                                        "tr":  "Asistan ifadesi",
+                                        "ar":  "إفادة المساعدة",
+                                        "kk":  "Көмекшінің жауабы"
+                                    },
+                          "content":  {
+                                          "ru":  "«Она просила никому не говорить, что боится финального прыжка. Сказала: если башня виновата, отбор перенесут».",
+                                          "en":  "\"She asked me not to tell anyone she feared the final jump. She said: if the tower is blamed, the selection will be postponed.\"",
+                                          "tr":  "\"Final atlayışından korktuğunu kimseye söylemememi istedi. \"Kule suçlanırsa seçmeler ertelenir\" dedi.\"",
+                                          "ar":  "«طلبت مني ألا أخبر أحداً بأنها تخاف القفزة النهائية. قالت: إذا لاموا البرج فسيؤجلون الاختيار».",
+                                          "kk":  "«Ол финал секірісінен қорқатынын ешкімге айтпауымды сұрады. \"Мұнара кінәлі болса, іріктеу кейінге қалады\" деді»."
+                                      },
+                          "isContradiction":  false,
+                          "contradictionExplanation":  {
+                                                           "ru":  "Материал важен для проверки версии, но сам по себе не является противоречием.",
+                                                           "en":  "The material matters to the review but is not a contradiction by itself.",
+                                                           "tr":  "Bu kayıt inceleme için önemlidir, ancak tek başına çelişki değildir.",
+                                                           "ar":  "هذه المادة مهمة للمراجعة لكنها ليست تناقضاً بحد ذاتها.",
+                                                           "kk":  "Материал тексеру үшін маңызды, бірақ өздігінен қайшылық емес."
+                                                       },
+                          "relation":  "supports"
+                      }
+                  ],
+    "correctDecision":  "reject",
+    "explanation":  {
+                        "ru":  [
+                                   "Пломба, камера и журнал показывают ручное отключение страховки.",
+                                   "Рейн использует слух о серой ленте как прикрытие для личной инсценировки.",
+                                   "Отказ башни не подтверждён: вердикт — отказ."
+                               ],
+                        "en":  [
+                                   "The seal, camera, and log show manual safety disconnection.",
+                                   "Rein uses the gray-ribbon rumor as cover for a personal staging.",
+                                   "Tower failure is unsupported: reject the claim."
+                               ],
+                        "tr":  [
+                                   "Mühür, kamera ve kayıt emniyetin elle kapatıldığını gösteriyor.",
+                                   "Rein gri şerit söylentisini kişisel sahnelemeye kılıf yapıyor.",
+                                   "Kule arızası desteklenmiyor: ödeme reddedilir."
+                               ],
+                        "ar":  [
+                                   "يظهر الختم والكاميرا والسجل تعطيل الأمان يدوياً.",
+                                   "تستخدم راين شائعة الشريط الرمادي غطاءً لفبركة شخصية.",
+                                   "عطل البرج غير مثبت: القرار رفض."
+                               ],
+                        "kk":  [
+                                   "Мөр, камера және журнал қауіпсіздіктің қолмен өшірілгенін көрсетеді.",
+                                   "Рейн сұр лента туралы қауесетті жеке қойылымына қалқан етеді.",
+                                   "Мұнара ақауы расталмады: вердикт — бас тарту."
+                               ]
+                    }
+}

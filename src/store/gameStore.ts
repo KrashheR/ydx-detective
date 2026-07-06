@@ -27,7 +27,7 @@ import {
   classifyStamps,
 } from '../engine/rewardEngine';
 import { evaluateRank, evaluateXpGain } from '../engine/rankEngine';
-import { evaluateStreak } from '../engine/streakEngine';
+import { evaluatePerfectCaseStreak, evaluateStreak } from '../engine/streakEngine';
 import { evaluateNewUnlocks } from '../engine/achievementsEngine';
 import { bestMastery, evaluateMastery } from '../engine/masteryEngine';
 import { updateWeeklyProgress } from '../engine/weeklyEngine';
@@ -37,6 +37,10 @@ import {
   makeDefaultStats,
   scheduleSync,
 } from '../services/persistence';
+import {
+  getThematicPackCaseIds,
+  THEMATIC_PACKS,
+} from '../data/thematicPacks';
 import {
   getServerTimeMs,
   getYandexLang,
@@ -151,6 +155,12 @@ export interface GameStoreState {
   isDailyUnlocked: () => boolean;
   /** Watch a rewarded ad to skip the 24h cooldown and unlock the next daily case. */
   unlockDailyViaAd: (caseId: string) => void;
+  /** Permanently unlock the next archive case for this pack after a rewarded ad. */
+  unlockArchiveCaseViaAd: (packId: string, caseId: string) => boolean;
+  /** Permanently grant all archive rights for a purchased pack. */
+  grantArchivePurchase: (packId: string) => void;
+  /** Restore purchased archive rights from the platform. */
+  grantArchivePurchases: (packIds: readonly string[]) => void;
 
   /* ---- ad-linked rewards ---- */
   /** Add the total of the last verdict again to balance (rewarded-video double). */
@@ -510,6 +520,7 @@ export const useGameStore = create<GameStoreState>((set, get) => {
     submitVerdict(caseData, decision) {
       const { session, stats } = get();
       const isReplay = stats.completedCaseIds.includes(caseData.id);
+      const rewardEligible = !isReplay;
       const selected = session?.selectedEvidenceIds ?? [];
 
       const total = totalContradictions(caseData);
@@ -527,6 +538,11 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         : binary.falseStamps;
       const proofRatio = total === 0 ? 1 : correct / total;
       const mastery = evaluateMastery(caseData, decision, session);
+      const perfectStreak = evaluatePerfectCaseStreak(
+        stats.perfectCaseStreakCount,
+        mastery === 'silver' || mastery === 'gold',
+        rewardEligible,
+      );
       const previousMastery = stats.results[caseData.id]?.mastery ?? 'none';
 
       // The rank bonus reflects the player's standing *when they solved it*, so
@@ -547,8 +563,9 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       const breakdown = evaluateReward(caseData, decision, selected, {
         rankBonusPct: rankBefore.rewardBonusPct,
         streakBonusPct: streak.multiplierPct,
+        perfectStreakBonusPct: perfectStreak.multiplierPct,
         opensUsed: session?.viewedEvidenceIds.length ?? 0,
-        rewardEligible: !isReplay,
+        rewardEligible,
         evidenceThesisLinks: session?.evidenceThesisLinks,
       });
 
@@ -603,6 +620,7 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         xp: stats.xp + xpGained,
         streakCount: streak.streak,
         lastPlayedServerDay: nowServerDay,
+        perfectCaseStreakCount: perfectStreak.streak,
         completedCaseIds: stats.completedCaseIds.includes(caseData.id)
           ? stats.completedCaseIds
           : [...stats.completedCaseIds, caseData.id],
@@ -776,6 +794,62 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         persist(true);
         trackGoal(GOAL.dailyAdUnlock, {});
       }, 'daily_unlock');
+    },
+
+    unlockArchiveCaseViaAd(packId, caseId) {
+      const pack = THEMATIC_PACKS.find((item) => item.id === packId);
+      if (!pack) return false;
+      if (!getThematicPackCaseIds(pack).includes(caseId)) return false;
+
+      const today = Math.floor(getServerTimeMs() / GAME_CONFIG.daily.cooldownMs);
+      const { stats } = get();
+      if (stats.archivePurchasedPackIds.includes(packId)) return false;
+      if (stats.archiveUnlockedCaseIds.includes(caseId)) return false;
+      if (stats.archiveAdUnlockServerDayByPack[packId] === today) return false;
+
+      trackAdOffer('rewarded', 'archive_unlock');
+      showRewardedAd(() => {
+        set((s) => ({
+          stats: {
+            ...s.stats,
+            archiveUnlockedCaseIds: s.stats.archiveUnlockedCaseIds.includes(caseId)
+              ? s.stats.archiveUnlockedCaseIds
+              : [...s.stats.archiveUnlockedCaseIds, caseId],
+            archiveAdUnlockServerDayByPack: {
+              ...s.stats.archiveAdUnlockServerDayByPack,
+              [packId]: today,
+            },
+          },
+        }));
+        persist(true);
+        trackGoal(GOAL.adReward, { kind: 'rewarded', placement: 'archive_unlock', packId, caseId });
+      }, 'archive_unlock');
+      return true;
+    },
+
+    grantArchivePurchase(packId) {
+      set((s) => ({
+        stats: {
+          ...s.stats,
+          archivePurchasedPackIds: s.stats.archivePurchasedPackIds.includes(packId)
+            ? s.stats.archivePurchasedPackIds
+            : [...s.stats.archivePurchasedPackIds, packId],
+        },
+      }));
+      persist(true);
+    },
+
+    grantArchivePurchases(packIds) {
+      if (packIds.length === 0) return;
+      set((s) => ({
+        stats: {
+          ...s.stats,
+          archivePurchasedPackIds: Array.from(
+            new Set([...s.stats.archivePurchasedPackIds, ...packIds]),
+          ),
+        },
+      }));
+      persist(true);
     },
 
     setPaused(paused) {

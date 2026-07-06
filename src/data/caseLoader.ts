@@ -55,6 +55,19 @@ import case036 from './cases/case-036.json';
 import case037 from './cases/case-037.json';
 import case038 from './cases/case-038.json';
 import case039 from './cases/case-039.json';
+// Special archives anthology — one archive folder per thematic pack.
+import case040 from './cases/archives/frontier-sector/case-040.json';
+import case041 from './cases/archives/frontier-sector/case-041.json';
+import case042 from './cases/archives/frontier-sector/case-042.json';
+import case043 from './cases/archives/frontier-sector/case-043.json';
+import case044 from './cases/archives/closed-collegium/case-044.json';
+import case045 from './cases/archives/closed-collegium/case-045.json';
+import case046 from './cases/archives/closed-collegium/case-046.json';
+import case047 from './cases/archives/closed-collegium/case-047.json';
+import case048 from './cases/archives/underground-department/case-048.json';
+import case049 from './cases/archives/underground-department/case-049.json';
+import case050 from './cases/archives/underground-department/case-050.json';
+import case051 from './cases/archives/underground-department/case-051.json';
 
 // Daily cases — one surfaces per server-day via getDailyCase() rotation.
 import daily002 from './cases/daily/case-002-daily.json';
@@ -72,7 +85,9 @@ const RAW_CASES: unknown[] = [
   case022, case023, case024, case025, case026,
   case027, case028, case029, case030, case031,
   case032, case033, case034, case035, case036,
-  case037, case038, case039,
+  case037, case038, case039, case040, case041,
+  case042, case043, case044, case045, case046,
+  case047, case048, case049, case050, case051,
   daily002, daily101, daily102, daily103, daily104, daily105,
 ];
 

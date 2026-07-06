@@ -8,7 +8,7 @@
 
 1. **Negative Prompt** — одинаковый для всех документальных фото: вставь из `_NEGATIVE.txt` один раз и оставь.
    Для рентгенов (`X1-`, `X2-`) — используй `_NEGATIVE_XRAY.txt`.
-2. **Настройки фото-улик (01–26):**
+2. **Настройки фото-улик (01–40):**
    - Модель: **PhotoReal** или реалистичная (*Leonardo Kino XL*, *Albedo Base XL*). Иллюстративные модели — не использовать.
    - Aspect Ratio: **4:3** (горизонталь) — для всех, включая аэро/дрон (08, 22).
 3. **Настройки рентгенов (X1, X2):**
@@ -57,5 +57,17 @@
 | `24-case033-ev-photo.txt` | `public/evidence/case-033-ev-photo.jpg` | case-033 · ev-photo | |
 | `25-case104daily-ev-photos.txt` | `public/evidence/case-104-daily-ev-photos.jpg` | case-104-daily · ev-photos | |
 | `26-case105daily-ev-photo.txt` | `public/evidence/case-105-daily-ev-photo.jpg` | case-105-daily · ev-photo | |
+| `29-case040-photo-hangar.txt` | `public/evidence/case-040-photo-hangar.jpg` | case-040 · photo-hangar | архив |
+| `30-case041-crash-photo.txt` | `public/evidence/case-041-crash-photo.jpg` | case-041 · crash-photo | архив |
+| `31-case042-display-photo.txt` | `public/evidence/case-042-display-photo.jpg` | case-042 · display-photo | архив |
+| `32-case043-cache-photo.txt` | `public/evidence/case-043-cache-photo.jpg` | case-043 · cache-photo | архив |
+| `33-case044-photo-44.txt` | `public/evidence/case-044-photo-44.jpg` | case-044 · photo-44 | архив ⚠️ противоречие |
+| `34-case045-photo-45.txt` | `public/evidence/case-045-photo-45.jpg` | case-045 · photo-45 | архив ⚠️ противоречие |
+| `35-case046-photo-46.txt` | `public/evidence/case-046-photo-46.jpg` | case-046 · photo-46 | архив ⚠️ противоречие |
+| `36-case047-photo-47.txt` | `public/evidence/case-047-photo-47.jpg` | case-047 · photo-47 | архив ⚠️ противоречие |
+| `37-case048-photo-48.txt` | `public/evidence/case-048-photo-48.jpg` | case-048 · photo-48 | архив ⚠️ противоречие |
+| `38-case049-photo-49.txt` | `public/evidence/case-049-photo-49.jpg` | case-049 · photo-49 | архив ⚠️ противоречие |
+| `39-case050-photo-50.txt` | `public/evidence/case-050-photo-50.jpg` | case-050 · photo-50 | архив ⚠️ противоречие |
+| `40-case051-photo-51.txt` | `public/evidence/case-051-photo-51.jpg` | case-051 · photo-51 | архив ⚠️ противоречие |
 | `X1-case003-ev-xray.txt` | `public/evidence/case-003-ev-xray.jpg` | case-003 · ev-xray | рентген ⚠️ противоречие |
 | `X2-case033-ev-xray.txt` | `public/evidence/case-033-ev-xray.jpg` | case-033 · ev-xray | рентген |

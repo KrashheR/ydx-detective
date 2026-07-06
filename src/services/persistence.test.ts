@@ -41,6 +41,9 @@ describe('defaults', () => {
     expect(s.completedCaseIds).toEqual([]);
     expect(s.unlockedAchievementIds).toEqual([]);
     expect(s.lastPlayedServerDay).toBeNull();
+    expect(s.perfectCaseStreakCount).toBe(0);
+    expect(s.archivePurchasedPackIds).toEqual([]);
+    expect(s.archiveUnlockedCaseIds).toEqual([]);
   });
 
   it('makeDefaultSnapshot uses the current save version', async () => {
@@ -75,12 +78,16 @@ describe('loadSnapshot', () => {
         xp: 5,
         streakCount: 1,
         lastPlayedServerDay: 3,
+        perfectCaseStreakCount: 2,
         unlockedAchievementIds: [],
         ratingDismissals: 0,
         departmentLevels: { archive: 0, field: 0, lab: 0 },
         serviceFreeUseServerDay: {},
         weeklyProgress: null,
         collectibleStampIds: [],
+        archivePurchasedPackIds: [],
+        archiveUnlockedCaseIds: [],
+        archiveAdUnlockServerDayByPack: {},
       },
       session: null,
     };
@@ -169,6 +176,7 @@ describe('migration (v1 → v2) via loadSnapshot', () => {
     expect(snapshot.stats.xp).toBe(0);
     expect(snapshot.stats.streakCount).toBe(0);
     expect(snapshot.stats.lastPlayedServerDay).toBeNull();
+    expect(snapshot.stats.perfectCaseStreakCount).toBe(0);
     expect(snapshot.stats.unlockedAchievementIds).toEqual([]);
     // Backfilled session field + upgraded version.
     expect(snapshot.session?.revealedEvidenceIds).toEqual([]);
@@ -192,12 +200,16 @@ describe('sync (debounce + flush)', () => {
       xp: 0,
       streakCount: 0,
       lastPlayedServerDay: null,
+      perfectCaseStreakCount: 0,
       unlockedAchievementIds: [],
       ratingDismissals: 0,
       departmentLevels: { archive: 0, field: 0, lab: 0 },
       serviceFreeUseServerDay: {},
       weeklyProgress: null,
       collectibleStampIds: [],
+      archivePurchasedPackIds: [],
+      archiveUnlockedCaseIds: [],
+      archiveAdUnlockServerDayByPack: {},
     },
     session: null,
   });

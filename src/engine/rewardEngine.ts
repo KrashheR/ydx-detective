@@ -44,6 +44,8 @@ export interface RewardModifiers {
   readonly rankBonusPct?: number;
   /** Additive % bonus from the player's daily streak. */
   readonly streakBonusPct?: number;
+  /** Additive % bonus from the player's 100%-proof case streak. */
+  readonly perfectStreakBonusPct?: number;
   /**
    * How many evidence cards the player opened this case. Used only for the
    * efficiency component on budgeted cases; ignored when the case has no
@@ -149,7 +151,9 @@ export function evaluateReward(
     Math.round(proofComponent) +
     Math.round(efficiencyComponent);
   const bonusPct =
-    (modifiers.rankBonusPct ?? 0) + (modifiers.streakBonusPct ?? 0);
+    (modifiers.rankBonusPct ?? 0) +
+    (modifiers.streakBonusPct ?? 0) +
+    (modifiers.perfectStreakBonusPct ?? 0);
   const bonusComponent = Math.round((positive * bonusPct) / 100);
 
   const penalty = falseStamps * reward.falseStampPenalty;
