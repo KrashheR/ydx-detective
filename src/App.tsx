@@ -299,14 +299,20 @@ export default function App() {
 
   if (!isHydrated) {
     return (
-      <div className={`theme-${FOLDER_LOOK} flex h-full items-center justify-center bg-bg text-text-muted`}>
+      <div
+        className={`theme-${FOLDER_LOOK} flex h-full items-center justify-center bg-bg text-text-muted`}
+        onContextMenu={(event) => event.preventDefault()}
+      >
         …
       </div>
     );
   }
 
   return (
-    <div className={`theme-${FOLDER_LOOK} min-h-full bg-bg md:h-full md:overflow-hidden`}>
+    <div
+      className={`theme-${FOLDER_LOOK} min-h-full bg-bg md:h-full md:overflow-hidden`}
+      onContextMenu={(event) => event.preventDefault()}
+    >
       {/* Mobile-only grouped desk menu (replaces sidebar + folder grid on small screens) */}
       {!selectedCase && (
         <div className="md:hidden">

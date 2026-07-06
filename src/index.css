@@ -9,9 +9,17 @@
   #root {
     height: 100%;
   }
+  #root,
+  #root *,
+  #static-game-loader,
+  #static-game-loader * {
+    -webkit-user-select: none;
+    user-select: none;
+  }
   body {
     @apply bg-bg font-sans antialiased;
     color: #3d3119;
+    -webkit-touch-callout: none;
   }
 
   /* ---------------------------------------------------------------------- *

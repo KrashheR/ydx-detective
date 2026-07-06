@@ -136,6 +136,21 @@ describe('hydration', () => {
     expect(useGameStore.getState().session).toBeNull();
   });
 
+  it('prevents the browser context menu inside the game', async () => {
+    const { container } = await renderHydrated();
+    const appRoot = container.firstElementChild;
+    expect(appRoot).not.toBeNull();
+
+    const contextMenu = new MouseEvent('contextmenu', {
+      bubbles: true,
+      cancelable: true,
+    });
+    const allowed = appRoot!.dispatchEvent(contextMenu);
+
+    expect(allowed).toBe(false);
+    expect(contextMenu.defaultPrevented).toBe(true);
+  });
+
   it('stays on the desk with a saved investigation until the player selects it', async () => {
     const firstCase = getStandardCases()[0]!;
     const savedSession = {
