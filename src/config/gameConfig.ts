@@ -264,7 +264,7 @@ export const GAME_CONFIG = {
      * `<script>` in index.html only defines `window.ym`; the actual
      * `ym(id, 'init', …)` call reads this value from `src/services/metrica.ts`.
      */
-    counterId: 110041851, // TODO: set the real Yandex Metrica counter ID
+    counterId: 110041851,
     /** Enable Webvisor session recording on init. */
     webvisor: true,
   },

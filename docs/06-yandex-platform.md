@@ -145,6 +145,7 @@ null при недоступности → UI фолбэчит.
 | `achievement_unlock` | `submitVerdict` (по одному на каждый новый ачив) | achievementId, caseId |
 | `rank_up` | `submitVerdict` (при `promotedToLevel`) | newLevel, xp |
 | `daily_claim` | `submitVerdict` (`type === 'daily'`) | caseId, total |
+| `daily_ad_unlock` | `unlockDailyViaAd` (после rewarded-награды) | — |
 | `bankruptcy` | `submitVerdict` (когда `isBankrupt` переходит в true) | caseId, balance |
 | `reward_double` | `doubleLastReward` | caseId, amount, balanceAfter |
 | `funds_restore` | `restoreFunds` (в колбэке rewarded-видео) | previousBalance, restoredTo |
@@ -156,6 +157,21 @@ null при недоступности → UI фолбэчит.
 **Конфиг** (`GAME_CONFIG.analytics`): `counterId`, `webvisor`, `economyVersion`,
 `contentVersion`, `experimentGroup`. Персист не
 меняется — трекинг always-on, без opt-out, `saveVersion` не бампается.
+
+**Синхронизация целей.** `scripts/upload-metrica-goals.mjs` сверяет свой полный каталог
+с `GOAL` из `metrica.ts`, читает существующие цели через Management API и создаёт только
+отсутствующие. По умолчанию команда безопасно делает dry-run; существующие цели не
+изменяются и не удаляются:
+
+```bash
+npm run metrika:goals          # показать отсутствующие цели
+npm run metrika:goals:publish  # создать отсутствующие цели
+npm run metrika:goals -- --list
+```
+
+Для API-доступа положить `YANDEX_METRICA_COUNTER_ID` и `YANDEX_OAUTH_TOKEN` со scopes
+`metrika:read metrika:write` в локальный `.env.metrica.local`; `.env*.local` исключены
+из git. Если ID не задан в env, скрипт использует `GAME_CONFIG.analytics.counterId`.
 
 ## Деплой
 

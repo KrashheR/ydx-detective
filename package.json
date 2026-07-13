@@ -11,6 +11,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:cov": "vitest run --coverage",
+    "metrika:goals": "node scripts/upload-metrica-goals.mjs",
+    "metrika:goals:publish": "node scripts/upload-metrica-goals.mjs --apply",
     "playtest:validate": "node scripts/synthetic-playtest.mjs --validate",
     "playtest:run": "node scripts/synthetic-playtest.mjs"
   },
