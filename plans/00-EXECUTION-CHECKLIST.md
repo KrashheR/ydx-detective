@@ -24,14 +24,17 @@
 
 По плану: `plans/README.md`, таблица «Что уже сделано».
 
-- [ ] Убедиться, что `submitLeaderboardScore` получает XP, а не balance (`gameStore.ts`, ~строка 663)
-- [ ] Убедиться, что `buyHint` не показывает интерстишл (только rewarded для canvass)
-- [ ] Убедиться, что `verdict_submit` шлёт `caseId`
-- [ ] Убедиться, что `claimTheses` отсутствует в `src/`
-- [ ] Незакоммиченные изменения из `git status` (App, StampModal, engines, persistence, store) —
-      разобраться, что это за WIP, и закоммитить/согласовать до начала работ
+- [x] Убедиться, что `submitLeaderboardScore` получает XP, а не balance (`gameStore.ts`, ~строка 663)
+- [x] Убедиться, что `buyHint` не показывает интерстишл (только rewarded для canvass)
+- [x] Убедиться, что `verdict_submit` шлёт `caseId`
+- [x] Убедиться, что `claimTheses` отсутствует в `src/`
+- [x] Незакоммиченные изменения из `git status` (App, StampModal, engines, persistence, store) —
+      разобраться, что это за WIP, и закоммитить/согласовать до начала работ (уже было закоммичено
+      в `c75f5cf` до начала этой сессии)
 
-**Статус:** _не начат_
+**Статус:** Закрыт. Все 4 пункта подтверждены чтением кода (gameStore.ts:390-457, 663, 666-684;
+`grep claimTheses` — 0 совпадений). `npm run typecheck` и `npm test` (250/250) чистые на момент
+старта. Рабочее дерево было чистым — WIP уже закоммичен раньше.
 
 ---
 
