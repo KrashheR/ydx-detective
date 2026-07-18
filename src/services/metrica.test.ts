@@ -101,6 +101,38 @@ describe('metrica adapter — enabled', () => {
     expect(ym).not.toHaveBeenCalled();
   });
 
+  it('tallies adsPerSession/verdictsSinceLastAd and merges them onto ad_open', () => {
+    m.initMetrica();
+    ym.mockClear();
+
+    m.trackGoal(m.GOAL.verdictSubmit, { total: 100 });
+    m.trackGoal(m.GOAL.verdictSubmit, { total: 200 });
+    m.trackGoal(m.GOAL.adOpen, { kind: 'fullscreen', placement: 'verdict' });
+
+    expect(ym).toHaveBeenCalledWith(
+      99,
+      'reachGoal',
+      'ad_open',
+      expect.objectContaining({
+        adsPerSession: 1,
+        verdictsSinceLastAd: 2,
+      }),
+    );
+
+    // The counter resets after the ad and starts accumulating again.
+    m.trackGoal(m.GOAL.verdictSubmit, { total: 50 });
+    m.trackGoal(m.GOAL.adOpen, { kind: 'rewarded', placement: 'witness_canvass' });
+    expect(ym).toHaveBeenCalledWith(
+      99,
+      'reachGoal',
+      'ad_open',
+      expect.objectContaining({
+        adsPerSession: 2,
+        verdictsSinceLastAd: 1,
+      }),
+    );
+  });
+
   it('records active-time boundaries when an ad pauses play', () => {
     m.initMetrica();
     ym.mockClear();

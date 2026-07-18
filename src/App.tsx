@@ -73,6 +73,8 @@ export default function App() {
   const lastInterstitialActiveMsRef = useRef(0);
   // Gate: show rating modal at most once per session.
   const ratingShownRef = useRef(false);
+  // Gate: fire `reject_blocked` at most once per case investigation.
+  const rejectBlockedCaseIdRef = useRef<string | null>(null);
 
   const flashToast = (msg: string) => {
     setToast(msg);
@@ -234,6 +236,13 @@ export default function App() {
   const handleSelectStandardCase = (info: CaseUnlockInfo) => {
     if (!isCaseUnlocked(info)) {
       flashToast(formatLockedCaseMessage(info));
+      trackGoal(GOAL.lockedCaseClick, {
+        caseId: info.caseData.id,
+        lockReason: info.reason === 'requires_level' ? 'level' : 'sequence',
+        campaignPosition: standardCaseUnlocks.findIndex(
+          (u) => u.caseData.id === info.caseData.id,
+        ),
+      });
       return;
     }
     handleSelectCase(info.caseData);
@@ -267,6 +276,11 @@ export default function App() {
     const opened = store.markEvidenceAsViewed(id, selectedCase);
     if (!opened) {
       flashToast(t('budgetExhausted', lang));
+      trackGoal(GOAL.budgetExhausted, {
+        caseId: selectedCase.id,
+        budget: selectedCase.investigationBudget ?? null,
+        opensUsed: session?.viewedEvidenceIds.length ?? 0,
+      });
       return;
     }
     setModalEvidenceId(id);
@@ -282,7 +296,19 @@ export default function App() {
   /** Returns false (→ show prompt) when rejecting without any stamped proof. */
   const handleReject = (): boolean => {
     if (!selectedCase) return true;
-    if ((session?.selectedEvidenceIds.length ?? 0) === 0) return false;
+    if ((session?.selectedEvidenceIds.length ?? 0) === 0) {
+      // Fire once per case investigation — repeated blocked attempts on the
+      // same case aren't a new signal.
+      if (rejectBlockedCaseIdRef.current !== selectedCase.id) {
+        rejectBlockedCaseIdRef.current = selectedCase.id;
+        trackGoal(GOAL.rejectBlocked, {
+          caseId: selectedCase.id,
+          viewedCount: session?.viewedEvidenceIds.length ?? 0,
+          stampedCount: session?.selectedEvidenceIds.length ?? 0,
+        });
+      }
+      return false;
+    }
     submitWithAdGate('reject');
     return true;
   };

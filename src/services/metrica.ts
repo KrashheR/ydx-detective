@@ -77,6 +77,9 @@ export const GOAL = {
   purchaseSuccess: 'purchase_success',
   purchaseError: 'purchase_error',
   purchaseRestore: 'purchase_restore',
+  rejectBlocked: 'reject_blocked',
+  budgetExhausted: 'budget_exhausted',
+  lockedCaseClick: 'locked_case_click',
 } as const;
 
 export type GoalName = (typeof GOAL)[keyof typeof GOAL];
@@ -99,6 +102,14 @@ let activeSinceMs: number | null = null;
 let activeTotalMs = 0;
 let adPaused = false;
 let lastAdClosedAtMs: number | null = null;
+
+/**
+ * Session-scoped ad-frequency aggregates (reset on module reload, i.e. per
+ * page session). Persisted cumulative counters (e.g. `interstitialsSeenTotal`)
+ * live in `PlayerStats` instead — see docs/06-yandex-platform.md.
+ */
+let adsPerSession = 0;
+let verdictsSinceLastAd = 0;
 
 function isPageActive(): boolean {
   return typeof document === 'undefined' || document.visibilityState === 'visible';
@@ -133,6 +144,8 @@ function endSession(reason: 'pagehide' | 'beforeunload'): void {
     activeTotalMs,
     msSinceAdClose,
     exitedAfterAd: msSinceAdClose != null && msSinceAdClose <= 10_000,
+    adsPerSession,
+    verdictsSinceLastAd,
   });
   sessionOpen = false;
 }
@@ -210,12 +223,22 @@ export function trackGoal(
   name: GoalName,
   params?: Record<string, unknown>,
 ): void {
+  // Ad-frequency aggregates are tallied unconditionally (even when the counter
+  // is disabled) so the numbers stay correct if Metrica loads mid-session.
+  if (name === GOAL.verdictSubmit) verdictsSinceLastAd += 1;
+  let mergedParams = params;
+  if (name === GOAL.adOpen) {
+    adsPerSession += 1;
+    mergedParams = { ...params, adsPerSession, verdictsSinceLastAd };
+    verdictsSinceLastAd = 0;
+  }
+
   const counter = ym();
   if (!enabled || !counter) return;
   try {
     counter(GAME_CONFIG.analytics.counterId, 'reachGoal', name, {
       ...releaseParams(),
-      ...params,
+      ...mergedParams,
     });
   } catch {
     /* swallow — analytics is best-effort */

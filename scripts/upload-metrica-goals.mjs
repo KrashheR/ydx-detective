@@ -62,6 +62,9 @@ const GOALS = [
   ['purchase_success', 'Покупка завершена'],
   ['purchase_error', 'Ошибка покупки'],
   ['purchase_restore', 'Покупки восстановлены'],
+  ['reject_blocked', 'Отклонение заблокировано без доказательств'],
+  ['budget_exhausted', 'Бюджет расследования исчерпан'],
+  ['locked_case_click', 'Клик по закрытому делу'],
 ];
 
 function loadLocalEnv() {

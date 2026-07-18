@@ -129,6 +129,12 @@ null при недоступности → UI фолбэчит.
 `experimentGroup` из `GAME_CONFIG.analytics`; эти значения меняются только при выпуске
 соответствующей версии или запуске эксперимента.
 
+**Ad-frequency агрегаты.** `adsPerSession`/`verdictsSinceLastAd` — module-level счётчики в
+`metrica.ts` (сбрасываются при перезагрузке страницы, т.е. живут ровно одну сессию); `trackGoal`
+инкрементирует их при `verdict_submit`/`ad_open` и подмешивает в `ad_open`/`session_end`.
+Кумулятивный `interstitialsSeenTotal` (персистентный, за все сессии) — за миграцией сейва, см.
+план `plans/00-EXECUTION-CHECKLIST.md`, этап 3 (единый бамп `saveVersion` 7→8).
+
 **Где эмитятся события.** Стор — эмиттер (как и для лидерборда): цели зовутся из действий
 `gameStore.ts`, где уже посчитаны payload'ы. Имена целей — каталог `GOAL` в `metrica.ts`
 (единый источник, держать в лок-степе с этой таблицей; переименование цели обнуляет её
@@ -136,7 +142,7 @@ null при недоступности → UI фолбэчит.
 
 | Цель (`GOAL`) | Откуда | Ключевые параметры |
 | --- | --- | --- |
-| `session_start`, `session_end` | lifecycle Метрики | visibility, restored, reason, activeTotalMs, exitedAfterAd |
+| `session_start`, `session_end` | lifecycle Метрики | visibility, restored, reason, activeTotalMs, exitedAfterAd; `session_end` дополнительно несёт `adsPerSession`, `verdictsSinceLastAd` |
 | `active_interval`, `session_pause`, `session_resume` | visibility / реклама | durationMs, activeTotalMs, reason |
 | `case_start` | `startCase` | caseId, type, difficulty, claimAmount, evidenceCount, budget |
 | `investigation_interrupt`, `investigation_resume` | смена/закрытие/повторный вход в дело | caseId, reason, viewedCount, stampCount |
@@ -152,9 +158,12 @@ null при недоступности → UI фолбэчит.
 | `reward_double` | `doubleLastReward` | caseId, amount, balanceAfter |
 | `funds_restore` | `restoreFunds` (в колбэке rewarded-видео) | previousBalance, restoredTo |
 | `rating_action` | `dismissRating` / `suppressRating` / `App.tsx` (onRate) | action (`dismiss`/`never`/`rate`), dismissals |
-| `ad_offer`, `ad_accept`, `ad_open`, `ad_close`, `ad_reward`, `ad_error` | UI + `yandexSDK.ts` | kind, placement, wasShown, rewarded, error |
+| `ad_offer`, `ad_accept`, `ad_open`, `ad_close`, `ad_reward`, `ad_error` | UI + `yandexSDK.ts` | kind, placement, wasShown, rewarded, error; `ad_open` дополнительно несёт сессионные агрегаты `adsPerSession`/`verdictsSinceLastAd` (см. ниже) |
 | `service_view`, `service_select`, `service_buy`, `service_use` | `App.tsx` / `buyHint` | service, caseId, cost, balanceBefore/After |
 | `shop_view`, `product_view`, `purchase_start`, `purchase_success`, `purchase_error`, `purchase_restore` | `ThematicPacksModal` + `yandexSDK.ts` | productId, archiveId, price, error |
+| `reject_blocked` | `App.tsx` (`handleReject`, при попытке отклонить без штампов; 1 раз за открытое дело) | caseId, viewedCount, stampedCount |
+| `budget_exhausted` | `App.tsx` (`handleOpenEvidence`, когда `markEvidenceAsViewed` отказывает) | caseId, budget, opensUsed |
+| `locked_case_click` | `App.tsx` (`handleSelectStandardCase`, клик по замкнутой карточке) | caseId, `lockReason: 'level' \| 'sequence'`, campaignPosition |
 
 **Конфиг** (`GAME_CONFIG.analytics`): `counterId`, `webvisor`, `economyVersion`,
 `contentVersion`, `experimentGroup`. Персист не
