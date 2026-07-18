@@ -469,10 +469,7 @@ describe('end-to-end flow for every shipped case', () => {
       store().startCase(caseData);
       // Study every document, then stamp exactly the real contradictions.
       caseData.evidences.forEach((e) => store().markEvidenceAsViewed(e.id, caseData));
-      contradictionIds(caseData).forEach((id) => {
-        const evidence = caseData.evidences.find((item) => item.id === id);
-        store().toggleEvidenceStamp(id, evidence?.thesisId);
-      });
+      contradictionIds(caseData).forEach((id) => store().toggleEvidenceStamp(id));
 
       const xpBefore = store().stats.xp;
       const breakdown = store().submitVerdict(caseData, caseData.correctDecision);

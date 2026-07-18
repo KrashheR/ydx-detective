@@ -59,10 +59,6 @@ export type DepartmentId = 'archive' | 'field' | 'lab';
 export type InvestigationService = 'archive_check' | 'extra_clearance' | 'expert_opinion';
 export type EvidenceRelation = 'supports' | 'contradicts' | 'context';
 
-export interface ClaimThesis {
-  readonly id: string;
-  readonly text: LocalizedString;
-}
 export type WeeklyTaskId = 'correct_3' | 'perfect_2' | 'no_hints_2' | 'efficient_1' | 'variety_3';
 
 export interface WeeklyProgress {
@@ -133,7 +129,7 @@ export interface Evidence {
   readonly contradictionExplanation: LocalizedString;
   /** Per-renderer display metadata — makes each evidence visually unique. */
   readonly meta?: EvidenceMeta;
-  readonly thesisId?: string;
+  /** Authoring metadata only — how the card relates to the claim narrative. */
   readonly relation?: EvidenceRelation;
 }
 
@@ -181,7 +177,6 @@ export interface Case {
    * Omitted ⇒ unlimited opens and the classic "review everything" gate.
    */
   readonly investigationBudget?: number;
-  readonly claimTheses?: readonly ClaimThesis[];
 }
 
 /* -------------------------------------------------------------------------- */
@@ -283,7 +278,6 @@ export interface ActiveSession {
   canvassUsed: boolean;
   /** Extra budget openings granted by Additional Clearance. */
   extraOpens: number;
-  evidenceThesisLinks: Record<string, string>;
   /** Server-time (ms) the investigation began — drives daily timers. */
   readonly startedAtServerMs: number;
 }

@@ -7,7 +7,7 @@ import {
   type MouseEvent as ReactMouseEvent,
 } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import type { ClaimThesis, Evidence, EvidenceMeta, Language } from '../types';
+import type { Evidence, EvidenceMeta, Language } from '../types';
 import { loc, t } from '../i18n/ui';
 import { EVIDENCE_TAG_KEY } from './icons';
 
@@ -20,9 +20,7 @@ interface Props {
   stamped: boolean;
   /** True if a paid "Inspector Note" hint revealed this card's true status. */
   revealed: boolean;
-  theses?: readonly ClaimThesis[];
-  linkedThesisId?: string;
-  onToggle: (thesisId?: string) => void;
+  onToggle: () => void;
   onClose: () => void;
 }
 
@@ -32,12 +30,9 @@ export function StampModal({
   lang,
   stamped,
   revealed,
-  theses,
-  linkedThesisId,
   onToggle,
   onClose,
 }: Props) {
-  const [selectedThesisId, setSelectedThesisId] = useState<string | undefined>(linkedThesisId);
   const dialogRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const onCloseRef = useRef(onClose);
@@ -48,8 +43,6 @@ export function StampModal({
   useEffect(() => {
     onCloseRef.current = onClose;
   }, [onClose]);
-
-  useEffect(() => setSelectedThesisId(linkedThesisId), [evidence?.id, linkedThesisId]);
 
   useEffect(() => {
     if (!evidence) return undefined;
@@ -197,29 +190,11 @@ export function StampModal({
 
             {/* Mark / unmark toggle */}
             <div className="px-[18px] pb-[18px]">
-              {!stamped && theses && theses.length > 0 && (
-                <div className="mb-3 space-y-2 border-l-2 border-border pl-3">
-                  {theses.map((thesis, index) => (
-                    <label key={thesis.id} className="flex cursor-pointer items-start gap-2 text-sm text-ink">
-                      <input
-                        type="radio"
-                        name="claim-thesis"
-                        value={thesis.id}
-                        checked={selectedThesisId === thesis.id}
-                        onChange={() => setSelectedThesisId(thesis.id)}
-                        className="mt-1"
-                      />
-                      <span><b className="font-mono">§{index + 1}</b> {loc(thesis.text, lang)}</span>
-                    </label>
-                  ))}
-                </div>
-              )}
               <button
                 type="button"
-                onClick={() => onToggle(selectedThesisId)}
-                disabled={!stamped && Boolean(theses?.length) && !selectedThesisId}
+                onClick={onToggle}
                 className={`h-[50px] w-full rounded-[9px] border-2 border-stamp text-[13px] font-bold uppercase tracking-wide transition-all ${
-                  stamped ? 'bg-stamp text-white' : 'bg-transparent text-stamp disabled:cursor-not-allowed disabled:opacity-40'
+                  stamped ? 'bg-stamp text-white' : 'bg-transparent text-stamp'
                 }`}
               >
                 {stamped

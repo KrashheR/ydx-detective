@@ -26,7 +26,6 @@
 | `correctDecision` | `approve \| reject` | `reject` если fraud, `approve` если valid |
 | `explanation` | LocalizedLines | ровно 3 коротких вывода для ResultSheet (массив строк, 5 языков) |
 | `investigationBudget` | number? | если задан — бюджетное дело (см. ниже) |
-| `claimTheses` | ClaimThesis[]? | 2–4 проверяемых тезиса углублённого режима |
 
 Улика (`Evidence`):
 
@@ -39,10 +38,7 @@
 | `isContradiction` | boolean | истинно только у реально противоречащих улик |
 | `contradictionExplanation` | LocalizedString | **всегда** заполнять, даже если false |
 | `meta` | EvidenceMeta? | per-renderer метаданные (см. ниже) |
-| `thesisId` / `relation` | string? | связь `supports / contradicts / context` с тезисом |
-
-Пилот связок включён в `case-013`, `case-021`, `case-025`, `case-029`, `case-033`,
-`case-039`. Неверная связка снижает точность доказательств; legacy-дела остаются бинарными.
+| `relation` | `supports \| contradicts \| context`? | авторская метадата (движком не используется) |
 
 **Правило truth ↔ улики:** fraud → `isContradiction: true` у **≥2** улик и
 `correctDecision: reject`. valid → **0** противоречий и `correctDecision: approve`.

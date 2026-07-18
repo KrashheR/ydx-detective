@@ -134,7 +134,7 @@ export interface GameStoreState {
    * card is now considered open.
    */
   markEvidenceAsViewed: (id: string, caseData: Case) => boolean;
-  toggleEvidenceStamp: (id: string, thesisId?: string) => void;
+  toggleEvidenceStamp: (id: string) => void;
   /**
    * Reveal the next unrevealed evidence card's true status for the active case.
    *   • `note`    — charges `balance` (20% of the claim); no-op if unaffordable.
@@ -304,7 +304,6 @@ export const useGameStore = create<GameStoreState>((set, get) => {
           hintsUsed: 0,
           canvassUsed: false,
           extraOpens: 0,
-          evidenceThesisLinks: {},
           startedAtServerMs: getServerTimeMs(),
         },
         lastResult: null,
@@ -364,18 +363,15 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       return true;
     },
 
-    toggleEvidenceStamp(id, thesisId) {
+    toggleEvidenceStamp(id) {
       set((s) => {
         if (!s.session) return s;
         const selected = s.session.selectedEvidenceIds;
         const next = selected.includes(id)
           ? selected.filter((x) => x !== id)
           : [...selected, id];
-        const links = { ...s.session.evidenceThesisLinks };
-        if (next.includes(id) && thesisId) links[id] = thesisId;
-        else delete links[id];
         return {
-          session: { ...s.session, selectedEvidenceIds: next, evidenceThesisLinks: links },
+          session: { ...s.session, selectedEvidenceIds: next },
         };
       });
       persist();
@@ -524,18 +520,7 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       const selected = session?.selectedEvidenceIds ?? [];
 
       const total = totalContradictions(caseData);
-      const binary = classifyStamps(caseData, selected);
-      const linkedCorrect = caseData.claimTheses?.length
-        ? selected.filter((id) => {
-            const evidence = caseData.evidences.find((item) => item.id === id);
-            return evidence?.relation === 'contradicts' &&
-              evidence.thesisId === session?.evidenceThesisLinks[id];
-          }).length
-        : binary.correct;
-      const correct = linkedCorrect;
-      const falseStamps = caseData.claimTheses?.length
-        ? selected.length - linkedCorrect
-        : binary.falseStamps;
+      const { correct, falseStamps } = classifyStamps(caseData, selected);
       const proofRatio = total === 0 ? 1 : correct / total;
       const mastery = evaluateMastery(caseData, decision, session);
       const perfectStreak = evaluatePerfectCaseStreak(
@@ -566,7 +551,6 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         perfectStreakBonusPct: perfectStreak.multiplierPct,
         opensUsed: session?.viewedEvidenceIds.length ?? 0,
         rewardEligible,
-        evidenceThesisLinks: session?.evidenceThesisLinks,
       });
 
       // Career XP, then detect whether this case crossed a rank threshold.
@@ -941,9 +925,7 @@ export function selectCaseInvestigationGate(
   const viewed = state.session?.viewedEvidenceIds ?? [];
   const stamped = state.session?.selectedEvidenceIds ?? [];
 
-  const hasStampedContradiction = caseData.claimTheses?.length
-    ? stamped.some((id) => Boolean(state.session?.evidenceThesisLinks[id]))
-    : stamped.length > 0;
+  const hasStampedContradiction = stamped.length > 0;
   const baseBudget = caseData.investigationBudget ?? null;
   const budget = baseBudget == null ? null : baseBudget + (state.session?.extraOpens ?? 0);
 

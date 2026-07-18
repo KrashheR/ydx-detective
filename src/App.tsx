@@ -463,9 +463,7 @@ export default function App() {
         lang={lang}
         stamped={session?.selectedEvidenceIds.includes(modalEvidenceId ?? '') ?? false}
         revealed={session?.revealedEvidenceIds.includes(modalEvidenceId ?? '') ?? false}
-        theses={selectedCase?.claimTheses}
-        linkedThesisId={modalEvidenceId ? session?.evidenceThesisLinks[modalEvidenceId] : undefined}
-        onToggle={(thesisId) => modalEvidenceId && store.toggleEvidenceStamp(modalEvidenceId, thesisId)}
+        onToggle={() => modalEvidenceId && store.toggleEvidenceStamp(modalEvidenceId)}
         onClose={() => setModalEvidenceId(null)}
       />
 

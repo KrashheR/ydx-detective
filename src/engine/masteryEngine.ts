@@ -9,17 +9,8 @@ export function evaluateMastery(
   session: ActiveSession | null,
 ): MasteryLevel {
   if (!session || decision !== caseData.correctDecision) return 'none';
-  const selected = caseData.claimTheses?.length
-    ? session.selectedEvidenceIds.filter((id) => {
-        const evidence = caseData.evidences.find((item) => item.id === id);
-        return evidence?.relation === 'contradicts' && evidence.thesisId === session.evidenceThesisLinks[id];
-      })
-    : session.selectedEvidenceIds;
-  const { correct, falseStamps } = classifyStamps(caseData, selected);
-  const linkErrors = caseData.claimTheses?.length
-    ? session.selectedEvidenceIds.length - selected.length
-    : 0;
-  const silver = falseStamps === 0 && linkErrors === 0 && correct === totalContradictions(caseData);
+  const { correct, falseStamps } = classifyStamps(caseData, session.selectedEvidenceIds);
+  const silver = falseStamps === 0 && correct === totalContradictions(caseData);
   if (!silver) return 'bronze';
 
   const budget = caseData.investigationBudget;

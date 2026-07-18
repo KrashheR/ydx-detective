@@ -40,7 +40,7 @@
 
 ## Миграция сейвов
 
-`GAME_CONFIG.saveVersion` — текущая версия схемы персиста (сейчас **6**). `migrate()` в
+`GAME_CONFIG.saveVersion` — текущая версия схемы персиста (сейчас **7**). `migrate()` в
 `persistence.ts` спредит текущие дефолты под старые сейвы, добивая новые поля:
 - v1 → v2: добавлены xp / streakCount / lastPlayedServerDay / unlockedAchievementIds в
   stats и revealedEvidenceIds в сессию.
@@ -50,6 +50,8 @@
 - v4 → v5: добавлен `perfectCaseStreakCount` для подряд закрытых 100%-дел.
 - v5 → v6: добавлены `archivePurchasedPackIds`, `archiveUnlockedCaseIds` и
   `archiveAdUnlockServerDayByPack` для прав доступа витрины архивов.
+- v6 → v7: удалён `evidenceThesisLinks` из активной сессии (механика «тезисов заявления»
+  вырезана целиком; старые сейвы просто теряют это поле при нормализации).
 
 Бампай версию и расширяй `migrate()` при любом изменении формы персиста.
 

@@ -13,7 +13,6 @@ function session(caseId: string, selected: string[], hintsUsed = 0): ActiveSessi
     hintsUsed,
     canvassUsed: false,
     extraOpens: 0,
-    evidenceThesisLinks: {},
     startedAtServerMs: 0,
   };
 }

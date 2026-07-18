@@ -39,7 +39,6 @@ export function classifyStamps(
 export interface RewardModifiers {
   /** Replays are training and never pay currency. */
   readonly rewardEligible?: boolean;
-  readonly evidenceThesisLinks?: Readonly<Record<string, string>>;
   /** Additive % bonus from the player's investigator rank. */
   readonly rankBonusPct?: number;
   /** Additive % bonus from the player's daily streak. */
@@ -81,22 +80,7 @@ export function evaluateReward(
   const baseReward = reward.baseByDifficulty[caseData.difficulty] * multiplier;
 
   const verdictCorrect = decision === caseData.correctDecision;
-  const classified = classifyStamps(caseData, selectedEvidenceIds);
-  const { correct, falseStamps } = caseData.claimTheses?.length
-    ? selectedEvidenceIds.reduce(
-        (acc, id) => {
-          const evidence = caseData.evidences.find((item) => item.id === id);
-          if (
-            evidence?.isContradiction &&
-            evidence.relation === 'contradicts' &&
-            evidence.thesisId === modifiers.evidenceThesisLinks?.[id]
-          ) acc.correct += 1;
-          else acc.falseStamps += 1;
-          return acc;
-        },
-        { correct: 0, falseStamps: 0 },
-      )
-    : classified;
+  const { correct, falseStamps } = classifyStamps(caseData, selectedEvidenceIds);
 
   // A wrong verdict means no reward at all — short-circuit before any component
   // math so investigation skill never pays out on a misjudged case.

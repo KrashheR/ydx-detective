@@ -98,7 +98,6 @@ export const evidenceSchema = z
     isContradiction: z.boolean(),
     contradictionExplanation: localizedString,
     meta: evidenceMetaSchema.optional(),
-    thesisId: z.string().min(1).optional(),
     relation: z.enum(['supports', 'contradicts', 'context']).optional(),
   })
   .strict();
@@ -143,11 +142,6 @@ export const caseSchema = z
     // Optional "investigation budget": max evidence cards the player may open
     // before deciding. Omitted ⇒ unlimited (classic review-everything flow).
     investigationBudget: z.number().int().positive().optional(),
-    claimTheses: z
-      .array(z.object({ id: z.string().min(1), text: localizedString }).strict())
-      .min(2)
-      .max(4)
-      .optional(),
   })
   .strict()
   // Cross-field invariant: evidence ids must be unique within a case so the
@@ -163,13 +157,6 @@ export const caseSchema = z
         });
       }
       ids.add(ev.id);
-      if (ev.thesisId && !data.claimTheses?.some((thesis) => thesis.id === ev.thesisId)) {
-        ctx.addIssue({
-          code: z.ZodIssueCode.custom,
-          message: `Unknown thesis id "${ev.thesisId}" in evidence "${ev.id}"`,
-          path: ['evidences'],
-        });
-      }
     }
   });
 
