@@ -150,6 +150,8 @@ export interface GameStoreState {
   submitVerdict: (caseData: Case, decision: Decision) => RewardBreakdown;
   closeCase: () => Promise<void>;
   restoreFunds: () => void;
+  /** Tally a shown fullscreen interstitial into the persisted cumulative counter. */
+  recordInterstitialShown: () => void;
 
   /* ---- daily ---- */
   isDailyUnlocked: () => boolean;
@@ -693,7 +695,8 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         trackGoal(GOAL.dailyClaim, { caseId: caseData.id, total: breakdown.total });
       }
       if (!stats.isBankrupt && finalStats.isBankrupt) {
-        trackGoal(GOAL.bankruptcy, { caseId: caseData.id, balance: finalBalance });
+        // Informational economy marker only — since save v8 nothing is blocked.
+        trackGoal(GOAL.bankruptcy, { caseId: caseData.id, balance: finalBalance, blocked: false });
       }
       reportUserParams(finalStats);
       return breakdown;
@@ -713,9 +716,11 @@ export const useGameStore = create<GameStoreState>((set, get) => {
     },
 
     restoreFunds() {
-      // Failure-state recovery is gated behind a rewarded ad. The reward
-      // callback only fires if the player actually watched it.
+      // Voluntary low-balance top-up behind a rewarded ad (the reward callback
+      // only fires if the player actually watched it). Guard: never lets the
+      // ad *lower* a balance that is already at or above the restore target.
       const previousBalance = get().stats.balance;
+      if (previousBalance >= GAME_CONFIG.economy.restoreFundsTo) return;
       showRewardedAd(() => {
         set((s) => ({
           stats: {
@@ -731,6 +736,16 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         });
         reportUserParams(get().stats);
       }, 'restore_funds');
+    },
+
+    recordInterstitialShown() {
+      set((s) => ({
+        stats: {
+          ...s.stats,
+          interstitialsSeenTotal: s.stats.interstitialsSeenTotal + 1,
+        },
+      }));
+      persist();
     },
 
     doubleLastReward() {

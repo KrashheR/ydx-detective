@@ -34,6 +34,7 @@ export function makeDefaultStats(): PlayerStats {
     dailyAdUnlockServerDay: null,
     dailyAdCaseId: null,
     isBankrupt: false,
+    interstitialsSeenTotal: 0,
     xp: 0,
     streakCount: 0,
     lastPlayedServerDay: null,
@@ -66,11 +67,15 @@ export function makeDefaultSnapshot(): PersistedState {
  * saves load cleanly:
  *   • v1 → v2 — adds xp / streakCount / lastPlayedServerDay /
  *     unlockedAchievementIds to stats, and revealedEvidenceIds to the session.
+ *   • v7 → v8 — bankruptcy is no longer a gate: force `isBankrupt: false` so
+ *     players stuck on the old blocking screen are freed; adds
+ *     `interstitialsSeenTotal` (backfilled to 0 by the defaults spread).
  */
 function migrate(raw: unknown): PersistedState | null {
   if (!raw || typeof raw !== 'object') return null;
   const candidate = raw as Partial<PersistedState>;
   if (!candidate.stats) return null;
+  const fromVersion = typeof candidate.version === 'number' ? candidate.version : 0;
 
   // Backfill the in-progress session's newer fields when one is present.
   const rawSession = candidate.session as Partial<ActiveSession> | null | undefined;
@@ -89,9 +94,13 @@ function migrate(raw: unknown): PersistedState | null {
         }
       : null;
 
+  const stats: PlayerStats = { ...makeDefaultStats(), ...candidate.stats };
+  // v8 removed the hard bankruptcy gate — un-stick anyone saved mid-block.
+  if (fromVersion < 8) stats.isBankrupt = false;
+
   return {
     version: GAME_CONFIG.saveVersion,
-    stats: { ...makeDefaultStats(), ...candidate.stats },
+    stats,
     session,
   };
 }

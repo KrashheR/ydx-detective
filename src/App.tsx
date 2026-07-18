@@ -68,6 +68,7 @@ export default function App() {
   const [leaderboard, setLeaderboard] = useState<LeaderboardRow[] | null>(null);
   const [toast, setToast] = useState<string | null>(null);
   const [rewardDoubled, setRewardDoubled] = useState(false);
+  const [lowBalanceOfferDismissed, setLowBalanceOfferDismissed] = useState(false);
   const [showRating, setShowRating] = useState(false);
   const [archiveCatalog, setArchiveCatalog] = useState<Record<string, PaymentsProduct>>({});
   const lastInterstitialActiveMsRef = useRef(0);
@@ -119,9 +120,22 @@ export default function App() {
     }
   }, [lastResult]);
 
+  // Voluntary low-balance offer: appears on the desk, never blocks play.
+  const showLowBalanceOffer =
+    stats.balance < GAME_CONFIG.economy.lowBalanceOfferThreshold &&
+    !selectedId &&
+    !lowBalanceOfferDismissed;
+
   useEffect(() => {
-    if (stats.isBankrupt) trackAdOffer('rewarded', 'restore_funds');
-  }, [stats.isBankrupt]);
+    if (showLowBalanceOffer) trackAdOffer('rewarded', 'restore_funds');
+  }, [showLowBalanceOffer]);
+
+  // A dismissed offer re-arms once the balance recovers above the threshold.
+  useEffect(() => {
+    if (stats.balance >= GAME_CONFIG.economy.lowBalanceOfferThreshold) {
+      setLowBalanceOfferDismissed(false);
+    }
+  }, [stats.balance]);
 
   // Rating prompt: show after a correct verdict at the peak of pride.
   useEffect(() => {
@@ -340,6 +354,7 @@ export default function App() {
       activeMs - lastInterstitialActiveMsRef.current >= GAME_CONFIG.advertising.interstitialMinActiveMs
     ) {
       lastInterstitialActiveMsRef.current = activeMs;
+      store.recordInterstitialShown();
       showFullscreenAd(transition, 'verdict');
     } else transition();
   };
@@ -355,6 +370,7 @@ export default function App() {
       activeMs - lastInterstitialActiveMsRef.current >= GAME_CONFIG.advertising.interstitialMinActiveMs
     ) {
       lastInterstitialActiveMsRef.current = activeMs;
+      store.recordInterstitialShown();
       showFullscreenAd(transition, 'verdict');
     } else transition();
   };
@@ -568,25 +584,41 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      {/* Bankruptcy gate → rewarded-ad restore */}
-      {stats.isBankrupt && !showResult && (
-        <div
-          className="fixed inset-0 z-[60] flex items-center justify-center p-5"
-          style={{ background: 'rgba(8,11,17,.8)' }}
-        >
-          <div className="paper-sheet w-full max-w-sm p-6 text-center">
-            <h2 className="text-xl font-bold text-ink">{t('bankruptTitle', lang)}</h2>
-            <p className="mt-2 text-sm text-ink/70">{t('bankruptDesc', lang)}</p>
-            <button
-              type="button"
-              onClick={store.restoreFunds}
-              className="mt-5 h-12 w-full rounded-[9px] bg-accent font-semibold text-white hover:brightness-110"
-            >
-              ▶ {t('restoreFunds', lang)} (₽{GAME_CONFIG.economy.restoreFundsTo})
-            </button>
-          </div>
-        </div>
-      )}
+      {/* Low-balance offer → voluntary rewarded-ad top-up (never blocks play) */}
+      <AnimatePresence>
+        {showLowBalanceOffer && !showResult && (
+          <motion.div
+            initial={{ y: 16, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 16, opacity: 0 }}
+            className="fixed bottom-[70px] left-1/2 z-[55] w-[92%] max-w-md -translate-x-1/2"
+          >
+            <div className="paper-sheet flex items-center gap-3 p-4 shadow-lift">
+              <div className="min-w-0 flex-1">
+                <div className="text-sm font-bold text-ink">{t('lowBalanceTitle', lang)}</div>
+                <div className="mt-0.5 text-xs leading-snug text-ink/70">
+                  {t('lowBalanceDesc', lang)}
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={store.restoreFunds}
+                className="h-12 shrink-0 rounded-[9px] bg-accent px-4 text-sm font-semibold text-white hover:brightness-110"
+              >
+                ▶ {t('restoreFunds', lang)} (₽{GAME_CONFIG.economy.restoreFundsTo})
+              </button>
+              <button
+                type="button"
+                aria-label={t('close', lang)}
+                onClick={() => setLowBalanceOfferDismissed(true)}
+                className="flex h-12 w-10 shrink-0 items-center justify-center rounded-[9px] text-lg text-ink/50 hover:text-ink"
+              >
+                ✕
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Ad pause guard overlay */}
       {isPaused && (

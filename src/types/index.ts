@@ -219,8 +219,17 @@ export interface PlayerStats {
   lastDailyCaseId: string | null;
   dailyAdUnlockServerDay: number | null;
   dailyAdCaseId: string | null;
-  /** True once balance hit <= 0 and the player must watch a rewarded ad. */
+  /**
+   * Informational marker: balance last landed at <= 0. Never blocks play (the
+   * hard bankruptcy gate was removed in saveVersion 8) — kept for analytics
+   * (`bankruptcy` goal, userParams) and save-compat.
+   */
   isBankrupt: boolean;
+  /**
+   * Cumulative count of fullscreen interstitials the player has ever seen.
+   * Persisted so ad-pressure is measurable across sessions (Metrica).
+   */
+  interstitialsSeenTotal: number;
   /**
    * Career experience. Permanent (never spent) — drives the investigator rank
    * ladder. Distinct from `balance`, which is the spendable currency.

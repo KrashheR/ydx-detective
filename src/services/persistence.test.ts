@@ -75,6 +75,7 @@ describe('loadSnapshot', () => {
         dailyAdUnlockServerDay: null,
         dailyAdCaseId: null,
         isBankrupt: false,
+        interstitialsSeenTotal: 0,
         xp: 5,
         streakCount: 1,
         lastPlayedServerDay: 3,
@@ -184,6 +185,36 @@ describe('migration (v1 → v2) via loadSnapshot', () => {
   });
 });
 
+describe('migration (v7 → v8) via loadSnapshot', () => {
+  it('unbanks stuck players and backfills interstitialsSeenTotal', async () => {
+    // A v7 save of a player stuck on the old blocking bankruptcy screen.
+    const v7 = {
+      version: 7,
+      stats: {
+        balance: 0,
+        language: 'ru',
+        completedCaseIds: ['a'],
+        results: {},
+        isBankrupt: true,
+        xp: 900,
+      },
+      session: null,
+    };
+    localStorage.setItem(LOCAL_KEY, JSON.stringify(v7));
+
+    const { loadSnapshot } = await freshPersistence();
+    const { snapshot } = await loadSnapshot();
+
+    expect(snapshot.version).toBe(GAME_CONFIG.saveVersion);
+    // The hard gate is gone — the flag is force-cleared for old saves.
+    expect(snapshot.stats.isBankrupt).toBe(false);
+    expect(snapshot.stats.interstitialsSeenTotal).toBe(0);
+    // Balance itself is untouched — only the block is lifted.
+    expect(snapshot.stats.balance).toBe(0);
+    expect(snapshot.stats.xp).toBe(900);
+  });
+});
+
 describe('sync (debounce + flush)', () => {
   const snap = (balance: number): PersistedState => ({
     version: GAME_CONFIG.saveVersion,
@@ -197,6 +228,7 @@ describe('sync (debounce + flush)', () => {
       dailyAdUnlockServerDay: null,
       dailyAdCaseId: null,
       isBankrupt: false,
+      interstitialsSeenTotal: 0,
       xp: 0,
       streakCount: 0,
       lastPlayedServerDay: null,

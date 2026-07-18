@@ -37,8 +37,8 @@ export type UIKey =
   | "penaltyFalseStamps"
   | "penaltyFalseStampsHint"
   | "rewardEarned"
-  | "bankruptTitle"
-  | "bankruptDesc"
+  | "lowBalanceTitle"
+  | "lowBalanceDesc"
   | "language"
   | "rank"
   | "xpGained"
@@ -418,19 +418,19 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     ar: "الإجمالي",
     kk: "Барлығы",
   },
-  bankruptTitle: {
-    ru: "Средства закончились",
-    en: "Out of Funds",
-    tr: "Fonlar Bitti",
-    ar: "نفدت الأموال",
-    kk: "Қаражат таусылды",
+  lowBalanceTitle: {
+    ru: "Касса пуста?",
+    en: "Out of funds?",
+    tr: "Kasa boş mu?",
+    ar: "نفدت الأموال؟",
+    kk: "Қаражат таусылды ма?",
   },
-  bankruptDesc: {
-    ru: "Посмотрите рекламу, чтобы восстановить баланс и продолжить расследование.",
-    en: "Watch an ad to restore your balance and continue investigating.",
-    tr: "Bakiyeni geri yüklemek için bir reklam izle ve soruşturmaya devam et.",
-    ar: "شاهد إعلانًا لاستعادة رصيدك ومواصلة التحقيق.",
-    kk: "Балансты қалпына келтіру үшін жарнаманы көріңіз.",
+  lowBalanceDesc: {
+    ru: "Премия от управления: посмотрите ролик — баланс пополнится. Играть можно и без этого.",
+    en: "A bonus from headquarters: watch a short ad to top up your balance. Playing on without it is fine too.",
+    tr: "Merkezden prim: kısa bir reklam izleyin, bakiyeniz dolsun. Reklamsız da oynamaya devam edebilirsiniz.",
+    ar: "مكافأة من الإدارة: شاهد إعلانًا قصيرًا لتعبئة رصيدك. يمكنك مواصلة اللعب بدونها أيضًا.",
+    kk: "Басқарманың сыйақысы: қысқа роликті көріңіз — баланс толады. Онсыз да ойнай беруге болады.",
   },
   language: { ru: "Язык", en: "Language", tr: "Dil", ar: "اللغة", kk: "Тіл" },
   rank: { ru: "Ранг", en: "Rank", tr: "Rütbe", ar: "الرتبة", kk: "Дәреже" },

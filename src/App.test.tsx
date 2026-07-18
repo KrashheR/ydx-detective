@@ -260,13 +260,28 @@ describe('verdict gating', () => {
 });
 
 describe('overlays', () => {
-  it('shows the bankruptcy gate when the player is broke', async () => {
+  it('offers a voluntary top-up at zero balance without blocking the desk', async () => {
     persist.loadSnapshot.mockResolvedValue({
       snapshot: defaultSnapshot({ balance: 0, isBankrupt: true }),
       isNew: false,
     });
+    await renderHydrated();
+    // The low-balance offer is visible…
+    expect(await screen.findByText(RU('lowBalanceTitle'))).toBeInTheDocument();
+    // …but the desk stays fully playable: a case can still be opened.
+    await openFirstCase();
+    expect(useGameStore.getState().session?.caseId).toBe(getStandardCases()[0]!.id);
+  });
+
+  it('dismissing the low-balance offer hides it', async () => {
+    persist.loadSnapshot.mockResolvedValue({
+      snapshot: defaultSnapshot({ balance: 0 }),
+      isNew: false,
+    });
     render(<App />);
-    expect(await screen.findByText(RU('bankruptTitle'))).toBeInTheDocument();
+    await screen.findByText(RU('lowBalanceTitle'));
+    fireEvent.click(screen.getByRole('button', { name: RU('close') }));
+    expect(screen.queryByText(RU('lowBalanceTitle'))).not.toBeInTheDocument();
   });
 
   it('shows the pause overlay while an ad is on screen', async () => {

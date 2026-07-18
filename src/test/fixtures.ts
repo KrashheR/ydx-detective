@@ -131,6 +131,7 @@ export function makeStats(overrides: Partial<PlayerStats> = {}): PlayerStats {
     dailyAdUnlockServerDay: null,
     dailyAdCaseId: null,
     isBankrupt: false,
+    interstitialsSeenTotal: 0,
     xp: 0,
     streakCount: 0,
     lastPlayedServerDay: null,

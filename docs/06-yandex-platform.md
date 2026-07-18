@@ -40,7 +40,7 @@
 
 ## Миграция сейвов
 
-`GAME_CONFIG.saveVersion` — текущая версия схемы персиста (сейчас **7**). `migrate()` в
+`GAME_CONFIG.saveVersion` — текущая версия схемы персиста (сейчас **8**). `migrate()` в
 `persistence.ts` спредит текущие дефолты под старые сейвы, добивая новые поля:
 - v1 → v2: добавлены xp / streakCount / lastPlayedServerDay / unlockedAchievementIds в
   stats и revealedEvidenceIds в сессию.
@@ -52,6 +52,9 @@
   `archiveAdUnlockServerDayByPack` для прав доступа витрины архивов.
 - v6 → v7: удалён `evidenceThesisLinks` из активной сессии (механика «тезисов заявления»
   вырезана целиком; старые сейвы просто теряют это поле при нормализации).
+- v7 → v8: банкротство больше не гейт — `isBankrupt` принудительно сбрасывается в `false`
+  (разблокировка застрявших на старом жёстком экране); добавлен кумулятивный счётчик
+  `interstitialsSeenTotal` (бэкфиллится в 0).
 
 Бампай версию и расширяй `migrate()` при любом изменении формы персиста.
 
@@ -132,8 +135,9 @@ null при недоступности → UI фолбэчит.
 **Ad-frequency агрегаты.** `adsPerSession`/`verdictsSinceLastAd` — module-level счётчики в
 `metrica.ts` (сбрасываются при перезагрузке страницы, т.е. живут ровно одну сессию); `trackGoal`
 инкрементирует их при `verdict_submit`/`ad_open` и подмешивает в `ad_open`/`session_end`.
-Кумулятивный `interstitialsSeenTotal` (персистентный, за все сессии) — за миграцией сейва, см.
-план `plans/00-EXECUTION-CHECKLIST.md`, этап 3 (единый бамп `saveVersion` 7→8).
+Кумулятивный `interstitialsSeenTotal` (персистентный, за все сессии) живёт в `PlayerStats`
+(с saveVersion 8): `App.tsx` зовёт `store.recordInterstitialShown()` перед каждым показом
+интерстишла (обе ветки `showFullscreenAd`).
 
 **Где эмитятся события.** Стор — эмиттер (как и для лидерборда): цели зовутся из действий
 `gameStore.ts`, где уже посчитаны payload'ы. Имена целей — каталог `GOAL` в `metrica.ts`
@@ -154,7 +158,7 @@ null при недоступности → UI фолбэчит.
 | `rank_up` | `submitVerdict` (при `promotedToLevel`) | newLevel, xp |
 | `daily_claim` | `submitVerdict` (`type === 'daily'`) | caseId, total |
 | `daily_ad_unlock` | `unlockDailyViaAd` (после rewarded-награды) | — |
-| `bankruptcy` | `submitVerdict` (когда `isBankrupt` переходит в true) | caseId, balance |
+| `bankruptcy` | `submitVerdict` (когда `isBankrupt` переходит в true; информационный маркер — ничего не блокирует) | caseId, balance, `blocked: false` |
 | `reward_double` | `doubleLastReward` | caseId, amount, balanceAfter |
 | `funds_restore` | `restoreFunds` (в колбэке rewarded-видео) | previousBalance, restoredTo |
 | `rating_action` | `dismissRating` / `suppressRating` / `App.tsx` (onRate) | action (`dismiss`/`never`/`rate`), dismissals |

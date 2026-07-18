@@ -4,7 +4,7 @@
  */
 export const GAME_CONFIG = {
   /** Schema version of the persisted runtime snapshot. Bump on shape changes. */
-  saveVersion: 7,
+  saveVersion: 8,
 
   reward: {
     /** Fixed payout by difficulty; claimAmount remains a narrative stake. */
@@ -216,8 +216,13 @@ export const GAME_CONFIG = {
   },
 
   economy: {
-    /** Balance at/below which progression is locked. */
+    /**
+     * Balance at/below which the informational `bankruptcy` analytics marker
+     * fires. Never blocks play — the game has no hard bankruptcy gate.
+     */
     bankruptcyThreshold: 0,
+    /** Balance below which the voluntary "restore funds" ad offer is shown. */
+    lowBalanceOfferThreshold: 500,
     /** Balance restored when the rewarded "restore funds" ad completes. */
     restoreFundsTo: 2000,
     /** Starting balance for a brand-new player. */

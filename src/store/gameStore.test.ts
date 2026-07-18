@@ -121,6 +121,13 @@ describe('startCase', () => {
     expect(store().session?.selectedEvidenceIds).toContain(evId);
   });
 
+  it('starts a case even at zero balance — bankruptcy never blocks play', () => {
+    useGameStore.setState({ stats: makeStats({ balance: 0, isBankrupt: true }) });
+    const c = makeCase();
+    store().startCase(c);
+    expect(store().session?.caseId).toBe(c.id);
+  });
+
   it('replaces the session when switching to a different case', () => {
     const a = makeCase({ id: 'case-a' });
     const b = makeCase({ id: 'case-b' });
@@ -338,6 +345,22 @@ describe('restoreFunds', () => {
     store().restoreFunds();
     expect(store().stats.balance).toBe(0);
     expect(store().stats.isBankrupt).toBe(true);
+  });
+
+  it('never lowers a balance already at or above the restore target', () => {
+    useGameStore.setState({ stats: makeStats({ balance: 5000 }) });
+    store().restoreFunds();
+    expect(sdk.showRewardedAd).not.toHaveBeenCalled();
+    expect(store().stats.balance).toBe(5000);
+  });
+});
+
+describe('recordInterstitialShown', () => {
+  it('accumulates the persisted interstitial counter', () => {
+    store().recordInterstitialShown();
+    store().recordInterstitialShown();
+    expect(store().stats.interstitialsSeenTotal).toBe(2);
+    expect(persist.scheduleSync).toHaveBeenCalled();
   });
 });
 
