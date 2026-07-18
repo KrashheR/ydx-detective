@@ -135,19 +135,35 @@ describe('evaluateReward', () => {
     expect(r.total).toBe(easyBase - 2 * reward.falseStampPenalty);
   });
 
-  it('can produce a negative net total when a correct verdict is brute-forced', () => {
+  it('floors the net total at 0 when a correct verdict is brute-forced (never a net loss)', () => {
+    const c = makeCase({
+      claimAmount: 100,
+      correctDecision: 'approve',
+      contradictions: 0,
+      cleanCards: 30,
+    });
+    // Correct verdict (approve), but every clean card is falsely stamped —
+    // enough false stamps to outweigh the positive base (1200 on easy).
+    const r = evaluateReward(c, 'approve', cleanIds(c));
+    expect(r.verdictCorrect).toBe(true);
+    expect(r.penalty).toBe(30 * reward.falseStampPenalty);
+    expect(r.penalty).toBeGreaterThan(easyBase); // positive base is fully wiped out
+    expect(r.total).toBe(0);
+  });
+
+  it('still awards 0 (not negative) on a wrong verdict — no floor needed, no penalty charged', () => {
     const c = makeCase({
       claimAmount: 100,
       correctDecision: 'approve',
       contradictions: 0,
       cleanCards: 5,
     });
-    // Correct verdict (approve), but every clean card is falsely stamped.
-    const r = evaluateReward(c, 'approve', cleanIds(c));
-    // verdict 50 + proof full (0 contradictions → ratio 1) 50 = 100 positive.
-    // penalty = 5 * 50 = 250 → total 100 - 250 = -150.
-    expect(r.verdictCorrect).toBe(true);
-    expect(r.total).toBe(easyBase - 5 * reward.falseStampPenalty);
+    // Wrong verdict, every clean card falsely stamped — should stay the
+    // existing "wrong verdict earns nothing" short-circuit, not the new floor.
+    const r = evaluateReward(c, 'reject', cleanIds(c));
+    expect(r.verdictCorrect).toBe(false);
+    expect(r.penalty).toBe(0);
+    expect(r.total).toBe(0);
   });
 
   it('applies the ×5 daily multiplier to the base', () => {

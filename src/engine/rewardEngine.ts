@@ -152,7 +152,9 @@ export function evaluateReward(
     dailyMultiplierApplied: multiplier,
     bonusComponent,
     bonusPct,
-    total: positive + bonusComponent - penalty,
+    // A correct verdict never nets negative currency — `penalty` above stays the
+    // honest, uncapped figure so the ResultSheet can still show what was lost.
+    total: Math.max(0, positive + bonusComponent - penalty),
   };
 }
 
