@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import type { Language } from "../types";
 import { t } from "../i18n/ui";
 import { Tooltip } from "./Tooltip";
@@ -36,9 +37,11 @@ export function VerdictPanel({
           className="block"
           label={canReject ? null : t("rejectNeedsProof", lang)}
         >
-          <button
+          <motion.button
             type="button"
             onClick={onReject}
+            whileTap={{ scale: 0.96 }}
+            transition={{ duration: 0.12, ease: "easeOut" }}
             className={`h-[54px] w-full rounded-[9px] text-[13px] font-bold uppercase tracking-wide text-white transition-[filter] ${
               canReject
                 ? "bg-danger hover:brightness-110"
@@ -46,16 +49,18 @@ export function VerdictPanel({
             }`}
           >
             {t("rejectPayout", lang)}
-          </button>
+          </motion.button>
         </Tooltip>
         <Tooltip
           className="block"
           label={canApprove ? null : approveBlockedReason}
         >
-          <button
+          <motion.button
             type="button"
             onClick={onApprove}
             disabled={!canApprove}
+            whileTap={canApprove ? { scale: 0.96 } : undefined}
+            transition={{ duration: 0.12, ease: "easeOut" }}
             className={`h-[54px] w-full rounded-[9px] text-[13px] font-bold uppercase tracking-wide text-white transition-[filter] ${
               canApprove
                 ? "bg-success hover:brightness-110"
@@ -63,7 +68,7 @@ export function VerdictPanel({
             }`}
           >
             {t("approvePayout", lang)}
-          </button>
+          </motion.button>
         </Tooltip>
       </div>
     </div>

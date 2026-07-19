@@ -35,10 +35,10 @@ describe('formatCaseLabel', () => {
 });
 
 describe('formatCaseLockMessage', () => {
-  it('interpolates the required level for a level lock', () => {
+  it('uses the complete-previous string for a level lock (decorative tier, not shown to the player)', () => {
     const msg = formatCaseLockMessage(lockInfo({ requiredLevel: 7 }), 'ru');
-    expect(msg).toBe(t('requiresLevel', 'ru').replace('{level}', '7'));
-    expect(msg).toContain('7');
+    expect(msg).toBe(t('completePreviousCase', 'ru'));
+    expect(msg).not.toContain('7');
   });
 
   it('uses the complete-previous string for a prerequisite lock', () => {

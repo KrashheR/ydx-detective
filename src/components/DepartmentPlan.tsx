@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { GAME_CONFIG } from '../config/gameConfig';
 import { t } from '../i18n/ui';
 import type React from 'react';
@@ -72,10 +73,12 @@ export function DepartmentPlan({
                 </div>
               </div>
 
-              <button
+              <motion.button
                 type="button"
                 disabled={maxed || !affordable}
                 onClick={() => onUpgradeDepartment(department.id)}
+                whileTap={!maxed && affordable ? { scale: 0.96 } : undefined}
+                transition={{ duration: 0.12, ease: 'easeOut' }}
                 className={`mt-2 h-9 w-full rounded-[7px] text-[12px] font-bold transition-colors ${
                   maxed
                     ? 'cursor-default bg-surface text-text-dim'
@@ -87,7 +90,7 @@ export function DepartmentPlan({
                 {maxed
                   ? t('departmentMaxed', lang)
                   : `${t('upgradeDepartment', lang)} · ₽ ${fmt(cost)}`}
-              </button>
+              </motion.button>
             </div>
           );
         })}

@@ -121,7 +121,6 @@ export type UIKey =
   | "xpToPromote"
   | "active"
   | "caseLocked"
-  | "requiresLevel"
   | "completePreviousCase"
   | "completedCase"
   | "unlockedCases"
@@ -158,7 +157,6 @@ export type UIKey =
   | "tipNoteUnaffordable"
   | "tipSealedCard"
   | "tipDailyLocked"
-  | "tipCaseLockedLevel"
     | "difficulty_hard"
     | "doubleReward"
     | "rewardDoubled"
@@ -934,13 +932,6 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     ar: "القضية مقفلة",
     kk: "Іс құлыпталған",
   },
-  requiresLevel: {
-    ru: "Откроется на ур. {level}",
-    en: "Unlocks at lvl {level}",
-    tr: "{level}. sv. açılır",
-    ar: "يفتح عند المستوى {level}",
-    kk: "{level}-дең. ашылады",
-  },
   completePreviousCase: {
     ru: "Закройте предыдущее дело",
     en: "Close the previous case",
@@ -1138,13 +1129,6 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     tr: "Reklam izlemek ve sonraki dosyayı hemen açmak için dokunun.",
     ar: "اضغط لمشاهدة إعلان وفتح القضية التالية الآن.",
     kk: "Жарнама көру және келесі істі қазір ашу үшін басыңыз.",
-  },
-  tipCaseLockedLevel: {
-    ru: "Откроется на {level}-м уровне следователя. Закрывайте дела и набирайте опыт.",
-    en: "Unlocks at investigator level {level}. Close cases to earn XP.",
-    tr: "Müfettiş seviyesi {level}'te açılır. XP kazanmak için dosyaları kapat.",
-    ar: "يُفتح عند مستوى المحقق {level}. أغلق القضايا لكسب الخبرة.",
-    kk: "Тергеуші {level}-деңгейінде ашылады. Тәжірибе жинау үшін істерді жабыңыз.",
   },
   doubleReward: {
     ru: "▶ Удвоить вознаграждение",

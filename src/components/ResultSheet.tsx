@@ -9,6 +9,7 @@ import type { Case, Language, RewardBreakdown } from "../types";
 import { GAME_CONFIG } from "../config/gameConfig";
 import { ACHIEVEMENTS_BY_ID } from "../data/achievements";
 import { formatInvestigatorLevel, loc, t } from "../i18n/ui";
+import { useCountUp } from "../hooks/useCountUp";
 
 const FOCUSABLE_SELECTOR =
   'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
@@ -103,6 +104,12 @@ export function ResultSheet({
 
   const fmt = (n: number) => n.toLocaleString("ru-RU");
   const sign = (n: number) => (n >= 0 ? "+" : "−");
+
+  const displayPayout = useCountUp(
+    win ? Math.abs(result.total) : caseData.claimAmount,
+    900,
+    0,
+  );
 
   const handleDialogKeyDown = (event: ReactKeyboardEvent<HTMLDivElement>) => {
     if (event.key !== "Tab") return;
@@ -280,9 +287,8 @@ export function ResultSheet({
                 letterSpacing: -0.5,
               }}
             >
-              {win
-                ? `+${fmt(Math.abs(result.total))} ₽`
-                : `− ${fmt(caseData.claimAmount)} ₽`}
+              {win ? "+" : "− "}
+              {fmt(displayPayout)} ₽
             </div>
 
             {result.mastery !== "none" && (
@@ -454,14 +460,21 @@ export function ResultSheet({
               />
             </div>
 
-            {/* Win: show correct stamps */}
+            {/* Win: show correct stamps — staggered so the breakdown reads like a
+                receipt printing one line at a time. */}
             {win && (
-              <div
+              <motion.div
                 style={{
                   marginTop: 14,
                   display: "flex",
                   flexDirection: "column",
                   gap: 9,
+                }}
+                initial="hidden"
+                animate="visible"
+                variants={{
+                  hidden: {},
+                  visible: { transition: { staggerChildren: 0.09, delayChildren: 0.15 } },
                 }}
               >
                 {/* Verdict row */}
@@ -493,7 +506,7 @@ export function ResultSheet({
                     value={`− ${fmt(result.penalty)} ₽`}
                   />
                 )}
-              </div>
+              </motion.div>
             )}
           </div>
 
@@ -867,7 +880,14 @@ function AccuracyRow({
 }) {
   const color = fail ? "#b4231f" : success ? "#15803d" : "#9ca3af";
   return (
-    <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+    <motion.div
+      style={{ display: "flex", alignItems: "center", gap: 10 }}
+      variants={{
+        hidden: { opacity: 0, y: 6 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      transition={{ duration: 0.25, ease: "easeOut" }}
+    >
       <span
         style={{
           width: 17,
@@ -907,7 +927,7 @@ function AccuracyRow({
       >
         {value}
       </span>
-    </div>
+    </motion.div>
   );
 }
 

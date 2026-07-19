@@ -13,33 +13,36 @@ export const formatCaseLabel = (caseData: Case, lang: Language): string => {
   return formatCaseNumber(idx + 1, lang);
 };
 
-/** Player-facing lock reason for a standard case row or folder cover. */
+/**
+ * Player-facing lock reason for a standard case row or folder cover.
+ *
+ * The real campaign lock is always the sequence — `requiredLevel` is an
+ * internal difficulty tier (always reachable, capped low) that never
+ * blocks a linear player, so both lock reasons surface the same
+ * "finish the previous case" wording rather than exposing the level tier.
+ */
 export const formatCaseLockMessage = (
   info: CaseUnlockInfo,
   lang: Language,
 ): string => {
-  if (info.reason === 'requires_level') {
-    return t('requiresLevel', lang).replace('{level}', String(info.requiredLevel));
+  if (info.reason === 'requires_level' || info.reason === 'complete_previous') {
+    return t('completePreviousCase', lang);
   }
-  if (info.reason === 'complete_previous') return t('completePreviousCase', lang);
   return t('caseLocked', lang);
 };
 
 /**
- * Fuller, actionable lock reason for a hover tooltip — states *why* a case is
- * locked and *what* unlocks it (the inline label is terser by design).
+ * Fuller, actionable lock reason for a hover tooltip. Currently identical to
+ * the inline label — kept as a separate function since the tooltip is the
+ * natural place to elaborate if the lock ever grows more detail.
  */
 export const formatCaseLockTooltip = (
   info: CaseUnlockInfo,
   lang: Language,
 ): string => {
-  if (info.reason === 'requires_level') {
-    return t('tipCaseLockedLevel', lang).replace(
-      '{level}',
-      String(info.requiredLevel),
-    );
+  if (info.reason === 'requires_level' || info.reason === 'complete_previous') {
+    return t('completePreviousCase', lang);
   }
-  if (info.reason === 'complete_previous') return t('completePreviousCase', lang);
   return t('caseLocked', lang);
 };
 

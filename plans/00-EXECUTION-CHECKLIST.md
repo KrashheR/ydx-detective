@@ -125,13 +125,23 @@ Ad-агрегаты реализованы централизованно вну
 
 По плану: `plans/01-fixes.md`, этап C.
 
-- [ ] Все замки дел в UI объясняются последовательностью, не уровнем
-- [ ] `caseUnlockEngine.ts` и `campaignProgression.test.ts` НЕ тронуты (сортировка остаётся)
-- [ ] Мёртвые i18n-ключи про уровень вычищены/переписаны (×5 языков)
-- [ ] `docs/03-gameplay.md` обновлён
-- [ ] **Gate**: typecheck + tests
+- [x] Все замки дел в UI объясняются последовательностью, не уровнем
+- [x] `caseUnlockEngine.ts` и `campaignProgression.test.ts` НЕ тронуты (сортировка остаётся)
+- [x] Мёртвые i18n-ключи про уровень вычищены/переписаны (×5 языков)
+- [x] `docs/03-gameplay.md` обновлён
+- [x] **Gate**: typecheck + tests
 
-**Статус:** _не начат_
+**Статус:** Закрыт. `formatCaseLockMessage`/`formatCaseLockTooltip` (`src/utils/caseDisplay.ts`)
+теперь рендерят `requires_level` тем же текстом «Закройте предыдущее дело», что и
+`complete_previous`, — уровень как причина замка нигде в UI не отображается (`CaseSelect.tsx`,
+`LeftSidebar.tsx`, `MobileDeskMenu.tsx`, `App.tsx` тост — все идут через эти два форматтера, других
+мест рендера `requiredLevel`/`levelsRemaining` в компонентах не найдено). `caseUnlockEngine.ts`
+не тронут: `CaseUnlockReason`/`reason: 'requires_level'` остаётся внутренним полем — используется
+аналитикой (`locked_case_click.lockReason`, `App.tsx`) и годится под будущий Кабинет следователя
+(Этап 9). Удалены мёртвые ключи `requiresLevel`/`tipCaseLockedLevel` (были только в
+`caseDisplay.ts`, ×5 языков каждый) из `UIKey`-объединения и каталога `src/i18n/ui.ts`.
+`caseDisplay.test.ts` переписан под новое поведение. `docs/03-gameplay.md` обновлён.
+typecheck ✅ + `npm test` 257/257 ✅.
 
 ---
 
@@ -308,3 +318,4 @@ Ad-агрегаты реализованы централизованно вну
 | 2026-07-18 | 2 | | `reject_blocked`/`budget_exhausted`/`locked_case_click` + сессионные ad-агрегаты; заведение целей в консоли Метрики — задача человеку |
 | 2026-07-18 | 1 | (следующий) | Пол `total ≥ 0`; ResultSheet не потребовал правок |
 | 2026-07-18 | 3 | | Банкротство → мягкий пол; saveVersion 7→8 (+`interstitialsSeenTotal` из Этапа 2); по решению человека сделан поверх незакоммиченного Этапа 2 — в ревью пойдут вместе |
+| 2026-07-19 | 4 | | Декоративный уровень убран из UI замка дел (`caseDisplay.ts`), мёртвые i18n-ключи вычищены |
