@@ -5,30 +5,29 @@
   "claimAmount": 3800000,
   "truth": "fraud",
   "title": {
-    "ru": "Лицензия на убыток",
-    "en": "Licence to Lose",
-    "tr": "Kayıp Lisansı",
-    "ar": "رخصة للخسارة",
-    "kk": "Шығынға лицензия"
+    "ru": "Инсценированная авария на мосту",
+    "en": "Staged Bridge Crash",
+    "tr": "Köprüde Kurgulanmış Kaza",
+    "ar": "حادث جسر مفتعل",
+    "kk": "Көпірдегі қолдан жасалған апат"
   },
   "claim": {
     "person": {
-      "ru": "Джеймс Бондаренко, 42 года",
-      "en": "James Bondarenko, 42",
-      "tr": "James Bondarenko, 42",
+      "ru": "Антон Беляров, 42 года",
+      "en": "Anton Belyarov, 42",
+      "tr": "Anton Belyarov, 42",
       "ar": "جيمس بونداريكو، 42",
-      "kk": "Джеймс Бондаренко, 42 жаста"
+      "kk": "Антон Беляров, 42 жаста"
     },
     "story": {
-      "ru": "Я корпоративный консультант по безопасности компании «МИ-7 Консалтинг». В ходе оперативного преследования враждебных агентов мой автомобиль «Астон Фантини DB9» был намеренно протаранен чёрным внедорожником и сброшен с моста Новый Ваксхолл. Прошу полного возмещения: 3 800 000 рублей.",
-      "en": "I am a corporate security consultant for MI-7 Consulting. During an operational pursuit of hostile agents, my Aston Fantini DB9 was deliberately rammed by a black SUV and pushed off the New Vauxhall Bridge. I request full compensation: 3,800,000 roubles.",
-      "tr": "MI-7 Consulting şirketinin kurumsal güvenlik danışmanıyım. Düşman ajanlarının operasyonel takibi sırasında Aston Fantini DB9 aracım siyah bir SUV tarafından kasıtlı olarak çarptı ve Yeni Vauxhall Köprüsü'nden düşürüldü. Tam tazminat talep ediyorum: 3.800.000 ruble.",
-      "ar": "أنا مستشار أمني مؤسسي لشركة MI-7 Consulting. خلال ملاحقة تشغيلية للعملاء المعادين، اصطدم أستون فانتيني DB9 الخاص بي عمدًا بمركبة SUV سوداء وأُسقط من جسر فوكسهول الجديد. أطلب تعويضًا كاملاً: 3,800,000 روبل.",
-      "kk": "Мен «МИ-7 Консалтинг» компаниясының корпоративтік қауіпсіздік кеңесшісімін. Жауласушы агенттерді оперативтік қудалау барысында «Астон Фантини DB9» автомобилім қара джиппен қасақана соғылып, Жаңа Ваксхолл көпірінен лақтырылды. Толық өтемақы сұраймын: 3 800 000 рубль."
+      "ru": "Я консультант по корпоративной безопасности. Во время поздней поездки мой служебный автомобиль Velar S9 якобы протаранил чёрный внедорожник и сбросил с моста Северного канала. Прошу полного возмещения: 3 800 000 рублей.",
+      "en": "I am a corporate security consultant. During a late drive, a black SUV allegedly rammed my company Velar S9 and pushed it off the North Canal Bridge. I request full compensation: 3,800,000 roubles.",
+      "tr": "Kurumsal güvenlik danışmanıyım. Geç saatteki bir yolculuk sırasında siyah bir SUV'un şirket aracı Velar S9'a çarpıp Kuzey Kanalı Köprüsü'nden düşürdüğünü iddia ediyorum. 3.800.000 ruble tam tazminat talep ediyorum.",
+      "ar": "أنا مستشار أمن مؤسسي. أثناء قيادة متأخرة يُزعم أن مركبة سوداء صدمت سيارة الشركة Velar S9 ودفعتها من جسر القناة الشمالية. أطلب تعويضاً كاملاً قدره 3,800,000 روبل.",
+      "kk": "Мен корпоративтік қауіпсіздік кеңесшісімін. Түнгі сапарда қара жол талғамайтын көлік Velar S9 қызметтік көлігімді соғып, Солтүстік арна көпірінен құлатты деп мәлімдеймін. 3 800 000 рубль толық өтемақы сұраймын."
     }
   },
   "coverImage": "covers/case-103-daily.svg",
-  "personImage": "people/james-bon.webp",
   "evidences": [
     {
       "id": "ev-witness",
@@ -41,11 +40,11 @@
         "kk": "Көпір күзетшісінің жауабы"
       },
       "content": {
-        "ru": "Никакого чёрного внедорожника не было. Я дежурю на мосту с 22:00. Около 23:48 увидел мужчину в смокинге, который разогнался и с разгона влетел в парапет. Перед этим он позвонил кому-то и что-то кричал про «невероятный трюк». На другом берегу стояла женщина с бокалом шампанского. Она захлопала в ладоши.",
-        "en": "There was no black SUV. I have been on duty on the bridge since 22:00. At around 23:48 I saw a man in a tuxedo who accelerated and drove straight into the parapet. Before that he called someone and was shouting something about an 'incredible stunt'. A woman with a glass of champagne was standing on the other side. She clapped.",
-        "tr": "Siyah bir SUV yoktu. Köprüde 22:00'den beri nöbetteyim. Yaklaşık 23:48'de smokin giyen bir adamın hızlanıp parasamuşa çarptığını gördüm. Öncesinde birini arayıp 'inanılmaz bir numara' hakkında bir şeyler bağırıyordu. Öte yanda elinde bir şampanya kadehi olan bir kadın duruyordu. Alkışladı.",
-        "ar": "لم تكن هناك سيارة SUV سوداء. أنا في الخدمة على الجسر منذ الساعة 22:00. حوالي الساعة 23:48 رأيت رجلاً يرتدي بدلة سهرة يسرع ويندفع مباشرة نحو الحاجز. قبل ذلك اتصل بشخص ما وكان يصرخ عن 'حيلة رائعة'. كانت امرأة تحمل كأس شامبانيا تقف على الجانب الآخر. صفّقت.",
-        "kk": "Ешқандай қара джип болмады. Мен 22:00-ден бері көпірде кезекте тұрмын. Шамамен 23:48-де фрак киген ер адам жылдамдатып, парапетке тіке кірді. Алдын ала ол біреуге қоңырау шалып, «ғажайып трюк» туралы бірдеңе айқайлады. Арғы жақта шампан стаканымен тұрған әйел болды. Ол қол шапалақтады."
+        "ru": "Никакого чёрного внедорожника не было. Я дежурю на мосту с 22:00. Около 23:48 увидел мужчину в тёмной куртке, который разогнался и влетел в парапет. Перед этим он позвонил кому-то и говорил о заранее подготовленном трюке. На другой стороне стоял свидетель и снимал происходящее на телефон.",
+        "en": "There was no black SUV. I have been on duty on the bridge since 22:00. At around 23:48 I saw a man in a dark jacket accelerate and drive straight into the parapet. Before that he called someone and spoke about a planned stunt. A witness on the other side recorded it on a phone.",
+        "tr": "Siyah bir SUV yoktu. Köprüde 22:00'den beri nöbetteyim. Yaklaşık 23:48'de koyu ceketli bir adamın hızlanıp bariyere çarptığını gördüm. Öncesinde birini arayıp planlanmış bir gösteriden söz etti. Öte yandaki bir tanık olayı telefonla kaydediyordu.",
+        "ar": "لم تكن هناك سيارة سوداء. أنا في الخدمة على الجسر منذ الساعة 22:00. حوالي الساعة 23:48 رأيت رجلاً بسترة داكنة يسرع ويندفع نحو الحاجز. قبل ذلك اتصل بشخص وتحدث عن حيلة مخططة. كان شاهد على الجانب الآخر يصور ما حدث بهاتفه.",
+        "kk": "Ешқандай қара жол талғамайтын көлік болмады. Мен 22:00-ден бері көпірде кезекшімін. Шамамен 23:48-де қара күртеше киген ер адамның жылдамдап, қоршауға кіргенін көрдім. Бұған дейін ол біреуге қоңырау шалып, алдын ала жоспарланған трюк туралы айтты. Арғы жақтағы куәгер оқиғаны телефонға түсіріп тұрды."
       },
       "isContradiction": true,
       "contradictionExplanation": {
@@ -68,36 +67,36 @@
       },
       "content": {
         "ru": [
-          "22:30 — Казино «Роял-7», Невский просп. (стоянка)",
-          "23:44 — Мост Новый Ваксхолл (въезд со стороны казино)",
+          "22:30 — Развлекательный центр «Северный», Невский просп. (стоянка)",
+          "23:44 — Мост Северного канала (въезд со стороны развлекательного центра)",
           "23:48 — [сигнал потерян: падение с моста]",
           "Второй автомобиль в радиусе 200 м на мосту: не зафиксирован",
           "Скорость перед падением: 87 км/ч (ускорение от 40 км/ч за 14 сек)"
         ],
         "en": [
-          "22:30 — Casino Royal-7, Nevsky Ave (parking)",
-          "23:44 — New Vauxhall Bridge (approach from casino side)",
+          "22:30 — North Entertainment Centre, Nevsky Ave (parking)",
+          "23:44 — North Canal Bridge (approach from entertainment-centre side)",
           "23:48 — [signal lost: bridge plunge]",
           "Second vehicle within 200 m radius on the bridge: none detected",
           "Speed before plunge: 87 km/h (accelerating from 40 km/h over 14 sec)"
         ],
         "tr": [
-          "22:30 — Royal-7 Kumarhane, Nevsky Bulvarı (otopark)",
-          "23:44 — Yeni Vauxhall Köprüsü (kumarhaneden yaklaşım)",
+          "22:30 — Kuzey Eğlence Merkezi, Nevsky Bulvarı (otopark)",
+          "23:44 — Kuzey Kanalı Köprüsü (eğlence merkezi tarafından yaklaşım)",
           "23:48 — [sinyal kayboldu: köprüden düşüş]",
           "Köprüde 200 m yarıçapında ikinci araç: tespit edilmedi",
           "Düşüşten önceki hız: 87 km/s (14 saniyede 40 km/s'den hızlanma)"
         ],
         "ar": [
-          "22:30 — كازينو رويال-7، شارع نيفسكي (موقف سيارات)",
-          "23:44 — جسر فوكسهول الجديد (اقتراب من جانب الكازينو)",
+          "22:30 — مركز الترفيه الشمالي، شارع نيفسكي (موقف سيارات)",
+          "23:44 — جسر القناة الشمالية (اقتراب من جهة مركز الترفيه)",
           "23:48 — [فُقد الإشارة: السقوط من الجسر]",
           "مركبة ثانية في نطاق 200 م على الجسر: لم تُرصد",
           "السرعة قبل السقوط: 87 كم/ساعة (تسريع من 40 كم/ساعة خلال 14 ثانية)"
         ],
         "kk": [
-          "22:30 — «Роял-7» казиносы, Невский даңғылы (тұрақ)",
-          "23:44 — Жаңа Ваксхолл көпірі (казино жағынан жақындау)",
+          "22:30 — «Солтүстік» ойын-сауық орталығы, Невский даңғылы (тұрақ)",
+          "23:44 — Солтүстік арна көпірі (ойын-сауық орталығы жағынан жақындау)",
           "23:48 — [сигнал жоғалды: көпірден құлау]",
           "Көпірдегі 200 м радиусындағы екінші автомобиль: тіркелмеді",
           "Құлаудан бұрынғы жылдамдық: 87 км/с (14 секундта 40 км/с-тен жеделдету)"
@@ -105,18 +104,18 @@
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "GPS фиксирует преднамеренное ускорение и отсутствие второго автомобиля. Сначала — казино, потом — мост. Оперативного задания не было.",
-        "en": "GPS records deliberate acceleration and the absence of a second vehicle. Casino first, then bridge. No operational mission.",
-        "tr": "GPS, kasıtlı hızlanmayı ve ikinci araç yokluğunu kaydediyor. Önce kumarhane, sonra köprü. Operasyonel görev yok.",
-        "ar": "يسجل GPS التسريع المتعمد وغياب مركبة ثانية. الكازينو أولاً ثم الجسر. لا مهمة تشغيلية.",
-        "kk": "GPS қасақана жеделдетуді және екінші автомобильдің жоқтығын тіркейді. Алдымен казино, содан соң көпір. Оперативтік тапсырма болмады."
+        "ru": "GPS фиксирует преднамеренное ускорение и отсутствие второго автомобиля. Сначала — развлекательный центр, потом — мост. Служебного задания не было.",
+        "en": "GPS records deliberate acceleration and the absence of a second vehicle. Entertainment centre first, then bridge. There was no work assignment.",
+        "tr": "GPS kasıtlı hızlanmayı ve ikinci araç yokluğunu kaydediyor. Önce eğlence merkezi, sonra köprü. İş görevi yoktu.",
+        "ar": "يسجل GPS التسريع المتعمد وغياب مركبة ثانية. مركز الترفيه أولاً ثم الجسر. لم تكن هناك مهمة عمل.",
+        "kk": "GPS қасақана жеделдетуді және екінші көліктің жоқтығын тіркейді. Алдымен ойын-сауық орталығы, содан кейін көпір. Қызметтік тапсырма болмаған."
       },
       "meta": {
         "company": {
           "ru": "МИ-7 Трекинг",
-          "en": "MI-7 Tracking",
-          "tr": "MI-7 Takip",
-          "ar": "تتبع MI-7",
+          "en": "Sentinel Tracking",
+          "tr": "Sentinel Takip",
+          "ar": "تتبع Sentinel",
           "kk": "МИ-7 Трекинг"
         },
         "department": {
@@ -127,11 +126,11 @@
           "kk": "Корпоративтік қауіпсіздік"
         },
         "requestId": {
-          "ru": "MI7-103-007",
-          "en": "MI7-103-007",
-          "tr": "MI7-103-007",
-          "ar": "MI7-103-007",
-          "kk": "MI7-103-007"
+          "ru": "SNT-103-417",
+          "en": "SNT-103-417",
+          "tr": "SNT-103-417",
+          "ar": "SNT-103-417",
+          "kk": "SNT-103-417"
         },
         "gpsFooter": {
           "ru": "Спутниковые точки подтверждены",
@@ -186,23 +185,23 @@
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "За три минуты до падения с моста Бондаренко позвонил женщине и прямо сказал, что собирается «сделать кое-что невероятное». Это трюк, не погоня.",
-        "en": "Three minutes before driving off the bridge, Bondarenko called a woman and plainly announced he was going to 'do something incredible'. It was a stunt, not a chase.",
-        "tr": "Köprüden düşmeden üç dakika önce Bondarenko bir kadını aradı ve açıkça 'inanılmaz bir şey yapacağını' duyurdu. Bu bir gösteriş, takip değil.",
+        "ru": "За три минуты до падения с моста Беляров позвонил женщине и прямо сказал, что собирается «сделать кое-что невероятное». Это трюк, не погоня.",
+        "en": "Three minutes before driving off the bridge, Belyarov called a woman and plainly announced he was going to 'do something incredible'. It was a stunt, not a chase.",
+        "tr": "Köprüden düşmeden üç dakika önce Belyarov bir kadını aradı ve açıkça 'inanılmaz bir şey yapacağını' duyurdu. Bu bir gösteriş, takip değil.",
         "ar": "قبل ثلاث دقائق من القفز عن الجسر، اتصل بونداريكو بامرأة وأعلن صراحةً أنه سيفعل 'شيئًا رائعًا'. كان استعراضًا لا مطاردة.",
-        "kk": "Көпірден секірмес бұрын үш минут бұрын Бондаренко бір әйелге қоңырау шалып, «бірдеңе ғажайып жасайтынын» тікелей хабарлады. Бұл трюк болды, қуу емес."
+        "kk": "Көпірден секірмес бұрын үш минут бұрын Беляров бір әйелге қоңырау шалып, «бірдеңе ғажайып жасайтынын» тікелей хабарлады. Бұл трюк болды, қуу емес."
       },
       "meta": {
         "requestId": {
-          "ru": "MS-DETAIL-103-007",
-          "en": "MS-DETAIL-103-007",
-          "tr": "MS-DETAIL-103-007",
-          "ar": "MS-DETAIL-103-007",
-          "kk": "MS-DETAIL-103-007"
+          "ru": "MS-DETAIL-103-417",
+          "en": "MS-DETAIL-103-417",
+          "tr": "MS-DETAIL-103-417",
+          "ar": "MS-DETAIL-103-417",
+          "kk": "MS-DETAIL-103-417"
         },
         "carrierName": {
           "ru": "МегаСвязь",
-          "en": "MegaCom",
+          "en": "Communications Office 103",
           "tr": "Megaİletişim",
           "ar": "ميغا كوم",
           "kk": "МегаБайланыс"
@@ -213,34 +212,34 @@
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Охранник моста не видел никакого внедорожника — только мужчину в смокинге, который сам разогнался и прыгнул с моста.",
-      "GPS подтверждает: заезд с казино, умышленное ускорение до 87 км/ч, никакого второго автомобиля.",
+      "Охранник моста не видел никакого внедорожника — водитель сам разогнался и направил машину в парапет.",
+      "GPS подтверждает: заезд от развлекательного центра, умышленное ускорение до 87 км/ч, никакого второго автомобиля.",
       "Звонок за три минуты до падения — прямое подтверждение: это был спланированный трюк, а не погоня.",
-      "Лицензии на убыток не выдаём. В выплате отказать."
+      "Авария была инсценирована. В выплате отказать."
     ],
     "en": [
-      "The bridge guard saw no SUV — only a man in a tuxedo who deliberately accelerated and launched himself off the bridge.",
-      "GPS confirms: approach from the casino, intentional acceleration to 87 km/h, no second vehicle.",
+      "The bridge guard saw no SUV — the driver deliberately accelerated into the parapet.",
+      "GPS confirms: approach from the entertainment centre, intentional acceleration to 87 km/h, no second vehicle.",
       "A call three minutes before the plunge is direct evidence: it was a planned stunt, not a chase.",
-      "We don't issue licences to lose. Reject the claim."
+      "The crash was staged. Reject the claim."
     ],
     "tr": [
-      "Köprü bekçisi hiçbir SUV görmedi — sadece kasıtlı olarak hızlanan ve köprüden atlamaya kendini atan smokolu bir adam.",
-      "GPS doğruluyor: kumarhane yaklaşımı, 87 km/s'ye kasıtlı hızlanma, ikinci araç yok.",
+      "Köprü bekçisi hiçbir SUV görmedi; sürücü kasıtlı olarak hızlanıp bariyere yöneldi.",
+      "GPS doğruluyor: eğlence merkezi yönünden yaklaşım, 87 km/s'ye kasıtlı hızlanma, ikinci araç yok.",
       "Düşüşten üç dakika önce yapılan arama doğrudan kanıt: planlı bir gösteriş, takip değil.",
-      "Kayıp lisansı vermiyoruz. Talebi reddedin."
+      "Kaza kurgulanmıştır. Talebi reddedin."
     ],
     "ar": [
-      "لم ير حارس الجسر أي سيارة SUV — فقط رجلاً يرتدي بدلة سهرة سرّع بتعمد وأطلق نفسه عن الجسر.",
-      "يؤكد GPS: الاقتراب من الكازينو، التسريع المتعمد إلى 87 كم/ساعة، لا مركبة ثانية.",
+      "لم ير حارس الجسر أي سيارة أخرى؛ فقد سرّع السائق عمداً نحو الحاجز.",
+      "يؤكد GPS: الاقتراب من مركز الترفيه، التسريع المتعمد إلى 87 كم/ساعة، لا مركبة ثانية.",
       "مكالمة قبل ثلاث دقائق من السقوط دليل مباشر: كانت حيلة مخططة لا مطاردة.",
-      "لا نصدر رخص الخسارة. رفض المطالبة."
+      "كان الحادث مدبّراً. رُفضت المطالبة."
     ],
     "kk": [
-      "Көпір күзетшісі ешқандай джип көрмеді — тек фрак киген ер адам қасақана жылдамдатып, өзін көпірден лақтырды.",
-      "GPS растайды: казинодан жақындау, 87 км/с-ке қасақана жеделдету, екінші автомобиль жоқ.",
+      "Көпір күзетшісі басқа көлікті көрмеді; жүргізуші әдейі жылдамдап, қоршауға бағыт алды.",
+      "GPS растайды: ойын-сауық орталығы жағынан жақындау, 87 км/с-ке қасақана жеделдету, екінші көлік жоқ.",
       "Құлаудан үш минут бұрын жасалған қоңырау — тікелей дәлел: бұл жоспарланған трюк болды, қуу емес.",
-      "Шығынға лицензия бермейміз. Талаптан бас тарту."
+      "Апат әдейі ұйымдастырылған. Талаптан бас тарту."
     ]
   }
 }

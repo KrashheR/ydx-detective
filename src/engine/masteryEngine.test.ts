@@ -11,7 +11,6 @@ function session(caseId: string, selected: string[], hintsUsed = 0): ActiveSessi
     revealedEvidenceIds: [],
     selectedService: null,
     hintsUsed,
-    canvassUsed: false,
     extraOpens: 0,
     startedAtServerMs: 0,
   };

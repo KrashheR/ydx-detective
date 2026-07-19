@@ -6,7 +6,7 @@ import {
   getThematicPackTotalCases,
 } from "../data/thematicPacks";
 import type { CaseUnlockInfo } from "../engine/caseUnlockEngine";
-import type { Language, PlayerStats } from "../types";
+import type { CaseSummary, Language, PlayerStats } from "../types";
 
 interface Props {
   lang: Language;
@@ -14,7 +14,7 @@ interface Props {
     PlayerStats,
     "archivePurchasedPackIds" | "archiveUnlockedCaseIds"
   >;
-  caseUnlocks?: readonly CaseUnlockInfo[];
+  caseUnlocks?: readonly CaseUnlockInfo<CaseSummary>[];
   onOpen: () => void;
   compact?: boolean;
 }
@@ -22,7 +22,7 @@ interface Props {
 function countAccessibleCases(
   stats: Pick<PlayerStats, "archivePurchasedPackIds" | "archiveUnlockedCaseIds">,
   pack: (typeof THEMATIC_PACKS)[number],
-  caseUnlocks: readonly CaseUnlockInfo[],
+  caseUnlocks: readonly CaseUnlockInfo<CaseSummary>[],
 ): number {
   const archiveCases = getThematicPackCases(pack);
   if (archiveCases.length === 0) return 0;
@@ -158,7 +158,7 @@ export function SpecialArchivesEntry({
         >
           <span
             className={`font-mono font-semibold uppercase tracking-[.07em] text-folder-ink ${
-              compact ? "text-[10px]" : "text-[9px]"
+              compact ? "text-[12px]" : "text-[9px]"
             }`}
           >
             {t("openedCases", lang)
@@ -168,7 +168,7 @@ export function SpecialArchivesEntry({
           <span
             className={`shrink-0 whitespace-nowrap font-mono font-semibold ${
               compact
-                ? "rounded-[5px] px-2 py-[4px] text-[10px]"
+                ? "rounded-[5px] px-2 py-[4px] text-[12px]"
                 : "rounded-[4px] px-[7px] py-[3px] text-[9px]"
             } ${
               isComplete

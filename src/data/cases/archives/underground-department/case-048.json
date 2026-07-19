@@ -1,345 +1,345 @@
-﻿{
-    "id":  "case-048",
-    "type":  "standard",
-    "difficulty":  "hard",
-    "claimAmount":  12600,
-    "truth":  "fraud",
-    "investigationBudget":  4,
-    "title":  {
-                  "ru":  "Разгром пиццерии после ночной драки",
-                  "en":  "Pizza Shop Damage after a Night Brawl",
-                  "tr":  "Pizza Shop Damage after a Night Brawl",
-                  "ar":  "Pizza Shop Damage after a Night Brawl",
-                  "kk":  "Разгром пиццерии после ночной драки"
-              },
-    "claim":  {
-                  "person":  {
-                                 "ru":  "Марко Лин, 44 года",
-                                 "en":  "Marko Lin, 44",
-                                 "tr":  "Marko Lin, 44",
-                                 "ar":  "ماركو لين، 44",
-                                 "kk":  "Марко Лин, 44 жаста"
-                             },
-                  "story":  {
-                                "ru":  "Банда в масках ворвалась после закрытия, перевернула кухню и разбила новый туннельный тепловой шкаф. Камеры как раз не работали, поэтому прошу выплату по акту.",
-                                "en":  "A masked crew broke in after closing, wrecked the kitchen, and smashed the new tunnel heat cabinet. The cameras happened to be down, so I request payout under the report.",
-                                "tr":  "Maskeli bir ekip kapanıştan sonra içeri girip mutfağı dağıttı ve yeni tünel ısı dolabını kırdı. Kameralar tam o sırada kapalıydı; rapora göre ödeme istiyorum.",
-                                "ar":  "اقتحمت عصابة مقنعة المكان بعد الإغلاق وخربت المطبخ وحطمت خزانة التسخين الجديدة. كانت الكاميرات معطلة بالصدفة، لذلك أطلب التعويض حسب التقرير.",
-                                "kk":  "Маска киген топ жабылғаннан кейін кіріп, асүйді қиратып, жаңа туннельдік жылу шкафын сындырды. Камералар дәл сол кезде істемеген, сондықтан акт бойынша төлем сұраймын."
-                            }
-              },
-    "coverImage":  "covers/case-048.svg",
-    "personImage":  "people/marko-lin.webp",
-    "client":  {
-                   "role":  {
-                                "ru":  "Владелец ночной пиццерии",
-                                "en":  "Night pizza shop owner",
-                                "tr":  "Gece pizzacısı sahibi",
-                                "ar":  "مالك مطعم بيتزا ليلي",
-                                "kk":  "Түнгі пиццерия иесі"
-                            },
-                   "meta":  [
-                                {
-                                    "k":  {
-                                              "ru":  "Архив",
-                                              "en":  "Archive",
-                                              "tr":  "Arşiv",
-                                              "ar":  "الأرشيف",
-                                              "kk":  "Архив"
-                                          },
-                                    "v":  {
-                                              "ru":  "Подземный Отдел",
-                                              "en":  "Underground Department",
-                                              "tr":  "Yeraltı Dairesi",
-                                              "ar":  "القسم الجوفي",
-                                              "kk":  "Жерасты бөлімі"
-                                          }
-                                },
-                                {
-                                    "k":  {
-                                              "ru":  "Застрахованный риск",
-                                              "en":  "Insured risk",
-                                              "tr":  "Sigortalı risk",
-                                              "ar":  "الخطر المؤمن عليه",
-                                              "kk":  "Сақтандырылған тәуекел"
-                                          },
-                                    "v":  {
-                                              "ru":  "Разгром кухни",
-                                              "en":  "Kitchen vandalism",
-                                              "tr":  "Mutfak tahribatı",
-                                              "ar":  "تخريب المطبخ",
-                                              "kk":  "Асүйдің қирауы"
-                                          }
-                                },
-                                {
-                                    "k":  {
-                                              "ru":  "Архивная связка",
-                                              "en":  "Archive thread",
-                                              "tr":  "Arşiv bağı",
-                                              "ar":  "خيط الأرشيف",
-                                              "kk":  "Архив байланысы"
-                                          },
-                                    "v":  {
-                                              "ru":  "Повторяющийся след: East Yard — скупка, где старое оборудование и украденные модули превращают в страховые истории.",
-                                              "en":  "Recurring lead: East Yard, the consignment yard turning old equipment and stolen modules into insurance stories.",
-                                              "tr":  "Tekrarlayan iz: East Yard; eski ekipmanı ve çalıntı modülleri sigorta hikâyelerine çeviren komisyon alanı.",
-                                              "ar":  "خيط متكرر: East Yard، ساحة البيع التي تحول المعدات القديمة والوحدات المسروقة إلى قصص تأمين.",
-                                              "kk":  "Қайталанатын із: East Yard — ескі жабдық пен ұрланған модульдерді сақтандыру оқиғасына айналдыратын алаң."
-                                          }
-                                }
-                            ]
-               },
-    "evidences":  [
-                      {
-                          "id":  "photo-48",
-                          "type":  "photo",
-                          "title":  {
-                                        "ru":  "Старый износ печи",
-                                        "en":  "Old oven wear",
-                                        "tr":  "Eski fırın aşınması",
-                                        "ar":  "تآكل فرن قديم",
-                                        "kk":  "Пештің ескі тозуы"
-                                    },
-                          "content":  {
-                                          "ru":  "На «новом» шкафу слой старого жира под свежей сажей; заводская плёнка давно снята.",
-                                          "en":  "The \"new\" cabinet has old grease under fresh soot; the factory film was removed long ago.",
-                                          "tr":  "\"Yeni\" dolapta taze isin altında eski yağ tabakası var; fabrika filmi çoktan çıkarılmış.",
-                                          "ar":  "على الخزانة \"الجديدة\" طبقة شحم قديمة تحت السخام الجديد؛ أزيل غلاف المصنع منذ زمن.",
-                                          "kk":  "\"Жаңа\" шкафта жаңа күйенің астында ескі май қабаты бар; зауыттық қабық әлдеқашан алынған."
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Фото показывает, что повреждённое оборудование не было новым.",
-                                                           "en":  "The photo shows the damaged equipment was not new.",
-                                                           "tr":  "Fotoğraf hasarlı ekipmanın yeni olmadığını gösteriyor.",
-                                                           "ar":  "تظهر الصورة أن المعدات المتضررة لم تكن جديدة.",
-                                                           "kk":  "Фото зақымдалған жабдықтың жаңа болмағанын көрсетеді."
-                                                       },
-                          "meta":  {
-                                       "filename":  "IMG_20260648_081500.jpg",
-                                       "imageUrl":  "evidence/case-048-photo-48.webp"
-                                   },
-                          "relation":  "contradicts"
-                      },
-                      {
-                          "id":  "document-48",
-                          "type":  "document",
-                          "title":  {
-                                        "ru":  "Счёт на тепловой шкаф",
-                                        "en":  "Heat cabinet invoice",
-                                        "tr":  "Isı dolabı faturası",
-                                        "ar":  "فاتورة خزانة التسخين",
-                                        "kk":  "Жылу шкафының шоты"
-                                    },
-                          "content":  {
-                                          "ru":  "Счёт выписан на демонстрационный шкаф 2019 года с пометкой «восстановленный». В заявлении он указан как новый.",
-                                          "en":  "The invoice is for a 2019 showroom cabinet marked \"refurbished.\" The claim lists it as new.",
-                                          "tr":  "Fatura, \"yenilenmiş\" notlu 2019 teşhir dolabı için. Başvuruda yeni olarak gösterilmiş.",
-                                          "ar":  "الفاتورة تخص خزانة عرض 2019 مكتوب عليها \"مجددة\". في المطالبة ذُكرت كجديدة.",
-                                          "kk":  "Шот \"қалпына келтірілген\" деп белгіленген 2019 жылғы көрме шкафына. Өтініште ол жаңа деп көрсетілген."
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Документы завышают стоимость повреждённого оборудования.",
-                                                           "en":  "The documents overstate the damaged equipment value.",
-                                                           "tr":  "Belgeler hasarlı ekipmanın değerini şişiriyor.",
-                                                           "ar":  "تضخم الوثائق قيمة المعدات المتضررة.",
-                                                           "kk":  "Құжаттар зақымдалған жабдық құнын асырып көрсетеді."
-                                                       },
-                          "relation":  "contradicts"
-                      },
-                      {
-                          "id":  "camera-48",
-                          "type":  "camera_recording",
-                          "title":  {
-                                        "ru":  "Камера соседнего лифта",
-                                        "en":  "Neighboring lift camera",
-                                        "tr":  "Yan asansör kamerası",
-                                        "ar":  "كاميرا المصعد المجاور",
-                                        "kk":  "Көрші лифт камерасы"
-                                    },
-                          "content":  {
-                                          "ru":  "02:03: Лин сам выносит ящики с посудой, затем возвращается с ломом. Людей в масках на входе нет.",
-                                          "en":  "02:03: Lin carries boxes of dishes out himself, then returns with a crowbar. No masked crew appears at the entrance.",
-                                          "tr":  "02:03: Lin tabak kutularını kendisi çıkarıyor, sonra levye ile dönüyor. Girişte maskeli ekip yok.",
-                                          "ar":  "02:03 يخرج لين صناديق أطباق بنفسه ثم يعود بعتلة. لا تظهر عصابة مقنعة عند المدخل.",
-                                          "kk":  "02:03-де Лин ыдыс қораптарын өзі шығарып, кейін сүйменмен оралады. Кіреберісте маскалы топ жоқ."
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Камера показывает подготовку разгрома самим владельцем.",
-                                                           "en":  "The camera shows the owner preparing the damage himself.",
-                                                           "tr":  "Kamera hasarı sahibinin hazırladığını gösteriyor.",
-                                                           "ar":  "تظهر الكاميرا أن المالك حضر الضرر بنفسه.",
-                                                           "kk":  "Камера қирауды иесінің өзі дайындағанын көрсетеді."
-                                                       },
-                          "meta":  {
-                                       "cameraId":  "ARC-48",
-                                       "cameraModel":  "Axis P3265-LV - 1080p - H.264"
-                                   },
-                          "relation":  "contradicts"
-                      },
-                      {
-                          "id":  "log-48",
-                          "type":  "usage_log",
-                          "title":  {
-                                        "ru":  "Журнал кассы и камер",
-                                        "en":  "Register and camera log",
-                                        "tr":  "Kasa ve kamera kaydı",
-                                        "ar":  "سجل الصندوق والكاميرات",
-                                        "kk":  "Касса және камера журналы"
-                                    },
-                          "content":  {
-                                          "ru":  [
-                                                     "01:48 — касса закрыта досрочно",
-                                                     "01:52 — камеры кухни переведены в сервис владельцем",
-                                                     "02:19 — акт разгрома создан до вызова охраны"
-                                                 ],
-                                          "en":  [
-                                                     "01:48 — register closed early",
-                                                     "01:52 — kitchen cameras set to service by owner",
-                                                     "02:19 — damage report created before security call"
-                                                 ],
-                                          "tr":  [
-                                                     "01:48 — kasa erken kapatıldı",
-                                                     "01:52 — mutfak kameraları sahibi tarafından servise alındı",
-                                                     "02:19 — güvenlik çağrısından önce hasar raporu oluşturuldu"
-                                                 ],
-                                          "ar":  [
-                                                     "01:48 — إغلاق الصندوق مبكراً",
-                                                     "01:52 — نقل كاميرات المطبخ للصيانة بواسطة المالك",
-                                                     "02:19 — إنشاء تقرير الضرر قبل استدعاء الأمن"
-                                                 ],
-                                          "kk":  [
-                                                     "01:48 — касса ерте жабылды",
-                                                     "01:52 — асүй камераларын иесі сервиске ауыстырды",
-                                                     "02:19 — күзет шақырудан бұрын залал акті жасалды"
-                                                 ]
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Системные логи противоречат внезапному нападению.",
-                                                           "en":  "System logs contradict a sudden attack.",
-                                                           "tr":  "Sistem kayıtları ani saldırıyla çelişiyor.",
-                                                           "ar":  "تتناقض سجلات النظام مع هجوم مفاجئ.",
-                                                           "kk":  "Жүйе журналдары кенет шабуылға қайшы."
-                                                       },
-                          "meta":  {
-                                       "logPrompt":  "archive@log-48:~$ tail -f /var/log/archive.log"
-                                   },
-                          "relation":  "contradicts"
-                      },
-                      {
-                          "id":  "bank-48",
-                          "type":  "bank_statement",
-                          "title":  {
-                                        "ru":  "Покупка замены заранее",
-                                        "en":  "Replacement bought in advance",
-                                        "tr":  "Önceden alınan yedek",
-                                        "ar":  "بديل مشترى مسبقاً",
-                                        "kk":  "Ауыстыру алдын ала алынған"
-                                    },
-                          "content":  {
-                                          "ru":  [
-                                                     "За два дня до инцидента — предоплата нового шкафа",
-                                                     "После инцидента — запрос страховой выплаты на полный новый комплект",
-                                                     "Получатель предоплаты — склад East Yard, который позже всплывёт в делах отдела."
-                                                 ],
-                                          "en":  [
-                                                     "Two days before incident — prepayment for a new cabinet",
-                                                     "After incident — insurance request for a full new set",
-                                                     "The prepayment recipient is East Yard, a warehouse that will surface again in department files."
-                                                 ],
-                                          "tr":  [
-                                                     "Olaydan iki gün önce — yeni dolap için ön ödeme",
-                                                     "Olaydan sonra — tam yeni set için sigorta talebi",
-                                                     "Ön ödeme alıcısı, bölüm dosyalarında tekrar görülecek East Yard deposu."
-                                                 ],
-                                          "ar":  [
-                                                     "قبل الحادث بيومين — دفعة مقدمة لخزانة جديدة",
-                                                     "بعد الحادث — طلب تأمين لمجموعة جديدة كاملة",
-                                                     "مستلم الدفعة المقدمة هو East Yard، وهو مخزن سيظهر مجدداً في ملفات القسم."
-                                                 ],
-                                          "kk":  [
-                                                     "Оқиғадан екі күн бұрын — жаңа шкафқа алдын ала төлем",
-                                                     "Оқиғадан кейін — толық жаңа жиынтыққа сақтандыру сұрауы",
-                                                     "Алдын ала төлем алушысы — кейін бөлім істерінде қайта шығатын East Yard қоймасы."
-                                                 ]
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Замена была заказана до заявленного нападения.",
-                                                           "en":  "The replacement was ordered before the reported attack.",
-                                                           "tr":  "Yedek, bildirilen saldırıdan önce sipariş edilmiş.",
-                                                           "ar":  "طُلب البديل قبل الهجوم المبلغ عنه.",
-                                                           "kk":  "Ауыстыру мәлімделген шабуылға дейін тапсырыс берілген."
-                                                       },
-                          "meta":  {
-                                       "bankName":  {
-                                                        "ru":  "Municipal Credit",
-                                                        "en":  "Municipal Credit",
-                                                        "tr":  "Municipal Credit",
-                                                        "ar":  "Municipal Credit",
-                                                        "kk":  "Municipal Credit"
-                                                    },
-                                       "accountMask":  "**** **** **** 48"
-                                   },
-                          "relation":  "contradicts"
-                      },
-                      {
-                          "id":  "witness-48",
-                          "type":  "witness_statement",
-                          "title":  {
-                                        "ru":  "Курьер ночной смены",
-                                        "en":  "Night courier statement",
-                                        "tr":  "Gece kurye ifadesi",
-                                        "ar":  "إفادة ساعي الليل",
-                                        "kk":  "Түнгі курьер жауабы"
-                                    },
-                          "content":  {
-                                          "ru":  "«Я видел, как Марко просил нас уехать через задний ход: “сегодня будет шумно, но без полиции”».",
-                                          "en":  "\"I saw Marko ask us to leave through the back: “it will be noisy tonight, but no police.”\"",
-                                          "tr":  "\"Marko’nun arka kapıdan çıkmamızı istediğini duydum: \"Bu gece gürültü olacak ama polis yok.\"",
-                                          "ar":  "«سمعت ماركو يطلب منا الخروج من الخلف: \"سيكون هناك ضجيج الليلة، لكن بلا شرطة\"».",
-                                          "kk":  "«Марко бізден артқы есіктен шығуды сұрады: \"бүгін шу болады, бірақ полициясыз\" деді»."
-                                      },
-                          "isContradiction":  false,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Материал важен для проверки версии, но сам по себе не является противоречием.",
-                                                           "en":  "The material matters to the review but is not a contradiction by itself.",
-                                                           "tr":  "Bu kayıt inceleme için önemlidir, ancak tek başına çelişki değildir.",
-                                                           "ar":  "هذه المادة مهمة للمراجعة لكنها ليست تناقضاً بحد ذاتها.",
-                                                           "kk":  "Материал тексеру үшін маңызды, бірақ өздігінен қайшылық емес."
-                                                       },
-                          "relation":  "supports"
-                      }
-                  ],
-    "correctDecision":  "reject",
-    "explanation":  {
-                        "ru":  [
-                                   "Камера, логи и фото показывают заранее подготовленный разгром.",
-                                   "Предоплата East Yard делает старый шкаф частью более широкой скупочной схемы.",
-                                   "Нападение банды не подтверждено: вердикт — отказ."
-                               ],
-                        "en":  [
-                                   "Camera, logs, and photo show damage prepared in advance.",
-                                   "The East Yard prepayment makes the old cabinet part of a wider resale scheme.",
-                                   "The gang attack is unsupported: reject the claim."
-                               ],
-                        "tr":  [
-                                   "Kamera, kayıtlar ve fotoğraf hasarın önceden hazırlandığını gösteriyor.",
-                                   "East Yard ön ödemesi eski dolabı daha geniş bir satış şemasına bağlıyor.",
-                                   "Çete saldırısı desteklenmiyor: ödeme reddedilir."
-                               ],
-                        "ar":  [
-                                   "تظهر الكاميرا والسجلات والصورة ضرراً مُحضّراً مسبقاً.",
-                                   "تجعل دفعة East Yard الخزانة القديمة جزءاً من مخطط بيع أوسع.",
-                                   "هجوم العصابة غير مثبت: القرار رفض."
-                               ],
-                        "kk":  [
-                                   "Камера, журналдар және фото алдын ала дайындалған қирауды көрсетеді.",
-                                   "East Yard алдын ала төлемі ескі шкафты кеңірек сату схемасына қосады.",
-                                   "Топ шабуылы расталмады: вердикт — бас тарту."
-                               ]
-                    }
+{
+  "id": "case-048",
+  "type": "standard",
+  "difficulty": "hard",
+  "claimAmount": 12600,
+  "truth": "fraud",
+  "investigationBudget": 4,
+  "title": {
+    "ru": "Разгром пиццерии после ночной драки",
+    "en": "Pizza Shop Damage after a Night Brawl",
+    "tr": "Pizza Shop Damage after a Night Brawl",
+    "ar": "Pizza Shop Damage after a Night Brawl",
+    "kk": "Разгром пиццерии после ночной драки"
+  },
+  "claim": {
+    "person": {
+      "ru": "Марко Лин, 44 года",
+      "en": "Marko Lin, 44",
+      "tr": "Marko Lin, 44",
+      "ar": "ماركو لين، 44",
+      "kk": "Марко Лин, 44 жаста"
+    },
+    "story": {
+      "ru": "Банда в масках ворвалась после закрытия, перевернула кухню и разбила новый туннельный тепловой шкаф. Камеры как раз не работали, поэтому прошу выплату по акту.",
+      "en": "A masked crew broke in after closing, wrecked the kitchen, and smashed the new tunnel heat cabinet. The cameras happened to be down, so I request payout under the report.",
+      "tr": "Maskeli bir ekip kapanıştan sonra içeri girip mutfağı dağıttı ve yeni tünel ısı dolabını kırdı. Kameralar tam o sırada kapalıydı; rapora göre ödeme istiyorum.",
+      "ar": "اقتحمت عصابة مقنعة المكان بعد الإغلاق وخربت المطبخ وحطمت خزانة التسخين الجديدة. كانت الكاميرات معطلة بالصدفة، لذلك أطلب التعويض حسب التقرير.",
+      "kk": "Маска киген топ жабылғаннан кейін кіріп, асүйді қиратып, жаңа туннельдік жылу шкафын сындырды. Камералар дәл сол кезде істемеген, сондықтан акт бойынша төлем сұраймын."
+    }
+  },
+  "coverImage": "covers/case-048.svg",
+  "personImage": "people/marko-lin.webp",
+  "client": {
+    "role": {
+      "ru": "Владелец ночной пиццерии",
+      "en": "Night pizza shop owner",
+      "tr": "Gece pizzacısı sahibi",
+      "ar": "مالك مطعم بيتزا ليلي",
+      "kk": "Түнгі пиццерия иесі"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Архив",
+          "en": "Archive",
+          "tr": "Arşiv",
+          "ar": "الأرشيف",
+          "kk": "Архив"
+        },
+        "v": {
+          "ru": "Подземный Отдел",
+          "en": "Underground Department",
+          "tr": "Yeraltı Dairesi",
+          "ar": "القسم الجوفي",
+          "kk": "Жерасты бөлімі"
+        }
+      },
+      {
+        "k": {
+          "ru": "Застрахованный риск",
+          "en": "Insured risk",
+          "tr": "Sigortalı risk",
+          "ar": "الخطر المؤمن عليه",
+          "kk": "Сақтандырылған тәуекел"
+        },
+        "v": {
+          "ru": "Разгром кухни",
+          "en": "Kitchen vandalism",
+          "tr": "Mutfak tahribatı",
+          "ar": "تخريب المطبخ",
+          "kk": "Асүйдің қирауы"
+        }
+      },
+      {
+        "k": {
+          "ru": "Архивная связка",
+          "en": "Archive thread",
+          "tr": "Arşiv bağı",
+          "ar": "خيط الأرشيف",
+          "kk": "Архив байланысы"
+        },
+        "v": {
+          "ru": "Повторяющийся след: East Yard — скупка, где старое оборудование и украденные модули превращают в страховые истории.",
+          "en": "Recurring lead: East Yard, the consignment yard turning old equipment and stolen modules into insurance stories.",
+          "tr": "Tekrarlayan iz: East Yard; eski ekipmanı ve çalıntı modülleri sigorta hikâyelerine çeviren komisyon alanı.",
+          "ar": "خيط متكرر: East Yard، ساحة البيع التي تحول المعدات القديمة والوحدات المسروقة إلى قصص تأمين.",
+          "kk": "Қайталанатын із: East Yard — ескі жабдық пен ұрланған модульдерді сақтандыру оқиғасына айналдыратын алаң."
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "photo-48",
+      "type": "photo",
+      "title": {
+        "ru": "Старый износ печи",
+        "en": "Old oven wear",
+        "tr": "Eski fırın aşınması",
+        "ar": "تآكل فرن قديم",
+        "kk": "Пештің ескі тозуы"
+      },
+      "content": {
+        "ru": "На «новом» шкафу слой старого жира под свежей сажей; заводская плёнка давно снята.",
+        "en": "The \"new\" cabinet has old grease under fresh soot; the factory film was removed long ago.",
+        "tr": "\"Yeni\" dolapta taze isin altında eski yağ tabakası var; fabrika filmi çoktan çıkarılmış.",
+        "ar": "على الخزانة \"الجديدة\" طبقة شحم قديمة تحت السخام الجديد؛ أزيل غلاف المصنع منذ زمن.",
+        "kk": "\"Жаңа\" шкафта жаңа күйенің астында ескі май қабаты бар; зауыттық қабық әлдеқашан алынған."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Фото показывает, что повреждённое оборудование не было новым.",
+        "en": "The photo shows the damaged equipment was not new.",
+        "tr": "Fotoğraf hasarlı ekipmanın yeni olmadığını gösteriyor.",
+        "ar": "تظهر الصورة أن المعدات المتضررة لم تكن جديدة.",
+        "kk": "Фото зақымдалған жабдықтың жаңа болмағанын көрсетеді."
+      },
+      "meta": {
+        "filename": "IMG_20260648_081500.jpg",
+        "imageUrl": "evidence/case-048-photo-48.webp"
+      },
+      "relation": "contradicts"
+    },
+    {
+      "id": "document-48",
+      "type": "document",
+      "title": {
+        "ru": "Счёт на тепловой шкаф",
+        "en": "Heat cabinet invoice",
+        "tr": "Isı dolabı faturası",
+        "ar": "فاتورة خزانة التسخين",
+        "kk": "Жылу шкафының шоты"
+      },
+      "content": {
+        "ru": "Счёт выписан на демонстрационный шкаф 2019 года с пометкой «восстановленный». В заявлении он указан как новый.",
+        "en": "The invoice is for a 2019 showroom cabinet marked \"refurbished.\" The claim lists it as new.",
+        "tr": "Fatura, \"yenilenmiş\" notlu 2019 teşhir dolabı için. Başvuruda yeni olarak gösterilmiş.",
+        "ar": "الفاتورة تخص خزانة عرض 2019 مكتوب عليها \"مجددة\". في المطالبة ذُكرت كجديدة.",
+        "kk": "Шот \"қалпына келтірілген\" деп белгіленген 2019 жылғы көрме шкафына. Өтініште ол жаңа деп көрсетілген."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Документы завышают стоимость повреждённого оборудования.",
+        "en": "The documents overstate the damaged equipment value.",
+        "tr": "Belgeler hasarlı ekipmanın değerini şişiriyor.",
+        "ar": "تضخم الوثائق قيمة المعدات المتضررة.",
+        "kk": "Құжаттар зақымдалған жабдық құнын асырып көрсетеді."
+      },
+      "relation": "contradicts"
+    },
+    {
+      "id": "camera-48",
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера соседнего лифта",
+        "en": "Neighboring lift camera",
+        "tr": "Yan asansör kamerası",
+        "ar": "كاميرا المصعد المجاور",
+        "kk": "Көрші лифт камерасы"
+      },
+      "content": {
+        "ru": "02:03: Лин сам выносит ящики с посудой, затем возвращается с ломом. Людей в масках на входе нет.",
+        "en": "02:03: Lin carries boxes of dishes out himself, then returns with a crowbar. No masked crew appears at the entrance.",
+        "tr": "02:03: Lin tabak kutularını kendisi çıkarıyor, sonra levye ile dönüyor. Girişte maskeli ekip yok.",
+        "ar": "02:03 يخرج لين صناديق أطباق بنفسه ثم يعود بعتلة. لا تظهر عصابة مقنعة عند المدخل.",
+        "kk": "02:03-де Лин ыдыс қораптарын өзі шығарып, кейін сүйменмен оралады. Кіреберісте маскалы топ жоқ."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Камера показывает подготовку разгрома самим владельцем.",
+        "en": "The camera shows the owner preparing the damage himself.",
+        "tr": "Kamera hasarı sahibinin hazırladığını gösteriyor.",
+        "ar": "تظهر الكاميرا أن المالك حضر الضرر بنفسه.",
+        "kk": "Камера қирауды иесінің өзі дайындағанын көрсетеді."
+      },
+      "meta": {
+        "cameraId": "ARC-48",
+        "cameraModel": "SentinelCam SC-3265 - 1080p - H.264"
+      },
+      "relation": "contradicts"
+    },
+    {
+      "id": "log-48",
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал кассы и камер",
+        "en": "Register and camera log",
+        "tr": "Kasa ve kamera kaydı",
+        "ar": "سجل الصندوق والكاميرات",
+        "kk": "Касса және камера журналы"
+      },
+      "content": {
+        "ru": [
+          "01:48 — касса закрыта досрочно",
+          "01:52 — камеры кухни переведены в сервис владельцем",
+          "02:19 — акт разгрома создан до вызова охраны"
+        ],
+        "en": [
+          "01:48 — register closed early",
+          "01:52 — kitchen cameras set to service by owner",
+          "02:19 — damage report created before security call"
+        ],
+        "tr": [
+          "01:48 — kasa erken kapatıldı",
+          "01:52 — mutfak kameraları sahibi tarafından servise alındı",
+          "02:19 — güvenlik çağrısından önce hasar raporu oluşturuldu"
+        ],
+        "ar": [
+          "01:48 — إغلاق الصندوق مبكراً",
+          "01:52 — نقل كاميرات المطبخ للصيانة بواسطة المالك",
+          "02:19 — إنشاء تقرير الضرر قبل استدعاء الأمن"
+        ],
+        "kk": [
+          "01:48 — касса ерте жабылды",
+          "01:52 — асүй камераларын иесі сервиске ауыстырды",
+          "02:19 — күзет шақырудан бұрын залал акті жасалды"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Системные логи противоречат внезапному нападению.",
+        "en": "System logs contradict a sudden attack.",
+        "tr": "Sistem kayıtları ani saldırıyla çelişiyor.",
+        "ar": "تتناقض سجلات النظام مع هجوم مفاجئ.",
+        "kk": "Жүйе журналдары кенет шабуылға қайшы."
+      },
+      "meta": {
+        "logPrompt": "archive@log-48:~$ tail -f /var/log/archive.log"
+      },
+      "relation": "contradicts"
+    },
+    {
+      "id": "bank-48",
+      "type": "bank_statement",
+      "title": {
+        "ru": "Покупка замены заранее",
+        "en": "Replacement bought in advance",
+        "tr": "Önceden alınan yedek",
+        "ar": "بديل مشترى مسبقاً",
+        "kk": "Ауыстыру алдын ала алынған"
+      },
+      "content": {
+        "ru": [
+          "За два дня до инцидента — предоплата нового шкафа",
+          "После инцидента — запрос страховой выплаты на полный новый комплект",
+          "Получатель предоплаты — склад East Yard, который позже всплывёт в делах отдела."
+        ],
+        "en": [
+          "Two days before incident — prepayment for a new cabinet",
+          "After incident — insurance request for a full new set",
+          "The prepayment recipient is East Yard, a warehouse that will surface again in department files."
+        ],
+        "tr": [
+          "Olaydan iki gün önce — yeni dolap için ön ödeme",
+          "Olaydan sonra — tam yeni set için sigorta talebi",
+          "Ön ödeme alıcısı, bölüm dosyalarında tekrar görülecek East Yard deposu."
+        ],
+        "ar": [
+          "قبل الحادث بيومين — دفعة مقدمة لخزانة جديدة",
+          "بعد الحادث — طلب تأمين لمجموعة جديدة كاملة",
+          "مستلم الدفعة المقدمة هو East Yard، وهو مخزن سيظهر مجدداً في ملفات القسم."
+        ],
+        "kk": [
+          "Оқиғадан екі күн бұрын — жаңа шкафқа алдын ала төлем",
+          "Оқиғадан кейін — толық жаңа жиынтыққа сақтандыру сұрауы",
+          "Алдын ала төлем алушысы — кейін бөлім істерінде қайта шығатын East Yard қоймасы."
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Замена была заказана до заявленного нападения.",
+        "en": "The replacement was ordered before the reported attack.",
+        "tr": "Yedek, bildirilen saldırıdan önce sipariş edilmiş.",
+        "ar": "طُلب البديل قبل الهجوم المبلغ عنه.",
+        "kk": "Ауыстыру мәлімделген шабуылға дейін тапсырыс берілген."
+      },
+      "meta": {
+        "bankName": {
+          "ru": "Municipal Credit",
+          "en": "Municipal Credit",
+          "tr": "Municipal Credit",
+          "ar": "Municipal Credit",
+          "kk": "Municipal Credit"
+        },
+        "accountMask": "**** **** **** 48"
+      },
+      "relation": "contradicts"
+    },
+    {
+      "id": "witness-48",
+      "type": "witness_statement",
+      "title": {
+        "ru": "Курьер ночной смены",
+        "en": "Night courier statement",
+        "tr": "Gece kurye ifadesi",
+        "ar": "إفادة ساعي الليل",
+        "kk": "Түнгі курьер жауабы"
+      },
+      "content": {
+        "ru": "«Я видел, как Марко просил нас уехать через задний ход: “сегодня будет шумно, но без полиции”».",
+        "en": "\"I saw Marko ask us to leave through the back: “it will be noisy tonight, but no police.”\"",
+        "tr": "\"Marko’nun arka kapıdan çıkmamızı istediğini duydum: \"Bu gece gürültü olacak ama polis yok.\"",
+        "ar": "«سمعت ماركو يطلب منا الخروج من الخلف: \"سيكون هناك ضجيج الليلة، لكن بلا شرطة\"».",
+        "kk": "«Марко бізден артқы есіктен шығуды сұрады: \"бүгін шу болады, бірақ полициясыз\" деді»."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Материал важен для проверки версии, но сам по себе не является противоречием.",
+        "en": "The material matters to the review but is not a contradiction by itself.",
+        "tr": "Bu kayıt inceleme için önemlidir, ancak tek başına çelişki değildir.",
+        "ar": "هذه المادة مهمة للمراجعة لكنها ليست تناقضاً بحد ذاتها.",
+        "kk": "Материал тексеру үшін маңызды, бірақ өздігінен қайшылық емес."
+      },
+      "relation": "supports"
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Камера, логи и фото показывают заранее подготовленный разгром.",
+      "Предоплата East Yard делает старый шкаф частью более широкой скупочной схемы.",
+      "Нападение банды не подтверждено: вердикт — отказ."
+    ],
+    "en": [
+      "Camera, logs, and photo show damage prepared in advance.",
+      "The East Yard prepayment makes the old cabinet part of a wider resale scheme.",
+      "The gang attack is unsupported: reject the claim."
+    ],
+    "tr": [
+      "Kamera, kayıtlar ve fotoğraf hasarın önceden hazırlandığını gösteriyor.",
+      "East Yard ön ödemesi eski dolabı daha geniş bir satış şemasına bağlıyor.",
+      "Çete saldırısı desteklenmiyor: ödeme reddedilir."
+    ],
+    "ar": [
+      "تظهر الكاميرا والسجلات والصورة ضرراً مُحضّراً مسبقاً.",
+      "تجعل دفعة East Yard الخزانة القديمة جزءاً من مخطط بيع أوسع.",
+      "هجوم العصابة غير مثبت: القرار رفض."
+    ],
+    "kk": [
+      "Камера, журналдар және фото алдын ала дайындалған қирауды көрсетеді.",
+      "East Yard алдын ала төлемі ескі шкафты кеңірек сату схемасына қосады.",
+      "Топ шабуылы расталмады: вердикт — бас тарту."
+    ]
+  }
 }

@@ -13,11 +13,11 @@
   },
   "claim": {
     "person": {
-      "ru": "Уолтер Харт, 51 год",
-      "en": "Walter Hart, 51",
-      "tr": "Walter Hart, 51",
-      "ar": "والتر هارت، 51",
-      "kk": "Уолтер Харт, 51 жаста"
+      "ru": "Виктор Громин, 51 год",
+      "en": "Viktor Gromin, 51",
+      "tr": "Viktor Gromin, 51",
+      "ar": "فيكتور غرومين، 51",
+      "kk": "Виктор Громин, 51 жаста"
     },
     "story": {
       "ru": "Я учитель химии в школе №34. Во время демонстрационного опыта по синтезу нейлона произошёл непредвиденный взрыв. Уничтожены автоклав, центрифуга и масс-спектрометр на общую сумму 45 000 рублей. Прошу возмещения по полису страхования оборудования.",
@@ -28,7 +28,6 @@
     }
   },
   "coverImage": "covers/case-002.svg",
-  "personImage": "people/walter.webp",
   "evidences": [
     {
       "id": "ev-lab-analysis",
@@ -41,19 +40,19 @@
         "kk": "Қалдықтардың сараптамалық талдауы"
       },
       "content": {
-        "ru": "В пробах, изъятых с места взрыва, обнаружены: метиламин (0-метил-эфедрин), фенилацетон, псевдоэфедрин. Нейлон-6,6 и его прекурсоры не выявлены. Соотношение реагентов характерно для синтеза метамфетамина. Синий кристаллический порошок обнаружен на полу лаборатории (97,6% чистоты).",
-        "en": "Samples taken from the blast site show: methylamine (0-methyl-ephedrine), phenylacetone, pseudoephedrine. No nylon-6,6 or its precursors found. Reagent ratios are consistent with methamphetamine synthesis. Blue crystalline powder found on the lab floor (97.6% purity).",
-        "tr": "Patlama mahallinden alınan örneklerde şunlar tespit edildi: metilamin (0-metil-efedrin), fenilaseton, psödoefedrin. Naylon-6,6 veya öncüleri bulunamadı. Reaktif oranları metamfetamin sentezi ile uyumlu. Laboratuvar zemininde mavi kristal toz bulundu (%97,6 saflık).",
-        "ar": "كشفت العينات المأخوذة من موقع الانفجار عن: ميثيلامين (0-ميثيل-إيفيدرين)، فينيل أسيتون، سودوإيفيدرين. لم يُعثر على النايلون-6,6 أو سلائفه. نسب الكواشف متوافقة مع تخليق الميثامفيتامين. عُثر على مسحوق بلوري أزرق على أرضية المختبر (نقاء 97.6%).",
-        "kk": "Жарылыс орнынан алынған үлгілерде табылды: метиламин (0-метил-эфедрин), фенилацетон, псевдоэфедрин. Нейлон-6,6 немесе оның прекурсорлары табылмады. Реагенттер қатынасы метамфетамин синтезіне тән. Зертхана еденінде көк кристалды ұнтақ табылды (97,6% тазалық)."
+        "ru": "В пробах с места взрыва обнаружена смесь толуола, ацетона и дешёвых ароматизаторов. Нейлон-6,6 и его прекурсоры не выявлены. Состав совпадает с контрафактным промышленным растворителем из изъятой партии.",
+        "en": "Samples from the blast site contain a mixture of toluene, acetone, and cheap fragrances. No nylon-6,6 or its precursors were found. The composition matches a seized batch of counterfeit industrial solvent.",
+        "tr": "Patlama yerinden alınan örneklerde toluen, aseton ve ucuz kokulandırıcı karışımı bulundu. Naylon-6,6 veya öncüleri bulunamadı. Bileşim, ele geçirilen sahte endüstriyel çözücü partisiyle eşleşiyor.",
+        "ar": "احتوت عينات موقع الانفجار على مزيج من التولوين والأسيتون ومواد عطرية رخيصة. لم يُعثر على النايلون-6,6 أو سلائفه. وتتطابق التركيبة مع دفعة مصادرة من مذيب صناعي مقلد.",
+        "kk": "Жарылыс орнынан алынған үлгілерде толуол, ацетон және арзан хош иістендіргіш қоспасы табылды. Нейлон-6,6 немесе оның прекурсорлары анықталмады. Құрамы тәркіленген контрафакті өнеркәсіптік еріткіш партиясымен сәйкес."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Найденные вещества и синий кристаллический порошок не имеют отношения к синтезу нейлона — это маркеры нелегальной нарколаборатории.",
-        "en": "The substances found and the blue crystalline powder have no connection to nylon synthesis — these are markers of an illegal drug lab.",
-        "tr": "Bulunan maddeler ve mavi kristal toz, naylon sentezi ile hiçbir ilgisi yoktur — bunlar yasadışı bir uyuşturucu laboratuvarının göstergeleridir.",
-        "ar": "المواد الموجودة والمسحوق البلوري الأزرق ليس لهما صلة بتخليق النايلون — هذه مؤشرات على مختبر مخدرات غير قانوني.",
-        "kk": "Табылған заттар мен көк кристалды ұнтақ нейлон синтезіне қатысы жоқ — бұл заңсыз есірткі зертханасының белгілері."
+        "ru": "Состав не имеет отношения к синтезу нейлона и указывает на нелегальный выпуск контрафактного растворителя.",
+        "en": "The composition is unrelated to nylon synthesis and points to illegal production of counterfeit solvent.",
+        "tr": "Bileşimin naylon senteziyle ilgisi yok ve yasa dışı sahte çözücü üretimine işaret ediyor.",
+        "ar": "لا علاقة للتركيبة بتخليق النايلون وتشير إلى إنتاج غير قانوني لمذيب مقلد.",
+        "kk": "Құрам нейлон синтезіне қатысы жоқ және контрафакті еріткіштің заңсыз өндірісін көрсетеді."
       }
     },
     {
@@ -67,19 +66,19 @@
         "kk": "Тазалаушы жауабы"
       },
       "content": {
-        "ru": "Харт приходил по ночам трижды за последний месяц. Привозил что-то в автодоме — сказал, это «личный склад». Из лаборатории воняло кошачьей едой и тухлыми яйцами. Один раз видел, как он продавал что-то у ворот какому-то лысому в жёлтой куртке.",
-        "en": "Hart came in at night three times last month. He brought something in a motorhome — said it was 'personal storage'. The lab smelled of cat food and rotten eggs. Once I saw him sell something at the gate to a bald man in a yellow jacket.",
-        "tr": "Hart geçen ay üç kez geceleri geldi. Bir karavanla bir şeyler getirdi — 'kişisel depo' dedi. Laboratuvardan kedi maması ve çürük yumurta kokusu geliyordu. Bir keresinde kapıda sarı ceketli kel bir adama bir şeyler sattığını gördüm.",
-        "ar": "جاء هارت ليلاً ثلاث مرات الشهر الماضي. أحضر شيئًا في منزل متنقل — قال إنه «مستودع شخصي». كانت المختبر تفوح منه رائحة طعام القطط والبيض الفاسد. مرة واحدة رأيته يبيع شيئًا عند البوابة لرجل أصلع يرتدي جاكيتًا أصفر.",
-        "kk": "Харт өткен айда үш рет түнде келді. Автоүйде бір нәрсе әкелді — «жеке қойма» деді. Зертханадан мысық тамағы мен шіріген жұмыртқа иісі шықты. Бір рет сарғыш куртка киген ешқылдық адамға қақпа жанында бір нәрсе сатып жатқанын көрдім."
+        "ru": "Громин приходил по ночам трижды за последний месяц. Привозил канистры в грузовом фургоне и называл их «личным складом». Из лаборатории резко пахло растворителем. Один раз я видел, как он передавал коробки покупателю в тёмном пальто у ворот.",
+        "en": "Gromin came in at night three times last month. He brought canisters in a delivery van and called them 'personal storage'. The lab smelled strongly of solvent. Once I saw him hand boxes to a buyer in a dark coat at the gate.",
+        "tr": "Gromin geçen ay üç kez gece geldi. Bir teslimat minibüsüyle bidonlar getirip bunlara 'kişisel depo' dedi. Laboratuvardan keskin çözücü kokusu geliyordu. Bir keresinde kapıda koyu paltolu bir alıcıya kutular verdiğini gördüm.",
+        "ar": "جاء غرومين ليلاً ثلاث مرات الشهر الماضي. أحضر عبوات في شاحنة توصيل ووصفها بأنها «مخزن شخصي». كانت رائحة المذيب قوية في المختبر. ورأيته مرة يسلم صناديق لمشترٍ يرتدي معطفاً داكناً عند البوابة.",
+        "kk": "Громин өткен айда үш рет түнде келді. Жеткізу фургонымен канистрлер әкеліп, оларды «жеке қойма» деді. Зертханадан еріткіштің өткір иісі шықты. Бір рет қақпа жанында қара пальтодағы сатып алушыға қораптар бергенін көрдім."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Автодом, химический запах и ночные визиты — признаки мобильной нарколаборатории, а не школьных опытов.",
-        "en": "The motorhome, chemical smell, and night-time visits are signs of a mobile drug lab, not a school experiment.",
-        "tr": "Karavan, kimyasal koku ve gece ziyaretleri, okul deneyi değil, mobil bir uyuşturucu laboratuvarının belirtileridir.",
-        "ar": "المنزل المتنقل والرائحة الكيميائية والزيارات الليلية علامات على مختبر مخدرات متنقل، وليست تجربة مدرسية.",
-        "kk": "Автоүй, химиялық иіс және түнгі барулар — бұл мектеп тәжірибесі емес, жылжымалы есірткі зертханасының белгілері."
+        "ru": "Канистры, запах растворителя и ночные продажи указывают на скрытое коммерческое производство, а не школьные опыты.",
+        "en": "The canisters, solvent smell, and night-time sales point to concealed commercial production, not a school experiment.",
+        "tr": "Bidonlar, çözücü kokusu ve gece satışları okul deneyine değil gizli ticari üretime işaret ediyor.",
+        "ar": "تشير العبوات ورائحة المذيب والمبيعات الليلية إلى إنتاج تجاري مخفي لا إلى تجربة مدرسية.",
+        "kk": "Канистрлер, еріткіш иісі және түнгі сауда мектеп тәжірибесін емес, жасырын коммерциялық өндірісті көрсетеді."
       }
     },
     {
@@ -134,11 +133,11 @@
       },
       "meta": {
         "bankName": {
-          "ru": "СберХим-Банк",
-          "en": "SberChem Bank",
-          "tr": "SberKimya Bankası",
+          "ru": "ЛабКредит",
+          "en": "LabCredit",
+          "tr": "LabKredi",
           "ar": "سبير كيم بنك",
-          "kk": "СберХим-Банк"
+          "kk": "ЛабКредит"
         },
         "accountMask": "•• 3404"
       }
@@ -147,32 +146,32 @@
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Лабораторный анализ обнаружил прекурсоры метамфетамина и синий кристалл вместо нейлона.",
-      "Уборщик видел автодом, химический запах и подозрительные ночные продажи.",
+      "Лабораторный анализ обнаружил состав контрафактного растворителя вместо нейлона.",
+      "Уборщик видел канистры, грузовой фургон и подозрительные ночные продажи.",
       "Три крупных наличных депозита без объяснения источника за две недели до взрыва.",
       "«Синтез нейлона» — прикрытие нелегальной лаборатории. В выплате отказать."
     ],
     "en": [
-      "Lab analysis found methamphetamine precursors and blue crystals instead of nylon.",
-      "The janitor witnessed the motorhome, chemical smell, and suspicious night-time sales.",
+      "Lab analysis found counterfeit solvent instead of nylon.",
+      "The janitor witnessed canisters, a delivery van, and suspicious night-time sales.",
       "Three large unexplained cash deposits in the two weeks before the explosion.",
       "'Nylon synthesis' was a cover for an illegal lab. Reject the claim."
     ],
     "tr": [
-      "Laboratuvar analizi, naylon yerine metamfetamin öncüllerini ve mavi kristalleri ortaya çıkardı.",
-      "Temizlikçi karavanı, kimyasal kokuyu ve şüpheli gece satışlarını gördü.",
+      "Laboratuvar analizi naylon yerine sahte çözücü buldu.",
+      "Temizlikçi bidonları, teslimat minibüsünü ve şüpheli gece satışlarını gördü.",
       "Patlamadan iki hafta önce kaynağı açıklanamayan üç büyük nakit yatırma.",
       "'Naylon sentezi' yasadışı bir laboratuvar için kapaktı. Talebi reddedin."
     ],
     "ar": [
-      "كشف تحليل المختبر عن سلائف الميثامفيتامين وبلورات زرقاء بدلاً من النايلون.",
-      "شهد عامل النظافة المنزل المتنقل والرائحة الكيميائية والمبيعات الليلية المشبوهة.",
+      "كشف تحليل المختبر عن مذيب مقلد بدلاً من النايلون.",
+      "شهد عامل النظافة العبوات وشاحنة التوصيل والمبيعات الليلية المشبوهة.",
       "ثلاثة إيداعات نقدية كبيرة غير مفسرة في الأسبوعين السابقين للانفجار.",
       "كان 'تخليق النايلون' غطاءً لمختبر غير قانوني. رفض المطالبة."
     ],
     "kk": [
-      "Зертханалық талдау нейлон орнына метамфетамин прекурсорлары мен көк кристалдар тапты.",
-      "Тазалаушы автоүйді, химиялық иісті және күдікті түнгі сатуды көрді.",
+      "Зертханалық талдау нейлон орнына контрафакті еріткіш тапты.",
+      "Тазалаушы канистрлерді, жеткізу фургонын және күдікті түнгі сатуды көрді.",
       "Жарылыстан екі апта бұрын көзі түсіндірілмеген үш ірі қолма-қол салым.",
       "«Нейлон синтезі» заңсыз зертхананың желеуі болды. Талаптан бас тарту."
     ]

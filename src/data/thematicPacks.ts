@@ -1,5 +1,5 @@
-import { getCaseById } from "./caseLoader";
-import type { Case, LocalizedString } from "../types";
+import { getCaseSummaryById } from "./caseLoader";
+import type { CaseSummary, LocalizedString } from "../types";
 
 export type ThematicPackStatus = "preview" | "free_available" | "ad_available";
 
@@ -141,10 +141,10 @@ export function getThematicPackCaseIds(pack: ThematicPack): readonly string[] {
   return ARCHIVE_CASE_IDS[pack.id] ?? [];
 }
 
-export function getThematicPackCases(pack: ThematicPack): readonly Case[] {
+export function getThematicPackCases(pack: ThematicPack): readonly CaseSummary[] {
   return getThematicPackCaseIds(pack)
-    .map((caseId) => getCaseById(caseId))
-    .filter((caseData): caseData is Case => caseData !== undefined);
+    .map((caseId) => getCaseSummaryById(caseId))
+    .filter((caseData): caseData is CaseSummary => caseData !== undefined);
 }
 
 export function getThematicPackTotalCases(pack: ThematicPack): number {

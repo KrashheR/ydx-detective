@@ -13,6 +13,7 @@ import { asset } from "../utils/asset";
 import { EvidenceCard } from "./EvidenceCard";
 import { VerdictPanel } from "./VerdictPanel";
 import { Tooltip } from "./Tooltip";
+import { tapHaptic } from "../utils/haptics";
 
 interface Props {
   caseData: Case;
@@ -34,6 +35,7 @@ interface Props {
   /** Returns false if rejection is unjustified, triggering the prompt. */
   onReject: () => boolean;
   onBackToDesk?: () => void;
+  onTabSwitch?: (from: Tab, to: Tab) => void;
 }
 
 type Tab = "statement" | "evidence";
@@ -61,6 +63,7 @@ export function CaseFile({
   onApprove,
   onReject,
   onBackToDesk,
+  onTabSwitch,
 }: Props) {
   const isRTL = RTL_LANGUAGES.has(lang);
   const [tab, setTab] = useState<Tab>("statement");
@@ -68,6 +71,7 @@ export function CaseFile({
   const [dir, setDir] = useState(0);
   const touchStart = useRef<{ x: number; y: number } | null>(null);
   const [toast, setToast] = useState<string | null>(null);
+  const [claimPeekOpen, setClaimPeekOpen] = useState(false);
 
   // Hint targeting mode: after clicking a hint button, the player picks which
   // card to reveal instead of getting "the next one in order". Esc or a click
@@ -98,6 +102,7 @@ export function CaseFile({
 
   const goToTab = (next: Tab) => {
     if (next === tab) return;
+    onTabSwitch?.(tab, next);
     setDir(next === "evidence" ? 1 : -1);
     setTab(next);
   };
@@ -117,8 +122,8 @@ export function CaseFile({
     const dy = p.clientY - start.y;
     // Only react to a clearly horizontal flick, so vertical scrolling is untouched.
     if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
-    if (dx < 0) goToTab("evidence");
-    else goToTab("statement");
+    const forward = isRTL ? dx > 0 : dx < 0;
+    goToTab(forward ? "evidence" : "statement");
   };
   const isDaily = caseData.type === "daily";
 
@@ -131,18 +136,28 @@ export function CaseFile({
   const allRevealed =
     (session?.revealedEvidenceIds.length ?? 0) >= caseData.evidences.length;
 
-  const stampedCount = session?.selectedEvidenceIds.length ?? 0;
   const evCount = caseData.evidences.length;
   const contradictionCount = caseData.evidences.filter((ev) => ev.isContradiction).length;
 
   const handleReject = () => {
-    if (!onReject()) {
-      setToast(t("rejectNeedsProof", lang));
-      window.setTimeout(() => setToast(null), 3800);
-    }
+    if (!onReject()) return showToast(t("rejectNeedsProof", lang));
+    tapHaptic();
+  };
+
+  const showToast = (message: string) => {
+    setToast(message);
+    window.setTimeout(() => setToast(null), 3800);
+  };
+
+  const handleApprove = () => {
+    tapHaptic();
+    onApprove();
   };
 
   const fmt = (n: number) => n.toLocaleString("ru-RU");
+  const claimStory = loc(caseData.claim.story, lang);
+  const claimExcerpt =
+    claimStory.length > 260 ? `${claimStory.slice(0, 257).trimEnd()}…` : claimStory;
 
   /* ---------------------------------- Statement sheet ----------------------- */
   const statement = (
@@ -167,8 +182,7 @@ export function CaseFile({
           <div className="w-[104px] md:w-[124px] shrink-0">
             {caseData.personImage ? (
               <div
-                className="overflow-hidden rounded-[4px] border border-[#b8b1a0] bg-[#d8d3c7]"
-                style={{ boxShadow: "0 3px 9px rgba(0,0,0,.2)" }}
+                className="overflow-hidden rounded-[4px] border border-photo-border bg-photo-bg shadow-photo-id"
               >
                 <img
                   src={asset(caseData.personImage)}
@@ -185,27 +199,24 @@ export function CaseFile({
               </div>
             ) : (
               <div
-                className="flex items-center justify-center overflow-hidden rounded-[4px] border border-[#b8b1a0] bg-[#d8d3c7]"
+                className="flex items-center justify-center overflow-hidden rounded-[4px] border border-photo-border bg-photo-placeholder shadow-photo-id"
                 style={{
                   aspectRatio: "1 / 1.2",
-                  boxShadow: "0 3px 9px rgba(0,0,0,.2)",
-                  background:
-                    "repeating-linear-gradient(45deg,#d8d3c7 0 6px,#cfc9bb 6px 12px)",
                 }}
               />
             )}
-            <div className="mt-[5px] text-center font-mono text-[7px] font-medium tracking-[1.5px] text-[#8a8472] md:text-[8px]">
+            <div className="mt-[5px] text-center font-mono text-[7px] font-medium tracking-[1.5px] text-photo-caption md:text-[8px]">
               ФОТО · ID
             </div>
           </div>
 
           {/* Name + meta column */}
           <div className="min-w-0 flex-1">
-            <div className="font-serif text-[18px] font-semibold leading-[1.15] text-[#1f2937] md:text-[20px]">
+            <div className="font-serif text-[18px] font-semibold leading-[1.15] text-document-title md:text-[20px]">
               {loc(caseData.claim.person, lang)}
             </div>
             {caseData.client && (
-              <div className="mt-[3px] text-[11px] font-medium text-[#6b7280] md:text-[12px]">
+              <div className="mt-[3px] text-[12px] font-medium text-document-muted">
                 {loc(caseData.client.role, lang)}
               </div>
             )}
@@ -219,10 +230,10 @@ export function CaseFile({
               >
                 {caseData.client.meta.map((row, i) => (
                   <Fragment key={i}>
-                    <div className="whitespace-nowrap text-[10px] font-medium text-[#9ca3af] md:text-[11px]">
+                    <div className="whitespace-nowrap text-[12px] font-medium text-document-faint md:text-[11px]">
                       {loc(row.k, lang)}
                     </div>
-                    <div className="font-mono text-[10px] font-semibold text-[#374151] md:text-[11px]">
+                    <div className="font-mono text-[12px] font-semibold text-document-copy md:text-[11px]">
                       {loc(row.v, lang)}
                     </div>
                   </Fragment>
@@ -232,9 +243,9 @@ export function CaseFile({
           </div>
         </div>
 
-        <div className="my-[18px] h-px bg-[#d1cfc8]" />
+        <div className="my-[18px] h-px bg-document-rule" />
 
-        <div className="mb-2 text-[11px] font-semibold tracking-[1px] text-text-muted">
+        <div className="mb-2 text-[12px] font-semibold tracking-[1px] text-text-muted md:text-[11px]">
           {t("circumstances", lang)}
         </div>
         <p
@@ -245,7 +256,7 @@ export function CaseFile({
         </p>
 
         {/* Claim sum box */}
-        <div className="mt-[18px] flex items-center justify-between gap-3 rounded-md border border-dashed border-[#c7c2b6] bg-white px-[15px] py-[13px]">
+        <div className="mt-[18px] flex items-center justify-between gap-3 rounded-md border border-dashed border-document-dash bg-white px-[15px] py-[13px]">
           <span className="text-xs font-medium text-text-dim">
             {t("claimLabel", lang)}
             {isDaily && <span className="ml-1 font-bold text-gold">×2</span>}
@@ -276,6 +287,7 @@ export function CaseFile({
             // On a budgeted case, un-opened cards seal once the budget is spent.
             sealed={budgetExhausted && !viewed}
             targetable={targetable}
+            dimmed={targeting != null && !targetable}
             onClick={() => {
               if (targeting) {
                 if (!targetable) return;
@@ -298,7 +310,7 @@ export function CaseFile({
       </span>
       <div className="flex items-center gap-2.5">
         {/* Investigation-budget counter — only on budgeted cases */}
-        {budget != null && (
+        {budget != null ? (
           <span
             className={`font-mono text-[11px] font-semibold ${
               budgetExhausted ? "text-stamp" : "text-gold"
@@ -307,10 +319,11 @@ export function CaseFile({
           >
             🔎 {opensRemaining ?? 0} / {budget} {t("budgetChecks", lang)}
           </span>
+        ) : (
+          <span className="font-mono text-[12px] font-semibold text-text-muted">
+            {t("viewedCount", lang)} {session?.viewedEvidenceIds.length ?? 0}/{evCount}
+          </span>
         )}
-        <span className="font-mono text-[11px] font-semibold text-stamp">
-          {stampedCount} / {evCount} {t("marked", lang)}
-        </span>
       </div>
     </div>
   );
@@ -391,7 +404,7 @@ export function CaseFile({
           >
             {key === "statement"
               ? t("statement", lang)
-              : `${t("evidence", lang)} · ${stampedCount}/${evCount}`}
+              : t("evidence", lang)}
           </button>
         ))}
       </div>
@@ -403,7 +416,7 @@ export function CaseFile({
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
-          <AnimatePresence initial={false} mode="wait" custom={dir}>
+          <AnimatePresence initial={false} mode="popLayout" custom={dir}>
             <motion.div
               key={tab}
               custom={dir}
@@ -417,6 +430,40 @@ export function CaseFile({
                 statement
               ) : (
                 <>
+                  <button
+                    type="button"
+                    aria-expanded={claimPeekOpen}
+                    onClick={() => setClaimPeekOpen((open) => !open)}
+                    className="mb-1 w-full rounded-[9px] border border-border bg-paper px-3.5 py-3 text-start shadow-panel"
+                  >
+                    <span className="flex items-center justify-between gap-3 text-[13px] font-bold text-text-light">
+                      <span>{t("statementPeek", lang)}</span>
+                      <span aria-hidden className="text-accent">{claimPeekOpen ? "−" : "+"}</span>
+                    </span>
+                    <span className="mt-1 block truncate font-serif text-[13px] text-ink">
+                      {loc(caseData.claim.person, lang)} · {fmt(caseData.claimAmount)} ₽ · {claimStory}
+                    </span>
+                    <AnimatePresence initial={false}>
+                      {claimPeekOpen && (
+                        <motion.span
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          className="block overflow-hidden"
+                        >
+                          {caseData.client?.meta.map((row, index) => (
+                            <span key={index} className="mt-2 grid grid-cols-[auto_1fr] gap-x-3 text-[12px]">
+                              <span className="text-text-muted">{loc(row.k, lang)}</span>
+                              <span className="font-mono font-semibold text-ink">{loc(row.v, lang)}</span>
+                            </span>
+                          ))}
+                          <span className="mt-3 block font-serif text-[13px] leading-relaxed text-ink">
+                            {claimExcerpt}
+                          </span>
+                        </motion.span>
+                      )}
+                    </AnimatePresence>
+                  </button>
                   {materialsHeader}
                   {evidence}
                 </>
@@ -431,18 +478,27 @@ export function CaseFile({
         </div>
 
         {/* Targeting-mode prompt — appears once a hint button starts aiming */}
-        <AnimatePresence>
+        <AnimatePresence initial={false}>
           {targeting && (
             <motion.div
-              initial={{ opacity: 0, y: -6 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -6 }}
-              className="mt-[14px] flex items-center justify-between gap-2 rounded-[9px] border border-accent/60 bg-accent/10 px-3.5 py-2.5 text-sm font-medium text-text-light"
+              initial={{ height: 0, marginTop: 0, opacity: 0 }}
+              animate={{ height: "auto", marginTop: 14, opacity: 1 }}
+              exit={{ height: 0, marginTop: 0, opacity: 0 }}
+              transition={{ duration: 0.22, ease: [0.4, 0, 0.2, 1] }}
+              className="fixed left-4 right-4 top-3 z-[35] overflow-hidden md:static"
             >
-              <span>{t("hintTargetPrompt", lang)}</span>
-              <span className="hidden shrink-0 text-xs text-text-muted sm:inline">
-                {t("hintTargetCancel", lang)}
-              </span>
+              <motion.div
+                initial={{ y: -6 }}
+                animate={{ y: 0 }}
+                exit={{ y: -6 }}
+                transition={{ duration: 0.22, ease: [0.4, 0, 0.2, 1] }}
+                className="flex items-center justify-between gap-2 rounded-[9px] border border-accent/60 bg-accent/10 px-3.5 py-2.5 text-sm font-medium text-text-light"
+              >
+                <span>{t("hintTargetPrompt", lang)}</span>
+                <button type="button" onClick={() => setTargeting(null)} className="shrink-0 rounded-md border border-accent/40 px-3 py-1.5 text-[12px] font-bold text-accent">
+                  {t("cancel", lang)}
+                </button>
+              </motion.div>
             </motion.div>
           )}
         </AnimatePresence>
@@ -471,12 +527,15 @@ export function CaseFile({
               >
                 <button
                   type="button"
-                  disabled={!canAffordNote}
                   onClick={() => {
+                    if (!canAffordNote) {
+                      showToast(t("tipNoteUnaffordable", lang).replace("{amount}", fmt(noteCost)));
+                      return;
+                    }
                     goToTab("evidence");
                     setTargeting((cur) => (cur === "note" ? null : "note"));
                   }}
-                  className={`flex w-full items-center justify-between gap-2 rounded-[9px] border px-3 py-2.5 text-sm font-medium text-text-light transition-colors disabled:cursor-not-allowed disabled:opacity-40 ${
+                  className={`flex w-full items-center justify-between gap-2 rounded-[9px] border px-3 py-2.5 text-sm font-medium text-text-light transition-colors ${!canAffordNote ? "opacity-50" : ""} ${
                     targeting === "note"
                       ? "border-accent bg-accent/15"
                       : "border-accent/50 hover:bg-accent/10"
@@ -508,18 +567,19 @@ export function CaseFile({
         </div>
       </div>
 
-      {/* Verdict */}
+      <div className="h-[88px] md:hidden" aria-hidden />
       <div className="mt-[18px]">
         <VerdictPanel
+          variant="responsive"
           lang={lang}
           canApprove={canApprove}
           canReject={canReject}
-          approveBlockedReason={
-            budget != null
-              ? t("tipApproveBudget", lang)
-              : t("reviewAllFirst", lang)
-          }
-          onApprove={onApprove}
+          approveBlockedReason={budget != null ? t("tipApproveBudget", lang) : t("reviewAllFirst", lang)}
+          stampedCount={session?.selectedEvidenceIds.length ?? 0}
+          budget={budget}
+          opensRemaining={opensRemaining}
+          onBlocked={showToast}
+          onApprove={handleApprove}
           onReject={handleReject}
         />
       </div>
@@ -531,7 +591,7 @@ export function CaseFile({
             initial={{ y: 12, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 12, opacity: 0 }}
-            className="fixed bottom-[22px] left-1/2 z-[60] max-w-[86%] -translate-x-1/2 rounded-[9px] border border-stamp bg-[#2b2018] px-[18px] py-3 text-center text-[13px] font-medium leading-snug text-[#fee2e2] shadow-lift"
+            className="fixed bottom-[104px] left-1/2 z-[60] max-w-[86%] -translate-x-1/2 rounded-[9px] border border-stamp bg-toast px-[18px] py-3 text-center text-[13px] font-medium leading-snug text-toast-ink shadow-lift md:bottom-[22px]"
           >
             {toast}
           </motion.div>

@@ -1,373 +1,373 @@
-﻿{
-    "id":  "case-033",
-    "type":  "standard",
-    "difficulty":  "hard",
-    "claimAmount":  11000,
-    "truth":  "valid",
-    "investigationBudget":  4,
-    "title":  {
-                  "ru":  "Рука в прессе",
-                  "en":  "The Hand in the Press",
-                  "tr":  "Preste Sıkışan El",
-                  "ar":  "اليد في المكبس",
-                  "kk":  "Престегі қол"
-              },
-    "claim":  {
-                  "person":  {
-                                 "ru":  "Геннадий Орлов, 49 лет",
-                                 "en":  "Gennady Orlov, 49",
-                                 "tr":  "Gennady Orlov, 49",
-                                 "ar":  "غينادي أورلوف، 49",
-                                 "kk":  "Геннадий Орлов, 49 жаста"
-                             },
-                  "story":  {
-                                "ru":  "Я работаю оператором штамповочного пресса. 3 марта пресс сработал раньше времени и зажал мне правую кисть. Меня увезли в травмпункт, наложили гипс. Прошу выплату за производственную травму и потерю трудоспособности.",
-                                "en":  "I work as a stamping-press operator. On 3 March the press cycled early and crushed my right hand. I was taken to the ER and put in a cast. I request a payout for the workplace injury and loss of capacity.",
-                                "tr":  "Pres operatörü olarak çalışıyorum. 3 Mart\u0027ta pres erken çalıştı ve sağ elimi ezdi. Acil servise götürüldüm ve alçıya alındım. İş kazası ve iş göremezlik için ödeme talep ediyorum.",
-                                "ar":  "أعمل مشغّلًا لمكبس الكبس. في 3 مارس عمل المكبس قبل الأوان وسحق يدي اليمنى. نُقلت إلى الطوارئ ووُضعت في الجبيرة. أطلب تعويضًا عن إصابة العمل وفقدان القدرة.",
-                                "kk":  "Мен штамптау пресінің операторымын. 3 наурызда пресс мерзімінен бұрын іске қосылып, оң білегімді қысып қалды. Мені травмпунктке апарып, гипс салды. Өндірістік жарақат пен еңбекке қабілеттіліктің жоғалуы үшін төлем сұраймын."
-                            }
-              },
-    "coverImage":  "covers/case-033.svg",
-    "personImage":  "people/gennady.webp",
-    "client":  {
-                   "role":  {
-                                "ru":  "Заявитель · физ. лицо",
-                                "en":  "Claimant · individual",
-                                "tr":  "Başvuru sahibi · gerçek kişi",
-                                "ar":  "مقدم الطلب · شخص طبيعي",
-                                "kk":  "Өтініш беруші · жеке тұлға"
-                            },
-                   "meta":  [
-                                {
-                                    "k":  {
-                                              "ru":  "Возраст",
-                                              "en":  "Age",
-                                              "tr":  "Yaş",
-                                              "ar":  "العمر",
-                                              "kk":  "Жасы"
-                                          },
-                                    "v":  {
-                                              "ru":  "49 лет",
-                                              "en":  "49 years old",
-                                              "tr":  "49 yaşında",
-                                              "ar":  "49 عامًا",
-                                              "kk":  "49 жаста"
-                                          }
-                                },
-                                {
-                                    "k":  {
-                                              "ru":  "Город",
-                                              "en":  "City",
-                                              "tr":  "Şehir",
-                                              "ar":  "المدينة",
-                                              "kk":  "Қала"
-                                          },
-                                    "v":  {
-                                              "ru":  "Самара",
-                                              "en":  "Samara",
-                                              "tr":  "Samara",
-                                              "ar":  "سامارا",
-                                              "kk":  "Самара"
-                                          }
-                                },
-                                {
-                                    "k":  {
-                                              "ru":  "Клиент с",
-                                              "en":  "Client since",
-                                              "tr":  "Müşteri",
-                                              "ar":  "عميل منذ",
-                                              "kk":  "Клиент"
-                                          },
-                                    "v":  {
-                                              "ru":  "2016 г.",
-                                              "en":  "2016",
-                                              "tr":  "2016",
-                                              "ar":  "2016",
-                                              "kk":  "2016 ж."
-                                          }
-                                },
-                                {
-                                    "k":  {
-                                              "ru":  "Полис",
-                                              "en":  "Policy",
-                                              "tr":  "Poliçe",
-                                              "ar":  "البوليصة",
-                                              "kk":  "Полис"
-                                          },
-                                    "v":  {
-                                              "ru":  "НС · НС-33388451-X1",
-                                              "en":  "Accident · NS-33388451-X1",
-                                              "tr":  "Kaza · NS-33388451-X1",
-                                              "ar":  "الحوادث · NS-33388451-X1",
-                                              "kk":  "Жазатайым оқиға · НС-33388451-X1"
-                                          }
-                                },
-                                {
-                                    "k":  {
-                                              "ru":  "Документ",
-                                              "en":  "Document",
-                                              "tr":  "Belge",
-                                              "ar":  "الوثيقة",
-                                              "kk":  "Құжат"
-                                          },
-                                    "v":  {
-                                              "ru":  "Паспорт 6314-80 №333884512-02",
-                                              "en":  "Passport 6314-80 №333884512-02",
-                                              "tr":  "Pasaport 6314-80 №333884512-02",
-                                              "ar":  "جواز السفر 6314-80 №333884512-02",
-                                              "kk":  "Паспорт 6314-80 №333884512-02"
-                                          }
-                                }
-                            ]
-               },
-    "evidences":  [
-                      {
-                          "id":  "ev-medical",
-                          "relation":  "supports",
-                          "type":  "document",
-                          "title":  {
-                                        "ru":  "Заключение приёмного отделения",
-                                        "en":  "ER Medical Report",
-                                        "tr":  "Acil Servis Raporu",
-                                        "ar":  "تقرير قسم الطوارئ",
-                                        "kk":  "Қабылдау бөлімінің қорытындысы"
-                                    },
-                          "content":  {
-                                          "ru":  "3 марта, 14:38 — пациент Орлов Г. доставлен бригадой скорой с производства. Диагноз: закрытый перелом II и III пястных костей правой кисти, обширная гематома, ушиб мягких тканей. Наложена гипсовая лонгета. Механизм травмы — сдавление прессом.",
-                                          "en":  "3 March, 14:38 — patient Orlov G. delivered by ambulance from a factory. Diagnosis: closed fracture of the 2nd and 3rd metacarpals of the right hand, extensive haematoma, soft-tissue contusion. A plaster splint was applied. Mechanism: crushing by a press.",
-                                          "tr":  "3 Mart, 14:38 — hasta Orlov G. fabrikadan ambulansla getirildi. Tanı: sağ elin 2. ve 3. metakarp kemiklerinde kapalı kırık, yaygın hematom, yumuşak doku ezilmesi. Alçı atel uygulandı. Mekanizma: pres ile ezilme.",
-                                          "ar":  "3 مارس، 14:38 — وصل المريض أورلوف ج. بسيارة إسعاف من مصنع. التشخيص: كسر مغلق في العظمين السنعيين الثاني والثالث لليد اليمنى، ورم دموي واسع، رضّ في الأنسجة الرخوة. وُضعت جبيرة جبسية. الآلية: سحق بمكبس.",
-                                          "kk":  "3 наурыз, 14:38 — Орлов Г. науқасы өндірістен жедел жәрдеммен жеткізілді. Диагноз: оң білектің II және III алақан сүйектерінің жабық сынуы, кең гематома, жұмсақ тіндердің контузиясы. Гипс лонгета салынды. Жарақат механизмі — преспен қысылу."
-                                      },
-                          "isContradiction":  false,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Медицинское заключение фиксирует травму, время и механизм, полностью совпадающие с рассказом заявителя.",
-                                                           "en":  "The medical report records an injury, time and mechanism fully matching the claimant\u0027s account.",
-                                                           "tr":  "Tıbbi rapor, başvuranın anlatımıyla tamamen örtüşen bir yaralanma, zaman ve mekanizmayı kaydediyor.",
-                                                           "ar":  "يسجّل التقرير الطبي إصابة ووقتًا وآلية تتطابق تمامًا مع رواية المطالب.",
-                                                           "kk":  "Медициналық қорытынды арыз берушінің әңгімесіне толық сәйкес келетін жарақатты, уақытты және механизмді тіркейді."
-                                                       }
-                      },
-                      {
-                          "id":  "ev-photo",
-                          "relation":  "supports",
-                          "type":  "photo",
-                          "title":  {
-                                        "ru":  "Фото пресса",
-                                        "en":  "Photo of the Press",
-                                        "tr":  "Presin Fotoğrafı",
-                                        "ar":  "صورة المكبس",
-                                        "kk":  "Престің суреті"
-                                    },
-                          "content":  {
-                                          "ru":  "Снимок штамповочного пресса в цеху, сделанный 3 марта. На рабочей зоне видны следы крови и согнутая защитная решётка, аварийная кнопка нажата.",
-                                          "en":  "A photo of the stamping press on the shop floor, taken on 3 March. The work area shows bloodstains and a bent safety guard, with the emergency stop button pressed.",
-                                          "tr":  "3 Mart\u0027ta atölyede çekilen pres fotoğrafı. Çalışma alanında kan izleri ve bükülmüş bir koruyucu ızgara, basılı acil durdurma düğmesi görülüyor.",
-                                          "ar":  "صورة لمكبس الكبس في الورشة، التُقطت في 3 مارس. تظهر منطقة العمل آثار دماء وحاجز أمان منثنٍ، مع زر التوقف الطارئ مضغوطًا.",
-                                          "kk":  "3 наурызда цехта түсірілген штамптау пресінің суреті. Жұмыс аймағында қан іздері мен иілген қорғаныс торы, басылған авариялық тоқтату түймесі көрінеді."
-                                      },
-                          "isContradiction":  false,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Фото подтверждает место и характер происшествия и согласуется с заявлением.",
-                                                           "en":  "The photo confirms the location and nature of the incident and is consistent with the claim.",
-                                                           "tr":  "Fotoğraf olayın yerini ve niteliğini doğruluyor ve iddia ile tutarlı.",
-                                                           "ar":  "تؤكد الصورة مكان الحادث وطبيعته وتتوافق مع المطالبة.",
-                                                           "kk":  "Сурет оқиға орны мен сипатын растайды және мәлімдемеге сәйкес келеді."
-                                                       },
-                          "meta":  {
-                                       "filename":  "IMG_20260303_145503.jpg",
-                                       "imageUrl":  "evidence/case-033-ev-photo.webp"
-                                   }
-                      },
-                      {
-                          "id":  "ev-machine",
-                          "relation":  "supports",
-                          "type":  "usage_log",
-                          "title":  {
-                                        "ru":  "Лог пресса (PLC)",
-                                        "en":  "Press Machine Log (PLC)",
-                                        "tr":  "Pres Makinesi Kaydı (PLC)",
-                                        "ar":  "سجل آلة المكبس (PLC)",
-                                        "kk":  "Пресс журналы (PLC)"
-                                    },
-                          "content":  {
-                                          "ru":  [
-                                                     "14:31:02 — Цикл #4471 завершён штатно",
-                                                     "14:33:50 — Оператор: смена детали, рука в зоне штампа",
-                                                     "14:33:51 — ОШИБКА E07: ложное срабатывание датчика педали",
-                                                     "14:33:51 — Ход ползуна инициирован БЕЗ команды оператора",
-                                                     "14:33:52 — Защитная блокировка НЕ сработала (реле залипло)",
-                                                     "14:33:55 — Аварийный стоп нажат вручную",
-                                                     "14:34:10 — Линия остановлена, вызвана бригада"
-                                                 ],
-                                          "en":  [
-                                                     "14:31:02 — Cycle #4471 completed normally",
-                                                     "14:33:50 — Operator: part swap, hand inside die zone",
-                                                     "14:33:51 — ERROR E07: false trigger of pedal sensor",
-                                                     "14:33:51 — Ram stroke initiated WITHOUT operator command",
-                                                     "14:33:52 — Safety interlock did NOT engage (relay stuck)",
-                                                     "14:33:55 — Emergency stop pressed manually",
-                                                     "14:34:10 — Line halted, crew called"
-                                                 ],
-                                          "tr":  [
-                                                     "14:31:02 — Çevrim #4471 normal tamamlandı",
-                                                     "14:33:50 — Operatör: parça değişimi, el kalıp bölgesinde",
-                                                     "14:33:51 — HATA E07: pedal sensörünün yanlış tetiklenmesi",
-                                                     "14:33:51 — Kızak hareketi operatör komutu OLMADAN başlatıldı",
-                                                     "14:33:52 — Güvenlik kilidi devreye GİRMEDİ (röle yapıştı)",
-                                                     "14:33:55 — Acil durdurma elle basıldı",
-                                                     "14:34:10 — Hat durduruldu, ekip çağrıldı"
-                                                 ],
-                                          "ar":  [
-                                                     "14:31:02 — اكتملت الدورة #4471 بشكل طبيعي",
-                                                     "14:33:50 — المشغّل: تبديل قطعة، اليد داخل منطقة القالب",
-                                                     "14:33:51 — خطأ E07: تشغيل خاطئ لمستشعر الدواسة",
-                                                     "14:33:51 — بدأت حركة المكبس دون أمر من المشغّل",
-                                                     "14:33:52 — لم يعمل قفل الأمان (تعطّل المرحّل)",
-                                                     "14:33:55 — ضُغط زر التوقف الطارئ يدويًا",
-                                                     "14:34:10 — تم إيقاف الخط، واستُدعي الطاقم"
-                                                 ],
-                                          "kk":  [
-                                                     "14:31:02 — Цикл #4471 қалыпты аяқталды",
-                                                     "14:33:50 — Оператор: бөлшекті ауыстыру, қол штамп аймағында",
-                                                     "14:33:51 — ҚАТЕ E07: педаль датчигінің жалған іске қосылуы",
-                                                     "14:33:51 — Ползун жүрісі оператор командасынсыз басталды",
-                                                     "14:33:52 — Қорғаныс блокировкасы ІСКЕ ҚОСЫЛМАДЫ (реле жабысты)",
-                                                     "14:33:55 — Авариялық тоқтату қолмен басылды",
-                                                     "14:34:10 — Желі тоқтатылды, бригада шақырылды"
-                                                 ]
-                                      },
-                          "isContradiction":  false,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Лог PLC показывает ложное срабатывание и несработавшую блокировку ровно в момент травмы — техника подтверждает несчастный случай.",
-                                                           "en":  "The PLC log shows a false trigger and a failed interlock at the exact moment of injury — the machine data confirms the accident.",
-                                                           "tr":  "PLC kaydı, yaralanma anında yanlış tetikleme ve devreye girmeyen kilidi gösteriyor — makine verisi kazayı doğruluyor.",
-                                                           "ar":  "يُظهر سجل الـPLC تشغيلًا خاطئًا وقفل أمان فاشلًا في لحظة الإصابة بالضبط — بيانات الآلة تؤكد الحادث.",
-                                                           "kk":  "PLC журналы жарақат сәтінде дәл жалған іске қосылу мен істемеген блокировканы көрсетеді — техника жазатайым оқиғаны растайды."
-                                                       },
-                          "meta":  {
-                                       "logPrompt":  "plc@assembly:~$ tail -f /var/log/press.log"
-                                   }
-                      },
-                      {
-                          "id":  "ev-witness",
-                          "relation":  "supports",
-                          "type":  "witness_statement",
-                          "title":  {
-                                        "ru":  "Показания напарника",
-                                        "en":  "Coworker\u0027s Statement",
-                                        "tr":  "İş Arkadaşının İfadesi",
-                                        "ar":  "إفادة زميل العمل",
-                                        "kk":  "Әріптестің айғағы"
-                                    },
-                          "content":  {
-                                          "ru":  "«Я стоял у соседнего станка. Пресс лязгнул сам, без нажатия педали, я только услышал крик Гены. Кинулся, ударил по аварийной кнопке. Решётка была погнута, рука зажата. Всё произошло за секунду.»",
-                                          "en":  "\"I was at the next machine. The press slammed on its own, no pedal press, I just heard Gena scream. I rushed over and hit the emergency button. The guard was bent, his hand pinned. It all happened in a second.\"",
-                                          "tr":  "\"Yan tezgâhtaydım. Pres pedala basılmadan kendiliğinden çarptı, sadece Gena\u0027nın çığlığını duydum. Koştum, acil durdurma düğmesine bastım. Izgara bükülmüştü, eli sıkışmıştı. Hepsi bir saniyede oldu.\"",
-                                          "ar":  "«كنت عند الآلة المجاورة. اشتغل المكبس من تلقاء نفسه دون ضغط الدواسة، سمعت فقط صراخ غينا. هرعت وضغطت زر الطوارئ. كان الحاجز منثنيًا ويده محشورة. حدث كل شيء في ثانية.»",
-                                          "kk":  "«Мен көршілес станокта тұрдым. Пресс педальсыз өздігінен сарт етті, мен тек Генаның айқайын естідім. Жүгіріп барып авариялық түймені бастым. Тор иілген, қолы қысылып қалған еді. Бәрі бір секундта болды.»"
-                                      },
-                          "isContradiction":  false,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Очевидец независимо подтверждает самопроизвольное срабатывание пресса и травму — согласуется с логом и заявлением.",
-                                                           "en":  "An eyewitness independently confirms the spontaneous press activation and the injury — consistent with the log and the claim.",
-                                                           "tr":  "Görgü tanığı, presin kendiliğinden çalışmasını ve yaralanmayı bağımsız olarak doğruluyor — kayıt ve iddia ile tutarlı.",
-                                                           "ar":  "يؤكد شاهد عيان بشكل مستقل تشغيل المكبس التلقائي والإصابة — متوافق مع السجل والمطالبة.",
-                                                           "kk":  "Куә престің өздігінен іске қосылуын және жарақатты тәуелсіз растайды — журнал мен мәлімдемеге сәйкес."
-                                                       }
-                      },
-                      {
-                          "id":  "ev-xray",
-                          "relation":  "supports",
-                          "type":  "xray",
-                          "title":  {
-                                        "ru":  "Рентгеновский снимок кисти",
-                                        "en":  "Hand X-Ray",
-                                        "tr":  "El Röntgeni",
-                                        "ar":  "أشعة سينية لليد",
-                                        "kk":  "Білектің рентген суреті"
-                                    },
-                          "content":  {
-                                          "ru":  "Рентгенограмма правой кисти от 3 марта: чёткие линии перелома II и III пястных костей со смещением, без признаков застарелых травм. Сопоставимо со свежим сдавлением.",
-                                          "en":  "Right-hand radiograph from 3 March: clear fracture lines of the 2nd and 3rd metacarpals with displacement, no signs of old injuries. Consistent with a fresh crush.",
-                                          "tr":  "3 Mart tarihli sağ el röntgeni: 2. ve 3. metakarp kemiklerinde deplasmanlı net kırık çizgileri, eski yaralanma izi yok. Taze ezilme ile uyumlu.",
-                                          "ar":  "أشعة اليد اليمنى بتاريخ 3 مارس: خطوط كسر واضحة في العظمين السنعيين الثاني والثالث مع إزاحة، دون علامات إصابات قديمة. متوافق مع سحق حديث.",
-                                          "kk":  "3 наурыздағы оң білектің рентгенограммасы: II және III алақан сүйектерінің ығысуымен анық сыну сызықтары, ескі жарақат белгілерісіз. Жаңа қысылуға сәйкес."
-                                      },
-                          "isContradiction":  false,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Снимок показывает свежий перелом нужных костей без старых повреждений — травма реальна и недавняя.",
-                                                           "en":  "The image shows a fresh fracture of the relevant bones with no old damage — the injury is real and recent.",
-                                                           "tr":  "Görüntü, ilgili kemiklerde eski hasar olmadan taze bir kırık gösteriyor — yaralanma gerçek ve yeni.",
-                                                           "ar":  "تُظهر الصورة كسرًا حديثًا في العظام المعنية دون ضرر قديم — الإصابة حقيقية وحديثة.",
-                                                           "kk":  "Сурет ескі зақымсыз қажетті сүйектердің жаңа сынуын көрсетеді — жарақат шынайы әрі жуырдағы."
-                                                       },
-                          "meta":  {
-                                       "clinicName":  {
-                                                          "ru":  "ООО «ТравмаЦентр» · Рентген-диагностика",
-                                                          "en":  "TraumaCenter LLC · X-ray diagnostics",
-                                                          "tr":  "TravmaMerkezi Ltd. · Röntgen tanısı",
-                                                          "ar":  "مركز الإصابات ذ.م.م · تشخيص بالأشعة",
-                                                          "kk":  "«ТравмаОрталығы» ЖШС · Рентген диагностикасы"
-                                                      },
-                                       "imageUrl":  "evidence/case-033-ev-xray.webp"
-                                   }
-                      },
-                      {
-                          "id":  "ev-safety",
-                          "relation":  "context",
-                          "type":  "document",
-                          "title":  {
-                                        "ru":  "Акт проверки охраны труда",
-                                        "en":  "Safety-Inspection Report",
-                                        "tr":  "İş Güvenliği Denetim Raporu",
-                                        "ar":  "تقرير تفتيش السلامة",
-                                        "kk":  "Еңбекті қорғау тексеру актісі"
-                                    },
-                          "content":  {
-                                          "ru":  "Комиссия по охране труда от 5 марта: подтверждён отказ защитной блокировки пресса (залипшее реле), зафиксировано ложное срабатывание датчика педали. Вины оператора нет; рекомендована замена узла. Случай признан производственным.",
-                                          "en":  "Occupational-safety commission, 5 March: confirmed failure of the press safety interlock (stuck relay), recorded a false trigger of the pedal sensor. No operator fault; unit replacement recommended. The incident is classified as work-related.",
-                                          "tr":  "İş güvenliği komisyonu, 5 Mart: pres güvenlik kilidinin arızası (yapışmış röle) doğrulandı, pedal sensörünün yanlış tetiklenmesi kaydedildi. Operatör kusuru yok; ünite değişimi önerildi. Olay iş kazası sayıldı.",
-                                          "ar":  "لجنة السلامة المهنية، 5 مارس: تأكّد فشل قفل أمان المكبس (مرحّل عالق)، وسُجّل تشغيل خاطئ لمستشعر الدواسة. لا خطأ على المشغّل؛ يُوصى باستبدال الوحدة. صُنّف الحادث على أنه إصابة عمل.",
-                                          "kk":  "5 наурыздағы еңбекті қорғау комиссиясы: пресс қорғаныс блокировкасының істен шығуы (жабысқан реле) расталды, педаль датчигінің жалған іске қосылуы тіркелді. Оператордың кінәсі жоқ; торапты ауыстыру ұсынылды. Оқиға өндірістік деп танылды."
-                                      },
-                          "isContradiction":  false,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Официальный акт признаёт неисправность оборудования и отсутствие вины оператора — травма признана производственной.",
-                                                           "en":  "The official report acknowledges the equipment failure and no operator fault — the injury is recognised as work-related.",
-                                                           "tr":  "Resmi rapor ekipman arızasını ve operatör kusuru olmadığını kabul ediyor — yaralanma iş kazası olarak tanınıyor.",
-                                                           "ar":  "يقرّ التقرير الرسمي بعطل المعدات وعدم وجود خطأ على المشغّل — تُعتبر الإصابة إصابة عمل.",
-                                                           "kk":  "Ресми акт жабдықтың ақаулығын және оператордың кінәсінің жоқтығын мойындайды — жарақат өндірістік деп танылады."
-                                                       }
-                      }
-                  ],
-    "correctDecision":  "approve",
-    "explanation":  {
-                        "ru":  [
-                                   "Медзаключение и рентген фиксируют свежий перелом от сдавления прессом.",
-                                   "Лог PLC и акт охраны труда подтверждают неисправность блокировки, а очевидец — самопроизвольное срабатывание.",
-                                   "Случай подлинный и страховое возмещение следует одобрить."
-                               ],
-                        "en":  [
-                                   "The medical report and X-ray record a fresh crush fracture from the press.",
-                                   "The PLC log and safety report confirm the interlock failure, and an eyewitness confirms the spontaneous activation.",
-                                   "The case is genuine and the claim should be approved."
-                               ],
-                        "tr":  [
-                                   "Tıbbi rapor ve röntgen, presten kaynaklanan taze bir ezilme kırığını kaydediyor.",
-                                   "PLC kaydı ve güvenlik raporu kilit arızasını, görgü tanığı ise kendiliğinden çalışmayı doğruluyor.",
-                                   "Olay gerçek ve talep onaylanmalı."
-                               ],
-                        "ar":  [
-                                   "يسجّل التقرير الطبي والأشعة كسر سحق حديثًا من المكبس.",
-                                   "يؤكد سجل الـPLC وتقرير السلامة فشل القفل، ويؤكد شاهد عيان التشغيل التلقائي.",
-                                   "الحالة حقيقية ويجب الموافقة على المطالبة."
-                               ],
-                        "kk":  [
-                                   "Медқорытынды мен рентген престен болған жаңа қысылу сынуын тіркейді.",
-                                   "PLC журналы мен еңбекті қорғау актісі блокировканың істен шығуын, ал куә өздігінен іске қосылуды растайды.",
-                                   "Оқиға шынайы және сақтандыру өтемін мақұлдау керек."
-                               ]
-                    }
+{
+  "id": "case-033",
+  "type": "standard",
+  "difficulty": "hard",
+  "claimAmount": 11000,
+  "truth": "valid",
+  "investigationBudget": 4,
+  "title": {
+    "ru": "Рука в прессе",
+    "en": "The Hand in the Press",
+    "tr": "Preste Sıkışan El",
+    "ar": "اليد في المكبس",
+    "kk": "Престегі қол"
+  },
+  "claim": {
+    "person": {
+      "ru": "Геннадий Орлов, 49 лет",
+      "en": "Gennady Orlov, 49",
+      "tr": "Gennady Orlov, 49",
+      "ar": "غينادي أورلوف، 49",
+      "kk": "Геннадий Орлов, 49 жаста"
+    },
+    "story": {
+      "ru": "Я работаю оператором штамповочного пресса. 3 марта пресс сработал раньше времени и зажал мне правую кисть. Меня увезли в травмпункт, наложили гипс. Прошу выплату за производственную травму и потерю трудоспособности.",
+      "en": "I work as a stamping-press operator. On 3 March the press cycled early and crushed my right hand. I was taken to the ER and put in a cast. I request a payout for the workplace injury and loss of capacity.",
+      "tr": "Pres operatörü olarak çalışıyorum. 3 Mart'ta pres erken çalıştı ve sağ elimi ezdi. Acil servise götürüldüm ve alçıya alındım. İş kazası ve iş göremezlik için ödeme talep ediyorum.",
+      "ar": "أعمل مشغّلًا لمكبس الكبس. في 3 مارس عمل المكبس قبل الأوان وسحق يدي اليمنى. نُقلت إلى الطوارئ ووُضعت في الجبيرة. أطلب تعويضًا عن إصابة العمل وفقدان القدرة.",
+      "kk": "Мен штамптау пресінің операторымын. 3 наурызда пресс мерзімінен бұрын іске қосылып, оң білегімді қысып қалды. Мені травмпунктке апарып, гипс салды. Өндірістік жарақат пен еңбекке қабілеттіліктің жоғалуы үшін төлем сұраймын."
+    }
+  },
+  "coverImage": "covers/case-033.svg",
+  "personImage": "people/gennady.webp",
+  "client": {
+    "role": {
+      "ru": "Заявитель · физ. лицо",
+      "en": "Claimant · individual",
+      "tr": "Başvuru sahibi · gerçek kişi",
+      "ar": "مقدم الطلب · شخص طبيعي",
+      "kk": "Өтініш беруші · жеке тұлға"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Возраст",
+          "en": "Age",
+          "tr": "Yaş",
+          "ar": "العمر",
+          "kk": "Жасы"
+        },
+        "v": {
+          "ru": "49 лет",
+          "en": "49 years old",
+          "tr": "49 yaşında",
+          "ar": "49 عامًا",
+          "kk": "49 жаста"
+        }
+      },
+      {
+        "k": {
+          "ru": "Город",
+          "en": "City",
+          "tr": "Şehir",
+          "ar": "المدينة",
+          "kk": "Қала"
+        },
+        "v": {
+          "ru": "Самара",
+          "en": "Samara",
+          "tr": "Samara",
+          "ar": "سامارا",
+          "kk": "Самара"
+        }
+      },
+      {
+        "k": {
+          "ru": "Клиент с",
+          "en": "Client since",
+          "tr": "Müşteri",
+          "ar": "عميل منذ",
+          "kk": "Клиент"
+        },
+        "v": {
+          "ru": "2016 г.",
+          "en": "2016",
+          "tr": "2016",
+          "ar": "2016",
+          "kk": "2016 ж."
+        }
+      },
+      {
+        "k": {
+          "ru": "Полис",
+          "en": "Policy",
+          "tr": "Poliçe",
+          "ar": "البوليصة",
+          "kk": "Полис"
+        },
+        "v": {
+          "ru": "НС · НС-33388451-X1",
+          "en": "Accident · NS-33388451-X1",
+          "tr": "Kaza · NS-33388451-X1",
+          "ar": "الحوادث · NS-33388451-X1",
+          "kk": "Жазатайым оқиға · НС-33388451-X1"
+        }
+      },
+      {
+        "k": {
+          "ru": "Документ",
+          "en": "Document",
+          "tr": "Belge",
+          "ar": "الوثيقة",
+          "kk": "Құжат"
+        },
+        "v": {
+          "ru": "Паспорт 6314-80 №333884512-02",
+          "en": "Passport 6314-80 №333884512-02",
+          "tr": "Pasaport 6314-80 №333884512-02",
+          "ar": "جواز السفر 6314-80 №333884512-02",
+          "kk": "Паспорт 6314-80 №333884512-02"
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "ev-medical",
+      "relation": "supports",
+      "type": "document",
+      "title": {
+        "ru": "Заключение приёмного отделения",
+        "en": "ER Medical Report",
+        "tr": "Acil Servis Raporu",
+        "ar": "تقرير قسم الطوارئ",
+        "kk": "Қабылдау бөлімінің қорытындысы"
+      },
+      "content": {
+        "ru": "3 марта, 14:38 — пациент Орлов Г. доставлен бригадой скорой с производства. Диагноз: закрытый перелом II и III пястных костей правой кисти, обширная гематома, ушиб мягких тканей. Наложена гипсовая лонгета. Механизм травмы — сдавление прессом.",
+        "en": "3 March, 14:38 — patient Orlov G. delivered by ambulance from a factory. Diagnosis: closed fracture of the 2nd and 3rd metacarpals of the right hand, extensive haematoma, soft-tissue contusion. A plaster splint was applied. Mechanism: crushing by a press.",
+        "tr": "3 Mart, 14:38 — hasta Orlov G. fabrikadan ambulansla getirildi. Tanı: sağ elin 2. ve 3. metakarp kemiklerinde kapalı kırık, yaygın hematom, yumuşak doku ezilmesi. Alçı atel uygulandı. Mekanizma: pres ile ezilme.",
+        "ar": "3 مارس، 14:38 — وصل المريض أورلوف ج. بسيارة إسعاف من مصنع. التشخيص: كسر مغلق في العظمين السنعيين الثاني والثالث لليد اليمنى، ورم دموي واسع، رضّ في الأنسجة الرخوة. وُضعت جبيرة جبسية. الآلية: سحق بمكبس.",
+        "kk": "3 наурыз, 14:38 — Орлов Г. науқасы өндірістен жедел жәрдеммен жеткізілді. Диагноз: оң білектің II және III алақан сүйектерінің жабық сынуы, кең гематома, жұмсақ тіндердің контузиясы. Гипс лонгета салынды. Жарақат механизмі — преспен қысылу."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Медицинское заключение фиксирует травму, время и механизм, полностью совпадающие с рассказом заявителя.",
+        "en": "The medical report records an injury, time and mechanism fully matching the claimant's account.",
+        "tr": "Tıbbi rapor, başvuranın anlatımıyla tamamen örtüşen bir yaralanma, zaman ve mekanizmayı kaydediyor.",
+        "ar": "يسجّل التقرير الطبي إصابة ووقتًا وآلية تتطابق تمامًا مع رواية المطالب.",
+        "kk": "Медициналық қорытынды арыз берушінің әңгімесіне толық сәйкес келетін жарақатты, уақытты және механизмді тіркейді."
+      }
+    },
+    {
+      "id": "ev-photo",
+      "relation": "supports",
+      "type": "photo",
+      "title": {
+        "ru": "Фото пресса",
+        "en": "Photo of the Press",
+        "tr": "Presin Fotoğrafı",
+        "ar": "صورة المكبس",
+        "kk": "Престің суреті"
+      },
+      "content": {
+        "ru": "Снимок штамповочного пресса в цеху, сделанный 3 марта. На рабочей зоне видны следы крови и согнутая защитная решётка, аварийная кнопка нажата.",
+        "en": "A photo of the stamping press on the shop floor, taken on 3 March. The work area shows bloodstains and a bent safety guard, with the emergency stop button pressed.",
+        "tr": "3 Mart'ta atölyede çekilen pres fotoğrafı. Çalışma alanında kan izleri ve bükülmüş bir koruyucu ızgara, basılı acil durdurma düğmesi görülüyor.",
+        "ar": "صورة لمكبس الكبس في الورشة، التُقطت في 3 مارس. تظهر منطقة العمل آثار دماء وحاجز أمان منثنٍ، مع زر التوقف الطارئ مضغوطًا.",
+        "kk": "3 наурызда цехта түсірілген штамптау пресінің суреті. Жұмыс аймағында қан іздері мен иілген қорғаныс торы, басылған авариялық тоқтату түймесі көрінеді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Фото подтверждает место и характер происшествия и согласуется с заявлением.",
+        "en": "The photo confirms the location and nature of the incident and is consistent with the claim.",
+        "tr": "Fotoğraf olayın yerini ve niteliğini doğruluyor ve iddia ile tutarlı.",
+        "ar": "تؤكد الصورة مكان الحادث وطبيعته وتتوافق مع المطالبة.",
+        "kk": "Сурет оқиға орны мен сипатын растайды және мәлімдемеге сәйкес келеді."
+      },
+      "meta": {
+        "filename": "IMG_20260303_145503.jpg",
+        "imageUrl": "evidence/case-033-ev-photo.webp"
+      }
+    },
+    {
+      "id": "ev-machine",
+      "relation": "supports",
+      "type": "usage_log",
+      "title": {
+        "ru": "Лог пресса (PLC)",
+        "en": "Press Machine Log (PLC)",
+        "tr": "Pres Makinesi Kaydı (PLC)",
+        "ar": "سجل آلة المكبس (PLC)",
+        "kk": "Пресс журналы (PLC)"
+      },
+      "content": {
+        "ru": [
+          "14:31:02 — Цикл #4471 завершён штатно",
+          "14:33:50 — Оператор: смена детали, рука в зоне штампа",
+          "14:33:51 — ОШИБКА E07: ложное срабатывание датчика педали",
+          "14:33:51 — Ход ползуна инициирован БЕЗ команды оператора",
+          "14:33:52 — Защитная блокировка НЕ сработала (реле залипло)",
+          "14:33:55 — Аварийный стоп нажат вручную",
+          "14:34:10 — Линия остановлена, вызвана бригада"
+        ],
+        "en": [
+          "14:31:02 — Cycle #4471 completed normally",
+          "14:33:50 — Operator: part swap, hand inside die zone",
+          "14:33:51 — ERROR E07: false trigger of pedal sensor",
+          "14:33:51 — Ram stroke initiated WITHOUT operator command",
+          "14:33:52 — Safety interlock did NOT engage (relay stuck)",
+          "14:33:55 — Emergency stop pressed manually",
+          "14:34:10 — Line halted, crew called"
+        ],
+        "tr": [
+          "14:31:02 — Çevrim #4471 normal tamamlandı",
+          "14:33:50 — Operatör: parça değişimi, el kalıp bölgesinde",
+          "14:33:51 — HATA E07: pedal sensörünün yanlış tetiklenmesi",
+          "14:33:51 — Kızak hareketi operatör komutu OLMADAN başlatıldı",
+          "14:33:52 — Güvenlik kilidi devreye GİRMEDİ (röle yapıştı)",
+          "14:33:55 — Acil durdurma elle basıldı",
+          "14:34:10 — Hat durduruldu, ekip çağrıldı"
+        ],
+        "ar": [
+          "14:31:02 — اكتملت الدورة #4471 بشكل طبيعي",
+          "14:33:50 — المشغّل: تبديل قطعة، اليد داخل منطقة القالب",
+          "14:33:51 — خطأ E07: تشغيل خاطئ لمستشعر الدواسة",
+          "14:33:51 — بدأت حركة المكبس دون أمر من المشغّل",
+          "14:33:52 — لم يعمل قفل الأمان (تعطّل المرحّل)",
+          "14:33:55 — ضُغط زر التوقف الطارئ يدويًا",
+          "14:34:10 — تم إيقاف الخط، واستُدعي الطاقم"
+        ],
+        "kk": [
+          "14:31:02 — Цикл #4471 қалыпты аяқталды",
+          "14:33:50 — Оператор: бөлшекті ауыстыру, қол штамп аймағында",
+          "14:33:51 — ҚАТЕ E07: педаль датчигінің жалған іске қосылуы",
+          "14:33:51 — Ползун жүрісі оператор командасынсыз басталды",
+          "14:33:52 — Қорғаныс блокировкасы ІСКЕ ҚОСЫЛМАДЫ (реле жабысты)",
+          "14:33:55 — Авариялық тоқтату қолмен басылды",
+          "14:34:10 — Желі тоқтатылды, бригада шақырылды"
+        ]
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Лог PLC показывает ложное срабатывание и несработавшую блокировку ровно в момент травмы — техника подтверждает несчастный случай.",
+        "en": "The PLC log shows a false trigger and a failed interlock at the exact moment of injury — the machine data confirms the accident.",
+        "tr": "PLC kaydı, yaralanma anında yanlış tetikleme ve devreye girmeyen kilidi gösteriyor — makine verisi kazayı doğruluyor.",
+        "ar": "يُظهر سجل الـPLC تشغيلًا خاطئًا وقفل أمان فاشلًا في لحظة الإصابة بالضبط — بيانات الآلة تؤكد الحادث.",
+        "kk": "PLC журналы жарақат сәтінде дәл жалған іске қосылу мен істемеген блокировканы көрсетеді — техника жазатайым оқиғаны растайды."
+      },
+      "meta": {
+        "logPrompt": "plc@assembly:~$ tail -f /var/log/press.log"
+      }
+    },
+    {
+      "id": "ev-witness",
+      "relation": "supports",
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания напарника",
+        "en": "Coworker's Statement",
+        "tr": "İş Arkadaşının İfadesi",
+        "ar": "إفادة زميل العمل",
+        "kk": "Әріптестің айғағы"
+      },
+      "content": {
+        "ru": "«Я стоял у соседнего станка. Пресс лязгнул сам, без нажатия педали, я только услышал крик Гены. Кинулся, ударил по аварийной кнопке. Решётка была погнута, рука зажата. Всё произошло за секунду.»",
+        "en": "\"I was at the next machine. The press slammed on its own, no pedal press, I just heard Gena scream. I rushed over and hit the emergency button. The guard was bent, his hand pinned. It all happened in a second.\"",
+        "tr": "\"Yan tezgâhtaydım. Pres pedala basılmadan kendiliğinden çarptı, sadece Gena'nın çığlığını duydum. Koştum, acil durdurma düğmesine bastım. Izgara bükülmüştü, eli sıkışmıştı. Hepsi bir saniyede oldu.\"",
+        "ar": "«كنت عند الآلة المجاورة. اشتغل المكبس من تلقاء نفسه دون ضغط الدواسة، سمعت فقط صراخ غينا. هرعت وضغطت زر الطوارئ. كان الحاجز منثنيًا ويده محشورة. حدث كل شيء في ثانية.»",
+        "kk": "«Мен көршілес станокта тұрдым. Пресс педальсыз өздігінен сарт етті, мен тек Генаның айқайын естідім. Жүгіріп барып авариялық түймені бастым. Тор иілген, қолы қысылып қалған еді. Бәрі бір секундта болды.»"
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Очевидец независимо подтверждает самопроизвольное срабатывание пресса и травму — согласуется с логом и заявлением.",
+        "en": "An eyewitness independently confirms the spontaneous press activation and the injury — consistent with the log and the claim.",
+        "tr": "Görgü tanığı, presin kendiliğinden çalışmasını ve yaralanmayı bağımsız olarak doğruluyor — kayıt ve iddia ile tutarlı.",
+        "ar": "يؤكد شاهد عيان بشكل مستقل تشغيل المكبس التلقائي والإصابة — متوافق مع السجل والمطالبة.",
+        "kk": "Куә престің өздігінен іске қосылуын және жарақатты тәуелсіз растайды — журнал мен мәлімдемеге сәйкес."
+      }
+    },
+    {
+      "id": "ev-xray",
+      "relation": "supports",
+      "type": "xray",
+      "title": {
+        "ru": "Рентгеновский снимок кисти",
+        "en": "Hand X-Ray",
+        "tr": "El Röntgeni",
+        "ar": "أشعة سينية لليد",
+        "kk": "Білектің рентген суреті"
+      },
+      "content": {
+        "ru": "Рентгенограмма правой кисти от 3 марта: чёткие линии перелома II и III пястных костей со смещением, без признаков застарелых травм. Сопоставимо со свежим сдавлением.",
+        "en": "Right-hand radiograph from 3 March: clear fracture lines of the 2nd and 3rd metacarpals with displacement, no signs of old injuries. Consistent with a fresh crush.",
+        "tr": "3 Mart tarihli sağ el röntgeni: 2. ve 3. metakarp kemiklerinde deplasmanlı net kırık çizgileri, eski yaralanma izi yok. Taze ezilme ile uyumlu.",
+        "ar": "أشعة اليد اليمنى بتاريخ 3 مارس: خطوط كسر واضحة في العظمين السنعيين الثاني والثالث مع إزاحة، دون علامات إصابات قديمة. متوافق مع سحق حديث.",
+        "kk": "3 наурыздағы оң білектің рентгенограммасы: II және III алақан сүйектерінің ығысуымен анық сыну сызықтары, ескі жарақат белгілерісіз. Жаңа қысылуға сәйкес."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Снимок показывает свежий перелом нужных костей без старых повреждений — травма реальна и недавняя.",
+        "en": "The image shows a fresh fracture of the relevant bones with no old damage — the injury is real and recent.",
+        "tr": "Görüntü, ilgili kemiklerde eski hasar olmadan taze bir kırık gösteriyor — yaralanma gerçek ve yeni.",
+        "ar": "تُظهر الصورة كسرًا حديثًا في العظام المعنية دون ضرر قديم — الإصابة حقيقية وحديثة.",
+        "kk": "Сурет ескі зақымсыз қажетті сүйектердің жаңа сынуын көрсетеді — жарақат шынайы әрі жуырдағы."
+      },
+      "meta": {
+        "clinicName": {
+          "ru": "ООО «ТравмаЦентр» · Рентген-диагностика",
+          "en": "TraumaCenter LLC · X-ray diagnostics",
+          "tr": "TravmaMerkezi Ltd. · Röntgen tanısı",
+          "ar": "مركز الإصابات ذ.م.م · تشخيص بالأشعة",
+          "kk": "«ТравмаОрталығы» ЖШС · Рентген диагностикасы"
+        },
+        "imageUrl": "evidence/case-033-ev-xray.webp"
+      }
+    },
+    {
+      "id": "ev-safety",
+      "relation": "context",
+      "type": "document",
+      "title": {
+        "ru": "Акт проверки охраны труда",
+        "en": "Safety-Inspection Report",
+        "tr": "İş Güvenliği Denetim Raporu",
+        "ar": "تقرير تفتيش السلامة",
+        "kk": "Еңбекті қорғау тексеру актісі"
+      },
+      "content": {
+        "ru": "Комиссия по охране труда от 5 марта: подтверждён отказ защитной блокировки пресса (залипшее реле), зафиксировано ложное срабатывание датчика педали. Вины оператора нет; рекомендована замена узла. Случай признан производственным.",
+        "en": "Occupational-safety commission, 5 March: confirmed failure of the press safety interlock (stuck relay), recorded a false trigger of the pedal sensor. No operator fault; unit replacement recommended. The incident is classified as work-related.",
+        "tr": "İş güvenliği komisyonu, 5 Mart: pres güvenlik kilidinin arızası (yapışmış röle) doğrulandı, pedal sensörünün yanlış tetiklenmesi kaydedildi. Operatör kusuru yok; ünite değişimi önerildi. Olay iş kazası sayıldı.",
+        "ar": "لجنة السلامة المهنية، 5 مارس: تأكّد فشل قفل أمان المكبس (مرحّل عالق)، وسُجّل تشغيل خاطئ لمستشعر الدواسة. لا خطأ على المشغّل؛ يُوصى باستبدال الوحدة. صُنّف الحادث على أنه إصابة عمل.",
+        "kk": "5 наурыздағы еңбекті қорғау комиссиясы: пресс қорғаныс блокировкасының істен шығуы (жабысқан реле) расталды, педаль датчигінің жалған іске қосылуы тіркелді. Оператордың кінәсі жоқ; торапты ауыстыру ұсынылды. Оқиға өндірістік деп танылды."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Официальный акт признаёт неисправность оборудования и отсутствие вины оператора — травма признана производственной.",
+        "en": "The official report acknowledges the equipment failure and no operator fault — the injury is recognised as work-related.",
+        "tr": "Resmi rapor ekipman arızasını ve operatör kusuru olmadığını kabul ediyor — yaralanma iş kazası olarak tanınıyor.",
+        "ar": "يقرّ التقرير الرسمي بعطل المعدات وعدم وجود خطأ على المشغّل — تُعتبر الإصابة إصابة عمل.",
+        "kk": "Ресми акт жабдықтың ақаулығын және оператордың кінәсінің жоқтығын мойындайды — жарақат өндірістік деп танылады."
+      }
+    }
+  ],
+  "correctDecision": "approve",
+  "explanation": {
+    "ru": [
+      "Медзаключение и рентген фиксируют свежий перелом от сдавления прессом.",
+      "Лог PLC и акт охраны труда подтверждают неисправность блокировки, а очевидец — самопроизвольное срабатывание.",
+      "Случай подлинный и страховое возмещение следует одобрить."
+    ],
+    "en": [
+      "The medical report and X-ray record a fresh crush fracture from the press.",
+      "The PLC log and safety report confirm the interlock failure, and an eyewitness confirms the spontaneous activation.",
+      "The case is genuine and the claim should be approved."
+    ],
+    "tr": [
+      "Tıbbi rapor ve röntgen, presten kaynaklanan taze bir ezilme kırığını kaydediyor.",
+      "PLC kaydı ve güvenlik raporu kilit arızasını, görgü tanığı ise kendiliğinden çalışmayı doğruluyor.",
+      "Olay gerçek ve talep onaylanmalı."
+    ],
+    "ar": [
+      "يسجّل التقرير الطبي والأشعة كسر سحق حديثًا من المكبس.",
+      "يؤكد سجل الـPLC وتقرير السلامة فشل القفل، ويؤكد شاهد عيان التشغيل التلقائي.",
+      "الحالة حقيقية ويجب الموافقة على المطالبة."
+    ],
+    "kk": [
+      "Медқорытынды мен рентген престен болған жаңа қысылу сынуын тіркейді.",
+      "PLC журналы мен еңбекті қорғау актісі блокировканың істен шығуын, ал куә өздігінен іске қосылуды растайды.",
+      "Оқиға шынайы және сақтандыру өтемін мақұлдау керек."
+    ]
+  }
 }

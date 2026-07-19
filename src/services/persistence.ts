@@ -88,7 +88,6 @@ function migrate(raw: unknown): PersistedState | null {
           revealedEvidenceIds: rawSession.revealedEvidenceIds ?? [],
           selectedService: rawSession.selectedService ?? null,
           hintsUsed: rawSession.hintsUsed ?? 0,
-          canvassUsed: rawSession.canvassUsed ?? false,
           extraOpens: rawSession.extraOpens ?? 0,
           startedAtServerMs: rawSession.startedAtServerMs ?? 0,
         }

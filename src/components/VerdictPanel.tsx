@@ -14,6 +14,11 @@ interface Props {
    * by the parent that knows the gate.
    */
   approveBlockedReason: string;
+  variant?: "inline" | "bar" | "responsive";
+  stampedCount?: number;
+  budget?: number | null;
+  opensRemaining?: number | null;
+  onBlocked: (reason: string) => void;
   onApprove: () => void;
   onReject: () => void;
 }
@@ -24,15 +29,64 @@ export function VerdictPanel({
   canApprove,
   canReject,
   approveBlockedReason,
+  variant = "inline",
+  stampedCount = 0,
+  budget = null,
+  opensRemaining = null,
+  onBlocked,
   onApprove,
   onReject,
 }: Props) {
+  const isBar = variant !== "inline";
+  const isResponsive = variant === "responsive";
+  const handleApprove = () => {
+    if (!canApprove) {
+      onBlocked(approveBlockedReason);
+      return;
+    }
+    onApprove();
+  };
+
   return (
-    <div className="rounded-[10px] border border-border bg-surface p-4">
-      <p className="mb-3 text-center text-xs text-text-muted">
-        {t("verdictPrompt", lang)}
+    <div
+      className={
+        isResponsive
+          ? "fixed inset-x-0 bottom-0 z-30 border-t border-border bg-surface/95 px-3 pb-[max(10px,env(safe-area-inset-bottom))] pt-2 shadow-lift backdrop-blur-sm md:static md:rounded-[10px] md:border md:bg-surface md:p-4 md:shadow-none md:backdrop-blur-none"
+          : isBar
+          ? "border-t border-border bg-surface/95 px-3 pt-2 shadow-lift backdrop-blur-sm"
+          : "rounded-[10px] border border-border bg-surface p-4"
+      }
+      style={variant === "bar" ? { paddingBottom: "max(10px, env(safe-area-inset-bottom))" } : undefined}
+    >
+      <p
+        className={
+          isResponsive
+            ? "mb-2 text-center text-[12px] font-semibold text-text-muted md:mb-3 md:text-xs"
+            : isBar
+              ? "mb-2 text-center text-[12px] font-semibold text-text-muted"
+              : "mb-3 text-center text-xs text-text-muted"
+        }
+      >
+        {isResponsive ? (
+          <>
+            <span className="md:hidden">{`${t("markedCount", lang)}: ${stampedCount}${budget != null ? ` · 🔎 ${budget - (opensRemaining ?? 0)} / ${budget}` : ""}`}</span>
+            <span className="hidden md:inline">{t("verdictPrompt", lang)}</span>
+          </>
+        ) : isBar ? (
+          `${t("markedCount", lang)}: ${stampedCount}${budget != null ? ` · 🔎 ${budget - (opensRemaining ?? 0)} / ${budget}` : ""}`
+        ) : (
+          t("verdictPrompt", lang)
+        )}
       </p>
-      <div className="grid grid-cols-2 gap-3">
+      <div
+        className={
+          isResponsive
+            ? "grid grid-cols-2 gap-2 md:gap-3"
+            : isBar
+              ? "grid grid-cols-2 gap-2"
+              : "grid grid-cols-2 gap-3"
+        }
+      >
         <Tooltip
           className="block"
           label={canReject ? null : t("rejectNeedsProof", lang)}
@@ -42,7 +96,7 @@ export function VerdictPanel({
             onClick={onReject}
             whileTap={{ scale: 0.96 }}
             transition={{ duration: 0.12, ease: "easeOut" }}
-            className={`h-[54px] w-full rounded-[9px] text-[13px] font-bold uppercase tracking-wide text-white transition-[filter] ${
+            className={`h-[54px] w-full rounded-[9px] text-[15px] font-bold uppercase tracking-wide text-white transition-[filter] md:text-[13px] ${
               canReject
                 ? "bg-danger hover:brightness-110"
                 : "bg-danger/60 hover:brightness-110"
@@ -57,14 +111,13 @@ export function VerdictPanel({
         >
           <motion.button
             type="button"
-            onClick={onApprove}
-            disabled={!canApprove}
-            whileTap={canApprove ? { scale: 0.96 } : undefined}
+            onClick={handleApprove}
+            whileTap={{ scale: 0.96 }}
             transition={{ duration: 0.12, ease: "easeOut" }}
-            className={`h-[54px] w-full rounded-[9px] text-[13px] font-bold uppercase tracking-wide text-white transition-[filter] ${
+            className={`h-[54px] w-full rounded-[9px] text-[15px] font-bold uppercase tracking-wide text-white transition-[filter] md:text-[13px] ${
               canApprove
                 ? "bg-success hover:brightness-110"
-                : "cursor-not-allowed bg-success/30"
+                : "bg-success/30"
             }`}
           >
             {t("approvePayout", lang)}

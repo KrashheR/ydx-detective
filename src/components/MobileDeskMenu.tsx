@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import type { Case, CaseResult, Language, PlayerStats } from "../types";
+import type { CaseResult, CaseSummary, Language, PlayerStats } from "../types";
 import type { CaseUnlockInfo } from "../engine/caseUnlockEngine";
 import { loc, t } from "../i18n/ui";
 import {
@@ -14,8 +14,8 @@ import { Tooltip } from "./Tooltip";
 import { SpecialArchivesEntry } from "./SpecialArchivesEntry";
 
 interface Props {
-  standardCaseUnlocks: CaseUnlockInfo[];
-  dailyCase: Case | undefined;
+  standardCaseUnlocks: CaseUnlockInfo<CaseSummary>[];
+  dailyCase: CaseSummary | undefined;
   dailyUnlocked: boolean;
   dailyMsRemaining: number;
   lang: Language;
@@ -25,8 +25,8 @@ interface Props {
     "archivePurchasedPackIds" | "archiveUnlockedCaseIds"
   >;
   results: Record<string, CaseResult>;
-  onSelectStandardCase: (info: CaseUnlockInfo) => void;
-  onSelect: (c: Case) => void;
+  onSelectStandardCase: (info: CaseUnlockInfo<CaseSummary>) => void;
+  onSelect: (c: CaseSummary) => void;
   onDailyLocked: () => void;
   onLanguage: (lang: Language) => void;
   onOpenSpecialArchives: () => void;
@@ -43,7 +43,7 @@ function caseAccuracyPct(result: CaseResult): number {
 }
 
 const SectionLabel = ({ children }: { children: React.ReactNode }) => (
-  <div className="mb-[9px] font-mono text-[10px] font-bold tracking-[.14em] text-text-muted uppercase">
+  <div className="mb-[9px] font-mono text-[12px] font-bold tracking-[.14em] text-text-muted uppercase">
     {children}
   </div>
 );
@@ -83,18 +83,9 @@ export function MobileDeskMenu({
   return (
     <div className="flex min-h-screen flex-col">
       {/* ── App bar ──────────────────────────────────────────────────────── */}
-      <div
-        className="shrink-0 px-4 pb-3 pt-[14px]"
-        style={{
-          background: "rgb(244, 233, 211)",
-          borderBottom: "1px solid #ddd0b6",
-        }}
-      >
+      <div className="shrink-0 border-b border-mobile-bar-border bg-mobile-bar px-4 pb-3 pt-[14px]">
         <div className="flex items-center justify-between gap-2">
-          <div
-            className="font-sans text-[13px] font-bold tracking-[.06em]"
-            style={{ color: "#3a3024" }}
-          >
+          <div className="font-sans text-[13px] font-bold tracking-[.06em] text-mobile-ink">
             {t("gameTitle", lang).toUpperCase()}
           </div>
           <LanguageSelector lang={lang} onChange={onLanguage} />
@@ -105,38 +96,31 @@ export function MobileDeskMenu({
           <div className="min-w-0 flex-1">
             <div className="mb-[5px] flex items-baseline justify-between">
               <span
-                className="font-mono text-[10px] font-bold tracking-[.1em]"
-                style={{ color: "#a89a80" }}
+                className="font-mono text-[12px] font-bold tracking-[.1em] text-mobile-muted"
               >
                 {t("solved", lang).toUpperCase()}
               </span>
               <span
-                className="font-mono text-[11px] font-bold"
-                style={{ color: "#3a3024" }}
+                className="font-mono text-[12px] font-bold text-mobile-ink"
               >
                 {solvedCount} / {total}
               </span>
             </div>
-            <div
-              className="h-[5px] overflow-hidden rounded-full"
-              style={{ background: "#ddd0b6" }}
-            >
+            <div className="h-[5px] overflow-hidden rounded-full bg-mobile-bar-border">
               <div
-                className="h-full rounded-full transition-[width] duration-500"
-                style={{ width: `${progressPct}%`, background: "#b3702f" }}
+                style={{ width: `${progressPct}%` }}
+                className="h-full rounded-full bg-accent transition-[width] duration-500"
               />
             </div>
           </div>
           <div className="shrink-0 text-right">
             <div
-              className="font-sans text-[9px] font-medium"
-              style={{ color: "#9a8c6e" }}
+              className="font-sans text-[12px] font-medium text-mobile-muted-strong"
             >
               {t("balance", lang)}
             </div>
             <div
-              className="font-mono text-[13px] font-bold"
-              style={{ color: "#3f8f4e" }}
+              className="font-mono text-[13px] font-bold text-mobile-success"
             >
               ₽ {fmt(balance)}
             </div>
@@ -162,70 +146,53 @@ export function MobileDeskMenu({
                 }
                 whileTap={{ scale: 0.98 }}
                 transition={{ duration: 0.12 }}
-                className="relative block w-full overflow-hidden text-left"
-                style={{
-                  background: "linear-gradient(135deg,#e6b052,#d6982f)",
-                  border: "1px solid #b07d1f",
-                  borderRadius: 11,
-                  padding: "16px 18px",
-                  boxShadow: "0 12px 26px rgba(40,28,10,.2)",
-                }}
+                className="relative block w-full overflow-hidden rounded-[11px] border border-daily-border bg-gold bg-daily-card px-[18px] py-4 text-left shadow-mobile-daily"
               >
                 {/* СРОЧНО stamp */}
                 <span
                   aria-hidden
-                  className="pointer-events-none absolute font-mono text-[9px] font-extrabold tracking-[.16em] text-white"
                   style={{
                     top: 14,
                     right: -32,
                     transform: "rotate(34deg)",
-                    background: "#b4231f",
                     padding: "4px 38px",
                   }}
+                  className="pointer-events-none absolute bg-danger font-mono text-[9px] font-extrabold tracking-[.16em] text-white"
                 >
                   {t("urgent", lang)}
                 </span>
                 <div
-                  className="font-mono text-[10px] font-semibold tracking-[.06em]"
-                  style={{ color: "#5c3f08" }}
+                  className="font-mono text-[12px] font-semibold tracking-[.06em] text-daily-copy"
                 >
                   {dailyUnlocked
                     ? t("dailyCase", lang).toUpperCase()
                     : `${t("dailyCase", lang).toUpperCase()} · ${formatCountdown(dailyMsRemaining)}`}
                 </div>
                 <div
-                  className="mt-[6px] max-w-[82%] font-serif text-[21px] font-bold leading-tight"
-                  style={{ color: "#3a2705" }}
+                  className="mt-[6px] max-w-[82%] font-serif text-[21px] font-bold leading-tight text-daily-ink"
                 >
                   {loc(dailyCase.title, lang)}
                 </div>
                 <div className="mt-[13px] flex flex-wrap items-center gap-2">
                   <span
-                    className="rounded-md px-[10px] py-[5px] font-sans text-[11px] font-bold"
-                    style={{ background: "#3a2705", color: "#f0c46b" }}
+                    className="rounded-md bg-daily-ink px-[10px] py-[5px] font-sans text-[12px] font-bold text-gold-text"
                   >
                     {t("dailyRewardBadge", lang)}
                   </span>
                   <span
-                    className="rounded-md px-[10px] py-[5px] font-sans text-[11px] font-bold"
-                    style={{
-                      background: "rgba(58,39,5,.16)",
-                      color: "#3a2705",
-                    }}
+                    className="rounded-md bg-daily-ink/15 px-[10px] py-[5px] font-sans text-[12px] font-bold text-daily-ink"
                   >
                     {t("dailyDifficultyBadge", lang)}
                   </span>
                   {dailyUnlocked ? (
                     <span
-                      className="ml-auto font-mono text-[11px] font-semibold"
-                      style={{ color: "#5c3f08" }}
+                      className="ml-auto font-mono text-[12px] font-semibold text-daily-copy"
                     >
-                      {dailyCase.evidences.length} {t("documents", lang)}
+                      {dailyCase.evidenceCount} {t("documents", lang)}
                     </span>
                   ) : (
                     <span
-                      className="ml-auto font-sans text-[11px] font-bold"
-                      style={{ color: "#3a2705" }}
+                      className="ml-auto font-sans text-[12px] font-bold text-daily-ink"
                     >
                       ▶ {t("watchAd", lang)}
                     </span>
@@ -255,38 +222,24 @@ export function MobileDeskMenu({
               onClick={() => onSelectStandardCase(nextCase)}
               whileTap={{ scale: 0.98 }}
               transition={{ duration: 0.12 }}
-              className="block w-full overflow-hidden text-left"
-              style={{
-                background: "#d8b95e",
-                border: "1px solid #876520",
-                borderRadius: 11,
-                padding: 16,
-                boxShadow: "0 14px 30px rgba(135,101,32,.26)",
-              }}
+              className="block w-full overflow-hidden rounded-[11px] border border-gold border-folder-gold-edge bg-gold bg-folder-gold p-4 text-left shadow-mobile-folder"
             >
               {/* Header row */}
               <div className="flex items-start justify-between gap-[10px]">
                 <div className="min-w-0">
                   <div
-                    className="font-mono text-[10px] font-semibold tracking-[.06em]"
-                    style={{ color: "#6e5a24" }}
+                    className="font-mono text-[12px] font-semibold tracking-[.06em] text-folder-gold-copy"
                   >
                     {formatCaseLabel(nextCase.caseData, lang).toUpperCase()}
                   </div>
                   <div
-                    className="mt-1 font-serif text-[22px] font-bold leading-tight"
-                    style={{ color: "#2e2207" }}
+                    className="mt-1 font-serif text-[22px] font-bold leading-tight text-folder-gold-ink"
                   >
                     {loc(nextCase.caseData.title, lang)}
                   </div>
                 </div>
                 <span
-                  className="shrink-0 rounded-[6px] font-mono text-[9px] font-extrabold tracking-[.06em]"
-                  style={{
-                    color: "#fff",
-                    background: "#876520",
-                    padding: "5px 9px",
-                  }}
+                  className="shrink-0 rounded-[6px] bg-folder-gold-edge px-[9px] py-[5px] font-mono text-[12px] font-extrabold tracking-[.06em] text-white"
                 >
                   {t("availableStatus", lang)}
                 </span>
@@ -295,8 +248,7 @@ export function MobileDeskMenu({
               {/* Client row */}
               <div className="mt-[14px] flex items-center gap-[11px]">
                 <div
-                  className="h-[44px] w-[44px] shrink-0 overflow-hidden rounded-[6px]"
-                  style={{ border: "1px solid rgba(0,0,0,.2)" }}
+                  className="h-[44px] w-[44px] shrink-0 overflow-hidden rounded-[6px] border border-black/20"
                 >
                   {nextCase.caseData.personImage ? (
                     <img
@@ -313,12 +265,7 @@ export function MobileDeskMenu({
                     />
                   ) : (
                     <div
-                      className="flex h-full w-full items-center justify-center font-mono text-[7px] font-semibold"
-                      style={{
-                        background:
-                          "repeating-linear-gradient(135deg,#c6ad55 0 6px,#bda049 6px 12px)",
-                        color: "#5c4a1a",
-                      }}
+                      className="flex h-full w-full items-center justify-center bg-folder-sealed font-mono text-[7px] font-semibold text-folder-gold-pattern"
                     >
                       ID
                     </div>
@@ -326,39 +273,30 @@ export function MobileDeskMenu({
                 </div>
                 <div className="min-w-0">
                   <div
-                    className="font-sans text-[13px] font-semibold"
-                    style={{ color: "#2e2207" }}
+                    className="font-sans text-[13px] font-semibold text-folder-gold-ink"
                   >
                     {loc(nextCase.caseData.claim.person, lang)}
                   </div>
                   <div
-                    className="mt-[2px] font-mono text-[12px] font-semibold"
-                    style={{ color: "#6e5a24" }}
+                    className="mt-[2px] font-mono text-[12px] font-semibold text-folder-gold-copy"
                   >
                     {fmt(nextCase.caseData.claimAmount)} ₽ ·{" "}
-                    {nextCase.caseData.evidences.length} {t("documents", lang)}
+                    {nextCase.caseData.evidenceCount} {t("documents", lang)}
                   </div>
                 </div>
               </div>
 
               {/* Footer row */}
               <div
-                className="mt-[14px] flex items-center justify-between pt-[13px]"
-                style={{ borderTop: "1px solid rgba(0,0,0,.16)" }}
+                className="mt-[14px] flex items-center justify-between border-t border-black/15 pt-[13px]"
               >
                 <span
-                  className="flex items-center gap-[6px] rounded-[4px] border font-mono text-[10px] font-semibold"
-                  style={{
-                    color: "#b4231f",
-                    borderColor: "#b4231f",
-                    padding: "3px 7px",
-                  }}
+                  className="flex items-center gap-[6px] rounded-[4px] border border-danger px-[7px] py-[3px] font-mono text-[10px] font-semibold text-danger"
                 >
                   {t("confidential", lang).slice(0, 6).toUpperCase()}.
                 </span>
                 <span
-                  className="font-sans text-[14px] font-bold"
-                  style={{ color: "#2e2207" }}
+                  className="font-sans text-[14px] font-bold text-folder-gold-ink"
                 >
                   {t("openCaseAction", lang)} →
                 </span>
@@ -377,41 +315,28 @@ export function MobileDeskMenu({
                 onClick={() => onSelectStandardCase(info)}
                 whileTap={{ scale: 0.98 }}
                 transition={{ duration: 0.12 }}
-                className="mb-[9px] flex w-full items-center gap-3 rounded-[10px] text-left"
-                style={{
-                  background: "#d8b95e",
-                  border: "1px solid #876520",
-                  padding: "12px 14px",
-                }}
+                className="mb-[9px] flex w-full items-center gap-3 rounded-[10px] border border-gold border-folder-gold-edge bg-gold bg-folder-gold px-[14px] py-3 text-left"
               >
                 <div
-                  className="flex h-[26px] w-[26px] shrink-0 items-center justify-center rounded-full font-mono text-[11px] font-bold"
-                  style={{
-                    background: "rgba(135,101,32,.15)",
-                    border: "1px solid rgba(135,101,32,.4)",
-                    color: "#876520",
-                  }}
+                  className="flex h-[26px] w-[26px] shrink-0 items-center justify-center rounded-full border border-folder-gold-edge/40 bg-folder-gold-edge/15 font-mono text-[12px] font-bold text-folder-gold-edge"
                 >
                   →
                 </div>
                 <div className="min-w-0 flex-1">
                   <div
-                    className="font-serif text-[14px] font-semibold"
-                    style={{ color: "#2e2207" }}
+                    className="font-serif text-[14px] font-semibold text-folder-gold-ink"
                   >
                     {loc(info.caseData.title, lang)}
                   </div>
                   <div
-                    className="font-sans text-[11px] font-medium"
-                    style={{ color: "#6e5a24" }}
+                    className="font-sans text-[12px] font-medium text-folder-gold-copy"
                   >
                     {formatCaseLabel(info.caseData, lang)} ·{" "}
                     {fmt(info.caseData.claimAmount)} ₽
                   </div>
                 </div>
                 <span
-                  className="shrink-0 font-sans text-[11px] font-bold"
-                  style={{ color: "#2e2207" }}
+                  className="shrink-0 font-sans text-[12px] font-bold text-folder-gold-ink"
                 >
                   →
                 </span>
@@ -425,14 +350,12 @@ export function MobileDeskMenu({
           <section className="mb-5">
             <div className="mb-[9px] flex items-baseline gap-[7px]">
               <span
-                className="font-mono text-[10px] font-bold tracking-[.14em]"
-                style={{ color: "#a89a80" }}
+                className="font-mono text-[12px] font-bold tracking-[.14em] text-mobile-muted"
               >
                 {t("solved", lang).toUpperCase()}
               </span>
               <span
-                className="font-mono text-[10px] font-bold"
-                style={{ color: "#4f8a4a" }}
+                className="font-mono text-[12px] font-bold text-mobile-success-soft"
               >
                 {solvedCases.length}
               </span>
@@ -454,33 +377,21 @@ export function MobileDeskMenu({
                       onClick={() => onSelectStandardCase(info)}
                       whileTap={{ scale: 0.99 }}
                       transition={{ duration: 0.1 }}
-                      className="flex w-full items-center gap-3 rounded-[10px] text-left"
-                      style={{
-                        background: "#f3ecdd",
-                        border: "1px solid #dcd0b6",
-                        padding: "12px 14px",
-                      }}
+                      className="flex w-full items-center gap-3 rounded-[10px] border border-border border-mobile-solved-border bg-surface bg-mobile-solved px-[14px] py-3 text-left"
                     >
                       <div
-                        className="flex h-[26px] w-[26px] shrink-0 items-center justify-center rounded-full font-sans text-[13px] font-bold"
-                        style={{
-                          background: "rgba(79,138,74,.15)",
-                          border: "1px solid rgba(79,138,74,.4)",
-                          color: "#4f8a4a",
-                        }}
+                        className="flex h-[26px] w-[26px] shrink-0 items-center justify-center rounded-full border border-mobile-success-soft/40 bg-mobile-success-soft/15 font-sans text-[13px] font-bold text-mobile-success-soft"
                       >
                         ✓
                       </div>
                       <div className="min-w-0 flex-1">
                         <div
-                          className="font-serif text-[14px] font-semibold"
-                          style={{ color: "#3a3024" }}
+                          className="font-serif text-[14px] font-semibold text-mobile-ink"
                         >
                           {loc(info.caseData.title, lang)}
                         </div>
                         <div
-                          className="mt-[1px] font-sans text-[11px] font-medium"
-                          style={{ color: "#9a8c6e" }}
+                          className="mt-[1px] font-sans text-[12px] font-medium text-mobile-muted-strong"
                         >
                           {formatCaseLabel(info.caseData, lang)} ·{" "}
                           {loc(info.caseData.claim.person, lang)}
@@ -489,15 +400,13 @@ export function MobileDeskMenu({
                       {result && (
                         <div className="shrink-0 text-right">
                           <div
-                            className="font-mono text-[12px] font-bold"
-                            style={{ color: "#3f8f4e" }}
+                            className="font-mono text-[12px] font-bold text-mobile-success"
                           >
                             +{fmt(reward)} ₽
                           </div>
                           {pct !== null && (
                             <div
-                              className="mt-[1px] font-mono text-[10px] font-medium"
-                              style={{ color: "#a89a80" }}
+                              className="mt-[1px] font-mono text-[12px] font-medium text-mobile-muted"
                             >
                               {t("accuracy", lang).slice(0, 5).toLowerCase()}.{" "}
                               {pct}%
@@ -518,14 +427,12 @@ export function MobileDeskMenu({
           <section>
             <div className="mb-[9px] flex items-baseline gap-[7px]">
               <span
-                className="font-mono text-[10px] font-bold tracking-[.14em]"
-                style={{ color: "#a89a80" }}
+                className="font-mono text-[12px] font-bold tracking-[.14em] text-mobile-muted"
               >
                 {t("lockedStatus", lang).toUpperCase()}
               </span>
               <span
-                className="font-mono text-[10px] font-bold"
-                style={{ color: "#b3ab98" }}
+                className="font-mono text-[12px] font-bold text-mobile-locked-count"
               >
                 {lockedCases.length}
               </span>
@@ -539,40 +446,27 @@ export function MobileDeskMenu({
                   label={formatCaseLockTooltip(info, lang)}
                 >
                   <div
-                    className="flex items-center gap-3 rounded-[10px]"
-                    style={{
-                      background: "#e3ddcf",
-                      border: "1px solid #d3ccbb",
-                      padding: "12px 14px",
-                    }}
+                    className="flex items-center gap-3 rounded-[10px] border border-border border-mobile-locked-border bg-surface-2 bg-mobile-locked px-[14px] py-3"
                   >
                     <div
-                      className="flex h-[26px] w-[26px] shrink-0 items-center justify-center rounded-full text-[12px]"
-                      style={{
-                        background: "rgba(0,0,0,.05)",
-                        border: "1px solid #c5bca6",
-                        color: "#9b937f",
-                      }}
+                      className="flex h-[26px] w-[26px] shrink-0 items-center justify-center rounded-full border border-mobile-locked-icon bg-black/5 text-[12px] text-mobile-locked-muted"
                     >
                       🔒
                     </div>
                     <div className="min-w-0 flex-1">
                       <div
-                        className="truncate font-serif text-[14px] font-semibold"
-                        style={{ color: "#7a7058" }}
+                        className="truncate font-serif text-[14px] font-semibold text-mobile-locked-text"
                       >
                         {loc(info.caseData.title, lang)}
                       </div>
                       <div
-                        className="mt-[1px] font-sans text-[11px] font-medium"
-                        style={{ color: "#a89a80" }}
+                        className="mt-[1px] font-sans text-[12px] font-medium text-mobile-muted"
                       >
                         {formatCaseLockMessage(info, lang)}
                       </div>
                     </div>
                     <span
-                      className="shrink-0 font-mono text-[10px] font-semibold"
-                      style={{ color: "#a89a80" }}
+                      className="shrink-0 font-mono text-[12px] font-semibold text-mobile-muted"
                     >
                       {formatCaseLabel(info.caseData, lang)}
                     </span>

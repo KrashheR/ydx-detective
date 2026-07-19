@@ -1,9 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
-  getDailyCase,
-  getStandardCases,
+  getDailyCaseSummary,
+  getStandardCaseSummaries,
+  getCaseSummaryById,
   getCaseById,
+  loadCaseById,
+  preloadCases,
 } from './data/caseLoader';
 import {
   useGameStore,
@@ -34,8 +37,12 @@ import {
 import { GOAL, getAnalyticsActiveTotalMs, trackGoal } from './services/metrica';
 import { GAME_CONFIG } from './config/gameConfig';
 import { RTL_LANGUAGES, t } from './i18n/ui';
-import type { Case } from './types';
-import { THEMATIC_PACKS, type ThematicPack } from './data/thematicPacks';
+import type { CaseSummary } from './types';
+import {
+  THEMATIC_PACKS,
+  getThematicPackCaseIds,
+  type ThematicPack,
+} from './data/thematicPacks';
 import { LeftSidebar } from './components/LeftSidebar';
 import { RightSidebar } from './components/RightSidebar';
 import { CaseFile } from './components/CaseFile';
@@ -48,6 +55,7 @@ import { RatingModal } from './components/RatingModal';
 import { ThematicPacksModal } from './components/ThematicPacksModal';
 import { formatCountdown } from './components/icons';
 import { formatCaseLockMessage } from './utils/caseDisplay';
+import { getAdjacentEvidenceId } from './utils/evidenceNavigation';
 
 /**
  * Folder visual theme. The mockup ships two looks; manila (warm archive) is the
@@ -163,7 +171,7 @@ export default function App() {
     };
   }, [isHydrated, stats.xp]);
 
-  const standardCases = useMemo(() => getStandardCases(), []);
+  const standardCases = useMemo(() => getStandardCaseSummaries(), []);
   const standardCaseUnlocks = useMemo(
     () => evaluateCaseUnlocks(standardCases, stats),
     [standardCases, stats],
@@ -176,13 +184,13 @@ export default function App() {
     return () => window.clearInterval(id);
   }, []);
   const serverDay = Math.floor(serverNow / GAME_CONFIG.daily.cooldownMs);
-  const baseDailyCase = useMemo(() => getDailyCase(serverDay), [serverDay]);
+  const baseDailyCase = useMemo(() => getDailyCaseSummary(serverDay), [serverDay]);
   const adDailyCase = useMemo(
-    () => getDailyCase(serverDay + 1),
+    () => getDailyCaseSummary(serverDay + 1),
     [serverDay],
   );
   const dailyCase = stats.dailyAdUnlockServerDay === serverDay && stats.dailyAdCaseId
-    ? getCaseById(stats.dailyAdCaseId) ?? baseDailyCase
+    ? getCaseSummaryById(stats.dailyAdCaseId) ?? baseDailyCase
     : baseDailyCase;
   const selectedCase = selectedId ? getCaseById(selectedId) : undefined;
 
@@ -190,6 +198,37 @@ export default function App() {
     stats.lastDailyClaimServerMs,
     serverNow,
   );
+
+  // Warm only content the player can actually open. The shelf itself is built
+  // from lightweight summaries, so locked case JSON/evidence stays unfetched.
+  useEffect(() => {
+    if (!isHydrated) return;
+
+    const accessibleIds = new Set(
+      standardCaseUnlocks
+        .filter(isCaseUnlocked)
+        .map((info) => info.caseData.id),
+    );
+    if (daily.unlocked && dailyCase) accessibleIds.add(dailyCase.id);
+    if (session?.caseId) accessibleIds.add(session.caseId);
+
+    for (const pack of THEMATIC_PACKS) {
+      const caseIds = getThematicPackCaseIds(pack);
+      const purchased = stats.archivePurchasedPackIds.includes(pack.id);
+      caseIds.forEach((caseId, index) => {
+        if (
+          purchased ||
+          index === 0 ||
+          stats.archiveUnlockedCaseIds.includes(caseId)
+        ) {
+          accessibleIds.add(caseId);
+        }
+      });
+    }
+
+    preloadCases([...accessibleIds]);
+  }, [daily.unlocked, dailyCase, isHydrated, session?.caseId, standardCaseUnlocks,
+    stats.archivePurchasedPackIds, stats.archiveUnlockedCaseIds]);
 
   useEffect(() => {
     if (isHydrated && !daily.unlocked) trackAdOffer('rewarded', 'daily_unlock');
@@ -225,19 +264,24 @@ export default function App() {
     [results],
   );
 
-  const formatLockedCaseMessage = (info: CaseUnlockInfo): string =>
+  const formatLockedCaseMessage = (info: CaseUnlockInfo<CaseSummary>): string =>
     formatCaseLockMessage(info, lang);
 
-  const openCase = (c: Case, opts?: { skipStandardGate?: boolean }) => {
-    if (c.type === 'standard' && !opts?.skipStandardGate) {
-      const unlock = standardCaseUnlocks.find((info) => info.caseData.id === c.id);
-      const isResumingActiveCase = session?.caseId === c.id;
+  const openCase = async (
+    summary: CaseSummary,
+    opts?: { skipStandardGate?: boolean },
+  ) => {
+    if (summary.type === 'standard' && !opts?.skipStandardGate) {
+      const unlock = standardCaseUnlocks.find((info) => info.caseData.id === summary.id);
+      const isResumingActiveCase = session?.caseId === summary.id;
       if (unlock && !isCaseUnlocked(unlock) && !isResumingActiveCase) {
         flashToast(formatLockedCaseMessage(unlock));
         return;
       }
     }
 
+    const c = await loadCaseById(summary.id);
+    if (!c) return;
     setSelectedId(c.id);
     store.startCase(c);
     trackGoal(GOAL.serviceView, { caseId: c.id, service: 'inspector_note' });
@@ -245,9 +289,9 @@ export default function App() {
     trackAdOffer('rewarded', 'witness_canvass');
   };
 
-  const handleSelectCase = (c: Case) => openCase(c);
+  const handleSelectCase = (c: CaseSummary) => void openCase(c);
 
-  const handleSelectStandardCase = (info: CaseUnlockInfo) => {
+  const handleSelectStandardCase = (info: CaseUnlockInfo<CaseSummary>) => {
     if (!isCaseUnlocked(info)) {
       flashToast(formatLockedCaseMessage(info));
       trackGoal(GOAL.lockedCaseClick, {
@@ -262,9 +306,9 @@ export default function App() {
     handleSelectCase(info.caseData);
   };
 
-  const handleSelectArchiveCase = (c: Case) => {
+  const handleSelectArchiveCase = (c: CaseSummary) => {
     setShowSpecialArchives(false);
-    openCase(c, { skipStandardGate: true });
+    void openCase(c, { skipStandardGate: true });
   };
 
   const handlePurchaseArchive = async (pack: ThematicPack): Promise<boolean> => {
@@ -298,6 +342,16 @@ export default function App() {
       return;
     }
     setModalEvidenceId(id);
+  };
+
+  const handleNavigateEvidence = (direction: -1 | 1) => {
+    if (!selectedCase || !modalEvidenceId) return;
+    const nextEvidenceId = getAdjacentEvidenceId(
+      selectedCase.evidences,
+      modalEvidenceId,
+      direction,
+    );
+    if (nextEvidenceId) handleOpenEvidence(nextEvidenceId);
   };
 
   const submitWithAdGate = (decision: 'approve' | 'reject') => {
@@ -430,7 +484,7 @@ export default function App() {
       {/* Desktop 3-column layout; also used on mobile when a case is open */}
       <div className={`flex flex-col gap-4 p-4 md:h-full md:flex-row ${!selectedCase ? 'hidden md:flex' : 'flex'}`}>
         {/* Left desk column */}
-        <div className="order-2 md:order-1 md:h-full md:w-[272px] md:shrink-0">
+        <div className="hidden md:order-1 md:block md:h-full md:w-[272px] md:shrink-0">
           <LeftSidebar
             standardCaseUnlocks={standardCaseUnlocks}
             dailyCase={dailyCase}
@@ -468,6 +522,7 @@ export default function App() {
               onApprove={handleApprove}
               onReject={handleReject}
               onBackToDesk={backToDesk}
+              onTabSwitch={(from, to) => trackGoal(GOAL.tabSwitch, { caseId: selectedCase.id, from, to })}
             />
           ) : (
             <CaseSelect
@@ -484,7 +539,7 @@ export default function App() {
         </main>
 
         {/* Right analytics column */}
-        <div className="order-3 md:h-full md:w-[272px] md:shrink-0">
+        <div className="hidden md:block md:h-full md:w-[272px] md:shrink-0">
           <RightSidebar
             lang={lang}
             xp={stats.xp}
@@ -507,6 +562,9 @@ export default function App() {
         lang={lang}
         stamped={session?.selectedEvidenceIds.includes(modalEvidenceId ?? '') ?? false}
         revealed={session?.revealedEvidenceIds.includes(modalEvidenceId ?? '') ?? false}
+        position={modalEvidence ? selectedCase?.evidences.findIndex((item) => item.id === modalEvidence.id) ?? -1 : -1}
+        total={selectedCase?.evidences.length ?? 0}
+        onNavigate={handleNavigateEvidence}
         onToggle={() => modalEvidenceId && store.toggleEvidenceStamp(modalEvidenceId)}
         onClose={() => setModalEvidenceId(null)}
       />
@@ -579,7 +637,7 @@ export default function App() {
             initial={{ y: 12, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 12, opacity: 0 }}
-            className="fixed bottom-[22px] left-1/2 z-[60] max-w-[86%] -translate-x-1/2 rounded-[9px] border border-stamp bg-[#2b2018] px-[18px] py-3 text-center text-[13px] font-medium leading-snug text-[#fee2e2] shadow-lift"
+            className={`fixed left-1/2 z-[60] max-w-[86%] -translate-x-1/2 rounded-[9px] border border-stamp bg-toast px-[18px] py-3 text-center text-[13px] font-medium leading-snug text-toast-ink shadow-lift md:bottom-[22px] ${modalEvidence ? "bottom-[136px]" : selectedCase ? "bottom-[104px]" : "bottom-[22px]"}`}
           >
             {toast}
           </motion.div>

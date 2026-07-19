@@ -28,15 +28,22 @@ beforeEach(() => {
 
 afterEach(() => {
   delete (window as { ym?: unknown }).ym;
+  document.querySelectorAll('script[src="https://mc.yandex.ru/metrika/tag.js"]')
+    .forEach((script) => script.remove());
 });
 
 describe('metrica adapter — disabled (no-op) modes', () => {
-  it('does not throw and never calls ym when the counter never loaded', async () => {
+  it('creates the async loader without waiting for the counter script', async () => {
     config.counterId = 12345;
     const m = await freshAdapter();
     expect(() => m.initMetrica()).not.toThrow();
     expect(() => m.trackGoal(m.GOAL.caseStart, { a: 1 })).not.toThrow();
     expect(() => m.setUserParams({ level: 2 })).not.toThrow();
+    const script = document.querySelector<HTMLScriptElement>(
+      'script[src="https://mc.yandex.ru/metrika/tag.js"]',
+    );
+    expect(script?.async).toBe(true);
+    expect(typeof window.ym).toBe('function');
   });
 
   it('stays a no-op when the counter id is a falsy placeholder', async () => {

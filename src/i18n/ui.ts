@@ -12,6 +12,12 @@ export type UIKey =
   | "markContradiction"
   | "unmarkContradiction"
   | "rejectNeedsProof"
+  | "markedCount"
+  | "viewedCount"
+  | "statementPeek"
+  | "cancel"
+  | "previousEvidence"
+  | "nextEvidence"
   | "caseClosed"
   | "fraudExposed"
   | "investigatorError"
@@ -98,7 +104,6 @@ export type UIKey =
   | "circumstances"
   | "caseMaterials"
   | "documents"
-  | "marked"
   | "openCaseAction"
   | "openDossier"
   | "viewedDossier"
@@ -248,6 +253,24 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     tr: "Ret gerekçelendirilmelidir. Belgelerde en az bir çelişki belirtin.",
     ar: "يجب تبرير الرفض. حدد تناقضًا واحدًا على الأقل في المستندات.",
     kk: "Бас тарту негізделуі керек. Құжаттардан кемінде бір қайшылық көрсетіңіз.",
+  },
+  markedCount: {
+    ru: "Отмечено", en: "Marked", tr: "İşaretli", ar: "مُعلَّم", kk: "Белгіленді",
+  },
+  viewedCount: {
+    ru: "Просмотрено", en: "Reviewed", tr: "İncelendi", ar: "تمت المراجعة", kk: "Қаралды",
+  },
+  statementPeek: {
+    ru: "Заявление", en: "Statement", tr: "Beyan", ar: "الإفادة", kk: "Өтініш",
+  },
+  cancel: {
+    ru: "Отмена", en: "Cancel", tr: "İptal", ar: "إلغاء", kk: "Бас тарту",
+  },
+  previousEvidence: {
+    ru: "Предыдущая улика", en: "Previous evidence", tr: "Önceki kanıt", ar: "الدليل السابق", kk: "Алдыңғы дәлел",
+  },
+  nextEvidence: {
+    ru: "Следующая улика", en: "Next evidence", tr: "Sonraki kanıt", ar: "الدليل التالي", kk: "Келесі дәлел",
   },
   caseClosed: {
     ru: "ДЕЛО ЗАКРЫТО",
@@ -808,13 +831,6 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     tr: "belge",
     ar: "مستندات",
     kk: "құжат",
-  },
-  marked: {
-    ru: "отмечено",
-    en: "marked",
-    tr: "işaretli",
-    ar: "موسوم",
-    kk: "белгіленді",
   },
   openCaseAction: {
     ru: "Открыть дело",

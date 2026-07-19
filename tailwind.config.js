@@ -18,6 +18,41 @@ export default {
         'text-light': '#3D3119', // primary text on sepia chrome
         'text-muted': '#6B5733', // secondary text on sepia chrome
         'text-dim': '#6B5733', // muted labels on sepia chrome
+        'mobile-bar': '#F4E9D3',
+        'mobile-bar-border': '#DDD0B6',
+        'mobile-ink': '#3A3024',
+        'mobile-muted': '#A89A80',
+        'mobile-muted-strong': '#9A8C6E',
+        'mobile-success': '#3F8F4E',
+        'mobile-success-soft': '#4F8A4A',
+        'daily-ink': '#3A2705',
+        'daily-copy': '#5C3F08',
+        'daily-border': '#B07D1F',
+        'folder-gold': '#D8B95E',
+        'folder-gold-edge': '#876520',
+        'folder-gold-copy': '#6E5A24',
+        'folder-gold-ink': '#2E2207',
+        'folder-gold-pattern': '#5C4A1A',
+        'mobile-solved': '#F3ECDD',
+        'mobile-solved-border': '#DCD0B6',
+        'mobile-locked': '#E3DDCF',
+        'mobile-locked-border': '#D3CCBB',
+        'mobile-locked-icon': '#C5BCA6',
+        'mobile-locked-text': '#7A7058',
+        'mobile-locked-muted': '#9B937F',
+        'mobile-locked-count': '#B3AB98',
+        'photo-border': '#B8B1A0',
+        'photo-bg': '#D8D3C7',
+        'photo-caption': '#8A8472',
+        'document-title': '#1F2937',
+        'document-copy': '#374151',
+        'document-muted': '#6B7280',
+        'document-faint': '#9CA3AF',
+        'document-rule': '#D1CFC8',
+        'document-dash': '#C7C2B6',
+        toast: '#2B2018',
+        'toast-ink': '#FEE2E2',
+        'modal-backdrop': 'rgb(8 11 17 / 0.8)',
 
         // --- Folder theme (manila | dossier) via CSS vars ---
         // RGB channels so Tailwind's /opacity modifier keeps working.
@@ -43,6 +78,14 @@ export default {
         'card-hover': '0 16px 30px rgba(0,0,0,0.45)',
         lift: '0 16px 30px rgba(0,0,0,0.45)',
         modal: '0 30px 70px rgba(0,0,0,0.6)',
+        'mobile-daily': '0 12px 26px rgba(40,28,10,.2)',
+        'mobile-folder': '0 14px 30px rgba(135,101,32,.26)',
+        'photo-id': '0 3px 9px rgba(0,0,0,.2)',
+      },
+      backgroundImage: {
+        'daily-card': 'linear-gradient(135deg,#e6b052,#d6982f)',
+        'folder-sealed': 'repeating-linear-gradient(135deg,#c6ad55 0 6px,#bda049 6px 12px)',
+        'photo-placeholder': 'repeating-linear-gradient(45deg,#d8d3c7 0 6px,#cfc9bb 6px 12px)',
       },
       keyframes: {
         stampIn: {

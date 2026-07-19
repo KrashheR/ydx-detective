@@ -1,0 +1,29 @@
+{
+  "budget": {
+    "beforeBlocked": "Показания соседа",
+    "afterBlocked": "Показания соседа",
+    "stayedOnCurrentEvidence": true,
+    "budgetToastVisible": true,
+    "horizontalOverflow": false,
+    "direction": "ltr"
+  },
+  "rtl": {
+    "direction": "rtl",
+    "evidenceTabActive": true,
+    "horizontalOverflow": false,
+    "verdictButtons": 2,
+    "rtlArrowGlyphs": [
+      "✕",
+      "›",
+      "‹"
+    ],
+    "modalSwipeAdvanced": true,
+    "modalTitleBefore": "صورة مكان الحادث",
+    "modalTitleAfter": "إعلان بيع"
+  },
+  "daily": {
+    "verdictButtons": 2,
+    "horizontalOverflow": false,
+    "resultReached": true
+  }
+}

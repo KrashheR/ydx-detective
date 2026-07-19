@@ -1,6 +1,5 @@
 {
   "_comment": "Гайд по генерации дел для Claude. Читай полностью перед генерацией любого дела.",
-
   "tl_dr": [
     "1. Выбери уникальный страховой сценарий (избегай повторов из existing_cases).",
     "2. Определи truth: fraud | valid. Fraud = 2+ улики-противоречия. Valid = 0 противоречий.",
@@ -8,7 +7,6 @@
     "4. Напиши content на 5 языках (ru/en/tr/ar/kk). Для usage_log content — массив строк.",
     "5. Проверь: все evidenceId уникальны, все 5 языков заполнены везде, correctDecision совпадает с truth."
   ],
-
   "schema_required_fields": {
     "case_root": {
       "id": "string — формат: case-NNN или case-NNN-daily",
@@ -38,12 +36,13 @@
       "meta": "EvidenceMeta (optional) — см. meta_fields_by_type"
     }
   },
-
   "meta_fields_by_type": {
     "_localization_rule": "Видимые поля company/department/requestId/gpsFooter/docHeader/docFooter/clinicName/bankName/carrierName — LocalizedString (ru/en/tr/ar/kk). Технические идентификаторы, filename, imageUrl, cameraId, cameraModel, logPrompt, accountMask, phoneMask и socialPlatform — обычные строки.",
     "photo": {
       "filename": "Имя файла фото. Формат: IMG_YYYYMMDD_HHMMSS.jpg или SCR_YYYYMMDD_HHMMSS.png или DJI_YYYYMMDD_HHMMSS.jpg (для дронов). Дата должна совпадать с хронологией дела.",
-      "example": { "filename": "IMG_20260315_143022.jpg" }
+      "example": {
+        "filename": "IMG_20260315_143022.jpg"
+      }
     },
     "gps": {
       "company": "Название GPS-сервиса. Придумай реалистичное (не GeoGuard — он уже в case-001).",
@@ -59,10 +58,10 @@
     },
     "camera_recording": {
       "cameraId": "Идентификатор камеры. Формат: CAM-XX, DVR-X, LIVE-CH, BELL-N, PET-NN и т.д. Уникален для дела.",
-      "cameraModel": "Реальная модель камеры · разрешение · кодек. Примеры: HIKVISION DS-2CD2143G2-I · 4K · H.265, Ring Video Doorbell Pro 2 · 1080p · H.264",
+      "cameraModel": "Реальная модель камеры · разрешение · кодек. Примеры: SentinelCam SC-2143 · 4K · H.265, EntryCam EC-202 · 1080p · H.264",
       "example": {
         "cameraId": "CAM-R3",
-        "cameraModel": "Dahua IPC-HFW2849S · 4K · H.265"
+        "cameraModel": "PerimeterCam PC-2849 · 4K · H.265"
       }
     },
     "usage_log": {
@@ -77,26 +76,35 @@
     },
     "xray": {
       "clinicName": "Название клиники/отдела. Формат: ООО «Название» · Отдел",
-      "example": { "clinicName": "ООО «КлиникаИмидж» · Рентген-диагностика" }
+      "example": {
+        "clinicName": "ООО «КлиникаИмидж» · Рентген-диагностика"
+      }
     },
     "bank_statement": {
       "bankName": "Название банка.",
       "accountMask": "Маскированный номер счёта. Формат: •••• •••• •••• XXXX",
-      "example": { "bankName": "ClearBank", "accountMask": "•••• •••• •••• 8832" }
+      "example": {
+        "bankName": "ClearBank",
+        "accountMask": "•••• •••• •••• 8832"
+      }
     },
     "phone_records": {
       "carrierName": "Название оператора.",
       "phoneMask": "Маскированный номер. Формат: +7 (9••) •••-••-••",
-      "example": { "carrierName": "МобиЛинк", "phoneMask": "+7 (9••) •••-••-••" }
+      "example": {
+        "carrierName": "МобиЛинк",
+        "phoneMask": "+7 (9••) •••-••-••"
+      }
     },
     "social_media": {
-      "socialPlatform": "Домен платформы. Например: vk.com, t.me, ok.ru, instagram.com",
-      "example": { "socialPlatform": "ok.ru" }
+      "socialPlatform": "Домен платформы. Например: cityfeed.local, localfeed.local, circlefeed.local, photofeed.local",
+      "example": {
+        "socialPlatform": "circlefeed.local"
+      }
     },
     "document": "meta не нужен — document рендерится как бумажный лист без header/footer переменных",
     "witness_statement": "meta не нужен — протокол-заголовок свидетельства фиксированный"
   },
-
   "evidence_type_cheatsheet": {
     "photo": "Любой снимок: место происшествия, товар, лицо, X-ray (если type=photo а не xray), скриншот. content — строка описания.",
     "gps": "Трек/маршрут транспорта, судна, техники. content — массив строк с координатами/временем.",
@@ -109,26 +117,43 @@
     "phone_records": "Детализация звонков. content — массив строк записей.",
     "social_media": "Пост/профиль в соцсети. content — строка с описанием поста."
   },
-
-  "localized_string_languages": ["ru", "en", "tr", "ar", "kk"],
-
+  "localized_string_languages": [
+    "ru",
+    "en",
+    "tr",
+    "ar",
+    "kk"
+  ],
   "usage_log_content_format": {
     "description": "Для type=usage_log content — это объект, где каждый язык содержит МАССИВ строк, а не строку.",
     "example": {
-      "ru": ["10:14:22 — Открытие: карта #A-041 (Менеджер Петров)", "10:14:55 — Закрытие: карта #A-041"],
-      "en": ["10:14:22 — Open: card #A-041 (Manager Petrov)", "10:14:55 — Close: card #A-041"],
-      "tr": ["10:14:22 — Açılış: kart #A-041 (Müdür Petrov)", "10:14:55 — Kapanış: kart #A-041"],
-      "ar": ["10:14:22 — فتح: بطاقة #A-041 (المدير بيتروف)", "10:14:55 — إغلاق: بطاقة #A-041"],
-      "kk": ["10:14:22 — Ашу: карта #A-041 (Менеджер Петров)", "10:14:55 — Жабу: карта #A-041"]
+      "ru": [
+        "10:14:22 — Открытие: карта #A-041 (Менеджер Петров)",
+        "10:14:55 — Закрытие: карта #A-041"
+      ],
+      "en": [
+        "10:14:22 — Open: card #A-041 (Manager Petrov)",
+        "10:14:55 — Close: card #A-041"
+      ],
+      "tr": [
+        "10:14:22 — Açılış: kart #A-041 (Müdür Petrov)",
+        "10:14:55 — Kapanış: kart #A-041"
+      ],
+      "ar": [
+        "10:14:22 — فتح: بطاقة #A-041 (المدير بيتروف)",
+        "10:14:55 — إغلاق: بطاقة #A-041"
+      ],
+      "kk": [
+        "10:14:22 — Ашу: карта #A-041 (Менеджер Петров)",
+        "10:14:55 — Жабу: карта #A-041"
+      ]
     }
   },
-
   "difficulty_guidelines": {
     "easy": "Противоречия очевидны с первого взгляда. Valid-дело без сюрпризов. 3-4 улики. Хорошо для онбординга.",
     "medium": "Нужно сопоставить 2-3 улики. Одна улика может казаться подозрительной, но при анализе совокупности — картина ясна. 4-5 улик.",
     "hard": "Противоречие скрыто в деталях (время, цифры, технический факт). Или наоборот — история звучит дико, но все улики её подтверждают (case-004). 4-5 улик."
   },
-
   "fraud_patterns": [
     "Заявитель сам продаёт 'украденную/утраченную' вещь (case-003, case-103-daily)",
     "GPS/камера фиксирует заявителя на месте, где он 'не был' (case-002-daily)",
@@ -139,7 +164,6 @@
     "Заявитель был в отъезде, но камера/GPS его засекла",
     "Страховой случай произошёл слишком скоро после оформления полиса"
   ],
-
   "valid_case_patterns": [
     "Необычное но физически возможное событие (корова на крыше — case-004)",
     "Природные катаклизмы с метеоподтверждением (case-014, case-104-daily, case-105-daily)",
@@ -148,76 +172,301 @@
     "ДТП с dash-cam + протокол ГИБДД",
     "Производственная травма с медзаключением + актом"
   ],
-
   "existing_cases": {
     "standard": [
-      { "id": "case-001", "theme": "Угон автомобиля", "truth": "fraud" },
-      { "id": "case-002", "theme": "(читать файл)", "truth": "?" },
-      { "id": "case-003", "theme": "Пёс съел часы (рентген)", "truth": "fraud" },
-      { "id": "case-004", "theme": "Корова пробила теплицу через крышу сарая", "truth": "valid" },
-      { "id": "case-005", "theme": "Пожар от стрима / умный улей", "truth": "fraud" },
-      { "id": "case-006", "theme": "Вино в подвале (климат-лог)", "truth": "fraud" },
-      { "id": "case-007", "theme": "Утеря багажа в аэропорту", "truth": "fraud" },
-      { "id": "case-008", "theme": "Травма в спортзале / марафон", "truth": "fraud" },
-      { "id": "case-009", "theme": "Пожар из-за проводки на кухне", "truth": "valid" },
-      { "id": "case-010", "theme": "ДТП / dash-cam", "truth": "fraud" },
-      { "id": "case-011", "theme": "Кража со взломом / дверной звонок", "truth": "fraud" },
-      { "id": "case-012", "theme": "Аптека / лекарства", "truth": "fraud" },
-      { "id": "case-013", "theme": "Протечка / влажность", "truth": "fraud" },
-      { "id": "case-014", "theme": "Град на пшеничном поле (дрон)", "truth": "valid" },
-      { "id": "case-015", "theme": "Морской груз / AIS судно", "truth": "fraud" },
-      { "id": "case-016", "theme": "(читать файл)", "truth": "?" },
-      { "id": "case-017", "theme": "Анатолий и енот Жорик: микроволновка-поджигатель", "truth": "valid" },
-      { "id": "case-018", "theme": "Анатолий и енот Жорик: дрон-похититель кольца", "truth": "valid" },
-      { "id": "case-019", "theme": "Анатолий и енот Жорик: газонокосилка без водителя", "truth": "valid" },
-      { "id": "case-020", "theme": "Сплинтович vs Шреддеров (TMNT): подстава с пиццей", "truth": "fraud" },
-      { "id": "case-021", "theme": "Сплинтович vs Шреддеров (TMNT): взрыв газа в додзё", "truth": "fraud" },
-      { "id": "case-022", "theme": "Сплинтович vs Шреддеров (TMNT): кража в додзё (FOOT CLAN)", "truth": "valid" },
-      { "id": "case-023", "theme": "Карта украдена за границей / банковская выписка (bank_statement дебют)", "truth": "fraud" },
-      { "id": "case-024", "theme": "ДТП / детализация звонков (phone_records дебют)", "truth": "valid" },
-      { "id": "case-025", "theme": "Пожар в кафе / пост очевидца (social_media дебют)", "truth": "valid" },
-      { "id": "case-026", "theme": "Кража часов / соцсети выдают", "truth": "fraud" },
-      { "id": "case-027", "theme": "Затопление склада ливнем", "truth": "valid" },
-      { "id": "case-028", "theme": "Поджог склада ради страховки (бюджет 3)", "truth": "fraud" },
-      { "id": "case-029", "theme": "Удар молнии в дом / электроника", "truth": "valid" },
-      { "id": "case-030", "theme": "ДТП-подстава со сговором", "truth": "fraud" },
-      { "id": "case-031", "theme": "Градобой теплицы", "truth": "valid" },
-      { "id": "case-032", "theme": "Поддельная кража авто (GPS/камера/банк)", "truth": "fraud" },
-      { "id": "case-033", "theme": "Производственная травма (рентген, бюджет 4)", "truth": "valid" },
-      { "id": "case-034", "theme": "Масштабная афера / пожар бизнеса", "truth": "fraud" },
-      { "id": "case-035", "theme": "Паранормальная служба очистки / охотники за привидениями", "truth": "fraud" },
-      { "id": "case-036", "theme": "Электрокупе, молния и башенные часы / путешествие во времени", "truth": "valid" },
-      { "id": "case-037", "theme": "Мотомастерская, эндоскелеты и человек из будущего", "truth": "fraud" },
-      { "id": "case-038", "theme": "Школьная лаборатория, совиная почта и мандрагора", "truth": "valid" },
-      { "id": "case-039", "theme": "Солнечная ферма, сервисный дроид и космическая сага", "truth": "fraud" },
-      { "id": "case-040", "theme": "Архив Пограничного Сектора: сгоревший груз на лунной ферме", "truth": "fraud" },
-      { "id": "case-041", "theme": "Архив Пограничного Сектора: потерянный перехватчик в ледяном каньоне", "truth": "fraud" },
-      { "id": "case-042", "theme": "Архив Пограничного Сектора: пропавший церемониальный клинок", "truth": "fraud" },
-      { "id": "case-043", "theme": "Архив Пограничного Сектора: исчезнувший ученик навигатора", "truth": "fraud" },
-      { "id": "case-044", "theme": "Архив Закрытого Коллегиума: пожар в теплице редких мандрагор", "truth": "fraud" },
-      { "id": "case-045", "theme": "Архив Закрытого Коллегиума: пропавший экзаменационный кубок", "truth": "fraud" },
-      { "id": "case-046", "theme": "Архив Закрытого Коллегиума: падение с учебной башни", "truth": "fraud" },
-      { "id": "case-047", "theme": "Архив Закрытого Коллегиума: ночной побег из общежития", "truth": "fraud" },
-      { "id": "case-048", "theme": "Архив Подземного Отдела: разгром пиццерии после ночной драки", "truth": "fraud" },
-      { "id": "case-049", "theme": "Архив Подземного Отдела: кража лабораторного мутагена", "truth": "fraud" },
-      { "id": "case-050", "theme": "Архив Подземного Отдела: пожар в антикварном додзё", "truth": "fraud" },
-      { "id": "case-051", "theme": "Архив Подземного Отдела: угон фургона с уличной электроникой", "truth": "fraud" }
+      {
+        "id": "case-001",
+        "theme": "Угон автомобиля",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-002",
+        "theme": "(читать файл)",
+        "truth": "?"
+      },
+      {
+        "id": "case-003",
+        "theme": "Пёс съел часы (рентген)",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-004",
+        "theme": "Корова пробила теплицу через крышу сарая",
+        "truth": "valid"
+      },
+      {
+        "id": "case-005",
+        "theme": "Пожар от стрима / умный улей",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-006",
+        "theme": "Вино в подвале (климат-лог)",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-417",
+        "theme": "Утеря багажа в аэропорту",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-008",
+        "theme": "Травма в спортзале / марафон",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-009",
+        "theme": "Пожар из-за проводки на кухне",
+        "truth": "valid"
+      },
+      {
+        "id": "case-010",
+        "theme": "ДТП / dash-cam",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-011",
+        "theme": "Кража со взломом / дверной звонок",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-012",
+        "theme": "Аптека / лекарства",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-013",
+        "theme": "Протечка / влажность",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-014",
+        "theme": "Град на пшеничном поле (дрон)",
+        "truth": "valid"
+      },
+      {
+        "id": "case-015",
+        "theme": "Морской груз / AIS судно",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-016",
+        "theme": "(читать файл)",
+        "truth": "?"
+      },
+      {
+        "id": "case-017",
+        "theme": "Анатолий и енот Жорик: микроволновка-поджигатель",
+        "truth": "valid"
+      },
+      {
+        "id": "case-018",
+        "theme": "Анатолий и енот Жорик: дрон-похититель кольца",
+        "truth": "valid"
+      },
+      {
+        "id": "case-019",
+        "theme": "Анатолий и енот Жорик: газонокосилка без водителя",
+        "truth": "valid"
+      },
+      {
+        "id": "case-020",
+        "theme": "Тернов vs Арсенов (TMNT): подстава с пиццей",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-021",
+        "theme": "Тернов vs Арсенов (TMNT): взрыв газа в додзё",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-022",
+        "theme": "Тернов vs Арсенов (TMNT): кража в додзё (NORTH YARD)",
+        "truth": "valid"
+      },
+      {
+        "id": "case-023",
+        "theme": "Карта украдена за границей / банковская выписка (bank_statement дебют)",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-024",
+        "theme": "ДТП / детализация звонков (phone_records дебют)",
+        "truth": "valid"
+      },
+      {
+        "id": "case-025",
+        "theme": "Пожар в кафе / пост очевидца (social_media дебют)",
+        "truth": "valid"
+      },
+      {
+        "id": "case-026",
+        "theme": "Кража часов / соцсети выдают",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-027",
+        "theme": "Затопление склада ливнем",
+        "truth": "valid"
+      },
+      {
+        "id": "case-028",
+        "theme": "Поджог склада ради страховки (бюджет 3)",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-029",
+        "theme": "Удар молнии в дом / электроника",
+        "truth": "valid"
+      },
+      {
+        "id": "case-030",
+        "theme": "ДТП-подстава со сговором",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-031",
+        "theme": "Градобой теплицы",
+        "truth": "valid"
+      },
+      {
+        "id": "case-032",
+        "theme": "Поддельная кража авто (GPS/камера/банк)",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-033",
+        "theme": "Производственная травма (рентген, бюджет 4)",
+        "truth": "valid"
+      },
+      {
+        "id": "case-034",
+        "theme": "Масштабная афера / пожар бизнеса",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-035",
+        "theme": "Паранормальная служба очистки / охотники за привидениями",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-036",
+        "theme": "Электрокупе, молния и башенные часы / путешествие во времени",
+        "truth": "valid"
+      },
+      {
+        "id": "case-037",
+        "theme": "Мотомастерская и инсценированная кража хромированных манекенов",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-038",
+        "theme": "Школьная лаборатория и ошибочно маркированный химический реагент",
+        "truth": "valid"
+      },
+      {
+        "id": "case-039",
+        "theme": "Солнечная ферма, сервисный сервисный робот и космическая сага",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-040",
+        "theme": "Архив Пограничного Сектора: сгоревший груз на лунной ферме",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-041",
+        "theme": "Архив Пограничного Сектора: потерянный перехватчик в ледяном каньоне",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-042",
+        "theme": "Архив Пограничного Сектора: пропавший церемониальный клинок",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-043",
+        "theme": "Архив Пограничного Сектора: исчезнувший ученик навигатора",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-044",
+        "theme": "Архив Закрытого Коллегиума: пожар в теплице редких мандрагор",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-045",
+        "theme": "Архив Закрытого Коллегиума: пропавший экзаменационный кубок",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-046",
+        "theme": "Архив Закрытого Коллегиума: падение с учебной башни",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-047",
+        "theme": "Архив Закрытого Коллегиума: ночной побег из общежития",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-048",
+        "theme": "Архив Подземного Отдела: разгром пиццерии после ночной драки",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-049",
+        "theme": "Архив Подземного Отдела: кража лабораторного мутагена",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-050",
+        "theme": "Архив Подземного Отдела: пожар в антикварном додзё",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-051",
+        "theme": "Архив Подземного Отдела: угон фургона с уличной электроникой",
+        "truth": "fraud"
+      }
     ],
     "daily": [
-      { "id": "case-002-daily", "theme": "Угон авто / CAN-шина", "truth": "fraud" },
-      { "id": "case-101-daily", "theme": "Полтергейст в пекарне (торты)", "truth": "fraud" },
-      { "id": "case-102-daily", "theme": "Строительная техника GPS", "truth": "fraud" },
-      { "id": "case-103-daily", "theme": "Кража картины / попугай-камера", "truth": "fraud" },
-      { "id": "case-104-daily", "theme": "Молния в сарай (Лихтенберг)", "truth": "valid" },
-      { "id": "case-105-daily", "theme": "Батут через забор в оранжерею", "truth": "valid" }
+      {
+        "id": "case-002-daily",
+        "theme": "Угон авто / CAN-шина",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-101-daily",
+        "theme": "Полтергейст в пекарне (торты)",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-102-daily",
+        "theme": "Строительная техника GPS",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-103-daily",
+        "theme": "Кража картины / попугай-камера",
+        "truth": "fraud"
+      },
+      {
+        "id": "case-104-daily",
+        "theme": "Молния в сарай (Лихтенберг)",
+        "truth": "valid"
+      },
+      {
+        "id": "case-105-daily",
+        "theme": "Батут через забор в оранжерею",
+        "truth": "valid"
+      }
     ]
   },
-
   "unused_evidence_types": {
     "note": "Все 10 типов улик теперь задействованы хотя бы в одном деле (xray/bank_statement/phone_records/social_media введены в экспертном тире, case-023..034). Новых типов вводить не нужно.",
     "types": []
   },
-
   "complexity_curve": {
     "note": "Кампания нарастает по сложности (удержание игрока). Инвариант закреплён тестом src/data/campaignProgression.test.ts. Порядок кампании = сортировка по (requiredLevel, caseNumber) из gameConfig.standardCaseRequiredLevelById.",
     "rules": [
@@ -227,19 +476,72 @@
       "requiredLevel не убывает и ≤ 16 (тир сложности, а не XP-стена)."
     ],
     "tiers": {
-      "L1 (2 улики)": ["case-001", "case-009"],
-      "L2-3 (3 улики)": ["case-013", "case-018", "case-019", "case-020", "case-021"],
-      "L4-11 (4 улики)": ["case-003", "case-004", "case-005", "case-006", "case-007", "case-008", "case-010", "case-011", "case-012", "case-014", "case-015", "case-016", "case-017", "case-022", "case-023", "case-024"],
-      "L12-13 (5 улик)": ["case-025", "case-026", "case-027", "case-028"],
-      "L14-16 (6 улик)": ["case-029", "case-030", "case-031", "case-032", "case-033", "case-034", "case-035", "case-036", "case-037", "case-038", "case-039", "case-040", "case-041", "case-042", "case-043", "case-044", "case-045", "case-046", "case-047", "case-048", "case-049", "case-050", "case-051"]
+      "L1 (2 улики)": [
+        "case-001",
+        "case-009"
+      ],
+      "L2-3 (3 улики)": [
+        "case-013",
+        "case-018",
+        "case-019",
+        "case-020",
+        "case-021"
+      ],
+      "L4-11 (4 улики)": [
+        "case-003",
+        "case-004",
+        "case-005",
+        "case-006",
+        "case-417",
+        "case-008",
+        "case-010",
+        "case-011",
+        "case-012",
+        "case-014",
+        "case-015",
+        "case-016",
+        "case-017",
+        "case-022",
+        "case-023",
+        "case-024"
+      ],
+      "L12-13 (5 улик)": [
+        "case-025",
+        "case-026",
+        "case-027",
+        "case-028"
+      ],
+      "L14-16 (6 улик)": [
+        "case-029",
+        "case-030",
+        "case-031",
+        "case-032",
+        "case-033",
+        "case-034",
+        "case-035",
+        "case-036",
+        "case-037",
+        "case-038",
+        "case-039",
+        "case-040",
+        "case-041",
+        "case-042",
+        "case-043",
+        "case-044",
+        "case-045",
+        "case-046",
+        "case-047",
+        "case-048",
+        "case-049",
+        "case-050",
+        "case-051"
+      ]
     }
   },
-
   "generation_prompt_template": {
     "description": "Минимальный промпт для Claude при генерации нового дела. Подставь переменные в {}.",
-    "prompt": "Сгенерируй JSON-дело для игры-детектива по страховым случаям. Параметры: theme={ТЕМА}, truth={fraud|valid}, difficulty={easy|medium|hard}, type={standard|daily}, claimAmount={СУММА}. Используй evidence types: {СПИСОК_ТИПОВ}. Для каждого photo добавь meta.filename (формат IMG_YYYYMMDD_HHMMSS.jpg, дата из хронологии дела). Для gps — meta с company/department/requestId/gpsFooter. Для camera_recording — meta с cameraId/cameraModel (реальная модель). Для usage_log — meta.logPrompt (формат user@host:~$ tail -f /var/log/xxx.log) И content как массив строк на каждом языке. Заполни все 5 языков: ru/en/tr/ar/kk. Evidence ids уникальны. correctDecision=reject если truth=fraud, approve если valid. Explanation — ровно 3 пункта. Следуй схеме из CASE_AUTHORING_GUIDE.json."
+    "prompt": "Сгенерируй JSON-дело для игры-детектива по страховым случаям. Параметры: theme={ТЕМА}, truth={fraud|valid}, difficulty={easy|medium|hard}, type={standard|daily}, claimAmount={СУММА}. Используй evidence types: {СПИСОК_ТИПОВ}. Для каждого photo добавь meta.filename (формат IMG_YYYYMMDD_HHMMSS.jpg, дата из хронологии дела). Для gps — meta с company/department/requestId/gpsFooter. Для camera_recording — meta с cameraId/cameraModel (вымышленная модель без реального бренда). Для usage_log — meta.logPrompt (формат user@host:~$ tail -f /var/log/xxx.log) И content как массив строк на каждом языке. Заполни все 5 языков: ru/en/tr/ar/kk. Evidence ids уникальны. Не используй имена персонажей, названия, цитаты, коды, бренды, модели или визуальные образы из существующих произведений и реальных компаний. correctDecision=reject если truth=fraud, approve если valid. Explanation — ровно 3 пункта. Следуй схеме из CASE_AUTHORING_GUIDE.json."
   },
-
   "quality_checklist": [
     "[ ] id дела уникален и не совпадает с existing_cases",
     "[ ] Все 5 языков (ru/en/tr/ar/kk) заполнены в каждом LocalizedString",
@@ -251,36 +553,68 @@
     "[ ] Количество isContradiction=true: для fraud ≥ 2, для valid = 0",
     "[ ] correctDecision: reject если truth=fraud, approve если truth=valid",
     "[ ] explanation ровно 3 пункта на каждом языке",
-    "[ ] coverImage и personImage указаны (портрет сохраняется как WebP отдельно)"
+    "[ ] coverImage указан; personImage опционален и используется только для оригинального нейтрального портрета без логотипов, документов и сходства с известными персонажами или людьми",
+    "[ ] Имена, названия организаций, модели техники, домены, цитаты и коды полностью вымышлены и не отсылают к существующим произведениям, персонажам, публичным лицам или реальным брендам"
   ],
-
   "meta_values_used": {
     "note": "Не повторяй эти значения в новых делах — они уже заняты.",
-    "gps_companies": ["GeoGuard Solutions", "МореМонитор", "ТрекМаш PRO", "АэроСлед Навигация", "ГеоТрек Авто", "СпектрТрек", "ХроноНав", "ОрбитаМаяк"],
-    "bank_names": ["СтолицаБанк", "ВестаКредит", "НордБанк", "ПримаБанк", "АкваФинанс", "МеридианБанк", "ГородКапитал", "СтальИнвест Банк", "Галактика Кредит"],
-    "carrier_names": ["ВолнаМобайл", "СигналТел", "ОрбитаСвязь", "ЛайнКом", "ИмпульсСвязь", "ФилинТелеком"],
-    "social_platforms": ["t.me", "instagram.com", "ok.ru", "vk.com", "ghostbook.local"],
+    "gps_companies": [
+      "Navigation Office 7",
+      "Морская служба контроля",
+      "ТрекМаш PRO",
+      "Бюро воздушных маршрутов",
+      "Автослужба маршрутов",
+      "Навигационная служба № 35",
+      "ХроноНав",
+      "ОрбитаМаяк"
+    ],
+    "bank_names": [
+      "Расчётный отдел № 23",
+      "ВестаКредит",
+      "Расчётный отдел № 29",
+      "Расчётный отдел № 30",
+      "АкваФинанс",
+      "Расчётный отдел № 34",
+      "ГородКапитал",
+      "СтальИнвест Банк",
+      "Галактика Кредит"
+    ],
+    "carrier_names": [
+      "Оператор связи № 24",
+      "Оператор связи № 30",
+      "Оператор связи № 32",
+      "Оператор связи № 34",
+      "ИмпульсСвязь",
+      "ФилинТелеком"
+    ],
+    "social_platforms": [
+      "localfeed.local",
+      "photofeed.local",
+      "circlefeed.local",
+      "cityfeed.local",
+      "nightlog.local"
+    ],
     "camera_models": [
-      "HIKVISION DS-2CD2143G2-I · 4K · H.265",
-      "AXIS P1448-LE · 4K · H.265",
-      "Reolink RLC-810A · 4K · H.265",
-      "Logitech C922 · 1080p · H.264",
-      "BlackVue DR900X · 4K · H.265",
-      "Ring Video Doorbell Pro 2 · 1080p · H.264",
-      "Dahua IPC-HFW3849H · 4K · H.265",
-      "Eufy Cam S220 · 2K · H.265",
-      "TP-Link Tapo C520WS · 2K · H.264",
-      "Imou Cruiser 2 · 4K · H.265",
-      "Hikvision DS-2CD2087G2-LU · 4K · H.265",
-      "Hikvision DS-2CD2387G2 · 4K · H.265",
-      "Garmin Dash Cam 67W · 1440p · H.264",
-      "Lorex 4K E893AB · 4K · H.265",
-      "Uniview IPC3614SB · 4K · H.265",
-      "Bosch FLEXIDOME IP starlight 8000i · 4K · H.265",
-      "Hanwha Vision PNO-A9081R · 4K · H.265",
-      "Avigilon H5A Dome · 5MP · H.265",
-      "Mobotix M73 · 4K · MxPEG+",
-      "Pelco Sarix Professional 4 · 4K · H.265"
+      "SentinelCam SC-2143 · 4K · H.265",
+      "SentinelCam SC-1448 · 4K · H.265",
+      "ArchiveCam AC-810 · 4K · H.265",
+      "ArchiveCam AC-922 · 1080p · H.264",
+      "RoadEye RX-900 · 4K · H.265",
+      "EntryCam EC-202 · 1080p · H.264",
+      "PerimeterCam PC-3849 · 4K · H.265",
+      "HomeCam HC-220 · 2K · H.265",
+      "AeroCam AC-520 · 2K · H.264",
+      "PatrolCam PC-2 · 4K · H.265",
+      "SentinelCam SC-2087 · 4K · H.265",
+      "SentinelCam SC-2387 · 4K · H.265",
+      "RoadLog RL-67 · 1440p · H.264",
+      "VaultCam VC-893 · 4K · H.265",
+      "UniCam UC-3614 · 4K · H.265",
+      "DomeGuard DG-8000 · 4K · H.265",
+      "NightGuard NG-9081 · 4K · H.265",
+      "SecureDome SD-5A · 5MP · H.265",
+      "WatchTower WT-73 · 4K · H.265",
+      "PerimeterCam PC-4 · 4K · H.265"
     ],
     "log_prompts": [
       "root@alarm:~$ tail -f /var/log/security.log",
@@ -299,9 +633,9 @@
       "greenhouse@farm:~$ tail -f /var/log/climate2.log",
       "plc@assembly:~$ tail -f /var/log/press.log",
       "scada@plant:~$ tail -f /var/log/fire-panel.log",
-      "flux@delorean:~$ tail -f /var/log/flux-capacitor.log",
-      "prefect@hoglab:~$ tail -f /var/log/cauldron-394.log",
-      "r2unit@twomoons:~$ tail -f /var/log/astromech.log"
+      "diagnostic@vehicle:~$ tail -f /var/log/traction-battery.log",
+      "labtech@chem-lab:~$ tail -f /var/log/reactor-394.log",
+      "service@dryridge:~$ tail -f /var/log/service-robot.log"
     ]
   }
 }

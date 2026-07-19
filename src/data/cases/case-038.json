@@ -6,30 +6,29 @@
   "truth": "valid",
   "investigationBudget": 4,
   "title": {
-    "ru": "Тайная комната № 394",
-    "en": "Secret Room 394",
-    "tr": "Gizli Oda 394",
-    "ar": "الغرفة السرية 394",
-    "kk": "Құпия бөлме 394"
+    "ru": "Лаборатория № 394",
+    "en": "Laboratory 394",
+    "tr": "Laboratuvar 394",
+    "ar": "المختبر 394",
+    "kk": "№394 зертхана"
   },
   "claim": {
     "person": {
-      "ru": "Северин Снэйпов, 46 лет",
-      "en": "Severin Snapev, 46",
-      "tr": "Severin Snapev, 46",
+      "ru": "Антон Ланской, 46 лет",
+      "en": "Anton Lanskoy, 46",
+      "tr": "Anton Lanskoy, 46",
       "ar": "سيفيرين سنيبوف، 46",
-      "kk": "Северин Снэйпов, 46 жаста"
+      "kk": "Антон Ланской, 46 жаста"
     },
     "story": {
-      "ru": "В школьной лаборатории котёл самопроизвольно взорвался на уроке химии. За минуту до этого сова доставила посылку с корнем мандрагоры, промаркированным как валериана. Ученики эвакуированы, но лаборатория уничтожена.",
-      "en": "A cauldron exploded spontaneously during chemistry class. One minute earlier, an owl delivered mandrake root mislabeled as valerian. The pupils escaped, but the laboratory was destroyed.",
-      "tr": "Kimya dersinde kazan kendiliğinden patladı. Bir dakika önce bir baykuş, kediotu diye etiketlenmiş adamotu kökü getirdi. Öğrenciler kurtuldu ama laboratuvar yok oldu.",
-      "ar": "انفجر المرجل تلقائياً أثناء درس الكيمياء. قبل دقيقة أوصلت بومة جذراً من اللفاح موسوماً كناردين. نجا الطلاب لكن المختبر دُمر.",
-      "kk": "Химия сабағында қазан өздігінен жарылды. Бір минут бұрын үкі валериана деп таңбаланған мандрагора тамырын жеткізді. Оқушылар аман, зертхана қирады."
+      "ru": "В школьной лаборатории реакционная ёмкость самопроизвольно взорвалась на уроке химии. За минуту до этого курьер доставил токсичный реагент, ошибочно промаркированный как безопасная добавка. Ученики эвакуированы, но лаборатория уничтожена.",
+      "en": "A reaction vessel exploded spontaneously during chemistry class. One minute earlier, a courier delivered a toxic reagent mislabeled as a safe additive. The pupils escaped, but the laboratory was destroyed.",
+      "tr": "Kimya dersinde bir reaksiyon kabı kendiliğinden patladı. Bir dakika önce kurye, güvenli katkı maddesi olarak yanlış etiketlenmiş zehirli bir reaktif getirdi. Öğrenciler kurtuldu ama laboratuvar yok oldu.",
+      "ar": "انفجرت حاوية تفاعل تلقائياً أثناء درس الكيمياء. وقبل دقيقة سلّم مندوب مادة كيميائية سامة وُسمت خطأً كمادة مضافة آمنة. نجا الطلاب لكن المختبر دُمر.",
+      "kk": "Химия сабағында реакциялық ыдыс өздігінен жарылды. Бір минут бұрын курьер қауіпсіз қоспа деп қате таңбаланған улы реагентті жеткізді. Оқушылар аман, зертхана қирады."
     }
   },
   "coverImage": "covers/case-038.svg",
-  "personImage": "people/severin.webp",
   "client": {
     "role": {
       "ru": "Преподаватель химии",
@@ -64,11 +63,11 @@
           "kk": "Полис"
         },
         "v": {
-          "ru": "Школа · HP-394",
-          "en": "School · HP-394",
-          "tr": "Okul · HP-394",
-          "ar": "المدرسة · HP-394",
-          "kk": "Мектеп · HP-394"
+          "ru": "Школа · LAB-394",
+          "en": "School · LAB-394",
+          "tr": "Okul · LAB-394",
+          "ar": "المدرسة · LAB-394",
+          "kk": "Мектеп · LAB-394"
         }
       },
       {
@@ -80,9 +79,9 @@
           "kk": "Кабинет"
         },
         "v": {
-          "ru": "Подземелье № 394",
-          "en": "Dungeon No. 394",
-          "tr": "Zindan No. 394",
+          "ru": "Подвальная лаборатория № 394",
+          "en": "Basement Laboratory 394",
+          "tr": "Bodrum Laboratuvarı 394",
           "ar": "الزنزانة رقم 394",
           "kk": "№ 394 зындан"
         }
@@ -101,11 +100,11 @@
         "kk": "Зертхана камерасы"
       },
       "content": {
-        "ru": "10:31 · посылка вскрыта; корень падает в котёл; Снэйпов запускает эвакуацию.",
-        "en": "10:31 · parcel opened; root falls into cauldron; Snapev starts evacuation.",
-        "tr": "10:31 · paket açılıyor; kök kazana düşüyor; Snapev tahliyeyi başlatıyor.",
-        "ar": "10:31 · فُتحت الطرد وسقط الجذر في المرجل وبدأ سنيبوف الإخلاء.",
-        "kk": "10:31 · сәлемдеме ашылып, тамыр қазанға түседі; Снэйпов эвакуация бастайды."
+        "ru": "10:31 · посылка вскрыта; реагент попадает в реакционную ёмкость; Ланской запускает эвакуацию.",
+        "en": "10:31 · parcel opened; reagent enters the reaction vessel; Lanskoy starts evacuation.",
+        "tr": "10:31 · paket açılıyor; reaktif reaksiyon kabına düşüyor; Lanskoy tahliyeyi başlatıyor.",
+        "ar": "10:31 · فُتح الطرد ودخلت المادة حاوية التفاعل وبدأ لانسكوي الإخلاء.",
+        "kk": "10:31 · сәлемдеме ашылып, реагент реакциялық ыдысқа түседі; Ланской эвакуация бастайды."
       },
       "isContradiction": false,
       "contradictionExplanation": {
@@ -116,26 +115,26 @@
         "kk": "Камера кездейсоқтық пен мұғалімнің жедел әрекетін растайды."
       },
       "meta": {
-        "cameraId": "CAM-DUNGEON-394",
-        "cameraModel": "Mobotix M73 · 4K · MxPEG+"
+        "cameraId": "CAM-LAB-394",
+        "cameraModel": "WatchTower WT-73 · 4K · H.265"
       }
     },
     {
       "id": "ev-document",
       "type": "document",
       "title": {
-        "ru": "Накладная совиной почты",
-        "en": "Owl-post manifest",
-        "tr": "Baykuş postası irsaliyesi",
-        "ar": "بيان بريد البوم",
-        "kk": "Үкі поштасының құжаты"
+        "ru": "Накладная курьера кампуса",
+        "en": "Campus courier manifest",
+        "tr": "Kampüs kurye irsaliyesi",
+        "ar": "بيان مندوب الحرم",
+        "kk": "Кампус курьерінің құжаты"
       },
       "content": {
-        "ru": "Отправитель: «Косой переулок, лавка 9¾». Содержимое по накладной: валериана.",
-        "en": "Sender: Crooked Alley, Shop 9¾. Manifest contents: valerian.",
-        "tr": "Gönderen: Eğri Sokak, Dükkân 9¾. İrsaliye: kediotu.",
-        "ar": "المرسل: الزقاق الملتوي، متجر 9¾. المحتوى: ناردين.",
-        "kk": "Жіберуші: Қисық көше, 9¾ дүкен. Құжатта: валериана."
+        "ru": "Отправитель: «Косой переулок, лавка 14». Содержимое по накладной: валериана.",
+        "en": "Sender: Crooked Alley, Warehouse 14. Manifest contents: valerian.",
+        "tr": "Gönderen: Eğri Sokak, Dükkân 14. İrsaliye: kediotu.",
+        "ar": "المرسل: الزقاق الملتوي، متجر 14. المحتوى: ناردين.",
+        "kk": "Жіберуші: Қисық көше, 14 дүкен. Құжатта: валериана."
       },
       "isContradiction": false,
       "contradictionExplanation": {
@@ -197,7 +196,7 @@
         "kk": "Датчиктер химиялық реакцияны айтылған уақытта тіркеген."
       },
       "meta": {
-        "logPrompt": "prefect@hoglab:~$ tail -f /var/log/cauldron-394.log"
+        "logPrompt": "labtech@chem-lab:~$ tail -f /var/log/reactor-394.log"
       }
     },
     {
@@ -211,11 +210,11 @@
         "kk": "Сынып басшысының жауабы"
       },
       "content": {
-        "ru": "Снэйпов не касался посылки: её открыл ученик по инструкции на упаковке.",
-        "en": "Snapev never touched the parcel; a pupil opened it according to its instructions.",
-        "tr": "Snapev pakete dokunmadı; öğrenci kutudaki talimata göre açtı.",
+        "ru": "Ланской не касался посылки: её открыл ученик по инструкции на упаковке.",
+        "en": "Lanskoy never touched the parcel; a pupil opened it according to its instructions.",
+        "tr": "Lanskoy pakete dokunmadı; öğrenci kutudaki talimata göre açtı.",
         "ar": "لم يلمس سنيبوف الطرد؛ فتحه طالب وفق التعليمات.",
-        "kk": "Снэйпов сәлемдемеге тимеді; оны оқушы нұсқаулықпен ашты."
+        "kk": "Ланской сәлемдемеге тимеді; оны оқушы нұсқаулықпен ашты."
       },
       "isContradiction": false,
       "contradictionExplanation": {
@@ -269,10 +268,10 @@
       "meta": {
         "carrierName": {
           "ru": "ФилинТелеком",
-          "en": "Owl Telecom",
-          "tr": "Baykuş Telekom",
+          "en": "Campus Telecom",
+          "tr": "Kampüs Telekom",
           "ar": "أول تيليكوم",
-          "kk": "Үкі Телеком"
+          "kk": "Кампус Телеком"
         },
         "phoneMask": "+7 ••• ••• 0394"
       }
@@ -288,11 +287,11 @@
         "kk": "Ботаникалық сараптама"
       },
       "content": {
-        "ru": "В упаковке с этикеткой «валериана» обнаружена мандрагора; пломба поставщика не нарушена до урока.",
-        "en": "Mandrake was found in a package labeled 'valerian'; the supplier seal was intact before class.",
-        "tr": "'Kediotu' etiketli pakette adamotu bulundu; tedarikçi mührü dersten önce sağlamdı.",
-        "ar": "عُثر على لفاح في عبوة «ناردين» وكان ختم المورد سليماً قبل الدرس.",
-        "kk": "«Валериана» қаптамасынан мандрагора табылды; жеткізуші мөрі сабаққа дейін бүтін."
+        "ru": "В упаковке с этикеткой «безопасная добавка» обнаружен токсичный реагент; пломба поставщика не нарушена до урока.",
+        "en": "A toxic reagent was found in a package labeled 'safe additive'; the supplier seal was intact before class.",
+        "tr": "'Güvenli katkı' etiketli pakette zehirli reaktif bulundu; tedarikçi mührü dersten önce sağlamdı.",
+        "ar": "عُثر على مادة سامة في عبوة موسومة «مادة مضافة آمنة» وكان ختم المورد سليماً قبل الدرس.",
+        "kk": "«Қауіпсіз қоспа» қаптамасынан улы реагент табылды; жеткізуші мөрі сабаққа дейін бүтін."
       },
       "isContradiction": false,
       "contradictionExplanation": {
@@ -307,29 +306,29 @@
   "correctDecision": "approve",
   "explanation": {
     "ru": [
-      "Дело отсылает к школе волшебников: подземелье, совиная почта, мандрагора и номер 394.",
+      "Запечатанная посылка содержала ошибочно маркированный химический реагент.",
       "Камера, пломба и ботаническая экспертиза подтверждают ошибку поставщика.",
-      "Снэйпов вовремя эвакуировал класс; оснований считать взрыв инсценировкой нет."
+      "Ланской вовремя эвакуировал класс; оснований считать взрыв инсценировкой нет."
     ],
     "en": [
-      "The case riffs on a wizard school: dungeon, owl post, mandrake, and number 394.",
+      "The sealed parcel contained a mislabeled chemical reagent.",
       "CCTV, the seal, and botanical analysis confirm supplier error.",
-      "Snapev evacuated the class promptly; there is no basis to call the blast staged."
+      "Lanskoy evacuated the class promptly; there is no basis to call the blast staged."
     ],
     "tr": [
-      "Dava büyücülük okuluna gönderme yapar: zindan, baykuş postası, adamotu ve 394.",
+      "Mühürlü paket yanlış etiketlenmiş bir kimyasal içeriyordu.",
       "Kamera, mühür ve botanik analiz tedarikçi hatasını doğruluyor.",
-      "Snapev sınıfı zamanında tahliye etti; patlamanın mizansen olduğuna dair temel yok."
+      "Lanskoy sınıfı zamanında tahliye etti; patlamanın mizansen olduğuna dair temel yok."
     ],
     "ar": [
-      "تحاكي القضية مدرسة سحر: القبو وبريد البوم واللفاح والرقم 394.",
+      "احتوت العبوة المختومة على مادة كيميائية ذات ملصق خاطئ.",
       "تؤكد الكاميرا والختم والتحليل النباتي خطأ المورد.",
       "أخلى سنيبوف الصف فوراً ولا أساس لاعتبار الانفجار مفبركاً."
     ],
     "kk": [
-      "Іс сиқыршылар мектебіне ишара: жертөле, үкі поштасы, мандрагора және 394 саны.",
+      "Мөрленген сәлемдемеде қате таңбаланған химиялық реагент болды.",
       "Камера, мөр және ботаникалық сараптама жеткізуші қатесін растайды.",
-      "Снэйпов сыныпты дер кезінде шығарды; жарылыс қойылым деуге негіз жоқ."
+      "Ланской сыныпты дер кезінде шығарды; жарылыс қойылым деуге негіз жоқ."
     ]
   }
 }

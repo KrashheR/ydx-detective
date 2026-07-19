@@ -5,19 +5,19 @@
   "claimAmount": 280000,
   "truth": "valid",
   "title": {
-    "ru": "Взрыв соседнего блока",
-    "en": "The Neighbour's Block Exploded",
-    "tr": "Komşu Blok Patladı",
-    "ar": "انفجر بلوك الجار",
-    "kk": "Көршінің блогы жарылды"
+    "ru": "Взрыв этажом ниже",
+    "en": "Explosion One Floor Below",
+    "tr": "Alt Kattaki Patlama",
+    "ar": "انفجار في الطابق السفلي",
+    "kk": "Төменгі қабаттағы жарылыс"
   },
   "claim": {
     "person": {
-      "ru": "Стив Блоков, 22 года",
-      "en": "Steve Blokov, 22",
-      "tr": "Steve Blokov, 22",
-      "ar": "ستيف بلوكوف، 22",
-      "kk": "Стив Блоков, 22 жаста"
+      "ru": "Степан Миров, 22 года",
+      "en": "Stepan Mirov, 22",
+      "tr": "Stepan Mirov, 22",
+      "ar": "ستيبان ميروف، 22",
+      "kk": "Степан Миров, 22 жаста"
     },
     "story": {
       "ru": "Я контент-криэйтор и стример. 14 апреля из-за газовой аварии в квартире соседа снизу (кв. 18) произошёл взрыв, уничтоживший мою стриминговую студию: игровой ПК, три монитора, аудиоинтерфейс и две профессиональные камеры. Общий ущерб — 280 000 рублей. Прошу возмещения по полису имущественного страхования.",
@@ -28,7 +28,6 @@
     }
   },
   "coverImage": "covers/case-105-daily.svg",
-  "personImage": "people/stiv.webp",
   "evidences": [
     {
       "id": "ev-gas-report",
@@ -41,19 +40,19 @@
         "kk": "Газ авариялық қызметінің актісі"
       },
       "content": {
-        "ru": "Выезд бригады «ГорГаз» 14.04 в 03:17. Адрес: ул. Пиксельная, 18. Квартира 18 (наниматель Крипер А.В.): разрыв газовой трубы вследствие коррозии. Очаг взрыва — кухня кв. 18. Волна разрушений распространилась на квартиры 17 и 19. Структурные повреждения перекрытий подтверждены. Причина — изношенность труб 1987 года постройки.",
-        "en": "GorGaz emergency team call-out 14.04 at 03:17. Address: Pixelnaya St, 18. Flat 18 (tenant Creeper A.V.): gas pipe rupture due to corrosion. Explosion seat — flat 18 kitchen. Destruction wave spread to flats 17 and 19. Structural damage to floors confirmed. Cause — worn pipes built in 1987.",
-        "tr": "GorGaz acil ekibi çağrısı 14.04, 03:17. Adres: Pixelnaya Cad., 18. Daire 18 (kiracı Creeper A.V.): korozyon nedeniyle gaz borusu kırılması. Patlama odağı — daire 18 mutfak. Yıkım dalgası 17 ve 19 numaralı dairelere yayıldı. Döşemelerde yapısal hasar doğrulandı. Neden — 1987 yapımı aşınmış borular.",
+        "ru": "Выезд бригады «ГорГаз» 14.04 в 03:17. Адрес: ул. Студийная, 18. Квартира 18 (наниматель Кленов А.В.): разрыв газовой трубы вследствие коррозии. Очаг взрыва — кухня кв. 18. Волна разрушений распространилась на квартиры 17 и 19. Структурные повреждения перекрытий подтверждены. Причина — изношенность труб 1987 года постройки.",
+        "en": "GorGaz emergency team call-out 14.04 at 03:17. Address: Studio St, 18. Flat 18 (tenant Klenov A.V.): gas pipe rupture due to corrosion. Explosion seat — flat 18 kitchen. Destruction wave spread to flats 17 and 19. Structural damage to floors confirmed. Cause — worn pipes built in 1987.",
+        "tr": "GorGaz acil ekibi çağrısı 14.04, 03:17. Adres: Studio Cad., 18. Daire 18 (kiracı Klenov A.V.): korozyon nedeniyle gaz borusu kırılması. Patlama odağı — daire 18 mutfak. Yıkım dalgası 17 ve 19 numaralı dairelere yayıldı. Döşemelerde yapısal hasar doğrulandı. Neden — 1987 yapımı aşınmış borular.",
         "ar": "استجابة فريق طوارئ GorGaz 14.04 الساعة 03:17. العنوان: شارع بيكسلنايا 18. الشقة 18 (المستأجر كريبر أ.ف.): تمزق أنبوب الغاز بسبب التآكل. بؤرة الانفجار — مطبخ الشقة 18. امتدت موجة الدمار إلى الشقتين 17 و19. تأكّدت الأضرار الهيكلية في الأسقف. السبب — أنابيب متهالكة من بناء عام 1987.",
-        "kk": "«ГорГаз» бригадасының шығуы 14.04-те 03:17-де. Мекенжайы: Пиксельная к., 18. 18-пәтер (жалдаушы Крипер А.В.): тот басудан газ құбырының жарылуы. Жарылыс ошағы — 18-пәтер асханасы. Қиратудың толқыны 17 және 19-пәтерлерге тарады. Еден жабындарының конструктивтік зақымдары расталды. Себеп — 1987 жылғы ескірген құбырлар."
+        "kk": "«ГорГаз» бригадасының шығуы 14.04-те 03:17-де. Мекенжайы: Студийная к., 18. 18-пәтер (жалдаушы Кленов А.В.): тот басудан газ құбырының жарылуы. Жарылыс ошағы — 18-пәтер асханасы. Қиратудың толқыны 17 және 19-пәтерлерге тарады. Еден жабындарының конструктивтік зақымдары расталды. Себеп — 1987 жылғы ескірген құбырлар."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Официальный акт подтверждает реальную газовую аварию в соседней квартире и распространение разрушений на квартиру Блокова.",
-        "en": "The official report confirms a real gas accident in the neighbouring flat and damage spreading to Blokov's apartment.",
-        "tr": "Resmi rapor, komşu dairede gerçek bir gaz kazasını ve hasarın Blokov'un dairesine yayıldığını doğruluyor.",
+        "ru": "Официальный акт подтверждает реальную газовую аварию в соседней квартире и распространение разрушений на квартиру Мирова.",
+        "en": "The official report confirms a real gas accident in the neighbouring flat and damage spreading to Mirov's apartment.",
+        "tr": "Resmi rapor, komşu dairede gerçek bir gaz kazasını ve hasarın Mirov'un dairesine yayıldığını doğruluyor.",
         "ar": "يؤكد التقرير الرسمي حادث غاز حقيقي في الشقة المجاورة وانتشار الضرر إلى شقة بلوكوف.",
-        "kk": "Ресми акт көршілес пәтердегі нақты газ авариясын және қиратудың Блоков пәтеріне таралуын растайды."
+        "kk": "Ресми акт көршілес пәтердегі нақты газ авариясын және қиратудың Миров пәтеріне таралуын растайды."
       }
     },
     {
@@ -67,19 +66,19 @@
         "kk": "Көршінің сақтандыру өтінімі"
       },
       "content": {
-        "ru": "Крипер Андрей Викторович, кв. 18. Утверждает: газовая плита взорвалась в 03:12. Он попытался «заблокировать вентиль» лопаткой для пиццы. Пожарные подтвердили его версию. Подаёт параллельное страховое заявление на ремонт квартиры. Дата и время инцидента совпадают с заявлением Блокова С.М.",
-        "en": "Creeper Andrei Viktorovich, flat 18. States: gas stove exploded at 03:12. He tried to 'block the valve' with a pizza spatula. Firefighters confirmed his account. Filing a parallel insurance claim for flat repairs. Date and time of incident match Blokov S.M.'s claim.",
-        "tr": "Creeper Andrei Viktorovich, daire 18. Beyan ediyor: gaz sobası 03:12'de patladı. Vanayı pizza spatulasıyla 'bloke etmeye' çalıştı. İtfaiye ekipleri ifadesini doğruladı. Daire tamiri için paralel sigorta başvurusu yapıyor. Olayın tarihi ve saati Blokov S.M.'nin başvurusuyla örtüşüyor.",
+        "ru": "Андрей Кленов, кв. 18. Утверждает: газовая плита взорвалась в 03:12. Он попытался «заблокировать вентиль» лопаткой для пиццы. Пожарные подтвердили его версию. Подаёт параллельное страховое заявление на ремонт квартиры. Дата и время инцидента совпадают с заявлением Мирова С.М.",
+        "en": "Andrei Klenov, flat 18. States: gas stove exploded at 03:12. He tried to 'block the valve' with a pizza spatula. Firefighters confirmed his account. Filing a parallel insurance claim for flat repairs. Date and time of incident match Mirov S.M.'s claim.",
+        "tr": "Andrei Klenov, daire 18. Beyan ediyor: gaz sobası 03:12'de patladı. Vanayı pizza spatulasıyla 'bloke etmeye' çalıştı. İtfaiye ekipleri ifadesini doğruladı. Daire tamiri için paralel sigorta başvurusu yapıyor. Olayın tarihi ve saati Mirov S.M.'nin başvurusuyla örtüşüyor.",
         "ar": "كريبر أندريه فيكتوروفيتش، شقة 18. يؤكد: انفجر موقد الغاز في 03:12. حاول 'سد الصمام' بملعقة البيتزا. أكّد رجال الإطفاء روايته. يقدم مطالبة تأمين موازية لإصلاح الشقة. تاريخ ووقت الحادثة يتطابقان مع مطالبة بلوكوف س.م.",
-        "kk": "Крипер Андрей Викторович, 18-пәтер. Мәлімдейді: газ плитасы 03:12-де жарылды. Ол «тығынды» пицца күрегімен «бекітуге» тырысты. Өрт сөндірушілер оның нұсқасын растады. Пәтерді жөндеу бойынша параллель сақтандыру өтінімін береді. Оқиғаның күні мен уақыты Блоков С.М. өтінімімен сәйкес келеді."
+        "kk": "Андрей Кленов, 18-пәтер. Мәлімдейді: газ плитасы 03:12-де жарылды. Ол «тығынды» пицца күрегімен «бекітуге» тырысты. Өрт сөндірушілер оның нұсқасын растады. Пәтерді жөндеу бойынша параллель сақтандыру өтінімін береді. Оқиғаның күні мен уақыты Миров С.М. өтінімімен сәйкес келеді."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Сосед независимо подтверждает инцидент: дата, время и место совпадают с заявлением Блокова. Противоречий нет.",
-        "en": "The neighbour independently confirms the incident: date, time, and location match Blokov's claim. No contradictions.",
-        "tr": "Komşu olayı bağımsız olarak doğruluyor: tarih, saat ve konum Blokov'un başvurusuyla örtüşüyor. Çelişki yok.",
+        "ru": "Сосед независимо подтверждает инцидент: дата, время и место совпадают с заявлением Мирова. Противоречий нет.",
+        "en": "The neighbour independently confirms the incident: date, time, and location match Mirov's claim. No contradictions.",
+        "tr": "Komşu olayı bağımsız olarak doğruluyor: tarih, saat ve konum Mirov'un başvurusuyla örtüşüyor. Çelişki yok.",
         "ar": "يؤكد الجار الحادثة بشكل مستقل: التاريخ والوقت والموقع يتطابقان مع مطالبة بلوكوف. لا تناقضات.",
-        "kk": "Көрші оқиғаны тәуелсіз растайды: күні, уақыты және орны Блоков өтінімімен сәйкес. Қайшылық жоқ."
+        "kk": "Көрші оқиғаны тәуелсіз растайды: күні, уақыты және орны Миров өтінімімен сәйкес. Қайшылық жоқ."
       }
     },
     {
@@ -93,11 +92,11 @@
         "kk": "Жойылған студияның фотосы"
       },
       "content": {
-        "ru": "Системный блок ПК оплавлен, боковая панель вырвана взрывной волной. На уцелевшем фрагменте корпуса — инвентарный стикер SB-BLOKOV-2024-PC1 (совпадает с полисом). На одном из мониторов, вдавленном в стену, различима надпись «GAME OVER» на оплавленном экране. На полу — пепел от акустических панелей.",
-        "en": "The PC tower is melted, the side panel torn off by the blast wave. On an intact fragment of the casing — inventory sticker SB-BLOKOV-2024-PC1 (matches the policy). On one of the monitors pushed into the wall, the words 'GAME OVER' are visible on the melted screen. Ash from acoustic panels on the floor.",
-        "tr": "PC kasası erimiş, yan panel patlama dalgası tarafından koparılmış. Kasanın sağlam bir parçasında — envanter etiketi SB-BLOKOV-2024-PC1 (poliçeyle eşleşiyor). Duvara gömülmüş monitörlerden birinde, erimiş ekranda 'GAME OVER' yazısı seçiliyor. Yerde akustik panellerden kül.",
-        "ar": "برج الحاسوب منصهر، الجانب الجانبي مُقتلَع بموجة الانفجار. على جزء سليم من الهيكل — ملصق المخزون SB-BLOKOV-2024-PC1 (مطابق للوثيقة). على إحدى الشاشات المدفوعة في الجدار، تظهر كلمات 'GAME OVER' على الشاشة المنصهرة. رماد الألواح الصوتية على الأرض.",
-        "kk": "ПК жүйелік блогы балқыған, бүйір панель жарылыс толқынымен жұлынып кеткен. Корпустың аман қалған бөлігінде — инвентарлық жапсырма SB-BLOKOV-2024-PC1 (полиспен сәйкес). Қабырғаға кіріп кеткен мониторлардың бірінде балқыған экранда «GAME OVER» жазуы көрінеді. Акустикалық панелдерден күл еденде жатыр."
+        "ru": "Системный блок ПК оплавлен, боковая панель вырвана взрывной волной. На уцелевшем фрагменте корпуса — инвентарный стикер SM-2024-PC1-2024-PC1 (совпадает с полисом). На одном из мониторов, вдавленном в стену, различима надпись «SYSTEM OFFLINE» на оплавленном экране. На полу — пепел от акустических панелей.",
+        "en": "The PC tower is melted, the side panel torn off by the blast wave. On an intact fragment of the casing — inventory sticker SM-2024-PC1-2024-PC1 (matches the policy). On one of the monitors pushed into the wall, the words 'SYSTEM OFFLINE' are visible on the melted screen. Ash from acoustic panels on the floor.",
+        "tr": "PC kasası erimiş, yan panel patlama dalgası tarafından koparılmış. Kasanın sağlam bir parçasında — envanter etiketi SM-2024-PC1-2024-PC1 (poliçeyle eşleşiyor). Duvara gömülmüş monitörlerden birinde, erimiş ekranda 'SYSTEM OFFLINE' yazısı seçiliyor. Yerde akustik panellerden kül.",
+        "ar": "برج الحاسوب منصهر، الجانب الجانبي مُقتلَع بموجة الانفجار. على جزء سليم من الهيكل — ملصق المخزون SM-2024-PC1-2024-PC1 (مطابق للوثيقة). على إحدى الشاشات المدفوعة في الجدار، تظهر كلمات 'SYSTEM OFFLINE' على الشاشة المنصهرة. رماد الألواح الصوتية على الأرض.",
+        "kk": "ПК жүйелік блогы балқыған, бүйір панель жарылыс толқынымен жұлынып кеткен. Корпустың аман қалған бөлігінде — инвентарлық жапсырма SM-2024-PC1-2024-PC1 (полиспен сәйкес). Қабырғаға кіріп кеткен мониторлардың бірінде балқыған экранда «SYSTEM OFFLINE» жазуы көрінеді. Акустикалық панелдерден күл еденде жатыр."
       },
       "isContradiction": false,
       "contradictionExplanation": {
@@ -116,18 +115,18 @@
   "correctDecision": "approve",
   "explanation": {
     "ru": [
-      "Акт газовой службы официально подтверждает взрыв в кв. 18 и распространение разрушений на кв. 19 (Блоков).",
-      "Независимое заявление соседа Крипера совпадает по дате, времени и характеру аварии.",
+      "Акт газовой службы официально подтверждает взрыв в кв. 18 и распространение разрушений на кв. 19 (Миров).",
+      "Независимое заявление соседа Кленова совпадает по дате, времени и характеру аварии.",
       "Инвентарный стикер на ПК совпадает с полисом; характер повреждений — взрывная волна. Заявление подлинное, одобряем."
     ],
     "en": [
-      "The gas service report officially confirms the explosion in flat 18 and damage spreading to flat 19 (Blokov).",
-      "The independent claim from neighbour Creeper matches in date, time, and accident description.",
+      "The gas service report officially confirms the explosion in flat 18 and damage spreading to flat 19 (Mirov).",
+      "The independent claim from neighbour Klenov matches in date, time, and accident description.",
       "Inventory sticker on the PC matches the policy; damage pattern is blast wave. Claim is genuine, approve."
     ],
     "tr": [
-      "Gaz servisi raporu, daire 18'deki patlamayı ve hasarın daire 19'a (Blokov) yayılmasını resmi olarak doğruluyor.",
-      "Komşu Creeper'ın bağımsız başvurusu tarih, saat ve kaza açıklamasında örtüşüyor.",
+      "Gaz servisi raporu, daire 18'deki patlamayı ve hasarın daire 19'a (Mirov) yayılmasını resmi olarak doğruluyor.",
+      "Komşu Klenov'ın bağımsız başvurusu tarih, saat ve kaza açıklamasında örtüşüyor.",
       "PC'deki envanter etiketi poliçeyle eşleşiyor; hasar deseni patlama dalgası. Talep gerçek, onaylayın."
     ],
     "ar": [
@@ -136,7 +135,7 @@
       "ملصق المخزون على الحاسوب مطابق للوثيقة؛ نمط الضرر موجة انفجار. المطالبة حقيقية، وافق عليها."
     ],
     "kk": [
-      "Газ қызметінің актісі 18-пәтердегі жарылысты және зақымның 19-пәтерге (Блоков) таралуын ресми растайды.",
+      "Газ қызметінің актісі 18-пәтердегі жарылысты және зақымның 19-пәтерге (Миров) таралуын ресми растайды.",
       "Көрші Кріпердің тәуелсіз өтінімі күні, уақыты және апат сипаттамасы бойынша сәйкес.",
       "ПК-дегі инвентарлық жапсырма полиспен сәйкес; зақым сипаты — жарылыс толқыны. Талап шынайы, мақұлдаңыз."
     ]

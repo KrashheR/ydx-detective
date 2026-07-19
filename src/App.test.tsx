@@ -244,7 +244,7 @@ describe('verdict gating', () => {
       await screen.findByRole('button', { name: new RegExp(RU('markAsContradiction')) }),
     );
     // Close the modal.
-    fireEvent.click(screen.getByRole('button', { name: 'Close' }));
+    fireEvent.click(screen.getByRole('button', { name: RU('close') }));
 
     // Reject is now enabled; submit it.
     const rejectBtn = await screen.findByRole('button', { name: new RegExp(RU('rejectPayout')) });

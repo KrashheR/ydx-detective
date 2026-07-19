@@ -8,16 +8,16 @@ import {
 } from "../data/thematicPacks";
 import { RTL_LANGUAGES, loc, t } from "../i18n/ui";
 import type { CaseUnlockInfo } from "../engine/caseUnlockEngine";
-import type { Case, Language, PlayerStats } from "../types";
+import type { CaseSummary, Language, PlayerStats } from "../types";
 import { getServerTimeMs, type PaymentsProduct } from "../services/yandexSDK";
 
 interface Props {
   lang: Language;
   stats: PlayerStats;
-  caseUnlocks?: readonly CaseUnlockInfo[];
+  caseUnlocks?: readonly CaseUnlockInfo<CaseSummary>[];
   paymentsAvailable: boolean;
   catalogByProductId: Record<string, PaymentsProduct>;
-  onSelectCase: (caseData: Case) => void;
+  onSelectCase: (caseData: CaseSummary) => void;
   onPurchasePack: (pack: ThematicPack) => Promise<boolean>;
   onRestorePurchases: () => Promise<number>;
   onUnlockCaseWithAd: (packId: string, caseId: string) => boolean;
@@ -63,7 +63,7 @@ const LOCALE_BY_LANGUAGE: Record<Language, string> = {
 
 type ArchiveCaseStatus = "completed" | "available" | "locked";
 
-type UnlockByCaseId = ReadonlyMap<string, CaseUnlockInfo>;
+type UnlockByCaseId = ReadonlyMap<string, CaseUnlockInfo<CaseSummary>>;
 
 function formatCurrency(value: number, lang: Language): string {
   return new Intl.NumberFormat(LOCALE_BY_LANGUAGE[lang], {
@@ -124,7 +124,7 @@ function getNextRewardedCase(
   stats: PlayerStats,
   pack: ThematicPack,
   unlockByCaseId: UnlockByCaseId,
-): Case | null {
+): CaseSummary | null {
   return (
     getThematicPackCases(pack).find(
       (caseData, index) =>
@@ -348,7 +348,7 @@ function ArchiveCaseRow({
   lang,
   onSelect,
 }: {
-  caseData: Case;
+  caseData: CaseSummary;
   index: number;
   status: ArchiveCaseStatus;
   lang: Language;

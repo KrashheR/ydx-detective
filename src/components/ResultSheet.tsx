@@ -246,7 +246,7 @@ export function ResultSheet({
             <div
               style={{
                 fontFamily: "'Inter', sans-serif",
-                fontSize: 13,
+                fontSize: 15,
                 fontWeight: 600,
                 color: win ? "#2a6b4a" : "#b4231f",
                 marginTop: 4,
@@ -268,7 +268,7 @@ export function ResultSheet({
             <div
               style={{
                 fontFamily: "'Inter', sans-serif",
-                fontSize: 11,
+                fontSize: 12,
                 fontWeight: 600,
                 letterSpacing: 2,
                 color: win ? "#8a7c64" : "#a98379",
@@ -322,7 +322,7 @@ export function ResultSheet({
                 <span
                   style={{
                     fontFamily: "'Inter', sans-serif",
-                    fontSize: 11,
+                    fontSize: 12,
                     fontWeight: 600,
                     color: "#8a6515",
                   }}
@@ -346,7 +346,7 @@ export function ResultSheet({
                 <div
                   style={{
                     fontFamily: "'Inter', sans-serif",
-                    fontSize: 10,
+                    fontSize: 12,
                     fontWeight: 500,
                     color: win ? "#8a7c64" : "#a98379",
                   }}
@@ -380,7 +380,7 @@ export function ResultSheet({
                 <div
                   style={{
                     fontFamily: "'Inter', sans-serif",
-                    fontSize: 10,
+                    fontSize: 12,
                     fontWeight: 500,
                     color: win ? "#8a7c64" : "#a98379",
                   }}
@@ -521,7 +521,7 @@ export function ResultSheet({
               <div
                 style={{
                   fontFamily: "'Inter', sans-serif",
-                  fontSize: 11,
+                  fontSize: 12,
                   fontWeight: 600,
                   letterSpacing: 1.5,
                   color: "#a98379",
@@ -644,7 +644,7 @@ export function ResultSheet({
                       <span
                         style={{
                           fontFamily: "'Inter', sans-serif",
-                          fontSize: 9,
+                          fontSize: 12,
                           fontWeight: 700,
                           letterSpacing: 0.8,
                           color: "#7a6c54",
@@ -724,7 +724,7 @@ export function ResultSheet({
                       style={{
                         margin: 0,
                         fontFamily: "'Inter', sans-serif",
-                        fontSize: 11,
+                        fontSize: 12,
                         fontWeight: 700,
                         letterSpacing: "0.1em",
                         textTransform: "uppercase",
@@ -750,7 +750,7 @@ export function ResultSheet({
                       marginLeft: "auto",
                       whiteSpace: "nowrap",
                       fontFamily: "'IBM Plex Mono', monospace",
-                      fontSize: 11,
+                      fontSize: 12,
                       color: "#7a6c54",
                     }}
                   >
@@ -766,7 +766,7 @@ export function ResultSheet({
             <div
               style={{
                 fontFamily: "'Inter', sans-serif",
-                fontSize: 11,
+                fontSize: 12,
                 fontWeight: 600,
                 letterSpacing: 1.5,
                 color: "#9a8c70",
@@ -852,7 +852,7 @@ export function ResultSheet({
                 background: win ? "#3a3024" : "#b4231f",
                 color: "#fff",
                 fontFamily: "'Inter', sans-serif",
-                fontSize: 14,
+                fontSize: 16,
                 fontWeight: 700,
                 letterSpacing: 0.3,
                 cursor: "pointer",
@@ -900,7 +900,7 @@ function AccuracyRow({
           alignItems: "center",
           justifyContent: "center",
           fontFamily: "'Inter', sans-serif",
-          fontSize: 10,
+          fontSize: 12,
           fontWeight: 700,
         }}
       >
@@ -955,7 +955,7 @@ function MissedRow({
           alignItems: "center",
           justifyContent: "center",
           fontFamily: "'Inter', sans-serif",
-          fontSize: 10,
+          fontSize: 12,
           fontWeight: 700,
         }}
       >
@@ -986,7 +986,7 @@ function MissedRow({
       <span
         style={{
           fontFamily: "'IBM Plex Mono', monospace",
-          fontSize: 11,
+          fontSize: 12,
           fontWeight: 600,
           color: "#b4231f",
           flexShrink: 0,

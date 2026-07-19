@@ -5,8 +5,10 @@ import type { Case, PlayerStats } from '../types';
 export type CaseUnlockStatus = 'available' | 'locked' | 'completed';
 export type CaseUnlockReason = 'requires_level' | 'complete_previous';
 
-export interface CaseUnlockInfo {
-  readonly caseData: Case;
+type CaseUnlockCandidate = Pick<Case, 'id'>;
+
+export interface CaseUnlockInfo<T extends CaseUnlockCandidate = Case> {
+  readonly caseData: T;
   readonly status: CaseUnlockStatus;
   readonly reason: CaseUnlockReason | null;
   /** Investigator level required to open this standard case. */
@@ -23,13 +25,13 @@ export interface CaseUnlockSummary {
   readonly completed: number;
 }
 
-const isCompletedCase = (stats: PlayerStats, caseData: Case): boolean =>
+const isCompletedCase = (stats: PlayerStats, caseData: CaseUnlockCandidate): boolean =>
   stats.completedCaseIds.includes(caseData.id);
 
 type StandardCaseRequirementMap =
   typeof GAME_CONFIG.caseUnlocks.standardCaseRequiredLevelById;
 
-export const getRequiredLevel = (caseData: Case): number => {
+export const getRequiredLevel = (caseData: CaseUnlockCandidate): number => {
   const requirements = GAME_CONFIG.caseUnlocks.standardCaseRequiredLevelById;
   const level = requirements[caseData.id as keyof StandardCaseRequirementMap];
   return level ?? GAME_CONFIG.caseUnlocks.defaultRequiredLevel;
@@ -41,7 +43,10 @@ const caseNumberFromId = (id: string): number => {
 };
 
 /** Ascending unlock order: required level → case number. */
-export const compareCasesByUnlockCriteria = (a: Case, b: Case): number => {
+export const compareCasesByUnlockCriteria = (
+  a: CaseUnlockCandidate,
+  b: CaseUnlockCandidate,
+): number => {
   const levelA = getRequiredLevel(a);
   const levelB = getRequiredLevel(b);
   if (levelA !== levelB) return levelA - levelB;
@@ -49,10 +54,10 @@ export const compareCasesByUnlockCriteria = (a: Case, b: Case): number => {
   return caseNumberFromId(a.id) - caseNumberFromId(b.id);
 };
 
-export const evaluateCaseUnlocks = (
-  standardCases: readonly Case[],
+export const evaluateCaseUnlocks = <T extends CaseUnlockCandidate>(
+  standardCases: readonly T[],
   stats: PlayerStats,
-): CaseUnlockInfo[] => {
+): CaseUnlockInfo<T>[] => {
   const currentLevel = evaluateRank(stats.xp).level;
 
   return standardCases.map((caseData, index) => {
@@ -107,13 +112,13 @@ export const evaluateCaseUnlocks = (
   });
 };
 
-export const isCaseUnlocked = (info: CaseUnlockInfo): boolean =>
+export const isCaseUnlocked = (info: CaseUnlockInfo<CaseUnlockCandidate>): boolean =>
   info.status !== 'locked';
 
-export const getNextAvailableCase = (
-  unlocks: readonly CaseUnlockInfo[],
+export const getNextAvailableCase = <T extends CaseUnlockCandidate>(
+  unlocks: readonly CaseUnlockInfo<T>[],
   currentCaseId: string | null,
-): Case | null => {
+): T | null => {
   const availableCases = unlocks.filter(
     (info) => info.status === 'available' && info.caseData.id !== currentCaseId,
   );
@@ -122,7 +127,7 @@ export const getNextAvailableCase = (
 };
 
 export const summarizeCaseUnlocks = (
-  unlocks: readonly CaseUnlockInfo[],
+  unlocks: readonly CaseUnlockInfo<CaseUnlockCandidate>[],
 ): CaseUnlockSummary => {
   const completed = unlocks.filter((info) => info.status === 'completed').length;
   const unlocked = unlocks.filter(isCaseUnlocked).length;

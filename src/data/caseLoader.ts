@@ -1,106 +1,133 @@
 /**
- * Data-driven case registry.
+ * Data-driven case registry with lazy content loading.
  *
- * Adding a case = dropping a JSON file in `./cases/` and listing it here (or
- * using a glob importer such as Vite's `import.meta.glob('./cases/*.json')`).
- * No engine, store, or component code changes. Every file is Zod-validated at
- * load time so malformed content fails fast and never reaches gameplay.
+ * Adding a case = dropping a JSON file anywhere under `./cases/` — both the
+ * summary manifest and the lazy chunk map below pick it up automatically; no
+ * registry edits needed.
+ *
+ * Two layers, so the entry bundle stays light:
+ *   • `CaseSummary[]` — build-time previews from `virtual:case-summaries`
+ *     (Zod-validated at build by the vite plugin). Always available, sync;
+ *     everything the desk shelf / menus render.
+ *   • Full `Case` content — one lazy chunk per JSON via `import.meta.glob`,
+ *     fetched by `loadCaseById()` when the player opens (or is about to open)
+ *     a case, re-validated with Zod on arrival, then cached in `registry`.
+ *
+ * The sync full-case getters (`getCaseById`, `getStandardCases`, …) only see
+ * cases already loaded; tests preload everything via `loadAllCases()` in
+ * `src/test/setup.ts`.
  */
+import rawSummaries from 'virtual:case-summaries';
 import { compareCasesByUnlockCriteria } from '../engine/caseUnlockEngine';
-import { parseCase, safeParseCases } from './caseSchema';
-import type { Case } from '../types';
+import type { Case, CaseSummary } from '../types';
 
-// Static imports keep cases in the bundle. Swap for `import.meta.glob` to make
-// the directory fully drop-in without editing this array.
-// Standard cases live in ./cases/; daily cases live in ./cases/daily/.
-import case001 from './cases/case-001.json';
-import case003 from './cases/case-003.json';
-import case004 from './cases/case-004.json';
-import case005 from './cases/case-005.json';
-import case006 from './cases/case-006.json';
-import case007 from './cases/case-007.json';
-import case008 from './cases/case-008.json';
-import case009 from './cases/case-009.json';
-import case010 from './cases/case-010.json';
-import case011 from './cases/case-011.json';
-import case012 from './cases/case-012.json';
-import case013 from './cases/case-013.json';
-import case014 from './cases/case-014.json';
-import case015 from './cases/case-015.json';
-import case016 from './cases/case-016.json';
-// Easter-egg recurring arc — Anatoly Stepanovich & Zhorik the raccoon (all valid).
-import case017 from './cases/case-017.json';
-import case018 from './cases/case-018.json';
-import case019 from './cases/case-019.json';
-// Easter-egg recurring arc — Splintovich vs. Shredderov ("Ninja" dojo / TMNT parody).
-import case020 from './cases/case-020.json';
-import case021 from './cases/case-021.json';
-import case022 from './cases/case-022.json';
-// Expert tier — progressive curve cases introducing bank_statement / phone_records / social_media.
-import case023 from './cases/case-023.json';
-import case024 from './cases/case-024.json';
-import case025 from './cases/case-025.json';
-import case026 from './cases/case-026.json';
-import case027 from './cases/case-027.json';
-import case028 from './cases/case-028.json';
-import case029 from './cases/case-029.json';
-import case030 from './cases/case-030.json';
-import case031 from './cases/case-031.json';
-import case032 from './cases/case-032.json';
-import case033 from './cases/case-033.json';
-import case034 from './cases/case-034.json';
-// Expert fan-service anthology — original insurance parodies of cult genre films.
-import case035 from './cases/case-035.json';
-import case036 from './cases/case-036.json';
-import case037 from './cases/case-037.json';
-import case038 from './cases/case-038.json';
-import case039 from './cases/case-039.json';
-// Special archives anthology — one archive folder per thematic pack.
-import case040 from './cases/archives/frontier-sector/case-040.json';
-import case041 from './cases/archives/frontier-sector/case-041.json';
-import case042 from './cases/archives/frontier-sector/case-042.json';
-import case043 from './cases/archives/frontier-sector/case-043.json';
-import case044 from './cases/archives/closed-collegium/case-044.json';
-import case045 from './cases/archives/closed-collegium/case-045.json';
-import case046 from './cases/archives/closed-collegium/case-046.json';
-import case047 from './cases/archives/closed-collegium/case-047.json';
-import case048 from './cases/archives/underground-department/case-048.json';
-import case049 from './cases/archives/underground-department/case-049.json';
-import case050 from './cases/archives/underground-department/case-050.json';
-import case051 from './cases/archives/underground-department/case-051.json';
+/** One lazy chunk per case JSON; keys match the summaries' `path` field. */
+const caseModules = import.meta.glob('./cases/**/*.json', { import: 'default' });
 
-// Daily cases — one surfaces per server-day via getDailyCase() rotation.
-import daily002 from './cases/daily/case-002-daily.json';
-import daily101 from './cases/daily/case-101-daily.json';
-import daily102 from './cases/daily/case-102-daily.json';
-import daily103 from './cases/daily/case-103-daily.json';
-import daily104 from './cases/daily/case-104-daily.json';
-import daily105 from './cases/daily/case-105-daily.json';
+const chunkPathById = new Map<string, string>(
+  rawSummaries.map((s) => [s.id, s.path]),
+);
 
-const RAW_CASES: unknown[] = [
-  case001, case003, case004, case005, case006,
-  case007, case008, case009, case010, case011,
-  case012, case013, case014, case015, case016,
-  case017, case018, case019, case020, case021,
-  case022, case023, case024, case025, case026,
-  case027, case028, case029, case030, case031,
-  case032, case033, case034, case035, case036,
-  case037, case038, case039, case040, case041,
-  case042, case043, case044, case045, case046,
-  case047, case048, case049, case050, case051,
-  daily002, daily101, daily102, daily103, daily104, daily105,
-];
+const summaries: CaseSummary[] = rawSummaries.map(
+  ({ path: _path, ...summary }) => summary,
+);
+const summaryById = new Map(summaries.map((s) => [s.id, s]));
 
-/** All valid cases, indexed by id. Invalid files are logged and skipped. */
-const registry: Map<string, Case> = (() => {
-  const { cases, errors } = safeParseCases(RAW_CASES);
-  for (const { index, error } of errors) {
-    // eslint-disable-next-line no-console
-    console.error(`[caseLoader] Skipped invalid case at index ${index}:`, error.format());
-  }
-  return new Map(cases.map((c) => [c.id, c]));
-})();
+/* ------------------------- Summaries (sync, eager) ------------------------ */
 
+export function getAllCaseSummaries(): CaseSummary[] {
+  return [...summaries];
+}
+
+export function getCaseSummaryById(id: string): CaseSummary | undefined {
+  return summaryById.get(id);
+}
+
+export function getStandardCaseSummaries(): CaseSummary[] {
+  return summaries
+    .filter((s) => s.type === 'standard')
+    .sort(compareCasesByUnlockCriteria);
+}
+
+/** All daily summaries, deterministically ordered by id so rotation is stable. */
+export function getDailyCaseSummaries(): CaseSummary[] {
+  return summaries
+    .filter((s) => s.type === 'daily')
+    .sort((a, b) => a.id.localeCompare(b.id));
+}
+
+/**
+ * The daily case preview for a given rotation index (e.g. server-day number).
+ * With no index — or no dailies — falls back to the first daily. The index
+ * must be derived from *server* time, never the device clock.
+ */
+export function getDailyCaseSummary(dayIndex?: number): CaseSummary | undefined {
+  const dailies = getDailyCaseSummaries();
+  if (dailies.length === 0) return undefined;
+  if (dayIndex === undefined) return dailies[0];
+  // Normalize to a non-negative index before the modulo so negatives are safe.
+  const i = ((Math.floor(dayIndex) % dailies.length) + dailies.length) % dailies.length;
+  return dailies[i];
+}
+
+/* ---------------------- Full cases (lazy, on demand) ---------------------- */
+
+/** Fully loaded + validated cases, indexed by id. */
+const registry = new Map<string, Case>();
+const inflight = new Map<string, Promise<Case | undefined>>();
+
+/**
+ * Fetch, validate, and cache one case's full content. Resolves `undefined`
+ * for unknown ids and for invalid content (logged, never thrown) so a broken
+ * case degrades to "folder does not open" instead of crashing the desk.
+ */
+export function loadCaseById(id: string): Promise<Case | undefined> {
+  const cached = registry.get(id);
+  if (cached) return Promise.resolve(cached);
+
+  const pending = inflight.get(id);
+  if (pending) return pending;
+
+  const chunkPath = chunkPathById.get(id);
+  const importCase = chunkPath ? caseModules[chunkPath] : undefined;
+  if (!importCase) return Promise.resolve(undefined);
+
+  const promise = (async () => {
+    try {
+      const [raw, { parseCase }] = await Promise.all([
+        importCase(),
+        // Lazy so Zod stays out of the entry bundle.
+        import('./caseSchema'),
+      ]);
+      const parsed = parseCase(raw);
+      registry.set(id, parsed);
+      return parsed;
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.error(`[caseLoader] Failed to load case "${id}":`, error);
+      return undefined;
+    } finally {
+      inflight.delete(id);
+    }
+  })();
+  inflight.set(id, promise);
+  return promise;
+}
+
+/** Fire-and-forget warm-up of the given cases (e.g. available + next + daily). */
+export function preloadCases(ids: readonly string[]): void {
+  for (const id of ids) void loadCaseById(id);
+}
+
+/** Load every case (test setup / tooling — defeats laziness by design). */
+export async function loadAllCases(): Promise<Case[]> {
+  const loaded = await Promise.all(summaries.map((s) => loadCaseById(s.id)));
+  return loaded.filter((c): c is Case => c !== undefined);
+}
+
+/* ------------------- Loaded-case getters (sync views) --------------------- */
+
+/** All *loaded* cases. Complete only after `loadAllCases()` (tests/tooling). */
 export function getAllCases(): Case[] {
   return [...registry.values()];
 }
@@ -115,7 +142,7 @@ export function getStandardCases(): Case[] {
     .sort(compareCasesByUnlockCriteria);
 }
 
-/** All daily cases, deterministically ordered by id so rotation is stable. */
+/** All *loaded* daily cases, ordered by id so rotation is stable. */
 export function getDailyCases(): Case[] {
   return getAllCases()
     .filter((c) => c.type === 'daily')
@@ -123,19 +150,13 @@ export function getDailyCases(): Case[] {
 }
 
 /**
- * The daily case for a given rotation index (e.g. server-day number). With no
- * index — or no dailies — falls back to the first daily so existing callers and
- * the offline path keep working. The pool rotates so a fresh case appears each
- * day; the index must be derived from *server* time, never the device clock.
+ * The loaded daily case for a rotation index — see `getDailyCaseSummary` for
+ * the rotation contract. Prefer the summary variant in UI code.
  */
 export function getDailyCase(dayIndex?: number): Case | undefined {
   const dailies = getDailyCases();
   if (dailies.length === 0) return undefined;
   if (dayIndex === undefined) return dailies[0];
-  // Normalize to a non-negative index before the modulo so negatives are safe.
   const i = ((Math.floor(dayIndex) % dailies.length) + dailies.length) % dailies.length;
   return dailies[i];
 }
-
-/** Validate a single externally-fetched case (e.g. server-pushed daily). */
-export { parseCase };

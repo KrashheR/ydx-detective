@@ -1,345 +1,345 @@
-﻿{
-    "id":  "case-049",
-    "type":  "standard",
-    "difficulty":  "hard",
-    "claimAmount":  38800,
-    "truth":  "fraud",
-    "investigationBudget":  4,
-    "title":  {
-                  "ru":  "Кража лабораторного мутагена",
-                  "en":  "Laboratory Mutagen Theft",
-                  "tr":  "Laboratory Mutagen Theft",
-                  "ar":  "Laboratory Mutagen Theft",
-                  "kk":  "Кража лабораторного мутагена"
-              },
-    "claim":  {
-                  "person":  {
-                                 "ru":  "Герман Кросс, 46 лет",
-                                 "en":  "Herman Kross, 46",
-                                 "tr":  "Herman Kross, 46",
-                                 "ar":  "هيرمان كروس، 46",
-                                 "kk":  "Герман Кросс, 46 жаста"
-                             },
-                  "story":  {
-                                "ru":  "Контейнер с мутагеном украли из сервисного тоннеля. Вентиляция вскрыта, сторож ничего не видел, лаборатория потеряла препарат и неделю работы.",
-                                "en":  "A mutagen container was stolen through the service tunnel. The vent was opened, the guard saw nothing, and the lab lost both the reagent and a week of work.",
-                                "tr":  "Mutajen kabı servis tünelinden çalındı. Havalandırma açılmış, bekçi hiçbir şey görmemiş; laboratuvar reaktifi ve bir haftalık işi kaybetti.",
-                                "ar":  "سُرق حاوي المطفر عبر نفق الخدمة. فُتحت التهوية ولم ير الحارس شيئاً، وخسر المختبر المادة وأسبوع عمل.",
-                                "kk":  "Мутаген контейнері қызмет туннелі арқылы ұрланған. Желдеткіш ашылған, күзетші ештеңе көрмеген, зертхана препарат пен бір апталық жұмыстан айырылды."
-                            }
-              },
-    "coverImage":  "covers/case-049.svg",
-    "personImage":  "people/herman-kross.webp",
-    "client":  {
-                   "role":  {
-                                "ru":  "Заведующий тоннельной лабораторией",
-                                "en":  "Tunnel laboratory chief",
-                                "tr":  "Tünel laboratuvarı şefi",
-                                "ar":  "رئيس مختبر الأنفاق",
-                                "kk":  "Туннель зертханасының меңгерушісі"
-                            },
-                   "meta":  [
-                                {
-                                    "k":  {
-                                              "ru":  "Архив",
-                                              "en":  "Archive",
-                                              "tr":  "Arşiv",
-                                              "ar":  "الأرشيف",
-                                              "kk":  "Архив"
-                                          },
-                                    "v":  {
-                                              "ru":  "Подземный Отдел",
-                                              "en":  "Underground Department",
-                                              "tr":  "Yeraltı Dairesi",
-                                              "ar":  "القسم الجوفي",
-                                              "kk":  "Жерасты бөлімі"
-                                          }
-                                },
-                                {
-                                    "k":  {
-                                              "ru":  "Застрахованный риск",
-                                              "en":  "Insured risk",
-                                              "tr":  "Sigortalı risk",
-                                              "ar":  "الخطر المؤمن عليه",
-                                              "kk":  "Сақтандырылған тәуекел"
-                                          },
-                                    "v":  {
-                                              "ru":  "Кража реагента",
-                                              "en":  "Reagent theft",
-                                              "tr":  "Reaktif hırsızlığı",
-                                              "ar":  "سرقة مادة كيميائية",
-                                              "kk":  "Реагент ұрлығы"
-                                          }
-                                },
-                                {
-                                    "k":  {
-                                              "ru":  "Архивная связка",
-                                              "en":  "Archive thread",
-                                              "tr":  "Arşiv bağı",
-                                              "ar":  "خيط الأرشيف",
-                                              "kk":  "Архив байланысы"
-                                          },
-                                    "v":  {
-                                              "ru":  "Повторяющийся след: East Yard — скупка, где старое оборудование и украденные модули превращают в страховые истории.",
-                                              "en":  "Recurring lead: East Yard, the consignment yard turning old equipment and stolen modules into insurance stories.",
-                                              "tr":  "Tekrarlayan iz: East Yard; eski ekipmanı ve çalıntı modülleri sigorta hikâyelerine çeviren komisyon alanı.",
-                                              "ar":  "خيط متكرر: East Yard، ساحة البيع التي تحول المعدات القديمة والوحدات المسروقة إلى قصص تأمين.",
-                                              "kk":  "Қайталанатын із: East Yard — ескі жабдық пен ұрланған модульдерді сақтандыру оқиғасына айналдыратын алаң."
-                                          }
-                                }
-                            ]
-               },
-    "evidences":  [
-                      {
-                          "id":  "photo-49",
-                          "type":  "photo",
-                          "title":  {
-                                        "ru":  "Вентиляционная решётка",
-                                        "en":  "Vent grate",
-                                        "tr":  "Havalandırma ızgarası",
-                                        "ar":  "شبكة التهوية",
-                                        "kk":  "Желдеткіш торы"
-                                    },
-                          "content":  {
-                                          "ru":  "Винты решётки лежат внутри лаборатории, а царапины направлены изнутри наружу.",
-                                          "en":  "The grate screws are inside the lab, and the scratches run from inside outward.",
-                                          "tr":  "Izgara vidaları laboratuvarın içinde; çizikler içeriden dışarı yönlü.",
-                                          "ar":  "مسامير الشبكة داخل المختبر والخدوش تتجه من الداخل إلى الخارج.",
-                                          "kk":  "Тор бұрандалары зертхана ішінде, сызаттар іштен сыртқа бағытталған."
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Взлом имитирован изнутри лаборатории.",
-                                                           "en":  "The break-in was staged from inside the lab.",
-                                                           "tr":  "Zorlama laboratuvarın içinden sahnelenmiş.",
-                                                           "ar":  "تم تمثيل الاقتحام من داخل المختبر.",
-                                                           "kk":  "Бұзу зертхана ішінен қойылымдалған."
-                                                       },
-                          "meta":  {
-                                       "filename":  "IMG_20260649_081500.jpg",
-                                       "imageUrl":  "evidence/case-049-photo-49.webp"
-                                   },
-                          "relation":  "contradicts"
-                      },
-                      {
-                          "id":  "document-49",
-                          "type":  "document",
-                          "title":  {
-                                        "ru":  "Журнал партии M-7",
-                                        "en":  "Batch M-7 ledger",
-                                        "tr":  "M-7 parti defteri",
-                                        "ar":  "سجل الدفعة M-7",
-                                        "kk":  "M-7 партия журналы"
-                                    },
-                          "content":  {
-                                          "ru":  "Контейнер M-7 был списан как нестабильный за три дня до кражи, но в страховом заявлении указан как полноценный.",
-                                          "en":  "Container M-7 was written down as unstable three days before the theft, but the insurance claim lists it as viable.",
-                                          "tr":  "M-7 kabı hırsızlıktan üç gün önce kararsız diye düşülmüş, ancak sigorta başvurusunda sağlam gösterilmiş.",
-                                          "ar":  "سُجلت الحاوية M-7 غير مستقرة قبل السرقة بثلاثة أيام، لكن المطالبة تذكرها صالحة.",
-                                          "kk":  "M-7 контейнері ұрлықтан үш күн бұрын тұрақсыз деп есептен шығарылған, ал өтініште жарамды деп көрсетілген."
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Документы завышают ценность утраченного реагента.",
-                                                           "en":  "The documents overstate the lost reagent value.",
-                                                           "tr":  "Belgeler kayıp reaktif değerini şişiriyor.",
-                                                           "ar":  "تضخم الوثائق قيمة المادة المفقودة.",
-                                                           "kk":  "Құжаттар жоғалған реагент құнын асырып көрсетеді."
-                                                       },
-                          "relation":  "contradicts"
-                      },
-                      {
-                          "id":  "camera-49",
-                          "type":  "camera_recording",
-                          "title":  {
-                                        "ru":  "Камера шлюза C",
-                                        "en":  "Airlock C camera",
-                                        "tr":  "Hava kilidi C kamerası",
-                                        "ar":  "كاميرا الحاجز C",
-                                        "kk":  "C шлюзі камерасы"
-                                    },
-                          "content":  {
-                                          "ru":  "23:41: Кросс один входит в лабораторию с пустым охлаждающим кейсом. Через семь минут выходит с кейсом тяжелее.",
-                                          "en":  "23:41: Kross enters the lab alone with an empty cooling case. Seven minutes later he leaves with the case visibly heavier.",
-                                          "tr":  "23:41: Kross boş soğutma çantasıyla laboratuvara tek başına giriyor. Yedi dakika sonra çanta belirgin şekilde ağır çıkıyor.",
-                                          "ar":  "23:41 يدخل كروس المختبر وحده بحقيبة تبريد فارغة. بعد سبع دقائق يخرج والحقيبة أثقل بوضوح.",
-                                          "kk":  "23:41-де Кросс бос салқындатқыш қораппен зертханаға жалғыз кіреді. Жеті минуттан соң қорап ауыр болып шығады."
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Камера связывает вынос контейнера с заявителем.",
-                                                           "en":  "The camera links container removal to the claimant.",
-                                                           "tr":  "Kamera kabın çıkarılmasını başvuranla bağlıyor.",
-                                                           "ar":  "تربط الكاميرا إخراج الحاوية بصاحب المطالبة.",
-                                                           "kk":  "Камера контейнерді шығаруды өтініш берушімен байланыстырады."
-                                                       },
-                          "meta":  {
-                                       "cameraId":  "ARC-49",
-                                       "cameraModel":  "Axis P3265-LV - 1080p - H.264"
-                                   },
-                          "relation":  "contradicts"
-                      },
-                      {
-                          "id":  "log-49",
-                          "type":  "usage_log",
-                          "title":  {
-                                        "ru":  "Журнал морозильного сейфа",
-                                        "en":  "Cryo safe log",
-                                        "tr":  "Kriyo kasa kaydı",
-                                        "ar":  "سجل الخزنة المبردة",
-                                        "kk":  "Крио сейф журналы"
-                                    },
-                          "content":  {
-                                          "ru":  [
-                                                     "23:38 — доступ: KROSS-H",
-                                                     "23:40 — контейнер M-7 извлечён штатно",
-                                                     "23:49 — тревога о взломе создана вручную"
-                                                 ],
-                                          "en":  [
-                                                     "23:38 — access: KROSS-H",
-                                                     "23:40 — container M-7 removed normally",
-                                                     "23:49 — break-in alarm created manually"
-                                                 ],
-                                          "tr":  [
-                                                     "23:38 — erişim: KROSS-H",
-                                                     "23:40 — M-7 kabı normal çıkarıldı",
-                                                     "23:49 — hırsızlık alarmı elle oluşturuldu"
-                                                 ],
-                                          "ar":  [
-                                                     "23:38 — دخول: KROSS-H",
-                                                     "23:40 — إخراج الحاوية M-7 بشكل نظامي",
-                                                     "23:49 — إنشاء إنذار اقتحام يدوياً"
-                                                 ],
-                                          "kk":  [
-                                                     "23:38 — кіру: KROSS-H",
-                                                     "23:40 — M-7 контейнері штаттық түрде алынды",
-                                                     "23:49 — бұзу дабылы қолмен жасалды"
-                                                 ]
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Сейф открыт штатным доступом Кросса, а не ворами.",
-                                                           "en":  "The safe was opened with Kross normal access, not by thieves.",
-                                                           "tr":  "Kasa hırsızlarca değil Kross’un normal erişimiyle açılmış.",
-                                                           "ar":  "فُتحت الخزنة بوصول كروس النظامي لا بواسطة لصوص.",
-                                                           "kk":  "Сейф ұрылармен емес, Кросстың штаттық қолжетімімен ашылған."
-                                                       },
-                          "meta":  {
-                                       "logPrompt":  "archive@log-49:~$ tail -f /var/log/archive.log"
-                                   },
-                          "relation":  "contradicts"
-                      },
-                      {
-                          "id":  "bank-49",
-                          "type":  "bank_statement",
-                          "title":  {
-                                        "ru":  "Оплата серого брокера",
-                                        "en":  "Gray broker payment",
-                                        "tr":  "Gri aracı ödemesi",
-                                        "ar":  "دفعة لوسيط رمادي",
-                                        "kk":  "Күмәнді делдал төлемі"
-                                    },
-                          "content":  {
-                                          "ru":  [
-                                                     "За ночь до кражи — входящий платёж от BioSplice Transit",
-                                                     "Назначение: «консультация по нестабильным культурам»",
-                                                     "Платёж BioSplice прошёл через тот же расчётный узел East Yard."
-                                                 ],
-                                          "en":  [
-                                                     "Night before theft — incoming payment from BioSplice Transit",
-                                                     "Memo: \"unstable cultures consultation\"",
-                                                     "The BioSplice payment passed through the same East Yard clearing node."
-                                                 ],
-                                          "tr":  [
-                                                     "Hırsızlıktan önceki gece — BioSplice Transit’ten ödeme",
-                                                     "Açıklama: \"kararsız kültür danışmanlığı\"",
-                                                     "BioSplice ödemesi aynı East Yard takas düğümünden geçti."
-                                                 ],
-                                          "ar":  [
-                                                     "ليلة قبل السرقة — دفعة واردة من BioSplice Transit",
-                                                     "الوصف: \"استشارة ثقافات غير مستقرة\"",
-                                                     "مرت دفعة BioSplice عبر عقدة تسوية East Yard نفسها."
-                                                 ],
-                                          "kk":  [
-                                                     "Ұрлық алдындағы түн — BioSplice Transit-тен кіріс төлем",
-                                                     "Мақсаты: \"тұрақсыз дақылдар бойынша кеңес\"",
-                                                     "BioSplice төлемі сол East Yard есеп айырысу торабы арқылы өтті."
-                                                 ]
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Платёж указывает на скрытую сделку с реагентом.",
-                                                           "en":  "The payment points to a hidden reagent deal.",
-                                                           "tr":  "Ödeme gizli reaktif anlaşmasına işaret ediyor.",
-                                                           "ar":  "تشير الدفعة إلى صفقة مخفية للمادة.",
-                                                           "kk":  "Төлем реагент бойынша жасырын мәмілені көрсетеді."
-                                                       },
-                          "meta":  {
-                                       "bankName":  {
-                                                        "ru":  "Municipal Credit",
-                                                        "en":  "Municipal Credit",
-                                                        "tr":  "Municipal Credit",
-                                                        "ar":  "Municipal Credit",
-                                                        "kk":  "Municipal Credit"
-                                                    },
-                                       "accountMask":  "**** **** **** 49"
-                                   },
-                          "relation":  "contradicts"
-                      },
-                      {
-                          "id":  "witness-49",
-                          "type":  "witness_statement",
-                          "title":  {
-                                        "ru":  "Техник вентиляции",
-                                        "en":  "Ventilation technician",
-                                        "tr":  "Havalandırma teknisyeni",
-                                        "ar":  "فني التهوية",
-                                        "kk":  "Желдету технигі"
-                                    },
-                          "content":  {
-                                          "ru":  "«Решётку не ломали с тоннеля. Я видел, что пломба была снята аккуратно и лежала на столе Кросса».",
-                                          "en":  "\"The grate was not forced from the tunnel. I saw the seal removed neatly and placed on Kross desk.\"",
-                                          "tr":  "\"Izgara tünelden zorlanmamıştı. Mührün düzgün çıkarılıp Kross’un masasına konduğunu gördüm.\"",
-                                          "ar":  "«لم تُكسر الشبكة من النفق. رأيت الختم منزوعاً بعناية وموضوعاً على مكتب كروس».",
-                                          "kk":  "«Тор туннель жақтан бұзылмаған. Мөр ұқыпты алынып, Кросстың үстелінде жатқанын көрдім»."
-                                      },
-                          "isContradiction":  false,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Материал важен для проверки версии, но сам по себе не является противоречием.",
-                                                           "en":  "The material matters to the review but is not a contradiction by itself.",
-                                                           "tr":  "Bu kayıt inceleme için önemlidir, ancak tek başına çelişki değildir.",
-                                                           "ar":  "هذه المادة مهمة للمراجعة لكنها ليست تناقضاً بحد ذاتها.",
-                                                           "kk":  "Материал тексеру үшін маңызды, бірақ өздігінен қайшылық емес."
-                                                       },
-                          "relation":  "supports"
-                      }
-                  ],
-    "correctDecision":  "reject",
-    "explanation":  {
-                        "ru":  [
-                                   "Вентиляция и сейф показывают инсценировку изнутри.",
-                                   "BioSplice и East Yard связывают реагент с той же подпольной логистикой.",
-                                   "Кража неизвестными не подтверждена: вердикт — отказ."
-                               ],
-                        "en":  [
-                                   "The vent and safe records show an inside staging.",
-                                   "BioSplice and East Yard tie the reagent to the same underground logistics.",
-                                   "Theft by unknown intruders is unsupported: reject the claim."
-                               ],
-                        "tr":  [
-                                   "Havalandırma ve kasa kayıtları içeriden sahnelemeyi gösteriyor.",
-                                   "BioSplice ve East Yard reaktifi aynı yeraltı lojistiğine bağlıyor.",
-                                   "Bilinmeyen hırsızlar iddiası desteklenmiyor: ödeme reddedilir."
-                               ],
-                        "ar":  [
-                                   "تظهر التهوية وسجلات الخزنة تمثيلاً من الداخل.",
-                                   "تربط BioSplice وEast Yard المادة باللوجستيات الجوفية نفسها.",
-                                   "سرقة مجهولين غير مثبتة: القرار رفض."
-                               ],
-                        "kk":  [
-                                   "Желдеткіш пен сейф жазбалары ішкі қойылымды көрсетеді.",
-                                   "BioSplice пен East Yard реагентті сол жерасты логистикасымен байланыстырады.",
-                                   "Белгісіз ұрылар нұсқасы расталмады: вердикт — бас тарту."
-                               ]
-                    }
+{
+  "id": "case-049",
+  "type": "standard",
+  "difficulty": "hard",
+  "claimAmount": 38800,
+  "truth": "fraud",
+  "investigationBudget": 4,
+  "title": {
+    "ru": "Кража лабораторного мутагена",
+    "en": "Laboratory Mutagen Theft",
+    "tr": "Laboratory Mutagen Theft",
+    "ar": "Laboratory Mutagen Theft",
+    "kk": "Кража лабораторного мутагена"
+  },
+  "claim": {
+    "person": {
+      "ru": "Герман Кросс, 46 лет",
+      "en": "Herman Kross, 46",
+      "tr": "Herman Kross, 46",
+      "ar": "هيرمان كروس، 46",
+      "kk": "Герман Кросс, 46 жаста"
+    },
+    "story": {
+      "ru": "Контейнер с мутагеном украли из сервисного тоннеля. Вентиляция вскрыта, сторож ничего не видел, лаборатория потеряла препарат и неделю работы.",
+      "en": "A mutagen container was stolen through the service tunnel. The vent was opened, the guard saw nothing, and the lab lost both the reagent and a week of work.",
+      "tr": "Mutajen kabı servis tünelinden çalındı. Havalandırma açılmış, bekçi hiçbir şey görmemiş; laboratuvar reaktifi ve bir haftalık işi kaybetti.",
+      "ar": "سُرق حاوي المطفر عبر نفق الخدمة. فُتحت التهوية ولم ير الحارس شيئاً، وخسر المختبر المادة وأسبوع عمل.",
+      "kk": "Мутаген контейнері қызмет туннелі арқылы ұрланған. Желдеткіш ашылған, күзетші ештеңе көрмеген, зертхана препарат пен бір апталық жұмыстан айырылды."
+    }
+  },
+  "coverImage": "covers/case-049.svg",
+  "personImage": "people/herman-kross.webp",
+  "client": {
+    "role": {
+      "ru": "Заведующий тоннельной лабораторией",
+      "en": "Tunnel laboratory chief",
+      "tr": "Tünel laboratuvarı şefi",
+      "ar": "رئيس مختبر الأنفاق",
+      "kk": "Туннель зертханасының меңгерушісі"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Архив",
+          "en": "Archive",
+          "tr": "Arşiv",
+          "ar": "الأرشيف",
+          "kk": "Архив"
+        },
+        "v": {
+          "ru": "Подземный Отдел",
+          "en": "Underground Department",
+          "tr": "Yeraltı Dairesi",
+          "ar": "القسم الجوفي",
+          "kk": "Жерасты бөлімі"
+        }
+      },
+      {
+        "k": {
+          "ru": "Застрахованный риск",
+          "en": "Insured risk",
+          "tr": "Sigortalı risk",
+          "ar": "الخطر المؤمن عليه",
+          "kk": "Сақтандырылған тәуекел"
+        },
+        "v": {
+          "ru": "Кража реагента",
+          "en": "Reagent theft",
+          "tr": "Reaktif hırsızlığı",
+          "ar": "سرقة مادة كيميائية",
+          "kk": "Реагент ұрлығы"
+        }
+      },
+      {
+        "k": {
+          "ru": "Архивная связка",
+          "en": "Archive thread",
+          "tr": "Arşiv bağı",
+          "ar": "خيط الأرشيف",
+          "kk": "Архив байланысы"
+        },
+        "v": {
+          "ru": "Повторяющийся след: East Yard — скупка, где старое оборудование и украденные модули превращают в страховые истории.",
+          "en": "Recurring lead: East Yard, the consignment yard turning old equipment and stolen modules into insurance stories.",
+          "tr": "Tekrarlayan iz: East Yard; eski ekipmanı ve çalıntı modülleri sigorta hikâyelerine çeviren komisyon alanı.",
+          "ar": "خيط متكرر: East Yard، ساحة البيع التي تحول المعدات القديمة والوحدات المسروقة إلى قصص تأمين.",
+          "kk": "Қайталанатын із: East Yard — ескі жабдық пен ұрланған модульдерді сақтандыру оқиғасына айналдыратын алаң."
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "photo-49",
+      "type": "photo",
+      "title": {
+        "ru": "Вентиляционная решётка",
+        "en": "Vent grate",
+        "tr": "Havalandırma ızgarası",
+        "ar": "شبكة التهوية",
+        "kk": "Желдеткіш торы"
+      },
+      "content": {
+        "ru": "Винты решётки лежат внутри лаборатории, а царапины направлены изнутри наружу.",
+        "en": "The grate screws are inside the lab, and the scratches run from inside outward.",
+        "tr": "Izgara vidaları laboratuvarın içinde; çizikler içeriden dışarı yönlü.",
+        "ar": "مسامير الشبكة داخل المختبر والخدوش تتجه من الداخل إلى الخارج.",
+        "kk": "Тор бұрандалары зертхана ішінде, сызаттар іштен сыртқа бағытталған."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Взлом имитирован изнутри лаборатории.",
+        "en": "The break-in was staged from inside the lab.",
+        "tr": "Zorlama laboratuvarın içinden sahnelenmiş.",
+        "ar": "تم تمثيل الاقتحام من داخل المختبر.",
+        "kk": "Бұзу зертхана ішінен қойылымдалған."
+      },
+      "meta": {
+        "filename": "IMG_20260649_081500.jpg",
+        "imageUrl": "evidence/case-049-photo-49.webp"
+      },
+      "relation": "contradicts"
+    },
+    {
+      "id": "document-49",
+      "type": "document",
+      "title": {
+        "ru": "Журнал партии M-7",
+        "en": "Batch M-7 ledger",
+        "tr": "M-7 parti defteri",
+        "ar": "سجل الدفعة M-7",
+        "kk": "M-7 партия журналы"
+      },
+      "content": {
+        "ru": "Контейнер M-7 был списан как нестабильный за три дня до кражи, но в страховом заявлении указан как полноценный.",
+        "en": "Container M-7 was written down as unstable three days before the theft, but the insurance claim lists it as viable.",
+        "tr": "M-7 kabı hırsızlıktan üç gün önce kararsız diye düşülmüş, ancak sigorta başvurusunda sağlam gösterilmiş.",
+        "ar": "سُجلت الحاوية M-7 غير مستقرة قبل السرقة بثلاثة أيام، لكن المطالبة تذكرها صالحة.",
+        "kk": "M-7 контейнері ұрлықтан үш күн бұрын тұрақсыз деп есептен шығарылған, ал өтініште жарамды деп көрсетілген."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Документы завышают ценность утраченного реагента.",
+        "en": "The documents overstate the lost reagent value.",
+        "tr": "Belgeler kayıp reaktif değerini şişiriyor.",
+        "ar": "تضخم الوثائق قيمة المادة المفقودة.",
+        "kk": "Құжаттар жоғалған реагент құнын асырып көрсетеді."
+      },
+      "relation": "contradicts"
+    },
+    {
+      "id": "camera-49",
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера шлюза C",
+        "en": "Airlock C camera",
+        "tr": "Hava kilidi C kamerası",
+        "ar": "كاميرا الحاجز C",
+        "kk": "C шлюзі камерасы"
+      },
+      "content": {
+        "ru": "23:41: Кросс один входит в лабораторию с пустым охлаждающим кейсом. Через семь минут выходит с кейсом тяжелее.",
+        "en": "23:41: Kross enters the lab alone with an empty cooling case. Seven minutes later he leaves with the case visibly heavier.",
+        "tr": "23:41: Kross boş soğutma çantasıyla laboratuvara tek başına giriyor. Yedi dakika sonra çanta belirgin şekilde ağır çıkıyor.",
+        "ar": "23:41 يدخل كروس المختبر وحده بحقيبة تبريد فارغة. بعد سبع دقائق يخرج والحقيبة أثقل بوضوح.",
+        "kk": "23:41-де Кросс бос салқындатқыш қораппен зертханаға жалғыз кіреді. Жеті минуттан соң қорап ауыр болып шығады."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Камера связывает вынос контейнера с заявителем.",
+        "en": "The camera links container removal to the claimant.",
+        "tr": "Kamera kabın çıkarılmasını başvuranla bağlıyor.",
+        "ar": "تربط الكاميرا إخراج الحاوية بصاحب المطالبة.",
+        "kk": "Камера контейнерді шығаруды өтініш берушімен байланыстырады."
+      },
+      "meta": {
+        "cameraId": "ARC-49",
+        "cameraModel": "SentinelCam SC-3265 - 1080p - H.264"
+      },
+      "relation": "contradicts"
+    },
+    {
+      "id": "log-49",
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал морозильного сейфа",
+        "en": "Cryo safe log",
+        "tr": "Kriyo kasa kaydı",
+        "ar": "سجل الخزنة المبردة",
+        "kk": "Крио сейф журналы"
+      },
+      "content": {
+        "ru": [
+          "23:38 — доступ: KROSS-H",
+          "23:40 — контейнер M-7 извлечён штатно",
+          "23:49 — тревога о взломе создана вручную"
+        ],
+        "en": [
+          "23:38 — access: KROSS-H",
+          "23:40 — container M-7 removed normally",
+          "23:49 — break-in alarm created manually"
+        ],
+        "tr": [
+          "23:38 — erişim: KROSS-H",
+          "23:40 — M-7 kabı normal çıkarıldı",
+          "23:49 — hırsızlık alarmı elle oluşturuldu"
+        ],
+        "ar": [
+          "23:38 — دخول: KROSS-H",
+          "23:40 — إخراج الحاوية M-7 بشكل نظامي",
+          "23:49 — إنشاء إنذار اقتحام يدوياً"
+        ],
+        "kk": [
+          "23:38 — кіру: KROSS-H",
+          "23:40 — M-7 контейнері штаттық түрде алынды",
+          "23:49 — бұзу дабылы қолмен жасалды"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Сейф открыт штатным доступом Кросса, а не ворами.",
+        "en": "The safe was opened with Kross normal access, not by thieves.",
+        "tr": "Kasa hırsızlarca değil Kross’un normal erişimiyle açılmış.",
+        "ar": "فُتحت الخزنة بوصول كروس النظامي لا بواسطة لصوص.",
+        "kk": "Сейф ұрылармен емес, Кросстың штаттық қолжетімімен ашылған."
+      },
+      "meta": {
+        "logPrompt": "archive@log-49:~$ tail -f /var/log/archive.log"
+      },
+      "relation": "contradicts"
+    },
+    {
+      "id": "bank-49",
+      "type": "bank_statement",
+      "title": {
+        "ru": "Оплата серого брокера",
+        "en": "Gray broker payment",
+        "tr": "Gri aracı ödemesi",
+        "ar": "دفعة لوسيط رمادي",
+        "kk": "Күмәнді делдал төлемі"
+      },
+      "content": {
+        "ru": [
+          "За ночь до кражи — входящий платёж от BioSplice Transit",
+          "Назначение: «консультация по нестабильным культурам»",
+          "Платёж BioSplice прошёл через тот же расчётный узел East Yard."
+        ],
+        "en": [
+          "Night before theft — incoming payment from BioSplice Transit",
+          "Memo: \"unstable cultures consultation\"",
+          "The BioSplice payment passed through the same East Yard clearing node."
+        ],
+        "tr": [
+          "Hırsızlıktan önceki gece — BioSplice Transit’ten ödeme",
+          "Açıklama: \"kararsız kültür danışmanlığı\"",
+          "BioSplice ödemesi aynı East Yard takas düğümünden geçti."
+        ],
+        "ar": [
+          "ليلة قبل السرقة — دفعة واردة من BioSplice Transit",
+          "الوصف: \"استشارة ثقافات غير مستقرة\"",
+          "مرت دفعة BioSplice عبر عقدة تسوية East Yard نفسها."
+        ],
+        "kk": [
+          "Ұрлық алдындағы түн — BioSplice Transit-тен кіріс төлем",
+          "Мақсаты: \"тұрақсыз дақылдар бойынша кеңес\"",
+          "BioSplice төлемі сол East Yard есеп айырысу торабы арқылы өтті."
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Платёж указывает на скрытую сделку с реагентом.",
+        "en": "The payment points to a hidden reagent deal.",
+        "tr": "Ödeme gizli reaktif anlaşmasına işaret ediyor.",
+        "ar": "تشير الدفعة إلى صفقة مخفية للمادة.",
+        "kk": "Төлем реагент бойынша жасырын мәмілені көрсетеді."
+      },
+      "meta": {
+        "bankName": {
+          "ru": "Municipal Credit",
+          "en": "Municipal Credit",
+          "tr": "Municipal Credit",
+          "ar": "Municipal Credit",
+          "kk": "Municipal Credit"
+        },
+        "accountMask": "**** **** **** 49"
+      },
+      "relation": "contradicts"
+    },
+    {
+      "id": "witness-49",
+      "type": "witness_statement",
+      "title": {
+        "ru": "Техник вентиляции",
+        "en": "Ventilation technician",
+        "tr": "Havalandırma teknisyeni",
+        "ar": "فني التهوية",
+        "kk": "Желдету технигі"
+      },
+      "content": {
+        "ru": "«Решётку не ломали с тоннеля. Я видел, что пломба была снята аккуратно и лежала на столе Кросса».",
+        "en": "\"The grate was not forced from the tunnel. I saw the seal removed neatly and placed on Kross desk.\"",
+        "tr": "\"Izgara tünelden zorlanmamıştı. Mührün düzgün çıkarılıp Kross’un masasına konduğunu gördüm.\"",
+        "ar": "«لم تُكسر الشبكة من النفق. رأيت الختم منزوعاً بعناية وموضوعاً على مكتب كروس».",
+        "kk": "«Тор туннель жақтан бұзылмаған. Мөр ұқыпты алынып, Кросстың үстелінде жатқанын көрдім»."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Материал важен для проверки версии, но сам по себе не является противоречием.",
+        "en": "The material matters to the review but is not a contradiction by itself.",
+        "tr": "Bu kayıt inceleme için önemlidir, ancak tek başına çelişki değildir.",
+        "ar": "هذه المادة مهمة للمراجعة لكنها ليست تناقضاً بحد ذاتها.",
+        "kk": "Материал тексеру үшін маңызды, бірақ өздігінен қайшылық емес."
+      },
+      "relation": "supports"
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Вентиляция и сейф показывают инсценировку изнутри.",
+      "BioSplice и East Yard связывают реагент с той же подпольной логистикой.",
+      "Кража неизвестными не подтверждена: вердикт — отказ."
+    ],
+    "en": [
+      "The vent and safe records show an inside staging.",
+      "BioSplice and East Yard tie the reagent to the same underground logistics.",
+      "Theft by unknown intruders is unsupported: reject the claim."
+    ],
+    "tr": [
+      "Havalandırma ve kasa kayıtları içeriden sahnelemeyi gösteriyor.",
+      "BioSplice ve East Yard reaktifi aynı yeraltı lojistiğine bağlıyor.",
+      "Bilinmeyen hırsızlar iddiası desteklenmiyor: ödeme reddedilir."
+    ],
+    "ar": [
+      "تظهر التهوية وسجلات الخزنة تمثيلاً من الداخل.",
+      "تربط BioSplice وEast Yard المادة باللوجستيات الجوفية نفسها.",
+      "سرقة مجهولين غير مثبتة: القرار رفض."
+    ],
+    "kk": [
+      "Желдеткіш пен сейф жазбалары ішкі қойылымды көрсетеді.",
+      "BioSplice пен East Yard реагентті сол жерасты логистикасымен байланыстырады.",
+      "Белгісіз ұрылар нұсқасы расталмады: вердикт — бас тарту."
+    ]
+  }
 }

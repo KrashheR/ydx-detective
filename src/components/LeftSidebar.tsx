@@ -1,4 +1,4 @@
-import type { Case, Language, PlayerStats } from "../types";
+import type { CaseSummary, Language, PlayerStats } from "../types";
 import type { CaseUnlockInfo } from "../engine/caseUnlockEngine";
 import { summarizeCaseUnlocks } from "../engine/caseUnlockEngine";
 import { formatInvestigatorLevel, loc, t } from "../i18n/ui";
@@ -14,8 +14,8 @@ import { Tooltip } from "./Tooltip";
 import { SpecialArchivesEntry } from "./SpecialArchivesEntry";
 
 interface Props {
-  standardCaseUnlocks: CaseUnlockInfo[];
-  dailyCase: Case | undefined;
+  standardCaseUnlocks: CaseUnlockInfo<CaseSummary>[];
+  dailyCase: CaseSummary | undefined;
   dailyUnlocked: boolean;
   dailyMsRemaining: number;
   selectedId: string | null;
@@ -26,8 +26,8 @@ interface Props {
     PlayerStats,
     "archivePurchasedPackIds" | "archiveUnlockedCaseIds"
   >;
-  onSelect: (c: Case) => void;
-  onSelectStandardCase: (info: CaseUnlockInfo) => void;
+  onSelect: (c: CaseSummary) => void;
+  onSelectStandardCase: (info: CaseUnlockInfo<CaseSummary>) => void;
   onDailyLocked: () => void;
   onLanguage: (lang: Language) => void;
   onOpenSpecialArchives: () => void;

@@ -1,339 +1,339 @@
-﻿{
-    "id":  "case-042",
-    "type":  "standard",
-    "difficulty":  "hard",
-    "claimAmount":  42800,
-    "truth":  "fraud",
-    "investigationBudget":  4,
-    "title":  {
-                  "ru":  "Пропавший церемониальный клинок",
-                  "en":  "Missing Ceremonial Blade",
-                  "tr":  "Missing Ceremonial Blade",
-                  "ar":  "Missing Ceremonial Blade",
-                  "kk":  "Пропавший церемониальный клинок"
-              },
-    "claim":  {
-                  "person":  {
-                                 "ru":  "Селена Орвик, 34 года",
-                                 "en":  "Selena Orvik, 34",
-                                 "tr":  "Selena Orvik, 34",
-                                 "ar":  "Selena Orvik, 34",
-                                 "kk":  "Селена Орвик, 34 года"
-                             },
-                  "story":  {
-                                "ru":  "Из семейного архива похитили церемониальный энерго-клинок. Это политическое послание радикалов, направленное против нашей семьи. Прошу выплату за реликвию.",
-                                "en":  "A ceremonial energy blade was stolen from our family archive. This is a political message from radicals against our house. I request payout for the relic.",
-                                "tr":  "A ceremonial energy blade was stolen from our family archive. This is a political message from radicals against our house. I request payout for the relic.",
-                                "ar":  "A ceremonial energy blade was stolen from our family archive. This is a political message from radicals against our house. I request payout for the relic.",
-                                "kk":  "Из семейного архива похитили церемониальный энерго-клинок. Это политическое послание радикалов, направленное против нашей семьи. Прошу выплату за реликвию."
-                            }
-              },
-    "coverImage":  "covers/case-042.svg",
-    "personImage":  "people/selena-orvik.webp",
-    "client":  {
-                   "role":  {
-                                "ru":  "Наследница пограничного дома",
-                                "en":  "Frontier house heir",
-                                "tr":  "Sınır hanedanı varisi",
-                                "ar":  "وريثة بيت حدودي",
-                                "kk":  "Шекара әулетінің мұрагері"
-                            },
-                   "meta":  [
-                                {
-                                    "k":  {
-                                              "ru":  "Архив",
-                                              "en":  "Archive",
-                                              "tr":  "Arşiv",
-                                              "ar":  "الأرشيف",
-                                              "kk":  "Архив"
-                                          },
-                                    "v":  {
-                                              "ru":  "Пограничный сектор",
-                                              "en":  "Frontier Sector",
-                                              "tr":  "Sınır Sektörü",
-                                              "ar":  "القطاع الحدودي",
-                                              "kk":  "Шекара секторы"
-                                          }
-                                },
-                                {
-                                    "k":  {
-                                              "ru":  "Застрахованный риск",
-                                              "en":  "Insured risk",
-                                              "tr":  "Sigortalı risk",
-                                              "ar":  "الخطر المؤمن عليه",
-                                              "kk":  "Сақтандырылған тәуекел"
-                                          },
-                                    "v":  {
-                                              "ru":  "Кража церемониальной реликвии",
-                                              "en":  "Ceremonial relic theft",
-                                              "tr":  "Tören röliği hırsızlığı",
-                                              "ar":  "سرقة أثر احتفالي",
-                                              "kk":  "Салтанатты реликвия ұрлығы"
-                                          }
-                                },
-                                {
-                                    "k":  {
-                                              "ru":  "Архивная связка",
-                                              "en":  "Archive thread",
-                                              "tr":  "Arşiv bağı",
-                                              "ar":  "خيط الأرشيف",
-                                              "kk":  "Архив байланысы"
-                                          },
-                                    "v":  {
-                                              "ru":  "Повторяющийся след: маркировка GC-17 и серые транспортные жетоны «Серого конвоя».",
-                                              "en":  "Recurring lead: GC-17 markings and gray transport tokens of the Grey Convoy.",
-                                              "tr":  "Tekrarlayan iz: GC-17 işaretleri ve Gri Konvoy’un gri taşıma jetonları.",
-                                              "ar":  "خيط متكرر: علامات GC-17 ورموز النقل الرمادية لقافلة غراي.",
-                                              "kk":  "Қайталанатын із: GC-17 таңбалары және Сұр конвойдың сұр көлік жетондары."
-                                          }
-                                }
-                            ]
-               },
-    "evidences":  [
-                      {
-                          "id":  "display-photo",
-                          "type":  "photo",
-                          "title":  {
-                                        "ru":  "Фото витрины",
-                                        "en":  "Display Case Photo",
-                                        "tr":  "Display Case Photo",
-                                        "ar":  "Display Case Photo",
-                                        "kk":  "Фото витрины"
-                                    },
-                          "content":  {
-                                          "ru":  "Стекло целое, замок не повреждён. На бархате виден аккуратный след снятого клинка.",
-                                          "en":  "Glass is intact, lock undamaged. The velvet shows a clean indentation where the blade was removed.",
-                                          "tr":  "Glass is intact, lock undamaged. The velvet shows a clean indentation where the blade was removed.",
-                                          "ar":  "Glass is intact, lock undamaged. The velvet shows a clean indentation where the blade was removed.",
-                                          "kk":  "Стекло целое, замок не повреждён. На бархате виден аккуратный след снятого клинка."
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Сцена похожа на доступ ключом, а не на нападение.",
-                                                           "en":  "The scene fits key access, not a raid.",
-                                                           "tr":  "The scene fits key access, not a raid.",
-                                                           "ar":  "The scene fits key access, not a raid.",
-                                                           "kk":  "Сцена похожа на доступ ключом, а не на нападение."
-                                                       },
-                          "meta":  {
-                                       "filename":  "IMG_20260519_114002.jpg",
-                                       "imageUrl":  "evidence/case-042-display-photo.webp"
-                                   },
-                          "relation":  "contradicts"
-                      },
-                      {
-                          "id":  "bank-auction",
-                          "type":  "bank_statement",
-                          "title":  {
-                                        "ru":  "Платёж аукционного дома",
-                                        "en":  "Auction House Payment",
-                                        "tr":  "Auction House Payment",
-                                        "ar":  "Auction House Payment",
-                                        "kk":  "Платёж аукционного дома"
-                                    },
-                          "content":  {
-                                          "ru":  [
-                                                     "18.05 — +31 500 CR · Дом закрытых торгов «Арка»",
-                                                     "18.05 — -9 000 CR · погашение частного долга"
-                                                 ],
-                                          "en":  [
-                                                     "18 May — +31,500 CR · Arka private auctions",
-                                                     "18 May — -9,000 CR · private debt repayment"
-                                                 ],
-                                          "tr":  [
-                                                     "18 May — +31,500 CR · Arka private auctions",
-                                                     "18 May — -9,000 CR · private debt repayment"
-                                                 ],
-                                          "ar":  [
-                                                     "18 May — +31,500 CR · Arka private auctions",
-                                                     "18 May — -9,000 CR · private debt repayment"
-                                                 ],
-                                          "kk":  [
-                                                     "18.05 — +31 500 CR · Дом закрытых торгов «Арка»",
-                                                     "18.05 — -9 000 CR · погашение частного долга"
-                                                 ]
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Выплата совпадает с исчезновением реликвии.",
-                                                           "en":  "The payment matches the relic disappearance.",
-                                                           "tr":  "The payment matches the relic disappearance.",
-                                                           "ar":  "The payment matches the relic disappearance.",
-                                                           "kk":  "Выплата совпадает с исчезновением реликвии."
-                                                       },
-                          "meta":  {
-                                       "bankName":  {
-                                                        "ru":  "Regency Trust",
-                                                        "en":  "Regency Trust",
-                                                        "tr":  "Regency Trust",
-                                                        "ar":  "Regency Trust",
-                                                        "kk":  "Regency Trust"
-                                                    },
-                                       "accountMask":  "•••• •••• •••• 1184"
-                                   },
-                          "relation":  "contradicts"
-                      },
-                      {
-                          "id":  "social-courier",
-                          "type":  "social_media",
-                          "title":  {
-                                        "ru":  "Сообщение курьеру",
-                                        "en":  "Courier Message",
-                                        "tr":  "Courier Message",
-                                        "ar":  "Courier Message",
-                                        "kk":  "Сообщение курьеру"
-                                    },
-                          "content":  {
-                                          "ru":  "Закрытый пост: «Семейный металл заберут через боковой шлюз. Без вопросов, коробка уже оплачена». Курьер ставит на фото серый жетон с тем же GC-17.",
-                                          "en":  "Private post: \"Family metal leaves through the side airlock. No questions, the crate is prepaid.\" The courier shows a gray token with the same GC-17 in the photo.",
-                                          "tr":  "Private post: \"Family metal leaves through the side airlock. No questions, the crate is prepaid.\" Kurye fotoğrafta aynı GC-17 yazılı gri jetonu gösteriyor.",
-                                          "ar":  "Private post: \"Family metal leaves through the side airlock. No questions, the crate is prepaid.\" يظهر الساعي في الصورة رمزاً رمادياً عليه GC-17 نفسه.",
-                                          "kk":  "Закрытый пост: «Семейный металл заберут через боковой шлюз. Без вопросов, коробка уже оплачена». Курьер фотода сол GC-17 жазылған сұр жетон көрсетеді."
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Фраза описывает добровольную передачу предмета.",
-                                                           "en":  "The wording describes a voluntary handoff.",
-                                                           "tr":  "The wording describes a voluntary handoff.",
-                                                           "ar":  "The wording describes a voluntary handoff.",
-                                                           "kk":  "Фраза описывает добровольную передачу предмета."
-                                                       },
-                          "meta":  {
-                                       "socialPlatform":  "closed-circle.local"
-                                   },
-                          "relation":  "contradicts"
-                      },
-                      {
-                          "id":  "guard-statement",
-                          "type":  "witness_statement",
-                          "title":  {
-                                        "ru":  "Показания охраны",
-                                        "en":  "Guard Statement",
-                                        "tr":  "Guard Statement",
-                                        "ar":  "Guard Statement",
-                                        "kk":  "Показания охраны"
-                                    },
-                          "content":  {
-                                          "ru":  "«Госпожа Орвик сама внесла ночного курьера в список допуска. Тревоги не было».",
-                                          "en":  "\"Ms. Orvik personally added the night courier to the access list. There was no alarm.\"",
-                                          "tr":  "\"Ms. Orvik personally added the night courier to the access list. There was no alarm.\"",
-                                          "ar":  "\"Ms. Orvik personally added the night courier to the access list. There was no alarm.\"",
-                                          "kk":  "«Госпожа Орвик сама внесла ночного курьера в список допуска. Тревоги не было»."
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Охрана подтверждает добровольный допуск.",
-                                                           "en":  "Security confirms voluntary access.",
-                                                           "tr":  "Security confirms voluntary access.",
-                                                           "ar":  "Security confirms voluntary access.",
-                                                           "kk":  "Охрана подтверждает добровольный допуск."
-                                                       },
-                          "relation":  "contradicts"
-                      },
-                      {
-                          "id":  "archive-access",
-                          "type":  "usage_log",
-                          "title":  {
-                                        "ru":  "Журнал доступа архива",
-                                        "en":  "Archive Access Log",
-                                        "tr":  "Archive Access Log",
-                                        "ar":  "Archive Access Log",
-                                        "kk":  "Журнал доступа архива"
-                                    },
-                          "content":  {
-                                          "ru":  [
-                                                     "21:44 — карта S-01, С. Орвик, вход",
-                                                     "21:49 — витрина 3, штатное открытие",
-                                                     "21:57 — карта S-01, выход"
-                                                 ],
-                                          "en":  [
-                                                     "21:44 — card S-01, S. Orvik, entry",
-                                                     "21:49 — display 3, normal open",
-                                                     "21:57 — card S-01, exit"
-                                                 ],
-                                          "tr":  [
-                                                     "21:44 — card S-01, S. Orvik, entry",
-                                                     "21:49 — display 3, normal open",
-                                                     "21:57 — card S-01, exit"
-                                                 ],
-                                          "ar":  [
-                                                     "21:44 — card S-01, S. Orvik, entry",
-                                                     "21:49 — display 3, normal open",
-                                                     "21:57 — card S-01, exit"
-                                                 ],
-                                          "kk":  [
-                                                     "21:44 — карта S-01, С. Орвик, вход",
-                                                     "21:49 — витрина 3, штатное открытие",
-                                                     "21:57 — карта S-01, выход"
-                                                 ]
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Штатное открытие витрины связано с картой заявительницы.",
-                                                           "en":  "The normal display opening is tied to the claimant card.",
-                                                           "tr":  "The normal display opening is tied to the claimant card.",
-                                                           "ar":  "The normal display opening is tied to the claimant card.",
-                                                           "kk":  "Штатное открытие витрины связано с картой заявительницы."
-                                                       },
-                          "meta":  {
-                                       "logPrompt":  "archive@noble-vault:~$ tail -f /var/log/access.log"
-                                   },
-                          "relation":  "contradicts"
-                      },
-                      {
-                          "id":  "valuation",
-                          "type":  "document",
-                          "title":  {
-                                        "ru":  "Оценка реликвии",
-                                        "en":  "Relic Valuation",
-                                        "tr":  "Relic Valuation",
-                                        "ar":  "Relic Valuation",
-                                        "kk":  "Оценка реликвии"
-                                    },
-                          "content":  {
-                                          "ru":  "Независимая оценка подтверждает страховую стоимость предмета при наличии оригинала.",
-                                          "en":  "Independent valuation confirms the insured value if the original item is present.",
-                                          "tr":  "Independent valuation confirms the insured value if the original item is present.",
-                                          "ar":  "Independent valuation confirms the insured value if the original item is present.",
-                                          "kk":  "Независимая оценка подтверждает страховую стоимость предмета при наличии оригинала."
-                                      },
-                          "isContradiction":  false,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Материал важен для хронологии, но сам по себе не опровергает заявление.",
-                                                           "en":  "The material matters for the timeline but does not by itself disprove the claim.",
-                                                           "tr":  "The material matters for the timeline but does not by itself disprove the claim.",
-                                                           "ar":  "The material matters for the timeline but does not by itself disprove the claim.",
-                                                           "kk":  "Материал важен для хронологии, но сам по себе не опровергает заявление."
-                                                       },
-                          "relation":  "context"
-                      }
-                  ],
-    "correctDecision":  "reject",
-    "explanation":  {
-                        "ru":  [
-                                   "Витрина открыта штатно, а банковский след показывает тайную продажу.",
-                                   "Серый жетон GC-17 выводит к той же транспортной сети.",
-                                   "Политическая кража не подтверждена: вердикт — отказ."
-                               ],
-                        "en":  [
-                                   "The display was opened normally, and the bank trail shows a secret sale.",
-                                   "The gray GC-17 token points to the same transport network.",
-                                   "The political theft story is unsupported: reject the claim."
-                               ],
-                        "tr":  [
-                                   "Vitrin normal açılmış ve banka izi gizli satışı gösteriyor.",
-                                   "Gri GC-17 jetonu aynı taşıma ağına işaret ediyor.",
-                                   "Siyasi hırsızlık hikâyesi desteklenmiyor: ödeme reddedilir."
-                               ],
-                        "ar":  [
-                                   "فُتحت الواجهة بشكل نظامي ويظهر المسار البنكي بيعاً سرياً.",
-                                   "يشير رمز GC-17 الرمادي إلى شبكة النقل نفسها.",
-                                   "قصة السرقة السياسية غير مثبتة: القرار رفض."
-                               ],
-                        "kk":  [
-                                   "Витрина штаттық түрде ашылған, банк ізі жасырын сатуды көрсетеді.",
-                                   "Сұр GC-17 жетоны сол көлік желісіне апарады.",
-                                   "Саяси ұрлық нұсқасы расталмады: вердикт — бас тарту."
-                               ]
-                    }
+{
+  "id": "case-042",
+  "type": "standard",
+  "difficulty": "hard",
+  "claimAmount": 42800,
+  "truth": "fraud",
+  "investigationBudget": 4,
+  "title": {
+    "ru": "Пропавший церемониальный клинок",
+    "en": "Missing Ceremonial Blade",
+    "tr": "Missing Ceremonial Blade",
+    "ar": "Missing Ceremonial Blade",
+    "kk": "Пропавший церемониальный клинок"
+  },
+  "claim": {
+    "person": {
+      "ru": "Селена Орвик, 34 года",
+      "en": "Selena Orvik, 34",
+      "tr": "Selena Orvik, 34",
+      "ar": "Selena Orvik, 34",
+      "kk": "Селена Орвик, 34 года"
+    },
+    "story": {
+      "ru": "Из семейного архива похитили церемониальный энерго-клинок. Это политическое послание радикалов, направленное против нашей семьи. Прошу выплату за реликвию.",
+      "en": "A ceremonial energy blade was stolen from our family archive. This is a political message from radicals against our house. I request payout for the relic.",
+      "tr": "A ceremonial energy blade was stolen from our family archive. This is a political message from radicals against our house. I request payout for the relic.",
+      "ar": "A ceremonial energy blade was stolen from our family archive. This is a political message from radicals against our house. I request payout for the relic.",
+      "kk": "Из семейного архива похитили церемониальный энерго-клинок. Это политическое послание радикалов, направленное против нашей семьи. Прошу выплату за реликвию."
+    }
+  },
+  "coverImage": "covers/case-042.svg",
+  "personImage": "people/selena-orvik.webp",
+  "client": {
+    "role": {
+      "ru": "Наследница пограничного дома",
+      "en": "Frontier house heir",
+      "tr": "Sınır hanedanı varisi",
+      "ar": "وريثة بيت حدودي",
+      "kk": "Шекара әулетінің мұрагері"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Архив",
+          "en": "Archive",
+          "tr": "Arşiv",
+          "ar": "الأرشيف",
+          "kk": "Архив"
+        },
+        "v": {
+          "ru": "Пограничный сектор",
+          "en": "Frontier Sector",
+          "tr": "Sınır Sektörü",
+          "ar": "القطاع الحدودي",
+          "kk": "Шекара секторы"
+        }
+      },
+      {
+        "k": {
+          "ru": "Застрахованный риск",
+          "en": "Insured risk",
+          "tr": "Sigortalı risk",
+          "ar": "الخطر المؤمن عليه",
+          "kk": "Сақтандырылған тәуекел"
+        },
+        "v": {
+          "ru": "Кража церемониальной реликвии",
+          "en": "Ceremonial relic theft",
+          "tr": "Tören röliği hırsızlığı",
+          "ar": "سرقة أثر احتفالي",
+          "kk": "Салтанатты реликвия ұрлығы"
+        }
+      },
+      {
+        "k": {
+          "ru": "Архивная связка",
+          "en": "Archive thread",
+          "tr": "Arşiv bağı",
+          "ar": "خيط الأرشيف",
+          "kk": "Архив байланысы"
+        },
+        "v": {
+          "ru": "Повторяющийся след: маркировка GC-17 и серые транспортные жетоны «Серого конвоя».",
+          "en": "Recurring lead: GC-17 markings and gray transport tokens of the Grey Convoy.",
+          "tr": "Tekrarlayan iz: GC-17 işaretleri ve Gri Konvoy’un gri taşıma jetonları.",
+          "ar": "خيط متكرر: علامات GC-17 ورموز النقل الرمادية لقافلة غراي.",
+          "kk": "Қайталанатын із: GC-17 таңбалары және Сұр конвойдың сұр көлік жетондары."
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "display-photo",
+      "type": "photo",
+      "title": {
+        "ru": "Фото витрины",
+        "en": "Display Case Photo",
+        "tr": "Display Case Photo",
+        "ar": "Display Case Photo",
+        "kk": "Фото витрины"
+      },
+      "content": {
+        "ru": "Стекло целое, замок не повреждён. На бархате виден аккуратный след снятого клинка.",
+        "en": "Glass is intact, lock undamaged. The velvet shows a clean indentation where the blade was removed.",
+        "tr": "Glass is intact, lock undamaged. The velvet shows a clean indentation where the blade was removed.",
+        "ar": "Glass is intact, lock undamaged. The velvet shows a clean indentation where the blade was removed.",
+        "kk": "Стекло целое, замок не повреждён. На бархате виден аккуратный след снятого клинка."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Сцена похожа на доступ ключом, а не на нападение.",
+        "en": "The scene fits key access, not a raid.",
+        "tr": "The scene fits key access, not a raid.",
+        "ar": "The scene fits key access, not a raid.",
+        "kk": "Сцена похожа на доступ ключом, а не на нападение."
+      },
+      "meta": {
+        "filename": "IMG_20260519_114002.jpg",
+        "imageUrl": "evidence/case-042-display-photo.webp"
+      },
+      "relation": "contradicts"
+    },
+    {
+      "id": "bank-auction",
+      "type": "bank_statement",
+      "title": {
+        "ru": "Платёж аукционного дома",
+        "en": "Auction House Payment",
+        "tr": "Auction House Payment",
+        "ar": "Auction House Payment",
+        "kk": "Платёж аукционного дома"
+      },
+      "content": {
+        "ru": [
+          "18.05 — +31 500 CR · Дом закрытых торгов «Арка»",
+          "18.05 — -9 000 CR · погашение частного долга"
+        ],
+        "en": [
+          "18 May — +31,500 CR · Arka private auctions",
+          "18 May — -9,000 CR · private debt repayment"
+        ],
+        "tr": [
+          "18 May — +31,500 CR · Arka private auctions",
+          "18 May — -9,000 CR · private debt repayment"
+        ],
+        "ar": [
+          "18 May — +31,500 CR · Arka private auctions",
+          "18 May — -9,000 CR · private debt repayment"
+        ],
+        "kk": [
+          "18.05 — +31 500 CR · Дом закрытых торгов «Арка»",
+          "18.05 — -9 000 CR · погашение частного долга"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Выплата совпадает с исчезновением реликвии.",
+        "en": "The payment matches the relic disappearance.",
+        "tr": "The payment matches the relic disappearance.",
+        "ar": "The payment matches the relic disappearance.",
+        "kk": "Выплата совпадает с исчезновением реликвии."
+      },
+      "meta": {
+        "bankName": {
+          "ru": "Regency Trust",
+          "en": "Regency Trust",
+          "tr": "Regency Trust",
+          "ar": "Regency Trust",
+          "kk": "Regency Trust"
+        },
+        "accountMask": "•••• •••• •••• 1184"
+      },
+      "relation": "contradicts"
+    },
+    {
+      "id": "social-courier",
+      "type": "social_media",
+      "title": {
+        "ru": "Сообщение курьеру",
+        "en": "Courier Message",
+        "tr": "Courier Message",
+        "ar": "Courier Message",
+        "kk": "Сообщение курьеру"
+      },
+      "content": {
+        "ru": "Закрытый пост: «Семейный металл заберут через боковой шлюз. Без вопросов, коробка уже оплачена». Курьер ставит на фото серый жетон с тем же GC-17.",
+        "en": "Private post: \"Family metal leaves through the side airlock. No questions, the crate is prepaid.\" The courier shows a gray token with the same GC-17 in the photo.",
+        "tr": "Private post: \"Family metal leaves through the side airlock. No questions, the crate is prepaid.\" Kurye fotoğrafta aynı GC-17 yazılı gri jetonu gösteriyor.",
+        "ar": "Private post: \"Family metal leaves through the side airlock. No questions, the crate is prepaid.\" يظهر الساعي في الصورة رمزاً رمادياً عليه GC-17 نفسه.",
+        "kk": "Закрытый пост: «Семейный металл заберут через боковой шлюз. Без вопросов, коробка уже оплачена». Курьер фотода сол GC-17 жазылған сұр жетон көрсетеді."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Фраза описывает добровольную передачу предмета.",
+        "en": "The wording describes a voluntary handoff.",
+        "tr": "The wording describes a voluntary handoff.",
+        "ar": "The wording describes a voluntary handoff.",
+        "kk": "Фраза описывает добровольную передачу предмета."
+      },
+      "meta": {
+        "socialPlatform": "closed-circle.local"
+      },
+      "relation": "contradicts"
+    },
+    {
+      "id": "guard-statement",
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания охраны",
+        "en": "Guard Statement",
+        "tr": "Guard Statement",
+        "ar": "Guard Statement",
+        "kk": "Показания охраны"
+      },
+      "content": {
+        "ru": "«Госпожа Орвик сама внесла ночного курьера в список допуска. Тревоги не было».",
+        "en": "\"Ms. Orvik personally added the night courier to the access list. There was no alarm.\"",
+        "tr": "\"Ms. Orvik personally added the night courier to the access list. There was no alarm.\"",
+        "ar": "\"Ms. Orvik personally added the night courier to the access list. There was no alarm.\"",
+        "kk": "«Госпожа Орвик сама внесла ночного курьера в список допуска. Тревоги не было»."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Охрана подтверждает добровольный допуск.",
+        "en": "Security confirms voluntary access.",
+        "tr": "Security confirms voluntary access.",
+        "ar": "Security confirms voluntary access.",
+        "kk": "Охрана подтверждает добровольный допуск."
+      },
+      "relation": "contradicts"
+    },
+    {
+      "id": "archive-access",
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал доступа архива",
+        "en": "Archive Access Log",
+        "tr": "Archive Access Log",
+        "ar": "Archive Access Log",
+        "kk": "Журнал доступа архива"
+      },
+      "content": {
+        "ru": [
+          "21:44 — карта S-01, С. Орвик, вход",
+          "21:49 — витрина 3, штатное открытие",
+          "21:57 — карта S-01, выход"
+        ],
+        "en": [
+          "21:44 — card S-01, S. Orvik, entry",
+          "21:49 — display 3, normal open",
+          "21:57 — card S-01, exit"
+        ],
+        "tr": [
+          "21:44 — card S-01, S. Orvik, entry",
+          "21:49 — display 3, normal open",
+          "21:57 — card S-01, exit"
+        ],
+        "ar": [
+          "21:44 — card S-01, S. Orvik, entry",
+          "21:49 — display 3, normal open",
+          "21:57 — card S-01, exit"
+        ],
+        "kk": [
+          "21:44 — карта S-01, С. Орвик, вход",
+          "21:49 — витрина 3, штатное открытие",
+          "21:57 — карта S-01, выход"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Штатное открытие витрины связано с картой заявительницы.",
+        "en": "The normal display opening is tied to the claimant card.",
+        "tr": "The normal display opening is tied to the claimant card.",
+        "ar": "The normal display opening is tied to the claimant card.",
+        "kk": "Штатное открытие витрины связано с картой заявительницы."
+      },
+      "meta": {
+        "logPrompt": "archive@noble-vault:~$ tail -f /var/log/access.log"
+      },
+      "relation": "contradicts"
+    },
+    {
+      "id": "valuation",
+      "type": "document",
+      "title": {
+        "ru": "Оценка реликвии",
+        "en": "Relic Valuation",
+        "tr": "Relic Valuation",
+        "ar": "Relic Valuation",
+        "kk": "Оценка реликвии"
+      },
+      "content": {
+        "ru": "Независимая оценка подтверждает страховую стоимость предмета при наличии оригинала.",
+        "en": "Independent valuation confirms the insured value if the original item is present.",
+        "tr": "Independent valuation confirms the insured value if the original item is present.",
+        "ar": "Independent valuation confirms the insured value if the original item is present.",
+        "kk": "Независимая оценка подтверждает страховую стоимость предмета при наличии оригинала."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Материал важен для хронологии, но сам по себе не опровергает заявление.",
+        "en": "The material matters for the timeline but does not by itself disprove the claim.",
+        "tr": "The material matters for the timeline but does not by itself disprove the claim.",
+        "ar": "The material matters for the timeline but does not by itself disprove the claim.",
+        "kk": "Материал важен для хронологии, но сам по себе не опровергает заявление."
+      },
+      "relation": "context"
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Витрина открыта штатно, а банковский след показывает тайную продажу.",
+      "Серый жетон GC-17 выводит к той же транспортной сети.",
+      "Политическая кража не подтверждена: вердикт — отказ."
+    ],
+    "en": [
+      "The display was opened normally, and the bank trail shows a secret sale.",
+      "The gray GC-17 token points to the same transport network.",
+      "The political theft story is unsupported: reject the claim."
+    ],
+    "tr": [
+      "Vitrin normal açılmış ve banka izi gizli satışı gösteriyor.",
+      "Gri GC-17 jetonu aynı taşıma ağına işaret ediyor.",
+      "Siyasi hırsızlık hikâyesi desteklenmiyor: ödeme reddedilir."
+    ],
+    "ar": [
+      "فُتحت الواجهة بشكل نظامي ويظهر المسار البنكي بيعاً سرياً.",
+      "يشير رمز GC-17 الرمادي إلى شبكة النقل نفسها.",
+      "قصة السرقة السياسية غير مثبتة: القرار رفض."
+    ],
+    "kk": [
+      "Витрина штаттық түрде ашылған, банк ізі жасырын сатуды көрсетеді.",
+      "Сұр GC-17 жетоны сол көлік желісіне апарады.",
+      "Саяси ұрлық нұсқасы расталмады: вердикт — бас тарту."
+    ]
+  }
 }

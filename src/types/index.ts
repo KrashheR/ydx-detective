@@ -179,6 +179,28 @@ export interface Case {
   readonly investigationBudget?: number;
 }
 
+/**
+ * Lightweight case preview shipped in the entry bundle. Carries only what the
+ * desk shelf / menus render (folder cover, client row, document count); the
+ * full `Case` — evidences, claim story, solution — lives in a lazy per-case
+ * chunk loaded on demand via `loadCaseById()`. Built at bundle time by the
+ * `case-summaries` Vite plugin from the same JSON files (see vite.config.ts),
+ * so it can never drift from the case content.
+ */
+export interface CaseSummary {
+  readonly id: string;
+  readonly type: CaseType;
+  readonly difficulty: Difficulty;
+  readonly claimAmount: number;
+  readonly title: LocalizedString;
+  readonly claim: { readonly person: LocalizedString };
+  readonly coverImage: string;
+  readonly personImage?: string;
+  /** `evidences.length` of the full case — shown as the document count. */
+  readonly evidenceCount: number;
+  readonly investigationBudget?: number;
+}
+
 /* -------------------------------------------------------------------------- */
 /*  Runtime player state                                                      */
 /* -------------------------------------------------------------------------- */
@@ -284,7 +306,6 @@ export interface ActiveSession {
   selectedService: InvestigationService | null;
   /** Number of paid/ad hints used, required for gold mastery. */
   hintsUsed: number;
-  canvassUsed: boolean;
   /** Extra budget openings granted by Additional Clearance. */
   extraOpens: number;
   /** Server-time (ms) the investigation began — drives daily timers. */

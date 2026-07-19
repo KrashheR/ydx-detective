@@ -1,295 +1,295 @@
-﻿{
-    "id":  "case-025",
-    "type":  "standard",
-    "difficulty":  "medium",
-    "claimAmount":  5000,
-    "truth":  "valid",
-    "title":  {
-                  "ru":  "Пожар в кафе",
-                  "en":  "Fire at the Café",
-                  "tr":  "Kafedeki Yangın",
-                  "ar":  "حريق في المقهى",
-                  "kk":  "Кафедегі өрт"
-              },
-    "claim":  {
-                  "person":  {
-                                 "ru":  "Лоренцо Конти, 45 лет",
-                                 "en":  "Lorenzo Conti, 45",
-                                 "tr":  "Lorenzo Conti, 45",
-                                 "ar":  "لورنزو كونتي، 45",
-                                 "kk":  "Лоренцо Конти, 45 жаста"
-                             },
-                  "story":  {
-                                "ru":  "Вечером 5 мая около 21:15 в моём кафе вспыхнул пожар — загорелась проводка за барной стойкой. Сгорело оборудование и часть зала. Пожарные приехали быстро, посетителей и персонал успели вывести. Прошу компенсацию ущерба.",
-                                "en":  "On the evening of May 5, around 21:15, a fire broke out in my café — the wiring behind the bar caught fire. Equipment and part of the dining area burned. Firefighters arrived quickly and guests and staff were evacuated in time. I request compensation for the damage.",
-                                "tr":  "5 Mayıs akşamı, saat 21:15 sularında kafemde yangın çıktı — barın arkasındaki kablolar tutuştu. Ekipman ve salonun bir kısmı yandı. İtfaiye hızlı geldi, müşteriler ve personel zamanında tahliye edildi. Zarar için tazminat talep ediyorum.",
-                                "ar":  "مساء 5 مايو، حوالي الساعة 21:15، اندلع حريق في مقهاي — اشتعلت الأسلاك خلف البار. احترقت المعدات وجزء من الصالة. وصل رجال الإطفاء بسرعة وأُخلِي الزبائن والموظفون في الوقت المناسب. أطلب تعويضًا عن الأضرار.",
-                                "kk":  "5 мамыр кешінде шамамен 21:15-те менің кафемде өрт шықты — бар сөресінің артындағы сым жанды. Жабдық пен залдың бір бөлігі өртенді. Өрт сөндірушілер тез келді, келушілер мен қызметкерлер уақытында шығарылды. Зиян үшін өтемақы сұраймын."
-                            }
-              },
-    "coverImage":  "covers/case-025.svg",
-    "personImage":  "people/lorenzo.webp",
-    "client":  {
-                   "role":  {
-                                "ru":  "Заявитель · ИП",
-                                "en":  "Claimant · sole proprietor",
-                                "tr":  "Başvuru sahibi · bireysel girişimci",
-                                "ar":  "مقدم الطلب · مالك فردي",
-                                "kk":  "Өтініш беруші · ЖК"
-                            },
-                   "meta":  [
-                                {
-                                    "k":  {
-                                              "ru":  "Возраст",
-                                              "en":  "Age",
-                                              "tr":  "Yaş",
-                                              "ar":  "العمر",
-                                              "kk":  "Жасы"
-                                          },
-                                    "v":  {
-                                              "ru":  "45 лет",
-                                              "en":  "45 years old",
-                                              "tr":  "45 yaşında",
-                                              "ar":  "45 عامًا",
-                                              "kk":  "45 жаста"
-                                          }
-                                },
-                                {
-                                    "k":  {
-                                              "ru":  "Город",
-                                              "en":  "City",
-                                              "tr":  "Şehir",
-                                              "ar":  "المدينة",
-                                              "kk":  "Қала"
-                                          },
-                                    "v":  {
-                                              "ru":  "Рим",
-                                              "en":  "Rome",
-                                              "tr":  "Roma",
-                                              "ar":  "روما",
-                                              "kk":  "Рим"
-                                          }
-                                },
-                                {
-                                    "k":  {
-                                              "ru":  "Клиент с",
-                                              "en":  "Client since",
-                                              "tr":  "Müşteri",
-                                              "ar":  "عميل منذ",
-                                              "kk":  "Клиент"
-                                          },
-                                    "v":  {
-                                              "ru":  "2015 г.",
-                                              "en":  "2015",
-                                              "tr":  "2015",
-                                              "ar":  "2015",
-                                              "kk":  "2015 ж."
-                                          }
-                                },
-                                {
-                                    "k":  {
-                                              "ru":  "Полис",
-                                              "en":  "Policy",
-                                              "tr":  "Poliçe",
-                                              "ar":  "البوليصة",
-                                              "kk":  "Полис"
-                                          },
-                                    "v":  {
-                                              "ru":  "Коммерч. имущество · КИ-25300673-X7",
-                                              "en":  "Commercial property · KI-25300673-X7",
-                                              "tr":  "Ticari mülk · KI-25300673-X7",
-                                              "ar":  "الممتلكات التجارية · KI-25300673-X7",
-                                              "kk":  "Коммерциялық мүлік · КИ-25300673-X7"
-                                          }
-                                },
-                                {
-                                    "k":  {
-                                              "ru":  "Документ",
-                                              "en":  "Document",
-                                              "tr":  "Belge",
-                                              "ar":  "الوثيقة",
-                                              "kk":  "Құжат"
-                                          },
-                                    "v":  {
-                                              "ru":  "Паспорт IT-X5 667788009-46181",
-                                              "en":  "Passport IT-X5 667788009-46181",
-                                              "tr":  "Pasaport IT-X5 667788009-46181",
-                                              "ar":  "جواز السفر IT-X5 667788009-46181",
-                                              "kk":  "Паспорт IT-X5 667788009-46181"
-                                          }
-                                }
-                            ]
-               },
-    "evidences":  [
-                      {
-                          "id":  "ev-fire",
-                          "relation":  "supports",
-                          "type":  "document",
-                          "title":  {
-                                        "ru":  "Отчёт пожарной службы",
-                                        "en":  "Fire Brigade Report",
-                                        "tr":  "İtfaiye Raporu",
-                                        "ar":  "تقرير فرقة الإطفاء",
-                                        "kk":  "Өрт сөндіру қызметінің есебі"
-                                    },
-                          "content":  {
-                                          "ru":  "Заключение дознавателя от 6 мая: очаг возгорания — распределительная коробка за барной стойкой, причина — короткое замыкание изношенной проводки. Время вызова — 21:18, 5 мая. Признаков поджога и горючих жидкостей не обнаружено.",
-                                          "en":  "Investigator\u0027s report dated May 6: the seat of the fire was a junction box behind the bar; the cause was a short circuit in worn wiring. Call time — 21:18, May 5. No signs of arson or accelerants were found.",
-                                          "tr":  "6 Mayıs tarihli müfettiş raporu: yangının kaynağı barın arkasındaki bir dağıtım kutusuydu; nedeni yıpranmış kablolardaki kısa devreydi. Çağrı saati — 5 Mayıs 21:18. Kundaklama veya hızlandırıcı belirtisi bulunmadı.",
-                                          "ar":  "تقرير المحقق بتاريخ 6 مايو: كان مصدر الحريق علبة توصيل خلف البار؛ والسبب دارة قصيرة في أسلاك بالية. وقت البلاغ — 21:18 في 5 مايو. لم تُكتشف علامات إضرام أو مواد مسرّعة للاشتعال.",
-                                          "kk":  "6 мамырдағы тергеушінің қорытындысы: өрт ошағы — бар сөресінің артындағы тарату қорабы; себебі — тозған сымдағы қысқа тұйықталу. Шақыру уақыты — 5 мамыр 21:18. Өрт қою немесе жанғыш сұйықтық белгілері табылмаған."
-                                      },
-                          "isContradiction":  false,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Отчёт подтверждает электрическую причину и время, совпадающие с рассказом; поджог исключён.",
-                                                           "en":  "The report confirms an electrical cause and a time matching the account; arson is ruled out.",
-                                                           "tr":  "Rapor, anlatımla örtüşen elektriksel bir nedeni ve zamanı doğrular; kundaklama dışlanmıştır.",
-                                                           "ar":  "يؤكد التقرير سببًا كهربائيًا ووقتًا يطابقان الرواية؛ ويستبعد الإضرام.",
-                                                           "kk":  "Есеп әңгімеге сай электрлік себеп пен уақытты растайды; өрт қою жоққа шығарылған."
-                                                       }
-                      },
-                      {
-                          "id":  "ev-photo",
-                          "relation":  "supports",
-                          "type":  "photo",
-                          "title":  {
-                                        "ru":  "Фото ущерба",
-                                        "en":  "Damage Photo",
-                                        "tr":  "Hasar Fotoğrafı",
-                                        "ar":  "صورة الأضرار",
-                                        "kk":  "Зақым суреті"
-                                    },
-                          "content":  {
-                                          "ru":  "Снимок зала после пожара: обугленная стена за стойкой, оплавленная кофемашина и закопчённый потолок. Видны следы тушения водой и пеной.",
-                                          "en":  "A photo of the dining area after the fire: a charred wall behind the bar, a melted coffee machine and a soot-blackened ceiling. Traces of water and foam suppression are visible.",
-                                          "tr":  "Yangından sonra salonun fotoğrafı: barın arkasında kömürleşmiş duvar, erimiş kahve makinesi ve isle kararmış tavan. Su ve köpükle söndürme izleri görülüyor.",
-                                          "ar":  "صورة للصالة بعد الحريق: جدار متفحم خلف البار، آلة قهوة منصهرة وسقف اسودَّ بالسخام. تظهر آثار الإخماد بالماء والرغوة.",
-                                          "kk":  "Өрттен кейінгі залдың суреті: сөренің артындағы күйген қабырға, балқыған кофемашина және күйеленген төбе. Сумен және көбікпен сөндіру іздері көрінеді."
-                                      },
-                          "isContradiction":  false,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Характер повреждений соответствует электрическому пожару у барной стойки, как указано в отчёте.",
-                                                           "en":  "The nature of the damage matches an electrical fire at the bar, as stated in the report.",
-                                                           "tr":  "Hasarın niteliği, raporda belirtildiği gibi bardaki elektriksel yangına uyuyor.",
-                                                           "ar":  "تتوافق طبيعة الأضرار مع حريق كهربائي عند البار كما ورد في التقرير.",
-                                                           "kk":  "Зақым сипаты есепте көрсетілгендей бар жанындағы электрлік өртке сай."
-                                                       },
-                          "meta":  {
-                                       "filename":  "IMG_20260506_103044.jpg",
-                                       "imageUrl":  "evidence/case-025-ev-photo.jpg"
-                                   }
-                      },
-                      {
-                          "id":  "ev-social",
-                          "relation":  "context",
-                          "type":  "social_media",
-                          "title":  {
-                                        "ru":  "Пост прохожего",
-                                        "en":  "Passerby\u0027s Post",
-                                        "tr":  "Yoldan Geçenin Gönderisi",
-                                        "ar":  "منشور أحد المارة",
-                                        "kk":  "Жолаушының жазбасы"
-                                    },
-                          "content":  {
-                                          "ru":  "Пост в Telegram-канале местного жителя от 5 мая, 21:22: видеоролик с горящим окном кафе и дымом над входом, подпись «На углу Морской горит кафе, уже подъезжают пожарные». Геометка и время совпадают с местом и моментом пожара. Автор — независимый прохожий, не связанный с заявителем.",
-                                          "en":  "A post in a local resident\u0027s Telegram channel from May 5, 21:22: a video of the café\u0027s burning window and smoke above the entrance, captioned “A café on the corner of Morskaya is on fire, firefighters already arriving.” The geotag and time match the place and moment of the fire. The author is an independent passerby unrelated to the claimant.",
-                                          "tr":  "Yerel bir sakinin Telegram kanalında 5 Mayıs 21:22\u0027de bir gönderi: kafenin yanan penceresini ve girişin üstündeki dumanı gösteren bir video, “Morskaya köşesindeki kafe yanıyor, itfaiye geliyor bile.” başlıklı. Konum etiketi ve saat, yangının yeri ve anıyla örtüşüyor. Yazar, başvuranla ilgisi olmayan bağımsız bir yoldan geçen.",
-                                          "ar":  "منشور في قناة تلغرام لأحد سكان المنطقة بتاريخ 5 مايو، 21:22: فيديو لنافذة المقهى المشتعلة ودخان فوق المدخل، بتعليق «مقهى عند زاوية مورسكايا يحترق، رجال الإطفاء قادمون بالفعل». تتطابق العلامة الجغرافية والوقت مع مكان الحريق ولحظته. الناشر أحد المارة المستقلين لا علاقة له بمقدِّم الطلب.",
-                                          "kk":  "Жергілікті тұрғынның Telegram арнасындағы 5 мамыр 21:22-дегі жазба: кафенің жанып тұрған терезесі мен кіреберіс үстіндегі түтін бейнеленген видео, «Морская бұрышындағы кафе жанып жатыр, өрт сөндірушілер келе жатыр» деген қолтаңбамен. Геобелгі мен уақыт өрттің орны мен сәтіне сай. Автор — арыз иесіне қатысы жоқ тәуелсіз жолаушы."
-                                      },
-                          "isContradiction":  false,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Независимый пост с геометкой и временем 21:22 подтверждает сам факт и момент пожара, согласуясь с рассказом и отчётом.",
-                                                           "en":  "The independent post with a geotag and the time 21:22 confirms the fire\u0027s occurrence and timing, agreeing with the account and the report.",
-                                                           "tr":  "Konum etiketli ve 21:22 saatli bağımsız gönderi, yangının gerçekleştiğini ve zamanını doğrular; anlatım ve raporla uyumludur.",
-                                                           "ar":  "يؤكد المنشور المستقل بعلامته الجغرافية ووقته 21:22 وقوع الحريق وتوقيته، متوافقًا مع الرواية والتقرير.",
-                                                           "kk":  "Геобелгісі мен 21:22 уақыты бар тәуелсіз жазба өрттің болғаны мен сәтін растайды әрі әңгіме мен есепке үйлеседі."
-                                                       },
-                          "meta":  {
-                                       "socialPlatform":  "t.me"
-                                   }
-                      },
-                      {
-                          "id":  "ev-witness",
-                          "relation":  "supports",
-                          "type":  "witness_statement",
-                          "title":  {
-                                        "ru":  "Показания соседа",
-                                        "en":  "Neighbour\u0027s Statement",
-                                        "tr":  "Komşu İfadesi",
-                                        "ar":  "إفادة الجار",
-                                        "kk":  "Көршінің айғағы"
-                                    },
-                          "content":  {
-                                          "ru":  "«Я держу цветочную лавку рядом. Около четверти десятого вечера почувствовал гарь и увидел дым из-за стойки кафе. Помог вывести двух посетителей и вызвал пожарных. Никаких канистр или подозрительных людей не видел — всё произошло внезапно.»",
-                                          "en":  "“I run the flower shop next door. Around quarter past nine in the evening I smelled burning and saw smoke from behind the café\u0027s bar. I helped get two guests out and called the fire service. I saw no cans or suspicious people — it all happened suddenly.”",
-                                          "tr":  "“Yan tarafta çiçekçi dükkânı işletiyorum. Akşam dokuzu çeyrek geçe yanık kokusu aldım ve kafenin barının arkasından duman gördüm. İki müşterinin çıkmasına yardım ettim ve itfaiyeyi aradım. Hiçbir bidon ya da şüpheli kişi görmedim — her şey aniden oldu.”",
-                                          "ar":  "«أُدير محل الزهور المجاور. حوالي التاسعة وربع مساءً شممت رائحة حريق ورأيت دخانًا من خلف بار المقهى. ساعدت في إخراج زبونين واتصلت بالإطفاء. لم أرَ أي عبوات أو أشخاص مشبوهين — حدث كل شيء فجأة.»",
-                                          "kk":  "«Мен қасында гүл дүкенін ұстаймын. Кешкі тоғыздан он бес минут өткенде күйік иісін сезіп, кафенің сөресінің артынан түтін көрдім. Екі келушіні шығаруға көмектесіп, өрт сөндірушілерді шақырдым. Ешқандай канистра да, күдікті адам да көрмедім — бәрі кенеттен болды.»"
-                                      },
-                          "isContradiction":  false,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Независимый свидетель подтверждает время и внезапность пожара и отсутствие признаков поджога.",
-                                                           "en":  "An independent witness confirms the time and suddenness of the fire and the absence of arson signs.",
-                                                           "tr":  "Bağımsız bir tanık, yangının zamanını ve aniliğini ve kundaklama izi bulunmadığını doğrular.",
-                                                           "ar":  "يؤكد شاهد مستقل وقت الحريق وفجائيته وغياب علامات الإضرام.",
-                                                           "kk":  "Тәуелсіз куә өрттің уақыты мен кенеттігін және өрт қою белгілерінің жоқтығын растайды."
-                                                       }
-                      },
-                      {
-                          "id":  "ev-ledger",
-                          "relation":  "supports",
-                          "type":  "document",
-                          "title":  {
-                                        "ru":  "Книга доходов и убытков",
-                                        "en":  "Income and Loss Ledger",
-                                        "tr":  "Gelir ve Zarar Defteri",
-                                        "ar":  "دفتر الدخل والخسائر",
-                                        "kk":  "Кіріс пен шығын кітабы"
-                                    },
-                          "content":  {
-                                          "ru":  "Бухгалтерская ведомость кафе за полгода: стабильная выручка, перечень оборудования с датами покупки (кофемашина, холодильные витрины, мебель). Суммарная балансовая стоимость утраченного и повреждённого имущества — около 5000 евро, что соответствует заявленной сумме.",
-                                          "en":  "The café\u0027s six-month accounting ledger: steady revenue, a list of equipment with purchase dates (coffee machine, refrigerated displays, furniture). The total book value of lost and damaged property is about €5,000, matching the claimed amount.",
-                                          "tr":  "Kafenin altı aylık muhasebe defteri: istikrarlı gelir, satın alma tarihleriyle ekipman listesi (kahve makinesi, soğutmalı vitrinler, mobilya). Kaybedilen ve hasar gören malların toplam defter değeri yaklaşık 5.000 avro olup talep edilen tutarla uyumludur.",
-                                          "ar":  "دفتر محاسبة المقهى لستة أشهر: إيرادات مستقرة، وقائمة معدات بتواريخ الشراء (آلة قهوة، فاترينات تبريد، أثاث). تبلغ القيمة الدفترية الإجمالية للممتلكات المفقودة والمتضررة نحو 5000 يورو، وهو ما يطابق المبلغ المطالب به.",
-                                          "kk":  "Кафенің жарты жылдық бухгалтерлік ведомосы: тұрақты түсім, сатып алу күндерімен жабдық тізімі (кофемашина, тоңазытқыш сөрелер, жиһаз). Жоғалған және зақымдалған мүліктің жалпы баланстық құны шамамен 5000 еуро, бұл мәлімделген сомаға сай."
-                                      },
-                          "isContradiction":  false,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Балансовая стоимость утраченного имущества подтверждает заявленную сумму ущерба.",
-                                                           "en":  "The book value of the lost property supports the claimed damage amount.",
-                                                           "tr":  "Kaybedilen malın defter değeri, talep edilen hasar tutarını destekler.",
-                                                           "ar":  "تدعم القيمة الدفترية للممتلكات المفقودة مبلغ الضرر المطالب به.",
-                                                           "kk":  "Жоғалған мүліктің баланстық құны мәлімделген зиян сомасын растайды."
-                                                       }
-                      }
-                  ],
-    "correctDecision":  "approve",
-    "explanation":  {
-                        "ru":  [
-                                   "Отчёт дознавателя устанавливает электрическую причину пожара, поджог исключён.",
-                                   "Независимый пост прохожего и сосед подтверждают факт и время возгорания.",
-                                   "Заявление достоверное, его следует одобрить."
-                               ],
-                        "en":  [
-                                   "The investigator\u0027s report establishes an electrical cause; arson is ruled out.",
-                                   "An independent passerby\u0027s post and the neighbour confirm the fire and its timing.",
-                                   "The claim is genuine and should be approved."
-                               ],
-                        "tr":  [
-                                   "Müfettiş raporu elektriksel bir neden tespit ediyor; kundaklama dışlandı.",
-                                   "Bağımsız bir yoldan geçenin gönderisi ve komşu, yangını ve zamanını doğruluyor.",
-                                   "Talep gerçek ve onaylanmalı."
-                               ],
-                        "ar":  [
-                                   "يثبت تقرير المحقق سببًا كهربائيًا؛ ويُستبعَد الإضرام.",
-                                   "يؤكد منشور أحد المارة المستقلين والجار وقوع الحريق وتوقيته.",
-                                   "المطالبة صحيحة ويجب الموافقة عليها."
-                               ],
-                        "kk":  [
-                                   "Тергеушінің есебі өрттің электрлік себебін анықтайды; өрт қою жоққа шығарылған.",
-                                   "Тәуелсіз жолаушының жазбасы мен көрші өрт пен оның уақытын растайды.",
-                                   "Талап шынайы, оны мақұлдау керек."
-                               ]
-                    }
+{
+  "id": "case-025",
+  "type": "standard",
+  "difficulty": "medium",
+  "claimAmount": 5000,
+  "truth": "valid",
+  "title": {
+    "ru": "Пожар в кафе",
+    "en": "Fire at the Café",
+    "tr": "Kafedeki Yangın",
+    "ar": "حريق في المقهى",
+    "kk": "Кафедегі өрт"
+  },
+  "claim": {
+    "person": {
+      "ru": "Лоренцо Конти, 45 лет",
+      "en": "Lorenzo Conti, 45",
+      "tr": "Lorenzo Conti, 45",
+      "ar": "لورنزو كونتي، 45",
+      "kk": "Лоренцо Конти, 45 жаста"
+    },
+    "story": {
+      "ru": "Вечером 5 мая около 21:15 в моём кафе вспыхнул пожар — загорелась проводка за барной стойкой. Сгорело оборудование и часть зала. Пожарные приехали быстро, посетителей и персонал успели вывести. Прошу компенсацию ущерба.",
+      "en": "On the evening of May 5, around 21:15, a fire broke out in my café — the wiring behind the bar caught fire. Equipment and part of the dining area burned. Firefighters arrived quickly and guests and staff were evacuated in time. I request compensation for the damage.",
+      "tr": "5 Mayıs akşamı, saat 21:15 sularında kafemde yangın çıktı — barın arkasındaki kablolar tutuştu. Ekipman ve salonun bir kısmı yandı. İtfaiye hızlı geldi, müşteriler ve personel zamanında tahliye edildi. Zarar için tazminat talep ediyorum.",
+      "ar": "مساء 5 مايو، حوالي الساعة 21:15، اندلع حريق في مقهاي — اشتعلت الأسلاك خلف البار. احترقت المعدات وجزء من الصالة. وصل رجال الإطفاء بسرعة وأُخلِي الزبائن والموظفون في الوقت المناسب. أطلب تعويضًا عن الأضرار.",
+      "kk": "5 мамыр кешінде шамамен 21:15-те менің кафемде өрт шықты — бар сөресінің артындағы сым жанды. Жабдық пен залдың бір бөлігі өртенді. Өрт сөндірушілер тез келді, келушілер мен қызметкерлер уақытында шығарылды. Зиян үшін өтемақы сұраймын."
+    }
+  },
+  "coverImage": "covers/case-025.svg",
+  "personImage": "people/lorenzo.webp",
+  "client": {
+    "role": {
+      "ru": "Заявитель · ИП",
+      "en": "Claimant · sole proprietor",
+      "tr": "Başvuru sahibi · bireysel girişimci",
+      "ar": "مقدم الطلب · مالك فردي",
+      "kk": "Өтініш беруші · ЖК"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Возраст",
+          "en": "Age",
+          "tr": "Yaş",
+          "ar": "العمر",
+          "kk": "Жасы"
+        },
+        "v": {
+          "ru": "45 лет",
+          "en": "45 years old",
+          "tr": "45 yaşında",
+          "ar": "45 عامًا",
+          "kk": "45 жаста"
+        }
+      },
+      {
+        "k": {
+          "ru": "Город",
+          "en": "City",
+          "tr": "Şehir",
+          "ar": "المدينة",
+          "kk": "Қала"
+        },
+        "v": {
+          "ru": "Рим",
+          "en": "Rome",
+          "tr": "Roma",
+          "ar": "روما",
+          "kk": "Рим"
+        }
+      },
+      {
+        "k": {
+          "ru": "Клиент с",
+          "en": "Client since",
+          "tr": "Müşteri",
+          "ar": "عميل منذ",
+          "kk": "Клиент"
+        },
+        "v": {
+          "ru": "2015 г.",
+          "en": "2015",
+          "tr": "2015",
+          "ar": "2015",
+          "kk": "2015 ж."
+        }
+      },
+      {
+        "k": {
+          "ru": "Полис",
+          "en": "Policy",
+          "tr": "Poliçe",
+          "ar": "البوليصة",
+          "kk": "Полис"
+        },
+        "v": {
+          "ru": "Коммерч. имущество · КИ-25300673-X7",
+          "en": "Commercial property · KI-25300673-X7",
+          "tr": "Ticari mülk · KI-25300673-X7",
+          "ar": "الممتلكات التجارية · KI-25300673-X7",
+          "kk": "Коммерциялық мүлік · КИ-25300673-X7"
+        }
+      },
+      {
+        "k": {
+          "ru": "Документ",
+          "en": "Document",
+          "tr": "Belge",
+          "ar": "الوثيقة",
+          "kk": "Құжат"
+        },
+        "v": {
+          "ru": "Паспорт IT-X5 667788009-46181",
+          "en": "Passport IT-X5 667788009-46181",
+          "tr": "Pasaport IT-X5 667788009-46181",
+          "ar": "جواز السفر IT-X5 667788009-46181",
+          "kk": "Паспорт IT-X5 667788009-46181"
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "ev-fire",
+      "relation": "supports",
+      "type": "document",
+      "title": {
+        "ru": "Отчёт пожарной службы",
+        "en": "Fire Brigade Report",
+        "tr": "İtfaiye Raporu",
+        "ar": "تقرير فرقة الإطفاء",
+        "kk": "Өрт сөндіру қызметінің есебі"
+      },
+      "content": {
+        "ru": "Заключение дознавателя от 6 мая: очаг возгорания — распределительная коробка за барной стойкой, причина — короткое замыкание изношенной проводки. Время вызова — 21:18, 5 мая. Признаков поджога и горючих жидкостей не обнаружено.",
+        "en": "Investigator's report dated May 6: the seat of the fire was a junction box behind the bar; the cause was a short circuit in worn wiring. Call time — 21:18, May 5. No signs of arson or accelerants were found.",
+        "tr": "6 Mayıs tarihli müfettiş raporu: yangının kaynağı barın arkasındaki bir dağıtım kutusuydu; nedeni yıpranmış kablolardaki kısa devreydi. Çağrı saati — 5 Mayıs 21:18. Kundaklama veya hızlandırıcı belirtisi bulunmadı.",
+        "ar": "تقرير المحقق بتاريخ 6 مايو: كان مصدر الحريق علبة توصيل خلف البار؛ والسبب دارة قصيرة في أسلاك بالية. وقت البلاغ — 21:18 في 5 مايو. لم تُكتشف علامات إضرام أو مواد مسرّعة للاشتعال.",
+        "kk": "6 мамырдағы тергеушінің қорытындысы: өрт ошағы — бар сөресінің артындағы тарату қорабы; себебі — тозған сымдағы қысқа тұйықталу. Шақыру уақыты — 5 мамыр 21:18. Өрт қою немесе жанғыш сұйықтық белгілері табылмаған."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Отчёт подтверждает электрическую причину и время, совпадающие с рассказом; поджог исключён.",
+        "en": "The report confirms an electrical cause and a time matching the account; arson is ruled out.",
+        "tr": "Rapor, anlatımla örtüşen elektriksel bir nedeni ve zamanı doğrular; kundaklama dışlanmıştır.",
+        "ar": "يؤكد التقرير سببًا كهربائيًا ووقتًا يطابقان الرواية؛ ويستبعد الإضرام.",
+        "kk": "Есеп әңгімеге сай электрлік себеп пен уақытты растайды; өрт қою жоққа шығарылған."
+      }
+    },
+    {
+      "id": "ev-photo",
+      "relation": "supports",
+      "type": "photo",
+      "title": {
+        "ru": "Фото ущерба",
+        "en": "Damage Photo",
+        "tr": "Hasar Fotoğrafı",
+        "ar": "صورة الأضرار",
+        "kk": "Зақым суреті"
+      },
+      "content": {
+        "ru": "Снимок зала после пожара: обугленная стена за стойкой, оплавленная кофемашина и закопчённый потолок. Видны следы тушения водой и пеной.",
+        "en": "A photo of the dining area after the fire: a charred wall behind the bar, a melted coffee machine and a soot-blackened ceiling. Traces of water and foam suppression are visible.",
+        "tr": "Yangından sonra salonun fotoğrafı: barın arkasında kömürleşmiş duvar, erimiş kahve makinesi ve isle kararmış tavan. Su ve köpükle söndürme izleri görülüyor.",
+        "ar": "صورة للصالة بعد الحريق: جدار متفحم خلف البار، آلة قهوة منصهرة وسقف اسودَّ بالسخام. تظهر آثار الإخماد بالماء والرغوة.",
+        "kk": "Өрттен кейінгі залдың суреті: сөренің артындағы күйген қабырға, балқыған кофемашина және күйеленген төбе. Сумен және көбікпен сөндіру іздері көрінеді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Характер повреждений соответствует электрическому пожару у барной стойки, как указано в отчёте.",
+        "en": "The nature of the damage matches an electrical fire at the bar, as stated in the report.",
+        "tr": "Hasarın niteliği, raporda belirtildiği gibi bardaki elektriksel yangına uyuyor.",
+        "ar": "تتوافق طبيعة الأضرار مع حريق كهربائي عند البار كما ورد في التقرير.",
+        "kk": "Зақым сипаты есепте көрсетілгендей бар жанындағы электрлік өртке сай."
+      },
+      "meta": {
+        "filename": "IMG_20260506_103044.jpg",
+        "imageUrl": "evidence/case-025-ev-photo.jpg"
+      }
+    },
+    {
+      "id": "ev-social",
+      "relation": "context",
+      "type": "social_media",
+      "title": {
+        "ru": "Пост прохожего",
+        "en": "Passerby's Post",
+        "tr": "Yoldan Geçenin Gönderisi",
+        "ar": "منشور أحد المارة",
+        "kk": "Жолаушының жазбасы"
+      },
+      "content": {
+        "ru": "Пост в локальной социальной сети местного жителя от 5 мая, 21:22: видеоролик с горящим окном кафе и дымом над входом, подпись «На углу Морской горит кафе, уже подъезжают пожарные». Геометка и время совпадают с местом и моментом пожара. Автор — независимый прохожий, не связанный с заявителем.",
+        "en": "A post in a local resident's local social network from May 5, 21:22: a video of the café's burning window and smoke above the entrance, captioned “A café on the corner of Morskaya is on fire, firefighters already arriving.” The geotag and time match the place and moment of the fire. The author is an independent passerby unrelated to the claimant.",
+        "tr": "Yerel bir sakinin yerel sosyal ağda 5 Mayıs 21:22'de bir gönderi: kafenin yanan penceresini ve girişin üstündeki dumanı gösteren bir video, “Morskaya köşesindeki kafe yanıyor, itfaiye geliyor bile.” başlıklı. Konum etiketi ve saat, yangının yeri ve anıyla örtüşüyor. Yazar, başvuranla ilgisi olmayan bağımsız bir yoldan geçen.",
+        "ar": "منشور في قناة تلغرام لأحد سكان المنطقة بتاريخ 5 مايو، 21:22: فيديو لنافذة المقهى المشتعلة ودخان فوق المدخل، بتعليق «مقهى عند زاوية مورسكايا يحترق، رجال الإطفاء قادمون بالفعل». تتطابق العلامة الجغرافية والوقت مع مكان الحريق ولحظته. الناشر أحد المارة المستقلين لا علاقة له بمقدِّم الطلب.",
+        "kk": "Жергілікті тұрғынның жергілікті әлеуметтік желідегі 5 мамыр 21:22-дегі жазба: кафенің жанып тұрған терезесі мен кіреберіс үстіндегі түтін бейнеленген видео, «Морская бұрышындағы кафе жанып жатыр, өрт сөндірушілер келе жатыр» деген қолтаңбамен. Геобелгі мен уақыт өрттің орны мен сәтіне сай. Автор — арыз иесіне қатысы жоқ тәуелсіз жолаушы."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Независимый пост с геометкой и временем 21:22 подтверждает сам факт и момент пожара, согласуясь с рассказом и отчётом.",
+        "en": "The independent post with a geotag and the time 21:22 confirms the fire's occurrence and timing, agreeing with the account and the report.",
+        "tr": "Konum etiketli ve 21:22 saatli bağımsız gönderi, yangının gerçekleştiğini ve zamanını doğrular; anlatım ve raporla uyumludur.",
+        "ar": "يؤكد المنشور المستقل بعلامته الجغرافية ووقته 21:22 وقوع الحريق وتوقيته، متوافقًا مع الرواية والتقرير.",
+        "kk": "Геобелгісі мен 21:22 уақыты бар тәуелсіз жазба өрттің болғаны мен сәтін растайды әрі әңгіме мен есепке үйлеседі."
+      },
+      "meta": {
+        "socialPlatform": "localfeed.local"
+      }
+    },
+    {
+      "id": "ev-witness",
+      "relation": "supports",
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания соседа",
+        "en": "Neighbour's Statement",
+        "tr": "Komşu İfadesi",
+        "ar": "إفادة الجار",
+        "kk": "Көршінің айғағы"
+      },
+      "content": {
+        "ru": "«Я держу цветочную лавку рядом. Около четверти десятого вечера почувствовал гарь и увидел дым из-за стойки кафе. Помог вывести двух посетителей и вызвал пожарных. Никаких канистр или подозрительных людей не видел — всё произошло внезапно.»",
+        "en": "“I run the flower shop next door. Around quarter past nine in the evening I smelled burning and saw smoke from behind the café's bar. I helped get two guests out and called the fire service. I saw no cans or suspicious people — it all happened suddenly.”",
+        "tr": "“Yan tarafta çiçekçi dükkânı işletiyorum. Akşam dokuzu çeyrek geçe yanık kokusu aldım ve kafenin barının arkasından duman gördüm. İki müşterinin çıkmasına yardım ettim ve itfaiyeyi aradım. Hiçbir bidon ya da şüpheli kişi görmedim — her şey aniden oldu.”",
+        "ar": "«أُدير محل الزهور المجاور. حوالي التاسعة وربع مساءً شممت رائحة حريق ورأيت دخانًا من خلف بار المقهى. ساعدت في إخراج زبونين واتصلت بالإطفاء. لم أرَ أي عبوات أو أشخاص مشبوهين — حدث كل شيء فجأة.»",
+        "kk": "«Мен қасында гүл дүкенін ұстаймын. Кешкі тоғыздан он бес минут өткенде күйік иісін сезіп, кафенің сөресінің артынан түтін көрдім. Екі келушіні шығаруға көмектесіп, өрт сөндірушілерді шақырдым. Ешқандай канистра да, күдікті адам да көрмедім — бәрі кенеттен болды.»"
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Независимый свидетель подтверждает время и внезапность пожара и отсутствие признаков поджога.",
+        "en": "An independent witness confirms the time and suddenness of the fire and the absence of arson signs.",
+        "tr": "Bağımsız bir tanık, yangının zamanını ve aniliğini ve kundaklama izi bulunmadığını doğrular.",
+        "ar": "يؤكد شاهد مستقل وقت الحريق وفجائيته وغياب علامات الإضرام.",
+        "kk": "Тәуелсіз куә өрттің уақыты мен кенеттігін және өрт қою белгілерінің жоқтығын растайды."
+      }
+    },
+    {
+      "id": "ev-ledger",
+      "relation": "supports",
+      "type": "document",
+      "title": {
+        "ru": "Книга доходов и убытков",
+        "en": "Income and Loss Ledger",
+        "tr": "Gelir ve Zarar Defteri",
+        "ar": "دفتر الدخل والخسائر",
+        "kk": "Кіріс пен шығын кітабы"
+      },
+      "content": {
+        "ru": "Бухгалтерская ведомость кафе за полгода: стабильная выручка, перечень оборудования с датами покупки (кофемашина, холодильные витрины, мебель). Суммарная балансовая стоимость утраченного и повреждённого имущества — около 5000 евро, что соответствует заявленной сумме.",
+        "en": "The café's six-month accounting ledger: steady revenue, a list of equipment with purchase dates (coffee machine, refrigerated displays, furniture). The total book value of lost and damaged property is about €5,000, matching the claimed amount.",
+        "tr": "Kafenin altı aylık muhasebe defteri: istikrarlı gelir, satın alma tarihleriyle ekipman listesi (kahve makinesi, soğutmalı vitrinler, mobilya). Kaybedilen ve hasar gören malların toplam defter değeri yaklaşık 5.000 avro olup talep edilen tutarla uyumludur.",
+        "ar": "دفتر محاسبة المقهى لستة أشهر: إيرادات مستقرة، وقائمة معدات بتواريخ الشراء (آلة قهوة، فاترينات تبريد، أثاث). تبلغ القيمة الدفترية الإجمالية للممتلكات المفقودة والمتضررة نحو 5000 يورو، وهو ما يطابق المبلغ المطالب به.",
+        "kk": "Кафенің жарты жылдық бухгалтерлік ведомосы: тұрақты түсім, сатып алу күндерімен жабдық тізімі (кофемашина, тоңазытқыш сөрелер, жиһаз). Жоғалған және зақымдалған мүліктің жалпы баланстық құны шамамен 5000 еуро, бұл мәлімделген сомаға сай."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Балансовая стоимость утраченного имущества подтверждает заявленную сумму ущерба.",
+        "en": "The book value of the lost property supports the claimed damage amount.",
+        "tr": "Kaybedilen malın defter değeri, talep edilen hasar tutarını destekler.",
+        "ar": "تدعم القيمة الدفترية للممتلكات المفقودة مبلغ الضرر المطالب به.",
+        "kk": "Жоғалған мүліктің баланстық құны мәлімделген зиян сомасын растайды."
+      }
+    }
+  ],
+  "correctDecision": "approve",
+  "explanation": {
+    "ru": [
+      "Отчёт дознавателя устанавливает электрическую причину пожара, поджог исключён.",
+      "Независимый пост прохожего и сосед подтверждают факт и время возгорания.",
+      "Заявление достоверное, его следует одобрить."
+    ],
+    "en": [
+      "The investigator's report establishes an electrical cause; arson is ruled out.",
+      "An independent passerby's post and the neighbour confirm the fire and its timing.",
+      "The claim is genuine and should be approved."
+    ],
+    "tr": [
+      "Müfettiş raporu elektriksel bir neden tespit ediyor; kundaklama dışlandı.",
+      "Bağımsız bir yoldan geçenin gönderisi ve komşu, yangını ve zamanını doğruluyor.",
+      "Talep gerçek ve onaylanmalı."
+    ],
+    "ar": [
+      "يثبت تقرير المحقق سببًا كهربائيًا؛ ويُستبعَد الإضرام.",
+      "يؤكد منشور أحد المارة المستقلين والجار وقوع الحريق وتوقيته.",
+      "المطالبة صحيحة ويجب الموافقة عليها."
+    ],
+    "kk": [
+      "Тергеушінің есебі өрттің электрлік себебін анықтайды; өрт қою жоққа шығарылған.",
+      "Тәуелсіз жолаушының жазбасы мен көрші өрт пен оның уақытын растайды.",
+      "Талап шынайы, оны мақұлдау керек."
+    ]
+  }
 }

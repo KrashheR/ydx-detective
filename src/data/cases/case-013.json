@@ -1,266 +1,266 @@
-﻿{
-    "id":  "case-013",
-    "type":  "standard",
-    "difficulty":  "medium",
-    "claimAmount":  1100,
-    "truth":  "fraud",
-    "title":  {
-                  "ru":  "Утонувший смартфон",
-                  "en":  "The Drowned Smartphone",
-                  "tr":  "Suya Düşen Akıllı Telefon",
-                  "ar":  "الهاتف الذكي الغارق",
-                  "kk":  "Суға кеткен смартфон"
-              },
-    "claim":  {
-                  "person":  {
-                                 "ru":  "Тимур Аширов, 29 лет",
-                                 "en":  "Timur Ashirov, 29",
-                                 "tr":  "Timur Aşirov, 29",
-                                 "ar":  "تيمور عاشيروف، 29",
-                                 "kk":  "Тимур Аширов, 29 жаста"
-                             },
-                  "story":  {
-                                "ru":  "В субботу утром мой телефон выскользнул из кармана и упал в озеро. Я не смог его достать, он полностью утонул и больше не включается. Прошу возместить стоимость аппарата.",
-                                "en":  "On Saturday morning my phone slipped out of my pocket and fell into the lake. I couldn\u0027t recover it; it sank completely and no longer powers on. I request reimbursement for the device.",
-                                "tr":  "Cumartesi sabahı telefonum cebimden kayıp göle düştü. Onu çıkaramadım; tamamen battı ve artık açılmıyor. Cihaz bedelinin karşılanmasını talep ediyorum.",
-                                "ar":  "صباح السبت انزلق هاتفي من جيبي وسقط في البحيرة. لم أتمكن من استعادته؛ غرق تمامًا ولم يعد يعمل. أطلب تعويض ثمن الجهاز.",
-                                "kk":  "Сенбі таңында телефоным қалтамнан сырғып, көлге түсіп кетті. Оны шығара алмадым; ол толық суға кетті және енді қосылмайды. Аппараттың құнын өтеуді сұраймын."
-                            }
-              },
-    "coverImage":  "covers/case-013.svg",
-    "personImage":  "people/timur.webp",
-    "client":  {
-                   "role":  {
-                                "ru":  "Заявитель · физ. лицо",
-                                "en":  "Claimant · individual",
-                                "tr":  "Başvuru sahibi · gerçek kişi",
-                                "ar":  "مقدم الطلب · شخص طبيعي",
-                                "kk":  "Өтініш беруші · жеке тұлға"
-                            },
-                   "meta":  [
-                                {
-                                    "k":  {
-                                              "ru":  "Возраст",
-                                              "en":  "Age",
-                                              "tr":  "Yaş",
-                                              "ar":  "العمر",
-                                              "kk":  "Жасы"
-                                          },
-                                    "v":  {
-                                              "ru":  "29 лет",
-                                              "en":  "29 years old",
-                                              "tr":  "29 yaşında",
-                                              "ar":  "29 عامًا",
-                                              "kk":  "29 жаста"
-                                          }
-                                },
-                                {
-                                    "k":  {
-                                              "ru":  "Город",
-                                              "en":  "City",
-                                              "tr":  "Şehir",
-                                              "ar":  "المدينة",
-                                              "kk":  "Қала"
-                                          },
-                                    "v":  {
-                                              "ru":  "Ташкент",
-                                              "en":  "Tashkent",
-                                              "tr":  "Taşkent",
-                                              "ar":  "طشقند",
-                                              "kk":  "Ташкент"
-                                          }
-                                },
-                                {
-                                    "k":  {
-                                              "ru":  "Клиент с",
-                                              "en":  "Client since",
-                                              "tr":  "Müşteri",
-                                              "ar":  "عميل منذ",
-                                              "kk":  "Клиент"
-                                          },
-                                    "v":  {
-                                              "ru":  "2022 г.",
-                                              "en":  "2022",
-                                              "tr":  "2022",
-                                              "ar":  "2022",
-                                              "kk":  "2022 ж."
-                                          }
-                                },
-                                {
-                                    "k":  {
-                                              "ru":  "Полис",
-                                              "en":  "Policy",
-                                              "tr":  "Poliçe",
-                                              "ar":  "البوليصة",
-                                              "kk":  "Полис"
-                                          },
-                                    "v":  {
-                                              "ru":  "Электроника · ЭЛ-13178451-X1",
-                                              "en":  "Electronics · EL-13178451-X1",
-                                              "tr":  "Elektronik · EL-13178451-X1",
-                                              "ar":  "الإلكترونيات · EL-13178451-X1",
-                                              "kk":  "Электроника · ЭЛ-13178451-X1"
-                                          }
-                                },
-                                {
-                                    "k":  {
-                                              "ru":  "Документ",
-                                              "en":  "Document",
-                                              "tr":  "Belge",
-                                              "ar":  "الوثيقة",
-                                              "kk":  "Құжат"
-                                          },
-                                    "v":  {
-                                              "ru":  "Паспорт UZ-X2 31278419-47092",
-                                              "en":  "Passport UZ-X2 31278419-47092",
-                                              "tr":  "Pasaport UZ-X2 31278419-47092",
-                                              "ar":  "جواز السفر UZ-X2 31278419-47092",
-                                              "kk":  "Паспорт UZ-X2 31278419-47092"
-                                          }
-                                }
-                            ]
-               },
-    "evidences":  [
-                      {
-                          "id":  "ev-moisture",
-                          "relation":  "contradicts",
-                          "type":  "photo",
-                          "title":  {
-                                        "ru":  "Фото из сервисного центра",
-                                        "en":  "Repair-Shop Photo",
-                                        "tr":  "Servis Merkezi Fotoğrafı",
-                                        "ar":  "صورة من مركز الإصلاح",
-                                        "kk":  "Сервис орталығының суреті"
-                                    },
-                          "content":  {
-                                          "ru":  "Техник вскрыл корпус и сфотографировал внутренний индикатор влаги: он остался полностью белым.",
-                                          "en":  "The technician opened the housing and photographed the internal moisture indicator: it remained completely white.",
-                                          "tr":  "Teknisyen kasayı açtı ve dahili nem göstergesini fotoğrafladı: tamamen beyaz kalmıştı.",
-                                          "ar":  "فتح الفني الغطاء وصوّر مؤشر الرطوبة الداخلي: بقي أبيض تمامًا.",
-                                          "kk":  "Маман корпусты ашып, ішкі ылғал индикаторын суретке түсірді: ол толығымен ақ болып қалды."
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Индикатор влаги краснеет при контакте с водой; белый цвет означает, что телефон никогда не намокал.",
-                                                           "en":  "A moisture indicator turns red on contact with water; staying white proves the phone was never wet.",
-                                                           "tr":  "Nem göstergesi suyla temasta kırmızıya döner; beyaz kalması telefonun hiç ıslanmadığını kanıtlar.",
-                                                           "ar":  "مؤشر الرطوبة يتحول إلى الأحمر عند ملامسة الماء؛ بقاؤه أبيض يثبت أن الهاتف لم يبتل قط.",
-                                                           "kk":  "Ылғал индикаторы сумен жанасқанда қызарады; ақ болып қалуы телефонның еш ылғалданбағанын дәлелдейді."
-                                                       },
-                          "meta":  {
-                                       "filename":  "IMG_20260318_145607.jpg",
-                                       "imageUrl":  "evidence/case-013-ev-moisture.webp"
-                                   }
-                      },
-                      {
-                          "id":  "ev-usage",
-                          "relation":  "contradicts",
-                          "type":  "usage_log",
-                          "title":  {
-                                        "ru":  "Журнал активности оператора",
-                                        "en":  "Carrier Usage Log",
-                                        "tr":  "Operatör Kullanım Kaydı",
-                                        "ar":  "سجل استخدام شركة الاتصالات",
-                                        "kk":  "Оператордың белсенділік журналы"
-                                    },
-                          "content":  {
-                                          "ru":  [
-                                                     "Сб 09:05 — заявленное падение в озеро",
-                                                     "Сб 11:20 — исходящий звонок, 4 мин",
-                                                     "Сб 14:47 — передача данных, 320 МБ",
-                                                     "Сб 18:13 — входящий звонок, 2 мин"
-                                                 ],
-                                          "en":  [
-                                                     "Sat 09:05 — alleged fall into lake",
-                                                     "Sat 11:20 — outgoing call, 4 min",
-                                                     "Sat 14:47 — data session, 320 MB",
-                                                     "Sat 18:13 — incoming call, 2 min"
-                                                 ],
-                                          "tr":  [
-                                                     "Cmt 09:05 — iddia edilen göle düşme",
-                                                     "Cmt 11:20 — giden arama, 4 dk",
-                                                     "Cmt 14:47 — veri oturumu, 320 MB",
-                                                     "Cmt 18:13 — gelen arama, 2 dk"
-                                                 ],
-                                          "ar":  [
-                                                     "السبت 09:05 — السقوط المزعوم في البحيرة",
-                                                     "السبت 11:20 — مكالمة صادرة، 4 دقائق",
-                                                     "السبت 14:47 — جلسة بيانات، 320 ميغابايت",
-                                                     "السبت 18:13 — مكالمة واردة، دقيقتان"
-                                                 ],
-                                          "kk":  [
-                                                     "Сб 09:05 — мәлімделген көлге құлау",
-                                                     "Сб 11:20 — шығыс қоңырау, 4 мин",
-                                                     "Сб 14:47 — деректер сеансы, 320 МБ",
-                                                     "Сб 18:13 — кіріс қоңырау, 2 мин"
-                                                 ]
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Тот же телефон совершал звонки и передавал данные часами после заявленного утопления.",
-                                                           "en":  "The same phone made calls and used data for hours after the supposed drowning.",
-                                                           "tr":  "Aynı telefon, sözde batıştan saatler sonra arama yaptı ve veri kullandı.",
-                                                           "ar":  "الهاتف نفسه أجرى مكالمات واستخدم البيانات لساعات بعد الغرق المزعوم.",
-                                                           "kk":  "Сол телефон мәлімделген суға кетуден кейін бірнеше сағат бойы қоңырау шалып, деректер жіберген."
-                                                       },
-                          "meta":  {
-                                       "logPrompt":  "mno@telecom:~$ tail -f /var/log/subscriber.log"
-                                   }
-                      },
-                      {
-                          "id":  "ev-receipt",
-                          "relation":  "context",
-                          "type":  "document",
-                          "title":  {
-                                        "ru":  "Чек о покупке телефона",
-                                        "en":  "Phone Purchase Receipt",
-                                        "tr":  "Telefon Satın Alma Fişi",
-                                        "ar":  "إيصال شراء الهاتف",
-                                        "kk":  "Телефон сатып алу түбіртегі"
-                                    },
-                          "content":  {
-                                          "ru":  "Подлинный кассовый чек из магазина электроники на сумму 1100 евро, выданный за год до происшествия.",
-                                          "en":  "A genuine electronics-store receipt for 1,100 euros, issued a year before the incident.",
-                                          "tr":  "Olaydan bir yıl önce düzenlenmiş, 1.100 avroluk gerçek bir elektronik mağazası fişi.",
-                                          "ar":  "إيصال أصلي من متجر إلكترونيات بقيمة 1100 يورو، صادر قبل عام من الحادث.",
-                                          "kk":  "Оқиғадан бір жыл бұрын берілген, электроника дүкенінен алынған 1100 еуролық шынайы түбіртек."
-                                      },
-                          "isContradiction":  false,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Чек подлинный и лишь подтверждает покупку аппарата, не противореча делу.",
-                                                           "en":  "The receipt is genuine and merely confirms the purchase, not conflicting with the case.",
-                                                           "tr":  "Fiş gerçektir ve yalnızca satın alımı doğrular, davayla çelişmez.",
-                                                           "ar":  "الإيصال أصلي ويؤكد عملية الشراء فقط، ولا يتعارض مع القضية.",
-                                                           "kk":  "Түбіртек шынайы әрі тек сатып алуды растайды, іске қайшы келмейді."
-                                                       }
-                      }
-                  ],
-    "correctDecision":  "reject",
-    "explanation":  {
-                        "ru":  [
-                                   "Индикатор влаги белый — телефон никогда не контактировал с водой.",
-                                   "Оператор фиксирует звонки и трафик часами после «утопления».",
-                                   "Заявление мошенническое, его следует отклонить."
-                               ],
-                        "en":  [
-                                   "The moisture indicator is white — the phone never touched water.",
-                                   "The carrier logs calls and data for hours after the \u0027drowning\u0027.",
-                                   "The claim is fraudulent and should be rejected."
-                               ],
-                        "tr":  [
-                                   "Nem göstergesi beyaz — telefon hiç suyla temas etmedi.",
-                                   "Operatör, \u0027batıştan\u0027 saatler sonra arama ve veri kaydediyor.",
-                                   "Talep hileli ve reddedilmeli."
-                               ],
-                        "ar":  [
-                                   "مؤشر الرطوبة أبيض — الهاتف لم يلامس الماء أبدًا.",
-                                   "تسجل شركة الاتصالات مكالمات وبيانات لساعات بعد \u0027الغرق\u0027.",
-                                   "المطالبة احتيالية ويجب رفضها."
-                               ],
-                        "kk":  [
-                                   "Ылғал индикаторы ақ — телефон сумен мүлде жанаспаған.",
-                                   "Оператор «суға кетуден» кейін сағаттар бойы қоңырау мен трафик тіркейді.",
-                                   "Талап алаяқтық, оны қабылдамау керек."
-                               ]
-                    }
+{
+  "id": "case-013",
+  "type": "standard",
+  "difficulty": "medium",
+  "claimAmount": 1100,
+  "truth": "fraud",
+  "title": {
+    "ru": "Утонувший смартфон",
+    "en": "The Drowned Smartphone",
+    "tr": "Suya Düşen Akıllı Telefon",
+    "ar": "الهاتف الذكي الغارق",
+    "kk": "Суға кеткен смартфон"
+  },
+  "claim": {
+    "person": {
+      "ru": "Тимур Аширов, 29 лет",
+      "en": "Timur Ashirov, 29",
+      "tr": "Timur Aşirov, 29",
+      "ar": "تيمور عاشيروف، 29",
+      "kk": "Тимур Аширов, 29 жаста"
+    },
+    "story": {
+      "ru": "В субботу утром мой телефон выскользнул из кармана и упал в озеро. Я не смог его достать, он полностью утонул и больше не включается. Прошу возместить стоимость аппарата.",
+      "en": "On Saturday morning my phone slipped out of my pocket and fell into the lake. I couldn't recover it; it sank completely and no longer powers on. I request reimbursement for the device.",
+      "tr": "Cumartesi sabahı telefonum cebimden kayıp göle düştü. Onu çıkaramadım; tamamen battı ve artık açılmıyor. Cihaz bedelinin karşılanmasını talep ediyorum.",
+      "ar": "صباح السبت انزلق هاتفي من جيبي وسقط في البحيرة. لم أتمكن من استعادته؛ غرق تمامًا ولم يعد يعمل. أطلب تعويض ثمن الجهاز.",
+      "kk": "Сенбі таңында телефоным қалтамнан сырғып, көлге түсіп кетті. Оны шығара алмадым; ол толық суға кетті және енді қосылмайды. Аппараттың құнын өтеуді сұраймын."
+    }
+  },
+  "coverImage": "covers/case-013.svg",
+  "personImage": "people/timur.webp",
+  "client": {
+    "role": {
+      "ru": "Заявитель · физ. лицо",
+      "en": "Claimant · individual",
+      "tr": "Başvuru sahibi · gerçek kişi",
+      "ar": "مقدم الطلب · شخص طبيعي",
+      "kk": "Өтініш беруші · жеке тұлға"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Возраст",
+          "en": "Age",
+          "tr": "Yaş",
+          "ar": "العمر",
+          "kk": "Жасы"
+        },
+        "v": {
+          "ru": "29 лет",
+          "en": "29 years old",
+          "tr": "29 yaşında",
+          "ar": "29 عامًا",
+          "kk": "29 жаста"
+        }
+      },
+      {
+        "k": {
+          "ru": "Город",
+          "en": "City",
+          "tr": "Şehir",
+          "ar": "المدينة",
+          "kk": "Қала"
+        },
+        "v": {
+          "ru": "Ташкент",
+          "en": "Tashkent",
+          "tr": "Taşkent",
+          "ar": "طشقند",
+          "kk": "Ташкент"
+        }
+      },
+      {
+        "k": {
+          "ru": "Клиент с",
+          "en": "Client since",
+          "tr": "Müşteri",
+          "ar": "عميل منذ",
+          "kk": "Клиент"
+        },
+        "v": {
+          "ru": "2022 г.",
+          "en": "2022",
+          "tr": "2022",
+          "ar": "2022",
+          "kk": "2022 ж."
+        }
+      },
+      {
+        "k": {
+          "ru": "Полис",
+          "en": "Policy",
+          "tr": "Poliçe",
+          "ar": "البوليصة",
+          "kk": "Полис"
+        },
+        "v": {
+          "ru": "Электроника · ЭЛ-13178451-X1",
+          "en": "Electronics · EL-13178451-X1",
+          "tr": "Elektronik · EL-13178451-X1",
+          "ar": "الإلكترونيات · EL-13178451-X1",
+          "kk": "Электроника · ЭЛ-13178451-X1"
+        }
+      },
+      {
+        "k": {
+          "ru": "Документ",
+          "en": "Document",
+          "tr": "Belge",
+          "ar": "الوثيقة",
+          "kk": "Құжат"
+        },
+        "v": {
+          "ru": "Паспорт UZ-X2 31278419-47092",
+          "en": "Passport UZ-X2 31278419-47092",
+          "tr": "Pasaport UZ-X2 31278419-47092",
+          "ar": "جواز السفر UZ-X2 31278419-47092",
+          "kk": "Паспорт UZ-X2 31278419-47092"
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "ev-moisture",
+      "relation": "contradicts",
+      "type": "photo",
+      "title": {
+        "ru": "Фото из сервисного центра",
+        "en": "Repair-Shop Photo",
+        "tr": "Servis Merkezi Fotoğrafı",
+        "ar": "صورة من مركز الإصلاح",
+        "kk": "Сервис орталығының суреті"
+      },
+      "content": {
+        "ru": "Техник вскрыл корпус и сфотографировал внутренний индикатор влаги: он остался полностью белым.",
+        "en": "The technician opened the housing and photographed the internal moisture indicator: it remained completely white.",
+        "tr": "Teknisyen kasayı açtı ve dahili nem göstergesini fotoğrafladı: tamamen beyaz kalmıştı.",
+        "ar": "فتح الفني الغطاء وصوّر مؤشر الرطوبة الداخلي: بقي أبيض تمامًا.",
+        "kk": "Маман корпусты ашып, ішкі ылғал индикаторын суретке түсірді: ол толығымен ақ болып қалды."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Индикатор влаги краснеет при контакте с водой; белый цвет означает, что телефон никогда не намокал.",
+        "en": "A moisture indicator turns red on contact with water; staying white proves the phone was never wet.",
+        "tr": "Nem göstergesi suyla temasta kırmızıya döner; beyaz kalması telefonun hiç ıslanmadığını kanıtlar.",
+        "ar": "مؤشر الرطوبة يتحول إلى الأحمر عند ملامسة الماء؛ بقاؤه أبيض يثبت أن الهاتف لم يبتل قط.",
+        "kk": "Ылғал индикаторы сумен жанасқанда қызарады; ақ болып қалуы телефонның еш ылғалданбағанын дәлелдейді."
+      },
+      "meta": {
+        "filename": "IMG_20260318_145607.jpg",
+        "imageUrl": "evidence/case-013-ev-moisture.webp"
+      }
+    },
+    {
+      "id": "ev-usage",
+      "relation": "contradicts",
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал активности оператора",
+        "en": "Carrier Usage Log",
+        "tr": "Operatör Kullanım Kaydı",
+        "ar": "سجل استخدام شركة الاتصالات",
+        "kk": "Оператордың белсенділік журналы"
+      },
+      "content": {
+        "ru": [
+          "Сб 09:05 — заявленное падение в озеро",
+          "Сб 11:20 — исходящий звонок, 4 мин",
+          "Сб 14:47 — передача данных, 320 МБ",
+          "Сб 18:13 — входящий звонок, 2 мин"
+        ],
+        "en": [
+          "Sat 09:05 — alleged fall into lake",
+          "Sat 11:20 — outgoing call, 4 min",
+          "Sat 14:47 — data session, 320 MB",
+          "Sat 18:13 — incoming call, 2 min"
+        ],
+        "tr": [
+          "Cmt 09:05 — iddia edilen göle düşme",
+          "Cmt 11:20 — giden arama, 4 dk",
+          "Cmt 14:47 — veri oturumu, 320 MB",
+          "Cmt 18:13 — gelen arama, 2 dk"
+        ],
+        "ar": [
+          "السبت 09:05 — السقوط المزعوم في البحيرة",
+          "السبت 11:20 — مكالمة صادرة، 4 دقائق",
+          "السبت 14:47 — جلسة بيانات، 320 ميغابايت",
+          "السبت 18:13 — مكالمة واردة، دقيقتان"
+        ],
+        "kk": [
+          "Сб 09:05 — мәлімделген көлге құлау",
+          "Сб 11:20 — шығыс қоңырау, 4 мин",
+          "Сб 14:47 — деректер сеансы, 320 МБ",
+          "Сб 18:13 — кіріс қоңырау, 2 мин"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Тот же телефон совершал звонки и передавал данные часами после заявленного утопления.",
+        "en": "The same phone made calls and used data for hours after the supposed drowning.",
+        "tr": "Aynı telefon, sözde batıştan saatler sonra arama yaptı ve veri kullandı.",
+        "ar": "الهاتف نفسه أجرى مكالمات واستخدم البيانات لساعات بعد الغرق المزعوم.",
+        "kk": "Сол телефон мәлімделген суға кетуден кейін бірнеше сағат бойы қоңырау шалып, деректер жіберген."
+      },
+      "meta": {
+        "logPrompt": "mno@telecom:~$ tail -f /var/log/subscriber.log"
+      }
+    },
+    {
+      "id": "ev-receipt",
+      "relation": "context",
+      "type": "document",
+      "title": {
+        "ru": "Чек о покупке телефона",
+        "en": "Phone Purchase Receipt",
+        "tr": "Telefon Satın Alma Fişi",
+        "ar": "إيصال شراء الهاتف",
+        "kk": "Телефон сатып алу түбіртегі"
+      },
+      "content": {
+        "ru": "Подлинный кассовый чек из магазина электроники на сумму 1100 евро, выданный за год до происшествия.",
+        "en": "A genuine electronics-store receipt for 1,100 euros, issued a year before the incident.",
+        "tr": "Olaydan bir yıl önce düzenlenmiş, 1.100 avroluk gerçek bir elektronik mağazası fişi.",
+        "ar": "إيصال أصلي من متجر إلكترونيات بقيمة 1100 يورو، صادر قبل عام من الحادث.",
+        "kk": "Оқиғадан бір жыл бұрын берілген, электроника дүкенінен алынған 1100 еуролық шынайы түбіртек."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Чек подлинный и лишь подтверждает покупку аппарата, не противореча делу.",
+        "en": "The receipt is genuine and merely confirms the purchase, not conflicting with the case.",
+        "tr": "Fiş gerçektir ve yalnızca satın alımı doğrular, davayla çelişmez.",
+        "ar": "الإيصال أصلي ويؤكد عملية الشراء فقط، ولا يتعارض مع القضية.",
+        "kk": "Түбіртек шынайы әрі тек сатып алуды растайды, іске қайшы келмейді."
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Индикатор влаги белый — телефон никогда не контактировал с водой.",
+      "Оператор фиксирует звонки и трафик часами после «утопления».",
+      "Заявление мошенническое, его следует отклонить."
+    ],
+    "en": [
+      "The moisture indicator is white — the phone never touched water.",
+      "The carrier logs calls and data for hours after the 'drowning'.",
+      "The claim is fraudulent and should be rejected."
+    ],
+    "tr": [
+      "Nem göstergesi beyaz — telefon hiç suyla temas etmedi.",
+      "Operatör, 'batıştan' saatler sonra arama ve veri kaydediyor.",
+      "Talep hileli ve reddedilmeli."
+    ],
+    "ar": [
+      "مؤشر الرطوبة أبيض — الهاتف لم يلامس الماء أبدًا.",
+      "تسجل شركة الاتصالات مكالمات وبيانات لساعات بعد 'الغرق'.",
+      "المطالبة احتيالية ويجب رفضها."
+    ],
+    "kk": [
+      "Ылғал индикаторы ақ — телефон сумен мүлде жанаспаған.",
+      "Оператор «суға кетуден» кейін сағаттар бойы қоңырау мен трафик тіркейді.",
+      "Талап алаяқтық, оны қабылдамау керек."
+    ]
+  }
 }

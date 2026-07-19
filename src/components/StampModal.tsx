@@ -10,6 +10,8 @@ import { AnimatePresence, motion } from 'framer-motion';
 import type { Evidence, EvidenceMeta, Language } from '../types';
 import { loc, t } from '../i18n/ui';
 import { EVIDENCE_TAG_KEY } from './icons';
+import { RTL_LANGUAGES } from '../i18n/ui';
+import { tapHaptic } from '../utils/haptics';
 
 const FOCUSABLE_SELECTOR =
   'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
@@ -22,6 +24,9 @@ interface Props {
   revealed: boolean;
   onToggle: () => void;
   onClose: () => void;
+  position: number;
+  total: number;
+  onNavigate: (direction: -1 | 1) => void;
 }
 
 /** Full-screen evidence viewer with the "Mark as Contradiction" toggle. */
@@ -32,10 +37,16 @@ export function StampModal({
   revealed,
   onToggle,
   onClose,
+  position,
+  total,
+  onNavigate,
 }: Props) {
   const dialogRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const onCloseRef = useRef(onClose);
+  const touchStart = useRef<{ x: number; y: number } | null>(null);
+  const isOpen = evidence != null;
+  const isRTL = RTL_LANGUAGES.has(lang);
   const titleId = evidence
     ? `stamp-modal-title-${evidence.id.replace(/[^a-zA-Z0-9_-]/g, '-')}`
     : undefined;
@@ -45,7 +56,7 @@ export function StampModal({
   }, [onClose]);
 
   useEffect(() => {
-    if (!evidence) return undefined;
+    if (!isOpen) return undefined;
 
     const previouslyFocused =
       document.activeElement instanceof HTMLElement ? document.activeElement : null;
@@ -61,7 +72,29 @@ export function StampModal({
       window.removeEventListener('keydown', handleKeyDown);
       previouslyFocused?.focus();
     };
-  }, [evidence]);
+  }, [isOpen]);
+
+  const handleTouchStart = (event: React.TouchEvent) => {
+    const point = event.touches[0];
+    if (point) touchStart.current = { x: point.clientX, y: point.clientY };
+  };
+
+  const handleTouchEnd = (event: React.TouchEvent) => {
+    const start = touchStart.current;
+    touchStart.current = null;
+    const point = event.changedTouches[0];
+    if (!start || !point) return;
+    const dx = point.clientX - start.x;
+    const dy = point.clientY - start.y;
+    if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
+    const forward = isRTL ? dx > 0 : dx < 0;
+    onNavigate(forward ? 1 : -1);
+  };
+
+  const handleToggle = () => {
+    tapHaptic();
+    onToggle();
+  };
 
   const handleDialogKeyDown = (event: ReactKeyboardEvent<HTMLDivElement>) => {
     if (event.key !== 'Tab') return;
@@ -99,8 +132,7 @@ export function StampModal({
     <AnimatePresence>
       {evidence && (
         <motion.div
-          className="fixed inset-0 z-40 flex items-center justify-center p-5"
-          style={{ background: 'rgba(8,11,17,.8)' }}
+          className="fixed inset-0 z-40 flex items-end justify-center bg-modal-backdrop md:items-center md:p-5"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -112,8 +144,7 @@ export function StampModal({
             role="dialog"
             aria-modal="true"
             aria-labelledby={titleId}
-            className="relative flex max-h-full w-full max-w-[420px] flex-col overflow-auto bg-paper shadow-modal"
-            style={{ borderRadius: 9 }}
+            className="relative flex h-[100dvh] w-full flex-col overflow-hidden rounded-t-[16px] bg-paper shadow-modal md:h-auto md:max-h-full md:max-w-[420px] md:overflow-auto md:rounded-[9px]"
             initial={{ opacity: 0, y: 16, scale: 0.985 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.985 }}
@@ -121,11 +152,13 @@ export function StampModal({
             tabIndex={-1}
             onClick={(e) => e.stopPropagation()}
             onKeyDown={handleDialogKeyDown}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
           >
             {/* Dark folder-edge header */}
             <div className="flex items-center justify-between gap-2 bg-folder-edge px-4 py-3">
               <div className="flex min-w-0 items-center gap-2.5">
-                <span className="rounded bg-white/[0.18] px-1.5 py-[3px] font-mono text-[10px] font-bold uppercase tracking-wider text-white">
+                <span className="rounded bg-white/[0.18] px-1.5 py-[3px] font-mono text-[12px] md:text-[10px] font-bold uppercase tracking-wider text-white">
                   {t(EVIDENCE_TAG_KEY[evidence.type], lang)}
                 </span>
                 <span
@@ -139,15 +172,15 @@ export function StampModal({
                 ref={closeButtonRef}
                 type="button"
                 onClick={onClose}
-                aria-label="Close"
-                className="px-1.5 text-lg leading-none text-white/85 hover:text-white focus:outline-none focus-visible:outline-none"
+                aria-label={t('close', lang)}
+                className="flex h-11 w-11 items-center justify-center text-xl leading-none text-white/85 hover:text-white focus:outline-none focus-visible:outline-none"
               >
                 ✕
               </button>
             </div>
 
             {/* Document body + ink stamp overlay */}
-            <div className="relative p-[18px]">
+            <div className="relative min-h-0 flex-1 overflow-y-auto overscroll-contain p-[18px] md:flex-none md:overflow-visible">
               {/* Inspector-note reveal: the card's true status, bought with a hint */}
               {revealed && (
                 <div
@@ -180,7 +213,7 @@ export function StampModal({
                     }}
                   >
                     {t('contradiction', lang)}
-                    <div className="mt-0.5 text-[10px] tracking-[4px]">
+                    <div className="mt-0.5 text-[12px] md:text-[10px] tracking-[4px]">
                       CONTRADICTION
                     </div>
                   </div>
@@ -189,11 +222,34 @@ export function StampModal({
             </div>
 
             {/* Mark / unmark toggle */}
-            <div className="px-[18px] pb-[18px]">
+            <div className="shrink-0 border-t border-border bg-paper px-[18px] pt-3" style={{ paddingBottom: 'max(14px, env(safe-area-inset-bottom))' }}>
+              <div className="mb-2 grid grid-cols-[48px_1fr_48px] items-center gap-2 md:hidden">
+                <button
+                  type="button"
+                  onClick={() => onNavigate(-1)}
+                  disabled={position <= 0}
+                  aria-label={t('previousEvidence', lang)}
+                  className="h-11 rounded-[9px] border border-border text-2xl text-text-light disabled:opacity-30"
+                >
+                  {isRTL ? '›' : '‹'}
+                </button>
+                <span className="text-center font-mono text-[13px] font-bold text-text-muted">
+                  {position + 1} / {total}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => onNavigate(1)}
+                  disabled={position < 0 || position >= total - 1}
+                  aria-label={t('nextEvidence', lang)}
+                  className="h-11 rounded-[9px] border border-border text-2xl text-text-light disabled:opacity-30"
+                >
+                  {isRTL ? '‹' : '›'}
+                </button>
+              </div>
               <button
                 type="button"
-                onClick={onToggle}
-                className={`h-[50px] w-full rounded-[9px] border-2 border-stamp text-[13px] font-bold uppercase tracking-wide transition-all ${
+                onClick={handleToggle}
+                className={`h-[52px] w-full rounded-[9px] border-2 border-stamp text-[15px] font-bold uppercase tracking-wide transition-all ${
                   stamped ? 'bg-stamp text-white' : 'bg-transparent text-stamp'
                 }`}
               >
@@ -305,10 +361,10 @@ function GpsBody({ lines, meta, lang }: { lines: string[]; meta?: EvidenceMeta; 
       <div className="flex items-start justify-between">
         <div>
           <div className="flex items-center gap-1.5">
-            <span className="font-mono text-[11px] text-ink/40">▣</span>
-            <span className="font-mono text-[11px] font-semibold text-ink/60">{meta?.company ? loc(meta.company, lang) : 'GeoGuard Solutions'}</span>
+            <span className="font-mono text-[12px] md:text-[11px] text-ink/40">▣</span>
+            <span className="font-mono text-[12px] md:text-[11px] font-semibold text-ink/60">{meta?.company ? loc(meta.company, lang) : 'GeoGuard Solutions'}</span>
           </div>
-          <div className="mt-0.5 font-mono text-[9px] text-ink/40">
+          <div className="mt-0.5 font-mono text-[12px] md:text-[9px] text-ink/40">
             {meta?.department ? loc(meta.department, lang) : t('department', lang)}
           </div>
         </div>
@@ -317,7 +373,7 @@ function GpsBody({ lines, meta, lang }: { lines: string[]; meta?: EvidenceMeta; 
         </span>
       </div>
       <div className="my-2.5 h-px bg-[#d1d5db]" />
-      <div className="mb-2.5 font-mono text-[10px] text-ink/50">
+      <div className="mb-2.5 font-mono text-[12px] md:text-[10px] text-ink/50">
         {meta?.requestId ? loc(meta.requestId, lang) : 'STR-2026-0314-A'}
       </div>
 
@@ -388,7 +444,7 @@ function GpsBody({ lines, meta, lang }: { lines: string[]; meta?: EvidenceMeta; 
           style={{ gridTemplateColumns: '62px 1fr 78px' }}
         >
           {['TIME', 'LOCATION', 'STATUS'].map((h) => (
-            <span key={h} className="font-mono text-[9px] font-semibold text-ink/40">
+            <span key={h} className="font-mono text-[12px] md:text-[9px] font-semibold text-ink/40">
               {h}
             </span>
           ))}
@@ -407,15 +463,15 @@ function GpsBody({ lines, meta, lang }: { lines: string[]; meta?: EvidenceMeta; 
                 borderLeft: `2px solid ${isActive ? '#2563eb' : 'transparent'}`,
               }}
             >
-              <span className="font-mono text-[10px] font-medium text-ink">{row.time}</span>
-              <span className="font-mono text-[10px] text-ink/75">{row.loc}</span>
-              <span className="font-mono text-[10px] font-medium text-success">● LOGGED</span>
+              <span className="font-mono text-[12px] md:text-[10px] font-medium text-ink">{row.time}</span>
+              <span className="font-mono text-[12px] md:text-[10px] text-ink/75">{row.loc}</span>
+              <span className="font-mono text-[12px] md:text-[10px] font-medium text-success">● LOGGED</span>
             </button>
           );
         })}
       </div>
 
-      <div className="mt-2.5 font-mono text-[9px] text-ink/35">
+      <div className="mt-2.5 font-mono text-[12px] md:text-[9px] text-ink/35">
         Документ сформирован автоматически. Печать: ____/____ Подпись: __________
       </div>
     </>
@@ -486,7 +542,7 @@ function PhotoBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
             <button
               type="button"
               onClick={() => setFlipped(true)}
-              className="absolute bottom-2 right-3 font-mono text-[9px] text-accent"
+              className="absolute bottom-2 right-3 font-mono text-[12px] md:text-[9px] text-accent"
             >
               ↩ свойства
             </button>
@@ -502,20 +558,20 @@ function PhotoBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
               background: '#f5f0e8',
             }}
           >
-            <div className="mb-3 font-mono text-[9px] font-semibold uppercase tracking-wider text-ink/40">
+            <div className="mb-3 font-mono text-[12px] md:text-[9px] font-semibold uppercase tracking-wider text-ink/40">
               Свойства файла
             </div>
             {exifLines.map((e, i) => (
               <div key={i} className="flex gap-2 border-b border-black/10 py-1.5">
                 <span>{e.icon}</span>
-                <span className="font-serif text-[11px] italic text-ink/80">{e.text}</span>
+                <span className="font-serif text-[12px] md:text-[11px] italic text-ink/80">{e.text}</span>
               </div>
             ))}
-            <div className="mt-3 font-mono text-[9px] text-ink/50">{meta?.filename ?? 'IMG_20260315_081402.jpg'}</div>
+            <div className="mt-3 font-mono text-[12px] md:text-[9px] text-ink/50">{meta?.filename ?? 'IMG_20260315_081402.jpg'}</div>
             <button
               type="button"
               onClick={() => setFlipped(false)}
-              className="absolute bottom-3 right-3 font-mono text-[9px] text-accent"
+              className="absolute bottom-3 right-3 font-mono text-[12px] md:text-[9px] text-accent"
             >
               ↩ назад
             </button>
@@ -573,7 +629,7 @@ function CameraBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.15 }}
               >
-                <span className="font-mono text-[10px]" style={{ color: 'rgba(74,222,128,.3)' }}>
+                <span className="font-mono text-[12px] md:text-[10px]" style={{ color: 'rgba(74,222,128,.3)' }}>
                   📹 CCTV FEED
                 </span>
               </motion.div>
@@ -585,9 +641,9 @@ function CameraBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
                 className="block h-2 w-2 rounded-full bg-red-500"
                 style={{ animation: 'recpulse 1.4s infinite' }}
               />
-              <span className="font-mono text-[9px] font-semibold text-red-500">REC</span>
+              <span className="font-mono text-[12px] md:text-[9px] font-semibold text-red-500">REC</span>
             </div>
-            <div className="absolute right-2.5 top-2 font-mono text-[9px]" style={{ color: 'rgba(74,222,128,.6)' }}>
+            <div className="absolute right-2.5 top-2 font-mono text-[12px] md:text-[9px]" style={{ color: 'rgba(74,222,128,.6)' }}>
               {meta?.cameraId ?? 'CAM-04'}
             </div>
 
@@ -596,10 +652,10 @@ function CameraBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
               className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-2.5 py-1.5"
               style={{ background: 'rgba(0,0,0,.55)' }}
             >
-              <span className="font-mono text-[11px]" style={{ color: '#4ade80' }}>
+              <span className="font-mono text-[12px] md:text-[11px]" style={{ color: '#4ade80' }}>
                 {current.text}
               </span>
-              <span className="font-mono text-[10px] font-semibold" style={{ color: 'rgba(74,222,128,.8)' }}>
+              <span className="font-mono text-[12px] md:text-[10px] font-semibold" style={{ color: 'rgba(74,222,128,.8)' }}>
                 {current.clock}
               </span>
             </div>
@@ -617,7 +673,7 @@ function CameraBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
           >
             ◀◀
           </button>
-          <span className="font-mono text-[9px]" style={{ color: 'rgba(74,222,128,.5)' }}>
+          <span className="font-mono text-[12px] md:text-[9px]" style={{ color: 'rgba(74,222,128,.5)' }}>
             FRAME {String(frame + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}
           </span>
           <button
@@ -643,12 +699,12 @@ function CameraBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
 function WitnessBody({ lines }: { lines: string[] }) {
   return (
     <>
-      <div className="text-center font-mono text-[9px] font-semibold uppercase tracking-[2px] text-ink/40">
+      <div className="text-center font-mono text-[12px] md:text-[9px] font-semibold uppercase tracking-[2px] text-ink/40">
         Протокол допроса свидетеля
       </div>
       <div className="my-2.5 h-px bg-[#d1d5db]" />
       <div
-        className="font-mono text-[10px] leading-[1.8] text-ink/55"
+        className="font-mono text-[12px] md:text-[10px] leading-[1.8] text-ink/55"
         dangerouslySetInnerHTML={{
           __html: 'Дата: ___.__.___ &nbsp; Время: ___:___ &nbsp;<br>Следователь: ст. инсп. __________________',
         }}
@@ -660,7 +716,7 @@ function WitnessBody({ lines }: { lines: string[] }) {
           </p>
         ))}
       </div>
-      <div className="mt-4 font-mono text-[10px] text-ink/50">
+      <div className="mt-4 font-mono text-[12px] md:text-[10px] text-ink/50">
         Свидетель: ____________________ Подпись: _________
       </div>
     </>
@@ -673,7 +729,7 @@ function DocumentBody({ lines, meta, lang }: { lines: string[]; meta?: EvidenceM
   return (
     <>
       <div className="-mx-[18px] -mt-[18px] mb-4 border-t-4 border-accent" />
-      <div className="mb-2.5 font-mono text-[9px] font-semibold uppercase tracking-[2px] text-ink/40">
+      <div className="mb-2.5 font-mono text-[12px] md:text-[9px] font-semibold uppercase tracking-[2px] text-ink/40">
         {meta?.docHeader ? loc(meta.docHeader, lang) : t('tag_document', lang)}
       </div>
       <div className="mb-3 border-b border-dashed border-[#c7c2b6]" />
@@ -684,7 +740,7 @@ function DocumentBody({ lines, meta, lang }: { lines: string[]; meta?: EvidenceM
           </div>
         ))}
       </div>
-      <div className="mt-4 text-right font-mono text-[10px] text-ink/50">
+      <div className="mt-4 text-right font-mono text-[12px] md:text-[10px] text-ink/50">
         {meta?.docFooter ? loc(meta.docFooter, lang) : '______________'}
       </div>
     </>
@@ -701,18 +757,18 @@ function UsageLogBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta })
 
   return (
     <div className="rounded-md p-3" style={{ background: '#0d0d0d' }}>
-      <div className="mb-2 font-mono text-[9px]" style={{ color: 'rgba(74,222,128,.6)' }}>
+      <div className="mb-2 font-mono text-[12px] md:text-[9px]" style={{ color: 'rgba(74,222,128,.6)' }}>
         {meta?.logPrompt ?? 'root@alarm:~$ tail -f /var/log/security.log'}
       </div>
       {tagged.map((l, i) => (
-        <div key={i} className="font-mono text-[11px] leading-[1.7]" style={{ color: '#4ade80' }}>
+        <div key={i} className="font-mono text-[12px] md:text-[11px] leading-[1.7]" style={{ color: '#4ade80' }}>
           <span style={{ color: l.warn ? '#fbbf24' : 'rgba(74,222,128,.55)' }}>
             {l.warn ? '[WARN]' : '[INFO]'}
           </span>{' '}
           {l.text}
         </div>
       ))}
-      <div className="mt-0.5 flex items-center font-mono text-[11px]" style={{ color: '#4ade80' }}>
+      <div className="mt-0.5 flex items-center font-mono text-[12px] md:text-[11px]" style={{ color: '#4ade80' }}>
         _
         <span
           className="ml-0.5 inline-block h-[13px] w-[7px] align-middle"
@@ -870,7 +926,7 @@ function XRayBody({ lines, meta, lang }: { lines: string[]; meta?: EvidenceMeta;
           </div>
         </div>
       </div>
-      <div className="mt-2.5 text-center font-mono text-[10px] text-ink/60">
+      <div className="mt-2.5 text-center font-mono text-[12px] md:text-[10px] text-ink/60">
         {meta?.clinicName ? loc(meta.clinicName, lang) : 'MedImage'}
       </div>
     </>
@@ -910,7 +966,7 @@ function BankBody({ lines, meta, lang }: { lines: string[]; meta?: EvidenceMeta;
           ВЫПИСКА ПО СЧЁТУ
         </span>
       </div>
-      <div className="mt-2 font-mono text-[11px] text-ink/55">{meta?.accountMask ?? '•••• •••• •••• 4721'}</div>
+      <div className="mt-2 font-mono text-[12px] md:text-[11px] text-ink/55">{meta?.accountMask ?? '•••• •••• •••• 4721'}</div>
 
       <div className="mt-3 overflow-hidden rounded-md border border-black/10">
         <div
@@ -932,15 +988,15 @@ function BankBody({ lines, meta, lang }: { lines: string[]; meta?: EvidenceMeta;
               background: r.bg,
             }}
           >
-            <span className="font-mono text-[9px] text-ink/60">{r.date}</span>
-            <span className="font-mono text-[9px] text-ink">{r.desc}</span>
-            <span className="text-right font-mono text-[9px] font-semibold" style={{ color: r.amtColor }}>{r.amt}</span>
-            <span className="text-right font-mono text-[9px] text-ink/60">{r.bal}</span>
+            <span className="font-mono text-[12px] md:text-[9px] text-ink/60">{r.date}</span>
+            <span className="font-mono text-[12px] md:text-[9px] text-ink">{r.desc}</span>
+            <span className="text-right font-mono text-[12px] md:text-[9px] font-semibold" style={{ color: r.amtColor }}>{r.amt}</span>
+            <span className="text-right font-mono text-[12px] md:text-[9px] text-ink/60">{r.bal}</span>
           </div>
         ))}
       </div>
 
-      <div className="mt-2.5 font-mono text-[9px] text-ink/40">
+      <div className="mt-2.5 font-mono text-[12px] md:text-[9px] text-ink/40">
         Сформирован: {new Date().toLocaleDateString('ru')} · Оператор: Система · ЭЦП: ████████████
       </div>
     </>
@@ -971,7 +1027,7 @@ function PhoneBody({ lines, meta, lang }: { lines: string[]; meta?: EvidenceMeta
           <span className="text-accent">◈</span>
           <span className="font-mono text-[12px] font-bold text-ink">{meta?.carrierName ? loc(meta.carrierName, lang) : 'TeleLink'}</span>
         </div>
-        <span className="font-mono text-[10px] text-ink/55">{meta?.phoneMask ?? '+7 (9••) •••-••-••'}</span>
+        <span className="font-mono text-[12px] md:text-[10px] text-ink/55">{meta?.phoneMask ?? '+7 (9••) •••-••-••'}</span>
       </div>
 
       <div className="mt-3 overflow-hidden rounded-md border border-black/10">
@@ -992,16 +1048,16 @@ function PhoneBody({ lines, meta, lang }: { lines: string[]; meta?: EvidenceMeta
               background: r.bg,
             }}
           >
-            <span className="font-mono text-[9px] text-ink/60">{r.date}</span>
-            <span className="font-mono text-[9px] font-medium text-ink">{r.time}</span>
-            <span className="font-mono text-[9px] text-ink/75">{r.num}</span>
-            <span className="font-mono text-[9px] text-ink/60">{r.dur}</span>
-            <span className="font-mono text-[9px] font-medium" style={{ color: r.typeColor }}>{r.type}</span>
+            <span className="font-mono text-[12px] md:text-[9px] text-ink/60">{r.date}</span>
+            <span className="font-mono text-[12px] md:text-[9px] font-medium text-ink">{r.time}</span>
+            <span className="font-mono text-[12px] md:text-[9px] text-ink/75">{r.num}</span>
+            <span className="font-mono text-[12px] md:text-[9px] text-ink/60">{r.dur}</span>
+            <span className="font-mono text-[12px] md:text-[9px] font-medium" style={{ color: r.typeColor }}>{r.type}</span>
           </div>
         ))}
       </div>
 
-      <div className="mt-2.5 font-mono text-[9px] text-ink/40">
+      <div className="mt-2.5 font-mono text-[12px] md:text-[9px] text-ink/40">
         {meta?.carrierName ? loc(meta.carrierName, lang) : 'TeleLink'}
       </div>
     </>
@@ -1063,8 +1119,8 @@ function SocialBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
     <div className="relative overflow-hidden rounded-lg border border-[#e5e7eb] bg-white shadow-sm">
       {/* Browser-bar */}
       <div className="flex items-center gap-1.5 border-b border-[#e5e7eb] bg-[#f3f4f6] px-3 py-2">
-        <span className="text-[11px]">🔒</span>
-        <span className="font-mono text-[11px] text-ink/60">{meta?.socialPlatform ?? 'vk.com'}/id{urlSuffix}</span>
+        <span className="text-[12px] md:text-[11px]">🔒</span>
+        <span className="font-mono text-[12px] md:text-[11px] text-ink/60">{meta?.socialPlatform ?? 'vk.com'}/id{urlSuffix}</span>
       </div>
 
       <div className="p-3.5">
@@ -1078,7 +1134,7 @@ function SocialBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
           </div>
           <div>
             <div className="font-sans text-[13px] font-semibold text-ink">{authorName}</div>
-            <div className="font-sans text-[11px] text-[#9ca3af]">{postDate}</div>
+            <div className="font-sans text-[12px] md:text-[11px] text-[#9ca3af]">{postDate}</div>
           </div>
         </div>
 

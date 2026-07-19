@@ -5,11 +5,11 @@
   "claimAmount": 120000,
   "truth": "fraud",
   "title": {
-    "ru": "Кто из нас самозванец?",
-    "en": "Who Among Us Is the Impostor?",
-    "tr": "Aramızdaki Sahte Kim?",
-    "ar": "من المتسلل بيننا؟",
-    "kk": "Арамыздағы өтірікші кім?"
+    "ru": "Кто отключил вентиляцию?",
+    "en": "Who Disabled the Ventilation?",
+    "tr": "Havalandırmayı Kim Kapattı?",
+    "ar": "من عطّل التهوية؟",
+    "kk": "Желдетуді кім өшірді?"
   },
   "claim": {
     "person": {
@@ -98,18 +98,18 @@
       "id": "ev-witness",
       "type": "witness_statement",
       "title": {
-        "ru": "Показания коллеги «Чёрного»",
-        "en": "Statement from Colleague 'Black'",
-        "tr": "Meslektaş 'Black' İfadesi",
-        "ar": "إفادة الزميل «الأسود»",
-        "kk": "«Қара» деген әріптестің жауабы"
+        "ru": "Показания начальника смены",
+        "en": "Shift Supervisor Statement",
+        "tr": "Vardiya Amiri İfadesi",
+        "ar": "إفادة مشرف الوردية",
+        "kk": "Ауысым басшысының жауабы"
       },
       "content": {
-        "ru": "Экстренное собрание команды по тревоге. Мы сразу подозревали Красного. Он несколько раз в ту ночь ходил к вентшахте — я видел сам. После пожара он первый начал обвинять стажёра. Но мы проверили записи. Красный — самозванец. Он не тот, за кого себя выдаёт.",
-        "en": "Emergency team meeting on the alert. We suspected Red from the start. He went to the vent shaft several times that night — I saw it myself. After the fire he was the first to blame the trainee. But we checked the logs. Red is the impostor. He is not who he claims to be.",
-        "tr": "Acil ekip toplantısı uyarı üzerine. Kırmızı'dan başından beri şüpheleniyorduk. O gece havalandırma kanalına birkaç kez gitti — kendim gördüm. Yangından sonra stajyeri ilk suçlayan oydu. Ama kayıtları kontrol ettik. Kırmızı sahtekâr. İddia ettiği kişi değil.",
-        "ar": "اجتماع طارئ للفريق عند الإنذار. اشتبهنا في الأحمر منذ البداية. ذهب إلى مجرى التهوية عدة مرات تلك الليلة — رأيت ذلك بنفسي. بعد الحريق كان أول من اتهم المتدرب. لكننا فحصنا السجلات. الأحمر هو المتسلل. إنه ليس من يدّعي أنه هو.",
-        "kk": "Дабылға командалық жедел жиналыс. Қызылды алғашқыдан-ақ күдіктендік. Ол сол түні желдеткіш шахтасына бірнеше рет барды — өзім көрдім. Өрттен кейін тәжірибешіні бірінші айыптаған ол болды. Бірақ жазбаларды тексердік. Қызыл — өтірікші. Ол өзі кім деп мәлімдесе — сол емес."
+        "ru": "На разборе инцидента мы проверили журнал доступа. Красин несколько раз за ночь ходил к вентшахте — я видел это сам. После пожара он первым начал обвинять стажёра, но записи показали, что ответственность лежит на нём.",
+        "en": "During the incident review we checked the access log. Krasin went to the vent shaft several times that night — I saw it myself. After the fire he was first to blame the trainee, but the records showed he was responsible.",
+        "tr": "Olay incelemesinde erişim kayıtlarını kontrol ettik. Krasin o gece havalandırma kanalına birkaç kez gitti; bunu kendim gördüm. Yangından sonra ilk olarak stajyeri suçladı, ancak kayıtlar sorumluluğun onda olduğunu gösterdi.",
+        "ar": "راجعنا سجل الدخول أثناء التحقيق في الحادث. ذهب كراسين إلى مجرى التهوية عدة مرات تلك الليلة وقد رأيت ذلك بنفسي. كان أول من اتهم المتدرب بعد الحريق، لكن السجلات أثبتت مسؤوليته.",
+        "kk": "Оқиғаны талдау кезінде кіру журналын тексердік. Красин сол түні желдеткіш шахтасына бірнеше рет барды — оны өзім көрдім. Өрттен кейін ол тәжірибешіні бірінші айыптады, бірақ жазбалар жауапкершілік өзінде екенін көрсетті."
       },
       "isContradiction": true,
       "contradictionExplanation": {
@@ -178,7 +178,7 @@
       "meta": {
         "bankName": {
           "ru": "Промышленный Банк",
-          "en": "Industrial Bank",
+          "en": "Factory Settlement Office",
           "tr": "Sanayi Bankası",
           "ar": "البنك الصناعي",
           "kk": "Өнеркәсіп Банкі"
@@ -193,19 +193,19 @@
       "Журнал доступа фиксирует только карту Красина у вентшахты за 10 минут до отключения вентиляции.",
       "Коллеги видели многократные ночные походы к вентиляции и его попытки переложить вину на стажёра.",
       "За три месяца до пожара Красин похитил 72 700 ₽ — и уничтожил архив, чтобы это скрыть.",
-      "Красин — самозванец. В выплате отказать."
+      "Красин ответственен за аварию. В выплате отказать."
     ],
     "en": [
       "The access log records only Krasin's card at the vent shaft 10 minutes before ventilation was disabled.",
       "Colleagues witnessed multiple night-time trips to the vents and his attempt to shift blame onto the trainee.",
       "In the three months before the fire Krasin embezzled 72,700 ₽ — and destroyed the archives to hide it.",
-      "Krasin is the impostor. Reject the claim."
+      "Krasin caused the incident. Reject the claim."
     ],
     "tr": [
       "Erişim kaydı, havalandırma devre dışı bırakılmadan 10 dakika önce sadece Krasin'in kartını havalandırma kanalında kayıt altına alıyor.",
       "Meslektaşlar, gece havalandırmaya yapılan birden fazla ziyareti ve suçu stajyere yükleme girişimini gördü.",
       "Yangından üç ay önce Krasin 72.700 ₽ zimmetine geçirdi — ve bunu gizlemek için arşivleri yok etti.",
-      "Krasin sahtekârdır. Talebi reddedin."
+      "Olaydan Krasin sorumludur. Talebi reddedin."
     ],
     "ar": [
       "يسجل سجل الوصول بطاقة كراسين فقط عند مجرى التهوية قبل 10 دقائق من تعطيل التهوية.",

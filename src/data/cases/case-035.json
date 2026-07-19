@@ -6,8 +6,8 @@
   "truth": "fraud",
   "investigationBudget": 4,
   "title": {
-    "ru": "Охотники за выплатой",
-    "en": "Payout Hunters",
+    "ru": "Инспекторы необычного ущерба",
+    "en": "Unusual Damage Inspectors",
     "tr": "Tazminat Avcıları",
     "ar": "صيادو التعويضات",
     "kk": "Төлем аңшылары"
@@ -21,15 +21,14 @@
       "kk": "Аркадий Егоров, 52 жаста"
     },
     "story": {
-      "ru": "Ночью в отеле «Слизень» произошёл выброс неизвестной плазмы. Призрак разгромил банкетный зал и уничтожил оборудование моей службы паранормальной очистки. Прошу оплатить ремонт фургона и четыре протонных распылителя.",
-      "en": "An unknown plasma discharge struck the Slime Hotel overnight. A ghost wrecked the ballroom and destroyed my paranormal-cleanup equipment. I request payment for the van and four proton sprayers.",
-      "tr": "Gece Slime Oteli'nde bilinmeyen bir plazma boşalması oldu. Bir hayalet balo salonunu ve paranormal temizlik ekipmanımı yok etti. Minibüs ile dört proton püskürtücünün bedelini istiyorum.",
-      "ar": "حدث ليلاً تفريغ بلازمي مجهول في فندق «سلايم». دمّر شبح قاعة الحفلات ومعدات شركتي للتنظيف الخارق. أطلب تعويض الشاحنة وأربعة مرشات بروتونية.",
-      "kk": "Түнде «Слайм» қонақүйінде белгісіз плазма разряды болды. Елес залды және паранормалды тазалау жабдығымды қиратты. Фургон мен төрт протон бүріккішін өтеуді сұраймын."
+      "ru": "Ночью в отеле «Янтарь» неизвестный разгромил банкетный зал и уничтожил оборудование моей службы промышленной очистки. Прошу оплатить ремонт фургона и четырёх электростатических распылителей.",
+      "en": "An unknown intruder wrecked the Amber Hotel ballroom overnight and destroyed my industrial-cleaning equipment. I request payment for the van and four electrostatic sprayers.",
+      "tr": "Gece kimliği belirsiz biri Amber Oteli'nin balo salonunu dağıttı ve endüstriyel temizlik ekipmanımı yok etti. Minibüs ile dört elektrostatik püskürtücünün bedelini istiyorum.",
+      "ar": "خرّب شخص مجهول قاعة فندق العنبر ليلاً ودمّر معدات التنظيف الصناعي الخاصة بي. أطلب تعويض الشاحنة وأربعة مرشات كهروستاتيكية.",
+      "kk": "Түнде белгісіз адам «Янтарь» қонақүйінің залын қиратып, өнеркәсіптік тазалау жабдығымды жойды. Фургон мен төрт электростатикалық бүріккішті өтеуді сұраймын."
     }
   },
   "coverImage": "covers/case-035.svg",
-  "personImage": "people/arkady.webp",
   "client": {
     "role": {
       "ru": "Владелец службы очистки",
@@ -80,11 +79,11 @@
           "kk": "Компания"
         },
         "v": {
-          "ru": "ЭКТО-1",
-          "en": "ECTO-1",
-          "tr": "ECTO-1",
-          "ar": "ECTO-1",
-          "kk": "ЭКТО-1"
+          "ru": "АРВ-4",
+          "en": "ARV-4",
+          "tr": "ARV-4",
+          "ar": "ARV-4",
+          "kk": "АРВ-4"
         }
       }
     ]
@@ -109,41 +108,41 @@
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Разгром устроил сам заявитель, а не призрак.",
-        "en": "The claimant, not a ghost, caused the damage.",
-        "tr": "Hasarı hayalet değil başvuru sahibi verdi.",
-        "ar": "صاحب الطلب لا الشبح هو من أحدث الضرر.",
-        "kk": "Зиянды елес емес, өтініш беруші келтірген."
+        "ru": "Разгром устроил сам заявитель, а не неизвестный нарушитель.",
+        "en": "The claimant, not an unknown intruder, caused the damage.",
+        "tr": "Hasarı kimliği belirsiz biri değil başvuru sahibi verdi.",
+        "ar": "صاحب الطلب، لا شخص مجهول، هو من أحدث الضرر.",
+        "kk": "Зиянды белгісіз адам емес, өтініш беруші келтірген."
       },
       "meta": {
-        "cameraId": "CAM-SLIME-04",
-        "cameraModel": "Bosch FLEXIDOME IP starlight 8000i · 4K · H.265"
+        "cameraId": "CAM-AMBER-04",
+        "cameraModel": "DomeGuard DG-8000 · 4K · H.265"
       }
     },
     {
       "id": "ev-gps",
       "type": "gps",
       "title": {
-        "ru": "Трек фургона ЭКТО-1",
-        "en": "ECTO-1 van track",
-        "tr": "ECTO-1 minibüs rotası",
-        "ar": "مسار شاحنة ECTO-1",
-        "kk": "ECTO-1 фургонының бағыты"
+        "ru": "Трек фургона АРВ-4",
+        "en": "ARV-4 van track",
+        "tr": "ARV-4 minibüs rotası",
+        "ar": "مسار شاحنة ARV-4",
+        "kk": "ARV-4 фургонының бағыты"
       },
       "content": {
         "ru": [
           "00:55 · склад",
-          "01:39 · отель «Слизень»",
+          "01:39 · отель «Янтарь»",
           "02:18 · ломбард"
         ],
         "en": [
           "00:55 · depot",
-          "01:39 · Slime Hotel",
+          "01:39 · Amber Hotel",
           "02:18 · pawnshop"
         ],
         "tr": [
           "00:55 · depo",
-          "01:39 · Slime Oteli",
+          "01:39 · Amber Oteli",
           "02:18 · rehin dükkânı"
         ],
         "ar": [
@@ -153,7 +152,7 @@
         ],
         "kk": [
           "00:55 · қойма",
-          "01:39 · «Слайм» қонақүйі",
+          "01:39 · «Янтарь» қонақүйі",
           "02:18 · ломбард"
         ]
       },
@@ -167,11 +166,11 @@
       },
       "meta": {
         "company": {
-          "ru": "СпектрТрек",
-          "en": "SpectrumTrack",
+          "ru": "Навигационная служба № 35",
+          "en": "Navigation Office 35",
           "tr": "SpektrumTakip",
           "ar": "سبيكتروم تراك",
-          "kk": "СпектрТрек"
+          "kk": "Навигационная служба № 35"
         },
         "department": {
           "ru": "Корпоративный контроль",
@@ -258,8 +257,8 @@
         "kk": "Әкімші жауабы"
       },
       "content": {
-        "ru": "Слышал гул, хлопок и крик: «Не пересекайте струи!»",
-        "en": "I heard a hum, a bang, and someone shout: 'Don't cross the streams!'",
+        "ru": "Слышал гул, хлопок и крик: «Отключите оборудование!»",
+        "en": "I heard a hum, a bang, and someone shout: 'Shut down the equipment!'",
         "tr": "Bir uğultu, patlama ve 'Akışları kesiştirmeyin!' diye bir ses duydum.",
         "ar": "سمعت طنيناً وانفجاراً وصوتاً يصرخ: «لا تقاطعوا التدفقات!»",
         "kk": "Гуіл, тарс және «Ағындарды қоспаңдар!» деген айқайды естідім."
@@ -284,11 +283,11 @@
         "kk": "Залды тексеру"
       },
       "content": {
-        "ru": "Следы шин совпадают с протектором фургона ЭКТО-1; плазменных ожогов нет.",
-        "en": "Tire marks match the ECTO-1 van; no plasma burns were found.",
-        "tr": "Lastik izleri ECTO-1 ile eşleşiyor; plazma yanığı yok.",
-        "ar": "آثار الإطارات تطابق شاحنة ECTO-1؛ لا حروق بلازمية.",
-        "kk": "Шина іздері ECTO-1-ге сәйкес; плазмалық күйік жоқ."
+        "ru": "Следы шин совпадают с протектором фургона АРВ-4; следов внешнего воздействия нет.",
+        "en": "Tire marks match the ARV-4 van; no signs of an outside attack were found.",
+        "tr": "Lastik izleri ARV-4 ile eşleşiyor; plazma yanığı yok.",
+        "ar": "آثار الإطارات تطابق شاحنة ARV-4؛ لا حروق بلازمية.",
+        "kk": "Шина іздері ARV-4-ке сәйкес; сыртқы шабуыл белгілері жоқ."
       },
       "isContradiction": true,
       "contradictionExplanation": {
@@ -310,11 +309,11 @@
         "kk": "Өшірілген жазба"
       },
       "content": {
-        "ru": "«Если страховщик поверит в призрака — долги закрыты. Кто кого вызовет теперь?»",
-        "en": "'If the insurer buys the ghost story, the debts are gone. Who are they gonna call now?'",
-        "tr": "'Sigortacı hayalet hikâyesine inanırsa borçlar biter. Şimdi kimi arayacaklar?'",
-        "ar": "«إذا صدقت شركة التأمين قصة الشبح انتهت الديون. بمن سيتصلون الآن؟»",
-        "kk": "«Сақтандырушы елеске сенсе, қарыз жабылады. Енді кімді шақырады?»"
+        "ru": "«Если страховщик поверит в историю о ночном нарушителе — долги закрыты.»",
+        "en": "'If the insurer accepts the story about a night intruder, the debts are gone.'",
+        "tr": "'Sigortacı gece gelen davetsiz misafir hikâyesine inanırsa borçlar biter.'",
+        "ar": "«إذا صدقت شركة التأمين قصة المتسلل الليلي انتهت الديون.»",
+        "kk": "«Сақтандырушы түнгі бұзушы туралы оқиғаға сенсе, қарыз жабылады.»"
       },
       "isContradiction": true,
       "contradictionExplanation": {
@@ -325,34 +324,34 @@
         "kk": "Жазба себеп пен қойылым жоспарын тікелей ашады."
       },
       "meta": {
-        "socialPlatform": "ghostbook.local"
+        "socialPlatform": "nightlog.local"
       }
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Дело пародирует охотников за привидениями: фургон, ловушки и запрет пересекать струи.",
+      "Следы шин и переписка доказывают инсценировку ущерба.",
       "Камера, шины и GPS доказывают, что зал разгромил сам Егоров.",
       "Распылители были проданы до аварии, а удалённый пост раскрывает страховую схему."
     ],
     "en": [
-      "The case riffs on ghost hunters: the van, traps, and the warning not to cross streams.",
+      "Tire marks and messages prove the damage was staged.",
       "CCTV, tire marks, and GPS prove Egorov wrecked the room himself.",
       "The sprayers were sold beforehand, and the deleted post exposes the insurance scheme."
     ],
     "tr": [
-      "Dava hayalet avcılarına gönderme yapar: minibüs, tuzaklar ve akışları kesiştirmeme uyarısı.",
+      "Lastik izleri ve mesajlar hasarın kurgulandığını kanıtlıyor.",
       "Kamera, lastik izleri ve GPS salonu Egorov'un dağıttığını kanıtlıyor.",
       "Püskürtücüler önceden satılmış; silinen gönderi sigorta planını açığa çıkarıyor."
     ],
     "ar": [
-      "تحاكي القضية صيادي الأشباح: الشاحنة والفخاخ والتحذير من تقاطع التدفقات.",
+      "تثبت آثار الإطارات والرسائل أن الضرر كان مدبّراً.",
       "تثبت الكاميرا وآثار الإطارات وGPS أن إيغوروف دمّر القاعة بنفسه.",
       "بيعت المرشات مسبقاً ويكشف المنشور المحذوف مخطط التأمين."
     ],
     "kk": [
-      "Іс елес аңшыларын әжуалайды: фургон, тұзақ және ағындарды қоспау ескертуі.",
+      "Шина іздері мен хаттар залалдың қолдан жасалғанын дәлелдейді.",
       "Камера, шина ізі және GPS залды Егоровтың өзі қиратқанын дәлелдейді.",
       "Бүріккіштер алдын ала сатылған, ал өшірілген жазба сақтандыру айласын ашады."
     ]

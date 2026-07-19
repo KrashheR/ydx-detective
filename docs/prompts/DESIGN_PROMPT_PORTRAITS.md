@@ -186,15 +186,15 @@
 > bushy grey moustache and eyebrows, large old-fashioned thick glasses, knitted olive cardigan.
 > Earnest, slightly batty but endearing. + STYLE
 
-**orest** · Orest Shredderov, 48 · РФ · *«вандализм и кража» на металлобазе* (отсылка к Шреддеру)
-> A 48-year-old Russian man, stern intimidating scrap-yard boss, hard angular face, shaved head
-> or very short hair, heavy jaw, cold grey eyes, dark slate work jacket. Severe, humourless —
-> but still a plain document photo, no villain theatrics. + STYLE
+**orest** · Pavel Arsenov, 48 · РФ · *владелец спортбара, инсценировка кражи*
+> A 48-year-old Russian small-business owner, broad face, short sandy hair, hazel eyes, plain
+> charcoal work jacket over a beige shirt. Reserved and businesslike; a neutral document portrait
+> with no resemblance to a known person or fictional character. + STYLE
 
-**khariton** ↻ · Khariton (Splintovich 69 / Velizhanin 55) · *сэнсэй додзё / склад* (отсылка к Сплинтеру)
-> A ~65-year-old wise old martial-arts sensei, narrow lined face, long wispy thin grey beard and
-> moustache, calm half-closed eyes, grey topknot or bald crown, muted clay-brown kimono-style
-> collar. Serene, dignified, slightly mischievous. + STYLE
+**khariton** ↻ · Mikhail Ternov, 69 / Khariton Velizhanin, 55 · *тренер спортклуба / склад*
+> A ~65-year-old sports-club administrator, square lined face, neat short grey hair, trimmed
+> moustache, attentive brown eyes, muted clay-brown cardigan over a collared shirt. Calm and
+> dignified; no costume styling or resemblance to a known person or fictional character. + STYLE
 
 ---
 

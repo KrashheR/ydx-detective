@@ -5,19 +5,19 @@
   "claimAmount": 85000,
   "truth": "valid",
   "title": {
-    "ru": "Сбой в матрице",
-    "en": "Matrix Failure",
-    "tr": "Matris Arızası",
-    "ar": "عطل في المصفوفة",
-    "kk": "Матрицадағы ақау"
+    "ru": "Перегрев серверной",
+    "en": "Server Room Overheating",
+    "tr": "Sunucu Odasının Aşırı Isınması",
+    "ar": "ارتفاع حرارة غرفة الخوادم",
+    "kk": "Сервер бөлмесінің қызып кетуі"
   },
   "claim": {
     "person": {
-      "ru": "Нэо Ковалёв, 33 года",
-      "en": "Neo Kovalyov, 33",
-      "tr": "Neo Kovalyov, 33",
-      "ar": "نيو كوفاليوف، 33",
-      "kk": "Нэо Ковалёв, 33 жаста"
+      "ru": "Николай Коваль, 33 года",
+      "en": "Nikolai Koval, 33",
+      "tr": "Nikolai Koval, 33",
+      "ar": "نيكولاي كوفال، 33",
+      "kk": "Николай Коваль, 33 жаста"
     },
     "story": {
       "ru": "Работаю старшим разработчиком в «ГринКод Системс». Во время ночной смены система охлаждения серверной вышла из строя. Перегрев уничтожил мой рабочий ноутбук с уникальными наработками. Прошу компенсацию 85 000 рублей по полису страхования профессионального оборудования.",
@@ -28,7 +28,6 @@
     }
   },
   "coverImage": "covers/case-101-daily.svg",
-  "personImage": "people/neo.webp",
   "evidences": [
     {
       "id": "ev-temp-log",
@@ -100,11 +99,11 @@
         "kk": "Техникалық инспекция актісі"
       },
       "content": {
-        "ru": "Насос охлаждения #2 вышел из строя вследствие усталостного разрушения подшипника. Признаков преднамеренного повреждения нет. Код неисправности системы: 4221. Сообщение журнала ошибок: «There is no spoon». Потеря охлаждения была неизбежна с момента разрушения подшипника.",
-        "en": "Cooling pump #2 failed due to bearing fatigue fracture. No signs of deliberate damage. System fault code: 4221. Error log message: 'There is no spoon'. Cooling loss was inevitable from the moment of bearing failure.",
-        "tr": "Soğutma pompası #2, yatak yorulma kırığı nedeniyle arızalandı. Kasıtlı hasar belirtisi yok. Sistem arıza kodu: 4221. Hata günlüğü mesajı: 'There is no spoon'. Soğutma kaybı, yatak arızası anından itibaren kaçınılmazdı.",
-        "ar": "تعطّلت مضخة التبريد #2 بسبب كسر إجهاد المحمل. لا توجد علامات ضرر متعمد. رمز عطل النظام: 4221. رسالة سجل الأخطاء: 'There is no spoon'. كان فقدان التبريد حتميًا من لحظة فشل المحمل.",
-        "kk": "#2 салқындату сорғысы мойынтіректің шаршаудан сынуы салдарынан істен шықты. Қасақана зиян белгілері жоқ. Жүйенің бұзылу коды: 4221. Қате журналы хабары: «There is no spoon». Мойынтірек бұзылған сәттен бастап салқындатудың жоғалуы сөзсіз болды."
+        "ru": "Насос охлаждения #2 вышел из строя вследствие усталостного разрушения подшипника. Признаков преднамеренного повреждения нет. Код неисправности системы: 4221. Сообщение журнала ошибок: «Cooling threshold exceeded». Потеря охлаждения была неизбежна с момента разрушения подшипника.",
+        "en": "Cooling pump #2 failed due to bearing fatigue fracture. No signs of deliberate damage. System fault code: 4221. Error log message: 'Cooling threshold exceeded'. Cooling loss was inevitable from the moment of bearing failure.",
+        "tr": "Soğutma pompası #2, yatak yorulma kırığı nedeniyle arızalandı. Kasıtlı hasar belirtisi yok. Sistem arıza kodu: 4221. Hata günlüğü mesajı: 'Cooling threshold exceeded'. Soğutma kaybı, yatak arızası anından itibaren kaçınılmazdı.",
+        "ar": "تعطّلت مضخة التبريد #2 بسبب كسر إجهاد المحمل. لا توجد علامات ضرر متعمد. رمز عطل النظام: 4221. رسالة سجل الأخطاء: 'Cooling threshold exceeded'. كان فقدان التبريد حتميًا من لحظة فشل المحمل.",
+        "kk": "#2 салқындату сорғысы мойынтіректің шаршаудан сынуы салдарынан істен шықты. Қасақана зиян белгілері жоқ. Жүйенің бұзылу коды: 4221. Қате журналы хабары: «Cooling threshold exceeded». Мойынтірек бұзылған сәттен бастап салқындатудың жоғалуы сөзсіз болды."
       },
       "isContradiction": false,
       "contradictionExplanation": {
@@ -126,11 +125,11 @@
         "kk": "Жойылған ноутбуктың фотосы"
       },
       "content": {
-        "ru": "На экране оплавленного ноутбука — россыпь зелёных символов на чёрном фоне. Серийный номер на шильдике: GC-2026-NEO-7749. Корпус деформирован, порты оплавлены. Следов физического удара или вскрытия нет.",
-        "en": "On the melted laptop screen — a cascade of green symbols on a black background. Serial number on the tag: GC-2026-NEO-7749. The casing is deformed, ports are melted. No traces of physical impact or tampering.",
-        "tr": "Erimiş dizüstü bilgisayarın ekranında siyah bir arka plan üzerinde yeşil semboller dizisi. Etiketteki seri numarası: GC-2026-NEO-7749. Gövde deforme olmuş, portlar erimiş. Fiziksel darbe veya kurcalama izi yok.",
-        "ar": "على شاشة الحاسوب المنصهر — شلال من الرموز الخضراء على خلفية سوداء. الرقم التسلسلي على الملصق: GC-2026-NEO-7749. الهيكل مشوه والمنافذ منصهرة. لا آثار لصدمة جسدية أو عبث.",
-        "kk": "Балқыған ноутбук экранында қара фонда жасыл символдар шашылғаны. Жапсырмадағы сериялық нөмір: GC-2026-NEO-7749. Корпус деформацияланған, порттар балқыған. Физикалық соққы немесе ашу іздері жоқ."
+        "ru": "На экране оплавленного ноутбука виден стандартный журнал диагностики. Серийный номер на шильдике: GC-2026-NKV-7749. Корпус деформирован, порты оплавлены. Следов физического удара или вскрытия нет.",
+        "en": "The melted laptop screen shows a standard diagnostic log. Serial number on the tag: GC-2026-NKV-7749. The casing is deformed, ports are melted. No traces of physical impact or tampering.",
+        "tr": "Erimiş dizüstü bilgisayarın ekranında standart tanılama günlüğü görülüyor. Etiketteki seri numarası: GC-2026-NKV-7749. Gövde deforme olmuş, portlar erimiş. Fiziksel darbe veya kurcalama izi yok.",
+        "ar": "تعرض شاشة الحاسوب المنصهر سجل تشخيص اعتيادياً. الرقم التسلسلي على الملصق: GC-2026-NKV-7749. الهيكل مشوه والمنافذ منصهرة. لا آثار لصدمة جسدية أو عبث.",
+        "kk": "Балқыған ноутбук экранында стандартты диагностикалық журнал көрінеді. Жапсырмадағы сериялық нөмір: GC-2026-NKV-7749. Корпус деформацияланған, порттар балқыған. Физикалық соққы немесе ашу іздері жоқ."
       },
       "isContradiction": false,
       "contradictionExplanation": {

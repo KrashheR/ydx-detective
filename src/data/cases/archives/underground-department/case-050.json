@@ -1,340 +1,340 @@
-﻿{
-    "id":  "case-050",
-    "type":  "standard",
-    "difficulty":  "hard",
-    "claimAmount":  21400,
-    "truth":  "valid",
-    "investigationBudget":  4,
-    "title":  {
-                  "ru":  "Пожар в антикварном додзё",
-                  "en":  "Fire in the Antique Dojo",
-                  "tr":  "Fire in the Antique Dojo",
-                  "ar":  "Fire in the Antique Dojo",
-                  "kk":  "Пожар в антикварном додзё"
-              },
-    "claim":  {
-                  "person":  {
-                                 "ru":  "Харитон Сэн, 65 лет",
-                                 "en":  "Khariton Sen, 65",
-                                 "tr":  "Khariton Sen, 65",
-                                 "ar":  "خاريتون سين، 65",
-                                 "kk":  "Харитон Сэн, 65 жаста"
-                             },
-                  "story":  {
-                                "ru":  "Конкуренты подожгли музей-додзё через служебный двор. Я успел вынести учеников, но старые маски и часть татами сгорели. Прошу выплату на восстановление.",
-                                "en":  "Rivals set fire to the dojo-museum through the service yard. I got the students out, but old masks and part of the tatami burned. I request payout for restoration.",
-                                "tr":  "Rakipler servis avlusundan dojo-müzeyi ateşe verdi. Öğrencileri çıkardım, ama eski maskeler ve tataminin bir kısmı yandı. Onarım ödemesi istiyorum.",
-                                "ar":  "أشعل خصوم النار في متحف الدوجو عبر ساحة الخدمة. أخرجت الطلاب، لكن الأقنعة القديمة وجزءاً من التاتامي احترق. أطلب تعويض الترميم.",
-                                "kk":  "Бәсекелестер қызмет ауласы арқылы додзё-музейді өртеді. Шәкірттерді шығарып үлгердім, бірақ ескі маскалар мен татамидің бір бөлігі жанды. Қалпына келтіруге төлем сұраймын."
-                            }
-              },
-    "coverImage":  "covers/case-050.svg",
-    "personImage":  "people/khariton-sen.webp",
-    "client":  {
-                   "role":  {
-                                "ru":  "Хранитель подпольного додзё-музея",
-                                "en":  "Underground dojo-museum keeper",
-                                "tr":  "Yeraltı dojo-müzesi koruyucusu",
-                                "ar":  "حارس متحف الدوجو الجوفي",
-                                "kk":  "Жерасты додзё-музейінің сақтаушысы"
-                            },
-                   "meta":  [
-                                {
-                                    "k":  {
-                                              "ru":  "Архив",
-                                              "en":  "Archive",
-                                              "tr":  "Arşiv",
-                                              "ar":  "الأرشيف",
-                                              "kk":  "Архив"
-                                          },
-                                    "v":  {
-                                              "ru":  "Подземный Отдел",
-                                              "en":  "Underground Department",
-                                              "tr":  "Yeraltı Dairesi",
-                                              "ar":  "القسم الجوفي",
-                                              "kk":  "Жерасты бөлімі"
-                                          }
-                                },
-                                {
-                                    "k":  {
-                                              "ru":  "Застрахованный риск",
-                                              "en":  "Insured risk",
-                                              "tr":  "Sigortalı risk",
-                                              "ar":  "الخطر المؤمن عليه",
-                                              "kk":  "Сақтандырылған тәуекел"
-                                          },
-                                    "v":  {
-                                              "ru":  "Поджог музея",
-                                              "en":  "Museum arson",
-                                              "tr":  "Müze kundaklama",
-                                              "ar":  "إحراق متحف",
-                                              "kk":  "Музейді өртеу"
-                                          }
-                                },
-                                {
-                                    "k":  {
-                                              "ru":  "Архивная связка",
-                                              "en":  "Archive thread",
-                                              "tr":  "Arşiv bağı",
-                                              "ar":  "خيط الأرشيف",
-                                              "kk":  "Архив байланысы"
-                                          },
-                                    "v":  {
-                                              "ru":  "Повторяющийся след: East Yard — скупка, где старое оборудование и украденные модули превращают в страховые истории.",
-                                              "en":  "Recurring lead: East Yard, the consignment yard turning old equipment and stolen modules into insurance stories.",
-                                              "tr":  "Tekrarlayan iz: East Yard; eski ekipmanı ve çalıntı modülleri sigorta hikâyelerine çeviren komisyon alanı.",
-                                              "ar":  "خيط متكرر: East Yard، ساحة البيع التي تحول المعدات القديمة والوحدات المسروقة إلى قصص تأمين.",
-                                              "kk":  "Қайталанатын із: East Yard — ескі жабдық пен ұрланған модульдерді сақтандыру оқиғасына айналдыратын алаң."
-                                          }
-                                }
-                            ]
-               },
-    "evidences":  [
-                      {
-                          "id":  "photo-50",
-                          "type":  "photo",
-                          "title":  {
-                                        "ru":  "След фитиля у служебной двери",
-                                        "en":  "Fuse trace by service door",
-                                        "tr":  "Servis kapısında fitil izi",
-                                        "ar":  "أثر فتيل عند باب الخدمة",
-                                        "kk":  "Қызмет есігіндегі білте ізі"
-                                    },
-                          "content":  {
-                                          "ru":  "Обугленная дорожка идёт от внешнего двора к порогу. Очаг не в подсобке, а у служебной двери.",
-                                          "en":  "The char trail runs from the outside yard to the threshold. The fire origin is at the service door, not in the storage room.",
-                                          "tr":  "Kömürleşmiş iz dış avludan eşiğe gidiyor. Yangın noktası depoda değil servis kapısında.",
-                                          "ar":  "يمتد أثر التفحم من الساحة الخارجية إلى العتبة. نقطة الحريق عند باب الخدمة لا في المخزن.",
-                                          "kk":  "Күйген із сыртқы ауладан табалдырыққа барады. Өрт ошағы қоймада емес, қызмет есігінде."
-                                      },
-                          "isContradiction":  false,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Улика поддерживает заявленную версию и не требует штампа противоречия.",
-                                                           "en":  "This evidence supports the claim and should not be stamped as a contradiction.",
-                                                           "tr":  "Bu kanıt başvuruyu destekler ve çelişki damgası gerektirmez.",
-                                                           "ar":  "يدعم هذا الدليل المطالبة ولا يجب ختمه كتعارض.",
-                                                           "kk":  "Бұл айғақ өтінішті қолдайды және қайшылық ретінде белгіленбеуі керек."
-                                                       },
-                          "meta":  {
-                                       "filename":  "IMG_20260650_081500.jpg",
-                                       "imageUrl":  "evidence/case-050-photo-50.webp"
-                                   },
-                          "relation":  "supports"
-                      },
-                      {
-                          "id":  "document-50",
-                          "type":  "document",
-                          "title":  {
-                                        "ru":  "Опись музейной коллекции",
-                                        "en":  "Museum collection inventory",
-                                        "tr":  "Müze koleksiyonu envanteri",
-                                        "ar":  "جرد مجموعة المتحف",
-                                        "kk":  "Музей коллекциясы тізімі"
-                                    },
-                          "content":  {
-                                          "ru":  "Опись до пожара подтверждает маски, тренировочные свитки и татами. Повреждённые предметы были застрахованы до инцидента.",
-                                          "en":  "The pre-fire inventory confirms the masks, training scrolls, and tatami. The damaged items were insured before the incident.",
-                                          "tr":  "Yangın öncesi envanter maskeleri, eğitim tomarlarını ve tatamiyi doğruluyor. Hasarlı parçalar olaydan önce sigortalıydı.",
-                                          "ar":  "يثبت جرد ما قبل الحريق الأقنعة واللفائف التدريبية والتاتامي. كانت القطع المتضررة مؤمنة قبل الحادث.",
-                                          "kk":  "Өртке дейінгі тізім маскаларды, оқу шиыршықтарын және татамиді растайды. Зақымдалған заттар оқиғаға дейін сақтандырылған."
-                                      },
-                          "isContradiction":  false,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Улика поддерживает заявленную версию и не требует штампа противоречия.",
-                                                           "en":  "This evidence supports the claim and should not be stamped as a contradiction.",
-                                                           "tr":  "Bu kanıt başvuruyu destekler ve çelişki damgası gerektirmez.",
-                                                           "ar":  "يدعم هذا الدليل المطالبة ولا يجب ختمه كتعارض.",
-                                                           "kk":  "Бұл айғақ өтінішті қолдайды және қайшылық ретінде белгіленбеуі керек."
-                                                       },
-                          "relation":  "context"
-                      },
-                      {
-                          "id":  "camera-50",
-                          "type":  "camera_recording",
-                          "title":  {
-                                        "ru":  "Камера переулка",
-                                        "en":  "Alley camera",
-                                        "tr":  "Sokak kamerası",
-                                        "ar":  "كاميرا الزقاق",
-                                        "kk":  "Тар көше камерасы"
-                                    },
-                          "content":  {
-                                          "ru":  "22:31: двое в одинаковых куртках оставляют канистру у служебной двери и бегут к тоннельному лифту. Куртки на записи имеют нашивку East Yard, но Сэн не связан с этой площадкой.",
-                                          "en":  "22:31: two people in matching jackets leave a canister by the service door and run toward the tunnel lift. The jackets in the footage carry an East Yard patch, but Sen is not linked to that yard.",
-                                          "tr":  "22:31: aynı ceketli iki kişi servis kapısına bidon bırakıp tünel asansörüne koşuyor. Görüntüdeki ceketlerde East Yard arması var, ancak Sen bu alanla bağlantılı değil.",
-                                          "ar":  "22:31 يترك شخصان بسترتين متشابهتين علبة قرب باب الخدمة ويركضان نحو مصعد النفق. تحمل السترات في التسجيل رقعة East Yard، لكن سين غير مرتبط بتلك الساحة.",
-                                          "kk":  "22:31-де бірдей күртеше киген екі адам қызмет есігіне канистр тастап, туннель лифтіне жүгіреді. Жазбадағы күртешелерде East Yard белгісі бар, бірақ Сэн бұл алаңмен байланысты емес."
-                                      },
-                          "isContradiction":  false,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Улика поддерживает заявленную версию и не требует штампа противоречия.",
-                                                           "en":  "This evidence supports the claim and should not be stamped as a contradiction.",
-                                                           "tr":  "Bu kanıt başvuruyu destekler ve çelişki damgası gerektirmez.",
-                                                           "ar":  "يدعم هذا الدليل المطالبة ولا يجب ختمه كتعارض.",
-                                                           "kk":  "Бұл айғақ өтінішті қолдайды және қайшылық ретінде белгіленбеуі керек."
-                                                       },
-                          "meta":  {
-                                       "cameraId":  "ARC-50",
-                                       "cameraModel":  "Axis P3265-LV - 1080p - H.264"
-                                   },
-                          "relation":  "supports"
-                      },
-                      {
-                          "id":  "log-50",
-                          "type":  "usage_log",
-                          "title":  {
-                                        "ru":  "Журнал пожарной панели",
-                                        "en":  "Fire panel log",
-                                        "tr":  "Yangın paneli kaydı",
-                                        "ar":  "سجل لوحة الحريق",
-                                        "kk":  "Өрт панелі журналы"
-                                    },
-                          "content":  {
-                                          "ru":  [
-                                                     "22:32 — датчик двора: вспышка у служебной двери",
-                                                     "22:33 — автоматическое закрытие ученического зала",
-                                                     "22:34 — ручная эвакуация запущена ключом SEN-H"
-                                                 ],
-                                          "en":  [
-                                                     "22:32 — yard sensor: flash at service door",
-                                                     "22:33 — student hall auto-closed",
-                                                     "22:34 — manual evacuation started by SEN-H key"
-                                                 ],
-                                          "tr":  [
-                                                     "22:32 — avlu sensörü: servis kapısında parlama",
-                                                     "22:33 — öğrenci salonu otomatik kapandı",
-                                                     "22:34 — SEN-H anahtarıyla manuel tahliye başlatıldı"
-                                                 ],
-                                          "ar":  [
-                                                     "22:32 — حساس الساحة: وميض عند باب الخدمة",
-                                                     "22:33 — إغلاق قاعة الطلاب تلقائياً",
-                                                     "22:34 — بدء إخلاء يدوي بمفتاح SEN-H"
-                                                 ],
-                                          "kk":  [
-                                                     "22:32 — аула датчигі: қызмет есігінде жарқыл",
-                                                     "22:33 — шәкірт залы автоматты жабылды",
-                                                     "22:34 — SEN-H кілтімен қолмен эвакуация басталды"
-                                                 ]
-                                      },
-                          "isContradiction":  false,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Улика поддерживает заявленную версию и не требует штампа противоречия.",
-                                                           "en":  "This evidence supports the claim and should not be stamped as a contradiction.",
-                                                           "tr":  "Bu kanıt başvuruyu destekler ve çelişki damgası gerektirmez.",
-                                                           "ar":  "يدعم هذا الدليل المطالبة ولا يجب ختمه كتعارض.",
-                                                           "kk":  "Бұл айғақ өтінішті қолдайды және қайшылық ретінде белгіленбеуі керек."
-                                                       },
-                          "meta":  {
-                                       "logPrompt":  "archive@log-50:~$ tail -f /var/log/archive.log"
-                                   },
-                          "relation":  "supports"
-                      },
-                      {
-                          "id":  "bank-50",
-                          "type":  "bank_statement",
-                          "title":  {
-                                        "ru":  "Проверка закупок",
-                                        "en":  "Purchase review",
-                                        "tr":  "Alım kontrolü",
-                                        "ar":  "فحص المشتريات",
-                                        "kk":  "Сатып алуды тексеру"
-                                    },
-                          "content":  {
-                                          "ru":  [
-                                                     "За месяц — только покупка огнетушителей и пропитки татами",
-                                                     "Нет платежей за серу, стружку или ускорители горения"
-                                                 ],
-                                          "en":  [
-                                                     "Past month — only extinguisher and tatami coating purchases",
-                                                     "No payments for sulfur, shavings, or burn accelerants"
-                                                 ],
-                                          "tr":  [
-                                                     "Son ay — yalnız söndürücü ve tatami kaplaması alımı",
-                                                     "Kükürt, talaş veya hızlandırıcı ödemesi yok"
-                                                 ],
-                                          "ar":  [
-                                                     "الشهر الماضي — مشتريات مطفآت وطلاء تاتامي فقط",
-                                                     "لا مدفوعات لكبريت أو نشارة أو مسرعات حريق"
-                                                 ],
-                                          "kk":  [
-                                                     "Соңғы ай — тек өртсөндіргіш пен татами сіңдірмесі сатып алынған",
-                                                     "Күкірт, жоңқа немесе жану үдеткішіне төлем жоқ"
-                                                 ]
-                                      },
-                          "isContradiction":  false,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Материал важен для проверки версии, но сам по себе не является противоречием.",
-                                                           "en":  "The material matters to the review but is not a contradiction by itself.",
-                                                           "tr":  "Bu kayıt inceleme için önemlidir, ancak tek başına çelişki değildir.",
-                                                           "ar":  "هذه المادة مهمة للمراجعة لكنها ليست تناقضاً بحد ذاتها.",
-                                                           "kk":  "Материал тексеру үшін маңызды, бірақ өздігінен қайшылық емес."
-                                                       },
-                          "meta":  {
-                                       "bankName":  {
-                                                        "ru":  "Municipal Credit",
-                                                        "en":  "Municipal Credit",
-                                                        "tr":  "Municipal Credit",
-                                                        "ar":  "Municipal Credit",
-                                                        "kk":  "Municipal Credit"
-                                                    },
-                                       "accountMask":  "**** **** **** 50"
-                                   },
-                          "relation":  "context"
-                      },
-                      {
-                          "id":  "witness-50",
-                          "type":  "witness_statement",
-                          "title":  {
-                                        "ru":  "Ученик вечерней группы",
-                                        "en":  "Evening student statement",
-                                        "tr":  "Akşam öğrencisi ifadesi",
-                                        "ar":  "إفادة طالب المساء",
-                                        "kk":  "Кешкі топ шәкірті"
-                                    },
-                          "content":  {
-                                          "ru":  "«Сэн первым вывел нас к запасному выходу. Если бы он тянул время, мы бы остались в дыму».",
-                                          "en":  "\"Sen was the first to lead us to the emergency exit. If he had delayed, we would have stayed in the smoke.\"",
-                                          "tr":  "\"Sen bizi ilk acil çıkışa götüren kişiydi. Gecikseydi dumanda kalırdık.\"",
-                                          "ar":  "«كان سين أول من قادنا إلى مخرج الطوارئ. لو تأخر لبقينا في الدخان».",
-                                          "kk":  "«Сэн бізді бірінші болып қосымша шығуға алып шықты. Ол кешіксе, түтінде қалар едік»."
-                                      },
-                          "isContradiction":  false,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Улика поддерживает заявленную версию и не требует штампа противоречия.",
-                                                           "en":  "This evidence supports the claim and should not be stamped as a contradiction.",
-                                                           "tr":  "Bu kanıt başvuruyu destekler ve çelişki damgası gerektirmez.",
-                                                           "ar":  "يدعم هذا الدليل المطالبة ولا يجب ختمه كتعارض.",
-                                                           "kk":  "Бұл айғақ өтінішті қолдайды және қайшылық ретінде белгіленбеуі керек."
-                                                       },
-                          "relation":  "supports"
-                      }
-                  ],
-    "correctDecision":  "approve",
-    "explanation":  {
-                        "ru":  [
-                                   "Фото, камера и пожарная панель указывают на внешний поджог.",
-                                   "Нашивка East Yard делает это дело реальным ударом сети, а не инсценировкой Сэна.",
-                                   "Версия Сэна подтверждена: вердикт — выплатить."
-                               ],
-                        "en":  [
-                                   "Photo, camera, and fire panel records point to outside arson.",
-                                   "The East Yard patch makes this a real network strike, not Sen staging.",
-                                   "Sen version is supported: approve the payout."
-                               ],
-                        "tr":  [
-                                   "Fotoğraf, kamera ve yangın paneli dış kundaklamayı gösteriyor.",
-                                   "East Yard arması bunu Sen’in sahnesi değil gerçek ağ saldırısı yapıyor.",
-                                   "Sen’in anlatımı destekleniyor: ödeme onaylanır."
-                               ],
-                        "ar":  [
-                                   "تشير الصورة والكاميرا ولوحة الحريق إلى إحراق خارجي.",
-                                   "تجعل رقعة East Yard الحادث ضربة حقيقية من الشبكة لا فبركة من سين.",
-                                   "رواية سين مثبتة: القرار دفع التعويض."
-                               ],
-                        "kk":  [
-                                   "Фото, камера және өрт панелі сыртқы өрт қоюды көрсетеді.",
-                                   "East Yard белгісі мұны Сэннің қойылымы емес, желінің нақты соққысы етеді.",
-                                   "Сэн нұсқасы расталды: вердикт — төлеу."
-                               ]
-                    }
+{
+  "id": "case-050",
+  "type": "standard",
+  "difficulty": "hard",
+  "claimAmount": 21400,
+  "truth": "valid",
+  "investigationBudget": 4,
+  "title": {
+    "ru": "Пожар в антикварном додзё",
+    "en": "Fire in the Antique Dojo",
+    "tr": "Fire in the Antique Dojo",
+    "ar": "Fire in the Antique Dojo",
+    "kk": "Пожар в антикварном додзё"
+  },
+  "claim": {
+    "person": {
+      "ru": "Харитон Сэн, 65 лет",
+      "en": "Khariton Sen, 65",
+      "tr": "Khariton Sen, 65",
+      "ar": "خاريتون سين، 65",
+      "kk": "Харитон Сэн, 65 жаста"
+    },
+    "story": {
+      "ru": "Конкуренты подожгли музей-додзё через служебный двор. Я успел вынести учеников, но старые маски и часть татами сгорели. Прошу выплату на восстановление.",
+      "en": "Rivals set fire to the dojo-museum through the service yard. I got the students out, but old masks and part of the tatami burned. I request payout for restoration.",
+      "tr": "Rakipler servis avlusundan dojo-müzeyi ateşe verdi. Öğrencileri çıkardım, ama eski maskeler ve tataminin bir kısmı yandı. Onarım ödemesi istiyorum.",
+      "ar": "أشعل خصوم النار في متحف الدوجو عبر ساحة الخدمة. أخرجت الطلاب، لكن الأقنعة القديمة وجزءاً من التاتامي احترق. أطلب تعويض الترميم.",
+      "kk": "Бәсекелестер қызмет ауласы арқылы додзё-музейді өртеді. Шәкірттерді шығарып үлгердім, бірақ ескі маскалар мен татамидің бір бөлігі жанды. Қалпына келтіруге төлем сұраймын."
+    }
+  },
+  "coverImage": "covers/case-050.svg",
+  "personImage": "people/khariton-sen.webp",
+  "client": {
+    "role": {
+      "ru": "Хранитель подпольного додзё-музея",
+      "en": "Underground dojo-museum keeper",
+      "tr": "Yeraltı dojo-müzesi koruyucusu",
+      "ar": "حارس متحف الدوجو الجوفي",
+      "kk": "Жерасты додзё-музейінің сақтаушысы"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Архив",
+          "en": "Archive",
+          "tr": "Arşiv",
+          "ar": "الأرشيف",
+          "kk": "Архив"
+        },
+        "v": {
+          "ru": "Подземный Отдел",
+          "en": "Underground Department",
+          "tr": "Yeraltı Dairesi",
+          "ar": "القسم الجوفي",
+          "kk": "Жерасты бөлімі"
+        }
+      },
+      {
+        "k": {
+          "ru": "Застрахованный риск",
+          "en": "Insured risk",
+          "tr": "Sigortalı risk",
+          "ar": "الخطر المؤمن عليه",
+          "kk": "Сақтандырылған тәуекел"
+        },
+        "v": {
+          "ru": "Поджог музея",
+          "en": "Museum arson",
+          "tr": "Müze kundaklama",
+          "ar": "إحراق متحف",
+          "kk": "Музейді өртеу"
+        }
+      },
+      {
+        "k": {
+          "ru": "Архивная связка",
+          "en": "Archive thread",
+          "tr": "Arşiv bağı",
+          "ar": "خيط الأرشيف",
+          "kk": "Архив байланысы"
+        },
+        "v": {
+          "ru": "Повторяющийся след: East Yard — скупка, где старое оборудование и украденные модули превращают в страховые истории.",
+          "en": "Recurring lead: East Yard, the consignment yard turning old equipment and stolen modules into insurance stories.",
+          "tr": "Tekrarlayan iz: East Yard; eski ekipmanı ve çalıntı modülleri sigorta hikâyelerine çeviren komisyon alanı.",
+          "ar": "خيط متكرر: East Yard، ساحة البيع التي تحول المعدات القديمة والوحدات المسروقة إلى قصص تأمين.",
+          "kk": "Қайталанатын із: East Yard — ескі жабдық пен ұрланған модульдерді сақтандыру оқиғасына айналдыратын алаң."
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "photo-50",
+      "type": "photo",
+      "title": {
+        "ru": "След фитиля у служебной двери",
+        "en": "Fuse trace by service door",
+        "tr": "Servis kapısında fitil izi",
+        "ar": "أثر فتيل عند باب الخدمة",
+        "kk": "Қызмет есігіндегі білте ізі"
+      },
+      "content": {
+        "ru": "Обугленная дорожка идёт от внешнего двора к порогу. Очаг не в подсобке, а у служебной двери.",
+        "en": "The char trail runs from the outside yard to the threshold. The fire origin is at the service door, not in the storage room.",
+        "tr": "Kömürleşmiş iz dış avludan eşiğe gidiyor. Yangın noktası depoda değil servis kapısında.",
+        "ar": "يمتد أثر التفحم من الساحة الخارجية إلى العتبة. نقطة الحريق عند باب الخدمة لا في المخزن.",
+        "kk": "Күйген із сыртқы ауладан табалдырыққа барады. Өрт ошағы қоймада емес, қызмет есігінде."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Улика поддерживает заявленную версию и не требует штампа противоречия.",
+        "en": "This evidence supports the claim and should not be stamped as a contradiction.",
+        "tr": "Bu kanıt başvuruyu destekler ve çelişki damgası gerektirmez.",
+        "ar": "يدعم هذا الدليل المطالبة ولا يجب ختمه كتعارض.",
+        "kk": "Бұл айғақ өтінішті қолдайды және қайшылық ретінде белгіленбеуі керек."
+      },
+      "meta": {
+        "filename": "IMG_20260650_081500.jpg",
+        "imageUrl": "evidence/case-050-photo-50.webp"
+      },
+      "relation": "supports"
+    },
+    {
+      "id": "document-50",
+      "type": "document",
+      "title": {
+        "ru": "Опись музейной коллекции",
+        "en": "Museum collection inventory",
+        "tr": "Müze koleksiyonu envanteri",
+        "ar": "جرد مجموعة المتحف",
+        "kk": "Музей коллекциясы тізімі"
+      },
+      "content": {
+        "ru": "Опись до пожара подтверждает маски, тренировочные свитки и татами. Повреждённые предметы были застрахованы до инцидента.",
+        "en": "The pre-fire inventory confirms the masks, training scrolls, and tatami. The damaged items were insured before the incident.",
+        "tr": "Yangın öncesi envanter maskeleri, eğitim tomarlarını ve tatamiyi doğruluyor. Hasarlı parçalar olaydan önce sigortalıydı.",
+        "ar": "يثبت جرد ما قبل الحريق الأقنعة واللفائف التدريبية والتاتامي. كانت القطع المتضررة مؤمنة قبل الحادث.",
+        "kk": "Өртке дейінгі тізім маскаларды, оқу шиыршықтарын және татамиді растайды. Зақымдалған заттар оқиғаға дейін сақтандырылған."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Улика поддерживает заявленную версию и не требует штампа противоречия.",
+        "en": "This evidence supports the claim and should not be stamped as a contradiction.",
+        "tr": "Bu kanıt başvuruyu destekler ve çelişki damgası gerektirmez.",
+        "ar": "يدعم هذا الدليل المطالبة ولا يجب ختمه كتعارض.",
+        "kk": "Бұл айғақ өтінішті қолдайды және қайшылық ретінде белгіленбеуі керек."
+      },
+      "relation": "context"
+    },
+    {
+      "id": "camera-50",
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера переулка",
+        "en": "Alley camera",
+        "tr": "Sokak kamerası",
+        "ar": "كاميرا الزقاق",
+        "kk": "Тар көше камерасы"
+      },
+      "content": {
+        "ru": "22:31: двое в одинаковых куртках оставляют канистру у служебной двери и бегут к тоннельному лифту. Куртки на записи имеют нашивку East Yard, но Сэн не связан с этой площадкой.",
+        "en": "22:31: two people in matching jackets leave a canister by the service door and run toward the tunnel lift. The jackets in the footage carry an East Yard patch, but Sen is not linked to that yard.",
+        "tr": "22:31: aynı ceketli iki kişi servis kapısına bidon bırakıp tünel asansörüne koşuyor. Görüntüdeki ceketlerde East Yard arması var, ancak Sen bu alanla bağlantılı değil.",
+        "ar": "22:31 يترك شخصان بسترتين متشابهتين علبة قرب باب الخدمة ويركضان نحو مصعد النفق. تحمل السترات في التسجيل رقعة East Yard، لكن سين غير مرتبط بتلك الساحة.",
+        "kk": "22:31-де бірдей күртеше киген екі адам қызмет есігіне канистр тастап, туннель лифтіне жүгіреді. Жазбадағы күртешелерде East Yard белгісі бар, бірақ Сэн бұл алаңмен байланысты емес."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Улика поддерживает заявленную версию и не требует штампа противоречия.",
+        "en": "This evidence supports the claim and should not be stamped as a contradiction.",
+        "tr": "Bu kanıt başvuruyu destekler ve çelişki damgası gerektirmez.",
+        "ar": "يدعم هذا الدليل المطالبة ولا يجب ختمه كتعارض.",
+        "kk": "Бұл айғақ өтінішті қолдайды және қайшылық ретінде белгіленбеуі керек."
+      },
+      "meta": {
+        "cameraId": "ARC-50",
+        "cameraModel": "SentinelCam SC-3265 - 1080p - H.264"
+      },
+      "relation": "supports"
+    },
+    {
+      "id": "log-50",
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал пожарной панели",
+        "en": "Fire panel log",
+        "tr": "Yangın paneli kaydı",
+        "ar": "سجل لوحة الحريق",
+        "kk": "Өрт панелі журналы"
+      },
+      "content": {
+        "ru": [
+          "22:32 — датчик двора: вспышка у служебной двери",
+          "22:33 — автоматическое закрытие ученического зала",
+          "22:34 — ручная эвакуация запущена ключом SEN-H"
+        ],
+        "en": [
+          "22:32 — yard sensor: flash at service door",
+          "22:33 — student hall auto-closed",
+          "22:34 — manual evacuation started by SEN-H key"
+        ],
+        "tr": [
+          "22:32 — avlu sensörü: servis kapısında parlama",
+          "22:33 — öğrenci salonu otomatik kapandı",
+          "22:34 — SEN-H anahtarıyla manuel tahliye başlatıldı"
+        ],
+        "ar": [
+          "22:32 — حساس الساحة: وميض عند باب الخدمة",
+          "22:33 — إغلاق قاعة الطلاب تلقائياً",
+          "22:34 — بدء إخلاء يدوي بمفتاح SEN-H"
+        ],
+        "kk": [
+          "22:32 — аула датчигі: қызмет есігінде жарқыл",
+          "22:33 — шәкірт залы автоматты жабылды",
+          "22:34 — SEN-H кілтімен қолмен эвакуация басталды"
+        ]
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Улика поддерживает заявленную версию и не требует штампа противоречия.",
+        "en": "This evidence supports the claim and should not be stamped as a contradiction.",
+        "tr": "Bu kanıt başvuruyu destekler ve çelişki damgası gerektirmez.",
+        "ar": "يدعم هذا الدليل المطالبة ولا يجب ختمه كتعارض.",
+        "kk": "Бұл айғақ өтінішті қолдайды және қайшылық ретінде белгіленбеуі керек."
+      },
+      "meta": {
+        "logPrompt": "archive@log-50:~$ tail -f /var/log/archive.log"
+      },
+      "relation": "supports"
+    },
+    {
+      "id": "bank-50",
+      "type": "bank_statement",
+      "title": {
+        "ru": "Проверка закупок",
+        "en": "Purchase review",
+        "tr": "Alım kontrolü",
+        "ar": "فحص المشتريات",
+        "kk": "Сатып алуды тексеру"
+      },
+      "content": {
+        "ru": [
+          "За месяц — только покупка огнетушителей и пропитки татами",
+          "Нет платежей за серу, стружку или ускорители горения"
+        ],
+        "en": [
+          "Past month — only extinguisher and tatami coating purchases",
+          "No payments for sulfur, shavings, or burn accelerants"
+        ],
+        "tr": [
+          "Son ay — yalnız söndürücü ve tatami kaplaması alımı",
+          "Kükürt, talaş veya hızlandırıcı ödemesi yok"
+        ],
+        "ar": [
+          "الشهر الماضي — مشتريات مطفآت وطلاء تاتامي فقط",
+          "لا مدفوعات لكبريت أو نشارة أو مسرعات حريق"
+        ],
+        "kk": [
+          "Соңғы ай — тек өртсөндіргіш пен татами сіңдірмесі сатып алынған",
+          "Күкірт, жоңқа немесе жану үдеткішіне төлем жоқ"
+        ]
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Материал важен для проверки версии, но сам по себе не является противоречием.",
+        "en": "The material matters to the review but is not a contradiction by itself.",
+        "tr": "Bu kayıt inceleme için önemlidir, ancak tek başına çelişki değildir.",
+        "ar": "هذه المادة مهمة للمراجعة لكنها ليست تناقضاً بحد ذاتها.",
+        "kk": "Материал тексеру үшін маңызды, бірақ өздігінен қайшылық емес."
+      },
+      "meta": {
+        "bankName": {
+          "ru": "Municipal Credit",
+          "en": "Municipal Credit",
+          "tr": "Municipal Credit",
+          "ar": "Municipal Credit",
+          "kk": "Municipal Credit"
+        },
+        "accountMask": "**** **** **** 50"
+      },
+      "relation": "context"
+    },
+    {
+      "id": "witness-50",
+      "type": "witness_statement",
+      "title": {
+        "ru": "Ученик вечерней группы",
+        "en": "Evening student statement",
+        "tr": "Akşam öğrencisi ifadesi",
+        "ar": "إفادة طالب المساء",
+        "kk": "Кешкі топ шәкірті"
+      },
+      "content": {
+        "ru": "«Сэн первым вывел нас к запасному выходу. Если бы он тянул время, мы бы остались в дыму».",
+        "en": "\"Sen was the first to lead us to the emergency exit. If he had delayed, we would have stayed in the smoke.\"",
+        "tr": "\"Sen bizi ilk acil çıkışa götüren kişiydi. Gecikseydi dumanda kalırdık.\"",
+        "ar": "«كان سين أول من قادنا إلى مخرج الطوارئ. لو تأخر لبقينا في الدخان».",
+        "kk": "«Сэн бізді бірінші болып қосымша шығуға алып шықты. Ол кешіксе, түтінде қалар едік»."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Улика поддерживает заявленную версию и не требует штампа противоречия.",
+        "en": "This evidence supports the claim and should not be stamped as a contradiction.",
+        "tr": "Bu kanıt başvuruyu destekler ve çelişki damgası gerektirmez.",
+        "ar": "يدعم هذا الدليل المطالبة ولا يجب ختمه كتعارض.",
+        "kk": "Бұл айғақ өтінішті қолдайды және қайшылық ретінде белгіленбеуі керек."
+      },
+      "relation": "supports"
+    }
+  ],
+  "correctDecision": "approve",
+  "explanation": {
+    "ru": [
+      "Фото, камера и пожарная панель указывают на внешний поджог.",
+      "Нашивка East Yard делает это дело реальным ударом сети, а не инсценировкой Сэна.",
+      "Версия Сэна подтверждена: вердикт — выплатить."
+    ],
+    "en": [
+      "Photo, camera, and fire panel records point to outside arson.",
+      "The East Yard patch makes this a real network strike, not Sen staging.",
+      "Sen version is supported: approve the payout."
+    ],
+    "tr": [
+      "Fotoğraf, kamera ve yangın paneli dış kundaklamayı gösteriyor.",
+      "East Yard arması bunu Sen’in sahnesi değil gerçek ağ saldırısı yapıyor.",
+      "Sen’in anlatımı destekleniyor: ödeme onaylanır."
+    ],
+    "ar": [
+      "تشير الصورة والكاميرا ولوحة الحريق إلى إحراق خارجي.",
+      "تجعل رقعة East Yard الحادث ضربة حقيقية من الشبكة لا فبركة من سين.",
+      "رواية سين مثبتة: القرار دفع التعويض."
+    ],
+    "kk": [
+      "Фото, камера және өрт панелі сыртқы өрт қоюды көрсетеді.",
+      "East Yard белгісі мұны Сэннің қойылымы емес, желінің нақты соққысы етеді.",
+      "Сэн нұсқасы расталды: вердикт — төлеу."
+    ]
+  }
 }

@@ -4,8 +4,8 @@
  * The engine NEVER touches `window.ym` directly. Everything funnels through
  * this adapter — the analytics twin of `yandexSDK.ts` — so that:
  *   • the store stays unit-testable (the counter is a spy / no-op in tests);
- *   • a missing / unloaded counter degrades to a silent no-op (local dev,
- *     non-Yandex host, blocked script) and never blocks gameplay;
+ *   • a missing / unloaded counter degrades safely (local dev, non-Yandex
+ *     host, blocked script) and never blocks gameplay;
  *   • the goal/param vocabulary lives in one place, in lockstep with
  *     docs/06-yandex-platform.md.
  *
@@ -14,8 +14,9 @@
  *   ym(id, 'reachGoal', name, params)  → per-event funnel goals
  *   ym(id, 'userParams', params)       → per-player profile (level/balance/…)
  *
- * The counter ID is single-sourced in GAME_CONFIG.analytics — index.html only
- * defines the `window.ym` loader; the `init` call happens here.
+ * The counter ID is single-sourced in GAME_CONFIG.analytics. Both the queueing
+ * stub and the async tag.js request are created here only after game hydration,
+ * keeping Metrica off the critical startup path.
  */
 import { GAME_CONFIG } from '../config/gameConfig';
 
@@ -26,6 +27,13 @@ type YmFn = (
   method: string,
   ...args: unknown[]
 ) => void;
+
+type QueuedYmFn = YmFn & {
+  a?: unknown[][];
+  l?: number;
+};
+
+const METRICA_TAG_URL = 'https://mc.yandex.ru/metrika/tag.js';
 
 declare global {
   interface Window {
@@ -80,6 +88,7 @@ export const GOAL = {
   rejectBlocked: 'reject_blocked',
   budgetExhausted: 'budget_exhausted',
   lockedCaseClick: 'locked_case_click',
+  tabSwitch: 'tab_switch',
 } as const;
 
 export type GoalName = (typeof GOAL)[keyof typeof GOAL];
@@ -181,20 +190,53 @@ function ym(): YmFn | null {
     : null;
 }
 
+/**
+ * Define Metrica's queueing function and start loading tag.js asynchronously.
+ * This is intentionally invoked by `initMetrica`, not from index.html, so the
+ * analytics request cannot compete with the initial game bundle and save load.
+ */
+function ensureMetricaLoader(): YmFn | null {
+  if (typeof window === 'undefined' || typeof document === 'undefined') return null;
+  if (typeof window.ym === 'function') return window.ym;
+
+  const queued: QueuedYmFn = (...args: unknown[]) => {
+    (queued.a ??= []).push(args);
+  };
+  queued.l = Date.now();
+  window.ym = queued;
+
+  const alreadyLoading = Array.from(document.scripts).some(
+    (script) => script.src === METRICA_TAG_URL,
+  );
+  if (!alreadyLoading) {
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = METRICA_TAG_URL;
+    document.head.appendChild(script);
+  }
+
+  return queued;
+}
+
 /* ------------------------------- Lifecycle ------------------------------- */
 
 /**
- * Initialize the Metrica counter. Safe to call repeatedly (idempotent). A falsy
- * `counterId` or a missing `window.ym` flips the adapter to silent no-op mode —
- * tracking calls simply do nothing, exactly like the SDK's offline fallback.
+ * Initialize the Metrica counter and start loading its script. Safe to call
+ * repeatedly (idempotent). A falsy `counterId` keeps the adapter in silent
+ * no-op mode. A blocked script only leaves calls in the local queue.
  */
 export function initMetrica(): void {
   if (initialized) return;
   initialized = true;
 
   const { counterId, webvisor } = GAME_CONFIG.analytics;
-  const counter = ym();
-  if (!counterId || !counter) {
+  if (!counterId) {
+    enabled = false;
+    return;
+  }
+
+  const counter = ym() ?? ensureMetricaLoader();
+  if (!counter) {
     enabled = false;
     return;
   }

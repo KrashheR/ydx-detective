@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import type { Case, Difficulty, Language } from "../types";
+import type { CaseSummary, Difficulty, Language } from "../types";
 import type { CaseUnlockInfo } from "../engine/caseUnlockEngine";
 import { loc, t, tDifficulty } from "../i18n/ui";
 import {
@@ -11,13 +11,13 @@ import { formatCountdown } from "./icons";
 import { Tooltip } from "./Tooltip";
 
 interface Props {
-  standardCaseUnlocks: CaseUnlockInfo[];
-  dailyCase: Case | undefined;
+  standardCaseUnlocks: CaseUnlockInfo<CaseSummary>[];
+  dailyCase: CaseSummary | undefined;
   dailyUnlocked: boolean;
   dailyMsRemaining: number;
   lang: Language;
-  onSelectStandardCase: (info: CaseUnlockInfo) => void;
-  onSelect: (c: Case) => void;
+  onSelectStandardCase: (info: CaseUnlockInfo<CaseSummary>) => void;
+  onSelect: (c: CaseSummary) => void;
   onDailyLocked: () => void;
 }
 
@@ -107,7 +107,7 @@ export function CaseSelect({
                   {dailyUnlocked ? (
                     <>
                       <span className="font-mono text-xs font-semibold text-[#5c3f08]">
-                        {dailyCase.evidences.length} {t("documents", lang)}
+                        {dailyCase.evidenceCount} {t("documents", lang)}
                       </span>
                       <span className="text-xs font-bold text-[#3a2705]">
                         {t("openCaseAction", lang)} →
@@ -197,7 +197,7 @@ export function CaseSelect({
                   <div className="my-[14px] mt-[18px] h-px bg-black/[0.18]" />
                   <div className="flex items-center justify-between gap-4">
                     <span className="text-[11px] font-medium text-folder-ink-soft">
-                      {c.evidences.length} {t("documents", lang)}
+                      {c.evidenceCount} {t("documents", lang)}
                     </span>
                     <span className="text-right text-xs font-bold text-folder-ink">
                       {actionText}
@@ -294,7 +294,7 @@ export function CaseSelect({
                     {t("dailyDifficultyBadge", lang)}
                   </span>
                   <span className="font-mono text-xs font-semibold text-[#5c3f08]">
-                    {dailyCase.evidences.length} {t("documents", lang)}
+                    {dailyCase.evidenceCount} {t("documents", lang)}
                   </span>
                 </div>
               </div>

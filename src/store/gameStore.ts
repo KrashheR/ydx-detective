@@ -249,10 +249,6 @@ export const useGameStore = create<GameStoreState>((set, get) => {
     async init() {
       // 1) Bring up the SDK (no-op-safe if unavailable → offline mode).
       await initYandex();
-      // 1b) Bring up Yandex Metrica (silent no-op if the counter never loaded
-      //     or the configured id is a placeholder).
-      initMetrica();
-
       // 2) Wire the global pause guard to ad lifecycles. Ad open/close anywhere
       //    in the app now flips `isPaused`, which the audio manager & game loop
       //    observe to mute contexts and freeze progression.
@@ -275,8 +271,13 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         isHydrated: true,
       });
 
-      // Seed the player profile in Metrica from the hydrated stats.
-      reportUserParams(stats);
+      // Analytics is deliberately outside the boot path. Yield after hydration
+      // so the game can paint before Metrica starts its network request; neither
+      // a slow VPN nor a blocked mc.yandex.ru can delay play.
+      window.setTimeout(() => {
+        initMetrica();
+        reportUserParams(stats);
+      }, 0);
     },
 
     setLanguage(lang) {
@@ -312,7 +313,6 @@ export const useGameStore = create<GameStoreState>((set, get) => {
           revealedEvidenceIds: [],
           selectedService: null,
           hintsUsed: 0,
-          canvassUsed: false,
           extraOpens: 0,
           startedAtServerMs: getServerTimeMs(),
         },
@@ -401,7 +401,6 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       const { session, stats } = get();
       if (!session || session.caseId !== caseData.id) return false;
       const service = kind === 'note' ? 'inspector_note' : 'witness_canvass';
-      if (kind === 'canvass' && session.canvassUsed) return false;
       trackGoal(GOAL.serviceSelect, { caseId: caseData.id, service });
 
       // A valid, not-yet-revealed target picks that card; otherwise fall back
@@ -431,7 +430,6 @@ export const useGameStore = create<GameStoreState>((set, get) => {
               ...s.session,
               revealedEvidenceIds: [...s.session.revealedEvidenceIds, nextId],
               hintsUsed: s.session.hintsUsed + 1,
-              canvassUsed: kind === 'canvass' ? true : s.session.canvassUsed,
             },
           };
         });

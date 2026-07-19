@@ -22,6 +22,8 @@ interface Props {
    * accepts a click even when `sealed`, since hints don't spend budget opens.
    */
   targetable?: boolean;
+  /** Visually de-emphasize cards that cannot be selected in hint targeting mode. */
+  dimmed?: boolean;
   onClick: () => void;
 }
 
@@ -34,25 +36,27 @@ export function EvidenceCard({
   revealed,
   sealed = false,
   targetable = false,
+  dimmed = false,
   onClick,
 }: Props) {
-  const disabled = sealed && !targetable;
+  const unavailable = sealed && !targetable;
   return (
     <Tooltip
       className="block h-full"
-      label={sealed && !targetable ? t("tipSealedCard", lang) : null}
+      label={unavailable ? t("tipSealedCard", lang) : null}
     >
       <motion.button
         type="button"
         onClick={onClick}
-        disabled={disabled}
-        whileHover={disabled ? undefined : { y: -4 }}
-        whileTap={disabled ? undefined : { scale: 0.99 }}
+        whileHover={unavailable ? undefined : { y: -4 }}
+        whileTap={{ scale: 0.99 }}
         transition={{ type: "spring", stiffness: 300, damping: 24 }}
         className={`relative flex h-full w-full flex-col overflow-hidden rounded-[7px] border border-black/[0.08] bg-paper p-3.5 text-left md:shadow-card transition-shadow ${
-          disabled
-            ? "cursor-not-allowed opacity-50 grayscale"
-            : "hover:shadow-card-hover"
+          unavailable
+            ? "opacity-50 grayscale"
+            : dimmed
+              ? "opacity-45"
+              : "hover:shadow-card-hover"
         }`}
       >
         {/* Targeting-mode pulse: an animated outline inviting the pick */}

@@ -6,30 +6,29 @@
   "truth": "fraud",
   "investigationBudget": 4,
   "title": {
-    "ru": "Терминал возмещения",
-    "en": "The Compensation Terminal",
-    "tr": "Tazminat Terminali",
-    "ar": "محطة التعويض",
-    "kk": "Өтем терминалы"
+    "ru": "Кража хромированных манекенов",
+    "en": "Chrome Mannequin Theft",
+    "tr": "Krom Manken Hırsızlığı",
+    "ar": "سرقة دمى العرض المطلية بالكروم",
+    "kk": "Хром манекендердің ұрлығы"
   },
   "claim": {
     "person": {
-      "ru": "Борис Т-800ов, 55 лет",
-      "en": "Boris T-800ov, 55",
-      "tr": "Boris T-800ov, 55",
-      "ar": "بوريس تي-800وف، 55",
-      "kk": "Борис Т-800ов, 55 жаста"
+      "ru": "Денис Корин, 55 лет",
+      "en": "Denis Korin, 55",
+      "tr": "Denis Korin, 55",
+      "ar": "دينيس كورين، 55",
+      "kk": "Денис Корин, 55 жаста"
     },
     "story": {
-      "ru": "В мою мотомастерскую ворвался голый байкер, сказал «я вернусь», забрал три дорогих хромированных манекена и уехал на моём мотоцикле. Камеры он якобы вывел из строя красным глазным лазером. Требую полную выплату.",
-      "en": "A naked biker broke into my motorcycle shop, said 'I'll be back,' stole three expensive chrome mannequins, and rode away on my bike. He supposedly disabled the cameras with a red eye laser. I demand full payment.",
-      "tr": "Çıplak bir motorcu dükkânıma girip 'Geri döneceğim' dedi, üç pahalı krom mankeni ve motosikletimi çaldı. Kameraları kırmızı göz lazeriyle bozmuş. Tam ödeme istiyorum.",
-      "ar": "اقتحم دراج عارٍ ورشتي وقال «سأعود»، وسرق ثلاثة تماثيل كرومية ودراجتي. وزُعم أنه عطّل الكاميرات بليزر أحمر من عينه. أطلب التعويض كاملاً.",
-      "kk": "Жалаңаш байкер шеберханама кіріп, «қайтып келемін» деді де, үш хром манекен мен мотоциклді ұрлады. Камераларды қызыл көз лазерімен істен шығарған. Толық төлем сұраймын."
+      "ru": "Ночью неизвестный проник в мою мотомастерскую, забрал три дорогих хромированных манекена и уехал на моём мотоцикле. Камеры перед кражей якобы перестали работать из-за скачка напряжения. Требую полную выплату.",
+      "en": "At night an unknown intruder entered my motorcycle shop, took three expensive chrome mannequins, and rode away on my motorcycle. The cameras supposedly failed from a power surge before the theft. I demand full payment.",
+      "tr": "Gece kimliği belirsiz biri motosiklet dükkânıma girip üç pahalı krom mankeni aldı ve motosikletimle uzaklaştı. Kameraların hırsızlıktan önce voltaj dalgalanması nedeniyle bozulduğu söyleniyor. Tam ödeme istiyorum.",
+      "ar": "دخل شخص مجهول ورشتي ليلاً وأخذ ثلاث دمى عرض مطلية بالكروم وغادر على دراجتي. ويُزعم أن الكاميرات تعطلت بسبب ارتفاع الجهد قبل السرقة. أطلب التعويض كاملاً.",
+      "kk": "Түнде белгісіз адам мотошеберханама кіріп, үш қымбат хром манекенді алып, мотоцикліммен кетіп қалды. Камералар ұрлық алдында кернеу секірісінен істен шықты делінеді. Толық төлем сұраймын."
     }
   },
   "coverImage": "covers/case-037.svg",
-  "personImage": "people/boris.webp",
   "client": {
     "role": {
       "ru": "Владелец мотомастерской",
@@ -101,11 +100,11 @@
         "kk": "Қосалқы камера"
       },
       "content": {
-        "ru": "03:12 · Т-800ов грузит манекены и мотоцикл в свой фургон.",
-        "en": "03:12 · T-800ov loads the mannequins and motorcycle into his van.",
-        "tr": "03:12 · T-800ov mankenleri ve motosikleti minibüsüne yüklüyor.",
+        "ru": "03:12 · Корин грузит манекены и мотоцикл в свой фургон.",
+        "en": "03:12 · Korin loads the mannequins and motorcycle into his van.",
+        "tr": "03:12 · Korin mankenleri ve motosikleti minibüsüne yüklüyor.",
         "ar": "03:12 · تي-800وف يحمّل التماثيل والدراجة في شاحنته.",
-        "kk": "03:12 · Т-800ов манекендер мен мотоциклді фургонына тиеуде."
+        "kk": "03:12 · Корин манекендер мен мотоциклді фургонына тиеуде."
       },
       "isContradiction": true,
       "contradictionExplanation": {
@@ -117,7 +116,7 @@
       },
       "meta": {
         "cameraId": "CAM-MOTO-B",
-        "cameraModel": "Avigilon H5A Dome · 5MP · H.265"
+        "cameraModel": "SecureDome SD-5A · 5MP · H.265"
       }
     },
     {
@@ -131,11 +130,11 @@
         "kk": "Шекара жүгінің рентгені"
       },
       "content": {
-        "ru": "В фургоне видны три стальных каркаса и мотоцикл; водитель — Т-800ов.",
-        "en": "The van contains three steel frames and a motorcycle; driver: T-800ov.",
-        "tr": "Minibüste üç çelik iskelet ve motosiklet var; sürücü T-800ov.",
+        "ru": "В фургоне видны три стальных каркаса и мотоцикл; водитель — Корин.",
+        "en": "The van contains three steel frames and a motorcycle; driver: Korin.",
+        "tr": "Minibüste üç çelik iskelet ve motosiklet var; sürücü Korin.",
         "ar": "في الشاحنة ثلاثة هياكل فولاذية ودراجة؛ السائق تي-800وف.",
-        "kk": "Фургонда үш болат қаңқа мен мотоцикл бар; жүргізуші — Т-800ов."
+        "kk": "Фургонда үш болат қаңқа мен мотоцикл бар; жүргізуші — Корин."
       },
       "isContradiction": true,
       "contradictionExplanation": {
@@ -168,11 +167,11 @@
       "content": {
         "ru": [
           "За 2 дня · +22 000 €",
-          "Назначение: три эндоскелета и мотоцикл"
+          "Назначение: три металлокаркас манекена и мотоцикл"
         ],
         "en": [
           "2 days earlier · +€22,000",
-          "Memo: three endoskeletons and motorcycle"
+          "Memo: three metal-frame mannequins and motorcycle"
         ],
         "tr": [
           "2 gün önce · +22.000 €",
@@ -184,7 +183,7 @@
         ],
         "kk": [
           "2 күн бұрын · +22 000 €",
-          "Мақсаты: үш эндоскелет және мотоцикл"
+          "Мақсаты: үш металлокаркас манекен және мотоцикл"
         ]
       },
       "isContradiction": true,
@@ -249,7 +248,7 @@
       "meta": {
         "carrierName": {
           "ru": "ИмпульсСвязь",
-          "en": "ImpulseCom",
+          "en": "Relay-37",
           "tr": "İmpulsİletişim",
           "ar": "إمبالس كوم",
           "kk": "ИмпульсБайланыс"
@@ -313,28 +312,28 @@
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Дело пародирует киборга из будущего: Т-800, «я вернусь» и эндоскелеты.",
-      "Камера и таможенный рентген показывают, что имущество вывез сам Т-800ов.",
+      "Камеры и рентген показывают, что владелец сам вывез имущество.",
+      "Камера и таможенный рентген показывают, что имущество вывез сам Корин.",
       "Предоплата, звонок и штатное отключение камер доказывают инсценировку."
     ],
     "en": [
-      "The case riffs on a future cyborg: T-800, 'I'll be back,' and endoskeletons.",
-      "CCTV and the customs X-ray show T-800ov transporting the property himself.",
+      "CCTV and X-ray show the owner transported the property himself.",
+      "CCTV and the customs X-ray show Korin transporting the property himself.",
       "Prepayment, the call, and normal camera shutdown prove staging."
     ],
     "tr": [
-      "Dava geleceğin siborguna gönderme yapar: T-800, 'Geri döneceğim' ve iç iskeletler.",
-      "Kamera ve gümrük röntgeni malları T-800ov'un taşıdığını gösteriyor.",
+      "Kamera ve röntgen, eşyaları sahibinin taşıdığını gösteriyor.",
+      "Kamera ve gümrük röntgeni malları Korin'un taşıdığını gösteriyor.",
       "Ön ödeme, arama ve normal kamera kapatması mizanseni kanıtlıyor."
     ],
     "ar": [
-      "تحاكي القضية سايبورغ المستقبل: T-800 و«سأعود» والهياكل الداخلية.",
+      "تُظهر الكاميرا والأشعة أن المالك نقل الممتلكات بنفسه.",
       "تظهر الكاميرا والأشعة الجمركية أن تي-800وف نقل الممتلكات بنفسه.",
       "تثبت الدفعة والاتصال والإغلاق النظامي للكاميرات التلفيق."
     ],
     "kk": [
-      "Іс болашақ киборгына ишара: T-800, «қайтып келемін» және эндоскелеттер.",
-      "Камера мен кеден рентгені мүлікті Т-800овтың өзі әкеткенін көрсетеді.",
+      "Камера мен рентген мүлікті иесінің өзі әкеткенін көрсетеді.",
+      "Камера мен кеден рентгені мүлікті Коринтың өзі әкеткенін көрсетеді.",
       "Алдын ала төлем, қоңырау және камераны штаттық өшіру қойылымды дәлелдейді."
     ]
   }

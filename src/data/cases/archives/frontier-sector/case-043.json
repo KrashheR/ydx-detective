@@ -1,345 +1,345 @@
-﻿{
-    "id":  "case-043",
-    "type":  "standard",
-    "difficulty":  "hard",
-    "claimAmount":  17400,
-    "truth":  "fraud",
-    "investigationBudget":  4,
-    "title":  {
-                  "ru":  "Исчезнувший ученик навигатора",
-                  "en":  "Missing Navigator Student",
-                  "tr":  "Missing Navigator Student",
-                  "ar":  "Missing Navigator Student",
-                  "kk":  "Исчезнувший ученик навигатора"
-              },
-    "claim":  {
-                  "person":  {
-                                 "ru":  "Мастер Илар Роун, 61 год",
-                                 "en":  "Master Ilar Roun, 61",
-                                 "tr":  "Master Ilar Roun, 61",
-                                 "ar":  "Master Ilar Roun, 61",
-                                 "kk":  "Мастер Илар Роун, 61 год"
-                             },
-                  "story":  {
-                                "ru":  "Моего стажёра похитили агенты подполья. Он исчез ночью из закрытого корпуса академии, а вместе с ним пропали учебные материалы. Прошу компенсацию расходов поиска.",
-                                "en":  "Underground agents abducted my trainee. He vanished overnight from the academy dormitory, along with study materials. I request compensation for search costs.",
-                                "tr":  "Underground agents abducted my trainee. He vanished overnight from the academy dormitory, along with study materials. I request compensation for search costs.",
-                                "ar":  "Underground agents abducted my trainee. He vanished overnight from the academy dormitory, along with study materials. I request compensation for search costs.",
-                                "kk":  "Моего стажёра похитили агенты подполья. Он исчез ночью из закрытого корпуса академии, а вместе с ним пропали учебные материалы. Прошу компенсацию расходов поиска."
-                            }
-              },
-    "coverImage":  "covers/case-043.svg",
-    "personImage":  "people/ilar-roun.webp",
-    "client":  {
-                   "role":  {
-                                "ru":  "Наставник навигационной академии",
-                                "en":  "Navigation academy mentor",
-                                "tr":  "Seyrüsefer akademisi mentoru",
-                                "ar":  "مرشد أكاديمية الملاحة",
-                                "kk":  "Навигация академиясының тәлімгері"
-                            },
-                   "meta":  [
-                                {
-                                    "k":  {
-                                              "ru":  "Архив",
-                                              "en":  "Archive",
-                                              "tr":  "Arşiv",
-                                              "ar":  "الأرشيف",
-                                              "kk":  "Архив"
-                                          },
-                                    "v":  {
-                                              "ru":  "Пограничный сектор",
-                                              "en":  "Frontier Sector",
-                                              "tr":  "Sınır Sektörü",
-                                              "ar":  "القطاع الحدودي",
-                                              "kk":  "Шекара секторы"
-                                          }
-                                },
-                                {
-                                    "k":  {
-                                              "ru":  "Застрахованный риск",
-                                              "en":  "Insured risk",
-                                              "tr":  "Sigortalı risk",
-                                              "ar":  "الخطر المؤمن عليه",
-                                              "kk":  "Сақтандырылған тәуекел"
-                                          },
-                                    "v":  {
-                                              "ru":  "Пропажа стажёра",
-                                              "en":  "Trainee disappearance",
-                                              "tr":  "Stajyer kaybı",
-                                              "ar":  "اختفاء متدرب",
-                                              "kk":  "Тәлімгердің жоғалуы"
-                                          }
-                                },
-                                {
-                                    "k":  {
-                                              "ru":  "Архивная связка",
-                                              "en":  "Archive thread",
-                                              "tr":  "Arşiv bağı",
-                                              "ar":  "خيط الأرشيف",
-                                              "kk":  "Архив байланысы"
-                                          },
-                                    "v":  {
-                                              "ru":  "Повторяющийся след: маркировка GC-17 и серые транспортные жетоны «Серого конвоя».",
-                                              "en":  "Recurring lead: GC-17 markings and gray transport tokens of the Grey Convoy.",
-                                              "tr":  "Tekrarlayan iz: GC-17 işaretleri ve Gri Konvoy’un gri taşıma jetonları.",
-                                              "ar":  "خيط متكرر: علامات GC-17 ورموز النقل الرمادية لقافلة غراي.",
-                                              "kk":  "Қайталанатын із: GC-17 таңбалары және Сұр конвойдың сұр көлік жетондары."
-                                          }
-                                }
-                            ]
-               },
-    "evidences":  [
-                      {
-                          "id":  "corridor-cam",
-                          "type":  "camera_recording",
-                          "title":  {
-                                        "ru":  "Коридорная камера",
-                                        "en":  "Corridor Camera",
-                                        "tr":  "Corridor Camera",
-                                        "ar":  "Corridor Camera",
-                                        "kk":  "Коридорная камера"
-                                    },
-                          "content":  {
-                                          "ru":  "Стажёр идёт один с сумкой, останавливается у терминала и не сопротивляется никому.",
-                                          "en":  "The trainee walks alone with a bag, stops at a terminal, and resists nobody.",
-                                          "tr":  "The trainee walks alone with a bag, stops at a terminal, and resists nobody.",
-                                          "ar":  "The trainee walks alone with a bag, stops at a terminal, and resists nobody.",
-                                          "kk":  "Стажёр идёт один с сумкой, останавливается у терминала и не сопротивляется никому."
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Запись противоречит версии насильственного похищения.",
-                                                           "en":  "The footage contradicts a forced abduction.",
-                                                           "tr":  "The footage contradicts a forced abduction.",
-                                                           "ar":  "The footage contradicts a forced abduction.",
-                                                           "kk":  "Запись противоречит версии насильственного похищения."
-                                                       },
-                          "meta":  {
-                                       "cameraId":  "NAV-COR-12",
-                                       "cameraModel":  "Axis P3265-LV · 1080p · H.264"
-                                   },
-                          "relation":  "contradicts"
-                      },
-                      {
-                          "id":  "exit-pass",
-                          "type":  "usage_log",
-                          "title":  {
-                                        "ru":  "Пропуск выхода",
-                                        "en":  "Exit Pass Log",
-                                        "tr":  "Exit Pass Log",
-                                        "ar":  "Exit Pass Log",
-                                        "kk":  "Пропуск выхода"
-                                    },
-                          "content":  {
-                                          "ru":  [
-                                                     "01:16 — карта N-318, выход через шлюз B",
-                                                     "01:17 — подтверждение биометрии",
-                                                     "01:18 — дверь закрыта штатно"
-                                                 ],
-                                          "en":  [
-                                                     "01:16 — card N-318, exit through lock B",
-                                                     "01:17 — biometric confirmation",
-                                                     "01:18 — door closed normally"
-                                                 ],
-                                          "tr":  [
-                                                     "01:16 — card N-318, exit through lock B",
-                                                     "01:17 — biometric confirmation",
-                                                     "01:18 — door closed normally"
-                                                 ],
-                                          "ar":  [
-                                                     "01:16 — card N-318, exit through lock B",
-                                                     "01:17 — biometric confirmation",
-                                                     "01:18 — door closed normally"
-                                                 ],
-                                          "kk":  [
-                                                     "01:16 — карта N-318, выход через шлюз B",
-                                                     "01:17 — подтверждение биометрии",
-                                                     "01:18 — дверь закрыта штатно"
-                                                 ]
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Выход активирован личной картой и биометрией.",
-                                                           "en":  "The exit used the trainee card and biometrics.",
-                                                           "tr":  "The exit used the trainee card and biometrics.",
-                                                           "ar":  "The exit used the trainee card and biometrics.",
-                                                           "kk":  "Выход активирован личной картой и биометрией."
-                                                       },
-                          "meta":  {
-                                       "logPrompt":  "gate@navacademy:~$ tail -f /var/log/exit-pass.log"
-                                   },
-                          "relation":  "contradicts"
-                      },
-                      {
-                          "id":  "cache-photo",
-                          "type":  "photo",
-                          "title":  {
-                                        "ru":  "Тайник за скамьёй",
-                                        "en":  "Bench Cache",
-                                        "tr":  "Bench Cache",
-                                        "ar":  "Bench Cache",
-                                        "kk":  "Тайник за скамьёй"
-                                    },
-                          "content":  {
-                                          "ru":  "За скамьёй найдены дорожный паёк, наличные кредиты и запасная куртка, сложенные заранее.",
-                                          "en":  "A ration pack, cash credits, and spare jacket were found hidden behind a bench.",
-                                          "tr":  "A ration pack, cash credits, and spare jacket were found hidden behind a bench.",
-                                          "ar":  "A ration pack, cash credits, and spare jacket were found hidden behind a bench.",
-                                          "kk":  "За скамьёй найдены дорожный паёк, наличные кредиты и запасная куртка, сложенные заранее."
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Тайник указывает на подготовленный побег.",
-                                                           "en":  "The cache points to a planned escape.",
-                                                           "tr":  "The cache points to a planned escape.",
-                                                           "ar":  "The cache points to a planned escape.",
-                                                           "kk":  "Тайник указывает на подготовленный побег."
-                                                       },
-                          "meta":  {
-                                       "filename":  "IMG_20260601_082244.jpg",
-                                       "imageUrl":  "evidence/case-043-cache-photo.webp"
-                                   },
-                          "relation":  "contradicts"
-                      },
-                      {
-                          "id":  "letter",
-                          "type":  "document",
-                          "title":  {
-                                        "ru":  "Личное письмо",
-                                        "en":  "Personal Letter",
-                                        "tr":  "Personal Letter",
-                                        "ar":  "Personal Letter",
-                                        "kk":  "Личное письмо"
-                                    },
-                          "content":  {
-                                          "ru":  "«Я ухожу сам. В стенах академии протоколы не вскроют. Если получится, передам копии наружу». В письме отдельно названы «протоколы Серого конвоя».",
-                                          "en":  "\"I am leaving on my own. Inside academy walls the protocols will stay buried. If I can, I will pass copies outside.\" The letter separately names the \"Grey Convoy protocols.\"",
-                                          "tr":  "\"I am leaving on my own. Inside academy walls the protocols will stay buried. If I can, I will pass copies outside.\" Mektup ayrıca \"Gri Konvoy protokollerini\" adlandırıyor.",
-                                          "ar":  "\"I am leaving on my own. Inside academy walls the protocols will stay buried. If I can, I will pass copies outside.\" تسمي الرسالة أيضاً \"بروتوكولات القافلة الرمادية\".",
-                                          "kk":  "«Я ухожу сам. В стенах академии протоколы не вскроют. Если получится, передам копии наружу». Хатта \"Сұр конвой хаттамалары\" бөлек аталған."
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Письмо прямо говорит о добровольном уходе.",
-                                                           "en":  "The letter directly states voluntary departure.",
-                                                           "tr":  "The letter directly states voluntary departure.",
-                                                           "ar":  "The letter directly states voluntary departure.",
-                                                           "kk":  "Письмо прямо говорит о добровольном уходе."
-                                                       },
-                          "relation":  "contradicts"
-                      },
-                      {
-                          "id":  "protocol-draft",
-                          "type":  "document",
-                          "title":  {
-                                        "ru":  "Черновик экзаменационного протокола",
-                                        "en":  "Exam Protocol Draft",
-                                        "tr":  "Exam Protocol Draft",
-                                        "ar":  "Exam Protocol Draft",
-                                        "kk":  "Черновик экзаменационного протокола"
-                                    },
-                          "content":  {
-                                          "ru":  "В черновике отмечены исправленные оценки и подписи, не совпадающие с журналом комиссии.",
-                                          "en":  "The draft shows altered grades and signatures that do not match the commission log.",
-                                          "tr":  "The draft shows altered grades and signatures that do not match the commission log.",
-                                          "ar":  "The draft shows altered grades and signatures that do not match the commission log.",
-                                          "kk":  "В черновике отмечены исправленные оценки и подписи, не совпадающие с журналом комиссии."
-                                      },
-                          "isContradiction":  false,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Материал важен для хронологии, но сам по себе не опровергает заявление.",
-                                                           "en":  "The material matters for the timeline but does not by itself disprove the claim.",
-                                                           "tr":  "The material matters for the timeline but does not by itself disprove the claim.",
-                                                           "ar":  "The material matters for the timeline but does not by itself disprove the claim.",
-                                                           "kk":  "Материал важен для хронологии, но сам по себе не опровергает заявление."
-                                                       },
-                          "relation":  "context"
-                      },
-                      {
-                          "id":  "phone-detail",
-                          "type":  "phone_records",
-                          "title":  {
-                                        "ru":  "Детализация связи",
-                                        "en":  "Call Detail",
-                                        "tr":  "Call Detail",
-                                        "ar":  "Call Detail",
-                                        "kk":  "Детализация связи"
-                                    },
-                          "content":  {
-                                          "ru":  [
-                                                     "31.05 22:40 — исходящее: общественный терминал порта",
-                                                     "01.06 00:58 — короткий вызов: учебный корпус",
-                                                     "01.06 01:24 — входящее: пригородный шлюз"
-                                                 ],
-                                          "en":  [
-                                                     "31 May 22:40 — outgoing: public port terminal",
-                                                     "01 Jun 00:58 — short call: academy wing",
-                                                     "01 Jun 01:24 — incoming: suburban gate"
-                                                 ],
-                                          "tr":  [
-                                                     "31 May 22:40 — outgoing: public port terminal",
-                                                     "01 Jun 00:58 — short call: academy wing",
-                                                     "01 Jun 01:24 — incoming: suburban gate"
-                                                 ],
-                                          "ar":  [
-                                                     "31 May 22:40 — outgoing: public port terminal",
-                                                     "01 Jun 00:58 — short call: academy wing",
-                                                     "01 Jun 01:24 — incoming: suburban gate"
-                                                 ],
-                                          "kk":  [
-                                                     "31.05 22:40 — исходящее: общественный терминал порта",
-                                                     "01.06 00:58 — короткий вызов: учебный корпус",
-                                                     "01.06 01:24 — входящее: пригородный шлюз"
-                                                 ]
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Звонки показывают связь с маршрутом ухода, а не с похитителями.",
-                                                           "en":  "The calls track an escape route rather than kidnappers.",
-                                                           "tr":  "The calls track an escape route rather than kidnappers.",
-                                                           "ar":  "The calls track an escape route rather than kidnappers.",
-                                                           "kk":  "Звонки показывают связь с маршрутом ухода, а не с похитителями."
-                                                       },
-                          "meta":  {
-                                       "carrierName":  {
-                                                           "ru":  "RelayTel Sector",
-                                                           "en":  "RelayTel Sector",
-                                                           "tr":  "RelayTel Sector",
-                                                           "ar":  "RelayTel Sector",
-                                                           "kk":  "RelayTel Sector"
-                                                       },
-                                       "phoneMask":  "+0 (7••) •••-••-18"
-                                   },
-                          "relation":  "contradicts"
-                      }
-                  ],
-    "correctDecision":  "reject",
-    "explanation":  {
-                        "ru":  [
-                                   "Камера, пропуск и письмо показывают добровольный уход стажёра.",
-                                   "Письмо превращает GC-17 из случайной метки в след «Серого конвоя».",
-                                   "Похищение не подтверждено: вердикт — отказ."
-                               ],
-                        "en":  [
-                                   "Camera, pass, and letter show the trainee left voluntarily.",
-                                   "The letter turns GC-17 from a stray mark into a Grey Convoy lead.",
-                                   "Abduction is unsupported: reject the claim."
-                               ],
-                        "tr":  [
-                                   "Kamera, geçiş kaydı ve mektup stajyerin gönüllü ayrıldığını gösteriyor.",
-                                   "Mektup GC-17’yi rastgele izden Gri Konvoy bağlantısına çeviriyor.",
-                                   "Kaçırılma desteklenmiyor: ödeme reddedilir."
-                               ],
-                        "ar":  [
-                                   "تظهر الكاميرا والتصريح والرسالة أن المتدرب غادر طوعاً.",
-                                   "تحول الرسالة GC-17 من علامة عابرة إلى خيط للقافلة الرمادية.",
-                                   "الاختطاف غير مثبت: القرار رفض."
-                               ],
-                        "kk":  [
-                                   "Камера, рұқсат және хат стажёрдың ерікті кеткенін көрсетеді.",
-                                   "Хат GC-17-ні кездейсоқ таңбадан Сұр конвой ізіне айналдырады.",
-                                   "Ұрлау расталмады: вердикт — бас тарту."
-                               ]
-                    }
+{
+  "id": "case-043",
+  "type": "standard",
+  "difficulty": "hard",
+  "claimAmount": 17400,
+  "truth": "fraud",
+  "investigationBudget": 4,
+  "title": {
+    "ru": "Исчезнувший ученик навигатора",
+    "en": "Missing Navigator Student",
+    "tr": "Missing Navigator Student",
+    "ar": "Missing Navigator Student",
+    "kk": "Исчезнувший ученик навигатора"
+  },
+  "claim": {
+    "person": {
+      "ru": "Мастер Илар Роун, 61 год",
+      "en": "Master Ilar Roun, 61",
+      "tr": "Master Ilar Roun, 61",
+      "ar": "Master Ilar Roun, 61",
+      "kk": "Мастер Илар Роун, 61 год"
+    },
+    "story": {
+      "ru": "Моего стажёра похитили агенты подполья. Он исчез ночью из закрытого корпуса академии, а вместе с ним пропали учебные материалы. Прошу компенсацию расходов поиска.",
+      "en": "Underground agents abducted my trainee. He vanished overnight from the academy dormitory, along with study materials. I request compensation for search costs.",
+      "tr": "Underground agents abducted my trainee. He vanished overnight from the academy dormitory, along with study materials. I request compensation for search costs.",
+      "ar": "Underground agents abducted my trainee. He vanished overnight from the academy dormitory, along with study materials. I request compensation for search costs.",
+      "kk": "Моего стажёра похитили агенты подполья. Он исчез ночью из закрытого корпуса академии, а вместе с ним пропали учебные материалы. Прошу компенсацию расходов поиска."
+    }
+  },
+  "coverImage": "covers/case-043.svg",
+  "personImage": "people/ilar-roun.webp",
+  "client": {
+    "role": {
+      "ru": "Наставник навигационной академии",
+      "en": "Navigation academy mentor",
+      "tr": "Seyrüsefer akademisi mentoru",
+      "ar": "مرشد أكاديمية الملاحة",
+      "kk": "Навигация академиясының тәлімгері"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Архив",
+          "en": "Archive",
+          "tr": "Arşiv",
+          "ar": "الأرشيف",
+          "kk": "Архив"
+        },
+        "v": {
+          "ru": "Пограничный сектор",
+          "en": "Frontier Sector",
+          "tr": "Sınır Sektörü",
+          "ar": "القطاع الحدودي",
+          "kk": "Шекара секторы"
+        }
+      },
+      {
+        "k": {
+          "ru": "Застрахованный риск",
+          "en": "Insured risk",
+          "tr": "Sigortalı risk",
+          "ar": "الخطر المؤمن عليه",
+          "kk": "Сақтандырылған тәуекел"
+        },
+        "v": {
+          "ru": "Пропажа стажёра",
+          "en": "Trainee disappearance",
+          "tr": "Stajyer kaybı",
+          "ar": "اختفاء متدرب",
+          "kk": "Тәлімгердің жоғалуы"
+        }
+      },
+      {
+        "k": {
+          "ru": "Архивная связка",
+          "en": "Archive thread",
+          "tr": "Arşiv bağı",
+          "ar": "خيط الأرشيف",
+          "kk": "Архив байланысы"
+        },
+        "v": {
+          "ru": "Повторяющийся след: маркировка GC-17 и серые транспортные жетоны «Серого конвоя».",
+          "en": "Recurring lead: GC-17 markings and gray transport tokens of the Grey Convoy.",
+          "tr": "Tekrarlayan iz: GC-17 işaretleri ve Gri Konvoy’un gri taşıma jetonları.",
+          "ar": "خيط متكرر: علامات GC-17 ورموز النقل الرمادية لقافلة غراي.",
+          "kk": "Қайталанатын із: GC-17 таңбалары және Сұр конвойдың сұр көлік жетондары."
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "corridor-cam",
+      "type": "camera_recording",
+      "title": {
+        "ru": "Коридорная камера",
+        "en": "Corridor Camera",
+        "tr": "Corridor Camera",
+        "ar": "Corridor Camera",
+        "kk": "Коридорная камера"
+      },
+      "content": {
+        "ru": "Стажёр идёт один с сумкой, останавливается у терминала и не сопротивляется никому.",
+        "en": "The trainee walks alone with a bag, stops at a terminal, and resists nobody.",
+        "tr": "The trainee walks alone with a bag, stops at a terminal, and resists nobody.",
+        "ar": "The trainee walks alone with a bag, stops at a terminal, and resists nobody.",
+        "kk": "Стажёр идёт один с сумкой, останавливается у терминала и не сопротивляется никому."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Запись противоречит версии насильственного похищения.",
+        "en": "The footage contradicts a forced abduction.",
+        "tr": "The footage contradicts a forced abduction.",
+        "ar": "The footage contradicts a forced abduction.",
+        "kk": "Запись противоречит версии насильственного похищения."
+      },
+      "meta": {
+        "cameraId": "NAV-COR-12",
+        "cameraModel": "SentinelCam SC-3265 · 1080p · H.264"
+      },
+      "relation": "contradicts"
+    },
+    {
+      "id": "exit-pass",
+      "type": "usage_log",
+      "title": {
+        "ru": "Пропуск выхода",
+        "en": "Exit Pass Log",
+        "tr": "Exit Pass Log",
+        "ar": "Exit Pass Log",
+        "kk": "Пропуск выхода"
+      },
+      "content": {
+        "ru": [
+          "01:16 — карта N-318, выход через шлюз B",
+          "01:17 — подтверждение биометрии",
+          "01:18 — дверь закрыта штатно"
+        ],
+        "en": [
+          "01:16 — card N-318, exit through lock B",
+          "01:17 — biometric confirmation",
+          "01:18 — door closed normally"
+        ],
+        "tr": [
+          "01:16 — card N-318, exit through lock B",
+          "01:17 — biometric confirmation",
+          "01:18 — door closed normally"
+        ],
+        "ar": [
+          "01:16 — card N-318, exit through lock B",
+          "01:17 — biometric confirmation",
+          "01:18 — door closed normally"
+        ],
+        "kk": [
+          "01:16 — карта N-318, выход через шлюз B",
+          "01:17 — подтверждение биометрии",
+          "01:18 — дверь закрыта штатно"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Выход активирован личной картой и биометрией.",
+        "en": "The exit used the trainee card and biometrics.",
+        "tr": "The exit used the trainee card and biometrics.",
+        "ar": "The exit used the trainee card and biometrics.",
+        "kk": "Выход активирован личной картой и биометрией."
+      },
+      "meta": {
+        "logPrompt": "gate@navacademy:~$ tail -f /var/log/exit-pass.log"
+      },
+      "relation": "contradicts"
+    },
+    {
+      "id": "cache-photo",
+      "type": "photo",
+      "title": {
+        "ru": "Тайник за скамьёй",
+        "en": "Bench Cache",
+        "tr": "Bench Cache",
+        "ar": "Bench Cache",
+        "kk": "Тайник за скамьёй"
+      },
+      "content": {
+        "ru": "За скамьёй найдены дорожный паёк, наличные кредиты и запасная куртка, сложенные заранее.",
+        "en": "A ration pack, cash credits, and spare jacket were found hidden behind a bench.",
+        "tr": "A ration pack, cash credits, and spare jacket were found hidden behind a bench.",
+        "ar": "A ration pack, cash credits, and spare jacket were found hidden behind a bench.",
+        "kk": "За скамьёй найдены дорожный паёк, наличные кредиты и запасная куртка, сложенные заранее."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Тайник указывает на подготовленный побег.",
+        "en": "The cache points to a planned escape.",
+        "tr": "The cache points to a planned escape.",
+        "ar": "The cache points to a planned escape.",
+        "kk": "Тайник указывает на подготовленный побег."
+      },
+      "meta": {
+        "filename": "IMG_20260601_082244.jpg",
+        "imageUrl": "evidence/case-043-cache-photo.webp"
+      },
+      "relation": "contradicts"
+    },
+    {
+      "id": "letter",
+      "type": "document",
+      "title": {
+        "ru": "Личное письмо",
+        "en": "Personal Letter",
+        "tr": "Personal Letter",
+        "ar": "Personal Letter",
+        "kk": "Личное письмо"
+      },
+      "content": {
+        "ru": "«Я ухожу сам. В стенах академии протоколы не вскроют. Если получится, передам копии наружу». В письме отдельно названы «протоколы Серого конвоя».",
+        "en": "\"I am leaving on my own. Inside academy walls the protocols will stay buried. If I can, I will pass copies outside.\" The letter separately names the \"Grey Convoy protocols.\"",
+        "tr": "\"I am leaving on my own. Inside academy walls the protocols will stay buried. If I can, I will pass copies outside.\" Mektup ayrıca \"Gri Konvoy protokollerini\" adlandırıyor.",
+        "ar": "\"I am leaving on my own. Inside academy walls the protocols will stay buried. If I can, I will pass copies outside.\" تسمي الرسالة أيضاً \"بروتوكولات القافلة الرمادية\".",
+        "kk": "«Я ухожу сам. В стенах академии протоколы не вскроют. Если получится, передам копии наружу». Хатта \"Сұр конвой хаттамалары\" бөлек аталған."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Письмо прямо говорит о добровольном уходе.",
+        "en": "The letter directly states voluntary departure.",
+        "tr": "The letter directly states voluntary departure.",
+        "ar": "The letter directly states voluntary departure.",
+        "kk": "Письмо прямо говорит о добровольном уходе."
+      },
+      "relation": "contradicts"
+    },
+    {
+      "id": "protocol-draft",
+      "type": "document",
+      "title": {
+        "ru": "Черновик экзаменационного протокола",
+        "en": "Exam Protocol Draft",
+        "tr": "Exam Protocol Draft",
+        "ar": "Exam Protocol Draft",
+        "kk": "Черновик экзаменационного протокола"
+      },
+      "content": {
+        "ru": "В черновике отмечены исправленные оценки и подписи, не совпадающие с журналом комиссии.",
+        "en": "The draft shows altered grades and signatures that do not match the commission log.",
+        "tr": "The draft shows altered grades and signatures that do not match the commission log.",
+        "ar": "The draft shows altered grades and signatures that do not match the commission log.",
+        "kk": "В черновике отмечены исправленные оценки и подписи, не совпадающие с журналом комиссии."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Материал важен для хронологии, но сам по себе не опровергает заявление.",
+        "en": "The material matters for the timeline but does not by itself disprove the claim.",
+        "tr": "The material matters for the timeline but does not by itself disprove the claim.",
+        "ar": "The material matters for the timeline but does not by itself disprove the claim.",
+        "kk": "Материал важен для хронологии, но сам по себе не опровергает заявление."
+      },
+      "relation": "context"
+    },
+    {
+      "id": "phone-detail",
+      "type": "phone_records",
+      "title": {
+        "ru": "Детализация связи",
+        "en": "Call Detail",
+        "tr": "Call Detail",
+        "ar": "Call Detail",
+        "kk": "Детализация связи"
+      },
+      "content": {
+        "ru": [
+          "31.05 22:40 — исходящее: общественный терминал порта",
+          "01.06 00:58 — короткий вызов: учебный корпус",
+          "01.06 01:24 — входящее: пригородный шлюз"
+        ],
+        "en": [
+          "31 May 22:40 — outgoing: public port terminal",
+          "01 Jun 00:58 — short call: academy wing",
+          "01 Jun 01:24 — incoming: suburban gate"
+        ],
+        "tr": [
+          "31 May 22:40 — outgoing: public port terminal",
+          "01 Jun 00:58 — short call: academy wing",
+          "01 Jun 01:24 — incoming: suburban gate"
+        ],
+        "ar": [
+          "31 May 22:40 — outgoing: public port terminal",
+          "01 Jun 00:58 — short call: academy wing",
+          "01 Jun 01:24 — incoming: suburban gate"
+        ],
+        "kk": [
+          "31.05 22:40 — исходящее: общественный терминал порта",
+          "01.06 00:58 — короткий вызов: учебный корпус",
+          "01.06 01:24 — входящее: пригородный шлюз"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Звонки показывают связь с маршрутом ухода, а не с похитителями.",
+        "en": "The calls track an escape route rather than kidnappers.",
+        "tr": "The calls track an escape route rather than kidnappers.",
+        "ar": "The calls track an escape route rather than kidnappers.",
+        "kk": "Звонки показывают связь с маршрутом ухода, а не с похитителями."
+      },
+      "meta": {
+        "carrierName": {
+          "ru": "RelayTel Sector",
+          "en": "RelayTel Sector",
+          "tr": "RelayTel Sector",
+          "ar": "RelayTel Sector",
+          "kk": "RelayTel Sector"
+        },
+        "phoneMask": "+0 (7••) •••-••-18"
+      },
+      "relation": "contradicts"
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Камера, пропуск и письмо показывают добровольный уход стажёра.",
+      "Письмо превращает GC-17 из случайной метки в след «Серого конвоя».",
+      "Похищение не подтверждено: вердикт — отказ."
+    ],
+    "en": [
+      "Camera, pass, and letter show the trainee left voluntarily.",
+      "The letter turns GC-17 from a stray mark into a Grey Convoy lead.",
+      "Abduction is unsupported: reject the claim."
+    ],
+    "tr": [
+      "Kamera, geçiş kaydı ve mektup stajyerin gönüllü ayrıldığını gösteriyor.",
+      "Mektup GC-17’yi rastgele izden Gri Konvoy bağlantısına çeviriyor.",
+      "Kaçırılma desteklenmiyor: ödeme reddedilir."
+    ],
+    "ar": [
+      "تظهر الكاميرا والتصريح والرسالة أن المتدرب غادر طوعاً.",
+      "تحول الرسالة GC-17 من علامة عابرة إلى خيط للقافلة الرمادية.",
+      "الاختطاف غير مثبت: القرار رفض."
+    ],
+    "kk": [
+      "Камера, рұқсат және хат стажёрдың ерікті кеткенін көрсетеді.",
+      "Хат GC-17-ні кездейсоқ таңбадан Сұр конвой ізіне айналдырады.",
+      "Ұрлау расталмады: вердикт — бас тарту."
+    ]
+  }
 }

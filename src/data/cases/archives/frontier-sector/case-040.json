@@ -1,391 +1,391 @@
-﻿{
-    "id":  "case-040",
-    "type":  "standard",
-    "difficulty":  "hard",
-    "claimAmount":  22100,
-    "truth":  "fraud",
-    "investigationBudget":  4,
-    "title":  {
-                  "ru":  "Сгоревший груз на лунной ферме",
-                  "en":  "Burned Cargo on the Moon Farm",
-                  "tr":  "Burned Cargo on the Moon Farm",
-                  "ar":  "Burned Cargo on the Moon Farm",
-                  "kk":  "Сгоревший груз на лунной ферме"
-              },
-    "claim":  {
-                  "person":  {
-                                 "ru":  "Мирон Вейл, 52 года",
-                                 "en":  "Miron Vale, 52",
-                                 "tr":  "Miron Vale, 52",
-                                 "ar":  "Miron Vale, 52",
-                                 "kk":  "Мирон Вейл, 52 года"
-                             },
-                  "story":  {
-                                "ru":  "Правительственный патруль сжёг мой грузовой ангар и сезонный запас оборудования. Ворота выбиты, часть испарителей уничтожена, семья осталась без дохода. Прошу полное возмещение.",
-                                "en":  "A government patrol burned my cargo hangar and seasonal equipment stock. The gate was forced, evaporators were destroyed, and my family lost its income. I request full compensation.",
-                                "tr":  "A government patrol burned my cargo hangar and seasonal equipment stock. The gate was forced, evaporators were destroyed, and my family lost its income. I request full compensation.",
-                                "ar":  "A government patrol burned my cargo hangar and seasonal equipment stock. The gate was forced, evaporators were destroyed, and my family lost its income. I request full compensation.",
-                                "kk":  "Правительственный патруль сжёг мой грузовой ангар и сезонный запас оборудования. Ворота выбиты, часть испарителей уничтожена, семья осталась без дохода. Прошу полное возмещение."
-                            }
-              },
-    "coverImage":  "covers/case-040.svg",
-    "personImage":  "people/miron-veil.webp",
-    "client":  {
-                   "role":  {
-                                "ru":  "Фермер лунного купола",
-                                "en":  "Moon dome farmer",
-                                "tr":  "Ay kubbesi çiftçisi",
-                                "ar":  "مزارع قبة قمرية",
-                                "kk":  "Ай күмбезі фермері"
-                            },
-                   "meta":  [
-                                {
-                                    "k":  {
-                                              "ru":  "Архив",
-                                              "en":  "Archive",
-                                              "tr":  "Arşiv",
-                                              "ar":  "الأرشيف",
-                                              "kk":  "Архив"
-                                          },
-                                    "v":  {
-                                              "ru":  "Пограничный сектор",
-                                              "en":  "Frontier Sector",
-                                              "tr":  "Sınır Sektörü",
-                                              "ar":  "القطاع الحدودي",
-                                              "kk":  "Шекара секторы"
-                                          }
-                                },
-                                {
-                                    "k":  {
-                                              "ru":  "Застрахованный риск",
-                                              "en":  "Insured risk",
-                                              "tr":  "Sigortalı risk",
-                                              "ar":  "الخطر المؤمن عليه",
-                                              "kk":  "Сақтандырылған тәуекел"
-                                          },
-                                    "v":  {
-                                              "ru":  "Пожар грузового ангара",
-                                              "en":  "Cargo hangar fire",
-                                              "tr":  "Yük hangarı yangını",
-                                              "ar":  "حريق حظيرة شحن",
-                                              "kk":  "Жүк ангары өрті"
-                                          }
-                                },
-                                {
-                                    "k":  {
-                                              "ru":  "Архивная связка",
-                                              "en":  "Archive thread",
-                                              "tr":  "Arşiv bağı",
-                                              "ar":  "خيط الأرشيف",
-                                              "kk":  "Архив байланысы"
-                                          },
-                                    "v":  {
-                                              "ru":  "Повторяющийся след: маркировка GC-17 и серые транспортные жетоны «Серого конвоя».",
-                                              "en":  "Recurring lead: GC-17 markings and gray transport tokens of the Grey Convoy.",
-                                              "tr":  "Tekrarlayan iz: GC-17 işaretleri ve Gri Konvoy’un gri taşıma jetonları.",
-                                              "ar":  "خيط متكرر: علامات GC-17 ورموز النقل الرمادية لقافلة غراي.",
-                                              "kk":  "Қайталанатын із: GC-17 таңбалары және Сұр конвойдың сұр көлік жетондары."
-                                          }
-                                }
-                            ]
-               },
-    "evidences":  [
-                      {
-                          "id":  "photo-hangar",
-                          "type":  "photo",
-                          "title":  {
-                                        "ru":  "Фото ангара",
-                                        "en":  "Hangar Photo",
-                                        "tr":  "Hangar Photo",
-                                        "ar":  "Hangar Photo",
-                                        "kk":  "Фото ангара"
-                                    },
-                          "content":  {
-                                          "ru":  "Очаг сильнее всего выгорел у внутреннего верстака. Ворота обуглены меньше, чем рабочая зона.",
-                                          "en":  "The deepest burn is around the internal workbench. The gate is less charred than the work area.",
-                                          "tr":  "The deepest burn is around the internal workbench. The gate is less charred than the work area.",
-                                          "ar":  "The deepest burn is around the internal workbench. The gate is less charred than the work area.",
-                                          "kk":  "Очаг сильнее всего выгорел у внутреннего верстака. Ворота обуглены меньше, чем рабочая зона."
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Очаг внутри противоречит версии о поджоге снаружи.",
-                                                           "en":  "An internal ignition point contradicts an outside attack.",
-                                                           "tr":  "An internal ignition point contradicts an outside attack.",
-                                                           "ar":  "An internal ignition point contradicts an outside attack.",
-                                                           "kk":  "Очаг внутри противоречит версии о поджоге снаружи."
-                                                       },
-                          "meta":  {
-                                       "filename":  "IMG_20260412_071430.jpg",
-                                       "imageUrl":  "evidence/case-040-photo-hangar.webp"
-                                   },
-                          "relation":  "contradicts"
-                      },
-                      {
-                          "id":  "droid-log",
-                          "type":  "usage_log",
-                          "title":  {
-                                        "ru":  "Сервисный журнал дроида",
-                                        "en":  "Droid Service Log",
-                                        "tr":  "Droid Service Log",
-                                        "ar":  "Droid Service Log",
-                                        "kk":  "Сервисный журнал дроида"
-                                    },
-                          "content":  {
-                                          "ru":  [
-                                                     "23:18 — питание боевого блока включено локально",
-                                                     "23:41 — снят силовой модуль L-9",
-                                                     "00:07 — перегрев верстака, аварийное отключение"
-                                                 ],
-                                          "en":  [
-                                                     "23:18 — combat core powered locally",
-                                                     "23:41 — L-9 power module removed",
-                                                     "00:07 — workbench overheating, emergency shutdown"
-                                                 ],
-                                          "tr":  [
-                                                     "23:18 — combat core powered locally",
-                                                     "23:41 — L-9 power module removed",
-                                                     "00:07 — workbench overheating, emergency shutdown"
-                                                 ],
-                                          "ar":  [
-                                                     "23:18 — combat core powered locally",
-                                                     "23:41 — L-9 power module removed",
-                                                     "00:07 — workbench overheating, emergency shutdown"
-                                                 ],
-                                          "kk":  [
-                                                     "23:18 — питание боевого блока включено локально",
-                                                     "23:41 — снят силовой модуль L-9",
-                                                     "00:07 — перегрев верстака, аварийное отключение"
-                                                 ]
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Дроид разбирали перед пожаром, что указывает на скрытую причину возгорания.",
-                                                           "en":  "The droid was dismantled before the fire, pointing to a concealed cause.",
-                                                           "tr":  "The droid was dismantled before the fire, pointing to a concealed cause.",
-                                                           "ar":  "The droid was dismantled before the fire, pointing to a concealed cause.",
-                                                           "kk":  "Дроид разбирали перед пожаром, что указывает на скрытую причину возгорания."
-                                                       },
-                          "meta":  {
-                                       "logPrompt":  "farmtech@dryledge:~$ tail -f /var/log/droid-service.log"
-                                   },
-                          "relation":  "contradicts"
-                      },
-                      {
-                          "id":  "bank-modules",
-                          "type":  "bank_statement",
-                          "title":  {
-                                        "ru":  "Покупка силовых модулей",
-                                        "en":  "Power Module Purchase",
-                                        "tr":  "Power Module Purchase",
-                                        "ar":  "Power Module Purchase",
-                                        "kk":  "Покупка силовых модулей"
-                                    },
-                          "content":  {
-                                          "ru":  [
-                                                     "08.04 — -4 900 CR · Редкие силовые модули, рынок Кольца",
-                                                     "11.04 — -620 CR · Термозащита и резак",
-                                                     "В назначении платежа повторяется код GC-17."
-                                                 ],
-                                          "en":  [
-                                                     "08 Apr — -4,900 CR · rare power modules, Ring market",
-                                                     "11 Apr — -620 CR · heat shielding and cutter",
-                                                     "The payment memo repeats code GC-17."
-                                                 ],
-                                          "tr":  [
-                                                     "08 Apr — -4,900 CR · rare power modules, Ring market",
-                                                     "11 Apr — -620 CR · heat shielding and cutter",
-                                                     "Ödeme açıklamasında GC-17 kodu tekrarlanıyor."
-                                                 ],
-                                          "ar":  [
-                                                     "08 Apr — -4,900 CR · rare power modules, Ring market",
-                                                     "11 Apr — -620 CR · heat shielding and cutter",
-                                                     "يتكرر رمز GC-17 في وصف الدفعة."
-                                                 ],
-                                          "kk":  [
-                                                     "08.04 — -4 900 CR · Редкие силовые модули, рынок Кольца",
-                                                     "11.04 — -620 CR · Термозащита и резак",
-                                                     "Төлем мақсатында GC-17 коды қайталанады."
-                                                 ]
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Покупки связаны с разборкой, а не с сельхозоборудованием.",
-                                                           "en":  "The purchases fit dismantling work, not farm repairs.",
-                                                           "tr":  "The purchases fit dismantling work, not farm repairs.",
-                                                           "ar":  "The purchases fit dismantling work, not farm repairs.",
-                                                           "kk":  "Покупки связаны с разборкой, а не с сельхозоборудованием."
-                                                       },
-                          "meta":  {
-                                       "bankName":  {
-                                                        "ru":  "Frontier Credit Union",
-                                                        "en":  "Frontier Credit Union",
-                                                        "tr":  "Frontier Credit Union",
-                                                        "ar":  "Frontier Credit Union",
-                                                        "kk":  "Frontier Credit Union"
-                                                    },
-                                       "accountMask":  "•••• •••• •••• 4091"
-                                   },
-                          "relation":  "contradicts"
-                      },
-                      {
-                          "id":  "witness-welding",
-                          "type":  "witness_statement",
-                          "title":  {
-                                        "ru":  "Показания соседа",
-                                        "en":  "Neighbor Statement",
-                                        "tr":  "Neighbor Statement",
-                                        "ar":  "Neighbor Statement",
-                                        "kk":  "Показания соседа"
-                                    },
-                          "content":  {
-                                          "ru":  "«До пожара я видел в ангаре ночную сварку. Патрульных машин в ту ночь у фермы не было».",
-                                          "en":  "\"Before the fire I saw night welding in the hangar. No patrol vehicles were at the farm that night.\"",
-                                          "tr":  "\"Before the fire I saw night welding in the hangar. No patrol vehicles were at the farm that night.\"",
-                                          "ar":  "\"Before the fire I saw night welding in the hangar. No patrol vehicles were at the farm that night.\"",
-                                          "kk":  "«До пожара я видел в ангаре ночную сварку. Патрульных машин в ту ночь у фермы не было»."
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Свидетель подтверждает внутренние работы и отсутствие налёта.",
-                                                           "en":  "The witness confirms internal work and no raid.",
-                                                           "tr":  "The witness confirms internal work and no raid.",
-                                                           "ar":  "The witness confirms internal work and no raid.",
-                                                           "kk":  "Свидетель подтверждает внутренние работы и отсутствие налёта."
-                                                       },
-                          "relation":  "contradicts"
-                      },
-                      {
-                          "id":  "inventory",
-                          "type":  "document",
-                          "title":  {
-                                        "ru":  "Опись испарителей",
-                                        "en":  "Evaporator Inventory",
-                                        "tr":  "Evaporator Inventory",
-                                        "ar":  "Evaporator Inventory",
-                                        "kk":  "Опись испарителей"
-                                    },
-                          "content":  {
-                                          "ru":  "Страховая опись подтверждает 11 рабочих испарителей и складской запас фильтров на дату осмотра.",
-                                          "en":  "The insurance inventory confirms 11 working evaporators and filter stock at inspection.",
-                                          "tr":  "The insurance inventory confirms 11 working evaporators and filter stock at inspection.",
-                                          "ar":  "The insurance inventory confirms 11 working evaporators and filter stock at inspection.",
-                                          "kk":  "Страховая опись подтверждает 11 рабочих испарителей и складской запас фильтров на дату осмотра."
-                                      },
-                          "isContradiction":  false,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Материал важен для хронологии, но сам по себе не опровергает заявление.",
-                                                           "en":  "The material matters for the timeline but does not by itself disprove the claim.",
-                                                           "tr":  "The material matters for the timeline but does not by itself disprove the claim.",
-                                                           "ar":  "The material matters for the timeline but does not by itself disprove the claim.",
-                                                           "kk":  "Материал важен для хронологии, но сам по себе не опровергает заявление."
-                                                       },
-                          "relation":  "context"
-                      },
-                      {
-                          "id":  "patrol-track",
-                          "type":  "gps",
-                          "title":  {
-                                        "ru":  "Маршрут патруля",
-                                        "en":  "Patrol Route",
-                                        "tr":  "Patrol Route",
-                                        "ar":  "Patrol Route",
-                                        "kk":  "Маршрут патруля"
-                                    },
-                          "content":  {
-                                          "ru":  [
-                                                     "22:10 — КПП северного кратера",
-                                                     "23:30 — сектор каньона, 38 км от фермы",
-                                                     "00:20 — возврат на базу"
-                                                 ],
-                                          "en":  [
-                                                     "22:10 — north crater checkpoint",
-                                                     "23:30 — canyon sector, 38 km from farm",
-                                                     "00:20 — returned to base"
-                                                 ],
-                                          "tr":  [
-                                                     "22:10 — north crater checkpoint",
-                                                     "23:30 — canyon sector, 38 km from farm",
-                                                     "00:20 — returned to base"
-                                                 ],
-                                          "ar":  [
-                                                     "22:10 — north crater checkpoint",
-                                                     "23:30 — canyon sector, 38 km from farm",
-                                                     "00:20 — returned to base"
-                                                 ],
-                                          "kk":  [
-                                                     "22:10 — КПП северного кратера",
-                                                     "23:30 — сектор каньона, 38 км от фермы",
-                                                     "00:20 — возврат на базу"
-                                                 ]
-                                      },
-                          "isContradiction":  true,
-                          "contradictionExplanation":  {
-                                                           "ru":  "Маршрут патруля не проходил рядом с фермой во время пожара.",
-                                                           "en":  "The patrol route never came near the farm during the fire.",
-                                                           "tr":  "The patrol route never came near the farm during the fire.",
-                                                           "ar":  "The patrol route never came near the farm during the fire.",
-                                                           "kk":  "Маршрут патруля не проходил рядом с фермой во время пожара."
-                                                       },
-                          "meta":  {
-                                       "company":  {
-                                                       "ru":  "Orbital Track Bureau",
-                                                       "en":  "Orbital Track Bureau",
-                                                       "tr":  "Orbital Track Bureau",
-                                                       "ar":  "Orbital Track Bureau",
-                                                       "kk":  "Orbital Track Bureau"
-                                                   },
-                                       "department":  {
-                                                          "ru":  "Отдел маршрутов служебных судов",
-                                                          "en":  "Service Vessel Route Desk",
-                                                          "tr":  "Service Vessel Route Desk",
-                                                          "ar":  "Service Vessel Route Desk",
-                                                          "kk":  "Отдел маршрутов служебных судов"
-                                                      },
-                                       "requestId":  {
-                                                         "ru":  "ОТВ-2026-0412-С · Тип: патрульный маршрут",
-                                                         "en":  "OTB-2026-0412-S · Type: patrol route",
-                                                         "tr":  "OTB-2026-0412-S · Type: patrol route",
-                                                         "ar":  "OTB-2026-0412-S · Type: patrol route",
-                                                         "kk":  "ОТВ-2026-0412-С · Тип: патрульный маршрут"
-                                                     },
-                                       "gpsFooter":  {
-                                                         "ru":  "© Orbital Track 2026 · NAV ACC: ±12m",
-                                                         "en":  "© Orbital Track 2026 · NAV ACC: ±12m",
-                                                         "tr":  "© Orbital Track 2026 · NAV ACC: ±12m",
-                                                         "ar":  "© Orbital Track 2026 · NAV ACC: ±12m",
-                                                         "kk":  "© Orbital Track 2026 · NAV ACC: ±12m"
-                                                     }
-                                   },
-                          "relation":  "contradicts"
-                      }
-                  ],
-    "correctDecision":  "reject",
-    "explanation":  {
-                        "ru":  [
-                                   "Очаг, журналы и банковская выписка показывают подготовленный пожар.",
-                                   "Код GC-17 впервые связывает ангар с серой транспортной цепочкой.",
-                                   "Заявление о внешнем налёте не подтверждено: вердикт — отказ."
-                               ],
-                        "en":  [
-                                   "The burn mark, logs, and bank record show a prepared fire.",
-                                   "Code GC-17 first ties the hangar to a gray transport chain.",
-                                   "The external raid story is unsupported: reject the claim."
-                               ],
-                        "tr":  [
-                                   "Yanık izi, kayıtlar ve banka kaydı hazırlanmış yangını gösteriyor.",
-                                   "GC-17 kodu hangarı ilk kez gri taşıma zincirine bağlıyor.",
-                                   "Dış baskın hikâyesi desteklenmiyor: ödeme reddedilir."
-                               ],
-                        "ar":  [
-                                   "يظهر أثر الحريق والسجلات والبنك حريقاً مُحضّراً.",
-                                   "يربط رمز GC-17 الحظيرة لأول مرة بسلسلة نقل رمادية.",
-                                   "رواية الغارة الخارجية غير مثبتة: القرار رفض."
-                               ],
-                        "kk":  [
-                                   "Өрт ізі, журналдар және банк жазбасы дайындалған өртті көрсетеді.",
-                                   "GC-17 коды ангарды алғаш рет сұр көлік тізбегімен байланыстырады.",
-                                   "Сыртқы шабуыл нұсқасы расталмады: вердикт — бас тарту."
-                               ]
-                    }
+{
+  "id": "case-040",
+  "type": "standard",
+  "difficulty": "hard",
+  "claimAmount": 22100,
+  "truth": "fraud",
+  "investigationBudget": 4,
+  "title": {
+    "ru": "Сгоревший груз на лунной ферме",
+    "en": "Burned Cargo on the Moon Farm",
+    "tr": "Burned Cargo on the Moon Farm",
+    "ar": "Burned Cargo on the Moon Farm",
+    "kk": "Сгоревший груз на лунной ферме"
+  },
+  "claim": {
+    "person": {
+      "ru": "Мирон Вейл, 52 года",
+      "en": "Miron Vale, 52",
+      "tr": "Miron Vale, 52",
+      "ar": "Miron Vale, 52",
+      "kk": "Мирон Вейл, 52 года"
+    },
+    "story": {
+      "ru": "Правительственный патруль сжёг мой грузовой ангар и сезонный запас оборудования. Ворота выбиты, часть испарителей уничтожена, семья осталась без дохода. Прошу полное возмещение.",
+      "en": "A government patrol burned my cargo hangar and seasonal equipment stock. The gate was forced, evaporators were destroyed, and my family lost its income. I request full compensation.",
+      "tr": "A government patrol burned my cargo hangar and seasonal equipment stock. The gate was forced, evaporators were destroyed, and my family lost its income. I request full compensation.",
+      "ar": "A government patrol burned my cargo hangar and seasonal equipment stock. The gate was forced, evaporators were destroyed, and my family lost its income. I request full compensation.",
+      "kk": "Правительственный патруль сжёг мой грузовой ангар и сезонный запас оборудования. Ворота выбиты, часть испарителей уничтожена, семья осталась без дохода. Прошу полное возмещение."
+    }
+  },
+  "coverImage": "covers/case-040.svg",
+  "personImage": "people/miron-veil.webp",
+  "client": {
+    "role": {
+      "ru": "Фермер лунного купола",
+      "en": "Moon dome farmer",
+      "tr": "Ay kubbesi çiftçisi",
+      "ar": "مزارع قبة قمرية",
+      "kk": "Ай күмбезі фермері"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Архив",
+          "en": "Archive",
+          "tr": "Arşiv",
+          "ar": "الأرشيف",
+          "kk": "Архив"
+        },
+        "v": {
+          "ru": "Пограничный сектор",
+          "en": "Frontier Sector",
+          "tr": "Sınır Sektörü",
+          "ar": "القطاع الحدودي",
+          "kk": "Шекара секторы"
+        }
+      },
+      {
+        "k": {
+          "ru": "Застрахованный риск",
+          "en": "Insured risk",
+          "tr": "Sigortalı risk",
+          "ar": "الخطر المؤمن عليه",
+          "kk": "Сақтандырылған тәуекел"
+        },
+        "v": {
+          "ru": "Пожар грузового ангара",
+          "en": "Cargo hangar fire",
+          "tr": "Yük hangarı yangını",
+          "ar": "حريق حظيرة شحن",
+          "kk": "Жүк ангары өрті"
+        }
+      },
+      {
+        "k": {
+          "ru": "Архивная связка",
+          "en": "Archive thread",
+          "tr": "Arşiv bağı",
+          "ar": "خيط الأرشيف",
+          "kk": "Архив байланысы"
+        },
+        "v": {
+          "ru": "Повторяющийся след: маркировка GC-17 и серые транспортные жетоны «Серого конвоя».",
+          "en": "Recurring lead: GC-17 markings and gray transport tokens of the Grey Convoy.",
+          "tr": "Tekrarlayan iz: GC-17 işaretleri ve Gri Konvoy’un gri taşıma jetonları.",
+          "ar": "خيط متكرر: علامات GC-17 ورموز النقل الرمادية لقافلة غراي.",
+          "kk": "Қайталанатын із: GC-17 таңбалары және Сұр конвойдың сұр көлік жетондары."
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "photo-hangar",
+      "type": "photo",
+      "title": {
+        "ru": "Фото ангара",
+        "en": "Hangar Photo",
+        "tr": "Hangar Photo",
+        "ar": "Hangar Photo",
+        "kk": "Фото ангара"
+      },
+      "content": {
+        "ru": "Очаг сильнее всего выгорел у внутреннего верстака. Ворота обуглены меньше, чем рабочая зона.",
+        "en": "The deepest burn is around the internal workbench. The gate is less charred than the work area.",
+        "tr": "The deepest burn is around the internal workbench. The gate is less charred than the work area.",
+        "ar": "The deepest burn is around the internal workbench. The gate is less charred than the work area.",
+        "kk": "Очаг сильнее всего выгорел у внутреннего верстака. Ворота обуглены меньше, чем рабочая зона."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Очаг внутри противоречит версии о поджоге снаружи.",
+        "en": "An internal ignition point contradicts an outside attack.",
+        "tr": "An internal ignition point contradicts an outside attack.",
+        "ar": "An internal ignition point contradicts an outside attack.",
+        "kk": "Очаг внутри противоречит версии о поджоге снаружи."
+      },
+      "meta": {
+        "filename": "IMG_20260412_071430.jpg",
+        "imageUrl": "evidence/case-040-photo-hangar.webp"
+      },
+      "relation": "contradicts"
+    },
+    {
+      "id": "service robot-log",
+      "type": "usage_log",
+      "title": {
+        "ru": "Сервисный журнал сервисный робота",
+        "en": "service robot Service Log",
+        "tr": "service robot Service Log",
+        "ar": "service robot Service Log",
+        "kk": "Сервисный журнал сервисный робота"
+      },
+      "content": {
+        "ru": [
+          "23:18 — питание боевого блока включено локально",
+          "23:41 — снят силовой модуль L-9",
+          "00:07 — перегрев верстака, аварийное отключение"
+        ],
+        "en": [
+          "23:18 — combat core powered locally",
+          "23:41 — L-9 power module removed",
+          "00:07 — workbench overheating, emergency shutdown"
+        ],
+        "tr": [
+          "23:18 — combat core powered locally",
+          "23:41 — L-9 power module removed",
+          "00:07 — workbench overheating, emergency shutdown"
+        ],
+        "ar": [
+          "23:18 — combat core powered locally",
+          "23:41 — L-9 power module removed",
+          "00:07 — workbench overheating, emergency shutdown"
+        ],
+        "kk": [
+          "23:18 — питание боевого блока включено локально",
+          "23:41 — снят силовой модуль L-9",
+          "00:07 — перегрев верстака, аварийное отключение"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "сервисный робот разбирали перед пожаром, что указывает на скрытую причину возгорания.",
+        "en": "The service robot was dismantled before the fire, pointing to a concealed cause.",
+        "tr": "The service robot was dismantled before the fire, pointing to a concealed cause.",
+        "ar": "The service robot was dismantled before the fire, pointing to a concealed cause.",
+        "kk": "сервисный робот разбирали перед пожаром, что указывает на скрытую причину возгорания."
+      },
+      "meta": {
+        "logPrompt": "farmtech@dryledge:~$ tail -f /var/log/service robot-service.log"
+      },
+      "relation": "contradicts"
+    },
+    {
+      "id": "bank-modules",
+      "type": "bank_statement",
+      "title": {
+        "ru": "Покупка силовых модулей",
+        "en": "Power Module Purchase",
+        "tr": "Power Module Purchase",
+        "ar": "Power Module Purchase",
+        "kk": "Покупка силовых модулей"
+      },
+      "content": {
+        "ru": [
+          "08.04 — -4 900 CR · Редкие силовые модули, рынок Кольца",
+          "11.04 — -620 CR · Термозащита и резак",
+          "В назначении платежа повторяется код GC-17."
+        ],
+        "en": [
+          "08 Apr — -4,900 CR · rare power modules, Ring market",
+          "11 Apr — -620 CR · heat shielding and cutter",
+          "The payment memo repeats code GC-17."
+        ],
+        "tr": [
+          "08 Apr — -4,900 CR · rare power modules, Ring market",
+          "11 Apr — -620 CR · heat shielding and cutter",
+          "Ödeme açıklamasında GC-17 kodu tekrarlanıyor."
+        ],
+        "ar": [
+          "08 Apr — -4,900 CR · rare power modules, Ring market",
+          "11 Apr — -620 CR · heat shielding and cutter",
+          "يتكرر رمز GC-17 في وصف الدفعة."
+        ],
+        "kk": [
+          "08.04 — -4 900 CR · Редкие силовые модули, рынок Кольца",
+          "11.04 — -620 CR · Термозащита и резак",
+          "Төлем мақсатында GC-17 коды қайталанады."
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Покупки связаны с разборкой, а не с сельхозоборудованием.",
+        "en": "The purchases fit dismantling work, not farm repairs.",
+        "tr": "The purchases fit dismantling work, not farm repairs.",
+        "ar": "The purchases fit dismantling work, not farm repairs.",
+        "kk": "Покупки связаны с разборкой, а не с сельхозоборудованием."
+      },
+      "meta": {
+        "bankName": {
+          "ru": "Frontier Credit Union",
+          "en": "Frontier Credit Union",
+          "tr": "Frontier Credit Union",
+          "ar": "Frontier Credit Union",
+          "kk": "Frontier Credit Union"
+        },
+        "accountMask": "•••• •••• •••• 4091"
+      },
+      "relation": "contradicts"
+    },
+    {
+      "id": "witness-welding",
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания соседа",
+        "en": "Neighbor Statement",
+        "tr": "Neighbor Statement",
+        "ar": "Neighbor Statement",
+        "kk": "Показания соседа"
+      },
+      "content": {
+        "ru": "«До пожара я видел в ангаре ночную сварку. Патрульных машин в ту ночь у фермы не было».",
+        "en": "\"Before the fire I saw night welding in the hangar. No patrol vehicles were at the farm that night.\"",
+        "tr": "\"Before the fire I saw night welding in the hangar. No patrol vehicles were at the farm that night.\"",
+        "ar": "\"Before the fire I saw night welding in the hangar. No patrol vehicles were at the farm that night.\"",
+        "kk": "«До пожара я видел в ангаре ночную сварку. Патрульных машин в ту ночь у фермы не было»."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Свидетель подтверждает внутренние работы и отсутствие налёта.",
+        "en": "The witness confirms internal work and no raid.",
+        "tr": "The witness confirms internal work and no raid.",
+        "ar": "The witness confirms internal work and no raid.",
+        "kk": "Свидетель подтверждает внутренние работы и отсутствие налёта."
+      },
+      "relation": "contradicts"
+    },
+    {
+      "id": "inventory",
+      "type": "document",
+      "title": {
+        "ru": "Опись испарителей",
+        "en": "Evaporator Inventory",
+        "tr": "Evaporator Inventory",
+        "ar": "Evaporator Inventory",
+        "kk": "Опись испарителей"
+      },
+      "content": {
+        "ru": "Страховая опись подтверждает 11 рабочих испарителей и складской запас фильтров на дату осмотра.",
+        "en": "The insurance inventory confirms 11 working evaporators and filter stock at inspection.",
+        "tr": "The insurance inventory confirms 11 working evaporators and filter stock at inspection.",
+        "ar": "The insurance inventory confirms 11 working evaporators and filter stock at inspection.",
+        "kk": "Страховая опись подтверждает 11 рабочих испарителей и складской запас фильтров на дату осмотра."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Материал важен для хронологии, но сам по себе не опровергает заявление.",
+        "en": "The material matters for the timeline but does not by itself disprove the claim.",
+        "tr": "The material matters for the timeline but does not by itself disprove the claim.",
+        "ar": "The material matters for the timeline but does not by itself disprove the claim.",
+        "kk": "Материал важен для хронологии, но сам по себе не опровергает заявление."
+      },
+      "relation": "context"
+    },
+    {
+      "id": "patrol-track",
+      "type": "gps",
+      "title": {
+        "ru": "Маршрут патруля",
+        "en": "Patrol Route",
+        "tr": "Patrol Route",
+        "ar": "Patrol Route",
+        "kk": "Маршрут патруля"
+      },
+      "content": {
+        "ru": [
+          "22:10 — КПП северного кратера",
+          "23:30 — сектор каньона, 38 км от фермы",
+          "00:20 — возврат на базу"
+        ],
+        "en": [
+          "22:10 — north crater checkpoint",
+          "23:30 — canyon sector, 38 km from farm",
+          "00:20 — returned to base"
+        ],
+        "tr": [
+          "22:10 — north crater checkpoint",
+          "23:30 — canyon sector, 38 km from farm",
+          "00:20 — returned to base"
+        ],
+        "ar": [
+          "22:10 — north crater checkpoint",
+          "23:30 — canyon sector, 38 km from farm",
+          "00:20 — returned to base"
+        ],
+        "kk": [
+          "22:10 — КПП северного кратера",
+          "23:30 — сектор каньона, 38 км от фермы",
+          "00:20 — возврат на базу"
+        ]
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Маршрут патруля не проходил рядом с фермой во время пожара.",
+        "en": "The patrol route never came near the farm during the fire.",
+        "tr": "The patrol route never came near the farm during the fire.",
+        "ar": "The patrol route never came near the farm during the fire.",
+        "kk": "Маршрут патруля не проходил рядом с фермой во время пожара."
+      },
+      "meta": {
+        "company": {
+          "ru": "Orbital Track Bureau",
+          "en": "Orbital Track Bureau",
+          "tr": "Orbital Track Bureau",
+          "ar": "Orbital Track Bureau",
+          "kk": "Orbital Track Bureau"
+        },
+        "department": {
+          "ru": "Отдел маршрутов служебных судов",
+          "en": "Service Vessel Route Desk",
+          "tr": "Service Vessel Route Desk",
+          "ar": "Service Vessel Route Desk",
+          "kk": "Отдел маршрутов служебных судов"
+        },
+        "requestId": {
+          "ru": "ОТВ-2026-0412-С · Тип: патрульный маршрут",
+          "en": "OTB-2026-0412-S · Type: patrol route",
+          "tr": "OTB-2026-0412-S · Type: patrol route",
+          "ar": "OTB-2026-0412-S · Type: patrol route",
+          "kk": "ОТВ-2026-0412-С · Тип: патрульный маршрут"
+        },
+        "gpsFooter": {
+          "ru": "© Orbital Track 2026 · NAV ACC: ±12m",
+          "en": "© Orbital Track 2026 · NAV ACC: ±12m",
+          "tr": "© Orbital Track 2026 · NAV ACC: ±12m",
+          "ar": "© Orbital Track 2026 · NAV ACC: ±12m",
+          "kk": "© Orbital Track 2026 · NAV ACC: ±12m"
+        }
+      },
+      "relation": "contradicts"
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Очаг, журналы и банковская выписка показывают подготовленный пожар.",
+      "Код GC-17 впервые связывает ангар с серой транспортной цепочкой.",
+      "Заявление о внешнем налёте не подтверждено: вердикт — отказ."
+    ],
+    "en": [
+      "The burn mark, logs, and bank record show a prepared fire.",
+      "Code GC-17 first ties the hangar to a gray transport chain.",
+      "The external raid story is unsupported: reject the claim."
+    ],
+    "tr": [
+      "Yanık izi, kayıtlar ve banka kaydı hazırlanmış yangını gösteriyor.",
+      "GC-17 kodu hangarı ilk kez gri taşıma zincirine bağlıyor.",
+      "Dış baskın hikâyesi desteklenmiyor: ödeme reddedilir."
+    ],
+    "ar": [
+      "يظهر أثر الحريق والسجلات والبنك حريقاً مُحضّراً.",
+      "يربط رمز GC-17 الحظيرة لأول مرة بسلسلة نقل رمادية.",
+      "رواية الغارة الخارجية غير مثبتة: القرار رفض."
+    ],
+    "kk": [
+      "Өрт ізі, журналдар және банк жазбасы дайындалған өртті көрсетеді.",
+      "GC-17 коды ангарды алғаш рет сұр көлік тізбегімен байланыстырады.",
+      "Сыртқы шабуыл нұсқасы расталмады: вердикт — бас тарту."
+    ]
+  }
 }

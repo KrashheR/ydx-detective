@@ -27,6 +27,19 @@ const sdk = vi.hoisted(() => ({
 }));
 vi.mock('../services/yandexSDK', () => sdk);
 
+const metrica = vi.hoisted(() => ({
+  initMetrica: vi.fn(),
+  setUserParams: vi.fn(),
+}));
+vi.mock('../services/metrica', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('../services/metrica')>();
+  return {
+    ...actual,
+    initMetrica: metrica.initMetrica,
+    setUserParams: metrica.setUserParams,
+  };
+});
+
 const persist = vi.hoisted(() => ({
   scheduleSync: vi.fn(),
   flushSync: vi.fn(async () => undefined),
@@ -75,6 +88,21 @@ describe('init', () => {
     expect(sdk.initYandex).toHaveBeenCalledTimes(1);
     expect(sdk.onPauseChange).toHaveBeenCalledTimes(1);
     expect(store().isHydrated).toBe(true);
+  });
+
+  it('hydrates before starting Metrica in a deferred task', async () => {
+    vi.useFakeTimers();
+    try {
+      await store().init();
+      expect(store().isHydrated).toBe(true);
+      expect(metrica.initMetrica).not.toHaveBeenCalled();
+
+      await vi.runAllTimersAsync();
+      expect(metrica.initMetrica).toHaveBeenCalled();
+      expect(metrica.setUserParams).toHaveBeenCalled();
+    } finally {
+      vi.useRealTimers();
+    }
   });
 
   it('adopts the Yandex locale for a first-time player', async () => {
@@ -243,6 +271,18 @@ describe('buyHint', () => {
     expect(ok).toBe(true);
     expect(sdk.showRewardedAd).toHaveBeenCalledTimes(1);
     expect(store().session?.revealedEvidenceIds).toEqual([targetId]);
+  });
+
+  it('allows repeated Witness Canvass ads within the same case', () => {
+    const c = makeCase({ claimAmount: 1000 });
+    store().startCase(c);
+    expect(store().buyHint(c, 'canvass')).toBe(true);
+    expect(store().buyHint(c, 'canvass')).toBe(true);
+    expect(sdk.showRewardedAd).toHaveBeenCalledTimes(2);
+    expect(store().session?.revealedEvidenceIds).toEqual([
+      c.evidences[0]!.id,
+      c.evidences[1]!.id,
+    ]);
   });
 });
 

@@ -265,9 +265,8 @@ export const GAME_CONFIG = {
      * Yandex Metrica counter ID. Replace the placeholder with the real counter
      * created in the Metrica console (https://metrika.yandex.ru). A falsy id
      * (0) keeps tracking a silent no-op — safe for local dev and non-Yandex
-     * builds where the counter script never loads. Single source of truth: the
-     * `<script>` in index.html only defines `window.ym`; the actual
-     * `ym(id, 'init', …)` call reads this value from `src/services/metrica.ts`.
+     * builds where the counter script never loads. `src/services/metrica.ts`
+     * owns both the deferred script loader and the `ym(id, 'init', …)` call.
      */
     counterId: 110041851,
     /** Enable Webvisor session recording on init. */

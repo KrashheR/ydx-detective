@@ -8,8 +8,9 @@
 
 ## Инициализация
 
-`initYandex()` идемпотентна (`initPromise`). Опрашивает `window.YaGames` до 4с
-(`<script>` грузится `async`), затем `getPlayer({ scopes: false })` (без промпта прав).
+`initYandex()` идемпотентна (`initPromise`). Актуальный лоадер `/sdk.js` подключён в
+`index.html` с `async`; адаптер опрашивает `window.YaGames` до 4с, затем вызывает
+`getPlayer({ scopes: false })` (без промпта прав).
 `canUseCloud()` истинно только когда SDK+player готовы и игрок не `lite` (анонимный).
 `features.LoadingAPI.ready()` не вызывается сразу после SDK. Пока loader временно
 отключён, оболочка в `main.tsx` вызывает `notifyGameReady()` сразу после гидратации.
@@ -112,11 +113,13 @@ null при недоступности → UI фолбэчит.
 тесты не требуют реального счётчика.
 
 **Счётчик и инициализация.** ID счётчика — единый источник истины в
-`GAME_CONFIG.analytics.counterId` (плейсхолдер `0` = выключено). `index.html` содержит
-только лоадер, определяющий очередь `window.ym` и подгружающий `tag.js`; сам
-`ym(id, 'init', …)` зовётся из `initMetrica()` (в `gameStore.init()`, после `initYandex()`).
-`initMetrica()` идемпотентна; при falsy id или отсутствии `window.ym` адаптер остаётся
-выключенным.
+`GAME_CONFIG.analytics.counterId` (плейсхолдер `0` = выключено). В `index.html` нет
+запроса к Метрике: очередь `window.ym`, асинхронная загрузка `tag.js` и
+`ym(id, 'init', …)` создаются внутри `initMetrica()`. `gameStore.init()` запускает их
+через отложенную задачу только после гидратации сохранения, не ожидая результата, поэтому
+медленный VPN или заблокированный `mc.yandex.ru` не задерживает старт игры.
+`initMetrica()` идемпотентна; при falsy id адаптер остаётся выключенным, а при
+недоступном `tag.js` события безопасно остаются в локальной очереди.
 
 **Поверхность адаптера:**
 - `initMetrica()` — поднять счётчик (один раз).
@@ -168,6 +171,7 @@ null при недоступности → UI фолбэчит.
 | `reject_blocked` | `App.tsx` (`handleReject`, при попытке отклонить без штампов; 1 раз за открытое дело) | caseId, viewedCount, stampedCount |
 | `budget_exhausted` | `App.tsx` (`handleOpenEvidence`, когда `markEvidenceAsViewed` отказывает) | caseId, budget, opensUsed |
 | `locked_case_click` | `App.tsx` (`handleSelectStandardCase`, клик по замкнутой карточке) | caseId, `lockReason: 'level' \| 'sequence'`, campaignPosition |
+| `tab_switch` | `CaseFile` → callback `App.tsx` | caseId, from, to |
 
 **Конфиг** (`GAME_CONFIG.analytics`): `counterId`, `webvisor`, `economyVersion`,
 `contentVersion`, `experimentGroup`. Персист не
