@@ -204,6 +204,46 @@ describe('buyHint', () => {
     store().startCase(c);
     expect(store().buyHint(makeCase({ id: 'other' }), 'note')).toBe(false);
   });
+
+  it('reveals the targeted card instead of the next one in order', () => {
+    const c = makeCase({ claimAmount: 1000 }); // note cost = 200
+    store().startCase(c);
+    const targetId = c.evidences[c.evidences.length - 1]!.id;
+    const ok = store().buyHint(c, 'note', targetId);
+    expect(ok).toBe(true);
+    expect(store().session?.revealedEvidenceIds).toEqual([targetId]);
+  });
+
+  it('falls back to the next unrevealed card when the target is already revealed', () => {
+    const c = makeCase({ claimAmount: 1000 });
+    store().startCase(c);
+    const firstId = c.evidences[0]!.id;
+    store().buyHint(c, 'note'); // reveals firstId
+    const ok = store().buyHint(c, 'note', firstId); // already revealed — falls back
+    expect(ok).toBe(true);
+    expect(store().session?.revealedEvidenceIds).toEqual([
+      firstId,
+      c.evidences[1]!.id,
+    ]);
+  });
+
+  it('falls back to the next unrevealed card when the target does not belong to the case', () => {
+    const c = makeCase({ claimAmount: 1000 });
+    store().startCase(c);
+    const ok = store().buyHint(c, 'note', 'not-a-real-id');
+    expect(ok).toBe(true);
+    expect(store().session?.revealedEvidenceIds).toEqual([c.evidences[0]!.id]);
+  });
+
+  it('reveals the targeted card for free via Witness Canvass', () => {
+    const c = makeCase({ claimAmount: 1000 });
+    store().startCase(c);
+    const targetId = c.evidences[c.evidences.length - 1]!.id;
+    const ok = store().buyHint(c, 'canvass', targetId);
+    expect(ok).toBe(true);
+    expect(sdk.showRewardedAd).toHaveBeenCalledTimes(1);
+    expect(store().session?.revealedEvidenceIds).toEqual([targetId]);
+  });
 });
 
 /* ------------------------------ submitVerdict ---------------------------- */

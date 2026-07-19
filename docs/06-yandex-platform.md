@@ -152,7 +152,7 @@ null при недоступности → UI фолбэчит.
 | `investigation_interrupt`, `investigation_resume` | смена/закрытие/повторный вход в дело | caseId, reason, viewedCount, stampCount |
 | `evidence_view` | `markEvidenceAsViewed` (только реально новое открытие) | caseId, evidenceId, evidenceType, viewedCount, budget |
 | `evidence_stamp` | `toggleEvidenceStamp` | caseId, evidenceId, stamped, stampCount |
-| `hint_buy` | `buyHint` (в колбэке реального раскрытия) | caseId, kind, cost, revealedId, balanceAfter |
+| `hint_buy` | `buyHint` (в колбэке реального раскрытия) | caseId, kind, cost, revealedId, balanceAfter, targeted, targetIndex |
 | `verdict_submit` | `submitVerdict` | decision, verdictCorrect, verdict/proof/efficiency-компоненты, penalty, bonusPct, dailyMultiplierApplied, total, xpGained, proofRatio, falseStamps, opensUsed |
 | `achievement_unlock` | `submitVerdict` (по одному на каждый новый ачив) | achievementId, caseId |
 | `rank_up` | `submitVerdict` (при `promotedToLevel`) | newLevel, xp |

@@ -136,13 +136,21 @@ export interface GameStoreState {
   markEvidenceAsViewed: (id: string, caseData: Case) => boolean;
   toggleEvidenceStamp: (id: string) => void;
   /**
-   * Reveal the next unrevealed evidence card's true status for the active case.
+   * Reveal an evidence card's true status for the active case.
    *   • `note`    — charges `balance` (20% of the claim); no-op if unaffordable.
    *   • `canvass` — shows a rewarded Yandex video, revealing for free once watched.
+   * `targetEvidenceId` picks which card to reveal; omitted (or invalid/already
+   * revealed) falls back to the next unrevealed card in case order. For
+   * `canvass` the target is captured before the ad plays, so the reveal lands
+   * on the chosen card once the video finishes.
    * Returns false when there is nothing to do (wrong/absent case, all revealed,
    * or `note` requested without enough balance).
    */
-  buyHint: (caseData: Case, kind: HintKind) => boolean;
+  buyHint: (
+    caseData: Case,
+    kind: HintKind,
+    targetEvidenceId?: string,
+  ) => boolean;
   selectInvestigationService: (caseData: Case, service: InvestigationService) => boolean;
   upgradeDepartment: (department: 'archive' | 'field' | 'lab') => boolean;
 
@@ -389,18 +397,25 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       }
     },
 
-    buyHint(caseData, kind) {
+    buyHint(caseData, kind, targetEvidenceId) {
       const { session, stats } = get();
       if (!session || session.caseId !== caseData.id) return false;
       const service = kind === 'note' ? 'inspector_note' : 'witness_canvass';
       if (kind === 'canvass' && session.canvassUsed) return false;
       trackGoal(GOAL.serviceSelect, { caseId: caseData.id, service });
 
-      // Both hints reveal the next not-yet-revealed card (in case order).
-      const nextId =
-        caseData.evidences.find(
-          (e) => !session.revealedEvidenceIds.includes(e.id),
-        )?.id ?? null;
+      // A valid, not-yet-revealed target picks that card; otherwise fall back
+      // to the next unrevealed card in case order.
+      const targetValid =
+        targetEvidenceId != null &&
+        caseData.evidences.some((e) => e.id === targetEvidenceId) &&
+        !session.revealedEvidenceIds.includes(targetEvidenceId);
+      const targeted = targetValid;
+      const nextId = targetValid
+        ? targetEvidenceId!
+        : (caseData.evidences.find(
+            (e) => !session.revealedEvidenceIds.includes(e.id),
+          )?.id ?? null);
       if (!nextId) return false; // every card already revealed
 
       // `charge` is the amount to deduct (0 on the ad-funded path).
@@ -428,6 +443,8 @@ export const useGameStore = create<GameStoreState>((set, get) => {
           cost: charge,
           revealedId: nextId,
           balanceAfter: get().stats.balance,
+          targeted,
+          targetIndex: caseData.evidences.findIndex((e) => e.id === nextId),
         });
         trackGoal(GOAL.serviceUse, {
           caseId: caseData.id,

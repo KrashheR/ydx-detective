@@ -462,7 +462,9 @@ export default function App() {
               budgetExhausted={gate.budgetExhausted}
               balance={stats.balance}
               onOpenEvidence={handleOpenEvidence}
-              onBuyHint={(kind) => store.buyHint(selectedCase, kind)}
+              onBuyHint={(kind, targetEvidenceId) =>
+                store.buyHint(selectedCase, kind, targetEvidenceId)
+              }
               onApprove={handleApprove}
               onReject={handleReject}
               onBackToDesk={backToDesk}

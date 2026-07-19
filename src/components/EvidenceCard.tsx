@@ -16,6 +16,12 @@ interface Props {
    * card was never opened — it can no longer be inspected.
    */
   sealed?: boolean;
+  /**
+   * True while a hint's targeting mode is active and this card is a valid
+   * pick (not yet revealed) — draws the pulsing "choose me" outline and
+   * accepts a click even when `sealed`, since hints don't spend budget opens.
+   */
+  targetable?: boolean;
   onClick: () => void;
 }
 
@@ -27,26 +33,42 @@ export function EvidenceCard({
   stamped,
   revealed,
   sealed = false,
+  targetable = false,
   onClick,
 }: Props) {
+  const disabled = sealed && !targetable;
   return (
     <Tooltip
       className="block h-full"
-      label={sealed ? t("tipSealedCard", lang) : null}
+      label={sealed && !targetable ? t("tipSealedCard", lang) : null}
     >
       <motion.button
         type="button"
         onClick={onClick}
-        disabled={sealed}
-        whileHover={sealed ? undefined : { y: -4 }}
-        whileTap={sealed ? undefined : { scale: 0.99 }}
+        disabled={disabled}
+        whileHover={disabled ? undefined : { y: -4 }}
+        whileTap={disabled ? undefined : { scale: 0.99 }}
         transition={{ type: "spring", stiffness: 300, damping: 24 }}
         className={`relative flex h-full w-full flex-col overflow-hidden rounded-[7px] border border-black/[0.08] bg-paper p-3.5 text-left md:shadow-card transition-shadow ${
-          sealed
+          disabled
             ? "cursor-not-allowed opacity-50 grayscale"
             : "hover:shadow-card-hover"
         }`}
       >
+        {/* Targeting-mode pulse: an animated outline inviting the pick */}
+        {targetable && (
+          <motion.span
+            aria-hidden
+            className="pointer-events-none absolute inset-0 z-10 rounded-[7px] border-2 border-accent"
+            animate={{
+              boxShadow: [
+                "0 0 0 0 rgb(var(--accent) / 0.5)",
+                "0 0 0 7px rgb(var(--accent) / 0)",
+              ],
+            }}
+            transition={{ duration: 1.3, repeat: Infinity, ease: "easeOut" }}
+          />
+        )}
         {/* Mono chip-tag on the folder-edge colour */}
         <span className="inline-block w-fit rounded font-mono text-[10px] font-bold uppercase tracking-wider text-white bg-folder-edge px-2 py-[3px]">
           {t(EVIDENCE_TAG_KEY[evidence.type], lang)}

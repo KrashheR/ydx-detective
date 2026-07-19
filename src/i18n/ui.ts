@@ -54,6 +54,8 @@ export type UIKey =
   | "revealedClean"
   | "watchAd"
   | "allRevealed"
+  | "hintTargetPrompt"
+  | "hintTargetCancel"
   | "achievements"
   | "achievementUnlocked"
   | "gameTitle"
@@ -498,6 +500,20 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     tr: "Tüm kanıtlar açıldı",
     ar: "تم كشف كل الأدلة",
     kk: "Барлық дәлел ашылды",
+  },
+  hintTargetPrompt: {
+    ru: "Выберите улику для проверки",
+    en: "Choose which evidence to check",
+    tr: "Kontrol edilecek kanıtı seçin",
+    ar: "اختر الدليل الذي تريد فحصه",
+    kk: "Тексеретін дәлелді таңдаңыз",
+  },
+  hintTargetCancel: {
+    ru: "Esc или клик мимо — отмена",
+    en: "Esc or click outside to cancel",
+    tr: "İptal için Esc veya dışına tıklayın",
+    ar: "Esc أو انقر خارجًا للإلغاء",
+    kk: "Болдырмау үшін Esc немесе сыртына басыңыз",
   },
   achievements: {
     ru: "Достижения",

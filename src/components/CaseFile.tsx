@@ -1,4 +1,4 @@
-import { Fragment, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import type {
   ActiveSession,
@@ -29,7 +29,7 @@ interface Props {
   /** Spendable balance — gates whether a hint is bought with cash or an ad. */
   balance: number;
   onOpenEvidence: (id: string) => void;
-  onBuyHint: (kind: HintKind) => void;
+  onBuyHint: (kind: HintKind, targetEvidenceId?: string) => void;
   onApprove: () => void;
   /** Returns false if rejection is unjustified, triggering the prompt. */
   onReject: () => boolean;
@@ -68,6 +68,33 @@ export function CaseFile({
   const [dir, setDir] = useState(0);
   const touchStart = useRef<{ x: number; y: number } | null>(null);
   const [toast, setToast] = useState<string | null>(null);
+
+  // Hint targeting mode: after clicking a hint button, the player picks which
+  // card to reveal instead of getting "the next one in order". Esc or a click
+  // outside the materials/hints region cancels without spending anything.
+  const [targeting, setTargeting] = useState<HintKind | null>(null);
+  const targetingScopeRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!targeting) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setTargeting(null);
+    };
+    const onPointerDown = (e: PointerEvent) => {
+      if (
+        targetingScopeRef.current &&
+        !targetingScopeRef.current.contains(e.target as Node)
+      ) {
+        setTargeting(null);
+      }
+    };
+    window.addEventListener("keydown", onKeyDown);
+    window.addEventListener("pointerdown", onPointerDown);
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      window.removeEventListener("pointerdown", onPointerDown);
+    };
+  }, [targeting]);
 
   const goToTab = (next: Tab) => {
     if (next === tab) return;
@@ -236,6 +263,8 @@ export function CaseFile({
     <div className="grid grid-cols-2 gap-3">
       {caseData.evidences.map((ev) => {
         const viewed = session?.viewedEvidenceIds.includes(ev.id) ?? false;
+        const revealed = session?.revealedEvidenceIds.includes(ev.id) ?? false;
+        const targetable = targeting != null && !revealed;
         return (
           <EvidenceCard
             key={ev.id}
@@ -243,10 +272,19 @@ export function CaseFile({
             lang={lang}
             viewed={viewed}
             stamped={session?.selectedEvidenceIds.includes(ev.id) ?? false}
-            revealed={session?.revealedEvidenceIds.includes(ev.id) ?? false}
+            revealed={revealed}
             // On a budgeted case, un-opened cards seal once the budget is spent.
             sealed={budgetExhausted && !viewed}
-            onClick={() => onOpenEvidence(ev.id)}
+            targetable={targetable}
+            onClick={() => {
+              if (targeting) {
+                if (!targetable) return;
+                onBuyHint(targeting, ev.id);
+                setTargeting(null);
+                return;
+              }
+              onOpenEvidence(ev.id);
+            }}
           />
         );
       })}
@@ -358,83 +396,116 @@ export function CaseFile({
         ))}
       </div>
 
-      {/* Mobile: one panel at a time, swipeable left/right. Desktop: stacked. */}
-      <div
-        className="overflow-hidden md:hidden"
-        onTouchStart={handleTouchStart}
-        onTouchEnd={handleTouchEnd}
-      >
-        <AnimatePresence initial={false} mode="wait" custom={dir}>
-          <motion.div
-            key={tab}
-            custom={dir}
-            variants={slideVariants}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            transition={{ duration: 0.22, ease: [0.4, 0, 0.2, 1] }}
-          >
-            {tab === "statement" ? (
-              statement
-            ) : (
-              <>
-                {materialsHeader}
-                {evidence}
-              </>
-            )}
-          </motion.div>
-        </AnimatePresence>
-      </div>
-      <div className="hidden md:block">
-        {statement}
-        {materialsHeader}
-        {evidence}
-      </div>
-
-      {/* Paid investigation hints (extended feature, styled to the desk) */}
-      <div className="mt-[18px] rounded-[10px] border border-border bg-surface p-4">
-        <div className="mb-3 text-[11px] font-semibold tracking-[1px] text-text-dim">
-          {t("hints", lang)}
-        </div>
-        {allRevealed ? (
-          <div className="rounded-md border border-border bg-surface-2 px-3 py-2 text-center text-sm text-text-muted">
-            {t("allRevealed", lang)}
-          </div>
-        ) : (
-          <div className="flex flex-col gap-2 sm:flex-row">
-            <Tooltip
-              className="flex-1"
-              label={
-                canAffordNote
-                  ? null
-                  : t("tipNoteUnaffordable", lang).replace(
-                      "{amount}",
-                      fmt(noteCost),
-                    )
-              }
+      <div ref={targetingScopeRef}>
+        {/* Mobile: one panel at a time, swipeable left/right. Desktop: stacked. */}
+        <div
+          className="overflow-hidden md:hidden"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
+          <AnimatePresence initial={false} mode="wait" custom={dir}>
+            <motion.div
+              key={tab}
+              custom={dir}
+              variants={slideVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.22, ease: [0.4, 0, 0.2, 1] }}
             >
+              {tab === "statement" ? (
+                statement
+              ) : (
+                <>
+                  {materialsHeader}
+                  {evidence}
+                </>
+              )}
+            </motion.div>
+          </AnimatePresence>
+        </div>
+        <div className="hidden md:block">
+          {statement}
+          {materialsHeader}
+          {evidence}
+        </div>
+
+        {/* Targeting-mode prompt — appears once a hint button starts aiming */}
+        <AnimatePresence>
+          {targeting && (
+            <motion.div
+              initial={{ opacity: 0, y: -6 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -6 }}
+              className="mt-[14px] flex items-center justify-between gap-2 rounded-[9px] border border-accent/60 bg-accent/10 px-3.5 py-2.5 text-sm font-medium text-text-light"
+            >
+              <span>{t("hintTargetPrompt", lang)}</span>
+              <span className="hidden shrink-0 text-xs text-text-muted sm:inline">
+                {t("hintTargetCancel", lang)}
+              </span>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Paid investigation hints (extended feature, styled to the desk) */}
+        <div className="mt-[18px] rounded-[10px] border border-border bg-surface p-4">
+          <div className="mb-3 text-[11px] font-semibold tracking-[1px] text-text-dim">
+            {t("hints", lang)}
+          </div>
+          {allRevealed ? (
+            <div className="rounded-md border border-border bg-surface-2 px-3 py-2 text-center text-sm text-text-muted">
+              {t("allRevealed", lang)}
+            </div>
+          ) : (
+            <div className="flex flex-col gap-2 sm:flex-row">
+              <Tooltip
+                className="flex-1"
+                label={
+                  canAffordNote
+                    ? null
+                    : t("tipNoteUnaffordable", lang).replace(
+                        "{amount}",
+                        fmt(noteCost),
+                      )
+                }
+              >
+                <button
+                  type="button"
+                  disabled={!canAffordNote}
+                  onClick={() => {
+                    goToTab("evidence");
+                    setTargeting((cur) => (cur === "note" ? null : "note"));
+                  }}
+                  className={`flex w-full items-center justify-between gap-2 rounded-[9px] border px-3 py-2.5 text-sm font-medium text-text-light transition-colors disabled:cursor-not-allowed disabled:opacity-40 ${
+                    targeting === "note"
+                      ? "border-accent bg-accent/15"
+                      : "border-accent/50 hover:bg-accent/10"
+                  }`}
+                >
+                  <span>{t("hintNote", lang)}</span>
+                  <span className="font-mono text-text-muted">₽{noteCost}</span>
+                </button>
+              </Tooltip>
               <button
                 type="button"
-                disabled={!canAffordNote}
-                onClick={() => onBuyHint("note")}
-                className="flex w-full items-center justify-between gap-2 rounded-[9px] border border-accent/50 px-3 py-2.5 text-sm font-medium text-text-light transition-colors hover:bg-accent/10 disabled:cursor-not-allowed disabled:opacity-40"
+                onClick={() => {
+                  goToTab("evidence");
+                  setTargeting((cur) => (cur === "canvass" ? null : "canvass"));
+                }}
+                className={`flex flex-1 items-center justify-between gap-2 rounded-[9px] border px-3 py-2.5 text-sm font-medium text-text-light transition-colors overflow-hidden ${
+                  targeting === "canvass"
+                    ? "border-gold bg-gold/15"
+                    : "border-gold/50 hover:bg-gold/10"
+                }`}
               >
-                <span>{t("hintNote", lang)}</span>
-                <span className="font-mono text-text-muted">₽{noteCost}</span>
+                <span>{t("hintCanvass", lang)}</span>
+                <span className="whitespace-nowrap text-gold">
+                  ▶ {t("watchAd", lang)}
+                </span>
               </button>
-            </Tooltip>
-            <button
-              type="button"
-              onClick={() => onBuyHint("canvass")}
-              className="flex flex-1 items-center justify-between gap-2 rounded-[9px] border border-gold/50 px-3 py-2.5 text-sm font-medium text-text-light transition-colors hover:bg-gold/10 overflow-hidden"
-            >
-              <span>{t("hintCanvass", lang)}</span>
-              <span className="whitespace-nowrap text-gold">
-                ▶ {t("watchAd", lang)}
-              </span>
-            </button>
-          </div>
-        )}
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Verdict */}
