@@ -1,0 +1,469 @@
+{
+  "id": "case-014",
+  "campaignOrder": 16,
+  "requiredLevel": 8,
+  "act": 2,
+  "actTitle": {
+    "ru": "Пять лет назад",
+    "en": "Five Years Earlier"
+  },
+  "title": {
+    "ru": "Белая полоса над полем",
+    "en": "A White Streak Across the Field"
+  },
+  "difficulty": "medium",
+  "claimAmount": {
+    "value": 13000,
+    "currency": "EUR"
+  },
+  "groundTruth": "valid",
+  "correctDecision": "approve",
+  "investigationBudget": 3,
+  "claimant": {
+    "name": {
+      "ru": "Болат Жумабеков, 53 года",
+      "en": "Bolat Zhumabekov, age 53"
+    },
+    "migrationNote": {
+      "ru": "Зафиксировать возраст 53 года и использовать те же данные при возвращении в деле 25. Сохранить портрет.",
+      "en": "Set his age to 53 and use the same profile when he returns in Case 25. Keep the portrait."
+    },
+    "portrait": null,
+    "portraitStatus": "retain_existing_project_portrait",
+    "portraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/bolat.webp",
+      "existingFile": "public/people/bolat.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Ущерб урожаю легко преувеличить фотографией крупного плана. Здесь понадобится доказать границы повреждённой зоны и реальную урожайность. — В. Лебедева",
+      "en": "A close-up photograph can easily exaggerate crop damage. Here, you must establish the boundaries of the affected area and its actual yield. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Болат не заявил погибшим всё поле, хотя мог рассчитывать на невнимательность. Запомните эту фамилию: честность тоже имеет продолжение.",
+      "en": "Bolat did not claim that the entire field was destroyed, although he might have expected no one to check. Remember his name: honesty has consequences too."
+    },
+    "nextCaseTeaser": {
+      "ru": "В море действительно был шторм и действительно нашли затонувшее судно. Но не то, за которое просят 18 000 евро.",
+      "en": "There really was a storm at sea, and a sunken vessel really was found. But not the one behind this €18,000 claim."
+    },
+    "seasonClue": null,
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Сильный град прошёл узкой полосой через моё пшеничное поле и уничтожил посевы почти на половине участка. Прошу компенсировать подтверждённую потерю урожая — 13 000 евро.",
+    "en": "A severe hailstorm cut a narrow path across my wheat field and destroyed crops on almost half the land. I am claiming €13,000 for the documented crop loss."
+  },
+  "evidence": [
+    {
+      "id": "ev-weather",
+      "order": 1,
+      "type": "document",
+      "title": {
+        "ru": "Радар осадков",
+        "en": "Weather Radar"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Метеослужба фиксирует градовую ячейку шириной 1,8 км, прошедшую через участок Жумабекова в 16:22.",
+        "en": "The weather service recorded a 1.8 km-wide hail cell crossing Zhumabekov's land at 4:22 p.m."
+      },
+      "statusExplanation": {
+        "ru": "Погода, время и направление подтверждаются независимыми данными.",
+        "en": "Independent data confirms the weather, time, and direction."
+      },
+      "statementLink": {
+        "statementId": "claim_event_time",
+        "relation": "supports",
+        "reason": {
+          "ru": "Погода, время и направление подтверждаются независимыми данными.",
+          "en": "Independent data confirms the weather, time, and direction."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-satellite",
+      "order": 2,
+      "type": "shadow_time_check",
+      "title": {
+        "ru": "Проверка времени полевого снимка",
+        "en": "Field Photograph Time Check"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Снимок сделан в 16:20–16:40 сразу после града; светлая полоса относится к заявленному событию.",
+        "en": "The photograph was taken between 4:20 and 4:40 p.m., immediately after the hail; the pale streak belongs to the reported event."
+      },
+      "previousType": "photo",
+      "description": {
+        "ru": "Агроном сфотографировал границу повреждений; положение межевого столба нанесено на план участка.",
+        "en": "An agronomist photographed the boundary of the damage; the survey post is marked on the field plan."
+      },
+      "instruction": {
+        "ru": "Сопоставить тень межевого столба со временем прохождения грозы.",
+        "en": "Match the survey post's shadow to the storm's recorded time."
+      },
+      "assets": {
+        "asset1": "assets/interactive/ev-satellite-scene.webp",
+        "asset2": "assets/interactive/ev-satellite-shadow-reference.svg"
+      },
+      "data": {
+        "claimedTime": "16:22",
+        "orientationSource": "Геодезический план участка",
+        "slider": {
+          "from": "06:00",
+          "to": "21:00",
+          "stepMinutes": 10
+        },
+        "shadowOrigin": {
+          "x": 44,
+          "y": 65
+        },
+        "referenceShadow": {
+          "baseAngle": 0,
+          "baseLength": 100,
+          "width": 20,
+          "opacity": 0.34
+        },
+        "timeSamples": [
+          {
+            "time": "08:00",
+            "angle": 72,
+            "length": 126
+          },
+          {
+            "time": "12:00",
+            "angle": 10,
+            "length": 50
+          },
+          {
+            "time": "16:20",
+            "angle": -43,
+            "length": 93
+          },
+          {
+            "time": "20:00",
+            "angle": -75,
+            "length": 149
+          }
+        ],
+        "validTimeRanges": [
+          {
+            "from": "16:20",
+            "to": "16:40"
+          }
+        ],
+        "matchTolerance": {
+          "angle": 8,
+          "length": 16
+        },
+        "orientationSourceEn": "Land survey plan"
+      },
+      "statementLink": {
+        "statementId": "claim_event_time",
+        "relation": "supports",
+        "reason": {
+          "ru": "Снимок сделан в 16:20–16:40 сразу после града; светлая полоса относится к заявленному событию.",
+          "en": "The photograph was taken between 4:20 and 4:40 p.m., immediately after the hail; the pale streak belongs to the reported event."
+        }
+      },
+      "contradictionTarget": null,
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Интерактив подтверждает, что полоса повреждения появилась после конкретной градовой ячейки, а не была старой.",
+          "en": "The interaction confirms that the damage streak was caused by this hail cell and was not pre-existing."
+        },
+        "playerAction": {
+          "ru": "Сопоставить тень межевого столба со временем прохождения грозы.",
+          "en": "Match the survey post's shadow to the storm's recorded time."
+        },
+        "conclusion": {
+          "ru": "Снимок сделан в 16:20–16:40 сразу после града; светлая полоса относится к заявленному событию.",
+          "en": "The photograph was taken between 4:20 and 4:40 p.m., immediately after the hail; the pale streak belongs to the reported event."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-016",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-014/evidence/case-014-ev-satellite.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-014/evidence/case-014-ev-satellite.webp",
+          "caseRelativeSrc": "evidence/case-014-ev-satellite.webp",
+          "installTo": "public/evidence/case-014-ev-satellite.webp",
+          "legacyRuntimeUrl": "evidence/case-014-ev-satellite.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "0547689cf0531170440ccb6ac6fa887e19d69bfae2fec4142c790ff3aea7d251"
+        },
+        {
+          "assetId": "asset-017",
+          "role": "interactive_scene",
+          "src": "src/data/cases/case-014/assets/interactive/ev-satellite-scene.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-014/assets/interactive/ev-satellite-scene.webp",
+          "caseRelativeSrc": "assets/interactive/ev-satellite-scene.webp",
+          "installTo": "src/data/cases/case-014/assets/interactive/ev-satellite-scene.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "f97a6cd81e0dce30503baf45a46491ff065f2240567870e54320d29b684212c5"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-014/evidence/case-014-ev-satellite.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-014/evidence/case-014-ev-satellite.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-014-ev-satellite.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-014/evidence/case-014-ev-satellite.webp",
+        "copyTo": "public/evidence/case-014-ev-satellite.webp"
+      }
+    },
+    {
+      "id": "ev-agro",
+      "order": 3,
+      "type": "document",
+      "title": {
+        "ru": "Заключение агронома",
+        "en": "Agronomist's Report"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Агроном обследовал поле по сетке и подтвердил гибель 46% посевов. Расчёт потерь основан на средней урожайности трёх предыдущих лет.",
+        "en": "The agronomist surveyed the field on a grid and confirmed that 46% of the crop was destroyed. The loss calculation uses the average yield from the previous three years."
+      },
+      "statusExplanation": {
+        "ru": "Масштаб потерь рассчитан проверяемым способом.",
+        "en": "The scale of the loss was calculated using a verifiable method."
+      },
+      "statementLink": {
+        "statementId": "claim_damage_boundary",
+        "relation": "supports",
+        "reason": {
+          "ru": "Масштаб потерь рассчитан проверяемым способом.",
+          "en": "The scale of the loss was calculated using a verifiable method."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-contract",
+      "order": 4,
+      "type": "document",
+      "title": {
+        "ru": "Договор поставки зерна",
+        "en": "Grain Supply Contract"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Заключённый до града договор подтверждает ожидаемый объём и рыночную цену. Заявленная сумма не превышает фактическую потерю.",
+        "en": "A contract signed before the hail confirms the expected volume and market price. The amount claimed does not exceed the actual loss."
+      },
+      "statusExplanation": {
+        "ru": "Сумма ущерба соответствует реальным обязательствам фермера.",
+        "en": "The claimed loss matches the farmer's actual contractual obligations."
+      },
+      "statementLink": {
+        "statementId": "claim_loss",
+        "relation": "supports",
+        "reason": {
+          "ru": "Сумма ущерба соответствует реальным обязательствам фермера.",
+          "en": "The claimed loss matches the farmer's actual contractual obligations."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Градовая полоса прошла непосредственно через поле Жумабекова.",
+      "Полевой снимок по тени датируется минутами после града, а обследование подтверждает гибель 46% посевов.",
+      "Размер потери рассчитан по прежней урожайности и договору. Выплату следует одобрить."
+    ],
+    "en": [
+      "Independent data confirms the weather, time, and direction.",
+      "The photograph was taken between 4:20 and 4:40 p.m., immediately after the hail; the pale streak belongs to the reported event.",
+      "The scale of the loss was calculated using a verifiable method.",
+      "The claimed loss matches the farmer's actual contractual obligations.",
+      "No material statement has been disproven. The claim should be approved."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Исправить несовпадающий возраст повторяющегося героя.",
+      "Сделать доказательство масштаба ущерба частью дедукции.",
+      "Интегрировать shadow_time_check в улику ev-satellite; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate shadow_time_check into evidence ev-satellite; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "evidence/case-014-ev-satellite.webp",
+      "action": "generate",
+      "prompt": "Documentary agricultural satellite or high-altitude survey image of a large wheat field after a narrow hailstorm, a distinct pale damaged strip crossing otherwise healthy green-gold crops, realistic field boundaries and tractor lines, neutral evidence style, no labels, no text, no watermark."
+    },
+    {
+      "file": "assets/interactive/ev-satellite-scene.webp",
+      "purpose": "Фотография с одной геометрически читаемой тенью",
+      "resolution": "1600×1000",
+      "format": "WebP",
+      "transparency": false,
+      "generatedBy": "image_model",
+      "manualPost": "Отбраковать конфликтующие тени; вручную сверить origin и фактический диапазон.",
+      "prompt": "Пшеничное поле с узкой полосой свежего градового повреждения, один межевой столб с чёткой тенью, ровный горизонт. One dominant vertical reference object with its base fully visible, one clear physically connected shadow on a level surface, single sunlight direction, minimal other shadows and reflections, free overlay space. Photorealistic insurance-investigation evidence photograph, documentary look, shot on a phone or compact camera by a non-professional, natural available light, neutral muted colors, realistic textures, high detail. No captions, no watermark, no logos, no readable real-world branding, no famous people, no recognizable copyrighted characters, no visible faces unless explicitly required. Evidence photo, not illustration or cinematic poster.",
+      "evidenceId": "ev-satellite",
+      "evidenceType": "shadow_time_check"
+    },
+    {
+      "file": "assets/interactive/ev-satellite-shadow-reference.svg",
+      "purpose": "Эталонная тень, управляемая ползунком времени",
+      "resolution": "viewBox 0 0 100 100",
+      "format": "SVG",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "Откалибровать angle/length по принятому изображению.",
+      "prompt": null,
+      "evidenceId": "ev-satellite",
+      "evidenceType": "shadow_time_check"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Сильный град прошёл узкой полосой через моё пшеничное поле и уничтожил посевы почти на половине участка. Прошу компенсировать подтверждённую потерю урожая — 13 000 евро.",
+        "en": "A severe hailstorm cut a narrow path across my wheat field and destroyed crops on almost half the land. I am claiming €13,000 for the documented crop loss."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_event_time",
+      "text": {
+        "ru": "Град прошёл через поле в заявленное время.",
+        "en": "Hail crossed the field at the reported time."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_damage_boundary",
+      "text": {
+        "ru": "Повреждена конкретная полоса посевов, а не всё поле.",
+        "en": "A specific strip of crops was damaged, not the entire field."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_loss",
+      "text": {
+        "ru": "Расчёт потери урожая основан на реальной урожайности и договорах.",
+        "en": "The crop-loss calculation is based on actual yields and contracts."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-014",
+    "archiveBasePath": "generated-assets/src/data/cases/case-014",
+    "claimantPortrait": null,
+    "claimantPortraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/bolat.webp",
+      "existingFile": "public/people/bolat.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-satellite",
+        "title": {
+          "ru": "Проверка времени полевого снимка",
+          "en": "Field Photograph Time Check"
+        },
+        "primaryImage": "src/data/cases/case-014/evidence/case-014-ev-satellite.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-014/evidence/case-014-ev-satellite.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-014-ev-satellite.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-014/evidence/case-014-ev-satellite.webp",
+          "copyTo": "public/evidence/case-014-ev-satellite.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-016",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-014/evidence/case-014-ev-satellite.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-014/evidence/case-014-ev-satellite.webp",
+            "caseRelativeSrc": "evidence/case-014-ev-satellite.webp",
+            "installTo": "public/evidence/case-014-ev-satellite.webp",
+            "legacyRuntimeUrl": "evidence/case-014-ev-satellite.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "0547689cf0531170440ccb6ac6fa887e19d69bfae2fec4142c790ff3aea7d251"
+          },
+          {
+            "assetId": "asset-017",
+            "role": "interactive_scene",
+            "src": "src/data/cases/case-014/assets/interactive/ev-satellite-scene.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-014/assets/interactive/ev-satellite-scene.webp",
+            "caseRelativeSrc": "assets/interactive/ev-satellite-scene.webp",
+            "installTo": "src/data/cases/case-014/assets/interactive/ev-satellite-scene.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1600,
+            "height": 1000,
+            "sha256": "f97a6cd81e0dce30503baf45a46491ff065f2240567870e54320d29b684212c5"
+          }
+        ]
+      }
+    ]
+  }
+}

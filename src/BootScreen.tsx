@@ -7,7 +7,7 @@ import {
   useSmoothedProgress,
   type BootSignals,
 } from './components/GameLoader';
-import { initYandex, notifyGameReady } from './services/yandexSDK';
+import { initYandex, notifyGameReady } from './services/platformAdapter';
 import { useGameStore } from './store/gameStore';
 import { detectInitialLanguage } from './utils/initialLanguage';
 

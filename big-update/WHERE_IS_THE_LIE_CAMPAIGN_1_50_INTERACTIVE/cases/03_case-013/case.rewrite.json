@@ -1,0 +1,418 @@
+{
+  "id": "case-013",
+  "campaignOrder": 3,
+  "requiredLevel": 2,
+  "act": 1,
+  "actTitle": {
+    "ru": "Чужой почерк",
+    "en": "Another Hand"
+  },
+  "title": {
+    "ru": "Телефон со дна озера",
+    "en": "The Phone from the Bottom of the Lake"
+  },
+  "difficulty": "medium",
+  "claimAmount": {
+    "value": 1100,
+    "currency": "EUR"
+  },
+  "groundTruth": "fraud",
+  "correctDecision": "reject",
+  "investigationBudget": 3,
+  "claimant": {
+    "name": {
+      "ru": "Тимур Аширов, 29 лет",
+      "en": "Timur Ashirov, age 29"
+    },
+    "migrationNote": {
+      "ru": "Сохранить стабильный профиль и существующий портрет после визуальной сверки с канонической версией.",
+      "en": "Keep the established profile and existing portrait after visually checking them against the canonical version."
+    },
+    "portrait": null,
+    "portraitStatus": "retain_existing_project_portrait",
+    "portraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/timur.webp",
+      "existingFile": "public/people/timur.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Два одинаковых телефона могут рассказать две разные истории. Сегодня главное не увидеть воду, а доказать личность устройства. — В. Лебедева",
+      "en": "Two identical phones can tell two different stories. Today, spotting water damage is not enough—you must prove the device's identity. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Телефон в озере был настоящим. Подмена тоже. Акт оформлен по тому же шаблону 17-К, что и первое заявление — вплоть до одинаковой опечатки.",
+      "en": "The phone in the lake was real. So was the switch. The service report uses the same 17-K template as the first claim—right down to the same typo."
+    },
+    "nextCaseTeaser": {
+      "ru": "В следующей папке рентген, французский бульдог и семейная реликвия. Хотя бы один из этих трёх пунктов настоящий.",
+      "en": "The next file contains an X-ray, a French bulldog, and a family heirloom. At least one of those three things is genuine."
+    },
+    "seasonClue": {
+      "id": "act1-clue-3",
+      "label": {
+        "ru": "Второй документ 17-К",
+        "en": "A Second 17-K Document"
+      },
+      "description": {
+        "ru": "В заявлении о телефоне используется тот же шаблон предварительной оценки, что и в деле Семёнова. Даже ошибка в слове «амортизация» совпадает.",
+        "en": "The phone claim uses the same preliminary-assessment template as Semyonov's case. Even the misspelling of ‘depreciation’ is identical."
+      },
+      "progressIndex": 2,
+      "progressTotal": 5
+    },
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "В субботу около 09:00 мой застрахованный телефон упал с причала в озеро. Его достали примерно через сорок минут, но он больше не включился. Именно этот аппарат я передал в сервис и прошу возместить 1100 евро.",
+    "en": "At about 9:00 a.m. on Saturday, my insured phone fell from a pier into the lake. It was recovered roughly forty minutes later but would no longer switch on. I delivered that exact device to the repair shop and am claiming €1,100."
+  },
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "В субботу около 09:00 мой застрахованный телефон упал с причала в озеро. Его достали примерно через сорок минут, но он больше не включился. Именно этот аппарат я передал в сервис и прошу возместить 1100 евро.",
+        "en": "At about 9:00 a.m. on Saturday, my insured phone fell from a pier into the lake. It was recovered roughly forty minutes later but would no longer switch on. I delivered that exact device to the repair shop and am claiming €1,100."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_phone_fell",
+      "text": {
+        "ru": "Около 09:00 телефон упал с причала в озеро и был поднят примерно через сорок минут.",
+        "en": "At about 9:00 a.m., the phone fell from the pier into the lake and was recovered roughly forty minutes later."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_recovered_phone_is_insured",
+      "text": {
+        "ru": "Телефон, переданный в сервис, является тем же устройством, которое указано в полисе.",
+        "en": "The phone delivered to the repair shop is the same device listed on the policy."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_insured_phone_unusable",
+      "text": {
+        "ru": "Застрахованный телефон после происшествия больше не включался и не выходил в сеть.",
+        "en": "After the incident, the insured phone never switched on or connected to the network again."
+      },
+      "stampable": true
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-service-photo",
+      "order": 1,
+      "type": "photo",
+      "title": {
+        "ru": "Фото из сервисного центра",
+        "en": "Repair Shop Photograph"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Вскрытый телефон действительно мокрый. Индикаторы контакта с водой изменили цвет, внутри корпуса видны капли и следы короткого замыкания.",
+        "en": "The opened phone is genuinely wet. Its liquid-contact indicators have changed color, and droplets and short-circuit marks are visible inside the case."
+      },
+      "statusExplanation": {
+        "ru": "В сервисный центр действительно передали утопленный телефон. Эта фотография подтверждает повреждение, но пока не подтверждает личность устройства.",
+        "en": "A water-damaged phone was indeed delivered to the repair shop. The photograph proves the damage, but not yet the identity of the device."
+      },
+      "statementLink": {
+        "statementId": "claim_phone_fell",
+        "relation": "supports",
+        "reason": {
+          "ru": "В сервисный центр действительно передали утопленный телефон. Эта фотография подтверждает повреждение, но пока не подтверждает личность устройства.",
+          "en": "A water-damaged phone was indeed delivered to the repair shop. The photograph proves the damage, but not yet the identity of the device."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-service-act",
+      "order": 2,
+      "type": "document_scan",
+      "title": {
+        "ru": "Экспертиза сервисного акта",
+        "en": "Repair Report Examination"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Окончание IMEI «7373» нанесено поверх исходного «1841»; утопленный аппарат не совпадает с телефоном в полисе.",
+        "en": "The IMEI ending ‘7373’ was written over the original ‘1841’; the submerged device does not match the phone on the policy."
+      },
+      "previousType": "document",
+      "description": {
+        "ru": "Аширов приложил скан акта сервисного центра как подтверждение личности утопленного телефона.",
+        "en": "Ashirov submitted a scan of the repair report as proof of the submerged phone's identity."
+      },
+      "instruction": {
+        "ru": "Включить УФ-режим, найти исправленные цифры и сравнить их с IMEI полиса.",
+        "en": "Switch on UV mode, find the altered digits, and compare them with the policy IMEI."
+      },
+      "assets": {
+        "asset1": "assets/interactive/ev-service-act-base.webp",
+        "asset2": "assets/interactive/ev-service-act-scan-overlay.svg"
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "uv",
+          "backlight"
+        ],
+        "anomalyZones": [
+          {
+            "id": "imei_overwrite",
+            "mode": "uv",
+            "x": 58,
+            "y": 39,
+            "width": 20,
+            "height": 8,
+            "label": "Окончание IMEI «7373» нанесено поверх исходного «1841»; утопленный аппарат не совпадает с телефоном в полисе.",
+            "isContradiction": true,
+            "labelEn": "The IMEI ending ‘7373’ was written over the original ‘1841’; the submerged device does not match the phone on the policy."
+          }
+        ],
+        "successCondition": {
+          "type": "select_then_compare",
+          "zoneId": "imei_overwrite",
+          "referenceFieldId": "policy_imei"
+        },
+        "referenceFields": [
+          {
+            "id": "policy_imei",
+            "label": "IMEI в полисе",
+            "value": "•••• 7373",
+            "labelEn": "Policy IMEI"
+          }
+        ]
+      },
+      "statementLink": {
+        "statementId": "claim_recovered_phone_is_insured",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Окончание IMEI «7373» нанесено поверх исходного «1841»; утопленный аппарат не совпадает с телефоном в полисе.",
+          "en": "The IMEI ending ‘7373’ was written over the original ‘1841’; the submerged device does not match the phone on the policy."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_recovered_phone_is_insured",
+        "reason": {
+          "ru": "Окончание IMEI «7373» нанесено поверх исходного «1841»; утопленный аппарат не совпадает с телефоном в полисе.",
+          "en": "The IMEI ending ‘7373’ was written over the original ‘1841’; the submerged device does not match the phone on the policy."
+        }
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Игрок не просто сравнивает две готовые строки, а сам обнаруживает подмену идентификатора.",
+          "en": "Instead of comparing two ready-made strings, the player personally uncovers the altered identifier."
+        },
+        "playerAction": {
+          "ru": "Включить УФ-режим, найти исправленные цифры и сравнить их с IMEI полиса.",
+          "en": "Switch on UV mode, find the altered digits, and compare them with the policy IMEI."
+        },
+        "conclusion": {
+          "ru": "Окончание IMEI «7373» нанесено поверх исходного «1841»; утопленный аппарат не совпадает с телефоном в полисе.",
+          "en": "The IMEI ending ‘7373’ was written over the original ‘1841’; the submerged device does not match the phone on the policy."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-002",
+          "role": "interactive_base",
+          "src": "src/data/cases/case-013/assets/interactive/ev-service-act-base.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-013/assets/interactive/ev-service-act-base.webp",
+          "caseRelativeSrc": "assets/interactive/ev-service-act-base.webp",
+          "installTo": "src/data/cases/case-013/assets/interactive/ev-service-act-base.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1600,
+          "height": 1100,
+          "sha256": "a9a073582566ed5b2a3e3b6e39bf1929c6ef3911590c289b8c1bcb4fdc9f5280"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-013/assets/interactive/ev-service-act-base.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-013/assets/interactive/ev-service-act-base.webp",
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-operator-log",
+      "order": 3,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал активности оператора",
+        "en": "Carrier Activity Log"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Активность IMEI `…7373`:\n\n- 09:05 — заявленное падение в озеро;\n- 11:20 — исходящий звонок, 4 минуты;\n- 14:47 — передача данных, 320 МБ;\n- 18:13 — входящий звонок, 2 минуты.",
+        "en": "Activity for IMEI `…7373`:\n\n- 9:05 a.m.—reported fall into the lake;\n- 11:20 a.m.—outgoing call, 4 minutes;\n- 2:47 p.m.—320 MB data transfer;\n- 6:13 p.m.—incoming call, 2 minutes."
+      },
+      "statusExplanation": {
+        "ru": "Застрахованный телефон продолжал работать после происшествия. В озеро попал другой аппарат.",
+        "en": "The insured phone remained active after the incident. A different device went into the lake."
+      },
+      "statementLink": {
+        "statementId": "claim_insured_phone_unusable",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Застрахованный телефон продолжал работать после происшествия. В озеро попал другой аппарат.",
+          "en": "The insured phone remained active after the incident. A different device went into the lake."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_insured_phone_unusable",
+        "reason": {
+          "ru": "Застрахованный телефон продолжал работать после происшествия. В озеро попал другой аппарат.",
+          "en": "The insured phone remained active after the incident. A different device went into the lake."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "В воду действительно попал телефон, но сервисный акт скрывает его исходный IMEI «…1841».",
+      "В полисе указан другой аппарат — «…7373». Он продолжал звонить и передавать данные после происшествия.",
+      "Аширов утопил дешёвую замену и попытался выдать её за застрахованный телефон.",
+      "Заявление следует отклонить. Повтор формы 17-К открывает первую связь между делами."
+    ],
+    "en": [
+      "The IMEI ending ‘7373’ was written over the original ‘1841’; the submerged device does not match the phone on the policy.",
+      "The insured phone remained active after the incident. A different device went into the lake.",
+      "A water-damaged phone was indeed delivered to the repair shop. The photograph proves the damage, but not yet the identity of the device.",
+      "The claim is fraudulent and should be rejected."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Внедрить каноническую постановку из первого акта «Архив №17».",
+      "Сохранить стабильный ID и новый campaignOrder.",
+      "Интегрировать document_scan в улику ev-service-act; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate document_scan into evidence ev-service-act; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "assets/interactive/ev-service-act-base.webp",
+      "purpose": "Базовая версия документа в normal-режиме",
+      "resolution": "1600×1100",
+      "format": "WebP",
+      "transparency": false,
+      "generatedBy": "image_model",
+      "manualPost": "Удалить случайный читаемый текст; выровнять документ; оставить поля для UI-слоёв.",
+      "prompt": "Create a realistic fictional administrative document for an insurance detective game. Фиктивный акт ремонта смартфона с крупным полем IMEI, датой и зоной подписи; весь важный текст накладывается UI. Full document visible from above, utilitarian layout, paper texture, large blank structured fields. No real organization, logo, brand, personal data or watermark. Do not render critical readable text; dates, names, codes and signatures will be added in HTML/SVG. The hidden anomaly must not be obvious in the normal version.",
+      "evidenceId": "ev-service-act",
+      "evidenceType": "document_scan"
+    },
+    {
+      "file": "assets/interactive/ev-service-act-scan-overlay.svg",
+      "purpose": "Совмещённый слой УФ/просвета/бокового света",
+      "resolution": "viewBox 0 0 100 100",
+      "format": "SVG",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "После финального base.webp откалибровать hotspot и режим проявления.",
+      "prompt": null,
+      "evidenceId": "ev-service-act",
+      "evidenceType": "document_scan"
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "targetPlaytimeSeconds": 150,
+  "onboarding": {
+    "phase": "identity_comparison",
+    "targetDurationSeconds": 150,
+    "teaches": [
+      "compare_identifiers",
+      "document_scan",
+      "multiple_evidence_synthesis",
+      "season_clue"
+    ],
+    "successEmotion": "Я доказал не просто ущерб, а подмену предмета",
+    "menuUnlockAfterVerdict": true,
+    "unlocks": [
+      "career_map",
+      "daily_case",
+      "archive_17_board"
+    ],
+    "successEmotionEn": "I proved not just the damage, but the switched device"
+  },
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-013",
+    "archiveBasePath": "generated-assets/src/data/cases/case-013",
+    "claimantPortrait": null,
+    "claimantPortraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/timur.webp",
+      "existingFile": "public/people/timur.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-service-act",
+        "title": {
+          "ru": "Экспертиза сервисного акта",
+          "en": "Repair Report Examination"
+        },
+        "primaryImage": "src/data/cases/case-013/assets/interactive/ev-service-act-base.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-013/assets/interactive/ev-service-act-base.webp",
+        "legacyImageBinding": null,
+        "assets": [
+          {
+            "assetId": "asset-002",
+            "role": "interactive_base",
+            "src": "src/data/cases/case-013/assets/interactive/ev-service-act-base.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-013/assets/interactive/ev-service-act-base.webp",
+            "caseRelativeSrc": "assets/interactive/ev-service-act-base.webp",
+            "installTo": "src/data/cases/case-013/assets/interactive/ev-service-act-base.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1600,
+            "height": 1100,
+            "sha256": "a9a073582566ed5b2a3e3b6e39bf1929c6ef3911590c289b8c1bcb4fdc9f5280"
+          }
+        ]
+      }
+    ]
+  }
+}

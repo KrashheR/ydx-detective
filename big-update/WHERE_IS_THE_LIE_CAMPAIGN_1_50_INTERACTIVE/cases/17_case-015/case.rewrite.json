@@ -1,0 +1,565 @@
+{
+  "id": "case-015",
+  "campaignOrder": 17,
+  "requiredLevel": 9,
+  "act": 2,
+  "actTitle": {
+    "ru": "Пять лет назад",
+    "en": "Five Years Earlier"
+  },
+  "title": {
+    "ru": "Не та яхта",
+    "en": "The Wrong Yacht"
+  },
+  "difficulty": "hard",
+  "claimAmount": {
+    "value": 18000,
+    "currency": "EUR"
+  },
+  "groundTruth": "fraud",
+  "correctDecision": "reject",
+  "investigationBudget": 3,
+  "claimant": {
+    "name": {
+      "ru": "Рустам Бекетов, 47 лет",
+      "en": "Rustam Beketov, age 47"
+    },
+    "migrationNote": {
+      "ru": "Сохранить данные и портрет.",
+      "en": "Keep the existing profile data and portrait."
+    },
+    "portrait": null,
+    "portraitStatus": "retain_existing_project_portrait",
+    "portraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/rustam.webp",
+      "existingFile": "public/people/rustam.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Шторм был. Судно затонуло. Даже две правдивые части не гарантируют правдивого заявления. Сверяйте корпус, двигатель и регистрацию. — В. Лебедева",
+      "en": "There was a storm. A vessel sank. Even two true details do not make a claim true. Check the hull, engine, and registration. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Впервые шаблон 17-К привёл не к документу, а к реальному адресу. «Восточный двор» фигурировал и в старой папке Карелина, но как обычная стоянка.",
+      "en": "For the first time, the 17-K template has led us to a physical address rather than a document. Eastern Yard also appears in Karelin's old file, but only as an ordinary storage facility."
+    },
+    "nextCaseTeaser": {
+      "ru": "Следующее дело тоже о воде, но без подмены: маленький магазин и четыре дня, когда его владелица не могла работать.",
+      "en": "The next case also involves water, but no switch: a small shop and four days when its owner could not work."
+    },
+    "seasonClue": {
+      "id": "east-yard-first",
+      "label": {
+        "ru": "Комплекс «Восточный двор»",
+        "en": "Eastern Yard Complex"
+      },
+      "description": {
+        "ru": "Застрахованное имущество перевозят на один склад до подачи заявления об утрате.",
+        "en": "Insured property is being moved to the same warehouse before loss claims are filed."
+      },
+      "progressIndex": 4,
+      "progressTotal": 5
+    },
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Во время субботнего шторма моя моторная яхта потеряла управление, получила пробоину и затонула. Спасатели сняли меня с аварийного плота. Прошу выплатить страховую стоимость судна — 18 000 евро.",
+    "en": "During Saturday's storm, my motor yacht lost steering, was holed, and sank. Rescuers recovered me from an emergency raft. I am claiming the vessel's insured value of €18,000."
+  },
+  "evidence": [
+    {
+      "id": "ev-weather",
+      "order": 1,
+      "type": "document",
+      "title": {
+        "ru": "Морская метеосводка",
+        "en": "Marine Weather Report"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "В акватории действительно действовало штормовое предупреждение: ветер до 18 м/с, волна до 2,5 м.",
+        "en": "A storm warning was in force for the area, with winds up to 18 m/s and waves up to 2.5 m."
+      },
+      "statusExplanation": {
+        "ru": "Шторм реален и подтверждает только условия, но не личность погибшего судна.",
+        "en": "The storm was real and confirms the conditions, but not the identity of the sunken vessel."
+      },
+      "statementLink": {
+        "statementId": "claim_storm",
+        "relation": "supports",
+        "reason": {
+          "ru": "Шторм реален и подтверждает только условия, но не личность погибшего судна.",
+          "en": "The storm was real and confirms the conditions, but not the identity of the sunken vessel."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-rescue",
+      "order": 2,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Запись спасательного катера",
+        "en": "Rescue Boat Footage"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Бекетов найден на плоту рядом с обломками небольшого катера. На записи видно, что он действительно нуждался в помощи.",
+        "en": "Beketov was found on a raft beside the wreckage of a small boat. The footage shows that he genuinely needed rescue."
+      },
+      "statusExplanation": {
+        "ru": "Опасное происшествие произошло, однако класс судна по записи определить нельзя.",
+        "en": "A dangerous incident did occur, but the footage cannot establish the vessel's class."
+      },
+      "statementLink": {
+        "statementId": "claim_storm",
+        "relation": "supports",
+        "reason": {
+          "ru": "Опасное происшествие произошло, однако класс судна по записи определить нельзя.",
+          "en": "A dangerous incident did occur, but the footage cannot establish the vessel's class."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-hull",
+      "order": 3,
+      "type": "seal_match",
+      "title": {
+        "ru": "Сопоставление защитной полосы корпуса",
+        "en": "Hull Rub-Rail Comparison"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Разрыв, волокна и серийный узор не совпадают: обломок принадлежит арендованному катеру, а не застрахованной яхте.",
+        "en": "The tear, fibers, and serial pattern do not match: the fragment came from a rented boat, not the insured yacht."
+      },
+      "previousType": "photo",
+      "description": {
+        "ru": "Фрагмент поднят у места спасения; контрольный образец взят с зарегистрированной яхты до страхования.",
+        "en": "The fragment was recovered near the rescue site; the reference sample was taken from the registered yacht before coverage began."
+      },
+      "instruction": {
+        "ru": "Совместить фрагмент защитной полосы с контрольным образцом.",
+        "en": "Match the rub-rail fragment to the reference sample."
+      },
+      "assets": {
+        "asset1": "assets/interactive/ev-hull-master-a.webp",
+        "asset2": "assets/interactive/ev-hull-master-b.webp",
+        "asset3": "assets/interactive/ev-hull-fragments.json"
+      },
+      "data": {
+        "movableFragment": "B",
+        "allowRotation": true,
+        "rotationStep": 3,
+        "initialTransform": {
+          "x": 72,
+          "y": 18,
+          "rotation": -14
+        },
+        "targetTransform": {
+          "x": 132,
+          "y": 48,
+          "rotation": 6
+        },
+        "tolerance": {
+          "position": 10,
+          "rotation": 5
+        },
+        "expectedMatch": false,
+        "sourceSeed": 171517,
+        "fragmentASeed": 171517,
+        "fragmentBSeed": 171842,
+        "comparisonMarkers": [
+          {
+            "id": "tear_pattern",
+            "label": "Не совпадают микроперфорация, волокна и шаг защитного узора",
+            "labelEn": "Microperforation, fibers, and security-pattern spacing do not match"
+          }
+        ]
+      },
+      "statementLink": {
+        "statementId": "claim_lost_vessel_identity",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Разрыв, волокна и серийный узор не совпадают: обломок принадлежит арендованному катеру, а не застрахованной яхте.",
+          "en": "The tear, fibers, and serial pattern do not match: the fragment came from a rented boat, not the insured yacht."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_lost_vessel_identity",
+        "reason": {
+          "ru": "Разрыв, волокна и серийный узор не совпадают: обломок принадлежит арендованному катеру, а не застрахованной яхте.",
+          "en": "The tear, fibers, and serial pattern do not match: the fragment came from a rented boat, not the insured yacht."
+        }
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true,
+        "transparencyMode": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Физическое несовпадение быстрее и убедительнее длинного сравнения заводских номеров.",
+          "en": "The physical mismatch is faster and more convincing than a long comparison of factory numbers."
+        },
+        "playerAction": {
+          "ru": "Совместить фрагмент защитной полосы с контрольным образцом.",
+          "en": "Match the rub-rail fragment to the reference sample."
+        },
+        "conclusion": {
+          "ru": "Разрыв, волокна и серийный узор не совпадают: обломок принадлежит арендованному катеру, а не застрахованной яхте.",
+          "en": "The tear, fibers, and serial pattern do not match: the fragment came from a rented boat, not the insured yacht."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-018",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-015/evidence/case-015-ev-hull.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-015/evidence/case-015-ev-hull.webp",
+          "caseRelativeSrc": "evidence/case-015-ev-hull.webp",
+          "installTo": "public/evidence/case-015-ev-hull.webp",
+          "legacyRuntimeUrl": "evidence/case-015-ev-hull.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "7b2d4c59fa51c6ef9a566206bafe15b55f3c80cd0d8c413030a3c1f117d32c5b"
+        },
+        {
+          "assetId": "asset-020",
+          "role": "interactive_master_a",
+          "src": "src/data/cases/case-015/assets/interactive/ev-hull-master-a.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-015/assets/interactive/ev-hull-master-a.webp",
+          "caseRelativeSrc": "assets/interactive/ev-hull-master-a.webp",
+          "installTo": "src/data/cases/case-015/assets/interactive/ev-hull-master-a.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1400,
+          "height": 500,
+          "sha256": "3ceee37f9c51aa6c58c36d521035e46f0837702699e6d51d64f51b1aca875049"
+        },
+        {
+          "assetId": "asset-021",
+          "role": "interactive_master_b",
+          "src": "src/data/cases/case-015/assets/interactive/ev-hull-master-b.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-015/assets/interactive/ev-hull-master-b.webp",
+          "caseRelativeSrc": "assets/interactive/ev-hull-master-b.webp",
+          "installTo": "src/data/cases/case-015/assets/interactive/ev-hull-master-b.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1400,
+          "height": 500,
+          "sha256": "317c50fd1f2449ce3a5e0b9533e8dfb2d7f1a0a5bdb7fddcdb3e5e33e4f95237"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-015/evidence/case-015-ev-hull.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-015/evidence/case-015-ev-hull.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-015-ev-hull.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-015/evidence/case-015-ev-hull.webp",
+        "copyTo": "public/evidence/case-015-ev-hull.webp"
+      }
+    },
+    {
+      "id": "ev-transport",
+      "order": 4,
+      "type": "gps",
+      "title": {
+        "ru": "Маршрут перевозки яхты",
+        "en": "Yacht Transport Route"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "За сутки до шторма застрахованную яхту погрузили на трейлер и вывезли со стоянки в складской комплекс «Восточный двор». Пропуск оформлен на Бекетова.",
+        "en": "One day before the storm, the insured yacht was loaded onto a trailer and moved from the marina to the Eastern Yard warehouse complex. The entry pass was issued to Beketov."
+      },
+      "statusExplanation": {
+        "ru": "Застрахованное судно осталось целым и было заранее вывезено в другое место.",
+        "en": "The insured vessel remained intact and was moved elsewhere in advance."
+      },
+      "statementLink": {
+        "statementId": "claim_yacht_lost",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Застрахованное судно осталось целым и было заранее вывезено в другое место.",
+          "en": "The insured vessel remained intact and was moved elsewhere in advance."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_yacht_lost",
+        "reason": {
+          "ru": "Застрахованное судно осталось целым и было заранее вывезено в другое место.",
+          "en": "The insured vessel remained intact and was moved elsewhere in advance."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-019",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-015/evidence/case-015-ev-transport.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-015/evidence/case-015-ev-transport.webp",
+          "caseRelativeSrc": "evidence/case-015-ev-transport.webp",
+          "installTo": "public/evidence/case-015-ev-transport.webp",
+          "legacyRuntimeUrl": "evidence/case-015-ev-transport.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "24656418e9e8d0ba83811b08576e1e42bd40441f0cd8abe4a912f34daa063953"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-015/evidence/case-015-ev-transport.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-015/evidence/case-015-ev-transport.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-015-ev-transport.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-015/evidence/case-015-ev-transport.webp",
+        "copyTo": "public/evidence/case-015-ev-transport.webp"
+      }
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Шторм и спасение Бекетова были настоящими.",
+      "Защитная полоса поднятого фрагмента не совпадает с образцом яхты: в море затонул арендованный дешёвый катер.",
+      "Застрахованную яхту заранее вывезли в комплекс «Восточный двор». Выплату следует отклонить."
+    ],
+    "en": [
+      "The tear, fibers, and serial pattern do not match: the fragment came from a rented boat, not the insured yacht.",
+      "The insured vessel remained intact and was moved elsewhere in advance.",
+      "The storm was real and confirms the conditions, but not the identity of the sunken vessel.",
+      "A dangerous incident did occur, but the footage cannot establish the vessel's class.",
+      "The claim is fraudulent and should be rejected."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Заменить слишком очевидную неподвижную яхту на частично правдивую морскую аварию.",
+      "Добавить идентификацию корпуса и первое физическое звено сети.",
+      "Интегрировать seal_match в улику ev-hull; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate seal_match into evidence ev-hull; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "evidence/case-015-ev-hull.webp",
+      "action": "generate",
+      "prompt": "Marine insurance evidence photo of a recovered broken fiberglass hull fragment from a small recreational motorboat on a wet dock, a clean rectangular manufacturer serial plate area visible but without readable text, storm residue and rescue ropes, realistic documentary photography, no logos, no watermark."
+    },
+    {
+      "file": "evidence/case-015-ev-transport.webp",
+      "action": "generate",
+      "prompt": "Night industrial gate security camera frame showing an intact mid-size motor yacht secured on a road trailer entering a warehouse complex, towing vehicle and gate barrier visible, utilitarian lighting, no readable signs or license plates, realistic CCTV compression, no logos, no watermark."
+    },
+    {
+      "file": "assets/interactive/ev-hull-master-a.webp",
+      "purpose": "Цельный мастер пломбы или контрольного фрагмента A",
+      "resolution": "1400×500",
+      "format": "WebP",
+      "transparency": true,
+      "generatedBy": "image_model",
+      "manualPost": "Убрать случайный текст; сохранить альфа-канал; разрезать процедурно по sourceSeed.",
+      "prompt": "Create a realistic intact security seal or evidence control label for a fictional insurance investigation. Два образца защитной композитной полосы морского корпуса с вымышленным микропаттерном, следы воды и соли. Front view, full object, transparent background, detailed fibers, adhesive or polymer texture, abstract protection pattern, no real logo or brand, no watermark, no critical readable text, restrained utilitarian evidence style. Keep edges suitable for procedural tearing.",
+      "evidenceId": "ev-hull",
+      "evidenceType": "seal_match"
+    },
+    {
+      "file": "assets/interactive/ev-hull-master-b.webp",
+      "purpose": "Второй цельный мастер для заведомо несовпадающего фрагмента B",
+      "resolution": "1400×500",
+      "format": "WebP",
+      "transparency": true,
+      "generatedBy": "image_model",
+      "manualPost": "Убрать случайный текст; сохранить альфа-канал; разрезать процедурно по sourceSeed.",
+      "prompt": "Create a realistic intact security seal or evidence control label for a fictional insurance investigation. Два образца защитной композитной полосы морского корпуса с вымышленным микропаттерном, следы воды и соли. Front view, full object, transparent background, detailed fibers, adhesive or polymer texture, abstract protection pattern, no real logo or brand, no watermark, no critical readable text, restrained utilitarian evidence style. Keep edges suitable for procedural tearing. Create a clearly different microscopic protection pattern and fiber layout while keeping the same general material family.",
+      "evidenceId": "ev-hull",
+      "evidenceType": "seal_match"
+    },
+    {
+      "file": "assets/interactive/ev-hull-fragments.json",
+      "purpose": "Seed разрыва, трансформации и допуски",
+      "resolution": "normalized component space",
+      "format": "JSON",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "Сгенерировать fragment-a.webp и fragment-b.webp из master-файлов; проверить drag/rotate/snap.",
+      "prompt": null,
+      "evidenceId": "ev-hull",
+      "evidenceType": "seal_match"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Во время субботнего шторма моя моторная яхта потеряла управление, получила пробоину и затонула. Спасатели сняли меня с аварийного плота. Прошу выплатить страховую стоимость судна — 18 000 евро.",
+        "en": "During Saturday's storm, my motor yacht lost steering, was holed, and sank. Rescuers recovered me from an emergency raft. I am claiming the vessel's insured value of €18,000."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_storm",
+      "text": {
+        "ru": "Во время шторма Бекетов попал в реальную аварийную ситуацию.",
+        "en": "Beketov was involved in a genuine emergency during the storm."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_lost_vessel_identity",
+      "text": {
+        "ru": "Затонувшее судно является застрахованной яхтой.",
+        "en": "The sunken vessel was the insured yacht."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_yacht_lost",
+      "text": {
+        "ru": "Застрахованная яхта утрачена и требует выплаты 18 000 евро.",
+        "en": "The insured yacht was lost, warranting an €18,000 payout."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-015",
+    "archiveBasePath": "generated-assets/src/data/cases/case-015",
+    "claimantPortrait": null,
+    "claimantPortraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/rustam.webp",
+      "existingFile": "public/people/rustam.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-hull",
+        "title": {
+          "ru": "Сопоставление защитной полосы корпуса",
+          "en": "Hull Rub-Rail Comparison"
+        },
+        "primaryImage": "src/data/cases/case-015/evidence/case-015-ev-hull.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-015/evidence/case-015-ev-hull.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-015-ev-hull.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-015/evidence/case-015-ev-hull.webp",
+          "copyTo": "public/evidence/case-015-ev-hull.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-018",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-015/evidence/case-015-ev-hull.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-015/evidence/case-015-ev-hull.webp",
+            "caseRelativeSrc": "evidence/case-015-ev-hull.webp",
+            "installTo": "public/evidence/case-015-ev-hull.webp",
+            "legacyRuntimeUrl": "evidence/case-015-ev-hull.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "7b2d4c59fa51c6ef9a566206bafe15b55f3c80cd0d8c413030a3c1f117d32c5b"
+          },
+          {
+            "assetId": "asset-020",
+            "role": "interactive_master_a",
+            "src": "src/data/cases/case-015/assets/interactive/ev-hull-master-a.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-015/assets/interactive/ev-hull-master-a.webp",
+            "caseRelativeSrc": "assets/interactive/ev-hull-master-a.webp",
+            "installTo": "src/data/cases/case-015/assets/interactive/ev-hull-master-a.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1400,
+            "height": 500,
+            "sha256": "3ceee37f9c51aa6c58c36d521035e46f0837702699e6d51d64f51b1aca875049"
+          },
+          {
+            "assetId": "asset-021",
+            "role": "interactive_master_b",
+            "src": "src/data/cases/case-015/assets/interactive/ev-hull-master-b.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-015/assets/interactive/ev-hull-master-b.webp",
+            "caseRelativeSrc": "assets/interactive/ev-hull-master-b.webp",
+            "installTo": "src/data/cases/case-015/assets/interactive/ev-hull-master-b.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1400,
+            "height": 500,
+            "sha256": "317c50fd1f2449ce3a5e0b9533e8dfb2d7f1a0a5bdb7fddcdb3e5e33e4f95237"
+          }
+        ]
+      },
+      {
+        "evidenceId": "ev-transport",
+        "title": {
+          "ru": "Маршрут перевозки яхты",
+          "en": "Yacht Transport Route"
+        },
+        "primaryImage": "src/data/cases/case-015/evidence/case-015-ev-transport.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-015/evidence/case-015-ev-transport.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-015-ev-transport.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-015/evidence/case-015-ev-transport.webp",
+          "copyTo": "public/evidence/case-015-ev-transport.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-019",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-015/evidence/case-015-ev-transport.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-015/evidence/case-015-ev-transport.webp",
+            "caseRelativeSrc": "evidence/case-015-ev-transport.webp",
+            "installTo": "public/evidence/case-015-ev-transport.webp",
+            "legacyRuntimeUrl": "evidence/case-015-ev-transport.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "24656418e9e8d0ba83811b08576e1e42bd40441f0cd8abe4a912f34daa063953"
+          }
+        ]
+      }
+    ]
+  }
+}

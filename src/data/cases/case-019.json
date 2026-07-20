@@ -1,239 +1,373 @@
 {
   "id": "case-019",
   "type": "standard",
+  "campaignOrder": 8,
+  "requiredLevel": 4,
+  "act": 1,
+  "actTitle": {
+    "ru": "Чужой почерк",
+    "en": "Another Hand",
+    "tr": "Another Hand",
+    "ar": "Another Hand",
+    "kk": "Чужой почерк"
+  },
   "difficulty": "medium",
   "claimAmount": 850,
   "truth": "valid",
   "title": {
-    "ru": "Газонокосилка без водителя",
-    "en": "The Driverless Lawnmower",
-    "tr": "Sürücüsüz Çim Biçme Makinesi",
-    "ar": "جزّازة العشب بلا سائق",
-    "kk": "Жүргізушісіз шөп шапқыш"
+    "ru": "Ночной водитель",
+    "en": "The Night Driver",
+    "tr": "The Night Driver",
+    "ar": "The Night Driver",
+    "kk": "Ночной водитель"
   },
   "claim": {
     "person": {
       "ru": "Анатолий Степанович, 71 год",
-      "en": "Anatoly Stepanovich, 71",
-      "tr": "Anatoly Stepanovich, 71",
-      "ar": "أناتولي ستيبانوفيتش، 71",
-      "kk": "Анатолий Степанович, 71 жаста"
+      "en": "Anatoly Stepanovich, age 71",
+      "tr": "Anatoly Stepanovich, age 71",
+      "ar": "Anatoly Stepanovich, age 71",
+      "kk": "Анатолий Степанович, 71 год"
     },
     "story": {
-      "ru": "Настоящим уведомляю о причинении ущерба транспортному средству. В ночное время мой премиальный садовый трактор-газонокосилка самостоятельно завёлся, выехал на дорогу общего пользования и совершил наезд на мой же припаркованный автомобиль, повредив передний бампер. За рулём косилки никто не находился. Прошу возместить стоимость ремонта.",
-      "en": "I hereby notify you of damage to a vehicle. During the night, my premium ride-on lawnmower started itself, drove onto the public road, and collided with my own parked car, damaging the front bumper. No one was at the controls of the mower. I request compensation for the cost of repairs.",
-      "tr": "İşbu belgeyle bir araçta meydana gelen hasarı bildiririm. Gece vakti, premium binicili çim biçme makinem kendi kendine çalıştı, kamu yoluna çıktı ve park halindeki kendi arabama çarparak ön tamponu hasara uğrattı. Makinenin başında kimse yoktu. Onarım maliyetinin tazmin edilmesini talep ederim.",
-      "ar": "أُبلغكم بموجب هذا عن ضرر لحق بمركبة. أثناء الليل، تشغّلت جزّازة العشب الفاخرة القابلة للركوب من تلقاء نفسها، وخرجت إلى الطريق العام، واصطدمت بسيارتي المتوقفة، فأتلفت المصد الأمامي. لم يكن أحد عند مقود الجزّازة. أطلب تعويض تكلفة الإصلاح.",
-      "kk": "Осы арқылы көлік құралына зиян келтірілгені туралы хабарлаймын. Түнгі уақытта менің премиум отырып басқарылатын шөп шапқышым өздігінен оталып, ортақ пайдаланудағы жолға шығып, өзімнің тұрған автокөлігіме соғылып, алдыңғы бамперді зақымдады. Шапқыштың рульінде ешкім болмады. Жөндеу құнын өтеуді сұраймын."
+      "ru": "Ночью моя роботизированная газонокосилка получила команду с пульта, выехала со двора и повредила теплицу соседа. Я спал и пультом не пользовался; утром он был найден в сливовом дереве. Сосед предъявил требование на 850 евро. Прошу урегулировать ущерб по полису ответственности.",
+      "en": "During the night, my robotic lawn mower received a remote command, left my yard, and damaged my neighbor's greenhouse. I was asleep and did not use the remote; it was found in a plum tree the next morning. My neighbor is claiming €850. Please settle the damage under my liability policy.",
+      "tr": "During the night, my robotic lawn mower received a remote command, left my yard, and damaged my neighbor's greenhouse. I was asleep and did not use the remote; it was found in a plum tree the next morning. My neighbor is claiming €850. Please settle the damage under my liability policy.",
+      "ar": "During the night, my robotic lawn mower received a remote command, left my yard, and damaged my neighbor's greenhouse. I was asleep and did not use the remote; it was found in a plum tree the next morning. My neighbor is claiming €850. Please settle the damage under my liability policy.",
+      "kk": "Ночью моя роботизированная газонокосилка получила команду с пульта, выехала со двора и повредила теплицу соседа. Я спал и пультом не пользовался; утром он был найден в сливовом дереве. Сосед предъявил требование на 850 евро. Прошу урегулировать ущерб по полису ответственности."
     }
   },
-  "coverImage": "covers/case-019.svg",
-  "personImage": "people/anatoly.webp",
   "client": {
     "role": {
-      "ru": "Заявитель · физ. лицо",
-      "en": "Claimant · individual",
-      "tr": "Başvuru sahibi · gerçek kişi",
-      "ar": "مقدم الطلب · شخص طبيعي",
-      "kk": "Өтініш беруші · жеке тұлға"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Возраст",
-          "en": "Age",
-          "tr": "Yaş",
-          "ar": "العمر",
-          "kk": "Жасы"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "71 год",
-          "en": "71 years old",
-          "tr": "71 yaşında",
-          "ar": "71 عامًا",
-          "kk": "71 жаста"
+          "ru": "1",
+          "en": "1",
+          "tr": "1",
+          "ar": "1",
+          "kk": "1"
         }
       },
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Воронеж",
-          "en": "Voronezh",
-          "tr": "Voronej",
-          "ar": "فورونيج",
-          "kk": "Воронеж"
-        }
-      },
-      {
-        "k": {
-          "ru": "Клиент с",
-          "en": "Client since",
-          "tr": "Müşteri",
-          "ar": "عميل منذ",
-          "kk": "Клиент"
-        },
-        "v": {
-          "ru": "2012 г.",
-          "en": "2012",
-          "tr": "2012",
-          "ar": "2012",
-          "kk": "2012 ж."
-        }
-      },
-      {
-        "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
-        },
-        "v": {
-          "ru": "Ответственность · ОТ-19234017-X9",
-          "en": "Liability · OT-19234017-X9",
-          "tr": "Sorumluluk · OT-19234017-X9",
-          "ar": "المسؤولية · OT-19234017-X9",
-          "kk": "Жауапкершілік · ОТ-19234017-X9"
-        }
-      },
-      {
-        "k": {
-          "ru": "Документ",
-          "en": "Document",
-          "tr": "Belge",
-          "ar": "الوثيقة",
-          "kk": "Құжат"
-        },
-        "v": {
-          "ru": "Паспорт 3609-71 №172128951-83",
-          "en": "Passport 3609-71 №172128951-83",
-          "tr": "Pasaport 3609-71 №172128951-83",
-          "ar": "جواز السفر 3609-71 №172128951-83",
-          "kk": "Паспорт 3609-71 №172128951-83"
+          "ru": "8",
+          "en": "8",
+          "tr": "8",
+          "ar": "8",
+          "kk": "8"
         }
       }
     ]
   },
+  "coverImage": "covers/case-019.svg",
+  "personImage": "people/anatoly.webp",
   "evidences": [
     {
-      "id": "ev-police",
+      "id": "ev-neighbor",
+      "order": 1,
       "type": "document",
       "title": {
-        "ru": "Протокол ГИБДД",
-        "en": "Traffic Police Report",
-        "tr": "Trafik Polisi Raporu",
-        "ar": "محضر شرطة المرور",
-        "kk": "Жол полициясының хаттамасы"
+        "ru": "Требование соседа",
+        "en": "Neighbor's Damage Claim",
+        "tr": "Neighbor's Damage Claim",
+        "ar": "Neighbor's Damage Claim",
+        "kk": "Требование соседа"
       },
       "content": {
-        "ru": "Из протокола: «Столкновение совершено беспилотным сельскохозяйственным транспортным средством. Водитель на месте происшествия не установлен. Алкоголь и иные участники движения исключены». Время — 03:40.",
-        "en": "From the report: \"The collision was caused by an unmanned agricultural vehicle. No driver was identified at the scene. Alcohol and other road users are ruled out.\" Time — 03:40.",
-        "tr": "Rapordan: \"Çarpışma, insansız bir tarım aracı tarafından gerçekleştirildi. Olay yerinde sürücü tespit edilemedi. Alkol ve diğer yol kullanıcıları elendi.\" Saat — 03:40.",
-        "ar": "من المحضر: «وقع الاصطدام بفعل مركبة زراعية بدون سائق. لم يُحدَّد أي سائق في مكان الحادث. استُبعد الكحول وسائر مستخدمي الطريق». الوقت — 03:40.",
-        "kk": "Хаттамадан: «Соқтығысу ұшқышсыз ауылшаруашылық көлік құралымен жасалды. Оқиға орнында жүргізуші анықталмады. Алкоголь мен басқа жол қозғалысына қатысушылар жоққа шығарылды». Уақыты — 03:40."
+        "ru": "Фотографии показывают газонокосилку, застрявшую в нижней секции соседской теплицы. Смета включает замену двух панелей и алюминиевой направляющей. Сумма соответствует повреждениям.",
+        "en": "The photographs show the lawn mower lodged in the lower section of the neighbor's greenhouse. The estimate covers two replacement panels and an aluminum guide rail. The amount is consistent with the damage.",
+        "tr": "The photographs show the lawn mower lodged in the lower section of the neighbor's greenhouse. The estimate covers two replacement panels and an aluminum guide rail. The amount is consistent with the damage.",
+        "ar": "The photographs show the lawn mower lodged in the lower section of the neighbor's greenhouse. The estimate covers two replacement panels and an aluminum guide rail. The amount is consistent with the damage.",
+        "kk": "Фотографии показывают газонокосилку, застрявшую в нижней секции соседской теплицы. Смета включает замену двух панелей и алюминиевой направляющей. Сумма соответствует повреждениям."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Официальный протокол прямо фиксирует наезд беспилотной техники — это подтверждает заявление.",
-        "en": "The official report explicitly records a collision by an unmanned vehicle — this supports the claim.",
-        "tr": "Resmi rapor, insansız bir aracın çarpışmasını açıkça kaydediyor — bu, talebi destekliyor.",
-        "ar": "المحضر الرسمي يسجّل صراحةً اصطداماً بمركبة بدون سائق — وهذا يدعم المطالبة.",
-        "kk": "Ресми хаттама ұшқышсыз техниканың соғылуын тікелей тіркейді — бұл өтінішті растайды."
-      }
+        "ru": "Ущерб соседу реален и соответствует заявленной сумме.",
+        "en": "The neighbor's damage is real and matches the amount claimed.",
+        "tr": "The neighbor's damage is real and matches the amount claimed.",
+        "ar": "The neighbor's damage is real and matches the amount claimed.",
+        "kk": "Ущерб соседу реален и соответствует заявленной сумме."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_liability_damage",
+        "relation": "supports",
+        "reason": {
+          "ru": "Ущерб соседу реален и соответствует заявленной сумме.",
+          "en": "The neighbor's damage is real and matches the amount claimed.",
+          "tr": "The neighbor's damage is real and matches the amount claimed.",
+          "ar": "The neighbor's damage is real and matches the amount claimed.",
+          "kk": "Ущерб соседу реален и соответствует заявленной сумме."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
-      "id": "ev-photo",
-      "type": "photo",
+      "id": "ev-mower-log",
+      "order": 2,
+      "type": "usage_log",
       "title": {
-        "ru": "Фото места ДТП",
-        "en": "Accident Scene Photo",
-        "tr": "Kaza Yeri Fotoğrafı",
-        "ar": "صورة مكان الحادث",
-        "kk": "Жол оқиғасы орнының суреті"
+        "ru": "Журнал газонокосилки",
+        "en": "Lawn Mower Log",
+        "tr": "Lawn Mower Log",
+        "ar": "Lawn Mower Log",
+        "kk": "Журнал газонокосилки"
       },
       "content": {
-        "ru": "Газонокосилка застряла под передним бампером автомобиля. Рулевое колесо и сиденье косилки сплошь покрыты грязными отпечатками маленьких лап. Рядом — осыпавшаяся слива.",
-        "en": "The lawnmower is wedged under the car's front bumper. The mower's steering wheel and seat are covered with muddy little paw prints. Nearby lie fallen plums.",
-        "tr": "Çim biçme makinesi, arabanın ön tamponunun altına sıkışmış. Makinenin direksiyonu ve koltuğu çamurlu küçük pati izleriyle kaplı. Yakında dökülmüş erikler var.",
-        "ar": "جزّازة العشب محشورة تحت المصد الأمامي للسيارة. عجلة قيادة الجزّازة ومقعدها مغطّيان بآثار مخالب صغيرة موحلة. وبالقرب منها برقوق متساقط.",
-        "kk": "Шөп шапқыш автокөліктің алдыңғы бамперінің астына қыстырылып қалған. Шапқыштың рулі мен орындығы лай болған кішкентай табан іздерімен толған. Қасында түсіп қалған өрік жатыр."
+        "ru": "- 03:39:54 — получена команда разблокировки с зарегистрированного пульта;\n- 03:40:02 — движение вперёд, максимальное отклонение джойстика;\n- 03:40:19 — потеря сигнала;\n- 03:40:31 — срабатывание датчика столкновения.",
+        "en": "- 3:39:54 a.m.—unlock command received from registered remote;\n- 3:40:02 a.m.—forward movement, joystick at maximum;\n- 3:40:19 a.m.—signal lost;\n- 3:40:31 a.m.—collision sensor triggered.",
+        "tr": "- 3:39:54 a.m.—unlock command received from registered remote;\n- 3:40:02 a.m.—forward movement, joystick at maximum;\n- 3:40:19 a.m.—signal lost;\n- 3:40:31 a.m.—collision sensor triggered.",
+        "ar": "- 3:39:54 a.m.—unlock command received from registered remote;\n- 3:40:02 a.m.—forward movement, joystick at maximum;\n- 3:40:19 a.m.—signal lost;\n- 3:40:31 a.m.—collision sensor triggered.",
+        "kk": "- 03:39:54 — получена команда разблокировки с зарегистрированного пульта;\n- 03:40:02 — движение вперёд, максимальное отклонение джойстика;\n- 03:40:19 — потеря сигнала;\n- 03:40:31 — срабатывание датчика столкновения."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Следы лап на руле и слива рядом объясняют, что косилку привело в движение животное.",
-        "en": "The paw prints on the wheel and the plums nearby explain that an animal set the mower in motion.",
-        "tr": "Direksiyondaki pati izleri ve yakındaki erikler, makineyi bir hayvanın harekete geçirdiğini açıklıyor.",
-        "ar": "آثار المخالب على المقود والبرقوق القريب يفسّران أن حيواناً هو من حرّك الجزّازة.",
-        "kk": "Рульдегі табан іздері мен қасындағы өрік шапқышты жануар қозғалысқа келтіргенін түсіндіреді."
+        "ru": "Косилка двигалась по команде настоящего пульта, но журнал не устанавливает, кто нажимал на управление.",
+        "en": "The mower responded to its genuine remote, but the log does not reveal who operated it.",
+        "tr": "The mower responded to its genuine remote, but the log does not reveal who operated it.",
+        "ar": "The mower responded to its genuine remote, but the log does not reveal who operated it.",
+        "kk": "Косилка двигалась по команде настоящего пульта, но журнал не устанавливает, кто нажимал на управление."
       },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_event",
+        "relation": "supports",
+        "reason": {
+          "ru": "Косилка двигалась по команде настоящего пульта, но журнал не устанавливает, кто нажимал на управление.",
+          "en": "The mower responded to its genuine remote, but the log does not reveal who operated it.",
+          "tr": "The mower responded to its genuine remote, but the log does not reveal who operated it.",
+          "ar": "The mower responded to its genuine remote, but the log does not reveal who operated it.",
+          "kk": "Косилка двигалась по команде настоящего пульта, но журнал не устанавливает, кто нажимал на управление."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "ev-remote-photo",
+      "order": 3,
+      "type": "photo",
+      "title": {
+        "ru": "Фото найденного пульта",
+        "en": "Photograph of the Recovered Remote",
+        "tr": "Photograph of the Recovered Remote",
+        "ar": "Photograph of the Recovered Remote",
+        "kk": "Фото найденного пульта"
+      },
+      "content": {
+        "ru": "Пульт лежит в развилке сливового дерева. Корпус испачкан землёй, на кнопке разблокировки и джойстике видны небольшие грязные следы лап.",
+        "en": "The remote is lodged in the fork of a plum tree. Its case is smeared with soil, and small muddy paw prints mark the unlock button and joystick.",
+        "tr": "The remote is lodged in the fork of a plum tree. Its case is smeared with soil, and small muddy paw prints mark the unlock button and joystick.",
+        "ar": "The remote is lodged in the fork of a plum tree. Its case is smeared with soil, and small muddy paw prints mark the unlock button and joystick.",
+        "kk": "Пульт лежит в развилке сливового дерева. Корпус испачкан землёй, на кнопке разблокировки и джойстике видны небольшие грязные следы лап."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Следы подтверждают, что пульт оказался у животного, а не использовался заявителем.",
+        "en": "The marks confirm that an animal handled the remote, not the claimant.",
+        "tr": "The marks confirm that an animal handled the remote, not the claimant.",
+        "ar": "The marks confirm that an animal handled the remote, not the claimant.",
+        "kk": "Следы подтверждают, что пульт оказался у животного, а не использовался заявителем."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_owner_not_controlling",
+        "relation": "supports",
+        "reason": {
+          "ru": "Следы подтверждают, что пульт оказался у животного, а не использовался заявителем.",
+          "en": "The marks confirm that an animal handled the remote, not the claimant.",
+          "tr": "The marks confirm that an animal handled the remote, not the claimant.",
+          "ar": "The marks confirm that an animal handled the remote, not the claimant.",
+          "kk": "Следы подтверждают, что пульт оказался у животного, а не использовался заявителем."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
       "meta": {
-        "filename": "IMG_20260509_034208.jpg",
-        "imageUrl": "evidence/case-019-ev-photo.jpg"
+        "imageUrl": "evidence/case-019-mower-remote.webp"
       }
     },
     {
       "id": "ev-camera",
+      "order": 4,
       "type": "camera_recording",
       "title": {
         "ru": "Запись дворовой камеры",
-        "en": "Yard Camera Recording",
-        "tr": "Bahçe Kamerası Kaydı",
-        "ar": "تسجيل كاميرا الفناء",
-        "kk": "Аула камерасының жазбасы"
+        "en": "Yard Camera Footage",
+        "tr": "Yard Camera Footage",
+        "ar": "Yard Camera Footage",
+        "kk": "Запись дворовой камеры"
       },
       "content": {
-        "ru": "Ночная запись: енот забирается на косилку под сливовым деревом, тянется к ветке и задевает рычаг передачи. Машина дёргается вперёд, енот кубарем падает, а косилка катится со двора на дорогу и упирается в бампер автомобиля.",
-        "en": "Night footage: a raccoon climbs onto the mower under the plum tree, reaches for a branch, and knocks the gear lever. The machine lurches forward, the raccoon tumbles off, and the mower rolls out of the yard onto the road and into the car's bumper.",
-        "tr": "Gece görüntüsü: bir rakun erik ağacının altındaki makineye tırmanıyor, bir dala uzanıyor ve vites koluna çarpıyor. Makine ileri fırlıyor, rakun yuvarlanarak düşüyor ve makine bahçeden yola çıkıp arabanın tamponuna toslıyor.",
-        "ar": "تسجيل ليلي: راكون يتسلق الجزّازة تحت شجرة البرقوق، يمدّ يده نحو غصن، فيصطدم بذراع نقل السرعة. تندفع الآلة إلى الأمام، يتدحرج الراكون ساقطاً، وتخرج الجزّازة من الفناء إلى الطريق فترتطم بمصد السيارة.",
-        "kk": "Түнгі жазба: енот өрік ағашының астындағы шапқышқа мініп, бұтаққа созылады да, беріліс тұтқасын қағып кетеді. Машина алға ұмтылады, енот домалап түсіп қалады, ал шапқыш аула ішінен жолға шығып, автокөліктің бамперіне тіреледі."
+        "ru": "Камера показывает, как Жорик забирается на стол, хватает пульт и уносит его к сливе. Косилка в этот момент находится вне кадра; управление и столкновение восстанавливаются только по журналу устройства и следам на пульте.",
+        "en": "The camera shows Zhorik climbing onto a table, taking the remote, and carrying it toward the plum tree. The mower is off camera; its movement and collision can only be reconstructed from the device log and marks on the remote.",
+        "tr": "The camera shows Zhorik climbing onto a table, taking the remote, and carrying it toward the plum tree. The mower is off camera; its movement and collision can only be reconstructed from the device log and marks on the remote.",
+        "ar": "The camera shows Zhorik climbing onto a table, taking the remote, and carrying it toward the plum tree. The mower is off camera; its movement and collision can only be reconstructed from the device log and marks on the remote.",
+        "kk": "Камера показывает, как Жорик забирается на стол, хватает пульт и уносит его к сливе. Косилка в этот момент находится вне кадра; управление и столкновение восстанавливаются только по журналу устройства и следам на пульте."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Запись по кадрам показывает причину: енот случайно включил передачу. Полностью согласуется с делом.",
-        "en": "The footage shows the cause frame by frame: the raccoon accidentally engaged the gear. Fully consistent with the case.",
-        "tr": "Görüntü, nedeni kare kare gösteriyor: rakun yanlışlıkla vitesi devreye soktu. Davayla tamamen tutarlı.",
-        "ar": "التسجيل يُظهر السبب لقطة بلقطة: الراكون أدخل ناقل الحركة عن طريق الخطأ. متوافق تماماً مع القضية.",
-        "kk": "Жазба себебін кадрлап көрсетеді: енот байқаусызда берілісті қосып жіберген. Іспен толық үйлеседі."
+        "ru": "Запись объясняет, как пульт оказался у енота, но требует сопоставления с журналом косилки.",
+        "en": "The footage explains how the raccoon obtained the remote, but must be matched with the mower log.",
+        "tr": "The footage explains how the raccoon obtained the remote, but must be matched with the mower log.",
+        "ar": "The footage explains how the raccoon obtained the remote, but must be matched with the mower log.",
+        "kk": "Запись объясняет, как пульт оказался у енота, но требует сопоставления с журналом косилки."
       },
-      "meta": {
-        "cameraId": "CAM-YD2",
-        "cameraModel": "PatrolCam PC-2 · 4K · H.265"
-      }
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_owner_not_controlling",
+        "relation": "supports",
+        "reason": {
+          "ru": "Запись объясняет, как пульт оказался у енота, но требует сопоставления с журналом косилки.",
+          "en": "The footage explains how the raccoon obtained the remote, but must be matched with the mower log.",
+          "tr": "The footage explains how the raccoon obtained the remote, but must be matched with the mower log.",
+          "ar": "The footage explains how the raccoon obtained the remote, but must be matched with the mower log.",
+          "kk": "Запись объясняет, как пульт оказался у енота, но требует сопоставления с журналом косилки."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5
     }
   ],
   "correctDecision": "approve",
   "explanation": {
     "ru": [
-      "Самоходная газонокосилка звучит как выдумка, но протокол, фото и видео сходятся.",
-      "На самом деле Жорик залез на косилку, чтобы дотянуться до сливы, случайно сдвинул рычаг передачи и свалился.",
-      "Машина без водителя выкатилась на дорогу и врезалась в бампер. Противоречий нет — заявление подлинное, одобряем."
+      "Косилка действительно повредила имущество соседа.",
+      "Команда пришла с зарегистрированного пульта, который унёс Жорик.",
+      "Камера показывает, как енот случайно активирует управление.",
+      "Ущерб третьему лицу подтверждён, умышленной инсценировки нет. Выплату следует одобрить."
     ],
     "en": [
-      "A self-driving lawnmower sounds made up, but the report, photo, and video all agree.",
-      "In reality, Zhorik climbed onto the mower to reach the plums, accidentally shifted the gear lever, and fell off.",
-      "The driverless machine rolled onto the road and hit the bumper. No contradictions — the claim is genuine, approve it."
+      "The neighbor's damage is real and matches the amount claimed.",
+      "The mower responded to its genuine remote, but the log does not reveal who operated it.",
+      "The marks confirm that an animal handled the remote, not the claimant.",
+      "The footage explains how the raccoon obtained the remote, but must be matched with the mower log.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "tr": [
-      "Kendi kendine giden bir çim biçme makinesi uydurma gibi geliyor ama rapor, fotoğraf ve video birbirini doğruluyor.",
-      "Gerçekte Zhorik eriklere uzanmak için makineye tırmandı, yanlışlıkla vites koluna çarptı ve düştü.",
-      "Sürücüsüz makine yola çıkıp tampona çarptı. Çelişki yok — talep gerçek, onaylayın."
+      "The neighbor's damage is real and matches the amount claimed.",
+      "The mower responded to its genuine remote, but the log does not reveal who operated it.",
+      "The marks confirm that an animal handled the remote, not the claimant.",
+      "The footage explains how the raccoon obtained the remote, but must be matched with the mower log.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "ar": [
-      "جزّازة تسير من تلقاء نفسها تبدو ملفّقة، لكن المحضر والصورة والفيديو كلها متوافقة.",
-      "في الحقيقة تسلّق جوريك الجزّازة ليصل إلى البرقوق، فحرّك ذراع نقل السرعة عن طريق الخطأ وسقط.",
-      "تدحرجت الآلة بلا سائق إلى الطريق واصطدمت بالمصد. لا توجد تناقضات — المطالبة حقيقية، وافق عليها."
+      "The neighbor's damage is real and matches the amount claimed.",
+      "The mower responded to its genuine remote, but the log does not reveal who operated it.",
+      "The marks confirm that an animal handled the remote, not the claimant.",
+      "The footage explains how the raccoon obtained the remote, but must be matched with the mower log.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "kk": [
-      "Өздігінен жүретін шөп шапқыш ойдан шығарылғандай естіледі, бірақ хаттама, сурет пен бейне сәйкеседі.",
-      "Шын мәнінде Жорик өрікке жету үшін шапқышқа мініп, байқаусызда беріліс тұтқасын жылжытып, құлап түсті.",
-      "Жүргізушісіз машина жолға шығып, бамперге соғылды. Қайшылық жоқ — талап шынайы, мақұлдаңыз."
+      "Косилка действительно повредила имущество соседа.",
+      "Команда пришла с зарегистрированного пульта, который унёс Жорик.",
+      "Камера показывает, как енот случайно активирует управление.",
+      "Ущерб третьему лицу подтверждён, умышленной инсценировки нет. Выплату следует одобрить."
     ]
+  },
+  "investigationBudget": 3,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Ночью моя роботизированная газонокосилка получила команду с пульта, выехала со двора и повредила теплицу соседа. Я спал и пультом не пользовался; утром он был найден в сливовом дереве. Сосед предъявил требование на 850 евро. Прошу урегулировать ущерб по полису ответственности.",
+        "en": "During the night, my robotic lawn mower received a remote command, left my yard, and damaged my neighbor's greenhouse. I was asleep and did not use the remote; it was found in a plum tree the next morning. My neighbor is claiming €850. Please settle the damage under my liability policy.",
+        "tr": "During the night, my robotic lawn mower received a remote command, left my yard, and damaged my neighbor's greenhouse. I was asleep and did not use the remote; it was found in a plum tree the next morning. My neighbor is claiming €850. Please settle the damage under my liability policy.",
+        "ar": "During the night, my robotic lawn mower received a remote command, left my yard, and damaged my neighbor's greenhouse. I was asleep and did not use the remote; it was found in a plum tree the next morning. My neighbor is claiming €850. Please settle the damage under my liability policy.",
+        "kk": "Ночью моя роботизированная газонокосилка получила команду с пульта, выехала со двора и повредила теплицу соседа. Я спал и пультом не пользовался; утром он был найден в сливовом дереве. Сосед предъявил требование на 850 евро. Прошу урегулировать ущерб по полису ответственности."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_event",
+      "text": {
+        "ru": "Газонокосилка ночью выехала со двора и повредила теплицу соседа.",
+        "en": "The lawn mower left the yard during the night and damaged the neighbor's greenhouse.",
+        "tr": "The lawn mower left the yard during the night and damaged the neighbor's greenhouse.",
+        "ar": "The lawn mower left the yard during the night and damaged the neighbor's greenhouse.",
+        "kk": "Газонокосилка ночью выехала со двора и повредила теплицу соседа."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_owner_not_controlling",
+      "text": {
+        "ru": "Анатолий Степанович спал и не управлял зарегистрированным пультом.",
+        "en": "Anatoly Stepanovich was asleep and did not operate the registered remote.",
+        "tr": "Anatoly Stepanovich was asleep and did not operate the registered remote.",
+        "ar": "Anatoly Stepanovich was asleep and did not operate the registered remote.",
+        "kk": "Анатолий Степанович спал и не управлял зарегистрированным пультом."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_liability_damage",
+      "text": {
+        "ru": "Реальный ущерб соседу составляет 850 евро.",
+        "en": "The neighbor's actual loss totals €850.",
+        "tr": "The neighbor's actual loss totals €850.",
+        "ar": "The neighbor's actual loss totals €850.",
+        "kk": "Реальный ущерб соседу составляет 850 евро."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Я узнала почерк ещё до фамилии. Не спешите обвинять Анатолия Степановича: до сих пор он сообщал только правду. — В. Лебедева",
+      "en": "I recognized the writing before I saw the name. Do not rush to accuse Anatoly Stepanovich; so far, every claim he has made has been truthful. — V. Lebedeva",
+      "tr": "I recognized the writing before I saw the name. Do not rush to accuse Anatoly Stepanovich; so far, every claim he has made has been truthful. — V. Lebedeva",
+      "ar": "I recognized the writing before I saw the name. Do not rush to accuse Anatoly Stepanovich; so far, every claim he has made has been truthful. — V. Lebedeva",
+      "kk": "Я узнала почерк ещё до фамилии. Не спешите обвинять Анатолия Степановича: до сих пор он сообщал только правду. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "После истории с дроном Анатолий Степанович установил ещё одну камеру. Замок на ящик с пультом он установить не догадался.",
+      "en": "After the drone incident, Anatoly Stepanovich installed another camera. It did not occur to him to put a lock on the remote-control box.",
+      "tr": "After the drone incident, Anatoly Stepanovich installed another camera. It did not occur to him to put a lock on the remote-control box.",
+      "ar": "After the drone incident, Anatoly Stepanovich installed another camera. It did not occur to him to put a lock on the remote-control box.",
+      "kk": "После истории с дроном Анатолий Степанович установил ещё одну камеру. Замок на ящик с пультом он установить не догадался."
+    },
+    "nextCaseTeaser": {
+      "ru": "Следующая папка пришла из клуба «Маяк». На этот раз заявление подписал человек, которого мы недавно защитили.",
+      "en": "The next file comes from the Mayak club. This time, the claim was signed by someone we recently defended.",
+      "tr": "The next file comes from the Mayak club. This time, the claim was signed by someone we recently defended.",
+      "ar": "The next file comes from the Mayak club. This time, the claim was signed by someone we recently defended.",
+      "kk": "Следующая папка пришла из клуба «Маяк». На этот раз заявление подписал человек, которого мы недавно защитили."
+    },
+    "seasonClue": null,
+    "epilogue": null
   }
 }

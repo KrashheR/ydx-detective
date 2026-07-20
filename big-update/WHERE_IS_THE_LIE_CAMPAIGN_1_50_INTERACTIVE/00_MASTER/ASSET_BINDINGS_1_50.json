@@ -1,0 +1,3857 @@
+{
+  "schemaVersion": 1,
+  "generatedFor": "WHERE_IS_THE_LIE_CAMPAIGN_1_50_INTERACTIVE",
+  "copyInstruction": "Copy the contents of generated-assets/src into the game project src directory. Runtime paths in src fields will then resolve directly.",
+  "pathFields": {
+    "src": "Destination path used by the new per-case content architecture.",
+    "archiveSrc": "Current path relative to the root of this content archive.",
+    "caseRelativeSrc": "Path relative to src/data/cases/<caseId>.",
+    "installTo": "Exact copy destination relative to the current game project root.",
+    "legacyRuntimeUrl": "Value for the current game schema; used by personImage or evidence[].data.imageUrl."
+  },
+  "summary": {
+    "cases": 50,
+    "physicalWebpAssets": 110,
+    "boundAssets": 110,
+    "claimantPortraits": 24,
+    "retainedExistingPortraits": 25,
+    "casesWithoutPortrait": 1,
+    "evidenceAssets": 84,
+    "caseSceneAssets": 2,
+    "unboundAssets": 0
+  },
+  "cases": [
+    {
+      "campaignOrder": 1,
+      "caseId": "case-001",
+      "title": {
+        "ru": "Телевизор, переживший потоп",
+        "en": "The TV That Survived the Flood"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Игорь Семёнов, 41 год",
+          "en": "Igor Semyonov, age 41"
+        },
+        "portrait": null,
+        "portraitBinding": {
+          "mode": "no_portrait",
+          "targetField": "personImage",
+          "runtimeValue": null,
+          "reason": "No portrait exists in the current project and no replacement was requested by the asset production queue."
+        },
+        "portraitStatus": "no_portrait_in_source_or_content_package"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-scene",
+          "title": {
+            "ru": "Тепловой осмотр телевизора",
+            "en": "Thermal Inspection of the TV"
+          },
+          "primaryImage": "src/data/cases/case-001/assets/interactive/ev-scene-scene.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-001/assets/interactive/ev-scene-scene.webp",
+          "legacyImageBinding": null,
+          "assets": [
+            {
+              "assetId": "asset-001",
+              "role": "interactive_scene",
+              "src": "src/data/cases/case-001/assets/interactive/ev-scene-scene.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-001/assets/interactive/ev-scene-scene.webp",
+              "caseRelativeSrc": "assets/interactive/ev-scene-scene.webp",
+              "installTo": "src/data/cases/case-001/assets/interactive/ev-scene-scene.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1600,
+              "height": 1000,
+              "sha256": "ff29f67270d98407f99ca2b7af4d3ed322f07c8d7c85c77a92c5d92061da1f96"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 2,
+      "caseId": "case-009",
+      "title": {
+        "ru": "Пожар без виновного",
+        "en": "A Fire Without a Culprit"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Хелена Брандт, 44 года",
+          "en": "Helena Brandt, age 44"
+        },
+        "portrait": null,
+        "portraitBinding": {
+          "mode": "retain_existing",
+          "targetField": "personImage",
+          "runtimeValue": "people/helena.webp",
+          "existingFile": "public/people/helena.webp"
+        },
+        "portraitStatus": "retain_existing_project_portrait"
+      },
+      "caseSceneAssets": [],
+      "evidence": []
+    },
+    {
+      "campaignOrder": 3,
+      "caseId": "case-013",
+      "title": {
+        "ru": "Телефон со дна озера",
+        "en": "The Phone from the Bottom of the Lake"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Тимур Аширов, 29 лет",
+          "en": "Timur Ashirov, age 29"
+        },
+        "portrait": null,
+        "portraitBinding": {
+          "mode": "retain_existing",
+          "targetField": "personImage",
+          "runtimeValue": "people/timur.webp",
+          "existingFile": "public/people/timur.webp"
+        },
+        "portraitStatus": "retain_existing_project_portrait"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-service-act",
+          "title": {
+            "ru": "Экспертиза сервисного акта",
+            "en": "Repair Report Examination"
+          },
+          "primaryImage": "src/data/cases/case-013/assets/interactive/ev-service-act-base.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-013/assets/interactive/ev-service-act-base.webp",
+          "legacyImageBinding": null,
+          "assets": [
+            {
+              "assetId": "asset-002",
+              "role": "interactive_base",
+              "src": "src/data/cases/case-013/assets/interactive/ev-service-act-base.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-013/assets/interactive/ev-service-act-base.webp",
+              "caseRelativeSrc": "assets/interactive/ev-service-act-base.webp",
+              "installTo": "src/data/cases/case-013/assets/interactive/ev-service-act-base.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1600,
+              "height": 1100,
+              "sha256": "a9a073582566ed5b2a3e3b6e39bf1929c6ef3911590c289b8c1bcb4fdc9f5280"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 4,
+      "caseId": "case-003",
+      "title": {
+        "ru": "Часы в желудке",
+        "en": "A Watch in the Stomach"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Геннадий Бубликов, 52 года",
+          "en": "Gennady Bublikov, age 52"
+        },
+        "portrait": null,
+        "portraitBinding": {
+          "mode": "retain_existing",
+          "targetField": "personImage",
+          "runtimeValue": "people/gennady.webp",
+          "existingFile": "public/people/gennady.webp"
+        },
+        "portraitStatus": "retain_existing_project_portrait"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-xray",
+          "title": {
+            "ru": "Рентген Барона",
+            "en": "Baron's X-Ray"
+          },
+          "primaryImage": "src/data/cases/case-003/evidence/case-003-xray-baron.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-003/evidence/case-003-xray-baron.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-003-xray-baron.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-003/evidence/case-003-xray-baron.webp",
+            "copyTo": "public/evidence/case-003-xray-baron.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-003",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-003/evidence/case-003-xray-baron.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-003/evidence/case-003-xray-baron.webp",
+              "caseRelativeSrc": "evidence/case-003-xray-baron.webp",
+              "installTo": "public/evidence/case-003-xray-baron.webp",
+              "legacyRuntimeUrl": "evidence/case-003-xray-baron.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "a3f224cc2d1a60ae8a2f49299c9cdff5d96e1e49211f8d8beab4cb01516d88e7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 5,
+      "caseId": "case-018",
+      "title": {
+        "ru": "Кольцо на высоте",
+        "en": "The High-Flying Ring"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Анатолий Степанович, 71 год",
+          "en": "Anatoly Stepanovich, age 71"
+        },
+        "portrait": null,
+        "portraitBinding": {
+          "mode": "retain_existing",
+          "targetField": "personImage",
+          "runtimeValue": "people/anatoly.webp",
+          "existingFile": "public/people/anatoly.webp"
+        },
+        "portraitStatus": "retain_existing_project_portrait"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-camera",
+          "title": {
+            "ru": "Кадр с камеры соседа",
+            "en": "Neighbor's Camera Footage"
+          },
+          "primaryImage": "src/data/cases/case-018/evidence/case-018-drone-ring-raccoon.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-018/evidence/case-018-drone-ring-raccoon.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-018-drone-ring-raccoon.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-018/evidence/case-018-drone-ring-raccoon.webp",
+            "copyTo": "public/evidence/case-018-drone-ring-raccoon.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-004",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-018/evidence/case-018-drone-ring-raccoon.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-018/evidence/case-018-drone-ring-raccoon.webp",
+              "caseRelativeSrc": "evidence/case-018-drone-ring-raccoon.webp",
+              "installTo": "public/evidence/case-018-drone-ring-raccoon.webp",
+              "legacyRuntimeUrl": "evidence/case-018-drone-ring-raccoon.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "2a37e4fd135fba6756110e39d5430093bc771f7a9c9ffb3889ce8167ec5eeb11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 6,
+      "caseId": "case-020",
+      "title": {
+        "ru": "Сорок пропавших пицц",
+        "en": "Forty Missing Pizzas"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Орест Чернов, 48 лет",
+          "en": "Orest Chernov, age 48"
+        },
+        "portrait": {
+          "characterId": "orest-chernov",
+          "role": "claimant_portrait",
+          "name": {
+            "ru": "Орест Чернов",
+            "en": "Orest Chernov, age 48"
+          },
+          "assetId": "asset-006",
+          "src": "src/data/cases/case-020/people/orest-chernov.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-020/people/orest-chernov.webp",
+          "caseRelativeSrc": "people/orest-chernov.webp",
+          "installTo": "public/people/orest-chernov.webp",
+          "legacyRuntimeUrl": "people/orest-chernov.webp",
+          "format": "webp",
+          "width": 359,
+          "height": 359,
+          "sha256": "511ee479b2b45eaa68ff4a0c0a60a9a568160ae3663aea463c47b3f0d8ff8792"
+        },
+        "portraitBinding": {
+          "mode": "replace",
+          "targetField": "personImage",
+          "runtimeValue": "people/orest-chernov.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-020/people/orest-chernov.webp",
+          "copyTo": "public/people/orest-chernov.webp",
+          "replacesExistingValue": "people/orest.webp"
+        },
+        "portraitStatus": "generated_replacement_included"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-camera",
+          "title": {
+            "ru": "Запись камеры закусочной",
+            "en": "Snack Bar Camera Footage"
+          },
+          "primaryImage": "src/data/cases/case-020/evidence/case-020-staged-takeaway-cctv.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-020/evidence/case-020-staged-takeaway-cctv.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-020-staged-takeaway-cctv.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-020/evidence/case-020-staged-takeaway-cctv.webp",
+            "copyTo": "public/evidence/case-020-staged-takeaway-cctv.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-005",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-020/evidence/case-020-staged-takeaway-cctv.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-020/evidence/case-020-staged-takeaway-cctv.webp",
+              "caseRelativeSrc": "evidence/case-020-staged-takeaway-cctv.webp",
+              "installTo": "public/evidence/case-020-staged-takeaway-cctv.webp",
+              "legacyRuntimeUrl": "evidence/case-020-staged-takeaway-cctv.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "b5f135f8965ec19c907e7c27d6a9e0bbfc02ed3ec60c53478daa16cff8cea12a"
+            }
+          ]
+        },
+        {
+          "evidenceId": "ev-delivery-receipt",
+          "title": {
+            "ru": "Сопоставление пломб коробок",
+            "en": "Box Seal Comparison"
+          },
+          "primaryImage": "src/data/cases/case-020/assets/interactive/ev-delivery-receipt-master-a.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-020/assets/interactive/ev-delivery-receipt-master-a.webp",
+          "legacyImageBinding": null,
+          "assets": [
+            {
+              "assetId": "asset-007",
+              "role": "interactive_master_a",
+              "src": "src/data/cases/case-020/assets/interactive/ev-delivery-receipt-master-a.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-020/assets/interactive/ev-delivery-receipt-master-a.webp",
+              "caseRelativeSrc": "assets/interactive/ev-delivery-receipt-master-a.webp",
+              "installTo": "src/data/cases/case-020/assets/interactive/ev-delivery-receipt-master-a.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1400,
+              "height": 500,
+              "sha256": "71cddd98d6a587cfb7017bc8d0ed8b6e7e76897d7922b4c975cce286fa23a27a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 7,
+      "caseId": "case-004",
+      "title": {
+        "ru": "Корова над помидорами",
+        "en": "The Cow Above the Tomatoes"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Айгуль Нурланова, 47 лет",
+          "en": "Aigul Nurlanova, age 47"
+        },
+        "portrait": null,
+        "portraitBinding": {
+          "mode": "retain_existing",
+          "targetField": "personImage",
+          "runtimeValue": "people/aigul.webp",
+          "existingFile": "public/people/aigul.webp"
+        },
+        "portraitStatus": "retain_existing_project_portrait"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-tracks",
+          "title": {
+            "ru": "Проверка времени фотографии следов",
+            "en": "Track Photograph Time Check"
+          },
+          "primaryImage": "src/data/cases/case-004/assets/interactive/ev-tracks-scene.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-004/assets/interactive/ev-tracks-scene.webp",
+          "legacyImageBinding": null,
+          "assets": [
+            {
+              "assetId": "asset-009",
+              "role": "interactive_scene",
+              "src": "src/data/cases/case-004/assets/interactive/ev-tracks-scene.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-004/assets/interactive/ev-tracks-scene.webp",
+              "caseRelativeSrc": "assets/interactive/ev-tracks-scene.webp",
+              "installTo": "src/data/cases/case-004/assets/interactive/ev-tracks-scene.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1600,
+              "height": 1000,
+              "sha256": "175155b30ea21a09ddc310c6e46a25f4ffff5f0fe9646ce6e57945afdc0834ab"
+            }
+          ]
+        },
+        {
+          "evidenceId": "ev-greenhouse",
+          "title": {
+            "ru": "Фото теплицы и смета",
+            "en": "Greenhouse Photograph and Estimate"
+          },
+          "primaryImage": "src/data/cases/case-004/evidence/case-004-damaged-greenhouse.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-004/evidence/case-004-damaged-greenhouse.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-004-damaged-greenhouse.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-004/evidence/case-004-damaged-greenhouse.webp",
+            "copyTo": "public/evidence/case-004-damaged-greenhouse.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-008",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-004/evidence/case-004-damaged-greenhouse.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-004/evidence/case-004-damaged-greenhouse.webp",
+              "caseRelativeSrc": "evidence/case-004-damaged-greenhouse.webp",
+              "installTo": "public/evidence/case-004-damaged-greenhouse.webp",
+              "legacyRuntimeUrl": "evidence/case-004-damaged-greenhouse.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "b571c7d97b3ddc2fbcfaa0cfddc3d43b3162770c1c70e7b36abe36ec20f03a40"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 8,
+      "caseId": "case-019",
+      "title": {
+        "ru": "Ночной водитель",
+        "en": "The Night Driver"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Анатолий Степанович, 71 год",
+          "en": "Anatoly Stepanovich, age 71"
+        },
+        "portrait": null,
+        "portraitBinding": {
+          "mode": "retain_existing",
+          "targetField": "personImage",
+          "runtimeValue": "people/anatoly.webp",
+          "existingFile": "public/people/anatoly.webp"
+        },
+        "portraitStatus": "retain_existing_project_portrait"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-remote-photo",
+          "title": {
+            "ru": "Фото найденного пульта",
+            "en": "Photograph of the Recovered Remote"
+          },
+          "primaryImage": "src/data/cases/case-019/evidence/case-019-mower-remote.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-019/evidence/case-019-mower-remote.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-019-mower-remote.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-019/evidence/case-019-mower-remote.webp",
+            "copyTo": "public/evidence/case-019-mower-remote.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-010",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-019/evidence/case-019-mower-remote.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-019/evidence/case-019-mower-remote.webp",
+              "caseRelativeSrc": "evidence/case-019-mower-remote.webp",
+              "installTo": "public/evidence/case-019-mower-remote.webp",
+              "legacyRuntimeUrl": "evidence/case-019-mower-remote.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "683aaeda85667390a9f8128ba6deae7fd22482e86e41368e3010eca9df07ba00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 9,
+      "caseId": "case-021",
+      "title": {
+        "ru": "Прорыв под «Маяком»",
+        "en": "The Rupture Beneath Mayak"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Лев Аркадьевич Соколов, 69 лет",
+          "en": "Lev Arkadyevich Sokolov, age 69"
+        },
+        "portrait": {
+          "characterId": "lev-sokolov",
+          "role": "claimant_portrait",
+          "name": {
+            "ru": "Лев Аркадьевич Соколов",
+            "en": "Lev Arkadyevich Sokolov, age 69"
+          },
+          "assetId": "asset-012",
+          "src": "src/data/cases/case-021/people/lev-sokolov.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-021/people/lev-sokolov.webp",
+          "caseRelativeSrc": "people/lev-sokolov.webp",
+          "installTo": "public/people/lev-sokolov.webp",
+          "legacyRuntimeUrl": "people/lev-sokolov.webp",
+          "format": "webp",
+          "width": 359,
+          "height": 359,
+          "sha256": "33c405bd368a69e32b2b4bc80701fdd627ba1cc2468cc594ca356bce9b20b585"
+        },
+        "portraitBinding": {
+          "mode": "replace",
+          "targetField": "personImage",
+          "runtimeValue": "people/lev-sokolov.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-021/people/lev-sokolov.webp",
+          "copyTo": "public/people/lev-sokolov.webp",
+          "replacesExistingValue": "people/khariton.webp"
+        },
+        "portraitStatus": "generated_replacement_included"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-pipe-photo",
+          "title": {
+            "ru": "Очистка повреждённой трубы",
+            "en": "Cleaning the Damaged Pipe"
+          },
+          "primaryImage": "src/data/cases/case-021/evidence/case-021-mayak-workshop.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-021/evidence/case-021-mayak-workshop.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-021-mayak-workshop.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-021/evidence/case-021-mayak-workshop.webp",
+            "copyTo": "public/evidence/case-021-mayak-workshop.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-011",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-021/evidence/case-021-mayak-workshop.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-021/evidence/case-021-mayak-workshop.webp",
+              "caseRelativeSrc": "evidence/case-021-mayak-workshop.webp",
+              "installTo": "public/evidence/case-021-mayak-workshop.webp",
+              "legacyRuntimeUrl": "evidence/case-021-mayak-workshop.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "a35d199d1295abbbddcbfc7414ae502ad25540fe674b401476900e176b7e90da"
+            },
+            {
+              "assetId": "asset-013",
+              "role": "interactive_scene",
+              "src": "src/data/cases/case-021/assets/interactive/ev-pipe-photo-scene.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-021/assets/interactive/ev-pipe-photo-scene.webp",
+              "caseRelativeSrc": "assets/interactive/ev-pipe-photo-scene.webp",
+              "installTo": "src/data/cases/case-021/assets/interactive/ev-pipe-photo-scene.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1600,
+              "height": 1000,
+              "sha256": "e511530e4f47bc0e8e90f23cb71ddc3047d5e80898dfcc5f0122ce857108f334"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 10,
+      "caseId": "case-005",
+      "title": {
+        "ru": "Полтергейст вышел в эфир",
+        "en": "The Poltergeist Goes Live"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Стас Гром, 24 года",
+          "en": "Stas Grom, age 24"
+        },
+        "portrait": null,
+        "portraitBinding": {
+          "mode": "retain_existing",
+          "targetField": "personImage",
+          "runtimeValue": "people/stas.webp",
+          "existingFile": "public/people/stas.webp"
+        },
+        "portraitStatus": "retain_existing_project_portrait"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-17k-scan",
+          "title": {
+            "ru": "Просветка формы 17-К",
+            "en": "17-K Form Backlight Examination"
+          },
+          "primaryImage": "src/data/cases/case-005/assets/interactive/ev-17k-scan-base.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-005/assets/interactive/ev-17k-scan-base.webp",
+          "legacyImageBinding": null,
+          "assets": [
+            {
+              "assetId": "asset-014",
+              "role": "interactive_base",
+              "src": "src/data/cases/case-005/assets/interactive/ev-17k-scan-base.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-005/assets/interactive/ev-17k-scan-base.webp",
+              "caseRelativeSrc": "assets/interactive/ev-17k-scan-base.webp",
+              "installTo": "src/data/cases/case-005/assets/interactive/ev-17k-scan-base.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1600,
+              "height": 1100,
+              "sha256": "049d0d7be89e43c400d81a9e11ca09abd61607d994884835f9cef04570a79efe"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 11,
+      "caseId": "case-006",
+      "title": {
+        "ru": "Погреб, который не нагрелся",
+        "en": "The Cellar That Never Warmed Up"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Эдуард Виноградов, 59 лет",
+          "en": "Eduard Vinogradov, age 59"
+        },
+        "portrait": null,
+        "portraitBinding": {
+          "mode": "retain_existing",
+          "targetField": "personImage",
+          "runtimeValue": "people/eduard.webp",
+          "existingFile": "public/people/eduard.webp"
+        },
+        "portraitStatus": "retain_existing_project_portrait"
+      },
+      "caseSceneAssets": [],
+      "evidence": []
+    },
+    {
+      "campaignOrder": 12,
+      "caseId": "case-008",
+      "title": {
+        "ru": "Три месяца в постели",
+        "en": "Three Months in Bed"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Деян Ковач, 38 лет",
+          "en": "Dejan Kovac, age 38"
+        },
+        "portrait": null,
+        "portraitBinding": {
+          "mode": "retain_existing",
+          "targetField": "personImage",
+          "runtimeValue": "people/dejan.webp",
+          "existingFile": "public/people/dejan.webp"
+        },
+        "portraitStatus": "retain_existing_project_portrait"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-sickleave",
+          "title": {
+            "ru": "Экспертиза продлённого больничного",
+            "en": "Extended Medical Certificate Examination"
+          },
+          "primaryImage": "src/data/cases/case-008/assets/interactive/ev-sickleave-base.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-008/assets/interactive/ev-sickleave-base.webp",
+          "legacyImageBinding": null,
+          "assets": [
+            {
+              "assetId": "asset-015",
+              "role": "interactive_base",
+              "src": "src/data/cases/case-008/assets/interactive/ev-sickleave-base.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-008/assets/interactive/ev-sickleave-base.webp",
+              "caseRelativeSrc": "assets/interactive/ev-sickleave-base.webp",
+              "installTo": "src/data/cases/case-008/assets/interactive/ev-sickleave-base.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1600,
+              "height": 1100,
+              "sha256": "c55e6c2e1062dba5dd539828c762c3be424de0b73ed543c02a6d5efacdab23a3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 13,
+      "caseId": "case-010",
+      "title": {
+        "ru": "Двадцать две секунды на красном",
+        "en": "Twenty-Two Seconds at a Red Light"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Матеус Феррейра, 31 год",
+          "en": "Mateus Ferreira, age 31"
+        },
+        "portrait": null,
+        "portraitBinding": {
+          "mode": "retain_existing",
+          "targetField": "personImage",
+          "runtimeValue": "people/mateus.webp",
+          "existingFile": "public/people/mateus.webp"
+        },
+        "portraitStatus": "retain_existing_project_portrait"
+      },
+      "caseSceneAssets": [],
+      "evidence": []
+    },
+    {
+      "campaignOrder": 14,
+      "caseId": "case-011",
+      "title": {
+        "ru": "Дом без взломщика",
+        "en": "The House Without a Burglar"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Беатрис Колер, 52 года",
+          "en": "Beatrice Kohler, age 52"
+        },
+        "portrait": null,
+        "portraitBinding": {
+          "mode": "retain_existing",
+          "targetField": "personImage",
+          "runtimeValue": "people/beatrice.webp",
+          "existingFile": "public/people/beatrice.webp"
+        },
+        "portraitStatus": "retain_existing_project_portrait"
+      },
+      "caseSceneAssets": [],
+      "evidence": []
+    },
+    {
+      "campaignOrder": 15,
+      "caseId": "case-012",
+      "title": {
+        "ru": "Право на время",
+        "en": "The Right to Time"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Хельга Новак, 49 лет",
+          "en": "Helga Novak, age 49"
+        },
+        "portrait": null,
+        "portraitBinding": {
+          "mode": "retain_existing",
+          "targetField": "personImage",
+          "runtimeValue": "people/helga.webp",
+          "existingFile": "public/people/helga.webp"
+        },
+        "portraitStatus": "retain_existing_project_portrait"
+      },
+      "caseSceneAssets": [],
+      "evidence": []
+    },
+    {
+      "campaignOrder": 16,
+      "caseId": "case-014",
+      "title": {
+        "ru": "Белая полоса над полем",
+        "en": "A White Streak Across the Field"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Болат Жумабеков, 53 года",
+          "en": "Bolat Zhumabekov, age 53"
+        },
+        "portrait": null,
+        "portraitBinding": {
+          "mode": "retain_existing",
+          "targetField": "personImage",
+          "runtimeValue": "people/bolat.webp",
+          "existingFile": "public/people/bolat.webp"
+        },
+        "portraitStatus": "retain_existing_project_portrait"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-satellite",
+          "title": {
+            "ru": "Проверка времени полевого снимка",
+            "en": "Field Photograph Time Check"
+          },
+          "primaryImage": "src/data/cases/case-014/evidence/case-014-ev-satellite.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-014/evidence/case-014-ev-satellite.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-014-ev-satellite.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-014/evidence/case-014-ev-satellite.webp",
+            "copyTo": "public/evidence/case-014-ev-satellite.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-016",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-014/evidence/case-014-ev-satellite.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-014/evidence/case-014-ev-satellite.webp",
+              "caseRelativeSrc": "evidence/case-014-ev-satellite.webp",
+              "installTo": "public/evidence/case-014-ev-satellite.webp",
+              "legacyRuntimeUrl": "evidence/case-014-ev-satellite.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "0547689cf0531170440ccb6ac6fa887e19d69bfae2fec4142c790ff3aea7d251"
+            },
+            {
+              "assetId": "asset-017",
+              "role": "interactive_scene",
+              "src": "src/data/cases/case-014/assets/interactive/ev-satellite-scene.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-014/assets/interactive/ev-satellite-scene.webp",
+              "caseRelativeSrc": "assets/interactive/ev-satellite-scene.webp",
+              "installTo": "src/data/cases/case-014/assets/interactive/ev-satellite-scene.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1600,
+              "height": 1000,
+              "sha256": "f97a6cd81e0dce30503baf45a46491ff065f2240567870e54320d29b684212c5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 17,
+      "caseId": "case-015",
+      "title": {
+        "ru": "Не та яхта",
+        "en": "The Wrong Yacht"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Рустам Бекетов, 47 лет",
+          "en": "Rustam Beketov, age 47"
+        },
+        "portrait": null,
+        "portraitBinding": {
+          "mode": "retain_existing",
+          "targetField": "personImage",
+          "runtimeValue": "people/rustam.webp",
+          "existingFile": "public/people/rustam.webp"
+        },
+        "portraitStatus": "retain_existing_project_portrait"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-hull",
+          "title": {
+            "ru": "Сопоставление защитной полосы корпуса",
+            "en": "Hull Rub-Rail Comparison"
+          },
+          "primaryImage": "src/data/cases/case-015/evidence/case-015-ev-hull.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-015/evidence/case-015-ev-hull.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-015-ev-hull.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-015/evidence/case-015-ev-hull.webp",
+            "copyTo": "public/evidence/case-015-ev-hull.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-018",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-015/evidence/case-015-ev-hull.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-015/evidence/case-015-ev-hull.webp",
+              "caseRelativeSrc": "evidence/case-015-ev-hull.webp",
+              "installTo": "public/evidence/case-015-ev-hull.webp",
+              "legacyRuntimeUrl": "evidence/case-015-ev-hull.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "7b2d4c59fa51c6ef9a566206bafe15b55f3c80cd0d8c413030a3c1f117d32c5b"
+            },
+            {
+              "assetId": "asset-020",
+              "role": "interactive_master_a",
+              "src": "src/data/cases/case-015/assets/interactive/ev-hull-master-a.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-015/assets/interactive/ev-hull-master-a.webp",
+              "caseRelativeSrc": "assets/interactive/ev-hull-master-a.webp",
+              "installTo": "src/data/cases/case-015/assets/interactive/ev-hull-master-a.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1400,
+              "height": 500,
+              "sha256": "3ceee37f9c51aa6c58c36d521035e46f0837702699e6d51d64f51b1aca875049"
+            },
+            {
+              "assetId": "asset-021",
+              "role": "interactive_master_b",
+              "src": "src/data/cases/case-015/assets/interactive/ev-hull-master-b.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-015/assets/interactive/ev-hull-master-b.webp",
+              "caseRelativeSrc": "assets/interactive/ev-hull-master-b.webp",
+              "installTo": "src/data/cases/case-015/assets/interactive/ev-hull-master-b.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1400,
+              "height": 500,
+              "sha256": "317c50fd1f2449ce3a5e0b9533e8dfb2d7f1a0a5bdb7fddcdb3e5e33e4f95237"
+            }
+          ]
+        },
+        {
+          "evidenceId": "ev-transport",
+          "title": {
+            "ru": "Маршрут перевозки яхты",
+            "en": "Yacht Transport Route"
+          },
+          "primaryImage": "src/data/cases/case-015/evidence/case-015-ev-transport.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-015/evidence/case-015-ev-transport.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-015-ev-transport.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-015/evidence/case-015-ev-transport.webp",
+            "copyTo": "public/evidence/case-015-ev-transport.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-019",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-015/evidence/case-015-ev-transport.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-015/evidence/case-015-ev-transport.webp",
+              "caseRelativeSrc": "evidence/case-015-ev-transport.webp",
+              "installTo": "public/evidence/case-015-ev-transport.webp",
+              "legacyRuntimeUrl": "evidence/case-015-ev-transport.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "24656418e9e8d0ba83811b08576e1e42bd40441f0cd8abe4a912f34daa063953"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 18,
+      "caseId": "case-016",
+      "title": {
+        "ru": "Четыре дня без магазина",
+        "en": "Four Days Without a Shop"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Лейла Каримова, 38 лет",
+          "en": "Leyla Karimova, age 38"
+        },
+        "portrait": null,
+        "portraitBinding": {
+          "mode": "retain_existing",
+          "targetField": "personImage",
+          "runtimeValue": "people/leyla.webp",
+          "existingFile": "public/people/leyla.webp"
+        },
+        "portraitStatus": "retain_existing_project_portrait"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-photos",
+          "title": {
+            "ru": "Проявление линии затопления",
+            "en": "Revealing the Flood Line"
+          },
+          "primaryImage": "src/data/cases/case-016/assets/interactive/ev-photos-scene.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-016/assets/interactive/ev-photos-scene.webp",
+          "legacyImageBinding": null,
+          "assets": [
+            {
+              "assetId": "asset-022",
+              "role": "interactive_scene",
+              "src": "src/data/cases/case-016/assets/interactive/ev-photos-scene.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-016/assets/interactive/ev-photos-scene.webp",
+              "caseRelativeSrc": "assets/interactive/ev-photos-scene.webp",
+              "installTo": "src/data/cases/case-016/assets/interactive/ev-photos-scene.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1600,
+              "height": 1000,
+              "sha256": "bdc0b96fac1e5b63b296e5d98683adc2fa2fdd3f7d8e6763836b475a6d5b7f55"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 19,
+      "caseId": "case-017",
+      "title": {
+        "ru": "Ботинок на 800 ватт",
+        "en": "An 800-Watt Shoe"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Анатолий Степанович, 71 год",
+          "en": "Anatoly Stepanovich, age 71"
+        },
+        "portrait": null,
+        "portraitBinding": {
+          "mode": "retain_existing",
+          "targetField": "personImage",
+          "runtimeValue": "people/anatoly.webp",
+          "existingFile": "public/people/anatoly.webp"
+        },
+        "portraitStatus": "retain_existing_project_portrait"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-photo",
+          "title": {
+            "ru": "Тепловой осмотр умной кухни",
+            "en": "Smart Kitchen Thermal Inspection"
+          },
+          "primaryImage": "src/data/cases/case-017/assets/interactive/ev-photo-scene.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-017/assets/interactive/ev-photo-scene.webp",
+          "legacyImageBinding": null,
+          "assets": [
+            {
+              "assetId": "asset-024",
+              "role": "interactive_scene",
+              "src": "src/data/cases/case-017/assets/interactive/ev-photo-scene.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-017/assets/interactive/ev-photo-scene.webp",
+              "caseRelativeSrc": "assets/interactive/ev-photo-scene.webp",
+              "installTo": "src/data/cases/case-017/assets/interactive/ev-photo-scene.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1600,
+              "height": 1000,
+              "sha256": "c30099858dbe48971a7613b2f84de8290e18078c307b8b9d0b843239265a2e52"
+            }
+          ]
+        },
+        {
+          "evidenceId": "ev-yardcam",
+          "title": {
+            "ru": "Камера у кухонного окна",
+            "en": "Kitchen Window Camera"
+          },
+          "primaryImage": "src/data/cases/case-017/evidence/case-017-ev-yardcam.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-017/evidence/case-017-ev-yardcam.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-017-ev-yardcam.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-017/evidence/case-017-ev-yardcam.webp",
+            "copyTo": "public/evidence/case-017-ev-yardcam.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-023",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-017/evidence/case-017-ev-yardcam.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-017/evidence/case-017-ev-yardcam.webp",
+              "caseRelativeSrc": "evidence/case-017-ev-yardcam.webp",
+              "installTo": "public/evidence/case-017-ev-yardcam.webp",
+              "legacyRuntimeUrl": "evidence/case-017-ev-yardcam.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "70c476a131f525fc4aee33e1fca4b6f619d5d434447eff7ab913d442602d9816"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 20,
+      "caseId": "case-022",
+      "title": {
+        "ru": "Погром в «Компасе»",
+        "en": "The Break-In at Compass"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Михаил Тернов, 69 лет",
+          "en": "Mikhail Ternov, age 69"
+        },
+        "portrait": {
+          "characterId": "mikhail-ternov",
+          "role": "claimant_portrait",
+          "name": {
+            "ru": "Михаил Тернов",
+            "en": "Mikhail Ternov, age 69"
+          },
+          "assetId": "asset-025",
+          "src": "src/data/cases/case-022/people/mikhail-ternov.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-022/people/mikhail-ternov.webp",
+          "caseRelativeSrc": "people/mikhail-ternov.webp",
+          "installTo": "public/people/mikhail-ternov.webp",
+          "legacyRuntimeUrl": "people/mikhail-ternov.webp",
+          "format": "webp",
+          "width": 359,
+          "height": 359,
+          "sha256": "e98f476f001be46417a3ab0f90eb2c64ba1b5ffa7290fd3a8130b495fb97de2f"
+        },
+        "portraitBinding": {
+          "mode": "replace",
+          "targetField": "personImage",
+          "runtimeValue": "people/mikhail-ternov.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-022/people/mikhail-ternov.webp",
+          "copyTo": "public/people/mikhail-ternov.webp",
+          "replacesExistingValue": "people/khariton.webp"
+        },
+        "portraitStatus": "generated_replacement_included"
+      },
+      "caseSceneAssets": [
+        {
+          "assetId": "asset-026",
+          "role": "case_scene",
+          "src": "src/data/cases/case-022/evidence/case-022-ev-workshop.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-022/evidence/case-022-ev-workshop.webp",
+          "caseRelativeSrc": "evidence/case-022-ev-workshop.webp",
+          "installTo": "public/evidence/case-022-ev-workshop.webp",
+          "legacyRuntimeUrl": "evidence/case-022-ev-workshop.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "9219037edbb3e990959d806dec321d1c9154eaa6f11c863892afdb33e0a662d0"
+        }
+      ],
+      "evidence": [
+        {
+          "evidenceId": "ev-cctv",
+          "title": {
+            "ru": "Камера соседней аптеки",
+            "en": "Neighboring Pharmacy Camera"
+          },
+          "primaryImage": "src/data/cases/case-022/evidence/case-022-ev-cctv.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-022/evidence/case-022-ev-cctv.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-022-ev-cctv.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-022/evidence/case-022-ev-cctv.webp",
+            "copyTo": "public/evidence/case-022-ev-cctv.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-027",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-022/evidence/case-022-ev-cctv.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-022/evidence/case-022-ev-cctv.webp",
+              "caseRelativeSrc": "evidence/case-022-ev-cctv.webp",
+              "installTo": "public/evidence/case-022-ev-cctv.webp",
+              "legacyRuntimeUrl": "evidence/case-022-ev-cctv.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "b7d1dbc99a9c5bf8a4ba3bdfc1d22adcca8d1388328ad3598e412ba43a49594a"
+            }
+          ]
+        },
+        {
+          "evidenceId": "ev-fragment",
+          "title": {
+            "ru": "Экспертиза уцелевшего листа",
+            "en": "Surviving Page Examination"
+          },
+          "primaryImage": "src/data/cases/case-022/assets/interactive/ev-fragment-base.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-022/assets/interactive/ev-fragment-base.webp",
+          "legacyImageBinding": null,
+          "assets": [
+            {
+              "assetId": "asset-028",
+              "role": "interactive_base",
+              "src": "src/data/cases/case-022/assets/interactive/ev-fragment-base.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-022/assets/interactive/ev-fragment-base.webp",
+              "caseRelativeSrc": "assets/interactive/ev-fragment-base.webp",
+              "installTo": "src/data/cases/case-022/assets/interactive/ev-fragment-base.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1600,
+              "height": 1100,
+              "sha256": "55633c17a2989b13a8d2127bcd338755cf5670ce2d888e4029cef9b4ffc55f00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 21,
+      "caseId": "case-023",
+      "title": {
+        "ru": "Карта, оставшаяся дома",
+        "en": "The Card Left at Home"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Рустам Назаров, 38 лет",
+          "en": "Rustam Nazarov, age 38"
+        },
+        "portrait": {
+          "characterId": "rustam-nazarov",
+          "role": "claimant_portrait",
+          "name": {
+            "ru": "Рустам Назаров",
+            "en": "Rustam Nazarov, age 38"
+          },
+          "assetId": "asset-029",
+          "src": "src/data/cases/case-023/people/rustam-nazarov.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-023/people/rustam-nazarov.webp",
+          "caseRelativeSrc": "people/rustam-nazarov.webp",
+          "installTo": "public/people/rustam-nazarov.webp",
+          "legacyRuntimeUrl": "people/rustam-nazarov.webp",
+          "format": "webp",
+          "width": 359,
+          "height": 359,
+          "sha256": "93e05ac2998533e2649768edc828b8dc5f9c1e8b29025f2408eddd3f8f73cb1c"
+        },
+        "portraitBinding": {
+          "mode": "replace",
+          "targetField": "personImage",
+          "runtimeValue": "people/rustam-nazarov.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-023/people/rustam-nazarov.webp",
+          "copyTo": "public/people/rustam-nazarov.webp",
+          "replacesExistingValue": "people/rustam.webp"
+        },
+        "portraitStatus": "generated_replacement_included"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-doorcam",
+          "title": {
+            "ru": "Камера у дома",
+            "en": "Camera Outside the House"
+          },
+          "primaryImage": "src/data/cases/case-023/evidence/case-023-ev-doorcam.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-023/evidence/case-023-ev-doorcam.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-023-ev-doorcam.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-023/evidence/case-023-ev-doorcam.webp",
+            "copyTo": "public/evidence/case-023-ev-doorcam.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-030",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-023/evidence/case-023-ev-doorcam.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-023/evidence/case-023-ev-doorcam.webp",
+              "caseRelativeSrc": "evidence/case-023-ev-doorcam.webp",
+              "installTo": "public/evidence/case-023-ev-doorcam.webp",
+              "legacyRuntimeUrl": "evidence/case-023-ev-doorcam.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "dd960be7aa5268cf65838855787cc392b7552bcbf43f43e39c3d3f74df0e71b6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 22,
+      "caseId": "case-024",
+      "title": {
+        "ru": "Звонок в 17:41",
+        "en": "The 5:41 Call"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Марина Гордеева, 34 года",
+          "en": "Marina Gordeyeva, age 34"
+        },
+        "portrait": null,
+        "portraitBinding": {
+          "mode": "retain_existing",
+          "targetField": "personImage",
+          "runtimeValue": "people/marina.webp",
+          "existingFile": "public/people/marina.webp"
+        },
+        "portraitStatus": "retain_existing_project_portrait"
+      },
+      "caseSceneAssets": [],
+      "evidence": []
+    },
+    {
+      "campaignOrder": 23,
+      "caseId": "case-025",
+      "title": {
+        "ru": "Последний кофе перед пожаром",
+        "en": "The Last Coffee Before the Fire"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Лоренцо Конти, 45 лет",
+          "en": "Lorenzo Conti, age 45"
+        },
+        "portrait": null,
+        "portraitBinding": {
+          "mode": "retain_existing",
+          "targetField": "personImage",
+          "runtimeValue": "people/lorenzo.webp",
+          "existingFile": "public/people/lorenzo.webp"
+        },
+        "portraitStatus": "retain_existing_project_portrait"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-fire",
+          "title": {
+            "ru": "Очистка блока питания от копоти",
+            "en": "Cleaning Soot from the Power Unit"
+          },
+          "primaryImage": "src/data/cases/case-025/assets/interactive/ev-fire-scene.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-025/assets/interactive/ev-fire-scene.webp",
+          "legacyImageBinding": null,
+          "assets": [
+            {
+              "assetId": "asset-031",
+              "role": "interactive_scene",
+              "src": "src/data/cases/case-025/assets/interactive/ev-fire-scene.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-025/assets/interactive/ev-fire-scene.webp",
+              "caseRelativeSrc": "assets/interactive/ev-fire-scene.webp",
+              "installTo": "src/data/cases/case-025/assets/interactive/ev-fire-scene.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1600,
+              "height": 1000,
+              "sha256": "e14b611f67d4400319b31454d2f7a36d9b7c5223249e9f1afb590d42cb4567cb"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 24,
+      "caseId": "case-026",
+      "title": {
+        "ru": "Часы после кражи",
+        "en": "The Watch After the Theft"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Эдуард Кравец, 50 лет",
+          "en": "Eduard Kravets, age 50"
+        },
+        "portrait": {
+          "characterId": "eduard-kravets",
+          "role": "claimant_portrait",
+          "name": {
+            "ru": "Эдуард Кравец",
+            "en": "Eduard Kravets, age 50"
+          },
+          "assetId": "asset-032",
+          "src": "src/data/cases/case-026/people/eduard-kravets.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-026/people/eduard-kravets.webp",
+          "caseRelativeSrc": "people/eduard-kravets.webp",
+          "installTo": "public/people/eduard-kravets.webp",
+          "legacyRuntimeUrl": "people/eduard-kravets.webp",
+          "format": "webp",
+          "width": 359,
+          "height": 359,
+          "sha256": "1b085210755847bc30b885141fe51c65d429bb988fcf1fabff6606b752405ee0"
+        },
+        "portraitBinding": {
+          "mode": "replace",
+          "targetField": "personImage",
+          "runtimeValue": "people/eduard-kravets.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-026/people/eduard-kravets.webp",
+          "copyTo": "public/people/eduard-kravets.webp",
+          "replacesExistingValue": "people/eduard.webp"
+        },
+        "portraitStatus": "generated_replacement_included"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-photo",
+          "title": {
+            "ru": "Фото с закрытого приёма",
+            "en": "Photograph from a Private Reception"
+          },
+          "primaryImage": "src/data/cases/case-026/evidence/case-026-ev-photo.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-026/evidence/case-026-ev-photo.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-026-ev-photo.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-026/evidence/case-026-ev-photo.webp",
+            "copyTo": "public/evidence/case-026-ev-photo.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-033",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-026/evidence/case-026-ev-photo.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-026/evidence/case-026-ev-photo.webp",
+              "caseRelativeSrc": "evidence/case-026-ev-photo.webp",
+              "installTo": "public/evidence/case-026-ev-photo.webp",
+              "legacyRuntimeUrl": "evidence/case-026-ev-photo.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "d3357ee959ce7d38c83fb32edd4ca50ff0198907e58ee7a2d46e29fbe45722a4"
+            }
+          ]
+        },
+        {
+          "evidenceId": "ev-auction",
+          "title": {
+            "ru": "Просветка акта аукционной передачи",
+            "en": "Auction Transfer Form Backlight Examination"
+          },
+          "primaryImage": "src/data/cases/case-026/assets/interactive/ev-auction-base.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-026/assets/interactive/ev-auction-base.webp",
+          "legacyImageBinding": null,
+          "assets": [
+            {
+              "assetId": "asset-034",
+              "role": "interactive_base",
+              "src": "src/data/cases/case-026/assets/interactive/ev-auction-base.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-026/assets/interactive/ev-auction-base.webp",
+              "caseRelativeSrc": "assets/interactive/ev-auction-base.webp",
+              "installTo": "src/data/cases/case-026/assets/interactive/ev-auction-base.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1600,
+              "height": 1100,
+              "sha256": "e5c4861e476ca1139994867898bdd9cf60898b722da142b03649817a964ee879"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 25,
+      "caseId": "case-027",
+      "title": {
+        "ru": "Семена после ливня",
+        "en": "Seeds After the Downpour"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Болат Жумабеков, 53 года",
+          "en": "Bolat Zhumabekov, age 53"
+        },
+        "portrait": null,
+        "portraitBinding": {
+          "mode": "retain_existing",
+          "targetField": "personImage",
+          "runtimeValue": "people/bolat.webp",
+          "existingFile": "public/people/bolat.webp"
+        },
+        "portraitStatus": "retain_existing_project_portrait"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-photo",
+          "title": {
+            "ru": "Проверка времени снимка стеллажей",
+            "en": "Warehouse Photograph Time Check"
+          },
+          "primaryImage": "src/data/cases/case-027/evidence/case-027-ev-photo.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-027/evidence/case-027-ev-photo.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-027-ev-photo.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-027/evidence/case-027-ev-photo.webp",
+            "copyTo": "public/evidence/case-027-ev-photo.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-035",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-027/evidence/case-027-ev-photo.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-027/evidence/case-027-ev-photo.webp",
+              "caseRelativeSrc": "evidence/case-027-ev-photo.webp",
+              "installTo": "public/evidence/case-027-ev-photo.webp",
+              "legacyRuntimeUrl": "evidence/case-027-ev-photo.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "9fe436fd8d96347fea4eb57aa6c4289d8c785ac447a2f8b4560529e276495b48"
+            },
+            {
+              "assetId": "asset-036",
+              "role": "interactive_scene",
+              "src": "src/data/cases/case-027/assets/interactive/ev-photo-scene.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-027/assets/interactive/ev-photo-scene.webp",
+              "caseRelativeSrc": "assets/interactive/ev-photo-scene.webp",
+              "installTo": "src/data/cases/case-027/assets/interactive/ev-photo-scene.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1600,
+              "height": 1000,
+              "sha256": "34967f40b573bd25725683194f7e988d5102b1b56f89201b4fa8871efdec1616"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 26,
+      "caseId": "case-028",
+      "title": {
+        "ru": "Склад без товара",
+        "en": "The Empty Warehouse"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Дамир Аскаров, 47 лет",
+          "en": "Damir Askarov, age 47"
+        },
+        "portrait": null,
+        "portraitBinding": {
+          "mode": "retain_existing",
+          "targetField": "personImage",
+          "runtimeValue": "people/damir.webp",
+          "existingFile": "public/people/damir.webp"
+        },
+        "portraitStatus": "retain_existing_project_portrait"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-cam",
+          "title": {
+            "ru": "Сопоставление пломб вывезенных палет",
+            "en": "Removed Pallet Seal Comparison"
+          },
+          "primaryImage": "src/data/cases/case-028/evidence/case-028-ev-cam.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-028/evidence/case-028-ev-cam.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-028-ev-cam.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-028/evidence/case-028-ev-cam.webp",
+            "copyTo": "public/evidence/case-028-ev-cam.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-037",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-028/evidence/case-028-ev-cam.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-028/evidence/case-028-ev-cam.webp",
+              "caseRelativeSrc": "evidence/case-028-ev-cam.webp",
+              "installTo": "public/evidence/case-028-ev-cam.webp",
+              "legacyRuntimeUrl": "evidence/case-028-ev-cam.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "2af19365fc90059d75ce337bf7374f726ef73e1f3aae3147a9bd0a663eab3d02"
+            },
+            {
+              "assetId": "asset-038",
+              "role": "interactive_master_a",
+              "src": "src/data/cases/case-028/assets/interactive/ev-cam-master-a.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-028/assets/interactive/ev-cam-master-a.webp",
+              "caseRelativeSrc": "assets/interactive/ev-cam-master-a.webp",
+              "installTo": "src/data/cases/case-028/assets/interactive/ev-cam-master-a.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1400,
+              "height": 500,
+              "sha256": "73616611a040ec9e0de89b84e889e403ea062e76824a51d9b66e680ac9b48b39"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 27,
+      "caseId": "case-029",
+      "title": {
+        "ru": "Разряд через весь дом",
+        "en": "A Surge Through the Entire House"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Хелена Краузе, 39 лет",
+          "en": "Helena Krause, age 39"
+        },
+        "portrait": null,
+        "portraitBinding": {
+          "mode": "retain_existing",
+          "targetField": "personImage",
+          "runtimeValue": "people/helena.webp",
+          "existingFile": "public/people/helena.webp"
+        },
+        "portraitStatus": "retain_existing_project_portrait"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-photo",
+          "title": {
+            "ru": "Тепловой осмотр электрощита",
+            "en": "Electrical Panel Thermal Inspection"
+          },
+          "primaryImage": "src/data/cases/case-029/evidence/case-029-ev-panel.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-029/evidence/case-029-ev-panel.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-029-ev-panel.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-029/evidence/case-029-ev-panel.webp",
+            "copyTo": "public/evidence/case-029-ev-panel.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-039",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-029/evidence/case-029-ev-panel.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-029/evidence/case-029-ev-panel.webp",
+              "caseRelativeSrc": "evidence/case-029-ev-panel.webp",
+              "installTo": "public/evidence/case-029-ev-panel.webp",
+              "legacyRuntimeUrl": "evidence/case-029-ev-panel.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "112bb7febc780794866fadf6e41511734ce34c0d551c85e50a172760a1da7b49"
+            },
+            {
+              "assetId": "asset-040",
+              "role": "interactive_scene",
+              "src": "src/data/cases/case-029/assets/interactive/ev-photo-scene.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-029/assets/interactive/ev-photo-scene.webp",
+              "caseRelativeSrc": "assets/interactive/ev-photo-scene.webp",
+              "installTo": "src/data/cases/case-029/assets/interactive/ev-photo-scene.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1600,
+              "height": 1000,
+              "sha256": "b5b30a55412e11a0506c911b44c3448f196719c59584f680c77e1ee8328f791e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 28,
+      "caseId": "case-030",
+      "title": {
+        "ru": "Столкновение ради пломбы",
+        "en": "A Collision for a Seal"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Деян Маркович, 44 года",
+          "en": "Dejan Markovic, age 44"
+        },
+        "portrait": {
+          "characterId": "dejan-markovich",
+          "role": "claimant_portrait",
+          "name": {
+            "ru": "Деян Маркович",
+            "en": "Dejan Markovic, age 44"
+          },
+          "assetId": "asset-041",
+          "src": "src/data/cases/case-030/people/dejan-markovich.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-030/people/dejan-markovich.webp",
+          "caseRelativeSrc": "people/dejan-markovich.webp",
+          "installTo": "public/people/dejan-markovich.webp",
+          "legacyRuntimeUrl": "people/dejan-markovich.webp",
+          "format": "webp",
+          "width": 359,
+          "height": 359,
+          "sha256": "926ffcf94fc1427db01b0fcb5951cf44da2aa79f5e2a3a06cb318f972587408c"
+        },
+        "portraitBinding": {
+          "mode": "replace",
+          "targetField": "personImage",
+          "runtimeValue": "people/dejan-markovich.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-030/people/dejan-markovich.webp",
+          "copyTo": "public/people/dejan-markovich.webp",
+          "replacesExistingValue": "people/dejan.webp"
+        },
+        "portraitStatus": "generated_replacement_included"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-sealcam",
+          "title": {
+            "ru": "Сопоставление пломб грузового отсека",
+            "en": "Cargo-Compartment Seal Comparison"
+          },
+          "primaryImage": "src/data/cases/case-030/evidence/case-030-ev-sealcam.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-030/evidence/case-030-ev-sealcam.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-030-ev-sealcam.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-030/evidence/case-030-ev-sealcam.webp",
+            "copyTo": "public/evidence/case-030-ev-sealcam.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-042",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-030/evidence/case-030-ev-sealcam.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-030/evidence/case-030-ev-sealcam.webp",
+              "caseRelativeSrc": "evidence/case-030-ev-sealcam.webp",
+              "installTo": "public/evidence/case-030-ev-sealcam.webp",
+              "legacyRuntimeUrl": "evidence/case-030-ev-sealcam.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "18d52d80d7ef0f155befdc5a8b5e41edff0b21633458776db12b0949e89f5db6"
+            },
+            {
+              "assetId": "asset-043",
+              "role": "interactive_master_a",
+              "src": "src/data/cases/case-030/assets/interactive/ev-sealcam-master-a.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-030/assets/interactive/ev-sealcam-master-a.webp",
+              "caseRelativeSrc": "assets/interactive/ev-sealcam-master-a.webp",
+              "installTo": "src/data/cases/case-030/assets/interactive/ev-sealcam-master-a.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1400,
+              "height": 500,
+              "sha256": "69d1d3ce881b01223324e53f6297e18c70259eac8502952887e77abec4a8ca0a"
+            },
+            {
+              "assetId": "asset-044",
+              "role": "interactive_master_b",
+              "src": "src/data/cases/case-030/assets/interactive/ev-sealcam-master-b.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-030/assets/interactive/ev-sealcam-master-b.webp",
+              "caseRelativeSrc": "assets/interactive/ev-sealcam-master-b.webp",
+              "installTo": "src/data/cases/case-030/assets/interactive/ev-sealcam-master-b.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1400,
+              "height": 500,
+              "sha256": "bd22c40af4543fc43abdeb372cbb01c711c3aae969bb832d0fcee4c8a6248312"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 29,
+      "caseId": "case-031",
+      "title": {
+        "ru": "Двадцать минут льда",
+        "en": "Twenty Minutes of Ice"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Айгуль Сапарова, 36 лет",
+          "en": "Aigul Saparova, age 36"
+        },
+        "portrait": null,
+        "portraitBinding": {
+          "mode": "retain_existing",
+          "targetField": "personImage",
+          "runtimeValue": "people/aigul.webp",
+          "existingFile": "public/people/aigul.webp"
+        },
+        "portraitStatus": "retain_existing_project_portrait"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-antenna",
+          "title": {
+            "ru": "Фото внешней антенны",
+            "en": "External Antenna Photograph"
+          },
+          "primaryImage": "src/data/cases/case-031/evidence/case-031-ev-antenna.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-031/evidence/case-031-ev-antenna.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-031-ev-antenna.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-031/evidence/case-031-ev-antenna.webp",
+            "copyTo": "public/evidence/case-031-ev-antenna.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-045",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-031/evidence/case-031-ev-antenna.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-031/evidence/case-031-ev-antenna.webp",
+              "caseRelativeSrc": "evidence/case-031-ev-antenna.webp",
+              "installTo": "public/evidence/case-031-ev-antenna.webp",
+              "legacyRuntimeUrl": "evidence/case-031-ev-antenna.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "60ae706b787013425636dac507674cdf61b2ff694758ebf0a02969e45d61b873"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 30,
+      "caseId": "case-032",
+      "title": {
+        "ru": "Внедорожник за воротами",
+        "en": "The SUV Behind the Gate"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Тимур Расулов, 52 года",
+          "en": "Timur Rasulov, age 52"
+        },
+        "portrait": null,
+        "portraitBinding": {
+          "mode": "retain_existing",
+          "targetField": "personImage",
+          "runtimeValue": "people/timur.webp",
+          "existingFile": "public/people/timur.webp"
+        },
+        "portraitStatus": "retain_existing_project_portrait"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-cam",
+          "title": {
+            "ru": "Камера въезда",
+            "en": "Entrance Camera"
+          },
+          "primaryImage": "src/data/cases/case-032/evidence/case-032-ev-cam.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-032/evidence/case-032-ev-cam.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-032-ev-cam.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-032/evidence/case-032-ev-cam.webp",
+            "copyTo": "public/evidence/case-032-ev-cam.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-047",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-032/evidence/case-032-ev-cam.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-032/evidence/case-032-ev-cam.webp",
+              "caseRelativeSrc": "evidence/case-032-ev-cam.webp",
+              "installTo": "public/evidence/case-032-ev-cam.webp",
+              "legacyRuntimeUrl": "evidence/case-032-ev-cam.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "af6440c250f1162213712c3f7c90b9d6d09897f59c345b61da004c8f0a1f188b"
+            }
+          ]
+        },
+        {
+          "evidenceId": "ev-yardphoto",
+          "title": {
+            "ru": "Снимок ангара 4",
+            "en": "Hangar 4 Photograph"
+          },
+          "primaryImage": "src/data/cases/case-032/evidence/case-032-ev-yardphoto.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-032/evidence/case-032-ev-yardphoto.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-032-ev-yardphoto.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-032/evidence/case-032-ev-yardphoto.webp",
+            "copyTo": "public/evidence/case-032-ev-yardphoto.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-046",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-032/evidence/case-032-ev-yardphoto.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-032/evidence/case-032-ev-yardphoto.webp",
+              "caseRelativeSrc": "evidence/case-032-ev-yardphoto.webp",
+              "installTo": "public/evidence/case-032-ev-yardphoto.webp",
+              "legacyRuntimeUrl": "evidence/case-032-ev-yardphoto.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "342cc3e8b8e11d1d68253c0e253fe042d84be2e1bc058e3a0ba7c779c2380958"
+            }
+          ]
+        },
+        {
+          "evidenceId": "ev-police",
+          "title": {
+            "ru": "Экспертиза заявления об угоне",
+            "en": "Theft Report Examination"
+          },
+          "primaryImage": "src/data/cases/case-032/assets/interactive/ev-police-base.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-032/assets/interactive/ev-police-base.webp",
+          "legacyImageBinding": null,
+          "assets": [
+            {
+              "assetId": "asset-048",
+              "role": "interactive_base",
+              "src": "src/data/cases/case-032/assets/interactive/ev-police-base.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-032/assets/interactive/ev-police-base.webp",
+              "caseRelativeSrc": "assets/interactive/ev-police-base.webp",
+              "installTo": "src/data/cases/case-032/assets/interactive/ev-police-base.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1600,
+              "height": 1100,
+              "sha256": "7f461b375379da8c8fae669bc81b3b78ff06569ef8e8b0dc2350d6a959963ff4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 31,
+      "caseId": "case-033",
+      "title": {
+        "ru": "Рука в прессе",
+        "en": "A Hand in the Press"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Геннадий Орлов, 49 лет",
+          "en": "Gennady Orlov, age 49"
+        },
+        "portrait": {
+          "characterId": "gennady-orlov",
+          "role": "claimant_portrait",
+          "name": {
+            "ru": "Геннадий Орлов",
+            "en": "Gennady Orlov, age 49"
+          },
+          "assetId": "asset-049",
+          "src": "src/data/cases/case-033/people/gennady-orlov.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-033/people/gennady-orlov.webp",
+          "caseRelativeSrc": "people/gennady-orlov.webp",
+          "installTo": "public/people/gennady-orlov.webp",
+          "legacyRuntimeUrl": "people/gennady-orlov.webp",
+          "format": "webp",
+          "width": 359,
+          "height": 359,
+          "sha256": "64ed49b1915e03539a4477cbd100541fb7d81a110a5db9567779d6baf70a38bd"
+        },
+        "portraitBinding": {
+          "mode": "replace",
+          "targetField": "personImage",
+          "runtimeValue": "people/gennady-orlov.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-033/people/gennady-orlov.webp",
+          "copyTo": "public/people/gennady-orlov.webp",
+          "replacesExistingValue": "people/gennady.webp"
+        },
+        "portraitStatus": "generated_replacement_included"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-relay",
+          "title": {
+            "ru": "Сопоставление пломбы защитного реле",
+            "en": "Safety Relay Seal Comparison"
+          },
+          "primaryImage": "src/data/cases/case-033/evidence/case-033-ev-relay.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-033/evidence/case-033-ev-relay.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-033-ev-relay.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-033/evidence/case-033-ev-relay.webp",
+            "copyTo": "public/evidence/case-033-ev-relay.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-050",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-033/evidence/case-033-ev-relay.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-033/evidence/case-033-ev-relay.webp",
+              "caseRelativeSrc": "evidence/case-033-ev-relay.webp",
+              "installTo": "public/evidence/case-033-ev-relay.webp",
+              "legacyRuntimeUrl": "evidence/case-033-ev-relay.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "9d3cac65d73dd7b43e678e38c6fd0176d17ebea34e903d1a91e2d1afe7249790"
+            },
+            {
+              "assetId": "asset-051",
+              "role": "interactive_master_a",
+              "src": "src/data/cases/case-033/assets/interactive/ev-relay-master-a.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-033/assets/interactive/ev-relay-master-a.webp",
+              "caseRelativeSrc": "assets/interactive/ev-relay-master-a.webp",
+              "installTo": "src/data/cases/case-033/assets/interactive/ev-relay-master-a.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1400,
+              "height": 500,
+              "sha256": "626b5abf6904c7798d77e11893a3cdfa92278b2675e3bd07679a381433d1c367"
+            },
+            {
+              "assetId": "asset-052",
+              "role": "interactive_master_b",
+              "src": "src/data/cases/case-033/assets/interactive/ev-relay-master-b.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-033/assets/interactive/ev-relay-master-b.webp",
+              "caseRelativeSrc": "assets/interactive/ev-relay-master-b.webp",
+              "installTo": "src/data/cases/case-033/assets/interactive/ev-relay-master-b.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1400,
+              "height": 500,
+              "sha256": "054120299b5fc61277508ec282080b53023786d486a81e40769732ab749b3839"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 32,
+      "caseId": "case-034",
+      "title": {
+        "ru": "Серийные номера в пепле",
+        "en": "Serial Numbers in the Ashes"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Харитон Велижанин, 55 лет",
+          "en": "Khariton Velizhanin, age 55"
+        },
+        "portrait": null,
+        "portraitBinding": {
+          "mode": "retain_existing",
+          "targetField": "personImage",
+          "runtimeValue": "people/khariton.webp",
+          "existingFile": "public/people/khariton.webp"
+        },
+        "portraitStatus": "retain_existing_project_portrait"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-serials",
+          "title": {
+            "ru": "Очистка серийного номера от сажи",
+            "en": "Cleaning Soot from the Serial Number"
+          },
+          "primaryImage": "src/data/cases/case-034/evidence/case-034-ev-serials.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-034/evidence/case-034-ev-serials.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-034-ev-serials.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-034/evidence/case-034-ev-serials.webp",
+            "copyTo": "public/evidence/case-034-ev-serials.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-053",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-034/evidence/case-034-ev-serials.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-034/evidence/case-034-ev-serials.webp",
+              "caseRelativeSrc": "evidence/case-034-ev-serials.webp",
+              "installTo": "public/evidence/case-034-ev-serials.webp",
+              "legacyRuntimeUrl": "evidence/case-034-ev-serials.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "bc23134f16a591015a6591fca4aee3f012d56e7c6b8f5a6fb252e691680e0ca0"
+            },
+            {
+              "assetId": "asset-054",
+              "role": "interactive_scene",
+              "src": "src/data/cases/case-034/assets/interactive/ev-serials-scene.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-034/assets/interactive/ev-serials-scene.webp",
+              "caseRelativeSrc": "assets/interactive/ev-serials-scene.webp",
+              "installTo": "src/data/cases/case-034/assets/interactive/ev-serials-scene.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1600,
+              "height": 1000,
+              "sha256": "deb2e6dafc15be6fec546c9c07cfd344ead6c4c835ab62a2b09d41548a20a26e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 33,
+      "caseId": "case-035",
+      "title": {
+        "ru": "Следы шин в «Янтаре»",
+        "en": "Tire Tracks at the Amber"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Аркадий Егоров, 52 года",
+          "en": "Arkady Yegorov, age 52"
+        },
+        "portrait": {
+          "characterId": "arkady-egorov",
+          "role": "claimant_portrait",
+          "name": {
+            "ru": "Аркадий Егоров",
+            "en": "Arkady Yegorov, age 52"
+          },
+          "assetId": "asset-055",
+          "src": "src/data/cases/case-035/people/arkady-egorov.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-035/people/arkady-egorov.webp",
+          "caseRelativeSrc": "people/arkady-egorov.webp",
+          "installTo": "public/people/arkady-egorov.webp",
+          "legacyRuntimeUrl": "people/arkady-egorov.webp",
+          "format": "webp",
+          "width": 359,
+          "height": 359,
+          "sha256": "4447c18894ea448ba42e2ab982c3bc1460cf14752c66c331e16d29b7c6709495"
+        },
+        "portraitBinding": {
+          "mode": "replace",
+          "targetField": "personImage",
+          "runtimeValue": "people/arkady-egorov.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-035/people/arkady-egorov.webp",
+          "copyTo": "public/people/arkady-egorov.webp",
+          "replacesExistingValue": null
+        },
+        "portraitStatus": "generated_replacement_included"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-tyres",
+          "title": {
+            "ru": "Следы на паркете",
+            "en": "Tracks on the Parquet"
+          },
+          "primaryImage": "src/data/cases/case-035/evidence/case-035-ev-tyres.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-035/evidence/case-035-ev-tyres.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-035-ev-tyres.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-035/evidence/case-035-ev-tyres.webp",
+            "copyTo": "public/evidence/case-035-ev-tyres.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-056",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-035/evidence/case-035-ev-tyres.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-035/evidence/case-035-ev-tyres.webp",
+              "caseRelativeSrc": "evidence/case-035-ev-tyres.webp",
+              "installTo": "public/evidence/case-035-ev-tyres.webp",
+              "legacyRuntimeUrl": "evidence/case-035-ev-tyres.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "21be8595d06496a6c7bcb6032f888586a4e78525ada035878d2d866613c9f6e9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 34,
+      "caseId": "case-036",
+      "title": {
+        "ru": "Невозможная скорость",
+        "en": "The Impossible Speed"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Максим Ярцев, 41 год",
+          "en": "Maxim Yartsev, age 41"
+        },
+        "portrait": {
+          "characterId": "maxim-yartsev",
+          "role": "claimant_portrait",
+          "name": {
+            "ru": "Максим Ярцев",
+            "en": "Maxim Yartsev, age 41"
+          },
+          "assetId": "asset-057",
+          "src": "src/data/cases/case-036/people/maxim-yartsev.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-036/people/maxim-yartsev.webp",
+          "caseRelativeSrc": "people/maxim-yartsev.webp",
+          "installTo": "public/people/maxim-yartsev.webp",
+          "legacyRuntimeUrl": "people/maxim-yartsev.webp",
+          "format": "webp",
+          "width": 359,
+          "height": 359,
+          "sha256": "05024f12477f7dae98e70fbcb476ea01a46414dd7b35a1b0d3d0029aa946987e"
+        },
+        "portraitBinding": {
+          "mode": "replace",
+          "targetField": "personImage",
+          "runtimeValue": "people/maxim-yartsev.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-036/people/maxim-yartsev.webp",
+          "copyTo": "public/people/maxim-yartsev.webp",
+          "replacesExistingValue": null
+        },
+        "portraitStatus": "generated_replacement_included"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-camera",
+          "title": {
+            "ru": "Камера зарядной площадки",
+            "en": "Charging Area Camera"
+          },
+          "primaryImage": "src/data/cases/case-036/evidence/case-036-ev-camera.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-036/evidence/case-036-ev-camera.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-036-ev-camera.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-036/evidence/case-036-ev-camera.webp",
+            "copyTo": "public/evidence/case-036-ev-camera.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-058",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-036/evidence/case-036-ev-camera.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-036/evidence/case-036-ev-camera.webp",
+              "caseRelativeSrc": "evidence/case-036-ev-camera.webp",
+              "installTo": "public/evidence/case-036-ev-camera.webp",
+              "legacyRuntimeUrl": "evidence/case-036-ev-camera.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "10069e0c91f781425ee9a40c97d6ebe9ebfca058085a398a5b50cdcb37d4f191"
+            }
+          ]
+        },
+        {
+          "evidenceId": "ev-melt",
+          "title": {
+            "ru": "Тепловая карта зарядного контура",
+            "en": "Charging Circuit Thermal Map"
+          },
+          "primaryImage": "src/data/cases/case-036/assets/interactive/ev-melt-scene.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-036/assets/interactive/ev-melt-scene.webp",
+          "legacyImageBinding": null,
+          "assets": [
+            {
+              "assetId": "asset-059",
+              "role": "interactive_scene",
+              "src": "src/data/cases/case-036/assets/interactive/ev-melt-scene.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-036/assets/interactive/ev-melt-scene.webp",
+              "caseRelativeSrc": "assets/interactive/ev-melt-scene.webp",
+              "installTo": "src/data/cases/case-036/assets/interactive/ev-melt-scene.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1600,
+              "height": 1000,
+              "sha256": "ef4b1d9c2f7d34eb139ae80f2d597ffd2dadf9343dffabd0e2f403c8df91676a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 35,
+      "caseId": "case-037",
+      "title": {
+        "ru": "Три силуэта в контейнере",
+        "en": "Three Silhouettes in a Container"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Денис Корин, 55 лет",
+          "en": "Denis Korin, age 55"
+        },
+        "portrait": {
+          "characterId": "denis-korin",
+          "role": "claimant_portrait",
+          "name": {
+            "ru": "Денис Корин",
+            "en": "Denis Korin, age 55"
+          },
+          "assetId": "asset-060",
+          "src": "src/data/cases/case-037/people/denis-korin.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-037/people/denis-korin.webp",
+          "caseRelativeSrc": "people/denis-korin.webp",
+          "installTo": "public/people/denis-korin.webp",
+          "legacyRuntimeUrl": "people/denis-korin.webp",
+          "format": "webp",
+          "width": 359,
+          "height": 359,
+          "sha256": "26cda8b193c8c50c1466c8022775a94c4a3c27431dead0e39d9a036daad01c6b"
+        },
+        "portraitBinding": {
+          "mode": "replace",
+          "targetField": "personImage",
+          "runtimeValue": "people/denis-korin.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-037/people/denis-korin.webp",
+          "copyTo": "public/people/denis-korin.webp",
+          "replacesExistingValue": null
+        },
+        "portraitStatus": "generated_replacement_included"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-backup",
+          "title": {
+            "ru": "Проверка времени резервной записи",
+            "en": "Backup Footage Time Check"
+          },
+          "primaryImage": "src/data/cases/case-037/assets/interactive/ev-backup-scene.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-037/assets/interactive/ev-backup-scene.webp",
+          "legacyImageBinding": null,
+          "assets": [
+            {
+              "assetId": "asset-062",
+              "role": "interactive_scene",
+              "src": "src/data/cases/case-037/assets/interactive/ev-backup-scene.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-037/assets/interactive/ev-backup-scene.webp",
+              "caseRelativeSrc": "assets/interactive/ev-backup-scene.webp",
+              "installTo": "src/data/cases/case-037/assets/interactive/ev-backup-scene.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1600,
+              "height": 1000,
+              "sha256": "e4e09daf6516dcfc64b7078460731b9fbfd99e0eec2ed5a96081be5052ed0b2b"
+            }
+          ]
+        },
+        {
+          "evidenceId": "ev-xray",
+          "title": {
+            "ru": "Таможенный рентген",
+            "en": "Customs X-Ray"
+          },
+          "primaryImage": "src/data/cases/case-037/evidence/case-037-ev-xray.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-037/evidence/case-037-ev-xray.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-037-ev-xray.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-037/evidence/case-037-ev-xray.webp",
+            "copyTo": "public/evidence/case-037-ev-xray.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-061",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-037/evidence/case-037-ev-xray.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-037/evidence/case-037-ev-xray.webp",
+              "caseRelativeSrc": "evidence/case-037-ev-xray.webp",
+              "installTo": "public/evidence/case-037-ev-xray.webp",
+              "legacyRuntimeUrl": "evidence/case-037-ev-xray.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "fd19fd2d3e635d0013819e9d0236781f4ad14e9775345e3977393ea8c78b08f3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 36,
+      "caseId": "case-038",
+      "title": {
+        "ru": "Лаборатория №394",
+        "en": "Laboratory 394"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Антон Ланской, 46 лет",
+          "en": "Anton Lanskoy, age 46"
+        },
+        "portrait": {
+          "characterId": "anton-lanskoy",
+          "role": "claimant_portrait",
+          "name": {
+            "ru": "Антон Ланской",
+            "en": "Anton Lanskoy, age 46"
+          },
+          "assetId": "asset-063",
+          "src": "src/data/cases/case-038/people/anton-lanskoy.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-038/people/anton-lanskoy.webp",
+          "caseRelativeSrc": "people/anton-lanskoy.webp",
+          "installTo": "public/people/anton-lanskoy.webp",
+          "legacyRuntimeUrl": "people/anton-lanskoy.webp",
+          "format": "webp",
+          "width": 359,
+          "height": 359,
+          "sha256": "c88df09f721e194b87986afb6317511a987e5b4139b98ae64df6bc8e6577e1c8"
+        },
+        "portraitBinding": {
+          "mode": "replace",
+          "targetField": "personImage",
+          "runtimeValue": "people/anton-lanskoy.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-038/people/anton-lanskoy.webp",
+          "copyTo": "public/people/anton-lanskoy.webp",
+          "replacesExistingValue": null
+        },
+        "portraitStatus": "generated_replacement_included"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-camera",
+          "title": {
+            "ru": "Камера лаборатории",
+            "en": "Laboratory Camera"
+          },
+          "primaryImage": "src/data/cases/case-038/evidence/case-038-ev-camera.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-038/evidence/case-038-ev-camera.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-038-ev-camera.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-038/evidence/case-038-ev-camera.webp",
+            "copyTo": "public/evidence/case-038-ev-camera.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-064",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-038/evidence/case-038-ev-camera.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-038/evidence/case-038-ev-camera.webp",
+              "caseRelativeSrc": "evidence/case-038-ev-camera.webp",
+              "installTo": "public/evidence/case-038-ev-camera.webp",
+              "legacyRuntimeUrl": "evidence/case-038-ev-camera.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "92514b5c011bbf6083ee8332543b6b2464f5be2dc57a3f416b4aef764a75cd72"
+            }
+          ]
+        },
+        {
+          "evidenceId": "ev-analysis",
+          "title": {
+            "ru": "Просветка этикетки реагента",
+            "en": "Reagent Label Backlight Examination"
+          },
+          "primaryImage": "src/data/cases/case-038/assets/interactive/ev-analysis-base.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-038/assets/interactive/ev-analysis-base.webp",
+          "legacyImageBinding": null,
+          "assets": [
+            {
+              "assetId": "asset-065",
+              "role": "interactive_base",
+              "src": "src/data/cases/case-038/assets/interactive/ev-analysis-base.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-038/assets/interactive/ev-analysis-base.webp",
+              "caseRelativeSrc": "assets/interactive/ev-analysis-base.webp",
+              "installTo": "src/data/cases/case-038/assets/interactive/ev-analysis-base.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1600,
+              "height": 1100,
+              "sha256": "5ae4b82fe00a60e11c26195d94ec3982a3b7b1e2dd0e85bb6e686e65734329d5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 37,
+      "caseId": "case-039",
+      "title": {
+        "ru": "Робот, разобравший солнце",
+        "en": "The Robot That Dismantled the Sun"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Никита Воронов, 38 лет",
+          "en": "Nikita Voronov, age 38"
+        },
+        "portrait": {
+          "characterId": "nikita-voronov",
+          "role": "claimant_portrait",
+          "name": {
+            "ru": "Никита Воронов",
+            "en": "Nikita Voronov, age 38"
+          },
+          "assetId": "asset-066",
+          "src": "src/data/cases/case-039/people/nikita-voronov.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-039/people/nikita-voronov.webp",
+          "caseRelativeSrc": "people/nikita-voronov.webp",
+          "installTo": "public/people/nikita-voronov.webp",
+          "legacyRuntimeUrl": "people/nikita-voronov.webp",
+          "format": "webp",
+          "width": 359,
+          "height": 359,
+          "sha256": "a9620530c2789e6b82a55e718f0f09969e37863a2789d70300ba2c291df34bb3"
+        },
+        "portraitBinding": {
+          "mode": "replace",
+          "targetField": "personImage",
+          "runtimeValue": "people/nikita-voronov.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-039/people/nikita-voronov.webp",
+          "copyTo": "public/people/nikita-voronov.webp",
+          "replacesExistingValue": null
+        },
+        "portraitStatus": "generated_replacement_included"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-cuts",
+          "title": {
+            "ru": "Экспертиза креплений",
+            "en": "Mounting Examination"
+          },
+          "primaryImage": "src/data/cases/case-039/evidence/case-039-ev-panels.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-039/evidence/case-039-ev-panels.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-039-ev-panels.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-039/evidence/case-039-ev-panels.webp",
+            "copyTo": "public/evidence/case-039-ev-panels.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-067",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-039/evidence/case-039-ev-panels.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-039/evidence/case-039-ev-panels.webp",
+              "caseRelativeSrc": "evidence/case-039-ev-panels.webp",
+              "installTo": "public/evidence/case-039-ev-panels.webp",
+              "legacyRuntimeUrl": "evidence/case-039-ev-panels.webp",
+              "format": "webp",
+              "width": 434,
+              "height": 326,
+              "sha256": "f1b8d8a6362f8bb1b0cbf8246f544dcf676e917d1f0560af609d1779b2f61ec0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 38,
+      "caseId": "case-040",
+      "title": {
+        "ru": "Пожар на «Лунном склоне»",
+        "en": "The Fire at Moon Slope"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Мирон Вейл, 52 года",
+          "en": "Miron Veil, age 52"
+        },
+        "portrait": {
+          "characterId": "miron-veil-grounded",
+          "role": "claimant_portrait",
+          "name": {
+            "ru": "Мирон Вейл",
+            "en": "Miron Veil, age 52"
+          },
+          "assetId": "asset-068",
+          "src": "src/data/cases/case-040/people/miron-veil-grounded.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-040/people/miron-veil-grounded.webp",
+          "caseRelativeSrc": "people/miron-veil-grounded.webp",
+          "installTo": "public/people/miron-veil-grounded.webp",
+          "legacyRuntimeUrl": "people/miron-veil-grounded.webp",
+          "format": "webp",
+          "width": 359,
+          "height": 359,
+          "sha256": "fd99b21412ac2935f4c2a5ada255e4ba33342f2dbc28e24866bc980b661d6914"
+        },
+        "portraitBinding": {
+          "mode": "replace",
+          "targetField": "personImage",
+          "runtimeValue": "people/miron-veil-grounded.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-040/people/miron-veil-grounded.webp",
+          "copyTo": "public/people/miron-veil-grounded.webp",
+          "replacesExistingValue": "people/miron-veil.webp"
+        },
+        "portraitStatus": "generated_replacement_included"
+      },
+      "caseSceneAssets": [
+        {
+          "assetId": "asset-069",
+          "role": "case_scene",
+          "src": "src/data/cases/case-040/evidence/case-040-ev-farm.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-040/evidence/case-040-ev-farm.webp",
+          "caseRelativeSrc": "evidence/case-040-ev-farm.webp",
+          "installTo": "public/evidence/case-040-ev-farm.webp",
+          "legacyRuntimeUrl": "evidence/case-040-ev-farm.webp",
+          "format": "webp",
+          "width": 1448,
+          "height": 1086,
+          "sha256": "84a63ce9b231ab6c7a29d89f52db44d71cba3d92ff9b7badf742736b815d5744"
+        }
+      ],
+      "evidence": [
+        {
+          "evidenceId": "ev-photo",
+          "title": {
+            "ru": "Сопоставление фитильной ленты",
+            "en": "Fuse-Tape Comparison"
+          },
+          "primaryImage": "src/data/cases/case-040/assets/interactive/ev-photo-master-a.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-040/assets/interactive/ev-photo-master-a.webp",
+          "legacyImageBinding": null,
+          "assets": [
+            {
+              "assetId": "asset-071",
+              "role": "interactive_master_a",
+              "src": "src/data/cases/case-040/assets/interactive/ev-photo-master-a.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-040/assets/interactive/ev-photo-master-a.webp",
+              "caseRelativeSrc": "assets/interactive/ev-photo-master-a.webp",
+              "installTo": "src/data/cases/case-040/assets/interactive/ev-photo-master-a.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1400,
+              "height": 500,
+              "sha256": "f734b8b42d61b59d399d0c82a7552c891733d157e7984cfa58444a989dce88cc"
+            }
+          ]
+        },
+        {
+          "evidenceId": "ev-camera",
+          "title": {
+            "ru": "Камера горной дороги",
+            "en": "Mountain Road Camera"
+          },
+          "primaryImage": "src/data/cases/case-040/evidence/case-040-ev-camera.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-040/evidence/case-040-ev-camera.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-040-ev-camera.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-040/evidence/case-040-ev-camera.webp",
+            "copyTo": "public/evidence/case-040-ev-camera.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-070",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-040/evidence/case-040-ev-camera.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-040/evidence/case-040-ev-camera.webp",
+              "caseRelativeSrc": "evidence/case-040-ev-camera.webp",
+              "installTo": "public/evidence/case-040-ev-camera.webp",
+              "legacyRuntimeUrl": "evidence/case-040-ev-camera.webp",
+              "format": "webp",
+              "width": 1448,
+              "height": 1086,
+              "sha256": "5b99532ee364cb5304452aa121f4bd35179601d919ef48db411ad4f00caa04a7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 39,
+      "caseId": "case-041",
+      "title": {
+        "ru": "Перехватчик в ледяном каньоне",
+        "en": "The Interceptor in the Ice Canyon"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Элиан Корд, 27 лет",
+          "en": "Elian Kord, age 27"
+        },
+        "portrait": {
+          "characterId": "elian-kord-grounded",
+          "role": "claimant_portrait",
+          "name": {
+            "ru": "Элиан Корд",
+            "en": "Elian Kord, age 27"
+          },
+          "assetId": "asset-072",
+          "src": "src/data/cases/case-041/people/elian-kord-grounded.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-041/people/elian-kord-grounded.webp",
+          "caseRelativeSrc": "people/elian-kord-grounded.webp",
+          "installTo": "public/people/elian-kord-grounded.webp",
+          "legacyRuntimeUrl": "people/elian-kord-grounded.webp",
+          "format": "webp",
+          "width": 359,
+          "height": 359,
+          "sha256": "e2dc5867a22514ebf0e279d8456d9e84181e57687d769e28243df9e3df1d229d"
+        },
+        "portraitBinding": {
+          "mode": "replace",
+          "targetField": "personImage",
+          "runtimeValue": "people/elian-kord-grounded.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-041/people/elian-kord-grounded.webp",
+          "copyTo": "public/people/elian-kord-grounded.webp",
+          "replacesExistingValue": "people/elian-kord.webp"
+        },
+        "portraitStatus": "generated_replacement_included"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-crash",
+          "title": {
+            "ru": "Фото обломков",
+            "en": "Wreckage Photograph"
+          },
+          "primaryImage": "src/data/cases/case-041/evidence/case-041-ev-crash.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-041/evidence/case-041-ev-crash.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-041-ev-crash.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-041/evidence/case-041-ev-crash.webp",
+            "copyTo": "public/evidence/case-041-ev-crash.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-073",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-041/evidence/case-041-ev-crash.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-041/evidence/case-041-ev-crash.webp",
+              "caseRelativeSrc": "evidence/case-041-ev-crash.webp",
+              "installTo": "public/evidence/case-041-ev-crash.webp",
+              "legacyRuntimeUrl": "evidence/case-041-ev-crash.webp",
+              "format": "webp",
+              "width": 1448,
+              "height": 1086,
+              "sha256": "3c4c5c6273990e19a7bb19f16f1b97f0ab561569e0fa125324a7f080a33ccde3"
+            }
+          ]
+        },
+        {
+          "evidenceId": "ev-manifest",
+          "title": {
+            "ru": "Экспертиза грузовой ведомости",
+            "en": "Cargo Manifest Examination"
+          },
+          "primaryImage": "src/data/cases/case-041/assets/interactive/ev-manifest-base.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-041/assets/interactive/ev-manifest-base.webp",
+          "legacyImageBinding": null,
+          "assets": [
+            {
+              "assetId": "asset-074",
+              "role": "interactive_base",
+              "src": "src/data/cases/case-041/assets/interactive/ev-manifest-base.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-041/assets/interactive/ev-manifest-base.webp",
+              "caseRelativeSrc": "assets/interactive/ev-manifest-base.webp",
+              "installTo": "src/data/cases/case-041/assets/interactive/ev-manifest-base.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1600,
+              "height": 1100,
+              "sha256": "b0383b7079fd04132a99e43bf3f2e900200df0328c1dc1ded82088904176b8cb"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 40,
+      "caseId": "case-042",
+      "title": {
+        "ru": "Клинок, проданный до кражи",
+        "en": "The Blade Sold Before the Theft"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Селена Орвик, 34 года",
+          "en": "Selena Orvik, age 34"
+        },
+        "portrait": {
+          "characterId": "selena-orvik-grounded",
+          "role": "claimant_portrait",
+          "name": {
+            "ru": "Селена Орвик",
+            "en": "Selena Orvik, age 34"
+          },
+          "assetId": "asset-075",
+          "src": "src/data/cases/case-042/people/selena-orvik-grounded.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-042/people/selena-orvik-grounded.webp",
+          "caseRelativeSrc": "people/selena-orvik-grounded.webp",
+          "installTo": "public/people/selena-orvik-grounded.webp",
+          "legacyRuntimeUrl": "people/selena-orvik-grounded.webp",
+          "format": "webp",
+          "width": 359,
+          "height": 359,
+          "sha256": "35aed9113d5c140cc81a8a873b32137d72b51d034a25a54a8ba2397057064767"
+        },
+        "portraitBinding": {
+          "mode": "replace",
+          "targetField": "personImage",
+          "runtimeValue": "people/selena-orvik-grounded.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-042/people/selena-orvik-grounded.webp",
+          "copyTo": "public/people/selena-orvik-grounded.webp",
+          "replacesExistingValue": "people/selena-orvik.webp"
+        },
+        "portraitStatus": "generated_replacement_included"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-display",
+          "title": {
+            "ru": "Фото витрины",
+            "en": "Display Case Photograph"
+          },
+          "primaryImage": "src/data/cases/case-042/evidence/case-042-ev-display.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-042/evidence/case-042-ev-display.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-042-ev-display.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-042/evidence/case-042-ev-display.webp",
+            "copyTo": "public/evidence/case-042-ev-display.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-076",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-042/evidence/case-042-ev-display.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-042/evidence/case-042-ev-display.webp",
+              "caseRelativeSrc": "evidence/case-042-ev-display.webp",
+              "installTo": "public/evidence/case-042-ev-display.webp",
+              "legacyRuntimeUrl": "evidence/case-042-ev-display.webp",
+              "format": "webp",
+              "width": 1448,
+              "height": 1086,
+              "sha256": "347b22b1d936be7eb315c72530662108ee887c8e0e8e8a593d0b6529a0fdaa8d"
+            }
+          ]
+        },
+        {
+          "evidenceId": "ev-courier",
+          "title": {
+            "ru": "Сопоставление контрольного ярлыка футляра",
+            "en": "Case Security-Tag Comparison"
+          },
+          "primaryImage": "src/data/cases/case-042/assets/interactive/ev-courier-master-a.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-042/assets/interactive/ev-courier-master-a.webp",
+          "legacyImageBinding": null,
+          "assets": [
+            {
+              "assetId": "asset-077",
+              "role": "interactive_master_a",
+              "src": "src/data/cases/case-042/assets/interactive/ev-courier-master-a.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-042/assets/interactive/ev-courier-master-a.webp",
+              "caseRelativeSrc": "assets/interactive/ev-courier-master-a.webp",
+              "installTo": "src/data/cases/case-042/assets/interactive/ev-courier-master-a.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1400,
+              "height": 500,
+              "sha256": "54307778e16f31b65c89237aee9544df562c5bd4d3b27118e0cb032a5882dead"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 41,
+      "caseId": "case-043",
+      "title": {
+        "ru": "Стажёр, который ушёл сам",
+        "en": "The Trainee Who Left Voluntarily"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Илар Роун, 61 год",
+          "en": "Ilar Roun, age 61"
+        },
+        "portrait": {
+          "characterId": "ilar-roun-grounded",
+          "role": "claimant_portrait",
+          "name": {
+            "ru": "Илар Роун",
+            "en": "Ilar Roun, age 61"
+          },
+          "assetId": "asset-078",
+          "src": "src/data/cases/case-043/people/ilar-roun-grounded.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-043/people/ilar-roun-grounded.webp",
+          "caseRelativeSrc": "people/ilar-roun-grounded.webp",
+          "installTo": "public/people/ilar-roun-grounded.webp",
+          "legacyRuntimeUrl": "people/ilar-roun-grounded.webp",
+          "format": "webp",
+          "width": 359,
+          "height": 359,
+          "sha256": "451b40eec93e27a3435bc31268f5e00f16969a1c3fd43db1b724db4e27148bb4"
+        },
+        "portraitBinding": {
+          "mode": "replace",
+          "targetField": "personImage",
+          "runtimeValue": "people/ilar-roun-grounded.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-043/people/ilar-roun-grounded.webp",
+          "copyTo": "public/people/ilar-roun-grounded.webp",
+          "replacesExistingValue": "people/ilar-roun.webp"
+        },
+        "portraitStatus": "generated_replacement_included"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "cache-photo",
+          "title": {
+            "ru": "Тайник у станции",
+            "en": "Cache Near the Station"
+          },
+          "primaryImage": "src/data/cases/case-043/evidence/case-043-cache-photo.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-043/evidence/case-043-cache-photo.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-043-cache-photo.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-043/evidence/case-043-cache-photo.webp",
+            "copyTo": "public/evidence/case-043-cache-photo.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-079",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-043/evidence/case-043-cache-photo.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-043/evidence/case-043-cache-photo.webp",
+              "caseRelativeSrc": "evidence/case-043-cache-photo.webp",
+              "installTo": "public/evidence/case-043-cache-photo.webp",
+              "legacyRuntimeUrl": "evidence/case-043-cache-photo.webp",
+              "format": "webp",
+              "width": 1448,
+              "height": 1086,
+              "sha256": "d5066d452f2d0b46db301c2d67372efa0b29a407e2b7aee3e4c6056d3bc9f823"
+            }
+          ]
+        },
+        {
+          "evidenceId": "protocol",
+          "title": {
+            "ru": "Экспертиза экзаменационного протокола",
+            "en": "Examination Record Analysis"
+          },
+          "primaryImage": "src/data/cases/case-043/assets/interactive/protocol-base.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-043/assets/interactive/protocol-base.webp",
+          "legacyImageBinding": null,
+          "assets": [
+            {
+              "assetId": "asset-080",
+              "role": "interactive_base",
+              "src": "src/data/cases/case-043/assets/interactive/protocol-base.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-043/assets/interactive/protocol-base.webp",
+              "caseRelativeSrc": "assets/interactive/protocol-base.webp",
+              "installTo": "src/data/cases/case-043/assets/interactive/protocol-base.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1600,
+              "height": 1100,
+              "sha256": "300c7d4dfacb09f1eff06750fd9ea83761d5dcdbfc088e511acf93b5cbf3fa5d"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 42,
+      "caseId": "case-044",
+      "title": {
+        "ru": "Слишком удобная серая лента",
+        "en": "The Gray Tape That Was Too Convenient"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Эвелина Морн, 49 лет",
+          "en": "Evelina Morn, age 49"
+        },
+        "portrait": {
+          "characterId": "evelina-morn-grounded",
+          "role": "claimant_portrait",
+          "name": {
+            "ru": "Эвелина Морн",
+            "en": "Evelina Morn, age 49"
+          },
+          "assetId": "asset-081",
+          "src": "src/data/cases/case-044/people/evelina-morn-grounded.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-044/people/evelina-morn-grounded.webp",
+          "caseRelativeSrc": "people/evelina-morn-grounded.webp",
+          "installTo": "public/people/evelina-morn-grounded.webp",
+          "legacyRuntimeUrl": "people/evelina-morn-grounded.webp",
+          "format": "webp",
+          "width": 359,
+          "height": 359,
+          "sha256": "a28a5ffa110dea9233789ac62b818f0bcfec5e40edacde2012c0100588a18dc7"
+        },
+        "portraitBinding": {
+          "mode": "replace",
+          "targetField": "personImage",
+          "runtimeValue": "people/evelina-morn-grounded.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-044/people/evelina-morn-grounded.webp",
+          "copyTo": "public/people/evelina-morn-grounded.webp",
+          "replacesExistingValue": "people/evelina-morn.webp"
+        },
+        "portraitStatus": "generated_replacement_included"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "photo-44",
+          "title": {
+            "ru": "Тепловой осмотр теплицы",
+            "en": "Greenhouse Thermal Inspection"
+          },
+          "primaryImage": "src/data/cases/case-044/evidence/case-044-photo-44.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-044/evidence/case-044-photo-44.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-044-photo-44.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-044/evidence/case-044-photo-44.webp",
+            "copyTo": "public/evidence/case-044-photo-44.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-082",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-044/evidence/case-044-photo-44.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-044/evidence/case-044-photo-44.webp",
+              "caseRelativeSrc": "evidence/case-044-photo-44.webp",
+              "installTo": "public/evidence/case-044-photo-44.webp",
+              "legacyRuntimeUrl": "evidence/case-044-photo-44.webp",
+              "format": "webp",
+              "width": 1448,
+              "height": 1086,
+              "sha256": "4f76f0aeec198210c6b2a18fd54730ae526aae87d5de8d8bfbb0c54b451bb29e"
+            },
+            {
+              "assetId": "asset-083",
+              "role": "interactive_scene",
+              "src": "src/data/cases/case-044/assets/interactive/photo-44-scene.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-044/assets/interactive/photo-44-scene.webp",
+              "caseRelativeSrc": "assets/interactive/photo-44-scene.webp",
+              "installTo": "src/data/cases/case-044/assets/interactive/photo-44-scene.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1600,
+              "height": 1000,
+              "sha256": "df96e96a2509f99e57958e5b054cdc406e29fed611c3ddea749a6644be3f295c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 43,
+      "caseId": "case-045",
+      "title": {
+        "ru": "Кубок через верхний люк",
+        "en": "The Cup Through the Roof Hatch"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Бруно Стерн, 57 лет",
+          "en": "Bruno Stern, age 57"
+        },
+        "portrait": {
+          "characterId": "bruno-stern-grounded",
+          "role": "claimant_portrait",
+          "name": {
+            "ru": "Бруно Стерн",
+            "en": "Bruno Stern, age 57"
+          },
+          "assetId": "asset-084",
+          "src": "src/data/cases/case-045/people/bruno-stern-grounded.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-045/people/bruno-stern-grounded.webp",
+          "caseRelativeSrc": "people/bruno-stern-grounded.webp",
+          "installTo": "public/people/bruno-stern-grounded.webp",
+          "legacyRuntimeUrl": "people/bruno-stern-grounded.webp",
+          "format": "webp",
+          "width": 359,
+          "height": 359,
+          "sha256": "1e4bf3013c824f346499d872a71d48c50d900b8c8ad39aed37369609920d26c2"
+        },
+        "portraitBinding": {
+          "mode": "replace",
+          "targetField": "personImage",
+          "runtimeValue": "people/bruno-stern-grounded.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-045/people/bruno-stern-grounded.webp",
+          "copyTo": "public/people/bruno-stern-grounded.webp",
+          "replacesExistingValue": "people/bruno-stern.webp"
+        },
+        "portraitStatus": "generated_replacement_included"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "photo-45",
+          "title": {
+            "ru": "След на верхней петле",
+            "en": "Trace on the Upper Hinge"
+          },
+          "primaryImage": "src/data/cases/case-045/evidence/case-045-photo-45.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-045/evidence/case-045-photo-45.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-045-photo-45.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-045/evidence/case-045-photo-45.webp",
+            "copyTo": "public/evidence/case-045-photo-45.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-085",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-045/evidence/case-045-photo-45.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-045/evidence/case-045-photo-45.webp",
+              "caseRelativeSrc": "evidence/case-045-photo-45.webp",
+              "installTo": "public/evidence/case-045-photo-45.webp",
+              "legacyRuntimeUrl": "evidence/case-045-photo-45.webp",
+              "format": "webp",
+              "width": 1448,
+              "height": 1086,
+              "sha256": "db502c1fc2da9233bd1ba17df566b765ee71710c76cfafa97a88d4d717d17de1"
+            }
+          ]
+        },
+        {
+          "evidenceId": "camera-45",
+          "title": {
+            "ru": "Камера верхней галереи",
+            "en": "Upper Gallery Camera"
+          },
+          "primaryImage": "src/data/cases/case-045/evidence/case-045-camera-45.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-045/evidence/case-045-camera-45.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-045-camera-45.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-045/evidence/case-045-camera-45.webp",
+            "copyTo": "public/evidence/case-045-camera-45.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-086",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-045/evidence/case-045-camera-45.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-045/evidence/case-045-camera-45.webp",
+              "caseRelativeSrc": "evidence/case-045-camera-45.webp",
+              "installTo": "public/evidence/case-045-camera-45.webp",
+              "legacyRuntimeUrl": "evidence/case-045-camera-45.webp",
+              "format": "webp",
+              "width": 1448,
+              "height": 1086,
+              "sha256": "28caa39d97156dd06a3984788352fed8c171ffe7652a238bb26da9354f39e041"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 44,
+      "caseId": "case-046",
+      "title": {
+        "ru": "Падение, которого не было",
+        "en": "The Fall That Never Happened"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Ника Рейн, 18 лет",
+          "en": "Nika Rein, age 18"
+        },
+        "portrait": {
+          "characterId": "nika-rein-grounded",
+          "role": "claimant_portrait",
+          "name": {
+            "ru": "Ника Рейн",
+            "en": "Nika Rein, age 18"
+          },
+          "assetId": "asset-087",
+          "src": "src/data/cases/case-046/people/nika-rein-grounded.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-046/people/nika-rein-grounded.webp",
+          "caseRelativeSrc": "people/nika-rein-grounded.webp",
+          "installTo": "public/people/nika-rein-grounded.webp",
+          "legacyRuntimeUrl": "people/nika-rein-grounded.webp",
+          "format": "webp",
+          "width": 359,
+          "height": 359,
+          "sha256": "287769e26a4e2df7703764ad45ba2d9aa51318c58c761147eb470cdb158faf39"
+        },
+        "portraitBinding": {
+          "mode": "replace",
+          "targetField": "personImage",
+          "runtimeValue": "people/nika-rein-grounded.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-046/people/nika-rein-grounded.webp",
+          "copyTo": "public/people/nika-rein-grounded.webp",
+          "replacesExistingValue": "people/nika-rein.webp"
+        },
+        "portraitStatus": "generated_replacement_included"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "photo-46",
+          "title": {
+            "ru": "Сопоставление пломбы страховочной линии",
+            "en": "Safety-Line Seal Comparison"
+          },
+          "primaryImage": "src/data/cases/case-046/evidence/case-046-photo-46.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-046/evidence/case-046-photo-46.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-046-photo-46.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-046/evidence/case-046-photo-46.webp",
+            "copyTo": "public/evidence/case-046-photo-46.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-088",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-046/evidence/case-046-photo-46.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-046/evidence/case-046-photo-46.webp",
+              "caseRelativeSrc": "evidence/case-046-photo-46.webp",
+              "installTo": "public/evidence/case-046-photo-46.webp",
+              "legacyRuntimeUrl": "evidence/case-046-photo-46.webp",
+              "format": "webp",
+              "width": 1448,
+              "height": 1086,
+              "sha256": "3b219c0c37d0f509564ba4002e28b0245472e85e6146abdb15299038d048965c"
+            },
+            {
+              "assetId": "asset-089",
+              "role": "interactive_master_a",
+              "src": "src/data/cases/case-046/assets/interactive/photo-46-master-a.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-046/assets/interactive/photo-46-master-a.webp",
+              "caseRelativeSrc": "assets/interactive/photo-46-master-a.webp",
+              "installTo": "src/data/cases/case-046/assets/interactive/photo-46-master-a.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1400,
+              "height": 500,
+              "sha256": "a7e320a2951416f8ba72d590344f4b6b866b02c01b944c8a29aa63ba5b1d34cf"
+            },
+            {
+              "assetId": "asset-090",
+              "role": "interactive_master_b",
+              "src": "src/data/cases/case-046/assets/interactive/photo-46-master-b.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-046/assets/interactive/photo-46-master-b.webp",
+              "caseRelativeSrc": "assets/interactive/photo-46-master-b.webp",
+              "installTo": "src/data/cases/case-046/assets/interactive/photo-46-master-b.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1400,
+              "height": 500,
+              "sha256": "9a8f2484fbe909bd672531ba2e5e879aa2e138caafbea793231dfe454dbeb879"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 45,
+      "caseId": "case-047",
+      "title": {
+        "ru": "Ночной свет в общежитии",
+        "en": "The Dormitory Blackout"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Аделия Варн, 16 лет",
+          "en": "Adelia Varn, age 16"
+        },
+        "portrait": {
+          "characterId": "adelia-varn",
+          "role": "claimant_portrait",
+          "name": {
+            "ru": "Аделия Варн",
+            "en": "Adelia Varn, age 16"
+          },
+          "assetId": "asset-091",
+          "src": "src/data/cases/case-047/people/adelia-varn.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-047/people/adelia-varn.webp",
+          "caseRelativeSrc": "people/adelia-varn.webp",
+          "installTo": "public/people/adelia-varn.webp",
+          "legacyRuntimeUrl": "people/adelia-varn.webp",
+          "format": "webp",
+          "width": 359,
+          "height": 359,
+          "sha256": "122191ce7833ac4bf11c3fe181f2b44f23104ebd7add0f18ce9f1e6e6c1f1edb"
+        },
+        "portraitBinding": {
+          "mode": "replace",
+          "targetField": "personImage",
+          "runtimeValue": "people/adelia-varn.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-047/people/adelia-varn.webp",
+          "copyTo": "public/people/adelia-varn.webp",
+          "replacesExistingValue": null
+        },
+        "portraitStatus": "generated_replacement_included"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "camera-47",
+          "title": {
+            "ru": "Камера западного карниза",
+            "en": "West Ledge Camera"
+          },
+          "primaryImage": "src/data/cases/case-047/evidence/case-047-camera-47.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-047/evidence/case-047-camera-47.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-047-camera-47.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-047/evidence/case-047-camera-47.webp",
+            "copyTo": "public/evidence/case-047-camera-47.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-092",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-047/evidence/case-047-camera-47.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-047/evidence/case-047-camera-47.webp",
+              "caseRelativeSrc": "evidence/case-047-camera-47.webp",
+              "installTo": "public/evidence/case-047-camera-47.webp",
+              "legacyRuntimeUrl": "evidence/case-047-camera-47.webp",
+              "format": "webp",
+              "width": 1448,
+              "height": 1086,
+              "sha256": "16fa92276c3a98c506e42c57fd8bf9f38bdd86a9e370120c6dabd67a3ca951c4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 46,
+      "caseId": "case-048",
+      "title": {
+        "ru": "Разгром после закрытия",
+        "en": "The Break-In After Closing"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Марко Лин, 44 года",
+          "en": "Marko Lin, age 44"
+        },
+        "portrait": {
+          "characterId": "marko-lin-grounded",
+          "role": "claimant_portrait",
+          "name": {
+            "ru": "Марко Лин",
+            "en": "Marko Lin, age 44"
+          },
+          "assetId": "asset-093",
+          "src": "src/data/cases/case-048/people/marko-lin-grounded.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-048/people/marko-lin-grounded.webp",
+          "caseRelativeSrc": "people/marko-lin-grounded.webp",
+          "installTo": "public/people/marko-lin-grounded.webp",
+          "legacyRuntimeUrl": "people/marko-lin-grounded.webp",
+          "format": "webp",
+          "width": 359,
+          "height": 359,
+          "sha256": "e636a0e6756628a7efd48a545359f19fdc53818dd2fa9f7d4b3264a92b7bdcf2"
+        },
+        "portraitBinding": {
+          "mode": "replace",
+          "targetField": "personImage",
+          "runtimeValue": "people/marko-lin-grounded.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-048/people/marko-lin-grounded.webp",
+          "copyTo": "public/people/marko-lin-grounded.webp",
+          "replacesExistingValue": "people/marko-lin.webp"
+        },
+        "portraitStatus": "generated_replacement_included"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "photo-48",
+          "title": {
+            "ru": "Слой старого износа",
+            "en": "Layer of Old Wear"
+          },
+          "primaryImage": "src/data/cases/case-048/evidence/case-048-photo-48.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-048/evidence/case-048-photo-48.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-048-photo-48.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-048/evidence/case-048-photo-48.webp",
+            "copyTo": "public/evidence/case-048-photo-48.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-094",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-048/evidence/case-048-photo-48.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-048/evidence/case-048-photo-48.webp",
+              "caseRelativeSrc": "evidence/case-048-photo-48.webp",
+              "installTo": "public/evidence/case-048-photo-48.webp",
+              "legacyRuntimeUrl": "evidence/case-048-photo-48.webp",
+              "format": "webp",
+              "width": 1448,
+              "height": 1086,
+              "sha256": "91ad184037bddd8619806d099a0c29d5a8c0e3a24229b1d8756442a6beebcc4c"
+            }
+          ]
+        },
+        {
+          "evidenceId": "document-48",
+          "title": {
+            "ru": "Экспертиза счёта на оборудование",
+            "en": "Equipment Invoice Examination"
+          },
+          "primaryImage": "src/data/cases/case-048/assets/interactive/document-48-base.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-048/assets/interactive/document-48-base.webp",
+          "legacyImageBinding": null,
+          "assets": [
+            {
+              "assetId": "asset-095",
+              "role": "interactive_base",
+              "src": "src/data/cases/case-048/assets/interactive/document-48-base.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-048/assets/interactive/document-48-base.webp",
+              "caseRelativeSrc": "assets/interactive/document-48-base.webp",
+              "installTo": "src/data/cases/case-048/assets/interactive/document-48-base.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1600,
+              "height": 1100,
+              "sha256": "af548ecb29072ac239c7417d0104f469454372863edee6d551bf31eebf1af4fb"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 47,
+      "caseId": "case-049",
+      "title": {
+        "ru": "Контейнер M-7",
+        "en": "The M-7 Container"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Герман Кросс, 46 лет",
+          "en": "Herman Kross, age 46"
+        },
+        "portrait": {
+          "characterId": "herman-kross-grounded",
+          "role": "claimant_portrait",
+          "name": {
+            "ru": "Герман Кросс",
+            "en": "Herman Kross, age 46"
+          },
+          "assetId": "asset-096",
+          "src": "src/data/cases/case-049/people/herman-kross-grounded.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-049/people/herman-kross-grounded.webp",
+          "caseRelativeSrc": "people/herman-kross-grounded.webp",
+          "installTo": "public/people/herman-kross-grounded.webp",
+          "legacyRuntimeUrl": "people/herman-kross-grounded.webp",
+          "format": "webp",
+          "width": 359,
+          "height": 359,
+          "sha256": "53f1ca45585ab49c4b5b977f30531b668b60a7391c7a4c72a9599fb1ac79adf1"
+        },
+        "portraitBinding": {
+          "mode": "replace",
+          "targetField": "personImage",
+          "runtimeValue": "people/herman-kross-grounded.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-049/people/herman-kross-grounded.webp",
+          "copyTo": "public/people/herman-kross-grounded.webp",
+          "replacesExistingValue": "people/herman-kross.webp"
+        },
+        "portraitStatus": "generated_replacement_included"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "photo-49",
+          "title": {
+            "ru": "Очистка инея в морозильном сейфе",
+            "en": "Clearing Frost Inside the Freezer Safe"
+          },
+          "primaryImage": "src/data/cases/case-049/evidence/case-049-photo-49.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-049/evidence/case-049-photo-49.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-049-photo-49.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-049/evidence/case-049-photo-49.webp",
+            "copyTo": "public/evidence/case-049-photo-49.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-097",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-049/evidence/case-049-photo-49.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-049/evidence/case-049-photo-49.webp",
+              "caseRelativeSrc": "evidence/case-049-photo-49.webp",
+              "installTo": "public/evidence/case-049-photo-49.webp",
+              "legacyRuntimeUrl": "evidence/case-049-photo-49.webp",
+              "format": "webp",
+              "width": 1448,
+              "height": 1086,
+              "sha256": "db985d51e621f19ffc207f6f51ac0bf8a8669e85072a2e4fd3deb471c795be04"
+            },
+            {
+              "assetId": "asset-098",
+              "role": "interactive_scene",
+              "src": "src/data/cases/case-049/assets/interactive/photo-49-scene.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-049/assets/interactive/photo-49-scene.webp",
+              "caseRelativeSrc": "assets/interactive/photo-49-scene.webp",
+              "installTo": "src/data/cases/case-049/assets/interactive/photo-49-scene.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1600,
+              "height": 1000,
+              "sha256": "df5bbe8044a3d831cdb55d500e1f071cd11a0800bfcd7b13bf325e9f6e888342"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 48,
+      "caseId": "case-050",
+      "title": {
+        "ru": "Огонь в «Компасе»",
+        "en": "Fire at the Compass"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Михаил Тернов, 69 лет",
+          "en": "Mikhail Ternov, age 69"
+        },
+        "portrait": null,
+        "portraitBinding": {
+          "mode": "retain_existing",
+          "targetField": "personImage",
+          "runtimeValue": "people/khariton-sen.webp",
+          "existingFile": "public/people/khariton-sen.webp"
+        },
+        "portraitStatus": "retain_existing_project_portrait"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "photo-50",
+          "title": {
+            "ru": "Сопоставление обгоревшего фитиля",
+            "en": "Burned Fuse Comparison"
+          },
+          "primaryImage": "src/data/cases/case-050/evidence/case-050-photo-50.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-050/evidence/case-050-photo-50.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-050-photo-50.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-050/evidence/case-050-photo-50.webp",
+            "copyTo": "public/evidence/case-050-photo-50.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-099",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-050/evidence/case-050-photo-50.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-050/evidence/case-050-photo-50.webp",
+              "caseRelativeSrc": "evidence/case-050-photo-50.webp",
+              "installTo": "public/evidence/case-050-photo-50.webp",
+              "legacyRuntimeUrl": "evidence/case-050-photo-50.webp",
+              "format": "webp",
+              "width": 1448,
+              "height": 1086,
+              "sha256": "e5c251ec9b1e08a8d414ca26ec8a5ec4c5a94fa23029b45fa39997e9cee2b377"
+            },
+            {
+              "assetId": "asset-101",
+              "role": "interactive_master_a",
+              "src": "src/data/cases/case-050/assets/interactive/photo-50-master-a.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-050/assets/interactive/photo-50-master-a.webp",
+              "caseRelativeSrc": "assets/interactive/photo-50-master-a.webp",
+              "installTo": "src/data/cases/case-050/assets/interactive/photo-50-master-a.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1400,
+              "height": 500,
+              "sha256": "36e37a9e0597424be6b106a821a573b826264c49df1b03e70c90a46acc85c3c0"
+            }
+          ]
+        },
+        {
+          "evidenceId": "camera-50",
+          "title": {
+            "ru": "Камера переулка",
+            "en": "Alley Camera"
+          },
+          "primaryImage": "src/data/cases/case-050/evidence/case-050-camera-50.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-050/evidence/case-050-camera-50.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-050-camera-50.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-050/evidence/case-050-camera-50.webp",
+            "copyTo": "public/evidence/case-050-camera-50.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-100",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-050/evidence/case-050-camera-50.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-050/evidence/case-050-camera-50.webp",
+              "caseRelativeSrc": "evidence/case-050-camera-50.webp",
+              "installTo": "public/evidence/case-050-camera-50.webp",
+              "legacyRuntimeUrl": "evidence/case-050-camera-50.webp",
+              "format": "webp",
+              "width": 1448,
+              "height": 1086,
+              "sha256": "3c14e1539b52af5e619b947de0656a4099f44097ec4ce50f3ff8dab2a3ca7540"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 49,
+      "caseId": "case-051",
+      "title": {
+        "ru": "Последний фургон",
+        "en": "The Last Van"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Роман Драй, 33 года",
+          "en": "Roman Dray, age 33"
+        },
+        "portrait": {
+          "characterId": "roman-dray-grounded",
+          "role": "claimant_portrait",
+          "name": {
+            "ru": "Роман Драй",
+            "en": "Roman Dray, age 33"
+          },
+          "assetId": "asset-102",
+          "src": "src/data/cases/case-051/people/roman-dray-grounded.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-051/people/roman-dray-grounded.webp",
+          "caseRelativeSrc": "people/roman-dray-grounded.webp",
+          "installTo": "public/people/roman-dray-grounded.webp",
+          "legacyRuntimeUrl": "people/roman-dray-grounded.webp",
+          "format": "webp",
+          "width": 359,
+          "height": 359,
+          "sha256": "e1f81cde16a4fd6769579fba1a7f3afbbf2122cda05fcdac9d006ddbf7874682"
+        },
+        "portraitBinding": {
+          "mode": "replace",
+          "targetField": "personImage",
+          "runtimeValue": "people/roman-dray-grounded.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-051/people/roman-dray-grounded.webp",
+          "copyTo": "public/people/roman-dray-grounded.webp",
+          "replacesExistingValue": "people/roman-dray.webp"
+        },
+        "portraitStatus": "generated_replacement_included"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "photo-51",
+          "title": {
+            "ru": "Кузов без следов борьбы",
+            "en": "Cargo Bay with No Signs of Struggle"
+          },
+          "primaryImage": "src/data/cases/case-051/evidence/case-051-photo-51.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-051/evidence/case-051-photo-51.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-051-photo-51.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-051/evidence/case-051-photo-51.webp",
+            "copyTo": "public/evidence/case-051-photo-51.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-103",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-051/evidence/case-051-photo-51.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-051/evidence/case-051-photo-51.webp",
+              "caseRelativeSrc": "evidence/case-051-photo-51.webp",
+              "installTo": "public/evidence/case-051-photo-51.webp",
+              "legacyRuntimeUrl": "evidence/case-051-photo-51.webp",
+              "format": "webp",
+              "width": 1448,
+              "height": 1086,
+              "sha256": "5ce53457a739ded9b108e173fff75d264f3240aaf1c19f5ba8eee5481368dae0"
+            }
+          ]
+        },
+        {
+          "evidenceId": "camera-51",
+          "title": {
+            "ru": "Камера тоннельной рампы",
+            "en": "Tunnel Ramp Camera"
+          },
+          "primaryImage": "src/data/cases/case-051/evidence/case-051-camera-51.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-051/evidence/case-051-camera-51.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-051-camera-51.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-051/evidence/case-051-camera-51.webp",
+            "copyTo": "public/evidence/case-051-camera-51.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-104",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-051/evidence/case-051-camera-51.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-051/evidence/case-051-camera-51.webp",
+              "caseRelativeSrc": "evidence/case-051-camera-51.webp",
+              "installTo": "public/evidence/case-051-camera-51.webp",
+              "legacyRuntimeUrl": "evidence/case-051-camera-51.webp",
+              "format": "webp",
+              "width": 1448,
+              "height": 1086,
+              "sha256": "7ea64eede3aecf2d9bd34c9f6e0ebee56243e1df97057c83a6f8994266621c44"
+            }
+          ]
+        },
+        {
+          "evidenceId": "photo-staged-van",
+          "title": {
+            "ru": "Проверка времени фотографии фургона",
+            "en": "Van Photograph Time Check"
+          },
+          "primaryImage": "src/data/cases/case-051/assets/interactive/photo-staged-van-scene.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-051/assets/interactive/photo-staged-van-scene.webp",
+          "legacyImageBinding": null,
+          "assets": [
+            {
+              "assetId": "asset-105",
+              "role": "interactive_scene",
+              "src": "src/data/cases/case-051/assets/interactive/photo-staged-van-scene.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-051/assets/interactive/photo-staged-van-scene.webp",
+              "caseRelativeSrc": "assets/interactive/photo-staged-van-scene.webp",
+              "installTo": "src/data/cases/case-051/assets/interactive/photo-staged-van-scene.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1600,
+              "height": 1000,
+              "sha256": "b05a9d2d4b33e0fcc41f1e2caaf385e085ac9e09720021e831d2a551b19dda5d"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaignOrder": 50,
+      "caseId": "case-417",
+      "title": {
+        "ru": "Последний чемодан",
+        "en": "The Last Suitcase"
+      },
+      "claimant": {
+        "name": {
+          "ru": "Лукас Феррейра, 29 лет",
+          "en": "Lucas Ferreira, age 29"
+        },
+        "portrait": {
+          "characterId": "lucas-ferreira",
+          "role": "claimant_portrait",
+          "name": {
+            "ru": "Лукас Феррейра",
+            "en": "Lucas Ferreira, age 29"
+          },
+          "assetId": "asset-106",
+          "src": "src/data/cases/case-417/people/lucas-ferreira.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-417/people/lucas-ferreira.webp",
+          "caseRelativeSrc": "people/lucas-ferreira.webp",
+          "installTo": "public/people/lucas-ferreira.webp",
+          "legacyRuntimeUrl": "people/lucas-ferreira.webp",
+          "format": "webp",
+          "width": 359,
+          "height": 359,
+          "sha256": "adbaec28e9c07991660a9cb05a407d28258a13c9ac0aa83649e532c6c2858750"
+        },
+        "portraitBinding": {
+          "mode": "replace",
+          "targetField": "personImage",
+          "runtimeValue": "people/lucas-ferreira.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-417/people/lucas-ferreira.webp",
+          "copyTo": "public/people/lucas-ferreira.webp",
+          "replacesExistingValue": "people/lucas.webp"
+        },
+        "portraitStatus": "generated_replacement_included"
+      },
+      "caseSceneAssets": [],
+      "evidence": [
+        {
+          "evidenceId": "ev-garage",
+          "title": {
+            "ru": "Камера гаража Матеуса",
+            "en": "Mateus's Garage Camera"
+          },
+          "primaryImage": "src/data/cases/case-417/evidence/case-417-ev-garage.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-417/evidence/case-417-ev-garage.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-417-ev-garage.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-417/evidence/case-417-ev-garage.webp",
+            "copyTo": "public/evidence/case-417-ev-garage.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-107",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-417/evidence/case-417-ev-garage.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-417/evidence/case-417-ev-garage.webp",
+              "caseRelativeSrc": "evidence/case-417-ev-garage.webp",
+              "installTo": "public/evidence/case-417-ev-garage.webp",
+              "legacyRuntimeUrl": "evidence/case-417-ev-garage.webp",
+              "format": "webp",
+              "width": 1448,
+              "height": 1086,
+              "sha256": "e3f00006162958146820bad6823e8d96945ed1a5e1608dfbcf2d2c5ae92fc8a4"
+            }
+          ]
+        },
+        {
+          "evidenceId": "ev-bottom",
+          "title": {
+            "ru": "Просветка оригинала формы 17-К",
+            "en": "Original 17-K Form Backlight Examination"
+          },
+          "primaryImage": "src/data/cases/case-417/evidence/case-417-ev-bottom.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-417/evidence/case-417-ev-bottom.webp",
+          "legacyImageBinding": {
+            "targetField": "data.imageUrl",
+            "runtimeValue": "evidence/case-417-ev-bottom.webp",
+            "copyFrom": "generated-assets/src/data/cases/case-417/evidence/case-417-ev-bottom.webp",
+            "copyTo": "public/evidence/case-417-ev-bottom.webp"
+          },
+          "assets": [
+            {
+              "assetId": "asset-108",
+              "role": "evidence_card",
+              "src": "src/data/cases/case-417/evidence/case-417-ev-bottom.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-417/evidence/case-417-ev-bottom.webp",
+              "caseRelativeSrc": "evidence/case-417-ev-bottom.webp",
+              "installTo": "public/evidence/case-417-ev-bottom.webp",
+              "legacyRuntimeUrl": "evidence/case-417-ev-bottom.webp",
+              "format": "webp",
+              "width": 1448,
+              "height": 1086,
+              "sha256": "7f9960b7fad53cc391db46838cc6127eb7ee336157725b298b355b37190d2259"
+            },
+            {
+              "assetId": "asset-109",
+              "role": "interactive_base",
+              "src": "src/data/cases/case-417/assets/interactive/ev-bottom-base.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-417/assets/interactive/ev-bottom-base.webp",
+              "caseRelativeSrc": "assets/interactive/ev-bottom-base.webp",
+              "installTo": "src/data/cases/case-417/assets/interactive/ev-bottom-base.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1600,
+              "height": 1100,
+              "sha256": "2d9dc36c4b03b0147bd861ca8f9c195e954a6613d60ae783e6a6568c2c099a71"
+            }
+          ]
+        },
+        {
+          "evidenceId": "ev-suitcase-seal",
+          "title": {
+            "ru": "Сопоставление транспортной пломбы чемодана",
+            "en": "Suitcase Transport-Seal Comparison"
+          },
+          "primaryImage": "src/data/cases/case-417/assets/interactive/ev-suitcase-seal-master-a.webp",
+          "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-417/assets/interactive/ev-suitcase-seal-master-a.webp",
+          "legacyImageBinding": null,
+          "assets": [
+            {
+              "assetId": "asset-110",
+              "role": "interactive_master_a",
+              "src": "src/data/cases/case-417/assets/interactive/ev-suitcase-seal-master-a.webp",
+              "archiveSrc": "generated-assets/src/data/cases/case-417/assets/interactive/ev-suitcase-seal-master-a.webp",
+              "caseRelativeSrc": "assets/interactive/ev-suitcase-seal-master-a.webp",
+              "installTo": "src/data/cases/case-417/assets/interactive/ev-suitcase-seal-master-a.webp",
+              "legacyRuntimeUrl": null,
+              "format": "webp",
+              "width": 1400,
+              "height": 500,
+              "sha256": "dd3a038901401ea9fca76447d93aff8f4e4de4702726838450e27d3476f9ddfa"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

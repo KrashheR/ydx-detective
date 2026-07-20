@@ -1,335 +1,527 @@
 {
   "id": "case-026",
   "type": "standard",
+  "campaignOrder": 24,
+  "requiredLevel": 12,
+  "act": 3,
+  "actTitle": {
+    "ru": "Восточный двор",
+    "en": "Eastern Yard",
+    "tr": "Eastern Yard",
+    "ar": "Eastern Yard",
+    "kk": "Восточный двор"
+  },
   "difficulty": "hard",
   "claimAmount": 12000,
   "truth": "fraud",
   "title": {
-    "ru": "Похищенные часы",
-    "en": "The Stolen Watch",
-    "tr": "Çalınan Saat",
-    "ar": "الساعة المسروقة",
-    "kk": "Ұрланған сағат"
+    "ru": "Часы после кражи",
+    "en": "The Watch After the Theft",
+    "tr": "The Watch After the Theft",
+    "ar": "The Watch After the Theft",
+    "kk": "Часы после кражи"
   },
   "claim": {
     "person": {
       "ru": "Эдуард Кравец, 50 лет",
-      "en": "Eduard Kravets, 50",
-      "tr": "Eduard Kravets, 50",
-      "ar": "إدوارد كرافيتس، 50",
-      "kk": "Эдуард Кравец, 50 жаста"
+      "en": "Eduard Kravets, age 50",
+      "tr": "Eduard Kravets, age 50",
+      "ar": "Eduard Kravets, age 50",
+      "kk": "Эдуард Кравец, 50 лет"
     },
     "story": {
-      "ru": "12 марта из моей квартиры похитили коллекционные швейцарские часы. Я хранил их в спальне. Это была дорогая вещь, я подал в полицию и прошу выплатить страховую стоимость — 12000 евро.",
-      "en": "On 12 March, a collector's Swiss watch was stolen from my apartment. I kept it in the bedroom. It was an expensive piece; I filed a police report and request the insured value of €12,000.",
-      "tr": "12 Mart'ta dairemden koleksiyonluk bir İsviçre saati çalındı. Onu yatak odasında saklıyordum. Pahalı bir parçaydı; polise başvurdum ve 12.000 avroluk sigorta değerinin ödenmesini talep ediyorum.",
-      "ar": "في 12 مارس، سُرقت ساعة سويسرية نادرة من شقتي. كنت أحتفظ بها في غرفة النوم. كانت قطعة باهظة الثمن؛ قدمت بلاغًا للشرطة وأطلب صرف القيمة المؤمَّنة وقدرها 12000 يورو.",
-      "kk": "12 наурызда пәтерімнен коллекциялық швейцариялық сағат ұрланды. Оны жатын бөлмеде сақтайтынмын. Бұл қымбат зат еді; полицияға арыз жаздым және сақтандыру құны — 12000 еуроны төлеуді сұраймын."
+      "ru": "12 марта из спальни похитили коллекционные часы индивидуальной сборки стоимостью 12 000 евро. Я подал заявление в полицию и прошу выплату по страховому сертификату.",
+      "en": "On March 12, a custom-built collectible watch worth €12,000 was stolen from my bedroom. I filed a police report and am claiming payment under the insurance certificate.",
+      "tr": "On March 12, a custom-built collectible watch worth €12,000 was stolen from my bedroom. I filed a police report and am claiming payment under the insurance certificate.",
+      "ar": "On March 12, a custom-built collectible watch worth €12,000 was stolen from my bedroom. I filed a police report and am claiming payment under the insurance certificate.",
+      "kk": "12 марта из спальни похитили коллекционные часы индивидуальной сборки стоимостью 12 000 евро. Я подал заявление в полицию и прошу выплату по страховому сертификату."
     }
   },
-  "coverImage": "covers/case-026.svg",
-  "personImage": "people/eduard.webp",
   "client": {
     "role": {
-      "ru": "Заявитель · физ. лицо",
-      "en": "Claimant · individual",
-      "tr": "Başvuru sahibi · gerçek kişi",
-      "ar": "مقدم الطلب · شخص طبيعي",
-      "kk": "Өтініш беруші · жеке тұлға"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Возраст",
-          "en": "Age",
-          "tr": "Yaş",
-          "ar": "العمر",
-          "kk": "Жасы"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "50 лет",
-          "en": "50 years old",
-          "tr": "50 yaşında",
-          "ar": "50 عامًا",
-          "kk": "50 жаста"
+          "ru": "3",
+          "en": "3",
+          "tr": "3",
+          "ar": "3",
+          "kk": "3"
         }
       },
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Киев",
-          "en": "Kyiv",
-          "tr": "Kiev",
-          "ar": "كييف",
-          "kk": "Киев"
-        }
-      },
-      {
-        "k": {
-          "ru": "Клиент с",
-          "en": "Client since",
-          "tr": "Müşteri",
-          "ar": "عميل منذ",
-          "kk": "Клиент"
-        },
-        "v": {
-          "ru": "2013 г.",
-          "en": "2013",
-          "tr": "2013",
-          "ar": "2013",
-          "kk": "2013 ж."
-        }
-      },
-      {
-        "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
-        },
-        "v": {
-          "ru": "Ценности · ЦЕ-26311784-X0",
-          "en": "Valuables · CE-26311784-X0",
-          "tr": "Değerli eşyalar · CE-26311784-X0",
-          "ar": "المقتنيات الثمينة · CE-26311784-X0",
-          "kk": "Құндылықтар · ЦЕ-26311784-X0"
-        }
-      },
-      {
-        "k": {
-          "ru": "Документ",
-          "en": "Document",
-          "tr": "Belge",
-          "ar": "الوثيقة",
-          "kk": "Құжат"
-        },
-        "v": {
-          "ru": "Паспорт UA-X2 778899118-57092",
-          "en": "Passport UA-X2 778899118-57092",
-          "tr": "Pasaport UA-X2 778899118-57092",
-          "ar": "جواز السفر UA-X2 778899118-57092",
-          "kk": "Паспорт UA-X2 778899118-57092"
+          "ru": "24",
+          "en": "24",
+          "tr": "24",
+          "ar": "24",
+          "kk": "24"
         }
       }
     ]
   },
+  "coverImage": "covers/case-026.svg",
+  "personImage": "people/eduard-kravets.webp",
   "evidences": [
     {
       "id": "ev-police",
+      "order": 1,
       "type": "document",
       "title": {
         "ru": "Заявление в полицию",
         "en": "Police Report",
-        "tr": "Polis Tutanağı",
-        "ar": "بلاغ الشرطة",
-        "kk": "Полицияға арыз"
+        "tr": "Police Report",
+        "ar": "Police Report",
+        "kk": "Заявление в полицию"
       },
       "content": {
-        "ru": "Зарегистрированное 12 марта заявление о краже из квартиры. Зафиксировано со слов заявителя: пропали наручные часы. Признаков взлома дверей и окон не обнаружено.",
-        "en": "A theft report registered on 12 March. Recorded from the claimant's account: a wristwatch went missing. No signs of forced entry to doors or windows were found.",
-        "tr": "12 Mart'ta kaydedilen bir hırsızlık tutanağı. Başvuranın ifadesine göre kaydedildi: bir kol saati kayboldu. Kapı veya pencerelerde zorla giriş izi bulunmadı.",
-        "ar": "بلاغ سرقة مسجَّل في 12 مارس. دُوِّن بناءً على إفادة المُطالِب: فُقدت ساعة يد. لم يُعثر على آثار اقتحام للأبواب أو النوافذ.",
-        "kk": "12 наурызда тіркелген ұрлық туралы арыз. Арыз берушінің сөзінен жазылған: қол сағаты жоғалды. Есік пен терезеде бұзып кіру белгілері табылмады."
+        "ru": "Кравец сообщил о пропаже часов и повреждённом ящике. Полиция зарегистрировала сведения со слов владельца.",
+        "en": "Kravets reported the missing watch and a damaged drawer. The police recorded the information provided by the owner.",
+        "tr": "Kravets reported the missing watch and a damaged drawer. The police recorded the information provided by the owner.",
+        "ar": "Kravets reported the missing watch and a damaged drawer. The police recorded the information provided by the owner.",
+        "kk": "Кравец сообщил о пропаже часов и повреждённом ящике. Полиция зарегистрировала сведения со слов владельца."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Заявление в полицию подлинное — оно лишь фиксирует обращение, но само по себе не доказывает факт кражи.",
-        "en": "The police report is genuine — it merely records that a complaint was filed and does not by itself prove a theft occurred.",
-        "tr": "Polis tutanağı gerçektir — yalnızca bir şikâyetin yapıldığını kaydeder ve tek başına hırsızlığın gerçekleştiğini kanıtlamaz.",
-        "ar": "بلاغ الشرطة أصلي — فهو يسجّل فقط أن شكوى قُدِّمت ولا يُثبت بحد ذاته وقوع السرقة.",
-        "kk": "Полицияға берілген арыз шынайы — ол тек өтініштің тіркелгенін көрсетеді, бірақ ұрлық болғанын дәлелдемейді."
-      }
-    },
-    {
-      "id": "ev-social",
-      "type": "social_media",
-      "title": {
-        "ru": "Пост в соцсети",
-        "en": "Social Media Post",
-        "tr": "Sosyal Medya Gönderisi",
-        "ar": "منشور على وسائل التواصل",
-        "kk": "Әлеуметтік желідегі жазба"
+        "ru": "Регистрация заявления не подтверждает сам факт кражи.",
+        "en": "Registering a report does not prove that a theft occurred.",
+        "tr": "Registering a report does not prove that a theft occurred.",
+        "ar": "Registering a report does not prove that a theft occurred.",
+        "kk": "Регистрация заявления не подтверждает сам факт кражи."
       },
-      "content": {
-        "ru": "Опубликовано 19 марта (через неделю после кражи). На фото Эдуард на ужине, на запястье отчётливо видны те самые коллекционные часы. Подпись: «Вечер удался». Часы те же, что в заявлении.",
-        "en": "Posted on 19 March (a week after the theft). The photo shows Eduard at dinner, with the very same collector's watch clearly on his wrist. Caption: \"Great evening.\" It is the same watch described in the claim.",
-        "tr": "19 Mart'ta paylaşıldı (hırsızlıktan bir hafta sonra). Fotoğrafta Eduard akşam yemeğinde, bileğinde aynı koleksiyonluk saat net biçimde görülüyor. Açıklama: \"Harika bir akşam.\" Talepte tarif edilen saatin aynısı.",
-        "ar": "نُشر في 19 مارس (بعد أسبوع من السرقة). تُظهر الصورة إدوارد على العشاء، وعلى معصمه بوضوح نفس الساعة النادرة. التعليق: «أمسية رائعة». إنها نفس الساعة الموصوفة في المطالبة.",
-        "kk": "19 наурызда жарияланған (ұрлықтан бір апта өткен соң). Суретте Эдуард кешкі аста, білегінде сол коллекциялық сағат анық көрінеді. Жазба: «Кеш сәтті өтті». Бұл арыздағы дәл сол сағат."
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_theft_timing",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Регистрация заявления не подтверждает сам факт кражи.",
+          "en": "Registering a report does not prove that a theft occurred.",
+          "tr": "Registering a report does not prove that a theft occurred.",
+          "ar": "Registering a report does not prove that a theft occurred.",
+          "kk": "Регистрация заявления не подтверждает сам факт кражи."
+        }
       },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Часы заявлены украденными 12 марта, но на снимке от 19 марта Эдуард носит их на руке — значит, они не были похищены.",
-        "en": "The watch was reported stolen on 12 March, yet in the 19 March photo Eduard is wearing it — so it was never stolen.",
-        "tr": "Saat 12 Mart'ta çalındı diye bildirildi, ancak 19 Mart tarihli fotoğrafta Eduard onu takıyor — yani çalınmamış.",
-        "ar": "أُبلغ عن سرقة الساعة في 12 مارس، لكنها تظهر على معصم إدوارد في صورة 19 مارس — أي أنها لم تُسرق.",
-        "kk": "Сағат 12 наурызда ұрланды деп мәлімделген, бірақ 19 наурыздағы суретте Эдуард оны таққан — демек, ол ұрланбаған."
-      },
-      "meta": {
-        "socialPlatform": "photofeed.local"
-      }
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "ev-photo",
+      "order": 2,
       "type": "photo",
       "title": {
-        "ru": "Фото квартиры",
-        "en": "Apartment Photo",
-        "tr": "Daire Fotoğrafı",
-        "ar": "صورة الشقة",
-        "kk": "Пәтердің суреті"
+        "ru": "Фото с закрытого приёма",
+        "en": "Photograph from a Private Reception",
+        "tr": "Photograph from a Private Reception",
+        "ar": "Photograph from a Private Reception",
+        "kk": "Фото с закрытого приёма"
       },
       "content": {
-        "ru": "Общий снимок спальни заявителя: аккуратно заправленная кровать, прикроватная тумба, шкатулка для аксессуаров. Обстановка не нарушена, следов беспорядка нет.",
-        "en": "A general shot of the claimant's bedroom: a neatly made bed, a nightstand, an accessory box. The room is undisturbed, with no signs of disorder.",
-        "tr": "Başvuranın yatak odasının genel bir karesi: düzgünce yapılmış bir yatak, bir komodin, bir aksesuar kutusu. Oda dağılmamış, düzensizlik izi yok.",
-        "ar": "لقطة عامة لغرفة نوم المُطالِب: سرير مرتَّب بعناية، طاولة جانبية، علبة إكسسوارات. الغرفة غير مضطربة ولا توجد آثار فوضى.",
-        "kk": "Арыз берушінің жатын бөлмесінің жалпы суреті: ұқыпты жиналған төсек, кереует жанындағы тумба, аксессуар қорабы. Бөлме бұзылмаған, ретсіздік белгілері жоқ."
+        "ru": "Через семь дней после кражи Кравец запечатлён с часами той же формы. На увеличении видна редкая царапина и часть гравировки из страхового сертификата.",
+        "en": "Seven days after the reported theft, Kravets is photographed wearing the same model of watch. Enlargement reveals a rare scratch and part of the engraving listed in the insurance certificate.",
+        "tr": "Seven days after the reported theft, Kravets is photographed wearing the same model of watch. Enlargement reveals a rare scratch and part of the engraving listed in the insurance certificate.",
+        "ar": "Seven days after the reported theft, Kravets is photographed wearing the same model of watch. Enlargement reveals a rare scratch and part of the engraving listed in the insurance certificate.",
+        "kk": "Через семь дней после кражи Кравец запечатлён с часами той же формы. На увеличении видна редкая царапина и часть гравировки из страхового сертификата."
       },
-      "isContradiction": false,
+      "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Это нейтральное фото обстановки спальни; оно не противоречит заявлению и ничего не доказывает.",
-        "en": "This is a neutral photo of the bedroom; it does not contradict the claim and proves nothing on its own.",
-        "tr": "Bu, yatak odasının nötr bir fotoğrafıdır; talebe aykırı değildir ve tek başına bir şey kanıtlamaz.",
-        "ar": "هذه صورة محايدة لغرفة النوم؛ لا تتعارض مع المطالبة ولا تُثبت شيئًا بمفردها.",
-        "kk": "Бұл жатын бөлменің бейтарап суреті; ол арызға қайшы келмейді және өздігінен ештеңе дәлелдемейді."
+        "ru": "Уникальные признаки показывают, что заявитель продолжал носить объявленные похищенными часы.",
+        "en": "Unique identifiers show that the claimant continued wearing the watch he had reported stolen.",
+        "tr": "Unique identifiers show that the claimant continued wearing the watch he had reported stolen.",
+        "ar": "Unique identifiers show that the claimant continued wearing the watch he had reported stolen.",
+        "kk": "Уникальные признаки показывают, что заявитель продолжал носить объявленные похищенными часы."
       },
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_watch_lost",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Уникальные признаки показывают, что заявитель продолжал носить объявленные похищенными часы.",
+          "en": "Unique identifiers show that the claimant continued wearing the watch he had reported stolen.",
+          "tr": "Unique identifiers show that the claimant continued wearing the watch he had reported stolen.",
+          "ar": "Unique identifiers show that the claimant continued wearing the watch he had reported stolen.",
+          "kk": "Уникальные признаки показывают, что заявитель продолжал носить объявленные похищенными часы."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_watch_lost",
+        "reason": {
+          "ru": "Уникальные признаки показывают, что заявитель продолжал носить объявленные похищенными часы.",
+          "en": "Unique identifiers show that the claimant continued wearing the watch he had reported stolen.",
+          "tr": "Unique identifiers show that the claimant continued wearing the watch he had reported stolen.",
+          "ar": "Unique identifiers show that the claimant continued wearing the watch he had reported stolen.",
+          "kk": "Уникальные признаки показывают, что заявитель продолжал носить объявленные похищенными часы."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
       "meta": {
-        "filename": "IMG_20260312_103015.jpg",
-        "imageUrl": "evidence/case-026-ev-photo.jpg"
+        "imageUrl": "evidence/case-026-ev-photo.webp"
+      }
+    },
+    {
+      "id": "ev-auction",
+      "order": 3,
+      "type": "document_scan",
+      "title": {
+        "ru": "Просветка акта аукционной передачи",
+        "en": "Auction Transfer Form Backlight Examination",
+        "tr": "Auction Transfer Form Backlight Examination",
+        "ar": "Auction Transfer Form Backlight Examination",
+        "kk": "Просветка акта аукционной передачи"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Исходная дата передачи — 11 марта, за день до «кражи»; позднее поверх неё напечатано 18 марта.",
+        "en": "The original transfer date is March 11, one day before the ‘theft’; March 18 was printed over it later.",
+        "tr": "The original transfer date is March 11, one day before the ‘theft’; March 18 was printed over it later.",
+        "ar": "The original transfer date is March 11, one day before the ‘theft’; March 18 was printed over it later.",
+        "kk": "Исходная дата передачи — 11 марта, за день до «кражи»; позднее поверх неё напечатано 18 марта."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_theft_timing",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Исходная дата передачи — 11 марта, за день до «кражи»; позднее поверх неё напечатано 18 марта.",
+          "en": "The original transfer date is March 11, one day before the ‘theft’; March 18 was printed over it later.",
+          "tr": "The original transfer date is March 11, one day before the ‘theft’; March 18 was printed over it later.",
+          "ar": "The original transfer date is March 11, one day before the ‘theft’; March 18 was printed over it later.",
+          "kk": "Исходная дата передачи — 11 марта, за день до «кражи»; позднее поверх неё напечатано 18 марта."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_theft_timing",
+        "reason": {
+          "ru": "Исходная дата передачи — 11 марта, за день до «кражи»; позднее поверх неё напечатано 18 марта.",
+          "en": "The original transfer date is March 11, one day before the ‘theft’; March 18 was printed over it later.",
+          "tr": "The original transfer date is March 11, one day before the ‘theft’; March 18 was printed over it later.",
+          "ar": "The original transfer date is March 11, one day before the ‘theft’; March 18 was printed over it later.",
+          "kk": "Исходная дата передачи — 11 марта, за день до «кражи»; позднее поверх неё напечатано 18 марта."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "Аукционный дом передал страховщику бумажный оригинал акта приёма часов.",
+        "en": "The auction house supplied the insurer with the original paper watch-acceptance form.",
+        "tr": "The auction house supplied the insurer with the original paper watch-acceptance form.",
+        "ar": "The auction house supplied the insurer with the original paper watch-acceptance form.",
+        "kk": "Аукционный дом передал страховщику бумажный оригинал акта приёма часов."
+      },
+      "instruction": {
+        "ru": "Переключиться на просвет и проверить дату под копировальным слоем.",
+        "en": "Switch to backlight and inspect the date beneath the overprinted layer.",
+        "tr": "Switch to backlight and inspect the date beneath the overprinted layer.",
+        "ar": "Switch to backlight and inspect the date beneath the overprinted layer.",
+        "kk": "Переключиться на просвет и проверить дату под копировальным слоем."
+      },
+      "previousType": "document",
+      "assets": {
+        "asset1": "cases/case-026/assets/interactive/ev-auction-base.webp",
+        "asset2": "cases/case-026/assets/interactive/ev-auction-scan-overlay.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Игрок сам обнаруживает, что добровольная передача произошла до заявленной кражи.",
+          "en": "The player personally discovers that the voluntary transfer occurred before the reported theft.",
+          "tr": "The player personally discovers that the voluntary transfer occurred before the reported theft.",
+          "ar": "The player personally discovers that the voluntary transfer occurred before the reported theft.",
+          "kk": "Игрок сам обнаруживает, что добровольная передача произошла до заявленной кражи."
+        },
+        "playerAction": {
+          "ru": "Переключиться на просвет и проверить дату под копировальным слоем.",
+          "en": "Switch to backlight and inspect the date beneath the overprinted layer.",
+          "tr": "Switch to backlight and inspect the date beneath the overprinted layer.",
+          "ar": "Switch to backlight and inspect the date beneath the overprinted layer.",
+          "kk": "Переключиться на просвет и проверить дату под копировальным слоем."
+        },
+        "conclusion": {
+          "ru": "Исходная дата передачи — 11 марта, за день до «кражи»; позднее поверх неё напечатано 18 марта.",
+          "en": "The original transfer date is March 11, one day before the ‘theft’; March 18 was printed over it later.",
+          "tr": "The original transfer date is March 11, one day before the ‘theft’; March 18 was printed over it later.",
+          "ar": "The original transfer date is March 11, one day before the ‘theft’; March 18 was printed over it later.",
+          "kk": "Исходная дата передачи — 11 марта, за день до «кражи»; позднее поверх неё напечатано 18 марта."
+        }
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "uv",
+          "backlight"
+        ],
+        "anomalyZones": [
+          {
+            "id": "transfer_date",
+            "mode": "backlight",
+            "x": 66,
+            "y": 25,
+            "width": 15,
+            "height": 8,
+            "label": "Исходная дата передачи — 11 марта, за день до «кражи»; позднее поверх неё напечатано 18 марта.",
+            "isContradiction": true,
+            "labelEn": "The original transfer date is March 11, one day before the ‘theft’; March 18 was printed over it later."
+          }
+        ],
+        "successCondition": {
+          "type": "select_zone",
+          "zoneId": "transfer_date"
+        }
       }
     },
     {
       "id": "ev-bank",
+      "order": 4,
       "type": "bank_statement",
       "title": {
-        "ru": "Банковская выписка",
-        "en": "Bank Statement",
-        "tr": "Banka Ekstresi",
-        "ar": "كشف حساب بنكي",
-        "kk": "Банк үзіндісі"
+        "ru": "Аванс покупателя",
+        "en": "Buyer's Advance",
+        "tr": "Buyer's Advance",
+        "ar": "Buyer's Advance",
+        "kk": "Аванс покупателя"
       },
       "content": {
-        "ru": [
-          "10 мар · Кофейня «Аромат» · -8,40 €",
-          "11 мар · Заправка АЗС-7 · -54,00 €",
-          "12 мар · Аптека «Здоровье» · -12,30 €",
-          "18 мар · Входящий перевод · «Продажа часов, частное лицо» · +9 800,00 €",
-          "20 мар · Ресторан «Вечер» · -76,50 €",
-          "За весь период покупки часов на счёте не значится."
-        ],
-        "en": [
-          "10 Mar · Aroma Coffee · -€8.40",
-          "11 Mar · Gas Station No.7 · -€54.00",
-          "12 Mar · Health Pharmacy · -€12.30",
-          "18 Mar · Incoming transfer · \"Sale of watch, private party\" · +€9,800.00",
-          "20 Mar · Vecher Restaurant · -€76.50",
-          "No purchase of any watch appears on the account for the entire period."
-        ],
-        "tr": [
-          "10 Mar · Aroma Kahve · -8,40 €",
-          "11 Mar · 7 No'lu Benzin İstasyonu · -54,00 €",
-          "12 Mar · Sağlık Eczanesi · -12,30 €",
-          "18 Mar · Gelen havale · \"Saat satışı, özel şahıs\" · +9.800,00 €",
-          "20 Mar · Vecher Restoranı · -76,50 €",
-          "Tüm dönem boyunca hesapta herhangi bir saat alımı görünmüyor."
-        ],
-        "ar": [
-          "10 مارس · مقهى أروما · -8.40 €",
-          "11 مارس · محطة وقود رقم 7 · -54.00 €",
-          "12 مارس · صيدلية الصحة · -12.30 €",
-          "18 مارس · تحويل وارد · «بيع ساعة، شخص خاص» · +9,800.00 €",
-          "20 مارس · مطعم فيتشير · -76.50 €",
-          "لا يظهر في الحساب أي شراء لساعة طوال الفترة."
-        ],
-        "kk": [
-          "10 нау · «Аромат» кофеханасы · -8,40 €",
-          "11 нау · ЖАҚ-7 жанармай бекеті · -54,00 €",
-          "12 нау · «Денсаулық» дәріханасы · -12,30 €",
-          "18 нау · Кіріс аударым · «Сағат сату, жеке тұлға» · +9 800,00 €",
-          "20 нау · «Вечер» мейрамханасы · -76,50 €",
-          "Бүкіл кезеңде шотта сағат сатып алу көрсетілмеген."
-        ]
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "По счёту никогда не проходила покупка дорогих часов, зато 18 марта пришёл крупный перевод с пометкой «продажа часов» — заявитель сам продал вещь, а не лишился её.",
-        "en": "No purchase of an expensive watch ever cleared the account, yet on 18 March a large transfer arrived marked \"sale of watch\" — the claimant sold the item rather than losing it.",
-        "tr": "Hesapta pahalı bir saat alımı hiçbir zaman gerçekleşmemiş, ancak 18 Mart'ta \"saat satışı\" notuyla büyük bir havale gelmiş — başvuran eşyayı kaybetmedi, sattı.",
-        "ar": "لم يُسجَّل قط شراء ساعة باهظة على الحساب، لكن في 18 مارس وصل تحويل كبير بعنوان «بيع ساعة» — المُطالِب باع القطعة ولم يفقدها.",
-        "kk": "Шот бойынша қымбат сағат сатып алу ешқашан өтпеген, бірақ 18 наурызда «сағат сату» белгісімен ірі аударым түскен — арыз беруші затты жоғалтпай, өзі сатқан."
-      },
-      "meta": {
-        "bankName": {
-          "ru": "ВестаКредит",
-          "en": "VestaCredit",
-          "tr": "VestaKredi",
-          "ar": "فيستا كريدت",
-          "kk": "ВестаКредит"
-        },
-        "accountMask": "•••• •••• •••• 9120"
-      }
-    },
-    {
-      "id": "ev-appraisal",
-      "type": "document",
-      "title": {
-        "ru": "Сертификат оценки",
-        "en": "Appraisal Certificate",
-        "tr": "Değerleme Sertifikası",
-        "ar": "شهادة التقييم",
-        "kk": "Бағалау сертификаты"
-      },
-      "content": {
-        "ru": "Сертификат независимого оценщика подтверждает рыночную стоимость коллекционных часов на уровне около 12000 евро. Документ описывает модель и состояние, но не указывает дату приобретения и владельца.",
-        "en": "A certificate from an independent appraiser confirms the collector's watch is worth roughly €12,000. The document describes the model and condition but states no purchase date or owner.",
-        "tr": "Bağımsız bir eksperin sertifikası, koleksiyonluk saatin yaklaşık 12.000 avro değerinde olduğunu doğrular. Belge modeli ve durumu tanımlar ancak satın alma tarihi veya sahibini belirtmez.",
-        "ar": "تؤكد شهادة من مُقيِّم مستقل أن قيمة الساعة النادرة نحو 12000 يورو. يصف المستند الطراز والحالة لكنه لا يذكر تاريخ الشراء ولا المالك.",
-        "kk": "Тәуелсіз бағалаушының сертификаты коллекциялық сағаттың нарықтық құнын шамамен 12000 еуро деп растайды. Құжатта модель мен жай-күй сипатталған, бірақ сатып алу күні мен иесі көрсетілмеген."
+        "ru": "До заявления о краже Кравец получил 40% цены от посредника. Остаток поступил после передачи часов на склад.",
+        "en": "Before reporting the theft, Kravets received 40% of the price from an intermediary. The balance arrived after the watch was delivered to the warehouse.",
+        "tr": "Before reporting the theft, Kravets received 40% of the price from an intermediary. The balance arrived after the watch was delivered to the warehouse.",
+        "ar": "Before reporting the theft, Kravets received 40% of the price from an intermediary. The balance arrived after the watch was delivered to the warehouse.",
+        "kk": "До заявления о краже Кравец получил 40% цены от посредника. Остаток поступил после передачи часов на склад."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Сертификат лишь подтверждает стоимость такого типа часов и подлинен; он не свидетельствует ни о краже, ни о владении.",
-        "en": "The certificate merely confirms the value of this type of watch and is genuine; it attests to neither a theft nor ownership.",
-        "tr": "Sertifika yalnızca bu tür bir saatin değerini doğrular ve gerçektir; ne bir hırsızlığa ne de mülkiyete tanıklık eder.",
-        "ar": "تؤكد الشهادة فقط قيمة هذا النوع من الساعات وهي أصلية؛ لا تشهد على سرقة ولا على ملكية.",
-        "kk": "Сертификат тек осындай сағаттың құнын растайды әрі шынайы; ол ұрлықты да, иелікті де дәлелдемейді."
-      }
+        "ru": "Оплата началась до заявления и подтверждает заранее подготовленную продажу.",
+        "en": "Payment began before the claim and confirms a prearranged sale.",
+        "tr": "Payment began before the claim and confirms a prearranged sale.",
+        "ar": "Payment began before the claim and confirms a prearranged sale.",
+        "kk": "Оплата началась до заявления и подтверждает заранее подготовленную продажу."
+      },
+      "narrativeRole": "motive",
+      "statementLink": {
+        "statementId": "claim_no_voluntary_transfer",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Оплата началась до заявления и подтверждает заранее подготовленную продажу.",
+          "en": "Payment began before the claim and confirms a prearranged sale.",
+          "tr": "Payment began before the claim and confirms a prearranged sale.",
+          "ar": "Payment began before the claim and confirms a prearranged sale.",
+          "kk": "Оплата началась до заявления и подтверждает заранее подготовленную продажу."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "ev-appraisal",
+      "order": 5,
+      "type": "document",
+      "title": {
+        "ru": "Страховой сертификат",
+        "en": "Insurance Certificate",
+        "tr": "Insurance Certificate",
+        "ar": "Insurance Certificate",
+        "kk": "Страховой сертификат"
+      },
+      "content": {
+        "ru": "Сертификат подлинный и подтверждает стоимость, номер и гравировку часов.",
+        "en": "The certificate is genuine and confirms the watch's value, serial number, and engraving.",
+        "tr": "The certificate is genuine and confirms the watch's value, serial number, and engraving.",
+        "ar": "The certificate is genuine and confirms the watch's value, serial number, and engraving.",
+        "kk": "Сертификат подлинный и подтверждает стоимость, номер и гравировку часов."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Подлинность вещи и её цена не доказывают кражу, но позволяют точно идентифицировать часы.",
+        "en": "The item's authenticity and value do not prove theft, but they allow the watch to be identified precisely.",
+        "tr": "The item's authenticity and value do not prove theft, but they allow the watch to be identified precisely.",
+        "ar": "The item's authenticity and value do not prove theft, but they allow the watch to be identified precisely.",
+        "kk": "Подлинность вещи и её цена не доказывают кражу, но позволяют точно идентифицировать часы."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_watch_lost",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Подлинность вещи и её цена не доказывают кражу, но позволяют точно идентифицировать часы.",
+          "en": "The item's authenticity and value do not prove theft, but they allow the watch to be identified precisely.",
+          "tr": "The item's authenticity and value do not prove theft, but they allow the watch to be identified precisely.",
+          "ar": "The item's authenticity and value do not prove theft, but they allow the watch to be identified precisely.",
+          "kk": "Подлинность вещи и её цена не доказывают кражу, но позволяют точно идентифицировать часы."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Пост от 19 марта показывает Эдуарда с «украденными» часами на руке.",
-      "Выписка не содержит покупки часов, но фиксирует их продажу 18 марта.",
-      "Заявление мошенническое и должно быть отклонено."
+      "Уникальные повреждения и серийный номер показывают, что часы оставались у Кравца.",
+      "Он заранее получил аванс и сам передал вещь аукционному посреднику через «Восточный двор».",
+      "Исходная дата передачи — 11 марта, за день до «кражи»; позднее поверх неё напечатано 18 марта.",
+      "Кража инсценирована. Выплату следует отклонить."
     ],
     "en": [
-      "The 19 March post shows Eduard wearing the \"stolen\" watch.",
-      "The statement shows no purchase of the watch but records its sale on 18 March.",
+      "Unique identifiers show that the claimant continued wearing the watch he had reported stolen.",
+      "The original transfer date is March 11, one day before the ‘theft’; March 18 was printed over it later.",
+      "Registering a report does not prove that a theft occurred.",
+      "Payment began before the claim and confirms a prearranged sale.",
+      "The item's authenticity and value do not prove theft, but they allow the watch to be identified precisely.",
       "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "19 Mart tarihli gönderi, Eduard'ı \"çalınan\" saatle gösteriyor.",
-      "Ekstrede saatin alımı yok ama 18 Mart'taki satışı kayıtlı.",
-      "Talep hileli ve reddedilmeli."
+      "Unique identifiers show that the claimant continued wearing the watch he had reported stolen.",
+      "The original transfer date is March 11, one day before the ‘theft’; March 18 was printed over it later.",
+      "Registering a report does not prove that a theft occurred.",
+      "Payment began before the claim and confirms a prearranged sale.",
+      "The item's authenticity and value do not prove theft, but they allow the watch to be identified precisely.",
+      "The claim is fraudulent and should be rejected."
     ],
     "ar": [
-      "منشور 19 مارس يُظهر إدوارد مرتديًا الساعة «المسروقة».",
-      "الكشف لا يتضمّن شراء الساعة بل يسجّل بيعها في 18 مارس.",
-      "المطالبة احتيالية ويجب رفضها."
+      "Unique identifiers show that the claimant continued wearing the watch he had reported stolen.",
+      "The original transfer date is March 11, one day before the ‘theft’; March 18 was printed over it later.",
+      "Registering a report does not prove that a theft occurred.",
+      "Payment began before the claim and confirms a prearranged sale.",
+      "The item's authenticity and value do not prove theft, but they allow the watch to be identified precisely.",
+      "The claim is fraudulent and should be rejected."
     ],
     "kk": [
-      "19 наурыздағы жазба Эдуардты «ұрланған» сағатпен көрсетеді.",
-      "Үзіндіде сағат сатып алу жоқ, бірақ 18 наурызда сатылғаны тіркелген.",
-      "Талап алаяқтық, оны қабылдамау керек."
+      "Уникальные повреждения и серийный номер показывают, что часы оставались у Кравца.",
+      "Он заранее получил аванс и сам передал вещь аукционному посреднику через «Восточный двор».",
+      "Исходная дата передачи — 11 марта, за день до «кражи»; позднее поверх неё напечатано 18 марта.",
+      "Кража инсценирована. Выплату следует отклонить."
     ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "12 марта из спальни похитили коллекционные часы индивидуальной сборки стоимостью 12 000 евро. Я подал заявление в полицию и прошу выплату по страховому сертификату.",
+        "en": "On March 12, a custom-built collectible watch worth €12,000 was stolen from my bedroom. I filed a police report and am claiming payment under the insurance certificate.",
+        "tr": "On March 12, a custom-built collectible watch worth €12,000 was stolen from my bedroom. I filed a police report and am claiming payment under the insurance certificate.",
+        "ar": "On March 12, a custom-built collectible watch worth €12,000 was stolen from my bedroom. I filed a police report and am claiming payment under the insurance certificate.",
+        "kk": "12 марта из спальни похитили коллекционные часы индивидуальной сборки стоимостью 12 000 евро. Я подал заявление в полицию и прошу выплату по страховому сертификату."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_theft_timing",
+      "text": {
+        "ru": "Коллекционные часы были похищены 12 марта.",
+        "en": "The collectible watch was stolen on March 12.",
+        "tr": "The collectible watch was stolen on March 12.",
+        "ar": "The collectible watch was stolen on March 12.",
+        "kk": "Коллекционные часы были похищены 12 марта."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_no_voluntary_transfer",
+      "text": {
+        "ru": "Кравец не продавал и не передавал часы до кражи.",
+        "en": "Kravets neither sold nor transferred the watch before the theft.",
+        "tr": "Kravets neither sold nor transferred the watch before the theft.",
+        "ar": "Kravets neither sold nor transferred the watch before the theft.",
+        "kk": "Кравец не продавал и не передавал часы до кражи."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_watch_lost",
+      "text": {
+        "ru": "Застрахованные часы остаются утраченными.",
+        "en": "The insured watch remains lost.",
+        "tr": "The insured watch remains lost.",
+        "ar": "The insured watch remains lost.",
+        "kk": "Застрахованные часы остаются утраченными."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Фотография похожих часов ничего не доказывает. Ищите уникальные признаки: номер, гравировку и историю передачи. — В. Лебедева",
+      "en": "A photograph of a similar watch proves nothing. Look for unique identifiers: the serial number, engraving, and transfer history. — V. Lebedeva",
+      "tr": "A photograph of a similar watch proves nothing. Look for unique identifiers: the serial number, engraving, and transfer history. — V. Lebedeva",
+      "ar": "A photograph of a similar watch proves nothing. Look for unique identifiers: the serial number, engraving, and transfer history. — V. Lebedeva",
+      "kk": "Фотография похожих часов ничего не доказывает. Ищите уникальные признаки: номер, гравировку и историю передачи. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "«Восточный двор» принимает не только крупную технику. Через него проходят любые вещи, которые можно продать второй раз после страховой выплаты.",
+      "en": "Eastern Yard handles more than large equipment. Anything that can be sold a second time after an insurance payout passes through it.",
+      "tr": "Eastern Yard handles more than large equipment. Anything that can be sold a second time after an insurance payout passes through it.",
+      "ar": "Eastern Yard handles more than large equipment. Anything that can be sold a second time after an insurance payout passes through it.",
+      "kk": "«Восточный двор» принимает не только крупную технику. Через него проходят любые вещи, которые можно продать второй раз после страховой выплаты."
+    },
+    "nextCaseTeaser": {
+      "ru": "Болат Жумабеков возвращается. После града он перенёс семенной запас на склад — и теперь склад затоплен.",
+      "en": "Bolat Zhumabekov returns. After the hail, he moved his seed reserves to a warehouse—and now the warehouse has flooded.",
+      "tr": "Bolat Zhumabekov returns. After the hail, he moved his seed reserves to a warehouse—and now the warehouse has flooded.",
+      "ar": "Bolat Zhumabekov returns. After the hail, he moved his seed reserves to a warehouse—and now the warehouse has flooded.",
+      "kk": "Болат Жумабеков возвращается. После града он перенёс семенной запас на склад — и теперь склад затоплен."
+    },
+    "seasonClue": {
+      "id": "east-yard-auction",
+      "label": {
+        "ru": "Аукционный канал",
+        "en": "The Auction Channel",
+        "tr": "The Auction Channel",
+        "ar": "The Auction Channel",
+        "kk": "Аукционный канал"
+      },
+      "description": {
+        "ru": "Склад служит перевалочным пунктом для застрахованных ценностей, тайно проданных владельцами.",
+        "en": "The warehouse serves as a transfer point for insured valuables secretly sold by their owners.",
+        "tr": "The warehouse serves as a transfer point for insured valuables secretly sold by their owners.",
+        "ar": "The warehouse serves as a transfer point for insured valuables secretly sold by their owners.",
+        "kk": "Склад служит перевалочным пунктом для застрахованных ценностей, тайно проданных владельцами."
+      },
+      "progressIndex": 1,
+      "progressTotal": 4
+    },
+    "epilogue": null
   }
 }

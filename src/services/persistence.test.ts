@@ -89,6 +89,9 @@ describe('loadSnapshot', () => {
         archivePurchasedPackIds: [],
         archiveUnlockedCaseIds: [],
         archiveAdUnlockServerDayByPack: {},
+        interactiveEvidenceProgress: {},
+        finalSynthesisProgress: {},
+        metaUnlocked: true,
       },
       session: null,
     };
@@ -242,6 +245,9 @@ describe('sync (debounce + flush)', () => {
       archivePurchasedPackIds: [],
       archiveUnlockedCaseIds: [],
       archiveAdUnlockServerDayByPack: {},
+      interactiveEvidenceProgress: {},
+      finalSynthesisProgress: {},
+      metaUnlocked: true,
     },
     session: null,
   });

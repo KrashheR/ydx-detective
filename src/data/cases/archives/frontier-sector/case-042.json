@@ -1,339 +1,585 @@
 {
   "id": "case-042",
   "type": "standard",
-  "difficulty": "hard",
+  "campaignOrder": 40,
+  "requiredLevel": 16,
+  "act": 4,
+  "actTitle": {
+    "ru": "Серый конвой",
+    "en": "The Gray Convoy",
+    "tr": "The Gray Convoy",
+    "ar": "The Gray Convoy",
+    "kk": "Серый конвой"
+  },
+  "difficulty": "medium",
   "claimAmount": 42800,
   "truth": "fraud",
-  "investigationBudget": 4,
   "title": {
-    "ru": "Пропавший церемониальный клинок",
-    "en": "Missing Ceremonial Blade",
-    "tr": "Missing Ceremonial Blade",
-    "ar": "Missing Ceremonial Blade",
-    "kk": "Пропавший церемониальный клинок"
+    "ru": "Клинок, проданный до кражи",
+    "en": "The Blade Sold Before the Theft",
+    "tr": "The Blade Sold Before the Theft",
+    "ar": "The Blade Sold Before the Theft",
+    "kk": "Клинок, проданный до кражи"
   },
   "claim": {
     "person": {
       "ru": "Селена Орвик, 34 года",
-      "en": "Selena Orvik, 34",
-      "tr": "Selena Orvik, 34",
-      "ar": "Selena Orvik, 34",
+      "en": "Selena Orvik, age 34",
+      "tr": "Selena Orvik, age 34",
+      "ar": "Selena Orvik, age 34",
       "kk": "Селена Орвик, 34 года"
     },
     "story": {
-      "ru": "Из семейного архива похитили церемониальный энерго-клинок. Это политическое послание радикалов, направленное против нашей семьи. Прошу выплату за реликвию.",
-      "en": "A ceremonial energy blade was stolen from our family archive. This is a political message from radicals against our house. I request payout for the relic.",
-      "tr": "A ceremonial energy blade was stolen from our family archive. This is a political message from radicals against our house. I request payout for the relic.",
-      "ar": "A ceremonial energy blade was stolen from our family archive. This is a political message from radicals against our house. I request payout for the relic.",
-      "kk": "Из семейного архива похитили церемониальный энерго-клинок. Это политическое послание радикалов, направленное против нашей семьи. Прошу выплату за реликвию."
+      "ru": "Из семейного архива похитили церемониальный клинок XVII века. Витрина открыта без повреждений; я считаю кражу политическим посланием против семьи. Прошу выплатить страховую стоимость реликвии.",
+      "en": "A seventeenth-century ceremonial blade was stolen from my family archive. The display case was opened without damage; I believe the theft was a political message against my family. I am claiming the relic's insured value.",
+      "tr": "A seventeenth-century ceremonial blade was stolen from my family archive. The display case was opened without damage; I believe the theft was a political message against my family. I am claiming the relic's insured value.",
+      "ar": "A seventeenth-century ceremonial blade was stolen from my family archive. The display case was opened without damage; I believe the theft was a political message against my family. I am claiming the relic's insured value.",
+      "kk": "Из семейного архива похитили церемониальный клинок XVII века. Витрина открыта без повреждений; я считаю кражу политическим посланием против семьи. Прошу выплатить страховую стоимость реликвии."
     }
   },
-  "coverImage": "covers/case-042.svg",
-  "personImage": "people/selena-orvik.webp",
   "client": {
     "role": {
-      "ru": "Наследница пограничного дома",
-      "en": "Frontier house heir",
-      "tr": "Sınır hanedanı varisi",
-      "ar": "وريثة بيت حدودي",
-      "kk": "Шекара әулетінің мұрагері"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Архив",
-          "en": "Archive",
-          "tr": "Arşiv",
-          "ar": "الأرشيف",
-          "kk": "Архив"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "Пограничный сектор",
-          "en": "Frontier Sector",
-          "tr": "Sınır Sektörü",
-          "ar": "القطاع الحدودي",
-          "kk": "Шекара секторы"
+          "ru": "4",
+          "en": "4",
+          "tr": "4",
+          "ar": "4",
+          "kk": "4"
         }
       },
       {
         "k": {
-          "ru": "Застрахованный риск",
-          "en": "Insured risk",
-          "tr": "Sigortalı risk",
-          "ar": "الخطر المؤمن عليه",
-          "kk": "Сақтандырылған тәуекел"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Кража церемониальной реликвии",
-          "en": "Ceremonial relic theft",
-          "tr": "Tören röliği hırsızlığı",
-          "ar": "سرقة أثر احتفالي",
-          "kk": "Салтанатты реликвия ұрлығы"
-        }
-      },
-      {
-        "k": {
-          "ru": "Архивная связка",
-          "en": "Archive thread",
-          "tr": "Arşiv bağı",
-          "ar": "خيط الأرشيف",
-          "kk": "Архив байланысы"
-        },
-        "v": {
-          "ru": "Повторяющийся след: маркировка GC-17 и серые транспортные жетоны «Серого конвоя».",
-          "en": "Recurring lead: GC-17 markings and gray transport tokens of the Grey Convoy.",
-          "tr": "Tekrarlayan iz: GC-17 işaretleri ve Gri Konvoy’un gri taşıma jetonları.",
-          "ar": "خيط متكرر: علامات GC-17 ورموز النقل الرمادية لقافلة غراي.",
-          "kk": "Қайталанатын із: GC-17 таңбалары және Сұр конвойдың сұр көлік жетондары."
+          "ru": "40",
+          "en": "40",
+          "tr": "40",
+          "ar": "40",
+          "kk": "40"
         }
       }
     ]
   },
+  "coverImage": "covers/case-042.svg",
+  "personImage": "people/selena-orvik-grounded.webp",
   "evidences": [
     {
-      "id": "display-photo",
+      "id": "ev-display",
+      "order": 1,
       "type": "photo",
       "title": {
         "ru": "Фото витрины",
-        "en": "Display Case Photo",
-        "tr": "Display Case Photo",
-        "ar": "Display Case Photo",
+        "en": "Display Case Photograph",
+        "tr": "Display Case Photograph",
+        "ar": "Display Case Photograph",
         "kk": "Фото витрины"
       },
       "content": {
-        "ru": "Стекло целое, замок не повреждён. На бархате виден аккуратный след снятого клинка.",
-        "en": "Glass is intact, lock undamaged. The velvet shows a clean indentation where the blade was removed.",
-        "tr": "Glass is intact, lock undamaged. The velvet shows a clean indentation where the blade was removed.",
-        "ar": "Glass is intact, lock undamaged. The velvet shows a clean indentation where the blade was removed.",
-        "kk": "Стекло целое, замок не повреждён. На бархате виден аккуратный след снятого клинка."
+        "ru": "Замок открыт правильным ключом, пыль на петлях не нарушена, стекло цело. Следов внешнего доступа нет.",
+        "en": "The lock was opened with the correct key, dust on the hinges is undisturbed, and the glass is intact. There is no sign of external entry.",
+        "tr": "The lock was opened with the correct key, dust on the hinges is undisturbed, and the glass is intact. There is no sign of external entry.",
+        "ar": "The lock was opened with the correct key, dust on the hinges is undisturbed, and the glass is intact. There is no sign of external entry.",
+        "kk": "Замок открыт правильным ключом, пыль на петлях не нарушена, стекло цело. Следов внешнего доступа нет."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Сцена похожа на доступ ключом, а не на нападение.",
-        "en": "The scene fits key access, not a raid.",
-        "tr": "The scene fits key access, not a raid.",
-        "ar": "The scene fits key access, not a raid.",
-        "kk": "Сцена похожа на доступ ключом, а не на нападение."
+        "ru": "Витрину открыли штатно, а не вскрыли похитители.",
+        "en": "The display case was opened normally, not forced by thieves.",
+        "tr": "The display case was opened normally, not forced by thieves.",
+        "ar": "The display case was opened normally, not forced by thieves.",
+        "kk": "Витрину открыли штатно, а не вскрыли похитители."
       },
+      "narrativeRole": "suspicion",
+      "statementLink": {
+        "statementId": "claim_forced_entry",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Витрину открыли штатно, а не вскрыли похитители.",
+          "en": "The display case was opened normally, not forced by thieves.",
+          "tr": "The display case was opened normally, not forced by thieves.",
+          "ar": "The display case was opened normally, not forced by thieves.",
+          "kk": "Витрину открыли штатно, а не вскрыли похитители."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_forced_entry",
+        "reason": {
+          "ru": "Витрину открыли штатно, а не вскрыли похитители.",
+          "en": "The display case was opened normally, not forced by thieves.",
+          "tr": "The display case was opened normally, not forced by thieves.",
+          "ar": "The display case was opened normally, not forced by thieves.",
+          "kk": "Витрину открыли штатно, а не вскрыли похитители."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
       "meta": {
-        "filename": "IMG_20260519_114002.jpg",
-        "imageUrl": "evidence/case-042-display-photo.webp"
-      },
-      "relation": "contradicts"
+        "imageUrl": "evidence/case-042-ev-display.webp"
+      }
     },
     {
-      "id": "bank-auction",
+      "id": "ev-bank",
+      "order": 2,
       "type": "bank_statement",
       "title": {
-        "ru": "Платёж аукционного дома",
-        "en": "Auction House Payment",
-        "tr": "Auction House Payment",
-        "ar": "Auction House Payment",
-        "kk": "Платёж аукционного дома"
+        "ru": "Платёж аукционного посредника",
+        "en": "Auction Intermediary Payment",
+        "tr": "Auction Intermediary Payment",
+        "ar": "Auction Intermediary Payment",
+        "kk": "Платёж аукционного посредника"
       },
       "content": {
-        "ru": [
-          "18.05 — +31 500 CR · Дом закрытых торгов «Арка»",
-          "18.05 — -9 000 CR · погашение частного долга"
-        ],
-        "en": [
-          "18 May — +31,500 CR · Arka private auctions",
-          "18 May — -9,000 CR · private debt repayment"
-        ],
-        "tr": [
-          "18 May — +31,500 CR · Arka private auctions",
-          "18 May — -9,000 CR · private debt repayment"
-        ],
-        "ar": [
-          "18 May — +31,500 CR · Arka private auctions",
-          "18 May — -9,000 CR · private debt repayment"
-        ],
-        "kk": [
-          "18.05 — +31 500 CR · Дом закрытых торгов «Арка»",
-          "18.05 — -9 000 CR · погашение частного долга"
-        ]
+        "ru": "За двенадцать часов до «кражи» Орвик получила 60% стоимости клинка от закрытого аукционного дома.",
+        "en": "Twelve hours before the ‘theft,’ Orvik received 60% of the blade's value from a private auction house.",
+        "tr": "Twelve hours before the ‘theft,’ Orvik received 60% of the blade's value from a private auction house.",
+        "ar": "Twelve hours before the ‘theft,’ Orvik received 60% of the blade's value from a private auction house.",
+        "kk": "За двенадцать часов до «кражи» Орвик получила 60% стоимости клинка от закрытого аукционного дома."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Выплата совпадает с исчезновением реликвии.",
-        "en": "The payment matches the relic disappearance.",
-        "tr": "The payment matches the relic disappearance.",
-        "ar": "The payment matches the relic disappearance.",
-        "kk": "Выплата совпадает с исчезновением реликвии."
+        "ru": "Оплата за реликвию поступила до заявленного исчезновения.",
+        "en": "Payment for the relic arrived before its reported disappearance.",
+        "tr": "Payment for the relic arrived before its reported disappearance.",
+        "ar": "Payment for the relic arrived before its reported disappearance.",
+        "kk": "Оплата за реликвию поступила до заявленного исчезновения."
       },
-      "meta": {
-        "bankName": {
-          "ru": "Regency Trust",
-          "en": "Regency Trust",
-          "tr": "Regency Trust",
-          "ar": "Regency Trust",
-          "kk": "Regency Trust"
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_no_sale",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Оплата за реликвию поступила до заявленного исчезновения.",
+          "en": "Payment for the relic arrived before its reported disappearance.",
+          "tr": "Payment for the relic arrived before its reported disappearance.",
+          "ar": "Payment for the relic arrived before its reported disappearance.",
+          "kk": "Оплата за реликвию поступила до заявленного исчезновения."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_no_sale",
+        "reason": {
+          "ru": "Оплата за реликвию поступила до заявленного исчезновения.",
+          "en": "Payment for the relic arrived before its reported disappearance.",
+          "tr": "Payment for the relic arrived before its reported disappearance.",
+          "ar": "Payment for the relic arrived before its reported disappearance.",
+          "kk": "Оплата за реликвию поступила до заявленного исчезновения."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "ev-courier",
+      "order": 3,
+      "type": "seal_match",
+      "title": {
+        "ru": "Сопоставление контрольного ярлыка футляра",
+        "en": "Case Security-Tag Comparison",
+        "tr": "Case Security-Tag Comparison",
+        "ar": "Case Security-Tag Comparison",
+        "kk": "Сопоставление контрольного ярлыка футляра"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Фрагменты совпали: Орвик сама передала курьеру футляр с застрахованным клинком до заявления о краже.",
+        "en": "The fragments match: Orvik personally gave the insured blade's case to a courier before reporting the theft.",
+        "tr": "The fragments match: Orvik personally gave the insured blade's case to a courier before reporting the theft.",
+        "ar": "The fragments match: Orvik personally gave the insured blade's case to a courier before reporting the theft.",
+        "kk": "Фрагменты совпали: Орвик сама передала курьеру футляр с застрахованным клинком до заявления о краже."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_forced_entry",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Фрагменты совпали: Орвик сама передала курьеру футляр с застрахованным клинком до заявления о краже.",
+          "en": "The fragments match: Orvik personally gave the insured blade's case to a courier before reporting the theft.",
+          "tr": "The fragments match: Orvik personally gave the insured blade's case to a courier before reporting the theft.",
+          "ar": "The fragments match: Orvik personally gave the insured blade's case to a courier before reporting the theft.",
+          "kk": "Фрагменты совпали: Орвик сама передала курьеру футляр с застрахованным клинком до заявления о краже."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_forced_entry",
+        "reason": {
+          "ru": "Фрагменты совпали: Орвик сама передала курьеру футляр с застрахованным клинком до заявления о краже.",
+          "en": "The fragments match: Orvik personally gave the insured blade's case to a courier before reporting the theft.",
+          "tr": "The fragments match: Orvik personally gave the insured blade's case to a courier before reporting the theft.",
+          "ar": "The fragments match: Orvik personally gave the insured blade's case to a courier before reporting the theft.",
+          "kk": "Фрагменты совпали: Орвик сама передала курьеру футляр с застрахованным клинком до заявления о краже."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "Фрагмент A остался в архивной витрине, фрагмент B приклеен к квитанции курьера.",
+        "en": "Fragment A remained in the archive display case; fragment B is attached to the courier receipt.",
+        "tr": "Fragment A remained in the archive display case; fragment B is attached to the courier receipt.",
+        "ar": "Fragment A remained in the archive display case; fragment B is attached to the courier receipt.",
+        "kk": "Фрагмент A остался в архивной витрине, фрагмент B приклеен к квитанции курьера."
+      },
+      "instruction": {
+        "ru": "Совместить рваные края ярлыка.",
+        "en": "Align the tag's torn edges.",
+        "tr": "Align the tag's torn edges.",
+        "ar": "Align the tag's torn edges.",
+        "kk": "Совместить рваные края ярлыка."
+      },
+      "previousType": "social_media",
+      "assets": {
+        "asset1": "cases/case-042/assets/interactive/ev-courier-master-a.webp",
+        "asset2": "cases/case-042/assets/interactive/ev-courier-fragments.json"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true,
+        "transparencyMode": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Совпадение физически доказывает добровольную передачу именно застрахованного футляра.",
+          "en": "The match physically proves the voluntary transfer of the insured case.",
+          "tr": "The match physically proves the voluntary transfer of the insured case.",
+          "ar": "The match physically proves the voluntary transfer of the insured case.",
+          "kk": "Совпадение физически доказывает добровольную передачу именно застрахованного футляра."
         },
-        "accountMask": "•••• •••• •••• 1184"
+        "playerAction": {
+          "ru": "Совместить рваные края ярлыка.",
+          "en": "Align the tag's torn edges.",
+          "tr": "Align the tag's torn edges.",
+          "ar": "Align the tag's torn edges.",
+          "kk": "Совместить рваные края ярлыка."
+        },
+        "conclusion": {
+          "ru": "Фрагменты совпали: Орвик сама передала курьеру футляр с застрахованным клинком до заявления о краже.",
+          "en": "The fragments match: Orvik personally gave the insured blade's case to a courier before reporting the theft.",
+          "tr": "The fragments match: Orvik personally gave the insured blade's case to a courier before reporting the theft.",
+          "ar": "The fragments match: Orvik personally gave the insured blade's case to a courier before reporting the theft.",
+          "kk": "Фрагменты совпали: Орвик сама передала курьеру футляр с застрахованным клинком до заявления о краже."
+        }
       },
-      "relation": "contradicts"
+      "data": {
+        "movableFragment": "B",
+        "allowRotation": true,
+        "rotationStep": 3,
+        "initialTransform": {
+          "x": 72,
+          "y": 18,
+          "rotation": -14
+        },
+        "targetTransform": {
+          "x": 132,
+          "y": 48,
+          "rotation": 6
+        },
+        "tolerance": {
+          "position": 10,
+          "rotation": 5
+        },
+        "expectedMatch": true,
+        "sourceSeed": 404217,
+        "fragmentASeed": 404217,
+        "fragmentBSeed": 404217,
+        "comparisonMarkers": [
+          {
+            "id": "tear_pattern",
+            "label": "Совпадают волокна бумаги, разрыв и дефект рамки",
+            "labelEn": "Paper fibers, tear, and border defect match"
+          }
+        ]
+      }
     },
     {
-      "id": "social-courier",
-      "type": "social_media",
-      "title": {
-        "ru": "Сообщение курьеру",
-        "en": "Courier Message",
-        "tr": "Courier Message",
-        "ar": "Courier Message",
-        "kk": "Сообщение курьеру"
-      },
-      "content": {
-        "ru": "Закрытый пост: «Семейный металл заберут через боковой шлюз. Без вопросов, коробка уже оплачена». Курьер ставит на фото серый жетон с тем же GC-17.",
-        "en": "Private post: \"Family metal leaves through the side airlock. No questions, the crate is prepaid.\" The courier shows a gray token with the same GC-17 in the photo.",
-        "tr": "Private post: \"Family metal leaves through the side airlock. No questions, the crate is prepaid.\" Kurye fotoğrafta aynı GC-17 yazılı gri jetonu gösteriyor.",
-        "ar": "Private post: \"Family metal leaves through the side airlock. No questions, the crate is prepaid.\" يظهر الساعي في الصورة رمزاً رمادياً عليه GC-17 نفسه.",
-        "kk": "Закрытый пост: «Семейный металл заберут через боковой шлюз. Без вопросов, коробка уже оплачена». Курьер фотода сол GC-17 жазылған сұр жетон көрсетеді."
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Фраза описывает добровольную передачу предмета.",
-        "en": "The wording describes a voluntary handoff.",
-        "tr": "The wording describes a voluntary handoff.",
-        "ar": "The wording describes a voluntary handoff.",
-        "kk": "Фраза описывает добровольную передачу предмета."
-      },
-      "meta": {
-        "socialPlatform": "closed-circle.local"
-      },
-      "relation": "contradicts"
-    },
-    {
-      "id": "guard-statement",
-      "type": "witness_statement",
-      "title": {
-        "ru": "Показания охраны",
-        "en": "Guard Statement",
-        "tr": "Guard Statement",
-        "ar": "Guard Statement",
-        "kk": "Показания охраны"
-      },
-      "content": {
-        "ru": "«Госпожа Орвик сама внесла ночного курьера в список допуска. Тревоги не было».",
-        "en": "\"Ms. Orvik personally added the night courier to the access list. There was no alarm.\"",
-        "tr": "\"Ms. Orvik personally added the night courier to the access list. There was no alarm.\"",
-        "ar": "\"Ms. Orvik personally added the night courier to the access list. There was no alarm.\"",
-        "kk": "«Госпожа Орвик сама внесла ночного курьера в список допуска. Тревоги не было»."
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Охрана подтверждает добровольный допуск.",
-        "en": "Security confirms voluntary access.",
-        "tr": "Security confirms voluntary access.",
-        "ar": "Security confirms voluntary access.",
-        "kk": "Охрана подтверждает добровольный допуск."
-      },
-      "relation": "contradicts"
-    },
-    {
-      "id": "archive-access",
+      "id": "ev-access",
+      "order": 4,
       "type": "usage_log",
       "title": {
-        "ru": "Журнал доступа архива",
+        "ru": "Журнал архива",
         "en": "Archive Access Log",
         "tr": "Archive Access Log",
         "ar": "Archive Access Log",
-        "kk": "Журнал доступа архива"
+        "kk": "Журнал архива"
       },
       "content": {
-        "ru": [
-          "21:44 — карта S-01, С. Орвик, вход",
-          "21:49 — витрина 3, штатное открытие",
-          "21:57 — карта S-01, выход"
-        ],
-        "en": [
-          "21:44 — card S-01, S. Orvik, entry",
-          "21:49 — display 3, normal open",
-          "21:57 — card S-01, exit"
-        ],
-        "tr": [
-          "21:44 — card S-01, S. Orvik, entry",
-          "21:49 — display 3, normal open",
-          "21:57 — card S-01, exit"
-        ],
-        "ar": [
-          "21:44 — card S-01, S. Orvik, entry",
-          "21:49 — display 3, normal open",
-          "21:57 — card S-01, exit"
-        ],
-        "kk": [
-          "21:44 — карта S-01, С. Орвик, вход",
-          "21:49 — витрина 3, штатное открытие",
-          "21:57 — карта S-01, выход"
-        ]
+        "ru": "В помещение вошли по персональной карте Орвик; тревога отключена её кодом.",
+        "en": "Orvik's personal card opened the room, and her code disabled the alarm.",
+        "tr": "Orvik's personal card opened the room, and her code disabled the alarm.",
+        "ar": "Orvik's personal card opened the room, and her code disabled the alarm.",
+        "kk": "В помещение вошли по персональной карте Орвик; тревога отключена её кодом."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Штатное открытие витрины связано с картой заявительницы.",
-        "en": "The normal display opening is tied to the claimant card.",
-        "tr": "The normal display opening is tied to the claimant card.",
-        "ar": "The normal display opening is tied to the claimant card.",
-        "kk": "Штатное открытие витрины связано с картой заявительницы."
+        "ru": "Доступ осуществлён штатными средствами владелицы.",
+        "en": "The owner's normal credentials were used for access.",
+        "tr": "The owner's normal credentials were used for access.",
+        "ar": "The owner's normal credentials were used for access.",
+        "kk": "Доступ осуществлён штатными средствами владелицы."
       },
-      "meta": {
-        "logPrompt": "archive@noble-vault:~$ tail -f /var/log/access.log"
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_forced_entry",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Доступ осуществлён штатными средствами владелицы.",
+          "en": "The owner's normal credentials were used for access.",
+          "tr": "The owner's normal credentials were used for access.",
+          "ar": "The owner's normal credentials were used for access.",
+          "kk": "Доступ осуществлён штатными средствами владелицы."
+        }
       },
-      "relation": "contradicts"
+      "contradictionTarget": {
+        "statementId": "claim_forced_entry",
+        "reason": {
+          "ru": "Доступ осуществлён штатными средствами владелицы.",
+          "en": "The owner's normal credentials were used for access.",
+          "tr": "The owner's normal credentials were used for access.",
+          "ar": "The owner's normal credentials were used for access.",
+          "kk": "Доступ осуществлён штатными средствами владелицы."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
-      "id": "valuation",
+      "id": "ev-guard",
+      "order": 5,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания охранника",
+        "en": "Guard's Statement",
+        "tr": "Guard's Statement",
+        "ar": "Guard's Statement",
+        "kk": "Показания охранника"
+      },
+      "content": {
+        "ru": "Охранник видел, как Орвик передала запечатанный футляр курьеру и назвала это отправкой на реставрацию.",
+        "en": "The guard saw Orvik give the sealed case to a courier, describing it as a restoration shipment.",
+        "tr": "The guard saw Orvik give the sealed case to a courier, describing it as a restoration shipment.",
+        "ar": "The guard saw Orvik give the sealed case to a courier, describing it as a restoration shipment.",
+        "kk": "Охранник видел, как Орвик передала запечатанный футляр курьеру и назвала это отправкой на реставрацию."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Независимый свидетель подтверждает добровольную передачу.",
+        "en": "An independent witness confirms the voluntary transfer.",
+        "tr": "An independent witness confirms the voluntary transfer.",
+        "ar": "An independent witness confirms the voluntary transfer.",
+        "kk": "Независимый свидетель подтверждает добровольную передачу."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_no_sale",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Независимый свидетель подтверждает добровольную передачу.",
+          "en": "An independent witness confirms the voluntary transfer.",
+          "tr": "An independent witness confirms the voluntary transfer.",
+          "ar": "An independent witness confirms the voluntary transfer.",
+          "kk": "Независимый свидетель подтверждает добровольную передачу."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_no_sale",
+        "reason": {
+          "ru": "Независимый свидетель подтверждает добровольную передачу.",
+          "en": "An independent witness confirms the voluntary transfer.",
+          "tr": "An independent witness confirms the voluntary transfer.",
+          "ar": "An independent witness confirms the voluntary transfer.",
+          "kk": "Независимый свидетель подтверждает добровольную передачу."
+        }
+      },
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5
+    },
+    {
+      "id": "ev-valuation",
+      "order": 6,
       "type": "document",
       "title": {
         "ru": "Оценка реликвии",
-        "en": "Relic Valuation",
-        "tr": "Relic Valuation",
-        "ar": "Relic Valuation",
+        "en": "Relic Appraisal",
+        "tr": "Relic Appraisal",
+        "ar": "Relic Appraisal",
         "kk": "Оценка реликвии"
       },
       "content": {
-        "ru": "Независимая оценка подтверждает страховую стоимость предмета при наличии оригинала.",
-        "en": "Independent valuation confirms the insured value if the original item is present.",
-        "tr": "Independent valuation confirms the insured value if the original item is present.",
-        "ar": "Independent valuation confirms the insured value if the original item is present.",
-        "kk": "Независимая оценка подтверждает страховую стоимость предмета при наличии оригинала."
+        "ru": "Клинок подлинный и действительно стоит около 42 800 евро.",
+        "en": "The blade is genuine and worth approximately €42,800.",
+        "tr": "The blade is genuine and worth approximately €42,800.",
+        "ar": "The blade is genuine and worth approximately €42,800.",
+        "kk": "Клинок подлинный и действительно стоит около 42 800 евро."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Материал важен для хронологии, но сам по себе не опровергает заявление.",
-        "en": "The material matters for the timeline but does not by itself disprove the claim.",
-        "tr": "The material matters for the timeline but does not by itself disprove the claim.",
-        "ar": "The material matters for the timeline but does not by itself disprove the claim.",
-        "kk": "Материал важен для хронологии, но сам по себе не опровергает заявление."
+        "ru": "Цена реальна, но не доказывает кражу.",
+        "en": "The value is genuine but does not prove theft.",
+        "tr": "The value is genuine but does not prove theft.",
+        "ar": "The value is genuine but does not prove theft.",
+        "kk": "Цена реальна, но не доказывает кражу."
       },
-      "relation": "context"
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_no_sale",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Цена реальна, но не доказывает кражу.",
+          "en": "The value is genuine but does not prove theft.",
+          "tr": "The value is genuine but does not prove theft.",
+          "ar": "The value is genuine but does not prove theft.",
+          "kk": "Цена реальна, но не доказывает кражу."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Витрина открыта штатно, а банковский след показывает тайную продажу.",
-      "Серый жетон GC-17 выводит к той же транспортной сети.",
-      "Политическая кража не подтверждена: вердикт — отказ."
+      "Витрина открыта штатно картой и ключом Орвик.",
+      "Она получила аванс и лично организовала отправку клинка через северный терминал GC-17.",
+      "Фрагменты совпали: Орвик сама передала курьеру футляр с застрахованным клинком до заявления о краже.",
+      "Политическая кража выдумана после продажи. Выплату следует отклонить."
     ],
     "en": [
-      "The display was opened normally, and the bank trail shows a secret sale.",
-      "The gray GC-17 token points to the same transport network.",
-      "The political theft story is unsupported: reject the claim."
+      "The display case was opened normally, not forced by thieves.",
+      "Payment for the relic arrived before its reported disappearance.",
+      "The fragments match: Orvik personally gave the insured blade's case to a courier before reporting the theft.",
+      "The owner's normal credentials were used for access.",
+      "An independent witness confirms the voluntary transfer.",
+      "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "Vitrin normal açılmış ve banka izi gizli satışı gösteriyor.",
-      "Gri GC-17 jetonu aynı taşıma ağına işaret ediyor.",
-      "Siyasi hırsızlık hikâyesi desteklenmiyor: ödeme reddedilir."
+      "The display case was opened normally, not forced by thieves.",
+      "Payment for the relic arrived before its reported disappearance.",
+      "The fragments match: Orvik personally gave the insured blade's case to a courier before reporting the theft.",
+      "The owner's normal credentials were used for access.",
+      "An independent witness confirms the voluntary transfer.",
+      "The claim is fraudulent and should be rejected."
     ],
     "ar": [
-      "فُتحت الواجهة بشكل نظامي ويظهر المسار البنكي بيعاً سرياً.",
-      "يشير رمز GC-17 الرمادي إلى شبكة النقل نفسها.",
-      "قصة السرقة السياسية غير مثبتة: القرار رفض."
+      "The display case was opened normally, not forced by thieves.",
+      "Payment for the relic arrived before its reported disappearance.",
+      "The fragments match: Orvik personally gave the insured blade's case to a courier before reporting the theft.",
+      "The owner's normal credentials were used for access.",
+      "An independent witness confirms the voluntary transfer.",
+      "The claim is fraudulent and should be rejected."
     ],
     "kk": [
-      "Витрина штаттық түрде ашылған, банк ізі жасырын сатуды көрсетеді.",
-      "Сұр GC-17 жетоны сол көлік желісіне апарады.",
-      "Саяси ұрлық нұсқасы расталмады: вердикт — бас тарту."
+      "Витрина открыта штатно картой и ключом Орвик.",
+      "Она получила аванс и лично организовала отправку клинка через северный терминал GC-17.",
+      "Фрагменты совпали: Орвик сама передала курьеру футляр с застрахованным клинком до заявления о краже.",
+      "Политическая кража выдумана после продажи. Выплату следует отклонить."
     ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Из семейного архива похитили церемониальный клинок XVII века. Витрина открыта без повреждений; я считаю кражу политическим посланием против семьи. Прошу выплатить страховую стоимость реликвии.",
+        "en": "A seventeenth-century ceremonial blade was stolen from my family archive. The display case was opened without damage; I believe the theft was a political message against my family. I am claiming the relic's insured value.",
+        "tr": "A seventeenth-century ceremonial blade was stolen from my family archive. The display case was opened without damage; I believe the theft was a political message against my family. I am claiming the relic's insured value.",
+        "ar": "A seventeenth-century ceremonial blade was stolen from my family archive. The display case was opened without damage; I believe the theft was a political message against my family. I am claiming the relic's insured value.",
+        "kk": "Из семейного архива похитили церемониальный клинок XVII века. Витрина открыта без повреждений; я считаю кражу политическим посланием против семьи. Прошу выплатить страховую стоимость реликвии."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_theft",
+      "text": {
+        "ru": "Церемониальный клинок был похищен из закрытой витрины.",
+        "en": "The ceremonial blade was stolen from a locked display case.",
+        "tr": "The ceremonial blade was stolen from a locked display case.",
+        "ar": "The ceremonial blade was stolen from a locked display case.",
+        "kk": "Церемониальный клинок был похищен из закрытой витрины."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_forced_entry",
+      "text": {
+        "ru": "Витрину вскрыли посторонние, а владелица не передавала футляр.",
+        "en": "Outsiders forced the display case, and the owner did not transfer the case.",
+        "tr": "Outsiders forced the display case, and the owner did not transfer the case.",
+        "ar": "Outsiders forced the display case, and the owner did not transfer the case.",
+        "kk": "Витрину вскрыли посторонние, а владелица не передавала футляр."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_no_sale",
+      "text": {
+        "ru": "Орвик не продавала клинок и не получала за него аванс.",
+        "en": "Orvik did not sell the blade or receive an advance for it.",
+        "tr": "Orvik did not sell the blade or receive an advance for it.",
+        "ar": "Orvik did not sell the blade or receive an advance for it.",
+        "kk": "Орвик не продавала клинок и не получала за него аванс."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Политический мотив звучит убедительно и потому удобен. Но деньги пришли на счёт за двенадцать часов до заявленного проникновения. — В. Лебедева",
+      "en": "A political motive sounds convincing, which makes it convenient. But the money reached the account twelve hours before the alleged break-in. — V. Lebedeva",
+      "tr": "A political motive sounds convincing, which makes it convenient. But the money reached the account twelve hours before the alleged break-in. — V. Lebedeva",
+      "ar": "A political motive sounds convincing, which makes it convenient. But the money reached the account twelve hours before the alleged break-in. — V. Lebedeva",
+      "kk": "Политический мотив звучит убедительно и потому удобен. Но деньги пришли на счёт за двенадцать часов до заявленного проникновения. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "В документах курьера найден пропуск в академию «Меридиан». Серый конвой хранит там маршрутные ключи и вербует стажёров. Следующий акт начинается внутри академии.",
+      "en": "A pass to Meridian Academy was found in the courier's records. The Gray Convoy stores route keys there and recruits trainees. The next act begins inside the academy.",
+      "tr": "A pass to Meridian Academy was found in the courier's records. The Gray Convoy stores route keys there and recruits trainees. The next act begins inside the academy.",
+      "ar": "A pass to Meridian Academy was found in the courier's records. The Gray Convoy stores route keys there and recruits trainees. The next act begins inside the academy.",
+      "kk": "В документах курьера найден пропуск в академию «Меридиан». Серый конвой хранит там маршрутные ключи и вербует стажёров. Следующий акт начинается внутри академии."
+    },
+    "nextCaseTeaser": {
+      "ru": "В «Меридиане» исчез стажёр, который успел скопировать маршруты Серого конвоя. Наставник называет это похищением.",
+      "en": "A Meridian trainee vanished after copying Gray Convoy routes. His mentor calls it an abduction.",
+      "tr": "A Meridian trainee vanished after copying Gray Convoy routes. His mentor calls it an abduction.",
+      "ar": "A Meridian trainee vanished after copying Gray Convoy routes. His mentor calls it an abduction.",
+      "kk": "В «Меридиане» исчез стажёр, который успел скопировать маршруты Серого конвоя. Наставник называет это похищением."
+    },
+    "seasonClue": null,
+    "epilogue": null
   }
 }

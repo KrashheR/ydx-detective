@@ -1,0 +1,83 @@
+{
+  "id": "ev-police",
+  "order": 6,
+  "type": "document_scan",
+  "title": {
+    "ru": "Экспертиза заявления об угоне"
+  },
+  "isContradiction": true,
+  "narrativeRole": "context",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "В черновике было написано «ключ №2 у меня»; строку стёрли перед подписанием заявления."
+  },
+  "previousType": "document",
+  "description": {
+    "ru": "Полиция предоставила бумажный черновик заявления вместе с подписанной копией."
+  },
+  "instruction": {
+    "ru": "Включить боковой свет и проверить участок перечня ключей."
+  },
+  "assets": {
+    "asset1": "assets/interactive/ev-police-base.webp",
+    "asset2": "assets/interactive/ev-police-scan-overlay.svg"
+  },
+  "data": {
+    "initialMode": "normal",
+    "modes": [
+      "normal",
+      "side_light",
+      "contrast"
+    ],
+    "anomalyZones": [
+      {
+        "id": "second_key",
+        "mode": "side_light",
+        "x": 28,
+        "y": 61,
+        "width": 42,
+        "height": 9,
+        "label": "В черновике было написано «ключ №2 у меня»; строку стёрли перед подписанием заявления.",
+        "isContradiction": true
+      }
+    ],
+    "successCondition": {
+      "type": "select_zone",
+      "zoneId": "second_key"
+    }
+  },
+  "statementLink": {
+    "statementId": "claim_keys",
+    "relation": "contradicts",
+    "reason": {
+      "ru": "В черновике было написано «ключ №2 у меня»; строку стёрли перед подписанием заявления."
+    }
+  },
+  "contradictionTarget": {
+    "statementId": "claim_keys",
+    "reason": {
+      "ru": "В черновике было написано «ключ №2 у меня»; строку стёрли перед подписанием заявления."
+    }
+  },
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Скрытая удалённая строка показывает осознанное сокрытие второго ключа."
+    },
+    "playerAction": {
+      "ru": "Включить боковой свет и проверить участок перечня ключей."
+    },
+    "conclusion": {
+      "ru": "В черновике было написано «ключ №2 у меня»; строку стёрли перед подписанием заявления."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

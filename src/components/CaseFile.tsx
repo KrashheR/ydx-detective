@@ -72,6 +72,7 @@ export function CaseFile({
   const touchStart = useRef<{ x: number; y: number } | null>(null);
   const [toast, setToast] = useState<string | null>(null);
   const [claimPeekOpen, setClaimPeekOpen] = useState(false);
+  const [selectedStatementId, setSelectedStatementId] = useState<string | null>(null);
 
   // Hint targeting mode: after clicking a hint button, the player picks which
   // card to reveal instead of getting "the next one in order". Esc or a click
@@ -126,6 +127,11 @@ export function CaseFile({
     goToTab(forward ? "evidence" : "statement");
   };
   const isDaily = caseData.type === "daily";
+  const viewedIds = new Set(session?.viewedEvidenceIds ?? []);
+  const visibleEvidences = caseData.evidences.filter((item) =>
+    item.evidenceTier !== "arc" &&
+    (item.unlocksAfterEvidenceIds?.every((id) => viewedIds.has(id)) ?? true),
+  );
 
   // Hint state. Both hints reveal one evidence card's true status; Inspector
   // Note costs 20% of the claim, Witness Canvass is unlocked by a rewarded video.
@@ -134,10 +140,10 @@ export function CaseFile({
   );
   const canAffordNote = balance >= noteCost;
   const allRevealed =
-    (session?.revealedEvidenceIds.length ?? 0) >= caseData.evidences.length;
+    (session?.revealedEvidenceIds.length ?? 0) >= visibleEvidences.length;
 
-  const evCount = caseData.evidences.length;
-  const contradictionCount = caseData.evidences.filter((ev) => ev.isContradiction).length;
+  const evCount = visibleEvidences.length;
+  const contradictionCount = visibleEvidences.filter((ev) => ev.isContradiction).length;
 
   const handleReject = () => {
     if (!onReject()) return showToast(t("rejectNeedsProof", lang));
@@ -255,6 +261,27 @@ export function CaseFile({
           {loc(caseData.claim.story, lang)}
         </p>
 
+        {caseData.claimStatements && (
+          <div className="mt-4 space-y-2" aria-label={t("statement", lang)}>
+            {caseData.claimStatements.filter((item) => item.id !== "claim_main").map((item, index) => {
+              const stamped = session?.stamps?.some((stamp) => stamp.statementId === item.id) ?? false;
+              const active = selectedStatementId === item.id;
+              return (
+                <button
+                  key={item.id}
+                  type="button"
+                  onClick={() => setSelectedStatementId(item.id)}
+                  className={`flex min-h-11 w-full items-start gap-3 rounded-md border px-3 py-2 text-start text-sm leading-relaxed transition-colors ${active ? "border-accent bg-accent/10 text-ink" : "border-document-dash bg-white text-text-light"}`}
+                >
+                  <span className="font-mono text-xs font-bold text-text-muted">{index + 1}.</span>
+                  <span className="flex-1">{loc(item.text, lang)}</span>
+                  {stamped && <span className="rotate-[-8deg] border-2 border-stamp px-1 font-mono text-[9px] font-bold text-stamp">✓</span>}
+                </button>
+              );
+            })}
+          </div>
+        )}
+
         {/* Claim sum box */}
         <div className="mt-[18px] flex items-center justify-between gap-3 rounded-md border border-dashed border-document-dash bg-white px-[15px] py-[13px]">
           <span className="text-xs font-medium text-text-dim">
@@ -272,7 +299,7 @@ export function CaseFile({
   /* ---------------------------------- Evidence grid ------------------------- */
   const evidence = (
     <div className="grid grid-cols-2 gap-3">
-      {caseData.evidences.map((ev) => {
+      {visibleEvidences.map((ev) => {
         const viewed = session?.viewedEvidenceIds.includes(ev.id) ?? false;
         const revealed = session?.revealedEvidenceIds.includes(ev.id) ?? false;
         const targetable = targeting != null && !revealed;

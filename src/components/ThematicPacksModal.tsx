@@ -9,7 +9,7 @@ import {
 import { RTL_LANGUAGES, loc, t } from "../i18n/ui";
 import type { CaseUnlockInfo } from "../engine/caseUnlockEngine";
 import type { CaseSummary, Language, PlayerStats } from "../types";
-import { getServerTimeMs, type PaymentsProduct } from "../services/yandexSDK";
+import { getServerTimeMs, type PaymentsProduct } from "../services/platformAdapter";
 
 interface Props {
   lang: Language;

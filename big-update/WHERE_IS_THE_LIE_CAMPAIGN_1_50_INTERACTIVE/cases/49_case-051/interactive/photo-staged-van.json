@@ -1,0 +1,110 @@
+{
+  "id": "photo-staged-van",
+  "order": 7,
+  "type": "shadow_time_check",
+  "title": {
+    "ru": "Проверка времени фотографии фургона"
+  },
+  "isContradiction": true,
+  "narrativeRole": "proof",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Фотография сделана в 16:10–16:35 предыдущего дня, а не после ночного «перехвата»."
+  },
+  "previousType": null,
+  "description": {
+    "ru": "Драй приложил снимок якобы брошенного фургона; ориентация рампы известна по плану терминала."
+  },
+  "instruction": {
+    "ru": "Совместить тень сигнального столба с временной шкалой."
+  },
+  "assets": {
+    "asset1": "assets/interactive/photo-staged-van-scene.webp",
+    "asset2": "assets/interactive/photo-staged-van-shadow-reference.svg"
+  },
+  "data": {
+    "claimedTime": "02:15",
+    "orientationSource": "Технический план аэропортовой рампы",
+    "slider": {
+      "from": "06:00",
+      "to": "21:00",
+      "stepMinutes": 10
+    },
+    "shadowOrigin": {
+      "x": 44,
+      "y": 65
+    },
+    "referenceShadow": {
+      "baseAngle": 0,
+      "baseLength": 100,
+      "width": 20,
+      "opacity": 0.34
+    },
+    "timeSamples": [
+      {
+        "time": "08:00",
+        "angle": 71,
+        "length": 129
+      },
+      {
+        "time": "12:00",
+        "angle": 9,
+        "length": 52
+      },
+      {
+        "time": "16:20",
+        "angle": -44,
+        "length": 94
+      },
+      {
+        "time": "20:00",
+        "angle": -76,
+        "length": 151
+      }
+    ],
+    "validTimeRanges": [
+      {
+        "from": "16:10",
+        "to": "16:35"
+      }
+    ],
+    "matchTolerance": {
+      "angle": 8,
+      "length": 16
+    }
+  },
+  "statementLink": {
+    "statementId": "claim_interception_time",
+    "relation": "contradicts",
+    "reason": {
+      "ru": "Фотография сделана в 16:10–16:35 предыдущего дня, а не после ночного «перехвата»."
+    }
+  },
+  "contradictionTarget": {
+    "statementId": "claim_interception_time",
+    "reason": {
+      "ru": "Фотография сделана в 16:10–16:35 предыдущего дня, а не после ночного «перехвата»."
+    }
+  },
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Новая улика доказывает, что легенду о перехвате подготовили ещё до ночной перевозки."
+    },
+    "playerAction": {
+      "ru": "Совместить тень сигнального столба с временной шкалой."
+    },
+    "conclusion": {
+      "ru": "Фотография сделана в 16:10–16:35 предыдущего дня, а не после ночного «перехвата»."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

@@ -1,0 +1,83 @@
+{
+  "id": "ev-auction",
+  "order": 3,
+  "type": "document_scan",
+  "title": {
+    "ru": "Просветка акта аукционной передачи"
+  },
+  "isContradiction": true,
+  "narrativeRole": "proof",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Исходная дата передачи — 11 марта, за день до «кражи»; позднее поверх неё напечатано 18 марта."
+  },
+  "previousType": "document",
+  "description": {
+    "ru": "Аукционный дом передал страховщику бумажный оригинал акта приёма часов."
+  },
+  "instruction": {
+    "ru": "Переключиться на просвет и проверить дату под копировальным слоем."
+  },
+  "assets": {
+    "asset1": "assets/interactive/ev-auction-base.webp",
+    "asset2": "assets/interactive/ev-auction-scan-overlay.svg"
+  },
+  "data": {
+    "initialMode": "normal",
+    "modes": [
+      "normal",
+      "uv",
+      "backlight"
+    ],
+    "anomalyZones": [
+      {
+        "id": "transfer_date",
+        "mode": "backlight",
+        "x": 66,
+        "y": 25,
+        "width": 15,
+        "height": 8,
+        "label": "Исходная дата передачи — 11 марта, за день до «кражи»; позднее поверх неё напечатано 18 марта.",
+        "isContradiction": true
+      }
+    ],
+    "successCondition": {
+      "type": "select_zone",
+      "zoneId": "transfer_date"
+    }
+  },
+  "statementLink": {
+    "statementId": "claim_theft_timing",
+    "relation": "contradicts",
+    "reason": {
+      "ru": "Исходная дата передачи — 11 марта, за день до «кражи»; позднее поверх неё напечатано 18 марта."
+    }
+  },
+  "contradictionTarget": {
+    "statementId": "claim_theft_timing",
+    "reason": {
+      "ru": "Исходная дата передачи — 11 марта, за день до «кражи»; позднее поверх неё напечатано 18 марта."
+    }
+  },
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Игрок сам обнаруживает, что добровольная передача произошла до заявленной кражи."
+    },
+    "playerAction": {
+      "ru": "Переключиться на просвет и проверить дату под копировальным слоем."
+    },
+    "conclusion": {
+      "ru": "Исходная дата передачи — 11 марта, за день до «кражи»; позднее поверх неё напечатано 18 марта."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

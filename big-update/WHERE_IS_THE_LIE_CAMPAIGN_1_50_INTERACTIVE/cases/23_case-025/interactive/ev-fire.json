@@ -1,0 +1,85 @@
+{
+  "id": "ev-fire",
+  "order": 1,
+  "type": "surface_reveal",
+  "title": {
+    "ru": "Очистка блока питания от копоти"
+  },
+  "isContradiction": false,
+  "narrativeRole": "proof",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Под копотью видны локальная электрическая дуга и оплавление изнутри наружу; следов второго очага или внешнего поджога нет."
+  },
+  "previousType": "document",
+  "description": {
+    "ru": "Пожарный эксперт передал крупный снимок металлического блока кофемашины до лабораторной очистки."
+  },
+  "instruction": {
+    "ru": "Сотрите копоть с панели блока питания и найдите место первичного пробоя."
+  },
+  "assets": {
+    "baseImage": "assets/interactive/ev-fire-scene.webp",
+    "coverTexture": "shared/surface/soot.webp",
+    "revealMasks": [
+      "assets/interactive/ev-fire-internal_arc-trace-mask.svg"
+    ],
+    "toolCursor": "shared/surface/cloth-cursor.svg"
+  },
+  "data": {
+    "mode": "erase",
+    "coverType": "soot",
+    "brush": {
+      "radius": 46,
+      "hardness": 0.66,
+      "opacity": 0.84,
+      "spacing": 8
+    },
+    "completion": {
+      "type": "discover_any",
+      "requiredTraceIds": [
+        "internal_arc"
+      ]
+    },
+    "traces": [
+      {
+        "id": "internal_arc",
+        "label": "Локальный след электрической дуги",
+        "requiredRevealPercent": 58,
+        "mask": "assets/interactive/ev-fire-internal_arc-trace-mask.svg",
+        "shape": "mask",
+        "isContradiction": false,
+        "conclusion": "Под копотью видны локальная электрическая дуга и оплавление изнутри наружу; следов второго очага или внешнего поджога нет."
+      }
+    ]
+  },
+  "statementLink": {
+    "statementId": "claim_cause",
+    "relation": "supports",
+    "reason": {
+      "ru": "Под копотью видны локальная электрическая дуга и оплавление изнутри наружу; следов второго очага или внешнего поджога нет."
+    }
+  },
+  "contradictionTarget": null,
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": false,
+    "highlightAfterHint": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Игрок обнаруживает внутренний электрический очаг сам, а не получает его готовой строкой из отчёта."
+    },
+    "playerAction": {
+      "ru": "Сотрите копоть с панели блока питания и найдите место первичного пробоя."
+    },
+    "conclusion": {
+      "ru": "Под копотью видны локальная электрическая дуга и оплавление изнутри наружу; следов второго очага или внешнего поджога нет."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

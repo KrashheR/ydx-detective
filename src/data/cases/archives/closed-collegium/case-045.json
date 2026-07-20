@@ -1,340 +1,481 @@
 {
   "id": "case-045",
   "type": "standard",
-  "difficulty": "hard",
+  "campaignOrder": 43,
+  "requiredLevel": 16,
+  "act": 5,
+  "actTitle": {
+    "ru": "Последний маршрут",
+    "en": "The Final Route",
+    "tr": "The Final Route",
+    "ar": "The Final Route",
+    "kk": "Последний маршрут"
+  },
+  "difficulty": "medium",
   "claimAmount": 23500,
   "truth": "valid",
-  "investigationBudget": 4,
   "title": {
-    "ru": "Пропавший экзаменационный кубок",
-    "en": "Missing Examination Cup",
-    "tr": "Missing Examination Cup",
-    "ar": "Missing Examination Cup",
-    "kk": "Пропавший экзаменационный кубок"
+    "ru": "Кубок через верхний люк",
+    "en": "The Cup Through the Roof Hatch",
+    "tr": "The Cup Through the Roof Hatch",
+    "ar": "The Cup Through the Roof Hatch",
+    "kk": "Кубок через верхний люк"
   },
   "claim": {
     "person": {
       "ru": "Бруно Стерн, 57 лет",
-      "en": "Bruno Stern, 57",
-      "tr": "Bruno Stern, 57",
-      "ar": "برونو شتيرن، 57",
-      "kk": "Бруно Стерн, 57 жаста"
+      "en": "Bruno Stern, age 57",
+      "tr": "Bruno Stern, age 57",
+      "ar": "Bruno Stern, age 57",
+      "kk": "Бруно Стерн, 57 лет"
     },
     "story": {
-      "ru": "Кубок забрали через верхний сервисный ход за час до церемонии. Все решили, что я опять перепутал ключи, но витрина была вскрыта снаружи. Прошу выплату за реликвию.",
-      "en": "The cup was taken through the upper service passage an hour before the ceremony. Everyone assumed I had mixed up the keys again, but the case was opened from outside. I request payout for the relic.",
-      "tr": "Kupa törenden bir saat önce üst servis geçidinden alındı. Herkes yine anahtarları karıştırdığımı sandı, ama vitrin dışarıdan açılmıştı. Rölik için ödeme istiyorum.",
-      "ar": "أُخذ الكأس عبر ممر الخدمة العلوي قبل الحفل بساعة. ظن الجميع أنني خلطت المفاتيح مجدداً، لكن الواجهة فُتحت من الخارج. أطلب التعويض عن الأثر.",
-      "kk": "Кубок салтанатқа бір сағат қалғанда жоғарғы қызмет өткелінен алынған. Бәрі мен тағы кілттерді шатастырды деп ойлады, бірақ витрина сырттан ашылған. Реликвия үшін төлем сұраймын."
+      "ru": "За час до церемонии из закрытой витрины исчез исторический экзаменационный кубок академии. Замок двери не тронут; я считаю, что похититель проник через верхний сервисный люк. Прошу выплату за реликвию.",
+      "en": "One hour before the ceremony, the academy's historic examination cup vanished from a locked display case. The door lock was untouched; I believe the thief entered through the upper service hatch. I am claiming the relic's value.",
+      "tr": "One hour before the ceremony, the academy's historic examination cup vanished from a locked display case. The door lock was untouched; I believe the thief entered through the upper service hatch. I am claiming the relic's value.",
+      "ar": "One hour before the ceremony, the academy's historic examination cup vanished from a locked display case. The door lock was untouched; I believe the thief entered through the upper service hatch. I am claiming the relic's value.",
+      "kk": "За час до церемонии из закрытой витрины исчез исторический экзаменационный кубок академии. Замок двери не тронут; я считаю, что похититель проник через верхний сервисный люк. Прошу выплату за реликвию."
     }
   },
-  "coverImage": "covers/case-045.svg",
-  "personImage": "people/bruno-stern.webp",
   "client": {
     "role": {
-      "ru": "Комендант зала наград",
-      "en": "Trophy hall steward",
-      "tr": "Kupa salonu görevlisi",
-      "ar": "أمين قاعة الجوائز",
-      "kk": "Марапат залының коменданты"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Архив",
-          "en": "Archive",
-          "tr": "Arşiv",
-          "ar": "الأرشيف",
-          "kk": "Архив"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "Закрытый Коллегиум",
-          "en": "Closed Collegium",
-          "tr": "Kapalı Kolej",
-          "ar": "الكلية المغلقة",
-          "kk": "Жабық коллегиум"
+          "ru": "5",
+          "en": "5",
+          "tr": "5",
+          "ar": "5",
+          "kk": "5"
         }
       },
       {
         "k": {
-          "ru": "Застрахованный риск",
-          "en": "Insured risk",
-          "tr": "Sigortalı risk",
-          "ar": "الخطر المؤمن عليه",
-          "kk": "Сақтандырылған тәуекел"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Кража реликвии",
-          "en": "Relic theft",
-          "tr": "Rölik hırsızlığı",
-          "ar": "سرقة أثر",
-          "kk": "Реликвия ұрлығы"
-        }
-      },
-      {
-        "k": {
-          "ru": "Архивная связка",
-          "en": "Archive thread",
-          "tr": "Arşiv bağı",
-          "ar": "خيط الأرشيف",
-          "kk": "Архив байланысы"
-        },
-        "v": {
-          "ru": "Повторяющийся след: серая восковая лента; часть заявителей её имитирует, но часть дел выводит на настоящую группу.",
-          "en": "Recurring lead: gray wax ribbon; some claimants imitate it, but some files point to a real group.",
-          "tr": "Tekrarlayan iz: gri mum şerit; bazı başvuranlar taklit ediyor, bazı dosyalar gerçek bir gruba işaret ediyor.",
-          "ar": "خيط متكرر: شريط شمعي رمادي؛ بعض أصحاب المطالبات يقلدونه، لكن بعض الملفات تقود إلى جماعة حقيقية.",
-          "kk": "Қайталанатын із: сұр балауыз лента; кейбір өтініш берушілер оны қолдан жасайды, ал кейбір істер нақты топқа апарады."
+          "ru": "43",
+          "en": "43",
+          "tr": "43",
+          "ar": "43",
+          "kk": "43"
         }
       }
     ]
   },
+  "coverImage": "covers/case-045.svg",
+  "personImage": "people/bruno-stern-grounded.webp",
   "evidences": [
     {
       "id": "photo-45",
+      "order": 1,
       "type": "photo",
       "title": {
-        "ru": "Внешний след на петле",
-        "en": "Outer hinge mark",
-        "tr": "Dış menteşe izi",
-        "ar": "أثر خارجي على المفصلة",
-        "kk": "Сыртқы топса ізі"
+        "ru": "След на верхней петле",
+        "en": "Trace on the Upper Hinge",
+        "tr": "Trace on the Upper Hinge",
+        "ar": "Trace on the Upper Hinge",
+        "kk": "След на верхней петле"
       },
       "content": {
-        "ru": "На латунной петле видна свежая дуга резака снаружи витрины; внутренний замок не повреждён.",
-        "en": "The brass hinge has a fresh cutter arc on the outside of the display case; the inner lock is intact.",
-        "tr": "Pirinç menteşede vitrinin dışından yeni kesici izi var; iç kilit sağlam.",
-        "ar": "على المفصلة النحاسية أثر قاطع جديد من خارج الواجهة؛ القفل الداخلي سليم.",
-        "kk": "Жез топсада витринаның сыртынан түскен жаңа кескіш ізі бар; ішкі құлып бүтін."
+        "ru": "Петля витрины приподнята тонким инструментом сверху. На металле остался серый полимер с составом, совпадающим с промышленной упаковкой GC-17.",
+        "en": "The display-case hinge was lifted from above with a thin tool. Gray polymer on the metal matches the composition of GC-17 industrial packaging.",
+        "tr": "The display-case hinge was lifted from above with a thin tool. Gray polymer on the metal matches the composition of GC-17 industrial packaging.",
+        "ar": "The display-case hinge was lifted from above with a thin tool. Gray polymer on the metal matches the composition of GC-17 industrial packaging.",
+        "kk": "Петля витрины приподнята тонким инструментом сверху. На металле остался серый полимер с составом, совпадающим с промышленной упаковкой GC-17."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Улика поддерживает заявленную версию и не требует штампа противоречия.",
-        "en": "This evidence supports the claim and should not be stamped as a contradiction.",
-        "tr": "Bu kanıt başvuruyu destekler ve çelişki damgası gerektirmez.",
-        "ar": "يدعم هذا الدليل المطالبة ولا يجب ختمه كتعارض.",
-        "kk": "Бұл айғақ өтінішті қолдайды және қайшылық ретінде белгіленбеуі керек."
+        "ru": "Физический след подтверждает внешний доступ и подлинную связь с сетью.",
+        "en": "The physical trace confirms external access and a genuine link to the network.",
+        "tr": "The physical trace confirms external access and a genuine link to the network.",
+        "ar": "The physical trace confirms external access and a genuine link to the network.",
+        "kk": "Физический след подтверждает внешний доступ и подлинную связь с сетью."
       },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_upper_entry",
+        "relation": "supports",
+        "reason": {
+          "ru": "Физический след подтверждает внешний доступ и подлинную связь с сетью.",
+          "en": "The physical trace confirms external access and a genuine link to the network.",
+          "tr": "The physical trace confirms external access and a genuine link to the network.",
+          "ar": "The physical trace confirms external access and a genuine link to the network.",
+          "kk": "Физический след подтверждает внешний доступ и подлинную связь с сетью."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
       "meta": {
-        "filename": "IMG_20260645_081500.jpg",
         "imageUrl": "evidence/case-045-photo-45.webp"
-      },
-      "relation": "supports"
+      }
     },
     {
       "id": "document-45",
+      "order": 2,
       "type": "document",
       "title": {
-        "ru": "Опись церемониального кубка",
-        "en": "Ceremonial cup inventory",
-        "tr": "Tören kupası envanteri",
-        "ar": "جرد الكأس الاحتفالي",
-        "kk": "Салтанатты кубок тізімі"
+        "ru": "Опись кубка",
+        "en": "Cup Inventory Record",
+        "tr": "Cup Inventory Record",
+        "ar": "Cup Inventory Record",
+        "kk": "Опись кубка"
       },
       "content": {
-        "ru": "Опись подтверждает подлинность кубка, вес, гравировку и страховую сумму. Дубликаты в архиве не числятся.",
-        "en": "The inventory confirms the cup authenticity, weight, engraving, and insured value. No duplicates are listed in the archive.",
-        "tr": "Envanter kupanın özgünlüğünü, ağırlığını, işlemesini ve sigorta değerini doğrular. Arşivde kopya görünmüyor.",
-        "ar": "يثبت الجرد أصالة الكأس ووزنه ونقشه وقيمته المؤمن عليها. لا توجد نسخ في الأرشيف.",
-        "kk": "Тізім кубоктың түпнұсқалығын, салмағын, өрнегін және сақтандыру құнын растайды. Архивте көшірме жоқ."
+        "ru": "Кубок зарегистрирован, оценён до происшествия и имеет скрытый полый цоколь после реставрации 2021 года.",
+        "en": "The cup was registered and appraised before the incident and has contained a concealed hollow base since its 2021 restoration.",
+        "tr": "The cup was registered and appraised before the incident and has contained a concealed hollow base since its 2021 restoration.",
+        "ar": "The cup was registered and appraised before the incident and has contained a concealed hollow base since its 2021 restoration.",
+        "kk": "Кубок зарегистрирован, оценён до происшествия и имеет скрытый полый цоколь после реставрации 2021 года."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Улика поддерживает заявленную версию и не требует штампа противоречия.",
-        "en": "This evidence supports the claim and should not be stamped as a contradiction.",
-        "tr": "Bu kanıt başvuruyu destekler ve çelişki damgası gerektirmez.",
-        "ar": "يدعم هذا الدليل المطالبة ولا يجب ختمه كتعارض.",
-        "kk": "Бұл айғақ өтінішті қолдайды және қайшылық ретінде белгіленбеуі керек."
+        "ru": "Существование и стоимость подтверждены; полый цоколь объясняет возможный дополнительный мотив.",
+        "en": "Its existence and value are confirmed; the hollow base suggests an additional motive.",
+        "tr": "Its existence and value are confirmed; the hollow base suggests an additional motive.",
+        "ar": "Its existence and value are confirmed; the hollow base suggests an additional motive.",
+        "kk": "Существование и стоимость подтверждены; полый цоколь объясняет возможный дополнительный мотив."
       },
-      "relation": "context"
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_theft",
+        "relation": "supports",
+        "reason": {
+          "ru": "Существование и стоимость подтверждены; полый цоколь объясняет возможный дополнительный мотив.",
+          "en": "Its existence and value are confirmed; the hollow base suggests an additional motive.",
+          "tr": "Its existence and value are confirmed; the hollow base suggests an additional motive.",
+          "ar": "Its existence and value are confirmed; the hollow base suggests an additional motive.",
+          "kk": "Существование и стоимость подтверждены; полый цоколь объясняет возможный дополнительный мотив."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "camera-45",
+      "order": 3,
       "type": "camera_recording",
       "title": {
         "ru": "Камера верхней галереи",
-        "en": "Upper gallery camera",
-        "tr": "Üst galeri kamerası",
-        "ar": "كاميرا الرواق العلوي",
-        "kk": "Жоғарғы галерея камерасы"
+        "en": "Upper Gallery Camera",
+        "tr": "Upper Gallery Camera",
+        "ar": "Upper Gallery Camera",
+        "kk": "Камера верхней галереи"
       },
       "content": {
-        "ru": "03:12: фигура в сером плаще спускается с сервисной балки и уходит с длинным свёртком. Стерн в кадре не появляется. На рукаве фигуры видна настоящая серая лента с тройной печатью.",
-        "en": "03:12: a gray-cloaked figure drops from the service beam and leaves with a long wrapped object. Stern never appears in frame. The figure sleeve shows a real gray ribbon with a triple seal.",
-        "tr": "03:12: gri pelerinli biri servis kirişinden inip uzun bir paketle çıkıyor. Stern görüntüde yok. Figürün kolunda üçlü mühürlü gerçek gri şerit görünüyor.",
-        "ar": "03:12 ينزل شخص برداء رمادي من عارضة الخدمة ويخرج بحزمة طويلة. لا يظهر شتيرن في الصورة. يظهر على كم الشخص شريط رمادي حقيقي بختم ثلاثي.",
-        "kk": "03:12-де сұр плащ киген адам қызмет арқалығынан түсіп, ұзын орамамен кетеді. Стерн кадрда жоқ. Фигураның жеңінде үш мөрлі нағыз сұр лента көрінеді."
+        "ru": "На верхней галерее появляется человек в технической страховке. Он скрывается за балкой над витриной; через минуту возвращается с закрытым футляром, содержимое которого камера не различает.",
+        "en": "A person wearing technical safety gear appears on the upper gallery. They disappear behind a beam above the case and return one minute later carrying a closed container whose contents are not visible.",
+        "tr": "A person wearing technical safety gear appears on the upper gallery. They disappear behind a beam above the case and return one minute later carrying a closed container whose contents are not visible.",
+        "ar": "A person wearing technical safety gear appears on the upper gallery. They disappear behind a beam above the case and return one minute later carrying a closed container whose contents are not visible.",
+        "kk": "На верхней галерее появляется человек в технической страховке. Он скрывается за балкой над витриной; через минуту возвращается с закрытым футляром, содержимое которого камера не различает."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Улика поддерживает заявленную версию и не требует штампа противоречия.",
-        "en": "This evidence supports the claim and should not be stamped as a contradiction.",
-        "tr": "Bu kanıt başvuruyu destekler ve çelişki damgası gerektirmez.",
-        "ar": "يدعم هذا الدليل المطالبة ولا يجب ختمه كتعارض.",
-        "kk": "Бұл айғақ өтінішті қолдайды және қайшылық ретінде белгіленбеуі керек."
+        "ru": "Камера подтверждает верхний маршрут, но личность футляра устанавливают петля, опись и журнал люка.",
+        "en": "The camera confirms the upper route, while the hinge, inventory, and hatch log identify what was taken.",
+        "tr": "The camera confirms the upper route, while the hinge, inventory, and hatch log identify what was taken.",
+        "ar": "The camera confirms the upper route, while the hinge, inventory, and hatch log identify what was taken.",
+        "kk": "Камера подтверждает верхний маршрут, но личность футляра устанавливают петля, опись и журнал люка."
       },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_upper_entry",
+        "relation": "supports",
+        "reason": {
+          "ru": "Камера подтверждает верхний маршрут, но личность футляра устанавливают петля, опись и журнал люка.",
+          "en": "The camera confirms the upper route, while the hinge, inventory, and hatch log identify what was taken.",
+          "tr": "The camera confirms the upper route, while the hinge, inventory, and hatch log identify what was taken.",
+          "ar": "The camera confirms the upper route, while the hinge, inventory, and hatch log identify what was taken.",
+          "kk": "Камера подтверждает верхний маршрут, но личность футляра устанавливают петля, опись и журнал люка."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
       "meta": {
-        "cameraId": "ARC-45",
-        "cameraModel": "SentinelCam SC-3265 - 1080p - H.264"
-      },
-      "relation": "supports"
+        "imageUrl": "evidence/case-045-camera-45.webp"
+      }
     },
     {
       "id": "log-45",
+      "order": 4,
       "type": "usage_log",
       "title": {
         "ru": "Журнал купольного люка",
-        "en": "Dome hatch log",
-        "tr": "Kubbe kapağı kaydı",
-        "ar": "سجل فتحة القبة",
-        "kk": "Күмбез люгі журналы"
+        "en": "Dome Hatch Log",
+        "tr": "Dome Hatch Log",
+        "ar": "Dome Hatch Log",
+        "kk": "Журнал купольного люка"
       },
       "content": {
-        "ru": [
-          "03:09 — аварийный люк открыт внешним сервисным ключом",
-          "03:14 — датчик витрины: вибрация без штатного ключа",
-          "03:16 — люк закрыт снаружи"
-        ],
-        "en": [
-          "03:09 — emergency hatch opened by external service key",
-          "03:14 — display sensor: vibration without hall key",
-          "03:16 — hatch closed from outside"
-        ],
-        "tr": [
-          "03:09 — acil kapak dış servis anahtarıyla açıldı",
-          "03:14 — vitrin sensörü: salon anahtarı olmadan titreşim",
-          "03:16 — kapak dışarıdan kapandı"
-        ],
-        "ar": [
-          "03:09 — فتح باب الطوارئ بمفتاح خدمة خارجي",
-          "03:14 — حساس الواجهة: اهتزاز بلا مفتاح القاعة",
-          "03:16 — إغلاق الفتحة من الخارج"
-        ],
-        "kk": [
-          "03:09 — апаттық люк сыртқы қызмет кілтімен ашылды",
-          "03:14 — витрина датчигі: зал кілтінсіз діріл",
-          "03:16 — люк сырттан жабылды"
-        ]
+        "ru": "Люк открыт клонированным сервисным ключом из той же серии, что использован на ферме «Лунный склон».",
+        "en": "The hatch was opened with a cloned service key from the same series used at Moon Slope farm.",
+        "tr": "The hatch was opened with a cloned service key from the same series used at Moon Slope farm.",
+        "ar": "The hatch was opened with a cloned service key from the same series used at Moon Slope farm.",
+        "kk": "Люк открыт клонированным сервисным ключом из той же серии, что использован на ферме «Лунный склон»."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Улика поддерживает заявленную версию и не требует штампа противоречия.",
-        "en": "This evidence supports the claim and should not be stamped as a contradiction.",
-        "tr": "Bu kanıt başvuruyu destekler ve çelişki damgası gerektirmez.",
-        "ar": "يدعم هذا الدليل المطالبة ولا يجب ختمه كتعارض.",
-        "kk": "Бұл айғақ өтінішті қолдайды және қайшылық ретінде белгіленбеуі керек."
+        "ru": "Технический почерк совпадает с реальной операцией Серого конвоя.",
+        "en": "The technical signature matches a genuine Gray Convoy operation.",
+        "tr": "The technical signature matches a genuine Gray Convoy operation.",
+        "ar": "The technical signature matches a genuine Gray Convoy operation.",
+        "kk": "Технический почерк совпадает с реальной операцией Серого конвоя."
       },
-      "meta": {
-        "logPrompt": "archive@log-45:~$ tail -f /var/log/archive.log"
+      "narrativeRole": "arc_proof",
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Технический почерк совпадает с реальной операцией Серого конвоя.",
+          "en": "The technical signature matches a genuine Gray Convoy operation.",
+          "tr": "The technical signature matches a genuine Gray Convoy operation.",
+          "ar": "The technical signature matches a genuine Gray Convoy operation.",
+          "kk": "Технический почерк совпадает с реальной операцией Серого конвоя."
+        }
       },
-      "relation": "supports"
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75
     },
     {
       "id": "bank-45",
+      "order": 5,
       "type": "bank_statement",
       "title": {
-        "ru": "Проверка слуха о продаже",
-        "en": "Sale rumor check",
-        "tr": "Satış söylentisi kontrolü",
-        "ar": "فحص شائعة البيع",
-        "kk": "Сату қауесетін тексеру"
+        "ru": "Проверка продажи",
+        "en": "Sale Check",
+        "tr": "Sale Check",
+        "ar": "Sale Check",
+        "kk": "Проверка продажи"
       },
       "content": {
-        "ru": [
-          "За неделю до кражи — нет платежей от аукционных домов",
-          "После кражи — только стандартная зарплата коменданта"
-        ],
-        "en": [
-          "Week before theft — no auction-house payments",
-          "After theft — steward salary only"
-        ],
-        "tr": [
-          "Hırsızlıktan önceki hafta — müzayede ödemesi yok",
-          "Hırsızlıktan sonra — yalnızca görevli maaşı"
-        ],
-        "ar": [
-          "الأسبوع السابق للسرقة — لا مدفوعات من دور مزاد",
-          "بعد السرقة — راتب الأمين فقط"
-        ],
-        "kk": [
-          "Ұрлық алдындағы апта — аукцион үйінен төлем жоқ",
-          "Ұрлықтан кейін — тек комендант жалақысы"
-        ]
+        "ru": "Стерн не получал платежей от аукционов, посредников или сети; долгов и необычных переводов нет.",
+        "en": "Stern received no payments from auctions, intermediaries, or the network and has no debts or unusual transfers.",
+        "tr": "Stern received no payments from auctions, intermediaries, or the network and has no debts or unusual transfers.",
+        "ar": "Stern received no payments from auctions, intermediaries, or the network and has no debts or unusual transfers.",
+        "kk": "Стерн не получал платежей от аукционов, посредников или сети; долгов и необычных переводов нет."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Материал важен для проверки версии, но сам по себе не является противоречием.",
-        "en": "The material matters to the review but is not a contradiction by itself.",
-        "tr": "Bu kayıt inceleme için önemlidir, ancak tek başına çelişki değildir.",
-        "ar": "هذه المادة مهمة للمراجعة لكنها ليست تناقضاً بحد ذاتها.",
-        "kk": "Материал тексеру үшін маңызды, бірақ өздігінен қайшылық емес."
+        "ru": "Финансовая проверка не показывает мотива к инсценировке.",
+        "en": "The financial check reveals no motive to stage the theft.",
+        "tr": "The financial check reveals no motive to stage the theft.",
+        "ar": "The financial check reveals no motive to stage the theft.",
+        "kk": "Финансовая проверка не показывает мотива к инсценировке."
       },
-      "meta": {
-        "bankName": {
-          "ru": "Municipal Credit",
-          "en": "Municipal Credit",
-          "tr": "Municipal Credit",
-          "ar": "Municipal Credit",
-          "kk": "Municipal Credit"
-        },
-        "accountMask": "**** **** **** 45"
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_owner_not_involved",
+        "relation": "supports",
+        "reason": {
+          "ru": "Финансовая проверка не показывает мотива к инсценировке.",
+          "en": "The financial check reveals no motive to stage the theft.",
+          "tr": "The financial check reveals no motive to stage the theft.",
+          "ar": "The financial check reveals no motive to stage the theft.",
+          "kk": "Финансовая проверка не показывает мотива к инсценировке."
+        }
       },
-      "relation": "context"
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
-      "id": "witness-45",
-      "type": "witness_statement",
+      "id": "hidden-45",
+      "order": 6,
+      "type": "document",
       "title": {
-        "ru": "Сторож лестничной башни",
-        "en": "Stair tower guard",
-        "tr": "Merdiven kulesi bekçisi",
-        "ar": "حارس برج الدرج",
-        "kk": "Баспалдақ мұнарасының күзетшісі"
+        "ru": "Запись реставратора",
+        "en": "Restorer's Record",
+        "tr": "Restorer's Record",
+        "ar": "Restorer's Record",
+        "kk": "Запись реставратора"
       },
       "content": {
-        "ru": "«Я слышал не ключи Стерна, а верхний колокол люка. Потом кто-то пробежал по балке — шаги были выше витрины».",
-        "en": "\"I heard the upper hatch bell, not Stern’s keys. Then someone ran along the beam; the footsteps were above the display case.\"",
-        "tr": "\"Stern’in anahtarlarını değil üst kapak zilini duydum. Sonra biri kirişte koştu; adımlar vitrinin üstündeydi.\"",
-        "ar": "«سمعت جرس الفتحة العلوية لا مفاتيح شتيرن. ثم ركض شخص فوق العارضة؛ كانت الخطوات فوق الواجهة».",
-        "kk": "«Мен Стерннің кілттерін емес, жоғарғы люктің қоңырауын естідім. Кейін біреу арқалықпен жүгірді; қадамдар витринаның үстінде болды»."
+        "ru": "В 2021 году в цоколе кубка временно спрятали резервный маршрутный ключ академии. Изъят ли он позже, в журнале не отмечено.",
+        "en": "In 2021, a backup academy route key was temporarily hidden in the cup's base. The log does not say whether it was later removed.",
+        "tr": "In 2021, a backup academy route key was temporarily hidden in the cup's base. The log does not say whether it was later removed.",
+        "ar": "In 2021, a backup academy route key was temporarily hidden in the cup's base. The log does not say whether it was later removed.",
+        "kk": "В 2021 году в цоколе кубка временно спрятали резервный маршрутный ключ академии. Изъят ли он позже, в журнале не отмечено."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Улика поддерживает заявленную версию и не требует штампа противоречия.",
-        "en": "This evidence supports the claim and should not be stamped as a contradiction.",
-        "tr": "Bu kanıt başvuruyu destekler ve çelişki damgası gerektirmez.",
-        "ar": "يدعم هذا الدليل المطالبة ولا يجب ختمه كتعارض.",
-        "kk": "Бұл айғақ өтінішті қолдайды және қайшылық ретінде белгіленбеуі керек."
+        "ru": "Кубок могли похитить ради содержимого, но это не отменяет реальность кражи.",
+        "en": "The cup may have been stolen for its contents, but the theft itself remains real.",
+        "tr": "The cup may have been stolen for its contents, but the theft itself remains real.",
+        "ar": "The cup may have been stolen for its contents, but the theft itself remains real.",
+        "kk": "Кубок могли похитить ради содержимого, но это не отменяет реальность кражи."
       },
-      "relation": "supports"
+      "narrativeRole": "arc_context",
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Кубок могли похитить ради содержимого, но это не отменяет реальность кражи.",
+          "en": "The cup may have been stolen for its contents, but the theft itself remains real.",
+          "tr": "The cup may have been stolen for its contents, but the theft itself remains real.",
+          "ar": "The cup may have been stolen for its contents, but the theft itself remains real.",
+          "kk": "Кубок могли похитить ради содержимого, но это не отменяет реальность кражи."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75
     }
   ],
   "correctDecision": "approve",
   "explanation": {
     "ru": [
-      "Петля, камера и люк показывают внешний доступ сверху.",
-      "Серая лента на записи совпадает с настоящей архивной меткой, а не с подделкой из теплицы.",
-      "Кража реликвии подтверждена: вердикт — выплатить."
+      "Витрину открыли сверху через сервисный люк, не используя ключи Стерна.",
+      "Камера и клонированный сервисный ключ подтверждают внешнего похитителя GC-17.",
+      "Кража реальна, реликвия существовала и не продана владельцем. Выплату следует одобрить."
     ],
     "en": [
-      "The hinge, camera, and hatch records show outside access from above.",
-      "The gray ribbon in footage matches a true archive mark, not the greenhouse fake.",
-      "The relic theft is supported: approve the payout."
+      "The physical trace confirms external access and a genuine link to the network.",
+      "Its existence and value are confirmed; the hollow base suggests an additional motive.",
+      "The camera confirms the upper route, while the hinge, inventory, and hatch log identify what was taken.",
+      "The financial check reveals no motive to stage the theft.",
+      "The technical signature matches a genuine Gray Convoy operation.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "tr": [
-      "Menteşe, kamera ve kapak kayıtları yukarıdan dış erişimi gösteriyor.",
-      "Görüntüdeki gri şerit sera sahtesi değil gerçek arşiv işaretiyle eşleşiyor.",
-      "Rölik hırsızlığı doğrulandı: ödeme onaylanır."
+      "The physical trace confirms external access and a genuine link to the network.",
+      "Its existence and value are confirmed; the hollow base suggests an additional motive.",
+      "The camera confirms the upper route, while the hinge, inventory, and hatch log identify what was taken.",
+      "The financial check reveals no motive to stage the theft.",
+      "The technical signature matches a genuine Gray Convoy operation.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "ar": [
-      "تظهر المفصلة والكاميرا وسجل الفتحة دخولاً خارجياً من الأعلى.",
-      "يطابق الشريط الرمادي في التسجيل علامة أرشيفية حقيقية لا تقليد الدفيئة.",
-      "سرقة الأثر مثبتة: القرار دفع التعويض."
+      "The physical trace confirms external access and a genuine link to the network.",
+      "Its existence and value are confirmed; the hollow base suggests an additional motive.",
+      "The camera confirms the upper route, while the hinge, inventory, and hatch log identify what was taken.",
+      "The financial check reveals no motive to stage the theft.",
+      "The technical signature matches a genuine Gray Convoy operation.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "kk": [
-      "Топса, камера және люк жазбалары жоғарыдан сыртқы кіруді көрсетеді.",
-      "Жазбадағы сұр лента жылыжайдағы жалған белгі емес, нақты архив таңбасына сәйкес.",
-      "Реликвия ұрлығы расталды: вердикт — төлеу."
+      "Витрину открыли сверху через сервисный люк, не используя ключи Стерна.",
+      "Камера и клонированный сервисный ключ подтверждают внешнего похитителя GC-17.",
+      "Кража реальна, реликвия существовала и не продана владельцем. Выплату следует одобрить."
     ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "За час до церемонии из закрытой витрины исчез исторический экзаменационный кубок академии. Замок двери не тронут; я считаю, что похититель проник через верхний сервисный люк. Прошу выплату за реликвию.",
+        "en": "One hour before the ceremony, the academy's historic examination cup vanished from a locked display case. The door lock was untouched; I believe the thief entered through the upper service hatch. I am claiming the relic's value.",
+        "tr": "One hour before the ceremony, the academy's historic examination cup vanished from a locked display case. The door lock was untouched; I believe the thief entered through the upper service hatch. I am claiming the relic's value.",
+        "ar": "One hour before the ceremony, the academy's historic examination cup vanished from a locked display case. The door lock was untouched; I believe the thief entered through the upper service hatch. I am claiming the relic's value.",
+        "kk": "За час до церемонии из закрытой витрины исчез исторический экзаменационный кубок академии. Замок двери не тронут; я считаю, что похититель проник через верхний сервисный люк. Прошу выплату за реликвию."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_theft",
+      "text": {
+        "ru": "Исторический кубок действительно исчез из закрытой витрины.",
+        "en": "The historic cup genuinely disappeared from the locked display case.",
+        "tr": "The historic cup genuinely disappeared from the locked display case.",
+        "ar": "The historic cup genuinely disappeared from the locked display case.",
+        "kk": "Исторический кубок действительно исчез из закрытой витрины."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_upper_entry",
+      "text": {
+        "ru": "Похититель проник через верхний сервисный маршрут.",
+        "en": "The thief entered through the upper service route.",
+        "tr": "The thief entered through the upper service route.",
+        "ar": "The thief entered through the upper service route.",
+        "kk": "Похититель проник через верхний сервисный маршрут."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_owner_not_involved",
+      "text": {
+        "ru": "Стерн не продавал и не передавал кубок добровольно.",
+        "en": "Stern neither sold nor voluntarily transferred the cup.",
+        "tr": "Stern neither sold nor voluntarily transferred the cup.",
+        "ar": "Stern neither sold nor voluntarily transferred the cup.",
+        "kk": "Стерн не продавал и не передавал кубок добровольно."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Все считают, что Стерн снова перепутал ключи. Репутация свидетеля не заменяет осмотр петли, камеры и люка. — В. Лебедева",
+      "en": "Everyone assumes Stern mixed up the keys again. A witness's reputation is no substitute for examining the hinge, camera, and hatch. — V. Lebedeva",
+      "tr": "Everyone assumes Stern mixed up the keys again. A witness's reputation is no substitute for examining the hinge, camera, and hatch. — V. Lebedeva",
+      "ar": "Everyone assumes Stern mixed up the keys again. A witness's reputation is no substitute for examining the hinge, camera, and hatch. — V. Lebedeva",
+      "kk": "Все считают, что Стерн снова перепутал ключи. Репутация свидетеля не заменяет осмотр петли, камеры и люка. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Илья подтвердил: в основании кубка находился резервный маршрутный ключ. Серый конвой пришёл не за реликвией, а за доступом.",
+      "en": "Ilya confirmed that a backup route key was hidden in the cup's base. The Gray Convoy came for access, not the relic.",
+      "tr": "Ilya confirmed that a backup route key was hidden in the cup's base. The Gray Convoy came for access, not the relic.",
+      "ar": "Ilya confirmed that a backup route key was hidden in the cup's base. The Gray Convoy came for access, not the relic.",
+      "kk": "Илья подтвердил: в основании кубка находился резервный маршрутный ключ. Серый конвой пришёл не за реликвией, а за доступом."
+    },
+    "nextCaseTeaser": {
+      "ru": "Курсантка заявляет о падении с учебной башни. Пломба страховочной линии разрезана, но медицинский снимок сделан за два месяца до происшествия.",
+      "en": "A cadet reports falling from a training tower. The safety-line seal is cut, but the medical image predates the incident by two months.",
+      "tr": "A cadet reports falling from a training tower. The safety-line seal is cut, but the medical image predates the incident by two months.",
+      "ar": "A cadet reports falling from a training tower. The safety-line seal is cut, but the medical image predates the incident by two months.",
+      "kk": "Курсантка заявляет о падении с учебной башни. Пломба страховочной линии разрезана, но медицинский снимок сделан за два месяца до происшествия."
+    },
+    "seasonClue": {
+      "id": "route-key",
+      "label": {
+        "ru": "Резервный маршрутный ключ",
+        "en": "Backup Route Key",
+        "tr": "Backup Route Key",
+        "ar": "Backup Route Key",
+        "kk": "Резервный маршрутный ключ"
+      },
+      "description": {
+        "ru": "Сеть похитила кубок ради ключа, открывающего закрытые транспортные маршруты академии.",
+        "en": "The network stole the cup for a key that unlocks the academy's restricted transport routes.",
+        "tr": "The network stole the cup for a key that unlocks the academy's restricted transport routes.",
+        "ar": "The network stole the cup for a key that unlocks the academy's restricted transport routes.",
+        "kk": "Сеть похитила кубок ради ключа, открывающего закрытые транспортные маршруты академии."
+      },
+      "progressIndex": 3,
+      "progressTotal": 7
+    },
+    "epilogue": null
   }
 }

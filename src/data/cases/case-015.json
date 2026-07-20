@@ -1,316 +1,489 @@
 {
   "id": "case-015",
   "type": "standard",
+  "campaignOrder": 17,
+  "requiredLevel": 9,
+  "act": 2,
+  "actTitle": {
+    "ru": "Пять лет назад",
+    "en": "Five Years Earlier",
+    "tr": "Five Years Earlier",
+    "ar": "Five Years Earlier",
+    "kk": "Пять лет назад"
+  },
   "difficulty": "hard",
   "claimAmount": 18000,
   "truth": "fraud",
   "title": {
-    "ru": "Затонувшая яхта",
-    "en": "The Sunken Yacht",
-    "tr": "Batan Yat",
-    "ar": "اليخت الغارق",
-    "kk": "Суға батқан яхта"
+    "ru": "Не та яхта",
+    "en": "The Wrong Yacht",
+    "tr": "The Wrong Yacht",
+    "ar": "The Wrong Yacht",
+    "kk": "Не та яхта"
   },
   "claim": {
     "person": {
       "ru": "Рустам Бекетов, 47 лет",
-      "en": "Rustam Beketov, 47",
-      "tr": "Rustam Beketov, 47",
-      "ar": "رستم بيكيتوف، 47",
-      "kk": "Рустам Бекетов, 47 жаста"
+      "en": "Rustam Beketov, age 47",
+      "tr": "Rustam Beketov, age 47",
+      "ar": "Rustam Beketov, age 47",
+      "kk": "Рустам Бекетов, 47 лет"
     },
     "story": {
-      "ru": "В субботу я вышел в море на своей моторной яхте. В открытом море нас застал шторм, судно дало течь и затонуло. Я едва спасся. Прошу выплату за погибшую яхту.",
-      "en": "On Saturday I took my motor yacht out to sea. A storm caught us offshore, the vessel took on water and sank. I barely escaped. I request payment for the lost yacht.",
-      "tr": "Cumartesi motorlu yatımla denize açıldım. Açık denizde bir fırtınaya yakalandık, tekne su aldı ve battı. Zar zor kurtuldum. Kaybolan yat için ödeme talep ediyorum.",
-      "ar": "يوم السبت أخرجت يختي بمحرّك إلى البحر. باغتتنا عاصفة في عرض البحر، فتسرّب الماء إلى السفينة وغرقت. نجوت بالكاد. أطلب تعويضًا عن اليخت الضائع.",
-      "kk": "Сенбіде мен моторлы яхтаммен теңізге шықтым. Ашық теңізде бізді дауыл қуып жетті, кеме су алып, батып кетті. Әрең құтылдым. Жоғалған яхта үшін төлем сұраймын."
+      "ru": "Во время субботнего шторма моя моторная яхта потеряла управление, получила пробоину и затонула. Спасатели сняли меня с аварийного плота. Прошу выплатить страховую стоимость судна — 18 000 евро.",
+      "en": "During Saturday's storm, my motor yacht lost steering, was holed, and sank. Rescuers recovered me from an emergency raft. I am claiming the vessel's insured value of €18,000.",
+      "tr": "During Saturday's storm, my motor yacht lost steering, was holed, and sank. Rescuers recovered me from an emergency raft. I am claiming the vessel's insured value of €18,000.",
+      "ar": "During Saturday's storm, my motor yacht lost steering, was holed, and sank. Rescuers recovered me from an emergency raft. I am claiming the vessel's insured value of €18,000.",
+      "kk": "Во время субботнего шторма моя моторная яхта потеряла управление, получила пробоину и затонула. Спасатели сняли меня с аварийного плота. Прошу выплатить страховую стоимость судна — 18 000 евро."
     }
   },
-  "coverImage": "covers/case-015.svg",
-  "personImage": "people/rustam.webp",
   "client": {
     "role": {
-      "ru": "Заявитель · физ. лицо",
-      "en": "Claimant · individual",
-      "tr": "Başvuru sahibi · gerçek kişi",
-      "ar": "مقدم الطلب · شخص طبيعي",
-      "kk": "Өтініш беруші · жеке тұлға"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Возраст",
-          "en": "Age",
-          "tr": "Yaş",
-          "ar": "العمر",
-          "kk": "Жасы"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "47 лет",
-          "en": "47 years old",
-          "tr": "47 yaşında",
-          "ar": "47 عامًا",
-          "kk": "47 жаста"
+          "ru": "2",
+          "en": "2",
+          "tr": "2",
+          "ar": "2",
+          "kk": "2"
         }
       },
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Сочи",
-          "en": "Sochi",
-          "tr": "Soçi",
-          "ar": "سوتشي",
-          "kk": "Сочи"
-        }
-      },
-      {
-        "k": {
-          "ru": "Клиент с",
-          "en": "Client since",
-          "tr": "Müşteri",
-          "ar": "عميل منذ",
-          "kk": "Клиент"
-        },
-        "v": {
-          "ru": "2016 г.",
-          "en": "2016",
-          "tr": "2016",
-          "ar": "2016",
-          "kk": "2016 ж."
-        }
-      },
-      {
-        "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
-        },
-        "v": {
-          "ru": "КАСКО · ВТ-15190673-X7",
-          "en": "Comprehensive auto · VT-15190673-X7",
-          "tr": "Kasko · VT-15190673-X7",
-          "ar": "تأمين شامل للمركبة · VT-15190673-X7",
-          "kk": "КАСКО · ВТ-15190673-X7"
-        }
-      },
-      {
-        "k": {
-          "ru": "Документ",
-          "en": "Document",
-          "tr": "Belge",
-          "ar": "الوثيقة",
-          "kk": "Құжат"
-        },
-        "v": {
-          "ru": "Паспорт 2314-88 №917206753-61",
-          "en": "Passport 2314-88 №917206753-61",
-          "tr": "Pasaport 2314-88 №917206753-61",
-          "ar": "جواز السفر 2314-88 №917206753-61",
-          "kk": "Паспорт 2314-88 №917206753-61"
+          "ru": "17",
+          "en": "17",
+          "tr": "17",
+          "ar": "17",
+          "kk": "17"
         }
       }
     ]
   },
+  "coverImage": "covers/case-015.svg",
+  "personImage": "people/rustam.webp",
   "evidences": [
     {
-      "id": "ev-cctv",
-      "type": "camera_recording",
-      "title": {
-        "ru": "Журнал швартовки и CCTV гавани",
-        "en": "Harbor Mooring Log and CCTV",
-        "tr": "Liman Bağlama Kaydı ve CCTV",
-        "ar": "سجل الرسو وكاميرات الميناء",
-        "kk": "Айлақ журналы және айлақ CCTV"
-      },
-      "content": {
-        "ru": [
-          "Пт 18:00 — яхта пришвартована, причал B-7",
-          "Сб 09:30 — судно у причала, камера 3",
-          "Сб 16:10 — судно у причала, камера 3",
-          "Вс 08:00 — судно у причала, камера 3"
-        ],
-        "en": [
-          "Fri 18:00 — yacht moored, berth B-7",
-          "Sat 09:30 — vessel at berth, camera 3",
-          "Sat 16:10 — vessel at berth, camera 3",
-          "Sun 08:00 — vessel at berth, camera 3"
-        ],
-        "tr": [
-          "Cum 18:00 — yat bağlı, iskele B-7",
-          "Cmt 09:30 — tekne iskelede, kamera 3",
-          "Cmt 16:10 — tekne iskelede, kamera 3",
-          "Paz 08:00 — tekne iskelede, kamera 3"
-        ],
-        "ar": [
-          "الجمعة 18:00 — اليخت راسٍ، الرصيف B-7",
-          "السبت 09:30 — السفينة عند الرصيف، الكاميرا 3",
-          "السبت 16:10 — السفينة عند الرصيف، الكاميرا 3",
-          "الأحد 08:00 — السفينة عند الرصيف، الكاميرا 3"
-        ],
-        "kk": [
-          "Жм 18:00 — яхта айлаққа байланған, B-7",
-          "Сб 09:30 — кеме айлақта, 3-камера",
-          "Сб 16:10 — кеме айлақта, 3-камера",
-          "Жс 08:00 — кеме айлақта, 3-камера"
-        ]
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Камеры показывают яхту у причала всю субботу — в день, когда она якобы затонула в море.",
-        "en": "Cameras show the yacht at its berth all Saturday — the very day it supposedly sank at sea.",
-        "tr": "Kameralar yatı cumartesi boyunca iskelede gösteriyor — sözde denizde battığı gün.",
-        "ar": "تُظهر الكاميرات اليخت عند رصيفه طوال السبت — وهو اليوم الذي يُزعم أنه غرق فيه بالبحر.",
-        "kk": "Камералар яхтаны бүкіл сенбі бойы айлақта көрсетеді — оның теңізде батқан деген күні."
-      },
-      "meta": {
-        "cameraId": "CAM-B7",
-        "cameraModel": "SentinelCam SC-1448 · 4K · H.265"
-      }
-    },
-    {
-      "id": "ev-ais",
-      "type": "gps",
-      "title": {
-        "ru": "Данные AIS-транспондера",
-        "en": "AIS Transponder Data",
-        "tr": "AIS Transponder Verisi",
-        "ar": "بيانات جهاز AIS",
-        "kk": "AIS транспондер деректері"
-      },
-      "content": {
-        "ru": "Последняя зафиксированная позиция транспондера судна — координаты причала B-7 в марине; выходов в открытое море за выходные не зарегистрировано.",
-        "en": "The vessel transponder's last recorded position is the marina berth B-7; no trips to open sea were logged over the weekend.",
-        "tr": "Teknenin transponderinin son kayıtlı konumu marina iskelesi B-7; hafta sonu açık denize çıkış kaydı yok.",
-        "ar": "آخر موقع مسجّل لجهاز السفينة هو رصيف المرسى B-7؛ ولم تُسجَّل أي رحلة إلى عرض البحر طوال عطلة الأسبوع.",
-        "kk": "Кеме транспондерінің соңғы тіркелген орны — маринадағы B-7 айлағы; демалыс күндері ашық теңізге шығу тіркелмеген."
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Транспондер фиксирует судно только у причала, а не в открытом море, где оно якобы затонуло.",
-        "en": "The transponder places the vessel only at the berth, not at the open sea where it allegedly sank.",
-        "tr": "Transponder, tekneyi yalnızca iskelede konumlandırıyor, battığı iddia edilen açık denizde değil.",
-        "ar": "يحدد جهاز التتبّع موقع السفينة عند الرصيف فقط، لا في عرض البحر حيث يُزعم أنها غرقت.",
-        "kk": "Транспондер кемені тек айлақта тіркейді, ол батқан деген ашық теңізде емес."
-      },
-      "meta": {
-        "company": {
-          "ru": "Морская служба контроля",
-          "en": "Marine Watch Office",
-          "tr": "DenizMonitör",
-          "ar": "مراقب البحر",
-          "kk": "ТеңізМонитор"
-        },
-        "department": {
-          "ru": "Служба мониторинга судоходства",
-          "en": "Maritime Monitoring Service",
-          "tr": "Deniz Trafiği İzleme Servisi",
-          "ar": "خدمة مراقبة الملاحة البحرية",
-          "kk": "Кеме қатынасын бақылау қызметі"
-        },
-        "requestId": {
-          "ru": "МОР-2026-0522-В · Тип: AIS-транспондер",
-          "en": "MOR-2026-0522-V · Type: AIS transponder",
-          "tr": "MOR-2026-0522-V · Tür: AIS transponderi",
-          "ar": "MOR-2026-0522-V · النوع: جهاز إرسال AIS",
-          "kk": "МОР-2026-0522-В · Түрі: AIS транспондері"
-        },
-        "gpsFooter": {
-          "ru": "© Морская служба контроля 2026 · AIS ACC: ±10m",
-          "en": "© Marine Watch Office 2026 · AIS ACC: ±10m",
-          "tr": "© DenizMonitör 2026 · AIS ACC: ±10m",
-          "ar": "© مراقب البحر 2026 · دقة AIS: ±10م",
-          "kk": "© ТеңізМонитор 2026 · AIS дәлдігі: ±10 м"
-        }
-      }
-    },
-    {
       "id": "ev-weather",
+      "order": 1,
       "type": "document",
       "title": {
-        "ru": "Метеосводка по акватории",
-        "en": "Coastal Weather Report",
-        "tr": "Kıyı Hava Durumu Raporu",
-        "ar": "تقرير الطقس الساحلي",
-        "kk": "Жағалаудағы ауа райы анықтамасы"
+        "ru": "Морская метеосводка",
+        "en": "Marine Weather Report",
+        "tr": "Marine Weather Report",
+        "ar": "Marine Weather Report",
+        "kk": "Морская метеосводка"
       },
       "content": {
-        "ru": "Морская метеослужба сообщает о штиле в субботу: волнение 1 балл, ветер 3 м/с, штормовых предупреждений не было.",
-        "en": "The marine weather service reports calm conditions on Saturday: sea state 1, wind 3 m/s, with no storm warnings issued.",
-        "tr": "Deniz meteoroloji servisi cumartesi için sakin koşullar bildiriyor: deniz durumu 1, rüzgâr 3 m/s, fırtına uyarısı yok.",
-        "ar": "تفيد دائرة الأرصاد البحرية بأن الأحوال كانت هادئة يوم السبت: حالة البحر 1، الرياح 3 م/ث، دون أي تحذيرات من عواصف.",
-        "kk": "Теңіз метеоқызметі сенбіде тыныш ауа райын хабарлайды: толқын 1 балл, жел 3 м/с, дауыл ескертуі болмаған."
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "В заявленный день стояла штилевая погода — шторм, на который ссылается клиент, не существовал.",
-        "en": "The claimed day had calm weather — the storm the client cites never existed.",
-        "tr": "İddia edilen gün hava sakindi — müşterinin öne sürdüğü fırtına hiç olmadı.",
-        "ar": "كان الطقس هادئًا في اليوم المزعوم — العاصفة التي يذكرها العميل لم تحدث.",
-        "kk": "Мәлімделген күні ауа райы тыныш болды — клиент сілтейтін дауыл болмаған."
-      }
-    },
-    {
-      "id": "ev-valuation",
-      "type": "document",
-      "title": {
-        "ru": "Оценка и регистрация судна",
-        "en": "Vessel Valuation and Registration",
-        "tr": "Tekne Değerleme ve Tescil",
-        "ar": "تقييم وتسجيل السفينة",
-        "kk": "Кеменің бағасы мен тіркеуі"
-      },
-      "content": {
-        "ru": "Подлинное регистрационное свидетельство и оценка судна на сумму около 18 000 евро.",
-        "en": "A genuine registration certificate and a vessel valuation of about 18,000 euros.",
-        "tr": "Gerçek bir tescil belgesi ve yaklaşık 18.000 avroluk bir tekne değerlemesi.",
-        "ar": "شهادة تسجيل أصلية وتقييم للسفينة بنحو 18000 يورو.",
-        "kk": "Шынайы тіркеу куәлігі және кеменің шамамен 18 000 еуролық бағасы."
+        "ru": "В акватории действительно действовало штормовое предупреждение: ветер до 18 м/с, волна до 2,5 м.",
+        "en": "A storm warning was in force for the area, with winds up to 18 m/s and waves up to 2.5 m.",
+        "tr": "A storm warning was in force for the area, with winds up to 18 m/s and waves up to 2.5 m.",
+        "ar": "A storm warning was in force for the area, with winds up to 18 m/s and waves up to 2.5 m.",
+        "kk": "В акватории действительно действовало штормовое предупреждение: ветер до 18 м/с, волна до 2,5 м."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Документ подлинный и лишь подтверждает стоимость судна, не противореча делу.",
-        "en": "The document is genuine and merely confirms the vessel's value, not conflicting with the case.",
-        "tr": "Belge gerçektir ve yalnızca teknenin değerini doğrular, davayla çelişmez.",
-        "ar": "المستند أصلي ويؤكد قيمة السفينة فقط، ولا يتعارض مع القضية.",
-        "kk": "Құжат шынайы әрі тек кеменің құнын растайды, іске қайшы келмейді."
+        "ru": "Шторм реален и подтверждает только условия, но не личность погибшего судна.",
+        "en": "The storm was real and confirms the conditions, but not the identity of the sunken vessel.",
+        "tr": "The storm was real and confirms the conditions, but not the identity of the sunken vessel.",
+        "ar": "The storm was real and confirms the conditions, but not the identity of the sunken vessel.",
+        "kk": "Шторм реален и подтверждает только условия, но не личность погибшего судна."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_storm",
+        "relation": "supports",
+        "reason": {
+          "ru": "Шторм реален и подтверждает только условия, но не личность погибшего судна.",
+          "en": "The storm was real and confirms the conditions, but not the identity of the sunken vessel.",
+          "tr": "The storm was real and confirms the conditions, but not the identity of the sunken vessel.",
+          "ar": "The storm was real and confirms the conditions, but not the identity of the sunken vessel.",
+          "kk": "Шторм реален и подтверждает только условия, но не личность погибшего судна."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "ev-rescue",
+      "order": 2,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Запись спасательного катера",
+        "en": "Rescue Boat Footage",
+        "tr": "Rescue Boat Footage",
+        "ar": "Rescue Boat Footage",
+        "kk": "Запись спасательного катера"
+      },
+      "content": {
+        "ru": "Бекетов найден на плоту рядом с обломками небольшого катера. На записи видно, что он действительно нуждался в помощи.",
+        "en": "Beketov was found on a raft beside the wreckage of a small boat. The footage shows that he genuinely needed rescue.",
+        "tr": "Beketov was found on a raft beside the wreckage of a small boat. The footage shows that he genuinely needed rescue.",
+        "ar": "Beketov was found on a raft beside the wreckage of a small boat. The footage shows that he genuinely needed rescue.",
+        "kk": "Бекетов найден на плоту рядом с обломками небольшого катера. На записи видно, что он действительно нуждался в помощи."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Опасное происшествие произошло, однако класс судна по записи определить нельзя.",
+        "en": "A dangerous incident did occur, but the footage cannot establish the vessel's class.",
+        "tr": "A dangerous incident did occur, but the footage cannot establish the vessel's class.",
+        "ar": "A dangerous incident did occur, but the footage cannot establish the vessel's class.",
+        "kk": "Опасное происшествие произошло, однако класс судна по записи определить нельзя."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_storm",
+        "relation": "supports",
+        "reason": {
+          "ru": "Опасное происшествие произошло, однако класс судна по записи определить нельзя.",
+          "en": "A dangerous incident did occur, but the footage cannot establish the vessel's class.",
+          "tr": "A dangerous incident did occur, but the footage cannot establish the vessel's class.",
+          "ar": "A dangerous incident did occur, but the footage cannot establish the vessel's class.",
+          "kk": "Опасное происшествие произошло, однако класс судна по записи определить нельзя."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5
+    },
+    {
+      "id": "ev-hull",
+      "order": 3,
+      "type": "seal_match",
+      "title": {
+        "ru": "Сопоставление защитной полосы корпуса",
+        "en": "Hull Rub-Rail Comparison",
+        "tr": "Hull Rub-Rail Comparison",
+        "ar": "Hull Rub-Rail Comparison",
+        "kk": "Сопоставление защитной полосы корпуса"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Разрыв, волокна и серийный узор не совпадают: обломок принадлежит арендованному катеру, а не застрахованной яхте.",
+        "en": "The tear, fibers, and serial pattern do not match: the fragment came from a rented boat, not the insured yacht.",
+        "tr": "The tear, fibers, and serial pattern do not match: the fragment came from a rented boat, not the insured yacht.",
+        "ar": "The tear, fibers, and serial pattern do not match: the fragment came from a rented boat, not the insured yacht.",
+        "kk": "Разрыв, волокна и серийный узор не совпадают: обломок принадлежит арендованному катеру, а не застрахованной яхте."
+      },
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_lost_vessel_identity",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Разрыв, волокна и серийный узор не совпадают: обломок принадлежит арендованному катеру, а не застрахованной яхте.",
+          "en": "The tear, fibers, and serial pattern do not match: the fragment came from a rented boat, not the insured yacht.",
+          "tr": "The tear, fibers, and serial pattern do not match: the fragment came from a rented boat, not the insured yacht.",
+          "ar": "The tear, fibers, and serial pattern do not match: the fragment came from a rented boat, not the insured yacht.",
+          "kk": "Разрыв, волокна и серийный узор не совпадают: обломок принадлежит арендованному катеру, а не застрахованной яхте."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_lost_vessel_identity",
+        "reason": {
+          "ru": "Разрыв, волокна и серийный узор не совпадают: обломок принадлежит арендованному катеру, а не застрахованной яхте.",
+          "en": "The tear, fibers, and serial pattern do not match: the fragment came from a rented boat, not the insured yacht.",
+          "tr": "The tear, fibers, and serial pattern do not match: the fragment came from a rented boat, not the insured yacht.",
+          "ar": "The tear, fibers, and serial pattern do not match: the fragment came from a rented boat, not the insured yacht.",
+          "kk": "Разрыв, волокна и серийный узор не совпадают: обломок принадлежит арендованному катеру, а не застрахованной яхте."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/case-015-ev-hull.webp"
+      },
+      "description": {
+        "ru": "Фрагмент поднят у места спасения; контрольный образец взят с зарегистрированной яхты до страхования.",
+        "en": "The fragment was recovered near the rescue site; the reference sample was taken from the registered yacht before coverage began.",
+        "tr": "The fragment was recovered near the rescue site; the reference sample was taken from the registered yacht before coverage began.",
+        "ar": "The fragment was recovered near the rescue site; the reference sample was taken from the registered yacht before coverage began.",
+        "kk": "Фрагмент поднят у места спасения; контрольный образец взят с зарегистрированной яхты до страхования."
+      },
+      "instruction": {
+        "ru": "Совместить фрагмент защитной полосы с контрольным образцом.",
+        "en": "Match the rub-rail fragment to the reference sample.",
+        "tr": "Match the rub-rail fragment to the reference sample.",
+        "ar": "Match the rub-rail fragment to the reference sample.",
+        "kk": "Совместить фрагмент защитной полосы с контрольным образцом."
+      },
+      "previousType": "photo",
+      "assets": {
+        "asset1": "cases/case-015/assets/interactive/ev-hull-master-a.webp",
+        "asset2": "cases/case-015/assets/interactive/ev-hull-master-b.webp",
+        "asset3": "cases/case-015/assets/interactive/ev-hull-fragments.json"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true,
+        "transparencyMode": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Физическое несовпадение быстрее и убедительнее длинного сравнения заводских номеров.",
+          "en": "The physical mismatch is faster and more convincing than a long comparison of factory numbers.",
+          "tr": "The physical mismatch is faster and more convincing than a long comparison of factory numbers.",
+          "ar": "The physical mismatch is faster and more convincing than a long comparison of factory numbers.",
+          "kk": "Физическое несовпадение быстрее и убедительнее длинного сравнения заводских номеров."
+        },
+        "playerAction": {
+          "ru": "Совместить фрагмент защитной полосы с контрольным образцом.",
+          "en": "Match the rub-rail fragment to the reference sample.",
+          "tr": "Match the rub-rail fragment to the reference sample.",
+          "ar": "Match the rub-rail fragment to the reference sample.",
+          "kk": "Совместить фрагмент защитной полосы с контрольным образцом."
+        },
+        "conclusion": {
+          "ru": "Разрыв, волокна и серийный узор не совпадают: обломок принадлежит арендованному катеру, а не застрахованной яхте.",
+          "en": "The tear, fibers, and serial pattern do not match: the fragment came from a rented boat, not the insured yacht.",
+          "tr": "The tear, fibers, and serial pattern do not match: the fragment came from a rented boat, not the insured yacht.",
+          "ar": "The tear, fibers, and serial pattern do not match: the fragment came from a rented boat, not the insured yacht.",
+          "kk": "Разрыв, волокна и серийный узор не совпадают: обломок принадлежит арендованному катеру, а не застрахованной яхте."
+        }
+      },
+      "data": {
+        "movableFragment": "B",
+        "allowRotation": true,
+        "rotationStep": 3,
+        "initialTransform": {
+          "x": 72,
+          "y": 18,
+          "rotation": -14
+        },
+        "targetTransform": {
+          "x": 132,
+          "y": 48,
+          "rotation": 6
+        },
+        "tolerance": {
+          "position": 10,
+          "rotation": 5
+        },
+        "expectedMatch": false,
+        "sourceSeed": 171517,
+        "fragmentASeed": 171517,
+        "fragmentBSeed": 171842,
+        "comparisonMarkers": [
+          {
+            "id": "tear_pattern",
+            "label": "Не совпадают микроперфорация, волокна и шаг защитного узора",
+            "labelEn": "Microperforation, fibers, and security-pattern spacing do not match"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ev-transport",
+      "order": 4,
+      "type": "gps",
+      "title": {
+        "ru": "Маршрут перевозки яхты",
+        "en": "Yacht Transport Route",
+        "tr": "Yacht Transport Route",
+        "ar": "Yacht Transport Route",
+        "kk": "Маршрут перевозки яхты"
+      },
+      "content": {
+        "ru": "За сутки до шторма застрахованную яхту погрузили на трейлер и вывезли со стоянки в складской комплекс «Восточный двор». Пропуск оформлен на Бекетова.",
+        "en": "One day before the storm, the insured yacht was loaded onto a trailer and moved from the marina to the Eastern Yard warehouse complex. The entry pass was issued to Beketov.",
+        "tr": "One day before the storm, the insured yacht was loaded onto a trailer and moved from the marina to the Eastern Yard warehouse complex. The entry pass was issued to Beketov.",
+        "ar": "One day before the storm, the insured yacht was loaded onto a trailer and moved from the marina to the Eastern Yard warehouse complex. The entry pass was issued to Beketov.",
+        "kk": "За сутки до шторма застрахованную яхту погрузили на трейлер и вывезли со стоянки в складской комплекс «Восточный двор». Пропуск оформлен на Бекетова."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Застрахованное судно осталось целым и было заранее вывезено в другое место.",
+        "en": "The insured vessel remained intact and was moved elsewhere in advance.",
+        "tr": "The insured vessel remained intact and was moved elsewhere in advance.",
+        "ar": "The insured vessel remained intact and was moved elsewhere in advance.",
+        "kk": "Застрахованное судно осталось целым и было заранее вывезено в другое место."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_yacht_lost",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Застрахованное судно осталось целым и было заранее вывезено в другое место.",
+          "en": "The insured vessel remained intact and was moved elsewhere in advance.",
+          "tr": "The insured vessel remained intact and was moved elsewhere in advance.",
+          "ar": "The insured vessel remained intact and was moved elsewhere in advance.",
+          "kk": "Застрахованное судно осталось целым и было заранее вывезено в другое место."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_yacht_lost",
+        "reason": {
+          "ru": "Застрахованное судно осталось целым и было заранее вывезено в другое место.",
+          "en": "The insured vessel remained intact and was moved elsewhere in advance.",
+          "tr": "The insured vessel remained intact and was moved elsewhere in advance.",
+          "ar": "The insured vessel remained intact and was moved elsewhere in advance.",
+          "kk": "Застрахованное судно осталось целым и было заранее вывезено в другое место."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/case-015-ev-transport.webp"
       }
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "CCTV и AIS показывают яхту у причала весь день предполагаемой гибели.",
-      "Метеосводка фиксирует штиль — заявленного шторма не было.",
-      "Заявление мошенническое, его следует отклонить."
+      "Шторм и спасение Бекетова были настоящими.",
+      "Защитная полоса поднятого фрагмента не совпадает с образцом яхты: в море затонул арендованный дешёвый катер.",
+      "Застрахованную яхту заранее вывезли в комплекс «Восточный двор». Выплату следует отклонить."
     ],
     "en": [
-      "CCTV and AIS show the yacht at the berth all the supposed sinking day.",
-      "The weather report shows calm seas — the claimed storm never happened.",
+      "The tear, fibers, and serial pattern do not match: the fragment came from a rented boat, not the insured yacht.",
+      "The insured vessel remained intact and was moved elsewhere in advance.",
+      "The storm was real and confirms the conditions, but not the identity of the sunken vessel.",
+      "A dangerous incident did occur, but the footage cannot establish the vessel's class.",
       "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "CCTV ve AIS, yatı sözde batış günü boyunca iskelede gösteriyor.",
-      "Hava raporu sakin deniz gösteriyor — iddia edilen fırtına hiç olmadı.",
-      "Talep hileli ve reddedilmeli."
+      "The tear, fibers, and serial pattern do not match: the fragment came from a rented boat, not the insured yacht.",
+      "The insured vessel remained intact and was moved elsewhere in advance.",
+      "The storm was real and confirms the conditions, but not the identity of the sunken vessel.",
+      "A dangerous incident did occur, but the footage cannot establish the vessel's class.",
+      "The claim is fraudulent and should be rejected."
     ],
     "ar": [
-      "تُظهر الكاميرات وAIS اليخت عند الرصيف طوال يوم الغرق المزعوم.",
-      "يُظهر تقرير الطقس بحرًا هادئًا — العاصفة المزعومة لم تحدث.",
-      "المطالبة احتيالية ويجب رفضها."
+      "The tear, fibers, and serial pattern do not match: the fragment came from a rented boat, not the insured yacht.",
+      "The insured vessel remained intact and was moved elsewhere in advance.",
+      "The storm was real and confirms the conditions, but not the identity of the sunken vessel.",
+      "A dangerous incident did occur, but the footage cannot establish the vessel's class.",
+      "The claim is fraudulent and should be rejected."
     ],
     "kk": [
-      "CCTV мен AIS яхтаны болжамды апат күні бойы айлақта көрсетеді.",
-      "Метеоанықтама тыныштықты тіркейді — мәлімделген дауыл болмаған.",
-      "Талап алаяқтық, оны қабылдамау керек."
+      "Шторм и спасение Бекетова были настоящими.",
+      "Защитная полоса поднятого фрагмента не совпадает с образцом яхты: в море затонул арендованный дешёвый катер.",
+      "Застрахованную яхту заранее вывезли в комплекс «Восточный двор». Выплату следует отклонить."
     ]
+  },
+  "investigationBudget": 3,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Во время субботнего шторма моя моторная яхта потеряла управление, получила пробоину и затонула. Спасатели сняли меня с аварийного плота. Прошу выплатить страховую стоимость судна — 18 000 евро.",
+        "en": "During Saturday's storm, my motor yacht lost steering, was holed, and sank. Rescuers recovered me from an emergency raft. I am claiming the vessel's insured value of €18,000.",
+        "tr": "During Saturday's storm, my motor yacht lost steering, was holed, and sank. Rescuers recovered me from an emergency raft. I am claiming the vessel's insured value of €18,000.",
+        "ar": "During Saturday's storm, my motor yacht lost steering, was holed, and sank. Rescuers recovered me from an emergency raft. I am claiming the vessel's insured value of €18,000.",
+        "kk": "Во время субботнего шторма моя моторная яхта потеряла управление, получила пробоину и затонула. Спасатели сняли меня с аварийного плота. Прошу выплатить страховую стоимость судна — 18 000 евро."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_storm",
+      "text": {
+        "ru": "Во время шторма Бекетов попал в реальную аварийную ситуацию.",
+        "en": "Beketov was involved in a genuine emergency during the storm.",
+        "tr": "Beketov was involved in a genuine emergency during the storm.",
+        "ar": "Beketov was involved in a genuine emergency during the storm.",
+        "kk": "Во время шторма Бекетов попал в реальную аварийную ситуацию."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_lost_vessel_identity",
+      "text": {
+        "ru": "Затонувшее судно является застрахованной яхтой.",
+        "en": "The sunken vessel was the insured yacht.",
+        "tr": "The sunken vessel was the insured yacht.",
+        "ar": "The sunken vessel was the insured yacht.",
+        "kk": "Затонувшее судно является застрахованной яхтой."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_yacht_lost",
+      "text": {
+        "ru": "Застрахованная яхта утрачена и требует выплаты 18 000 евро.",
+        "en": "The insured yacht was lost, warranting an €18,000 payout.",
+        "tr": "The insured yacht was lost, warranting an €18,000 payout.",
+        "ar": "The insured yacht was lost, warranting an €18,000 payout.",
+        "kk": "Застрахованная яхта утрачена и требует выплаты 18 000 евро."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Шторм был. Судно затонуло. Даже две правдивые части не гарантируют правдивого заявления. Сверяйте корпус, двигатель и регистрацию. — В. Лебедева",
+      "en": "There was a storm. A vessel sank. Even two true details do not make a claim true. Check the hull, engine, and registration. — V. Lebedeva",
+      "tr": "There was a storm. A vessel sank. Even two true details do not make a claim true. Check the hull, engine, and registration. — V. Lebedeva",
+      "ar": "There was a storm. A vessel sank. Even two true details do not make a claim true. Check the hull, engine, and registration. — V. Lebedeva",
+      "kk": "Шторм был. Судно затонуло. Даже две правдивые части не гарантируют правдивого заявления. Сверяйте корпус, двигатель и регистрацию. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Впервые шаблон 17-К привёл не к документу, а к реальному адресу. «Восточный двор» фигурировал и в старой папке Карелина, но как обычная стоянка.",
+      "en": "For the first time, the 17-K template has led us to a physical address rather than a document. Eastern Yard also appears in Karelin's old file, but only as an ordinary storage facility.",
+      "tr": "For the first time, the 17-K template has led us to a physical address rather than a document. Eastern Yard also appears in Karelin's old file, but only as an ordinary storage facility.",
+      "ar": "For the first time, the 17-K template has led us to a physical address rather than a document. Eastern Yard also appears in Karelin's old file, but only as an ordinary storage facility.",
+      "kk": "Впервые шаблон 17-К привёл не к документу, а к реальному адресу. «Восточный двор» фигурировал и в старой папке Карелина, но как обычная стоянка."
+    },
+    "nextCaseTeaser": {
+      "ru": "Следующее дело тоже о воде, но без подмены: маленький магазин и четыре дня, когда его владелица не могла работать.",
+      "en": "The next case also involves water, but no switch: a small shop and four days when its owner could not work.",
+      "tr": "The next case also involves water, but no switch: a small shop and four days when its owner could not work.",
+      "ar": "The next case also involves water, but no switch: a small shop and four days when its owner could not work.",
+      "kk": "Следующее дело тоже о воде, но без подмены: маленький магазин и четыре дня, когда его владелица не могла работать."
+    },
+    "seasonClue": {
+      "id": "east-yard-first",
+      "label": {
+        "ru": "Комплекс «Восточный двор»",
+        "en": "Eastern Yard Complex",
+        "tr": "Eastern Yard Complex",
+        "ar": "Eastern Yard Complex",
+        "kk": "Комплекс «Восточный двор»"
+      },
+      "description": {
+        "ru": "Застрахованное имущество перевозят на один склад до подачи заявления об утрате.",
+        "en": "Insured property is being moved to the same warehouse before loss claims are filed.",
+        "tr": "Insured property is being moved to the same warehouse before loss claims are filed.",
+        "ar": "Insured property is being moved to the same warehouse before loss claims are filed.",
+        "kk": "Застрахованное имущество перевозят на один склад до подачи заявления об утрате."
+      },
+      "progressIndex": 4,
+      "progressTotal": 5
+    },
+    "epilogue": null
   }
 }

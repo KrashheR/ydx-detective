@@ -1,0 +1,90 @@
+{
+  "id": "ev-serials",
+  "order": 2,
+  "type": "surface_reveal",
+  "title": {
+    "ru": "Очистка серийного номера от сажи"
+  },
+  "isContradiction": true,
+  "narrativeRole": "pivot",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Под сажей обнаружен номер списанного демонстрационного корпуса, отсутствующий в страховой описи нового товара."
+  },
+  "previousType": "document",
+  "description": {
+    "ru": "Уцелевшее шасси сфотографировано на месте пожара до очистки поверхности."
+  },
+  "instruction": {
+    "ru": "Сотрите сажу с таблички шасси и откройте сохранившийся номер."
+  },
+  "assets": {
+    "baseImage": "assets/interactive/ev-serials-scene.webp",
+    "coverTexture": "shared/surface/soot.webp",
+    "revealMasks": [
+      "assets/interactive/ev-serials-discarded_serial-trace-mask.svg"
+    ],
+    "toolCursor": "shared/surface/cloth-cursor.svg"
+  },
+  "data": {
+    "mode": "erase",
+    "coverType": "soot",
+    "brush": {
+      "radius": 46,
+      "hardness": 0.66,
+      "opacity": 0.84,
+      "spacing": 8
+    },
+    "completion": {
+      "type": "discover_any",
+      "requiredTraceIds": [
+        "discarded_serial"
+      ]
+    },
+    "traces": [
+      {
+        "id": "discarded_serial",
+        "label": "Номер списанного корпуса",
+        "requiredRevealPercent": 50,
+        "mask": "assets/interactive/ev-serials-discarded_serial-trace-mask.svg",
+        "shape": "mask",
+        "isContradiction": true,
+        "conclusion": "Под сажей обнаружен номер списанного демонстрационного корпуса, отсутствующий в страховой описи нового товара."
+      }
+    ]
+  },
+  "statementLink": {
+    "statementId": "claim_new_goods_destroyed",
+    "relation": "contradicts",
+    "reason": {
+      "ru": "Под сажей обнаружен номер списанного демонстрационного корпуса, отсутствующий в страховой описи нового товара."
+    }
+  },
+  "contradictionTarget": {
+    "statementId": "claim_new_goods_destroyed",
+    "reason": {
+      "ru": "Под сажей обнаружен номер списанного демонстрационного корпуса, отсутствующий в страховой описи нового товара."
+    }
+  },
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": false,
+    "highlightAfterHint": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Серийный номер становится настоящей находкой игрока и раскрывает подмену нового товара списанными корпусами."
+    },
+    "playerAction": {
+      "ru": "Сотрите сажу с таблички шасси и откройте сохранившийся номер."
+    },
+    "conclusion": {
+      "ru": "Под сажей обнаружен номер списанного демонстрационного корпуса, отсутствующий в страховой описи нового товара."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

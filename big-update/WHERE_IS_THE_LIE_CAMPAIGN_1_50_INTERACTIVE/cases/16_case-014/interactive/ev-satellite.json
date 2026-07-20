@@ -1,0 +1,105 @@
+{
+  "id": "ev-satellite",
+  "order": 2,
+  "type": "shadow_time_check",
+  "title": {
+    "ru": "Проверка времени полевого снимка"
+  },
+  "isContradiction": false,
+  "narrativeRole": "proof",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Снимок сделан в 16:20–16:40 сразу после града; светлая полоса относится к заявленному событию."
+  },
+  "previousType": "photo",
+  "description": {
+    "ru": "Агроном сфотографировал границу повреждений; положение межевого столба нанесено на план участка."
+  },
+  "instruction": {
+    "ru": "Сопоставить тень межевого столба со временем прохождения грозы."
+  },
+  "assets": {
+    "asset1": "assets/interactive/ev-satellite-scene.webp",
+    "asset2": "assets/interactive/ev-satellite-shadow-reference.svg"
+  },
+  "data": {
+    "claimedTime": "16:22",
+    "orientationSource": "Геодезический план участка",
+    "slider": {
+      "from": "06:00",
+      "to": "21:00",
+      "stepMinutes": 10
+    },
+    "shadowOrigin": {
+      "x": 44,
+      "y": 65
+    },
+    "referenceShadow": {
+      "baseAngle": 0,
+      "baseLength": 100,
+      "width": 20,
+      "opacity": 0.34
+    },
+    "timeSamples": [
+      {
+        "time": "08:00",
+        "angle": 72,
+        "length": 126
+      },
+      {
+        "time": "12:00",
+        "angle": 10,
+        "length": 50
+      },
+      {
+        "time": "16:20",
+        "angle": -43,
+        "length": 93
+      },
+      {
+        "time": "20:00",
+        "angle": -75,
+        "length": 149
+      }
+    ],
+    "validTimeRanges": [
+      {
+        "from": "16:20",
+        "to": "16:40"
+      }
+    ],
+    "matchTolerance": {
+      "angle": 8,
+      "length": 16
+    }
+  },
+  "statementLink": {
+    "statementId": "claim_event_time",
+    "relation": "supports",
+    "reason": {
+      "ru": "Снимок сделан в 16:20–16:40 сразу после града; светлая полоса относится к заявленному событию."
+    }
+  },
+  "contradictionTarget": null,
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Интерактив подтверждает, что полоса повреждения появилась после конкретной градовой ячейки, а не была старой."
+    },
+    "playerAction": {
+      "ru": "Сопоставить тень межевого столба со временем прохождения грозы."
+    },
+    "conclusion": {
+      "ru": "Снимок сделан в 16:20–16:40 сразу после града; светлая полоса относится к заявленному событию."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

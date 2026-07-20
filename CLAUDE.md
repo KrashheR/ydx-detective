@@ -43,7 +43,7 @@ Paths are stable. Read the matching doc for *why*, then the source for *how*.
 | Case unlock / sequence / level gating | `src/engine/caseUnlockEngine.ts` |
 | All economy/tuning constants (reward split, ranks, streak, hints, saveVersion) | `src/config/gameConfig.ts` |
 | Persistence: where/when snapshot is written + save migration | `src/services/persistence.ts` |
-| The **only** `window.YaGames` adapter (SDK, cloud, ads, leaderboard, server time) | `src/services/yandexSDK.ts` |
+| Portal-neutral SDK contract | `src/services/platformAdapter.ts` (Yandex implementation: `src/services/yandexSDK.ts`) |
 | The **only** `window.ym` adapter (Yandex Metrica analytics: goals + user params) | `src/services/metrica.ts` |
 | Types (`Case`/`Evidence`/`PlayerStats`/`ActiveSession`/`PersistedState`) | `src/types/index.ts` |
 | Case Zod validation (kept in lockstep with types) | `src/data/caseSchema.ts` |
@@ -103,12 +103,12 @@ These cut across the whole codebase; everything else lives in the docs above.
    body) is localized inside the case JSON itself using `LocalizedString`/`LocalizedContent` (see
    `src/types/index.ts`). A missing key in any language is a bug — the `Language` type is the exhaustive
    list; don't add a key for only some locales. Details: [docs/07](docs/07-authoring-content.md).
-7. **The standard campaign is a difficulty curve.** 38 cases ordered by `(requiredLevel, caseNumber)`;
-   evidence count is **non-decreasing** along that order (2-evidence onboarding → 6-evidence expert),
-   the first two cases use only `photo`/`document`, and the advanced types (`bank_statement`,
-   `phone_records`, `social_media`) debut late (≥ pos 18). `requiredLevel` is a complexity tier capped at
-   16 (never an XP wall) — strict sequence is the real gate. Adding/reordering cases must keep this
-   monotonic or `src/data/campaignProgression.test.ts` fails. All 10 evidence types have renderers.
+7. **The standard campaign has exactly 50 canonical positions.** Order by the immutable
+   `campaignOrder` field; stable case IDs must never be renumbered. Every case has an integer
+   investigation budget, atomic claim statements and validated evidence links. Cases 1–3 are the
+   onboarding flow; five interactive evidence types are introduced through the campaign, and case 50
+   owns the generic final synthesis. `requiredLevel` remains capped at 16. The invariant is enforced by
+   `src/data/campaignProgression.test.ts`; all 15 evidence types have renderers.
    Details: [docs/03](docs/03-gameplay.md) / [docs/07](docs/07-authoring-content.md).
 
 ## Design language (hard constraint)

@@ -1,0 +1,114 @@
+{
+  "id": "photo-44",
+  "order": 1,
+  "type": "thermal_scan",
+  "title": {
+    "ru": "Тепловой осмотр теплицы"
+  },
+  "isContradiction": true,
+  "narrativeRole": "pivot",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Горячей остаётся только металлическая чаша на отключённом нагревателе; воздух и грядки были холоднее нормы возгорания."
+  },
+  "previousType": "photo",
+  "description": {
+    "ru": "Сигнал о пожаре поступил в 01:12, открытое горение ликвидировано в 01:21. После безопасного проветривания тепловой осмотр начат в 01:29."
+  },
+  "instruction": {
+    "ru": "Включить тепловизор и выбрать источник остаточного тепла."
+  },
+  "assets": {
+    "asset1": "assets/interactive/photo-44-scene.webp",
+    "asset2": "assets/interactive/photo-44-heat-zones.json"
+  },
+  "data": {
+    "ambientTemperature": 17,
+    "observationTime": "01:29",
+    "claimedLastUseBefore": "01:21",
+    "elapsedSinceClaimedUseMinutes": 8,
+    "coolingReference": "Через восемь минут металлическая чаша сохраняет локальное тепло очага; температура воздуха и грядок служит контрольным фоном.",
+    "initialMode": "normal",
+    "heatZones": [
+      {
+        "id": "mixing_bowl",
+        "shape": "ellipse",
+        "x": 58,
+        "y": 58,
+        "width": 18,
+        "height": 13,
+        "temperature": 49,
+        "intensity": 0.94,
+        "label": "Локально нагретая чаша",
+        "isContradiction": true
+      },
+      {
+        "id": "beds",
+        "shape": "polygon",
+        "points": [
+          [
+            9,
+            65
+          ],
+          [
+            42,
+            61
+          ],
+          [
+            44,
+            88
+          ],
+          [
+            7,
+            91
+          ]
+        ],
+        "temperature": 18,
+        "intensity": 0.1,
+        "label": "Холодные грядки",
+        "isContradiction": false,
+        "isTarget": false
+      }
+    ],
+    "successCondition": {
+      "type": "select_any",
+      "zoneIds": [
+        "mixing_bowl"
+      ]
+    }
+  },
+  "statementLink": {
+    "statementId": "claim_spontaneous_overheat",
+    "relation": "contradicts",
+    "reason": {
+      "ru": "Горячей остаётся только металлическая чаша на отключённом нагревателе; воздух и грядки были холоднее нормы возгорания."
+    }
+  },
+  "contradictionTarget": {
+    "statementId": "claim_spontaneous_overheat",
+    "reason": {
+      "ru": "Горячей остаётся только металлическая чаша на отключённом нагревателе; воздух и грядки были холоднее нормы возгорания."
+    }
+  },
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Локальная горячая зона показывает истинный очаг и не позволяет списать пожар на общий перегрев."
+    },
+    "playerAction": {
+      "ru": "Включить тепловизор и выбрать источник остаточного тепла."
+    },
+    "conclusion": {
+      "ru": "Горячей остаётся только металлическая чаша на отключённом нагревателе; воздух и грядки были холоднее нормы возгорания."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

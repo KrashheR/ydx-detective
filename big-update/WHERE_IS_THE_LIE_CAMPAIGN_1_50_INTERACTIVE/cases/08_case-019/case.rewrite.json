@@ -1,0 +1,335 @@
+{
+  "id": "case-019",
+  "campaignOrder": 8,
+  "requiredLevel": 4,
+  "act": 1,
+  "actTitle": {
+    "ru": "Чужой почерк",
+    "en": "Another Hand"
+  },
+  "title": {
+    "ru": "Ночной водитель",
+    "en": "The Night Driver"
+  },
+  "difficulty": "medium",
+  "claimAmount": {
+    "value": 850,
+    "currency": "EUR"
+  },
+  "groundTruth": "valid",
+  "correctDecision": "approve",
+  "investigationBudget": 3,
+  "claimant": {
+    "name": {
+      "ru": "Анатолий Степанович, 71 год",
+      "en": "Anatoly Stepanovich, age 71"
+    },
+    "migrationNote": {
+      "ru": "Сохранить стабильный профиль и существующий портрет после визуальной сверки с канонической версией.",
+      "en": "Keep the established profile and existing portrait after visually checking them against the canonical version."
+    },
+    "portrait": null,
+    "portraitStatus": "retain_existing_project_portrait",
+    "portraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/anatoly.webp",
+      "existingFile": "public/people/anatoly.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Я узнала почерк ещё до фамилии. Не спешите обвинять Анатолия Степановича: до сих пор он сообщал только правду. — В. Лебедева",
+      "en": "I recognized the writing before I saw the name. Do not rush to accuse Anatoly Stepanovich; so far, every claim he has made has been truthful. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "После истории с дроном Анатолий Степанович установил ещё одну камеру. Замок на ящик с пультом он установить не догадался.",
+      "en": "After the drone incident, Anatoly Stepanovich installed another camera. It did not occur to him to put a lock on the remote-control box."
+    },
+    "nextCaseTeaser": {
+      "ru": "Следующая папка пришла из клуба «Маяк». На этот раз заявление подписал человек, которого мы недавно защитили.",
+      "en": "The next file comes from the Mayak club. This time, the claim was signed by someone we recently defended."
+    },
+    "seasonClue": null,
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Ночью моя роботизированная газонокосилка получила команду с пульта, выехала со двора и повредила теплицу соседа. Я спал и пультом не пользовался; утром он был найден в сливовом дереве. Сосед предъявил требование на 850 евро. Прошу урегулировать ущерб по полису ответственности.",
+    "en": "During the night, my robotic lawn mower received a remote command, left my yard, and damaged my neighbor's greenhouse. I was asleep and did not use the remote; it was found in a plum tree the next morning. My neighbor is claiming €850. Please settle the damage under my liability policy."
+  },
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Ночью моя роботизированная газонокосилка получила команду с пульта, выехала со двора и повредила теплицу соседа. Я спал и пультом не пользовался; утром он был найден в сливовом дереве. Сосед предъявил требование на 850 евро. Прошу урегулировать ущерб по полису ответственности.",
+        "en": "During the night, my robotic lawn mower received a remote command, left my yard, and damaged my neighbor's greenhouse. I was asleep and did not use the remote; it was found in a plum tree the next morning. My neighbor is claiming €850. Please settle the damage under my liability policy."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_event",
+      "text": {
+        "ru": "Газонокосилка ночью выехала со двора и повредила теплицу соседа.",
+        "en": "The lawn mower left the yard during the night and damaged the neighbor's greenhouse."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_owner_not_controlling",
+      "text": {
+        "ru": "Анатолий Степанович спал и не управлял зарегистрированным пультом.",
+        "en": "Anatoly Stepanovich was asleep and did not operate the registered remote."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_liability_damage",
+      "text": {
+        "ru": "Реальный ущерб соседу составляет 850 евро.",
+        "en": "The neighbor's actual loss totals €850."
+      },
+      "stampable": true
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-neighbor",
+      "order": 1,
+      "type": "document",
+      "title": {
+        "ru": "Требование соседа",
+        "en": "Neighbor's Damage Claim"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Фотографии показывают газонокосилку, застрявшую в нижней секции соседской теплицы. Смета включает замену двух панелей и алюминиевой направляющей. Сумма соответствует повреждениям.",
+        "en": "The photographs show the lawn mower lodged in the lower section of the neighbor's greenhouse. The estimate covers two replacement panels and an aluminum guide rail. The amount is consistent with the damage."
+      },
+      "statusExplanation": {
+        "ru": "Ущерб соседу реален и соответствует заявленной сумме.",
+        "en": "The neighbor's damage is real and matches the amount claimed."
+      },
+      "statementLink": {
+        "statementId": "claim_liability_damage",
+        "relation": "supports",
+        "reason": {
+          "ru": "Ущерб соседу реален и соответствует заявленной сумме.",
+          "en": "The neighbor's damage is real and matches the amount claimed."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-mower-log",
+      "order": 2,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал газонокосилки",
+        "en": "Lawn Mower Log"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "- 03:39:54 — получена команда разблокировки с зарегистрированного пульта;\n- 03:40:02 — движение вперёд, максимальное отклонение джойстика;\n- 03:40:19 — потеря сигнала;\n- 03:40:31 — срабатывание датчика столкновения.",
+        "en": "- 3:39:54 a.m.—unlock command received from registered remote;\n- 3:40:02 a.m.—forward movement, joystick at maximum;\n- 3:40:19 a.m.—signal lost;\n- 3:40:31 a.m.—collision sensor triggered."
+      },
+      "statusExplanation": {
+        "ru": "Косилка двигалась по команде настоящего пульта, но журнал не устанавливает, кто нажимал на управление.",
+        "en": "The mower responded to its genuine remote, but the log does not reveal who operated it."
+      },
+      "statementLink": {
+        "statementId": "claim_event",
+        "relation": "supports",
+        "reason": {
+          "ru": "Косилка двигалась по команде настоящего пульта, но журнал не устанавливает, кто нажимал на управление.",
+          "en": "The mower responded to its genuine remote, but the log does not reveal who operated it."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-remote-photo",
+      "order": 3,
+      "type": "photo",
+      "title": {
+        "ru": "Фото найденного пульта",
+        "en": "Photograph of the Recovered Remote"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Пульт лежит в развилке сливового дерева. Корпус испачкан землёй, на кнопке разблокировки и джойстике видны небольшие грязные следы лап.",
+        "en": "The remote is lodged in the fork of a plum tree. Its case is smeared with soil, and small muddy paw prints mark the unlock button and joystick."
+      },
+      "statusExplanation": {
+        "ru": "Следы подтверждают, что пульт оказался у животного, а не использовался заявителем.",
+        "en": "The marks confirm that an animal handled the remote, not the claimant."
+      },
+      "statementLink": {
+        "statementId": "claim_owner_not_controlling",
+        "relation": "supports",
+        "reason": {
+          "ru": "Следы подтверждают, что пульт оказался у животного, а не использовался заявителем.",
+          "en": "The marks confirm that an animal handled the remote, not the claimant."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-010",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-019/evidence/case-019-mower-remote.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-019/evidence/case-019-mower-remote.webp",
+          "caseRelativeSrc": "evidence/case-019-mower-remote.webp",
+          "installTo": "public/evidence/case-019-mower-remote.webp",
+          "legacyRuntimeUrl": "evidence/case-019-mower-remote.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "683aaeda85667390a9f8128ba6deae7fd22482e86e41368e3010eca9df07ba00"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-019/evidence/case-019-mower-remote.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-019/evidence/case-019-mower-remote.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-019-mower-remote.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-019/evidence/case-019-mower-remote.webp",
+        "copyTo": "public/evidence/case-019-mower-remote.webp"
+      }
+    },
+    {
+      "id": "ev-camera",
+      "order": 4,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Запись дворовой камеры",
+        "en": "Yard Camera Footage"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Камера показывает, как Жорик забирается на стол, хватает пульт и уносит его к сливе. Косилка в этот момент находится вне кадра; управление и столкновение восстанавливаются только по журналу устройства и следам на пульте.",
+        "en": "The camera shows Zhorik climbing onto a table, taking the remote, and carrying it toward the plum tree. The mower is off camera; its movement and collision can only be reconstructed from the device log and marks on the remote."
+      },
+      "statusExplanation": {
+        "ru": "Запись объясняет, как пульт оказался у енота, но требует сопоставления с журналом косилки.",
+        "en": "The footage explains how the raccoon obtained the remote, but must be matched with the mower log."
+      },
+      "statementLink": {
+        "statementId": "claim_owner_not_controlling",
+        "relation": "supports",
+        "reason": {
+          "ru": "Запись объясняет, как пульт оказался у енота, но требует сопоставления с журналом косилки.",
+          "en": "The footage explains how the raccoon obtained the remote, but must be matched with the mower log."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Косилка действительно повредила имущество соседа.",
+      "Команда пришла с зарегистрированного пульта, который унёс Жорик.",
+      "Камера показывает, как енот случайно активирует управление.",
+      "Ущерб третьему лицу подтверждён, умышленной инсценировки нет. Выплату следует одобрить."
+    ],
+    "en": [
+      "The neighbor's damage is real and matches the amount claimed.",
+      "The mower responded to its genuine remote, but the log does not reveal who operated it.",
+      "The marks confirm that an animal handled the remote, not the claimant.",
+      "The footage explains how the raccoon obtained the remote, but must be matched with the mower log.",
+      "No material statement has been disproven. The claim should be approved."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Внедрить каноническую постановку из первого акта «Архив №17».",
+      "Сохранить стабильный ID и новый campaignOrder."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "evidence/case-019-mower-remote.webp",
+      "action": "replace",
+      "purpose": "Пульт газонокосилки на дереве",
+      "prompt": "Close documentary evidence photo of a rugged remote control lodged in the fork of a plum tree, small muddy raccoon paw prints on the unlock button and joystick, leaves and fruit around it, realistic wear, natural early-morning light, no readable branding, no text overlay, no watermark."
+    }
+  ],
+  "interactiveEvidenceCount": 0,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-019",
+    "archiveBasePath": "generated-assets/src/data/cases/case-019",
+    "claimantPortrait": null,
+    "claimantPortraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/anatoly.webp",
+      "existingFile": "public/people/anatoly.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-remote-photo",
+        "title": {
+          "ru": "Фото найденного пульта",
+          "en": "Photograph of the Recovered Remote"
+        },
+        "primaryImage": "src/data/cases/case-019/evidence/case-019-mower-remote.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-019/evidence/case-019-mower-remote.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-019-mower-remote.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-019/evidence/case-019-mower-remote.webp",
+          "copyTo": "public/evidence/case-019-mower-remote.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-010",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-019/evidence/case-019-mower-remote.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-019/evidence/case-019-mower-remote.webp",
+            "caseRelativeSrc": "evidence/case-019-mower-remote.webp",
+            "installTo": "public/evidence/case-019-mower-remote.webp",
+            "legacyRuntimeUrl": "evidence/case-019-mower-remote.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "683aaeda85667390a9f8128ba6deae7fd22482e86e41368e3010eca9df07ba00"
+          }
+        ]
+      }
+    ]
+  }
+}

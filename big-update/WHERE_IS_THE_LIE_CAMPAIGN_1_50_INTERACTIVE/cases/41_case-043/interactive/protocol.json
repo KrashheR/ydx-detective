@@ -1,0 +1,78 @@
+{
+  "id": "protocol",
+  "order": 5,
+  "type": "document_scan",
+  "title": {
+    "ru": "Экспертиза экзаменационного протокола"
+  },
+  "isContradiction": false,
+  "narrativeRole": "motive",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Оценки занижены задним числом после доступа Ильи к маршрутам; исправления подписаны Роуном."
+  },
+  "previousType": "document",
+  "description": {
+    "ru": "Илья оставил бумажный черновик протокола вместе с копией маршрутов."
+  },
+  "instruction": {
+    "ru": "Включить боковой свет и найти прежние оценки под исправлениями."
+  },
+  "assets": {
+    "asset1": "assets/interactive/protocol-base.webp",
+    "asset2": "assets/interactive/protocol-scan-overlay.svg"
+  },
+  "data": {
+    "initialMode": "normal",
+    "modes": [
+      "normal",
+      "side_light",
+      "uv"
+    ],
+    "anomalyZones": [
+      {
+        "id": "changed_scores",
+        "mode": "side_light",
+        "x": 49,
+        "y": 47,
+        "width": 33,
+        "height": 20,
+        "label": "Оценки занижены задним числом после доступа Ильи к маршрутам; исправления подписаны Роуном.",
+        "isContradiction": true
+      }
+    ],
+    "successCondition": {
+      "type": "select_zone",
+      "zoneId": "changed_scores"
+    }
+  },
+  "statementLink": {
+    "statementId": "claim_documents_lost",
+    "relation": "contextualizes",
+    "reason": {
+      "ru": "Оценки занижены задним числом после доступа Ильи к маршрутам; исправления подписаны Роуном."
+    }
+  },
+  "contradictionTarget": null,
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Игрок сам обнаруживает давление на свидетеля и понимает мотив добровольного ухода."
+    },
+    "playerAction": {
+      "ru": "Включить боковой свет и найти прежние оценки под исправлениями."
+    },
+    "conclusion": {
+      "ru": "Оценки занижены задним числом после доступа Ильи к маршрутам; исправления подписаны Роуном."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

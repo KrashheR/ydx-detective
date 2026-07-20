@@ -1,0 +1,105 @@
+{
+  "id": "ev-photo",
+  "order": 3,
+  "type": "shadow_time_check",
+  "title": {
+    "ru": "Проверка времени снимка стеллажей"
+  },
+  "isContradiction": false,
+  "narrativeRole": "proof",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Тень соответствует 17:10–17:35, сразу после пика подтопления; снимок не был сделан заранее."
+  },
+  "previousType": "photo",
+  "description": {
+    "ru": "Инспектор снял залитый склад через открытые ворота; ориентация ворот указана на плане фермы."
+  },
+  "instruction": {
+    "ru": "Совместить тень стойки ворот с эталоном."
+  },
+  "assets": {
+    "asset1": "assets/interactive/ev-photo-scene.webp",
+    "asset2": "assets/interactive/ev-photo-shadow-reference.svg"
+  },
+  "data": {
+    "claimedTime": "17:20",
+    "orientationSource": "План строения и направление ворот",
+    "slider": {
+      "from": "06:00",
+      "to": "21:00",
+      "stepMinutes": 10
+    },
+    "shadowOrigin": {
+      "x": 44,
+      "y": 65
+    },
+    "referenceShadow": {
+      "baseAngle": 0,
+      "baseLength": 100,
+      "width": 20,
+      "opacity": 0.34
+    },
+    "timeSamples": [
+      {
+        "time": "08:00",
+        "angle": 70,
+        "length": 130
+      },
+      {
+        "time": "12:00",
+        "angle": 9,
+        "length": 51
+      },
+      {
+        "time": "17:20",
+        "angle": -54,
+        "length": 108
+      },
+      {
+        "time": "20:00",
+        "angle": -76,
+        "length": 152
+      }
+    ],
+    "validTimeRanges": [
+      {
+        "from": "17:10",
+        "to": "17:35"
+      }
+    ],
+    "matchTolerance": {
+      "angle": 8,
+      "length": 16
+    }
+  },
+  "statementLink": {
+    "statementId": "claim_event_time",
+    "relation": "supports",
+    "reason": {
+      "ru": "Тень соответствует 17:10–17:35, сразу после пика подтопления; снимок не был сделан заранее."
+    }
+  },
+  "contradictionTarget": null,
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Проверка подтверждает, что вода и повреждение семян зафиксированы сразу после ливня."
+    },
+    "playerAction": {
+      "ru": "Совместить тень стойки ворот с эталоном."
+    },
+    "conclusion": {
+      "ru": "Тень соответствует 17:10–17:35, сразу после пика подтопления; снимок не был сделан заранее."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

@@ -1,295 +1,494 @@
 {
   "id": "case-025",
   "type": "standard",
+  "campaignOrder": 23,
+  "requiredLevel": 12,
+  "act": 3,
+  "actTitle": {
+    "ru": "Восточный двор",
+    "en": "Eastern Yard",
+    "tr": "Eastern Yard",
+    "ar": "Eastern Yard",
+    "kk": "Восточный двор"
+  },
   "difficulty": "medium",
   "claimAmount": 5000,
   "truth": "valid",
   "title": {
-    "ru": "Пожар в кафе",
-    "en": "Fire at the Café",
-    "tr": "Kafedeki Yangın",
-    "ar": "حريق في المقهى",
-    "kk": "Кафедегі өрт"
+    "ru": "Последний кофе перед пожаром",
+    "en": "The Last Coffee Before the Fire",
+    "tr": "The Last Coffee Before the Fire",
+    "ar": "The Last Coffee Before the Fire",
+    "kk": "Последний кофе перед пожаром"
   },
   "claim": {
     "person": {
       "ru": "Лоренцо Конти, 45 лет",
-      "en": "Lorenzo Conti, 45",
-      "tr": "Lorenzo Conti, 45",
-      "ar": "لورنزو كونتي، 45",
-      "kk": "Лоренцо Конти, 45 жаста"
+      "en": "Lorenzo Conti, age 45",
+      "tr": "Lorenzo Conti, age 45",
+      "ar": "Lorenzo Conti, age 45",
+      "kk": "Лоренцо Конти, 45 лет"
     },
     "story": {
-      "ru": "Вечером 5 мая около 21:15 в моём кафе вспыхнул пожар — загорелась проводка за барной стойкой. Сгорело оборудование и часть зала. Пожарные приехали быстро, посетителей и персонал успели вывести. Прошу компенсацию ущерба.",
-      "en": "On the evening of May 5, around 21:15, a fire broke out in my café — the wiring behind the bar caught fire. Equipment and part of the dining area burned. Firefighters arrived quickly and guests and staff were evacuated in time. I request compensation for the damage.",
-      "tr": "5 Mayıs akşamı, saat 21:15 sularında kafemde yangın çıktı — barın arkasındaki kablolar tutuştu. Ekipman ve salonun bir kısmı yandı. İtfaiye hızlı geldi, müşteriler ve personel zamanında tahliye edildi. Zarar için tazminat talep ediyorum.",
-      "ar": "مساء 5 مايو، حوالي الساعة 21:15، اندلع حريق في مقهاي — اشتعلت الأسلاك خلف البار. احترقت المعدات وجزء من الصالة. وصل رجال الإطفاء بسرعة وأُخلِي الزبائن والموظفون في الوقت المناسب. أطلب تعويضًا عن الأضرار.",
-      "kk": "5 мамыр кешінде шамамен 21:15-те менің кафемде өрт шықты — бар сөресінің артындағы сым жанды. Жабдық пен залдың бір бөлігі өртенді. Өрт сөндірушілер тез келді, келушілер мен қызметкерлер уақытында шығарылды. Зиян үшін өтемақы сұраймын."
+      "ru": "5 мая после закрытия за барной стойкой загорелась проводка кофемашины. Персонал вывел посетителей, но огонь уничтожил оборудование и часть зала. Прошу компенсировать подтверждённый ущерб.",
+      "en": "After closing on May 5, wiring in the coffee machine caught fire behind the bar. Staff evacuated the customers, but the fire destroyed equipment and part of the dining area. I am claiming the documented loss.",
+      "tr": "After closing on May 5, wiring in the coffee machine caught fire behind the bar. Staff evacuated the customers, but the fire destroyed equipment and part of the dining area. I am claiming the documented loss.",
+      "ar": "After closing on May 5, wiring in the coffee machine caught fire behind the bar. Staff evacuated the customers, but the fire destroyed equipment and part of the dining area. I am claiming the documented loss.",
+      "kk": "5 мая после закрытия за барной стойкой загорелась проводка кофемашины. Персонал вывел посетителей, но огонь уничтожил оборудование и часть зала. Прошу компенсировать подтверждённый ущерб."
     }
   },
-  "coverImage": "covers/case-025.svg",
-  "personImage": "people/lorenzo.webp",
   "client": {
     "role": {
-      "ru": "Заявитель · ИП",
-      "en": "Claimant · sole proprietor",
-      "tr": "Başvuru sahibi · bireysel girişimci",
-      "ar": "مقدم الطلب · مالك فردي",
-      "kk": "Өтініш беруші · ЖК"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Возраст",
-          "en": "Age",
-          "tr": "Yaş",
-          "ar": "العمر",
-          "kk": "Жасы"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "45 лет",
-          "en": "45 years old",
-          "tr": "45 yaşında",
-          "ar": "45 عامًا",
-          "kk": "45 жаста"
+          "ru": "3",
+          "en": "3",
+          "tr": "3",
+          "ar": "3",
+          "kk": "3"
         }
       },
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Рим",
-          "en": "Rome",
-          "tr": "Roma",
-          "ar": "روما",
-          "kk": "Рим"
-        }
-      },
-      {
-        "k": {
-          "ru": "Клиент с",
-          "en": "Client since",
-          "tr": "Müşteri",
-          "ar": "عميل منذ",
-          "kk": "Клиент"
-        },
-        "v": {
-          "ru": "2015 г.",
-          "en": "2015",
-          "tr": "2015",
-          "ar": "2015",
-          "kk": "2015 ж."
-        }
-      },
-      {
-        "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
-        },
-        "v": {
-          "ru": "Коммерч. имущество · КИ-25300673-X7",
-          "en": "Commercial property · KI-25300673-X7",
-          "tr": "Ticari mülk · KI-25300673-X7",
-          "ar": "الممتلكات التجارية · KI-25300673-X7",
-          "kk": "Коммерциялық мүлік · КИ-25300673-X7"
-        }
-      },
-      {
-        "k": {
-          "ru": "Документ",
-          "en": "Document",
-          "tr": "Belge",
-          "ar": "الوثيقة",
-          "kk": "Құжат"
-        },
-        "v": {
-          "ru": "Паспорт IT-X5 667788009-46181",
-          "en": "Passport IT-X5 667788009-46181",
-          "tr": "Pasaport IT-X5 667788009-46181",
-          "ar": "جواز السفر IT-X5 667788009-46181",
-          "kk": "Паспорт IT-X5 667788009-46181"
+          "ru": "23",
+          "en": "23",
+          "tr": "23",
+          "ar": "23",
+          "kk": "23"
         }
       }
     ]
   },
+  "coverImage": "covers/case-025.svg",
+  "personImage": "people/lorenzo.webp",
   "evidences": [
     {
       "id": "ev-fire",
-      "relation": "supports",
+      "order": 1,
+      "type": "surface_reveal",
+      "title": {
+        "ru": "Очистка блока питания от копоти",
+        "en": "Cleaning Soot from the Power Unit",
+        "tr": "Cleaning Soot from the Power Unit",
+        "ar": "Cleaning Soot from the Power Unit",
+        "kk": "Очистка блока питания от копоти"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Под копотью видны локальная электрическая дуга и оплавление изнутри наружу; следов второго очага или внешнего поджога нет.",
+        "en": "Beneath the soot are signs of a localized electrical arc and melting from the inside outward; there is no second ignition point or evidence of external arson.",
+        "tr": "Beneath the soot are signs of a localized electrical arc and melting from the inside outward; there is no second ignition point or evidence of external arson.",
+        "ar": "Beneath the soot are signs of a localized electrical arc and melting from the inside outward; there is no second ignition point or evidence of external arson.",
+        "kk": "Под копотью видны локальная электрическая дуга и оплавление изнутри наружу; следов второго очага или внешнего поджога нет."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_cause",
+        "relation": "supports",
+        "reason": {
+          "ru": "Под копотью видны локальная электрическая дуга и оплавление изнутри наружу; следов второго очага или внешнего поджога нет.",
+          "en": "Beneath the soot are signs of a localized electrical arc and melting from the inside outward; there is no second ignition point or evidence of external arson.",
+          "tr": "Beneath the soot are signs of a localized electrical arc and melting from the inside outward; there is no second ignition point or evidence of external arson.",
+          "ar": "Beneath the soot are signs of a localized electrical arc and melting from the inside outward; there is no second ignition point or evidence of external arson.",
+          "kk": "Под копотью видны локальная электрическая дуга и оплавление изнутри наружу; следов второго очага или внешнего поджога нет."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "Пожарный эксперт передал крупный снимок металлического блока кофемашины до лабораторной очистки.",
+        "en": "The fire investigator supplied a close-up of the coffee machine's metal power unit before laboratory cleaning.",
+        "tr": "The fire investigator supplied a close-up of the coffee machine's metal power unit before laboratory cleaning.",
+        "ar": "The fire investigator supplied a close-up of the coffee machine's metal power unit before laboratory cleaning.",
+        "kk": "Пожарный эксперт передал крупный снимок металлического блока кофемашины до лабораторной очистки."
+      },
+      "instruction": {
+        "ru": "Сотрите копоть с панели блока питания и найдите место первичного пробоя.",
+        "en": "Wipe the soot from the power-unit panel and locate the initial electrical failure.",
+        "tr": "Wipe the soot from the power-unit panel and locate the initial electrical failure.",
+        "ar": "Wipe the soot from the power-unit panel and locate the initial electrical failure.",
+        "kk": "Сотрите копоть с панели блока питания и найдите место первичного пробоя."
+      },
+      "previousType": "document",
+      "assets": {
+        "baseImage": "cases/case-025/assets/interactive/ev-fire-scene.webp",
+        "coverTexture": "shared/surface/soot.svg",
+        "revealMasks": [
+          "cases/case-025/assets/interactive/ev-fire-internal_arc-trace-mask.svg"
+        ],
+        "toolCursor": "shared/surface/cloth-cursor.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": false,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Игрок обнаруживает внутренний электрический очаг сам, а не получает его готовой строкой из отчёта.",
+          "en": "The player discovers the internal electrical origin personally instead of receiving it as a ready-made line in a report.",
+          "tr": "The player discovers the internal electrical origin personally instead of receiving it as a ready-made line in a report.",
+          "ar": "The player discovers the internal electrical origin personally instead of receiving it as a ready-made line in a report.",
+          "kk": "Игрок обнаруживает внутренний электрический очаг сам, а не получает его готовой строкой из отчёта."
+        },
+        "playerAction": {
+          "ru": "Сотрите копоть с панели блока питания и найдите место первичного пробоя.",
+          "en": "Wipe the soot from the power-unit panel and locate the initial electrical failure.",
+          "tr": "Wipe the soot from the power-unit panel and locate the initial electrical failure.",
+          "ar": "Wipe the soot from the power-unit panel and locate the initial electrical failure.",
+          "kk": "Сотрите копоть с панели блока питания и найдите место первичного пробоя."
+        },
+        "conclusion": {
+          "ru": "Под копотью видны локальная электрическая дуга и оплавление изнутри наружу; следов второго очага или внешнего поджога нет.",
+          "en": "Beneath the soot are signs of a localized electrical arc and melting from the inside outward; there is no second ignition point or evidence of external arson.",
+          "tr": "Beneath the soot are signs of a localized electrical arc and melting from the inside outward; there is no second ignition point or evidence of external arson.",
+          "ar": "Beneath the soot are signs of a localized electrical arc and melting from the inside outward; there is no second ignition point or evidence of external arson.",
+          "kk": "Под копотью видны локальная электрическая дуга и оплавление изнутри наружу; следов второго очага или внешнего поджога нет."
+        }
+      },
+      "data": {
+        "mode": "erase",
+        "coverType": "soot",
+        "brush": {
+          "radius": 46,
+          "hardness": 0.66,
+          "opacity": 0.84,
+          "spacing": 8
+        },
+        "completion": {
+          "type": "discover_any",
+          "requiredTraceIds": [
+            "internal_arc"
+          ]
+        },
+        "traces": [
+          {
+            "id": "internal_arc",
+            "label": "Локальный след электрической дуги",
+            "requiredRevealPercent": 58,
+            "mask": "cases/case-025/assets/interactive/ev-fire-internal_arc-trace-mask.svg",
+            "shape": "mask",
+            "isContradiction": false,
+            "conclusion": "Под копотью видны локальная электрическая дуга и оплавление изнутри наружу; следов второго очага или внешнего поджога нет.",
+            "labelEn": "Localized electrical arc trace",
+            "conclusionEn": "Beneath the soot are signs of a localized electrical arc and melting from the inside outward; there is no second ignition point or evidence of external arson."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ev-cctv",
+      "order": 2,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера зала",
+        "en": "Dining Area Camera",
+        "tr": "Dining Area Camera",
+        "ar": "Dining Area Camera",
+        "kk": "Камера зала"
+      },
+      "content": {
+        "ru": "После закрытия сотрудник выключает основное оборудование. Через семь минут из корпуса кофемашины появляется дым; людей у стойки нет.",
+        "en": "After closing, an employee switches off the main equipment. Seven minutes later, smoke appears from the coffee machine while no one is near the bar.",
+        "tr": "After closing, an employee switches off the main equipment. Seven minutes later, smoke appears from the coffee machine while no one is near the bar.",
+        "ar": "After closing, an employee switches off the main equipment. Seven minutes later, smoke appears from the coffee machine while no one is near the bar.",
+        "kk": "После закрытия сотрудник выключает основное оборудование. Через семь минут из корпуса кофемашины появляется дым; людей у стойки нет."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Пожар начинается без вмешательства персонала или владельца.",
+        "en": "The fire starts without intervention by staff or the owner.",
+        "tr": "The fire starts without intervention by staff or the owner.",
+        "ar": "The fire starts without intervention by staff or the owner.",
+        "kk": "Пожар начинается без вмешательства персонала или владельца."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_no_arson",
+        "relation": "supports",
+        "reason": {
+          "ru": "Пожар начинается без вмешательства персонала или владельца.",
+          "en": "The fire starts without intervention by staff or the owner.",
+          "tr": "The fire starts without intervention by staff or the owner.",
+          "ar": "The fire starts without intervention by staff or the owner.",
+          "kk": "Пожар начинается без вмешательства персонала или владельца."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "ev-repair",
+      "order": 3,
       "type": "document",
       "title": {
-        "ru": "Отчёт пожарной службы",
-        "en": "Fire Brigade Report",
-        "tr": "İtfaiye Raporu",
-        "ar": "تقرير فرقة الإطفاء",
-        "kk": "Өрт сөндіру қызметінің есебі"
+        "ru": "История ремонта",
+        "en": "Repair History",
+        "tr": "Repair History",
+        "ar": "Repair History",
+        "kk": "История ремонта"
       },
       "content": {
-        "ru": "Заключение дознавателя от 6 мая: очаг возгорания — распределительная коробка за барной стойкой, причина — короткое замыкание изношенной проводки. Время вызова — 21:18, 5 мая. Признаков поджога и горючих жидкостей не обнаружено.",
-        "en": "Investigator's report dated May 6: the seat of the fire was a junction box behind the bar; the cause was a short circuit in worn wiring. Call time — 21:18, May 5. No signs of arson or accelerants were found.",
-        "tr": "6 Mayıs tarihli müfettiş raporu: yangının kaynağı barın arkasındaki bir dağıtım kutusuydu; nedeni yıpranmış kablolardaki kısa devreydi. Çağrı saati — 5 Mayıs 21:18. Kundaklama veya hızlandırıcı belirtisi bulunmadı.",
-        "ar": "تقرير المحقق بتاريخ 6 مايو: كان مصدر الحريق علبة توصيل خلف البار؛ والسبب دارة قصيرة في أسلاك بالية. وقت البلاغ — 21:18 في 5 مايو. لم تُكتشف علامات إضرام أو مواد مسرّعة للاشتعال.",
-        "kk": "6 мамырдағы тергеушінің қорытындысы: өрт ошағы — бар сөресінің артындағы тарату қорабы; себебі — тозған сымдағы қысқа тұйықталу. Шақыру уақыты — 5 мамыр 21:18. Өрт қою немесе жанғыш сұйықтық белгілері табылмаған."
+        "ru": "За неделю до пожара сервис заменил блок питания на восстановленный. Экспертиза обнаружила внутри неподходящий предохранитель.",
+        "en": "One week before the fire, a repair service installed a refurbished power unit. Examination found an unsuitable fuse inside it.",
+        "tr": "One week before the fire, a repair service installed a refurbished power unit. Examination found an unsuitable fuse inside it.",
+        "ar": "One week before the fire, a repair service installed a refurbished power unit. Examination found an unsuitable fuse inside it.",
+        "kk": "За неделю до пожара сервис заменил блок питания на восстановленный. Экспертиза обнаружила внутри неподходящий предохранитель."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Отчёт подтверждает электрическую причину и время, совпадающие с рассказом; поджог исключён.",
-        "en": "The report confirms an electrical cause and a time matching the account; arson is ruled out.",
-        "tr": "Rapor, anlatımla örtüşen elektriksel bir nedeni ve zamanı doğrular; kundaklama dışlanmıştır.",
-        "ar": "يؤكد التقرير سببًا كهربائيًا ووقتًا يطابقان الرواية؛ ويستبعد الإضرام.",
-        "kk": "Есеп әңгімеге сай электрлік себеп пен уақытты растайды; өрт қою жоққа шығарылған."
-      }
-    },
-    {
-      "id": "ev-photo",
-      "relation": "supports",
-      "type": "photo",
-      "title": {
-        "ru": "Фото ущерба",
-        "en": "Damage Photo",
-        "tr": "Hasar Fotoğrafı",
-        "ar": "صورة الأضرار",
-        "kk": "Зақым суреті"
+        "ru": "Неисправность возникла после некачественного ремонта сторонним сервисом.",
+        "en": "The fault resulted from poor work by an outside repair service.",
+        "tr": "The fault resulted from poor work by an outside repair service.",
+        "ar": "The fault resulted from poor work by an outside repair service.",
+        "kk": "Неисправность возникла после некачественного ремонта сторонним сервисом."
       },
-      "content": {
-        "ru": "Снимок зала после пожара: обугленная стена за стойкой, оплавленная кофемашина и закопчённый потолок. Видны следы тушения водой и пеной.",
-        "en": "A photo of the dining area after the fire: a charred wall behind the bar, a melted coffee machine and a soot-blackened ceiling. Traces of water and foam suppression are visible.",
-        "tr": "Yangından sonra salonun fotoğrafı: barın arkasında kömürleşmiş duvar, erimiş kahve makinesi ve isle kararmış tavan. Su ve köpükle söndürme izleri görülüyor.",
-        "ar": "صورة للصالة بعد الحريق: جدار متفحم خلف البار، آلة قهوة منصهرة وسقف اسودَّ بالسخام. تظهر آثار الإخماد بالماء والرغوة.",
-        "kk": "Өрттен кейінгі залдың суреті: сөренің артындағы күйген қабырға, балқыған кофемашина және күйеленген төбе. Сумен және көбікпен сөндіру іздері көрінеді."
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_damage",
+        "relation": "supports",
+        "reason": {
+          "ru": "Неисправность возникла после некачественного ремонта сторонним сервисом.",
+          "en": "The fault resulted from poor work by an outside repair service.",
+          "tr": "The fault resulted from poor work by an outside repair service.",
+          "ar": "The fault resulted from poor work by an outside repair service.",
+          "kk": "Неисправность возникла после некачественного ремонта сторонним сервисом."
+        }
       },
-      "isContradiction": false,
-      "contradictionExplanation": {
-        "ru": "Характер повреждений соответствует электрическому пожару у барной стойки, как указано в отчёте.",
-        "en": "The nature of the damage matches an electrical fire at the bar, as stated in the report.",
-        "tr": "Hasarın niteliği, raporda belirtildiği gibi bardaki elektriksel yangına uyuyor.",
-        "ar": "تتوافق طبيعة الأضرار مع حريق كهربائي عند البار كما ورد في التقرير.",
-        "kk": "Зақым сипаты есепте көрсетілгендей бар жанындағы электрлік өртке сай."
-      },
-      "meta": {
-        "filename": "IMG_20260506_103044.jpg",
-        "imageUrl": "evidence/case-025-ev-photo.jpg"
-      }
-    },
-    {
-      "id": "ev-social",
-      "relation": "context",
-      "type": "social_media",
-      "title": {
-        "ru": "Пост прохожего",
-        "en": "Passerby's Post",
-        "tr": "Yoldan Geçenin Gönderisi",
-        "ar": "منشور أحد المارة",
-        "kk": "Жолаушының жазбасы"
-      },
-      "content": {
-        "ru": "Пост в локальной социальной сети местного жителя от 5 мая, 21:22: видеоролик с горящим окном кафе и дымом над входом, подпись «На углу Морской горит кафе, уже подъезжают пожарные». Геометка и время совпадают с местом и моментом пожара. Автор — независимый прохожий, не связанный с заявителем.",
-        "en": "A post in a local resident's local social network from May 5, 21:22: a video of the café's burning window and smoke above the entrance, captioned “A café on the corner of Morskaya is on fire, firefighters already arriving.” The geotag and time match the place and moment of the fire. The author is an independent passerby unrelated to the claimant.",
-        "tr": "Yerel bir sakinin yerel sosyal ağda 5 Mayıs 21:22'de bir gönderi: kafenin yanan penceresini ve girişin üstündeki dumanı gösteren bir video, “Morskaya köşesindeki kafe yanıyor, itfaiye geliyor bile.” başlıklı. Konum etiketi ve saat, yangının yeri ve anıyla örtüşüyor. Yazar, başvuranla ilgisi olmayan bağımsız bir yoldan geçen.",
-        "ar": "منشور في قناة تلغرام لأحد سكان المنطقة بتاريخ 5 مايو، 21:22: فيديو لنافذة المقهى المشتعلة ودخان فوق المدخل، بتعليق «مقهى عند زاوية مورسكايا يحترق، رجال الإطفاء قادمون بالفعل». تتطابق العلامة الجغرافية والوقت مع مكان الحريق ولحظته. الناشر أحد المارة المستقلين لا علاقة له بمقدِّم الطلب.",
-        "kk": "Жергілікті тұрғынның жергілікті әлеуметтік желідегі 5 мамыр 21:22-дегі жазба: кафенің жанып тұрған терезесі мен кіреберіс үстіндегі түтін бейнеленген видео, «Морская бұрышындағы кафе жанып жатыр, өрт сөндірушілер келе жатыр» деген қолтаңбамен. Геобелгі мен уақыт өрттің орны мен сәтіне сай. Автор — арыз иесіне қатысы жоқ тәуелсіз жолаушы."
-      },
-      "isContradiction": false,
-      "contradictionExplanation": {
-        "ru": "Независимый пост с геометкой и временем 21:22 подтверждает сам факт и момент пожара, согласуясь с рассказом и отчётом.",
-        "en": "The independent post with a geotag and the time 21:22 confirms the fire's occurrence and timing, agreeing with the account and the report.",
-        "tr": "Konum etiketli ve 21:22 saatli bağımsız gönderi, yangının gerçekleştiğini ve zamanını doğrular; anlatım ve raporla uyumludur.",
-        "ar": "يؤكد المنشور المستقل بعلامته الجغرافية ووقته 21:22 وقوع الحريق وتوقيته، متوافقًا مع الرواية والتقرير.",
-        "kk": "Геобелгісі мен 21:22 уақыты бар тәуелсіз жазба өрттің болғаны мен сәтін растайды әрі әңгіме мен есепке үйлеседі."
-      },
-      "meta": {
-        "socialPlatform": "localfeed.local"
-      }
-    },
-    {
-      "id": "ev-witness",
-      "relation": "supports",
-      "type": "witness_statement",
-      "title": {
-        "ru": "Показания соседа",
-        "en": "Neighbour's Statement",
-        "tr": "Komşu İfadesi",
-        "ar": "إفادة الجار",
-        "kk": "Көршінің айғағы"
-      },
-      "content": {
-        "ru": "«Я держу цветочную лавку рядом. Около четверти десятого вечера почувствовал гарь и увидел дым из-за стойки кафе. Помог вывести двух посетителей и вызвал пожарных. Никаких канистр или подозрительных людей не видел — всё произошло внезапно.»",
-        "en": "“I run the flower shop next door. Around quarter past nine in the evening I smelled burning and saw smoke from behind the café's bar. I helped get two guests out and called the fire service. I saw no cans or suspicious people — it all happened suddenly.”",
-        "tr": "“Yan tarafta çiçekçi dükkânı işletiyorum. Akşam dokuzu çeyrek geçe yanık kokusu aldım ve kafenin barının arkasından duman gördüm. İki müşterinin çıkmasına yardım ettim ve itfaiyeyi aradım. Hiçbir bidon ya da şüpheli kişi görmedim — her şey aniden oldu.”",
-        "ar": "«أُدير محل الزهور المجاور. حوالي التاسعة وربع مساءً شممت رائحة حريق ورأيت دخانًا من خلف بار المقهى. ساعدت في إخراج زبونين واتصلت بالإطفاء. لم أرَ أي عبوات أو أشخاص مشبوهين — حدث كل شيء فجأة.»",
-        "kk": "«Мен қасында гүл дүкенін ұстаймын. Кешкі тоғыздан он бес минут өткенде күйік иісін сезіп, кафенің сөресінің артынан түтін көрдім. Екі келушіні шығаруға көмектесіп, өрт сөндірушілерді шақырдым. Ешқандай канистра да, күдікті адам да көрмедім — бәрі кенеттен болды.»"
-      },
-      "isContradiction": false,
-      "contradictionExplanation": {
-        "ru": "Независимый свидетель подтверждает время и внезапность пожара и отсутствие признаков поджога.",
-        "en": "An independent witness confirms the time and suddenness of the fire and the absence of arson signs.",
-        "tr": "Bağımsız bir tanık, yangının zamanını ve aniliğini ve kundaklama izi bulunmadığını doğrular.",
-        "ar": "يؤكد شاهد مستقل وقت الحريق وفجائيته وغياب علامات الإضرام.",
-        "kk": "Тәуелсіз куә өрттің уақыты мен кенеттігін және өрт қою белгілерінің жоқтығын растайды."
-      }
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "ev-ledger",
-      "relation": "supports",
+      "order": 4,
       "type": "document",
       "title": {
-        "ru": "Книга доходов и убытков",
-        "en": "Income and Loss Ledger",
-        "tr": "Gelir ve Zarar Defteri",
-        "ar": "دفتر الدخل والخسائر",
-        "kk": "Кіріс пен шығын кітабы"
+        "ru": "Книга доходов и долгов",
+        "en": "Income and Debt Ledger",
+        "tr": "Income and Debt Ledger",
+        "ar": "Income and Debt Ledger",
+        "kk": "Книга доходов и долгов"
       },
       "content": {
-        "ru": "Бухгалтерская ведомость кафе за полгода: стабильная выручка, перечень оборудования с датами покупки (кофемашина, холодильные витрины, мебель). Суммарная балансовая стоимость утраченного и повреждённого имущества — около 5000 евро, что соответствует заявленной сумме.",
-        "en": "The café's six-month accounting ledger: steady revenue, a list of equipment with purchase dates (coffee machine, refrigerated displays, furniture). The total book value of lost and damaged property is about €5,000, matching the claimed amount.",
-        "tr": "Kafenin altı aylık muhasebe defteri: istikrarlı gelir, satın alma tarihleriyle ekipman listesi (kahve makinesi, soğutmalı vitrinler, mobilya). Kaybedilen ve hasar gören malların toplam defter değeri yaklaşık 5.000 avro olup talep edilen tutarla uyumludur.",
-        "ar": "دفتر محاسبة المقهى لستة أشهر: إيرادات مستقرة، وقائمة معدات بتواريخ الشراء (آلة قهوة، فاترينات تبريد، أثاث). تبلغ القيمة الدفترية الإجمالية للممتلكات المفقودة والمتضررة نحو 5000 يورو، وهو ما يطابق المبلغ المطالب به.",
-        "kk": "Кафенің жарты жылдық бухгалтерлік ведомосы: тұрақты түсім, сатып алу күндерімен жабдық тізімі (кофемашина, тоңазытқыш сөрелер, жиһаз). Жоғалған және зақымдалған мүліктің жалпы баланстық құны шамамен 5000 еуро, бұл мәлімделген сомаға сай."
+        "ru": "Кафе имеет кредит, но стабильно обслуживает его. Выручка растёт; закрытие из-за пожара ухудшает, а не улучшает положение Конти.",
+        "en": "The café has a loan but services it reliably. Revenue is growing; a fire-related closure worsens Conti's position rather than improving it.",
+        "tr": "The café has a loan but services it reliably. Revenue is growing; a fire-related closure worsens Conti's position rather than improving it.",
+        "ar": "The café has a loan but services it reliably. Revenue is growing; a fire-related closure worsens Conti's position rather than improving it.",
+        "kk": "Кафе имеет кредит, но стабильно обслуживает его. Выручка растёт; закрытие из-за пожара ухудшает, а не улучшает положение Конти."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Балансовая стоимость утраченного имущества подтверждает заявленную сумму ущерба.",
-        "en": "The book value of the lost property supports the claimed damage amount.",
-        "tr": "Kaybedilen malın defter değeri, talep edilen hasar tutarını destekler.",
-        "ar": "تدعم القيمة الدفترية للممتلكات المفقودة مبلغ الضرر المطالب به.",
-        "kk": "Жоғалған мүліктің баланстық құны мәлімделген зиян сомасын растайды."
-      }
+        "ru": "Долг объясняет подозрение, но не создаёт выгоды от пожара.",
+        "en": "The debt explains the suspicion but creates no benefit from the fire.",
+        "tr": "The debt explains the suspicion but creates no benefit from the fire.",
+        "ar": "The debt explains the suspicion but creates no benefit from the fire.",
+        "kk": "Долг объясняет подозрение, но не создаёт выгоды от пожара."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_damage",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Долг объясняет подозрение, но не создаёт выгоды от пожара.",
+          "en": "The debt explains the suspicion but creates no benefit from the fire.",
+          "tr": "The debt explains the suspicion but creates no benefit from the fire.",
+          "ar": "The debt explains the suspicion but creates no benefit from the fire.",
+          "kk": "Долг объясняет подозрение, но не создаёт выгоды от пожара."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25
+    },
+    {
+      "id": "ev-evacuation",
+      "order": 5,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания посетительницы",
+        "en": "Customer's Statement",
+        "tr": "Customer's Statement",
+        "ar": "Customer's Statement",
+        "kk": "Показания посетительницы"
+      },
+      "content": {
+        "ru": "Свидетель подтверждает запах горелой электроники и быструю эвакуацию до распространения огня.",
+        "en": "The witness confirms the smell of burning electronics and a rapid evacuation before the fire spread.",
+        "tr": "The witness confirms the smell of burning electronics and a rapid evacuation before the fire spread.",
+        "ar": "The witness confirms the smell of burning electronics and a rapid evacuation before the fire spread.",
+        "kk": "Свидетель подтверждает запах горелой электроники и быструю эвакуацию до распространения огня."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Независимое описание совпадает с камерой и экспертизой.",
+        "en": "The independent account matches the camera footage and examination.",
+        "tr": "The independent account matches the camera footage and examination.",
+        "ar": "The independent account matches the camera footage and examination.",
+        "kk": "Независимое описание совпадает с камерой и экспертизой."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_no_arson",
+        "relation": "supports",
+        "reason": {
+          "ru": "Независимое описание совпадает с камерой и экспертизой.",
+          "en": "The independent account matches the camera footage and examination.",
+          "tr": "The independent account matches the camera footage and examination.",
+          "ar": "The independent account matches the camera footage and examination.",
+          "kk": "Независимое описание совпадает с камерой и экспертизой."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     }
   ],
   "correctDecision": "approve",
   "explanation": {
     "ru": [
-      "Отчёт дознавателя устанавливает электрическую причину пожара, поджог исключён.",
-      "Независимый пост прохожего и сосед подтверждают факт и время возгорания.",
-      "Заявление достоверное, его следует одобрить."
+      "Под копотью на блоке питания обнаружен внутренний след электрической дуги без второго очага или внешнего поджога.",
+      "Камера исключает вмешательство владельца, а экспертиза выявляет неправильный предохранитель.",
+      "Долг кафе был поводом для проверки, но не доказательством. Выплату следует одобрить."
     ],
     "en": [
-      "The investigator's report establishes an electrical cause; arson is ruled out.",
-      "An independent passerby's post and the neighbour confirm the fire and its timing.",
-      "The claim is genuine and should be approved."
+      "Beneath the soot are signs of a localized electrical arc and melting from the inside outward; there is no second ignition point or evidence of external arson.",
+      "The fire starts without intervention by staff or the owner.",
+      "The fault resulted from poor work by an outside repair service.",
+      "The independent account matches the camera footage and examination.",
+      "The debt explains the suspicion but creates no benefit from the fire.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "tr": [
-      "Müfettiş raporu elektriksel bir neden tespit ediyor; kundaklama dışlandı.",
-      "Bağımsız bir yoldan geçenin gönderisi ve komşu, yangını ve zamanını doğruluyor.",
-      "Talep gerçek ve onaylanmalı."
+      "Beneath the soot are signs of a localized electrical arc and melting from the inside outward; there is no second ignition point or evidence of external arson.",
+      "The fire starts without intervention by staff or the owner.",
+      "The fault resulted from poor work by an outside repair service.",
+      "The independent account matches the camera footage and examination.",
+      "The debt explains the suspicion but creates no benefit from the fire.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "ar": [
-      "يثبت تقرير المحقق سببًا كهربائيًا؛ ويُستبعَد الإضرام.",
-      "يؤكد منشور أحد المارة المستقلين والجار وقوع الحريق وتوقيته.",
-      "المطالبة صحيحة ويجب الموافقة عليها."
+      "Beneath the soot are signs of a localized electrical arc and melting from the inside outward; there is no second ignition point or evidence of external arson.",
+      "The fire starts without intervention by staff or the owner.",
+      "The fault resulted from poor work by an outside repair service.",
+      "The independent account matches the camera footage and examination.",
+      "The debt explains the suspicion but creates no benefit from the fire.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "kk": [
-      "Тергеушінің есебі өрттің электрлік себебін анықтайды; өрт қою жоққа шығарылған.",
-      "Тәуелсіз жолаушының жазбасы мен көрші өрт пен оның уақытын растайды.",
-      "Талап шынайы, оны мақұлдау керек."
+      "Под копотью на блоке питания обнаружен внутренний след электрической дуги без второго очага или внешнего поджога.",
+      "Камера исключает вмешательство владельца, а экспертиза выявляет неправильный предохранитель.",
+      "Долг кафе был поводом для проверки, но не доказательством. Выплату следует одобрить."
     ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "5 мая после закрытия за барной стойкой загорелась проводка кофемашины. Персонал вывел посетителей, но огонь уничтожил оборудование и часть зала. Прошу компенсировать подтверждённый ущерб.",
+        "en": "After closing on May 5, wiring in the coffee machine caught fire behind the bar. Staff evacuated the customers, but the fire destroyed equipment and part of the dining area. I am claiming the documented loss.",
+        "tr": "After closing on May 5, wiring in the coffee machine caught fire behind the bar. Staff evacuated the customers, but the fire destroyed equipment and part of the dining area. I am claiming the documented loss.",
+        "ar": "After closing on May 5, wiring in the coffee machine caught fire behind the bar. Staff evacuated the customers, but the fire destroyed equipment and part of the dining area. I am claiming the documented loss.",
+        "kk": "5 мая после закрытия за барной стойкой загорелась проводка кофемашины. Персонал вывел посетителей, но огонь уничтожил оборудование и часть зала. Прошу компенсировать подтверждённый ущерб."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_cause",
+      "text": {
+        "ru": "Пожар начался внутри блока питания кофемашины.",
+        "en": "The fire began inside the coffee machine's power unit.",
+        "tr": "The fire began inside the coffee machine's power unit.",
+        "ar": "The fire began inside the coffee machine's power unit.",
+        "kk": "Пожар начался внутри блока питания кофемашины."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_no_arson",
+      "text": {
+        "ru": "Владелец и персонал не создавали дополнительный очаг.",
+        "en": "Neither the owner nor the staff created a secondary ignition point.",
+        "tr": "Neither the owner nor the staff created a secondary ignition point.",
+        "ar": "Neither the owner nor the staff created a secondary ignition point.",
+        "kk": "Владелец и персонал не создавали дополнительный очаг."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_damage",
+      "text": {
+        "ru": "Огонь повредил оборудование и часть зала.",
+        "en": "The fire damaged equipment and part of the dining area.",
+        "tr": "The fire damaged equipment and part of the dining area.",
+        "ar": "The fire damaged equipment and part of the dining area.",
+        "kk": "Огонь повредил оборудование и часть зала."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "У Конти есть долги, а пожар решает часть его проблем. Это мотив для проверки, но не доказательство поджога. — В. Лебедева",
+      "en": "Conti is in debt, and a fire could solve some of his problems. That is a reason to investigate, not evidence of arson. — V. Lebedeva",
+      "tr": "Conti is in debt, and a fire could solve some of his problems. That is a reason to investigate, not evidence of arson. — V. Lebedeva",
+      "ar": "Conti is in debt, and a fire could solve some of his problems. That is a reason to investigate, not evidence of arson. — V. Lebedeva",
+      "kk": "У Конти есть долги, а пожар решает часть его проблем. Это мотив для проверки, но не доказательство поджога. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Не каждый должник поджигает бизнес. Иногда плохой предохранитель — просто плохой предохранитель.",
+      "en": "Not every debtor burns down their business. Sometimes a bad fuse is simply a bad fuse.",
+      "tr": "Not every debtor burns down their business. Sometimes a bad fuse is simply a bad fuse.",
+      "ar": "Not every debtor burns down their business. Sometimes a bad fuse is simply a bad fuse.",
+      "kk": "Не каждый должник поджигает бизнес. Иногда плохой предохранитель — просто плохой предохранитель."
+    },
+    "nextCaseTeaser": {
+      "ru": "Коллекционные часы исчезли из квартиры, а через неделю появились на фотографии с тем же владельцем.",
+      "en": "A collectible watch vanished from an apartment, then appeared in a photograph with the same owner one week later.",
+      "tr": "A collectible watch vanished from an apartment, then appeared in a photograph with the same owner one week later.",
+      "ar": "A collectible watch vanished from an apartment, then appeared in a photograph with the same owner one week later.",
+      "kk": "Коллекционные часы исчезли из квартиры, а через неделю появились на фотографии с тем же владельцем."
+    },
+    "seasonClue": null,
+    "epilogue": null
   }
 }

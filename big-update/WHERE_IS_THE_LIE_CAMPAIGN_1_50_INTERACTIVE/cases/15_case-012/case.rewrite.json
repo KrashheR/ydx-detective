@@ -1,0 +1,290 @@
+{
+  "id": "case-012",
+  "campaignOrder": 15,
+  "requiredLevel": 8,
+  "act": 2,
+  "actTitle": {
+    "ru": "Пять лет назад",
+    "en": "Five Years Earlier"
+  },
+  "title": {
+    "ru": "Право на время",
+    "en": "The Right to Time"
+  },
+  "difficulty": "medium",
+  "claimAmount": {
+    "value": 20000,
+    "currency": "EUR"
+  },
+  "groundTruth": "valid",
+  "correctDecision": "approve",
+  "investigationBudget": 3,
+  "claimant": {
+    "name": {
+      "ru": "Хельга Новак, 49 лет",
+      "en": "Helga Novak, age 49"
+    },
+    "migrationNote": {
+      "ru": "Сохранить данные и портрет. Писать медицинскую часть уважительно и без мелодраматической эксплуатации диагноза.",
+      "en": "Keep the existing profile data and portrait. Treat the medical material with respect and avoid melodramatic exploitation of the diagnosis."
+    },
+    "portrait": null,
+    "portraitStatus": "retain_existing_project_portrait",
+    "portraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/helga.webp",
+      "existingFile": "public/people/helga.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Не превращайте тяжёлую болезнь в аттракцион подозрений. Наша задача здесь — точно проверить диагноз, сроки полиса и покрытие. — В. Лебедева",
+      "en": "Do not turn a serious illness into a spectacle of suspicion. Our task is to verify the diagnosis, policy dates, and coverage with precision. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "В архиве 2021 года я нашла похожее подлинное заявление. Карелин отказал по нему, сославшись на страницу условий, которой в полисе не существовало. Он не только помогал получать лишнее — он умел отнимать положенное.",
+      "en": "In the 2021 archive, I found a similar legitimate claim. Karelin rejected it by citing a page of exclusions that did not exist in the policy. He did more than help people obtain money they were not owed—he also knew how to deny what was rightfully due."
+    },
+    "nextCaseTeaser": {
+      "ru": "После больничной папки — поле, уничтоженное градом. Его владелец ещё вернётся в нашу кампанию.",
+      "en": "After the hospital file comes a field destroyed by hail. Its owner will return later in our campaign."
+    },
+    "seasonClue": {
+      "id": "false-denial",
+      "label": {
+        "ru": "Поддельное основание отказа",
+        "en": "Fabricated Grounds for Denial"
+      },
+      "description": {
+        "ru": "Карелин использовал знание системы в обе стороны: готовил ложные выплаты и блокировал законные.",
+        "en": "Karelin exploited his knowledge of the system in both directions: arranging fraudulent payouts and blocking legitimate ones."
+      },
+      "progressIndex": 3,
+      "progressTotal": 5
+    },
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "В марте у меня диагностировали рак молочной железы II стадии. Я перенесла операцию и прохожу химиотерапию. Полис критических заболеваний действует больше года и включает этот диагноз. Прошу предусмотренную единовременную выплату.",
+    "en": "In March, I was diagnosed with stage II breast cancer. I underwent surgery and am now receiving chemotherapy. My critical-illness policy has been active for more than a year and covers this diagnosis. I am claiming the specified lump-sum benefit."
+  },
+  "evidence": [
+    {
+      "id": "ev-diagnosis",
+      "order": 1,
+      "type": "document",
+      "title": {
+        "ru": "Биопсия и протокол операции",
+        "en": "Biopsy and Surgical Report"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Биопсия от 12 марта подтверждает инвазивную карциному. Операция проведена 28 марта, гистология совпадает с первоначальным диагнозом.",
+        "en": "A biopsy dated March 12 confirms invasive carcinoma. Surgery took place on March 28, and the histology matches the original diagnosis."
+      },
+      "statusExplanation": {
+        "ru": "Два независимых медицинских документа подтверждают заболевание и его характер.",
+        "en": "Two independent medical records confirm the illness and its nature."
+      },
+      "statementLink": {
+        "statementId": "claim_diagnosis",
+        "relation": "supports",
+        "reason": {
+          "ru": "Два независимых медицинских документа подтверждают заболевание и его характер.",
+          "en": "Two independent medical records confirm the illness and its nature."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-oncologist",
+      "order": 2,
+      "type": "document",
+      "title": {
+        "ru": "Письмо лечащего онколога",
+        "en": "Treating Oncologist's Letter"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Врач подтверждает послеоперационную химиотерапию и соответствие состояния медицинскому определению критического заболевания в полисе.",
+        "en": "The physician confirms postoperative chemotherapy and that the condition meets the policy's medical definition of a critical illness."
+      },
+      "statusExplanation": {
+        "ru": "Специалист прямо связывает диагноз с условиями покрытия.",
+        "en": "The specialist directly confirms that the diagnosis meets the coverage terms."
+      },
+      "statementLink": {
+        "statementId": "claim_treatment",
+        "relation": "supports",
+        "reason": {
+          "ru": "Специалист прямо связывает диагноз с условиями покрытия.",
+          "en": "The specialist directly confirms that the diagnosis meets the coverage terms."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-pharmacy",
+      "order": 3,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал выдачи препаратов",
+        "en": "Medication Dispensing Log"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "В апреле и мае выданы три последовательных цикла химиотерапии и сопроводительные лекарства по назначениям одного онкологического центра.",
+        "en": "Three consecutive chemotherapy cycles and supporting medications were dispensed in April and May under prescriptions from the same oncology center."
+      },
+      "statusExplanation": {
+        "ru": "Лечение реально, последовательно и совпадает со сроками заявления.",
+        "en": "The treatment is genuine, consistent, and matches the claim timeline."
+      },
+      "statementLink": {
+        "statementId": "claim_treatment",
+        "relation": "supports",
+        "reason": {
+          "ru": "Лечение реально, последовательно и совпадает со сроками заявления.",
+          "en": "The treatment is genuine, consistent, and matches the claim timeline."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-policy",
+      "order": 4,
+      "type": "document",
+      "title": {
+        "ru": "Условия полиса",
+        "en": "Policy Terms"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Полис действует четырнадцать месяцев, взносы уплачены, период ожидания завершён. Диагноз впервые подтверждён после начала покрытия.",
+        "en": "The policy has been active for fourteen months, premiums are paid, and the waiting period has expired. The diagnosis was first confirmed after coverage began."
+      },
+      "statusExplanation": {
+        "ru": "Все формальные условия выплаты выполнены.",
+        "en": "All formal conditions for the benefit have been met."
+      },
+      "statementLink": {
+        "statementId": "claim_coverage",
+        "relation": "supports",
+        "reason": {
+          "ru": "Все формальные условия выплаты выполнены.",
+          "en": "All formal conditions for the benefit have been met."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Диагноз подтверждён биопсией, операцией и лечащим онкологом.",
+      "Полис действовал задолго до диагноза, период ожидания завершён.",
+      "Это подлинное покрываемое событие. Выплату следует одобрить без задержки."
+    ],
+    "en": [
+      "Two independent medical records confirm the illness and its nature.",
+      "The specialist directly confirms that the diagnosis meets the coverage terms.",
+      "The treatment is genuine, consistent, and matches the claim timeline.",
+      "All formal conditions for the benefit have been met.",
+      "No material statement has been disproven. The claim should be approved."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Сохранить valid-вердикт и усилить человеческую значимость.",
+      "Не создавать неоднозначных медицинских ловушек.",
+      "Показать моральный масштаб злоупотреблений Карелина."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order."
+    ]
+  },
+  "assetPlan": [],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "В марте у меня диагностировали рак молочной железы II стадии. Я перенесла операцию и прохожу химиотерапию. Полис критических заболеваний действует больше года и включает этот диагноз. Прошу предусмотренную единовременную выплату.",
+        "en": "In March, I was diagnosed with stage II breast cancer. I underwent surgery and am now receiving chemotherapy. My critical-illness policy has been active for more than a year and covers this diagnosis. I am claiming the specified lump-sum benefit."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_diagnosis",
+      "text": {
+        "ru": "Онкологический диагноз подтверждён и возник после начала действия полиса.",
+        "en": "The cancer diagnosis is confirmed and was made after the policy took effect."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_treatment",
+      "text": {
+        "ru": "Заявительница проходит заявленное лечение.",
+        "en": "The claimant is undergoing the treatment stated in her claim."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_coverage",
+      "text": {
+        "ru": "Событие соответствует условиям и периоду ожидания полиса.",
+        "en": "The event meets the policy terms and waiting-period requirements."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 0,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-012",
+    "archiveBasePath": "generated-assets/src/data/cases/case-012",
+    "claimantPortrait": null,
+    "claimantPortraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/helga.webp",
+      "existingFile": "public/people/helga.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": []
+  }
+}

@@ -1,286 +1,368 @@
 {
   "id": "case-010",
   "type": "standard",
-  "difficulty": "medium",
+  "campaignOrder": 13,
+  "requiredLevel": 7,
+  "act": 2,
+  "actTitle": {
+    "ru": "Пять лет назад",
+    "en": "Five Years Earlier",
+    "tr": "Five Years Earlier",
+    "ar": "Five Years Earlier",
+    "kk": "Пять лет назад"
+  },
+  "difficulty": "easy",
   "claimAmount": 3500,
   "truth": "valid",
   "title": {
-    "ru": "Удар сзади на светофоре",
-    "en": "Rear-Ended at the Light",
-    "tr": "Kırmızı Işıkta Arkadan Çarpma",
-    "ar": "اصطدام من الخلف عند الإشارة",
-    "kk": "Бағдаршамда артынан соғылу"
+    "ru": "Двадцать две секунды на красном",
+    "en": "Twenty-Two Seconds at a Red Light",
+    "tr": "Twenty-Two Seconds at a Red Light",
+    "ar": "Twenty-Two Seconds at a Red Light",
+    "kk": "Двадцать две секунды на красном"
   },
   "claim": {
     "person": {
-      "ru": "Матеус Феррейра",
-      "en": "Mateus Ferreira",
-      "tr": "Mateus Ferreira",
-      "ar": "ماتيوس فيريرا",
-      "kk": "Матеус Феррейра"
+      "ru": "Матеус Феррейра, 31 год",
+      "en": "Mateus Ferreira, age 31",
+      "tr": "Mateus Ferreira, age 31",
+      "ar": "Mateus Ferreira, age 31",
+      "kk": "Матеус Феррейра, 31 год"
     },
     "story": {
-      "ru": "Я стоял на красный свет, когда в мою машину сзади въехал другой автомобиль. У меня диагностировали хлыстовую травму шеи, и бампер пришлось чинить. Прошу компенсацию лечения и ремонта.",
-      "en": "I was stopped at a red light when another car drove into the back of my vehicle. I was diagnosed with whiplash and the rear of my car needed repairs. I am claiming for treatment and repair costs.",
-      "tr": "Kırmızı ışıkta durmuşken başka bir araç arkadan bana çarptı. Boyun incinmesi (whiplash) teşhisi kondu ve aracımın arkası tamir gerektirdi. Tedavi ve onarım masraflarını talep ediyorum.",
-      "ar": "كنت متوقفًا عند إشارة حمراء عندما اصطدمت سيارة أخرى بمؤخرة سيارتي. شُخّصت إصابتي بالتواء الرقبة واحتاجت مؤخرة السيارة إلى إصلاح. أطالب بتكاليف العلاج والإصلاح.",
-      "kk": "Қызыл шамда тұрғанымда басқа көлік артымнан соғып кетті. Маған мойын жарақаты (whiplash) диагнозы қойылды және көліктің артын жөндеу қажет болды. Емдеу мен жөндеу шығынын өтеуді сұраймын."
+      "ru": "Я остановился на красный сигнал и простоял около двадцати секунд, когда сзади в мою машину въехал седан. У меня диагностировали хлыстовую травму шеи, повреждены бампер и фонарь. Прошу оплатить лечение и ремонт.",
+      "en": "I stopped at a red light and had been stationary for about twenty seconds when a sedan struck my car from behind. I was diagnosed with whiplash, and my bumper and tail light were damaged. I am claiming the cost of treatment and repairs.",
+      "tr": "I stopped at a red light and had been stationary for about twenty seconds when a sedan struck my car from behind. I was diagnosed with whiplash, and my bumper and tail light were damaged. I am claiming the cost of treatment and repairs.",
+      "ar": "I stopped at a red light and had been stationary for about twenty seconds when a sedan struck my car from behind. I was diagnosed with whiplash, and my bumper and tail light were damaged. I am claiming the cost of treatment and repairs.",
+      "kk": "Я остановился на красный сигнал и простоял около двадцати секунд, когда сзади в мою машину въехал седан. У меня диагностировали хлыстовую травму шеи, повреждены бампер и фонарь. Прошу оплатить лечение и ремонт."
     }
   },
-  "coverImage": "covers/case-010.svg",
-  "personImage": "people/mateus.webp",
   "client": {
     "role": {
-      "ru": "Заявитель · физ. лицо",
-      "en": "Claimant · individual",
-      "tr": "Başvuru sahibi · gerçek kişi",
-      "ar": "مقدم الطلب · شخص طبيعي",
-      "kk": "Өтініш беруші · жеке тұлға"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Возраст",
-          "en": "Age",
-          "tr": "Yaş",
-          "ar": "العمر",
-          "kk": "Жасы"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "31 год",
-          "en": "31 years old",
-          "tr": "31 yaşında",
-          "ar": "31 عامًا",
-          "kk": "31 жаста"
+          "ru": "2",
+          "en": "2",
+          "tr": "2",
+          "ar": "2",
+          "kk": "2"
         }
       },
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Лиссабон",
-          "en": "Lisbon",
-          "tr": "Lizbon",
-          "ar": "لشبونة",
-          "kk": "Лиссабон"
-        }
-      },
-      {
-        "k": {
-          "ru": "Клиент с",
-          "en": "Client since",
-          "tr": "Müşteri",
-          "ar": "عميل منذ",
-          "kk": "Клиент"
-        },
-        "v": {
-          "ru": "2022 г.",
-          "en": "2022",
-          "tr": "2022",
-          "ar": "2022",
-          "kk": "2022 ж."
-        }
-      },
-      {
-        "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
-        },
-        "v": {
-          "ru": "КАСКО · КС-10145182-X2",
-          "en": "Comprehensive auto · KS-10145182-X2",
-          "tr": "Kasko · KS-10145182-X2",
-          "ar": "تأمين شامل للمركبة · KS-10145182-X2",
-          "kk": "КАСКО · КС-10145182-X2"
-        }
-      },
-      {
-        "k": {
-          "ru": "Документ",
-          "en": "Document",
-          "tr": "Belge",
-          "ar": "الوثيقة",
-          "kk": "Құжат"
-        },
-        "v": {
-          "ru": "Паспорт PT-X4 445566779-13048",
-          "en": "Passport PT-X4 445566779-13048",
-          "tr": "Pasaport PT-X4 445566779-13048",
-          "ar": "جواز السفر PT-X4 445566779-13048",
-          "kk": "Паспорт PT-X4 445566779-13048"
+          "ru": "13",
+          "en": "13",
+          "tr": "13",
+          "ar": "13",
+          "kk": "13"
         }
       }
     ]
   },
+  "coverImage": "covers/case-010.svg",
+  "personImage": "people/mateus.webp",
   "evidences": [
     {
       "id": "ev-dashcam",
+      "order": 1,
       "type": "camera_recording",
       "title": {
         "ru": "Запись видеорегистратора",
         "en": "Dashcam Footage",
-        "tr": "Araç Kamerası Kaydı",
-        "ar": "تسجيل كاميرا السيارة",
-        "kk": "Тіркеуіш жазбасы"
+        "tr": "Dashcam Footage",
+        "ar": "Dashcam Footage",
+        "kk": "Запись видеорегистратора"
       },
       "content": {
-        "ru": [
-          "14:02:09 — автомобиль остановлен у стоп-линии, сигнал светофора красный",
-          "14:02:21 — в зеркале заднего вида приближается седан, не снижая скорости",
-          "14:02:23 — удар сзади, камера резко дёргается вперёд",
-          "14:02:40 — водитель второго авто выходит и признаёт вину"
-        ],
-        "en": [
-          "14:02:09 — vehicle stopped at the line, traffic light is red",
-          "14:02:21 — a sedan approaches in the rear mirror without slowing",
-          "14:02:23 — rear impact, camera jolts sharply forward",
-          "14:02:40 — the other driver gets out and admits fault"
-        ],
-        "tr": [
-          "14:02:09 — araç çizgide durmuş, trafik ışığı kırmızı",
-          "14:02:21 — dikiz aynasında bir sedan yavaşlamadan yaklaşıyor",
-          "14:02:23 — arkadan çarpma, kamera sertçe öne sarsılıyor",
-          "14:02:40 — diğer sürücü iniyor ve kusurunu kabul ediyor"
-        ],
-        "ar": [
-          "14:02:09 — السيارة متوقفة عند الخط، إشارة المرور حمراء",
-          "14:02:21 — سيارة سيدان تقترب في المرآة الخلفية دون أن تبطئ",
-          "14:02:23 — اصطدام خلفي، الكاميرا تهتز بقوة إلى الأمام",
-          "14:02:40 — السائق الآخر ينزل ويعترف بخطئه"
-        ],
-        "kk": [
-          "14:02:09 — көлік тоқтау сызығында тұр, бағдаршам қызыл",
-          "14:02:21 — артқы айнада седан баяуламай жақындап келеді",
-          "14:02:23 — артынан соққы, камера кілт алға шайқалады",
-          "14:02:40 — екінші жүргізуші шығып, кінәсін мойындайды"
-        ]
+        "ru": "Автомобиль Феррейры полностью остановлен у стоп-линии. Через двадцать две секунды сзади приближается седан без торможения и происходит удар.",
+        "en": "Ferreira's car is completely stationary at the stop line. Twenty-two seconds later, a sedan approaches from behind without braking and strikes it.",
+        "tr": "Ferreira's car is completely stationary at the stop line. Twenty-two seconds later, a sedan approaches from behind without braking and strikes it.",
+        "ar": "Ferreira's car is completely stationary at the stop line. Twenty-two seconds later, a sedan approaches from behind without braking and strikes it.",
+        "kk": "Автомобиль Феррейры полностью остановлен у стоп-линии. Через двадцать две секунды сзади приближается седан без торможения и происходит удар."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Запись подтверждает версию: машина стояла на красный и получила удар сзади.",
-        "en": "The footage confirms the story: the car was stopped at a red light and struck from behind.",
-        "tr": "Kayıt anlatımı doğruluyor: araç kırmızı ışıkta duruyordu ve arkadan çarpıldı.",
-        "ar": "يؤكد التسجيل الرواية: كانت السيارة متوقفة عند إشارة حمراء وصُدمت من الخلف.",
-        "kk": "Жазба әңгімені растайды: көлік қызыл шамда тұрып, артынан соққы алды."
+        "ru": "Видео подтверждает, что заявитель стоял и не создавал аварийную ситуацию.",
+        "en": "The footage confirms that the claimant was stationary and did not create a hazard.",
+        "tr": "The footage confirms that the claimant was stationary and did not create a hazard.",
+        "ar": "The footage confirms that the claimant was stationary and did not create a hazard.",
+        "kk": "Видео подтверждает, что заявитель стоял и не создавал аварийную ситуацию."
       },
-      "meta": {
-        "cameraId": "DVR-F",
-        "cameraModel": "RoadEye RX-900 · 4K · H.265"
-      }
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_collision",
+        "relation": "supports",
+        "reason": {
+          "ru": "Видео подтверждает, что заявитель стоял и не создавал аварийную ситуацию.",
+          "en": "The footage confirms that the claimant was stationary and did not create a hazard.",
+          "tr": "The footage confirms that the claimant was stationary and did not create a hazard.",
+          "ar": "The footage confirms that the claimant was stationary and did not create a hazard.",
+          "kk": "Видео подтверждает, что заявитель стоял и не создавал аварийную ситуацию."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "ev-er",
+      "order": 2,
       "type": "document",
       "title": {
-        "ru": "Выписка из приёмного покоя",
-        "en": "ER Medical Record",
-        "tr": "Acil Servis Tıbbi Kaydı",
-        "ar": "تقرير قسم الطوارئ",
-        "kk": "Қабылдау бөлімінің құжаты"
+        "ru": "Медицинская выписка",
+        "en": "Medical Report",
+        "tr": "Medical Report",
+        "ar": "Medical Report",
+        "kk": "Медицинская выписка"
       },
       "content": {
-        "ru": "Пациент поступил в 15:10 в день ДТП с болью в шее и ограничением подвижности. Диагноз: хлыстовая травма шейного отдела (растяжение связок). Назначены обезболивающие и физиотерапия.",
-        "en": "Patient presented at 15:10 on the day of the accident with neck pain and restricted mobility. Diagnosis: cervical whiplash (ligament strain). Analgesics and physiotherapy prescribed.",
-        "tr": "Hasta kaza günü saat 15:10'da boyun ağrısı ve hareket kısıtlılığı ile başvurdu. Tanı: servikal whiplash (bağ zorlanması). Ağrı kesici ve fizyoterapi reçete edildi.",
-        "ar": "حضر المريض الساعة 15:10 يوم الحادث يعاني من ألم في الرقبة ومحدودية الحركة. التشخيص: التواء الرقبة العنقي (إجهاد الأربطة). وُصفت مسكنات وعلاج طبيعي.",
-        "kk": "Науқас оқиға күні 15:10-да мойын ауырсынуымен және қозғалыс шектеуімен келді. Диагноз: мойын омыртқасының whiplash жарақаты (байлам созылуы). Ауырсынуды басатын дәрі мен физиотерапия тағайындалды."
+        "ru": "Через 67 минут после ДТП зафиксированы боль в шее, ограничение подвижности и растяжение связок. Повреждения соответствуют резкому удару сзади.",
+        "en": "Sixty-seven minutes after the collision, doctors recorded neck pain, restricted movement, and a ligament strain. The injuries are consistent with a sudden rear impact.",
+        "tr": "Sixty-seven minutes after the collision, doctors recorded neck pain, restricted movement, and a ligament strain. The injuries are consistent with a sudden rear impact.",
+        "ar": "Sixty-seven minutes after the collision, doctors recorded neck pain, restricted movement, and a ligament strain. The injuries are consistent with a sudden rear impact.",
+        "kk": "Через 67 минут после ДТП зафиксированы боль в шее, ограничение подвижности и растяжение связок. Повреждения соответствуют резкому удару сзади."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Время и характер травмы соответствуют ДТП, зафиксированному на видео.",
-        "en": "The timing and nature of the injury match the accident captured on video.",
-        "tr": "Yaralanmanın zamanı ve niteliği videodaki kazayla örtüşüyor.",
-        "ar": "توقيت الإصابة وطبيعتها يتطابقان مع الحادث المسجّل في الفيديو.",
-        "kk": "Жарақаттың уақыты мен сипаты видеодағы оқиғаға сәйкес келеді."
-      }
+        "ru": "Время обращения и механизм травмы совпадают с аварией.",
+        "en": "The timing and mechanism of the injury match the collision.",
+        "tr": "The timing and mechanism of the injury match the collision.",
+        "ar": "The timing and mechanism of the injury match the collision.",
+        "kk": "Время обращения и механизм травмы совпадают с аварией."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_injury_damage",
+        "relation": "supports",
+        "reason": {
+          "ru": "Время обращения и механизм травмы совпадают с аварией.",
+          "en": "The timing and mechanism of the injury match the collision.",
+          "tr": "The timing and mechanism of the injury match the collision.",
+          "ar": "The timing and mechanism of the injury match the collision.",
+          "kk": "Время обращения и механизм травмы совпадают с аварией."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "ev-police",
+      "order": 3,
       "type": "document",
       "title": {
         "ru": "Протокол ДТП",
-        "en": "Police Accident Report",
-        "tr": "Polis Kaza Tutanağı",
-        "ar": "محضر الشرطة عن الحادث",
-        "kk": "Полиция жол оқиғасы хаттамасы"
+        "en": "Collision Report",
+        "tr": "Collision Report",
+        "ar": "Collision Report",
+        "kk": "Протокол ДТП"
       },
       "content": {
-        "ru": "Зарегистрировано столкновение на перекрёстке Авенида-Сентраль в 14:05. Вина возложена на водителя заднего автомобиля за несоблюдение дистанции. Заявитель указан как пострадавшая сторона.",
-        "en": "A collision was recorded at the Avenida Central intersection at 14:05. Fault assigned to the rear driver for failing to keep a safe distance. The claimant is listed as the injured party.",
-        "tr": "Avenida Central kavşağında saat 14:05'te bir çarpışma kaydedildi. Kusur, güvenli mesafeyi korumadığı için arkadaki sürücüye verildi. Talep sahibi mağdur taraf olarak belirtildi.",
-        "ar": "سُجّل اصطدام عند تقاطع أفينيدا سنترال الساعة 14:05. حُمّل السائق الخلفي المسؤولية لعدم احتفاظه بمسافة آمنة. ذُكر مقدّم الطلب كطرف متضرر.",
-        "kk": "Авенида-Сентраль қиылысында 14:05-те соқтығыс тіркелді. Қауіпсіз қашықтықты сақтамағаны үшін кінә арттағы жүргізушіге жүктелді. Өтініш беруші зардап шеккен тарап ретінде көрсетілген."
+        "ru": "Второй водитель признал, что отвлёкся на навигатор. Тормозной путь перед машиной Феррейры отсутствует. Вина возложена на водителя седана.",
+        "en": "The other driver admitted being distracted by the navigation system. There are no braking marks before Ferreira's car. The sedan driver was found at fault.",
+        "tr": "The other driver admitted being distracted by the navigation system. There are no braking marks before Ferreira's car. The sedan driver was found at fault.",
+        "ar": "The other driver admitted being distracted by the navigation system. There are no braking marks before Ferreira's car. The sedan driver was found at fault.",
+        "kk": "Второй водитель признал, что отвлёкся на навигатор. Тормозной путь перед машиной Феррейры отсутствует. Вина возложена на водителя седана."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Официальный протокол подтверждает место, время и виновника, совпадая с показаниями.",
-        "en": "The official report confirms the location, time and at-fault party, matching the account.",
-        "tr": "Resmi tutanak yeri, zamanı ve kusurlu tarafı doğruluyor ve anlatımla örtüşüyor.",
-        "ar": "يؤكد المحضر الرسمي المكان والزمان والطرف المخطئ بما يتوافق مع الرواية.",
-        "kk": "Ресми хаттама орынды, уақытты және кінәлі тарапты растап, мәлімдемемен сәйкеседі."
-      }
+        "ru": "Независимый протокол подтверждает обстоятельства и виновника.",
+        "en": "The independent report confirms both the circumstances and the at-fault driver.",
+        "tr": "The independent report confirms both the circumstances and the at-fault driver.",
+        "ar": "The independent report confirms both the circumstances and the at-fault driver.",
+        "kk": "Независимый протокол подтверждает обстоятельства и виновника."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_not_at_fault",
+        "relation": "supports",
+        "reason": {
+          "ru": "Независимый протокол подтверждает обстоятельства и виновника.",
+          "en": "The independent report confirms both the circumstances and the at-fault driver.",
+          "tr": "The independent report confirms both the circumstances and the at-fault driver.",
+          "ar": "The independent report confirms both the circumstances and the at-fault driver.",
+          "kk": "Независимый протокол подтверждает обстоятельства и виновника."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
-      "id": "ev-estimate",
-      "type": "document",
+      "id": "ev-lucas",
+      "order": 4,
+      "type": "witness_statement",
       "title": {
-        "ru": "Смета автосервиса",
-        "en": "Body-Shop Repair Estimate",
-        "tr": "Servis Onarım Tahmini",
-        "ar": "تقدير إصلاح ورشة السيارات",
-        "kk": "Автосервис жөндеу сметасы"
+        "ru": "Показания Лукаса Феррейры",
+        "en": "Statement from Lucas Ferreira",
+        "tr": "Statement from Lucas Ferreira",
+        "ar": "Statement from Lucas Ferreira",
+        "kk": "Показания Лукаса Феррейры"
       },
       "content": {
-        "ru": "Повреждения задней части: деформирован бампер, кронштейн и фонарь. Оценка ремонта — 2 100 €. Характер деформации соответствует удару сзади.",
-        "en": "Rear damage: deformed bumper, mounting bracket and tail light. Repair estimate — €2,100. The deformation pattern is consistent with a rear impact.",
-        "tr": "Arka hasar: deforme tampon, montaj braketi ve stop lambası. Onarım tahmini — 2.100 €. Deformasyon deseni arkadan çarpmayla uyumlu.",
-        "ar": "أضرار خلفية: مصد متشوّه ودعامة تثبيت ومصباح خلفي. تقدير الإصلاح — 2,100 €. نمط التشوّه يتوافق مع اصطدام خلفي.",
-        "kk": "Артқы зақым: майысқан бампер, бекіткіш кронштейн және артқы шам. Жөндеу бағасы — 2 100 €. Деформация сипаты артынан соққыға сәйкес келеді."
+        "ru": "Брат заявителя приехал через двадцать минут после звонка. Он описал свежие повреждения, состояние Матеуса и присутствие второго водителя и полиции.",
+        "en": "The claimant's brother arrived twenty minutes after receiving a call. He described the fresh damage, Mateus's condition, and the presence of the other driver and police.",
+        "tr": "The claimant's brother arrived twenty minutes after receiving a call. He described the fresh damage, Mateus's condition, and the presence of the other driver and police.",
+        "ar": "The claimant's brother arrived twenty minutes after receiving a call. He described the fresh damage, Mateus's condition, and the presence of the other driver and police.",
+        "kk": "Брат заявителя приехал через двадцать минут после звонка. Он описал свежие повреждения, состояние Матеуса и присутствие второго водителя и полиции."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Сумма и тип повреждений логично вытекают из зафиксированного столкновения.",
-        "en": "The amount and type of damage follow logically from the recorded collision.",
-        "tr": "Hasarın tutarı ve türü kaydedilen çarpışmadan mantıklı şekilde kaynaklanıyor.",
-        "ar": "مبلغ الضرر ونوعه ينبعان منطقيًا من الاصطدام المسجّل.",
-        "kk": "Зақымның сомасы мен түрі тіркелген соқтығыстан қисынды түрде шығады."
-      }
+        "ru": "Показания согласуются с записью и документами. Лукас впервые появляется в кампании как нейтральный свидетель.",
+        "en": "His statement matches the footage and documents. Lucas first appears in the campaign as a neutral witness.",
+        "tr": "His statement matches the footage and documents. Lucas first appears in the campaign as a neutral witness.",
+        "ar": "His statement matches the footage and documents. Lucas first appears in the campaign as a neutral witness.",
+        "kk": "Показания согласуются с записью и документами. Лукас впервые появляется в кампании как нейтральный свидетель."
+      },
+      "narrativeRole": "character_seed",
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Показания согласуются с записью и документами. Лукас впервые появляется в кампании как нейтральный свидетель.",
+          "en": "His statement matches the footage and documents. Lucas first appears in the campaign as a neutral witness.",
+          "tr": "His statement matches the footage and documents. Lucas first appears in the campaign as a neutral witness.",
+          "ar": "His statement matches the footage and documents. Lucas first appears in the campaign as a neutral witness.",
+          "kk": "Показания согласуются с записью и документами. Лукас впервые появляется в кампании как нейтральный свидетель."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75
     }
   ],
   "correctDecision": "approve",
   "explanation": {
     "ru": [
-      "Видеорегистратор показывает удар сзади на красный свет.",
-      "Медицинская выписка и протокол ДТП совпадают по времени и фактам.",
-      "Повреждения и смета соответствуют столкновению — претензия обоснована."
+      "Запись показывает неподвижный автомобиль и удар сзади.",
+      "Медицинские документы, протокол и свидетель совпадают по времени и обстоятельствам.",
+      "Заявление полностью подтверждено. Выплату следует одобрить."
     ],
     "en": [
-      "The dashcam shows a rear impact at a red light.",
-      "The ER record and police report agree on timing and facts.",
-      "Damage and estimate match the collision — the claim is valid."
+      "The footage confirms that the claimant was stationary and did not create a hazard.",
+      "The timing and mechanism of the injury match the collision.",
+      "The independent report confirms both the circumstances and the at-fault driver.",
+      "His statement matches the footage and documents. Lucas first appears in the campaign as a neutral witness.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "tr": [
-      "Araç kamerası kırmızı ışıkta arkadan çarpmayı gösteriyor.",
-      "Acil kaydı ve polis tutanağı zaman ve olgularda örtüşüyor.",
-      "Hasar ve tahmin çarpışmayla uyumlu — talep geçerli."
+      "The footage confirms that the claimant was stationary and did not create a hazard.",
+      "The timing and mechanism of the injury match the collision.",
+      "The independent report confirms both the circumstances and the at-fault driver.",
+      "His statement matches the footage and documents. Lucas first appears in the campaign as a neutral witness.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "ar": [
-      "كاميرا السيارة تُظهر اصطدامًا خلفيًا عند إشارة حمراء.",
-      "تقرير الطوارئ ومحضر الشرطة يتفقان في التوقيت والوقائع.",
-      "الأضرار والتقدير يتطابقان مع الاصطدام — المطالبة صحيحة."
+      "The footage confirms that the claimant was stationary and did not create a hazard.",
+      "The timing and mechanism of the injury match the collision.",
+      "The independent report confirms both the circumstances and the at-fault driver.",
+      "His statement matches the footage and documents. Lucas first appears in the campaign as a neutral witness.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "kk": [
-      "Тіркеуіш қызыл шамда артынан соққыны көрсетеді.",
-      "Медициналық құжат пен полиция хаттамасы уақыты мен фактілері бойынша сәйкеседі.",
-      "Зақым мен смета соқтығысқа сай — талап негізді."
+      "Запись показывает неподвижный автомобиль и удар сзади.",
+      "Медицинские документы, протокол и свидетель совпадают по времени и обстоятельствам.",
+      "Заявление полностью подтверждено. Выплату следует одобрить."
     ]
+  },
+  "investigationBudget": 3,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Я остановился на красный сигнал и простоял около двадцати секунд, когда сзади в мою машину въехал седан. У меня диагностировали хлыстовую травму шеи, повреждены бампер и фонарь. Прошу оплатить лечение и ремонт.",
+        "en": "I stopped at a red light and had been stationary for about twenty seconds when a sedan struck my car from behind. I was diagnosed with whiplash, and my bumper and tail light were damaged. I am claiming the cost of treatment and repairs.",
+        "tr": "I stopped at a red light and had been stationary for about twenty seconds when a sedan struck my car from behind. I was diagnosed with whiplash, and my bumper and tail light were damaged. I am claiming the cost of treatment and repairs.",
+        "ar": "I stopped at a red light and had been stationary for about twenty seconds when a sedan struck my car from behind. I was diagnosed with whiplash, and my bumper and tail light were damaged. I am claiming the cost of treatment and repairs.",
+        "kk": "Я остановился на красный сигнал и простоял около двадцати секунд, когда сзади в мою машину въехал седан. У меня диагностировали хлыстовую травму шеи, повреждены бампер и фонарь. Прошу оплатить лечение и ремонт."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_collision",
+      "text": {
+        "ru": "Автомобиль Матеуса стоял на красном сигнале и получил удар сзади.",
+        "en": "Mateus's car was stationary at a red light when it was struck from behind.",
+        "tr": "Mateus's car was stationary at a red light when it was struck from behind.",
+        "ar": "Mateus's car was stationary at a red light when it was struck from behind.",
+        "kk": "Автомобиль Матеуса стоял на красном сигнале и получил удар сзади."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_not_at_fault",
+      "text": {
+        "ru": "Матеус не двигался и не создавал аварийную ситуацию.",
+        "en": "Mateus was not moving and did not create a hazard.",
+        "tr": "Mateus was not moving and did not create a hazard.",
+        "ar": "Mateus was not moving and did not create a hazard.",
+        "kk": "Матеус не двигался и не создавал аварийную ситуацию."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_injury_damage",
+      "text": {
+        "ru": "Травма и ущерб возникли в результате этого столкновения.",
+        "en": "The injury and vehicle damage resulted from this collision.",
+        "tr": "The injury and vehicle damage resulted from this collision.",
+        "ar": "The injury and vehicle damage resulted from this collision.",
+        "kk": "Травма и ущерб возникли в результате этого столкновения."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "После двух отказов легко начать видеть ложь в каждом заявлении. Это профессиональная деформация, а не талант. — В. Лебедева",
+      "en": "After two rejected claims, it is easy to start seeing lies everywhere. That is professional bias, not talent. — V. Lebedeva",
+      "tr": "After two rejected claims, it is easy to start seeing lies everywhere. That is professional bias, not talent. — V. Lebedeva",
+      "ar": "After two rejected claims, it is easy to start seeing lies everywhere. That is professional bias, not talent. — V. Lebedeva",
+      "kk": "После двух отказов легко начать видеть ложь в каждом заявлении. Это профессиональная деформация, а не талант. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Иногда лучший результат расследования — не найти ложь там, где её нет. Свидетель Лукас Феррейра внесён в материалы дела.",
+      "en": "Sometimes the best outcome is not finding a lie where none exists. Witness Lucas Ferreira has been entered into the case record.",
+      "tr": "Sometimes the best outcome is not finding a lie where none exists. Witness Lucas Ferreira has been entered into the case record.",
+      "ar": "Sometimes the best outcome is not finding a lie where none exists. Witness Lucas Ferreira has been entered into the case record.",
+      "kk": "Иногда лучший результат расследования — не найти ложь там, где её нет. Свидетель Лукас Феррейра внесён в материалы дела."
+    },
+    "nextCaseTeaser": {
+      "ru": "В следующем доме замки целы, сигнализация снята правильным кодом, а драгоценности всё равно исчезли.",
+      "en": "At the next house, the locks are intact, the alarm was disarmed with the correct code, and the jewelry still vanished.",
+      "tr": "At the next house, the locks are intact, the alarm was disarmed with the correct code, and the jewelry still vanished.",
+      "ar": "At the next house, the locks are intact, the alarm was disarmed with the correct code, and the jewelry still vanished.",
+      "kk": "В следующем доме замки целы, сигнализация снята правильным кодом, а драгоценности всё равно исчезли."
+    },
+    "seasonClue": null,
+    "epilogue": null
   }
 }

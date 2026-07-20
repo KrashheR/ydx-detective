@@ -1,0 +1,83 @@
+{
+  "id": "document-48",
+  "order": 2,
+  "type": "document_scan",
+  "title": {
+    "ru": "Экспертиза счёта на оборудование"
+  },
+  "isContradiction": true,
+  "narrativeRole": "proof",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Номер Лина напечатан поверх другого, а под ним видны данные соседнего ресторана; счёт не относится к уничтоженному шкафу."
+  },
+  "previousType": "document",
+  "description": {
+    "ru": "Соседний ресторан предоставил страховщику бумажный оригинал своего счёта."
+  },
+  "instruction": {
+    "ru": "Включить УФ-режим и проверить серийный номер и имя покупателя."
+  },
+  "assets": {
+    "asset1": "assets/interactive/document-48-base.webp",
+    "asset2": "assets/interactive/document-48-scan-overlay.svg"
+  },
+  "data": {
+    "initialMode": "normal",
+    "modes": [
+      "normal",
+      "uv",
+      "backlight"
+    ],
+    "anomalyZones": [
+      {
+        "id": "invoice_owner",
+        "mode": "uv",
+        "x": 42,
+        "y": 38,
+        "width": 41,
+        "height": 16,
+        "label": "Номер Лина напечатан поверх другого, а под ним видны данные соседнего ресторана; счёт не относится к уничтоженному шкафу.",
+        "isContradiction": true
+      }
+    ],
+    "successCondition": {
+      "type": "select_zone",
+      "zoneId": "invoice_owner"
+    }
+  },
+  "statementLink": {
+    "statementId": "claim_new_equipment_destroyed",
+    "relation": "contradicts",
+    "reason": {
+      "ru": "Номер Лина напечатан поверх другого, а под ним видны данные соседнего ресторана; счёт не относится к уничтоженному шкафу."
+    }
+  },
+  "contradictionTarget": {
+    "statementId": "claim_new_equipment_destroyed",
+    "reason": {
+      "ru": "Номер Лина напечатан поверх другого, а под ним видны данные соседнего ресторана; счёт не относится к уничтоженному шкафу."
+    }
+  },
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Просветка показывает, как чужой документ приспособили под заявление Лина."
+    },
+    "playerAction": {
+      "ru": "Включить УФ-режим и проверить серийный номер и имя покупателя."
+    },
+    "conclusion": {
+      "ru": "Номер Лина напечатан поверх другого, а под ним видны данные соседнего ресторана; счёт не относится к уничтоженному шкафу."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

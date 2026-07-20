@@ -1,434 +1,585 @@
 {
   "id": "case-034",
   "type": "standard",
+  "campaignOrder": 32,
+  "requiredLevel": 16,
+  "act": 4,
+  "actTitle": {
+    "ru": "Серый конвой",
+    "en": "The Gray Convoy",
+    "tr": "The Gray Convoy",
+    "ar": "The Gray Convoy",
+    "kk": "Серый конвой"
+  },
   "difficulty": "hard",
   "claimAmount": 30000,
   "truth": "fraud",
   "title": {
-    "ru": "Большой пожар на складе",
-    "en": "The Great Warehouse Fire",
-    "tr": "Büyük Depo Yangını",
-    "ar": "حريق المستودع الكبير",
-    "kk": "Қоймадағы үлкен өрт"
+    "ru": "Серийные номера в пепле",
+    "en": "Serial Numbers in the Ashes",
+    "tr": "Serial Numbers in the Ashes",
+    "ar": "Serial Numbers in the Ashes",
+    "kk": "Серийные номера в пепле"
   },
   "claim": {
     "person": {
       "ru": "Харитон Велижанин, 55 лет",
-      "en": "Khariton Velizhanin, 55",
-      "tr": "Khariton Velizhanin, 55",
-      "ar": "خاريتون فيليجانين، 55",
-      "kk": "Харитон Велижанин, 55 жаста"
+      "en": "Khariton Velizhanin, age 55",
+      "tr": "Khariton Velizhanin, age 55",
+      "ar": "Khariton Velizhanin, age 55",
+      "kk": "Харитон Велижанин, 55 лет"
     },
     "story": {
-      "ru": "В ночь на 20 мая мой торговый склад полностью выгорел. Сгорел весь товар — электроника и бытовая техника на тридцать тысяч евро. Это был несчастный случай, проводка. Прошу выплату по полису в полном объёме.",
-      "en": "On the night of 20 May my trade warehouse burned down completely. All the stock was lost — electronics and appliances worth thirty thousand euros. It was an accident, the wiring. I request the full payout under my policy.",
-      "tr": "20 Mayıs gecesi ticari depom tamamen yandı. Tüm mal kaybedildi — otuz bin euro değerinde elektronik ve beyaz eşya. Bir kazaydı, kablolar. Poliçem kapsamında tam ödeme talep ediyorum.",
-      "ar": "في ليلة 20 مايو احترق مستودعي التجاري بالكامل. فُقدت كل البضائع — إلكترونيات وأجهزة منزلية بقيمة ثلاثين ألف يورو. كان حادثًا، الأسلاك. أطلب التعويض الكامل بموجب وثيقتي.",
-      "kk": "20 мамырға қараған түні менің сауда қоймам толық өртеніп кетті. Барлық тауар — отыз мың еуроға электроника мен тұрмыстық техника жанып кетті. Бұл жазатайым оқиға, сым еді. Полис бойынша толық төлемді сұраймын."
+      "ru": "В ночь на 20 мая полностью выгорел склад электроники. Внутри находились новые устройства и бытовая техника на 30 000 евро. Причиной считаю проводку. Прошу полную выплату.",
+      "en": "On the night of May 20, an electronics warehouse burned out completely. It contained €30,000 in new devices and appliances. I believe the wiring caused the fire and am claiming the full amount.",
+      "tr": "On the night of May 20, an electronics warehouse burned out completely. It contained €30,000 in new devices and appliances. I believe the wiring caused the fire and am claiming the full amount.",
+      "ar": "On the night of May 20, an electronics warehouse burned out completely. It contained €30,000 in new devices and appliances. I believe the wiring caused the fire and am claiming the full amount.",
+      "kk": "В ночь на 20 мая полностью выгорел склад электроники. Внутри находились новые устройства и бытовая техника на 30 000 евро. Причиной считаю проводку. Прошу полную выплату."
     }
   },
-  "coverImage": "covers/case-034.svg",
-  "personImage": "people/khariton.webp",
   "client": {
     "role": {
-      "ru": "Заявитель · ИП",
-      "en": "Claimant · sole proprietor",
-      "tr": "Başvuru sahibi · bireysel girişimci",
-      "ar": "مقدم الطلب · مالك فردي",
-      "kk": "Өтініш беруші · ЖК"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Возраст",
-          "en": "Age",
-          "tr": "Yaş",
-          "ar": "العمر",
-          "kk": "Жасы"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "55 лет",
-          "en": "55 years old",
-          "tr": "55 yaşında",
-          "ar": "55 عامًا",
-          "kk": "55 жаста"
+          "ru": "4",
+          "en": "4",
+          "tr": "4",
+          "ar": "4",
+          "kk": "4"
         }
       },
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Пермь",
-          "en": "Perm",
-          "tr": "Perm",
-          "ar": "بيرم",
-          "kk": "Пермь"
-        }
-      },
-      {
-        "k": {
-          "ru": "Клиент с",
-          "en": "Client since",
-          "tr": "Müşteri",
-          "ar": "عميل منذ",
-          "kk": "Клиент"
-        },
-        "v": {
-          "ru": "2011 г.",
-          "en": "2011",
-          "tr": "2011",
-          "ar": "2011",
-          "kk": "2011 ж."
-        }
-      },
-      {
-        "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
-        },
-        "v": {
-          "ru": "Коммерч. имущество · КИ-34399562-X4",
-          "en": "Commercial property · KI-34399562-X4",
-          "tr": "Ticari mülk · KI-34399562-X4",
-          "ar": "الممتلكات التجارية · KI-34399562-X4",
-          "kk": "Коммерциялық мүлік · КИ-34399562-X4"
-        }
-      },
-      {
-        "k": {
-          "ru": "Документ",
-          "en": "Document",
-          "tr": "Belge",
-          "ar": "الوثيقة",
-          "kk": "Құжат"
-        },
-        "v": {
-          "ru": "Паспорт 5709-26 №343995623-13",
-          "en": "Passport 5709-26 №343995623-13",
-          "tr": "Pasaport 5709-26 №343995623-13",
-          "ar": "جواز السفر 5709-26 №343995623-13",
-          "kk": "Паспорт 5709-26 №343995623-13"
+          "ru": "32",
+          "en": "32",
+          "tr": "32",
+          "ar": "32",
+          "kk": "32"
         }
       }
     ]
   },
+  "coverImage": "covers/case-034.svg",
+  "personImage": "people/khariton.webp",
   "evidences": [
     {
       "id": "ev-cam",
+      "order": 1,
       "type": "camera_recording",
       "title": {
-        "ru": "Запись камеры склада",
-        "en": "Warehouse Camera Recording",
-        "tr": "Depo Kamerası Kaydı",
-        "ar": "تسجيل كاميرا المستودع",
-        "kk": "Қойма камерасының жазбасы"
+        "ru": "Камера погрузочной зоны",
+        "en": "Loading Bay Camera",
+        "tr": "Loading Bay Camera",
+        "ar": "Loading Bay Camera",
+        "kk": "Камера погрузочной зоны"
       },
       "content": {
-        "ru": "19 мая, 22:10–23:40 — на записи видно, как двое сотрудников под руководством Харитона грузят коробки с телевизорами и техникой в фургон и вывозят их со склада. К утру стеллажи в кадре стоят почти пустыми, ещё до пожара.",
-        "en": "19 May, 22:10–23:40 — the footage shows two staff, directed by Khariton, loading boxes of televisions and appliances into a van and driving them out of the warehouse. By morning the shelves on camera stand nearly empty — before the fire.",
-        "tr": "19 Mayıs, 22:10–23:40 — görüntüde, Khariton'un yönetiminde iki çalışanın televizyon ve eşya kutularını bir kamyonete yükleyip depodan çıkardığı görülüyor. Sabaha kadar kameradaki raflar neredeyse boş — yangından önce.",
-        "ar": "19 مايو، 22:10–23:40 — يُظهر التسجيل موظفَين، بتوجيه من خاريتون، يحمّلان صناديق التلفزيونات والأجهزة في شاحنة صغيرة ويخرجانها من المستودع. وبحلول الصباح تبدو الرفوف في الكاميرا شبه فارغة — قبل الحريق.",
-        "kk": "19 мамыр, 22:10–23:40 — жазбада Харитонның басшылығымен екі қызметкердің теледидарлар мен техника салынған қораптарды фургонға тиеп, қоймадан шығарып әкеткені көрінеді. Таңға қарай кадрдағы сөрелер өрттен бұрын дерлік бос тұр."
+        "ru": "За четыре часа до пожара со склада вывезены запечатанные палеты с новым товаром. Велижанин контролирует погрузку.",
+        "en": "Four hours before the fire, sealed pallets of new stock were removed from the warehouse. Velizhanin supervised the loading.",
+        "tr": "Four hours before the fire, sealed pallets of new stock were removed from the warehouse. Velizhanin supervised the loading.",
+        "ar": "Four hours before the fire, sealed pallets of new stock were removed from the warehouse. Velizhanin supervised the loading.",
+        "kk": "За четыре часа до пожара со склада вывезены запечатанные палеты с новым товаром. Велижанин контролирует погрузку."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Накануне пожара ценный товар вывезли со склада — гореть «на тридцать тысяч» было уже нечему.",
-        "en": "The night before the fire the valuable stock was removed — there was nothing worth 'thirty thousand' left to burn.",
-        "tr": "Yangından önceki gece değerli mallar depodan çıkarıldı — yanacak 'otuz bin euroluk' bir şey kalmamıştı.",
-        "ar": "في الليلة السابقة للحريق نُقلت البضائع الثمينة — لم يبق ما يساوي 'ثلاثين ألفًا' ليحترق.",
-        "kk": "Өрттен бір түн бұрын құнды тауар қоймадан шығарылды — «отыз мыңға» жанатын ештеңе қалмаған."
+        "ru": "Ценный товар покинул склад до возгорания.",
+        "en": "The valuable stock left the warehouse before the fire.",
+        "tr": "The valuable stock left the warehouse before the fire.",
+        "ar": "The valuable stock left the warehouse before the fire.",
+        "kk": "Ценный товар покинул склад до возгорания."
       },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_new_goods_destroyed",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Ценный товар покинул склад до возгорания.",
+          "en": "The valuable stock left the warehouse before the fire.",
+          "tr": "The valuable stock left the warehouse before the fire.",
+          "ar": "The valuable stock left the warehouse before the fire.",
+          "kk": "Ценный товар покинул склад до возгорания."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_new_goods_destroyed",
+        "reason": {
+          "ru": "Ценный товар покинул склад до возгорания.",
+          "en": "The valuable stock left the warehouse before the fire.",
+          "tr": "The valuable stock left the warehouse before the fire.",
+          "ar": "The valuable stock left the warehouse before the fire.",
+          "kk": "Ценный товар покинул склад до возгорания."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "ev-serials",
+      "order": 2,
+      "type": "surface_reveal",
+      "title": {
+        "ru": "Очистка серийного номера от сажи",
+        "en": "Cleaning Soot from the Serial Number",
+        "tr": "Cleaning Soot from the Serial Number",
+        "ar": "Cleaning Soot from the Serial Number",
+        "kk": "Очистка серийного номера от сажи"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Под сажей обнаружен номер списанного демонстрационного корпуса, отсутствующий в страховой описи нового товара.",
+        "en": "Beneath the soot is the serial number of a decommissioned display chassis not listed in the insured new stock.",
+        "tr": "Beneath the soot is the serial number of a decommissioned display chassis not listed in the insured new stock.",
+        "ar": "Beneath the soot is the serial number of a decommissioned display chassis not listed in the insured new stock.",
+        "kk": "Под сажей обнаружен номер списанного демонстрационного корпуса, отсутствующий в страховой описи нового товара."
+      },
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_new_goods_destroyed",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Под сажей обнаружен номер списанного демонстрационного корпуса, отсутствующий в страховой описи нового товара.",
+          "en": "Beneath the soot is the serial number of a decommissioned display chassis not listed in the insured new stock.",
+          "tr": "Beneath the soot is the serial number of a decommissioned display chassis not listed in the insured new stock.",
+          "ar": "Beneath the soot is the serial number of a decommissioned display chassis not listed in the insured new stock.",
+          "kk": "Под сажей обнаружен номер списанного демонстрационного корпуса, отсутствующий в страховой описи нового товара."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_new_goods_destroyed",
+        "reason": {
+          "ru": "Под сажей обнаружен номер списанного демонстрационного корпуса, отсутствующий в страховой описи нового товара.",
+          "en": "Beneath the soot is the serial number of a decommissioned display chassis not listed in the insured new stock.",
+          "tr": "Beneath the soot is the serial number of a decommissioned display chassis not listed in the insured new stock.",
+          "ar": "Beneath the soot is the serial number of a decommissioned display chassis not listed in the insured new stock.",
+          "kk": "Под сажей обнаружен номер списанного демонстрационного корпуса, отсутствующий в страховой описи нового товара."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
       "meta": {
-        "cameraId": "CAM-F1",
-        "cameraModel": "UniCam UC-3614 · 4K · H.265"
+        "imageUrl": "evidence/case-034-ev-serials.webp"
+      },
+      "description": {
+        "ru": "Уцелевшее шасси сфотографировано на месте пожара до очистки поверхности.",
+        "en": "The surviving chassis was photographed at the fire scene before its surface was cleaned.",
+        "tr": "The surviving chassis was photographed at the fire scene before its surface was cleaned.",
+        "ar": "The surviving chassis was photographed at the fire scene before its surface was cleaned.",
+        "kk": "Уцелевшее шасси сфотографировано на месте пожара до очистки поверхности."
+      },
+      "instruction": {
+        "ru": "Сотрите сажу с таблички шасси и откройте сохранившийся номер.",
+        "en": "Wipe soot from the chassis plate and reveal the surviving number.",
+        "tr": "Wipe soot from the chassis plate and reveal the surviving number.",
+        "ar": "Wipe soot from the chassis plate and reveal the surviving number.",
+        "kk": "Сотрите сажу с таблички шасси и откройте сохранившийся номер."
+      },
+      "previousType": "document",
+      "assets": {
+        "baseImage": "cases/case-034/assets/interactive/ev-serials-scene.webp",
+        "coverTexture": "shared/surface/soot.svg",
+        "revealMasks": [
+          "cases/case-034/assets/interactive/ev-serials-discarded_serial-trace-mask.svg"
+        ],
+        "toolCursor": "shared/surface/cloth-cursor.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": false,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Серийный номер становится настоящей находкой игрока и раскрывает подмену нового товара списанными корпусами.",
+          "en": "The serial number becomes the player's own discovery and exposes the substitution of scrap chassis for new stock.",
+          "tr": "The serial number becomes the player's own discovery and exposes the substitution of scrap chassis for new stock.",
+          "ar": "The serial number becomes the player's own discovery and exposes the substitution of scrap chassis for new stock.",
+          "kk": "Серийный номер становится настоящей находкой игрока и раскрывает подмену нового товара списанными корпусами."
+        },
+        "playerAction": {
+          "ru": "Сотрите сажу с таблички шасси и откройте сохранившийся номер.",
+          "en": "Wipe soot from the chassis plate and reveal the surviving number.",
+          "tr": "Wipe soot from the chassis plate and reveal the surviving number.",
+          "ar": "Wipe soot from the chassis plate and reveal the surviving number.",
+          "kk": "Сотрите сажу с таблички шасси и откройте сохранившийся номер."
+        },
+        "conclusion": {
+          "ru": "Под сажей обнаружен номер списанного демонстрационного корпуса, отсутствующий в страховой описи нового товара.",
+          "en": "Beneath the soot is the serial number of a decommissioned display chassis not listed in the insured new stock.",
+          "tr": "Beneath the soot is the serial number of a decommissioned display chassis not listed in the insured new stock.",
+          "ar": "Beneath the soot is the serial number of a decommissioned display chassis not listed in the insured new stock.",
+          "kk": "Под сажей обнаружен номер списанного демонстрационного корпуса, отсутствующий в страховой описи нового товара."
+        }
+      },
+      "data": {
+        "mode": "erase",
+        "coverType": "soot",
+        "brush": {
+          "radius": 46,
+          "hardness": 0.66,
+          "opacity": 0.84,
+          "spacing": 8
+        },
+        "completion": {
+          "type": "discover_any",
+          "requiredTraceIds": [
+            "discarded_serial"
+          ]
+        },
+        "traces": [
+          {
+            "id": "discarded_serial",
+            "label": "Номер списанного корпуса",
+            "requiredRevealPercent": 50,
+            "mask": "cases/case-034/assets/interactive/ev-serials-discarded_serial-trace-mask.svg",
+            "shape": "mask",
+            "isContradiction": true,
+            "conclusion": "Под сажей обнаружен номер списанного демонстрационного корпуса, отсутствующий в страховой описи нового товара.",
+            "labelEn": "Decommissioned chassis number",
+            "conclusionEn": "Beneath the soot is the serial number of a decommissioned display chassis not listed in the insured new stock."
+          }
+        ]
       }
     },
     {
       "id": "ev-panel",
+      "order": 3,
       "type": "usage_log",
       "title": {
-        "ru": "Лог пожарной панели",
-        "en": "Fire-Panel Log",
-        "tr": "Yangın Paneli Kaydı",
-        "ar": "سجل لوحة الإنذار من الحريق",
-        "kk": "Өрт панелінің журналы"
+        "ru": "Журнал пожарной панели",
+        "en": "Fire Panel Log",
+        "tr": "Fire Panel Log",
+        "ar": "Fire Panel Log",
+        "kk": "Журнал пожарной панели"
       },
       "content": {
-        "ru": [
-          "19.05 21:58 — Вход в меню обслуживания (код администратора)",
-          "19.05 22:01 — Зона 1–6: детекторы дыма ПЕРЕВЕДЕНЫ В РУЧНОЕ ОТКЛЮЧЕНИЕ",
-          "19.05 22:02 — Звуковое оповещение и автонабор 101 ОТКЛЮЧЕНЫ",
-          "19.05 22:03 — Выход из меню обслуживания",
-          "20.05 02:14 — Зона 4: тепловой порог превышен (детектор заглушен, тревоги нет)",
-          "20.05 02:41 — Зона 2: тепловой порог превышен (тревоги нет)",
-          "20.05 03:05 — Внешний вызов 101 с улицы (прохожий)"
-        ],
-        "en": [
-          "19.05 21:58 — Maintenance menu entered (admin code)",
-          "19.05 22:01 — Zones 1–6: smoke detectors SET TO MANUAL DISABLE",
-          "19.05 22:02 — Sounder and auto-dial 101 DISABLED",
-          "19.05 22:03 — Maintenance menu exited",
-          "20.05 02:14 — Zone 4: heat threshold exceeded (detector muted, no alarm)",
-          "20.05 02:41 — Zone 2: heat threshold exceeded (no alarm)",
-          "20.05 03:05 — External 101 call from the street (passerby)"
-        ],
-        "tr": [
-          "19.05 21:58 — Bakım menüsüne giriş (yönetici kodu)",
-          "19.05 22:01 — Bölge 1–6: duman dedektörleri MANUEL DEVRE DIŞI bırakıldı",
-          "19.05 22:02 — Siren ve otomatik 101 araması DEVRE DIŞI",
-          "19.05 22:03 — Bakım menüsünden çıkış",
-          "20.05 02:14 — Bölge 4: ısı eşiği aşıldı (dedektör susturulmuş, alarm yok)",
-          "20.05 02:41 — Bölge 2: ısı eşiği aşıldı (alarm yok)",
-          "20.05 03:05 — Sokaktan dış 101 araması (yoldan geçen)"
-        ],
-        "ar": [
-          "19.05 21:58 — الدخول إلى قائمة الصيانة (رمز المسؤول)",
-          "19.05 22:01 — المناطق 1–6: تم تعطيل كاشفات الدخان يدويًا",
-          "19.05 22:02 — تم تعطيل صفّارة الإنذار والاتصال التلقائي بـ101",
-          "19.05 22:03 — الخروج من قائمة الصيانة",
-          "20.05 02:14 — المنطقة 4: تجاوز عتبة الحرارة (الكاشف مكتوم، لا إنذار)",
-          "20.05 02:41 — المنطقة 2: تجاوز عتبة الحرارة (لا إنذار)",
-          "20.05 03:05 — اتصال خارجي بـ101 من الشارع (أحد المارة)"
-        ],
-        "kk": [
-          "19.05 21:58 — Қызмет көрсету мәзіріне кіру (әкімші коды)",
-          "19.05 22:01 — 1–6 аймақтар: түтін детекторлары ҚОЛМЕН ӨШІРІЛДІ",
-          "19.05 22:02 — Дыбыстық дабыл мен 101 автотерілуі ӨШІРІЛДІ",
-          "19.05 22:03 — Қызмет көрсету мәзірінен шығу",
-          "20.05 02:14 — 4-аймақ: жылу шегі асып кетті (детектор өшірулі, дабыл жоқ)",
-          "20.05 02:41 — 2-аймақ: жылу шегі асып кетті (дабыл жоқ)",
-          "20.05 03:05 — Көшеден сыртқы 101 қоңырауы (өтіп бара жатқан адам)"
-        ]
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "За четыре часа до пожара пожарные датчики и автодозвон были вручную отключены под кодом администратора — пожар не мог быть случайным.",
-        "en": "Four hours before the fire the smoke detectors and auto-dial were manually disabled under the admin code — the fire could not have been accidental.",
-        "tr": "Yangından dört saat önce duman dedektörleri ve otomatik arama yönetici koduyla manuel olarak devre dışı bırakıldı — yangın kazara olamazdı.",
-        "ar": "قبل أربع ساعات من الحريق عُطّلت كاشفات الدخان والاتصال التلقائي يدويًا برمز المسؤول — لا يمكن أن يكون الحريق عرضيًا.",
-        "kk": "Өрттен төрт сағат бұрын түтін детекторлары мен автотерілу әкімші кодымен қолмен өшірілген — өрт кездейсоқ бола алмайды."
-      },
-      "meta": {
-        "logPrompt": "scada@plant:~$ tail -f /var/log/fire-panel.log"
-      }
-    },
-    {
-      "id": "ev-bank",
-      "type": "bank_statement",
-      "title": {
-        "ru": "Банковская выписка",
-        "en": "Bank Statement",
-        "tr": "Banka Ekstresi",
-        "ar": "كشف حساب بنكي",
-        "kk": "Банк үзіндісі"
-      },
-      "content": {
-        "ru": [
-          "01.05 — Остаток по счёту: −1 250 000 ₽ (овердрафт)",
-          "05.05 — Просрочен платёж по кредиту, начислена пеня",
-          "12.05 — Списание: арендная плата за склад НЕ ПРОШЛА (недостаточно средств)",
-          "17.05 — УВЕДОМЛЕНИЕ БАНКА: дефолт по кредиту, требование о погашении",
-          "18.05 — Заблокирована кредитная линия предприятия"
-        ],
-        "en": [
-          "01.05 — Account balance: −1,250,000 ₽ (overdraft)",
-          "05.05 — Loan payment overdue, penalty charged",
-          "12.05 — Debit: warehouse rent FAILED (insufficient funds)",
-          "17.05 — BANK NOTICE: loan default, demand for repayment",
-          "18.05 — Company credit line frozen"
-        ],
-        "tr": [
-          "01.05 — Hesap bakiyesi: −1.250.000 ₽ (ek hesap)",
-          "05.05 — Kredi ödemesi gecikti, ceza işlendi",
-          "12.05 — Borç: depo kirası BAŞARISIZ (yetersiz bakiye)",
-          "17.05 — BANKA BİLDİRİMİ: kredi temerrüdü, geri ödeme talebi",
-          "18.05 — Şirket kredi limiti donduruldu"
-        ],
-        "ar": [
-          "01.05 — رصيد الحساب: −1,250,000 ₽ (سحب على المكشوف)",
-          "05.05 — تأخّر سداد القرض، فُرضت غرامة",
-          "12.05 — خصم: إيجار المستودع فشل (رصيد غير كافٍ)",
-          "17.05 — إشعار من البنك: تعثّر القرض، مطالبة بالسداد",
-          "18.05 — تم تجميد خط ائتمان الشركة"
-        ],
-        "kk": [
-          "01.05 — Шот қалдығы: −1 250 000 ₽ (овердрафт)",
-          "05.05 — Несие төлемі мерзімінен өтті, өсімпұл есептелді",
-          "12.05 — Шегерім: қойма жалдау ақысы ӨТПЕДІ (қаражат жеткіліксіз)",
-          "17.05 — БАНК ХАБАРЛАМАСЫ: несие дефолты, өтеу талабы",
-          "18.05 — Кәсіпорынның несие желісі бұғатталды"
-        ]
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "За три дня до пожара бизнес был в дефолте по кредиту с миллионным долгом — налицо финансовый мотив поджога.",
-        "en": "Three days before the fire the business was in loan default with a million-rouble debt — a clear financial motive for arson.",
-        "tr": "Yangından üç gün önce işletme milyonluk borçla kredi temerrüdündeydi — kundaklama için açık bir mali güdü.",
-        "ar": "قبل ثلاثة أيام من الحريق كان العمل متعثّرًا في القرض بدين بالملايين — دافع مالي واضح للحريق المتعمّد.",
-        "kk": "Өрттен үш күн бұрын бизнес миллиондық қарызбен несие дефолтында болды — өртеудің айқын қаржылық себебі."
-      },
-      "meta": {
-        "bankName": {
-          "ru": "Расчётный отдел № 34",
-          "en": "Settlement Office 34",
-          "tr": "MeridyenBank",
-          "ar": "ميريديان بنك",
-          "kk": "Расчётный отдел № 34"
-        },
-        "accountMask": "•••• •••• •••• 1129"
-      }
-    },
-    {
-      "id": "ev-phone",
-      "type": "phone_records",
-      "title": {
-        "ru": "Детализация звонков",
-        "en": "Call Records",
-        "tr": "Arama Kayıtları",
-        "ar": "سجل المكالمات",
-        "kk": "Қоңыраулар детализациясы"
-      },
-      "content": {
-        "ru": [
-          "19.05 19:20 — Исходящий, поставщик, 5 мин",
-          "20.05 03:10 — Исходящий, 101 (пожарные), 4 мин",
-          "20.05 07:45 — Входящий, страховая, 8 мин",
-          "20.05 12:30 — Исходящий, бухгалтер, 6 мин"
-        ],
-        "en": [
-          "19.05 19:20 — Outgoing, supplier, 5 min",
-          "20.05 03:10 — Outgoing, 101 (fire brigade), 4 min",
-          "20.05 07:45 — Incoming, insurer, 8 min",
-          "20.05 12:30 — Outgoing, accountant, 6 min"
-        ],
-        "tr": [
-          "19.05 19:20 — Giden, tedarikçi, 5 dk",
-          "20.05 03:10 — Giden, 101 (itfaiye), 4 dk",
-          "20.05 07:45 — Gelen, sigortacı, 8 dk",
-          "20.05 12:30 — Giden, muhasebeci, 6 dk"
-        ],
-        "ar": [
-          "19.05 19:20 — صادرة، المورّد، 5 دقائق",
-          "20.05 03:10 — صادرة، 101 (الإطفاء)، 4 دقائق",
-          "20.05 07:45 — واردة، شركة التأمين، 8 دقائق",
-          "20.05 12:30 — صادرة، المحاسب، 6 دقائق"
-        ],
-        "kk": [
-          "19.05 19:20 — Шығыс, жеткізуші, 5 мин",
-          "20.05 03:10 — Шығыс, 101 (өрт сөндіру), 4 мин",
-          "20.05 07:45 — Кіріс, сақтандыру, 8 мин",
-          "20.05 12:30 — Шығыс, бухгалтер, 6 мин"
-        ]
+        "ru": "Датчики дыма отключены мастер-кодом владельца, а питание резервной линии отсоединено вручную.",
+        "en": "The smoke detectors were disabled using the owner's master code, and backup-line power was disconnected manually.",
+        "tr": "The smoke detectors were disabled using the owner's master code, and backup-line power was disconnected manually.",
+        "ar": "The smoke detectors were disabled using the owner's master code, and backup-line power was disconnected manually.",
+        "kk": "Датчики дыма отключены мастер-кодом владельца, а питание резервной линии отсоединено вручную."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Звонки обычные — поставщик, пожарные, страховая, бухгалтер. Сами по себе они ничего не выдают.",
-        "en": "The calls are ordinary — supplier, fire brigade, insurer, accountant. On their own they reveal nothing.",
-        "tr": "Aramalar sıradan — tedarikçi, itfaiye, sigortacı, muhasebeci. Tek başlarına bir şey ele vermiyor.",
-        "ar": "المكالمات عادية — المورّد، الإطفاء، التأمين، المحاسب. وهي بحد ذاتها لا تكشف شيئًا.",
-        "kk": "Қоңыраулар қарапайым — жеткізуші, өрт сөндіру, сақтандыру, бухгалтер. Олар өздігінен ештеңе ашпайды."
+        "ru": "Система пожарной защиты была намеренно выведена из работы.",
+        "en": "The fire-protection system was deliberately disabled.",
+        "tr": "The fire-protection system was deliberately disabled.",
+        "ar": "The fire-protection system was deliberately disabled.",
+        "kk": "Система пожарной защиты была намеренно выведена из работы."
       },
-      "meta": {
-        "carrierName": {
-          "ru": "Оператор связи № 34",
-          "en": "Communications Office 34",
-          "tr": "Communications Office 34",
-          "ar": "لاين كوم",
-          "kk": "Оператор связи № 34"
-        },
-        "phoneMask": "+7 (9••) •••-••-•4"
-      }
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_accidental_cause",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Система пожарной защиты была намеренно выведена из работы.",
+          "en": "The fire-protection system was deliberately disabled.",
+          "tr": "The fire-protection system was deliberately disabled.",
+          "ar": "The fire-protection system was deliberately disabled.",
+          "kk": "Система пожарной защиты была намеренно выведена из работы."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "ev-fire",
+      "order": 4,
       "type": "document",
       "title": {
         "ru": "Заключение дознавателя",
         "en": "Fire Investigator's Report",
-        "tr": "Yangın Müfettişi Raporu",
-        "ar": "تقرير محقّق الحرائق",
-        "kk": "Өрт сарапшысының қорытындысы"
+        "tr": "Fire Investigator's Report",
+        "ar": "Fire Investigator's Report",
+        "kk": "Заключение дознавателя"
       },
       "content": {
-        "ru": "Акт пожарно-технической экспертизы от 22 мая: очаг возгорания — в торговом зале, в нескольких независимых точках. Обнаружены следы интенсификатора горения (нефтепродукт). Версия о неисправности проводки не подтверждена. Конкретные лица в акте не названы.",
-        "en": "Fire-technical expert report, 22 May: the seat of the fire was in the sales floor, at several independent points. Traces of an accelerant (petroleum product) were found. The faulty-wiring theory is not confirmed. No specific persons are named in the report.",
-        "tr": "Yangın teknik bilirkişi raporu, 22 Mayıs: yangının başlangıç noktası satış alanında, birkaç bağımsız noktada. Yangın hızlandırıcı (petrol ürünü) izleri bulundu. Arızalı kablo teorisi doğrulanmadı. Raporda belirli kişi adı geçmiyor.",
-        "ar": "تقرير الخبير الفني للحرائق، 22 مايو: كان منشأ الحريق في صالة البيع، في عدة نقاط مستقلة. عُثر على آثار مادة مسرّعة للاشتعال (منتج بترولي). لم تتأكّد نظرية عطل الأسلاك. لا يُذكر في التقرير أشخاص محدّدون.",
-        "kk": "22 мамырдағы өрт-техникалық сараптама актісі: өрт ошағы — сауда залында, бірнеше тәуелсіз нүктеде. Жану интенсификаторының (мұнай өнімі) іздері табылды. Сым ақаулығы туралы нұсқа расталмады. Актіде нақты тұлғалар аталмаған."
-      },
-      "isContradiction": false,
-      "contradictionExplanation": {
-        "ru": "Эксперт фиксирует следы поджога, но не называет виновника — сам по себе документ не уличает заявителя.",
-        "en": "The expert records signs of arson but names no culprit — on its own the document does not incriminate the claimant.",
-        "tr": "Bilirkişi kundaklama belirtileri kaydediyor ancak fail belirtmiyor — belge tek başına başvuranı suçlamıyor.",
-        "ar": "يسجّل الخبير علامات حريق متعمّد لكنه لا يسمّي جانيًا — لا يدين المستند المطالب بحد ذاته.",
-        "kk": "Сарапшы өрттеу белгілерін тіркейді, бірақ кінәліні атамайды — құжаттың өзі арыз берушіні әшкерелемейді."
-      }
-    },
-    {
-      "id": "ev-social",
-      "type": "social_media",
-      "title": {
-        "ru": "Удалённый пост в соцсети",
-        "en": "Deleted Social-Media Post",
-        "tr": "Silinmiş Sosyal Medya Paylaşımı",
-        "ar": "منشور محذوف على وسائل التواصل",
-        "kk": "Жойылған әлеуметтік желі жазбасы"
-      },
-      "content": {
-        "ru": "Сохранённый скриншот поста Харитона от 13 мая (позже удалён): «Со складом столько головной боли… ну ничего, скоро страховая всё починит 🔥😉». Под постом — реакции знакомых.",
-        "en": "An archived screenshot of Khariton's post from 13 May (later deleted): \"This warehouse is such a headache… never mind, the insurance will fix everything soon 🔥😉\". Friends reacted under the post.",
-        "tr": "Khariton'un 13 Mayıs tarihli paylaşımının arşivlenmiş ekran görüntüsü (sonradan silinmiş): \"Bu depo tam bir baş ağrısı… neyse, yakında sigorta her şeyi halleder 🔥😉\". Paylaşımın altında tanıdıkların tepkileri var.",
-        "ar": "لقطة شاشة محفوظة لمنشور خاريتون بتاريخ 13 مايو (حُذف لاحقًا): «هذا المستودع صداع حقيقي… لا بأس، قريبًا سيصلح التأمين كل شيء 🔥😉». تفاعل المعارف أسفل المنشور.",
-        "kk": "Харитонның 13 мамырдағы жазбасының сақталған скриншоты (кейін жойылған): «Қоймамен бас ауыртатын дүние көп… ештеңе етпес, жақында сақтандыру бәрін жөндейді 🔥😉». Жазба астында таныстарының реакциясы бар."
+        "ru": "Очаг расположен в куче упаковки, обнаружен ускоритель горения. Проводка повреждена огнём снаружи и не была причиной.",
+        "en": "The ignition point was in a pile of packaging where accelerant was found. The wiring was damaged from the outside by the fire and was not the cause.",
+        "tr": "The ignition point was in a pile of packaging where accelerant was found. The wiring was damaged from the outside by the fire and was not the cause.",
+        "ar": "The ignition point was in a pile of packaging where accelerant was found. The wiring was damaged from the outside by the fire and was not the cause.",
+        "kk": "Очаг расположен в куче упаковки, обнаружен ускоритель горения. Проводка повреждена огнём снаружи и не была причиной."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "За неделю до пожара Харитон публично шутит, что «страховая всё починит» — это указывает на заранее задуманный поджог.",
-        "en": "A week before the fire Khariton publicly jokes that 'the insurance will fix everything' — pointing to a premeditated arson.",
-        "tr": "Yangından bir hafta önce Khariton 'sigorta her şeyi halleder' diye açıkça şaka yapıyor — önceden tasarlanmış bir kundaklamaya işaret ediyor.",
-        "ar": "قبل أسبوع من الحريق يمزح خاريتون علنًا بأن 'التأمين سيصلح كل شيء' — ما يشير إلى حريق متعمّد مدبّر مسبقًا.",
-        "kk": "Өрттен бір апта бұрын Харитон «сақтандыру бәрін жөндейді» деп ашық әзілдейді — бұл алдын ала ойластырылған өртеуді көрсетеді."
+        "ru": "Версия случайного электрического пожара опровергнута.",
+        "en": "The accidental electrical-fire theory is disproven.",
+        "tr": "The accidental electrical-fire theory is disproven.",
+        "ar": "The accidental electrical-fire theory is disproven.",
+        "kk": "Версия случайного электрического пожара опровергнута."
       },
-      "meta": {
-        "socialPlatform": "cityfeed.local"
-      }
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_accidental_cause",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Версия случайного электрического пожара опровергнута.",
+          "en": "The accidental electrical-fire theory is disproven.",
+          "tr": "The accidental electrical-fire theory is disproven.",
+          "ar": "The accidental electrical-fire theory is disproven.",
+          "kk": "Версия случайного электрического пожара опровергнута."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_accidental_cause",
+        "reason": {
+          "ru": "Версия случайного электрического пожара опровергнута.",
+          "en": "The accidental electrical-fire theory is disproven.",
+          "tr": "The accidental electrical-fire theory is disproven.",
+          "ar": "The accidental electrical-fire theory is disproven.",
+          "kk": "Версия случайного электрического пожара опровергнута."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "ev-route",
+      "order": 5,
+      "type": "gps",
+      "title": {
+        "ru": "Маршрут вывезенных палет",
+        "en": "Removed Pallet Route",
+        "tr": "Removed Pallet Route",
+        "ar": "Removed Pallet Route",
+        "kk": "Маршрут вывезенных палет"
+      },
+      "content": {
+        "ru": "Груз прибыл в распределительный терминал Серого конвоя с кодом `GC-17`.",
+        "en": "The cargo arrived at a Gray Convoy distribution terminal under code `GC-17`.",
+        "tr": "The cargo arrived at a Gray Convoy distribution terminal under code `GC-17`.",
+        "ar": "The cargo arrived at a Gray Convoy distribution terminal under code `GC-17`.",
+        "kk": "Груз прибыл в распределительный терминал Серого конвоя с кодом `GC-17`."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Настоящий товар сохранился и передан связанной сети.",
+        "en": "The genuine stock survived and was transferred to the connected network.",
+        "tr": "The genuine stock survived and was transferred to the connected network.",
+        "ar": "The genuine stock survived and was transferred to the connected network.",
+        "kk": "Настоящий товар сохранился и передан связанной сети."
+      },
+      "narrativeRole": "arc_proof",
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Настоящий товар сохранился и передан связанной сети.",
+          "en": "The genuine stock survived and was transferred to the connected network.",
+          "tr": "The genuine stock survived and was transferred to the connected network.",
+          "ar": "The genuine stock survived and was transferred to the connected network.",
+          "kk": "Настоящий товар сохранился и передан связанной сети."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75
+    },
+    {
+      "id": "ev-debt",
+      "order": 6,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Долговая нагрузка",
+        "en": "Debt Burden",
+        "tr": "Debt Burden",
+        "ar": "Debt Burden",
+        "kk": "Долговая нагрузка"
+      },
+      "content": {
+        "ru": "Компания находится на грани дефолта, а страховая сумма позволила бы закрыть просрочки.",
+        "en": "The company is close to default, and the insurance payout would cover its arrears.",
+        "tr": "The company is close to default, and the insurance payout would cover its arrears.",
+        "ar": "The company is close to default, and the insurance payout would cover its arrears.",
+        "kk": "Компания находится на грани дефолта, а страховая сумма позволила бы закрыть просрочки."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Финансовое положение объясняет мотив, но не заменяет физические доказательства.",
+        "en": "The financial position explains motive but does not replace physical evidence.",
+        "tr": "The financial position explains motive but does not replace physical evidence.",
+        "ar": "The financial position explains motive but does not replace physical evidence.",
+        "kk": "Финансовое положение объясняет мотив, но не заменяет физические доказательства."
+      },
+      "narrativeRole": "motive",
+      "statementLink": {
+        "statementId": "claim_accidental_cause",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Финансовое положение объясняет мотив, но не заменяет физические доказательства.",
+          "en": "The financial position explains motive but does not replace physical evidence.",
+          "tr": "The financial position explains motive but does not replace physical evidence.",
+          "ar": "The financial position explains motive but does not replace physical evidence.",
+          "kk": "Финансовое положение объясняет мотив, но не заменяет физические доказательства."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Накануне пожара со склада вывезли весь ценный товар, а пожарные датчики вручную отключили.",
-      "Банк показывает дефолт и миллионный долг — мотив, а удалённый пост раскрывает умысел.",
-      "Это спланированный поджог ради страховки — в выплате отказать."
+      "Новый товар вывезен до пожара и доставлен в терминал GC-17.",
+      "Под сажей на уцелевшем шасси найден номер списанного демонстрационного корпуса, которого нет в страховой описи.",
+      "Пожарную систему отключили, очаг подготовили. Это спланированный поджог, выплату следует отклонить."
     ],
     "en": [
-      "The night before the fire all valuable stock was removed and the smoke detectors were manually disabled.",
-      "The bank shows a default and a million-rouble debt — the motive — while the deleted post reveals intent.",
-      "This is a planned insurance arson — the claim must be rejected."
+      "The valuable stock left the warehouse before the fire.",
+      "Beneath the soot is the serial number of a decommissioned display chassis not listed in the insured new stock.",
+      "The accidental electrical-fire theory is disproven.",
+      "The fire-protection system was deliberately disabled.",
+      "The genuine stock survived and was transferred to the connected network.",
+      "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "Yangından önceki gece tüm değerli mallar çıkarıldı ve duman dedektörleri elle devre dışı bırakıldı.",
-      "Banka temerrüt ve milyonluk borç gösteriyor — güdü — silinmiş paylaşım ise niyeti ortaya koyuyor.",
-      "Bu, sigorta için planlanmış bir kundaklama — talep reddedilmeli."
+      "The valuable stock left the warehouse before the fire.",
+      "Beneath the soot is the serial number of a decommissioned display chassis not listed in the insured new stock.",
+      "The accidental electrical-fire theory is disproven.",
+      "The fire-protection system was deliberately disabled.",
+      "The genuine stock survived and was transferred to the connected network.",
+      "The claim is fraudulent and should be rejected."
     ],
     "ar": [
-      "في الليلة السابقة للحريق نُقلت كل البضائع الثمينة وعُطّلت كاشفات الدخان يدويًا.",
-      "يُظهر البنك تعثّرًا ودينًا بالملايين — الدافع — بينما يكشف المنشور المحذوف النية.",
-      "هذا حريق متعمّد مخطّط له من أجل التأمين — يجب رفض المطالبة."
+      "The valuable stock left the warehouse before the fire.",
+      "Beneath the soot is the serial number of a decommissioned display chassis not listed in the insured new stock.",
+      "The accidental electrical-fire theory is disproven.",
+      "The fire-protection system was deliberately disabled.",
+      "The genuine stock survived and was transferred to the connected network.",
+      "The claim is fraudulent and should be rejected."
     ],
     "kk": [
-      "Өрттен бір түн бұрын барлық құнды тауар шығарылып, түтін детекторлары қолмен өшірілді.",
-      "Банк дефолт пен миллиондық қарызды көрсетеді — себеп, ал жойылған жазба ниетті ашады.",
-      "Бұл сақтандыру үшін жоспарланған өртеу — төлемнен бас тарту керек."
+      "Новый товар вывезен до пожара и доставлен в терминал GC-17.",
+      "Под сажей на уцелевшем шасси найден номер списанного демонстрационного корпуса, которого нет в страховой описи.",
+      "Пожарную систему отключили, очаг подготовили. Это спланированный поджог, выплату следует отклонить."
     ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "В ночь на 20 мая полностью выгорел склад электроники. Внутри находились новые устройства и бытовая техника на 30 000 евро. Причиной считаю проводку. Прошу полную выплату.",
+        "en": "On the night of May 20, an electronics warehouse burned out completely. It contained €30,000 in new devices and appliances. I believe the wiring caused the fire and am claiming the full amount.",
+        "tr": "On the night of May 20, an electronics warehouse burned out completely. It contained €30,000 in new devices and appliances. I believe the wiring caused the fire and am claiming the full amount.",
+        "ar": "On the night of May 20, an electronics warehouse burned out completely. It contained €30,000 in new devices and appliances. I believe the wiring caused the fire and am claiming the full amount.",
+        "kk": "В ночь на 20 мая полностью выгорел склад электроники. Внутри находились новые устройства и бытовая техника на 30 000 евро. Причиной считаю проводку. Прошу полную выплату."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_fire",
+      "text": {
+        "ru": "Склад электроники полностью выгорел.",
+        "en": "The electronics warehouse burned out completely.",
+        "tr": "The electronics warehouse burned out completely.",
+        "ar": "The electronics warehouse burned out completely.",
+        "kk": "Склад электроники полностью выгорел."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_new_goods_destroyed",
+      "text": {
+        "ru": "В пожаре находились и погибли новые устройства из страховой описи.",
+        "en": "The new devices in the insured inventory were inside and destroyed by the fire.",
+        "tr": "The new devices in the insured inventory were inside and destroyed by the fire.",
+        "ar": "The new devices in the insured inventory were inside and destroyed by the fire.",
+        "kk": "В пожаре находились и погибли новые устройства из страховой описи."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_accidental_cause",
+      "text": {
+        "ru": "Возгорание произошло из-за проводки, а защита не отключалась намеренно.",
+        "en": "The fire was caused by wiring, and the protection system was not deliberately disabled.",
+        "tr": "The fire was caused by wiring, and the protection system was not deliberately disabled.",
+        "ar": "The fire was caused by wiring, and the protection system was not deliberately disabled.",
+        "kk": "Возгорание произошло из-за проводки, а защита не отключалась намеренно."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Пожар уничтожает форму, но не всегда уничтожает номера на металлических шасси. Сначала проверьте, что именно лежит в пепле. — В. Лебедева",
+      "en": "Fire destroys shape, but not always the numbers stamped into metal chassis. First determine what is actually lying in the ashes. — V. Lebedeva",
+      "tr": "Fire destroys shape, but not always the numbers stamped into metal chassis. First determine what is actually lying in the ashes. — V. Lebedeva",
+      "ar": "Fire destroys shape, but not always the numbers stamped into metal chassis. First determine what is actually lying in the ashes. — V. Lebedeva",
+      "kk": "Пожар уничтожает форму, но не всегда уничтожает номера на металлических шасси. Сначала проверьте, что именно лежит в пепле. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Схема получает деньги дважды: сеть продаёт настоящий товар, а владелец требует страховую выплату за сгоревший лом.",
+      "en": "The operation earns twice: the network sells the genuine stock, while the owner claims an insurance payout for burned scrap.",
+      "tr": "The operation earns twice: the network sells the genuine stock, while the owner claims an insurance payout for burned scrap.",
+      "ar": "The operation earns twice: the network sells the genuine stock, while the owner claims an insurance payout for burned scrap.",
+      "kk": "Схема получает деньги дважды: сеть продаёт настоящий товар, а владелец требует страховую выплату за сгоревший лом."
+    },
+    "nextCaseTeaser": {
+      "ru": "В отеле «Янтарь» разгромлен банкетный зал. На паркете остался рисунок шин, совпадающий с фургоном самого заявителя.",
+      "en": "A banquet hall at the Amber Hotel has been wrecked. Tire tracks on the parquet match the claimant's own van.",
+      "tr": "A banquet hall at the Amber Hotel has been wrecked. Tire tracks on the parquet match the claimant's own van.",
+      "ar": "A banquet hall at the Amber Hotel has been wrecked. Tire tracks on the parquet match the claimant's own van.",
+      "kk": "В отеле «Янтарь» разгромлен банкетный зал. На паркете остался рисунок шин, совпадающий с фургоном самого заявителя."
+    },
+    "seasonClue": {
+      "id": "double-profit",
+      "label": {
+        "ru": "Двойная прибыль",
+        "en": "Double Profit",
+        "tr": "Double Profit",
+        "ar": "Double Profit",
+        "kk": "Двойная прибыль"
+      },
+      "description": {
+        "ru": "Серый конвой объединяет продажу настоящих активов и выплату за уничтоженные заменители.",
+        "en": "The Gray Convoy combines the sale of genuine assets with payouts for destroyed substitutes.",
+        "tr": "The Gray Convoy combines the sale of genuine assets with payouts for destroyed substitutes.",
+        "ar": "The Gray Convoy combines the sale of genuine assets with payouts for destroyed substitutes.",
+        "kk": "Серый конвой объединяет продажу настоящих активов и выплату за уничтоженные заменители."
+      },
+      "progressIndex": 2,
+      "progressTotal": 6
+    },
+    "epilogue": null
   }
 }

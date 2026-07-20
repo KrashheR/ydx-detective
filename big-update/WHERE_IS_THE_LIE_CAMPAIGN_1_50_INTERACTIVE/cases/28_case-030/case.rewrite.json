@@ -1,0 +1,632 @@
+{
+  "id": "case-030",
+  "campaignOrder": 28,
+  "requiredLevel": 14,
+  "act": 3,
+  "actTitle": {
+    "ru": "Восточный двор",
+    "en": "Eastern Yard"
+  },
+  "title": {
+    "ru": "Столкновение ради пломбы",
+    "en": "A Collision for a Seal"
+  },
+  "difficulty": "hard",
+  "claimAmount": {
+    "value": 15000,
+    "currency": "EUR"
+  },
+  "groundTruth": "fraud",
+  "correctDecision": "reject",
+  "investigationBudget": 4,
+  "claimant": {
+    "name": {
+      "ru": "Деян Маркович, 44 года",
+      "en": "Dejan Markovic, age 44"
+    },
+    "migrationNote": {
+      "ru": "Сохранить данные и портрет.",
+      "en": "Keep the existing profile data and portrait."
+    },
+    "portrait": {
+      "characterId": "dejan-markovich",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Деян Маркович",
+        "en": "Dejan Markovic, age 44"
+      },
+      "assetId": "asset-041",
+      "src": "src/data/cases/case-030/people/dejan-markovich.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-030/people/dejan-markovich.webp",
+      "caseRelativeSrc": "people/dejan-markovich.webp",
+      "installTo": "public/people/dejan-markovich.webp",
+      "legacyRuntimeUrl": "people/dejan-markovich.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "926ffcf94fc1427db01b0fcb5951cf44da2aa79f5e2a3a06cb318f972587408c"
+    },
+    "portraitStatus": "generated_replacement_included",
+    "portraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/dejan-markovich.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-030/people/dejan-markovich.webp",
+      "copyTo": "public/people/dejan-markovich.webp",
+      "replacesExistingValue": "people/dejan.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Заявитель просит оплатить автомобиль, но странности сосредоточены вокруг грузового отсека второй машины. Возможно, ремонт — только прикрытие. — В. Лебедева",
+      "en": "The claimant wants his car repaired, but every strange detail concerns the other vehicle's cargo compartment. The repair may be only a cover. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Восточный двор не только хранит имущество. Он использует аварии, пожары и кражи как моменты для подмены груза.",
+      "en": "Eastern Yard does more than store property. It uses collisions, fires, and thefts as opportunities to switch cargo."
+    },
+    "nextCaseTeaser": {
+      "ru": "Теперь — теплица после града. Датчик замолчал раньше первых пробоин, но это не обязательно означает саботаж.",
+      "en": "Next comes a greenhouse after a hailstorm. Its sensor went silent before the first holes appeared, but that does not necessarily mean sabotage."
+    },
+    "seasonClue": {
+      "id": "seal-swap",
+      "label": {
+        "ru": "Подмена пломбы",
+        "en": "The Switched Seal"
+      },
+      "description": {
+        "ru": "Сеть применяет страховые происшествия как прикрытие для перемещения контейнеров.",
+        "en": "The network uses insured incidents as cover for moving containers."
+      },
+      "progressIndex": 3,
+      "progressTotal": 4
+    },
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Передо мной без причины резко затормозил грузовой фургон. Я не успел остановиться и повредил автомобиль. Виноват водитель фургона; прошу выплату на ремонт.",
+    "en": "A cargo van braked sharply in front of me for no reason. I could not stop in time and damaged my car. The van driver is at fault; I am claiming the repair cost."
+  },
+  "evidence": [
+    {
+      "id": "ev-cam",
+      "order": 1,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Видеорегистратор",
+        "en": "Dashcam Footage"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "За десять секунд до удара Маркович увеличивает скорость и выключает систему автоматического торможения. Фургон тормозит плавно у разрешённого поворота.",
+        "en": "Ten seconds before impact, Markovic accelerates and disables automatic braking. The van slows normally for a permitted turn."
+      },
+      "statusExplanation": {
+        "ru": "Заявитель сам создал столкновение и ложно описал действия второго водителя.",
+        "en": "The claimant deliberately caused the collision and falsely described the other driver's actions."
+      },
+      "statementLink": {
+        "statementId": "claim_other_driver_fault",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Заявитель сам создал столкновение и ложно описал действия второго водителя.",
+          "en": "The claimant deliberately caused the collision and falsely described the other driver's actions."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_other_driver_fault",
+        "reason": {
+          "ru": "Заявитель сам создал столкновение и ложно описал действия второго водителя.",
+          "en": "The claimant deliberately caused the collision and falsely described the other driver's actions."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-phone",
+      "order": 2,
+      "type": "phone_records",
+      "title": {
+        "ru": "Звонки между водителями",
+        "en": "Calls Between the Drivers"
+      },
+      "isContradiction": true,
+      "narrativeRole": "suspicion",
+      "text": {
+        "ru": "За двадцать минут до ДТП Маркович созванивался с водителем фургона трижды. После столкновения связь прекращается.",
+        "en": "During the twenty minutes before the collision, Markovic called the van driver three times. Their contact stops after the crash."
+      },
+      "statusExplanation": {
+        "ru": "Предварительные звонки противоречат версии о случайной встрече незнакомых водителей.",
+        "en": "The calls contradict the claim that two strangers met by chance."
+      },
+      "statementLink": {
+        "statementId": "claim_random_collision",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Предварительные звонки противоречат версии о случайной встрече незнакомых водителей.",
+          "en": "The calls contradict the claim that two strangers met by chance."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_random_collision",
+        "reason": {
+          "ru": "Предварительные звонки противоречат версии о случайной встрече незнакомых водителей.",
+          "en": "The calls contradict the claim that two strangers met by chance."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-sealcam",
+      "order": 3,
+      "type": "seal_match",
+      "title": {
+        "ru": "Сопоставление пломб грузового отсека",
+        "en": "Cargo-Compartment Seal Comparison"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Фрагменты не совпадают: во время оформления аварии пассажир заменил заводскую пломбу другой.",
+        "en": "The fragments do not match: while the accident was being documented, a passenger replaced the factory seal with another one."
+      },
+      "previousType": "camera_recording",
+      "description": {
+        "ru": "Первый фрагмент снят полицией до оформления ДТП, второй найден на двери после действий пассажира.",
+        "en": "Police removed the first fragment before processing the collision; the second was found on the door after the passenger intervened."
+      },
+      "instruction": {
+        "ru": "Сопоставить края и защитный узор двух пломб.",
+        "en": "Compare the edges and security patterns of the two seals."
+      },
+      "assets": {
+        "asset1": "assets/interactive/ev-sealcam-master-a.webp",
+        "asset2": "assets/interactive/ev-sealcam-master-b.webp",
+        "asset3": "assets/interactive/ev-sealcam-fragments.json"
+      },
+      "data": {
+        "movableFragment": "B",
+        "allowRotation": true,
+        "rotationStep": 3,
+        "initialTransform": {
+          "x": 72,
+          "y": 18,
+          "rotation": -14
+        },
+        "targetTransform": {
+          "x": 132,
+          "y": 48,
+          "rotation": 6
+        },
+        "tolerance": {
+          "position": 10,
+          "rotation": 5
+        },
+        "expectedMatch": false,
+        "sourceSeed": 283017,
+        "fragmentASeed": 283017,
+        "fragmentBSeed": 289144,
+        "comparisonMarkers": [
+          {
+            "id": "tear_pattern",
+            "label": "Не совпадают линия разрыва и шаг микропечати",
+            "labelEn": "Tear line and microprint spacing do not match"
+          }
+        ]
+      },
+      "statementLink": {
+        "statementId": "claim_seal_untouched",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Фрагменты не совпадают: во время оформления аварии пассажир заменил заводскую пломбу другой.",
+          "en": "The fragments do not match: while the accident was being documented, a passenger replaced the factory seal with another one."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_seal_untouched",
+        "reason": {
+          "ru": "Фрагменты не совпадают: во время оформления аварии пассажир заменил заводскую пломбу другой.",
+          "en": "The fragments do not match: while the accident was being documented, a passenger replaced the factory seal with another one."
+        }
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true,
+        "transparencyMode": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Игрок физически устанавливает замену пломбы — настоящую цель контролируемого столкновения.",
+          "en": "The player physically proves that the seal was switched—the true purpose of the controlled collision."
+        },
+        "playerAction": {
+          "ru": "Сопоставить края и защитный узор двух пломб.",
+          "en": "Compare the edges and security patterns of the two seals."
+        },
+        "conclusion": {
+          "ru": "Фрагменты не совпадают: во время оформления аварии пассажир заменил заводскую пломбу другой.",
+          "en": "The fragments do not match: while the accident was being documented, a passenger replaced the factory seal with another one."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-042",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-030/evidence/case-030-ev-sealcam.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-030/evidence/case-030-ev-sealcam.webp",
+          "caseRelativeSrc": "evidence/case-030-ev-sealcam.webp",
+          "installTo": "public/evidence/case-030-ev-sealcam.webp",
+          "legacyRuntimeUrl": "evidence/case-030-ev-sealcam.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "18d52d80d7ef0f155befdc5a8b5e41edff0b21633458776db12b0949e89f5db6"
+        },
+        {
+          "assetId": "asset-043",
+          "role": "interactive_master_a",
+          "src": "src/data/cases/case-030/assets/interactive/ev-sealcam-master-a.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-030/assets/interactive/ev-sealcam-master-a.webp",
+          "caseRelativeSrc": "assets/interactive/ev-sealcam-master-a.webp",
+          "installTo": "src/data/cases/case-030/assets/interactive/ev-sealcam-master-a.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1400,
+          "height": 500,
+          "sha256": "69d1d3ce881b01223324e53f6297e18c70259eac8502952887e77abec4a8ca0a"
+        },
+        {
+          "assetId": "asset-044",
+          "role": "interactive_master_b",
+          "src": "src/data/cases/case-030/assets/interactive/ev-sealcam-master-b.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-030/assets/interactive/ev-sealcam-master-b.webp",
+          "caseRelativeSrc": "assets/interactive/ev-sealcam-master-b.webp",
+          "installTo": "src/data/cases/case-030/assets/interactive/ev-sealcam-master-b.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1400,
+          "height": 500,
+          "sha256": "bd22c40af4543fc43abdeb372cbb01c711c3aae969bb832d0fcee4c8a6248312"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-030/evidence/case-030-ev-sealcam.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-030/evidence/case-030-ev-sealcam.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-030-ev-sealcam.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-030/evidence/case-030-ev-sealcam.webp",
+        "copyTo": "public/evidence/case-030-ev-sealcam.webp"
+      }
+    },
+    {
+      "id": "ev-bank",
+      "order": 4,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Перевод после аварии",
+        "en": "Post-Collision Transfer"
+      },
+      "isContradiction": false,
+      "narrativeRole": "arc_proof",
+      "text": {
+        "ru": "На следующий день Маркович получает 1500 евро от компании, арендующей сектор `EY-17` во «Восточном дворе».",
+        "en": "The next day, Markovic receives €1,500 from the company leasing sector `EY-17` at Eastern Yard."
+      },
+      "statusExplanation": {
+        "ru": "Оплата связывает инсценировку с закрытым сектором склада.",
+        "en": "The payment links the staged collision to the warehouse's restricted sector."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Оплата связывает инсценировку с закрытым сектором склада.",
+          "en": "The payment links the staged collision to the warehouse's restricted sector."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-police",
+      "order": 5,
+      "type": "document",
+      "title": {
+        "ru": "Первичный протокол",
+        "en": "Initial Collision Report"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "На месте Маркович признан виновным за дистанцию, но факт сговора в первичном протоколе ещё не рассматривался.",
+        "en": "At the scene, Markovic was found at fault for following too closely, but the initial report did not examine possible collusion."
+      },
+      "statusExplanation": {
+        "ru": "Документ подтверждает столкновение, но не оправдывает заявителя.",
+        "en": "The report confirms the collision but does not support the claimant's account."
+      },
+      "statementLink": {
+        "statementId": "claim_random_collision",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Документ подтверждает столкновение, но не оправдывает заявителя.",
+          "en": "The report confirms the collision but does not support the claimant's account."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-damage",
+      "order": 6,
+      "type": "photo",
+      "title": {
+        "ru": "Фото автомобилей",
+        "en": "Vehicle Photographs"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Повреждения реальны и соответствуют небольшому контролируемому удару. Они не объясняют действия у грузового отсека.",
+        "en": "The damage is real and consistent with a minor controlled impact. It does not explain the activity at the cargo compartment."
+      },
+      "statusExplanation": {
+        "ru": "Реальный ущерб не делает инсценированное событие страховым случаем.",
+        "en": "Real damage does not turn a staged event into a covered accident."
+      },
+      "statementLink": {
+        "statementId": "claim_other_driver_fault",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Реальный ущерб не делает инсценированное событие страховым случаем.",
+          "en": "Real damage does not turn a staged event into a covered accident."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Маркович намеренно ускорился и отключил помощь при торможении.",
+      "Водители созванивались заранее, а во время оформления пассажир заменил грузовую пломбу.",
+      "Фрагменты не совпадают: во время оформления аварии пассажир заменил заводскую пломбу другой.",
+      "Столкновение было частью согласованной операции, оплаченной сектором EY-17. В выплате следует отказать."
+    ],
+    "en": [
+      "The claimant deliberately caused the collision and falsely described the other driver's actions.",
+      "The calls contradict the claim that two strangers met by chance.",
+      "The fragments do not match: while the accident was being documented, a passenger replaced the factory seal with another one.",
+      "The report confirms the collision but does not support the claimant's account.",
+      "The payment links the staged collision to the warehouse's restricted sector.",
+      "The claim is fraudulent and should be rejected."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Дать подстроенному ДТП дополнительную цель — подмену груза.",
+      "Связать финансовый след с сектором EY-17.",
+      "Интегрировать seal_match в улику ev-sealcam; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate seal_match into evidence ev-sealcam; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "people/dejan-markovich.webp",
+      "action": "generate",
+      "prompt": "Illustrated archival claimant ID portrait matching the existing insurance detective game: Balkan male driver, 44 years old, sturdy build, short dark hair with early gray, guarded practical expression, plain street jacket, neutral document-photo background, original face distinct from Dejan Kovac, no logos, no text, no watermark."
+    },
+    {
+      "file": "evidence/case-030-ev-sealcam.webp",
+      "action": "generate",
+      "prompt": "Roadside shop security camera frame during a minor traffic accident: while two drivers stand near the front vehicles, a third adult discreetly replaces a cargo seal on the rear door of a delivery van and carries a small hard container toward a car trunk, realistic distance and CCTV compression, no readable plates, no logos, no watermark."
+    },
+    {
+      "file": "assets/interactive/ev-sealcam-master-a.webp",
+      "purpose": "Цельный мастер пломбы или контрольного фрагмента A",
+      "resolution": "1400×500",
+      "format": "WebP",
+      "transparency": true,
+      "generatedBy": "image_model",
+      "manualPost": "Убрать случайный текст; сохранить альфа-канал; разрезать процедурно по sourceSeed.",
+      "prompt": "Create a realistic intact security seal or evidence control label for a fictional insurance investigation. Две промышленно-защитные наклейки грузовой двери с абстрактной графикой, прозрачный фон, без бренда. Front view, full object, transparent background, detailed fibers, adhesive or polymer texture, abstract protection pattern, no real logo or brand, no watermark, no critical readable text, restrained utilitarian evidence style. Keep edges suitable for procedural tearing.",
+      "evidenceId": "ev-sealcam",
+      "evidenceType": "seal_match"
+    },
+    {
+      "file": "assets/interactive/ev-sealcam-master-b.webp",
+      "purpose": "Второй цельный мастер для заведомо несовпадающего фрагмента B",
+      "resolution": "1400×500",
+      "format": "WebP",
+      "transparency": true,
+      "generatedBy": "image_model",
+      "manualPost": "Убрать случайный текст; сохранить альфа-канал; разрезать процедурно по sourceSeed.",
+      "prompt": "Create a realistic intact security seal or evidence control label for a fictional insurance investigation. Две промышленно-защитные наклейки грузовой двери с абстрактной графикой, прозрачный фон, без бренда. Front view, full object, transparent background, detailed fibers, adhesive or polymer texture, abstract protection pattern, no real logo or brand, no watermark, no critical readable text, restrained utilitarian evidence style. Keep edges suitable for procedural tearing. Create a clearly different microscopic protection pattern and fiber layout while keeping the same general material family.",
+      "evidenceId": "ev-sealcam",
+      "evidenceType": "seal_match"
+    },
+    {
+      "file": "assets/interactive/ev-sealcam-fragments.json",
+      "purpose": "Seed разрыва, трансформации и допуски",
+      "resolution": "normalized component space",
+      "format": "JSON",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "Сгенерировать fragment-a.webp и fragment-b.webp из master-файлов; проверить drag/rotate/snap.",
+      "prompt": null,
+      "evidenceId": "ev-sealcam",
+      "evidenceType": "seal_match"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Передо мной без причины резко затормозил грузовой фургон. Я не успел остановиться и повредил автомобиль. Виноват водитель фургона; прошу выплату на ремонт.",
+        "en": "A cargo van braked sharply in front of me for no reason. I could not stop in time and damaged my car. The van driver is at fault; I am claiming the repair cost."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_random_collision",
+      "text": {
+        "ru": "Столкновение двух ранее незнакомых водителей произошло случайно.",
+        "en": "The collision between two previously unacquainted drivers was accidental."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_other_driver_fault",
+      "text": {
+        "ru": "Второй водитель неожиданно создал аварийную ситуацию.",
+        "en": "The other driver unexpectedly created a hazard."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_seal_untouched",
+      "text": {
+        "ru": "Пломба грузового отсека не заменялась во время оформления ДТП.",
+        "en": "The cargo-compartment seal was not replaced while the collision was being documented."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-030",
+    "archiveBasePath": "generated-assets/src/data/cases/case-030",
+    "claimantPortrait": {
+      "characterId": "dejan-markovich",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Деян Маркович",
+        "en": "Dejan Markovic, age 44"
+      },
+      "assetId": "asset-041",
+      "src": "src/data/cases/case-030/people/dejan-markovich.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-030/people/dejan-markovich.webp",
+      "caseRelativeSrc": "people/dejan-markovich.webp",
+      "installTo": "public/people/dejan-markovich.webp",
+      "legacyRuntimeUrl": "people/dejan-markovich.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "926ffcf94fc1427db01b0fcb5951cf44da2aa79f5e2a3a06cb318f972587408c"
+    },
+    "claimantPortraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/dejan-markovich.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-030/people/dejan-markovich.webp",
+      "copyTo": "public/people/dejan-markovich.webp",
+      "replacesExistingValue": "people/dejan.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-sealcam",
+        "title": {
+          "ru": "Сопоставление пломб грузового отсека",
+          "en": "Cargo-Compartment Seal Comparison"
+        },
+        "primaryImage": "src/data/cases/case-030/evidence/case-030-ev-sealcam.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-030/evidence/case-030-ev-sealcam.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-030-ev-sealcam.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-030/evidence/case-030-ev-sealcam.webp",
+          "copyTo": "public/evidence/case-030-ev-sealcam.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-042",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-030/evidence/case-030-ev-sealcam.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-030/evidence/case-030-ev-sealcam.webp",
+            "caseRelativeSrc": "evidence/case-030-ev-sealcam.webp",
+            "installTo": "public/evidence/case-030-ev-sealcam.webp",
+            "legacyRuntimeUrl": "evidence/case-030-ev-sealcam.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "18d52d80d7ef0f155befdc5a8b5e41edff0b21633458776db12b0949e89f5db6"
+          },
+          {
+            "assetId": "asset-043",
+            "role": "interactive_master_a",
+            "src": "src/data/cases/case-030/assets/interactive/ev-sealcam-master-a.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-030/assets/interactive/ev-sealcam-master-a.webp",
+            "caseRelativeSrc": "assets/interactive/ev-sealcam-master-a.webp",
+            "installTo": "src/data/cases/case-030/assets/interactive/ev-sealcam-master-a.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1400,
+            "height": 500,
+            "sha256": "69d1d3ce881b01223324e53f6297e18c70259eac8502952887e77abec4a8ca0a"
+          },
+          {
+            "assetId": "asset-044",
+            "role": "interactive_master_b",
+            "src": "src/data/cases/case-030/assets/interactive/ev-sealcam-master-b.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-030/assets/interactive/ev-sealcam-master-b.webp",
+            "caseRelativeSrc": "assets/interactive/ev-sealcam-master-b.webp",
+            "installTo": "src/data/cases/case-030/assets/interactive/ev-sealcam-master-b.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1400,
+            "height": 500,
+            "sha256": "bd22c40af4543fc43abdeb372cbb01c711c3aae969bb832d0fcee4c8a6248312"
+          }
+        ]
+      }
+    ]
+  }
+}

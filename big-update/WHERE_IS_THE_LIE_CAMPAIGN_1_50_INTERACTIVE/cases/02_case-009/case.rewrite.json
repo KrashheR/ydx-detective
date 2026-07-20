@@ -1,0 +1,255 @@
+{
+  "id": "case-009",
+  "campaignOrder": 2,
+  "requiredLevel": 1,
+  "act": 1,
+  "actTitle": {
+    "ru": "Чужой почерк",
+    "en": "Another Hand"
+  },
+  "title": {
+    "ru": "Пожар без виновного",
+    "en": "A Fire Without a Culprit"
+  },
+  "difficulty": "easy",
+  "claimAmount": {
+    "value": 9000,
+    "currency": "EUR"
+  },
+  "groundTruth": "valid",
+  "correctDecision": "approve",
+  "investigationBudget": 3,
+  "claimant": {
+    "name": {
+      "ru": "Хелена Брандт, 44 года",
+      "en": "Helena Brandt, age 44"
+    },
+    "migrationNote": {
+      "ru": "Сохранить стабильный профиль и существующий портрет после визуальной сверки с канонической версией.",
+      "en": "Keep the established profile and existing portrait after visually checking them against the canonical version."
+    },
+    "portrait": null,
+    "portraitStatus": "retain_existing_project_portrait",
+    "portraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/helena.webp",
+      "existingFile": "public/people/helena.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Страховую сумму увеличили за три недели до пожара. Это сильный повод проверить заявление — и очень слабый повод отказать без фактов. — В. Лебедева",
+      "en": "The coverage was increased three weeks before the fire. That is an excellent reason to investigate—and a very poor reason to reject a claim without evidence. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Вы не нашли ложь — и не придумали её ради красивого разоблачения. Для следователя это такой же важный навык, как поставить красный штамп.",
+      "en": "You found no lie—and you did not invent one just to make a dramatic accusation. For an investigator, that skill matters just as much as placing the red stamp."
+    },
+    "nextCaseTeaser": {
+      "ru": "Из озера достали телефон. Проблема не в том, что он мокрый, а в том, чей он.",
+      "en": "A phone has been recovered from a lake. The question is not why it is wet, but whose phone it is."
+    },
+    "seasonClue": null,
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Ночью 22 мая в кухне начался пожар. Три недели назад я увеличила страховую сумму после покупки новой техники и мебели. Пожарные установили короткое замыкание в старой розетке. В момент возгорания меня не было дома. Прошу возместить подтверждённые 9000 евро.",
+    "en": "A fire broke out in my kitchen during the night of May 22. Three weeks earlier, I increased my coverage after buying new appliances and furniture. The fire brigade traced the cause to a short circuit in an old outlet. I was not home when the fire started. I am claiming the documented loss of €9,000."
+  },
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Ночью 22 мая в кухне начался пожар. Три недели назад я увеличила страховую сумму после покупки новой техники и мебели. Пожарные установили короткое замыкание в старой розетке. В момент возгорания меня не было дома. Прошу возместить подтверждённые 9000 евро.",
+        "en": "A fire broke out in my kitchen during the night of May 22. Three weeks earlier, I increased my coverage after buying new appliances and furniture. The fire brigade traced the cause to a short circuit in an old outlet. I was not home when the fire started. I am claiming the documented loss of €9,000."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_fire_accidental",
+      "text": {
+        "ru": "Пожар начался из-за случайного короткого замыкания в кухонной розетке.",
+        "en": "The fire was caused by an accidental short circuit in a kitchen outlet."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_absent_at_ignition",
+      "text": {
+        "ru": "Хелена отсутствовала в квартире в момент возгорания.",
+        "en": "Helena was away from the apartment when the fire started."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_damage_scope",
+      "text": {
+        "ru": "Подтверждённый ущерб кухне и гостиной составляет 9000 евро.",
+        "en": "The documented damage to the kitchen and living room totals €9,000."
+      },
+      "stampable": true
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-policy",
+      "order": 1,
+      "type": "document",
+      "title": {
+        "ru": "Дополнение к полису",
+        "en": "Policy Endorsement"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "За три недели до пожара Хелена увеличила лимит покрытия кухни с 5000 до 9000 евро. К заявлению на изменение полиса приложены чеки на новую вытяжку, духовой шкаф и кухонную мебель, купленные ещё раньше.",
+        "en": "Three weeks before the fire, Helena increased the kitchen coverage limit from €5,000 to €9,000. Her policy amendment included receipts for a new range hood, oven, and kitchen furniture purchased earlier."
+      },
+      "statusExplanation": {
+        "ru": "Время изменения полиса вызывает подозрение, но документы показывают объективную причину: стоимость имущества действительно выросла до пожара.",
+        "en": "The timing of the policy change is suspicious, but the documents provide an objective reason: the value of the insured property genuinely increased before the fire."
+      },
+      "statementLink": {
+        "statementId": "claim_damage_scope",
+        "relation": "supports",
+        "reason": {
+          "ru": "Время изменения полиса вызывает подозрение, но документы показывают объективную причину: стоимость имущества действительно выросла до пожара.",
+          "en": "The timing of the policy change is suspicious, but the documents provide an objective reason: the value of the insured property genuinely increased before the fire."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-fire-report",
+      "order": 2,
+      "type": "document",
+      "title": {
+        "ru": "Отчёт пожарной службы",
+        "en": "Fire Brigade Report"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Вызов зарегистрирован 22.05.2026 в 02:14. Очаг находился внутри кухонной розетки. Обнаружены оплавленные контакты и повреждение старой проводки. Следов горючей жидкости, нескольких очагов или умышленного поджога нет.",
+        "en": "The call was logged at 2:14 a.m. on May 22, 2026. The point of origin was inside a kitchen outlet, where investigators found melted contacts and deteriorated wiring. There were no traces of accelerant, multiple ignition points, or deliberate arson."
+      },
+      "statusExplanation": {
+        "ru": "Официальная экспертиза подтверждает короткое замыкание и не обнаруживает признаков поджога.",
+        "en": "The official examination confirms a short circuit and finds no evidence of arson."
+      },
+      "statementLink": {
+        "statementId": "claim_fire_accidental",
+        "relation": "supports",
+        "reason": {
+          "ru": "Официальная экспертиза подтверждает короткое замыкание и не обнаруживает признаков поджога.",
+          "en": "The official examination confirms a short circuit and finds no evidence of arson."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-entry-camera",
+      "order": 3,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Запись камеры подъезда",
+        "en": "Building Entrance Camera"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Камера фиксирует, как Хелена покидает дом в 20:18 предыдущего вечера и возвращается только в 02:31 вместе с пожарными. Между этими событиями к квартире никто не поднимался.",
+        "en": "The camera shows Helena leaving the building at 8:18 p.m. the previous evening and returning only at 2:31 a.m. with the firefighters. No one went up to the apartment in between."
+      },
+      "statusExplanation": {
+        "ru": "Запись подтверждает отсутствие заявительницы в момент возгорания и не показывает посторонних, способных устроить поджог.",
+        "en": "The footage confirms that the claimant was away when the fire began and shows no outsider entering to start it."
+      },
+      "statementLink": {
+        "statementId": "claim_absent_at_ignition",
+        "relation": "supports",
+        "reason": {
+          "ru": "Запись подтверждает отсутствие заявительницы в момент возгорания и не показывает посторонних, способных устроить поджог.",
+          "en": "The footage confirms that the claimant was away when the fire began and shows no outsider entering to start it."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Увеличение покрытия объясняется покупками, совершёнными до пожара, и подтверждается чеками.",
+      "Очаг находился внутри старой розетки; следов ускорителя, второго очага и вмешательства нет.",
+      "Камера подтверждает отсутствие Хелены, а сумма соответствует реально приобретённому имуществу.",
+      "Ни одно проверяемое утверждение не опровергнуто. Выплату следует одобрить."
+    ],
+    "en": [
+      "The timing of the policy change is suspicious, but the documents provide an objective reason: the value of the insured property genuinely increased before the fire.",
+      "The official examination confirms a short circuit and finds no evidence of arson.",
+      "The footage confirms that the claimant was away when the fire began and shows no outsider entering to start it.",
+      "No material statement has been disproven. The claim should be approved."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Внедрить каноническую постановку из первого акта «Архив №17».",
+      "Сохранить стабильный ID и новый campaignOrder."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order."
+    ]
+  },
+  "assetPlan": [],
+  "interactiveEvidenceCount": 0,
+  "targetPlaytimeSeconds": 120,
+  "onboarding": {
+    "phase": "anti_bias",
+    "targetDurationSeconds": 120,
+    "teaches": [
+      "suspicion_is_not_contradiction",
+      "approve_without_stamp",
+      "evidence_supports_claim"
+    ],
+    "successEmotion": "Я не дал подозрению заменить доказательство",
+    "menuUnlockAfterVerdict": false,
+    "successEmotionEn": "I did not let suspicion replace evidence"
+  },
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-009",
+    "archiveBasePath": "generated-assets/src/data/cases/case-009",
+    "claimantPortrait": null,
+    "claimantPortraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/helena.webp",
+      "existingFile": "public/people/helena.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": []
+  }
+}

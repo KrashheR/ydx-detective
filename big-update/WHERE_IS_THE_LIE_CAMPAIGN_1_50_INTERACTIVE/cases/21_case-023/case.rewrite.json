@@ -1,0 +1,394 @@
+{
+  "id": "case-023",
+  "campaignOrder": 21,
+  "requiredLevel": 11,
+  "act": 3,
+  "actTitle": {
+    "ru": "Восточный двор",
+    "en": "Eastern Yard"
+  },
+  "title": {
+    "ru": "Карта, оставшаяся дома",
+    "en": "The Card Left at Home"
+  },
+  "difficulty": "medium",
+  "claimAmount": {
+    "value": 3500,
+    "currency": "EUR"
+  },
+  "groundTruth": "fraud",
+  "correctDecision": "reject",
+  "investigationBudget": 3,
+  "claimant": {
+    "name": {
+      "ru": "Рустам Назаров, 38 лет",
+      "en": "Rustam Nazarov, age 38"
+    },
+    "migrationNote": {
+      "ru": "Сохранить данные и портрет.",
+      "en": "Keep the existing profile data and portrait."
+    },
+    "portrait": {
+      "characterId": "rustam-nazarov",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Рустам Назаров",
+        "en": "Rustam Nazarov, age 38"
+      },
+      "assetId": "asset-029",
+      "src": "src/data/cases/case-023/people/rustam-nazarov.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-023/people/rustam-nazarov.webp",
+      "caseRelativeSrc": "people/rustam-nazarov.webp",
+      "installTo": "public/people/rustam-nazarov.webp",
+      "legacyRuntimeUrl": "people/rustam-nazarov.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "93e05ac2998533e2649768edc828b8dc5f9c1e8b29025f2408eddd3f8f73cb1c"
+    },
+    "portraitStatus": "generated_replacement_included",
+    "portraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/rustam-nazarov.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-023/people/rustam-nazarov.webp",
+      "copyTo": "public/people/rustam-nazarov.webp",
+      "replacesExistingValue": "people/rustam.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Билет подтверждает поездку человека, но не поездку его банковской карты. Отслеживайте предмет отдельно от владельца. — В. Лебедева",
+      "en": "A ticket proves that a person traveled, not that their bank card traveled with them. Track the object separately from its owner. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Карелин любил повторять: «Проверяйте не алиби человека, а маршрут имущества». Неприятно признавать, что совет всё ещё хорош.",
+      "en": "Karelin liked to say, ‘Check the route of the property, not the owner's alibi.’ It is unpleasant to admit that the advice is still sound."
+    },
+    "nextCaseTeaser": {
+      "ru": "Следующее ДТП выглядит слишком простым. Оно и есть простое — если не перепутать отсутствие загадки с отсутствием проверки.",
+      "en": "The next traffic accident looks almost too simple. It is simple—provided you do not mistake the absence of a mystery for the absence of verification."
+    },
+    "seasonClue": null,
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Во время отпуска за границей у меня украли карту и сняли с неё 3500 евро. В России меня не было, операции я не совершал и никому карту не передавал. Прошу вернуть похищенные средства.",
+    "en": "While I was on vacation abroad, my card was stolen and €3,500 was withdrawn from it. I was not in Russia, did not make the transactions, and never gave the card to anyone. I am claiming reimbursement of the stolen funds."
+  },
+  "evidence": [
+    {
+      "id": "ev-travel",
+      "order": 1,
+      "type": "document",
+      "title": {
+        "ru": "Билеты и пограничные отметки",
+        "en": "Tickets and Border Records"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Назаров действительно находился за границей с 10 по 17 марта.",
+        "en": "Nazarov was indeed abroad from March 10 to March 17."
+      },
+      "statusExplanation": {
+        "ru": "Поездка подтверждена, но документы не устанавливают местонахождение карты.",
+        "en": "The trip is confirmed, but the documents do not establish where the card was."
+      },
+      "statementLink": {
+        "statementId": "claim_card_stolen",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Поездка подтверждена, но документы не устанавливают местонахождение карты.",
+          "en": "The trip is confirmed, but the documents do not establish where the card was."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-bank",
+      "order": 2,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Банковская выписка",
+        "en": "Bank Statement"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "Два снятия выполнены 12 марта в банкомате в 250 метрах от дома физическим чипом и ПИН-кодом. Ещё 1000 евро переведены на второй счёт Назарова.",
+        "en": "Two withdrawals were made on March 12 at an ATM 250 meters from Nazarov's home using the physical chip and PIN. Another €1,000 was transferred to Nazarov's second account."
+      },
+      "statusExplanation": {
+        "ru": "Операции совершены оригинальной картой, а часть денег заявитель перевёл самому себе.",
+        "en": "The transactions used the original card, and part of the money was transferred back to the claimant."
+      },
+      "statementLink": {
+        "statementId": "claim_money_lost",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Операции совершены оригинальной картой, а часть денег заявитель перевёл самому себе.",
+          "en": "The transactions used the original card, and part of the money was transferred back to the claimant."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_money_lost",
+        "reason": {
+          "ru": "Операции совершены оригинальной картой, а часть денег заявитель перевёл самому себе.",
+          "en": "The transactions used the original card, and part of the money was transferred back to the claimant."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-doorcam",
+      "order": 3,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера у дома",
+        "en": "Camera Outside the House"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "За вечер до вылета Назаров передаёт двоюродному брату конверт и отдельно диктует четыре цифры. Брат позже опознан на камере банкомата по куртке и часам.",
+        "en": "The evening before his flight, Nazarov hands his cousin an envelope and separately dictates four digits. The cousin is later identified on the ATM camera by his jacket and watch."
+      },
+      "statusExplanation": {
+        "ru": "Заявитель добровольно оставил карту и ПИН сообщнику до поездки.",
+        "en": "The claimant deliberately left the card and PIN with an accomplice before traveling."
+      },
+      "statementLink": {
+        "statementId": "claim_no_access",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Заявитель добровольно оставил карту и ПИН сообщнику до поездки.",
+          "en": "The claimant deliberately left the card and PIN with an accomplice before traveling."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_no_access",
+        "reason": {
+          "ru": "Заявитель добровольно оставил карту и ПИН сообщнику до поездки.",
+          "en": "The claimant deliberately left the card and PIN with an accomplice before traveling."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-030",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-023/evidence/case-023-ev-doorcam.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-023/evidence/case-023-ev-doorcam.webp",
+          "caseRelativeSrc": "evidence/case-023-ev-doorcam.webp",
+          "installTo": "public/evidence/case-023-ev-doorcam.webp",
+          "legacyRuntimeUrl": "evidence/case-023-ev-doorcam.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "dd960be7aa5268cf65838855787cc392b7552bcbf43f43e39c3d3f74df0e71b6"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-023/evidence/case-023-ev-doorcam.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-023/evidence/case-023-ev-doorcam.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-023-ev-doorcam.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-023/evidence/case-023-ev-doorcam.webp",
+        "copyTo": "public/evidence/case-023-ev-doorcam.webp"
+      }
+    },
+    {
+      "id": "ev-transfer",
+      "order": 4,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Платёж за услугу",
+        "en": "Payment for Assistance"
+      },
+      "isContradiction": true,
+      "narrativeRole": "motive",
+      "text": {
+        "ru": "После возвращения Назаров переводит брату 300 евро с пометкой «за помощь». В переписке обсуждается доля после страхового возврата.",
+        "en": "After returning, Nazarov transfers €300 to his cousin with the note ‘for helping.’ Their messages discuss a share of the insurance reimbursement."
+      },
+      "statusExplanation": {
+        "ru": "Перевод и переписка подтверждают сговор, а не кражу.",
+        "en": "The transfer and messages prove collusion, not theft."
+      },
+      "statementLink": {
+        "statementId": "claim_card_stolen",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Перевод и переписка подтверждают сговор, а не кражу.",
+          "en": "The transfer and messages prove collusion, not theft."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_card_stolen",
+        "reason": {
+          "ru": "Перевод и переписка подтверждают сговор, а не кражу.",
+          "en": "The transfer and messages prove collusion, not theft."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Назаров действительно был за границей.",
+      "Карту и ПИН он заранее передал сообщнику, который снял деньги рядом с его домом.",
+      "Часть суммы вернулась на собственный счёт заявителя. Это согласованная инсценировка, выплату следует отклонить."
+    ],
+    "en": [
+      "The transactions used the original card, and part of the money was transferred back to the claimant.",
+      "The claimant deliberately left the card and PIN with an accomplice before traveling.",
+      "The transfer and messages prove collusion, not theft.",
+      "The trip is confirmed, but the documents do not establish where the card was.",
+      "The claim is fraudulent and should be rejected."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Сделать поездку правдивой частью легенды.",
+      "Добавить передачу карты сообщнику вместо невозможного клонирования чипа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "people/rustam-nazarov.webp",
+      "action": "generate",
+      "prompt": "Illustrated archival claimant ID portrait matching the existing insurance detective game: Bashkir or Tatar male, 38 years old, short dark hair, travel-casual jacket, controlled but slightly evasive expression, neutral document-photo background, original face distinct from all other claimants, no logos, no text, no watermark."
+    },
+    {
+      "file": "evidence/case-023-ev-doorcam.webp",
+      "action": "generate",
+      "prompt": "Evening smart doorbell security frame outside an apartment entrance: one adult man discreetly handing a small plain envelope to another adult man, both dressed normally, faces not clearly readable, realistic residential lighting, documentary CCTV compression, no text, no logos, no watermark."
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Во время отпуска за границей у меня украли карту и сняли с неё 3500 евро. В России меня не было, операции я не совершал и никому карту не передавал. Прошу вернуть похищенные средства.",
+        "en": "While I was on vacation abroad, my card was stolen and €3,500 was withdrawn from it. I was not in Russia, did not make the transactions, and never gave the card to anyone. I am claiming reimbursement of the stolen funds."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_card_stolen",
+      "text": {
+        "ru": "Банковская карта была похищена без согласия Назарова.",
+        "en": "The bank card was stolen without Nazarov's consent."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_no_access",
+      "text": {
+        "ru": "Заявитель не передавал никому карту и ПИН.",
+        "en": "The claimant gave neither the card nor the PIN to anyone."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_money_lost",
+      "text": {
+        "ru": "Снятые средства не возвращались заявителю.",
+        "en": "None of the withdrawn funds were returned to the claimant."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 0,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-023",
+    "archiveBasePath": "generated-assets/src/data/cases/case-023",
+    "claimantPortrait": {
+      "characterId": "rustam-nazarov",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Рустам Назаров",
+        "en": "Rustam Nazarov, age 38"
+      },
+      "assetId": "asset-029",
+      "src": "src/data/cases/case-023/people/rustam-nazarov.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-023/people/rustam-nazarov.webp",
+      "caseRelativeSrc": "people/rustam-nazarov.webp",
+      "installTo": "public/people/rustam-nazarov.webp",
+      "legacyRuntimeUrl": "people/rustam-nazarov.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "93e05ac2998533e2649768edc828b8dc5f9c1e8b29025f2408eddd3f8f73cb1c"
+    },
+    "claimantPortraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/rustam-nazarov.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-023/people/rustam-nazarov.webp",
+      "copyTo": "public/people/rustam-nazarov.webp",
+      "replacesExistingValue": "people/rustam.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-doorcam",
+        "title": {
+          "ru": "Камера у дома",
+          "en": "Camera Outside the House"
+        },
+        "primaryImage": "src/data/cases/case-023/evidence/case-023-ev-doorcam.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-023/evidence/case-023-ev-doorcam.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-023-ev-doorcam.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-023/evidence/case-023-ev-doorcam.webp",
+          "copyTo": "public/evidence/case-023-ev-doorcam.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-030",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-023/evidence/case-023-ev-doorcam.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-023/evidence/case-023-ev-doorcam.webp",
+            "caseRelativeSrc": "evidence/case-023-ev-doorcam.webp",
+            "installTo": "public/evidence/case-023-ev-doorcam.webp",
+            "legacyRuntimeUrl": "evidence/case-023-ev-doorcam.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "dd960be7aa5268cf65838855787cc392b7552bcbf43f43e39c3d3f74df0e71b6"
+          }
+        ]
+      }
+    ]
+  }
+}

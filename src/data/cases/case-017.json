@@ -1,289 +1,450 @@
 {
   "id": "case-017",
   "type": "standard",
-  "difficulty": "hard",
+  "campaignOrder": 19,
+  "requiredLevel": 10,
+  "act": 2,
+  "actTitle": {
+    "ru": "Пять лет назад",
+    "en": "Five Years Earlier",
+    "tr": "Five Years Earlier",
+    "ar": "Five Years Earlier",
+    "kk": "Пять лет назад"
+  },
+  "difficulty": "medium",
   "claimAmount": 2400,
   "truth": "valid",
   "title": {
-    "ru": "Микроволновка-поджигатель",
-    "en": "The Arsonist Microwave",
-    "tr": "Kundakçı Mikrodalga",
-    "ar": "الميكروويف المُشعِل للحريق",
-    "kk": "Өрт қойған қысқа толқынды пеш"
+    "ru": "Ботинок на 800 ватт",
+    "en": "An 800-Watt Shoe",
+    "tr": "An 800-Watt Shoe",
+    "ar": "An 800-Watt Shoe",
+    "kk": "Ботинок на 800 ватт"
   },
   "claim": {
     "person": {
       "ru": "Анатолий Степанович, 71 год",
-      "en": "Anatoly Stepanovich, 71",
-      "tr": "Anatoly Stepanovich, 71",
-      "ar": "أناتولي ستيبانوفيتش، 71",
-      "kk": "Анатолий Степанович, 71 жаста"
+      "en": "Anatoly Stepanovich, age 71",
+      "tr": "Anatoly Stepanovich, age 71",
+      "ar": "Anatoly Stepanovich, age 71",
+      "kk": "Анатолий Степанович, 71 год"
     },
     "story": {
-      "ru": "Настоящим довожу до вашего сведения о внештатном происшествии. В ночь на 14 марта моя умная микроволновая печь самопроизвольно открыла дверцу, поместила внутрь один кожаный ботинок и запекла его на мощности 800 Вт. Впоследствии голосовой помощник оформил заказ на 20 кг отборных грецких орехов, после чего произошло короткое замыкание и возгорание кухни. Прошу возместить причинённый ущерб согласно полису.",
-      "en": "I hereby report an incidental event. On the night of 14 March, my smart microwave oven opened its door of its own accord, placed a single leather shoe inside, and baked it at 800 watts. Subsequently, the voice assistant placed an order for 20 kg of premium walnuts, after which a short circuit occurred and the kitchen caught fire. I request compensation for the subsequent damage in accordance with the policy.",
-      "tr": "İşbu belgeyle olağan dışı bir olayı bilgilerinize sunarım. 14 Mart gecesi akıllı mikrodalga fırınım kapağını kendiliğinden açtı, içine tek bir deri ayakkabı yerleştirdi ve onu 800 watt güçte pişirdi. Akabinde sesli asistan 20 kg seçkin ceviz siparişi verdi, ardından kısa devre meydana geldi ve mutfak tutuştu. Poliçe uyarınca oluşan zararın tazmin edilmesini talep ederim.",
-      "ar": "أُبلغكم بموجب هذا عن واقعة عارضة. في ليلة الرابع عشر من مارس، فتح فرن الميكروويف الذكي بابه من تلقاء نفسه، ووضع بداخله حذاءً جلدياً واحداً، وشواه بقدرة 800 واط. وبعد ذلك، قام المساعد الصوتي بطلب 20 كيلوغراماً من الجوز الفاخر، ثم حدث ماس كهربائي واشتعلت النار في المطبخ. أطلب تعويض الضرر اللاحق وفقاً للوثيقة.",
-      "kk": "Осы арқылы штаттан тыс оқиға туралы хабарлаймын. 14 наурызға қараған түні менің ақылды қысқа толқынды пешім есігін өздігінен ашып, ішіне бір былғары етік салып, оны 800 Вт қуатпен пісірді. Кейіннен дауыстық көмекші 20 кг іріктелген грек жаңғағына тапсырыс берді, содан соң қысқа тұйықталу болып, ас үй өртеніп кетті. Полис бойынша келтірілген зиянды өтеуді сұраймын."
+      "ru": "Ночью на кухне произошло короткое замыкание и возгорание. В микроволновой печи обнаружен обугленный ботинок, на панели — следы лап. В ту же минуту голосовой помощник оформил заказ на двадцать килограммов орехов. Я не знаю, как это произошло, и прошу возместить ущерб кухне.",
+      "en": "During the night, a short circuit caused a kitchen fire. A charred shoe was found inside the microwave, with paw prints on the control panel. At the same moment, the voice assistant ordered twenty kilograms of nuts. I do not know how this happened and am claiming the kitchen damage.",
+      "tr": "During the night, a short circuit caused a kitchen fire. A charred shoe was found inside the microwave, with paw prints on the control panel. At the same moment, the voice assistant ordered twenty kilograms of nuts. I do not know how this happened and am claiming the kitchen damage.",
+      "ar": "During the night, a short circuit caused a kitchen fire. A charred shoe was found inside the microwave, with paw prints on the control panel. At the same moment, the voice assistant ordered twenty kilograms of nuts. I do not know how this happened and am claiming the kitchen damage.",
+      "kk": "Ночью на кухне произошло короткое замыкание и возгорание. В микроволновой печи обнаружен обугленный ботинок, на панели — следы лап. В ту же минуту голосовой помощник оформил заказ на двадцать килограммов орехов. Я не знаю, как это произошло, и прошу возместить ущерб кухне."
     }
   },
-  "coverImage": "covers/case-017.svg",
-  "personImage": "people/anatoly.webp",
   "client": {
     "role": {
-      "ru": "Заявитель · физ. лицо",
-      "en": "Claimant · individual",
-      "tr": "Başvuru sahibi · gerçek kişi",
-      "ar": "مقدم الطلب · شخص طبيعي",
-      "kk": "Өтініш беруші · жеке тұлға"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Возраст",
-          "en": "Age",
-          "tr": "Yaş",
-          "ar": "العمر",
-          "kk": "Жасы"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "71 год",
-          "en": "71 years old",
-          "tr": "71 yaşında",
-          "ar": "71 عامًا",
-          "kk": "71 жаста"
+          "ru": "2",
+          "en": "2",
+          "tr": "2",
+          "ar": "2",
+          "kk": "2"
         }
       },
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Воронеж",
-          "en": "Voronezh",
-          "tr": "Voronej",
-          "ar": "فورونيج",
-          "kk": "Воронеж"
-        }
-      },
-      {
-        "k": {
-          "ru": "Клиент с",
-          "en": "Client since",
-          "tr": "Müşteri",
-          "ar": "عميل منذ",
-          "kk": "Клиент"
-        },
-        "v": {
-          "ru": "2012 г.",
-          "en": "2012",
-          "tr": "2012",
-          "ar": "2012",
-          "kk": "2012 ж."
-        }
-      },
-      {
-        "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
-        },
-        "v": {
-          "ru": "Имущество · ИМ-17212895-X3",
-          "en": "Property · IM-17212895-X3",
-          "tr": "Mülk · IM-17212895-X3",
-          "ar": "الممتلكات · IM-17212895-X3",
-          "kk": "Мүлік · ИМ-17212895-X3"
-        }
-      },
-      {
-        "k": {
-          "ru": "Документ",
-          "en": "Document",
-          "tr": "Belge",
-          "ar": "الوثيقة",
-          "kk": "Құжат"
-        },
-        "v": {
-          "ru": "Паспорт 3609-71 №172128951-83",
-          "en": "Passport 3609-71 №172128951-83",
-          "tr": "Pasaport 3609-71 №172128951-83",
-          "ar": "جواز السفر 3609-71 №172128951-83",
-          "kk": "Паспорт 3609-71 №172128951-83"
+          "ru": "19",
+          "en": "19",
+          "tr": "19",
+          "ar": "19",
+          "kk": "19"
         }
       }
     ]
   },
+  "coverImage": "covers/case-017.svg",
+  "personImage": "people/anatoly.webp",
   "evidences": [
     {
       "id": "ev-vet",
+      "order": 1,
       "type": "document",
       "title": {
         "ru": "Счёт ветеринарной клиники",
-        "en": "Veterinary Clinic Bill",
-        "tr": "Veteriner Kliniği Faturası",
-        "ar": "فاتورة العيادة البيطرية",
-        "kk": "Ветеринарлық клиника шоты"
+        "en": "Veterinary Clinic Invoice",
+        "tr": "Veterinary Clinic Invoice",
+        "ar": "Veterinary Clinic Invoice",
+        "kk": "Счёт ветеринарной клиники"
       },
       "content": {
-        "ru": "Енот по кличке Жорик доставлен ночью 14 марта с опалёнными усами и лёгким ожогом задней части. От шерсти исходит запах жжёного грецкого ореха и палёной кожи.",
-        "en": "A raccoon named Zhorik was admitted on the night of 14 March with singed whiskers and a minor burn to his rear. His fur smells of scorched walnut and burnt leather.",
-        "tr": "Zhorik adlı rakun, 14 Mart gecesi yanmış bıyıkları ve arka kısmında hafif bir yanıkla getirildi. Tüyleri yanık ceviz ve yanık deri kokuyor.",
-        "ar": "أُدخل راكون يُدعى جوريك ليلة الرابع عشر من مارس وله شوارب محترقة وحرق طفيف في مؤخرته. تفوح من فرائه رائحة الجوز المحروق والجلد المحترق.",
-        "kk": "Жорик атты енот 14 наурыз түні күйген мұрты мен артқы жағындағы жеңіл күйікпен әкелінді. Жүнінен күйген грек жаңғағы мен күйген былғары иісі шығады."
+        "ru": "Жорик доставлен ночью с опалёнными усами и лёгким ожогом. На шерсти обнаружены частицы кожи и скорлупы грецкого ореха.",
+        "en": "Zhorik was brought in during the night with singed whiskers and a minor burn. Leather particles and walnut-shell fragments were found in his fur.",
+        "tr": "Zhorik was brought in during the night with singed whiskers and a minor burn. Leather particles and walnut-shell fragments were found in his fur.",
+        "ar": "Zhorik was brought in during the night with singed whiskers and a minor burn. Leather particles and walnut-shell fragments were found in his fur.",
+        "kk": "Жорик доставлен ночью с опалёнными усами и лёгким ожогом. На шерсти обнаружены частицы кожи и скорлупы грецкого ореха."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Травмы енота совпадают с описанным возгоранием и не противоречат делу.",
-        "en": "The raccoon's injuries match the described fire and do not contradict the case.",
-        "tr": "Rakunun yaralanmaları tarif edilen yangınla örtüşüyor ve davayla çelişmiyor.",
-        "ar": "إصابات الراكون تتطابق مع الحريق الموصوف ولا تتعارض مع القضية.",
-        "kk": "Еноттың жарақаттары сипатталған өртпен сәйкес келеді әрі іске қайшы емес."
-      }
+        "ru": "Следы на животном связывают Жорика с кухней и содержимым печи.",
+        "en": "The traces on the animal link Zhorik to the kitchen and the contents of the microwave.",
+        "tr": "The traces on the animal link Zhorik to the kitchen and the contents of the microwave.",
+        "ar": "The traces on the animal link Zhorik to the kitchen and the contents of the microwave.",
+        "kk": "Следы на животном связывают Жорика с кухней и содержимым печи."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_owner_not_involved",
+        "relation": "supports",
+        "reason": {
+          "ru": "Следы на животном связывают Жорика с кухней и содержимым печи.",
+          "en": "The traces on the animal link Zhorik to the kitchen and the contents of the microwave.",
+          "tr": "The traces on the animal link Zhorik to the kitchen and the contents of the microwave.",
+          "ar": "The traces on the animal link Zhorik to the kitchen and the contents of the microwave.",
+          "kk": "Следы на животном связывают Жорика с кухней и содержимым печи."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "ev-photo",
-      "type": "photo",
+      "order": 2,
+      "type": "thermal_scan",
       "title": {
-        "ru": "Фото места возгорания",
-        "en": "Fire Scene Photo",
-        "tr": "Yangın Yeri Fotoğrafı",
-        "ar": "صورة مكان الحريق",
-        "kk": "Өрт орнының суреті"
+        "ru": "Тепловой осмотр умной кухни",
+        "en": "Smart Kitchen Thermal Inspection",
+        "tr": "Smart Kitchen Thermal Inspection",
+        "ar": "Smart Kitchen Thermal Inspection",
+        "kk": "Тепловой осмотр умной кухни"
       },
       "content": {
-        "ru": "Внутри оплавленной микроволновой печи лежит обугленный кожаный ботинок. Дверца распахнута, стекло закопчено, на корпусе следы маленьких лап.",
-        "en": "A charred leather shoe lies inside the melted microwave. The door is flung open, the glass is sooty, and small paw marks streak the casing.",
-        "tr": "Erimiş mikrodalganın içinde kömürleşmiş bir deri ayakkabı duruyor. Kapak ardına kadar açık, cam isli ve gövdede küçük pati izleri var.",
-        "ar": "حذاء جلدي متفحم يرقد داخل الميكروويف المنصهر. الباب مفتوح على مصراعيه، والزجاج مغطى بالسخام، وعلى الهيكل آثار مخالب صغيرة.",
-        "kk": "Балқыған пештің ішінде көмірге айналған былғары етік жатыр. Есігі айқара ашық, шынысы күйеленген, корпуста кішкентай табан іздері бар."
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Фото наглядно подтверждает запечённый ботинок и оплавленную печь.",
-        "en": "The photo plainly confirms the baked shoe and the melted oven.",
-        "tr": "Fotoğraf, pişmiş ayakkabıyı ve erimiş fırını açıkça doğruluyor.",
-        "ar": "الصورة تؤكد بوضوح الحذاء المشوي والفرن المنصهر.",
-        "kk": "Сурет пісірілген етік пен балқыған пешті айқын растайды."
+        "ru": "Нагрет только компактный кухонный прибор и зажатая кнопка; дополнительных очагов или следов ускорителя нет.",
+        "en": "Only the compact kitchen appliance and a jammed button are hot; there are no secondary ignition points or traces of accelerant.",
+        "tr": "Only the compact kitchen appliance and a jammed button are hot; there are no secondary ignition points or traces of accelerant.",
+        "ar": "Only the compact kitchen appliance and a jammed button are hot; there are no secondary ignition points or traces of accelerant.",
+        "kk": "Нагрет только компактный кухонный прибор и зажатая кнопка; дополнительных очагов или следов ускорителя нет."
       },
-      "meta": {
-        "filename": "IMG_20260314_021903.jpg",
-        "imageUrl": "evidence/case-017-ev-photo.jpg"
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_event",
+        "relation": "supports",
+        "reason": {
+          "ru": "Нагрет только компактный кухонный прибор и зажатая кнопка; дополнительных очагов или следов ускорителя нет.",
+          "en": "Only the compact kitchen appliance and a jammed button are hot; there are no secondary ignition points or traces of accelerant.",
+          "tr": "Only the compact kitchen appliance and a jammed button are hot; there are no secondary ignition points or traces of accelerant.",
+          "ar": "Only the compact kitchen appliance and a jammed button are hot; there are no secondary ignition points or traces of accelerant.",
+          "kk": "Нагрет только компактный кухонный прибор и зажатая кнопка; дополнительных очагов или следов ускорителя нет."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "Осмотр проведён через девять минут после срабатывания пожарной автоматики.",
+        "en": "The inspection took place nine minutes after the fire alarm activated.",
+        "tr": "The inspection took place nine minutes after the fire alarm activated.",
+        "ar": "The inspection took place nine minutes after the fire alarm activated.",
+        "kk": "Осмотр проведён через девять минут после срабатывания пожарной автоматики."
+      },
+      "instruction": {
+        "ru": "Включить тепловизор и найти источник 800-ваттной нагрузки.",
+        "en": "Switch on thermal view and locate the source of the 800-watt load.",
+        "tr": "Switch on thermal view and locate the source of the 800-watt load.",
+        "ar": "Switch on thermal view and locate the source of the 800-watt load.",
+        "kk": "Включить тепловизор и найти источник 800-ваттной нагрузки."
+      },
+      "previousType": "photo",
+      "assets": {
+        "asset1": "cases/case-017/assets/interactive/ev-photo-scene.webp",
+        "asset2": "cases/case-017/assets/interactive/ev-photo-heat-zones.json"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Игрок видит, что нагреватель действительно работал, но тепловая картина не указывает на заранее подготовленный поджог.",
+          "en": "The player sees that the heating element was active, while the thermal pattern shows no sign of a prepared arson.",
+          "tr": "The player sees that the heating element was active, while the thermal pattern shows no sign of a prepared arson.",
+          "ar": "The player sees that the heating element was active, while the thermal pattern shows no sign of a prepared arson.",
+          "kk": "Игрок видит, что нагреватель действительно работал, но тепловая картина не указывает на заранее подготовленный поджог."
+        },
+        "playerAction": {
+          "ru": "Включить тепловизор и найти источник 800-ваттной нагрузки.",
+          "en": "Switch on thermal view and locate the source of the 800-watt load.",
+          "tr": "Switch on thermal view and locate the source of the 800-watt load.",
+          "ar": "Switch on thermal view and locate the source of the 800-watt load.",
+          "kk": "Включить тепловизор и найти источник 800-ваттной нагрузки."
+        },
+        "conclusion": {
+          "ru": "Нагрет только компактный кухонный прибор и зажатая кнопка; дополнительных очагов или следов ускорителя нет.",
+          "en": "Only the compact kitchen appliance and a jammed button are hot; there are no secondary ignition points or traces of accelerant.",
+          "tr": "Only the compact kitchen appliance and a jammed button are hot; there are no secondary ignition points or traces of accelerant.",
+          "ar": "Only the compact kitchen appliance and a jammed button are hot; there are no secondary ignition points or traces of accelerant.",
+          "kk": "Нагрет только компактный кухонный прибор и зажатая кнопка; дополнительных очагов или следов ускорителя нет."
+        }
+      },
+      "data": {
+        "ambientTemperature": 19,
+        "observationTime": "03:58",
+        "claimedLastUseBefore": "03:49",
+        "elapsedSinceClaimedUseMinutes": 9,
+        "coolingReference": "Через девять минут локальный источник сохраняет рабочее тепло; отсутствие других горячих зон исключает второй очаг.",
+        "initialMode": "normal",
+        "heatZones": [
+          {
+            "id": "appliance",
+            "shape": "ellipse",
+            "x": 53,
+            "y": 54,
+            "width": 20,
+            "height": 18,
+            "temperature": 61,
+            "intensity": 0.95,
+            "label": "Недавно работавший нагреватель",
+            "isContradiction": false,
+            "labelEn": "Recently active heating element"
+          }
+        ],
+        "successCondition": {
+          "type": "select_any",
+          "zoneIds": [
+            "appliance"
+          ]
+        },
+        "coolingReferenceEn": "After nine minutes, the local source retains operating heat; the absence of other hot zones rules out a second ignition point."
       }
     },
     {
       "id": "ev-speaker",
+      "order": 3,
       "type": "usage_log",
       "title": {
-        "ru": "Журнал умной колонки",
-        "en": "Smart Speaker Log",
-        "tr": "Akıllı Hoparlör Kaydı",
-        "ar": "سجل مكبر الصوت الذكي",
-        "kk": "Ақылды колонка журналы"
+        "ru": "Журнал умной кухни",
+        "en": "Smart Kitchen Log",
+        "tr": "Smart Kitchen Log",
+        "ar": "Smart Kitchen Log",
+        "kk": "Журнал умной кухни"
       },
       "content": {
-        "ru": [
-          "02:13:47 — Кнопка быстрого старта: запуск печи, мощность 800 Вт",
-          "02:14:09 — Распознана голосовая команда: «Крррр-цок-щёлк»",
-          "02:14:11 — Оформлен заказ: грецкий орех отборный, 20 кг",
-          "02:16:32 — Скачок тока: короткое замыкание, линия обесточена"
-        ],
-        "en": [
-          "02:13:47 — Quick-start button: oven started, power 800 W",
-          "02:14:09 — Voice command recognized: \"Krrr-squeak-click\"",
-          "02:14:11 — Order placed: premium walnuts, 20 kg",
-          "02:16:32 — Current spike: short circuit, line de-energized"
-        ],
-        "tr": [
-          "02:13:47 — Hızlı başlat düğmesi: fırın çalıştı, güç 800 W",
-          "02:14:09 — Sesli komut tanındı: \"Krrr-cıyak-tık\"",
-          "02:14:11 — Sipariş verildi: seçkin ceviz, 20 kg",
-          "02:16:32 — Akım sıçraması: kısa devre, hat enerjisiz kaldı"
-        ],
-        "ar": [
-          "02:13:47 — زر التشغيل السريع: بدأ الفرن، القدرة 800 واط",
-          "02:14:09 — تم التعرف على أمر صوتي: «كرررر-صرير-طقطقة»",
-          "02:14:11 — تم تقديم طلب: جوز فاخر، 20 كيلوغراماً",
-          "02:16:32 — ارتفاع مفاجئ في التيار: ماس كهربائي، انقطع الخط"
-        ],
-        "kk": [
-          "02:13:47 — Жылдам іске қосу түймесі: пеш қосылды, қуат 800 Вт",
-          "02:14:09 — Дауыстық команда танылды: «Крррр-шиқ-шырт»",
-          "02:14:11 — Тапсырыс берілді: іріктелген грек жаңғағы, 20 кг",
-          "02:16:32 — Ток секірісі: қысқа тұйықталу, желі сөнді"
-        ]
+        "ru": "02:13:47 — нажат быстрый старт 800 Вт; 02:14:09 — распознаны щелчки и шум; 02:14:11 — ошибочно оформлен заказ орехов; 02:16:32 — линия обесточена после замыкания.",
+        "en": "2:13:47 a.m.—800 W quick-start pressed; 2:14:09 a.m.—clicking and noise detected; 2:14:11 a.m.—nut order placed in error; 2:16:32 a.m.—circuit disconnected after short circuit.",
+        "tr": "2:13:47 a.m.—800 W quick-start pressed; 2:14:09 a.m.—clicking and noise detected; 2:14:11 a.m.—nut order placed in error; 2:16:32 a.m.—circuit disconnected after short circuit.",
+        "ar": "2:13:47 a.m.—800 W quick-start pressed; 2:14:09 a.m.—clicking and noise detected; 2:14:11 a.m.—nut order placed in error; 2:16:32 a.m.—circuit disconnected after short circuit.",
+        "kk": "02:13:47 — нажат быстрый старт 800 Вт; 02:14:09 — распознаны щелчки и шум; 02:14:11 — ошибочно оформлен заказ орехов; 02:16:32 — линия обесточена после замыкания."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Журнал колонки по секундам подтверждает запуск печи, заказ орехов и замыкание — ровно как в заявлении.",
-        "en": "The speaker log confirms, second by second, the oven start, the walnut order, and the short circuit — exactly as claimed.",
-        "tr": "Hoparlör kaydı, fırının çalışmasını, ceviz siparişini ve kısa devreyi saniye saniye doğruluyor — tam da iddia edildiği gibi.",
-        "ar": "سجل المكبر يؤكد، ثانية بثانية، تشغيل الفرن وطلب الجوز والماس الكهربائي — تماماً كما ورد في الطلب.",
-        "kk": "Колонка журналы пештің қосылуын, жаңғаққа тапсырысты және қысқа тұйықталуды секунд сайын растайды — дәл өтініштегідей."
+        "ru": "Хронология техники совпадает с физическими следами.",
+        "en": "The device timeline matches the physical evidence.",
+        "tr": "The device timeline matches the physical evidence.",
+        "ar": "The device timeline matches the physical evidence.",
+        "kk": "Хронология техники совпадает с физическими следами."
       },
-      "meta": {
-        "logPrompt": "smarthome@kitchen:~$ tail -f /var/log/voice.log"
-      }
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_event",
+        "relation": "supports",
+        "reason": {
+          "ru": "Хронология техники совпадает с физическими следами.",
+          "en": "The device timeline matches the physical evidence.",
+          "tr": "The device timeline matches the physical evidence.",
+          "ar": "The device timeline matches the physical evidence.",
+          "kk": "Хронология техники совпадает с физическими следами."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
-      "id": "ev-fire",
-      "type": "document",
+      "id": "ev-yardcam",
+      "order": 4,
+      "type": "camera_recording",
       "title": {
-        "ru": "Заключение дознавателя",
-        "en": "Fire Inspector Report",
-        "tr": "Yangın Müfettişi Raporu",
-        "ar": "تقرير محقق الحرائق",
-        "kk": "Өрт тергеушісінің қорытындысы"
+        "ru": "Камера у кухонного окна",
+        "en": "Kitchen Window Camera",
+        "tr": "Kitchen Window Camera",
+        "ar": "Kitchen Window Camera",
+        "kk": "Камера у кухонного окна"
       },
       "content": {
-        "ru": "Очаг возгорания — микроволновая печь. Внутри обнаружен кожаный предмет, запекавшийся на максимальной мощности. Причина короткого замыкания — перегрузка линии. Следов поджога и горючих жидкостей не выявлено.",
-        "en": "The point of origin is the microwave oven. A leather object baked at maximum power was found inside. The short circuit was caused by line overload. No traces of arson or accelerants were found.",
-        "tr": "Yangının çıkış noktası mikrodalga fırındır. İçinde azami güçte pişmiş deri bir nesne bulundu. Kısa devre, hat aşırı yüklenmesinden kaynaklandı. Kundaklama veya yanıcı sıvı izine rastlanmadı.",
-        "ar": "بؤرة الحريق هي فرن الميكروويف. عُثر بداخله على جسم جلدي مشوي بأقصى قدرة. سبب الماس الكهربائي هو الحمل الزائد على الخط. لم يُعثر على آثار إشعال متعمد أو مواد مسرّعة للاشتعال.",
-        "kk": "Өрт ошағы — қысқа толқынды пеш. Ішінен ең жоғары қуатпен пісірілген былғары зат табылды. Қысқа тұйықталудың себебі — желінің асқын жүктемесі. Қасақана өрт пен жанғыш сұйықтық іздері анықталмады."
+        "ru": "Жорик затаскивает ботинок через приоткрытое окно, прячет его в микроволновке, разворачивается на панели и нажимает кнопку. Через минуту из окна появляется дым.",
+        "en": "Zhorik drags a shoe through the half-open window, hides it in the microwave, turns around on the control panel, and presses a button. Smoke appears at the window one minute later.",
+        "tr": "Zhorik drags a shoe through the half-open window, hides it in the microwave, turns around on the control panel, and presses a button. Smoke appears at the window one minute later.",
+        "ar": "Zhorik drags a shoe through the half-open window, hides it in the microwave, turns around on the control panel, and presses a button. Smoke appears at the window one minute later.",
+        "kk": "Жорик затаскивает ботинок через приоткрытое окно, прячет его в микроволновке, разворачивается на панели и нажимает кнопку. Через минуту из окна появляется дым."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Официальное заключение полностью совпадает с версией заявителя.",
-        "en": "The official report fully matches the claimant's account.",
-        "tr": "Resmi rapor, talep sahibinin anlatımıyla tamamen örtüşüyor.",
-        "ar": "التقرير الرسمي يتطابق تماماً مع رواية مقدم الطلب.",
-        "kk": "Ресми қорытынды өтініш берушінің нұсқасымен толық сәйкес келеді."
+        "ru": "Запись полностью восстанавливает случайную цепочку событий и исключает инсценировку владельцем.",
+        "en": "The footage reconstructs the entire accidental chain of events and rules out staging by the owner.",
+        "tr": "The footage reconstructs the entire accidental chain of events and rules out staging by the owner.",
+        "ar": "The footage reconstructs the entire accidental chain of events and rules out staging by the owner.",
+        "kk": "Запись полностью восстанавливает случайную цепочку событий и исключает инсценировку владельцем."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_owner_not_involved",
+        "relation": "supports",
+        "reason": {
+          "ru": "Запись полностью восстанавливает случайную цепочку событий и исключает инсценировку владельцем.",
+          "en": "The footage reconstructs the entire accidental chain of events and rules out staging by the owner.",
+          "tr": "The footage reconstructs the entire accidental chain of events and rules out staging by the owner.",
+          "ar": "The footage reconstructs the entire accidental chain of events and rules out staging by the owner.",
+          "kk": "Запись полностью восстанавливает случайную цепочку событий и исключает инсценировку владельцем."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5,
+      "meta": {
+        "imageUrl": "evidence/case-017-ev-yardcam.webp"
       }
     }
   ],
   "correctDecision": "approve",
   "explanation": {
     "ru": [
-      "История звучит абсурдно, но каждая улика её подтверждает.",
-      "На самом деле Жорик прятал краденый ботинок в микроволновке и своим пышным задом нажал кнопку быстрого старта.",
-      "Его болтовня «крррр-цок-щёлк» сработала как голосовая команда колонке. Противоречий нет — заявление подлинное, одобряем."
+      "Жорик спрятал найденный ботинок в микроволновке и случайно нажал быстрый старт.",
+      "Шум енота голосовой помощник ошибочно принял за команду заказа.",
+      "Нагрет только компактный кухонный прибор и зажатая кнопка; дополнительных очагов или следов ускорителя нет.",
+      "Возгорание и ущерб реальны, умысла владельца нет. Выплату следует одобрить."
     ],
     "en": [
-      "The story sounds absurd, but every piece of evidence supports it.",
-      "In reality, Zhorik was hiding a stolen shoe in the microwave and pressed the quick-start button with his ample bottom.",
-      "His chatter \"krrr-squeak-click\" registered as a voice command to the speaker. No contradictions — the claim is genuine, approve it."
+      "The traces on the animal link Zhorik to the kitchen and the contents of the microwave.",
+      "Only the compact kitchen appliance and a jammed button are hot; there are no secondary ignition points or traces of accelerant.",
+      "The device timeline matches the physical evidence.",
+      "The footage reconstructs the entire accidental chain of events and rules out staging by the owner.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "tr": [
-      "Hikâye saçma geliyor ama her kanıt onu destekliyor.",
-      "Gerçekte Zhorik, çalınmış bir ayakkabıyı mikrodalgada saklıyordu ve dolgun kıçıyla hızlı başlat düğmesine bastı.",
-      "Onun \"krrr-cıyak-tık\" gevezeliği hoparlöre sesli komut olarak algılandı. Çelişki yok — talep gerçek, onaylayın."
+      "The traces on the animal link Zhorik to the kitchen and the contents of the microwave.",
+      "Only the compact kitchen appliance and a jammed button are hot; there are no secondary ignition points or traces of accelerant.",
+      "The device timeline matches the physical evidence.",
+      "The footage reconstructs the entire accidental chain of events and rules out staging by the owner.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "ar": [
-      "تبدو القصة سخيفة، لكن كل دليل يدعمها.",
-      "في الحقيقة كان جوريك يخبئ حذاءً مسروقاً داخل الميكروويف وضغط زر التشغيل السريع بمؤخرته الممتلئة.",
-      "ثرثرته «كرررر-صرير-طقطقة» سُجّلت كأمر صوتي للمكبر. لا توجد تناقضات — المطالبة حقيقية، وافق عليها."
+      "The traces on the animal link Zhorik to the kitchen and the contents of the microwave.",
+      "Only the compact kitchen appliance and a jammed button are hot; there are no secondary ignition points or traces of accelerant.",
+      "The device timeline matches the physical evidence.",
+      "The footage reconstructs the entire accidental chain of events and rules out staging by the owner.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "kk": [
-      "Оқиға күлкілі естіледі, бірақ әрбір дәлел оны растайды.",
-      "Шын мәнінде Жорик ұрланған етікті пешке тығып жатып, толық артымен жылдам іске қосу түймесін басып қалды.",
-      "Оның «крррр-шиқ-шырт» деген сөзі колонкаға дауыстық команда ретінде қабылданды. Қайшылық жоқ — талап шынайы, мақұлдаңыз."
+      "Жорик спрятал найденный ботинок в микроволновке и случайно нажал быстрый старт.",
+      "Шум енота голосовой помощник ошибочно принял за команду заказа.",
+      "Нагрет только компактный кухонный прибор и зажатая кнопка; дополнительных очагов или следов ускорителя нет.",
+      "Возгорание и ущерб реальны, умысла владельца нет. Выплату следует одобрить."
     ]
+  },
+  "investigationBudget": 3,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Ночью на кухне произошло короткое замыкание и возгорание. В микроволновой печи обнаружен обугленный ботинок, на панели — следы лап. В ту же минуту голосовой помощник оформил заказ на двадцать килограммов орехов. Я не знаю, как это произошло, и прошу возместить ущерб кухне.",
+        "en": "During the night, a short circuit caused a kitchen fire. A charred shoe was found inside the microwave, with paw prints on the control panel. At the same moment, the voice assistant ordered twenty kilograms of nuts. I do not know how this happened and am claiming the kitchen damage.",
+        "tr": "During the night, a short circuit caused a kitchen fire. A charred shoe was found inside the microwave, with paw prints on the control panel. At the same moment, the voice assistant ordered twenty kilograms of nuts. I do not know how this happened and am claiming the kitchen damage.",
+        "ar": "During the night, a short circuit caused a kitchen fire. A charred shoe was found inside the microwave, with paw prints on the control panel. At the same moment, the voice assistant ordered twenty kilograms of nuts. I do not know how this happened and am claiming the kitchen damage.",
+        "kk": "Ночью на кухне произошло короткое замыкание и возгорание. В микроволновой печи обнаружен обугленный ботинок, на панели — следы лап. В ту же минуту голосовой помощник оформил заказ на двадцать килограммов орехов. Я не знаю, как это произошло, и прошу возместить ущерб кухне."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_event",
+      "text": {
+        "ru": "Кухонный прибор случайно включился и вызвал локальное возгорание.",
+        "en": "A kitchen appliance was activated accidentally and caused a localized fire.",
+        "tr": "A kitchen appliance was activated accidentally and caused a localized fire.",
+        "ar": "A kitchen appliance was activated accidentally and caused a localized fire.",
+        "kk": "Кухонный прибор случайно включился и вызвал локальное возгорание."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_owner_not_involved",
+      "text": {
+        "ru": "Анатолий Степанович не запускал прибор и не готовил инсценировку.",
+        "en": "Anatoly Stepanovich neither activated the appliance nor staged the incident.",
+        "tr": "Anatoly Stepanovich neither activated the appliance nor staged the incident.",
+        "ar": "Anatoly Stepanovich neither activated the appliance nor staged the incident.",
+        "kk": "Анатолий Степанович не запускал прибор и не готовил инсценировку."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_damage",
+      "text": {
+        "ru": "Возгорание причинило реальный покрываемый ущерб.",
+        "en": "The fire caused genuine covered damage.",
+        "tr": "The fire caused genuine covered damage.",
+        "ar": "The fire caused genuine covered damage.",
+        "kk": "Возгорание причинило реальный покрываемый ущерб."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Анатолий Степанович больше не обвиняет бытовую технику в самостоятельности. Это прогресс. Жорик — нет. — В. Лебедева",
+      "en": "Anatoly Stepanovich no longer accuses household appliances of acting on their own. That is progress. Zhorik is not. — V. Lebedeva",
+      "tr": "Anatoly Stepanovich no longer accuses household appliances of acting on their own. That is progress. Zhorik is not. — V. Lebedeva",
+      "ar": "Anatoly Stepanovich no longer accuses household appliances of acting on their own. That is progress. Zhorik is not. — V. Lebedeva",
+      "kk": "Анатолий Степанович больше не обвиняет бытовую технику в самостоятельности. Это прогресс. Жорик — нет. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Заказ орехов отменён. Ботинок опознан соседом. Папка Жорика стала толще ещё на четыре страницы.",
+      "en": "The nut order was canceled. A neighbor identified the shoe. Zhorik's file is now four pages thicker.",
+      "tr": "The nut order was canceled. A neighbor identified the shoe. Zhorik's file is now four pages thicker.",
+      "ar": "The nut order was canceled. A neighbor identified the shoe. Zhorik's file is now four pages thicker.",
+      "kk": "Заказ орехов отменён. Ботинок опознан соседом. Папка Жорика стала толще ещё на четыре страницы."
+    },
+    "nextCaseTeaser": {
+      "ru": "Последнее дело акта: ночной погром в мастерской, где хранился реестр старых страховых дел.",
+      "en": "The act ends with a nighttime break-in at a workshop that stored a registry of old insurance cases.",
+      "tr": "The act ends with a nighttime break-in at a workshop that stored a registry of old insurance cases.",
+      "ar": "The act ends with a nighttime break-in at a workshop that stored a registry of old insurance cases.",
+      "kk": "Последнее дело акта: ночной погром в мастерской, где хранился реестр старых страховых дел."
+    },
+    "seasonClue": null,
+    "epilogue": null
   }
 }

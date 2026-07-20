@@ -1,0 +1,90 @@
+{
+  "id": "photo-46",
+  "order": 1,
+  "type": "seal_match",
+  "title": {
+    "ru": "Сопоставление пломбы страховочной линии"
+  },
+  "isContradiction": true,
+  "narrativeRole": "suspicion",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Фрагменты не совпадают: на линии бытовая лента с серой краской, а не материал GC-17."
+  },
+  "previousType": "photo",
+  "description": {
+    "ru": "Разрезанный ярлык с линии сравнивается с образцом настоящей транспортной ленты GC-17."
+  },
+  "instruction": {
+    "ru": "Совместить края и защитный рисунок."
+  },
+  "assets": {
+    "asset1": "assets/interactive/photo-46-master-a.webp",
+    "asset2": "assets/interactive/photo-46-master-b.webp",
+    "asset3": "assets/interactive/photo-46-fragments.json"
+  },
+  "data": {
+    "movableFragment": "B",
+    "allowRotation": true,
+    "rotationStep": 3,
+    "initialTransform": {
+      "x": 72,
+      "y": 18,
+      "rotation": -14
+    },
+    "targetTransform": {
+      "x": 132,
+      "y": 48,
+      "rotation": 6
+    },
+    "tolerance": {
+      "position": 10,
+      "rotation": 5
+    },
+    "expectedMatch": false,
+    "sourceSeed": 444617,
+    "fragmentASeed": 444617,
+    "fragmentBSeed": 449811,
+    "comparisonMarkers": [
+      {
+        "id": "tear_pattern",
+        "label": "Нет совпадения сетки, клеевого слоя и линии разрыва"
+      }
+    ]
+  },
+  "statementLink": {
+    "statementId": "claim_gc17_sabotage",
+    "relation": "contradicts",
+    "reason": {
+      "ru": "Фрагменты не совпадают: на линии бытовая лента с серой краской, а не материал GC-17."
+    }
+  },
+  "contradictionTarget": {
+    "statementId": "claim_gc17_sabotage",
+    "reason": {
+      "ru": "Фрагменты не совпадают: на линии бытовая лента с серой краской, а не материал GC-17."
+    }
+  },
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true,
+    "transparencyMode": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Несовпадение разоблачает попытку свалить безопасную инсценировку на Серый конвой."
+    },
+    "playerAction": {
+      "ru": "Совместить края и защитный рисунок."
+    },
+    "conclusion": {
+      "ru": "Фрагменты не совпадают: на линии бытовая лента с серой краской, а не материал GC-17."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

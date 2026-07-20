@@ -1,0 +1,110 @@
+[
+  {
+    "file": "shared/surface/dust.webp",
+    "purpose": "Универсальная мягкая пыль",
+    "generatedBy": "frontend",
+    "resolution": "1024×1024 seamless",
+    "format": "WebP",
+    "transparency": true,
+    "recipe": "Многомасштабный Canvas noise тёплого серо-бежевого цвета, мягкие неоднородные alpha-пятна, бесшовный tile."
+  },
+  {
+    "file": "shared/surface/dust-heavy.webp",
+    "purpose": "Плотная старая пыль",
+    "generatedBy": "frontend",
+    "resolution": "1024×1024 seamless",
+    "format": "WebP",
+    "transparency": true,
+    "recipe": "Контрастный вариант dust с редкими крупными частицами, без заметного повторяющегося паттерна."
+  },
+  {
+    "file": "shared/surface/condensation.webp",
+    "purpose": "Конденсат на стекле",
+    "generatedBy": "frontend",
+    "resolution": "1024×1024 seamless",
+    "format": "WebP",
+    "transparency": true,
+    "recipe": "Полупрозрачный молочный слой с низкочастотным noise и редкими мягкими каплями, без готовых следов пальцев."
+  },
+  {
+    "file": "shared/surface/soot.webp",
+    "purpose": "Копоть",
+    "generatedBy": "frontend",
+    "resolution": "1024×1024 seamless",
+    "format": "WebP",
+    "transparency": true,
+    "recipe": "Чёрно-серый alpha noise с мягкими краями и локальными неоднородностями, не перекрывающий сцену полностью."
+  },
+  {
+    "file": "shared/surface/dirt.webp",
+    "purpose": "Засохшая грязь",
+    "generatedBy": "frontend",
+    "resolution": "1024×1024 seamless",
+    "format": "WebP",
+    "transparency": true,
+    "recipe": "Серо-коричневые полупрозрачные разводы и мелкая зернистость на alpha-канале, без направленных следов."
+  },
+  {
+    "file": "shared/surface/frost.webp",
+    "purpose": "Иней",
+    "generatedBy": "frontend",
+    "resolution": "1024×1024 seamless",
+    "format": "WebP",
+    "transparency": true,
+    "recipe": "Белый полупрозрачный fractal noise с мелкими кристаллическими краями, без запечённых царапин."
+  },
+  {
+    "file": "shared/surface/sand.webp",
+    "purpose": "Мелкий песок",
+    "generatedBy": "frontend",
+    "resolution": "1024×1024 seamless",
+    "format": "WebP",
+    "transparency": true,
+    "recipe": "Тёплая зернистая tile-текстура с мягкими вариациями плотности, без крупных камней."
+  },
+  {
+    "file": "shared/surface/powder-dark.webp",
+    "purpose": "Тёмный проявляющий порошок",
+    "generatedBy": "frontend",
+    "resolution": "1024×1024 seamless",
+    "format": "WebP",
+    "transparency": true,
+    "recipe": "Нейтральный тёмный мелкодисперсный noise для режима apply, прозрачный фон."
+  },
+  {
+    "file": "shared/surface/powder-light.webp",
+    "purpose": "Светлый проявляющий порошок",
+    "generatedBy": "frontend",
+    "resolution": "1024×1024 seamless",
+    "format": "WebP",
+    "transparency": true,
+    "recipe": "Нейтральный светлый мелкодисперсный noise для тёмных поверхностей, прозрачный фон."
+  },
+  {
+    "file": "shared/surface/brush-cursor.svg",
+    "purpose": "Кисть для пыли и песка",
+    "generatedBy": "frontend",
+    "resolution": "64×64 viewBox",
+    "format": "SVG",
+    "transparency": true,
+    "recipe": "Простой служебный курсор в бумажно-архивной стилистике, крупный читаемый силуэт, currentColor, без брендов и декоративной перегрузки."
+  },
+  {
+    "file": "shared/surface/cloth-cursor.svg",
+    "purpose": "Салфетка для грязи, копоти, инея и конденсата",
+    "generatedBy": "frontend",
+    "resolution": "64×64 viewBox",
+    "format": "SVG",
+    "transparency": true,
+    "recipe": "Простой служебный курсор в бумажно-архивной стилистике, крупный читаемый силуэт, currentColor, без брендов и декоративной перегрузки."
+  },
+  {
+    "file": "shared/surface/flashlight-cursor.svg",
+    "purpose": "Источник бокового света для будущего light_reveal",
+    "generatedBy": "frontend",
+    "resolution": "64×64 viewBox",
+    "format": "SVG",
+    "transparency": true,
+    "recipe": "Простой служебный курсор в бумажно-архивной стилистике, крупный читаемый силуэт, currentColor, без брендов и декоративной перегрузки."
+  }
+]

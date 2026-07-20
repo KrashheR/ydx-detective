@@ -1,0 +1,90 @@
+{
+  "id": "ev-hull",
+  "order": 3,
+  "type": "seal_match",
+  "title": {
+    "ru": "Сопоставление защитной полосы корпуса"
+  },
+  "isContradiction": true,
+  "narrativeRole": "pivot",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Разрыв, волокна и серийный узор не совпадают: обломок принадлежит арендованному катеру, а не застрахованной яхте."
+  },
+  "previousType": "photo",
+  "description": {
+    "ru": "Фрагмент поднят у места спасения; контрольный образец взят с зарегистрированной яхты до страхования."
+  },
+  "instruction": {
+    "ru": "Совместить фрагмент защитной полосы с контрольным образцом."
+  },
+  "assets": {
+    "asset1": "assets/interactive/ev-hull-master-a.webp",
+    "asset2": "assets/interactive/ev-hull-master-b.webp",
+    "asset3": "assets/interactive/ev-hull-fragments.json"
+  },
+  "data": {
+    "movableFragment": "B",
+    "allowRotation": true,
+    "rotationStep": 3,
+    "initialTransform": {
+      "x": 72,
+      "y": 18,
+      "rotation": -14
+    },
+    "targetTransform": {
+      "x": 132,
+      "y": 48,
+      "rotation": 6
+    },
+    "tolerance": {
+      "position": 10,
+      "rotation": 5
+    },
+    "expectedMatch": false,
+    "sourceSeed": 171517,
+    "fragmentASeed": 171517,
+    "fragmentBSeed": 171842,
+    "comparisonMarkers": [
+      {
+        "id": "tear_pattern",
+        "label": "Не совпадают микроперфорация, волокна и шаг защитного узора"
+      }
+    ]
+  },
+  "statementLink": {
+    "statementId": "claim_lost_vessel_identity",
+    "relation": "contradicts",
+    "reason": {
+      "ru": "Разрыв, волокна и серийный узор не совпадают: обломок принадлежит арендованному катеру, а не застрахованной яхте."
+    }
+  },
+  "contradictionTarget": {
+    "statementId": "claim_lost_vessel_identity",
+    "reason": {
+      "ru": "Разрыв, волокна и серийный узор не совпадают: обломок принадлежит арендованному катеру, а не застрахованной яхте."
+    }
+  },
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true,
+    "transparencyMode": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Физическое несовпадение быстрее и убедительнее длинного сравнения заводских номеров."
+    },
+    "playerAction": {
+      "ru": "Совместить фрагмент защитной полосы с контрольным образцом."
+    },
+    "conclusion": {
+      "ru": "Разрыв, волокна и серийный узор не совпадают: обломок принадлежит арендованному катеру, а не застрахованной яхте."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

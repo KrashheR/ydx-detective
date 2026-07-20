@@ -57,7 +57,12 @@ export type Decision = 'approve' | 'reject';
 export type MasteryLevel = 'none' | 'bronze' | 'silver' | 'gold';
 export type DepartmentId = 'archive' | 'field' | 'lab';
 export type InvestigationService = 'archive_check' | 'extra_clearance' | 'expert_opinion';
-export type EvidenceRelation = 'supports' | 'contradicts' | 'context';
+export type EvidenceRelation =
+  | 'supports'
+  | 'contradicts'
+  | 'contextualizes'
+  | 'reveals_season_clue';
+export type EvidenceTier = 'core' | 'supporting' | 'bonus' | 'arc';
 
 export type WeeklyTaskId = 'correct_3' | 'perfect_2' | 'no_hints_2' | 'efficient_1' | 'variety_3';
 
@@ -83,7 +88,165 @@ export type EvidenceType =
   | 'xray'
   | 'bank_statement'
   | 'phone_records'
-  | 'social_media';
+  | 'social_media'
+  | 'document_scan'
+  | 'thermal_scan'
+  | 'shadow_time_check'
+  | 'seal_match'
+  | 'surface_reveal';
+
+export interface StatementLink {
+  readonly statementId: string;
+  readonly relation: EvidenceRelation;
+  readonly reason: LocalizedString;
+}
+
+export interface ClaimStatement {
+  readonly id: string;
+  readonly text: LocalizedString;
+  readonly stampable: boolean;
+}
+
+export interface InteractiveEvidenceHints {
+  readonly showReset: boolean;
+  readonly allowZoom: boolean;
+  readonly highlightAfterHint: boolean;
+  readonly transparencyMode?: boolean;
+}
+
+export interface InteractiveEvidenceDesign {
+  readonly why: LocalizedString;
+  readonly playerAction: LocalizedString;
+  readonly conclusion: LocalizedString;
+}
+
+export type ScanMode = 'normal' | 'uv' | 'backlight' | 'contrast' | 'side_light';
+
+export interface DocumentScanData {
+  readonly initialMode: ScanMode;
+  readonly modes: readonly ScanMode[];
+  readonly anomalyZones: ReadonlyArray<{
+    readonly id: string;
+    readonly mode: ScanMode;
+    readonly x: number;
+    readonly y: number;
+    readonly width: number;
+    readonly height: number;
+    readonly label: string;
+    readonly labelEn?: string;
+    readonly isContradiction: boolean;
+  }>;
+  readonly referenceFields?: ReadonlyArray<{
+    readonly id: string;
+    readonly label: string;
+    readonly labelEn?: string;
+    readonly value: string;
+  }>;
+  readonly successCondition:
+    | { readonly type: 'select_zone'; readonly zoneId: string }
+    | {
+        readonly type: 'select_then_compare';
+        readonly zoneId: string;
+        readonly referenceFieldId: string;
+      };
+}
+
+export interface ThermalScanData {
+  readonly ambientTemperature: number;
+  readonly observationTime: string;
+  readonly claimedLastUseBefore: string;
+  readonly elapsedSinceClaimedUseMinutes: number;
+  readonly coolingReference: string;
+  readonly coolingReferenceEn?: string;
+  readonly initialMode: 'normal' | 'thermal';
+  readonly heatZones: ReadonlyArray<{
+    readonly id: string;
+    readonly shape: 'circle' | 'ellipse' | 'polygon';
+    readonly x?: number;
+    readonly y?: number;
+    readonly width?: number;
+    readonly height?: number;
+    readonly points?: ReadonlyArray<
+      { readonly x: number; readonly y: number } | readonly [number, number]
+    >;
+    readonly temperature: number;
+    readonly intensity: number;
+    readonly label: string;
+    readonly labelEn?: string;
+    readonly isContradiction?: boolean;
+    readonly isTarget?: boolean;
+  }>;
+  readonly successCondition: {
+    readonly type: 'select_any' | 'select_all';
+    readonly zoneIds: readonly string[];
+  };
+}
+
+export interface ShadowTimeCheckData {
+  readonly claimedTime: string;
+  readonly orientationSource: string;
+  readonly orientationSourceEn?: string;
+  readonly slider: { readonly from: string; readonly to: string; readonly stepMinutes: number };
+  readonly shadowOrigin: { readonly x: number; readonly y: number };
+  readonly referenceShadow: {
+    readonly baseAngle: number;
+    readonly baseLength: number;
+    readonly width: number;
+    readonly opacity: number;
+  };
+  readonly timeSamples: ReadonlyArray<{
+    readonly time: string;
+    readonly angle: number;
+    readonly length: number;
+  }>;
+  readonly validTimeRanges: ReadonlyArray<{ readonly from: string; readonly to: string }>;
+  readonly matchTolerance: { readonly angle: number; readonly length: number };
+}
+
+export interface SealMatchData {
+  readonly movableFragment: 'A' | 'B';
+  readonly allowRotation: boolean;
+  readonly rotationStep: number;
+  readonly initialTransform: { readonly x: number; readonly y: number; readonly rotation: number };
+  readonly targetTransform: { readonly x: number; readonly y: number; readonly rotation: number };
+  readonly tolerance: { readonly position: number; readonly rotation: number };
+  readonly expectedMatch: boolean;
+  readonly sourceSeed: number;
+  readonly fragmentASeed: number;
+  readonly fragmentBSeed: number;
+  readonly comparisonMarkers: ReadonlyArray<{
+    readonly id: string;
+    readonly label: string;
+    readonly labelEn?: string;
+  }>;
+}
+
+export interface SurfaceRevealData {
+  readonly mode: 'erase' | 'apply' | 'light_reveal';
+  readonly coverType: 'dust' | 'condensation' | 'dirt' | 'soot' | 'frost' | 'sand' | 'powder' | 'custom';
+  readonly brush: {
+    readonly radius: number;
+    readonly hardness: number;
+    readonly opacity: number;
+    readonly spacing?: number;
+  };
+  readonly completion: {
+    readonly type: 'reveal_percentage' | 'discover_any' | 'discover_all';
+    readonly requiredRevealPercent?: number;
+    readonly requiredTraceIds?: readonly string[];
+  };
+  readonly traces: ReadonlyArray<{
+    readonly id: string;
+    readonly label: string;
+    readonly labelEn?: string;
+    readonly mask?: string;
+    readonly shape: 'mask';
+    readonly requiredRevealPercent: number;
+    readonly isContradiction: boolean;
+    readonly conclusion: string;
+    readonly conclusionEn?: string;
+  }>;
+}
 
 /**
  * Per-evidence renderer metadata. All fields are optional; renderers fall back
@@ -129,9 +292,35 @@ export interface Evidence {
   readonly contradictionExplanation: LocalizedString;
   /** Per-renderer display metadata — makes each evidence visually unique. */
   readonly meta?: EvidenceMeta;
-  /** Authoring metadata only — how the card relates to the claim narrative. */
-  readonly relation?: EvidenceRelation;
+  /** Exact claim statement and evidentiary relation established by this card. */
+  readonly statementLink?: StatementLink;
+  readonly contradictionTarget?: { readonly statementId: string; readonly reason: LocalizedString } | null;
+  readonly evidenceTier?: EvidenceTier;
+  readonly unlocksAfterEvidenceIds?: readonly string[];
+  readonly revealsEvidenceIds?: readonly string[];
+  readonly requiredForVerdict?: boolean;
+  readonly rewardWeight?: number;
+  readonly order?: number;
+  readonly narrativeRole?: string;
+  readonly description?: LocalizedString;
+  readonly instruction?: LocalizedString;
+  readonly assets?: Record<string, string | readonly string[]>;
+  readonly uiHints?: InteractiveEvidenceHints;
+  readonly interactiveDesign?: InteractiveEvidenceDesign;
+  readonly previousType?: string;
 }
+
+export interface DocumentScanEvidence extends Evidence { readonly type: 'document_scan'; readonly data: DocumentScanData }
+export interface ThermalScanEvidence extends Evidence { readonly type: 'thermal_scan'; readonly data: ThermalScanData }
+export interface ShadowTimeCheckEvidence extends Evidence { readonly type: 'shadow_time_check'; readonly data: ShadowTimeCheckData }
+export interface SealMatchEvidence extends Evidence { readonly type: 'seal_match'; readonly data: SealMatchData }
+export interface SurfaceRevealEvidence extends Evidence { readonly type: 'surface_reveal'; readonly data: SurfaceRevealData }
+export type InteractiveEvidence =
+  | DocumentScanEvidence
+  | ThermalScanEvidence
+  | ShadowTimeCheckEvidence
+  | SealMatchEvidence
+  | SurfaceRevealEvidence;
 
 export interface Claim {
   readonly person: LocalizedString;
@@ -177,6 +366,54 @@ export interface Case {
    * Omitted ⇒ unlimited opens and the classic "review everything" gate.
    */
   readonly investigationBudget?: number;
+  readonly campaignOrder?: number;
+  readonly requiredLevel?: number;
+  readonly act?: number;
+  readonly actTitle?: LocalizedString;
+  readonly claimStatements?: readonly ClaimStatement[];
+  readonly contentVersion?: string;
+  readonly schemaVersion?: number;
+  readonly revisionVersion?: string;
+  readonly narrative?: {
+    readonly preBrief: LocalizedString;
+    readonly postVerdictNote: LocalizedString;
+    readonly nextCaseTeaser: LocalizedString;
+    readonly seasonClue: null | {
+      readonly id: string;
+      readonly label: LocalizedString;
+      readonly description: LocalizedString;
+      readonly progressIndex: number;
+      readonly progressTotal: number;
+    };
+    readonly epilogue: LocalizedContent | null;
+  };
+  readonly onboarding?: {
+    readonly phase: string;
+    readonly targetDurationSeconds: number;
+    readonly teaches: readonly string[];
+    readonly successEmotion: LocalizedString;
+    readonly menuUnlockAfterVerdict: boolean;
+    readonly unlocks?: readonly string[];
+  };
+  readonly finalSynthesis?: FinalSynthesis;
+}
+
+export interface FinalSynthesis {
+  readonly id: string;
+  readonly title: LocalizedString;
+  readonly instruction: LocalizedString;
+  readonly unlockAfter: 'correct_verdict';
+  readonly nodes: ReadonlyArray<{
+    readonly id: string;
+    readonly label: LocalizedString;
+    readonly evidenceIds: readonly string[];
+  }>;
+  readonly requiredLinks: ReadonlyArray<readonly [string, string]>;
+  readonly evidenceUnlockIds: readonly string[];
+  readonly arcEvidenceAccess: 'post_verdict_free';
+  readonly successConclusion: LocalizedString;
+  readonly skippableAfterAttempts: number;
+  readonly analyticsEvent: string;
 }
 
 /**
@@ -199,6 +436,8 @@ export interface CaseSummary {
   /** `evidences.length` of the full case — shown as the document count. */
   readonly evidenceCount: number;
   readonly investigationBudget?: number;
+  readonly campaignOrder?: number;
+  readonly requiredLevel?: number;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -283,6 +522,12 @@ export interface PlayerStats {
   archiveUnlockedCaseIds: string[];
   /** Last server-day when this archive pack granted its rewarded unlock. */
   archiveAdUnlockServerDayByPack: Record<string, number>;
+  /** Interactive examination progress, keyed by `${caseId}/${evidenceId}`. */
+  interactiveEvidenceProgress: Record<string, InteractiveEvidenceProgress>;
+  /** Post-verdict synthesis progress, keyed by stable case id. */
+  finalSynthesisProgress: Record<string, FinalSynthesisProgress>;
+  /** Fresh-player prologue gate; old profiles are migrated to unlocked. */
+  metaUnlocked: boolean;
 }
 
 /**
@@ -294,6 +539,8 @@ export interface ActiveSession {
   readonly caseId: string;
   /** Evidence cards stamped by the player as contradictions. */
   selectedEvidenceIds: string[];
+  /** Exact statement/evidence pairs; selectedEvidenceIds remains for save compatibility. */
+  stamps: EvidenceStamp[];
   /** Evidence cards the player has opened/read at least once. */
   viewedEvidenceIds: string[];
   /**
@@ -310,6 +557,32 @@ export interface ActiveSession {
   extraOpens: number;
   /** Server-time (ms) the investigation began — drives daily timers. */
   readonly startedAtServerMs: number;
+}
+
+export interface EvidenceStamp {
+  readonly caseId: string;
+  readonly statementId: string;
+  readonly evidenceId: string;
+}
+
+export interface InteractiveEvidenceProgress {
+  readonly evidenceId: string;
+  opened: boolean;
+  analysisCompleted: boolean;
+  discoveredAnomalyIds: string[];
+  discoveredTraceIds: string[];
+  revealPercentByTrace: Record<string, number>;
+  selectedContradiction: boolean;
+  hintLevel: number;
+  attempts: number;
+  resetCount: number;
+}
+
+export interface FinalSynthesisProgress {
+  completed: boolean;
+  skipped: boolean;
+  attempts: number;
+  links: Array<readonly [string, string]>;
 }
 
 /* -------------------------------------------------------------------------- */

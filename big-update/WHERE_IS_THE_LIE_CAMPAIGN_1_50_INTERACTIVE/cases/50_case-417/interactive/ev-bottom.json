@@ -1,0 +1,78 @@
+{
+  "id": "ev-bottom",
+  "order": 6,
+  "type": "document_scan",
+  "title": {
+    "ru": "Просветка оригинала формы 17-К"
+  },
+  "isContradiction": false,
+  "narrativeRole": "arc_reveal",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Под наклейкой проявляется подпись Константина Карелина и таблица его долей по ранним выплатам."
+  },
+  "previousType": "document",
+  "description": {
+    "ru": "Оригинал из двойного дна чемодана исследуется без отделения старых слоёв бумаги."
+  },
+  "instruction": {
+    "ru": "Включить просвет и найти первую резолюцию под поздней наклейкой."
+  },
+  "assets": {
+    "asset1": "assets/interactive/ev-bottom-base.webp",
+    "asset2": "assets/interactive/ev-bottom-scan-overlay.svg"
+  },
+  "data": {
+    "initialMode": "normal",
+    "modes": [
+      "normal",
+      "uv",
+      "backlight"
+    ],
+    "anomalyZones": [
+      {
+        "id": "karelin_signature",
+        "mode": "backlight",
+        "x": 47,
+        "y": 68,
+        "width": 37,
+        "height": 13,
+        "label": "Под наклейкой проявляется подпись Константина Карелина и таблица его долей по ранним выплатам.",
+        "isContradiction": true
+      }
+    ],
+    "successCondition": {
+      "type": "select_zone",
+      "zoneId": "karelin_signature"
+    }
+  },
+  "statementLink": {
+    "statementId": "claim_main",
+    "relation": "reveals_season_clue",
+    "reason": {
+      "ru": "Под наклейкой проявляется подпись Константина Карелина и таблица его долей по ранним выплатам."
+    }
+  },
+  "contradictionTarget": null,
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Главное имя кампании добывает игрок, а не сообщает финальный текст."
+    },
+    "playerAction": {
+      "ru": "Включить просвет и найти первую резолюцию под поздней наклейкой."
+    },
+    "conclusion": {
+      "ru": "Под наклейкой проявляется подпись Константина Карелина и таблица его долей по ранним выплатам."
+    }
+  },
+  "evidenceTier": "arc",
+  "requiredForVerdict": false,
+  "rewardWeight": 0.75
+}

@@ -1,0 +1,587 @@
+{
+  "id": "case-050",
+  "campaignOrder": 48,
+  "requiredLevel": 28,
+  "act": 5,
+  "actTitle": {
+    "ru": "Последний маршрут",
+    "en": "The Final Route"
+  },
+  "title": {
+    "ru": "Огонь в «Компасе»",
+    "en": "Fire at the Compass"
+  },
+  "difficulty": "hard",
+  "claimAmount": {
+    "value": 21400,
+    "currency": "EUR"
+  },
+  "groundTruth": "valid",
+  "correctDecision": "approve",
+  "investigationBudget": 4,
+  "claimant": {
+    "name": {
+      "ru": "Михаил Тернов, 69 лет",
+      "en": "Mikhail Ternov, age 69"
+    },
+    "migrationNote": {
+      "ru": "Полностью заменить прежнего владельца додзё. Вернуть Михаила Тернова из дела 20 с тем же портретом, профилем и мастерской.",
+      "en": "Completely replace the former dojo owner. Return Mikhail Ternov from Case 20 with the same portrait, profile, and workshop."
+    },
+    "portrait": null,
+    "portraitStatus": "retain_existing_project_portrait",
+    "portraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/khariton-sen.webp",
+      "existingFile": "public/people/khariton-sen.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "После первого налёта Тернов согласился хранить копии Ильи. Теперь мастерская подожжена. Именно поэтому нельзя автоматически считать пожар инсценировкой ради выплаты. — В. Лебедева",
+      "en": "After the first raid, Ternov agreed to keep Ilya's copies. Now the workshop has been set on fire. That is precisely why we cannot automatically call it a staged payout. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Тернов спас не весь архив. Один металлический маршрутный жетон пережил огонь. Он указывает на аэропортовый грузовой сектор и фургон Романа Драя.",
+      "en": "Ternov could not save the entire archive. One metal route token survived the fire. It points to an airport cargo sector and Roman Dray's van."
+    },
+    "nextCaseTeaser": {
+      "ru": "Фургон с уличными сенсорами якобы угнали. Его GPS ни разу не остановился и привёл прямо к аэропорту.",
+      "en": "A van carrying street sensors was supposedly hijacked. Its GPS never stopped and led directly to the airport."
+    },
+    "seasonClue": {
+      "id": "airport-route",
+      "label": {
+        "ru": "Аэропортовый маршрут",
+        "en": "Airport Route"
+      },
+      "description": {
+        "ru": "Последний узел Серого конвоя связан с грузовым терминалом и багажными службами аэропорта.",
+        "en": "The Gray Convoy's final hub is linked to the airport cargo terminal and baggage services."
+      },
+      "progressIndex": 6,
+      "progressTotal": 7
+    },
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Ночью неизвестные проникли через служебный двор и подожгли мастерскую «Компас». Я успел вывести ученика из жилой комнаты, но огонь уничтожил оборудование, часть коллекции и старый страховой реестр. Прошу выплату на восстановление.",
+    "en": "During the night, unknown intruders entered through the service yard and set fire to the Compass workshop. I got my apprentice out of the living quarters, but the fire destroyed equipment, part of the collection, and the old insurance registry. I am claiming the restoration cost."
+  },
+  "evidence": [
+    {
+      "id": "photo-50",
+      "order": 1,
+      "type": "seal_match",
+      "title": {
+        "ru": "Сопоставление обгоревшего фитиля",
+        "en": "Burned Fuse Comparison"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Фрагменты совпали: поджигатели использовали материал из перехваченной партии GC-17.",
+        "en": "The fragments match: the arsonists used material from the intercepted GC-17 batch."
+      },
+      "previousType": "photo",
+      "description": {
+        "ru": "Фрагмент у двери «Компаса» сравнивается с лентой из перехваченной партии Серого конвоя.",
+        "en": "The fragment at the Compass door is compared with tape from the intercepted Gray Convoy batch."
+      },
+      "instruction": {
+        "ru": "Совместить уцелевшие участки разрыва и внутренней сетки.",
+        "en": "Align the surviving torn edges and internal mesh."
+      },
+      "assets": {
+        "asset1": "assets/interactive/photo-50-master-a.webp",
+        "asset2": "assets/interactive/photo-50-fragments.json"
+      },
+      "data": {
+        "movableFragment": "B",
+        "allowRotation": true,
+        "rotationStep": 3,
+        "initialTransform": {
+          "x": 72,
+          "y": 18,
+          "rotation": -14
+        },
+        "targetTransform": {
+          "x": 132,
+          "y": 48,
+          "rotation": 6
+        },
+        "tolerance": {
+          "position": 10,
+          "rotation": 5
+        },
+        "expectedMatch": true,
+        "sourceSeed": 485017,
+        "fragmentASeed": 485017,
+        "fragmentBSeed": 485017,
+        "comparisonMarkers": [
+          {
+            "id": "tear_pattern",
+            "label": "Совпадают внутренняя сетка, пропитка и край разрыва",
+            "labelEn": "Internal mesh, coating, and torn edge match"
+          }
+        ]
+      },
+      "statementLink": {
+        "statementId": "claim_external_arson",
+        "relation": "supports",
+        "reason": {
+          "ru": "Фрагменты совпали: поджигатели использовали материал из перехваченной партии GC-17.",
+          "en": "The fragments match: the arsonists used material from the intercepted GC-17 batch."
+        }
+      },
+      "contradictionTarget": null,
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true,
+        "transparencyMode": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Игрок применяет навык повторно и отличает реальную атаку от прежних подброшенных следов.",
+          "en": "The player reuses the skill to distinguish a real attack from earlier planted traces."
+        },
+        "playerAction": {
+          "ru": "Совместить уцелевшие участки разрыва и внутренней сетки.",
+          "en": "Align the surviving torn edges and internal mesh."
+        },
+        "conclusion": {
+          "ru": "Фрагменты совпали: поджигатели использовали материал из перехваченной партии GC-17.",
+          "en": "The fragments match: the arsonists used material from the intercepted GC-17 batch."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-099",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-050/evidence/case-050-photo-50.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-050/evidence/case-050-photo-50.webp",
+          "caseRelativeSrc": "evidence/case-050-photo-50.webp",
+          "installTo": "public/evidence/case-050-photo-50.webp",
+          "legacyRuntimeUrl": "evidence/case-050-photo-50.webp",
+          "format": "webp",
+          "width": 1448,
+          "height": 1086,
+          "sha256": "e5c251ec9b1e08a8d414ca26ec8a5ec4c5a94fa23029b45fa39997e9cee2b377"
+        },
+        {
+          "assetId": "asset-101",
+          "role": "interactive_master_a",
+          "src": "src/data/cases/case-050/assets/interactive/photo-50-master-a.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-050/assets/interactive/photo-50-master-a.webp",
+          "caseRelativeSrc": "assets/interactive/photo-50-master-a.webp",
+          "installTo": "src/data/cases/case-050/assets/interactive/photo-50-master-a.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1400,
+          "height": 500,
+          "sha256": "36e37a9e0597424be6b106a821a573b826264c49df1b03e70c90a46acc85c3c0"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-050/evidence/case-050-photo-50.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-050/evidence/case-050-photo-50.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-050-photo-50.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-050/evidence/case-050-photo-50.webp",
+        "copyTo": "public/evidence/case-050-photo-50.webp"
+      }
+    },
+    {
+      "id": "document-50",
+      "order": 2,
+      "type": "document",
+      "title": {
+        "ru": "Опись мастерской",
+        "en": "Workshop Inventory"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Оборудование, приборы и архив зарегистрированы задолго до пожара. Тернов не увеличивал страховую сумму после первого налёта.",
+        "en": "The equipment, instruments, and archive were registered long before the fire. Ternov did not increase coverage after the first raid."
+      },
+      "statusExplanation": {
+        "ru": "Имущество существовало, а страховое покрытие не менялось перед событием.",
+        "en": "The property existed, and coverage was not changed before the event."
+      },
+      "statementLink": {
+        "statementId": "claim_damage",
+        "relation": "supports",
+        "reason": {
+          "ru": "Имущество существовало, а страховое покрытие не менялось перед событием.",
+          "en": "The property existed, and coverage was not changed before the event."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "camera-50",
+      "order": 3,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера переулка",
+        "en": "Alley Camera"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Двое людей из серого фургона входят во двор с канистрой и инструментами. Тернов в это время находится в жилой части; через две минуты он выводит ученика через переднюю дверь.",
+        "en": "Two people leave a gray van and enter the yard carrying a fuel can and tools. Ternov is in the living quarters; two minutes later, he leads his apprentice out through the front door."
+      },
+      "statusExplanation": {
+        "ru": "Камера подтверждает внешних поджигателей и действия владельца по спасению человека.",
+        "en": "The footage confirms outside arsonists and the owner's rescue actions."
+      },
+      "statementLink": {
+        "statementId": "claim_owner_response",
+        "relation": "supports",
+        "reason": {
+          "ru": "Камера подтверждает внешних поджигателей и действия владельца по спасению человека.",
+          "en": "The footage confirms outside arsonists and the owner's rescue actions."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-100",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-050/evidence/case-050-camera-50.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-050/evidence/case-050-camera-50.webp",
+          "caseRelativeSrc": "evidence/case-050-camera-50.webp",
+          "installTo": "public/evidence/case-050-camera-50.webp",
+          "legacyRuntimeUrl": "evidence/case-050-camera-50.webp",
+          "format": "webp",
+          "width": 1448,
+          "height": 1086,
+          "sha256": "3c14e1539b52af5e619b947de0656a4099f44097ec4ce50f3ff8dab2a3ca7540"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-050/evidence/case-050-camera-50.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-050/evidence/case-050-camera-50.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-050-camera-50.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-050/evidence/case-050-camera-50.webp",
+        "copyTo": "public/evidence/case-050-camera-50.webp"
+      }
+    },
+    {
+      "id": "log-50",
+      "order": 4,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал пожарной панели",
+        "en": "Fire Panel Log"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Тревога срабатывает штатно. Тернов не отключает датчики; вызов пожарных отправлен автоматически через 11 секунд.",
+        "en": "The alarm activates normally. Ternov does not disable the sensors; the fire-service call is sent automatically after 11 seconds."
+      },
+      "statusExplanation": {
+        "ru": "Защитная система работала и не была подготовлена к инсценировке.",
+        "en": "The protection system worked and was not prepared for staging."
+      },
+      "statementLink": {
+        "statementId": "claim_owner_response",
+        "relation": "supports",
+        "reason": {
+          "ru": "Защитная система работала и не была подготовлена к инсценировке.",
+          "en": "The protection system worked and was not prepared for staging."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "route-50",
+      "order": 5,
+      "type": "gps",
+      "title": {
+        "ru": "Маршрут серого фургона",
+        "en": "Gray Van Route"
+      },
+      "isContradiction": false,
+      "narrativeRole": "arc_proof",
+      "text": {
+        "ru": "После поджога машина уходит к терминалу GC-17, затем к аэропортовому грузовому сектору.",
+        "en": "After the arson, the van travels to the GC-17 terminal and then to the airport cargo sector."
+      },
+      "statusExplanation": {
+        "ru": "Маршрут связывает нападение с последним каналом вывоза сети.",
+        "en": "The route links the attack to the network's final transport channel."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Маршрут связывает нападение с последним каналом вывоза сети.",
+          "en": "The route links the attack to the network's final transport channel."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "witness-50",
+      "order": 6,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания ученика",
+        "en": "Apprentice's Statement"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Ученик слышал сверление у задней двери и видел, как Тернов вывел его до распространения дыма. Он подтверждает, что копии Ильи лежали в архивном шкафу.",
+        "en": "The apprentice heard drilling at the rear door and saw Ternov lead him out before the smoke spread. He confirms that Ilya's copies were stored in the archive cabinet."
+      },
+      "statusExplanation": {
+        "ru": "Свидетель подтверждает внешний шум, эвакуацию и мотив нападения.",
+        "en": "The witness confirms the outside noise, evacuation, and motive for the attack."
+      },
+      "statementLink": {
+        "statementId": "claim_damage",
+        "relation": "supports",
+        "reason": {
+          "ru": "Свидетель подтверждает внешний шум, эвакуацию и мотив нападения.",
+          "en": "The witness confirms the outside noise, evacuation, and motive for the attack."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Фитиль и камера показывают внешний поджог людьми из серого фургона.",
+      "Тернов не отключал защиту и рисковал не имуществом, а собой, спасая ученика.",
+      "Фрагменты совпали: поджигатели использовали материал из перехваченной партии GC-17.",
+      "Серый конвой пытался уничтожить копии Ильи. Ущерб подлинный, выплату следует одобрить."
+    ],
+    "en": [
+      "The fragments match: the arsonists used material from the intercepted GC-17 batch.",
+      "The property existed, and coverage was not changed before the event.",
+      "The footage confirms outside arsonists and the owner's rescue actions.",
+      "The protection system worked and was not prepared for staging.",
+      "The route links the attack to the network's final transport channel.",
+      "No material statement has been disproven. The claim should be approved."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Полностью удалить музей-додзё, маски и прежнюю фан-сервисную арку.",
+      "Вернуть Михаила как эмоционально значимого свидетеля.",
+      "Изменить valid-дело в реальное нападение сети.",
+      "Интегрировать seal_match в улику photo-50; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate seal_match into evidence photo-50; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "evidence/case-050-photo-50.webp",
+      "action": "generate",
+      "prompt": "Documentary arson evidence photograph at the service door of a navigation-instrument restoration workshop: a charred fuse-like trail clearly runs from the outside yard across the threshold toward a burned archive cabinet, restrained fire damage, realistic old workshop materials, no dojo, no masks, no weapons, no logos, no text, no watermark."
+    },
+    {
+      "file": "evidence/case-050-camera-50.webp",
+      "action": "generate",
+      "prompt": "Night alley security camera frame behind a small restoration workshop: two adult arsonists from an unmarked gray van entering a service yard with a plain fuel can and tool case while an elderly craftsman leads a younger apprentice out the front in the distance, non-graphic, realistic CCTV, no logos, no text, no watermark."
+    },
+    {
+      "file": "assets/interactive/photo-50-master-a.webp",
+      "purpose": "Цельный мастер пломбы или контрольного фрагмента A",
+      "resolution": "1400×500",
+      "format": "WebP",
+      "transparency": true,
+      "generatedBy": "image_model",
+      "manualPost": "Убрать случайный текст; сохранить альфа-канал; разрезать процедурно по sourceSeed.",
+      "prompt": "Create a realistic intact security seal or evidence control label for a fictional insurance investigation. Обгоревший фрагмент промышленной фитильной ленты и чистый контрольный образец с абстрактной внутренней сеткой. Front view, full object, transparent background, detailed fibers, adhesive or polymer texture, abstract protection pattern, no real logo or brand, no watermark, no critical readable text, restrained utilitarian evidence style. Keep edges suitable for procedural tearing.",
+      "evidenceId": "photo-50",
+      "evidenceType": "seal_match"
+    },
+    {
+      "file": "assets/interactive/photo-50-fragments.json",
+      "purpose": "Seed разрыва, трансформации и допуски",
+      "resolution": "normalized component space",
+      "format": "JSON",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "Сгенерировать fragment-a.webp и fragment-b.webp из master-файлов; проверить drag/rotate/snap.",
+      "prompt": null,
+      "evidenceId": "photo-50",
+      "evidenceType": "seal_match"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Ночью неизвестные проникли через служебный двор и подожгли мастерскую «Компас». Я успел вывести ученика из жилой комнаты, но огонь уничтожил оборудование, часть коллекции и старый страховой реестр. Прошу выплату на восстановление.",
+        "en": "During the night, unknown intruders entered through the service yard and set fire to the Compass workshop. I got my apprentice out of the living quarters, but the fire destroyed equipment, part of the collection, and the old insurance registry. I am claiming the restoration cost."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_external_arson",
+      "text": {
+        "ru": "Мастерскую «Компас» подожгли снаружи люди Серого конвоя.",
+        "en": "Gray Convoy operatives set fire to the Compass workshop from outside."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_owner_response",
+      "text": {
+        "ru": "Тернов не отключал защиту и спасал ученика.",
+        "en": "Ternov did not disable the protection system and rescued his apprentice."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_damage",
+      "text": {
+        "ru": "Имущество и архив получили реальный покрываемый ущерб.",
+        "en": "The property and archive sustained genuine covered damage."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-050",
+    "archiveBasePath": "generated-assets/src/data/cases/case-050",
+    "claimantPortrait": null,
+    "claimantPortraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/khariton-sen.webp",
+      "existingFile": "public/people/khariton-sen.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "photo-50",
+        "title": {
+          "ru": "Сопоставление обгоревшего фитиля",
+          "en": "Burned Fuse Comparison"
+        },
+        "primaryImage": "src/data/cases/case-050/evidence/case-050-photo-50.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-050/evidence/case-050-photo-50.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-050-photo-50.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-050/evidence/case-050-photo-50.webp",
+          "copyTo": "public/evidence/case-050-photo-50.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-099",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-050/evidence/case-050-photo-50.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-050/evidence/case-050-photo-50.webp",
+            "caseRelativeSrc": "evidence/case-050-photo-50.webp",
+            "installTo": "public/evidence/case-050-photo-50.webp",
+            "legacyRuntimeUrl": "evidence/case-050-photo-50.webp",
+            "format": "webp",
+            "width": 1448,
+            "height": 1086,
+            "sha256": "e5c251ec9b1e08a8d414ca26ec8a5ec4c5a94fa23029b45fa39997e9cee2b377"
+          },
+          {
+            "assetId": "asset-101",
+            "role": "interactive_master_a",
+            "src": "src/data/cases/case-050/assets/interactive/photo-50-master-a.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-050/assets/interactive/photo-50-master-a.webp",
+            "caseRelativeSrc": "assets/interactive/photo-50-master-a.webp",
+            "installTo": "src/data/cases/case-050/assets/interactive/photo-50-master-a.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1400,
+            "height": 500,
+            "sha256": "36e37a9e0597424be6b106a821a573b826264c49df1b03e70c90a46acc85c3c0"
+          }
+        ]
+      },
+      {
+        "evidenceId": "camera-50",
+        "title": {
+          "ru": "Камера переулка",
+          "en": "Alley Camera"
+        },
+        "primaryImage": "src/data/cases/case-050/evidence/case-050-camera-50.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-050/evidence/case-050-camera-50.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-050-camera-50.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-050/evidence/case-050-camera-50.webp",
+          "copyTo": "public/evidence/case-050-camera-50.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-100",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-050/evidence/case-050-camera-50.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-050/evidence/case-050-camera-50.webp",
+            "caseRelativeSrc": "evidence/case-050-camera-50.webp",
+            "installTo": "public/evidence/case-050-camera-50.webp",
+            "legacyRuntimeUrl": "evidence/case-050-camera-50.webp",
+            "format": "webp",
+            "width": 1448,
+            "height": 1086,
+            "sha256": "3c14e1539b52af5e619b947de0656a4099f44097ec4ce50f3ff8dab2a3ca7540"
+          }
+        ]
+      }
+    ]
+  }
+}

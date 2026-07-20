@@ -1,395 +1,660 @@
 {
   "id": "case-051",
   "type": "standard",
+  "campaignOrder": 49,
+  "requiredLevel": 16,
+  "act": 5,
+  "actTitle": {
+    "ru": "Последний маршрут",
+    "en": "The Final Route",
+    "tr": "The Final Route",
+    "ar": "The Final Route",
+    "kk": "Последний маршрут"
+  },
   "difficulty": "hard",
   "claimAmount": 19700,
   "truth": "fraud",
-  "investigationBudget": 4,
   "title": {
-    "ru": "Угон фургона с уличной электроникой",
-    "en": "Van Hijack with Street Electronics",
-    "tr": "Van Hijack with Street Electronics",
-    "ar": "Van Hijack with Street Electronics",
-    "kk": "Угон фургона с уличной электроникой"
+    "ru": "Последний фургон",
+    "en": "The Last Van",
+    "tr": "The Last Van",
+    "ar": "The Last Van",
+    "kk": "Последний фургон"
   },
   "claim": {
     "person": {
       "ru": "Роман Драй, 33 года",
-      "en": "Roman Dray, 33",
-      "tr": "Roman Dray, 33",
-      "ar": "رومان دراي، 33",
-      "kk": "Роман Драй, 33 жаста"
+      "en": "Roman Dray, age 33",
+      "tr": "Roman Dray, age 33",
+      "ar": "Roman Dray, age 33",
+      "kk": "Роман Драй, 33 года"
     },
     "story": {
-      "ru": "Организованная банда перехватила мой фургон с сенсорами для уличной электроники. Водителя вытолкнули, груз исчез, а трекер молчал почти час.",
-      "en": "An organized gang hijacked my van carrying street-electronics sensors. The driver was thrown out, the cargo disappeared, and the tracker was silent for nearly an hour.",
-      "tr": "Örgütlü bir ekip sokak elektroniği sensörleri taşıyan minibüsümü kaçırdı. Sürücü atıldı, yük kayboldu ve takip cihazı neredeyse bir saat sustu.",
-      "ar": "اختطفت عصابة منظمة شاحنتي المحملة بحساسات إلكترونيات الشارع. أُخرج السائق، واختفت الشحنة، وصمت المتتبع قرابة ساعة.",
-      "kk": "Ұйымдасқан топ көше электроникасы сенсорлары бар фургонымды айдап әкетті. Жүргізушіні шығарып тастады, жүк жоғалды, трекер бір сағатқа жуық үнсіз болды."
+      "ru": "Организованная группа перехватила мой фургон с партией городских сенсоров. Водителя вытолкнули, груз исчез, трекер молчал почти час. Прошу возместить оборудование.",
+      "en": "An organized group hijacked my van carrying a batch of municipal sensors. They threw the driver out, the cargo vanished, and the tracker was silent for almost an hour. I am claiming the equipment loss.",
+      "tr": "An organized group hijacked my van carrying a batch of municipal sensors. They threw the driver out, the cargo vanished, and the tracker was silent for almost an hour. I am claiming the equipment loss.",
+      "ar": "An organized group hijacked my van carrying a batch of municipal sensors. They threw the driver out, the cargo vanished, and the tracker was silent for almost an hour. I am claiming the equipment loss.",
+      "kk": "Организованная группа перехватила мой фургон с партией городских сенсоров. Водителя вытолкнули, груз исчез, трекер молчал почти час. Прошу возместить оборудование."
     }
   },
-  "coverImage": "covers/case-051.svg",
-  "personImage": "people/roman-dray.webp",
   "client": {
     "role": {
-      "ru": "Поставщик уличной электроники",
-      "en": "Street electronics supplier",
-      "tr": "Sokak elektroniği tedarikçisi",
-      "ar": "مورد إلكترونيات الشارع",
-      "kk": "Көше электроникасы жеткізушісі"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Архив",
-          "en": "Archive",
-          "tr": "Arşiv",
-          "ar": "الأرشيف",
-          "kk": "Архив"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "Подземный Отдел",
-          "en": "Underground Department",
-          "tr": "Yeraltı Dairesi",
-          "ar": "القسم الجوفي",
-          "kk": "Жерасты бөлімі"
+          "ru": "5",
+          "en": "5",
+          "tr": "5",
+          "ar": "5",
+          "kk": "5"
         }
       },
       {
         "k": {
-          "ru": "Застрахованный риск",
-          "en": "Insured risk",
-          "tr": "Sigortalı risk",
-          "ar": "الخطر المؤمن عليه",
-          "kk": "Сақтандырылған тәуекел"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Угон фургона",
-          "en": "Van hijack",
-          "tr": "Minibüs kaçırma",
-          "ar": "اختطاف شاحنة",
-          "kk": "Фургонды айдап кету"
-        }
-      },
-      {
-        "k": {
-          "ru": "Архивная связка",
-          "en": "Archive thread",
-          "tr": "Arşiv bağı",
-          "ar": "خيط الأرشيف",
-          "kk": "Архив байланысы"
-        },
-        "v": {
-          "ru": "Повторяющийся след: East Yard — скупка, где старое оборудование и украденные модули превращают в страховые истории.",
-          "en": "Recurring lead: East Yard, the consignment yard turning old equipment and stolen modules into insurance stories.",
-          "tr": "Tekrarlayan iz: East Yard; eski ekipmanı ve çalıntı modülleri sigorta hikâyelerine çeviren komisyon alanı.",
-          "ar": "خيط متكرر: East Yard، ساحة البيع التي تحول المعدات القديمة والوحدات المسروقة إلى قصص تأمين.",
-          "kk": "Қайталанатын із: East Yard — ескі жабдық пен ұрланған модульдерді сақтандыру оқиғасына айналдыратын алаң."
+          "ru": "49",
+          "en": "49",
+          "tr": "49",
+          "ar": "49",
+          "kk": "49"
         }
       }
     ]
   },
+  "coverImage": "covers/case-051.svg",
+  "personImage": "people/roman-dray-grounded.webp",
   "evidences": [
     {
       "id": "photo-51",
+      "order": 1,
       "type": "photo",
       "title": {
         "ru": "Кузов без следов борьбы",
-        "en": "Cargo bay without struggle marks",
-        "tr": "Mücadele izi olmayan kasa",
-        "ar": "صندوق بلا آثار مقاومة",
-        "kk": "Күрес ізі жоқ кузов"
+        "en": "Cargo Bay with No Signs of Struggle",
+        "tr": "Cargo Bay with No Signs of Struggle",
+        "ar": "Cargo Bay with No Signs of Struggle",
+        "kk": "Кузов без следов борьбы"
       },
       "content": {
-        "ru": "Стяжки груза аккуратно сложены на полу. Нет следов резкого торможения, крови или сорванных креплений.",
-        "en": "Cargo straps are neatly folded on the floor. There are no hard-brake marks, blood, or torn mounts.",
-        "tr": "Yük bağları zeminde düzgün katlanmış. Sert fren izi, kan veya kopmuş bağlantı yok.",
-        "ar": "أحزمة الحمولة مطوية بعناية على الأرض. لا آثار فرملة قوية أو دم أو حوامل ممزقة.",
-        "kk": "Жүк баулары еденде ұқыпты жиналған. Қатты тежелу, қан немесе жұлынған бекітпе ізі жоқ."
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Салон выглядит разгруженным спокойно, а не после нападения.",
-        "en": "The cargo bay looks calmly unloaded, not attacked.",
-        "tr": "Kasa saldırıya uğramış değil sakin boşaltılmış görünüyor.",
-        "ar": "يبدو الصندوق مفرغاً بهدوء لا بعد هجوم.",
-        "kk": "Кузов шабуылдан кейін емес, тыныш түсірілгендей көрінеді."
-      },
-      "meta": {
-        "filename": "IMG_20260651_081500.jpg",
-        "imageUrl": "evidence/case-051-photo-51.webp"
-      },
-      "relation": "contradicts"
-    },
-    {
-      "id": "document-51",
-      "type": "document",
-      "title": {
-        "ru": "Накладная на сенсоры",
-        "en": "Sensor consignment note",
-        "tr": "Sensör irsaliyesi",
-        "ar": "إيصال شحنة الحساسات",
-        "kk": "Сенсор жүкқұжаты"
-      },
-      "content": {
-        "ru": "Накладная подтверждает 48 сенсорных блоков. Серийные номера совпадают с партией, позже замеченной на комиссионной площадке.",
-        "en": "The note confirms 48 sensor blocks. Serial numbers match a batch later seen at a consignment yard.",
-        "tr": "İrsaliye 48 sensör bloğunu doğrular. Seri numaraları daha sonra komisyon alanında görülen partiyle eşleşiyor.",
-        "ar": "يثبت الإيصال 48 وحدة حساس. تتطابق الأرقام التسلسلية مع دفعة شوهدت لاحقاً في ساحة بيع.",
-        "kk": "Жүкқұжат 48 сенсор блогын растайды. Сериялық нөмірлер кейін комиссия алаңынан көрінген партиямен сәйкес."
+        "ru": "Ремни аккуратно сложены, крепления целы, аварийного смещения коробок нет. На дверях отсутствуют следы насильственного открытия.",
+        "en": "The straps are neatly folded, the mounts are intact, and no boxes shifted violently. The doors show no signs of forced entry.",
+        "tr": "The straps are neatly folded, the mounts are intact, and no boxes shifted violently. The doors show no signs of forced entry.",
+        "ar": "The straps are neatly folded, the mounts are intact, and no boxes shifted violently. The doors show no signs of forced entry.",
+        "kk": "Ремни аккуратно сложены, крепления целы, аварийного смещения коробок нет. На дверях отсутствуют следы насильственного открытия."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Материал важен для проверки версии, но сам по себе не является противоречием.",
-        "en": "The material matters to the review but is not a contradiction by itself.",
-        "tr": "Bu kayıt inceleme için önemlidir, ancak tek başına çelişki değildir.",
-        "ar": "هذه المادة مهمة للمراجعة لكنها ليست تناقضاً بحد ذاتها.",
-        "kk": "Материал тексеру үшін маңызды, бірақ өздігінен қайшылық емес."
+        "ru": "Физическое состояние кузова не соответствует внезапному нападению и грубой разгрузке.",
+        "en": "The cargo bay's condition is inconsistent with a sudden attack and forced unloading.",
+        "tr": "The cargo bay's condition is inconsistent with a sudden attack and forced unloading.",
+        "ar": "The cargo bay's condition is inconsistent with a sudden attack and forced unloading.",
+        "kk": "Физическое состояние кузова не соответствует внезапному нападению и грубой разгрузке."
       },
-      "relation": "context"
+      "narrativeRole": "suspicion",
+      "statementLink": {
+        "statementId": "claim_forced_unloading",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Физическое состояние кузова не соответствует внезапному нападению и грубой разгрузке.",
+          "en": "The cargo bay's condition is inconsistent with a sudden attack and forced unloading.",
+          "tr": "The cargo bay's condition is inconsistent with a sudden attack and forced unloading.",
+          "ar": "The cargo bay's condition is inconsistent with a sudden attack and forced unloading.",
+          "kk": "Физическое состояние кузова не соответствует внезапному нападению и грубой разгрузке."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25,
+      "meta": {
+        "imageUrl": "evidence/case-051-photo-51.webp"
+      }
+    },
+    {
+      "id": "document-51",
+      "order": 2,
+      "type": "document",
+      "title": {
+        "ru": "Накладная на сенсоры",
+        "en": "Sensor Delivery Note",
+        "tr": "Sensor Delivery Note",
+        "ar": "Sensor Delivery Note",
+        "kk": "Накладная на сенсоры"
+      },
+      "content": {
+        "ru": "Партия существовала и стоила заявленную сумму. Серийные номера зарегистрированы.",
+        "en": "The batch existed and was worth the claimed amount. Its serial numbers are registered.",
+        "tr": "The batch existed and was worth the claimed amount. Its serial numbers are registered.",
+        "ar": "The batch existed and was worth the claimed amount. Its serial numbers are registered.",
+        "kk": "Партия существовала и стоила заявленную сумму. Серийные номера зарегистрированы."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Наличие груза реально, но документ не доказывает угон.",
+        "en": "The cargo was real, but the document does not prove hijacking.",
+        "tr": "The cargo was real, but the document does not prove hijacking.",
+        "ar": "The cargo was real, but the document does not prove hijacking.",
+        "kk": "Наличие груза реально, но документ не доказывает угон."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_goods_stolen",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Наличие груза реально, но документ не доказывает угон.",
+          "en": "The cargo was real, but the document does not prove hijacking.",
+          "tr": "The cargo was real, but the document does not prove hijacking.",
+          "ar": "The cargo was real, but the document does not prove hijacking.",
+          "kk": "Наличие груза реально, но документ не доказывает угон."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25
     },
     {
       "id": "camera-51",
+      "order": 3,
       "type": "camera_recording",
       "title": {
         "ru": "Камера тоннельной рампы",
-        "en": "Tunnel ramp camera",
-        "tr": "Tünel rampası kamerası",
-        "ar": "كاميرا منحدر النفق",
-        "kk": "Туннель рампасы камерасы"
+        "en": "Tunnel Ramp Camera",
+        "tr": "Tunnel Ramp Camera",
+        "ar": "Tunnel Ramp Camera",
+        "kk": "Камера тоннельной рампы"
       },
       "content": {
-        "ru": "Фургон въезжает на рампу без заноса и аварийных огней. За рулём человек в куртке Драя.",
-        "en": "The van enters the ramp without swerving or hazard lights. The driver wears Dray jacket.",
-        "tr": "Minibüs rampaya savrulmadan ve flaşörsüz giriyor. Sürücü Dray’in ceketiyle.",
-        "ar": "تدخل الشاحنة المنحدر بلا انحراف أو أضواء طوارئ. السائق يرتدي سترة دراي.",
-        "kk": "Фургон рампаға сырғымай, апат шамынсыз кіреді. Рөлдегі адам Драйдың күртешесін киген."
+        "ru": "Драй сам управляет фургоном, приветствует охранника и передаёт груз сотрудникам терминала. Никто не применяет силу.",
+        "en": "Dray drives the van himself, greets the guard, and hands the cargo to terminal staff. No force is used.",
+        "tr": "Dray drives the van himself, greets the guard, and hands the cargo to terminal staff. No force is used.",
+        "ar": "Dray drives the van himself, greets the guard, and hands the cargo to terminal staff. No force is used.",
+        "kk": "Драй сам управляет фургоном, приветствует охранника и передаёт груз сотрудникам терминала. Никто не применяет силу."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Камера не показывает силовой перехват.",
-        "en": "The camera does not show a forced hijack.",
-        "tr": "Kamera zorla kaçırmayı göstermiyor.",
-        "ar": "لا تظهر الكاميرا اختطافاً بالقوة.",
-        "kk": "Камера күшпен басып алуды көрсетпейді."
+        "ru": "Заявитель добровольно доставил партию в терминал.",
+        "en": "The claimant voluntarily delivered the batch to the terminal.",
+        "tr": "The claimant voluntarily delivered the batch to the terminal.",
+        "ar": "The claimant voluntarily delivered the batch to the terminal.",
+        "kk": "Заявитель добровольно доставил партию в терминал."
       },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_forced_unloading",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Заявитель добровольно доставил партию в терминал.",
+          "en": "The claimant voluntarily delivered the batch to the terminal.",
+          "tr": "The claimant voluntarily delivered the batch to the terminal.",
+          "ar": "The claimant voluntarily delivered the batch to the terminal.",
+          "kk": "Заявитель добровольно доставил партию в терминал."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_forced_unloading",
+        "reason": {
+          "ru": "Заявитель добровольно доставил партию в терминал.",
+          "en": "The claimant voluntarily delivered the batch to the terminal.",
+          "tr": "The claimant voluntarily delivered the batch to the terminal.",
+          "ar": "The claimant voluntarily delivered the batch to the terminal.",
+          "kk": "Заявитель добровольно доставил партию в терминал."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
       "meta": {
-        "cameraId": "ARC-51",
-        "cameraModel": "SentinelCam SC-3265 - 1080p - H.264"
-      },
-      "relation": "contradicts"
+        "imageUrl": "evidence/case-051-camera-51.webp"
+      }
     },
     {
       "id": "log-51",
+      "order": 4,
       "type": "usage_log",
       "title": {
-        "ru": "Журнал телематики фургона",
-        "en": "Van telematics log",
-        "tr": "Minibüs telematik kaydı",
-        "ar": "سجل تليماتيك الشاحنة",
-        "kk": "Фургон телематика журналы"
+        "ru": "Журнал телематики",
+        "en": "Telematics Log",
+        "tr": "Telematics Log",
+        "ar": "Telematics Log",
+        "kk": "Журнал телематики"
       },
       "content": {
-        "ru": [
-          "21:08 — водительский профиль: DRAY-R",
-          "21:11 — трекер переведён в режим приватной доставки",
-          "21:57 — маршрут завершён у площадки East Yard"
-        ],
-        "en": [
-          "21:08 — driver profile: DRAY-R",
-          "21:11 — tracker switched to private delivery mode",
-          "21:57 — route ended at East Yard"
-        ],
-        "tr": [
-          "21:08 — sürücü profili: DRAY-R",
-          "21:11 — takip cihazı özel teslimat moduna alındı",
-          "21:57 — rota East Yard’da bitti"
-        ],
-        "ar": [
-          "21:08 — ملف السائق: DRAY-R",
-          "21:11 — تحويل المتتبع إلى وضع تسليم خاص",
-          "21:57 — انتهاء المسار في East Yard"
-        ],
-        "kk": [
-          "21:08 — жүргізуші профилі: DRAY-R",
-          "21:11 — трекер жеке жеткізу режиміне ауысты",
-          "21:57 — бағыт East Yard-та аяқталды"
-        ]
+        "ru": "Двигатель не выключался, двери открыты штатным кодом, режим тревоги не активирован. Период «молчания» создан ручным отключением передачи данных.",
+        "en": "The engine never stopped, the doors opened with the normal code, and alarm mode was not activated. The ‘silent’ period was created by manually disabling data transmission.",
+        "tr": "The engine never stopped, the doors opened with the normal code, and alarm mode was not activated. The ‘silent’ period was created by manually disabling data transmission.",
+        "ar": "The engine never stopped, the doors opened with the normal code, and alarm mode was not activated. The ‘silent’ period was created by manually disabling data transmission.",
+        "kk": "Двигатель не выключался, двери открыты штатным кодом, режим тревоги не активирован. Период «молчания» создан ручным отключением передачи данных."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Телематика показывает штатный маршрут с профилем Драя.",
-        "en": "Telematics shows a normal route under Dray profile.",
-        "tr": "Telematik Dray profiliyle normal rota gösteriyor.",
-        "ar": "تظهر التليماتيك مساراً عادياً بملف دراي.",
-        "kk": "Телематика Драй профилімен штаттық бағытты көрсетеді."
+        "ru": "Трекер отключили, но сам фургон продолжал работать в обычном режиме.",
+        "en": "The tracker was disabled, but the van continued operating normally.",
+        "tr": "The tracker was disabled, but the van continued operating normally.",
+        "ar": "The tracker was disabled, but the van continued operating normally.",
+        "kk": "Трекер отключили, но сам фургон продолжал работать в обычном режиме."
       },
-      "meta": {
-        "logPrompt": "archive@log-51:~$ tail -f /var/log/archive.log"
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_forced_unloading",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Трекер отключили, но сам фургон продолжал работать в обычном режиме.",
+          "en": "The tracker was disabled, but the van continued operating normally.",
+          "tr": "The tracker was disabled, but the van continued operating normally.",
+          "ar": "The tracker was disabled, but the van continued operating normally.",
+          "kk": "Трекер отключили, но сам фургон продолжал работать в обычном режиме."
+        }
       },
-      "relation": "contradicts"
+      "contradictionTarget": {
+        "statementId": "claim_forced_unloading",
+        "reason": {
+          "ru": "Трекер отключили, но сам фургон продолжал работать в обычном режиме.",
+          "en": "The tracker was disabled, but the van continued operating normally.",
+          "tr": "The tracker was disabled, but the van continued operating normally.",
+          "ar": "The tracker was disabled, but the van continued operating normally.",
+          "kk": "Трекер отключили, но сам фургон продолжал работать в обычном режиме."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "bank-51",
+      "order": 5,
       "type": "bank_statement",
       "title": {
-        "ru": "Поступление от комиссионера",
-        "en": "Consignment yard payment",
-        "tr": "Komisyon alanı ödemesi",
-        "ar": "دفعة من ساحة بيع",
-        "kk": "Комиссия алаңынан төлем"
+        "ru": "Оплата комиссионера",
+        "en": "Agent's Payment",
+        "tr": "Agent's Payment",
+        "ar": "Agent's Payment",
+        "kk": "Оплата комиссионера"
       },
       "content": {
-        "ru": [
-          "Через 40 минут после «угона» — входящий платёж от East Yard Consign",
-          "Назначение: «электронные модули, партия 48»",
-          "Это уже не косвенный след: East Yard платит ровно за 48 модулей из накладной."
-        ],
-        "en": [
-          "40 minutes after the \"hijack\" — incoming payment from East Yard Consign",
-          "Memo: \"electronic modules, batch 48\"",
-          "This is no longer an indirect lead: East Yard pays for exactly 48 modules from the consignment note."
-        ],
-        "tr": [
-          "\"Kaçırmadan\" 40 dakika sonra — East Yard Consign ödemesi",
-          "Açıklama: \"elektronik modüller, parti 48\"",
-          "Bu artık dolaylı iz değil: East Yard irsaliyedeki tam 48 modül için ödeme yapıyor."
-        ],
-        "ar": [
-          "بعد 40 دقيقة من \"الاختطاف\" — دفعة واردة من East Yard Consign",
-          "الوصف: \"وحدات إلكترونية، دفعة 48\"",
-          "لم يعد هذا خيطاً غير مباشر: تدفع East Yard مقابل 48 وحدة بالضبط من الإيصال."
-        ],
-        "kk": [
-          "\"Айдап әкетуден\" 40 минут кейін — East Yard Consign төлемі",
-          "Мақсаты: \"электрондық модульдер, партия 48\"",
-          "Бұл енді жанама із емес: East Yard жүкқұжаттағы дәл 48 модуль үшін төлейді."
-        ]
+        "ru": "После разгрузки Драй получает платёж за точное количество и серийные номера сенсоров.",
+        "en": "After unloading, Dray receives payment for the exact quantity and serial numbers of the sensors.",
+        "tr": "After unloading, Dray receives payment for the exact quantity and serial numbers of the sensors.",
+        "ar": "After unloading, Dray receives payment for the exact quantity and serial numbers of the sensors.",
+        "kk": "После разгрузки Драй получает платёж за точное количество и серийные номера сенсоров."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Платёж совпадает с количеством заявленного груза.",
-        "en": "The payment matches the claimed cargo quantity.",
-        "tr": "Ödeme bildirilen yük miktarıyla eşleşiyor.",
-        "ar": "تطابق الدفعة كمية الشحنة المبلغ عنها.",
-        "kk": "Төлем мәлімделген жүк санымен сәйкес."
+        "ru": "Груз был продан, а не похищен.",
+        "en": "The cargo was sold, not stolen.",
+        "tr": "The cargo was sold, not stolen.",
+        "ar": "The cargo was sold, not stolen.",
+        "kk": "Груз был продан, а не похищен."
       },
-      "meta": {
-        "bankName": {
-          "ru": "Municipal Credit",
-          "en": "Municipal Credit",
-          "tr": "Municipal Credit",
-          "ar": "Municipal Credit",
-          "kk": "Municipal Credit"
-        },
-        "accountMask": "**** **** **** 51"
+      "narrativeRole": "motive",
+      "statementLink": {
+        "statementId": "claim_goods_stolen",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Груз был продан, а не похищен.",
+          "en": "The cargo was sold, not stolen.",
+          "tr": "The cargo was sold, not stolen.",
+          "ar": "The cargo was sold, not stolen.",
+          "kk": "Груз был продан, а не похищен."
+        }
       },
-      "relation": "contradicts"
+      "contradictionTarget": {
+        "statementId": "claim_goods_stolen",
+        "reason": {
+          "ru": "Груз был продан, а не похищен.",
+          "en": "The cargo was sold, not stolen.",
+          "tr": "The cargo was sold, not stolen.",
+          "ar": "The cargo was sold, not stolen.",
+          "kk": "Груз был продан, а не похищен."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "gps-51",
+      "order": 6,
       "type": "gps",
       "title": {
-        "ru": "GPS-трек без остановки",
-        "en": "GPS track without stop",
-        "tr": "Duraksız GPS izi",
-        "ar": "مسار GPS بلا توقف",
-        "kk": "Тоқтаусыз GPS-трек"
+        "ru": "Восстановленный GPS-трек",
+        "en": "Recovered GPS Track",
+        "tr": "Recovered GPS Track",
+        "ar": "Recovered GPS Track",
+        "kk": "Восстановленный GPS-трек"
       },
       "content": {
-        "ru": [
-          "21:07 — склад Драя, старт",
-          "21:22 — тоннель D4, скорость 42 км/ч",
-          "21:57 — East Yard, штатная парковка"
-        ],
-        "en": [
-          "21:07 — Dray warehouse, start",
-          "21:22 — tunnel D4, speed 42 km/h",
-          "21:57 — East Yard, normal parking"
-        ],
-        "tr": [
-          "21:07 — Dray deposu, başlangıç",
-          "21:22 — D4 tüneli, hız 42 km/s",
-          "21:57 — East Yard, normal park"
-        ],
-        "ar": [
-          "21:07 — مستودع دراي، انطلاق",
-          "21:22 — النفق D4، السرعة 42 كم/س",
-          "21:57 — East Yard، توقف نظامي"
-        ],
-        "kk": [
-          "21:07 — Драй қоймасы, бастау",
-          "21:22 — D4 туннелі, жылдамдық 42 км/сағ",
-          "21:57 — East Yard, штаттық тұрақ"
-        ]
+        "ru": "Буфер устройства показывает непрерывный маршрут до аэропортового грузового сектора, ангар B-17. Время следующей отправки — 04:40.",
+        "en": "The device buffer shows a continuous route to the airport cargo sector, Hangar B-17. The next shipment is scheduled for 4:40 a.m.",
+        "tr": "The device buffer shows a continuous route to the airport cargo sector, Hangar B-17. The next shipment is scheduled for 4:40 a.m.",
+        "ar": "The device buffer shows a continuous route to the airport cargo sector, Hangar B-17. The next shipment is scheduled for 4:40 a.m.",
+        "kk": "Буфер устройства показывает непрерывный маршрут до аэропортового грузового сектора, ангар B-17. Время следующей отправки — 04:40."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Последний груз сети находится в аэропорту и должен отправиться до рассвета.",
+        "en": "The network's final cargo is at the airport and is due to leave before dawn.",
+        "tr": "The network's final cargo is at the airport and is due to leave before dawn.",
+        "ar": "The network's final cargo is at the airport and is due to leave before dawn.",
+        "kk": "Последний груз сети находится в аэропорту и должен отправиться до рассвета."
+      },
+      "narrativeRole": "arc_proof",
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Последний груз сети находится в аэропорту и должен отправиться до рассвета.",
+          "en": "The network's final cargo is at the airport and is due to leave before dawn.",
+          "tr": "The network's final cargo is at the airport and is due to leave before dawn.",
+          "ar": "The network's final cargo is at the airport and is due to leave before dawn.",
+          "kk": "Последний груз сети находится в аэропорту и должен отправиться до рассвета."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75
+    },
+    {
+      "id": "photo-staged-van",
+      "order": 7,
+      "type": "shadow_time_check",
+      "title": {
+        "ru": "Проверка времени фотографии фургона",
+        "en": "Van Photograph Time Check",
+        "tr": "Van Photograph Time Check",
+        "ar": "Van Photograph Time Check",
+        "kk": "Проверка времени фотографии фургона"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Маршрут не содержит остановки или резкого отклонения для угона.",
-        "en": "The route has no stop or sharp deviation for a hijack.",
-        "tr": "Rotada kaçırmaya uygun duraklama veya keskin sapma yok.",
-        "ar": "لا يحتوي المسار على توقف أو انحراف حاد لاختطاف.",
-        "kk": "Бағытта айдап әкетуге тән тоқтау не күрт ауытқу жоқ."
+        "ru": "Фотография сделана в 16:10–16:35 предыдущего дня, а не после ночного «перехвата».",
+        "en": "The photograph was taken between 4:10 and 4:35 p.m. the previous day, not after the nighttime ‘hijacking.’",
+        "tr": "The photograph was taken between 4:10 and 4:35 p.m. the previous day, not after the nighttime ‘hijacking.’",
+        "ar": "The photograph was taken between 4:10 and 4:35 p.m. the previous day, not after the nighttime ‘hijacking.’",
+        "kk": "Фотография сделана в 16:10–16:35 предыдущего дня, а не после ночного «перехвата»."
       },
-      "meta": {
-        "company": {
-          "ru": "Cargo Office 51",
-          "en": "Cargo Office 51",
-          "tr": "Cargo Office 51",
-          "ar": "Cargo Office 51",
-          "kk": "Cargo Office 51"
-        },
-        "department": {
-          "ru": "Центр грузового мониторинга",
-          "en": "Cargo Monitoring Center",
-          "tr": "Kargo İzleme Merkezi",
-          "ar": "مركز مراقبة الشحن",
-          "kk": "Жүк мониторингі орталығы"
-        },
-        "requestId": {
-          "ru": "TLC-2026-0612-D · Тип: маршрут",
-          "en": "TLC-2026-0612-D · Type: route",
-          "tr": "TLC-2026-0612-D · Tür: rota",
-          "ar": "TLC-2026-0612-D · النوع: مسار",
-          "kk": "TLC-2026-0612-D · Түрі: бағыт"
-        },
-        "gpsFooter": {
-          "ru": "© TrackLine 2026 · GPS ACC: ±7m",
-          "en": "© TrackLine 2026 · GPS ACC: ±7m",
-          "tr": "© TrackLine 2026 · GPS ACC: ±7m",
-          "ar": "© TrackLine 2026 · GPS ACC: ±7m",
-          "kk": "© TrackLine 2026 · GPS ACC: ±7m"
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_interception_time",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Фотография сделана в 16:10–16:35 предыдущего дня, а не после ночного «перехвата».",
+          "en": "The photograph was taken between 4:10 and 4:35 p.m. the previous day, not after the nighttime ‘hijacking.’",
+          "tr": "The photograph was taken between 4:10 and 4:35 p.m. the previous day, not after the nighttime ‘hijacking.’",
+          "ar": "The photograph was taken between 4:10 and 4:35 p.m. the previous day, not after the nighttime ‘hijacking.’",
+          "kk": "Фотография сделана в 16:10–16:35 предыдущего дня, а не после ночного «перехвата»."
         }
       },
-      "relation": "contradicts"
+      "contradictionTarget": {
+        "statementId": "claim_interception_time",
+        "reason": {
+          "ru": "Фотография сделана в 16:10–16:35 предыдущего дня, а не после ночного «перехвата».",
+          "en": "The photograph was taken between 4:10 and 4:35 p.m. the previous day, not after the nighttime ‘hijacking.’",
+          "tr": "The photograph was taken between 4:10 and 4:35 p.m. the previous day, not after the nighttime ‘hijacking.’",
+          "ar": "The photograph was taken between 4:10 and 4:35 p.m. the previous day, not after the nighttime ‘hijacking.’",
+          "kk": "Фотография сделана в 16:10–16:35 предыдущего дня, а не после ночного «перехвата»."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "Драй приложил снимок якобы брошенного фургона; ориентация рампы известна по плану терминала.",
+        "en": "Dray submitted a photograph of the supposedly abandoned van; the ramp's orientation is known from the terminal plan.",
+        "tr": "Dray submitted a photograph of the supposedly abandoned van; the ramp's orientation is known from the terminal plan.",
+        "ar": "Dray submitted a photograph of the supposedly abandoned van; the ramp's orientation is known from the terminal plan.",
+        "kk": "Драй приложил снимок якобы брошенного фургона; ориентация рампы известна по плану терминала."
+      },
+      "instruction": {
+        "ru": "Совместить тень сигнального столба с временной шкалой.",
+        "en": "Match the signal-post shadow to the time scale.",
+        "tr": "Match the signal-post shadow to the time scale.",
+        "ar": "Match the signal-post shadow to the time scale.",
+        "kk": "Совместить тень сигнального столба с временной шкалой."
+      },
+      "assets": {
+        "asset1": "cases/case-051/assets/interactive/photo-staged-van-scene.webp",
+        "asset2": "cases/case-051/assets/interactive/photo-staged-van-shadow-reference.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Новая улика доказывает, что легенду о перехвате подготовили ещё до ночной перевозки.",
+          "en": "The new evidence proves that the hijacking story was prepared before the nighttime transport.",
+          "tr": "The new evidence proves that the hijacking story was prepared before the nighttime transport.",
+          "ar": "The new evidence proves that the hijacking story was prepared before the nighttime transport.",
+          "kk": "Новая улика доказывает, что легенду о перехвате подготовили ещё до ночной перевозки."
+        },
+        "playerAction": {
+          "ru": "Совместить тень сигнального столба с временной шкалой.",
+          "en": "Match the signal-post shadow to the time scale.",
+          "tr": "Match the signal-post shadow to the time scale.",
+          "ar": "Match the signal-post shadow to the time scale.",
+          "kk": "Совместить тень сигнального столба с временной шкалой."
+        },
+        "conclusion": {
+          "ru": "Фотография сделана в 16:10–16:35 предыдущего дня, а не после ночного «перехвата».",
+          "en": "The photograph was taken between 4:10 and 4:35 p.m. the previous day, not after the nighttime ‘hijacking.’",
+          "tr": "The photograph was taken between 4:10 and 4:35 p.m. the previous day, not after the nighttime ‘hijacking.’",
+          "ar": "The photograph was taken between 4:10 and 4:35 p.m. the previous day, not after the nighttime ‘hijacking.’",
+          "kk": "Фотография сделана в 16:10–16:35 предыдущего дня, а не после ночного «перехвата»."
+        }
+      },
+      "data": {
+        "claimedTime": "02:15",
+        "orientationSource": "Технический план аэропортовой рампы",
+        "slider": {
+          "from": "06:00",
+          "to": "21:00",
+          "stepMinutes": 10
+        },
+        "shadowOrigin": {
+          "x": 44,
+          "y": 65
+        },
+        "referenceShadow": {
+          "baseAngle": 0,
+          "baseLength": 100,
+          "width": 20,
+          "opacity": 0.34
+        },
+        "timeSamples": [
+          {
+            "time": "08:00",
+            "angle": 71,
+            "length": 129
+          },
+          {
+            "time": "12:00",
+            "angle": 9,
+            "length": 52
+          },
+          {
+            "time": "16:20",
+            "angle": -44,
+            "length": 94
+          },
+          {
+            "time": "20:00",
+            "angle": -76,
+            "length": 151
+          }
+        ],
+        "validTimeRanges": [
+          {
+            "from": "16:10",
+            "to": "16:35"
+          }
+        ],
+        "matchTolerance": {
+          "angle": 8,
+          "length": 16
+        },
+        "orientationSourceEn": "Airport ramp technical plan"
+      }
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Телематика и GPS показывают штатный маршрут до East Yard.",
-      "Банковский платёж совпадает с партией сенсоров и закрывает цепочку отдела.",
-      "Угон фургона не подтверждён: вердикт — отказ."
+      "Фургон не останавливался и не подвергался нападению.",
+      "Драй лично доставил сенсоры в аэропорт, после чего получил оплату за партию.",
+      "Фотография сделана в 16:10–16:35 предыдущего дня, а не после ночного «перехвата».",
+      "Угон выдуман. Выплату следует отклонить, а маршрут указывает на последнюю отправку Серого конвоя."
     ],
     "en": [
-      "Telematics and GPS show a normal route to East Yard.",
-      "The bank payment matches the sensor batch and closes the department chain.",
-      "The van hijack is unsupported: reject the claim."
+      "The claimant voluntarily delivered the batch to the terminal.",
+      "The tracker was disabled, but the van continued operating normally.",
+      "The cargo was sold, not stolen.",
+      "The photograph was taken between 4:10 and 4:35 p.m. the previous day, not after the nighttime ‘hijacking.’",
+      "The cargo bay's condition is inconsistent with a sudden attack and forced unloading.",
+      "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "Telematik ve GPS East Yard’a normal rota gösteriyor.",
-      "Banka ödemesi sensör partisiyle eşleşiyor ve bölüm zincirini kapatıyor.",
-      "Minibüs kaçırma iddiası desteklenmiyor: ödeme reddedilir."
+      "The claimant voluntarily delivered the batch to the terminal.",
+      "The tracker was disabled, but the van continued operating normally.",
+      "The cargo was sold, not stolen.",
+      "The photograph was taken between 4:10 and 4:35 p.m. the previous day, not after the nighttime ‘hijacking.’",
+      "The cargo bay's condition is inconsistent with a sudden attack and forced unloading.",
+      "The claim is fraudulent and should be rejected."
     ],
     "ar": [
-      "تظهر التليماتيك وGPS مساراً عادياً إلى East Yard.",
-      "تطابق الدفعة البنكية دفعة الحساسات وتغلق سلسلة القسم.",
-      "اختطاف الشاحنة غير مثبت: القرار رفض."
+      "The claimant voluntarily delivered the batch to the terminal.",
+      "The tracker was disabled, but the van continued operating normally.",
+      "The cargo was sold, not stolen.",
+      "The photograph was taken between 4:10 and 4:35 p.m. the previous day, not after the nighttime ‘hijacking.’",
+      "The cargo bay's condition is inconsistent with a sudden attack and forced unloading.",
+      "The claim is fraudulent and should be rejected."
     ],
     "kk": [
-      "Телематика мен GPS East Yard-қа штаттық бағытты көрсетеді.",
-      "Банк төлемі сенсор партиясымен сәйкес және бөлім тізбегін жабады.",
-      "Фургонды айдап кету расталмады: вердикт — бас тарту."
+      "Фургон не останавливался и не подвергался нападению.",
+      "Драй лично доставил сенсоры в аэропорт, после чего получил оплату за партию.",
+      "Фотография сделана в 16:10–16:35 предыдущего дня, а не после ночного «перехвата».",
+      "Угон выдуман. Выплату следует отклонить, а маршрут указывает на последнюю отправку Серого конвоя."
     ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Организованная группа перехватила мой фургон с партией городских сенсоров. Водителя вытолкнули, груз исчез, трекер молчал почти час. Прошу возместить оборудование.",
+        "en": "An organized group hijacked my van carrying a batch of municipal sensors. They threw the driver out, the cargo vanished, and the tracker was silent for almost an hour. I am claiming the equipment loss.",
+        "tr": "An organized group hijacked my van carrying a batch of municipal sensors. They threw the driver out, the cargo vanished, and the tracker was silent for almost an hour. I am claiming the equipment loss.",
+        "ar": "An organized group hijacked my van carrying a batch of municipal sensors. They threw the driver out, the cargo vanished, and the tracker was silent for almost an hour. I am claiming the equipment loss.",
+        "kk": "Организованная группа перехватила мой фургон с партией городских сенсоров. Водителя вытолкнули, груз исчез, трекер молчал почти час. Прошу возместить оборудование."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_interception_time",
+      "text": {
+        "ru": "Фургон был перехвачен ночью после выезда со склада.",
+        "en": "The van was hijacked at night after leaving the warehouse.",
+        "tr": "The van was hijacked at night after leaving the warehouse.",
+        "ar": "The van was hijacked at night after leaving the warehouse.",
+        "kk": "Фургон был перехвачен ночью после выезда со склада."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_forced_unloading",
+      "text": {
+        "ru": "Нападавшие силой остановили машину и выгрузили сенсоры.",
+        "en": "Attackers forcibly stopped the van and unloaded the sensors.",
+        "tr": "Attackers forcibly stopped the van and unloaded the sensors.",
+        "ar": "Attackers forcibly stopped the van and unloaded the sensors.",
+        "kk": "Нападавшие силой остановили машину и выгрузили сенсоры."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_goods_stolen",
+      "text": {
+        "ru": "Драй не продавал груз и не доставлял его в аэропорт добровольно.",
+        "en": "Dray neither sold the cargo nor delivered it voluntarily to the airport.",
+        "tr": "Dray neither sold the cargo nor delivered it voluntarily to the airport.",
+        "ar": "Dray neither sold the cargo nor delivered it voluntarily to the airport.",
+        "kk": "Драй не продавал груз и не доставлял его в аэропорт добровольно."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Драй заявляет о вооружённом перехвате. Но ремни груза сложены аккуратно, а фургон не останавливался между складом и аэропортом. — В. Лебедева",
+      "en": "Dray reports an armed hijacking. But the cargo straps are neatly folded, and the van never stopped between the warehouse and the airport. — V. Lebedeva",
+      "tr": "Dray reports an armed hijacking. But the cargo straps are neatly folded, and the van never stopped between the warehouse and the airport. — V. Lebedeva",
+      "ar": "Dray reports an armed hijacking. But the cargo straps are neatly folded, and the van never stopped between the warehouse and the airport. — V. Lebedeva",
+      "kk": "Драй заявляет о вооружённом перехвате. Но ремни груза сложены аккуратно, а фургон не останавливался между складом и аэропортом. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Отправка из ангара B-17 назначена на 04:40. В списке курьеров — Лукас Феррейра, брат честного заявителя из нашего тринадцатого дела.",
+      "en": "The shipment from Hangar B-17 is scheduled for 4:40 a.m. The courier list includes Lucas Ferreira, brother of the honest claimant from Case 13.",
+      "tr": "The shipment from Hangar B-17 is scheduled for 4:40 a.m. The courier list includes Lucas Ferreira, brother of the honest claimant from Case 13.",
+      "ar": "The shipment from Hangar B-17 is scheduled for 4:40 a.m. The courier list includes Lucas Ferreira, brother of the honest claimant from Case 13.",
+      "kk": "Отправка из ангара B-17 назначена на 04:40. В списке курьеров — Лукас Феррейра, брат честного заявителя из нашего тринадцатого дела."
+    },
+    "nextCaseTeaser": {
+      "ru": "Финальное дело: Лукас утверждает, что авиакомпания потеряла чемодан. Его брат Матеус уже принёс этот чемодан в отдел.",
+      "en": "Final case: Lucas says the airline lost his suitcase. His brother Mateus has already brought that suitcase to the department.",
+      "tr": "Final case: Lucas says the airline lost his suitcase. His brother Mateus has already brought that suitcase to the department.",
+      "ar": "Final case: Lucas says the airline lost his suitcase. His brother Mateus has already brought that suitcase to the department.",
+      "kk": "Финальное дело: Лукас утверждает, что авиакомпания потеряла чемодан. Его брат Матеус уже принёс этот чемодан в отдел."
+    },
+    "seasonClue": {
+      "id": "final-courier",
+      "label": {
+        "ru": "Курьер Лукас Феррейра",
+        "en": "Courier Lucas Ferreira",
+        "tr": "Courier Lucas Ferreira",
+        "ar": "Courier Lucas Ferreira",
+        "kk": "Курьер Лукас Феррейра"
+      },
+      "description": {
+        "ru": "Знакомый свидетель оказался последним курьером сети. Его багажный маршрут связан с ангаром B-17.",
+        "en": "A familiar witness is the network's final courier. His baggage route is linked to Hangar B-17.",
+        "tr": "A familiar witness is the network's final courier. His baggage route is linked to Hangar B-17.",
+        "ar": "A familiar witness is the network's final courier. His baggage route is linked to Hangar B-17.",
+        "kk": "Знакомый свидетель оказался последним курьером сети. Его багажный маршрут связан с ангаром B-17."
+      },
+      "progressIndex": 7,
+      "progressTotal": 7
+    },
+    "epilogue": null
   }
 }

@@ -1,359 +1,487 @@
 {
   "id": "case-035",
   "type": "standard",
-  "difficulty": "hard",
+  "campaignOrder": 33,
+  "requiredLevel": 16,
+  "act": 4,
+  "actTitle": {
+    "ru": "Серый конвой",
+    "en": "The Gray Convoy",
+    "tr": "The Gray Convoy",
+    "ar": "The Gray Convoy",
+    "kk": "Серый конвой"
+  },
+  "difficulty": "medium",
   "claimAmount": 12500,
   "truth": "fraud",
-  "investigationBudget": 4,
   "title": {
-    "ru": "Инспекторы необычного ущерба",
-    "en": "Unusual Damage Inspectors",
-    "tr": "Tazminat Avcıları",
-    "ar": "صيادو التعويضات",
-    "kk": "Төлем аңшылары"
+    "ru": "Следы шин в «Янтаре»",
+    "en": "Tire Tracks at the Amber",
+    "tr": "Tire Tracks at the Amber",
+    "ar": "Tire Tracks at the Amber",
+    "kk": "Следы шин в «Янтаре»"
   },
   "claim": {
     "person": {
       "ru": "Аркадий Егоров, 52 года",
-      "en": "Arkady Egorov, 52",
-      "tr": "Arkady Egorov, 52",
-      "ar": "أركادي إيغوروف، 52",
-      "kk": "Аркадий Егоров, 52 жаста"
+      "en": "Arkady Yegorov, age 52",
+      "tr": "Arkady Yegorov, age 52",
+      "ar": "Arkady Yegorov, age 52",
+      "kk": "Аркадий Егоров, 52 года"
     },
     "story": {
-      "ru": "Ночью в отеле «Янтарь» неизвестный разгромил банкетный зал и уничтожил оборудование моей службы промышленной очистки. Прошу оплатить ремонт фургона и четырёх электростатических распылителей.",
-      "en": "An unknown intruder wrecked the Amber Hotel ballroom overnight and destroyed my industrial-cleaning equipment. I request payment for the van and four electrostatic sprayers.",
-      "tr": "Gece kimliği belirsiz biri Amber Oteli'nin balo salonunu dağıttı ve endüstriyel temizlik ekipmanımı yok etti. Minibüs ile dört elektrostatik püskürtücünün bedelini istiyorum.",
-      "ar": "خرّب شخص مجهول قاعة فندق العنبر ليلاً ودمّر معدات التنظيف الصناعي الخاصة بي. أطلب تعويض الشاحنة وأربعة مرشات كهروستاتيكية.",
-      "kk": "Түнде белгісіз адам «Янтарь» қонақүйінің залын қиратып, өнеркәсіптік тазалау жабдығымды жойды. Фургон мен төрт электростатикалық бүріккішті өтеуді сұраймын."
+      "ru": "Ночью неизвестные проникли в отель «Янтарь», разгромили банкетный зал и уничтожили четыре дорогих электростатических распылителя моей службы промышленной очистки. Прошу оплатить оборудование и ремонт фургона.",
+      "en": "During the night, unknown intruders entered the Amber Hotel, wrecked the banquet hall, and destroyed four expensive electrostatic sprayers belonging to my industrial-cleaning service. I am claiming the equipment and van repairs.",
+      "tr": "During the night, unknown intruders entered the Amber Hotel, wrecked the banquet hall, and destroyed four expensive electrostatic sprayers belonging to my industrial-cleaning service. I am claiming the equipment and van repairs.",
+      "ar": "During the night, unknown intruders entered the Amber Hotel, wrecked the banquet hall, and destroyed four expensive electrostatic sprayers belonging to my industrial-cleaning service. I am claiming the equipment and van repairs.",
+      "kk": "Ночью неизвестные проникли в отель «Янтарь», разгромили банкетный зал и уничтожили четыре дорогих электростатических распылителя моей службы промышленной очистки. Прошу оплатить оборудование и ремонт фургона."
     }
   },
-  "coverImage": "covers/case-035.svg",
   "client": {
     "role": {
-      "ru": "Владелец службы очистки",
-      "en": "Cleanup service owner",
-      "tr": "Temizlik servisi sahibi",
-      "ar": "مالك خدمة تنظيف",
-      "kk": "Тазалау қызметінің иесі"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "Москва",
-          "en": "Moscow",
-          "tr": "Moskova",
-          "ar": "موسكو",
-          "kk": "Мәскеу"
+          "ru": "4",
+          "en": "4",
+          "tr": "4",
+          "ar": "4",
+          "kk": "4"
         }
       },
       {
         "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Бизнес · БИ-035-GH",
-          "en": "Business · BI-035-GH",
-          "tr": "İşletme · BI-035-GH",
-          "ar": "الأعمال · BI-035-GH",
-          "kk": "Бизнес · БИ-035-GH"
-        }
-      },
-      {
-        "k": {
-          "ru": "Компания",
-          "en": "Company",
-          "tr": "Şirket",
-          "ar": "الشركة",
-          "kk": "Компания"
-        },
-        "v": {
-          "ru": "АРВ-4",
-          "en": "ARV-4",
-          "tr": "ARV-4",
-          "ar": "ARV-4",
-          "kk": "АРВ-4"
+          "ru": "33",
+          "en": "33",
+          "tr": "33",
+          "ar": "33",
+          "kk": "33"
         }
       }
     ]
   },
+  "coverImage": "covers/case-035.svg",
+  "personImage": "people/arkady-egorov.webp",
   "evidences": [
     {
       "id": "ev-camera",
+      "order": 1,
       "type": "camera_recording",
       "title": {
         "ru": "Камера погрузочной зоны",
-        "en": "Loading-bay CCTV",
-        "tr": "Yükleme alanı kamerası",
-        "ar": "كاميرا منطقة التحميل",
-        "kk": "Тиеу аймағы камерасы"
+        "en": "Loading Bay Camera",
+        "tr": "Loading Bay Camera",
+        "ar": "Loading Bay Camera",
+        "kk": "Камера погрузочной зоны"
       },
       "content": {
-        "ru": "01:42 · Егоров сам таранит декорации фургоном; посторонних нет.",
-        "en": "01:42 · Egorov rams the scenery with his own van; nobody else is present.",
-        "tr": "01:42 · Egorov dekorlara kendi minibüsüyle çarpıyor; başka kimse yok.",
-        "ar": "01:42 · إيغوروف يصدم الديكور بشاحنته؛ لا أحد غيره.",
-        "kk": "01:42 · Егоров декорацияны өз фургонымен соғады; бөгде адам жоқ."
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Разгром устроил сам заявитель, а не неизвестный нарушитель.",
-        "en": "The claimant, not an unknown intruder, caused the damage.",
-        "tr": "Hasarı kimliği belirsiz biri değil başvuru sahibi verdi.",
-        "ar": "صاحب الطلب، لا شخص مجهول، هو من أحدث الضرر.",
-        "kk": "Зиянды белгісіз адам емес, өтініш беруші келтірген."
-      },
-      "meta": {
-        "cameraId": "CAM-AMBER-04",
-        "cameraModel": "DomeGuard DG-8000 · 4K · H.265"
-      }
-    },
-    {
-      "id": "ev-gps",
-      "type": "gps",
-      "title": {
-        "ru": "Трек фургона АРВ-4",
-        "en": "ARV-4 van track",
-        "tr": "ARV-4 minibüs rotası",
-        "ar": "مسار شاحنة ARV-4",
-        "kk": "ARV-4 фургонының бағыты"
-      },
-      "content": {
-        "ru": [
-          "00:55 · склад",
-          "01:39 · отель «Янтарь»",
-          "02:18 · ломбард"
-        ],
-        "en": [
-          "00:55 · depot",
-          "01:39 · Amber Hotel",
-          "02:18 · pawnshop"
-        ],
-        "tr": [
-          "00:55 · depo",
-          "01:39 · Amber Oteli",
-          "02:18 · rehin dükkânı"
-        ],
-        "ar": [
-          "00:55 · المستودع",
-          "01:39 · فندق سلايم",
-          "02:18 · متجر الرهن"
-        ],
-        "kk": [
-          "00:55 · қойма",
-          "01:39 · «Янтарь» қонақүйі",
-          "02:18 · ломбард"
-        ]
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "После «атаки» фургон поехал не в сервис, а в ломбард.",
-        "en": "After the 'attack,' the van went to a pawnshop, not a repair shop.",
-        "tr": "'Saldırıdan' sonra minibüs servise değil rehinciye gitti.",
-        "ar": "بعد «الهجوم» توجهت الشاحنة إلى متجر رهن لا إلى ورشة.",
-        "kk": "«Шабуылдан» кейін фургон сервиске емес, ломбардқа барған."
-      },
-      "meta": {
-        "company": {
-          "ru": "Навигационная служба № 35",
-          "en": "Navigation Office 35",
-          "tr": "SpektrumTakip",
-          "ar": "سبيكتروم تراك",
-          "kk": "Навигационная служба № 35"
-        },
-        "department": {
-          "ru": "Корпоративный контроль",
-          "en": "Corporate Control",
-          "tr": "Kurumsal Kontrol",
-          "ar": "الرقابة المؤسسية",
-          "kk": "Корпоративтік бақылау"
-        },
-        "requestId": {
-          "ru": "ST-035-441",
-          "en": "ST-035-441",
-          "tr": "ST-035-441",
-          "ar": "ST-035-441",
-          "kk": "ST-035-441"
-        },
-        "gpsFooter": {
-          "ru": "Спутниковые точки подтверждены",
-          "en": "Satellite points verified",
-          "tr": "Uydu noktaları doğrulandı",
-          "ar": "تم التحقق من نقاط الأقمار الصناعية",
-          "kk": "Спутниктік нүктелер расталды"
-        }
-      }
-    },
-    {
-      "id": "ev-bank",
-      "type": "bank_statement",
-      "title": {
-        "ru": "Счёт компании",
-        "en": "Company account",
-        "tr": "Şirket hesabı",
-        "ar": "حساب الشركة",
-        "kk": "Компания шоты"
-      },
-      "content": {
-        "ru": [
-          "Накануне · перевод от ломбарда: 18 000 €",
-          "Назначение: 4 промышленных распылителя"
-        ],
-        "en": [
-          "Previous day · pawnshop transfer: €18,000",
-          "Memo: 4 industrial sprayers"
-        ],
-        "tr": [
-          "Önceki gün · rehinciden transfer: 18.000 €",
-          "Açıklama: 4 endüstriyel püskürtücü"
-        ],
-        "ar": [
-          "اليوم السابق · تحويل من متجر الرهن: 18,000 €",
-          "البيان: 4 مرشات صناعية"
-        ],
-        "kk": [
-          "Алдыңғы күн · ломбард аударымы: 18 000 €",
-          "Мақсаты: 4 өнеркәсіптік бүріккіш"
-        ]
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Заявленное уничтоженным оборудование было продано заранее.",
-        "en": "The supposedly destroyed equipment had already been sold.",
-        "tr": "Yok olduğu söylenen ekipman önceden satılmıştı.",
-        "ar": "المعدات المزعوم تدميرها بيعت مسبقاً.",
-        "kk": "Жойылды делінген жабдық алдын ала сатылған."
-      },
-      "meta": {
-        "bankName": {
-          "ru": "ГородКапитал",
-          "en": "CityCapital",
-          "tr": "ŞehirSermaye",
-          "ar": "سيتي كابيتال",
-          "kk": "ҚалаКапитал"
-        },
-        "accountMask": "•• 0351"
-      }
-    },
-    {
-      "id": "ev-witness",
-      "type": "witness_statement",
-      "title": {
-        "ru": "Показания администратора",
-        "en": "Manager statement",
-        "tr": "Müdür ifadesi",
-        "ar": "إفادة المدير",
-        "kk": "Әкімші жауабы"
-      },
-      "content": {
-        "ru": "Слышал гул, хлопок и крик: «Отключите оборудование!»",
-        "en": "I heard a hum, a bang, and someone shout: 'Shut down the equipment!'",
-        "tr": "Bir uğultu, patlama ve 'Akışları kesiştirmeyin!' diye bir ses duydum.",
-        "ar": "سمعت طنيناً وانفجاراً وصوتاً يصرخ: «لا تقاطعوا التدفقات!»",
-        "kk": "Гуіл, тарс және «Ағындарды қоспаңдар!» деген айқайды естідім."
+        "ru": "Фургон Егорова входит по его служебной карте. Через десять минут машина выезжает с новой вмятиной; других автомобилей нет.",
+        "en": "Yegorov's van enters using his staff card. Ten minutes later it leaves with a fresh dent; no other vehicle enters.",
+        "tr": "Yegorov's van enters using his staff card. Ten minutes later it leaves with a fresh dent; no other vehicle enters.",
+        "ar": "Yegorov's van enters using his staff card. Ten minutes later it leaves with a fresh dent; no other vehicle enters.",
+        "kk": "Фургон Егорова входит по его служебной карте. Через десять минут машина выезжает с новой вмятиной; других автомобилей нет."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Шум подтверждает инцидент, но не его мистическую причину.",
-        "en": "The noise confirms an incident, not a supernatural cause.",
-        "tr": "Gürültü olayı doğrular, doğaüstü nedeni değil.",
-        "ar": "الضوضاء تثبت وقوع حادث لا سببه الخارق.",
-        "kk": "Дыбыс оқиғаны растайды, мистикалық себебін емес."
+        "ru": "Заявитель сам ввёл свой фургон в закрытую зону во время разгрома.",
+        "en": "The claimant personally drove his van into the restricted area during the damage.",
+        "tr": "The claimant personally drove his van into the restricted area during the damage.",
+        "ar": "The claimant personally drove his van into the restricted area during the damage.",
+        "kk": "Заявитель сам ввёл свой фургон в закрытую зону во время разгрома."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_attack",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Заявитель сам ввёл свой фургон в закрытую зону во время разгрома.",
+          "en": "The claimant personally drove his van into the restricted area during the damage.",
+          "tr": "The claimant personally drove his van into the restricted area during the damage.",
+          "ar": "The claimant personally drove his van into the restricted area during the damage.",
+          "kk": "Заявитель сам ввёл свой фургон в закрытую зону во время разгрома."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "ev-tyres",
+      "order": 2,
+      "type": "photo",
+      "title": {
+        "ru": "Следы на паркете",
+        "en": "Tracks on the Parquet",
+        "tr": "Tracks on the Parquet",
+        "ar": "Tracks on the Parquet",
+        "kk": "Следы на паркете"
+      },
+      "content": {
+        "ru": "Рисунок шин в зале совпадает с редкой зимней резиной фургона Егорова. Следы проходят через разбитую декоративную перегородку.",
+        "en": "The tire pattern in the hall matches the rare winter tires on Yegorov's van. The tracks run through the shattered decorative partition.",
+        "tr": "The tire pattern in the hall matches the rare winter tires on Yegorov's van. The tracks run through the shattered decorative partition.",
+        "ar": "The tire pattern in the hall matches the rare winter tires on Yegorov's van. The tracks run through the shattered decorative partition.",
+        "kk": "Рисунок шин в зале совпадает с редкой зимней резиной фургона Егорова. Следы проходят через разбитую декоративную перегородку."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Зал разгромлен движением собственного фургона заявителя.",
+        "en": "The hall was wrecked by the claimant's own van.",
+        "tr": "The hall was wrecked by the claimant's own van.",
+        "ar": "The hall was wrecked by the claimant's own van.",
+        "kk": "Зал разгромлен движением собственного фургона заявителя."
+      },
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_attack",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Зал разгромлен движением собственного фургона заявителя.",
+          "en": "The hall was wrecked by the claimant's own van.",
+          "tr": "The hall was wrecked by the claimant's own van.",
+          "ar": "The hall was wrecked by the claimant's own van.",
+          "kk": "Зал разгромлен движением собственного фургона заявителя."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_attack",
+        "reason": {
+          "ru": "Зал разгромлен движением собственного фургона заявителя.",
+          "en": "The hall was wrecked by the claimant's own van.",
+          "tr": "The hall was wrecked by the claimant's own van.",
+          "ar": "The hall was wrecked by the claimant's own van.",
+          "kk": "Зал разгромлен движением собственного фургона заявителя."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/case-035-ev-tyres.webp"
       }
     },
     {
-      "id": "ev-document",
+      "id": "ev-sprayers",
+      "order": 3,
       "type": "document",
       "title": {
-        "ru": "Акт осмотра зала",
-        "en": "Ballroom inspection",
-        "tr": "Salon incelemesi",
-        "ar": "فحص القاعة",
-        "kk": "Залды тексеру"
+        "ru": "Сервисный реестр",
+        "en": "Service Inventory",
+        "tr": "Service Inventory",
+        "ar": "Service Inventory",
+        "kk": "Сервисный реестр"
       },
       "content": {
-        "ru": "Следы шин совпадают с протектором фургона АРВ-4; следов внешнего воздействия нет.",
-        "en": "Tire marks match the ARV-4 van; no signs of an outside attack were found.",
-        "tr": "Lastik izleri ARV-4 ile eşleşiyor; plazma yanığı yok.",
-        "ar": "آثار الإطارات تطابق شاحنة ARV-4؛ لا حروق بلازمية.",
-        "kk": "Шина іздері ARV-4-ке сәйкес; сыртқы шабуыл белгілері жоқ."
+        "ru": "Два распылителя проданы за неделю до происшествия, ещё два сняты на запчасти. Целых четырёх устройств в отеле не было.",
+        "en": "Two sprayers were sold one week before the incident, and two others were dismantled for parts. Four intact units were never present at the hotel.",
+        "tr": "Two sprayers were sold one week before the incident, and two others were dismantled for parts. Four intact units were never present at the hotel.",
+        "ar": "Two sprayers were sold one week before the incident, and two others were dismantled for parts. Four intact units were never present at the hotel.",
+        "kk": "Два распылителя проданы за неделю до происшествия, ещё два сняты на запчасти. Целых четырёх устройств в отеле не было."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Физические следы указывают на обычный наезд фургона.",
-        "en": "Physical evidence points to an ordinary vehicle collision.",
-        "tr": "Fiziksel izler sıradan bir araç çarpmasına işaret ediyor.",
-        "ar": "الأدلة المادية تشير إلى اصطدام مركبة عادي.",
-        "kk": "Заттай іздер кәдімгі көлік соққысын көрсетеді."
-      }
+        "ru": "Заявленное уничтоженное оборудование не существовало в указанном составе.",
+        "en": "The allegedly destroyed equipment did not exist in the stated configuration.",
+        "tr": "The allegedly destroyed equipment did not exist in the stated configuration.",
+        "ar": "The allegedly destroyed equipment did not exist in the stated configuration.",
+        "kk": "Заявленное уничтоженное оборудование не существовало в указанном составе."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_equipment_destroyed",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Заявленное уничтоженное оборудование не существовало в указанном составе.",
+          "en": "The allegedly destroyed equipment did not exist in the stated configuration.",
+          "tr": "The allegedly destroyed equipment did not exist in the stated configuration.",
+          "ar": "The allegedly destroyed equipment did not exist in the stated configuration.",
+          "kk": "Заявленное уничтоженное оборудование не существовало в указанном составе."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_equipment_destroyed",
+        "reason": {
+          "ru": "Заявленное уничтоженное оборудование не существовало в указанном составе.",
+          "en": "The allegedly destroyed equipment did not exist in the stated configuration.",
+          "tr": "The allegedly destroyed equipment did not exist in the stated configuration.",
+          "ar": "The allegedly destroyed equipment did not exist in the stated configuration.",
+          "kk": "Заявленное уничтоженное оборудование не существовало в указанном составе."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
-      "id": "ev-social",
-      "type": "social_media",
+      "id": "ev-gps",
+      "order": 4,
+      "type": "gps",
       "title": {
-        "ru": "Удалённый пост",
-        "en": "Deleted post",
-        "tr": "Silinmiş gönderi",
-        "ar": "منشور محذوف",
-        "kk": "Өшірілген жазба"
+        "ru": "Трек фургона",
+        "en": "Van Tracking Log",
+        "tr": "Van Tracking Log",
+        "ar": "Van Tracking Log",
+        "kk": "Трек фургона"
       },
       "content": {
-        "ru": "«Если страховщик поверит в историю о ночном нарушителе — долги закрыты.»",
-        "en": "'If the insurer accepts the story about a night intruder, the debts are gone.'",
-        "tr": "'Sigortacı gece gelen davetsiz misafir hikâyesine inanırsa borçlar biter.'",
-        "ar": "«إذا صدقت شركة التأمين قصة المتسلل الليلي انتهت الديون.»",
-        "kk": "«Сақтандырушы түнгі бұзушы туралы оқиғаға сенсе, қарыз жабылады.»"
+        "ru": "После отеля фургон следует к частному кузовному сервису, где вмятину искусственно расширяют перед осмотром.",
+        "en": "After leaving the hotel, the van travels to a private body shop where the dent is deliberately enlarged before inspection.",
+        "tr": "After leaving the hotel, the van travels to a private body shop where the dent is deliberately enlarged before inspection.",
+        "ar": "After leaving the hotel, the van travels to a private body shop where the dent is deliberately enlarged before inspection.",
+        "kk": "После отеля фургон следует к частному кузовному сервису, где вмятину искусственно расширяют перед осмотром."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Пост прямо раскрывает мотив и план инсценировки.",
-        "en": "The post directly reveals the motive and staging plan.",
-        "tr": "Gönderi amacı ve mizanseni doğrudan açıklıyor.",
-        "ar": "المنشور يكشف الدافع وخطة التلفيق مباشرة.",
-        "kk": "Жазба себеп пен қойылым жоспарын тікелей ашады."
+        "ru": "Повреждение автомобиля было дополнительно увеличено после происшествия.",
+        "en": "The vehicle damage was deliberately increased after the incident.",
+        "tr": "The vehicle damage was deliberately increased after the incident.",
+        "ar": "The vehicle damage was deliberately increased after the incident.",
+        "kk": "Повреждение автомобиля было дополнительно увеличено после происшествия."
       },
-      "meta": {
-        "socialPlatform": "nightlog.local"
-      }
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_vehicle_damage",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Повреждение автомобиля было дополнительно увеличено после происшествия.",
+          "en": "The vehicle damage was deliberately increased after the incident.",
+          "tr": "The vehicle damage was deliberately increased after the incident.",
+          "ar": "The vehicle damage was deliberately increased after the incident.",
+          "kk": "Повреждение автомобиля было дополнительно увеличено после происшествия."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_vehicle_damage",
+        "reason": {
+          "ru": "Повреждение автомобиля было дополнительно увеличено после происшествия.",
+          "en": "The vehicle damage was deliberately increased after the incident.",
+          "tr": "The vehicle damage was deliberately increased after the incident.",
+          "ar": "The vehicle damage was deliberately increased after the incident.",
+          "kk": "Повреждение автомобиля было дополнительно увеличено после происшествия."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "ev-admin",
+      "order": 5,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания администратора",
+        "en": "Manager's Statement",
+        "tr": "Manager's Statement",
+        "ar": "Manager's Statement",
+        "kk": "Показания администратора"
+      },
+      "content": {
+        "ru": "Егоров настоял на работе без персонала и забрал временную карту зала. Администратор не видел момент повреждения.",
+        "en": "Yegorov insisted on working without hotel staff and took a temporary hall access card. The manager did not witness the damage.",
+        "tr": "Yegorov insisted on working without hotel staff and took a temporary hall access card. The manager did not witness the damage.",
+        "ar": "Yegorov insisted on working without hotel staff and took a temporary hall access card. The manager did not witness the damage.",
+        "kk": "Егоров настоял на работе без персонала и забрал временную карту зала. Администратор не видел момент повреждения."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Показания создают контекст доступа, но сами по себе не доказывают инсценировку.",
+        "en": "The statement establishes access but does not prove staging on its own.",
+        "tr": "The statement establishes access but does not prove staging on its own.",
+        "ar": "The statement establishes access but does not prove staging on its own.",
+        "kk": "Показания создают контекст доступа, но сами по себе не доказывают инсценировку."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_attack",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Показания создают контекст доступа, но сами по себе не доказывают инсценировку.",
+          "en": "The statement establishes access but does not prove staging on its own.",
+          "tr": "The statement establishes access but does not prove staging on its own.",
+          "ar": "The statement establishes access but does not prove staging on its own.",
+          "kk": "Показания создают контекст доступа, но сами по себе не доказывают инсценировку."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25
+    },
+    {
+      "id": "ev-deposit",
+      "order": 6,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Оплата покупателя",
+        "en": "Buyer's Payment",
+        "tr": "Buyer's Payment",
+        "ar": "Buyer's Payment",
+        "kk": "Оплата покупателя"
+      },
+      "content": {
+        "ru": "Деньги за распылители поступили от посредника, связанного с Восточным двором.",
+        "en": "Payment for the sprayers came from an intermediary linked to Eastern Yard.",
+        "tr": "Payment for the sprayers came from an intermediary linked to Eastern Yard.",
+        "ar": "Payment for the sprayers came from an intermediary linked to Eastern Yard.",
+        "kk": "Деньги за распылители поступили от посредника, связанного с Восточным двором."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Оборудование было продано через известный канал до заявления.",
+        "en": "The equipment was sold through the known channel before the claim.",
+        "tr": "The equipment was sold through the known channel before the claim.",
+        "ar": "The equipment was sold through the known channel before the claim.",
+        "kk": "Оборудование было продано через известный канал до заявления."
+      },
+      "narrativeRole": "arc_proof",
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Оборудование было продано через известный канал до заявления.",
+          "en": "The equipment was sold through the known channel before the claim.",
+          "tr": "The equipment was sold through the known channel before the claim.",
+          "ar": "The equipment was sold through the known channel before the claim.",
+          "kk": "Оборудование было продано через известный канал до заявления."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Следы шин и переписка доказывают инсценировку ущерба.",
-      "Камера, шины и GPS доказывают, что зал разгромил сам Егоров.",
-      "Распылители были проданы до аварии, а удалённый пост раскрывает страховую схему."
+      "В зал въезжал только фургон Егорова, а рисунок шин совпадает.",
+      "Четыре распылителя не были уничтожены: их продали или разобрали раньше.",
+      "Егоров инсценировал разгром и увеличил повреждение фургона. В выплате следует отказать."
     ],
     "en": [
-      "Tire marks and messages prove the damage was staged.",
-      "CCTV, tire marks, and GPS prove Egorov wrecked the room himself.",
-      "The sprayers were sold beforehand, and the deleted post exposes the insurance scheme."
+      "The hall was wrecked by the claimant's own van.",
+      "The allegedly destroyed equipment did not exist in the stated configuration.",
+      "The vehicle damage was deliberately increased after the incident.",
+      "The claimant personally drove his van into the restricted area during the damage.",
+      "The statement establishes access but does not prove staging on its own.",
+      "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "Lastik izleri ve mesajlar hasarın kurgulandığını kanıtlıyor.",
-      "Kamera, lastik izleri ve GPS salonu Egorov'un dağıttığını kanıtlıyor.",
-      "Püskürtücüler önceden satılmış; silinen gönderi sigorta planını açığa çıkarıyor."
+      "The hall was wrecked by the claimant's own van.",
+      "The allegedly destroyed equipment did not exist in the stated configuration.",
+      "The vehicle damage was deliberately increased after the incident.",
+      "The claimant personally drove his van into the restricted area during the damage.",
+      "The statement establishes access but does not prove staging on its own.",
+      "The claim is fraudulent and should be rejected."
     ],
     "ar": [
-      "تثبت آثار الإطارات والرسائل أن الضرر كان مدبّراً.",
-      "تثبت الكاميرا وآثار الإطارات وGPS أن إيغوروف دمّر القاعة بنفسه.",
-      "بيعت المرشات مسبقاً ويكشف المنشور المحذوف مخطط التأمين."
+      "The hall was wrecked by the claimant's own van.",
+      "The allegedly destroyed equipment did not exist in the stated configuration.",
+      "The vehicle damage was deliberately increased after the incident.",
+      "The claimant personally drove his van into the restricted area during the damage.",
+      "The statement establishes access but does not prove staging on its own.",
+      "The claim is fraudulent and should be rejected."
     ],
     "kk": [
-      "Шина іздері мен хаттар залалдың қолдан жасалғанын дәлелдейді.",
-      "Камера, шина ізі және GPS залды Егоровтың өзі қиратқанын дәлелдейді.",
-      "Бүріккіштер алдын ала сатылған, ал өшірілген жазба сақтандыру айласын ашады."
+      "В зал въезжал только фургон Егорова, а рисунок шин совпадает.",
+      "Четыре распылителя не были уничтожены: их продали или разобрали раньше.",
+      "Егоров инсценировал разгром и увеличил повреждение фургона. В выплате следует отказать."
     ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Ночью неизвестные проникли в отель «Янтарь», разгромили банкетный зал и уничтожили четыре дорогих электростатических распылителя моей службы промышленной очистки. Прошу оплатить оборудование и ремонт фургона.",
+        "en": "During the night, unknown intruders entered the Amber Hotel, wrecked the banquet hall, and destroyed four expensive electrostatic sprayers belonging to my industrial-cleaning service. I am claiming the equipment and van repairs.",
+        "tr": "During the night, unknown intruders entered the Amber Hotel, wrecked the banquet hall, and destroyed four expensive electrostatic sprayers belonging to my industrial-cleaning service. I am claiming the equipment and van repairs.",
+        "ar": "During the night, unknown intruders entered the Amber Hotel, wrecked the banquet hall, and destroyed four expensive electrostatic sprayers belonging to my industrial-cleaning service. I am claiming the equipment and van repairs.",
+        "kk": "Ночью неизвестные проникли в отель «Янтарь», разгромили банкетный зал и уничтожили четыре дорогих электростатических распылителя моей службы промышленной очистки. Прошу оплатить оборудование и ремонт фургона."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_attack",
+      "text": {
+        "ru": "Неизвестные проникли в зал «Янтаря» и устроили разгром.",
+        "en": "Unknown intruders entered the Amber's hall and wrecked it.",
+        "tr": "Unknown intruders entered the Amber's hall and wrecked it.",
+        "ar": "Unknown intruders entered the Amber's hall and wrecked it.",
+        "kk": "Неизвестные проникли в зал «Янтаря» и устроили разгром."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_equipment_destroyed",
+      "text": {
+        "ru": "Новое оборудование находилось в зале и было уничтожено.",
+        "en": "The new equipment was in the hall and was destroyed.",
+        "tr": "The new equipment was in the hall and was destroyed.",
+        "ar": "The new equipment was in the hall and was destroyed.",
+        "kk": "Новое оборудование находилось в зале и было уничтожено."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_vehicle_damage",
+      "text": {
+        "ru": "Повреждения фургона возникли во время нападения.",
+        "en": "The van was damaged during the attack.",
+        "tr": "The van was damaged during the attack.",
+        "ar": "The van was damaged during the attack.",
+        "kk": "Повреждения фургона возникли во время нападения."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Неизвестный разгромил зал и уничтожил оборудование службы очистки. Но следы шин проходят через дверь, в которую чужой фургон не мог попасть без карты персонала. — В. Лебедева",
+      "en": "An unknown intruder wrecked the hall and destroyed industrial-cleaning equipment. But the tire tracks pass through a door no outside van could enter without a staff card. — V. Lebedeva",
+      "tr": "An unknown intruder wrecked the hall and destroyed industrial-cleaning equipment. But the tire tracks pass through a door no outside van could enter without a staff card. — V. Lebedeva",
+      "ar": "An unknown intruder wrecked the hall and destroyed industrial-cleaning equipment. But the tire tracks pass through a door no outside van could enter without a staff card. — V. Lebedeva",
+      "kk": "Неизвестный разгромил зал и уничтожил оборудование службы очистки. Но следы шин проходят через дверь, в которую чужой фургон не мог попасть без карты персонала. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Не каждый случай в отделе особых рисков должен быть сверхъестественным. Иногда достаточно плохого плана и очень характерных шин.",
+      "en": "Not every Special Risks case needs to be supernatural. Sometimes a bad plan and distinctive tires are enough.",
+      "tr": "Not every Special Risks case needs to be supernatural. Sometimes a bad plan and distinctive tires are enough.",
+      "ar": "Not every Special Risks case needs to be supernatural. Sometimes a bad plan and distinctive tires are enough.",
+      "kk": "Не каждый случай в отделе особых рисков должен быть сверхъестественным. Иногда достаточно плохого плана и очень характерных шин."
+    },
+    "nextCaseTeaser": {
+      "ru": "Экспериментальный электромобиль показывает скорость 188 км/ч, хотя в момент грозы стоял на зарядке.",
+      "en": "An experimental electric car recorded 188 km/h even though it was charging during the storm.",
+      "tr": "An experimental electric car recorded 188 km/h even though it was charging during the storm.",
+      "ar": "An experimental electric car recorded 188 km/h even though it was charging during the storm.",
+      "kk": "Экспериментальный электромобиль показывает скорость 188 км/ч, хотя в момент грозы стоял на зарядке."
+    },
+    "seasonClue": null,
+    "epilogue": null
   }
 }

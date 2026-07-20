@@ -7,6 +7,7 @@ function session(caseId: string, selected: string[], hintsUsed = 0): ActiveSessi
   return {
     caseId,
     selectedEvidenceIds: selected,
+    stamps: selected.map((evidenceId) => ({ caseId, statementId: 'claim_main', evidenceId })),
     viewedEvidenceIds: [],
     revealedEvidenceIds: [],
     selectedService: null,

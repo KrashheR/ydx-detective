@@ -1,0 +1,101 @@
+{
+  "id": "photo-49",
+  "order": 1,
+  "type": "surface_reveal",
+  "title": {
+    "ru": "Очистка инея в морозильном сейфе"
+  },
+  "isContradiction": true,
+  "narrativeRole": "pivot",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Под инеем видны свежие полосы волочения к передней дверце, а металл у вентиляции не имеет царапин или следов инструмента; контейнер вынесли штатным путём изнутри лаборатории."
+  },
+  "previousType": "photo",
+  "description": {
+    "ru": "Внутреннюю полку и заднюю стенку сфотографировали до размораживания сейфа."
+  },
+  "instruction": {
+    "ru": "Счистите иней с полки и области у вентиляционной решётки."
+  },
+  "assets": {
+    "baseImage": "assets/interactive/photo-49-scene.webp",
+    "coverTexture": "shared/surface/frost.webp",
+    "revealMasks": [
+      "assets/interactive/photo-49-front_drag_marks-trace-mask.svg",
+      "assets/interactive/photo-49-undisturbed_vent-trace-mask.svg"
+    ],
+    "toolCursor": "shared/surface/cloth-cursor.svg"
+  },
+  "data": {
+    "mode": "erase",
+    "coverType": "frost",
+    "brush": {
+      "radius": 48,
+      "hardness": 0.66,
+      "opacity": 0.84,
+      "spacing": 8
+    },
+    "completion": {
+      "type": "discover_all",
+      "requiredTraceIds": [
+        "front_drag_marks",
+        "undisturbed_vent"
+      ]
+    },
+    "traces": [
+      {
+        "id": "front_drag_marks",
+        "label": "Полосы к передней дверце",
+        "requiredRevealPercent": 52,
+        "mask": "assets/interactive/photo-49-front_drag_marks-trace-mask.svg",
+        "shape": "mask",
+        "isContradiction": true,
+        "conclusion": "Под инеем видны свежие полосы волочения к передней дверце, а металл у вентиляции не имеет царапин или следов инструмента; контейнер вынесли штатным путём изнутри лаборатории."
+      },
+      {
+        "id": "undisturbed_vent",
+        "label": "Неповреждённый металл у вентиляции",
+        "requiredRevealPercent": 48,
+        "mask": "assets/interactive/photo-49-undisturbed_vent-trace-mask.svg",
+        "shape": "mask",
+        "isContradiction": true,
+        "conclusion": "Под инеем видны свежие полосы волочения к передней дверце, а металл у вентиляции не имеет царапин или следов инструмента; контейнер вынесли штатным путём изнутри лаборатории."
+      }
+    ]
+  },
+  "statementLink": {
+    "statementId": "claim_entry_route",
+    "relation": "contradicts",
+    "reason": {
+      "ru": "Под инеем видны свежие полосы волочения к передней дверце, а металл у вентиляции не имеет царапин или следов инструмента; контейнер вынесли штатным путём изнутри лаборатории."
+    }
+  },
+  "contradictionTarget": {
+    "statementId": "claim_entry_route",
+    "reason": {
+      "ru": "Под инеем видны свежие полосы волочения к передней дверце, а металл у вентиляции не имеет царапин или следов инструмента; контейнер вынесли штатным путём изнутри лаборатории."
+    }
+  },
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": false,
+    "highlightAfterHint": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Направление физического следа опровергает проникновение через вентиляцию и дополняет журнал биометрического доступа."
+    },
+    "playerAction": {
+      "ru": "Счистите иней с полки и области у вентиляционной решётки."
+    },
+    "conclusion": {
+      "ru": "Под инеем видны свежие полосы волочения к передней дверце, а металл у вентиляции не имеет царапин или следов инструмента; контейнер вынесли штатным путём изнутри лаборатории."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

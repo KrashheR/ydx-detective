@@ -1,391 +1,558 @@
 {
   "id": "case-040",
   "type": "standard",
+  "campaignOrder": 38,
+  "requiredLevel": 16,
+  "act": 4,
+  "actTitle": {
+    "ru": "Серый конвой",
+    "en": "The Gray Convoy",
+    "tr": "The Gray Convoy",
+    "ar": "The Gray Convoy",
+    "kk": "Серый конвой"
+  },
   "difficulty": "hard",
   "claimAmount": 22100,
-  "truth": "fraud",
-  "investigationBudget": 4,
+  "truth": "valid",
   "title": {
-    "ru": "Сгоревший груз на лунной ферме",
-    "en": "Burned Cargo on the Moon Farm",
-    "tr": "Burned Cargo on the Moon Farm",
-    "ar": "Burned Cargo on the Moon Farm",
-    "kk": "Сгоревший груз на лунной ферме"
+    "ru": "Пожар на «Лунном склоне»",
+    "en": "The Fire at Moon Slope",
+    "tr": "The Fire at Moon Slope",
+    "ar": "The Fire at Moon Slope",
+    "kk": "Пожар на «Лунном склоне»"
   },
   "claim": {
     "person": {
       "ru": "Мирон Вейл, 52 года",
-      "en": "Miron Vale, 52",
-      "tr": "Miron Vale, 52",
-      "ar": "Miron Vale, 52",
+      "en": "Miron Veil, age 52",
+      "tr": "Miron Veil, age 52",
+      "ar": "Miron Veil, age 52",
       "kk": "Мирон Вейл, 52 года"
     },
     "story": {
-      "ru": "Правительственный патруль сжёг мой грузовой ангар и сезонный запас оборудования. Ворота выбиты, часть испарителей уничтожена, семья осталась без дохода. Прошу полное возмещение.",
-      "en": "A government patrol burned my cargo hangar and seasonal equipment stock. The gate was forced, evaporators were destroyed, and my family lost its income. I request full compensation.",
-      "tr": "A government patrol burned my cargo hangar and seasonal equipment stock. The gate was forced, evaporators were destroyed, and my family lost its income. I request full compensation.",
-      "ar": "A government patrol burned my cargo hangar and seasonal equipment stock. The gate was forced, evaporators were destroyed, and my family lost its income. I request full compensation.",
-      "kk": "Правительственный патруль сжёг мой грузовой ангар и сезонный запас оборудования. Ворота выбиты, часть испарителей уничтожена, семья осталась без дохода. Прошу полное возмещение."
+      "ru": "Ночью серый грузовик проник на удалённую ферму «Лунный склон». Неизвестные подожгли грузовой ангар и уничтожили запас испарительных модулей для полива. Я был в городе. Прошу возместить реальный ущерб и сезонную остановку работ.",
+      "en": "During the night, a gray truck entered the remote Moon Slope farm. Unknown intruders set fire to the cargo hangar and destroyed a stock of irrigation evaporator modules. I was in the city. I am claiming the actual loss and seasonal interruption.",
+      "tr": "During the night, a gray truck entered the remote Moon Slope farm. Unknown intruders set fire to the cargo hangar and destroyed a stock of irrigation evaporator modules. I was in the city. I am claiming the actual loss and seasonal interruption.",
+      "ar": "During the night, a gray truck entered the remote Moon Slope farm. Unknown intruders set fire to the cargo hangar and destroyed a stock of irrigation evaporator modules. I was in the city. I am claiming the actual loss and seasonal interruption.",
+      "kk": "Ночью серый грузовик проник на удалённую ферму «Лунный склон». Неизвестные подожгли грузовой ангар и уничтожили запас испарительных модулей для полива. Я был в городе. Прошу возместить реальный ущерб и сезонную остановку работ."
     }
   },
-  "coverImage": "covers/case-040.svg",
-  "personImage": "people/miron-veil.webp",
   "client": {
     "role": {
-      "ru": "Фермер лунного купола",
-      "en": "Moon dome farmer",
-      "tr": "Ay kubbesi çiftçisi",
-      "ar": "مزارع قبة قمرية",
-      "kk": "Ай күмбезі фермері"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Архив",
-          "en": "Archive",
-          "tr": "Arşiv",
-          "ar": "الأرشيف",
-          "kk": "Архив"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "Пограничный сектор",
-          "en": "Frontier Sector",
-          "tr": "Sınır Sektörü",
-          "ar": "القطاع الحدودي",
-          "kk": "Шекара секторы"
+          "ru": "4",
+          "en": "4",
+          "tr": "4",
+          "ar": "4",
+          "kk": "4"
         }
       },
       {
         "k": {
-          "ru": "Застрахованный риск",
-          "en": "Insured risk",
-          "tr": "Sigortalı risk",
-          "ar": "الخطر المؤمن عليه",
-          "kk": "Сақтандырылған тәуекел"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Пожар грузового ангара",
-          "en": "Cargo hangar fire",
-          "tr": "Yük hangarı yangını",
-          "ar": "حريق حظيرة شحن",
-          "kk": "Жүк ангары өрті"
-        }
-      },
-      {
-        "k": {
-          "ru": "Архивная связка",
-          "en": "Archive thread",
-          "tr": "Arşiv bağı",
-          "ar": "خيط الأرشيف",
-          "kk": "Архив байланысы"
-        },
-        "v": {
-          "ru": "Повторяющийся след: маркировка GC-17 и серые транспортные жетоны «Серого конвоя».",
-          "en": "Recurring lead: GC-17 markings and gray transport tokens of the Grey Convoy.",
-          "tr": "Tekrarlayan iz: GC-17 işaretleri ve Gri Konvoy’un gri taşıma jetonları.",
-          "ar": "خيط متكرر: علامات GC-17 ورموز النقل الرمادية لقافلة غراي.",
-          "kk": "Қайталанатын із: GC-17 таңбалары және Сұр конвойдың сұр көлік жетондары."
+          "ru": "38",
+          "en": "38",
+          "tr": "38",
+          "ar": "38",
+          "kk": "38"
         }
       }
     ]
   },
+  "coverImage": "covers/case-040.svg",
+  "personImage": "people/miron-veil-grounded.webp",
   "evidences": [
     {
-      "id": "photo-hangar",
-      "type": "photo",
+      "id": "ev-photo",
+      "order": 1,
+      "type": "seal_match",
       "title": {
-        "ru": "Фото ангара",
-        "en": "Hangar Photo",
-        "tr": "Hangar Photo",
-        "ar": "Hangar Photo",
-        "kk": "Фото ангара"
+        "ru": "Сопоставление фитильной ленты",
+        "en": "Fuse-Tape Comparison",
+        "tr": "Fuse-Tape Comparison",
+        "ar": "Fuse-Tape Comparison",
+        "kk": "Сопоставление фитильной ленты"
       },
       "content": {
-        "ru": "Очаг сильнее всего выгорел у внутреннего верстака. Ворота обуглены меньше, чем рабочая зона.",
-        "en": "The deepest burn is around the internal workbench. The gate is less charred than the work area.",
-        "tr": "The deepest burn is around the internal workbench. The gate is less charred than the work area.",
-        "ar": "The deepest burn is around the internal workbench. The gate is less charred than the work area.",
-        "kk": "Очаг сильнее всего выгорел у внутреннего верстака. Ворота обуглены меньше, чем рабочая зона."
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Очаг внутри противоречит версии о поджоге снаружи.",
-        "en": "An internal ignition point contradicts an outside attack.",
-        "tr": "An internal ignition point contradicts an outside attack.",
-        "ar": "An internal ignition point contradicts an outside attack.",
-        "kk": "Очаг внутри противоречит версии о поджоге снаружи."
-      },
-      "meta": {
-        "filename": "IMG_20260412_071430.jpg",
-        "imageUrl": "evidence/case-040-photo-hangar.webp"
-      },
-      "relation": "contradicts"
-    },
-    {
-      "id": "service robot-log",
-      "type": "usage_log",
-      "title": {
-        "ru": "Сервисный журнал сервисный робота",
-        "en": "service robot Service Log",
-        "tr": "service robot Service Log",
-        "ar": "service robot Service Log",
-        "kk": "Сервисный журнал сервисный робота"
-      },
-      "content": {
-        "ru": [
-          "23:18 — питание боевого блока включено локально",
-          "23:41 — снят силовой модуль L-9",
-          "00:07 — перегрев верстака, аварийное отключение"
-        ],
-        "en": [
-          "23:18 — combat core powered locally",
-          "23:41 — L-9 power module removed",
-          "00:07 — workbench overheating, emergency shutdown"
-        ],
-        "tr": [
-          "23:18 — combat core powered locally",
-          "23:41 — L-9 power module removed",
-          "00:07 — workbench overheating, emergency shutdown"
-        ],
-        "ar": [
-          "23:18 — combat core powered locally",
-          "23:41 — L-9 power module removed",
-          "00:07 — workbench overheating, emergency shutdown"
-        ],
-        "kk": [
-          "23:18 — питание боевого блока включено локально",
-          "23:41 — снят силовой модуль L-9",
-          "00:07 — перегрев верстака, аварийное отключение"
-        ]
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "сервисный робот разбирали перед пожаром, что указывает на скрытую причину возгорания.",
-        "en": "The service robot was dismantled before the fire, pointing to a concealed cause.",
-        "tr": "The service robot was dismantled before the fire, pointing to a concealed cause.",
-        "ar": "The service robot was dismantled before the fire, pointing to a concealed cause.",
-        "kk": "сервисный робот разбирали перед пожаром, что указывает на скрытую причину возгорания."
-      },
-      "meta": {
-        "logPrompt": "farmtech@dryledge:~$ tail -f /var/log/service robot-service.log"
-      },
-      "relation": "contradicts"
-    },
-    {
-      "id": "bank-modules",
-      "type": "bank_statement",
-      "title": {
-        "ru": "Покупка силовых модулей",
-        "en": "Power Module Purchase",
-        "tr": "Power Module Purchase",
-        "ar": "Power Module Purchase",
-        "kk": "Покупка силовых модулей"
-      },
-      "content": {
-        "ru": [
-          "08.04 — -4 900 CR · Редкие силовые модули, рынок Кольца",
-          "11.04 — -620 CR · Термозащита и резак",
-          "В назначении платежа повторяется код GC-17."
-        ],
-        "en": [
-          "08 Apr — -4,900 CR · rare power modules, Ring market",
-          "11 Apr — -620 CR · heat shielding and cutter",
-          "The payment memo repeats code GC-17."
-        ],
-        "tr": [
-          "08 Apr — -4,900 CR · rare power modules, Ring market",
-          "11 Apr — -620 CR · heat shielding and cutter",
-          "Ödeme açıklamasında GC-17 kodu tekrarlanıyor."
-        ],
-        "ar": [
-          "08 Apr — -4,900 CR · rare power modules, Ring market",
-          "11 Apr — -620 CR · heat shielding and cutter",
-          "يتكرر رمز GC-17 في وصف الدفعة."
-        ],
-        "kk": [
-          "08.04 — -4 900 CR · Редкие силовые модули, рынок Кольца",
-          "11.04 — -620 CR · Термозащита и резак",
-          "Төлем мақсатында GC-17 коды қайталанады."
-        ]
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Покупки связаны с разборкой, а не с сельхозоборудованием.",
-        "en": "The purchases fit dismantling work, not farm repairs.",
-        "tr": "The purchases fit dismantling work, not farm repairs.",
-        "ar": "The purchases fit dismantling work, not farm repairs.",
-        "kk": "Покупки связаны с разборкой, а не с сельхозоборудованием."
-      },
-      "meta": {
-        "bankName": {
-          "ru": "Frontier Credit Union",
-          "en": "Frontier Credit Union",
-          "tr": "Frontier Credit Union",
-          "ar": "Frontier Credit Union",
-          "kk": "Frontier Credit Union"
-        },
-        "accountMask": "•••• •••• •••• 4091"
-      },
-      "relation": "contradicts"
-    },
-    {
-      "id": "witness-welding",
-      "type": "witness_statement",
-      "title": {
-        "ru": "Показания соседа",
-        "en": "Neighbor Statement",
-        "tr": "Neighbor Statement",
-        "ar": "Neighbor Statement",
-        "kk": "Показания соседа"
-      },
-      "content": {
-        "ru": "«До пожара я видел в ангаре ночную сварку. Патрульных машин в ту ночь у фермы не было».",
-        "en": "\"Before the fire I saw night welding in the hangar. No patrol vehicles were at the farm that night.\"",
-        "tr": "\"Before the fire I saw night welding in the hangar. No patrol vehicles were at the farm that night.\"",
-        "ar": "\"Before the fire I saw night welding in the hangar. No patrol vehicles were at the farm that night.\"",
-        "kk": "«До пожара я видел в ангаре ночную сварку. Патрульных машин в ту ночь у фермы не было»."
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Свидетель подтверждает внутренние работы и отсутствие налёта.",
-        "en": "The witness confirms internal work and no raid.",
-        "tr": "The witness confirms internal work and no raid.",
-        "ar": "The witness confirms internal work and no raid.",
-        "kk": "Свидетель подтверждает внутренние работы и отсутствие налёта."
-      },
-      "relation": "contradicts"
-    },
-    {
-      "id": "inventory",
-      "type": "document",
-      "title": {
-        "ru": "Опись испарителей",
-        "en": "Evaporator Inventory",
-        "tr": "Evaporator Inventory",
-        "ar": "Evaporator Inventory",
-        "kk": "Опись испарителей"
-      },
-      "content": {
-        "ru": "Страховая опись подтверждает 11 рабочих испарителей и складской запас фильтров на дату осмотра.",
-        "en": "The insurance inventory confirms 11 working evaporators and filter stock at inspection.",
-        "tr": "The insurance inventory confirms 11 working evaporators and filter stock at inspection.",
-        "ar": "The insurance inventory confirms 11 working evaporators and filter stock at inspection.",
-        "kk": "Страховая опись подтверждает 11 рабочих испарителей и складской запас фильтров на дату осмотра."
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Материал важен для хронологии, но сам по себе не опровергает заявление.",
-        "en": "The material matters for the timeline but does not by itself disprove the claim.",
-        "tr": "The material matters for the timeline but does not by itself disprove the claim.",
-        "ar": "The material matters for the timeline but does not by itself disprove the claim.",
-        "kk": "Материал важен для хронологии, но сам по себе не опровергает заявление."
+        "ru": "Разрыв, пропитка и заводская сетка совпали: поджог у «Лунного склона» связан с реальным грузом Серого конвоя.",
+        "en": "The tear, coating, and factory mesh match: the Moon Slope arson is linked to genuine Gray Convoy cargo.",
+        "tr": "The tear, coating, and factory mesh match: the Moon Slope arson is linked to genuine Gray Convoy cargo.",
+        "ar": "The tear, coating, and factory mesh match: the Moon Slope arson is linked to genuine Gray Convoy cargo.",
+        "kk": "Разрыв, пропитка и заводская сетка совпали: поджог у «Лунного склона» связан с реальным грузом Серого конвоя."
       },
-      "relation": "context"
-    },
-    {
-      "id": "patrol-track",
-      "type": "gps",
-      "title": {
-        "ru": "Маршрут патруля",
-        "en": "Patrol Route",
-        "tr": "Patrol Route",
-        "ar": "Patrol Route",
-        "kk": "Маршрут патруля"
-      },
-      "content": {
-        "ru": [
-          "22:10 — КПП северного кратера",
-          "23:30 — сектор каньона, 38 км от фермы",
-          "00:20 — возврат на базу"
-        ],
-        "en": [
-          "22:10 — north crater checkpoint",
-          "23:30 — canyon sector, 38 km from farm",
-          "00:20 — returned to base"
-        ],
-        "tr": [
-          "22:10 — north crater checkpoint",
-          "23:30 — canyon sector, 38 km from farm",
-          "00:20 — returned to base"
-        ],
-        "ar": [
-          "22:10 — north crater checkpoint",
-          "23:30 — canyon sector, 38 km from farm",
-          "00:20 — returned to base"
-        ],
-        "kk": [
-          "22:10 — КПП северного кратера",
-          "23:30 — сектор каньона, 38 км от фермы",
-          "00:20 — возврат на базу"
-        ]
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Маршрут патруля не проходил рядом с фермой во время пожара.",
-        "en": "The patrol route never came near the farm during the fire.",
-        "tr": "The patrol route never came near the farm during the fire.",
-        "ar": "The patrol route never came near the farm during the fire.",
-        "kk": "Маршрут патруля не проходил рядом с фермой во время пожара."
-      },
-      "meta": {
-        "company": {
-          "ru": "Orbital Track Bureau",
-          "en": "Orbital Track Bureau",
-          "tr": "Orbital Track Bureau",
-          "ar": "Orbital Track Bureau",
-          "kk": "Orbital Track Bureau"
-        },
-        "department": {
-          "ru": "Отдел маршрутов служебных судов",
-          "en": "Service Vessel Route Desk",
-          "tr": "Service Vessel Route Desk",
-          "ar": "Service Vessel Route Desk",
-          "kk": "Отдел маршрутов служебных судов"
-        },
-        "requestId": {
-          "ru": "ОТВ-2026-0412-С · Тип: патрульный маршрут",
-          "en": "OTB-2026-0412-S · Type: patrol route",
-          "tr": "OTB-2026-0412-S · Type: patrol route",
-          "ar": "OTB-2026-0412-S · Type: patrol route",
-          "kk": "ОТВ-2026-0412-С · Тип: патрульный маршрут"
-        },
-        "gpsFooter": {
-          "ru": "© Orbital Track 2026 · NAV ACC: ±12m",
-          "en": "© Orbital Track 2026 · NAV ACC: ±12m",
-          "tr": "© Orbital Track 2026 · NAV ACC: ±12m",
-          "ar": "© Orbital Track 2026 · NAV ACC: ±12m",
-          "kk": "© Orbital Track 2026 · NAV ACC: ±12m"
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_external_arson",
+        "relation": "supports",
+        "reason": {
+          "ru": "Разрыв, пропитка и заводская сетка совпали: поджог у «Лунного склона» связан с реальным грузом Серого конвоя.",
+          "en": "The tear, coating, and factory mesh match: the Moon Slope arson is linked to genuine Gray Convoy cargo.",
+          "tr": "The tear, coating, and factory mesh match: the Moon Slope arson is linked to genuine Gray Convoy cargo.",
+          "ar": "The tear, coating, and factory mesh match: the Moon Slope arson is linked to genuine Gray Convoy cargo.",
+          "kk": "Разрыв, пропитка и заводская сетка совпали: поджог у «Лунного склона» связан с реальным грузом Серого конвоя."
         }
       },
-      "relation": "contradicts"
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "Обгоревший фрагмент найден у служебной двери; контрольный кусок изъят из контейнера GC-17 по прошлому делу.",
+        "en": "The burned fragment was found by the service door; the reference piece was seized from a GC-17 container in the previous case.",
+        "tr": "The burned fragment was found by the service door; the reference piece was seized from a GC-17 container in the previous case.",
+        "ar": "The burned fragment was found by the service door; the reference piece was seized from a GC-17 container in the previous case.",
+        "kk": "Обгоревший фрагмент найден у служебной двери; контрольный кусок изъят из контейнера GC-17 по прошлому делу."
+      },
+      "instruction": {
+        "ru": "Совместить уцелевшие края двух лент.",
+        "en": "Align the surviving edges of the two tapes.",
+        "tr": "Align the surviving edges of the two tapes.",
+        "ar": "Align the surviving edges of the two tapes.",
+        "kk": "Совместить уцелевшие края двух лент."
+      },
+      "previousType": "photo",
+      "assets": {
+        "asset1": "cases/case-040/assets/interactive/ev-photo-master-a.webp",
+        "asset2": "cases/case-040/assets/interactive/ev-photo-fragments.json"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true,
+        "transparencyMode": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Совпадение отличает настоящий след сети от удобной подброшенной серой ленты.",
+          "en": "The match distinguishes a genuine network trace from conveniently planted gray tape.",
+          "tr": "The match distinguishes a genuine network trace from conveniently planted gray tape.",
+          "ar": "The match distinguishes a genuine network trace from conveniently planted gray tape.",
+          "kk": "Совпадение отличает настоящий след сети от удобной подброшенной серой ленты."
+        },
+        "playerAction": {
+          "ru": "Совместить уцелевшие края двух лент.",
+          "en": "Align the surviving edges of the two tapes.",
+          "tr": "Align the surviving edges of the two tapes.",
+          "ar": "Align the surviving edges of the two tapes.",
+          "kk": "Совместить уцелевшие края двух лент."
+        },
+        "conclusion": {
+          "ru": "Разрыв, пропитка и заводская сетка совпали: поджог у «Лунного склона» связан с реальным грузом Серого конвоя.",
+          "en": "The tear, coating, and factory mesh match: the Moon Slope arson is linked to genuine Gray Convoy cargo.",
+          "tr": "The tear, coating, and factory mesh match: the Moon Slope arson is linked to genuine Gray Convoy cargo.",
+          "ar": "The tear, coating, and factory mesh match: the Moon Slope arson is linked to genuine Gray Convoy cargo.",
+          "kk": "Разрыв, пропитка и заводская сетка совпали: поджог у «Лунного склона» связан с реальным грузом Серого конвоя."
+        }
+      },
+      "data": {
+        "movableFragment": "B",
+        "allowRotation": true,
+        "rotationStep": 3,
+        "initialTransform": {
+          "x": 72,
+          "y": 18,
+          "rotation": -14
+        },
+        "targetTransform": {
+          "x": 132,
+          "y": 48,
+          "rotation": 6
+        },
+        "tolerance": {
+          "position": 10,
+          "rotation": 5
+        },
+        "expectedMatch": true,
+        "sourceSeed": 384017,
+        "fragmentASeed": 384017,
+        "fragmentBSeed": 384017,
+        "comparisonMarkers": [
+          {
+            "id": "tear_pattern",
+            "label": "Совпадают волокна, пропитка и участок внутренней сетки",
+            "labelEn": "Fibers, coating, and internal-mesh section match"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ev-camera",
+      "order": 2,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера горной дороги",
+        "en": "Mountain Road Camera",
+        "tr": "Mountain Road Camera",
+        "ar": "Mountain Road Camera",
+        "kk": "Камера горной дороги"
+      },
+      "content": {
+        "ru": "В 01:42 к ферме поднимается серый грузовик с модульным контейнером. В 02:19 он уезжает; в кузове видны похищенные блоки полива.",
+        "en": "At 1:42 a.m., a gray truck carrying a modular container climbs toward the farm. It leaves at 2:19 a.m. with the stolen irrigation units visible inside.",
+        "tr": "At 1:42 a.m., a gray truck carrying a modular container climbs toward the farm. It leaves at 2:19 a.m. with the stolen irrigation units visible inside.",
+        "ar": "At 1:42 a.m., a gray truck carrying a modular container climbs toward the farm. It leaves at 2:19 a.m. with the stolen irrigation units visible inside.",
+        "kk": "В 01:42 к ферме поднимается серый грузовик с модульным контейнером. В 02:19 он уезжает; в кузове видны похищенные блоки полива."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Независимая камера подтверждает прибытие постороннего транспорта и вывоз имущества.",
+        "en": "Independent footage confirms the arrival of an outside vehicle and removal of the property.",
+        "tr": "Independent footage confirms the arrival of an outside vehicle and removal of the property.",
+        "ar": "Independent footage confirms the arrival of an outside vehicle and removal of the property.",
+        "kk": "Независимая камера подтверждает прибытие постороннего транспорта и вывоз имущества."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_external_arson",
+        "relation": "supports",
+        "reason": {
+          "ru": "Независимая камера подтверждает прибытие постороннего транспорта и вывоз имущества.",
+          "en": "Independent footage confirms the arrival of an outside vehicle and removal of the property.",
+          "tr": "Independent footage confirms the arrival of an outside vehicle and removal of the property.",
+          "ar": "Independent footage confirms the arrival of an outside vehicle and removal of the property.",
+          "kk": "Независимая камера подтверждает прибытие постороннего транспорта и вывоз имущества."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/case-040-ev-camera.webp"
+      }
+    },
+    {
+      "id": "ev-access",
+      "order": 3,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал ворот",
+        "en": "Gate Log",
+        "tr": "Gate Log",
+        "ar": "Gate Log",
+        "kk": "Журнал ворот"
+      },
+      "content": {
+        "ru": "Ворота открыты клонированным сервисным пропуском, ранее обнаруженным среди данных GC-17. Ключи Вейла не использовались.",
+        "en": "The gate was opened with a cloned service pass previously found in GC-17 data. Veil's keys were not used.",
+        "tr": "The gate was opened with a cloned service pass previously found in GC-17 data. Veil's keys were not used.",
+        "ar": "The gate was opened with a cloned service pass previously found in GC-17 data. Veil's keys were not used.",
+        "kk": "Ворота открыты клонированным сервисным пропуском, ранее обнаруженным среди данных GC-17. Ключи Вейла не использовались."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Доступ получен инструментом сети, а не владельцем.",
+        "en": "The network's access tool, not the owner, opened the gate.",
+        "tr": "The network's access tool, not the owner, opened the gate.",
+        "ar": "The network's access tool, not the owner, opened the gate.",
+        "kk": "Доступ получен инструментом сети, а не владельцем."
+      },
+      "narrativeRole": "arc_proof",
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Доступ получен инструментом сети, а не владельцем.",
+          "en": "The network's access tool, not the owner, opened the gate.",
+          "tr": "The network's access tool, not the owner, opened the gate.",
+          "ar": "The network's access tool, not the owner, opened the gate.",
+          "kk": "Доступ получен инструментом сети, а не владельцем."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75
+    },
+    {
+      "id": "ev-alibi",
+      "order": 4,
+      "type": "phone_records",
+      "title": {
+        "ru": "Подтверждение местонахождения Вейла",
+        "en": "Confirmation of Veil's Location",
+        "tr": "Confirmation of Veil's Location",
+        "ar": "Confirmation of Veil's Location",
+        "kk": "Подтверждение местонахождения Вейла"
+      },
+      "content": {
+        "ru": "Телефон, банковская карта и камера гостиницы фиксируют Вейла в городе в 190 км от фермы всю ночь.",
+        "en": "Phone, bank-card, and hotel-camera records place Veil in the city, 190 km from the farm, throughout the night.",
+        "tr": "Phone, bank-card, and hotel-camera records place Veil in the city, 190 km from the farm, throughout the night.",
+        "ar": "Phone, bank-card, and hotel-camera records place Veil in the city, 190 km from the farm, throughout the night.",
+        "kk": "Телефон, банковская карта и камера гостиницы фиксируют Вейла в городе в 190 км от фермы всю ночь."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Независимые источники подтверждают алиби владельца.",
+        "en": "Independent sources confirm the owner's alibi.",
+        "tr": "Independent sources confirm the owner's alibi.",
+        "ar": "Independent sources confirm the owner's alibi.",
+        "kk": "Независимые источники подтверждают алиби владельца."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_owner_absent",
+        "relation": "supports",
+        "reason": {
+          "ru": "Независимые источники подтверждают алиби владельца.",
+          "en": "Independent sources confirm the owner's alibi.",
+          "tr": "Independent sources confirm the owner's alibi.",
+          "ar": "Independent sources confirm the owner's alibi.",
+          "kk": "Независимые источники подтверждают алиби владельца."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "ev-inventory",
+      "order": 5,
+      "type": "document",
+      "title": {
+        "ru": "Опись модулей",
+        "en": "Module Inventory",
+        "tr": "Module Inventory",
+        "ar": "Module Inventory",
+        "kk": "Опись модулей"
+      },
+      "content": {
+        "ru": "Модули закуплены и установлены на складе до пожара. Серийные номера видны в кузове грузовика на улучшенном кадре.",
+        "en": "The modules were purchased and stored before the fire. Their serial numbers are visible in enhanced footage of the truck.",
+        "tr": "The modules were purchased and stored before the fire. Their serial numbers are visible in enhanced footage of the truck.",
+        "ar": "The modules were purchased and stored before the fire. Their serial numbers are visible in enhanced footage of the truck.",
+        "kk": "Модули закуплены и установлены на складе до пожара. Серийные номера видны в кузове грузовика на улучшенном кадре."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Существование и похищение имущества подтверждены.",
+        "en": "The property's existence and theft are confirmed.",
+        "tr": "The property's existence and theft are confirmed.",
+        "ar": "The property's existence and theft are confirmed.",
+        "kk": "Существование и похищение имущества подтверждены."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_modules_stolen",
+        "relation": "supports",
+        "reason": {
+          "ru": "Существование и похищение имущества подтверждены.",
+          "en": "The property's existence and theft are confirmed.",
+          "tr": "The property's existence and theft are confirmed.",
+          "ar": "The property's existence and theft are confirmed.",
+          "kk": "Существование и похищение имущества подтверждены."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "ev-route",
+      "order": 6,
+      "type": "gps",
+      "title": {
+        "ru": "Дорожные считыватели",
+        "en": "Road Readers",
+        "tr": "Road Readers",
+        "ar": "Road Readers",
+        "kk": "Дорожные считыватели"
+      },
+      "content": {
+        "ru": "Грузовик следует от фермы к северному терминалу Серого конвоя, минуя Восточный двор.",
+        "en": "The truck travels from the farm to the Gray Convoy's northern terminal, bypassing Eastern Yard.",
+        "tr": "The truck travels from the farm to the Gray Convoy's northern terminal, bypassing Eastern Yard.",
+        "ar": "The truck travels from the farm to the Gray Convoy's northern terminal, bypassing Eastern Yard.",
+        "kk": "Грузовик следует от фермы к северному терминалу Серого конвоя, минуя Восточный двор."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Дело раскрывает следующий узел сети.",
+        "en": "The case reveals the network's next hub.",
+        "tr": "The case reveals the network's next hub.",
+        "ar": "The case reveals the network's next hub.",
+        "kk": "Дело раскрывает следующий узел сети."
+      },
+      "narrativeRole": "arc_context",
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Дело раскрывает следующий узел сети.",
+          "en": "The case reveals the network's next hub.",
+          "tr": "The case reveals the network's next hub.",
+          "ar": "The case reveals the network's next hub.",
+          "kk": "Дело раскрывает следующий узел сети."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75
     }
   ],
-  "correctDecision": "reject",
+  "correctDecision": "approve",
   "explanation": {
     "ru": [
-      "Очаг, журналы и банковская выписка показывают подготовленный пожар.",
-      "Код GC-17 впервые связывает ангар с серой транспортной цепочкой.",
-      "Заявление о внешнем налёте не подтверждено: вердикт — отказ."
+      "Пожар начался снаружи, а на горной дороге зафиксирован серый грузовик.",
+      "Пропуск принадлежит инфраструктуре GC-17, Вейл находился в другом городе.",
+      "Разрыв, пропитка и заводская сетка совпали: поджог у «Лунного склона» связан с реальным грузом Серого конвоя.",
+      "Модули похищены, ущерб и остановка работ реальны. Выплату следует одобрить."
     ],
     "en": [
-      "The burn mark, logs, and bank record show a prepared fire.",
-      "Code GC-17 first ties the hangar to a gray transport chain.",
-      "The external raid story is unsupported: reject the claim."
+      "The tear, coating, and factory mesh match: the Moon Slope arson is linked to genuine Gray Convoy cargo.",
+      "Independent footage confirms the arrival of an outside vehicle and removal of the property.",
+      "Independent sources confirm the owner's alibi.",
+      "The property's existence and theft are confirmed.",
+      "The network's access tool, not the owner, opened the gate.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "tr": [
-      "Yanık izi, kayıtlar ve banka kaydı hazırlanmış yangını gösteriyor.",
-      "GC-17 kodu hangarı ilk kez gri taşıma zincirine bağlıyor.",
-      "Dış baskın hikâyesi desteklenmiyor: ödeme reddedilir."
+      "The tear, coating, and factory mesh match: the Moon Slope arson is linked to genuine Gray Convoy cargo.",
+      "Independent footage confirms the arrival of an outside vehicle and removal of the property.",
+      "Independent sources confirm the owner's alibi.",
+      "The property's existence and theft are confirmed.",
+      "The network's access tool, not the owner, opened the gate.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "ar": [
-      "يظهر أثر الحريق والسجلات والبنك حريقاً مُحضّراً.",
-      "يربط رمز GC-17 الحظيرة لأول مرة بسلسلة نقل رمادية.",
-      "رواية الغارة الخارجية غير مثبتة: القرار رفض."
+      "The tear, coating, and factory mesh match: the Moon Slope arson is linked to genuine Gray Convoy cargo.",
+      "Independent footage confirms the arrival of an outside vehicle and removal of the property.",
+      "Independent sources confirm the owner's alibi.",
+      "The property's existence and theft are confirmed.",
+      "The network's access tool, not the owner, opened the gate.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "kk": [
-      "Өрт ізі, журналдар және банк жазбасы дайындалған өртті көрсетеді.",
-      "GC-17 коды ангарды алғаш рет сұр көлік тізбегімен байланыстырады.",
-      "Сыртқы шабуыл нұсқасы расталмады: вердикт — бас тарту."
+      "Пожар начался снаружи, а на горной дороге зафиксирован серый грузовик.",
+      "Пропуск принадлежит инфраструктуре GC-17, Вейл находился в другом городе.",
+      "Разрыв, пропитка и заводская сетка совпали: поджог у «Лунного склона» связан с реальным грузом Серого конвоя.",
+      "Модули похищены, ущерб и остановка работ реальны. Выплату следует одобрить."
     ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Ночью серый грузовик проник на удалённую ферму «Лунный склон». Неизвестные подожгли грузовой ангар и уничтожили запас испарительных модулей для полива. Я был в городе. Прошу возместить реальный ущерб и сезонную остановку работ.",
+        "en": "During the night, a gray truck entered the remote Moon Slope farm. Unknown intruders set fire to the cargo hangar and destroyed a stock of irrigation evaporator modules. I was in the city. I am claiming the actual loss and seasonal interruption.",
+        "tr": "During the night, a gray truck entered the remote Moon Slope farm. Unknown intruders set fire to the cargo hangar and destroyed a stock of irrigation evaporator modules. I was in the city. I am claiming the actual loss and seasonal interruption.",
+        "ar": "During the night, a gray truck entered the remote Moon Slope farm. Unknown intruders set fire to the cargo hangar and destroyed a stock of irrigation evaporator modules. I was in the city. I am claiming the actual loss and seasonal interruption.",
+        "kk": "Ночью серый грузовик проник на удалённую ферму «Лунный склон». Неизвестные подожгли грузовой ангар и уничтожили запас испарительных модулей для полива. Я был в городе. Прошу возместить реальный ущерб и сезонную остановку работ."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_external_arson",
+      "text": {
+        "ru": "Ангар подожгли посторонние, прибывшие на сером грузовике.",
+        "en": "Outsiders arriving in a gray truck set fire to the hangar.",
+        "tr": "Outsiders arriving in a gray truck set fire to the hangar.",
+        "ar": "Outsiders arriving in a gray truck set fire to the hangar.",
+        "kk": "Ангар подожгли посторонние, прибывшие на сером грузовике."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_owner_absent",
+      "text": {
+        "ru": "Вейл отсутствовал и не открывал ворота своим ключом.",
+        "en": "Veil was away and did not open the gate with his key.",
+        "tr": "Veil was away and did not open the gate with his key.",
+        "ar": "Veil was away and did not open the gate with his key.",
+        "kk": "Вейл отсутствовал и не открывал ворота своим ключом."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_modules_stolen",
+      "text": {
+        "ru": "Модули существовали и были похищены после поджога.",
+        "en": "The modules existed and were stolen during the arson.",
+        "tr": "The modules existed and were stolen during the arson.",
+        "ar": "The modules existed and were stolen during the arson.",
+        "kk": "Модули существовали и были похищены после поджога."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Вейл обвиняет Серый конвой в поджоге. После десятков инсценировок удобнее всего решить, что он просто использует известное имя. Проверяйте следы, а не репутацию версии. — В. Лебедева",
+      "en": "Veil blames the Gray Convoy for the arson. After so many staged events, it is tempting to assume he is exploiting a familiar name. Check the evidence, not the reputation of the theory. — V. Lebedeva",
+      "tr": "Veil blames the Gray Convoy for the arson. After so many staged events, it is tempting to assume he is exploiting a familiar name. Check the evidence, not the reputation of the theory. — V. Lebedeva",
+      "ar": "Veil blames the Gray Convoy for the arson. After so many staged events, it is tempting to assume he is exploiting a familiar name. Check the evidence, not the reputation of the theory. — V. Lebedeva",
+      "kk": "Вейл обвиняет Серый конвой в поджоге. После десятков инсценировок удобнее всего решить, что он просто использует известное имя. Проверяйте следы, а не репутацию версии. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Впервые Серый конвой сам создал страховой ущерб, чтобы забрать оборудование и уничтожить следы. Сеть перестала быть только партнёром мошенников.",
+      "en": "For the first time, the Gray Convoy caused an insured loss itself to steal equipment and destroy evidence. The network is no longer merely a partner to fraudsters.",
+      "tr": "For the first time, the Gray Convoy caused an insured loss itself to steal equipment and destroy evidence. The network is no longer merely a partner to fraudsters.",
+      "ar": "For the first time, the Gray Convoy caused an insured loss itself to steal equipment and destroy evidence. The network is no longer merely a partner to fraudsters.",
+      "kk": "Впервые Серый конвой сам создал страховой ущерб, чтобы забрать оборудование и уничтожить следы. Сеть перестала быть только партнёром мошенников."
+    },
+    "nextCaseTeaser": {
+      "ru": "Северный маршрут ведёт в ледяной каньон, где разбился экспериментальный перехватчик с незаявленным грузом.",
+      "en": "The northern route leads to an icy canyon where an experimental interceptor crashed with undeclared cargo.",
+      "tr": "The northern route leads to an icy canyon where an experimental interceptor crashed with undeclared cargo.",
+      "ar": "The northern route leads to an icy canyon where an experimental interceptor crashed with undeclared cargo.",
+      "kk": "Северный маршрут ведёт в ледяной каньон, где разбился экспериментальный перехватчик с незаявленным грузом."
+    },
+    "seasonClue": {
+      "id": "gc-attack",
+      "label": {
+        "ru": "Реальное нападение Серого конвоя",
+        "en": "A Real Gray Convoy Attack",
+        "tr": "A Real Gray Convoy Attack",
+        "ar": "A Real Gray Convoy Attack",
+        "kk": "Реальное нападение Серого конвоя"
+      },
+      "description": {
+        "ru": "Сеть поджигает объекты и похищает оборудование без согласия владельцев.",
+        "en": "The network is setting fires and stealing equipment without the owners' consent.",
+        "tr": "The network is setting fires and stealing equipment without the owners' consent.",
+        "ar": "The network is setting fires and stealing equipment without the owners' consent.",
+        "kk": "Сеть поджигает объекты и похищает оборудование без согласия владельцев."
+      },
+      "progressIndex": 5,
+      "progressTotal": 6
+    },
+    "epilogue": null
   }
 }

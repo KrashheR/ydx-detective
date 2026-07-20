@@ -1,0 +1,420 @@
+{
+  "id": "case-008",
+  "campaignOrder": 12,
+  "requiredLevel": 6,
+  "act": 2,
+  "actTitle": {
+    "ru": "Пять лет назад",
+    "en": "Five Years Earlier"
+  },
+  "title": {
+    "ru": "Три месяца в постели",
+    "en": "Three Months in Bed"
+  },
+  "difficulty": "medium",
+  "claimAmount": {
+    "value": 6000,
+    "currency": "EUR"
+  },
+  "groundTruth": "fraud",
+  "correctDecision": "reject",
+  "investigationBudget": 3,
+  "claimant": {
+    "name": {
+      "ru": "Деян Ковач, 38 лет",
+      "en": "Dejan Kovac, age 38"
+    },
+    "migrationNote": {
+      "ru": "Сохранить существующие данные и портрет.",
+      "en": "Keep the existing profile data and portrait."
+    },
+    "portrait": null,
+    "portraitStatus": "retain_existing_project_portrait",
+    "portraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/dejan.webp",
+      "existingFile": "public/people/dejan.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Боль нельзя измерить по фотографии. Работоспособность — можно. Не путайте медицинский диагноз с тем, что заявитель говорит о своих ограничениях. — В. Лебедева",
+      "en": "Pain cannot be measured from a photograph. A person's capacity to work can. Do not confuse a medical diagnosis with what a claimant says they are unable to do. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Хорошее мошенничество редко строится на полной выдумке. Настоящая неделя боли стала основанием для выдуманных трёх месяцев.",
+      "en": "Convincing fraud is rarely built on a complete invention. One genuine week of pain became the basis for three fictional months."
+    },
+    "nextCaseTeaser": {
+      "ru": "Теперь — обычное ДТП. Самая опасная ошибка здесь будет искать сложный заговор там, где его нет.",
+      "en": "Next comes an ordinary traffic accident. The most dangerous mistake will be searching for an elaborate conspiracy where none exists."
+    },
+    "seasonClue": null,
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "После травмы поясницы я почти не встаю с постели и не могу выполнять физическую работу. Врач оформил больничный. Прошу выплату по защите дохода за три месяца полной нетрудоспособности.",
+    "en": "Since injuring my lower back, I have barely been able to leave my bed and cannot perform physical work. A doctor certified me unfit for work. I am claiming three months of total disability under my income-protection policy."
+  },
+  "evidence": [
+    {
+      "id": "ev-ernote",
+      "order": 1,
+      "type": "document",
+      "title": {
+        "ru": "Справка приёмного покоя",
+        "en": "Emergency Department Report"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "10 марта зафиксировано растяжение мышц поясницы без перелома и неврологических нарушений. Рекомендованы покой на 5–7 дней и повторный осмотр при сохранении боли.",
+        "en": "On March 10, doctors diagnosed a lower-back muscle strain with no fracture or neurological impairment. They recommended five to seven days of rest and a follow-up examination if the pain persisted."
+      },
+      "statusExplanation": {
+        "ru": "Травма реальна, но первоначальная справка не подтверждает три месяца полной нетрудоспособности.",
+        "en": "The injury is real, but the original report does not support three months of total disability."
+      },
+      "statementLink": {
+        "statementId": "claim_injury",
+        "relation": "supports",
+        "reason": {
+          "ru": "Травма реальна, но первоначальная справка не подтверждает три месяца полной нетрудоспособности.",
+          "en": "The injury is real, but the original report does not support three months of total disability."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-sickleave",
+      "order": 2,
+      "type": "document_scan",
+      "title": {
+        "ru": "Экспертиза продлённого больничного",
+        "en": "Extended Medical Certificate Examination"
+      },
+      "isContradiction": true,
+      "narrativeRole": "suspicion",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Под белой плашкой читается исходная запись «лёгкий труд разрешён после 7 дней»; фраза о полной нетрудоспособности добавлена позднее.",
+        "en": "Beneath the white correction, the original note reads ‘light duties permitted after 7 days’; the statement of total disability was added later."
+      },
+      "previousType": "document",
+      "description": {
+        "ru": "Страхователь предоставил распечатанную копию дистанционного продления.",
+        "en": "The policyholder submitted a printed copy of a remotely extended medical certificate."
+      },
+      "instruction": {
+        "ru": "Включить боковой свет и проверить строку с режимом труда.",
+        "en": "Switch on side light and inspect the line describing work restrictions."
+      },
+      "assets": {
+        "asset1": "assets/interactive/ev-sickleave-base.webp",
+        "asset2": "assets/interactive/ev-sickleave-scan-overlay.svg"
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "side_light",
+          "backlight"
+        ],
+        "anomalyZones": [
+          {
+            "id": "work_regime",
+            "mode": "side_light",
+            "x": 31,
+            "y": 57,
+            "width": 48,
+            "height": 9,
+            "label": "Под белой плашкой читается исходная запись «лёгкий труд разрешён после 7 дней»; фраза о полной нетрудоспособности добавлена позднее.",
+            "isContradiction": true,
+            "labelEn": "Beneath the white correction, the original note reads ‘light duties permitted after 7 days’; the statement of total disability was added later."
+          }
+        ],
+        "successCondition": {
+          "type": "select_zone",
+          "zoneId": "work_regime"
+        }
+      },
+      "statementLink": {
+        "statementId": "claim_disability_duration",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Под белой плашкой читается исходная запись «лёгкий труд разрешён после 7 дней»; фраза о полной нетрудоспособности добавлена позднее.",
+          "en": "Beneath the white correction, the original note reads ‘light duties permitted after 7 days’; the statement of total disability was added later."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_disability_duration",
+        "reason": {
+          "ru": "Под белой плашкой читается исходная запись «лёгкий труд разрешён после 7 дней»; фраза о полной нетрудоспособности добавлена позднее.",
+          "en": "Beneath the white correction, the original note reads ‘light duties permitted after 7 days’; the statement of total disability was added later."
+        }
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Скан делает ложь о полной нетрудоспособности конкретной, не ставя под сомнение сам факт первой травмы.",
+          "en": "The scan exposes the specific lie about total disability without disputing the original injury."
+        },
+        "playerAction": {
+          "ru": "Включить боковой свет и проверить строку с режимом труда.",
+          "en": "Switch on side light and inspect the line describing work restrictions."
+        },
+        "conclusion": {
+          "ru": "Под белой плашкой читается исходная запись «лёгкий труд разрешён после 7 дней»; фраза о полной нетрудоспособности добавлена позднее.",
+          "en": "Beneath the white correction, the original note reads ‘light duties permitted after 7 days’; the statement of total disability was added later."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-015",
+          "role": "interactive_base",
+          "src": "src/data/cases/case-008/assets/interactive/ev-sickleave-base.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-008/assets/interactive/ev-sickleave-base.webp",
+          "caseRelativeSrc": "assets/interactive/ev-sickleave-base.webp",
+          "installTo": "src/data/cases/case-008/assets/interactive/ev-sickleave-base.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1600,
+          "height": 1100,
+          "sha256": "c55e6c2e1062dba5dd539828c762c3be424de0b73ed543c02a6d5efacdab23a3"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-008/assets/interactive/ev-sickleave-base.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-008/assets/interactive/ev-sickleave-base.webp",
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-work-app",
+      "order": 3,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал пропусков грузовой компании",
+        "en": "Moving Company Access Log"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "Биометрический пропуск Ковача использован 18, 25 марта и 2 апреля на складе компании «Быстрый переезд». В каждую смену оформлена погрузка мебели общим весом более 600 кг.",
+        "en": "Kovac's biometric pass was used at the Fast Move warehouse on March 18, March 25, and April 2. Each shift recorded furniture-loading jobs totaling more than 600 kg."
+      },
+      "statusExplanation": {
+        "ru": "Заявитель регулярно выполнял тяжёлую физическую работу в период, когда называл себя прикованным к постели.",
+        "en": "The claimant repeatedly performed heavy physical work while claiming to be confined to bed."
+      },
+      "statementLink": {
+        "statementId": "claim_no_work",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Заявитель регулярно выполнял тяжёлую физическую работу в период, когда называл себя прикованным к постели.",
+          "en": "The claimant repeatedly performed heavy physical work while claiming to be confined to bed."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_no_work",
+        "reason": {
+          "ru": "Заявитель регулярно выполнял тяжёлую физическую работу в период, когда называл себя прикованным к постели.",
+          "en": "The claimant repeatedly performed heavy physical work while claiming to be confined to bed."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-payment",
+      "order": 4,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Оплата смен",
+        "en": "Shift Payments"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "После каждой складской смены на счёт Ковача поступала оплата с назначением «погрузочные работы». Плательщик подтвердил его личное присутствие.",
+        "en": "After each warehouse shift, Kovac received a payment labeled ‘loading services.’ The payer confirmed that he worked in person."
+      },
+      "statusExplanation": {
+        "ru": "Денежные переводы и подтверждение работодателя доказывают скрытую физическую занятость.",
+        "en": "The transfers and employer confirmation prove that he concealed paid physical work."
+      },
+      "statementLink": {
+        "statementId": "claim_no_work",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Денежные переводы и подтверждение работодателя доказывают скрытую физическую занятость.",
+          "en": "The transfers and employer confirmation prove that he concealed paid physical work."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_no_work",
+        "reason": {
+          "ru": "Денежные переводы и подтверждение работодателя доказывают скрытую физическую занятость.",
+          "en": "The transfers and employer confirmation prove that he concealed paid physical work."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Ковач действительно получил лёгкую травму и законный короткий больничный.",
+      "Затем он продолжил дистанционно жаловаться на полную нетрудоспособность, одновременно работая грузчиком.",
+      "Под белой плашкой читается исходная запись «лёгкий труд разрешён после 7 дней»; фраза о полной нетрудоспособности добавлена позднее.",
+      "Заявленная трёхмесячная потеря трудоспособности ложна. В выплате следует отказать."
+    ],
+    "en": [
+      "Beneath the white correction, the original note reads ‘light duties permitted after 7 days’; the statement of total disability was added later.",
+      "The claimant repeatedly performed heavy physical work while claiming to be confined to bed.",
+      "The transfers and employer confirmation prove that he concealed paid physical work.",
+      "The injury is real, but the original report does not support three months of total disability.",
+      "The claim is fraudulent and should be rejected."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Заменить слишком очевидные спортзал и марафон на скрытую оплачиваемую работу.",
+      "Сохранить частично правдивую травму.",
+      "Интегрировать document_scan в улику ev-sickleave; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate document_scan into evidence ev-sickleave; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "assets/interactive/ev-sickleave-base.webp",
+      "purpose": "Базовая версия документа в normal-режиме",
+      "resolution": "1600×1100",
+      "format": "WebP",
+      "transparency": false,
+      "generatedBy": "image_model",
+      "manualPost": "Удалить случайный читаемый текст; выровнять документ; оставить поля для UI-слоёв.",
+      "prompt": "Create a realistic fictional administrative document for an insurance detective game. Фиктивный медицинский бланк без реальных учреждений, крупная строка режима труда, важный текст только UI. Full document visible from above, utilitarian layout, paper texture, large blank structured fields. No real organization, logo, brand, personal data or watermark. Do not render critical readable text; dates, names, codes and signatures will be added in HTML/SVG. The hidden anomaly must not be obvious in the normal version.",
+      "evidenceId": "ev-sickleave",
+      "evidenceType": "document_scan"
+    },
+    {
+      "file": "assets/interactive/ev-sickleave-scan-overlay.svg",
+      "purpose": "Совмещённый слой УФ/просвета/бокового света",
+      "resolution": "viewBox 0 0 100 100",
+      "format": "SVG",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "После финального base.webp откалибровать hotspot и режим проявления.",
+      "prompt": null,
+      "evidenceId": "ev-sickleave",
+      "evidenceType": "document_scan"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "После травмы поясницы я почти не встаю с постели и не могу выполнять физическую работу. Врач оформил больничный. Прошу выплату по защите дохода за три месяца полной нетрудоспособности.",
+        "en": "Since injuring my lower back, I have barely been able to leave my bed and cannot perform physical work. A doctor certified me unfit for work. I am claiming three months of total disability under my income-protection policy."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_injury",
+      "text": {
+        "ru": "Ковач действительно получил травму.",
+        "en": "Kovac genuinely suffered an injury."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_disability_duration",
+      "text": {
+        "ru": "Травма сделала его полностью нетрудоспособным на три месяца.",
+        "en": "The injury left him totally unable to work for three months."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_no_work",
+      "text": {
+        "ru": "В период нетрудоспособности он не выполнял оплачиваемую физическую работу.",
+        "en": "He performed no paid physical work during the disability period."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-008",
+    "archiveBasePath": "generated-assets/src/data/cases/case-008",
+    "claimantPortrait": null,
+    "claimantPortraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/dejan.webp",
+      "existingFile": "public/people/dejan.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-sickleave",
+        "title": {
+          "ru": "Экспертиза продлённого больничного",
+          "en": "Extended Medical Certificate Examination"
+        },
+        "primaryImage": "src/data/cases/case-008/assets/interactive/ev-sickleave-base.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-008/assets/interactive/ev-sickleave-base.webp",
+        "legacyImageBinding": null,
+        "assets": [
+          {
+            "assetId": "asset-015",
+            "role": "interactive_base",
+            "src": "src/data/cases/case-008/assets/interactive/ev-sickleave-base.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-008/assets/interactive/ev-sickleave-base.webp",
+            "caseRelativeSrc": "assets/interactive/ev-sickleave-base.webp",
+            "installTo": "src/data/cases/case-008/assets/interactive/ev-sickleave-base.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1600,
+            "height": 1100,
+            "sha256": "c55e6c2e1062dba5dd539828c762c3be424de0b73ed543c02a6d5efacdab23a3"
+          }
+        ]
+      }
+    ]
+  }
+}

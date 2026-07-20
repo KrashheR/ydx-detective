@@ -1,0 +1,82 @@
+{
+  "id": "ev-photo",
+  "order": 2,
+  "type": "thermal_scan",
+  "title": {
+    "ru": "Тепловой осмотр умной кухни"
+  },
+  "isContradiction": false,
+  "narrativeRole": "proof",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Нагрет только компактный кухонный прибор и зажатая кнопка; дополнительных очагов или следов ускорителя нет."
+  },
+  "previousType": "photo",
+  "description": {
+    "ru": "Осмотр проведён через девять минут после срабатывания пожарной автоматики."
+  },
+  "instruction": {
+    "ru": "Включить тепловизор и найти источник 800-ваттной нагрузки."
+  },
+  "assets": {
+    "asset1": "assets/interactive/ev-photo-scene.webp",
+    "asset2": "assets/interactive/ev-photo-heat-zones.json"
+  },
+  "data": {
+    "ambientTemperature": 19,
+    "observationTime": "03:58",
+    "claimedLastUseBefore": "03:49",
+    "elapsedSinceClaimedUseMinutes": 9,
+    "coolingReference": "Через девять минут локальный источник сохраняет рабочее тепло; отсутствие других горячих зон исключает второй очаг.",
+    "initialMode": "normal",
+    "heatZones": [
+      {
+        "id": "appliance",
+        "shape": "ellipse",
+        "x": 53,
+        "y": 54,
+        "width": 20,
+        "height": 18,
+        "temperature": 61,
+        "intensity": 0.95,
+        "label": "Недавно работавший нагреватель",
+        "isContradiction": false
+      }
+    ],
+    "successCondition": {
+      "type": "select_any",
+      "zoneIds": [
+        "appliance"
+      ]
+    }
+  },
+  "statementLink": {
+    "statementId": "claim_event",
+    "relation": "supports",
+    "reason": {
+      "ru": "Нагрет только компактный кухонный прибор и зажатая кнопка; дополнительных очагов или следов ускорителя нет."
+    }
+  },
+  "contradictionTarget": null,
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Игрок видит, что нагреватель действительно работал, но тепловая картина не указывает на заранее подготовленный поджог."
+    },
+    "playerAction": {
+      "ru": "Включить тепловизор и найти источник 800-ваттной нагрузки."
+    },
+    "conclusion": {
+      "ru": "Нагрет только компактный кухонный прибор и зажатая кнопка; дополнительных очагов или следов ускорителя нет."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

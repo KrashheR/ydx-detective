@@ -1,0 +1,89 @@
+{
+  "id": "ev-delivery-receipt",
+  "order": 2,
+  "type": "seal_match",
+  "title": {
+    "ru": "Сопоставление пломб коробок"
+  },
+  "isContradiction": true,
+  "narrativeRole": "pivot",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Фрагменты совпали: коробки у клуба относятся к партии, которую Чернов сам оплатил и отправил туда до инсценировки."
+  },
+  "previousType": "document",
+  "description": {
+    "ru": "Один обрывок снят с коробок у клуба «Маяк», второй остался на упаковке из ночной доставки."
+  },
+  "instruction": {
+    "ru": "Повернуть фрагмент и совместить линию разрыва."
+  },
+  "assets": {
+    "asset1": "assets/interactive/ev-delivery-receipt-master-a.webp",
+    "asset2": "assets/interactive/ev-delivery-receipt-fragments.json"
+  },
+  "data": {
+    "movableFragment": "B",
+    "allowRotation": true,
+    "rotationStep": 3,
+    "initialTransform": {
+      "x": 72,
+      "y": 18,
+      "rotation": -14
+    },
+    "targetTransform": {
+      "x": 132,
+      "y": 48,
+      "rotation": 6
+    },
+    "tolerance": {
+      "position": 10,
+      "rotation": 5
+    },
+    "expectedMatch": true,
+    "sourceSeed": 610417,
+    "fragmentASeed": 610417,
+    "fragmentBSeed": 610417,
+    "comparisonMarkers": [
+      {
+        "id": "tear_pattern",
+        "label": "Совпадают волокна бумаги и три дефекта серийного узора"
+      }
+    ]
+  },
+  "statementLink": {
+    "statementId": "claim_intruder",
+    "relation": "contradicts",
+    "reason": {
+      "ru": "Фрагменты совпали: коробки у клуба относятся к партии, которую Чернов сам оплатил и отправил туда до инсценировки."
+    }
+  },
+  "contradictionTarget": {
+    "statementId": "claim_intruder",
+    "reason": {
+      "ru": "Фрагменты совпали: коробки у клуба относятся к партии, которую Чернов сам оплатил и отправил туда до инсценировки."
+    }
+  },
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true,
+    "transparencyMode": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Совпавший разрыв физически связывает коробки у клуба с заказом самого Чернова."
+    },
+    "playerAction": {
+      "ru": "Повернуть фрагмент и совместить линию разрыва."
+    },
+    "conclusion": {
+      "ru": "Фрагменты совпали: коробки у клуба относятся к партии, которую Чернов сам оплатил и отправил туда до инсценировки."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

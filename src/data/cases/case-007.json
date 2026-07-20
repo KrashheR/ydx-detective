@@ -1,289 +1,822 @@
 {
   "id": "case-417",
   "type": "standard",
-  "difficulty": "medium",
+  "campaignOrder": 50,
+  "requiredLevel": 16,
+  "act": 5,
+  "actTitle": {
+    "ru": "Последний маршрут",
+    "en": "The Final Route",
+    "tr": "The Final Route",
+    "ar": "The Final Route",
+    "kk": "Последний маршрут"
+  },
+  "difficulty": "hard",
   "claimAmount": 2500,
   "truth": "fraud",
   "title": {
-    "ru": "Пропавший чемодан",
-    "en": "The Missing Suitcase",
-    "tr": "Kayıp Bavul",
-    "ar": "الحقيبة المفقودة",
-    "kk": "Жоғалған шабадан"
+    "ru": "Последний чемодан",
+    "en": "The Last Suitcase",
+    "tr": "The Last Suitcase",
+    "ar": "The Last Suitcase",
+    "kk": "Последний чемодан"
   },
   "claim": {
     "person": {
-      "ru": "Лукас Феррейра",
-      "en": "Lucas Ferreira",
-      "tr": "Lucas Ferreira",
-      "ar": "لوكاس فيريرا",
-      "kk": "Лукас Феррейра"
+      "ru": "Лукас Феррейра, 29 лет",
+      "en": "Lucas Ferreira, age 29",
+      "tr": "Lucas Ferreira, age 29",
+      "ar": "Lucas Ferreira, age 29",
+      "kk": "Лукас Феррейра, 29 лет"
     },
     "story": {
-      "ru": "Авиакомпания потеряла мой сданный в багаж чемодан с дорогой электроникой и часами. Я так и не получил его и требую возмещения полной стоимости содержимого.",
-      "en": "The airline lost my checked suitcase containing expensive electronics and watches. I never received it and I am claiming the full value of the contents.",
-      "tr": "Havayolu, pahalı elektronik ve saatlerle dolu kayıtlı bavulumu kaybetti. Bavulu hiç teslim almadım ve içindekilerin tam değerini talep ediyorum.",
-      "ar": "فقدت شركة الطيران حقيبتي المسجّلة التي تحتوي على إلكترونيات وساعات باهظة الثمن. لم أستلمها أبداً وأطالب بالقيمة الكاملة لمحتوياتها.",
-      "kk": "Әуекомпания қымбат электроника мен сағаттар салынған тіркелген шабаданымды жоғалтты. Мен оны мүлдем алмадым және құрамының толық құнын өтеуді талап етемін."
+      "ru": "Авиакомпания потеряла мой сданный в багаж чемодан с электроникой и часами стоимостью 2500 евро. После прилёта я его не получил, доставка не состоялась. Прошу полное возмещение.",
+      "en": "The airline lost my checked suitcase containing electronics and watches worth €2,500. I did not receive it after landing, and delivery never occurred. I am claiming full compensation.",
+      "tr": "The airline lost my checked suitcase containing electronics and watches worth €2,500. I did not receive it after landing, and delivery never occurred. I am claiming full compensation.",
+      "ar": "The airline lost my checked suitcase containing electronics and watches worth €2,500. I did not receive it after landing, and delivery never occurred. I am claiming full compensation.",
+      "kk": "Авиакомпания потеряла мой сданный в багаж чемодан с электроникой и часами стоимостью 2500 евро. После прилёта я его не получил, доставка не состоялась. Прошу полное возмещение."
     }
   },
-  "coverImage": "covers/case-417.svg",
-  "personImage": "people/lucas.webp",
   "client": {
     "role": {
-      "ru": "Заявитель · физ. лицо",
-      "en": "Claimant · individual",
-      "tr": "Başvuru sahibi · gerçek kişi",
-      "ar": "مقدم الطلب · شخص طبيعي",
-      "kk": "Өтініш беруші · жеке тұлға"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Возраст",
-          "en": "Age",
-          "tr": "Yaş",
-          "ar": "العمر",
-          "kk": "Жасы"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "35 лет",
-          "en": "35 years old",
-          "tr": "35 yaşında",
-          "ar": "35 عامًا",
-          "kk": "35 жаста"
+          "ru": "5",
+          "en": "5",
+          "tr": "5",
+          "ar": "5",
+          "kk": "5"
         }
       },
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "São Paulo",
-          "en": "São Paulo",
-          "tr": "São Paulo",
-          "ar": "ساو باولو",
-          "kk": "Сан-Паулу"
-        }
-      },
-      {
-        "k": {
-          "ru": "Клиент с",
-          "en": "Client since",
-          "tr": "Müşteri",
-          "ar": "عميل منذ",
-          "kk": "Клиент"
-        },
-        "v": {
-          "ru": "2021 г.",
-          "en": "2021",
-          "tr": "2021",
-          "ar": "2021",
-          "kk": "2021 ж."
-        }
-      },
-      {
-        "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
-        },
-        "v": {
-          "ru": "Путешествие · ТУ-77011892-X6",
-          "en": "Travel · TU-77011892-X6",
-          "tr": "Seyahat · TU-77011892-X6",
-          "ar": "السفر · TU-77011892-X6",
-          "kk": "Саяхат · ТУ-77011892-X6"
-        }
-      },
-      {
-        "k": {
-          "ru": "Документ",
-          "en": "Document",
-          "tr": "Belge",
-          "ar": "الوثيقة",
-          "kk": "Құжат"
-        },
-        "v": {
-          "ru": "Паспорт BR-X7 223344559-08210",
-          "en": "Passport BR-X7 223344559-08210",
-          "tr": "Pasaport BR-X7 223344559-08210",
-          "ar": "جواز السفر BR-X7 223344559-08210",
-          "kk": "Паспорт BR-X7 223344559-08210"
+          "ru": "50",
+          "en": "50",
+          "tr": "50",
+          "ar": "50",
+          "kk": "50"
         }
       }
     ]
   },
+  "coverImage": "covers/case-007.svg",
+  "personImage": "people/lucas-ferreira.webp",
   "evidences": [
     {
       "id": "ev-boarding",
+      "order": 1,
       "type": "document",
       "title": {
-        "ru": "Посадочный талон",
-        "en": "Boarding Pass",
-        "tr": "Biniş Kartı",
-        "ar": "بطاقة الصعود",
-        "kk": "Отырғызу талоны"
+        "ru": "Посадочный талон и багажная бирка",
+        "en": "Boarding Pass and Baggage Tag",
+        "tr": "Boarding Pass and Baggage Tag",
+        "ar": "Boarding Pass and Baggage Tag",
+        "kk": "Посадочный талон и багажная бирка"
       },
       "content": {
-        "ru": "Рейс TP1043, Лиссабон → Берлин, 02.05.2026, место 14C, посадка подтверждена.",
-        "en": "Flight TP1043, Lisbon → Berlin, 02 May 2026, seat 14C, boarding confirmed.",
-        "tr": "Uçuş TP1043, Lizbon → Berlin, 02 Mayıs 2026, koltuk 14C, biniş onaylandı.",
-        "ar": "الرحلة TP1043، لشبونة ← برلين، 2 مايو 2026، المقعد 14C، تم تأكيد الصعود.",
-        "kk": "TP1043 рейсі, Лиссабон → Берлин, 02.05.2026, 14C орны, отырғызу расталды."
+        "ru": "Лукас действительно летел этим рейсом и сдал один чемодан. Номер бирки совпадает с заявлением.",
+        "en": "Lucas did take the flight and checked one suitcase. The tag number matches the claim.",
+        "tr": "Lucas did take the flight and checked one suitcase. The tag number matches the claim.",
+        "ar": "Lucas did take the flight and checked one suitcase. The tag number matches the claim.",
+        "kk": "Лукас действительно летел этим рейсом и сдал один чемодан. Номер бирки совпадает с заявлением."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Талон подлинный и подтверждает, что пассажир действительно летел этим рейсом — это не противоречие.",
-        "en": "The pass is genuine and confirms the passenger did fly on this flight — no contradiction here.",
-        "tr": "Kart gerçek ve yolcunun bu uçuşa bindiğini doğruluyor — burada çelişki yok.",
-        "ar": "البطاقة أصلية وتؤكد أن المسافر سافر فعلاً على هذه الرحلة — لا يوجد تناقض هنا.",
-        "kk": "Талон шынайы және жолаушының осы рейспен ұшқанын растайды — мұнда қайшылық жоқ."
-      }
+        "ru": "Документ подтверждает существование багажа, но не его утрату.",
+        "en": "The document confirms the baggage existed, but not that it was lost.",
+        "tr": "The document confirms the baggage existed, but not that it was lost.",
+        "ar": "The document confirms the baggage existed, but not that it was lost.",
+        "kk": "Документ подтверждает существование багажа, но не его утрату."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_baggage_checked",
+        "relation": "supports",
+        "reason": {
+          "ru": "Документ подтверждает существование багажа, но не его утрату.",
+          "en": "The document confirms the baggage existed, but not that it was lost.",
+          "tr": "The document confirms the baggage existed, but not that it was lost.",
+          "ar": "The document confirms the baggage existed, but not that it was lost.",
+          "kk": "Документ подтверждает существование багажа, но не его утрату."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "ev-tracking",
+      "order": 2,
       "type": "usage_log",
       "title": {
         "ru": "Журнал отслеживания багажа",
         "en": "Baggage Tracking Log",
-        "tr": "Bagaj Takip Kaydı",
-        "ar": "سجل تتبع الأمتعة",
-        "kk": "Багажды бақылау журналы"
+        "tr": "Baggage Tracking Log",
+        "ar": "Baggage Tracking Log",
+        "kk": "Журнал отслеживания багажа"
       },
       "content": {
-        "ru": [
-          "02.05 14:12 — бирка BG884201 загружена в Лиссабоне",
-          "02.05 18:40 — выгружена в Берлине, выдана на ленте 3",
-          "03.05 11:05 — доставлена курьером по адресу клиента",
-          "03.05 11:07 — подпись получателя: L. Ferreira"
-        ],
-        "en": [
-          "02 May 14:12 — tag BG884201 loaded in Lisbon",
-          "02 May 18:40 — unloaded in Berlin, released on belt 3",
-          "03 May 11:05 — delivered by courier to client's address",
-          "03 May 11:07 — recipient signature: L. Ferreira"
-        ],
-        "tr": [
-          "02 May 14:12 — BG884201 etiketi Lizbon'da yüklendi",
-          "02 May 18:40 — Berlin'de boşaltıldı, 3. banttan verildi",
-          "03 May 11:05 — kuryeyle müşterinin adresine teslim edildi",
-          "03 May 11:07 — alıcı imzası: L. Ferreira"
-        ],
-        "ar": [
-          "2 مايو 14:12 — تم تحميل البطاقة BG884201 في لشبونة",
-          "2 مايو 18:40 — تم تفريغها في برلين، أُطلقت على الحزام 3",
-          "3 مايو 11:05 — تم تسليمها بواسطة مندوب إلى عنوان العميل",
-          "3 مايو 11:07 — توقيع المستلم: L. Ferreira"
-        ],
-        "kk": [
-          "02.05 14:12 — BG884201 биркасы Лиссабонда тиелді",
-          "02.05 18:40 — Берлинде түсірілді, 3-таспадан берілді",
-          "03.05 11:05 — курьермен клиенттің мекенжайына жеткізілді",
-          "03.05 11:07 — алушының қолы: L. Ferreira"
-        ]
+        "ru": "После прилёта чемодан снят с ленты сотрудником по разовой заявке Лукаса. Получение подтверждено кодом из его телефона и личной подписью.",
+        "en": "After landing, an employee removed the suitcase from the belt at Lucas's one-time request. Collection was confirmed with a code from his phone and his signature.",
+        "tr": "After landing, an employee removed the suitcase from the belt at Lucas's one-time request. Collection was confirmed with a code from his phone and his signature.",
+        "ar": "After landing, an employee removed the suitcase from the belt at Lucas's one-time request. Collection was confirmed with a code from his phone and his signature.",
+        "kk": "После прилёта чемодан снят с ленты сотрудником по разовой заявке Лукаса. Получение подтверждено кодом из его телефона и личной подписью."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Клиент утверждает, что так и не получил чемодан, но журнал показывает доставку по его адресу с его подписью на следующий день.",
-        "en": "The client claims he never received the suitcase, yet the log shows it was delivered to his address and signed for the next day.",
-        "tr": "Müşteri bavulu hiç almadığını iddia ediyor, ancak kayıt ertesi gün adresine teslim edildiğini ve imzalandığını gösteriyor.",
-        "ar": "يدّعي العميل أنه لم يستلم الحقيبة أبداً، لكن السجل يُظهر أنها سُلّمت إلى عنوانه ووُقّع عليها في اليوم التالي.",
-        "kk": "Клиент шабаданды мүлдем алмадым дейді, бірақ журнал оның мекенжайына жеткізіліп, келесі күні қол қойылғанын көрсетеді."
+        "ru": "Лукас лично организовал выдачу чемодана вне общей ленты и получил его.",
+        "en": "Lucas personally arranged off-belt collection and received the suitcase.",
+        "tr": "Lucas personally arranged off-belt collection and received the suitcase.",
+        "ar": "Lucas personally arranged off-belt collection and received the suitcase.",
+        "kk": "Лукас лично организовал выдачу чемодана вне общей ленты и получил его."
       },
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_baggage_lost",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Лукас лично организовал выдачу чемодана вне общей ленты и получил его.",
+          "en": "Lucas personally arranged off-belt collection and received the suitcase.",
+          "tr": "Lucas personally arranged off-belt collection and received the suitcase.",
+          "ar": "Lucas personally arranged off-belt collection and received the suitcase.",
+          "kk": "Лукас лично организовал выдачу чемодана вне общей ленты и получил его."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_baggage_lost",
+        "reason": {
+          "ru": "Лукас лично организовал выдачу чемодана вне общей ленты и получил его.",
+          "en": "Lucas personally arranged off-belt collection and received the suitcase.",
+          "tr": "Lucas personally arranged off-belt collection and received the suitcase.",
+          "ar": "Lucas personally arranged off-belt collection and received the suitcase.",
+          "kk": "Лукас лично организовал выдачу чемодана вне общей ленты и получил его."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "ev-garage",
+      "order": 3,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера гаража Матеуса",
+        "en": "Mateus's Garage Camera",
+        "tr": "Mateus's Garage Camera",
+        "ar": "Mateus's Garage Camera",
+        "kk": "Камера гаража Матеуса"
+      },
+      "content": {
+        "ru": "Лукас привозит чемодан вечером, достаёт электронику и просит брата оставить багаж до утра. Чемодан имеет серую транспортную пломбу.",
+        "en": "Lucas brings the suitcase to the garage that evening, removes the electronics, and asks his brother to keep the luggage until morning. The suitcase carries a gray transport seal.",
+        "tr": "Lucas brings the suitcase to the garage that evening, removes the electronics, and asks his brother to keep the luggage until morning. The suitcase carries a gray transport seal.",
+        "ar": "Lucas brings the suitcase to the garage that evening, removes the electronics, and asks his brother to keep the luggage until morning. The suitcase carries a gray transport seal.",
+        "kk": "Лукас привозит чемодан вечером, достаёт электронику и просит брата оставить багаж до утра. Чемодан имеет серую транспортную пломбу."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Полученный багаж находился у заявителя после рейса.",
+        "en": "The collected baggage was in the claimant's possession after the flight.",
+        "tr": "The collected baggage was in the claimant's possession after the flight.",
+        "ar": "The collected baggage was in the claimant's possession after the flight.",
+        "kk": "Полученный багаж находился у заявителя после рейса."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_baggage_lost",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Полученный багаж находился у заявителя после рейса.",
+          "en": "The collected baggage was in the claimant's possession after the flight.",
+          "tr": "The collected baggage was in the claimant's possession after the flight.",
+          "ar": "The collected baggage was in the claimant's possession after the flight.",
+          "kk": "Полученный багаж находился у заявителя после рейса."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_baggage_lost",
+        "reason": {
+          "ru": "Полученный багаж находился у заявителя после рейса.",
+          "en": "The collected baggage was in the claimant's possession after the flight.",
+          "tr": "The collected baggage was in the claimant's possession after the flight.",
+          "ar": "The collected baggage was in the claimant's possession after the flight.",
+          "kk": "Полученный багаж находился у заявителя после рейса."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
       "meta": {
-        "logPrompt": "bagtrack@hub:~$ tail -f /var/log/baggage.log"
+        "imageUrl": "evidence/case-417-ev-garage.webp"
       }
     },
     {
       "id": "ev-listing",
+      "order": 4,
       "type": "photo",
       "title": {
-        "ru": "Объявление о перепродаже",
-        "en": "Resale Listing",
-        "tr": "Yeniden Satış İlanı",
-        "ar": "إعلان إعادة البيع",
-        "kk": "Қайта сату хабарландыруы"
+        "ru": "Объявления о продаже",
+        "en": "For-Sale Listings",
+        "tr": "For-Sale Listings",
+        "ar": "For-Sale Listings",
+        "kk": "Объявления о продаже"
       },
       "content": {
-        "ru": "Скриншот объявления от 06.05.2026: те же часы и ноутбук из списка содержимого выставлены клиентом на продажу как «новые, в коробке».",
-        "en": "Screenshot of a 06 May 2026 listing: the same watch and laptop from the contents list are offered for sale by the client as 'new, boxed'.",
-        "tr": "06 Mayıs 2026 tarihli ilan ekran görüntüsü: içerik listesindeki aynı saat ve dizüstü bilgisayar müşteri tarafından 'yeni, kutusunda' olarak satışa sunulmuş.",
-        "ar": "لقطة شاشة لإعلان بتاريخ 6 مايو 2026: نفس الساعة والحاسوب المحمول من قائمة المحتويات معروضان للبيع من قبل العميل بوصف 'جديد، في علبته'.",
-        "kk": "06.05.2026 хабарландыруының скриншоты: құрамы тізіміндегі дәл сол сағат пен ноутбук клиент тарапынан «жаңа, қорабында» деп сатуға қойылған."
+        "ru": "На следующий день Лукас выставляет заявленные часы и электронику как новые. Серийные номера совпадают с чеками из требования.",
+        "en": "The next day, Lucas lists the claimed watches and electronics as new. Their serial numbers match the receipts in the claim.",
+        "tr": "The next day, Lucas lists the claimed watches and electronics as new. Their serial numbers match the receipts in the claim.",
+        "ar": "The next day, Lucas lists the claimed watches and electronics as new. Their serial numbers match the receipts in the claim.",
+        "kk": "На следующий день Лукас выставляет заявленные часы и электронику как новые. Серийные номера совпадают с чеками из требования."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Предметы, заявленные как утраченные вместе с чемоданом, спустя дни выставлены тем же клиентом на продажу как новые.",
-        "en": "Items declared lost with the suitcase are listed for sale as new by the same client days later.",
-        "tr": "Bavulla birlikte kaybolduğu beyan edilen eşyalar günler sonra aynı müşteri tarafından yeni olarak satışa çıkarılmış.",
-        "ar": "العناصر التي أُعلن عن فقدانها مع الحقيبة معروضة للبيع كجديدة من قبل العميل نفسه بعد أيام.",
-        "kk": "Шабаданмен бірге жоғалды деп мәлімделген заттар бірнеше күннен кейін сол клиент тарапынан жаңа ретінде сатуға қойылған."
+        "ru": "Содержимое не утрачено и продаётся самим заявителем.",
+        "en": "The contents were not lost and are being sold by the claimant.",
+        "tr": "The contents were not lost and are being sold by the claimant.",
+        "ar": "The contents were not lost and are being sold by the claimant.",
+        "kk": "Содержимое не утрачено и продаётся самим заявителем."
       },
-      "meta": {
-        "filename": "SCR_20260506_142301.png",
-        "imageUrl": "evidence/case-417-ev-listing.webp"
-      }
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_contents_lost",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Содержимое не утрачено и продаётся самим заявителем.",
+          "en": "The contents were not lost and are being sold by the claimant.",
+          "tr": "The contents were not lost and are being sold by the claimant.",
+          "ar": "The contents were not lost and are being sold by the claimant.",
+          "kk": "Содержимое не утрачено и продаётся самим заявителем."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_contents_lost",
+        "reason": {
+          "ru": "Содержимое не утрачено и продаётся самим заявителем.",
+          "en": "The contents were not lost and are being sold by the claimant.",
+          "tr": "The contents were not lost and are being sold by the claimant.",
+          "ar": "The contents were not lost and are being sold by the claimant.",
+          "kk": "Содержимое не утрачено и продаётся самим заявителем."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
-      "id": "ev-claimform",
-      "type": "document",
+      "id": "ev-payment",
+      "order": 5,
+      "type": "bank_statement",
       "title": {
-        "ru": "Заявление о пропаже",
-        "en": "Loss Report Form",
-        "tr": "Kayıp Bildirim Formu",
-        "ar": "نموذج الإبلاغ عن الفقدان",
-        "kk": "Жоғалу туралы өтініш"
+        "ru": "Платёж Серого конвоя",
+        "en": "Gray Convoy Payment",
+        "tr": "Gray Convoy Payment",
+        "ar": "Gray Convoy Payment",
+        "kk": "Платёж Серого конвоя"
       },
       "content": {
-        "ru": "Поданное клиентом заявление: «Багаж не доставлен, местонахождение неизвестно с момента прилёта 02.05».",
-        "en": "Client-filed report: 'Baggage not delivered, whereabouts unknown since arrival on 02 May'.",
-        "tr": "Müşterinin doldurduğu bildirim: 'Bagaj teslim edilmedi, 02 Mayıs varıştan beri yeri bilinmiyor'.",
-        "ar": "البلاغ المقدّم من العميل: 'لم تُسلَّم الأمتعة، مكانها مجهول منذ الوصول في 2 مايو'.",
-        "kk": "Клиент берген өтініш: «Багаж жеткізілмеді, 02.05 келгеннен бері орны белгісіз»."
+        "ru": "Перед рейсом Лукас получает оплату за доставку «архивного образца» из ангара B-17. После подачи страхового заявления обещан дополнительный процент.",
+        "en": "Before the flight, Lucas receives payment to deliver an ‘archive sample’ from Hangar B-17. An additional percentage is promised after he files the insurance claim.",
+        "tr": "Before the flight, Lucas receives payment to deliver an ‘archive sample’ from Hangar B-17. An additional percentage is promised after he files the insurance claim.",
+        "ar": "Before the flight, Lucas receives payment to deliver an ‘archive sample’ from Hangar B-17. An additional percentage is promised after he files the insurance claim.",
+        "kk": "Перед рейсом Лукас получает оплату за доставку «архивного образца» из ангара B-17. После подачи страхового заявления обещан дополнительный процент."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Само заявление оформлено корректно; проблема в том, что оно опровергается журналом доставки, а не в самом бланке.",
-        "en": "The form itself is properly filled out; the issue is that it is refuted by the delivery log, not the form itself.",
-        "tr": "Formun kendisi düzgün doldurulmuş; sorun, formun değil, teslimat kaydının onu çürütmesidir.",
-        "ar": "النموذج نفسه مُعبّأ بشكل صحيح؛ المشكلة أنه مُكذّب بسجل التسليم وليس في النموذج ذاته.",
-        "kk": "Өтініштің өзі дұрыс толтырылған; мәселе оның бланкінде емес, жеткізу журналымен жоққа шығарылуында."
+        "ru": "Лукас одновременно работал курьером сети и пытался получить выплату за сохранённые вещи.",
+        "en": "Lucas was both a network courier and attempting to claim a payout for property he kept.",
+        "tr": "Lucas was both a network courier and attempting to claim a payout for property he kept.",
+        "ar": "Lucas was both a network courier and attempting to claim a payout for property he kept.",
+        "kk": "Лукас одновременно работал курьером сети и пытался получить выплату за сохранённые вещи."
+      },
+      "narrativeRole": "motive",
+      "statementLink": {
+        "statementId": "claim_contents_lost",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Лукас одновременно работал курьером сети и пытался получить выплату за сохранённые вещи.",
+          "en": "Lucas was both a network courier and attempting to claim a payout for property he kept.",
+          "tr": "Lucas was both a network courier and attempting to claim a payout for property he kept.",
+          "ar": "Lucas was both a network courier and attempting to claim a payout for property he kept.",
+          "kk": "Лукас одновременно работал курьером сети и пытался получить выплату за сохранённые вещи."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "ev-bottom",
+      "order": 6,
+      "type": "document_scan",
+      "title": {
+        "ru": "Просветка оригинала формы 17-К",
+        "en": "Original 17-K Form Backlight Examination",
+        "tr": "Original 17-K Form Backlight Examination",
+        "ar": "Original 17-K Form Backlight Examination",
+        "kk": "Просветка оригинала формы 17-К"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Под наклейкой проявляется подпись Константина Карелина и таблица его долей по ранним выплатам.",
+        "en": "Beneath the label appear Konstantin Karelin's signature and a table of his shares from early payouts.",
+        "tr": "Beneath the label appear Konstantin Karelin's signature and a table of his shares from early payouts.",
+        "ar": "Beneath the label appear Konstantin Karelin's signature and a table of his shares from early payouts.",
+        "kk": "Под наклейкой проявляется подпись Константина Карелина и таблица его долей по ранним выплатам."
+      },
+      "narrativeRole": "arc_reveal",
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Под наклейкой проявляется подпись Константина Карелина и таблица его долей по ранним выплатам.",
+          "en": "Beneath the label appear Konstantin Karelin's signature and a table of his shares from early payouts.",
+          "tr": "Beneath the label appear Konstantin Karelin's signature and a table of his shares from early payouts.",
+          "ar": "Beneath the label appear Konstantin Karelin's signature and a table of his shares from early payouts.",
+          "kk": "Под наклейкой проявляется подпись Константина Карелина и таблица его долей по ранним выплатам."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "meta": {
+        "imageUrl": "evidence/case-417-ev-bottom.webp"
+      },
+      "description": {
+        "ru": "Оригинал из двойного дна чемодана исследуется без отделения старых слоёв бумаги.",
+        "en": "The original from the suitcase's false bottom is examined without separating the old paper layers.",
+        "tr": "The original from the suitcase's false bottom is examined without separating the old paper layers.",
+        "ar": "The original from the suitcase's false bottom is examined without separating the old paper layers.",
+        "kk": "Оригинал из двойного дна чемодана исследуется без отделения старых слоёв бумаги."
+      },
+      "instruction": {
+        "ru": "Включить просвет и найти первую резолюцию под поздней наклейкой.",
+        "en": "Switch on backlight and find the original authorization beneath the later label.",
+        "tr": "Switch on backlight and find the original authorization beneath the later label.",
+        "ar": "Switch on backlight and find the original authorization beneath the later label.",
+        "kk": "Включить просвет и найти первую резолюцию под поздней наклейкой."
+      },
+      "previousType": "document",
+      "assets": {
+        "asset1": "cases/case-417/assets/interactive/ev-bottom-base.webp",
+        "asset2": "cases/case-417/assets/interactive/ev-bottom-scan-overlay.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Главное имя кампании добывает игрок, а не сообщает финальный текст.",
+          "en": "The player uncovers the campaign's central name instead of receiving it from the final text.",
+          "tr": "The player uncovers the campaign's central name instead of receiving it from the final text.",
+          "ar": "The player uncovers the campaign's central name instead of receiving it from the final text.",
+          "kk": "Главное имя кампании добывает игрок, а не сообщает финальный текст."
+        },
+        "playerAction": {
+          "ru": "Включить просвет и найти первую резолюцию под поздней наклейкой.",
+          "en": "Switch on backlight and find the original authorization beneath the later label.",
+          "tr": "Switch on backlight and find the original authorization beneath the later label.",
+          "ar": "Switch on backlight and find the original authorization beneath the later label.",
+          "kk": "Включить просвет и найти первую резолюцию под поздней наклейкой."
+        },
+        "conclusion": {
+          "ru": "Под наклейкой проявляется подпись Константина Карелина и таблица его долей по ранним выплатам.",
+          "en": "Beneath the label appear Konstantin Karelin's signature and a table of his shares from early payouts.",
+          "tr": "Beneath the label appear Konstantin Karelin's signature and a table of his shares from early payouts.",
+          "ar": "Beneath the label appear Konstantin Karelin's signature and a table of his shares from early payouts.",
+          "kk": "Под наклейкой проявляется подпись Константина Карелина и таблица его долей по ранним выплатам."
+        }
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "uv",
+          "backlight"
+        ],
+        "anomalyZones": [
+          {
+            "id": "karelin_signature",
+            "mode": "backlight",
+            "x": 47,
+            "y": 68,
+            "width": 37,
+            "height": 13,
+            "label": "Под наклейкой проявляется подпись Константина Карелина и таблица его долей по ранним выплатам.",
+            "isContradiction": true,
+            "labelEn": "Beneath the label appear Konstantin Karelin's signature and a table of his shares from early payouts."
+          }
+        ],
+        "successCondition": {
+          "type": "select_zone",
+          "zoneId": "karelin_signature"
+        }
+      }
+    },
+    {
+      "id": "ev-suitcase-seal",
+      "order": 7,
+      "type": "seal_match",
+      "title": {
+        "ru": "Сопоставление транспортной пломбы чемодана",
+        "en": "Suitcase Transport-Seal Comparison",
+        "tr": "Suitcase Transport-Seal Comparison",
+        "ar": "Suitcase Transport-Seal Comparison",
+        "kk": "Сопоставление транспортной пломбы чемодана"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Фрагменты совпали: чемодан прошёл через последнюю отправку Серого конвоя из ангара B-17.",
+        "en": "The fragments match: the suitcase passed through the Gray Convoy's final shipment from Hangar B-17.",
+        "tr": "The fragments match: the suitcase passed through the Gray Convoy's final shipment from Hangar B-17.",
+        "ar": "The fragments match: the suitcase passed through the Gray Convoy's final shipment from Hangar B-17.",
+        "kk": "Фрагменты совпали: чемодан прошёл через последнюю отправку Серого конвоя из ангара B-17."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Фрагменты совпали: чемодан прошёл через последнюю отправку Серого конвоя из ангара B-17.",
+          "en": "The fragments match: the suitcase passed through the Gray Convoy's final shipment from Hangar B-17.",
+          "tr": "The fragments match: the suitcase passed through the Gray Convoy's final shipment from Hangar B-17.",
+          "ar": "The fragments match: the suitcase passed through the Gray Convoy's final shipment from Hangar B-17.",
+          "kk": "Фрагменты совпали: чемодан прошёл через последнюю отправку Серого конвоя из ангара B-17."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "description": {
+        "ru": "Фрагмент с чемодана Лукаса сравнивается с пломбой последней отправки из ангара B-17.",
+        "en": "A fragment from Lucas's suitcase is compared with the seal from the final Hangar B-17 shipment.",
+        "tr": "A fragment from Lucas's suitcase is compared with the seal from the final Hangar B-17 shipment.",
+        "ar": "A fragment from Lucas's suitcase is compared with the seal from the final Hangar B-17 shipment.",
+        "kk": "Фрагмент с чемодана Лукаса сравнивается с пломбой последней отправки из ангара B-17."
+      },
+      "instruction": {
+        "ru": "Совместить фрагменты серой транспортной пломбы.",
+        "en": "Align the gray transport-seal fragments.",
+        "tr": "Align the gray transport-seal fragments.",
+        "ar": "Align the gray transport-seal fragments.",
+        "kk": "Совместить фрагменты серой транспортной пломбы."
+      },
+      "assets": {
+        "asset1": "cases/case-417/assets/interactive/ev-suitcase-seal-master-a.webp",
+        "asset2": "cases/case-417/assets/interactive/ev-suitcase-seal-fragments.json"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true,
+        "transparencyMode": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Вторая финальная механика связывает личное мошенничество с последним физическим маршрутом сети.",
+          "en": "The second final interaction links the personal fraud to the network's final physical route.",
+          "tr": "The second final interaction links the personal fraud to the network's final physical route.",
+          "ar": "The second final interaction links the personal fraud to the network's final physical route.",
+          "kk": "Вторая финальная механика связывает личное мошенничество с последним физическим маршрутом сети."
+        },
+        "playerAction": {
+          "ru": "Совместить фрагменты серой транспортной пломбы.",
+          "en": "Align the gray transport-seal fragments.",
+          "tr": "Align the gray transport-seal fragments.",
+          "ar": "Align the gray transport-seal fragments.",
+          "kk": "Совместить фрагменты серой транспортной пломбы."
+        },
+        "conclusion": {
+          "ru": "Фрагменты совпали: чемодан прошёл через последнюю отправку Серого конвоя из ангара B-17.",
+          "en": "The fragments match: the suitcase passed through the Gray Convoy's final shipment from Hangar B-17.",
+          "tr": "The fragments match: the suitcase passed through the Gray Convoy's final shipment from Hangar B-17.",
+          "ar": "The fragments match: the suitcase passed through the Gray Convoy's final shipment from Hangar B-17.",
+          "kk": "Фрагменты совпали: чемодан прошёл через последнюю отправку Серого конвоя из ангара B-17."
+        }
+      },
+      "data": {
+        "movableFragment": "B",
+        "allowRotation": true,
+        "rotationStep": 3,
+        "initialTransform": {
+          "x": 72,
+          "y": 18,
+          "rotation": -14
+        },
+        "targetTransform": {
+          "x": 132,
+          "y": 48,
+          "rotation": 6
+        },
+        "tolerance": {
+          "position": 10,
+          "rotation": 5
+        },
+        "expectedMatch": true,
+        "sourceSeed": 504217,
+        "fragmentASeed": 504217,
+        "fragmentBSeed": 504217,
+        "comparisonMarkers": [
+          {
+            "id": "tear_pattern",
+            "label": "Совпадают линия разрыва, клеевой дефект и участок защитной сетки",
+            "labelEn": "Tear line, adhesive defect, and security-mesh section match"
+          }
+        ]
       }
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Журнал багажа показывает доставку чемодана по адресу клиента с его подписью.",
-      "«Утраченные» дорогие предметы выставлены клиентом на перепродажу как новые.",
-      "Заявление о пропаже ложно — это мошенничество, в выплате отказать."
+      "Лукас лично получил чемодан по коду и привёз его в гараж брата.",
+      "Заявленные утраченными вещи он выставил на продажу.",
+      "В двойном дне находился архив Серого конвоя. Заявление Лукаса мошенническое и должно быть отклонено.",
+      "Под наклейкой проявляется подпись Константина Карелина и таблица его долей по ранним выплатам.",
+      "Фрагменты совпали: чемодан прошёл через последнюю отправку Серого конвоя из ангара B-17.",
+      "Документы устанавливают организатора схемы: бывшего руководителя расследований Константина Карелина."
     ],
     "en": [
-      "The baggage log shows the suitcase was delivered and signed for at the client's address.",
-      "The 'lost' expensive items were listed for resale as new by the client.",
-      "The loss report is false — this is fraud, reject the claim."
+      "Lucas personally arranged off-belt collection and received the suitcase.",
+      "The collected baggage was in the claimant's possession after the flight.",
+      "The contents were not lost and are being sold by the claimant.",
+      "The document confirms the baggage existed, but not that it was lost.",
+      "Lucas was both a network courier and attempting to claim a payout for property he kept.",
+      "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "Bagaj kaydı, bavulun müşterinin adresine teslim edilip imzalandığını gösteriyor.",
-      "'Kaybolan' pahalı eşyalar müşteri tarafından yeni olarak satışa çıkarılmış.",
-      "Kayıp bildirimi yanlış — bu bir dolandırıcılık, talebi reddedin."
+      "Lucas personally arranged off-belt collection and received the suitcase.",
+      "The collected baggage was in the claimant's possession after the flight.",
+      "The contents were not lost and are being sold by the claimant.",
+      "The document confirms the baggage existed, but not that it was lost.",
+      "Lucas was both a network courier and attempting to claim a payout for property he kept.",
+      "The claim is fraudulent and should be rejected."
     ],
     "ar": [
-      "سجل الأمتعة يُظهر تسليم الحقيبة والتوقيع عليها في عنوان العميل.",
-      "العناصر باهظة الثمن 'المفقودة' عرضها العميل لإعادة البيع كجديدة.",
-      "بلاغ الفقدان كاذب — هذا احتيال، ارفض المطالبة."
+      "Lucas personally arranged off-belt collection and received the suitcase.",
+      "The collected baggage was in the claimant's possession after the flight.",
+      "The contents were not lost and are being sold by the claimant.",
+      "The document confirms the baggage existed, but not that it was lost.",
+      "Lucas was both a network courier and attempting to claim a payout for property he kept.",
+      "The claim is fraudulent and should be rejected."
     ],
     "kk": [
-      "Багаж журналы шабаданның клиент мекенжайына жеткізіліп, қол қойылғанын көрсетеді.",
-      "«Жоғалған» қымбат заттар клиент тарапынан жаңа ретінде қайта сатуға қойылған.",
-      "Жоғалу туралы өтініш жалған — бұл алаяқтық, төлемнен бас тарту."
+      "Лукас лично получил чемодан по коду и привёз его в гараж брата.",
+      "Заявленные утраченными вещи он выставил на продажу.",
+      "В двойном дне находился архив Серого конвоя. Заявление Лукаса мошенническое и должно быть отклонено.",
+      "Под наклейкой проявляется подпись Константина Карелина и таблица его долей по ранним выплатам.",
+      "Фрагменты совпали: чемодан прошёл через последнюю отправку Серого конвоя из ангара B-17.",
+      "Документы устанавливают организатора схемы: бывшего руководителя расследований Константина Карелина."
     ]
+  },
+  "investigationBudget": 5,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Авиакомпания потеряла мой сданный в багаж чемодан с электроникой и часами стоимостью 2500 евро. После прилёта я его не получил, доставка не состоялась. Прошу полное возмещение.",
+        "en": "The airline lost my checked suitcase containing electronics and watches worth €2,500. I did not receive it after landing, and delivery never occurred. I am claiming full compensation.",
+        "tr": "The airline lost my checked suitcase containing electronics and watches worth €2,500. I did not receive it after landing, and delivery never occurred. I am claiming full compensation.",
+        "ar": "The airline lost my checked suitcase containing electronics and watches worth €2,500. I did not receive it after landing, and delivery never occurred. I am claiming full compensation.",
+        "kk": "Авиакомпания потеряла мой сданный в багаж чемодан с электроникой и часами стоимостью 2500 евро. После прилёта я его не получил, доставка не состоялась. Прошу полное возмещение."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_baggage_checked",
+      "text": {
+        "ru": "Лукас сдал чемодан в багаж на своём рейсе.",
+        "en": "Lucas checked a suitcase on his flight.",
+        "tr": "Lucas checked a suitcase on his flight.",
+        "ar": "Lucas checked a suitcase on his flight.",
+        "kk": "Лукас сдал чемодан в багаж на своём рейсе."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_baggage_lost",
+      "text": {
+        "ru": "После прилёта чемодан не был выдан Лукасу и остаётся потерянным.",
+        "en": "Lucas did not receive the suitcase after landing, and it remains lost.",
+        "tr": "Lucas did not receive the suitcase after landing, and it remains lost.",
+        "ar": "Lucas did not receive the suitcase after landing, and it remains lost.",
+        "kk": "После прилёта чемодан не был выдан Лукасу и остаётся потерянным."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_contents_lost",
+      "text": {
+        "ru": "Электроника и часы из чемодана утрачены и требуют выплаты 2500 евро.",
+        "en": "The suitcase's electronics and watches were lost, warranting a €2,500 payout.",
+        "tr": "The suitcase's electronics and watches were lost, warranting a €2,500 payout.",
+        "ar": "The suitcase's electronics and watches were lost, warranting a €2,500 payout.",
+        "kk": "Электроника и часы из чемодана утрачены и требуют выплаты 2500 евро."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Лукас подал заявление о потерянном чемодане. Через час его брат Матеус привёз чемодан в отдел и попросил не скрывать правду ради семьи. Это последнее дело Архива №17. — В. Лебедева",
+      "en": "Lucas filed a claim for a lost suitcase. One hour later, his brother Mateus brought the suitcase to the department and asked us not to hide the truth for the sake of family. This is the final case of Archive No. 17. — V. Lebedeva",
+      "tr": "Lucas filed a claim for a lost suitcase. One hour later, his brother Mateus brought the suitcase to the department and asked us not to hide the truth for the sake of family. This is the final case of Archive No. 17. — V. Lebedeva",
+      "ar": "Lucas filed a claim for a lost suitcase. One hour later, his brother Mateus brought the suitcase to the department and asked us not to hide the truth for the sake of family. This is the final case of Archive No. 17. — V. Lebedeva",
+      "kk": "Лукас подал заявление о потерянном чемодане. Через час его брат Матеус привёз чемодан в отдел и попросил не скрывать правду ради семьи. Это последнее дело Архива №17. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Карелин создал форму 17-К как внутреннее учебное дело, затем превратил её в инструкцию для мошенников. Он продавал настоящие активы через Серый конвой и добивался выплат за их мнимую утрату. Маршрутная книга указала его отправление из ангара B-17 в 04:40.",
+      "en": "Karelin created form 17-K as an internal training case, then turned it into a manual for fraudsters. He sold genuine assets through the Gray Convoy and obtained payouts for their fictitious loss. The route book records his departure from Hangar B-17 at 4:40 a.m.",
+      "tr": "Karelin created form 17-K as an internal training case, then turned it into a manual for fraudsters. He sold genuine assets through the Gray Convoy and obtained payouts for their fictitious loss. The route book records his departure from Hangar B-17 at 4:40 a.m.",
+      "ar": "Karelin created form 17-K as an internal training case, then turned it into a manual for fraudsters. He sold genuine assets through the Gray Convoy and obtained payouts for their fictitious loss. The route book records his departure from Hangar B-17 at 4:40 a.m.",
+      "kk": "Карелин создал форму 17-К как внутреннее учебное дело, затем превратил её в инструкцию для мошенников. Он продавал настоящие активы через Серый конвой и добивался выплат за их мнимую утрату. Маршрутная книга указала его отправление из ангара B-17 в 04:40."
+    },
+    "nextCaseTeaser": {
+      "ru": "Архив №17 закрыт. В маршрутной книге остаётся одна неподписанная колонка: кто внутри страховой компании одобрял первые выплаты Карелина?",
+      "en": "Archive No. 17 is closed. One unsigned column remains in the route book: who inside the insurance company approved Karelin's first payouts?",
+      "tr": "Archive No. 17 is closed. One unsigned column remains in the route book: who inside the insurance company approved Karelin's first payouts?",
+      "ar": "Archive No. 17 is closed. One unsigned column remains in the route book: who inside the insurance company approved Karelin's first payouts?",
+      "kk": "Архив №17 закрыт. В маршрутной книге остаётся одна неподписанная колонка: кто внутри страховой компании одобрял первые выплаты Карелина?"
+    },
+    "seasonClue": {
+      "id": "karelin-identity",
+      "label": {
+        "ru": "Константин Карелин",
+        "en": "Konstantin Karelin",
+        "tr": "Konstantin Karelin",
+        "ar": "Konstantin Karelin",
+        "kk": "Константин Карелин"
+      },
+      "description": {
+        "ru": "Бывший руководитель отдела и наставник Веры Лебедевой создал Архив №17 и управлял Серым конвоем.",
+        "en": "The former department head and Vera Lebedeva's mentor created Archive No. 17 and ran the Gray Convoy.",
+        "tr": "The former department head and Vera Lebedeva's mentor created Archive No. 17 and ran the Gray Convoy.",
+        "ar": "The former department head and Vera Lebedeva's mentor created Archive No. 17 and ran the Gray Convoy.",
+        "kk": "Бывший руководитель отдела и наставник Веры Лебедевой создал Архив №17 и управлял Серым конвоем."
+      },
+      "progressIndex": 1,
+      "progressTotal": 1
+    },
+    "epilogue": {
+      "ru": [
+        "По маршруту из чемодана последнюю отправку задержали до выезда из ангара B-17. Константин Карелин находился среди сопровождающих груз.",
+        "Михаил Тернов начал восстанавливать мастерскую. Илья и Аделия дали показания. Болат прислал фотографию нового урожая. Анатолий Степанович сообщил, что Жорик украл только колпачок от ручки следователя.",
+        "Вера Сергеевна закрывает папку резолюцией: «Он научил меня не доверять красивой версии. Я слишком долго не применила этот совет к нему самому».",
+        "Основная история получает завершение, но колонка внутренних согласований оставляет честный крючок для следующего архива."
+      ],
+      "en": [
+        "The route recovered from the suitcase allowed the final shipment to be intercepted before it left Hangar B-17. Konstantin Karelin was among those escorting the cargo.",
+        "Mikhail Ternov began rebuilding the workshop. Ilya and Adelia gave their statements. Bolat sent a photograph of the new harvest. Anatoly Stepanovich reported that Zhorik had stolen only the cap from the investigator's pen.",
+        "Vera Lebedeva closes the file with a final note: “He taught me never to trust a story simply because it sounds convincing. It took me far too long to apply that lesson to him.”",
+        "The main story reaches a complete resolution, while the internal-approval column leaves a fair lead into the next archive."
+      ],
+      "tr": [
+        "The route recovered from the suitcase allowed the final shipment to be intercepted before it left Hangar B-17. Konstantin Karelin was among those escorting the cargo.",
+        "Mikhail Ternov began rebuilding the workshop. Ilya and Adelia gave their statements. Bolat sent a photograph of the new harvest. Anatoly Stepanovich reported that Zhorik had stolen only the cap from the investigator's pen.",
+        "Vera Lebedeva closes the file with a final note: “He taught me never to trust a story simply because it sounds convincing. It took me far too long to apply that lesson to him.”",
+        "The main story reaches a complete resolution, while the internal-approval column leaves a fair lead into the next archive."
+      ],
+      "ar": [
+        "The route recovered from the suitcase allowed the final shipment to be intercepted before it left Hangar B-17. Konstantin Karelin was among those escorting the cargo.",
+        "Mikhail Ternov began rebuilding the workshop. Ilya and Adelia gave their statements. Bolat sent a photograph of the new harvest. Anatoly Stepanovich reported that Zhorik had stolen only the cap from the investigator's pen.",
+        "Vera Lebedeva closes the file with a final note: “He taught me never to trust a story simply because it sounds convincing. It took me far too long to apply that lesson to him.”",
+        "The main story reaches a complete resolution, while the internal-approval column leaves a fair lead into the next archive."
+      ],
+      "kk": [
+        "По маршруту из чемодана последнюю отправку задержали до выезда из ангара B-17. Константин Карелин находился среди сопровождающих груз.",
+        "Михаил Тернов начал восстанавливать мастерскую. Илья и Аделия дали показания. Болат прислал фотографию нового урожая. Анатолий Степанович сообщил, что Жорик украл только колпачок от ручки следователя.",
+        "Вера Сергеевна закрывает папку резолюцией: «Он научил меня не доверять красивой версии. Я слишком долго не применила этот совет к нему самому».",
+        "Основная история получает завершение, но колонка внутренних согласований оставляет честный крючок для следующего архива."
+      ]
+    }
+  },
+  "finalSynthesis": {
+    "id": "karelin-accusation-chain",
+    "title": {
+      "ru": "Соберите обвинение Карелина",
+      "en": "Build the Case Against Karelin",
+      "tr": "Build the Case Against Karelin",
+      "ar": "Build the Case Against Karelin",
+      "kk": "Соберите обвинение Карелина"
+    },
+    "instruction": {
+      "ru": "Соедините три доказанные связи и восстановите механизм Архива №17.",
+      "en": "Connect the three proven links and reconstruct how Archive No. 17 worked.",
+      "tr": "Connect the three proven links and reconstruct how Archive No. 17 worked.",
+      "ar": "Connect the three proven links and reconstruct how Archive No. 17 worked.",
+      "kk": "Соедините три доказанные связи и восстановите механизм Архива №17."
+    },
+    "unlockAfter": "correct_verdict",
+    "nodes": [
+      {
+        "id": "template",
+        "label": {
+          "ru": "Форма 17-К",
+          "en": "Form 17-K",
+          "tr": "Form 17-K",
+          "ar": "Form 17-K",
+          "kk": "Форма 17-К"
+        },
+        "evidenceIds": [
+          "ev-bottom"
+        ]
+      },
+      {
+        "id": "money",
+        "label": {
+          "ru": "Доли с ранних выплат",
+          "en": "Shares from Early Payouts",
+          "tr": "Shares from Early Payouts",
+          "ar": "Shares from Early Payouts",
+          "kk": "Доли с ранних выплат"
+        },
+        "evidenceIds": [
+          "ev-bottom",
+          "ev-payment"
+        ]
+      },
+      {
+        "id": "route",
+        "label": {
+          "ru": "Последняя отправка B-17",
+          "en": "Final B-17 Shipment",
+          "tr": "Final B-17 Shipment",
+          "ar": "Final B-17 Shipment",
+          "kk": "Последняя отправка B-17"
+        },
+        "evidenceIds": [
+          "ev-suitcase-seal",
+          "ev-tracking"
+        ]
+      }
+    ],
+    "requiredLinks": [
+      [
+        "template",
+        "money"
+      ],
+      [
+        "money",
+        "route"
+      ]
+    ],
+    "evidenceUnlockIds": [
+      "ev-bottom",
+      "ev-suitcase-seal"
+    ],
+    "arcEvidenceAccess": "post_verdict_free",
+    "successConclusion": {
+      "ru": "Карелин превратил учебный шаблон в инструкцию, получал долю страховых выплат и выводил сохранённое имущество через маршрут B-17.",
+      "en": "Karelin turned a training template into a fraud manual, took a share of insurance payouts, and moved preserved assets through route B-17.",
+      "tr": "Karelin turned a training template into a fraud manual, took a share of insurance payouts, and moved preserved assets through route B-17.",
+      "ar": "Karelin turned a training template into a fraud manual, took a share of insurance payouts, and moved preserved assets through route B-17.",
+      "kk": "Карелин превратил учебный шаблон в инструкцию, получал долю страховых выплат и выводил сохранённое имущество через маршрут B-17."
+    },
+    "skippableAfterAttempts": 3,
+    "analyticsEvent": "campaign_final_synthesis_completed"
   }
 }

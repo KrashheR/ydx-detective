@@ -1,0 +1,83 @@
+{
+  "id": "ev-manifest",
+  "order": 2,
+  "type": "document_scan",
+  "title": {
+    "ru": "Экспертиза грузовой ведомости"
+  },
+  "isContradiction": true,
+  "narrativeRole": "suspicion",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Под значением 240 кг проявляется исходная масса 920 кг; ведомость исправили перед гуманитарным рейсом."
+  },
+  "previousType": "document",
+  "description": {
+    "ru": "Спасатели передали обгоревший бумажный оригинал ведомости из кабины."
+  },
+  "instruction": {
+    "ru": "Включить УФ-режим и проверить поле фактической массы."
+  },
+  "assets": {
+    "asset1": "assets/interactive/ev-manifest-base.webp",
+    "asset2": "assets/interactive/ev-manifest-scan-overlay.svg"
+  },
+  "data": {
+    "initialMode": "normal",
+    "modes": [
+      "normal",
+      "uv",
+      "backlight"
+    ],
+    "anomalyZones": [
+      {
+        "id": "cargo_mass",
+        "mode": "uv",
+        "x": 61,
+        "y": 43,
+        "width": 18,
+        "height": 9,
+        "label": "Под значением 240 кг проявляется исходная масса 920 кг; ведомость исправили перед гуманитарным рейсом.",
+        "isContradiction": true
+      }
+    ],
+    "successCondition": {
+      "type": "select_zone",
+      "zoneId": "cargo_mass"
+    }
+  },
+  "statementLink": {
+    "statementId": "claim_declared_cargo",
+    "relation": "contradicts",
+    "reason": {
+      "ru": "Под значением 240 кг проявляется исходная масса 920 кг; ведомость исправили перед гуманитарным рейсом."
+    }
+  },
+  "contradictionTarget": {
+    "statementId": "claim_declared_cargo",
+    "reason": {
+      "ru": "Под значением 240 кг проявляется исходная масса 920 кг; ведомость исправили перед гуманитарным рейсом."
+    }
+  },
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Скрытая масса объясняет аварию и разрушает легенду о нападении без специальных знаний авиации."
+    },
+    "playerAction": {
+      "ru": "Включить УФ-режим и проверить поле фактической массы."
+    },
+    "conclusion": {
+      "ru": "Под значением 240 кг проявляется исходная масса 920 кг; ведомость исправили перед гуманитарным рейсом."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

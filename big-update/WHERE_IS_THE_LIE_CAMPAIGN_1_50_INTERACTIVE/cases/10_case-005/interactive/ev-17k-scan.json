@@ -1,0 +1,78 @@
+{
+  "id": "ev-17k-scan",
+  "order": 6,
+  "type": "document_scan",
+  "title": {
+    "ru": "Просветка формы 17-К"
+  },
+  "isContradiction": false,
+  "narrativeRole": "season_clue",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Под новым кодом виден индекс «A-17/2021»: шаблон использовали в уже выплаченном деле пять лет назад."
+  },
+  "previousType": null,
+  "description": {
+    "ru": "Пустой бланк из переписки консультанта передан в архивную экспертизу."
+  },
+  "instruction": {
+    "ru": "Включить просвет и найти прежний регистрационный индекс под белой корректировкой."
+  },
+  "assets": {
+    "asset1": "assets/interactive/ev-17k-scan-base.webp",
+    "asset2": "assets/interactive/ev-17k-scan-scan-overlay.svg"
+  },
+  "data": {
+    "initialMode": "normal",
+    "modes": [
+      "normal",
+      "uv",
+      "backlight"
+    ],
+    "anomalyZones": [
+      {
+        "id": "archive_index",
+        "mode": "backlight",
+        "x": 60,
+        "y": 82,
+        "width": 25,
+        "height": 8,
+        "label": "Под новым кодом виден индекс «A-17/2021»: шаблон использовали в уже выплаченном деле пять лет назад.",
+        "isContradiction": false
+      }
+    ],
+    "successCondition": {
+      "type": "select_zone",
+      "zoneId": "archive_index"
+    }
+  },
+  "statementLink": {
+    "statementId": "claim_main",
+    "relation": "reveals_season_clue",
+    "reason": {
+      "ru": "Под новым кодом виден индекс «A-17/2021»: шаблон использовали в уже выплаченном деле пять лет назад."
+    }
+  },
+  "contradictionTarget": null,
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Второе взаимодействие допустимо в финале акта и превращает клиффхэнгер в находку игрока."
+    },
+    "playerAction": {
+      "ru": "Включить просвет и найти прежний регистрационный индекс под белой корректировкой."
+    },
+    "conclusion": {
+      "ru": "Под новым кодом виден индекс «A-17/2021»: шаблон использовали в уже выплаченном деле пять лет назад."
+    }
+  },
+  "evidenceTier": "arc",
+  "requiredForVerdict": false,
+  "rewardWeight": 0.75
+}

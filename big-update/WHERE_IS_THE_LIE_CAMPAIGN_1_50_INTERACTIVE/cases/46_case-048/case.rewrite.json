@@ -1,0 +1,594 @@
+{
+  "id": "case-048",
+  "campaignOrder": 46,
+  "requiredLevel": 26,
+  "act": 5,
+  "actTitle": {
+    "ru": "Последний маршрут",
+    "en": "The Final Route"
+  },
+  "title": {
+    "ru": "Разгром после закрытия",
+    "en": "The Break-In After Closing"
+  },
+  "difficulty": "medium",
+  "claimAmount": {
+    "value": 12600,
+    "currency": "EUR"
+  },
+  "groundTruth": "fraud",
+  "correctDecision": "reject",
+  "investigationBudget": 4,
+  "claimant": {
+    "name": {
+      "ru": "Марко Лин, 44 года",
+      "en": "Marko Lin, age 44"
+    },
+    "migrationNote": {
+      "ru": "Сохранить имя и нейтральный портрет. Полностью убрать маски, банды, боевые искусства и любые фан-сервисные визуальные коды.",
+      "en": "Keep the name and a neutral portrait. Remove masks, gangs, martial arts, and all fan-service visual references."
+    },
+    "portrait": {
+      "characterId": "marko-lin-grounded",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Марко Лин",
+        "en": "Marko Lin, age 44"
+      },
+      "assetId": "asset-093",
+      "src": "src/data/cases/case-048/people/marko-lin-grounded.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-048/people/marko-lin-grounded.webp",
+      "caseRelativeSrc": "people/marko-lin-grounded.webp",
+      "installTo": "public/people/marko-lin-grounded.webp",
+      "legacyRuntimeUrl": "people/marko-lin-grounded.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "e636a0e6756628a7efd48a545359f19fdc53818dd2fa9f7d4b3264a92b7bdcf2"
+    },
+    "portraitStatus": "generated_replacement_included",
+    "portraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/marko-lin-grounded.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-048/people/marko-lin-grounded.webp",
+      "copyTo": "public/people/marko-lin-grounded.webp",
+      "replacesExistingValue": "people/marko-lin.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Лин называет уничтоженный тепловой шкаф новым. На фотографии под свежей вмятиной видна старая коррозия. Начните с возраста оборудования. — В. Лебедева",
+      "en": "Lin calls the destroyed warming cabinet new. The photograph shows old corrosion beneath a fresh dent. Start with the equipment's age. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Сеть пытается завершить последние продажи до закрытия маршрута. Следующая партия — лабораторный реагент M-7.",
+      "en": "The network is trying to complete its final sales before the route closes. The next shipment is laboratory reagent M-7."
+    },
+    "nextCaseTeaser": {
+      "ru": "Из лаборатории исчез контейнер M-7. Вентиляционная решётка вскрыта изнутри, а морозильный сейф открыт личным ключом директора.",
+      "en": "An M-7 container vanished from a laboratory. The ventilation grille was forced from inside, and the freezer safe was opened with the director's personal key."
+    },
+    "seasonClue": null,
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "После закрытия неизвестные проникли в пиццерию, перевернули кухню и уничтожили новый туннельный тепловой шкаф. Камеры якобы отключились во время нападения. Прошу оплатить оборудование и ремонт помещения.",
+    "en": "After closing, unknown intruders entered the pizzeria, wrecked the kitchen, and destroyed a new tunnel warming cabinet. The cameras supposedly failed during the attack. I am claiming the equipment and premises repairs."
+  },
+  "evidence": [
+    {
+      "id": "photo-48",
+      "order": 1,
+      "type": "photo",
+      "title": {
+        "ru": "Слой старого износа",
+        "en": "Layer of Old Wear"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "Под свежесогнутой панелью шкафа находятся многолетняя коррозия и старый сварной ремонт. Заводская табличка датирует устройство восемью годами ранее.",
+        "en": "Beneath the freshly bent panel are years of corrosion and an old welded repair. The factory plate dates the unit eight years earlier."
+      },
+      "statusExplanation": {
+        "ru": "Шкаф не новый и до разгрома уже был сильно изношен.",
+        "en": "The cabinet was not new and was already badly worn before the incident."
+      },
+      "statementLink": {
+        "statementId": "claim_new_equipment_destroyed",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Шкаф не новый и до разгрома уже был сильно изношен.",
+          "en": "The cabinet was not new and was already badly worn before the incident."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_new_equipment_destroyed",
+        "reason": {
+          "ru": "Шкаф не новый и до разгрома уже был сильно изношен.",
+          "en": "The cabinet was not new and was already badly worn before the incident."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-094",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-048/evidence/case-048-photo-48.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-048/evidence/case-048-photo-48.webp",
+          "caseRelativeSrc": "evidence/case-048-photo-48.webp",
+          "installTo": "public/evidence/case-048-photo-48.webp",
+          "legacyRuntimeUrl": "evidence/case-048-photo-48.webp",
+          "format": "webp",
+          "width": 1448,
+          "height": 1086,
+          "sha256": "91ad184037bddd8619806d099a0c29d5a8c0e3a24229b1d8756442a6beebcc4c"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-048/evidence/case-048-photo-48.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-048/evidence/case-048-photo-48.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-048-photo-48.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-048/evidence/case-048-photo-48.webp",
+        "copyTo": "public/evidence/case-048-photo-48.webp"
+      }
+    },
+    {
+      "id": "document-48",
+      "order": 2,
+      "type": "document_scan",
+      "title": {
+        "ru": "Экспертиза счёта на оборудование",
+        "en": "Equipment Invoice Examination"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Номер Лина напечатан поверх другого, а под ним видны данные соседнего ресторана; счёт не относится к уничтоженному шкафу.",
+        "en": "Lin's number was printed over another one, with a neighboring restaurant's details visible beneath it; the invoice does not belong to the destroyed cabinet."
+      },
+      "previousType": "document",
+      "description": {
+        "ru": "Соседний ресторан предоставил страховщику бумажный оригинал своего счёта.",
+        "en": "The neighboring restaurant supplied the insurer with its original paper invoice."
+      },
+      "instruction": {
+        "ru": "Включить УФ-режим и проверить серийный номер и имя покупателя.",
+        "en": "Switch on UV mode and inspect the serial number and buyer's name."
+      },
+      "assets": {
+        "asset1": "assets/interactive/document-48-base.webp",
+        "asset2": "assets/interactive/document-48-scan-overlay.svg"
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "uv",
+          "backlight"
+        ],
+        "anomalyZones": [
+          {
+            "id": "invoice_owner",
+            "mode": "uv",
+            "x": 42,
+            "y": 38,
+            "width": 41,
+            "height": 16,
+            "label": "Номер Лина напечатан поверх другого, а под ним видны данные соседнего ресторана; счёт не относится к уничтоженному шкафу.",
+            "isContradiction": true,
+            "labelEn": "Lin's number was printed over another one, with a neighboring restaurant's details visible beneath it; the invoice does not belong to the destroyed cabinet."
+          }
+        ],
+        "successCondition": {
+          "type": "select_zone",
+          "zoneId": "invoice_owner"
+        }
+      },
+      "statementLink": {
+        "statementId": "claim_new_equipment_destroyed",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Номер Лина напечатан поверх другого, а под ним видны данные соседнего ресторана; счёт не относится к уничтоженному шкафу.",
+          "en": "Lin's number was printed over another one, with a neighboring restaurant's details visible beneath it; the invoice does not belong to the destroyed cabinet."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_new_equipment_destroyed",
+        "reason": {
+          "ru": "Номер Лина напечатан поверх другого, а под ним видны данные соседнего ресторана; счёт не относится к уничтоженному шкафу.",
+          "en": "Lin's number was printed over another one, with a neighboring restaurant's details visible beneath it; the invoice does not belong to the destroyed cabinet."
+        }
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Просветка показывает, как чужой документ приспособили под заявление Лина.",
+          "en": "The examination reveals how another business's document was altered for Lin's claim."
+        },
+        "playerAction": {
+          "ru": "Включить УФ-режим и проверить серийный номер и имя покупателя.",
+          "en": "Switch on UV mode and inspect the serial number and buyer's name."
+        },
+        "conclusion": {
+          "ru": "Номер Лина напечатан поверх другого, а под ним видны данные соседнего ресторана; счёт не относится к уничтоженному шкафу.",
+          "en": "Lin's number was printed over another one, with a neighboring restaurant's details visible beneath it; the invoice does not belong to the destroyed cabinet."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-095",
+          "role": "interactive_base",
+          "src": "src/data/cases/case-048/assets/interactive/document-48-base.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-048/assets/interactive/document-48-base.webp",
+          "caseRelativeSrc": "assets/interactive/document-48-base.webp",
+          "installTo": "src/data/cases/case-048/assets/interactive/document-48-base.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1600,
+          "height": 1100,
+          "sha256": "af548ecb29072ac239c7417d0104f469454372863edee6d551bf31eebf1af4fb"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-048/assets/interactive/document-48-base.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-048/assets/interactive/document-48-base.webp",
+      "legacyImageBinding": null
+    },
+    {
+      "id": "camera-48",
+      "order": 3,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера служебного лифта",
+        "en": "Service Lift Camera"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Лин и двое работников после закрытия вывозят исправный новый шкаф, затем возвращаются с уже списанным старым устройством.",
+        "en": "After closing, Lin and two employees remove the operational new cabinet, then return with an old decommissioned unit."
+      },
+      "statusExplanation": {
+        "ru": "Новое оборудование сохранено, а для инсценировки завезён старый шкаф.",
+        "en": "The new equipment was preserved, and an old cabinet was brought in for the staging."
+      },
+      "statementLink": {
+        "statementId": "claim_new_equipment_destroyed",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Новое оборудование сохранено, а для инсценировки завезён старый шкаф.",
+          "en": "The new equipment was preserved, and an old cabinet was brought in for the staging."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_new_equipment_destroyed",
+        "reason": {
+          "ru": "Новое оборудование сохранено, а для инсценировки завезён старый шкаф.",
+          "en": "The new equipment was preserved, and an old cabinet was brought in for the staging."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "log-48",
+      "order": 4,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал кассы и камер",
+        "en": "Register and Camera Log"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Камеры отключены учётной записью Лина за минуту до начала перестановки. Внешнего сбоя не было.",
+        "en": "Lin's account disabled the cameras one minute before the equipment switch. No external failure occurred."
+      },
+      "statusExplanation": {
+        "ru": "Заявитель сам создал слепую зону.",
+        "en": "The claimant created the blind spot himself."
+      },
+      "statementLink": {
+        "statementId": "claim_owner_not_involved",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Заявитель сам создал слепую зону.",
+          "en": "The claimant created the blind spot himself."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_owner_not_involved",
+        "reason": {
+          "ru": "Заявитель сам создал слепую зону.",
+          "en": "The claimant created the blind spot himself."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "bank-48",
+      "order": 5,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Предоплата за новый шкаф",
+        "en": "Advance Payment for the New Cabinet"
+      },
+      "isContradiction": false,
+      "narrativeRole": "arc_proof",
+      "text": {
+        "ru": "Посредник East Yard переводит Лину деньги за новый шкаф до происшествия.",
+        "en": "An Eastern Yard intermediary paid Lin for the new cabinet before the incident."
+      },
+      "statusExplanation": {
+        "ru": "Исправное устройство было заранее продано через сеть.",
+        "en": "The operational unit had already been sold through the network."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Исправное устройство было заранее продано через сеть.",
+          "en": "The operational unit had already been sold through the network."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "witness-48",
+      "order": 6,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Курьер ночной смены",
+        "en": "Night-Shift Courier"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Курьер видел работников внутри после закрытия, но не наблюдал сам разгром.",
+        "en": "The courier saw employees inside after closing but did not witness the damage itself."
+      },
+      "statusExplanation": {
+        "ru": "Свидетель подтверждает присутствие персонала, однако основные доказательства дают камера и документы.",
+        "en": "The witness confirms staff presence, but the camera and documents provide the primary evidence."
+      },
+      "statementLink": {
+        "statementId": "claim_owner_not_involved",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Свидетель подтверждает присутствие персонала, однако основные доказательства дают камера и документы.",
+          "en": "The witness confirms staff presence, but the camera and documents provide the primary evidence."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Лин вывез новый шкаф и заменил его старым изношенным устройством.",
+      "Счёт относится к другому серийному номеру, а камеры отключены его учётной записью.",
+      "Номер Лина напечатан поверх другого, а под ним видны данные соседнего ресторана; счёт не относится к уничтоженному шкафу.",
+      "Ночного нападения не было. Выплату следует отклонить."
+    ],
+    "en": [
+      "The cabinet was not new and was already badly worn before the incident.",
+      "Lin's number was printed over another one, with a neighboring restaurant's details visible beneath it; the invoice does not belong to the destroyed cabinet.",
+      "The new equipment was preserved, and an old cabinet was brought in for the staging.",
+      "The claimant created the blind spot himself.",
+      "The operational unit had already been sold through the network.",
+      "The claim is fraudulent and should be rejected."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Полностью удалить остатки пародийной драки в масках.",
+      "Сделать подмену нового и старого оборудования центральным поворотом.",
+      "Интегрировать document_scan в улику document-48; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate document_scan into evidence document-48; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "people/marko-lin-grounded.webp",
+      "action": "generate_if_needed",
+      "prompt": "Illustrated archival claimant ID portrait matching the existing insurance detective game: male pizzeria owner, 44 years old, plain dark polo and work jacket, brisk businesslike expression, neutral document-photo background, original face, no masks, no martial arts styling, no franchise color coding, no logos, no text, no watermark."
+    },
+    {
+      "file": "evidence/case-048-photo-48.webp",
+      "action": "generate",
+      "prompt": "Close documentary restaurant equipment evidence photo of a heavily dented old tunnel warming cabinet, fresh bent outer panel revealing years of corrosion and an older weld beneath, realistic commercial kitchen, no people, no readable brands, no logos, no text, no watermark."
+    },
+    {
+      "file": "assets/interactive/document-48-base.webp",
+      "purpose": "Базовая версия документа в normal-режиме",
+      "resolution": "1600×1100",
+      "format": "WebP",
+      "transparency": false,
+      "generatedBy": "image_model",
+      "manualPost": "Удалить случайный читаемый текст; выровнять документ; оставить поля для UI-слоёв.",
+      "prompt": "Create a realistic fictional administrative document for an insurance detective game. Фиктивный счёт на промышленный тепловой шкаф, крупные поля покупателя и серийного номера, без брендов. Full document visible from above, utilitarian layout, paper texture, large blank structured fields. No real organization, logo, brand, personal data or watermark. Do not render critical readable text; dates, names, codes and signatures will be added in HTML/SVG. The hidden anomaly must not be obvious in the normal version.",
+      "evidenceId": "document-48",
+      "evidenceType": "document_scan"
+    },
+    {
+      "file": "assets/interactive/document-48-scan-overlay.svg",
+      "purpose": "Совмещённый слой УФ/просвета/бокового света",
+      "resolution": "viewBox 0 0 100 100",
+      "format": "SVG",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "После финального base.webp откалибровать hotspot и режим проявления.",
+      "prompt": null,
+      "evidenceId": "document-48",
+      "evidenceType": "document_scan"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "После закрытия неизвестные проникли в пиццерию, перевернули кухню и уничтожили новый туннельный тепловой шкаф. Камеры якобы отключились во время нападения. Прошу оплатить оборудование и ремонт помещения.",
+        "en": "After closing, unknown intruders entered the pizzeria, wrecked the kitchen, and destroyed a new tunnel warming cabinet. The cameras supposedly failed during the attack. I am claiming the equipment and premises repairs."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_attack",
+      "text": {
+        "ru": "После закрытия неизвестные разгромили ресторан.",
+        "en": "Unknown intruders wrecked the restaurant after closing."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_new_equipment_destroyed",
+      "text": {
+        "ru": "Уничтоженный тепловой шкаф был новым и принадлежал Лину.",
+        "en": "The destroyed warming cabinet was new and belonged to Lin."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_owner_not_involved",
+      "text": {
+        "ru": "Лин не создавал слепую зону и не вывозил исправное оборудование.",
+        "en": "Lin neither created the blind spot nor removed the operational equipment."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-048",
+    "archiveBasePath": "generated-assets/src/data/cases/case-048",
+    "claimantPortrait": {
+      "characterId": "marko-lin-grounded",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Марко Лин",
+        "en": "Marko Lin, age 44"
+      },
+      "assetId": "asset-093",
+      "src": "src/data/cases/case-048/people/marko-lin-grounded.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-048/people/marko-lin-grounded.webp",
+      "caseRelativeSrc": "people/marko-lin-grounded.webp",
+      "installTo": "public/people/marko-lin-grounded.webp",
+      "legacyRuntimeUrl": "people/marko-lin-grounded.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "e636a0e6756628a7efd48a545359f19fdc53818dd2fa9f7d4b3264a92b7bdcf2"
+    },
+    "claimantPortraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/marko-lin-grounded.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-048/people/marko-lin-grounded.webp",
+      "copyTo": "public/people/marko-lin-grounded.webp",
+      "replacesExistingValue": "people/marko-lin.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "photo-48",
+        "title": {
+          "ru": "Слой старого износа",
+          "en": "Layer of Old Wear"
+        },
+        "primaryImage": "src/data/cases/case-048/evidence/case-048-photo-48.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-048/evidence/case-048-photo-48.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-048-photo-48.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-048/evidence/case-048-photo-48.webp",
+          "copyTo": "public/evidence/case-048-photo-48.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-094",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-048/evidence/case-048-photo-48.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-048/evidence/case-048-photo-48.webp",
+            "caseRelativeSrc": "evidence/case-048-photo-48.webp",
+            "installTo": "public/evidence/case-048-photo-48.webp",
+            "legacyRuntimeUrl": "evidence/case-048-photo-48.webp",
+            "format": "webp",
+            "width": 1448,
+            "height": 1086,
+            "sha256": "91ad184037bddd8619806d099a0c29d5a8c0e3a24229b1d8756442a6beebcc4c"
+          }
+        ]
+      },
+      {
+        "evidenceId": "document-48",
+        "title": {
+          "ru": "Экспертиза счёта на оборудование",
+          "en": "Equipment Invoice Examination"
+        },
+        "primaryImage": "src/data/cases/case-048/assets/interactive/document-48-base.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-048/assets/interactive/document-48-base.webp",
+        "legacyImageBinding": null,
+        "assets": [
+          {
+            "assetId": "asset-095",
+            "role": "interactive_base",
+            "src": "src/data/cases/case-048/assets/interactive/document-48-base.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-048/assets/interactive/document-48-base.webp",
+            "caseRelativeSrc": "assets/interactive/document-48-base.webp",
+            "installTo": "src/data/cases/case-048/assets/interactive/document-48-base.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1600,
+            "height": 1100,
+            "sha256": "af548ecb29072ac239c7417d0104f469454372863edee6d551bf31eebf1af4fb"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,266 +1,464 @@
 {
   "id": "case-013",
   "type": "standard",
+  "campaignOrder": 3,
+  "requiredLevel": 2,
+  "act": 1,
+  "actTitle": {
+    "ru": "Чужой почерк",
+    "en": "Another Hand",
+    "tr": "Another Hand",
+    "ar": "Another Hand",
+    "kk": "Чужой почерк"
+  },
   "difficulty": "medium",
   "claimAmount": 1100,
   "truth": "fraud",
   "title": {
-    "ru": "Утонувший смартфон",
-    "en": "The Drowned Smartphone",
-    "tr": "Suya Düşen Akıllı Telefon",
-    "ar": "الهاتف الذكي الغارق",
-    "kk": "Суға кеткен смартфон"
+    "ru": "Телефон со дна озера",
+    "en": "The Phone from the Bottom of the Lake",
+    "tr": "The Phone from the Bottom of the Lake",
+    "ar": "The Phone from the Bottom of the Lake",
+    "kk": "Телефон со дна озера"
   },
   "claim": {
     "person": {
       "ru": "Тимур Аширов, 29 лет",
-      "en": "Timur Ashirov, 29",
-      "tr": "Timur Aşirov, 29",
-      "ar": "تيمور عاشيروف، 29",
-      "kk": "Тимур Аширов, 29 жаста"
+      "en": "Timur Ashirov, age 29",
+      "tr": "Timur Ashirov, age 29",
+      "ar": "Timur Ashirov, age 29",
+      "kk": "Тимур Аширов, 29 лет"
     },
     "story": {
-      "ru": "В субботу утром мой телефон выскользнул из кармана и упал в озеро. Я не смог его достать, он полностью утонул и больше не включается. Прошу возместить стоимость аппарата.",
-      "en": "On Saturday morning my phone slipped out of my pocket and fell into the lake. I couldn't recover it; it sank completely and no longer powers on. I request reimbursement for the device.",
-      "tr": "Cumartesi sabahı telefonum cebimden kayıp göle düştü. Onu çıkaramadım; tamamen battı ve artık açılmıyor. Cihaz bedelinin karşılanmasını talep ediyorum.",
-      "ar": "صباح السبت انزلق هاتفي من جيبي وسقط في البحيرة. لم أتمكن من استعادته؛ غرق تمامًا ولم يعد يعمل. أطلب تعويض ثمن الجهاز.",
-      "kk": "Сенбі таңында телефоным қалтамнан сырғып, көлге түсіп кетті. Оны шығара алмадым; ол толық суға кетті және енді қосылмайды. Аппараттың құнын өтеуді сұраймын."
+      "ru": "В субботу около 09:00 мой застрахованный телефон упал с причала в озеро. Его достали примерно через сорок минут, но он больше не включился. Именно этот аппарат я передал в сервис и прошу возместить 1100 евро.",
+      "en": "At about 9:00 a.m. on Saturday, my insured phone fell from a pier into the lake. It was recovered roughly forty minutes later but would no longer switch on. I delivered that exact device to the repair shop and am claiming €1,100.",
+      "tr": "At about 9:00 a.m. on Saturday, my insured phone fell from a pier into the lake. It was recovered roughly forty minutes later but would no longer switch on. I delivered that exact device to the repair shop and am claiming €1,100.",
+      "ar": "At about 9:00 a.m. on Saturday, my insured phone fell from a pier into the lake. It was recovered roughly forty minutes later but would no longer switch on. I delivered that exact device to the repair shop and am claiming €1,100.",
+      "kk": "В субботу около 09:00 мой застрахованный телефон упал с причала в озеро. Его достали примерно через сорок минут, но он больше не включился. Именно этот аппарат я передал в сервис и прошу возместить 1100 евро."
     }
   },
-  "coverImage": "covers/case-013.svg",
-  "personImage": "people/timur.webp",
   "client": {
     "role": {
-      "ru": "Заявитель · физ. лицо",
-      "en": "Claimant · individual",
-      "tr": "Başvuru sahibi · gerçek kişi",
-      "ar": "مقدم الطلب · شخص طبيعي",
-      "kk": "Өтініш беруші · жеке тұлға"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Возраст",
-          "en": "Age",
-          "tr": "Yaş",
-          "ar": "العمر",
-          "kk": "Жасы"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "29 лет",
-          "en": "29 years old",
-          "tr": "29 yaşında",
-          "ar": "29 عامًا",
-          "kk": "29 жаста"
+          "ru": "1",
+          "en": "1",
+          "tr": "1",
+          "ar": "1",
+          "kk": "1"
         }
       },
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Ташкент",
-          "en": "Tashkent",
-          "tr": "Taşkent",
-          "ar": "طشقند",
-          "kk": "Ташкент"
-        }
-      },
-      {
-        "k": {
-          "ru": "Клиент с",
-          "en": "Client since",
-          "tr": "Müşteri",
-          "ar": "عميل منذ",
-          "kk": "Клиент"
-        },
-        "v": {
-          "ru": "2022 г.",
-          "en": "2022",
-          "tr": "2022",
-          "ar": "2022",
-          "kk": "2022 ж."
-        }
-      },
-      {
-        "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
-        },
-        "v": {
-          "ru": "Электроника · ЭЛ-13178451-X1",
-          "en": "Electronics · EL-13178451-X1",
-          "tr": "Elektronik · EL-13178451-X1",
-          "ar": "الإلكترونيات · EL-13178451-X1",
-          "kk": "Электроника · ЭЛ-13178451-X1"
-        }
-      },
-      {
-        "k": {
-          "ru": "Документ",
-          "en": "Document",
-          "tr": "Belge",
-          "ar": "الوثيقة",
-          "kk": "Құжат"
-        },
-        "v": {
-          "ru": "Паспорт UZ-X2 31278419-47092",
-          "en": "Passport UZ-X2 31278419-47092",
-          "tr": "Pasaport UZ-X2 31278419-47092",
-          "ar": "جواز السفر UZ-X2 31278419-47092",
-          "kk": "Паспорт UZ-X2 31278419-47092"
+          "ru": "3",
+          "en": "3",
+          "tr": "3",
+          "ar": "3",
+          "kk": "3"
         }
       }
     ]
   },
+  "coverImage": "covers/case-013.svg",
+  "personImage": "people/timur.webp",
   "evidences": [
     {
-      "id": "ev-moisture",
-      "relation": "contradicts",
+      "id": "ev-service-photo",
+      "order": 1,
       "type": "photo",
       "title": {
         "ru": "Фото из сервисного центра",
-        "en": "Repair-Shop Photo",
-        "tr": "Servis Merkezi Fotoğrafı",
-        "ar": "صورة من مركز الإصلاح",
-        "kk": "Сервис орталығының суреті"
+        "en": "Repair Shop Photograph",
+        "tr": "Repair Shop Photograph",
+        "ar": "Repair Shop Photograph",
+        "kk": "Фото из сервисного центра"
       },
       "content": {
-        "ru": "Техник вскрыл корпус и сфотографировал внутренний индикатор влаги: он остался полностью белым.",
-        "en": "The technician opened the housing and photographed the internal moisture indicator: it remained completely white.",
-        "tr": "Teknisyen kasayı açtı ve dahili nem göstergesini fotoğrafladı: tamamen beyaz kalmıştı.",
-        "ar": "فتح الفني الغطاء وصوّر مؤشر الرطوبة الداخلي: بقي أبيض تمامًا.",
-        "kk": "Маман корпусты ашып, ішкі ылғал индикаторын суретке түсірді: ол толығымен ақ болып қалды."
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Индикатор влаги краснеет при контакте с водой; белый цвет означает, что телефон никогда не намокал.",
-        "en": "A moisture indicator turns red on contact with water; staying white proves the phone was never wet.",
-        "tr": "Nem göstergesi suyla temasta kırmızıya döner; beyaz kalması telefonun hiç ıslanmadığını kanıtlar.",
-        "ar": "مؤشر الرطوبة يتحول إلى الأحمر عند ملامسة الماء؛ بقاؤه أبيض يثبت أن الهاتف لم يبتل قط.",
-        "kk": "Ылғал индикаторы сумен жанасқанда қызарады; ақ болып қалуы телефонның еш ылғалданбағанын дәлелдейді."
-      },
-      "meta": {
-        "filename": "IMG_20260318_145607.jpg",
-        "imageUrl": "evidence/case-013-ev-moisture.webp"
-      }
-    },
-    {
-      "id": "ev-usage",
-      "relation": "contradicts",
-      "type": "usage_log",
-      "title": {
-        "ru": "Журнал активности оператора",
-        "en": "Carrier Usage Log",
-        "tr": "Operatör Kullanım Kaydı",
-        "ar": "سجل استخدام شركة الاتصالات",
-        "kk": "Оператордың белсенділік журналы"
-      },
-      "content": {
-        "ru": [
-          "Сб 09:05 — заявленное падение в озеро",
-          "Сб 11:20 — исходящий звонок, 4 мин",
-          "Сб 14:47 — передача данных, 320 МБ",
-          "Сб 18:13 — входящий звонок, 2 мин"
-        ],
-        "en": [
-          "Sat 09:05 — alleged fall into lake",
-          "Sat 11:20 — outgoing call, 4 min",
-          "Sat 14:47 — data session, 320 MB",
-          "Sat 18:13 — incoming call, 2 min"
-        ],
-        "tr": [
-          "Cmt 09:05 — iddia edilen göle düşme",
-          "Cmt 11:20 — giden arama, 4 dk",
-          "Cmt 14:47 — veri oturumu, 320 MB",
-          "Cmt 18:13 — gelen arama, 2 dk"
-        ],
-        "ar": [
-          "السبت 09:05 — السقوط المزعوم في البحيرة",
-          "السبت 11:20 — مكالمة صادرة، 4 دقائق",
-          "السبت 14:47 — جلسة بيانات، 320 ميغابايت",
-          "السبت 18:13 — مكالمة واردة، دقيقتان"
-        ],
-        "kk": [
-          "Сб 09:05 — мәлімделген көлге құлау",
-          "Сб 11:20 — шығыс қоңырау, 4 мин",
-          "Сб 14:47 — деректер сеансы, 320 МБ",
-          "Сб 18:13 — кіріс қоңырау, 2 мин"
-        ]
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Тот же телефон совершал звонки и передавал данные часами после заявленного утопления.",
-        "en": "The same phone made calls and used data for hours after the supposed drowning.",
-        "tr": "Aynı telefon, sözde batıştan saatler sonra arama yaptı ve veri kullandı.",
-        "ar": "الهاتف نفسه أجرى مكالمات واستخدم البيانات لساعات بعد الغرق المزعوم.",
-        "kk": "Сол телефон мәлімделген суға кетуден кейін бірнеше сағат бойы қоңырау шалып, деректер жіберген."
-      },
-      "meta": {
-        "logPrompt": "mno@telecom:~$ tail -f /var/log/subscriber.log"
-      }
-    },
-    {
-      "id": "ev-receipt",
-      "relation": "context",
-      "type": "document",
-      "title": {
-        "ru": "Чек о покупке телефона",
-        "en": "Phone Purchase Receipt",
-        "tr": "Telefon Satın Alma Fişi",
-        "ar": "إيصال شراء الهاتف",
-        "kk": "Телефон сатып алу түбіртегі"
-      },
-      "content": {
-        "ru": "Подлинный кассовый чек из магазина электроники на сумму 1100 евро, выданный за год до происшествия.",
-        "en": "A genuine electronics-store receipt for 1,100 euros, issued a year before the incident.",
-        "tr": "Olaydan bir yıl önce düzenlenmiş, 1.100 avroluk gerçek bir elektronik mağazası fişi.",
-        "ar": "إيصال أصلي من متجر إلكترونيات بقيمة 1100 يورو، صادر قبل عام من الحادث.",
-        "kk": "Оқиғадан бір жыл бұрын берілген, электроника дүкенінен алынған 1100 еуролық шынайы түбіртек."
+        "ru": "Вскрытый телефон действительно мокрый. Индикаторы контакта с водой изменили цвет, внутри корпуса видны капли и следы короткого замыкания.",
+        "en": "The opened phone is genuinely wet. Its liquid-contact indicators have changed color, and droplets and short-circuit marks are visible inside the case.",
+        "tr": "The opened phone is genuinely wet. Its liquid-contact indicators have changed color, and droplets and short-circuit marks are visible inside the case.",
+        "ar": "The opened phone is genuinely wet. Its liquid-contact indicators have changed color, and droplets and short-circuit marks are visible inside the case.",
+        "kk": "Вскрытый телефон действительно мокрый. Индикаторы контакта с водой изменили цвет, внутри корпуса видны капли и следы короткого замыкания."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Чек подлинный и лишь подтверждает покупку аппарата, не противореча делу.",
-        "en": "The receipt is genuine and merely confirms the purchase, not conflicting with the case.",
-        "tr": "Fiş gerçektir ve yalnızca satın alımı doğrular, davayla çelişmez.",
-        "ar": "الإيصال أصلي ويؤكد عملية الشراء فقط، ولا يتعارض مع القضية.",
-        "kk": "Түбіртек шынайы әрі тек сатып алуды растайды, іске қайшы келмейді."
+        "ru": "В сервисный центр действительно передали утопленный телефон. Эта фотография подтверждает повреждение, но пока не подтверждает личность устройства.",
+        "en": "A water-damaged phone was indeed delivered to the repair shop. The photograph proves the damage, but not yet the identity of the device.",
+        "tr": "A water-damaged phone was indeed delivered to the repair shop. The photograph proves the damage, but not yet the identity of the device.",
+        "ar": "A water-damaged phone was indeed delivered to the repair shop. The photograph proves the damage, but not yet the identity of the device.",
+        "kk": "В сервисный центр действительно передали утопленный телефон. Эта фотография подтверждает повреждение, но пока не подтверждает личность устройства."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_phone_fell",
+        "relation": "supports",
+        "reason": {
+          "ru": "В сервисный центр действительно передали утопленный телефон. Эта фотография подтверждает повреждение, но пока не подтверждает личность устройства.",
+          "en": "A water-damaged phone was indeed delivered to the repair shop. The photograph proves the damage, but not yet the identity of the device.",
+          "tr": "A water-damaged phone was indeed delivered to the repair shop. The photograph proves the damage, but not yet the identity of the device.",
+          "ar": "A water-damaged phone was indeed delivered to the repair shop. The photograph proves the damage, but not yet the identity of the device.",
+          "kk": "В сервисный центр действительно передали утопленный телефон. Эта фотография подтверждает повреждение, но пока не подтверждает личность устройства."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "ev-service-act",
+      "order": 2,
+      "type": "document_scan",
+      "title": {
+        "ru": "Экспертиза сервисного акта",
+        "en": "Repair Report Examination",
+        "tr": "Repair Report Examination",
+        "ar": "Repair Report Examination",
+        "kk": "Экспертиза сервисного акта"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Окончание IMEI «7373» нанесено поверх исходного «1841»; утопленный аппарат не совпадает с телефоном в полисе.",
+        "en": "The IMEI ending ‘7373’ was written over the original ‘1841’; the submerged device does not match the phone on the policy.",
+        "tr": "The IMEI ending ‘7373’ was written over the original ‘1841’; the submerged device does not match the phone on the policy.",
+        "ar": "The IMEI ending ‘7373’ was written over the original ‘1841’; the submerged device does not match the phone on the policy.",
+        "kk": "Окончание IMEI «7373» нанесено поверх исходного «1841»; утопленный аппарат не совпадает с телефоном в полисе."
+      },
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_recovered_phone_is_insured",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Окончание IMEI «7373» нанесено поверх исходного «1841»; утопленный аппарат не совпадает с телефоном в полисе.",
+          "en": "The IMEI ending ‘7373’ was written over the original ‘1841’; the submerged device does not match the phone on the policy.",
+          "tr": "The IMEI ending ‘7373’ was written over the original ‘1841’; the submerged device does not match the phone on the policy.",
+          "ar": "The IMEI ending ‘7373’ was written over the original ‘1841’; the submerged device does not match the phone on the policy.",
+          "kk": "Окончание IMEI «7373» нанесено поверх исходного «1841»; утопленный аппарат не совпадает с телефоном в полисе."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_recovered_phone_is_insured",
+        "reason": {
+          "ru": "Окончание IMEI «7373» нанесено поверх исходного «1841»; утопленный аппарат не совпадает с телефоном в полисе.",
+          "en": "The IMEI ending ‘7373’ was written over the original ‘1841’; the submerged device does not match the phone on the policy.",
+          "tr": "The IMEI ending ‘7373’ was written over the original ‘1841’; the submerged device does not match the phone on the policy.",
+          "ar": "The IMEI ending ‘7373’ was written over the original ‘1841’; the submerged device does not match the phone on the policy.",
+          "kk": "Окончание IMEI «7373» нанесено поверх исходного «1841»; утопленный аппарат не совпадает с телефоном в полисе."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "Аширов приложил скан акта сервисного центра как подтверждение личности утопленного телефона.",
+        "en": "Ashirov submitted a scan of the repair report as proof of the submerged phone's identity.",
+        "tr": "Ashirov submitted a scan of the repair report as proof of the submerged phone's identity.",
+        "ar": "Ashirov submitted a scan of the repair report as proof of the submerged phone's identity.",
+        "kk": "Аширов приложил скан акта сервисного центра как подтверждение личности утопленного телефона."
+      },
+      "instruction": {
+        "ru": "Включить УФ-режим, найти исправленные цифры и сравнить их с IMEI полиса.",
+        "en": "Switch on UV mode, find the altered digits, and compare them with the policy IMEI.",
+        "tr": "Switch on UV mode, find the altered digits, and compare them with the policy IMEI.",
+        "ar": "Switch on UV mode, find the altered digits, and compare them with the policy IMEI.",
+        "kk": "Включить УФ-режим, найти исправленные цифры и сравнить их с IMEI полиса."
+      },
+      "previousType": "document",
+      "assets": {
+        "asset1": "cases/case-013/assets/interactive/ev-service-act-base.webp",
+        "asset2": "cases/case-013/assets/interactive/ev-service-act-scan-overlay.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Игрок не просто сравнивает две готовые строки, а сам обнаруживает подмену идентификатора.",
+          "en": "Instead of comparing two ready-made strings, the player personally uncovers the altered identifier.",
+          "tr": "Instead of comparing two ready-made strings, the player personally uncovers the altered identifier.",
+          "ar": "Instead of comparing two ready-made strings, the player personally uncovers the altered identifier.",
+          "kk": "Игрок не просто сравнивает две готовые строки, а сам обнаруживает подмену идентификатора."
+        },
+        "playerAction": {
+          "ru": "Включить УФ-режим, найти исправленные цифры и сравнить их с IMEI полиса.",
+          "en": "Switch on UV mode, find the altered digits, and compare them with the policy IMEI.",
+          "tr": "Switch on UV mode, find the altered digits, and compare them with the policy IMEI.",
+          "ar": "Switch on UV mode, find the altered digits, and compare them with the policy IMEI.",
+          "kk": "Включить УФ-режим, найти исправленные цифры и сравнить их с IMEI полиса."
+        },
+        "conclusion": {
+          "ru": "Окончание IMEI «7373» нанесено поверх исходного «1841»; утопленный аппарат не совпадает с телефоном в полисе.",
+          "en": "The IMEI ending ‘7373’ was written over the original ‘1841’; the submerged device does not match the phone on the policy.",
+          "tr": "The IMEI ending ‘7373’ was written over the original ‘1841’; the submerged device does not match the phone on the policy.",
+          "ar": "The IMEI ending ‘7373’ was written over the original ‘1841’; the submerged device does not match the phone on the policy.",
+          "kk": "Окончание IMEI «7373» нанесено поверх исходного «1841»; утопленный аппарат не совпадает с телефоном в полисе."
+        }
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "uv",
+          "backlight"
+        ],
+        "anomalyZones": [
+          {
+            "id": "imei_overwrite",
+            "mode": "uv",
+            "x": 58,
+            "y": 39,
+            "width": 20,
+            "height": 8,
+            "label": "Окончание IMEI «7373» нанесено поверх исходного «1841»; утопленный аппарат не совпадает с телефоном в полисе.",
+            "isContradiction": true,
+            "labelEn": "The IMEI ending ‘7373’ was written over the original ‘1841’; the submerged device does not match the phone on the policy."
+          }
+        ],
+        "successCondition": {
+          "type": "select_then_compare",
+          "zoneId": "imei_overwrite",
+          "referenceFieldId": "policy_imei"
+        },
+        "referenceFields": [
+          {
+            "id": "policy_imei",
+            "label": "IMEI в полисе",
+            "value": "•••• 7373",
+            "labelEn": "Policy IMEI"
+          }
+        ]
       }
+    },
+    {
+      "id": "ev-operator-log",
+      "order": 3,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал активности оператора",
+        "en": "Carrier Activity Log",
+        "tr": "Carrier Activity Log",
+        "ar": "Carrier Activity Log",
+        "kk": "Журнал активности оператора"
+      },
+      "content": {
+        "ru": "Активность IMEI `…7373`:\n\n- 09:05 — заявленное падение в озеро;\n- 11:20 — исходящий звонок, 4 минуты;\n- 14:47 — передача данных, 320 МБ;\n- 18:13 — входящий звонок, 2 минуты.",
+        "en": "Activity for IMEI `…7373`:\n\n- 9:05 a.m.—reported fall into the lake;\n- 11:20 a.m.—outgoing call, 4 minutes;\n- 2:47 p.m.—320 MB data transfer;\n- 6:13 p.m.—incoming call, 2 minutes.",
+        "tr": "Activity for IMEI `…7373`:\n\n- 9:05 a.m.—reported fall into the lake;\n- 11:20 a.m.—outgoing call, 4 minutes;\n- 2:47 p.m.—320 MB data transfer;\n- 6:13 p.m.—incoming call, 2 minutes.",
+        "ar": "Activity for IMEI `…7373`:\n\n- 9:05 a.m.—reported fall into the lake;\n- 11:20 a.m.—outgoing call, 4 minutes;\n- 2:47 p.m.—320 MB data transfer;\n- 6:13 p.m.—incoming call, 2 minutes.",
+        "kk": "Активность IMEI `…7373`:\n\n- 09:05 — заявленное падение в озеро;\n- 11:20 — исходящий звонок, 4 минуты;\n- 14:47 — передача данных, 320 МБ;\n- 18:13 — входящий звонок, 2 минуты."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Застрахованный телефон продолжал работать после происшествия. В озеро попал другой аппарат.",
+        "en": "The insured phone remained active after the incident. A different device went into the lake.",
+        "tr": "The insured phone remained active after the incident. A different device went into the lake.",
+        "ar": "The insured phone remained active after the incident. A different device went into the lake.",
+        "kk": "Застрахованный телефон продолжал работать после происшествия. В озеро попал другой аппарат."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_insured_phone_unusable",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Застрахованный телефон продолжал работать после происшествия. В озеро попал другой аппарат.",
+          "en": "The insured phone remained active after the incident. A different device went into the lake.",
+          "tr": "The insured phone remained active after the incident. A different device went into the lake.",
+          "ar": "The insured phone remained active after the incident. A different device went into the lake.",
+          "kk": "Застрахованный телефон продолжал работать после происшествия. В озеро попал другой аппарат."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_insured_phone_unusable",
+        "reason": {
+          "ru": "Застрахованный телефон продолжал работать после происшествия. В озеро попал другой аппарат.",
+          "en": "The insured phone remained active after the incident. A different device went into the lake.",
+          "tr": "The insured phone remained active after the incident. A different device went into the lake.",
+          "ar": "The insured phone remained active after the incident. A different device went into the lake.",
+          "kk": "Застрахованный телефон продолжал работать после происшествия. В озеро попал другой аппарат."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Индикатор влаги белый — телефон никогда не контактировал с водой.",
-      "Оператор фиксирует звонки и трафик часами после «утопления».",
-      "Заявление мошенническое, его следует отклонить."
+      "В воду действительно попал телефон, но сервисный акт скрывает его исходный IMEI «…1841».",
+      "В полисе указан другой аппарат — «…7373». Он продолжал звонить и передавать данные после происшествия.",
+      "Аширов утопил дешёвую замену и попытался выдать её за застрахованный телефон.",
+      "Заявление следует отклонить. Повтор формы 17-К открывает первую связь между делами."
     ],
     "en": [
-      "The moisture indicator is white — the phone never touched water.",
-      "The carrier logs calls and data for hours after the 'drowning'.",
+      "The IMEI ending ‘7373’ was written over the original ‘1841’; the submerged device does not match the phone on the policy.",
+      "The insured phone remained active after the incident. A different device went into the lake.",
+      "A water-damaged phone was indeed delivered to the repair shop. The photograph proves the damage, but not yet the identity of the device.",
       "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "Nem göstergesi beyaz — telefon hiç suyla temas etmedi.",
-      "Operatör, 'batıştan' saatler sonra arama ve veri kaydediyor.",
-      "Talep hileli ve reddedilmeli."
+      "The IMEI ending ‘7373’ was written over the original ‘1841’; the submerged device does not match the phone on the policy.",
+      "The insured phone remained active after the incident. A different device went into the lake.",
+      "A water-damaged phone was indeed delivered to the repair shop. The photograph proves the damage, but not yet the identity of the device.",
+      "The claim is fraudulent and should be rejected."
     ],
     "ar": [
-      "مؤشر الرطوبة أبيض — الهاتف لم يلامس الماء أبدًا.",
-      "تسجل شركة الاتصالات مكالمات وبيانات لساعات بعد 'الغرق'.",
-      "المطالبة احتيالية ويجب رفضها."
+      "The IMEI ending ‘7373’ was written over the original ‘1841’; the submerged device does not match the phone on the policy.",
+      "The insured phone remained active after the incident. A different device went into the lake.",
+      "A water-damaged phone was indeed delivered to the repair shop. The photograph proves the damage, but not yet the identity of the device.",
+      "The claim is fraudulent and should be rejected."
     ],
     "kk": [
-      "Ылғал индикаторы ақ — телефон сумен мүлде жанаспаған.",
-      "Оператор «суға кетуден» кейін сағаттар бойы қоңырау мен трафик тіркейді.",
-      "Талап алаяқтық, оны қабылдамау керек."
+      "В воду действительно попал телефон, но сервисный акт скрывает его исходный IMEI «…1841».",
+      "В полисе указан другой аппарат — «…7373». Он продолжал звонить и передавать данные после происшествия.",
+      "Аширов утопил дешёвую замену и попытался выдать её за застрахованный телефон.",
+      "Заявление следует отклонить. Повтор формы 17-К открывает первую связь между делами."
     ]
+  },
+  "investigationBudget": 3,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "В субботу около 09:00 мой застрахованный телефон упал с причала в озеро. Его достали примерно через сорок минут, но он больше не включился. Именно этот аппарат я передал в сервис и прошу возместить 1100 евро.",
+        "en": "At about 9:00 a.m. on Saturday, my insured phone fell from a pier into the lake. It was recovered roughly forty minutes later but would no longer switch on. I delivered that exact device to the repair shop and am claiming €1,100.",
+        "tr": "At about 9:00 a.m. on Saturday, my insured phone fell from a pier into the lake. It was recovered roughly forty minutes later but would no longer switch on. I delivered that exact device to the repair shop and am claiming €1,100.",
+        "ar": "At about 9:00 a.m. on Saturday, my insured phone fell from a pier into the lake. It was recovered roughly forty minutes later but would no longer switch on. I delivered that exact device to the repair shop and am claiming €1,100.",
+        "kk": "В субботу около 09:00 мой застрахованный телефон упал с причала в озеро. Его достали примерно через сорок минут, но он больше не включился. Именно этот аппарат я передал в сервис и прошу возместить 1100 евро."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_phone_fell",
+      "text": {
+        "ru": "Около 09:00 телефон упал с причала в озеро и был поднят примерно через сорок минут.",
+        "en": "At about 9:00 a.m., the phone fell from the pier into the lake and was recovered roughly forty minutes later.",
+        "tr": "At about 9:00 a.m., the phone fell from the pier into the lake and was recovered roughly forty minutes later.",
+        "ar": "At about 9:00 a.m., the phone fell from the pier into the lake and was recovered roughly forty minutes later.",
+        "kk": "Около 09:00 телефон упал с причала в озеро и был поднят примерно через сорок минут."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_recovered_phone_is_insured",
+      "text": {
+        "ru": "Телефон, переданный в сервис, является тем же устройством, которое указано в полисе.",
+        "en": "The phone delivered to the repair shop is the same device listed on the policy.",
+        "tr": "The phone delivered to the repair shop is the same device listed on the policy.",
+        "ar": "The phone delivered to the repair shop is the same device listed on the policy.",
+        "kk": "Телефон, переданный в сервис, является тем же устройством, которое указано в полисе."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_insured_phone_unusable",
+      "text": {
+        "ru": "Застрахованный телефон после происшествия больше не включался и не выходил в сеть.",
+        "en": "After the incident, the insured phone never switched on or connected to the network again.",
+        "tr": "After the incident, the insured phone never switched on or connected to the network again.",
+        "ar": "After the incident, the insured phone never switched on or connected to the network again.",
+        "kk": "Застрахованный телефон после происшествия больше не включался и не выходил в сеть."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Два одинаковых телефона могут рассказать две разные истории. Сегодня главное не увидеть воду, а доказать личность устройства. — В. Лебедева",
+      "en": "Two identical phones can tell two different stories. Today, spotting water damage is not enough—you must prove the device's identity. — V. Lebedeva",
+      "tr": "Two identical phones can tell two different stories. Today, spotting water damage is not enough—you must prove the device's identity. — V. Lebedeva",
+      "ar": "Two identical phones can tell two different stories. Today, spotting water damage is not enough—you must prove the device's identity. — V. Lebedeva",
+      "kk": "Два одинаковых телефона могут рассказать две разные истории. Сегодня главное не увидеть воду, а доказать личность устройства. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Телефон в озере был настоящим. Подмена тоже. Акт оформлен по тому же шаблону 17-К, что и первое заявление — вплоть до одинаковой опечатки.",
+      "en": "The phone in the lake was real. So was the switch. The service report uses the same 17-K template as the first claim—right down to the same typo.",
+      "tr": "The phone in the lake was real. So was the switch. The service report uses the same 17-K template as the first claim—right down to the same typo.",
+      "ar": "The phone in the lake was real. So was the switch. The service report uses the same 17-K template as the first claim—right down to the same typo.",
+      "kk": "Телефон в озере был настоящим. Подмена тоже. Акт оформлен по тому же шаблону 17-К, что и первое заявление — вплоть до одинаковой опечатки."
+    },
+    "nextCaseTeaser": {
+      "ru": "В следующей папке рентген, французский бульдог и семейная реликвия. Хотя бы один из этих трёх пунктов настоящий.",
+      "en": "The next file contains an X-ray, a French bulldog, and a family heirloom. At least one of those three things is genuine.",
+      "tr": "The next file contains an X-ray, a French bulldog, and a family heirloom. At least one of those three things is genuine.",
+      "ar": "The next file contains an X-ray, a French bulldog, and a family heirloom. At least one of those three things is genuine.",
+      "kk": "В следующей папке рентген, французский бульдог и семейная реликвия. Хотя бы один из этих трёх пунктов настоящий."
+    },
+    "seasonClue": {
+      "id": "act1-clue-3",
+      "label": {
+        "ru": "Второй документ 17-К",
+        "en": "A Second 17-K Document",
+        "tr": "A Second 17-K Document",
+        "ar": "A Second 17-K Document",
+        "kk": "Второй документ 17-К"
+      },
+      "description": {
+        "ru": "В заявлении о телефоне используется тот же шаблон предварительной оценки, что и в деле Семёнова. Даже ошибка в слове «амортизация» совпадает.",
+        "en": "The phone claim uses the same preliminary-assessment template as Semyonov's case. Even the misspelling of ‘depreciation’ is identical.",
+        "tr": "The phone claim uses the same preliminary-assessment template as Semyonov's case. Even the misspelling of ‘depreciation’ is identical.",
+        "ar": "The phone claim uses the same preliminary-assessment template as Semyonov's case. Even the misspelling of ‘depreciation’ is identical.",
+        "kk": "В заявлении о телефоне используется тот же шаблон предварительной оценки, что и в деле Семёнова. Даже ошибка в слове «амортизация» совпадает."
+      },
+      "progressIndex": 2,
+      "progressTotal": 5
+    },
+    "epilogue": null
+  },
+  "onboarding": {
+    "phase": "identity_comparison",
+    "targetDurationSeconds": 150,
+    "teaches": [
+      "compare_identifiers",
+      "document_scan",
+      "multiple_evidence_synthesis",
+      "season_clue"
+    ],
+    "menuUnlockAfterVerdict": true,
+    "unlocks": [
+      "career_map",
+      "daily_case",
+      "archive_17_board"
+    ],
+    "successEmotion": {
+      "ru": "Я доказал не просто ущерб, а подмену предмета",
+      "en": "I proved not just the damage, but the switched device",
+      "tr": "I proved not just the damage, but the switched device",
+      "ar": "I proved not just the damage, but the switched device",
+      "kk": "Я доказал не просто ущерб, а подмену предмета"
+    }
   }
 }

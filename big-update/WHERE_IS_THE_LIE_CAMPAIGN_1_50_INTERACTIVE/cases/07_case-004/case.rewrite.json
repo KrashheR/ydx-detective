@@ -1,0 +1,485 @@
+{
+  "id": "case-004",
+  "campaignOrder": 7,
+  "requiredLevel": 4,
+  "act": 1,
+  "actTitle": {
+    "ru": "Чужой почерк",
+    "en": "Another Hand"
+  },
+  "title": {
+    "ru": "Корова над помидорами",
+    "en": "The Cow Above the Tomatoes"
+  },
+  "difficulty": "medium",
+  "claimAmount": {
+    "value": 1500,
+    "currency": "EUR"
+  },
+  "groundTruth": "valid",
+  "correctDecision": "approve",
+  "investigationBudget": 3,
+  "claimant": {
+    "name": {
+      "ru": "Айгуль Нурланова, 47 лет",
+      "en": "Aigul Nurlanova, age 47"
+    },
+    "migrationNote": {
+      "ru": "Сохранить стабильный профиль и существующий портрет после визуальной сверки с канонической версией.",
+      "en": "Keep the established profile and existing portrait after visually checking them against the canonical version."
+    },
+    "portrait": null,
+    "portraitStatus": "retain_existing_project_portrait",
+    "portraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/aigul.webp",
+      "existingFile": "public/people/aigul.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Нелепость заявления ничего не говорит о его правдивости. Проверяйте цепочку событий по одному звену. — В. Лебедева",
+      "en": "An absurd claim is not necessarily a false one. Verify the chain of events one link at a time. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Самая странная версия сегодня оказалась самой точной. Звёздочка жива и, по словам ветеринара, больше не интересуется высотой.",
+      "en": "Today's strangest account proved to be the most accurate. Zvezdochka is alive and, according to the veterinarian, no longer interested in heights."
+    },
+    "nextCaseTeaser": {
+      "ru": "В отдел снова написал Анатолий Степанович. Жорик на этот раз добрался до пульта управления.",
+      "en": "Anatoly Stepanovich has contacted the department again. This time, Zhorik got hold of a remote control."
+    },
+    "seasonClue": null,
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Во время фестиваля воздушный шар аварийно снизился над фермой и напугал корову Звёздочку. Она выбежала из загона, поднялась по обвалившейся пирамиде тюков на крышу сеновала, проломила край кровли и упала в соседнюю теплицу. Прошу компенсировать повреждение теплицы и системы полива.",
+    "en": "During a festival, a hot-air balloon made an emergency descent over my farm and frightened my cow, Zvezdochka. She ran from her pen, climbed a collapsed stack of hay bales onto the barn roof, broke through the edge, and fell into the neighboring greenhouse. I am claiming compensation for the greenhouse and irrigation damage."
+  },
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Во время фестиваля воздушный шар аварийно снизился над фермой и напугал корову Звёздочку. Она выбежала из загона, поднялась по обвалившейся пирамиде тюков на крышу сеновала, проломила край кровли и упала в соседнюю теплицу. Прошу компенсировать повреждение теплицы и системы полива.",
+        "en": "During a festival, a hot-air balloon made an emergency descent over my farm and frightened my cow, Zvezdochka. She ran from her pen, climbed a collapsed stack of hay bales onto the barn roof, broke through the edge, and fell into the neighboring greenhouse. I am claiming compensation for the greenhouse and irrigation damage."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_event_time",
+      "text": {
+        "ru": "Корова Звёздочка оказалась на крыше теплицы утром во время аварийного снижения шара.",
+        "en": "Zvezdochka the cow reached the greenhouse roof that morning during the balloon's emergency descent."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_cause",
+      "text": {
+        "ru": "Животное прошло по тюкам и провалилось через лёгкую кровлю.",
+        "en": "The animal climbed across the hay bales and fell through the lightweight roof."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_damage",
+      "text": {
+        "ru": "Падение коровы повредило теплицу, полив и посадки.",
+        "en": "The cow's fall damaged the greenhouse, irrigation system, and crops."
+      },
+      "stampable": true
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-flight-log",
+      "order": 1,
+      "type": "gps_track",
+      "title": {
+        "ru": "Полётный журнал воздушного шара",
+        "en": "Hot-Air Balloon Flight Log"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "В 08:09 шар аварийно снизился до 18 метров непосредственно над фермой из-за сбоя клапана горелки. Организатор фестиваля подтвердил отклонение от маршрута.",
+        "en": "At 8:09 a.m., a burner-valve fault forced the balloon down to 18 meters directly above the farm. The festival organizer confirmed the route deviation."
+      },
+      "statusExplanation": {
+        "ru": "Первая часть невероятной цепочки подтверждена независимо от заявительницы.",
+        "en": "The first link in this unlikely chain is confirmed independently of the claimant."
+      },
+      "statementLink": {
+        "statementId": "claim_event_time",
+        "relation": "supports",
+        "reason": {
+          "ru": "Первая часть невероятной цепочки подтверждена независимо от заявительницы.",
+          "en": "The first link in this unlikely chain is confirmed independently of the claimant."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-tracks",
+      "order": 2,
+      "type": "shadow_time_check",
+      "title": {
+        "ru": "Проверка времени фотографии следов",
+        "en": "Track Photograph Time Check"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Тень соответствует 08:00–08:25 — тому же промежутку, когда шар аварийно прошёл над фермой.",
+        "en": "The shadow matches the 8:00–8:25 a.m. window, when the balloon made its emergency pass over the farm."
+      },
+      "previousType": "photo",
+      "description": {
+        "ru": "Фото двора сделано инспектором сразу после происшествия; ориентация сеновала известна по кадастровому плану.",
+        "en": "An inspector photographed the yard immediately after the incident; the barn's orientation is established by the cadastral plan."
+      },
+      "instruction": {
+        "ru": "Совместить эталонную тень заборного столба с тенью на снимке.",
+        "en": "Match the reference shadow of the fence post to the shadow in the photograph."
+      },
+      "assets": {
+        "asset1": "assets/interactive/ev-tracks-scene.webp",
+        "asset2": "assets/interactive/ev-tracks-shadow-reference.svg"
+      },
+      "data": {
+        "claimedTime": "08:09",
+        "orientationSource": "Кадастровый план фермы и северная стрелка инспектора",
+        "slider": {
+          "from": "06:00",
+          "to": "21:00",
+          "stepMinutes": 10
+        },
+        "shadowOrigin": {
+          "x": 44,
+          "y": 65
+        },
+        "referenceShadow": {
+          "baseAngle": 0,
+          "baseLength": 100,
+          "width": 20,
+          "opacity": 0.34
+        },
+        "timeSamples": [
+          {
+            "time": "08:00",
+            "angle": 69,
+            "length": 132
+          },
+          {
+            "time": "12:00",
+            "angle": 8,
+            "length": 52
+          },
+          {
+            "time": "16:00",
+            "angle": -41,
+            "length": 88
+          },
+          {
+            "time": "20:00",
+            "angle": -76,
+            "length": 151
+          }
+        ],
+        "validTimeRanges": [
+          {
+            "from": "08:00",
+            "to": "08:25"
+          }
+        ],
+        "matchTolerance": {
+          "angle": 8,
+          "length": 16
+        },
+        "orientationSourceEn": "Farm cadastral plan and inspector's north marker"
+      },
+      "statementLink": {
+        "statementId": "claim_event_time",
+        "relation": "supports",
+        "reason": {
+          "ru": "Тень соответствует 08:00–08:25 — тому же промежутку, когда шар аварийно прошёл над фермой.",
+          "en": "The shadow matches the 8:00–8:25 a.m. window, when the balloon made its emergency pass over the farm."
+        }
+      },
+      "contradictionTarget": null,
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Механика подтверждает хронологию невероятного, но честного дела, не создавая ложного противоречия.",
+          "en": "The interaction verifies the timeline of an unlikely but honest claim without creating a false contradiction."
+        },
+        "playerAction": {
+          "ru": "Совместить эталонную тень заборного столба с тенью на снимке.",
+          "en": "Match the reference shadow of the fence post to the shadow in the photograph."
+        },
+        "conclusion": {
+          "ru": "Тень соответствует 08:00–08:25 — тому же промежутку, когда шар аварийно прошёл над фермой.",
+          "en": "The shadow matches the 8:00–8:25 a.m. window, when the balloon made its emergency pass over the farm."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-009",
+          "role": "interactive_scene",
+          "src": "src/data/cases/case-004/assets/interactive/ev-tracks-scene.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-004/assets/interactive/ev-tracks-scene.webp",
+          "caseRelativeSrc": "assets/interactive/ev-tracks-scene.webp",
+          "installTo": "src/data/cases/case-004/assets/interactive/ev-tracks-scene.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "175155b30ea21a09ddc310c6e46a25f4ffff5f0fe9646ce6e57945afdc0834ab"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-004/assets/interactive/ev-tracks-scene.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-004/assets/interactive/ev-tracks-scene.webp",
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-vet",
+      "order": 3,
+      "type": "document",
+      "title": {
+        "ru": "Заключение ветеринара",
+        "en": "Veterinary Report"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "У Звёздочки обнаружены растяжение передней ноги, мелкие порезы от стекла и следы строительной пыли на спине. Характер травм соответствует падению через лёгкую кровлю теплицы. Животное вне опасности.",
+        "en": "Zvezdochka has a strained foreleg, minor glass cuts, and construction dust on her back. The injuries are consistent with a fall through a lightweight greenhouse roof. The animal is out of danger."
+      },
+      "statusExplanation": {
+        "ru": "Травмы согласуются с описанным падением и повреждениями на месте.",
+        "en": "The injuries match the described fall and the damage at the scene."
+      },
+      "statementLink": {
+        "statementId": "claim_cause",
+        "relation": "supports",
+        "reason": {
+          "ru": "Травмы согласуются с описанным падением и повреждениями на месте.",
+          "en": "The injuries match the described fall and the damage at the scene."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-greenhouse",
+      "order": 4,
+      "type": "photo",
+      "title": {
+        "ru": "Фото теплицы и смета",
+        "en": "Greenhouse Photograph and Estimate"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Кровля теплицы продавлена сверху вниз. Повреждены три секции, две трубы полива и часть посадок. Подрядчик оценил восстановление в сумму, соответствующую заявленному ущербу.",
+        "en": "The greenhouse roof was crushed from above. Three sections, two irrigation pipes, and part of the crop were damaged. The contractor's repair estimate matches the claimed loss."
+      },
+      "statusExplanation": {
+        "ru": "Направление повреждений и стоимость ремонта соответствуют заявлению.",
+        "en": "The direction of the damage and the repair cost match the claim."
+      },
+      "statementLink": {
+        "statementId": "claim_damage",
+        "relation": "supports",
+        "reason": {
+          "ru": "Направление повреждений и стоимость ремонта соответствуют заявлению.",
+          "en": "The direction of the damage and the repair cost match the claim."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5,
+      "imageAssets": [
+        {
+          "assetId": "asset-008",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-004/evidence/case-004-damaged-greenhouse.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-004/evidence/case-004-damaged-greenhouse.webp",
+          "caseRelativeSrc": "evidence/case-004-damaged-greenhouse.webp",
+          "installTo": "public/evidence/case-004-damaged-greenhouse.webp",
+          "legacyRuntimeUrl": "evidence/case-004-damaged-greenhouse.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "b571c7d97b3ddc2fbcfaa0cfddc3d43b3162770c1c70e7b36abe36ec20f03a40"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-004/evidence/case-004-damaged-greenhouse.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-004/evidence/case-004-damaged-greenhouse.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-004-damaged-greenhouse.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-004/evidence/case-004-damaged-greenhouse.webp",
+        "copyTo": "public/evidence/case-004-damaged-greenhouse.webp"
+      }
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Воздушный шар действительно аварийно снизился над фермой.",
+      "Следы копыт показывают путь Звёздочки по обвалившимся тюкам на крышу.",
+      "Травмы и характер разрушения подтверждают падение в теплицу.",
+      "Тень соответствует 08:00–08:25 — тому же промежутку, когда шар аварийно прошёл над фермой.",
+      "Все звенья невероятной истории сходятся. Выплату следует одобрить."
+    ],
+    "en": [
+      "The first link in this unlikely chain is confirmed independently of the claimant.",
+      "The shadow matches the 8:00–8:25 a.m. window, when the balloon made its emergency pass over the farm.",
+      "The injuries match the described fall and the damage at the scene.",
+      "The direction of the damage and the repair cost match the claim.",
+      "No material statement has been disproven. The claim should be approved."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Внедрить каноническую постановку из первого акта «Архив №17».",
+      "Сохранить стабильный ID и новый campaignOrder.",
+      "Интегрировать shadow_time_check в улику ev-tracks; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate shadow_time_check into evidence ev-tracks; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "evidence/case-004-damaged-greenhouse.webp",
+      "action": "replace_if_needed",
+      "purpose": "Повреждённая теплица после падения коровы",
+      "prompt": "Realistic insurance evidence photograph of a damaged farm greenhouse after a large cow fell through the lightweight roof, roof panels bent downward, broken irrigation pipes and crushed tomato plants, the cow already safely removed, hoof marks and scattered hay nearby, plausible structural damage, natural morning light, no comically cow-shaped hole, no text or watermark."
+    },
+    {
+      "file": "assets/interactive/ev-tracks-scene.webp",
+      "purpose": "Фотография с одной геометрически читаемой тенью",
+      "resolution": "1600×1000",
+      "format": "WebP",
+      "transparency": false,
+      "generatedBy": "image_model",
+      "manualPost": "Отбраковать конфликтующие тени; вручную сверить origin и фактический диапазон.",
+      "prompt": "Фермерский двор, непрерывные следы копыт, рассыпанные тюки, один вертикальный заборный столб и чёткая утренняя тень. One dominant vertical reference object with its base fully visible, one clear physically connected shadow on a level surface, single sunlight direction, minimal other shadows and reflections, free overlay space. Photorealistic insurance-investigation evidence photograph, documentary look, shot on a phone or compact camera by a non-professional, natural available light, neutral muted colors, realistic textures, high detail. No captions, no watermark, no logos, no readable real-world branding, no famous people, no recognizable copyrighted characters, no visible faces unless explicitly required. Evidence photo, not illustration or cinematic poster.",
+      "evidenceId": "ev-tracks",
+      "evidenceType": "shadow_time_check"
+    },
+    {
+      "file": "assets/interactive/ev-tracks-shadow-reference.svg",
+      "purpose": "Эталонная тень, управляемая ползунком времени",
+      "resolution": "viewBox 0 0 100 100",
+      "format": "SVG",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "Откалибровать angle/length по принятому изображению.",
+      "prompt": null,
+      "evidenceId": "ev-tracks",
+      "evidenceType": "shadow_time_check"
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-004",
+    "archiveBasePath": "generated-assets/src/data/cases/case-004",
+    "claimantPortrait": null,
+    "claimantPortraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/aigul.webp",
+      "existingFile": "public/people/aigul.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-tracks",
+        "title": {
+          "ru": "Проверка времени фотографии следов",
+          "en": "Track Photograph Time Check"
+        },
+        "primaryImage": "src/data/cases/case-004/assets/interactive/ev-tracks-scene.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-004/assets/interactive/ev-tracks-scene.webp",
+        "legacyImageBinding": null,
+        "assets": [
+          {
+            "assetId": "asset-009",
+            "role": "interactive_scene",
+            "src": "src/data/cases/case-004/assets/interactive/ev-tracks-scene.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-004/assets/interactive/ev-tracks-scene.webp",
+            "caseRelativeSrc": "assets/interactive/ev-tracks-scene.webp",
+            "installTo": "src/data/cases/case-004/assets/interactive/ev-tracks-scene.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1600,
+            "height": 1000,
+            "sha256": "175155b30ea21a09ddc310c6e46a25f4ffff5f0fe9646ce6e57945afdc0834ab"
+          }
+        ]
+      },
+      {
+        "evidenceId": "ev-greenhouse",
+        "title": {
+          "ru": "Фото теплицы и смета",
+          "en": "Greenhouse Photograph and Estimate"
+        },
+        "primaryImage": "src/data/cases/case-004/evidence/case-004-damaged-greenhouse.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-004/evidence/case-004-damaged-greenhouse.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-004-damaged-greenhouse.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-004/evidence/case-004-damaged-greenhouse.webp",
+          "copyTo": "public/evidence/case-004-damaged-greenhouse.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-008",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-004/evidence/case-004-damaged-greenhouse.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-004/evidence/case-004-damaged-greenhouse.webp",
+            "caseRelativeSrc": "evidence/case-004-damaged-greenhouse.webp",
+            "installTo": "public/evidence/case-004-damaged-greenhouse.webp",
+            "legacyRuntimeUrl": "evidence/case-004-damaged-greenhouse.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "b571c7d97b3ddc2fbcfaa0cfddc3d43b3162770c1c70e7b36abe36ec20f03a40"
+          }
+        ]
+      }
+    ]
+  }
+}

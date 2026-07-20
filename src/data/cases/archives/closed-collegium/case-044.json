@@ -1,340 +1,603 @@
 {
   "id": "case-044",
   "type": "standard",
+  "campaignOrder": 42,
+  "requiredLevel": 16,
+  "act": 5,
+  "actTitle": {
+    "ru": "Последний маршрут",
+    "en": "The Final Route",
+    "tr": "The Final Route",
+    "ar": "The Final Route",
+    "kk": "Последний маршрут"
+  },
   "difficulty": "hard",
   "claimAmount": 19200,
   "truth": "fraud",
-  "investigationBudget": 4,
   "title": {
-    "ru": "Пожар в теплице редких ароматических корней",
-    "en": "Greenhouse Fire of Rare Aromatic Roots",
-    "tr": "Nadir Aromatik Kökler Serasında Yangın",
-    "ar": "حريق دفيئة الجذور العطرية النادرة",
-    "kk": "Сирек хош иісті тамырлар жылыжайындағы өрт"
+    "ru": "Слишком удобная серая лента",
+    "en": "The Gray Tape That Was Too Convenient",
+    "tr": "The Gray Tape That Was Too Convenient",
+    "ar": "The Gray Tape That Was Too Convenient",
+    "kk": "Слишком удобная серая лента"
   },
   "claim": {
     "person": {
       "ru": "Эвелина Морн, 49 лет",
-      "en": "Evelina Morn, 49",
-      "tr": "Evelina Morn, 49",
-      "ar": "إيفيلينا مورن، 49",
-      "kk": "Эвелина Морн, 49 жаста"
+      "en": "Evelina Morn, age 49",
+      "tr": "Evelina Morn, age 49",
+      "ar": "Evelina Morn, age 49",
+      "kk": "Эвелина Морн, 49 лет"
     },
     "story": {
-      "ru": "Редкие корни вспыхнули сами: перегрев теплицы, стекло, дым, вся партия погибла за одну ночь. У меня не было причин рисковать коллекцией перед весенним смотром.",
-      "en": "The rare roots ignited on their own: greenhouse heat, glass, smoke, and the whole batch gone in one night. I had no reason to risk the collection before the spring review.",
-      "tr": "Nadir kökler kendiliğinden tutuştu: sera ısısı, cam, duman ve bütün parti bir gecede yok oldu. Bahar denetimi öncesi koleksiyonu riske atmam için sebep yoktu.",
-      "ar": "اشتعلت الجذور النادرة من تلقاء نفسها: حرارة الدفيئة والزجاج والدخان وضاعت الدفعة كلها في ليلة واحدة. لم يكن لدي سبب للمخاطرة بالمجموعة قبل مراجعة الربيع.",
-      "kk": "Сирек тамырлар өздігінен тұтанды: жылыжай қызуы, әйнек, түтін, бүкіл партия бір түнде жойылды. Көктемгі тексеріс алдында коллекцияны тәуекелге тігетін себебім болған жоқ."
+      "ru": "Редкие лекарственные корни самовоспламенились из-за перегрева теплицы. Ночью погибла вся партия перед весенней сертификацией. У стола нашли серую ленту, поэтому я допускаю вмешательство Серого конвоя. Прошу полную выплату.",
+      "en": "Rare medicinal roots spontaneously ignited after the greenhouse overheated. The entire batch was destroyed during the night before spring certification. Gray tape was found near the workbench, so I suspect Gray Convoy interference. I am claiming the full amount.",
+      "tr": "Rare medicinal roots spontaneously ignited after the greenhouse overheated. The entire batch was destroyed during the night before spring certification. Gray tape was found near the workbench, so I suspect Gray Convoy interference. I am claiming the full amount.",
+      "ar": "Rare medicinal roots spontaneously ignited after the greenhouse overheated. The entire batch was destroyed during the night before spring certification. Gray tape was found near the workbench, so I suspect Gray Convoy interference. I am claiming the full amount.",
+      "kk": "Редкие лекарственные корни самовоспламенились из-за перегрева теплицы. Ночью погибла вся партия перед весенней сертификацией. У стола нашли серую ленту, поэтому я допускаю вмешательство Серого конвоя. Прошу полную выплату."
     }
   },
-  "coverImage": "covers/case-044.svg",
-  "personImage": "people/evelina-morn.webp",
   "client": {
     "role": {
-      "ru": "Куратор редких теплиц",
-      "en": "Rare greenhouse curator",
-      "tr": "Nadir sera küratörü",
-      "ar": "قيّمة الدفيئات النادرة",
-      "kk": "Сирек жылыжайлар кураторы"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Архив",
-          "en": "Archive",
-          "tr": "Arşiv",
-          "ar": "الأرشيف",
-          "kk": "Архив"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "Закрытый Коллегиум",
-          "en": "Closed Collegium",
-          "tr": "Kapalı Kolej",
-          "ar": "الكلية المغلقة",
-          "kk": "Жабық коллегиум"
+          "ru": "5",
+          "en": "5",
+          "tr": "5",
+          "ar": "5",
+          "kk": "5"
         }
       },
       {
         "k": {
-          "ru": "Застрахованный риск",
-          "en": "Insured risk",
-          "tr": "Sigortalı risk",
-          "ar": "الخطر المؤمن عليه",
-          "kk": "Сақтандырылған тәуекел"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Утрата редких корней",
-          "en": "Loss of rare roots",
-          "tr": "Nadir kök kaybı",
-          "ar": "فقدان جذور نادرة",
-          "kk": "Сирек тамырлардың жоғалуы"
-        }
-      },
-      {
-        "k": {
-          "ru": "Архивная связка",
-          "en": "Archive thread",
-          "tr": "Arşiv bağı",
-          "ar": "خيط الأرشيف",
-          "kk": "Архив байланысы"
-        },
-        "v": {
-          "ru": "Повторяющийся след: серая восковая лента; часть заявителей её имитирует, но часть дел выводит на настоящую группу.",
-          "en": "Recurring lead: gray wax ribbon; some claimants imitate it, but some files point to a real group.",
-          "tr": "Tekrarlayan iz: gri mum şerit; bazı başvuranlar taklit ediyor, bazı dosyalar gerçek bir gruba işaret ediyor.",
-          "ar": "خيط متكرر: شريط شمعي رمادي؛ بعض أصحاب المطالبات يقلدونه، لكن بعض الملفات تقود إلى جماعة حقيقية.",
-          "kk": "Қайталанатын із: сұр балауыз лента; кейбір өтініш берушілер оны қолдан жасайды, ал кейбір істер нақты топқа апарады."
+          "ru": "42",
+          "en": "42",
+          "tr": "42",
+          "ar": "42",
+          "kk": "42"
         }
       }
     ]
   },
+  "coverImage": "covers/case-044.svg",
+  "personImage": "people/evelina-morn-grounded.webp",
   "evidences": [
     {
       "id": "photo-44",
-      "type": "photo",
+      "order": 1,
+      "type": "thermal_scan",
       "title": {
-        "ru": "Очаг у стола смешивания",
-        "en": "Burn mark at the mixing table",
-        "tr": "Karıştırma masasındaki yanık izi",
-        "ar": "أثر الحريق عند طاولة الخلط",
-        "kk": "Араластыру үстеліндегі күйік ізі"
+        "ru": "Тепловой осмотр теплицы",
+        "en": "Greenhouse Thermal Inspection",
+        "tr": "Greenhouse Thermal Inspection",
+        "ar": "Greenhouse Thermal Inspection",
+        "kk": "Тепловой осмотр теплицы"
       },
       "content": {
-        "ru": "Ожог начинается вокруг керамической чаши с остатками ускорителя роста, а не внутри грядки с корнями.",
-        "en": "The burn starts around a ceramic bowl with growth-accelerant residue, not inside the root bed.",
-        "tr": "Yanık, kök yatağında değil büyüme hızlandırıcı kalıntılı seramik kâsenin çevresinde başlıyor.",
-        "ar": "يبدأ الاحتراق حول وعاء خزفي عليه بقايا منشط نمو، لا داخل حوض الجذور.",
-        "kk": "Күйік тамыр төсегінде емес, өсу үдеткіші қалған керамикалық тостаған маңынан басталады."
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Очаг пожара не совпадает с версией о самовозгорании растений.",
-        "en": "The fire origin does not match spontaneous plant ignition.",
-        "tr": "Yangın noktası bitkilerin kendiliğinden tutuşmasıyla uyuşmuyor.",
-        "ar": "نقطة بدء الحريق لا تطابق اشتعال النباتات تلقائياً.",
-        "kk": "Өрт ошағы өсімдіктің өздігінен тұтану нұсқасына сай емес."
+        "ru": "Горячей остаётся только металлическая чаша на отключённом нагревателе; воздух и грядки были холоднее нормы возгорания.",
+        "en": "Only a metal bowl on a switched-off heater remains hot; the air and beds were below ignition temperature.",
+        "tr": "Only a metal bowl on a switched-off heater remains hot; the air and beds were below ignition temperature.",
+        "ar": "Only a metal bowl on a switched-off heater remains hot; the air and beds were below ignition temperature.",
+        "kk": "Горячей остаётся только металлическая чаша на отключённом нагревателе; воздух и грядки были холоднее нормы возгорания."
       },
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_spontaneous_overheat",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Горячей остаётся только металлическая чаша на отключённом нагревателе; воздух и грядки были холоднее нормы возгорания.",
+          "en": "Only a metal bowl on a switched-off heater remains hot; the air and beds were below ignition temperature.",
+          "tr": "Only a metal bowl on a switched-off heater remains hot; the air and beds were below ignition temperature.",
+          "ar": "Only a metal bowl on a switched-off heater remains hot; the air and beds were below ignition temperature.",
+          "kk": "Горячей остаётся только металлическая чаша на отключённом нагревателе; воздух и грядки были холоднее нормы возгорания."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_spontaneous_overheat",
+        "reason": {
+          "ru": "Горячей остаётся только металлическая чаша на отключённом нагревателе; воздух и грядки были холоднее нормы возгорания.",
+          "en": "Only a metal bowl on a switched-off heater remains hot; the air and beds were below ignition temperature.",
+          "tr": "Only a metal bowl on a switched-off heater remains hot; the air and beds were below ignition temperature.",
+          "ar": "Only a metal bowl on a switched-off heater remains hot; the air and beds were below ignition temperature.",
+          "kk": "Горячей остаётся только металлическая чаша на отключённом нагревателе; воздух и грядки были холоднее нормы возгорания."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
       "meta": {
-        "filename": "IMG_20260644_081500.jpg",
         "imageUrl": "evidence/case-044-photo-44.webp"
       },
-      "relation": "contradicts"
+      "description": {
+        "ru": "Сигнал о пожаре поступил в 01:12, открытое горение ликвидировано в 01:21. После безопасного проветривания тепловой осмотр начат в 01:29.",
+        "en": "The fire alarm arrived at 1:12 a.m., and open flames were extinguished at 1:21. After safe ventilation, thermal inspection began at 1:29.",
+        "tr": "The fire alarm arrived at 1:12 a.m., and open flames were extinguished at 1:21. After safe ventilation, thermal inspection began at 1:29.",
+        "ar": "The fire alarm arrived at 1:12 a.m., and open flames were extinguished at 1:21. After safe ventilation, thermal inspection began at 1:29.",
+        "kk": "Сигнал о пожаре поступил в 01:12, открытое горение ликвидировано в 01:21. После безопасного проветривания тепловой осмотр начат в 01:29."
+      },
+      "instruction": {
+        "ru": "Включить тепловизор и выбрать источник остаточного тепла.",
+        "en": "Switch on thermal view and select the source of residual heat.",
+        "tr": "Switch on thermal view and select the source of residual heat.",
+        "ar": "Switch on thermal view and select the source of residual heat.",
+        "kk": "Включить тепловизор и выбрать источник остаточного тепла."
+      },
+      "previousType": "photo",
+      "assets": {
+        "asset1": "cases/case-044/assets/interactive/photo-44-scene.webp",
+        "asset2": "cases/case-044/assets/interactive/photo-44-heat-zones.json"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Локальная горячая зона показывает истинный очаг и не позволяет списать пожар на общий перегрев.",
+          "en": "The localized hot zone reveals the true origin and rules out general greenhouse overheating.",
+          "tr": "The localized hot zone reveals the true origin and rules out general greenhouse overheating.",
+          "ar": "The localized hot zone reveals the true origin and rules out general greenhouse overheating.",
+          "kk": "Локальная горячая зона показывает истинный очаг и не позволяет списать пожар на общий перегрев."
+        },
+        "playerAction": {
+          "ru": "Включить тепловизор и выбрать источник остаточного тепла.",
+          "en": "Switch on thermal view and select the source of residual heat.",
+          "tr": "Switch on thermal view and select the source of residual heat.",
+          "ar": "Switch on thermal view and select the source of residual heat.",
+          "kk": "Включить тепловизор и выбрать источник остаточного тепла."
+        },
+        "conclusion": {
+          "ru": "Горячей остаётся только металлическая чаша на отключённом нагревателе; воздух и грядки были холоднее нормы возгорания.",
+          "en": "Only a metal bowl on a switched-off heater remains hot; the air and beds were below ignition temperature.",
+          "tr": "Only a metal bowl on a switched-off heater remains hot; the air and beds were below ignition temperature.",
+          "ar": "Only a metal bowl on a switched-off heater remains hot; the air and beds were below ignition temperature.",
+          "kk": "Горячей остаётся только металлическая чаша на отключённом нагревателе; воздух и грядки были холоднее нормы возгорания."
+        }
+      },
+      "data": {
+        "ambientTemperature": 17,
+        "observationTime": "01:29",
+        "claimedLastUseBefore": "01:21",
+        "elapsedSinceClaimedUseMinutes": 8,
+        "coolingReference": "Через восемь минут металлическая чаша сохраняет локальное тепло очага; температура воздуха и грядок служит контрольным фоном.",
+        "initialMode": "normal",
+        "heatZones": [
+          {
+            "id": "mixing_bowl",
+            "shape": "ellipse",
+            "x": 58,
+            "y": 58,
+            "width": 18,
+            "height": 13,
+            "temperature": 49,
+            "intensity": 0.94,
+            "label": "Локально нагретая чаша",
+            "isContradiction": true,
+            "labelEn": "Locally heated bowl"
+          },
+          {
+            "id": "beds",
+            "shape": "polygon",
+            "points": [
+              [
+                9,
+                65
+              ],
+              [
+                42,
+                61
+              ],
+              [
+                44,
+                88
+              ],
+              [
+                7,
+                91
+              ]
+            ],
+            "temperature": 18,
+            "intensity": 0.1,
+            "label": "Холодные грядки",
+            "isContradiction": false,
+            "isTarget": false,
+            "labelEn": "Cold planting beds"
+          }
+        ],
+        "successCondition": {
+          "type": "select_any",
+          "zoneIds": [
+            "mixing_bowl"
+          ]
+        },
+        "coolingReferenceEn": "After eight minutes, the metal bowl retains localized heat from the ignition point; the air and beds provide a cool control background."
+      }
     },
     {
       "id": "document-44",
+      "order": 2,
       "type": "document",
       "title": {
         "ru": "Акт фитосанитарной комиссии",
-        "en": "Plant health commission report",
-        "tr": "Bitki sağlığı komisyon raporu",
-        "ar": "تقرير لجنة صحة النبات",
-        "kk": "Фитосанитарлық комиссия акті"
+        "en": "Plant Health Commission Report",
+        "tr": "Plant Health Commission Report",
+        "ar": "Plant Health Commission Report",
+        "kk": "Акт фитосанитарной комиссии"
       },
       "content": {
-        "ru": "За два дня до пожара комиссия отметила: 37% корней поражены плесенью, рыночная стоимость партии снижена.",
-        "en": "Two days before the fire, the commission noted: 37% of roots were mold-damaged and the batch value was reduced.",
-        "tr": "Yangından iki gün önce komisyon köklerin %37’sinde küf olduğunu ve parti değerinin düştüğünü kaydetti.",
-        "ar": "قبل الحريق بيومين سجلت اللجنة أن 37% من الجذور تضررت بالعفن وانخفضت قيمة الدفعة.",
-        "kk": "Өрттен екі күн бұрын комиссия тамырлардың 37% көгергенін және партия құны төмендегенін тіркеді."
+        "ru": "За день до пожара партия забракована из-за запрещённого ускорителя. Уничтожение растений должно было стать обязанностью владельца без компенсации.",
+        "en": "One day before the fire, the batch was rejected for a prohibited growth enhancer. The owner would have had to destroy it without compensation.",
+        "tr": "One day before the fire, the batch was rejected for a prohibited growth enhancer. The owner would have had to destroy it without compensation.",
+        "ar": "One day before the fire, the batch was rejected for a prohibited growth enhancer. The owner would have had to destroy it without compensation.",
+        "kk": "За день до пожара партия забракована из-за запрещённого ускорителя. Уничтожение растений должно было стать обязанностью владельца без компенсации."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Материал важен для проверки версии, но сам по себе не является противоречием.",
-        "en": "The material matters to the review but is not a contradiction by itself.",
-        "tr": "Bu kayıt inceleme için önemlidir, ancak tek başına çelişki değildir.",
-        "ar": "هذه المادة مهمة للمراجعة لكنها ليست تناقضاً بحد ذاتها.",
-        "kk": "Материал тексеру үшін маңызды, бірақ өздігінен қайшылық емес."
+        "ru": "Документ раскрывает мотив скрыть забракованную партию, но не доказывает поджог.",
+        "en": "The report reveals a motive to conceal the rejected batch but does not prove arson.",
+        "tr": "The report reveals a motive to conceal the rejected batch but does not prove arson.",
+        "ar": "The report reveals a motive to conceal the rejected batch but does not prove arson.",
+        "kk": "Документ раскрывает мотив скрыть забракованную партию, но не доказывает поджог."
       },
-      "relation": "context"
+      "narrativeRole": "motive",
+      "statementLink": {
+        "statementId": "claim_owner_not_involved",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Документ раскрывает мотив скрыть забракованную партию, но не доказывает поджог.",
+          "en": "The report reveals a motive to conceal the rejected batch but does not prove arson.",
+          "tr": "The report reveals a motive to conceal the rejected batch but does not prove arson.",
+          "ar": "The report reveals a motive to conceal the rejected batch but does not prove arson.",
+          "kk": "Документ раскрывает мотив скрыть забракованную партию, но не доказывает поджог."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "camera-44",
+      "order": 3,
       "type": "camera_recording",
       "title": {
-        "ru": "Ночная камера теплицы",
-        "en": "Night greenhouse camera",
-        "tr": "Gece sera kamerası",
-        "ar": "كاميرا الدفيئة الليلية",
-        "kk": "Түнгі жылыжай камерасы"
+        "ru": "Ночная камера",
+        "en": "Night Camera",
+        "tr": "Night Camera",
+        "ar": "Night Camera",
+        "kk": "Ночная камера"
       },
       "content": {
-        "ru": "02:18: Морн заносит закрытый термобокс. Через четыре минуты камера ослеплена паром изнутри теплицы.",
-        "en": "02:18: Morn carries in a sealed thermal case. Four minutes later the camera is blinded by steam from inside the greenhouse.",
-        "tr": "02:18: Morn kapalı bir termo kutu taşıyor. Dört dakika sonra kamera seranın içinden gelen buharla kapanıyor.",
-        "ar": "02:18 تدخل مورن صندوقاً حرارياً مغلقاً. بعد أربع دقائق تُحجب الكاميرا ببخار من داخل الدفيئة.",
-        "kk": "02:18-де Морн жабық термобокс әкеледі. Төрт минуттан соң камера жылыжай ішінен шыққан бумен тұманданады."
+        "ru": "Морн входит в служебную зону теплицы с металлической чашей и выходит за двенадцать минут до тревоги. Рабочий стол перекрыт стеллажом: камера не показывает, что происходило у нагревателя.",
+        "en": "Morn enters the greenhouse service area with a metal bowl and leaves twelve minutes before the alarm. Shelving blocks the workbench, so the camera does not show what happened near the heater.",
+        "tr": "Morn enters the greenhouse service area with a metal bowl and leaves twelve minutes before the alarm. Shelving blocks the workbench, so the camera does not show what happened near the heater.",
+        "ar": "Morn enters the greenhouse service area with a metal bowl and leaves twelve minutes before the alarm. Shelving blocks the workbench, so the camera does not show what happened near the heater.",
+        "kk": "Морн входит в служебную зону теплицы с металлической чашей и выходит за двенадцать минут до тревоги. Рабочий стол перекрыт стеллажом: камера не показывает, что происходило у нагревателя."
       },
-      "isContradiction": true,
+      "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Камера показывает подготовку внутри теплицы до заявленного перегрева.",
-        "en": "The camera shows preparation inside the greenhouse before the reported overheating.",
-        "tr": "Kamera, bildirilen aşırı ısınmadan önce seranın içinde hazırlık yapıldığını gösteriyor.",
-        "ar": "تظهر الكاميرا تحضيراً داخل الدفيئة قبل السخونة المبلغ عنها.",
-        "kk": "Камера мәлімделген қызып кетуге дейін жылыжай ішіндегі дайындықты көрсетеді."
+        "ru": "Запись создаёт временное окно и требует проверки очага; прямого поджога в кадре нет.",
+        "en": "The footage establishes a time window and requires examination of the origin; it does not show the arson directly.",
+        "tr": "The footage establishes a time window and requires examination of the origin; it does not show the arson directly.",
+        "ar": "The footage establishes a time window and requires examination of the origin; it does not show the arson directly.",
+        "kk": "Запись создаёт временное окно и требует проверки очага; прямого поджога в кадре нет."
       },
-      "meta": {
-        "cameraId": "ARC-44",
-        "cameraModel": "SentinelCam SC-3265 - 1080p - H.264"
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_owner_not_involved",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Запись создаёт временное окно и требует проверки очага; прямого поджога в кадре нет.",
+          "en": "The footage establishes a time window and requires examination of the origin; it does not show the arson directly.",
+          "tr": "The footage establishes a time window and requires examination of the origin; it does not show the arson directly.",
+          "ar": "The footage establishes a time window and requires examination of the origin; it does not show the arson directly.",
+          "kk": "Запись создаёт временное окно и требует проверки очага; прямого поджога в кадре нет."
+        }
       },
-      "relation": "contradicts"
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "log-44",
+      "order": 4,
       "type": "usage_log",
       "title": {
         "ru": "Климатический журнал",
-        "en": "Climate control log",
-        "tr": "İklim kontrol kaydı",
-        "ar": "سجل التحكم بالمناخ",
-        "kk": "Климат бақылау журналы"
+        "en": "Climate Log",
+        "tr": "Climate Log",
+        "ar": "Climate Log",
+        "kk": "Климатический журнал"
       },
       "content": {
-        "ru": [
-          "01:52 — ручной режим: вентиляция отключена",
-          "02:06 — датчик влажности переведён в сервис",
-          "02:24 — тревога подавлена локальным ключом"
-        ],
-        "en": [
-          "01:52 — manual mode: ventilation disabled",
-          "02:06 — humidity sensor moved to service",
-          "02:24 — alarm suppressed by local key"
-        ],
-        "tr": [
-          "01:52 — manuel mod: havalandırma kapatıldı",
-          "02:06 — nem sensörü servise alındı",
-          "02:24 — alarm yerel anahtarla susturuldu"
-        ],
-        "ar": [
-          "01:52 — وضع يدوي: تعطيل التهوية",
-          "02:06 — نقل حساس الرطوبة إلى الصيانة",
-          "02:24 — كتم الإنذار بمفتاح محلي"
-        ],
-        "kk": [
-          "01:52 — қол режимі: желдету өшірілді",
-          "02:06 — ылғал датчигі сервиске ауысты",
-          "02:24 — дабыл жергілікті кілтпен басылды"
-        ]
+        "ru": "Температура воздуха оставалась нормальной до момента локального пожара. Общего перегрева теплицы не было.",
+        "en": "Air temperature remained normal until the localized fire. The greenhouse did not overheat generally.",
+        "tr": "Air temperature remained normal until the localized fire. The greenhouse did not overheat generally.",
+        "ar": "Air temperature remained normal until the localized fire. The greenhouse did not overheat generally.",
+        "kk": "Температура воздуха оставалась нормальной до момента локального пожара. Общего перегрева теплицы не было."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Журнал показывает ручное подавление защитных систем.",
-        "en": "The log shows manual suppression of safety systems.",
-        "tr": "Kayıt, güvenlik sistemlerinin elle susturulduğunu gösteriyor.",
-        "ar": "يوضح السجل تعطيل أنظمة السلامة يدوياً.",
-        "kk": "Журнал қорғаныс жүйелерінің қолмен басылғанын көрсетеді."
+        "ru": "Версия самовоспламенения от высокой температуры опровергнута.",
+        "en": "The heat-induced spontaneous-combustion theory is disproven.",
+        "tr": "The heat-induced spontaneous-combustion theory is disproven.",
+        "ar": "The heat-induced spontaneous-combustion theory is disproven.",
+        "kk": "Версия самовоспламенения от высокой температуры опровергнута."
       },
-      "meta": {
-        "logPrompt": "archive@log-44:~$ tail -f /var/log/archive.log"
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_spontaneous_overheat",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Версия самовоспламенения от высокой температуры опровергнута.",
+          "en": "The heat-induced spontaneous-combustion theory is disproven.",
+          "tr": "The heat-induced spontaneous-combustion theory is disproven.",
+          "ar": "The heat-induced spontaneous-combustion theory is disproven.",
+          "kk": "Версия самовоспламенения от высокой температуры опровергнута."
+        }
       },
-      "relation": "contradicts"
+      "contradictionTarget": {
+        "statementId": "claim_spontaneous_overheat",
+        "reason": {
+          "ru": "Версия самовоспламенения от высокой температуры опровергнута.",
+          "en": "The heat-induced spontaneous-combustion theory is disproven.",
+          "tr": "The heat-induced spontaneous-combustion theory is disproven.",
+          "ar": "The heat-induced spontaneous-combustion theory is disproven.",
+          "kk": "Версия самовоспламенения от высокой температуры опровергнута."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "bank-44",
+      "order": 5,
       "type": "bank_statement",
       "title": {
-        "ru": "Покупка ускорителя",
-        "en": "Accelerant purchase",
-        "tr": "Hızlandırıcı alımı",
-        "ar": "شراء منشط",
-        "kk": "Үдеткіш сатып алу"
+        "ru": "Покупка реагента",
+        "en": "Reagent Purchase",
+        "tr": "Reagent Purchase",
+        "ar": "Reagent Purchase",
+        "kk": "Покупка реагента"
       },
       "content": {
-        "ru": [
-          "За сутки до пожара — покупка термогеля и ускорителя роста",
-          "После пожара — аванс за новую партию корней"
-        ],
-        "en": [
-          "One day before the fire — thermal gel and growth accelerant purchase",
-          "After the fire — advance payment for a new root batch"
-        ],
-        "tr": [
-          "Yangından bir gün önce — termal jel ve büyüme hızlandırıcı alımı",
-          "Yangından sonra — yeni kök partisi için avans"
-        ],
-        "ar": [
-          "قبل الحريق بيوم — شراء جل حراري ومنشط نمو",
-          "بعد الحريق — دفعة مقدمة لدفعة جذور جديدة"
-        ],
-        "kk": [
-          "Өрттен бір күн бұрын — термогель мен өсу үдеткіші сатып алынған",
-          "Өрттен кейін — жаңа тамыр партиясына аванс"
-        ]
+        "ru": "Морн приобрела горючий концентрат за несколько часов до пожара и оплатила наличными через помощника.",
+        "en": "Morn purchased a flammable concentrate several hours before the fire and paid cash through an assistant.",
+        "tr": "Morn purchased a flammable concentrate several hours before the fire and paid cash through an assistant.",
+        "ar": "Morn purchased a flammable concentrate several hours before the fire and paid cash through an assistant.",
+        "kk": "Морн приобрела горючий концентрат за несколько часов до пожара и оплатила наличными через помощника."
       },
-      "isContradiction": true,
+      "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Покупки связывают пожар с подготовленной химической реакцией.",
-        "en": "The purchases tie the fire to a prepared chemical reaction.",
-        "tr": "Alımlar yangını hazırlanmış kimyasal tepkimeye bağlıyor.",
-        "ar": "تربط المشتريات الحريق بتفاعل كيميائي مُحضّر.",
-        "kk": "Сатып алулар өртті дайындалған химиялық реакциямен байланыстырады."
+        "ru": "Подготовительная покупка согласуется с чашей в очаге.",
+        "en": "The preparatory purchase is consistent with the bowl at the fire's origin.",
+        "tr": "The preparatory purchase is consistent with the bowl at the fire's origin.",
+        "ar": "The preparatory purchase is consistent with the bowl at the fire's origin.",
+        "kk": "Подготовительная покупка согласуется с чашей в очаге."
       },
-      "meta": {
-        "bankName": {
-          "ru": "Municipal Credit",
-          "en": "Municipal Credit",
-          "tr": "Municipal Credit",
-          "ar": "Municipal Credit",
-          "kk": "Municipal Credit"
-        },
-        "accountMask": "**** **** **** 44"
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_owner_not_involved",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Подготовительная покупка согласуется с чашей в очаге.",
+          "en": "The preparatory purchase is consistent with the bowl at the fire's origin.",
+          "tr": "The preparatory purchase is consistent with the bowl at the fire's origin.",
+          "ar": "The preparatory purchase is consistent with the bowl at the fire's origin.",
+          "kk": "Подготовительная покупка согласуется с чашей в очаге."
+        }
       },
-      "relation": "contradicts"
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25
     },
     {
-      "id": "witness-44",
-      "type": "witness_statement",
+      "id": "tape-44",
+      "order": 6,
+      "type": "document",
       "title": {
-        "ru": "Показания ночного садовника",
-        "en": "Night gardener statement",
-        "tr": "Gece bahçıvanı ifadesi",
-        "ar": "إفادة البستاني الليلي",
-        "kk": "Түнгі бағбанның жауабы"
+        "ru": "Экспертиза серой ленты",
+        "en": "Gray Tape Examination",
+        "tr": "Gray Tape Examination",
+        "ar": "Gray Tape Examination",
+        "kk": "Экспертиза серой ленты"
       },
       "content": {
-        "ru": "«Перед дымом пахло не корнями, а горячим лаком. Морн велела мне не трогать вентиляционный щит». На ручке тепличного шкафа нашли серую восковую ленту, но она расплавлена только с одной стороны.",
-        "en": "\"Before the smoke, it smelled like hot varnish, not roots. Morn told me not to touch the ventilation panel.\" A gray wax ribbon was found on the greenhouse cabinet handle, but it melted on only one side.",
-        "tr": "\"Dumandan önce kök değil sıcak vernik kokusu vardı. Morn havalandırma panosuna dokunmamamı söyledi.\" Sera dolabı kolunda gri mum şerit bulundu, ancak yalnızca bir tarafı erimişti.",
-        "ar": "«قبل الدخان كانت الرائحة ورنيشاً ساخناً لا جذوراً. طلبت مني مورن ألا ألمس لوحة التهوية». وُجد شريط شمعي رمادي على مقبض خزانة الدفيئة، لكنه ذاب من جانب واحد فقط.",
-        "kk": "«Түтінге дейін тамыр емес, қызған лак иісі шықты. Морн желдету қалқанын ұстамауды айтты». Жылыжай шкафының тұтқасынан сұр балауыз лента табылды, бірақ ол тек бір жағынан еріген."
+        "ru": "Лента бытовая и продаётся в местном магазине; состав клея не совпадает с упаковкой GC-17.",
+        "en": "The tape is a household product sold locally; its adhesive does not match GC-17 packaging.",
+        "tr": "The tape is a household product sold locally; its adhesive does not match GC-17 packaging.",
+        "ar": "The tape is a household product sold locally; its adhesive does not match GC-17 packaging.",
+        "kk": "Лента бытовая и продаётся в местном магазине; состав клея не совпадает с упаковкой GC-17."
       },
-      "isContradiction": true,
+      "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Свидетель подтверждает искусственный источник дыма и запрет на вентиляцию.",
-        "en": "The witness confirms an artificial smoke source and a ban on ventilation.",
-        "tr": "Tanık yapay duman kaynağını ve havalandırma yasağını doğruluyor.",
-        "ar": "يؤكد الشاهد مصدر دخان اصطناعي ومنع التهوية.",
-        "kk": "Куә жасанды түтін көзін және желдетуге тыйымды растайды."
+        "ru": "Заявительница подбросила имитацию известного следа, чтобы направить расследование на сеть.",
+        "en": "The claimant planted an imitation of a known trace to redirect the investigation toward the network.",
+        "tr": "The claimant planted an imitation of a known trace to redirect the investigation toward the network.",
+        "ar": "The claimant planted an imitation of a known trace to redirect the investigation toward the network.",
+        "kk": "Заявительница подбросила имитацию известного следа, чтобы направить расследование на сеть."
       },
-      "relation": "contradicts"
+      "narrativeRole": "arc_lesson",
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Заявительница подбросила имитацию известного следа, чтобы направить расследование на сеть.",
+          "en": "The claimant planted an imitation of a known trace to redirect the investigation toward the network.",
+          "tr": "The claimant planted an imitation of a known trace to redirect the investigation toward the network.",
+          "ar": "The claimant planted an imitation of a known trace to redirect the investigation toward the network.",
+          "kk": "Заявительница подбросила имитацию известного следа, чтобы направить расследование на сеть."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Очаг и климатический журнал указывают на ручную подготовку пожара.",
-      "Серая лента здесь выглядит подброшенной приманкой, а не следом настоящей группы.",
-      "Самовозгорание редких корней не подтверждено: вердикт — отказ."
+      "Теплица не перегревалась, а пожар начался в чаше с горючим концентратом.",
+      "Морн сама отключила датчик и подготовила очаг после браковки растений.",
+      "Горячей остаётся только металлическая чаша на отключённом нагревателе; воздух и грядки были холоднее нормы возгорания.",
+      "Серая лента не принадлежит GC-17 и подброшена после пожара. Выплату следует отклонить."
     ],
     "en": [
-      "The burn mark and climate log point to a manually prepared fire.",
-      "The gray ribbon here looks planted, not like a true group trace.",
-      "Spontaneous ignition of the rare roots is unsupported: reject the claim."
+      "Only a metal bowl on a switched-off heater remains hot; the air and beds were below ignition temperature.",
+      "The heat-induced spontaneous-combustion theory is disproven.",
+      "The report reveals a motive to conceal the rejected batch but does not prove arson.",
+      "The footage establishes a time window and requires examination of the origin; it does not show the arson directly.",
+      "The preparatory purchase is consistent with the bowl at the fire's origin.",
+      "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "Yanık izi ve iklim kaydı yangının elle hazırlandığını gösteriyor.",
-      "Buradaki gri şerit gerçek grup izi değil, bırakılmış yem gibi duruyor.",
-      "Nadir köklerin kendiliğinden tutuştuğu desteklenmiyor: ödeme reddedilir."
+      "Only a metal bowl on a switched-off heater remains hot; the air and beds were below ignition temperature.",
+      "The heat-induced spontaneous-combustion theory is disproven.",
+      "The report reveals a motive to conceal the rejected batch but does not prove arson.",
+      "The footage establishes a time window and requires examination of the origin; it does not show the arson directly.",
+      "The preparatory purchase is consistent with the bowl at the fire's origin.",
+      "The claim is fraudulent and should be rejected."
     ],
     "ar": [
-      "يشير أثر الحريق وسجل المناخ إلى حريق مُحضّر يدوياً.",
-      "يبدو الشريط الرمادي هنا طُعماً مزروعاً لا أثراً حقيقياً للجماعة.",
-      "اشتعال الجذور النادرة تلقائياً غير مثبت: القرار رفض."
+      "Only a metal bowl on a switched-off heater remains hot; the air and beds were below ignition temperature.",
+      "The heat-induced spontaneous-combustion theory is disproven.",
+      "The report reveals a motive to conceal the rejected batch but does not prove arson.",
+      "The footage establishes a time window and requires examination of the origin; it does not show the arson directly.",
+      "The preparatory purchase is consistent with the bowl at the fire's origin.",
+      "The claim is fraudulent and should be rejected."
     ],
     "kk": [
-      "Өрт ізі мен климат журналы қолмен дайындалған өртті көрсетеді.",
-      "Бұл жердегі сұр лента нақты топ ізі емес, әдейі тасталған алдамшы белгі сияқты.",
-      "Сирек тамырлардың өздігінен тұтануы расталмады: вердикт — бас тарту."
+      "Теплица не перегревалась, а пожар начался в чаше с горючим концентратом.",
+      "Морн сама отключила датчик и подготовила очаг после браковки растений.",
+      "Горячей остаётся только металлическая чаша на отключённом нагревателе; воздух и грядки были холоднее нормы возгорания.",
+      "Серая лента не принадлежит GC-17 и подброшена после пожара. Выплату следует отклонить."
     ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Редкие лекарственные корни самовоспламенились из-за перегрева теплицы. Ночью погибла вся партия перед весенней сертификацией. У стола нашли серую ленту, поэтому я допускаю вмешательство Серого конвоя. Прошу полную выплату.",
+        "en": "Rare medicinal roots spontaneously ignited after the greenhouse overheated. The entire batch was destroyed during the night before spring certification. Gray tape was found near the workbench, so I suspect Gray Convoy interference. I am claiming the full amount.",
+        "tr": "Rare medicinal roots spontaneously ignited after the greenhouse overheated. The entire batch was destroyed during the night before spring certification. Gray tape was found near the workbench, so I suspect Gray Convoy interference. I am claiming the full amount.",
+        "ar": "Rare medicinal roots spontaneously ignited after the greenhouse overheated. The entire batch was destroyed during the night before spring certification. Gray tape was found near the workbench, so I suspect Gray Convoy interference. I am claiming the full amount.",
+        "kk": "Редкие лекарственные корни самовоспламенились из-за перегрева теплицы. Ночью погибла вся партия перед весенней сертификацией. У стола нашли серую ленту, поэтому я допускаю вмешательство Серого конвоя. Прошу полную выплату."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_spontaneous_overheat",
+      "text": {
+        "ru": "Пожар возник из-за общего перегрева теплицы.",
+        "en": "The fire resulted from general greenhouse overheating.",
+        "tr": "The fire resulted from general greenhouse overheating.",
+        "ar": "The fire resulted from general greenhouse overheating.",
+        "kk": "Пожар возник из-за общего перегрева теплицы."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_owner_not_involved",
+      "text": {
+        "ru": "Морн не отключала датчики и не готовила очаг.",
+        "en": "Morn neither disabled sensors nor prepared an ignition point.",
+        "tr": "Morn neither disabled sensors nor prepared an ignition point.",
+        "ar": "Morn neither disabled sensors nor prepared an ignition point.",
+        "kk": "Морн не отключала датчики и не готовила очаг."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_gc17_trace",
+      "text": {
+        "ru": "Серая лента указывает на реальное нападение Серого конвоя.",
+        "en": "The gray tape indicates a genuine Gray Convoy attack.",
+        "tr": "The gray tape indicates a genuine Gray Convoy attack.",
+        "ar": "The gray tape indicates a genuine Gray Convoy attack.",
+        "kk": "Серая лента указывает на реальное нападение Серого конвоя."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "После известий о Сером конвое любой серый предмет кажется уликой. Настоящий след должен объяснять событие, а не просто лежать рядом. — В. Лебедева",
+      "en": "After learning about the Gray Convoy, every gray object looks like evidence. A genuine trace must explain the event, not merely lie nearby. — V. Lebedeva",
+      "tr": "After learning about the Gray Convoy, every gray object looks like evidence. A genuine trace must explain the event, not merely lie nearby. — V. Lebedeva",
+      "ar": "After learning about the Gray Convoy, every gray object looks like evidence. A genuine trace must explain the event, not merely lie nearby. — V. Lebedeva",
+      "kk": "После известий о Сером конвое любой серый предмет кажется уликой. Настоящий след должен объяснять событие, а не просто лежать рядом. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Теперь у нас есть химический профиль настоящей упаковки GC-17. След в следующем деле можно будет проверить, а не угадывать.",
+      "en": "We now have the chemical profile of genuine GC-17 packaging. In the next case, we can test the trace instead of guessing.",
+      "tr": "We now have the chemical profile of genuine GC-17 packaging. In the next case, we can test the trace instead of guessing.",
+      "ar": "We now have the chemical profile of genuine GC-17 packaging. In the next case, we can test the trace instead of guessing.",
+      "kk": "Теперь у нас есть химический профиль настоящей упаковки GC-17. След в следующем деле можно будет проверить, а не угадывать."
+    },
+    "nextCaseTeaser": {
+      "ru": "За час до церемонии из академии исчез исторический кубок. След на верхнем люке содержит настоящий промышленный клей GC-17.",
+      "en": "One hour before a ceremony, a historic cup vanished from the academy. The trace on the roof hatch contains genuine GC-17 industrial adhesive.",
+      "tr": "One hour before a ceremony, a historic cup vanished from the academy. The trace on the roof hatch contains genuine GC-17 industrial adhesive.",
+      "ar": "One hour before a ceremony, a historic cup vanished from the academy. The trace on the roof hatch contains genuine GC-17 industrial adhesive.",
+      "kk": "За час до церемонии из академии исчез исторический кубок. След на верхнем люке содержит настоящий промышленный клей GC-17."
+    },
+    "seasonClue": {
+      "id": "fake-gray-mark",
+      "label": {
+        "ru": "Поддельная метка",
+        "en": "The Planted Mark",
+        "tr": "The Planted Mark",
+        "ar": "The Planted Mark",
+        "kk": "Поддельная метка"
+      },
+      "description": {
+        "ru": "Известность Серого конвоя провоцирует одиночных мошенников подбрасывать ложные следы. Нужна проверка состава и контекста.",
+        "en": "The Gray Convoy's notoriety encourages lone fraudsters to plant false traces. Composition and context must be verified.",
+        "tr": "The Gray Convoy's notoriety encourages lone fraudsters to plant false traces. Composition and context must be verified.",
+        "ar": "The Gray Convoy's notoriety encourages lone fraudsters to plant false traces. Composition and context must be verified.",
+        "kk": "Известность Серого конвоя провоцирует одиночных мошенников подбрасывать ложные следы. Нужна проверка состава и контекста."
+      },
+      "progressIndex": 2,
+      "progressTotal": 7
+    },
+    "epilogue": null
   }
 }

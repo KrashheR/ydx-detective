@@ -17,7 +17,7 @@ import {
   type PersistedState,
   type PlayerStats,
 } from '../types';
-import { canUseCloud, cloudGet, cloudSet } from './yandexSDK';
+import { canUseCloud, cloudGet, cloudSet } from './platformAdapter';
 
 const LOCAL_KEY = 'claimDetectiveSave';
 
@@ -48,6 +48,9 @@ export function makeDefaultStats(): PlayerStats {
     archivePurchasedPackIds: [],
     archiveUnlockedCaseIds: [],
     archiveAdUnlockServerDayByPack: {},
+    interactiveEvidenceProgress: {},
+    finalSynthesisProgress: {},
+    metaUnlocked: false,
   };
 }
 
@@ -84,6 +87,11 @@ function migrate(raw: unknown): PersistedState | null {
       ? {
           caseId: rawSession.caseId,
           selectedEvidenceIds: rawSession.selectedEvidenceIds ?? [],
+          stamps: rawSession.stamps ?? (rawSession.selectedEvidenceIds ?? []).map((evidenceId) => ({
+            caseId: rawSession.caseId!,
+            statementId: 'claim_main',
+            evidenceId,
+          })),
           viewedEvidenceIds: rawSession.viewedEvidenceIds ?? [],
           revealedEvidenceIds: rawSession.revealedEvidenceIds ?? [],
           selectedService: rawSession.selectedService ?? null,
@@ -96,6 +104,7 @@ function migrate(raw: unknown): PersistedState | null {
   const stats: PlayerStats = { ...makeDefaultStats(), ...candidate.stats };
   // v8 removed the hard bankruptcy gate — un-stick anyone saved mid-block.
   if (fromVersion < 8) stats.isBankrupt = false;
+  if (fromVersion < 9) stats.metaUnlocked = true;
 
   return {
     version: GAME_CONFIG.saveVersion,

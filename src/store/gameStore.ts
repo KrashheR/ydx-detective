@@ -4,7 +4,7 @@
  * This is the single runtime authority for mutable player state. It composes:
  *   • the pure reward engine        (src/engine/rewardEngine.ts)
  *   • the persistence layer         (src/services/persistence.ts)
- *   • the Yandex SDK boundary       (src/services/yandexSDK.ts)
+ *   • the portal-neutral SDK boundary (src/services/platformAdapter.ts)
  *
  * ── Yandex SDK ↔ engine interaction map ──────────────────────────────────
  *
@@ -49,7 +49,7 @@ import {
   showRewardedAd,
   trackAdOffer,
   submitLeaderboardScore,
-} from '../services/yandexSDK';
+} from '../services/platformAdapter';
 import { GOAL, initMetrica, setUserParams, trackGoal } from '../services/metrica';
 import {
   SUPPORTED_LANGUAGES,
@@ -59,6 +59,7 @@ import {
   type Decision,
   type Language,
   type InvestigationService,
+  type InteractiveEvidenceProgress,
   type PersistedState,
   type PlayerStats,
   type RewardBreakdown,
@@ -134,7 +135,18 @@ export interface GameStoreState {
    * card is now considered open.
    */
   markEvidenceAsViewed: (id: string, caseData: Case) => boolean;
-  toggleEvidenceStamp: (id: string) => void;
+  toggleEvidenceStamp: (id: string, caseData?: Case) => boolean;
+  updateInteractiveProgress: (
+    caseData: Case,
+    evidenceId: string,
+    progress: InteractiveEvidenceProgress,
+  ) => void;
+  completeFinalSynthesis: (
+    caseData: Case,
+    links: Array<readonly [string, string]>,
+    skipped?: boolean,
+    completed?: boolean,
+  ) => void;
   /**
    * Reveal an evidence card's true status for the active case.
    *   • `note`    — charges `balance` (20% of the claim); no-op if unaffordable.
@@ -290,6 +302,41 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       // so re-entering a case mid-investigation restores stamps & viewed cards.
       const existing = get().session;
       if (existing && existing.caseId === caseData.id) {
+        if (!caseData.claimStatements) {
+          trackGoal(GOAL.investigationResume, {
+            caseId: caseData.id,
+            viewedCount: existing.viewedEvidenceIds.length,
+            stampCount: existing.selectedEvidenceIds.length,
+          });
+          return;
+        }
+        const normalizedStamps = ((existing.stamps?.length ?? 0) > 0
+          ? existing.stamps!
+          : existing.selectedEvidenceIds.map((evidenceId) => ({
+              caseId: caseData.id,
+              statementId: 'claim_main',
+              evidenceId,
+            })))
+          .map((stamp) => {
+            const evidence = caseData.evidences.find((item) => item.id === stamp.evidenceId);
+            if (!evidence || evidence.statementLink?.relation !== 'contradicts') return null;
+            return {
+              caseId: caseData.id,
+              evidenceId: evidence.id,
+              statementId: stamp.statementId === 'claim_main'
+                ? evidence.statementLink.statementId
+                : stamp.statementId,
+            };
+          })
+          .filter((stamp): stamp is NonNullable<typeof stamp> => stamp != null);
+        set({
+          session: {
+            ...existing,
+            stamps: normalizedStamps,
+            selectedEvidenceIds: normalizedStamps.map((stamp) => stamp.evidenceId),
+          },
+        });
+        persist();
         trackGoal(GOAL.investigationResume, {
           caseId: caseData.id,
           viewedCount: existing.viewedEvidenceIds.length,
@@ -309,6 +356,7 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         session: {
           caseId: caseData.id,
           selectedEvidenceIds: [],
+          stamps: [],
           viewedEvidenceIds: [],
           revealedEvidenceIds: [],
           selectedService: null,
@@ -339,7 +387,12 @@ export const useGameStore = create<GameStoreState>((set, get) => {
 
       // Budgeted case: refuse a *new* open once the budget is exhausted.
       const budget = caseData.investigationBudget;
-      if (budget != null && session.viewedEvidenceIds.length >= budget + session.extraOpens) {
+      const evidence = caseData.evidences.find((item) => item.id === id);
+      if (!evidence) return false;
+      const budgetedViews = session.viewedEvidenceIds.filter((viewedId) =>
+        caseData.evidences.find((item) => item.id === viewedId)?.evidenceTier !== 'arc'
+      ).length;
+      if (budget != null && evidence.evidenceTier !== 'arc' && budgetedViews >= budget + session.extraOpens) {
         return false;
       }
 
@@ -373,15 +426,57 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       return true;
     },
 
-    toggleEvidenceStamp(id) {
+    toggleEvidenceStamp(id, caseData) {
+      if (!caseData) {
+        set((s) => {
+          if (!s.session) return s;
+          const removing = s.session.selectedEvidenceIds.includes(id);
+          return {
+            session: {
+              ...s.session,
+              selectedEvidenceIds: removing
+                ? s.session.selectedEvidenceIds.filter((item) => item !== id)
+                : [...s.session.selectedEvidenceIds, id],
+              stamps: removing
+                ? (s.session.stamps ?? []).filter((stamp) => stamp.evidenceId !== id)
+                : [...(s.session.stamps ?? []), { caseId: s.session.caseId, statementId: 'claim_main', evidenceId: id }],
+            },
+          };
+        });
+        persist();
+        return true;
+      }
+      const before = get();
+      const evidence = caseData.evidences.find((item) => item.id === id);
+      const link = evidence?.statementLink;
+      const statement = caseData.claimStatements?.find((item) => item.id === link?.statementId);
+      const progress = before.stats.interactiveEvidenceProgress[`${caseData.id}/${id}`];
+      const interactive = evidence != null && ['document_scan', 'thermal_scan', 'shadow_time_check', 'seal_match', 'surface_reveal'].includes(evidence.type);
+      if (
+        !before.session || before.session.caseId !== caseData.id ||
+        !evidence || link?.relation !== 'contradicts' || !statement?.stampable ||
+        !before.session.viewedEvidenceIds.includes(id) ||
+        (interactive && !progress?.analysisCompleted)
+      ) return false;
       set((s) => {
         if (!s.session) return s;
         const selected = s.session.selectedEvidenceIds;
-        const next = selected.includes(id)
-          ? selected.filter((x) => x !== id)
-          : [...selected, id];
+        const removing = selected.includes(id);
+        const next = removing ? selected.filter((x) => x !== id) : [...selected, id];
+        const stamps = removing
+          ? (s.session.stamps ?? []).filter((stamp) => stamp.evidenceId !== id)
+          : [...(s.session.stamps ?? []), { caseId: caseData.id, statementId: link.statementId, evidenceId: id }];
         return {
-          session: { ...s.session, selectedEvidenceIds: next },
+          session: { ...s.session, selectedEvidenceIds: next, stamps },
+          stats: progress
+            ? {
+                ...s.stats,
+                interactiveEvidenceProgress: {
+                  ...s.stats.interactiveEvidenceProgress,
+                  [`${caseData.id}/${id}`]: { ...progress, selectedContradiction: !removing },
+                },
+              }
+            : s.stats,
         };
       });
       persist();
@@ -391,10 +486,71 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         trackGoal(GOAL.evidenceStamp, {
           caseId: after.caseId,
           evidenceId: id,
+          statementId: link.statementId,
           stamped: after.selectedEvidenceIds.includes(id),
           stampCount: after.selectedEvidenceIds.length,
         });
       }
+      return true;
+    },
+
+    updateInteractiveProgress(caseData, evidenceId, progress) {
+      if (!caseData.evidences.some((evidence) => evidence.id === evidenceId)) return;
+      const key = `${caseData.id}/${evidenceId}`;
+      const previous = get().stats.interactiveEvidenceProgress[key];
+      set((s) => ({
+        stats: {
+          ...s.stats,
+          interactiveEvidenceProgress: {
+            ...s.stats.interactiveEvidenceProgress,
+            [key]: progress,
+          },
+        },
+      }));
+      persist();
+      if (!previous?.opened && progress.opened) {
+        trackGoal(GOAL.evidenceAnalysisStart, { caseId: caseData.id, evidenceId });
+      }
+      if ((progress.hintLevel ?? 0) > (previous?.hintLevel ?? 0)) {
+        trackGoal(GOAL.evidenceAnalysisHint, {
+          caseId: caseData.id,
+          evidenceId,
+          hintLevel: progress.hintLevel,
+        });
+      }
+      if (!previous?.analysisCompleted && progress.analysisCompleted) {
+        trackGoal(GOAL.evidenceAnalysisComplete, {
+          caseId: caseData.id,
+          evidenceId,
+          attempts: progress.attempts,
+          hintLevel: progress.hintLevel,
+        });
+      }
+    },
+
+    completeFinalSynthesis(caseData, links, skipped = false, completed = true) {
+      if (!caseData.finalSynthesis || !get().stats.results[caseData.id]?.verdictCorrect) return;
+      const previous = get().stats.finalSynthesisProgress[caseData.id];
+      set((s) => ({
+        stats: {
+          ...s.stats,
+          finalSynthesisProgress: {
+            ...s.stats.finalSynthesisProgress,
+            [caseData.id]: {
+              completed: completed && !skipped,
+              skipped,
+              attempts: (previous?.attempts ?? 0) + 1,
+              links,
+            },
+          },
+        },
+      }));
+      persist(true);
+      trackGoal(skipped ? GOAL.finalSynthesisSkip : GOAL.finalSynthesisComplete, {
+        caseId: caseData.id,
+        attempts: (previous?.attempts ?? 0) + 1,
+        linkCount: links.length,
+      });
     },
 
     buyHint(caseData, kind, targetEvidenceId) {
@@ -535,11 +691,19 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       const isReplay = stats.completedCaseIds.includes(caseData.id);
       const rewardEligible = !isReplay;
       const selected = session?.selectedEvidenceIds ?? [];
+      const scoringStamps = (session?.stamps ?? []).map((stamp) => {
+        if (stamp.statementId !== 'claim_main') return stamp;
+        const evidence = caseData.evidences.find((item) => item.id === stamp.evidenceId);
+        return evidence?.statementLink?.relation === 'contradicts'
+          ? { ...stamp, statementId: evidence.statementLink.statementId }
+          : stamp;
+      });
+      const scoringSession = session ? { ...session, stamps: scoringStamps } : null;
 
       const total = totalContradictions(caseData);
-      const { correct, falseStamps } = classifyStamps(caseData, selected);
+      const { correct, falseStamps } = classifyStamps(caseData, selected, scoringStamps);
       const proofRatio = total === 0 ? 1 : correct / total;
-      const mastery = evaluateMastery(caseData, decision, session);
+      const mastery = evaluateMastery(caseData, decision, scoringSession);
       const perfectStreak = evaluatePerfectCaseStreak(
         stats.perfectCaseStreakCount,
         mastery === 'silver' || mastery === 'gold',
@@ -568,6 +732,7 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         perfectStreakBonusPct: perfectStreak.multiplierPct,
         opensUsed: session?.viewedEvidenceIds.length ?? 0,
         rewardEligible,
+        statementStamps: scoringStamps,
       });
 
       // Career XP, then detect whether this case crossed a rank threshold.
@@ -637,6 +802,9 @@ export const useGameStore = create<GameStoreState>((set, get) => {
             : stats.lastDailyClaimServerMs,
         lastDailyCaseId: caseData.type === 'daily' ? caseData.id : stats.lastDailyCaseId,
         dailyAdCaseId: caseData.type === 'daily' ? null : stats.dailyAdCaseId,
+        metaUnlocked: stats.metaUnlocked || (
+          breakdown.verdictCorrect && caseData.onboarding?.menuUnlockAfterVerdict === true
+        ),
       };
 
       // Achievements newly satisfied by this case grant one-time XP + currency.
@@ -700,6 +868,9 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         falseStamps,
         opensUsed: session?.viewedEvidenceIds.length ?? 0,
       });
+      if (!stats.metaUnlocked && finalStats.metaUnlocked) {
+        trackGoal(GOAL.onboardingComplete, { caseId: caseData.id });
+      }
       for (const a of unlocks) {
         trackGoal(GOAL.achievement, { achievementId: a.id, caseId: caseData.id });
       }
@@ -953,6 +1124,9 @@ export function selectCaseInvestigationGate(
   budgetExhausted: boolean;
 } {
   const viewed = state.session?.viewedEvidenceIds ?? [];
+  const budgetedViewed = viewed.filter((id) =>
+    caseData.evidences.find((item) => item.id === id)?.evidenceTier !== 'arc'
+  );
   const stamped = state.session?.selectedEvidenceIds ?? [];
 
   const hasStampedContradiction = stamped.length > 0;
@@ -960,7 +1134,7 @@ export function selectCaseInvestigationGate(
   const budget = baseBudget == null ? null : baseBudget + (state.session?.extraOpens ?? 0);
 
   if (budget != null) {
-    const opensRemaining = Math.max(0, budget - viewed.length);
+    const opensRemaining = Math.max(0, budget - budgetedViewed.length);
     return {
       // Approving a payout is the default, low-stakes action — always available.
       canApprove: true,

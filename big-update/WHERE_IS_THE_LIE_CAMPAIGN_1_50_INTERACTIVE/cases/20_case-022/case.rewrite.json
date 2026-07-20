@@ -1,0 +1,531 @@
+{
+  "id": "case-022",
+  "campaignOrder": 20,
+  "requiredLevel": 10,
+  "act": 2,
+  "actTitle": {
+    "ru": "Пять лет назад",
+    "en": "Five Years Earlier"
+  },
+  "title": {
+    "ru": "Погром в «Компасе»",
+    "en": "The Break-In at Compass"
+  },
+  "difficulty": "hard",
+  "claimAmount": {
+    "value": 2200,
+    "currency": "EUR"
+  },
+  "groundTruth": "valid",
+  "correctDecision": "approve",
+  "investigationBudget": 3,
+  "claimant": {
+    "name": {
+      "ru": "Михаил Тернов, 69 лет",
+      "en": "Mikhail Ternov, age 69"
+    },
+    "migrationNote": {
+      "ru": "Полностью заменить прежний образ владельца додзё. Новый герой — реставратор навигационных приборов. Нужен новый портрет.",
+      "en": "Completely replace the former dojo-owner concept. The new character restores navigation instruments and requires a new portrait."
+    },
+    "portrait": {
+      "characterId": "mikhail-ternov",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Михаил Тернов",
+        "en": "Mikhail Ternov, age 69"
+      },
+      "assetId": "asset-025",
+      "src": "src/data/cases/case-022/people/mikhail-ternov.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-022/people/mikhail-ternov.webp",
+      "caseRelativeSrc": "people/mikhail-ternov.webp",
+      "installTo": "public/people/mikhail-ternov.webp",
+      "legacyRuntimeUrl": "people/mikhail-ternov.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "e98f476f001be46417a3ab0f90eb2c64ba1b5ffa7290fd3a8130b495fb97de2f"
+    },
+    "portraitStatus": "generated_replacement_included",
+    "portraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/mikhail-ternov.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-022/people/mikhail-ternov.webp",
+      "copyTo": "public/people/mikhail-ternov.webp",
+      "replacesExistingValue": "people/khariton.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Из мастерской украли не самый дорогой предмет, а старый реестр. Возможно, стоимость здесь вообще не главный вопрос. — В. Лебедева",
+      "en": "The thieves did not take the workshop's most valuable item. They took an old registry. Perhaps value is not the real issue here. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Я узнала подпись. Константин Карелин не просто видел форму 17-К — он связывал выплаты с «Восточным двором». Кто-то пришёл за реестром раньше нас. В уцелевшей части реестра рядом с бытовыми делами встречаются промышленные реле, лабораторные партии и навигационные модули — схема давно вышла за пределы обычных квартир.",
+      "en": "I recognized the signature. Konstantin Karelin did more than see form 17-K—he linked payouts to Eastern Yard. Someone reached the registry before us. In the surviving pages, ordinary household claims appear alongside industrial relays, laboratory batches, and navigation modules. This operation moved beyond apartment fraud long ago."
+    },
+    "nextCaseTeaser": {
+      "ru": "Следующий акт начнётся с денег, снятых якобы за границей. Маршрут приведёт нас всё к тому же складу.",
+      "en": "The next act begins with money supposedly withdrawn abroad. Its route leads back to the same warehouse."
+    },
+    "seasonClue": {
+      "id": "karelin-route",
+      "label": {
+        "ru": "Резолюция Карелина",
+        "en": "Karelin's Authorization"
+      },
+      "description": {
+        "ru": "В 2021 году Карелин направлял застрахованное имущество через «Восточный двор» после выплаты.",
+        "en": "In 2021, Karelin routed insured property through Eastern Yard after payouts were issued."
+      },
+      "progressIndex": 5,
+      "progressTotal": 5
+    },
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Ночью неизвестные взломали мою реставрационную мастерскую «Компас», разбили витрины и похитили латунный судовой хронометр вместе со старым страховым реестром, который я готовил к передаче в городской архив. Прошу возместить повреждения и застрахованную стоимость прибора.",
+    "en": "During the night, unknown intruders broke into my Compass restoration workshop, smashed display cases, and stole a brass marine chronometer along with an old insurance registry I was preparing for the city archive. I am claiming the damage and the instrument's insured value."
+  },
+  "evidence": [
+    {
+      "id": "ev-forensic",
+      "order": 1,
+      "type": "document",
+      "title": {
+        "ru": "Осмотр служебной двери",
+        "en": "Service Door Inspection"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Сердцевина замка высверлена снаружи, металлическая стружка находится внутри помещения. Код сигнализации введён не был.",
+        "en": "The lock cylinder was drilled from outside, and metal shavings lie inside the premises. No alarm code was entered."
+      },
+      "statusExplanation": {
+        "ru": "Следы подтверждают реальное внешнее проникновение, а не открытие владельцем.",
+        "en": "The marks confirm a genuine forced entry from outside, not access by the owner."
+      },
+      "statementLink": {
+        "statementId": "claim_break_in",
+        "relation": "supports",
+        "reason": {
+          "ru": "Следы подтверждают реальное внешнее проникновение, а не открытие владельцем.",
+          "en": "The marks confirm a genuine forced entry from outside, not access by the owner."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-cctv",
+      "order": 2,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера соседней аптеки",
+        "en": "Neighboring Pharmacy Camera"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "В 02:12 двое взрослых выгружают инструменты из серого фургона, входят через служебный двор и через шесть минут выносят плоский архивный короб и небольшой футляр.",
+        "en": "At 2:12 a.m., two adults unload tools from a gray van, enter through the service yard, and leave six minutes later carrying a flat archive box and a small case."
+      },
+      "statusExplanation": {
+        "ru": "Независимая камера подтверждает взлом, количество участников и похищенные предметы.",
+        "en": "Independent footage confirms the break-in, the number of intruders, and the stolen items."
+      },
+      "statementLink": {
+        "statementId": "claim_property_stolen",
+        "relation": "supports",
+        "reason": {
+          "ru": "Независимая камера подтверждает взлом, количество участников и похищенные предметы.",
+          "en": "Independent footage confirms the break-in, the number of intruders, and the stolen items."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-027",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-022/evidence/case-022-ev-cctv.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-022/evidence/case-022-ev-cctv.webp",
+          "caseRelativeSrc": "evidence/case-022-ev-cctv.webp",
+          "installTo": "public/evidence/case-022-ev-cctv.webp",
+          "legacyRuntimeUrl": "evidence/case-022-ev-cctv.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "b7d1dbc99a9c5bf8a4ba3bdfc1d22adcca8d1388328ad3598e412ba43a49594a"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-022/evidence/case-022-ev-cctv.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-022/evidence/case-022-ev-cctv.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-022-ev-cctv.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-022/evidence/case-022-ev-cctv.webp",
+        "copyTo": "public/evidence/case-022-ev-cctv.webp"
+      }
+    },
+    {
+      "id": "ev-inventory",
+      "order": 3,
+      "type": "document",
+      "title": {
+        "ru": "Архивная опись",
+        "en": "Archive Inventory"
+      },
+      "isContradiction": false,
+      "narrativeRole": "arc_context",
+      "text": {
+        "ru": "Хронометр зарегистрирован и оценён до происшествия. Реестр содержит копии выплат 2021 года, в том числе папку с номером 17-К.",
+        "en": "The chronometer was registered and appraised before the incident. The registry contains copies of 2021 payouts, including file 17-K."
+      },
+      "statusExplanation": {
+        "ru": "Документ подтверждает существование и стоимость имущества, а также возможный мотив кражи реестра.",
+        "en": "The inventory confirms the existence and value of the property, as well as a possible motive for stealing the registry."
+      },
+      "statementLink": {
+        "statementId": "claim_property_existed",
+        "relation": "supports",
+        "reason": {
+          "ru": "Документ подтверждает существование и стоимость имущества, а также возможный мотив кражи реестра.",
+          "en": "The inventory confirms the existence and value of the property, as well as a possible motive for stealing the registry."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-fragment",
+      "order": 4,
+      "type": "document_scan",
+      "title": {
+        "ru": "Экспертиза уцелевшего листа",
+        "en": "Surviving Page Examination"
+      },
+      "isContradiction": false,
+      "narrativeRole": "arc_proof",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Проявилась запись «К. Карелин» и маршрут «через Восточный двор после выплаты».",
+        "en": "The notes ‘K. Karelin’ and ‘via Eastern Yard after payout’ have been revealed."
+      },
+      "previousType": "photo",
+      "description": {
+        "ru": "Лист из реестра нашли под опрокинутым шкафом в мастерской «Компас».",
+        "en": "The registry page was found beneath an overturned cabinet in the Compass workshop."
+      },
+      "instruction": {
+        "ru": "Включить боковой свет и найти следы стёртой карандашной резолюции.",
+        "en": "Switch on side light and find the erased pencil authorization."
+      },
+      "assets": {
+        "asset1": "assets/interactive/ev-fragment-base.webp",
+        "asset2": "assets/interactive/ev-fragment-scan-overlay.svg"
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "side_light",
+          "contrast"
+        ],
+        "anomalyZones": [
+          {
+            "id": "erased_resolution",
+            "mode": "side_light",
+            "x": 46,
+            "y": 64,
+            "width": 39,
+            "height": 12,
+            "label": "Проявилась запись «К. Карелин» и маршрут «через Восточный двор после выплаты».",
+            "isContradiction": false,
+            "labelEn": "The notes ‘K. Karelin’ and ‘via Eastern Yard after payout’ have been revealed."
+          }
+        ],
+        "successCondition": {
+          "type": "select_zone",
+          "zoneId": "erased_resolution"
+        }
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Проявилась запись «К. Карелин» и маршрут «через Восточный двор после выплаты».",
+          "en": "The notes ‘K. Karelin’ and ‘via Eastern Yard after payout’ have been revealed."
+        }
+      },
+      "contradictionTarget": null,
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Имя и маршрут перестают быть готовым текстовым спойлером — игрок проявляет их сам.",
+          "en": "The name and route are no longer handed to the player as a text spoiler; the player reveals them personally."
+        },
+        "playerAction": {
+          "ru": "Включить боковой свет и найти следы стёртой карандашной резолюции.",
+          "en": "Switch on side light and find the erased pencil authorization."
+        },
+        "conclusion": {
+          "ru": "Проявилась запись «К. Карелин» и маршрут «через Восточный двор после выплаты».",
+          "en": "The notes ‘K. Karelin’ and ‘via Eastern Yard after payout’ have been revealed."
+        }
+      },
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "imageAssets": [
+        {
+          "assetId": "asset-028",
+          "role": "interactive_base",
+          "src": "src/data/cases/case-022/assets/interactive/ev-fragment-base.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-022/assets/interactive/ev-fragment-base.webp",
+          "caseRelativeSrc": "assets/interactive/ev-fragment-base.webp",
+          "installTo": "src/data/cases/case-022/assets/interactive/ev-fragment-base.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1600,
+          "height": 1100,
+          "sha256": "55633c17a2989b13a8d2127bcd338755cf5670ce2d888e4029cef9b4ffc55f00"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-022/assets/interactive/ev-fragment-base.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-022/assets/interactive/ev-fragment-base.webp",
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Дверь действительно взломана снаружи, а камера фиксирует двух неизвестных.",
+      "Хронометр и реестр существовали до нападения и были вынесены налётчиками.",
+      "Проявилась запись «К. Карелин» и маршрут «через Восточный двор после выплаты».",
+      "Погром и кража подлинные. Выплату Тернову следует одобрить."
+    ],
+    "en": [
+      "The marks confirm a genuine forced entry from outside, not access by the owner.",
+      "Independent footage confirms the break-in, the number of intruders, and the stolen items.",
+      "The inventory confirms the existence and value of the property, as well as a possible motive for stealing the registry.",
+      "The notes ‘K. Karelin’ and ‘via Eastern Yard after payout’ have been revealed.",
+      "No material statement has been disproven. The claim should be approved."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Полностью удалить прежнюю пародийную арку додзё.",
+      "Создать оригинального реставратора и эмоционально значимый реальный налёт.",
+      "Завершить акт прямой связью Карелина и Восточного двора.",
+      "Интегрировать document_scan в улику ev-fragment; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate document_scan into evidence ev-fragment; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "people/mikhail-ternov.webp",
+      "action": "generate",
+      "prompt": "Illustrated archival claimant ID portrait matching an established insurance detective game: Russian male restoration craftsman, 69 years old, thoughtful lined face, gray hair, simple dark cardigan and light work shirt, calm dignity, neutral document-photo background, original appearance, no martial arts clothing, no franchise imagery, no text or logo."
+    },
+    {
+      "file": "evidence/case-022-ev-workshop.webp",
+      "action": "generate",
+      "prompt": "Documentary insurance evidence photograph inside a small navigation-instrument restoration workshop after a real burglary: broken glass display cases, overturned wooden cabinet, empty padded stand for a brass marine chronometer, scattered archival papers and precision tools, realistic restrained damage, no dojo, no weapons, no logos, no readable text, no watermark."
+    },
+    {
+      "file": "evidence/case-022-ev-cctv.webp",
+      "action": "generate",
+      "prompt": "Night pharmacy exterior CCTV frame looking toward a service courtyard: two adult burglars in plain dark work clothes carrying a flat archive box and a small hard case toward an unmarked gray van, faces indistinct, realistic municipal lighting and CCTV compression, no masks with colors, no logos, no text, no watermark."
+    },
+    {
+      "file": "assets/interactive/ev-fragment-base.webp",
+      "purpose": "Базовая версия документа в normal-режиме",
+      "resolution": "1600×1100",
+      "format": "WebP",
+      "transparency": false,
+      "generatedBy": "image_model",
+      "manualPost": "Удалить случайный читаемый текст; выровнять документ; оставить поля для UI-слоёв.",
+      "prompt": "Create a realistic fictional administrative document for an insurance detective game. Старый лист страхового реестра с потёртой бумагой, пустой зоной резолюции и следами ластика; текст программный. Full document visible from above, utilitarian layout, paper texture, large blank structured fields. No real organization, logo, brand, personal data or watermark. Do not render critical readable text; dates, names, codes and signatures will be added in HTML/SVG. The hidden anomaly must not be obvious in the normal version.",
+      "evidenceId": "ev-fragment",
+      "evidenceType": "document_scan"
+    },
+    {
+      "file": "assets/interactive/ev-fragment-scan-overlay.svg",
+      "purpose": "Совмещённый слой УФ/просвета/бокового света",
+      "resolution": "viewBox 0 0 100 100",
+      "format": "SVG",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "После финального base.webp откалибровать hotspot и режим проявления.",
+      "prompt": null,
+      "evidenceId": "ev-fragment",
+      "evidenceType": "document_scan"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Ночью неизвестные взломали мою реставрационную мастерскую «Компас», разбили витрины и похитили латунный судовой хронометр вместе со старым страховым реестром, который я готовил к передаче в городской архив. Прошу возместить повреждения и застрахованную стоимость прибора.",
+        "en": "During the night, unknown intruders broke into my Compass restoration workshop, smashed display cases, and stole a brass marine chronometer along with an old insurance registry I was preparing for the city archive. I am claiming the damage and the instrument's insured value."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_break_in",
+      "text": {
+        "ru": "В мастерскую «Компас» проникли снаружи и устроили погром.",
+        "en": "Intruders entered the Compass workshop from outside and ransacked it."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_property_existed",
+      "text": {
+        "ru": "Похищенные хронометр и реестр существовали до нападения.",
+        "en": "The stolen chronometer and registry existed before the break-in."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_property_stolen",
+      "text": {
+        "ru": "Имущество вынесли неизвестные, а не спрятал владелец.",
+        "en": "Unknown intruders removed the property; the owner did not conceal it."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-022",
+    "archiveBasePath": "generated-assets/src/data/cases/case-022",
+    "claimantPortrait": {
+      "characterId": "mikhail-ternov",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Михаил Тернов",
+        "en": "Mikhail Ternov, age 69"
+      },
+      "assetId": "asset-025",
+      "src": "src/data/cases/case-022/people/mikhail-ternov.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-022/people/mikhail-ternov.webp",
+      "caseRelativeSrc": "people/mikhail-ternov.webp",
+      "installTo": "public/people/mikhail-ternov.webp",
+      "legacyRuntimeUrl": "people/mikhail-ternov.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "e98f476f001be46417a3ab0f90eb2c64ba1b5ffa7290fd3a8130b495fb97de2f"
+    },
+    "claimantPortraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/mikhail-ternov.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-022/people/mikhail-ternov.webp",
+      "copyTo": "public/people/mikhail-ternov.webp",
+      "replacesExistingValue": "people/khariton.webp"
+    },
+    "caseSceneAssets": [
+      {
+        "assetId": "asset-026",
+        "role": "case_scene",
+        "src": "src/data/cases/case-022/evidence/case-022-ev-workshop.webp",
+        "archiveSrc": "generated-assets/src/data/cases/case-022/evidence/case-022-ev-workshop.webp",
+        "caseRelativeSrc": "evidence/case-022-ev-workshop.webp",
+        "installTo": "public/evidence/case-022-ev-workshop.webp",
+        "legacyRuntimeUrl": "evidence/case-022-ev-workshop.webp",
+        "format": "webp",
+        "width": 434,
+        "height": 326,
+        "sha256": "9219037edbb3e990959d806dec321d1c9154eaa6f11c863892afdb33e0a662d0"
+      }
+    ],
+    "evidence": [
+      {
+        "evidenceId": "ev-cctv",
+        "title": {
+          "ru": "Камера соседней аптеки",
+          "en": "Neighboring Pharmacy Camera"
+        },
+        "primaryImage": "src/data/cases/case-022/evidence/case-022-ev-cctv.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-022/evidence/case-022-ev-cctv.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-022-ev-cctv.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-022/evidence/case-022-ev-cctv.webp",
+          "copyTo": "public/evidence/case-022-ev-cctv.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-027",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-022/evidence/case-022-ev-cctv.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-022/evidence/case-022-ev-cctv.webp",
+            "caseRelativeSrc": "evidence/case-022-ev-cctv.webp",
+            "installTo": "public/evidence/case-022-ev-cctv.webp",
+            "legacyRuntimeUrl": "evidence/case-022-ev-cctv.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "b7d1dbc99a9c5bf8a4ba3bdfc1d22adcca8d1388328ad3598e412ba43a49594a"
+          }
+        ]
+      },
+      {
+        "evidenceId": "ev-fragment",
+        "title": {
+          "ru": "Экспертиза уцелевшего листа",
+          "en": "Surviving Page Examination"
+        },
+        "primaryImage": "src/data/cases/case-022/assets/interactive/ev-fragment-base.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-022/assets/interactive/ev-fragment-base.webp",
+        "legacyImageBinding": null,
+        "assets": [
+          {
+            "assetId": "asset-028",
+            "role": "interactive_base",
+            "src": "src/data/cases/case-022/assets/interactive/ev-fragment-base.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-022/assets/interactive/ev-fragment-base.webp",
+            "caseRelativeSrc": "assets/interactive/ev-fragment-base.webp",
+            "installTo": "src/data/cases/case-022/assets/interactive/ev-fragment-base.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1600,
+            "height": 1100,
+            "sha256": "55633c17a2989b13a8d2127bcd338755cf5670ce2d888e4029cef9b4ffc55f00"
+          }
+        ]
+      }
+    ]
+  }
+}

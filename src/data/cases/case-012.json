@@ -1,285 +1,386 @@
 {
   "id": "case-012",
   "type": "standard",
+  "campaignOrder": 15,
+  "requiredLevel": 8,
+  "act": 2,
+  "actTitle": {
+    "ru": "Пять лет назад",
+    "en": "Five Years Earlier",
+    "tr": "Five Years Earlier",
+    "ar": "Five Years Earlier",
+    "kk": "Пять лет назад"
+  },
   "difficulty": "medium",
   "claimAmount": 20000,
   "truth": "valid",
   "title": {
-    "ru": "Выплата по критическому заболеванию",
-    "en": "Critical-Illness Payout",
-    "tr": "Kritik Hastalık Ödemesi",
-    "ar": "تعويض المرض الخطير",
-    "kk": "Ауыр науқас бойынша төлем"
+    "ru": "Право на время",
+    "en": "The Right to Time",
+    "tr": "The Right to Time",
+    "ar": "The Right to Time",
+    "kk": "Право на время"
   },
   "claim": {
     "person": {
-      "ru": "Хельга Новак",
-      "en": "Helga Novak",
-      "tr": "Helga Novak",
-      "ar": "هيلغا نوفاك",
-      "kk": "Хельга Новак"
+      "ru": "Хельга Новак, 49 лет",
+      "en": "Helga Novak, age 49",
+      "tr": "Helga Novak, age 49",
+      "ar": "Helga Novak, age 49",
+      "kk": "Хельга Новак, 49 лет"
     },
     "story": {
-      "ru": "В марте мне диагностировали рак молочной железы, я прошла операцию и сейчас на химиотерапии. Это заболевание входит в мой полис критических заболеваний. Прошу единовременную выплату.",
-      "en": "In March I was diagnosed with breast cancer, underwent surgery and am now in chemotherapy. This condition is covered by my critical-illness policy. I am requesting the lump-sum payout.",
-      "tr": "Mart ayında bana meme kanseri teşhisi kondu, ameliyat oldum ve şimdi kemoterapi görüyorum. Bu hastalık kritik hastalık poliçemin kapsamında. Toplu ödememi talep ediyorum.",
-      "ar": "في مارس شُخّصت بسرطان الثدي، وخضعت لعملية جراحية وأتلقى الآن العلاج الكيميائي. هذه الحالة مشمولة في وثيقة تأمين الأمراض الخطيرة الخاصة بي. أطلب الدفعة الإجمالية.",
-      "kk": "Наурызда маған сүт безі қатерлі ісігі диагнозы қойылды, операция жасалды, қазір химиотерапия алып жатырмын. Бұл ауру менің ауыр науқас полисіме кіреді. Біржолғы төлемді сұраймын."
+      "ru": "В марте у меня диагностировали рак молочной железы II стадии. Я перенесла операцию и прохожу химиотерапию. Полис критических заболеваний действует больше года и включает этот диагноз. Прошу предусмотренную единовременную выплату.",
+      "en": "In March, I was diagnosed with stage II breast cancer. I underwent surgery and am now receiving chemotherapy. My critical-illness policy has been active for more than a year and covers this diagnosis. I am claiming the specified lump-sum benefit.",
+      "tr": "In March, I was diagnosed with stage II breast cancer. I underwent surgery and am now receiving chemotherapy. My critical-illness policy has been active for more than a year and covers this diagnosis. I am claiming the specified lump-sum benefit.",
+      "ar": "In March, I was diagnosed with stage II breast cancer. I underwent surgery and am now receiving chemotherapy. My critical-illness policy has been active for more than a year and covers this diagnosis. I am claiming the specified lump-sum benefit.",
+      "kk": "В марте у меня диагностировали рак молочной железы II стадии. Я перенесла операцию и прохожу химиотерапию. Полис критических заболеваний действует больше года и включает этот диагноз. Прошу предусмотренную единовременную выплату."
     }
   },
-  "coverImage": "covers/case-012.svg",
-  "personImage": "people/helga.webp",
   "client": {
     "role": {
-      "ru": "Заявитель · физ. лицо",
-      "en": "Claimant · individual",
-      "tr": "Başvuru sahibi · gerçek kişi",
-      "ar": "مقدم الطلب · شخص طبيعي",
-      "kk": "Өтініш беруші · жеке тұлға"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Возраст",
-          "en": "Age",
-          "tr": "Yaş",
-          "ar": "العمر",
-          "kk": "Жасы"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "49 лет",
-          "en": "49 years old",
-          "tr": "49 yaşında",
-          "ar": "49 عامًا",
-          "kk": "49 жаста"
+          "ru": "2",
+          "en": "2",
+          "tr": "2",
+          "ar": "2",
+          "kk": "2"
         }
       },
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Вена",
-          "en": "Vienna",
-          "tr": "Viyana",
-          "ar": "فيينا",
-          "kk": "Вена"
-        }
-      },
-      {
-        "k": {
-          "ru": "Клиент с",
-          "en": "Client since",
-          "tr": "Müşteri",
-          "ar": "عميل منذ",
-          "kk": "Клиент"
-        },
-        "v": {
-          "ru": "2014 г.",
-          "en": "2014",
-          "tr": "2014",
-          "ar": "2014",
-          "kk": "2014 ж."
-        }
-      },
-      {
-        "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
-        },
-        "v": {
-          "ru": "ДМС · МС-12167340-X8",
-          "en": "Health · MS-12167340-X8",
-          "tr": "Sağlık · MS-12167340-X8",
-          "ar": "الصحة · MS-12167340-X8",
-          "kk": "Медициналық сақтандыру · МС-12167340-X8"
-        }
-      },
-      {
-        "k": {
-          "ru": "Документ",
-          "en": "Document",
-          "tr": "Belge",
-          "ar": "الوثيقة",
-          "kk": "Құжат"
-        },
-        "v": {
-          "ru": "Паспорт AT-X6 667788993-35160",
-          "en": "Passport AT-X6 667788993-35160",
-          "tr": "Pasaport AT-X6 667788993-35160",
-          "ar": "جواز السفر AT-X6 667788993-35160",
-          "kk": "Паспорт AT-X6 667788993-35160"
+          "ru": "15",
+          "en": "15",
+          "tr": "15",
+          "ar": "15",
+          "kk": "15"
         }
       }
     ]
   },
+  "coverImage": "covers/case-012.svg",
+  "personImage": "people/helga.webp",
   "evidences": [
     {
       "id": "ev-diagnosis",
+      "order": 1,
       "type": "document",
       "title": {
-        "ru": "Больничный диагноз",
-        "en": "Hospital Diagnosis Record",
-        "tr": "Hastane Tanı Kaydı",
-        "ar": "سجل التشخيص بالمستشفى",
-        "kk": "Ауруханалық диагноз жазбасы"
+        "ru": "Биопсия и протокол операции",
+        "en": "Biopsy and Surgical Report",
+        "tr": "Biopsy and Surgical Report",
+        "ar": "Biopsy and Surgical Report",
+        "kk": "Биопсия и протокол операции"
       },
       "content": {
-        "ru": "Биопсия от 12 марта подтвердила инвазивную карциному молочной железы, стадия II. Гистология и протокол операции от 28 марта приложены к карте пациента.",
-        "en": "A biopsy on 12 March confirmed invasive breast carcinoma, stage II. Histology and the 28 March surgical report are attached to the patient file.",
-        "tr": "12 Mart tarihli biyopsi, evre II invaziv meme karsinomunu doğruladı. Histoloji ve 28 Mart ameliyat raporu hasta dosyasına eklenmiştir.",
-        "ar": "أكدت خزعة بتاريخ 12 مارس وجود سرطان ثدي غازٍ من المرحلة الثانية. أُرفقت نتائج علم الأنسجة وتقرير عملية 28 مارس بملف المريضة.",
-        "kk": "12 наурыздағы биопсия II сатыдағы инвазивті сүт безі карциномасын растады. Гистология мен 28 наурыздағы операция хаттамасы науқас картасына тіркелген."
+        "ru": "Биопсия от 12 марта подтверждает инвазивную карциному. Операция проведена 28 марта, гистология совпадает с первоначальным диагнозом.",
+        "en": "A biopsy dated March 12 confirms invasive carcinoma. Surgery took place on March 28, and the histology matches the original diagnosis.",
+        "tr": "A biopsy dated March 12 confirms invasive carcinoma. Surgery took place on March 28, and the histology matches the original diagnosis.",
+        "ar": "A biopsy dated March 12 confirms invasive carcinoma. Surgery took place on March 28, and the histology matches the original diagnosis.",
+        "kk": "Биопсия от 12 марта подтверждает инвазивную карциному. Операция проведена 28 марта, гистология совпадает с первоначальным диагнозом."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Официальный диагноз с биопсией прямо подтверждает заявленное заболевание.",
-        "en": "The official biopsy-based diagnosis directly confirms the claimed condition.",
-        "tr": "Biyopsiye dayalı resmî tanı, talep edilen hastalığı doğrudan doğruluyor.",
-        "ar": "التشخيص الرسمي المبني على الخزعة يؤكد الحالة المطالب بها مباشرة.",
-        "kk": "Биопсияға негізделген ресми диагноз мәлімделген ауруды тікелей растайды."
-      }
+        "ru": "Два независимых медицинских документа подтверждают заболевание и его характер.",
+        "en": "Two independent medical records confirm the illness and its nature.",
+        "tr": "Two independent medical records confirm the illness and its nature.",
+        "ar": "Two independent medical records confirm the illness and its nature.",
+        "kk": "Два независимых медицинских документа подтверждают заболевание и его характер."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_diagnosis",
+        "relation": "supports",
+        "reason": {
+          "ru": "Два независимых медицинских документа подтверждают заболевание и его характер.",
+          "en": "Two independent medical records confirm the illness and its nature.",
+          "tr": "Two independent medical records confirm the illness and its nature.",
+          "ar": "Two independent medical records confirm the illness and its nature.",
+          "kk": "Два независимых медицинских документа подтверждают заболевание и его характер."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "ev-oncologist",
+      "order": 2,
       "type": "document",
       "title": {
-        "ru": "Письмо онколога",
-        "en": "Oncologist's Letter",
-        "tr": "Onkolog Mektubu",
-        "ar": "خطاب طبيب الأورام",
-        "kk": "Онколог хаты"
+        "ru": "Письмо лечащего онколога",
+        "en": "Treating Oncologist's Letter",
+        "tr": "Treating Oncologist's Letter",
+        "ar": "Treating Oncologist's Letter",
+        "kk": "Письмо лечащего онколога"
       },
       "content": {
-        "ru": "Лечащий онколог подтверждает диагноз злокачественного новообразования молочной железы и проводимый курс химиотерапии. Состояние соответствует определению покрываемого заболевания в полисе.",
-        "en": "The treating oncologist confirms the diagnosis of malignant breast cancer and the ongoing course of chemotherapy. The condition matches the policy's definition of a covered illness.",
-        "tr": "Tedaviyi yürüten onkolog, kötü huylu meme kanseri tanısını ve süren kemoterapi kürünü doğrular. Durum, poliçenin kapsanan hastalık tanımıyla örtüşür.",
-        "ar": "يؤكد طبيب الأورام المعالِج تشخيص سرطان الثدي الخبيث ودورة العلاج الكيميائي الجارية. الحالة تطابق تعريف الوثيقة للمرض المشمول.",
-        "kk": "Емдеуші онколог сүт безінің қатерлі ісігі диагнозын және жүргізіліп жатқан химиотерапия курсын растайды. Жағдай полистегі қамтылатын ауру анықтамасына сәйкес келеді."
+        "ru": "Врач подтверждает послеоперационную химиотерапию и соответствие состояния медицинскому определению критического заболевания в полисе.",
+        "en": "The physician confirms postoperative chemotherapy and that the condition meets the policy's medical definition of a critical illness.",
+        "tr": "The physician confirms postoperative chemotherapy and that the condition meets the policy's medical definition of a critical illness.",
+        "ar": "The physician confirms postoperative chemotherapy and that the condition meets the policy's medical definition of a critical illness.",
+        "kk": "Врач подтверждает послеоперационную химиотерапию и соответствие состояния медицинскому определению критического заболевания в полисе."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Специалист прямо указывает, что состояние подпадает под покрытие полиса.",
-        "en": "The specialist explicitly states the condition falls within the policy's coverage.",
-        "tr": "Uzman, durumun poliçenin kapsamına girdiğini açıkça belirtiyor.",
-        "ar": "يذكر الأخصائي صراحةً أن الحالة تقع ضمن تغطية الوثيقة.",
-        "kk": "Маман жағдайдың полис қамтуына кіретінін анық көрсетеді."
-      }
+        "ru": "Специалист прямо связывает диагноз с условиями покрытия.",
+        "en": "The specialist directly confirms that the diagnosis meets the coverage terms.",
+        "tr": "The specialist directly confirms that the diagnosis meets the coverage terms.",
+        "ar": "The specialist directly confirms that the diagnosis meets the coverage terms.",
+        "kk": "Специалист прямо связывает диагноз с условиями покрытия."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_treatment",
+        "relation": "supports",
+        "reason": {
+          "ru": "Специалист прямо связывает диагноз с условиями покрытия.",
+          "en": "The specialist directly confirms that the diagnosis meets the coverage terms.",
+          "tr": "The specialist directly confirms that the diagnosis meets the coverage terms.",
+          "ar": "The specialist directly confirms that the diagnosis meets the coverage terms.",
+          "kk": "Специалист прямо связывает диагноз с условиями покрытия."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "ev-pharmacy",
+      "order": 3,
       "type": "usage_log",
       "title": {
-        "ru": "Журнал выдачи лекарств",
-        "en": "Pharmacy Dispensing Log",
-        "tr": "Eczane Verme Kaydı",
-        "ar": "سجل صرف الأدوية",
-        "kk": "Дәріхана дәрі беру журналы"
+        "ru": "Журнал выдачи препаратов",
+        "en": "Medication Dispensing Log",
+        "tr": "Medication Dispensing Log",
+        "ar": "Medication Dispensing Log",
+        "kk": "Журнал выдачи препаратов"
       },
       "content": {
-        "ru": [
-          "2 апреля — выдан препарат для химиотерапии (цикл 1)",
-          "23 апреля — выдан противорвотный препарат и цикл 2",
-          "14 мая — цикл 3, сопроводительная терапия",
-          "Все назначения подписаны лечащим онкологом"
-        ],
-        "en": [
-          "2 April — chemotherapy agent dispensed (cycle 1)",
-          "23 April — antiemetic and cycle 2 dispensed",
-          "14 May — cycle 3, supportive medication",
-          "All prescriptions signed by the treating oncologist"
-        ],
-        "tr": [
-          "2 Nisan — kemoterapi ilacı verildi (kür 1)",
-          "23 Nisan — bulantı önleyici ve kür 2 verildi",
-          "14 Mayıs — kür 3, destekleyici ilaç",
-          "Tüm reçeteler tedavi eden onkolog tarafından imzalandı"
-        ],
-        "ar": [
-          "2 أبريل — صُرف دواء العلاج الكيميائي (الدورة 1)",
-          "23 أبريل — صُرف مضاد للقيء والدورة 2",
-          "14 مايو — الدورة 3، دواء داعم",
-          "جميع الوصفات موقّعة من طبيب الأورام المعالِج"
-        ],
-        "kk": [
-          "2 сәуір — химиотерапия дәрісі берілді (1-цикл)",
-          "23 сәуір — құсуға қарсы дәрі мен 2-цикл берілді",
-          "14 мамыр — 3-цикл, қосалқы ем",
-          "Барлық тағайындау емдеуші онкологпен қол қойылған"
-        ]
+        "ru": "В апреле и мае выданы три последовательных цикла химиотерапии и сопроводительные лекарства по назначениям одного онкологического центра.",
+        "en": "Three consecutive chemotherapy cycles and supporting medications were dispensed in April and May under prescriptions from the same oncology center.",
+        "tr": "Three consecutive chemotherapy cycles and supporting medications were dispensed in April and May under prescriptions from the same oncology center.",
+        "ar": "Three consecutive chemotherapy cycles and supporting medications were dispensed in April and May under prescriptions from the same oncology center.",
+        "kk": "В апреле и мае выданы три последовательных цикла химиотерапии и сопроводительные лекарства по назначениям одного онкологического центра."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Регулярная выдача химиопрепаратов соответствует заявленному лечению и срокам.",
-        "en": "The regular dispensing of chemotherapy drugs matches the claimed treatment and timeline.",
-        "tr": "Kemoterapi ilaçlarının düzenli verilmesi, talep edilen tedavi ve zaman çizelgesiyle uyumlu.",
-        "ar": "صرف أدوية العلاج الكيميائي بانتظام يتوافق مع العلاج والجدول الزمني المذكورين.",
-        "kk": "Химиопрепараттардың тұрақты берілуі мәлімделген ем мен мерзімдерге сәйкес келеді."
+        "ru": "Лечение реально, последовательно и совпадает со сроками заявления.",
+        "en": "The treatment is genuine, consistent, and matches the claim timeline.",
+        "tr": "The treatment is genuine, consistent, and matches the claim timeline.",
+        "ar": "The treatment is genuine, consistent, and matches the claim timeline.",
+        "kk": "Лечение реально, последовательно и совпадает со сроками заявления."
       },
-      "meta": {
-        "logPrompt": "pharma@rxsys:~$ tail -f /var/log/dispensary.log"
-      }
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_treatment",
+        "relation": "supports",
+        "reason": {
+          "ru": "Лечение реально, последовательно и совпадает со сроками заявления.",
+          "en": "The treatment is genuine, consistent, and matches the claim timeline.",
+          "tr": "The treatment is genuine, consistent, and matches the claim timeline.",
+          "ar": "The treatment is genuine, consistent, and matches the claim timeline.",
+          "kk": "Лечение реально, последовательно и совпадает со сроками заявления."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "ev-policy",
+      "order": 4,
       "type": "document",
       "title": {
-        "ru": "Полис критических заболеваний",
-        "en": "Critical-Illness Policy",
-        "tr": "Kritik Hastalık Poliçesi",
-        "ar": "وثيقة تأمين الأمراض الخطيرة",
-        "kk": "Ауыр науқас полисі"
+        "ru": "Условия полиса",
+        "en": "Policy Terms",
+        "tr": "Policy Terms",
+        "ar": "Policy Terms",
+        "kk": "Условия полиса"
       },
       "content": {
-        "ru": "Полис действует с прошлого года, взносы уплачены. В перечне покрываемых состояний прямо указан рак, требующий хирургии или химиотерапии. Период ожидания пройден.",
-        "en": "The policy has been active since last year with premiums paid. The list of covered conditions explicitly includes cancer requiring surgery or chemotherapy. The waiting period has been completed.",
-        "tr": "Poliçe geçen yıldan beri yürürlükte ve primler ödenmiş. Kapsanan durumlar listesinde ameliyat veya kemoterapi gerektiren kanser açıkça yer alıyor. Bekleme süresi tamamlanmış.",
-        "ar": "الوثيقة سارية منذ العام الماضي والأقساط مدفوعة. تتضمن قائمة الحالات المشمولة صراحةً السرطان الذي يتطلب جراحة أو علاجًا كيميائيًا. اكتملت فترة الانتظار.",
-        "kk": "Полис өткен жылдан бері жарамды, жарналар төленген. Қамтылатын жағдайлар тізімінде операция немесе химиотерапия қажет ететін қатерлі ісік анық көрсетілген. Күту мерзімі өтті."
+        "ru": "Полис действует четырнадцать месяцев, взносы уплачены, период ожидания завершён. Диагноз впервые подтверждён после начала покрытия.",
+        "en": "The policy has been active for fourteen months, premiums are paid, and the waiting period has expired. The diagnosis was first confirmed after coverage began.",
+        "tr": "The policy has been active for fourteen months, premiums are paid, and the waiting period has expired. The diagnosis was first confirmed after coverage began.",
+        "ar": "The policy has been active for fourteen months, premiums are paid, and the waiting period has expired. The diagnosis was first confirmed after coverage began.",
+        "kk": "Полис действует четырнадцать месяцев, взносы уплачены, период ожидания завершён. Диагноз впервые подтверждён после начала покрытия."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Полис активен, период ожидания пройден, и заболевание прямо входит в покрытие.",
-        "en": "The policy is active, the waiting period is met, and the illness is explicitly covered.",
-        "tr": "Poliçe aktif, bekleme süresi dolmuş ve hastalık açıkça kapsam dahilinde.",
-        "ar": "الوثيقة سارية، وفترة الانتظار مستوفاة، والمرض مشمول صراحةً.",
-        "kk": "Полис белсенді, күту мерзімі өтті және ауру анық қамтылған."
-      }
+        "ru": "Все формальные условия выплаты выполнены.",
+        "en": "All formal conditions for the benefit have been met.",
+        "tr": "All formal conditions for the benefit have been met.",
+        "ar": "All formal conditions for the benefit have been met.",
+        "kk": "Все формальные условия выплаты выполнены."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_coverage",
+        "relation": "supports",
+        "reason": {
+          "ru": "Все формальные условия выплаты выполнены.",
+          "en": "All formal conditions for the benefit have been met.",
+          "tr": "All formal conditions for the benefit have been met.",
+          "ar": "All formal conditions for the benefit have been met.",
+          "kk": "Все формальные условия выплаты выполнены."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5
     }
   ],
   "correctDecision": "approve",
   "explanation": {
     "ru": [
-      "Биопсия и операция подтверждают рак молочной железы II стадии.",
-      "Письмо онколога и журнал аптеки соответствуют курсу химиотерапии.",
-      "Полис активен и прямо покрывает это заболевание — выплата обоснована."
+      "Диагноз подтверждён биопсией, операцией и лечащим онкологом.",
+      "Полис действовал задолго до диагноза, период ожидания завершён.",
+      "Это подлинное покрываемое событие. Выплату следует одобрить без задержки."
     ],
     "en": [
-      "The biopsy and surgery confirm stage II breast cancer.",
-      "The oncologist's letter and pharmacy log match the chemotherapy course.",
-      "The policy is active and explicitly covers this illness — the payout is valid."
+      "Two independent medical records confirm the illness and its nature.",
+      "The specialist directly confirms that the diagnosis meets the coverage terms.",
+      "The treatment is genuine, consistent, and matches the claim timeline.",
+      "All formal conditions for the benefit have been met.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "tr": [
-      "Biyopsi ve ameliyat evre II meme kanserini doğruluyor.",
-      "Onkolog mektubu ve eczane kaydı kemoterapi küründe örtüşüyor.",
-      "Poliçe aktif ve bu hastalığı açıkça kapsıyor — ödeme geçerli."
+      "Two independent medical records confirm the illness and its nature.",
+      "The specialist directly confirms that the diagnosis meets the coverage terms.",
+      "The treatment is genuine, consistent, and matches the claim timeline.",
+      "All formal conditions for the benefit have been met.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "ar": [
-      "الخزعة والجراحة تؤكدان سرطان الثدي من المرحلة الثانية.",
-      "خطاب طبيب الأورام وسجل الصيدلية يتطابقان مع دورة العلاج الكيميائي.",
-      "الوثيقة سارية وتغطي هذا المرض صراحةً — التعويض مستحق."
+      "Two independent medical records confirm the illness and its nature.",
+      "The specialist directly confirms that the diagnosis meets the coverage terms.",
+      "The treatment is genuine, consistent, and matches the claim timeline.",
+      "All formal conditions for the benefit have been met.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "kk": [
-      "Биопсия мен операция II сатыдағы сүт безі қатерлі ісігін растайды.",
-      "Онколог хаты мен дәріхана журналы химиотерапия курсына сәйкес.",
-      "Полис белсенді әрі бұл ауруды анық қамтиды — төлем негізді."
+      "Диагноз подтверждён биопсией, операцией и лечащим онкологом.",
+      "Полис действовал задолго до диагноза, период ожидания завершён.",
+      "Это подлинное покрываемое событие. Выплату следует одобрить без задержки."
     ]
+  },
+  "investigationBudget": 3,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "В марте у меня диагностировали рак молочной железы II стадии. Я перенесла операцию и прохожу химиотерапию. Полис критических заболеваний действует больше года и включает этот диагноз. Прошу предусмотренную единовременную выплату.",
+        "en": "In March, I was diagnosed with stage II breast cancer. I underwent surgery and am now receiving chemotherapy. My critical-illness policy has been active for more than a year and covers this diagnosis. I am claiming the specified lump-sum benefit.",
+        "tr": "In March, I was diagnosed with stage II breast cancer. I underwent surgery and am now receiving chemotherapy. My critical-illness policy has been active for more than a year and covers this diagnosis. I am claiming the specified lump-sum benefit.",
+        "ar": "In March, I was diagnosed with stage II breast cancer. I underwent surgery and am now receiving chemotherapy. My critical-illness policy has been active for more than a year and covers this diagnosis. I am claiming the specified lump-sum benefit.",
+        "kk": "В марте у меня диагностировали рак молочной железы II стадии. Я перенесла операцию и прохожу химиотерапию. Полис критических заболеваний действует больше года и включает этот диагноз. Прошу предусмотренную единовременную выплату."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_diagnosis",
+      "text": {
+        "ru": "Онкологический диагноз подтверждён и возник после начала действия полиса.",
+        "en": "The cancer diagnosis is confirmed and was made after the policy took effect.",
+        "tr": "The cancer diagnosis is confirmed and was made after the policy took effect.",
+        "ar": "The cancer diagnosis is confirmed and was made after the policy took effect.",
+        "kk": "Онкологический диагноз подтверждён и возник после начала действия полиса."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_treatment",
+      "text": {
+        "ru": "Заявительница проходит заявленное лечение.",
+        "en": "The claimant is undergoing the treatment stated in her claim.",
+        "tr": "The claimant is undergoing the treatment stated in her claim.",
+        "ar": "The claimant is undergoing the treatment stated in her claim.",
+        "kk": "Заявительница проходит заявленное лечение."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_coverage",
+      "text": {
+        "ru": "Событие соответствует условиям и периоду ожидания полиса.",
+        "en": "The event meets the policy terms and waiting-period requirements.",
+        "tr": "The event meets the policy terms and waiting-period requirements.",
+        "ar": "The event meets the policy terms and waiting-period requirements.",
+        "kk": "Событие соответствует условиям и периоду ожидания полиса."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Не превращайте тяжёлую болезнь в аттракцион подозрений. Наша задача здесь — точно проверить диагноз, сроки полиса и покрытие. — В. Лебедева",
+      "en": "Do not turn a serious illness into a spectacle of suspicion. Our task is to verify the diagnosis, policy dates, and coverage with precision. — V. Lebedeva",
+      "tr": "Do not turn a serious illness into a spectacle of suspicion. Our task is to verify the diagnosis, policy dates, and coverage with precision. — V. Lebedeva",
+      "ar": "Do not turn a serious illness into a spectacle of suspicion. Our task is to verify the diagnosis, policy dates, and coverage with precision. — V. Lebedeva",
+      "kk": "Не превращайте тяжёлую болезнь в аттракцион подозрений. Наша задача здесь — точно проверить диагноз, сроки полиса и покрытие. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "В архиве 2021 года я нашла похожее подлинное заявление. Карелин отказал по нему, сославшись на страницу условий, которой в полисе не существовало. Он не только помогал получать лишнее — он умел отнимать положенное.",
+      "en": "In the 2021 archive, I found a similar legitimate claim. Karelin rejected it by citing a page of exclusions that did not exist in the policy. He did more than help people obtain money they were not owed—he also knew how to deny what was rightfully due.",
+      "tr": "In the 2021 archive, I found a similar legitimate claim. Karelin rejected it by citing a page of exclusions that did not exist in the policy. He did more than help people obtain money they were not owed—he also knew how to deny what was rightfully due.",
+      "ar": "In the 2021 archive, I found a similar legitimate claim. Karelin rejected it by citing a page of exclusions that did not exist in the policy. He did more than help people obtain money they were not owed—he also knew how to deny what was rightfully due.",
+      "kk": "В архиве 2021 года я нашла похожее подлинное заявление. Карелин отказал по нему, сославшись на страницу условий, которой в полисе не существовало. Он не только помогал получать лишнее — он умел отнимать положенное."
+    },
+    "nextCaseTeaser": {
+      "ru": "После больничной папки — поле, уничтоженное градом. Его владелец ещё вернётся в нашу кампанию.",
+      "en": "After the hospital file comes a field destroyed by hail. Its owner will return later in our campaign.",
+      "tr": "After the hospital file comes a field destroyed by hail. Its owner will return later in our campaign.",
+      "ar": "After the hospital file comes a field destroyed by hail. Its owner will return later in our campaign.",
+      "kk": "После больничной папки — поле, уничтоженное градом. Его владелец ещё вернётся в нашу кампанию."
+    },
+    "seasonClue": {
+      "id": "false-denial",
+      "label": {
+        "ru": "Поддельное основание отказа",
+        "en": "Fabricated Grounds for Denial",
+        "tr": "Fabricated Grounds for Denial",
+        "ar": "Fabricated Grounds for Denial",
+        "kk": "Поддельное основание отказа"
+      },
+      "description": {
+        "ru": "Карелин использовал знание системы в обе стороны: готовил ложные выплаты и блокировал законные.",
+        "en": "Karelin exploited his knowledge of the system in both directions: arranging fraudulent payouts and blocking legitimate ones.",
+        "tr": "Karelin exploited his knowledge of the system in both directions: arranging fraudulent payouts and blocking legitimate ones.",
+        "ar": "Karelin exploited his knowledge of the system in both directions: arranging fraudulent payouts and blocking legitimate ones.",
+        "kk": "Карелин использовал знание системы в обе стороны: готовил ложные выплаты и блокировал законные."
+      },
+      "progressIndex": 3,
+      "progressTotal": 5
+    },
+    "epilogue": null
   }
 }

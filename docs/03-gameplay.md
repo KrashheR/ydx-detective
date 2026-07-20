@@ -181,3 +181,28 @@ Archive modal case rows are resolved from the shipped case JSON via `caseLoader`
 case titles, claimants, amounts, difficulty, and evidence counts come from
 `src/data/cases/archives/<archive-id>/case-*.json`.
 Per-case availability/completion state is matched by those case ids from `caseUnlockEngine`.
+## Campaign 1–50 deduction flow
+
+Canonical order is the integer `campaignOrder` stored in every standard case. Stable case IDs are
+not renumbered. `requiredLevel` is still a complexity tier (maximum 16), while strict completion of
+the previous campaign position is the primary gate.
+
+The claim contains 2–4 atomic `claimStatements`. `claim_main` preserves the full original text and
+is never stampable. A contradiction stamp is legal only after the evidence is viewed, its
+`statementLink.relation` is `contradicts`, the target statement is stampable, and an interactive
+analysis (when present) has completed. `supports` and `contextualizes` evidence cannot be stamped.
+Reward/mastery scoring compares the exact statement/evidence pair.
+
+Evidence may be `core`, `supporting`, `bonus` or `arc`. Optional
+`unlocksAfterEvidenceIds`/`revealsEvidenceIds` describe a graph; prerequisites keep a card hidden.
+Arc evidence is hidden from the ordinary investigation and never consumes `investigationBudget`.
+All 50 cases have a numeric budget, validated against the accessible non-arc evidence.
+
+The first three cases are one onboarding chain. Until a correct case-3 verdict sets `metaUnlocked`,
+the long-lived meta navigation is hidden and the result sheet advances to the next case. Case 1
+teaches thermal analysis and a precise false-statement stamp; case 2 teaches that suspicion is not
+proof; case 3 introduces document comparison.
+
+After the correct verdict in campaign case 50, `EvidenceLinkBoard` opens the configured arc evidence
+for free. It requires the JSON-defined links, stores attempts/links/completion, reveals the conclusion
+only on success and permits skip after the configured number of failed attempts.

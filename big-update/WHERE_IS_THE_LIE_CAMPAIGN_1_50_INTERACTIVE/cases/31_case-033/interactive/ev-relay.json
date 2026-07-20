@@ -1,0 +1,85 @@
+{
+  "id": "ev-relay",
+  "order": 5,
+  "type": "seal_match",
+  "title": {
+    "ru": "Сопоставление пломбы защитного реле"
+  },
+  "isContradiction": false,
+  "narrativeRole": "arc_proof",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Пломбы не совпадают: в прессе стояло внешне похожее контрафактное реле из партии GC-17."
+  },
+  "previousType": "document",
+  "description": {
+    "ru": "Фрагмент с установленного реле сравнивается с контрольной пломбой сертифицированной партии."
+  },
+  "instruction": {
+    "ru": "Совместить края и микроперфорацию пломб."
+  },
+  "assets": {
+    "asset1": "assets/interactive/ev-relay-master-a.webp",
+    "asset2": "assets/interactive/ev-relay-master-b.webp",
+    "asset3": "assets/interactive/ev-relay-fragments.json"
+  },
+  "data": {
+    "movableFragment": "B",
+    "allowRotation": true,
+    "rotationStep": 3,
+    "initialTransform": {
+      "x": 72,
+      "y": 18,
+      "rotation": -14
+    },
+    "targetTransform": {
+      "x": 132,
+      "y": 48,
+      "rotation": 6
+    },
+    "tolerance": {
+      "position": 10,
+      "rotation": 5
+    },
+    "expectedMatch": false,
+    "sourceSeed": 313317,
+    "fragmentASeed": 313317,
+    "fragmentBSeed": 317700,
+    "comparisonMarkers": [
+      {
+        "id": "tear_pattern",
+        "label": "Контрафакт имеет другой шаг перфорации и рисунок волокон"
+      }
+    ]
+  },
+  "statementLink": {
+    "statementId": "claim_main",
+    "relation": "reveals_season_clue",
+    "reason": {
+      "ru": "Пломбы не совпадают: в прессе стояло внешне похожее контрафактное реле из партии GC-17."
+    }
+  },
+  "contradictionTarget": null,
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true,
+    "transparencyMode": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Игрок сам отличает контрафакт и видит, что пострадавший оператор не обходил защиту."
+    },
+    "playerAction": {
+      "ru": "Совместить края и микроперфорацию пломб."
+    },
+    "conclusion": {
+      "ru": "Пломбы не совпадают: в прессе стояло внешне похожее контрафактное реле из партии GC-17."
+    }
+  },
+  "evidenceTier": "arc",
+  "requiredForVerdict": false,
+  "rewardWeight": 0.75
+}

@@ -1,0 +1,445 @@
+{
+  "id": "case-025",
+  "campaignOrder": 23,
+  "requiredLevel": 12,
+  "act": 3,
+  "actTitle": {
+    "ru": "Восточный двор",
+    "en": "Eastern Yard"
+  },
+  "title": {
+    "ru": "Последний кофе перед пожаром",
+    "en": "The Last Coffee Before the Fire"
+  },
+  "difficulty": "medium",
+  "claimAmount": {
+    "value": 5000,
+    "currency": "EUR"
+  },
+  "groundTruth": "valid",
+  "correctDecision": "approve",
+  "investigationBudget": 4,
+  "claimant": {
+    "name": {
+      "ru": "Лоренцо Конти, 45 лет",
+      "en": "Lorenzo Conti, age 45"
+    },
+    "migrationNote": {
+      "ru": "Сохранить данные и портрет.",
+      "en": "Keep the existing profile data and portrait."
+    },
+    "portrait": null,
+    "portraitStatus": "retain_existing_project_portrait",
+    "portraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/lorenzo.webp",
+      "existingFile": "public/people/lorenzo.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "У Конти есть долги, а пожар решает часть его проблем. Это мотив для проверки, но не доказательство поджога. — В. Лебедева",
+      "en": "Conti is in debt, and a fire could solve some of his problems. That is a reason to investigate, not evidence of arson. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Не каждый должник поджигает бизнес. Иногда плохой предохранитель — просто плохой предохранитель.",
+      "en": "Not every debtor burns down their business. Sometimes a bad fuse is simply a bad fuse."
+    },
+    "nextCaseTeaser": {
+      "ru": "Коллекционные часы исчезли из квартиры, а через неделю появились на фотографии с тем же владельцем.",
+      "en": "A collectible watch vanished from an apartment, then appeared in a photograph with the same owner one week later."
+    },
+    "seasonClue": null,
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "5 мая после закрытия за барной стойкой загорелась проводка кофемашины. Персонал вывел посетителей, но огонь уничтожил оборудование и часть зала. Прошу компенсировать подтверждённый ущерб.",
+    "en": "After closing on May 5, wiring in the coffee machine caught fire behind the bar. Staff evacuated the customers, but the fire destroyed equipment and part of the dining area. I am claiming the documented loss."
+  },
+  "evidence": [
+    {
+      "id": "ev-fire",
+      "order": 1,
+      "type": "surface_reveal",
+      "title": {
+        "ru": "Очистка блока питания от копоти",
+        "en": "Cleaning Soot from the Power Unit"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Под копотью видны локальная электрическая дуга и оплавление изнутри наружу; следов второго очага или внешнего поджога нет.",
+        "en": "Beneath the soot are signs of a localized electrical arc and melting from the inside outward; there is no second ignition point or evidence of external arson."
+      },
+      "previousType": "document",
+      "description": {
+        "ru": "Пожарный эксперт передал крупный снимок металлического блока кофемашины до лабораторной очистки.",
+        "en": "The fire investigator supplied a close-up of the coffee machine's metal power unit before laboratory cleaning."
+      },
+      "instruction": {
+        "ru": "Сотрите копоть с панели блока питания и найдите место первичного пробоя.",
+        "en": "Wipe the soot from the power-unit panel and locate the initial electrical failure."
+      },
+      "assets": {
+        "baseImage": "assets/interactive/ev-fire-scene.webp",
+        "coverTexture": "shared/surface/soot.webp",
+        "revealMasks": [
+          "assets/interactive/ev-fire-internal_arc-trace-mask.svg"
+        ],
+        "toolCursor": "shared/surface/cloth-cursor.svg"
+      },
+      "data": {
+        "mode": "erase",
+        "coverType": "soot",
+        "brush": {
+          "radius": 46,
+          "hardness": 0.66,
+          "opacity": 0.84,
+          "spacing": 8
+        },
+        "completion": {
+          "type": "discover_any",
+          "requiredTraceIds": [
+            "internal_arc"
+          ]
+        },
+        "traces": [
+          {
+            "id": "internal_arc",
+            "label": "Локальный след электрической дуги",
+            "requiredRevealPercent": 58,
+            "mask": "assets/interactive/ev-fire-internal_arc-trace-mask.svg",
+            "shape": "mask",
+            "isContradiction": false,
+            "conclusion": "Под копотью видны локальная электрическая дуга и оплавление изнутри наружу; следов второго очага или внешнего поджога нет.",
+            "labelEn": "Localized electrical arc trace",
+            "conclusionEn": "Beneath the soot are signs of a localized electrical arc and melting from the inside outward; there is no second ignition point or evidence of external arson."
+          }
+        ]
+      },
+      "statementLink": {
+        "statementId": "claim_cause",
+        "relation": "supports",
+        "reason": {
+          "ru": "Под копотью видны локальная электрическая дуга и оплавление изнутри наружу; следов второго очага или внешнего поджога нет.",
+          "en": "Beneath the soot are signs of a localized electrical arc and melting from the inside outward; there is no second ignition point or evidence of external arson."
+        }
+      },
+      "contradictionTarget": null,
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": false,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Игрок обнаруживает внутренний электрический очаг сам, а не получает его готовой строкой из отчёта.",
+          "en": "The player discovers the internal electrical origin personally instead of receiving it as a ready-made line in a report."
+        },
+        "playerAction": {
+          "ru": "Сотрите копоть с панели блока питания и найдите место первичного пробоя.",
+          "en": "Wipe the soot from the power-unit panel and locate the initial electrical failure."
+        },
+        "conclusion": {
+          "ru": "Под копотью видны локальная электрическая дуга и оплавление изнутри наружу; следов второго очага или внешнего поджога нет.",
+          "en": "Beneath the soot are signs of a localized electrical arc and melting from the inside outward; there is no second ignition point or evidence of external arson."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-031",
+          "role": "interactive_scene",
+          "src": "src/data/cases/case-025/assets/interactive/ev-fire-scene.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-025/assets/interactive/ev-fire-scene.webp",
+          "caseRelativeSrc": "assets/interactive/ev-fire-scene.webp",
+          "installTo": "src/data/cases/case-025/assets/interactive/ev-fire-scene.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "e14b611f67d4400319b31454d2f7a36d9b7c5223249e9f1afb590d42cb4567cb"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-025/assets/interactive/ev-fire-scene.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-025/assets/interactive/ev-fire-scene.webp",
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-cctv",
+      "order": 2,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера зала",
+        "en": "Dining Area Camera"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "После закрытия сотрудник выключает основное оборудование. Через семь минут из корпуса кофемашины появляется дым; людей у стойки нет.",
+        "en": "After closing, an employee switches off the main equipment. Seven minutes later, smoke appears from the coffee machine while no one is near the bar."
+      },
+      "statusExplanation": {
+        "ru": "Пожар начинается без вмешательства персонала или владельца.",
+        "en": "The fire starts without intervention by staff or the owner."
+      },
+      "statementLink": {
+        "statementId": "claim_no_arson",
+        "relation": "supports",
+        "reason": {
+          "ru": "Пожар начинается без вмешательства персонала или владельца.",
+          "en": "The fire starts without intervention by staff or the owner."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-repair",
+      "order": 3,
+      "type": "document",
+      "title": {
+        "ru": "История ремонта",
+        "en": "Repair History"
+      },
+      "isContradiction": false,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "За неделю до пожара сервис заменил блок питания на восстановленный. Экспертиза обнаружила внутри неподходящий предохранитель.",
+        "en": "One week before the fire, a repair service installed a refurbished power unit. Examination found an unsuitable fuse inside it."
+      },
+      "statusExplanation": {
+        "ru": "Неисправность возникла после некачественного ремонта сторонним сервисом.",
+        "en": "The fault resulted from poor work by an outside repair service."
+      },
+      "statementLink": {
+        "statementId": "claim_damage",
+        "relation": "supports",
+        "reason": {
+          "ru": "Неисправность возникла после некачественного ремонта сторонним сервисом.",
+          "en": "The fault resulted from poor work by an outside repair service."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-ledger",
+      "order": 4,
+      "type": "document",
+      "title": {
+        "ru": "Книга доходов и долгов",
+        "en": "Income and Debt Ledger"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Кафе имеет кредит, но стабильно обслуживает его. Выручка растёт; закрытие из-за пожара ухудшает, а не улучшает положение Конти.",
+        "en": "The café has a loan but services it reliably. Revenue is growing; a fire-related closure worsens Conti's position rather than improving it."
+      },
+      "statusExplanation": {
+        "ru": "Долг объясняет подозрение, но не создаёт выгоды от пожара.",
+        "en": "The debt explains the suspicion but creates no benefit from the fire."
+      },
+      "statementLink": {
+        "statementId": "claim_damage",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Долг объясняет подозрение, но не создаёт выгоды от пожара.",
+          "en": "The debt explains the suspicion but creates no benefit from the fire."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-evacuation",
+      "order": 5,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания посетительницы",
+        "en": "Customer's Statement"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Свидетель подтверждает запах горелой электроники и быструю эвакуацию до распространения огня.",
+        "en": "The witness confirms the smell of burning electronics and a rapid evacuation before the fire spread."
+      },
+      "statusExplanation": {
+        "ru": "Независимое описание совпадает с камерой и экспертизой.",
+        "en": "The independent account matches the camera footage and examination."
+      },
+      "statementLink": {
+        "statementId": "claim_no_arson",
+        "relation": "supports",
+        "reason": {
+          "ru": "Независимое описание совпадает с камерой и экспертизой.",
+          "en": "The independent account matches the camera footage and examination."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Под копотью на блоке питания обнаружен внутренний след электрической дуги без второго очага или внешнего поджога.",
+      "Камера исключает вмешательство владельца, а экспертиза выявляет неправильный предохранитель.",
+      "Долг кафе был поводом для проверки, но не доказательством. Выплату следует одобрить."
+    ],
+    "en": [
+      "Beneath the soot are signs of a localized electrical arc and melting from the inside outward; there is no second ignition point or evidence of external arson.",
+      "The fire starts without intervention by staff or the owner.",
+      "The fault resulted from poor work by an outside repair service.",
+      "The independent account matches the camera footage and examination.",
+      "The debt explains the suspicion but creates no benefit from the fire.",
+      "No material statement has been disproven. The claim should be approved."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Добавить подозрительный мотив, который честно опровергается.",
+      "Сделать причиной дефект стороннего ремонта.",
+      "Интегрировать surface_reveal в улику ev-fire; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate surface_reveal into evidence ev-fire; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "assets/interactive/ev-fire-scene.webp",
+      "purpose": "Базовая поверхность со скрытым физическим следом, без процедурного покрытия",
+      "resolution": "1600×1000",
+      "format": "WebP",
+      "transparency": false,
+      "generatedBy": "image_model",
+      "manualPost": "Проверить плоский читаемый ракурс; удалить случайный текст; откалибровать каждую reveal mask по финальной сцене.",
+      "prompt": "Крупный документальный снимок металлического блока питания кофемашины после небольшого пожара; локальный кратер электрической дуги и оплавление изнутри наружу, без процедурного слоя копоти. The dust, dirt, soot, frost, condensation or powder cover will be added programmatically, so do not bake the cover layer into the image. Keep the important surface large, readable and minimally distorted. Photorealistic insurance-investigation evidence photograph, documentary look, shot on a phone or compact camera by a non-professional, natural available light, neutral muted colors, realistic textures, high detail. No captions, no watermark, no logos, no readable real-world branding, no famous people, no recognizable copyrighted characters, no visible faces unless explicitly required. Evidence photo, not illustration or cinematic poster.",
+      "evidenceId": "ev-fire",
+      "evidenceType": "surface_reveal"
+    },
+    {
+      "file": "assets/interactive/ev-fire-internal_arc-trace-mask.svg",
+      "purpose": "Маска скрытого следа: Локальный след электрической дуги",
+      "resolution": "1600×1000 aligned to base image",
+      "format": "SVG",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "Совместить с base image; порог обнаружения 58%; белая область маски — значимая зона.",
+      "prompt": null,
+      "evidenceId": "ev-fire",
+      "evidenceType": "surface_reveal"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "5 мая после закрытия за барной стойкой загорелась проводка кофемашины. Персонал вывел посетителей, но огонь уничтожил оборудование и часть зала. Прошу компенсировать подтверждённый ущерб.",
+        "en": "After closing on May 5, wiring in the coffee machine caught fire behind the bar. Staff evacuated the customers, but the fire destroyed equipment and part of the dining area. I am claiming the documented loss."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_cause",
+      "text": {
+        "ru": "Пожар начался внутри блока питания кофемашины.",
+        "en": "The fire began inside the coffee machine's power unit."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_no_arson",
+      "text": {
+        "ru": "Владелец и персонал не создавали дополнительный очаг.",
+        "en": "Neither the owner nor the staff created a secondary ignition point."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_damage",
+      "text": {
+        "ru": "Огонь повредил оборудование и часть зала.",
+        "en": "The fire damaged equipment and part of the dining area."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-025",
+    "archiveBasePath": "generated-assets/src/data/cases/case-025",
+    "claimantPortrait": null,
+    "claimantPortraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/lorenzo.webp",
+      "existingFile": "public/people/lorenzo.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-fire",
+        "title": {
+          "ru": "Очистка блока питания от копоти",
+          "en": "Cleaning Soot from the Power Unit"
+        },
+        "primaryImage": "src/data/cases/case-025/assets/interactive/ev-fire-scene.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-025/assets/interactive/ev-fire-scene.webp",
+        "legacyImageBinding": null,
+        "assets": [
+          {
+            "assetId": "asset-031",
+            "role": "interactive_scene",
+            "src": "src/data/cases/case-025/assets/interactive/ev-fire-scene.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-025/assets/interactive/ev-fire-scene.webp",
+            "caseRelativeSrc": "assets/interactive/ev-fire-scene.webp",
+            "installTo": "src/data/cases/case-025/assets/interactive/ev-fire-scene.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1600,
+            "height": 1000,
+            "sha256": "e14b611f67d4400319b31454d2f7a36d9b7c5223249e9f1afb590d42cb4567cb"
+          }
+        ]
+      }
+    ]
+  }
+}

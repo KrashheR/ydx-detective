@@ -1,0 +1,515 @@
+{
+  "id": "case-028",
+  "campaignOrder": 26,
+  "requiredLevel": 13,
+  "act": 3,
+  "actTitle": {
+    "ru": "Восточный двор",
+    "en": "Eastern Yard"
+  },
+  "title": {
+    "ru": "Склад без товара",
+    "en": "The Empty Warehouse"
+  },
+  "difficulty": "hard",
+  "claimAmount": {
+    "value": 18000,
+    "currency": "EUR"
+  },
+  "groundTruth": "fraud",
+  "correctDecision": "reject",
+  "investigationBudget": 4,
+  "claimant": {
+    "name": {
+      "ru": "Дамир Аскаров, 47 лет",
+      "en": "Damir Askarov, age 47"
+    },
+    "migrationNote": {
+      "ru": "Сохранить данные и портрет.",
+      "en": "Keep the existing profile data and portrait."
+    },
+    "portrait": null,
+    "portraitStatus": "retain_existing_project_portrait",
+    "portraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/damir.webp",
+      "existingFile": "public/people/damir.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Бюджет — три улики из пяти. Для отказа достаточно доказать, что товар вывезен и пожар подготовлен. Мотив полезен, но не обязателен. — В. Лебедева",
+      "en": "Your budget is three of five pieces of evidence. To reject the claim, it is enough to prove that the stock was removed and the fire was prepared. Motive is useful, but not essential. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Пропуск `EY-17` открывает закрытый сектор Восточного двора. Это уже не случайный склад — у схемы есть собственная логистика.",
+      "en": "Pass `EY-17` opens the restricted sector of Eastern Yard. This is no random warehouse—the operation has its own logistics network."
+    },
+    "nextCaseTeaser": {
+      "ru": "После умышленного огня — настоящий удар молнии. Необычный лог счётчика сначала будет выглядеть как подделка.",
+      "en": "After a deliberate fire comes a genuine lightning strike. The meter's unusual log will initially look fabricated."
+    },
+    "seasonClue": {
+      "id": "ey17-gate",
+      "label": {
+        "ru": "Пропуск EY-17",
+        "en": "EY-17 Access Pass"
+      },
+      "description": {
+        "ru": "Застрахованные активы поступают в закрытый сектор Восточного двора до инсценированных утрат.",
+        "en": "Insured assets enter Eastern Yard's restricted sector before their losses are staged."
+      },
+      "progressIndex": 2,
+      "progressTotal": 4
+    },
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "В ночь на 14 апреля склад сгорел вместе со всем товаром. Я был дома, сигнализация не сработала, о пожаре узнал утром. Прошу выплатить 18 000 евро за здание и уничтоженные запасы.",
+    "en": "On the night of April 14, my warehouse burned down with all its stock inside. I was at home, the alarm failed, and I learned about the fire in the morning. I am claiming €18,000 for the building and destroyed inventory."
+  },
+  "evidence": [
+    {
+      "id": "ev-cam",
+      "order": 1,
+      "type": "seal_match",
+      "title": {
+        "ru": "Сопоставление пломб вывезенных палет",
+        "en": "Removed Pallet Seal Comparison"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Разрыв и волокна совпали: товар из страховой описи вывезли до поджога и доставили на Восточный двор.",
+        "en": "The tear and fibers match: stock from the insured inventory was removed before the arson and delivered to Eastern Yard."
+      },
+      "previousType": "camera_recording",
+      "description": {
+        "ru": "Фрагмент A найден у пустого складского стеллажа, фрагмент B — в кузове грузовика на Восточном дворе.",
+        "en": "Fragment A was found beside an empty warehouse rack; fragment B was found inside a truck at Eastern Yard."
+      },
+      "instruction": {
+        "ru": "Совместить два фрагмента контрольной ленты.",
+        "en": "Align the two security-tape fragments."
+      },
+      "assets": {
+        "asset1": "assets/interactive/ev-cam-master-a.webp",
+        "asset2": "assets/interactive/ev-cam-fragments.json"
+      },
+      "data": {
+        "movableFragment": "B",
+        "allowRotation": true,
+        "rotationStep": 3,
+        "initialTransform": {
+          "x": 72,
+          "y": 18,
+          "rotation": -14
+        },
+        "targetTransform": {
+          "x": 132,
+          "y": 48,
+          "rotation": 6
+        },
+        "tolerance": {
+          "position": 10,
+          "rotation": 5
+        },
+        "expectedMatch": true,
+        "sourceSeed": 262817,
+        "fragmentASeed": 262817,
+        "fragmentBSeed": 262817,
+        "comparisonMarkers": [
+          {
+            "id": "tear_pattern",
+            "label": "Совпадают линия разрыва, клеевой дефект и участок защитной сетки",
+            "labelEn": "Tear line, adhesive defect, and security-mesh section match"
+          }
+        ]
+      },
+      "statementLink": {
+        "statementId": "claim_goods_destroyed",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Разрыв и волокна совпали: товар из страховой описи вывезли до поджога и доставили на Восточный двор.",
+          "en": "The tear and fibers match: stock from the insured inventory was removed before the arson and delivered to Eastern Yard."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_goods_destroyed",
+        "reason": {
+          "ru": "Разрыв и волокна совпали: товар из страховой описи вывезли до поджога и доставили на Восточный двор.",
+          "en": "The tear and fibers match: stock from the insured inventory was removed before the arson and delivered to Eastern Yard."
+        }
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true,
+        "transparencyMode": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Совпадение связывает вывезенные перед пожаром палеты именно с застрахованным товаром.",
+          "en": "The match links the pallets removed before the fire directly to the insured stock."
+        },
+        "playerAction": {
+          "ru": "Совместить два фрагмента контрольной ленты.",
+          "en": "Align the two security-tape fragments."
+        },
+        "conclusion": {
+          "ru": "Разрыв и волокна совпали: товар из страховой описи вывезли до поджога и доставили на Восточный двор.",
+          "en": "The tear and fibers match: stock from the insured inventory was removed before the arson and delivered to Eastern Yard."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-037",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-028/evidence/case-028-ev-cam.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-028/evidence/case-028-ev-cam.webp",
+          "caseRelativeSrc": "evidence/case-028-ev-cam.webp",
+          "installTo": "public/evidence/case-028-ev-cam.webp",
+          "legacyRuntimeUrl": "evidence/case-028-ev-cam.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "2af19365fc90059d75ce337bf7374f726ef73e1f3aae3147a9bd0a663eab3d02"
+        },
+        {
+          "assetId": "asset-038",
+          "role": "interactive_master_a",
+          "src": "src/data/cases/case-028/assets/interactive/ev-cam-master-a.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-028/assets/interactive/ev-cam-master-a.webp",
+          "caseRelativeSrc": "assets/interactive/ev-cam-master-a.webp",
+          "installTo": "src/data/cases/case-028/assets/interactive/ev-cam-master-a.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1400,
+          "height": 500,
+          "sha256": "73616611a040ec9e0de89b84e889e403ea062e76824a51d9b66e680ac9b48b39"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-028/evidence/case-028-ev-cam.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-028/evidence/case-028-ev-cam.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-028-ev-cam.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-028/evidence/case-028-ev-cam.webp",
+        "copyTo": "public/evidence/case-028-ev-cam.webp"
+      }
+    },
+    {
+      "id": "ev-alarm",
+      "order": 2,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал сигнализации",
+        "en": "Alarm System Log"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "В 01:12 система снята мастер-кодом владельца; датчики дыма переведены в сервисный режим. В 02:04 питание панели отключено вручную.",
+        "en": "At 1:12 a.m., the system was disarmed using the owner's master code and the smoke detectors were put into service mode. At 2:04 a.m., power to the panel was disconnected manually."
+      },
+      "statusExplanation": {
+        "ru": "Сигнализация не отказала: её последовательно отключили доступом владельца.",
+        "en": "The alarm did not fail; it was deliberately disabled using the owner's access."
+      },
+      "statementLink": {
+        "statementId": "claim_accidental_cause",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Сигнализация не отказала: её последовательно отключили доступом владельца.",
+          "en": "The alarm did not fail; it was deliberately disabled using the owner's access."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_accidental_cause",
+        "reason": {
+          "ru": "Сигнализация не отказала: её последовательно отключили доступом владельца.",
+          "en": "The alarm did not fail; it was deliberately disabled using the owner's access."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-fire",
+      "order": 3,
+      "type": "document",
+      "title": {
+        "ru": "Экспертиза очага",
+        "en": "Fire-Origin Examination"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "Обнаружены два независимых очага и следы ускорителя горения у пустых стеллажей. Электрическая проводка не является источником.",
+        "en": "Investigators found two independent ignition points and traces of accelerant beside empty racks. The electrical wiring was not the source."
+      },
+      "statusExplanation": {
+        "ru": "Пожар был подготовлен умышленно и не похож на случайную аварию.",
+        "en": "The fire was deliberately prepared and was not an accident."
+      },
+      "statementLink": {
+        "statementId": "claim_accidental_cause",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Пожар был подготовлен умышленно и не похож на случайную аварию.",
+          "en": "The fire was deliberately prepared and was not an accident."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_accidental_cause",
+        "reason": {
+          "ru": "Пожар был подготовлен умышленно и не похож на случайную аварию.",
+          "en": "The fire was deliberately prepared and was not an accident."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-route",
+      "order": 4,
+      "type": "gps",
+      "title": {
+        "ru": "Маршруты грузовиков",
+        "en": "Truck Routes"
+      },
+      "isContradiction": false,
+      "narrativeRole": "arc_proof",
+      "text": {
+        "ru": "Все три машины прибыли в закрытый сектор комплекса «Восточный двор». Въезд оформлен пропуском `EY-17`.",
+        "en": "All three vehicles arrived at the restricted sector of Eastern Yard. Entry was authorized with pass `EY-17`."
+      },
+      "statusExplanation": {
+        "ru": "Вывезенный товар доставлен на связанный со схемой склад.",
+        "en": "The removed stock was delivered to a warehouse connected to the operation."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Вывезенный товар доставлен на связанный со схемой склад.",
+          "en": "The removed stock was delivered to a warehouse connected to the operation."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-debt",
+      "order": 5,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Кредитная задолженность",
+        "en": "Outstanding Loans"
+      },
+      "isContradiction": false,
+      "narrativeRole": "motive",
+      "text": {
+        "ru": "Аскаров просрочил выплаты по двум кредитам, а страховая сумма превышает рыночную стоимость бизнеса.",
+        "en": "Askarov is behind on two loans, and the insured amount exceeds the business's market value."
+      },
+      "statusExplanation": {
+        "ru": "Долг создаёт мотив, но не доказывает поджог без камер, сигнализации или экспертизы.",
+        "en": "Debt creates a motive, but does not prove arson without camera footage, alarm records, or forensic evidence."
+      },
+      "statementLink": {
+        "statementId": "claim_accidental_cause",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Долг создаёт мотив, но не доказывает поджог без камер, сигнализации или экспертизы.",
+          "en": "Debt creates a motive, but does not prove arson without camera footage, alarm records, or forensic evidence."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Товар вывезен со склада до пожара и доставлен в комплекс «Восточный двор».",
+      "Сигнализацию отключили мастер-кодом, а экспертиза обнаружила два подготовленных очага.",
+      "Разрыв и волокна совпали: товар из страховой описи вывезли до поджога и доставили на Восточный двор.",
+      "Аскаров сохранил имущество и поджёг пустой склад ради выплаты. Заявление следует отклонить."
+    ],
+    "en": [
+      "The tear and fibers match: stock from the insured inventory was removed before the arson and delivered to Eastern Yard.",
+      "The alarm did not fail; it was deliberately disabled using the owner's access.",
+      "The fire was deliberately prepared and was not an accident.",
+      "Debt creates a motive, but does not prove arson without camera footage, alarm records, or forensic evidence.",
+      "The removed stock was delivered to a warehouse connected to the operation.",
+      "The claim is fraudulent and should be rejected."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Сбалансировать бюджет улик так, чтобы существовало несколько честных путей решения.",
+      "Сделать маршрут товара обязательным звеном арки.",
+      "Интегрировать seal_match в улику ev-cam; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate seal_match into evidence ev-cam; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "evidence/case-028-ev-cam.webp",
+      "action": "generate",
+      "prompt": "Night warehouse loading-dock CCTV frame: sealed pallets being loaded into three ordinary cargo trucks while a middle-aged owner signs a clipboard nearby, warehouse still intact, realistic industrial lighting, no readable company names or plates, no logos, no watermark."
+    },
+    {
+      "file": "assets/interactive/ev-cam-master-a.webp",
+      "purpose": "Цельный мастер пломбы или контрольного фрагмента A",
+      "resolution": "1400×500",
+      "format": "WebP",
+      "transparency": true,
+      "generatedBy": "image_model",
+      "manualPost": "Убрать случайный текст; сохранить альфа-канал; разрезать процедурно по sourceSeed.",
+      "prompt": "Create a realistic intact security seal or evidence control label for a fictional insurance investigation. Промышленная бумажно-полимерная пломба палеты с абстрактной сеткой и вымышленной нумерацией. Front view, full object, transparent background, detailed fibers, adhesive or polymer texture, abstract protection pattern, no real logo or brand, no watermark, no critical readable text, restrained utilitarian evidence style. Keep edges suitable for procedural tearing.",
+      "evidenceId": "ev-cam",
+      "evidenceType": "seal_match"
+    },
+    {
+      "file": "assets/interactive/ev-cam-fragments.json",
+      "purpose": "Seed разрыва, трансформации и допуски",
+      "resolution": "normalized component space",
+      "format": "JSON",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "Сгенерировать fragment-a.webp и fragment-b.webp из master-файлов; проверить drag/rotate/snap.",
+      "prompt": null,
+      "evidenceId": "ev-cam",
+      "evidenceType": "seal_match"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "В ночь на 14 апреля склад сгорел вместе со всем товаром. Я был дома, сигнализация не сработала, о пожаре узнал утром. Прошу выплатить 18 000 евро за здание и уничтоженные запасы.",
+        "en": "On the night of April 14, my warehouse burned down with all its stock inside. I was at home, the alarm failed, and I learned about the fire in the morning. I am claiming €18,000 for the building and destroyed inventory."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_fire",
+      "text": {
+        "ru": "Ночью склад загорелся и получил серьёзные повреждения.",
+        "en": "The warehouse caught fire during the night and sustained serious damage."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_goods_destroyed",
+      "text": {
+        "ru": "Застрахованные палеты оставались внутри до возгорания и погибли в огне.",
+        "en": "The insured pallets remained inside until the fire and were destroyed."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_accidental_cause",
+      "text": {
+        "ru": "Пожар возник случайно, а сигнализация отказала сама.",
+        "en": "The fire started accidentally, and the alarm failed on its own."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-028",
+    "archiveBasePath": "generated-assets/src/data/cases/case-028",
+    "claimantPortrait": null,
+    "claimantPortraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/damir.webp",
+      "existingFile": "public/people/damir.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-cam",
+        "title": {
+          "ru": "Сопоставление пломб вывезенных палет",
+          "en": "Removed Pallet Seal Comparison"
+        },
+        "primaryImage": "src/data/cases/case-028/evidence/case-028-ev-cam.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-028/evidence/case-028-ev-cam.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-028-ev-cam.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-028/evidence/case-028-ev-cam.webp",
+          "copyTo": "public/evidence/case-028-ev-cam.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-037",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-028/evidence/case-028-ev-cam.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-028/evidence/case-028-ev-cam.webp",
+            "caseRelativeSrc": "evidence/case-028-ev-cam.webp",
+            "installTo": "public/evidence/case-028-ev-cam.webp",
+            "legacyRuntimeUrl": "evidence/case-028-ev-cam.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "2af19365fc90059d75ce337bf7374f726ef73e1f3aae3147a9bd0a663eab3d02"
+          },
+          {
+            "assetId": "asset-038",
+            "role": "interactive_master_a",
+            "src": "src/data/cases/case-028/assets/interactive/ev-cam-master-a.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-028/assets/interactive/ev-cam-master-a.webp",
+            "caseRelativeSrc": "assets/interactive/ev-cam-master-a.webp",
+            "installTo": "src/data/cases/case-028/assets/interactive/ev-cam-master-a.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1400,
+            "height": 500,
+            "sha256": "73616611a040ec9e0de89b84e889e403ea062e76824a51d9b66e680ac9b48b39"
+          }
+        ]
+      }
+    ]
+  }
+}

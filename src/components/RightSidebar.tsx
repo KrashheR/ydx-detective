@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import type { Language } from '../types';
-import type { LeaderboardRow } from '../services/yandexSDK';
+import type { LeaderboardRow } from '../services/platformAdapter';
 import { evaluateRank } from '../engine/rankEngine';
 import { formatInvestigatorLevel, t } from '../i18n/ui';
 import { ACHIEVEMENTS } from '../data/achievements';

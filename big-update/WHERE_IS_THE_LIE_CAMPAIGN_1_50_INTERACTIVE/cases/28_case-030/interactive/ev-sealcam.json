@@ -1,0 +1,90 @@
+{
+  "id": "ev-sealcam",
+  "order": 3,
+  "type": "seal_match",
+  "title": {
+    "ru": "Сопоставление пломб грузового отсека"
+  },
+  "isContradiction": true,
+  "narrativeRole": "proof",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Фрагменты не совпадают: во время оформления аварии пассажир заменил заводскую пломбу другой."
+  },
+  "previousType": "camera_recording",
+  "description": {
+    "ru": "Первый фрагмент снят полицией до оформления ДТП, второй найден на двери после действий пассажира."
+  },
+  "instruction": {
+    "ru": "Сопоставить края и защитный узор двух пломб."
+  },
+  "assets": {
+    "asset1": "assets/interactive/ev-sealcam-master-a.webp",
+    "asset2": "assets/interactive/ev-sealcam-master-b.webp",
+    "asset3": "assets/interactive/ev-sealcam-fragments.json"
+  },
+  "data": {
+    "movableFragment": "B",
+    "allowRotation": true,
+    "rotationStep": 3,
+    "initialTransform": {
+      "x": 72,
+      "y": 18,
+      "rotation": -14
+    },
+    "targetTransform": {
+      "x": 132,
+      "y": 48,
+      "rotation": 6
+    },
+    "tolerance": {
+      "position": 10,
+      "rotation": 5
+    },
+    "expectedMatch": false,
+    "sourceSeed": 283017,
+    "fragmentASeed": 283017,
+    "fragmentBSeed": 289144,
+    "comparisonMarkers": [
+      {
+        "id": "tear_pattern",
+        "label": "Не совпадают линия разрыва и шаг микропечати"
+      }
+    ]
+  },
+  "statementLink": {
+    "statementId": "claim_seal_untouched",
+    "relation": "contradicts",
+    "reason": {
+      "ru": "Фрагменты не совпадают: во время оформления аварии пассажир заменил заводскую пломбу другой."
+    }
+  },
+  "contradictionTarget": {
+    "statementId": "claim_seal_untouched",
+    "reason": {
+      "ru": "Фрагменты не совпадают: во время оформления аварии пассажир заменил заводскую пломбу другой."
+    }
+  },
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true,
+    "transparencyMode": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Игрок физически устанавливает замену пломбы — настоящую цель контролируемого столкновения."
+    },
+    "playerAction": {
+      "ru": "Сопоставить края и защитный узор двух пломб."
+    },
+    "conclusion": {
+      "ru": "Фрагменты не совпадают: во время оформления аварии пассажир заменил заводскую пломбу другой."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

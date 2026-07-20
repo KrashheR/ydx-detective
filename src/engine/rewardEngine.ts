@@ -4,7 +4,7 @@
  * unit-testable and keeps the Zustand store thin.
  */
 import { GAME_CONFIG } from '../config/gameConfig';
-import type { Case, Decision, RewardBreakdown } from '../types';
+import type { Case, Decision, EvidenceStamp, RewardBreakdown } from '../types';
 
 /** How many evidence cards in this case are genuine contradictions. */
 export function totalContradictions(caseData: Case): number {
@@ -19,6 +19,7 @@ export function totalContradictions(caseData: Case): number {
 export function classifyStamps(
   caseData: Case,
   selectedEvidenceIds: readonly string[],
+  statementStamps?: readonly EvidenceStamp[],
 ): { correct: number; falseStamps: number } {
   const byId = new Map(caseData.evidences.map((e) => [e.id, e]));
   let correct = 0;
@@ -26,7 +27,14 @@ export function classifyStamps(
   for (const id of selectedEvidenceIds) {
     const ev = byId.get(id);
     if (!ev) continue; // stale id from a since-edited case — ignore safely
-    if (ev.isContradiction) correct += 1;
+    const stamp = statementStamps?.find((item) => item.evidenceId === id);
+    const exact = !caseData.claimStatements || !statementStamps || (
+      stamp?.caseId === caseData.id &&
+      stamp.statementId === ev.statementLink?.statementId &&
+      ev.statementLink?.relation === 'contradicts' &&
+      caseData.claimStatements?.some((statement) => statement.id === stamp.statementId && statement.stampable)
+    );
+    if (ev.isContradiction && exact) correct += 1;
     else falseStamps += 1;
   }
   return { correct, falseStamps };
@@ -52,6 +60,7 @@ export interface RewardModifiers {
    * unaffected.
    */
   readonly opensUsed?: number;
+  readonly statementStamps?: readonly EvidenceStamp[];
 }
 
 /**
@@ -80,7 +89,7 @@ export function evaluateReward(
   const baseReward = reward.baseByDifficulty[caseData.difficulty] * multiplier;
 
   const verdictCorrect = decision === caseData.correctDecision;
-  const { correct, falseStamps } = classifyStamps(caseData, selectedEvidenceIds);
+  const { correct, falseStamps } = classifyStamps(caseData, selectedEvidenceIds, modifiers.statementStamps);
 
   // A wrong verdict means no reward at all — short-circuit before any component
   // math so investigation skill never pays out on a misjudged case.

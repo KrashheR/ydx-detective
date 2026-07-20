@@ -1,0 +1,477 @@
+{
+  "id": "case-039",
+  "campaignOrder": 37,
+  "requiredLevel": 19,
+  "act": 4,
+  "actTitle": {
+    "ru": "Серый конвой",
+    "en": "The Gray Convoy"
+  },
+  "title": {
+    "ru": "Робот, разобравший солнце",
+    "en": "The Robot That Dismantled the Sun"
+  },
+  "difficulty": "medium",
+  "claimAmount": {
+    "value": 18400,
+    "currency": "EUR"
+  },
+  "groundTruth": "fraud",
+  "correctDecision": "reject",
+  "investigationBudget": 4,
+  "claimant": {
+    "name": {
+      "ru": "Никита Воронов, 38 лет",
+      "en": "Nikita Voronov, age 38"
+    },
+    "migrationNote": {
+      "ru": "Сохранить данные и портрет.",
+      "en": "Keep the existing profile data and portrait."
+    },
+    "portrait": {
+      "characterId": "nikita-voronov",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Никита Воронов",
+        "en": "Nikita Voronov, age 38"
+      },
+      "assetId": "asset-066",
+      "src": "src/data/cases/case-039/people/nikita-voronov.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-039/people/nikita-voronov.webp",
+      "caseRelativeSrc": "people/nikita-voronov.webp",
+      "installTo": "public/people/nikita-voronov.webp",
+      "legacyRuntimeUrl": "people/nikita-voronov.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "a9620530c2789e6b82a55e718f0f09969e37863a2789d70300ba2c291df34bb3"
+    },
+    "portraitStatus": "generated_replacement_included",
+    "portraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/nikita-voronov.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-039/people/nikita-voronov.webp",
+      "copyTo": "public/people/nikita-voronov.webp",
+      "replacesExistingValue": null
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Панели сняты слишком аккуратно для вандалов. Иногда отсутствие разрушения — самое сильное доказательство плана. — В. Лебедева",
+      "en": "The panels were removed too carefully for vandals. Sometimes the absence of destruction is the strongest evidence of a plan. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Серый конвой начал принимать не только груз, но и целые производственные массивы. Следующий маршрут ведёт на удалённый комплекс «Лунный склон».",
+      "en": "The Gray Convoy now handles not just cargo but entire industrial arrays. The next route leads to the remote Moon Slope complex."
+    },
+    "nextCaseTeaser": {
+      "ru": "На ферме «Лунный склон» сгорел ангар. В отличие от прошлых складов, владельца в эту ночь там не было — зато был серый грузовик.",
+      "en": "A hangar burned at Moon Slope farm. Unlike the owners of earlier warehouses, this owner was away that night—but a gray truck was present."
+    },
+    "seasonClue": {
+      "id": "gc-industrial",
+      "label": {
+        "ru": "Промышленный маршрут",
+        "en": "Industrial Route"
+      },
+      "description": {
+        "ru": "Сеть способна демонтировать и перепродавать крупные энергетические системы, сохраняя их целыми.",
+        "en": "The network can dismantle and resell large energy systems while keeping them intact."
+      },
+      "progressIndex": 4,
+      "progressTotal": 6
+    },
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Ночью люди в белых рабочих комбинезонах проникли на солнечную ферму, промышленным резаком уничтожили массив панелей и угнали сервисного робота. Прошу возместить оборудование и потерю выработки.",
+    "en": "During the night, people in white coveralls entered the solar farm, destroyed the panel array with industrial cutters, and stole the service robot. I am claiming the equipment and lost generation."
+  },
+  "evidence": [
+    {
+      "id": "ev-camera",
+      "order": 1,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера ангара",
+        "en": "Hangar Camera"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Воронов выпускает сервисного робота, загружает программу и открывает ему ворота. Посторонних людей не видно.",
+        "en": "Voronov releases the service robot, uploads a program, and opens the gate for it. No outsiders are visible."
+      },
+      "statusExplanation": {
+        "ru": "Владелец сам запустил операцию перед заявленным нападением.",
+        "en": "The owner initiated the operation himself before the reported attack."
+      },
+      "statementLink": {
+        "statementId": "claim_attack",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Владелец сам запустил операцию перед заявленным нападением.",
+          "en": "The owner initiated the operation himself before the reported attack."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_attack",
+        "reason": {
+          "ru": "Владелец сам запустил операцию перед заявленным нападением.",
+          "en": "The owner initiated the operation himself before the reported attack."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-log",
+      "order": 2,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал сервисного робота",
+        "en": "Service Robot Log"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "Получена задача «бережный демонтаж, сохранить разъёмы». Команда подписана администраторским ключом Воронова.",
+        "en": "Task received: ‘careful dismantling; preserve connectors.’ The command is signed with Voronov's administrator key."
+      },
+      "statusExplanation": {
+        "ru": "Роботу приказали снять, а не уничтожить панели.",
+        "en": "The robot was ordered to remove the panels, not destroy them."
+      },
+      "statementLink": {
+        "statementId": "claim_robot_uncontrolled",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Роботу приказали снять, а не уничтожить панели.",
+          "en": "The robot was ordered to remove the panels, not destroy them."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_robot_uncontrolled",
+        "reason": {
+          "ru": "Роботу приказали снять, а не уничтожить панели.",
+          "en": "The robot was ordered to remove the panels, not destroy them."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-cuts",
+      "order": 3,
+      "type": "document",
+      "title": {
+        "ru": "Экспертиза креплений",
+        "en": "Mounting Examination"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Разъёмы отсоединены штатно, крепления срезаны по заводским линиям. Панели пригодны к повторной установке.",
+        "en": "The connectors were properly disconnected and the mounts cut along factory lines. The panels can be reinstalled."
+      },
+      "statusExplanation": {
+        "ru": "Следы противоречат версии разрушительного нападения.",
+        "en": "The evidence contradicts the claim of a destructive attack."
+      },
+      "statementLink": {
+        "statementId": "claim_panels_destroyed",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Следы противоречат версии разрушительного нападения.",
+          "en": "The evidence contradicts the claim of a destructive attack."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_panels_destroyed",
+        "reason": {
+          "ru": "Следы противоречат версии разрушительного нападения.",
+          "en": "The evidence contradicts the claim of a destructive attack."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-067",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-039/evidence/case-039-ev-panels.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-039/evidence/case-039-ev-panels.webp",
+          "caseRelativeSrc": "evidence/case-039-ev-panels.webp",
+          "installTo": "public/evidence/case-039-ev-panels.webp",
+          "legacyRuntimeUrl": "evidence/case-039-ev-panels.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "f1b8d8a6362f8bb1b0cbf8246f544dcf676e917d1f0560af609d1779b2f61ec0"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-039/evidence/case-039-ev-panels.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-039/evidence/case-039-ev-panels.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-039-ev-panels.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-039/evidence/case-039-ev-panels.webp",
+        "copyTo": "public/evidence/case-039-ev-panels.webp"
+      }
+    },
+    {
+      "id": "ev-gps",
+      "order": 4,
+      "type": "gps",
+      "title": {
+        "ru": "Метка робота",
+        "en": "Robot Beacon"
+      },
+      "isContradiction": false,
+      "narrativeRole": "arc_proof",
+      "text": {
+        "ru": "Робот и панели находятся в подземном боксе, арендованном Вороновым через посредника GC-17.",
+        "en": "The robot and panels are in an underground unit rented by Voronov through a GC-17 intermediary."
+      },
+      "statusExplanation": {
+        "ru": "Имущество не утрачено и скрыто самим владельцем.",
+        "en": "The property was not lost and was concealed by its owner."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Имущество не утрачено и скрыто самим владельцем.",
+          "en": "The property was not lost and was concealed by its owner."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-debt",
+      "order": 5,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Долг фермы",
+        "en": "Farm Debt"
+      },
+      "isContradiction": false,
+      "narrativeRole": "motive",
+      "text": {
+        "ru": "Проект не выполнил кредитные показатели выработки и рискует быть изъят банком.",
+        "en": "The project failed to meet its generation targets and faces repossession by the bank."
+      },
+      "statusExplanation": {
+        "ru": "Финансовый кризис объясняет мотив, но не доказывает инсценировку.",
+        "en": "The financial crisis explains motive but does not prove staging."
+      },
+      "statementLink": {
+        "statementId": "claim_panels_destroyed",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Финансовый кризис объясняет мотив, но не доказывает инсценировку.",
+          "en": "The financial crisis explains motive but does not prove staging."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-neighbor",
+      "order": 6,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания соседнего оператора",
+        "en": "Neighboring Operator's Statement"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Ночью он слышал только штатный электропривод робота, без машин и голосов.",
+        "en": "During the night, he heard only the robot's normal electric drive, with no vehicles or voices."
+      },
+      "statusExplanation": {
+        "ru": "Свидетель согласуется с автономной операцией, но не идентифицирует заказчика.",
+        "en": "The witness supports an autonomous operation but cannot identify who ordered it."
+      },
+      "statementLink": {
+        "statementId": "claim_robot_uncontrolled",
+        "relation": "supports",
+        "reason": {
+          "ru": "Свидетель согласуется с автономной операцией, но не идентифицирует заказчика.",
+          "en": "The witness supports an autonomous operation but cannot identify who ordered it."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Воронов сам запустил робота и приказал бережно демонтировать панели.",
+      "Оборудование не уничтожено: оно спрятано вместе с роботом в арендованном боксе.",
+      "Ущерб инсценирован ради выплаты. Заявление следует отклонить."
+    ],
+    "en": [
+      "The owner initiated the operation himself before the reported attack.",
+      "The robot was ordered to remove the panels, not destroy them.",
+      "The evidence contradicts the claim of a destructive attack.",
+      "The witness supports an autonomous operation but cannot identify who ordered it.",
+      "The property was not lost and was concealed by its owner.",
+      "The claim is fraudulent and should be rejected."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Сделать аккуратность демонтажа ключевой уликой.",
+      "Сохранить сервисного робота без космооперной стилистики."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "people/nikita-voronov.webp",
+      "action": "generate",
+      "prompt": "Illustrated archival claimant ID portrait matching the existing insurance detective game: Russian male renewable-energy entrepreneur, 38 years old, neat field jacket, ambitious tense expression, short dark hair, neutral document-photo background, original face, no superhero or science-fiction costume, no logos, no text, no watermark."
+    },
+    {
+      "file": "evidence/case-039-ev-panels.webp",
+      "action": "generate",
+      "prompt": "Dawn forensic evidence photo at a solar farm where rows of panels have been professionally removed: intact connectors, neatly cut mounting points and organized cable ends, no smashed glass, a compact industrial service robot track visible in dust, realistic high-tech agriculture, no logos, no text, no watermark."
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Ночью люди в белых рабочих комбинезонах проникли на солнечную ферму, промышленным резаком уничтожили массив панелей и угнали сервисного робота. Прошу возместить оборудование и потерю выработки.",
+        "en": "During the night, people in white coveralls entered the solar farm, destroyed the panel array with industrial cutters, and stole the service robot. I am claiming the equipment and lost generation."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_attack",
+      "text": {
+        "ru": "Неизвестные вывели из строя солнечную ферму.",
+        "en": "Unknown intruders disabled the solar farm."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_robot_uncontrolled",
+      "text": {
+        "ru": "Сервисный робот действовал без команды владельца.",
+        "en": "The service robot acted without the owner's command."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_panels_destroyed",
+      "text": {
+        "ru": "Панели уничтожены и не находятся под контролем Воронова.",
+        "en": "The panels were destroyed and are no longer under Voronov's control."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 0,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-039",
+    "archiveBasePath": "generated-assets/src/data/cases/case-039",
+    "claimantPortrait": {
+      "characterId": "nikita-voronov",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Никита Воронов",
+        "en": "Nikita Voronov, age 38"
+      },
+      "assetId": "asset-066",
+      "src": "src/data/cases/case-039/people/nikita-voronov.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-039/people/nikita-voronov.webp",
+      "caseRelativeSrc": "people/nikita-voronov.webp",
+      "installTo": "public/people/nikita-voronov.webp",
+      "legacyRuntimeUrl": "people/nikita-voronov.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "a9620530c2789e6b82a55e718f0f09969e37863a2789d70300ba2c291df34bb3"
+    },
+    "claimantPortraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/nikita-voronov.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-039/people/nikita-voronov.webp",
+      "copyTo": "public/people/nikita-voronov.webp",
+      "replacesExistingValue": null
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-cuts",
+        "title": {
+          "ru": "Экспертиза креплений",
+          "en": "Mounting Examination"
+        },
+        "primaryImage": "src/data/cases/case-039/evidence/case-039-ev-panels.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-039/evidence/case-039-ev-panels.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-039-ev-panels.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-039/evidence/case-039-ev-panels.webp",
+          "copyTo": "public/evidence/case-039-ev-panels.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-067",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-039/evidence/case-039-ev-panels.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-039/evidence/case-039-ev-panels.webp",
+            "caseRelativeSrc": "evidence/case-039-ev-panels.webp",
+            "installTo": "public/evidence/case-039-ev-panels.webp",
+            "legacyRuntimeUrl": "evidence/case-039-ev-panels.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "f1b8d8a6362f8bb1b0cbf8246f544dcf676e917d1f0560af609d1779b2f61ec0"
+          }
+        ]
+      }
+    ]
+  }
+}

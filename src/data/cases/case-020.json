@@ -1,319 +1,489 @@
 {
   "id": "case-020",
   "type": "standard",
+  "campaignOrder": 6,
+  "requiredLevel": 3,
+  "act": 1,
+  "actTitle": {
+    "ru": "Чужой почерк",
+    "en": "Another Hand",
+    "tr": "Another Hand",
+    "ar": "Another Hand",
+    "kk": "Чужой почерк"
+  },
   "difficulty": "medium",
   "claimAmount": 3500,
   "truth": "fraud",
   "title": {
-    "ru": "Пицца-Погром",
-    "en": "The Pizza Pogrom",
-    "tr": "Pizza Yağması",
-    "ar": "مذبحة البيتزا",
-    "kk": "Пицца-Погром"
+    "ru": "Сорок пропавших пицц",
+    "en": "Forty Missing Pizzas",
+    "tr": "Forty Missing Pizzas",
+    "ar": "Forty Missing Pizzas",
+    "kk": "Сорок пропавших пицц"
   },
   "claim": {
     "person": {
-      "ru": "Павел Арсенов, 48 лет",
-      "en": "Pavel Arsenov, 48",
-      "tr": "Pavel Arsenov, 48",
-      "ar": "أوريست أرسينوف، 48",
-      "kk": "Павел Арсенов, 48 жаста"
+      "ru": "Орест Чернов, 48 лет",
+      "en": "Orest Chernov, age 48",
+      "tr": "Orest Chernov, age 48",
+      "ar": "Orest Chernov, age 48",
+      "kk": "Орест Чернов, 48 лет"
     },
     "story": {
-      "ru": "Заявляю о вопиющем акте вандализма и коммерческой кражи. В 02:00 группа малолетних хулиганов из подвальной спортклуба «Факел» разбила витрину моего премиального фреш-бара сети «СЕВЕРНЫЙ ДВОР» и похитила 40 семейных пицц пепперони, заготовленных для корпоративного банкета. Требую возмещения ущерба в полном объёме и настаиваю на закрытии этой рассадницы преступности.",
-      "en": "I report a flagrant act of vandalism and commercial theft. At 02:00 a gang of juvenile hooligans from the basement karate dojo \"Torch\" smashed the window of my premium juice bar of the \"NORTH YARD\" network and stole 40 family-sized pepperoni pizzas prepared for a corporate banquet. I demand full compensation and insist this den of crime be shut down.",
-      "tr": "Bariz bir vandalizm ve ticari hırsızlık olayını bildiriyorum. Saat 02:00'de bodrum kattaki \"Meşale\" spor kulübündan bir grup genç holigan, \"NORTH YARD\" ağına ait premium meyve suyu barımın camını kırdı ve kurumsal ziyafet için hazırlanmış 40 aile boyu pepperoni pizzayı çaldı. Zararın tamamının tazminini talep ediyor ve bu suç yuvasının kapatılmasında ısrar ediyorum.",
-      "ar": "أُبلغ عن عمل تخريبي صارخ وسرقة تجارية. في الساعة 02:00 قامت عصابة من المراهقين المشاغبين من نادي الكاراتيه القابع في القبو «نينجا» بتحطيم واجهة بار العصائر الفاخر التابع لشبكتي «الساحة الشمالية» وسرقة 40 بيتزا بيبروني بالحجم العائلي أُعدّت لمأدبة شركة. أطالب بالتعويض الكامل وأُصرّ على إغلاق وكر الجريمة هذا.",
-      "kk": "Дөрекі вандализм мен коммерциялық ұрлық туралы мәлімдеймін. Сағат 02:00-де «Факел» атты жертөледегі карате секциясының жасөспірім бұзақылары менің «СЕВЕРНЫЙ ДВОР» желісіндегі премиум фреш-барымның витринасын сындырып, корпоративтік банкетке дайындалған 40 отбасылық пепперони пиццасын ұрлап әкетті. Зиянды толық өтеуді талап етемін және осы қылмыс ұясын жабуды талап етемін."
+      "ru": "В ночь на 12 июня участники расположенного в подвале клуба робототехники «Маяк» разбили стекло боковой двери моей закусочной и похитили сорок пицц, приготовленных для корпоративного заказа. Камера зафиксировала человека в серой клубной ветровке. Прошу возместить стоимость продукции, двери и уборки — 3500 евро.",
+      "en": "On the night of June 12, members of the Mayak robotics club in the basement smashed my snack bar's side-door window and stole forty pizzas prepared for a corporate order. A camera recorded someone wearing the club's gray jacket. I am claiming €3,500 for the food, the door, and cleanup.",
+      "tr": "On the night of June 12, members of the Mayak robotics club in the basement smashed my snack bar's side-door window and stole forty pizzas prepared for a corporate order. A camera recorded someone wearing the club's gray jacket. I am claiming €3,500 for the food, the door, and cleanup.",
+      "ar": "On the night of June 12, members of the Mayak robotics club in the basement smashed my snack bar's side-door window and stole forty pizzas prepared for a corporate order. A camera recorded someone wearing the club's gray jacket. I am claiming €3,500 for the food, the door, and cleanup.",
+      "kk": "В ночь на 12 июня участники расположенного в подвале клуба робототехники «Маяк» разбили стекло боковой двери моей закусочной и похитили сорок пицц, приготовленных для корпоративного заказа. Камера зафиксировала человека в серой клубной ветровке. Прошу возместить стоимость продукции, двери и уборки — 3500 евро."
     }
   },
-  "coverImage": "covers/case-020.svg",
-  "personImage": "people/orest.webp",
   "client": {
     "role": {
-      "ru": "Заявитель · физ. лицо",
-      "en": "Claimant · individual",
-      "tr": "Başvuru sahibi · gerçek kişi",
-      "ar": "مقدم الطلب · شخص طبيعي",
-      "kk": "Өтініш беруші · жеке тұлға"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Возраст",
-          "en": "Age",
-          "tr": "Yaş",
-          "ar": "العمر",
-          "kk": "Жасы"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "48 лет",
-          "en": "48 years old",
-          "tr": "48 yaşında",
-          "ar": "48 عامًا",
-          "kk": "48 жаста"
+          "ru": "1",
+          "en": "1",
+          "tr": "1",
+          "ar": "1",
+          "kk": "1"
         }
       },
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Екатеринбург",
-          "en": "Yekaterinburg",
-          "tr": "Yekaterinburg",
-          "ar": "يكاترينبورغ",
-          "kk": "Екатеринбург"
-        }
-      },
-      {
-        "k": {
-          "ru": "Клиент с",
-          "en": "Client since",
-          "tr": "Müşteri",
-          "ar": "عميل منذ",
-          "kk": "Клиент"
-        },
-        "v": {
-          "ru": "2017 г.",
-          "en": "2017",
-          "tr": "2017",
-          "ar": "2017",
-          "kk": "2017 ж."
-        }
-      },
-      {
-        "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
-        },
-        "v": {
-          "ru": "Имущество · ИМ-20245128-X2",
-          "en": "Property · IM-20245128-X2",
-          "tr": "Mülk · IM-20245128-X2",
-          "ar": "الممتلكات · IM-20245128-X2",
-          "kk": "Мүлік · ИМ-20245128-X2"
-        }
-      },
-      {
-        "k": {
-          "ru": "Документ",
-          "en": "Document",
-          "tr": "Belge",
-          "ar": "الوثيقة",
-          "kk": "Құжат"
-        },
-        "v": {
-          "ru": "Паспорт 6515-34 №202451280-94",
-          "en": "Passport 6515-34 №202451280-94",
-          "tr": "Pasaport 6515-34 №202451280-94",
-          "ar": "جواز السفر 6515-34 №202451280-94",
-          "kk": "Паспорт 6515-34 №202451280-94"
+          "ru": "6",
+          "en": "6",
+          "tr": "6",
+          "ar": "6",
+          "kk": "6"
         }
       }
     ]
   },
+  "coverImage": "covers/case-020.svg",
+  "personImage": "people/orest-chernov.webp",
   "evidences": [
     {
-      "id": "ev-cctv",
+      "id": "ev-camera",
+      "order": 1,
       "type": "camera_recording",
       "title": {
-        "ru": "Запись камеры фреш-бара",
-        "en": "Juice Bar CCTV",
-        "tr": "Meyve Suyu Barı Kamerası",
-        "ar": "كاميرا بار العصائر",
-        "kk": "Фреш-бар камерасы"
+        "ru": "Запись камеры закусочной",
+        "en": "Snack Bar Camera Footage",
+        "tr": "Snack Bar Camera Footage",
+        "ar": "Snack Bar Camera Footage",
+        "kk": "Запись камеры закусочной"
       },
       "content": {
-        "ru": [
-          "02:04:58 · Фигура в маске-бандане ОРАНЖЕВОГО цвета у разбитой витрины",
-          "02:05:12 · На запястьях фигуры блестят серебряные запонки и дорогие часы",
-          "02:05:40 · Фигура выносит стопку коробок с пиццей и садится в чёрный внедорожник"
-        ],
-        "en": [
-          "02:04:58 · a figure in a dark hood by the smashed window",
-          "02:05:12 · Silver cufflinks and an expensive watch glint on the figure's wrists",
-          "02:05:40 · The figure carries off a stack of pizza boxes into a black SUV"
-        ],
-        "tr": [
-          "02:04:58 · Kırık camın yanında koyu kapüşonlu bir figür",
-          "02:05:12 · Figürün bileklerinde gümüş kol düğmeleri ve pahalı bir saat parlıyor",
-          "02:05:40 · Figür bir yığın pizza kutusunu siyah bir SUV'a taşıyor"
-        ],
-        "ar": [
-          "02:04:58 · شخص يرتدي قناع باندانا برتقالي اللون قرب الواجهة المحطمة",
-          "02:05:12 · يلمع على معصمَي الشخص أزرار أكمام فضية وساعة باهظة الثمن",
-          "02:05:40 · الشخص يحمل كومة من علب البيتزا إلى سيارة دفع رباعي سوداء"
-        ],
-        "kk": [
-          "02:04:58 · Сынған витрина қасында қара капюшонды тұлға",
-          "02:05:12 · Тұлғаның білегінде күміс түйме мен қымбат сағат жылтырайды",
-          "02:05:40 · Тұлға пицца қораптарын көтеріп, қара внедорожникке отырады"
-        ]
+        "ru": "В 02:04 человек в серой ветровке с эмблемой клуба «Маяк» выходит через повреждённую боковую дверь с коробками. Лицо закрыто капюшоном. Затем человек садится в чёрный служебный фургон; на записи читаются последние цифры номера — `417`.",
+        "en": "At 2:04 a.m., someone in a gray jacket bearing the Mayak club emblem leaves through the damaged side door carrying boxes. Their face is hidden by a hood. The person then enters a black company van; the final digits of its plate, `417`, are visible.",
+        "tr": "At 2:04 a.m., someone in a gray jacket bearing the Mayak club emblem leaves through the damaged side door carrying boxes. Their face is hidden by a hood. The person then enters a black company van; the final digits of its plate, `417`, are visible.",
+        "ar": "At 2:04 a.m., someone in a gray jacket bearing the Mayak club emblem leaves through the damaged side door carrying boxes. Their face is hidden by a hood. The person then enters a black company van; the final digits of its plate, `417`, are visible.",
+        "kk": "В 02:04 человек в серой ветровке с эмблемой клуба «Маяк» выходит через повреждённую боковую дверь с коробками. Лицо закрыто капюшоном. Затем человек садится в чёрный служебный фургон; на записи читаются последние цифры номера — `417`."
       },
-      "isContradiction": true,
+      "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Подросток из подвальной секции не носит серебряные запонки и дорогие часы — это приметы самого Арсенова. «Взлом» инсценирован.",
-        "en": "A teen from a basement dojo doesn't wear silver cufflinks and a luxury watch — those are Arsenov's own markers. The \"break-in\" was staged.",
-        "tr": "Bodrum salonundan bir genç gümüş kol düğmesi ve lüks saat takmaz — bunlar bizzat Arsenov'un işaretleri. \"Soygun\" sahnelenmiş.",
-        "ar": "مراهق من نادٍ في قبو لا يرتدي أزرار أكمام فضية وساعة فاخرة — تلك علامات أرسينوف نفسه. «الاقتحام» كان مفبركاً.",
-        "kk": "Жертөледегі секцияның жасөспірімі күміс түйме мен қымбат сағат тақпайды — бұл Арсеновтың өзінің белгілері. «Тонау» қойылған."
+        "ru": "Ветровка делает версию Чернова правдоподобной, но лицо человека не видно. Запись подтверждает вынос коробок, а не личность виновного.",
+        "en": "The jacket makes Chernov's account plausible, but the person's face is hidden. The footage proves that boxes were removed, not who removed them.",
+        "tr": "The jacket makes Chernov's account plausible, but the person's face is hidden. The footage proves that boxes were removed, not who removed them.",
+        "ar": "The jacket makes Chernov's account plausible, but the person's face is hidden. The footage proves that boxes were removed, not who removed them.",
+        "kk": "Ветровка делает версию Чернова правдоподобной, но лицо человека не видно. Запись подтверждает вынос коробок, а не личность виновного."
       },
-      "meta": {
-        "cameraId": "CAM-FC1",
-        "cameraModel": "SentinelCam SC-2087 · 4K · H.265"
-      }
-    },
-    {
-      "id": "ev-receipt",
-      "type": "document",
-      "title": {
-        "ru": "Чек доставки пиццы",
-        "en": "Pizza Delivery Receipt",
-        "tr": "Pizza Teslimat Fişi",
-        "ar": "إيصال توصيل البيتزا",
-        "kk": "Пицца жеткізу чегі"
-      },
-      "content": {
-        "ru": [
-          "Мега-Пицца Экспресс · электронный чек № MP-77431",
-          "Заказ: пицца «Пепперони», семейная — 40 шт.",
-          "Оплачено: 01:50, личной картой (Илья, ученик спортклуба «Факел»)",
-          "Адрес доставки: ул. Подвальная, 4 — спортклуб «Факел» (НЕ фреш-бар «СЕВЕРНЫЙ ДВОР»)",
-          "Статус: доставлено 02:08, получено лично"
-        ],
-        "en": [
-          "Mega-Pizza Express · e-receipt No. MP-77431",
-          "Order: \"Pepperoni\" pizza, family size — 40 pcs.",
-          "Paid: 01:50, personal card (Ilya, \"Torch\" sports club student)",
-          "Delivery address: 4 Basement St. — \"Torch\" sports club (NOT the \"NORTH YARD\" juice bar)",
-          "Status: delivered 02:08, received in person"
-        ],
-        "tr": [
-          "Mega-Pizza Express · e-fiş No. MP-77431",
-          "Sipariş: \"Pepperoni\" pizza, aile boyu — 40 adet.",
-          "Ödendi: 01:50, kişisel kart (Ilya, \"Meşale\" spor kulübü öğrencisi)",
-          "Teslimat adresi: Bodrum Sok. No:4 — \"Meşale\" spor kulübü (NORTH YARD meyve suyu barı DEĞİL)",
-          "Durum: 02:08'de teslim edildi, bizzat alındı"
-        ],
-        "ar": [
-          "ميغا-بيتزا إكسبرس · إيصال إلكتروني رقم MP-77431",
-          "الطلب: بيتزا «بيبروني»، حجم عائلي — 40 قطعة.",
-          "الدفع: 01:50، ببطاقة شخصية (إيليا، طالب نادي «نينجا»، قناع برتقالي)",
-          "عنوان التوصيل: شارع القبو 4 — نادي «نينجا» (وليس بار «الساحة الشمالية» للعصائر)",
-          "الحالة: تم التوصيل 02:08، استُلم شخصياً"
-        ],
-        "kk": [
-          "Мега-Пицца Экспресс · электрондық чек № MP-77431",
-          "Тапсырыс: «Пепперони» пиццасы, отбасылық — 40 дана.",
-          "Төленді: 01:50, жеке картамен (Илья, «Алау» спорт клубының оқушысы)",
-          "Жеткізу мекенжайы: Подвальная к-сі, 4 — спортклуб «Факел»сы (СЕВЕРНЫЙ ДВОР фреш-бары ЕМЕС)",
-          "Күйі: 02:08-де жеткізілді, өз қолына алынды"
-        ]
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "40 пицц были легально куплены учеником в 01:50 и доставлены в додзё — их не похищали из бара.",
-        "en": "The 40 pizzas were legally bought by the student at 01:50 and delivered to the dojo — they were never stolen from the bar.",
-        "tr": "40 pizza, öğrenci tarafından 01:50'de yasal olarak satın alındı ve salona teslim edildi — bardan çalınmadı.",
-        "ar": "الـ40 بيتزا اشتراها الطالب بشكل قانوني في 01:50 وسُلّمت إلى النادي — لم تُسرق من البار.",
-        "kk": "40 пицца оқушы 01:50-де заңды түрде сатып алып, додзёға жеткізілген — олар бардан ұрланбаған."
-      },
-      "meta": {
-        "docHeader": {
-          "ru": "Мега-Пицца Экспресс · электронный чек · оплата подтверждена",
-          "en": "Mega Pizza Express · electronic receipt · payment confirmed",
-          "tr": "Mega Pizza Express · elektronik fiş · ödeme onaylandı",
-          "ar": "ميغا بيتزا إكسبريس · إيصال إلكتروني · تم تأكيد الدفع",
-          "kk": "Mega Pizza Express · электрондық чек · төлем расталды"
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_event",
+        "relation": "supports",
+        "reason": {
+          "ru": "Ветровка делает версию Чернова правдоподобной, но лицо человека не видно. Запись подтверждает вынос коробок, а не личность виновного.",
+          "en": "The jacket makes Chernov's account plausible, but the person's face is hidden. The footage proves that boxes were removed, not who removed them.",
+          "tr": "The jacket makes Chernov's account plausible, but the person's face is hidden. The footage proves that boxes were removed, not who removed them.",
+          "ar": "The jacket makes Chernov's account plausible, but the person's face is hidden. The footage proves that boxes were removed, not who removed them.",
+          "kk": "Ветровка делает версию Чернова правдоподобной, но лицо человека не видно. Запись подтверждает вынос коробок, а не личность виновного."
         }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/case-020-staged-takeaway-cctv.webp"
       }
     },
     {
-      "id": "ev-medical",
-      "type": "document",
+      "id": "ev-delivery-receipt",
+      "order": 2,
+      "type": "seal_match",
       "title": {
-        "ru": "Справка приёмного отделения",
-        "en": "ER Admission Record",
-        "tr": "Acil Servis Kaydı",
-        "ar": "سجل قسم الطوارئ",
-        "kk": "Қабылдау бөлімінің анықтамасы"
+        "ru": "Сопоставление пломб коробок",
+        "en": "Box Seal Comparison",
+        "tr": "Box Seal Comparison",
+        "ar": "Box Seal Comparison",
+        "kk": "Сопоставление пломб коробок"
       },
       "content": {
-        "ru": [
-          "Городская клиника · приёмное отделение",
-          "Пациент: Илья, 16 лет, ученик спортклуба «Факел» ",
-          "Поступил: 02:00. Диагноз: острый гастрит, переедание (≈12 кусков пиццы)",
-          "Под наблюдением капельницы до утра, передвижение исключено"
-        ],
-        "en": [
-          "City clinic · emergency department",
-          "Patient: Ilya, 16, \"Torch\" sports club student ",
-          "Admitted: 02:00. Diagnosis: acute gastritis, overeating (≈12 slices of pizza)",
-          "On a drip under observation until morning, movement ruled out"
-        ],
-        "tr": [
-          "Şehir kliniği · acil servis",
-          "Hasta: Ilya, 16, \"Meşale\" spor kulübü öğrencisi ",
-          "Kabul: 02:00. Tanı: akut gastrit, aşırı yeme (≈12 dilim pizza)",
-          "Sabaha kadar serum altında gözlemde, hareket etmesi imkânsız"
-        ],
-        "ar": [
-          "عيادة المدينة · قسم الطوارئ",
-          "المريض: إيليا، 16 عاماً، طالب نادي «نينجا» (قناع برتقالي)",
-          "الدخول: 02:00. التشخيص: التهاب معدة حاد، إفراط في الأكل (≈12 شريحة بيتزا)",
-          "تحت المراقبة والمحلول حتى الصباح، الحركة مستبعدة"
-        ],
-        "kk": [
-          "Қалалық клиника · қабылдау бөлімі",
-          "Науқас: Илья, 16 жаста, «Алау» спорт клубының оқушысы ",
-          "Түскен уақыты: 02:00. Диагноз: жедел гастрит, шамадан тыс жеу (≈12 тілім пицца)",
-          "Таңға дейін тамшылатқыш астында бақылауда, қозғалуы мүмкін емес"
-        ]
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Ученик Илья с 02:00 лежит в приёмном — он физически не мог быть «грабителем» в 02:05.",
-        "en": "Ilya has been in the ER since 02:00 — he physically could not be the \"burglar\" at 02:05.",
-        "tr": "Ilya 02:00'den beri acil serviste — 02:05'teki \"soyguncu\" olması fiziksel olarak imkânsız.",
-        "ar": "الطالب ذو القناع البرتقالي في الطوارئ منذ 02:00 — يستحيل جسدياً أن يكون «اللص» في 02:05.",
-        "kk": "Илья 02:00-ден бері қабылдауда жатыр — ол 02:05-те «тонаушы» бола алмайды."
+        "ru": "Фрагменты совпали: коробки у клуба относятся к партии, которую Чернов сам оплатил и отправил туда до инсценировки.",
+        "en": "The fragments match: the boxes found at the club came from a batch Chernov paid for and sent there himself before staging the theft.",
+        "tr": "The fragments match: the boxes found at the club came from a batch Chernov paid for and sent there himself before staging the theft.",
+        "ar": "The fragments match: the boxes found at the club came from a batch Chernov paid for and sent there himself before staging the theft.",
+        "kk": "Фрагменты совпали: коробки у клуба относятся к партии, которую Чернов сам оплатил и отправил туда до инсценировки."
+      },
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_intruder",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Фрагменты совпали: коробки у клуба относятся к партии, которую Чернов сам оплатил и отправил туда до инсценировки.",
+          "en": "The fragments match: the boxes found at the club came from a batch Chernov paid for and sent there himself before staging the theft.",
+          "tr": "The fragments match: the boxes found at the club came from a batch Chernov paid for and sent there himself before staging the theft.",
+          "ar": "The fragments match: the boxes found at the club came from a batch Chernov paid for and sent there himself before staging the theft.",
+          "kk": "Фрагменты совпали: коробки у клуба относятся к партии, которую Чернов сам оплатил и отправил туда до инсценировки."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_intruder",
+        "reason": {
+          "ru": "Фрагменты совпали: коробки у клуба относятся к партии, которую Чернов сам оплатил и отправил туда до инсценировки.",
+          "en": "The fragments match: the boxes found at the club came from a batch Chernov paid for and sent there himself before staging the theft.",
+          "tr": "The fragments match: the boxes found at the club came from a batch Chernov paid for and sent there himself before staging the theft.",
+          "ar": "The fragments match: the boxes found at the club came from a batch Chernov paid for and sent there himself before staging the theft.",
+          "kk": "Фрагменты совпали: коробки у клуба относятся к партии, которую Чернов сам оплатил и отправил туда до инсценировки."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "Один обрывок снят с коробок у клуба «Маяк», второй остался на упаковке из ночной доставки.",
+        "en": "One fragment came from boxes found at the Mayak club; the other remained on packaging from the overnight delivery.",
+        "tr": "One fragment came from boxes found at the Mayak club; the other remained on packaging from the overnight delivery.",
+        "ar": "One fragment came from boxes found at the Mayak club; the other remained on packaging from the overnight delivery.",
+        "kk": "Один обрывок снят с коробок у клуба «Маяк», второй остался на упаковке из ночной доставки."
+      },
+      "instruction": {
+        "ru": "Повернуть фрагмент и совместить линию разрыва.",
+        "en": "Rotate the fragment and align the torn edges.",
+        "tr": "Rotate the fragment and align the torn edges.",
+        "ar": "Rotate the fragment and align the torn edges.",
+        "kk": "Повернуть фрагмент и совместить линию разрыва."
+      },
+      "previousType": "document",
+      "assets": {
+        "asset1": "cases/case-020/assets/interactive/ev-delivery-receipt-master-a.webp",
+        "asset2": "cases/case-020/assets/interactive/ev-delivery-receipt-fragments.json"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true,
+        "transparencyMode": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Совпавший разрыв физически связывает коробки у клуба с заказом самого Чернова.",
+          "en": "The matching tear physically links the boxes at the club to Chernov's own order.",
+          "tr": "The matching tear physically links the boxes at the club to Chernov's own order.",
+          "ar": "The matching tear physically links the boxes at the club to Chernov's own order.",
+          "kk": "Совпавший разрыв физически связывает коробки у клуба с заказом самого Чернова."
+        },
+        "playerAction": {
+          "ru": "Повернуть фрагмент и совместить линию разрыва.",
+          "en": "Rotate the fragment and align the torn edges.",
+          "tr": "Rotate the fragment and align the torn edges.",
+          "ar": "Rotate the fragment and align the torn edges.",
+          "kk": "Повернуть фрагмент и совместить линию разрыва."
+        },
+        "conclusion": {
+          "ru": "Фрагменты совпали: коробки у клуба относятся к партии, которую Чернов сам оплатил и отправил туда до инсценировки.",
+          "en": "The fragments match: the boxes found at the club came from a batch Chernov paid for and sent there himself before staging the theft.",
+          "tr": "The fragments match: the boxes found at the club came from a batch Chernov paid for and sent there himself before staging the theft.",
+          "ar": "The fragments match: the boxes found at the club came from a batch Chernov paid for and sent there himself before staging the theft.",
+          "kk": "Фрагменты совпали: коробки у клуба относятся к партии, которую Чернов сам оплатил и отправил туда до инсценировки."
+        }
+      },
+      "data": {
+        "movableFragment": "B",
+        "allowRotation": true,
+        "rotationStep": 3,
+        "initialTransform": {
+          "x": 72,
+          "y": 18,
+          "rotation": -14
+        },
+        "targetTransform": {
+          "x": 132,
+          "y": 48,
+          "rotation": 6
+        },
+        "tolerance": {
+          "position": 10,
+          "rotation": 5
+        },
+        "expectedMatch": true,
+        "sourceSeed": 610417,
+        "fragmentASeed": 610417,
+        "fragmentBSeed": 610417,
+        "comparisonMarkers": [
+          {
+            "id": "tear_pattern",
+            "label": "Совпадают волокна бумаги и три дефекта серийного узора",
+            "labelEn": "Paper fibers and three serial-pattern defects match"
+          }
+        ]
       }
+    },
+    {
+      "id": "ev-van-log",
+      "order": 3,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал охраны и телематика фургона",
+        "en": "Security Log and Van Telematics",
+        "tr": "Security Log and Van Telematics",
+        "ar": "Security Log and Van Telematics",
+        "kk": "Журнал охраны и телематика фургона"
+      },
+      "content": {
+        "ru": "- 01:58 — охрана боковой двери отключена личным кодом владельца;\n- 02:01 — дверь открыта изнутри аварийной ручкой;\n- 02:03 — служебный фургон `М417АХ` припаркован у входа;\n- 02:11 — тот же фургон прибывает к клубу «Маяк»;\n- ключ фургона зарегистрирован на Ореста Чернова.",
+        "en": "- 1:58 a.m.—side-door alarm disabled with the owner's personal code;\n- 2:01 a.m.—door opened from inside using the emergency handle;\n- 2:03 a.m.—company van `M417AKh` parked at the entrance;\n- 2:11 a.m.—the same van arrived at the Mayak club;\n- the van key is assigned to Orest Chernov.",
+        "tr": "- 1:58 a.m.—side-door alarm disabled with the owner's personal code;\n- 2:01 a.m.—door opened from inside using the emergency handle;\n- 2:03 a.m.—company van `M417AKh` parked at the entrance;\n- 2:11 a.m.—the same van arrived at the Mayak club;\n- the van key is assigned to Orest Chernov.",
+        "ar": "- 1:58 a.m.—side-door alarm disabled with the owner's personal code;\n- 2:01 a.m.—door opened from inside using the emergency handle;\n- 2:03 a.m.—company van `M417AKh` parked at the entrance;\n- 2:11 a.m.—the same van arrived at the Mayak club;\n- the van key is assigned to Orest Chernov.",
+        "kk": "- 01:58 — охрана боковой двери отключена личным кодом владельца;\n- 02:01 — дверь открыта изнутри аварийной ручкой;\n- 02:03 — служебный фургон `М417АХ` припаркован у входа;\n- 02:11 — тот же фургон прибывает к клубу «Маяк»;\n- ключ фургона зарегистрирован на Ореста Чернова."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Боковую дверь открыли изнутри кодом Чернова, а фигура на записи уехала на его служебном автомобиле. Инсценировку провёл сам заявитель.",
+        "en": "The side door was opened from inside using Chernov's code, and the person on camera left in his company vehicle. The claimant staged the theft himself.",
+        "tr": "The side door was opened from inside using Chernov's code, and the person on camera left in his company vehicle. The claimant staged the theft himself.",
+        "ar": "The side door was opened from inside using Chernov's code, and the person on camera left in his company vehicle. The claimant staged the theft himself.",
+        "kk": "Боковую дверь открыли изнутри кодом Чернова, а фигура на записи уехала на его служебном автомобиле. Инсценировку провёл сам заявитель."
+      },
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_intruder",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Боковую дверь открыли изнутри кодом Чернова, а фигура на записи уехала на его служебном автомобиле. Инсценировку провёл сам заявитель.",
+          "en": "The side door was opened from inside using Chernov's code, and the person on camera left in his company vehicle. The claimant staged the theft himself.",
+          "tr": "The side door was opened from inside using Chernov's code, and the person on camera left in his company vehicle. The claimant staged the theft himself.",
+          "ar": "The side door was opened from inside using Chernov's code, and the person on camera left in his company vehicle. The claimant staged the theft himself.",
+          "kk": "Боковую дверь открыли изнутри кодом Чернова, а фигура на записи уехала на его служебном автомобиле. Инсценировку провёл сам заявитель."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_intruder",
+        "reason": {
+          "ru": "Боковую дверь открыли изнутри кодом Чернова, а фигура на записи уехала на его служебном автомобиле. Инсценировку провёл сам заявитель.",
+          "en": "The side door was opened from inside using Chernov's code, and the person on camera left in his company vehicle. The claimant staged the theft himself.",
+          "tr": "The side door was opened from inside using Chernov's code, and the person on camera left in his company vehicle. The claimant staged the theft himself.",
+          "ar": "The side door was opened from inside using Chernov's code, and the person on camera left in his company vehicle. The claimant staged the theft himself.",
+          "kk": "Боковую дверь открыли изнутри кодом Чернова, а фигура на записи уехала на его служебном автомобиле. Инсценировку провёл сам заявитель."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "ev-landlord-chat",
+      "order": 4,
+      "type": "document",
+      "title": {
+        "ru": "Переписка с управляющей компанией",
+        "en": "Messages with the Property Manager",
+        "tr": "Messages with the Property Manager",
+        "ar": "Messages with the Property Manager",
+        "kk": "Переписка с управляющей компанией"
+      },
+      "content": {
+        "ru": "За две недели до происшествия Чернов просил передать ему подвальное помещение клуба для расширения кухни. Управляющая компания отказала, пока «Маяк» не нарушает договор. На следующий день после отказа Чернов получил от неизвестного консультанта шаблон заявления и смету с кодом `17-К`.",
+        "en": "Two weeks before the incident, Chernov asked to take over the club's basement space to expand his kitchen. The property manager refused as long as Mayak remained in compliance with its lease. The day after that refusal, Chernov received a claim template and estimate marked `17-K` from an unknown consultant.",
+        "tr": "Two weeks before the incident, Chernov asked to take over the club's basement space to expand his kitchen. The property manager refused as long as Mayak remained in compliance with its lease. The day after that refusal, Chernov received a claim template and estimate marked `17-K` from an unknown consultant.",
+        "ar": "Two weeks before the incident, Chernov asked to take over the club's basement space to expand his kitchen. The property manager refused as long as Mayak remained in compliance with its lease. The day after that refusal, Chernov received a claim template and estimate marked `17-K` from an unknown consultant.",
+        "kk": "За две недели до происшествия Чернов просил передать ему подвальное помещение клуба для расширения кухни. Управляющая компания отказала, пока «Маяк» не нарушает договор. На следующий день после отказа Чернов получил от неизвестного консультанта шаблон заявления и смету с кодом `17-К`."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Переписка раскрывает мотив и связь с шаблоном, но виновность уже устанавливается журналом доступа и маршрутом автомобиля.",
+        "en": "The messages reveal a motive and a link to the template, but the access log and vehicle route already establish who staged the theft.",
+        "tr": "The messages reveal a motive and a link to the template, but the access log and vehicle route already establish who staged the theft.",
+        "ar": "The messages reveal a motive and a link to the template, but the access log and vehicle route already establish who staged the theft.",
+        "kk": "Переписка раскрывает мотив и связь с шаблоном, но виновность уже устанавливается журналом доступа и маршрутом автомобиля."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_intruder",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Переписка раскрывает мотив и связь с шаблоном, но виновность уже устанавливается журналом доступа и маршрутом автомобиля.",
+          "en": "The messages reveal a motive and a link to the template, but the access log and vehicle route already establish who staged the theft.",
+          "tr": "The messages reveal a motive and a link to the template, but the access log and vehicle route already establish who staged the theft.",
+          "ar": "The messages reveal a motive and a link to the template, but the access log and vehicle route already establish who staged the theft.",
+          "kk": "Переписка раскрывает мотив и связь с шаблоном, но виновность уже устанавливается журналом доступа и маршрутом автомобиля."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Камера и документы показывают, кто инсценировал взлом.",
-      "Илья, но в 01:50 он сам купил и заказал 40 пицц в додзё, а в 02:00 уже лежал в приёмном с перееданием.",
-      "«Грабитель» на камере носит серебряные запонки Арсенова — он инсценировал взлом сам. Это мошенничество, заявление отклоняем."
+      "Чернов купил сорок пицц и заранее отправил их в клуб как анонимный подарок.",
+      "Затем он отключил охрану своим кодом, повредил вход изнутри и вывез коробки на собственном фургоне.",
+      "Серая ветровка понадобилась, чтобы подставить участников «Маяка» и добиться их выселения.",
+      "Фрагменты совпали: коробки у клуба относятся к партии, которую Чернов сам оплатил и отправил туда до инсценировки.",
+      "Заявление является мошенническим и должно быть отклонено."
     ],
     "en": [
-      "The camera and records identify who staged the break-in.",
-      "Ilya, but at 01:50 he bought and ordered the 40 pizzas to the dojo himself, and by 02:00 he was in the ER from overeating.",
-      "The \"burglar\" on camera wears Arsenov's silver cufflinks — he staged the break-in himself. This is fraud; reject the claim."
+      "The fragments match: the boxes found at the club came from a batch Chernov paid for and sent there himself before staging the theft.",
+      "The side door was opened from inside using Chernov's code, and the person on camera left in his company vehicle. The claimant staged the theft himself.",
+      "The jacket makes Chernov's account plausible, but the person's face is hidden. The footage proves that boxes were removed, not who removed them.",
+      "The messages reveal a motive and a link to the template, but the access log and vehicle route already establish who staged the theft.",
+      "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "Kamera ve kayıtlar soygunu kimin kurguladığını gösteriyor.",
-      "Ilya, ama 01:50'de 40 pizzayı kendisi salona sipariş edip ödedi ve 02:00'de aşırı yemekten acil serviste yatıyordu.",
-      "Kameradaki \"soyguncu\" Arsenov'un gümüş kol düğmelerini takıyor — soygunu kendisi sahneledi. Bu bir dolandırıcılık; talebi reddedin."
+      "The fragments match: the boxes found at the club came from a batch Chernov paid for and sent there himself before staging the theft.",
+      "The side door was opened from inside using Chernov's code, and the person on camera left in his company vehicle. The claimant staged the theft himself.",
+      "The jacket makes Chernov's account plausible, but the person's face is hidden. The footage proves that boxes were removed, not who removed them.",
+      "The messages reveal a motive and a link to the template, but the access log and vehicle route already establish who staged the theft.",
+      "The claim is fraudulent and should be rejected."
     ],
     "ar": [
-      "تُظهر الكاميرا والسجلات من دبّر الاقتحام.",
-      "القناع البرتقالي هو إيليا، لكنه في 01:50 اشترى وطلب الـ40 بيتزا إلى النادي بنفسه، وبحلول 02:00 كان في الطوارئ بسبب الإفراط في الأكل.",
-      "«اللص» في الكاميرا يرتدي أزرار أكمام أرسينوف الفضية — لقد فبرك الاقتحام بنفسه. هذا احتيال؛ ارفض المطالبة."
+      "The fragments match: the boxes found at the club came from a batch Chernov paid for and sent there himself before staging the theft.",
+      "The side door was opened from inside using Chernov's code, and the person on camera left in his company vehicle. The claimant staged the theft himself.",
+      "The jacket makes Chernov's account plausible, but the person's face is hidden. The footage proves that boxes were removed, not who removed them.",
+      "The messages reveal a motive and a link to the template, but the access log and vehicle route already establish who staged the theft.",
+      "The claim is fraudulent and should be rejected."
     ],
     "kk": [
-      "Камера мен құжаттар тонауды кім ұйымдастырғанын көрсетеді.",
-      "Илья, бірақ ол 01:50-де 40 пиццаны өзі додзёға тапсырыс беріп сатып алған, ал 02:00-де шамадан тыс жеуден қабылдауда жатқан.",
-      "Камерадағы «тонаушы» Арсеновтың күміс түймелерін таққан — тонауды өзі қойған. Бұл алаяқтық, өтінішті қабылдамаймыз."
+      "Чернов купил сорок пицц и заранее отправил их в клуб как анонимный подарок.",
+      "Затем он отключил охрану своим кодом, повредил вход изнутри и вывез коробки на собственном фургоне.",
+      "Серая ветровка понадобилась, чтобы подставить участников «Маяка» и добиться их выселения.",
+      "Фрагменты совпали: коробки у клуба относятся к партии, которую Чернов сам оплатил и отправил туда до инсценировки.",
+      "Заявление является мошенническим и должно быть отклонено."
     ]
+  },
+  "investigationBudget": 3,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "В ночь на 12 июня участники расположенного в подвале клуба робототехники «Маяк» разбили стекло боковой двери моей закусочной и похитили сорок пицц, приготовленных для корпоративного заказа. Камера зафиксировала человека в серой клубной ветровке. Прошу возместить стоимость продукции, двери и уборки — 3500 евро.",
+        "en": "On the night of June 12, members of the Mayak robotics club in the basement smashed my snack bar's side-door window and stole forty pizzas prepared for a corporate order. A camera recorded someone wearing the club's gray jacket. I am claiming €3,500 for the food, the door, and cleanup.",
+        "tr": "On the night of June 12, members of the Mayak robotics club in the basement smashed my snack bar's side-door window and stole forty pizzas prepared for a corporate order. A camera recorded someone wearing the club's gray jacket. I am claiming €3,500 for the food, the door, and cleanup.",
+        "ar": "On the night of June 12, members of the Mayak robotics club in the basement smashed my snack bar's side-door window and stole forty pizzas prepared for a corporate order. A camera recorded someone wearing the club's gray jacket. I am claiming €3,500 for the food, the door, and cleanup.",
+        "kk": "В ночь на 12 июня участники расположенного в подвале клуба робототехники «Маяк» разбили стекло боковой двери моей закусочной и похитили сорок пицц, приготовленных для корпоративного заказа. Камера зафиксировала человека в серой клубной ветровке. Прошу возместить стоимость продукции, двери и уборки — 3500 евро."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_event",
+      "text": {
+        "ru": "Ночью из закусочной вынесли сорок коробок пиццы.",
+        "en": "Forty pizza boxes were removed from the snack bar during the night.",
+        "tr": "Forty pizza boxes were removed from the snack bar during the night.",
+        "ar": "Forty pizza boxes were removed from the snack bar during the night.",
+        "kk": "Ночью из закусочной вынесли сорок коробок пиццы."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_intruder",
+      "text": {
+        "ru": "Коробки похитил неизвестный в серой ветровке без участия Чернова.",
+        "en": "An unknown person in a gray jacket stole the boxes without Chernov's involvement.",
+        "tr": "An unknown person in a gray jacket stole the boxes without Chernov's involvement.",
+        "ar": "An unknown person in a gray jacket stole the boxes without Chernov's involvement.",
+        "kk": "Коробки похитил неизвестный в серой ветровке без участия Чернова."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_loss",
+      "text": {
+        "ru": "Чернов утратил товар и просит страховое возмещение.",
+        "en": "Chernov lost his stock and is seeking insurance compensation.",
+        "tr": "Chernov lost his stock and is seeking insurance compensation.",
+        "ar": "Chernov lost his stock and is seeking insurance compensation.",
+        "kk": "Чернов утратил товар и просит страховое возмещение."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Орест Чернов приложил к заявлению больше обвинений, чем документов. Начните с документов. — В. Лебедева",
+      "en": "Orest Chernov attached more accusations than documents to his claim. Start with the documents. — V. Lebedeva",
+      "tr": "Orest Chernov attached more accusations than documents to his claim. Start with the documents. — V. Lebedeva",
+      "ar": "Orest Chernov attached more accusations than documents to his claim. Start with the documents. — V. Lebedeva",
+      "kk": "Орест Чернов приложил к заявлению больше обвинений, чем документов. Начните с документов. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Клуб оправдан, помещение остаётся за ним. А форма `17-К` встречается уже в третьем нашем деле. Я запросила источник шаблона.",
+      "en": "The club has been cleared and keeps its premises. Meanwhile, form `17-K` has appeared in a third case. I have requested the source of the template.",
+      "tr": "The club has been cleared and keeps its premises. Meanwhile, form `17-K` has appeared in a third case. I have requested the source of the template.",
+      "ar": "The club has been cleared and keeps its premises. Meanwhile, form `17-K` has appeared in a third case. I have requested the source of the template.",
+      "kk": "Клуб оправдан, помещение остаётся за ним. А форма `17-К` встречается уже в третьем нашем деле. Я запросила источник шаблона."
+    },
+    "nextCaseTeaser": {
+      "ru": "После сорока выдуманных пицц — одна настоящая корова. Проблема в том, что её нашли в теплице.",
+      "en": "After forty imaginary pizzas comes one very real cow. The problem is that she was found inside a greenhouse.",
+      "tr": "After forty imaginary pizzas comes one very real cow. The problem is that she was found inside a greenhouse.",
+      "ar": "After forty imaginary pizzas comes one very real cow. The problem is that she was found inside a greenhouse.",
+      "kk": "После сорока выдуманных пицц — одна настоящая корова. Проблема в том, что её нашли в теплице."
+    },
+    "seasonClue": {
+      "id": "act1-clue-6",
+      "label": {
+        "ru": "Шаблон заявления Чернова",
+        "en": "Chernov's Claim Template",
+        "tr": "Chernov's Claim Template",
+        "ar": "Chernov's Claim Template",
+        "kk": "Шаблон заявления Чернова"
+      },
+      "description": {
+        "ru": "Неизвестный консультант отправил Чернову готовую формулировку заявления и смету 17-К. Адрес отправителя скрыт, письмо подписано одной буквой: К.",
+        "en": "An unknown consultant sent Chernov a ready-made claim and a 17-K estimate. The sender's address is hidden; the message is signed with a single letter: K.",
+        "tr": "An unknown consultant sent Chernov a ready-made claim and a 17-K estimate. The sender's address is hidden; the message is signed with a single letter: K.",
+        "ar": "An unknown consultant sent Chernov a ready-made claim and a 17-K estimate. The sender's address is hidden; the message is signed with a single letter: K.",
+        "kk": "Неизвестный консультант отправил Чернову готовую формулировку заявления и смету 17-К. Адрес отправителя скрыт, письмо подписано одной буквой: К."
+      },
+      "progressIndex": 3,
+      "progressTotal": 5
+    },
+    "epilogue": null
   }
 }

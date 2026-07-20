@@ -1,289 +1,469 @@
 {
   "id": "case-008",
   "type": "standard",
+  "campaignOrder": 12,
+  "requiredLevel": 6,
+  "act": 2,
+  "actTitle": {
+    "ru": "Пять лет назад",
+    "en": "Five Years Earlier",
+    "tr": "Five Years Earlier",
+    "ar": "Five Years Earlier",
+    "kk": "Пять лет назад"
+  },
   "difficulty": "medium",
   "claimAmount": 6000,
   "truth": "fraud",
   "title": {
-    "ru": "Травма спины",
-    "en": "The Back Injury",
-    "tr": "Bel Sakatlığı",
-    "ar": "إصابة الظهر",
-    "kk": "Арқа жарақаты"
+    "ru": "Три месяца в постели",
+    "en": "Three Months in Bed",
+    "tr": "Three Months in Bed",
+    "ar": "Three Months in Bed",
+    "kk": "Три месяца в постели"
   },
   "claim": {
     "person": {
-      "ru": "Деян Ковач",
-      "en": "Dejan Kovac",
-      "tr": "Dejan Kovac",
-      "ar": "ديان كوفاتش",
-      "kk": "Деян Ковач"
+      "ru": "Деян Ковач, 38 лет",
+      "en": "Dejan Kovac, age 38",
+      "tr": "Dejan Kovac, age 38",
+      "ar": "Dejan Kovac, age 38",
+      "kk": "Деян Ковач, 38 лет"
     },
     "story": {
-      "ru": "Из-за тяжёлой травмы спины я не могу работать и почти не встаю с постели. Прошу выплату по защите дохода за три месяца нетрудоспособности.",
-      "en": "A severe back injury leaves me unable to work and mostly bedridden. I am claiming income-protection benefits for three months of incapacity.",
-      "tr": "Ağır bir bel sakatlığı yüzünden çalışamıyorum ve çoğunlukla yatağa bağımlıyım. Üç aylık iş göremezlik için gelir koruma ödeneği talep ediyorum.",
-      "ar": "إصابة شديدة في الظهر تجعلني غير قادر على العمل وملازماً للفراش غالباً. أطالب باستحقاقات حماية الدخل عن ثلاثة أشهر من العجز.",
-      "kk": "Ауыр арқа жарақатынан жұмыс істей алмаймын және көбіне төсек тартып жатырмын. Үш айлық еңбекке жарамсыздық үшін табысты қорғау төлемін сұраймын."
+      "ru": "После травмы поясницы я почти не встаю с постели и не могу выполнять физическую работу. Врач оформил больничный. Прошу выплату по защите дохода за три месяца полной нетрудоспособности.",
+      "en": "Since injuring my lower back, I have barely been able to leave my bed and cannot perform physical work. A doctor certified me unfit for work. I am claiming three months of total disability under my income-protection policy.",
+      "tr": "Since injuring my lower back, I have barely been able to leave my bed and cannot perform physical work. A doctor certified me unfit for work. I am claiming three months of total disability under my income-protection policy.",
+      "ar": "Since injuring my lower back, I have barely been able to leave my bed and cannot perform physical work. A doctor certified me unfit for work. I am claiming three months of total disability under my income-protection policy.",
+      "kk": "После травмы поясницы я почти не встаю с постели и не могу выполнять физическую работу. Врач оформил больничный. Прошу выплату по защите дохода за три месяца полной нетрудоспособности."
     }
   },
-  "coverImage": "covers/case-008.svg",
-  "personImage": "people/dejan.webp",
   "client": {
     "role": {
-      "ru": "Заявитель · физ. лицо",
-      "en": "Claimant · individual",
-      "tr": "Başvuru sahibi · gerçek kişi",
-      "ar": "مقدم الطلب · شخص طبيعي",
-      "kk": "Өтініш беруші · жеке тұлға"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Возраст",
-          "en": "Age",
-          "tr": "Yaş",
-          "ar": "العمر",
-          "kk": "Жасы"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "38 лет",
-          "en": "38 years old",
-          "tr": "38 yaşında",
-          "ar": "38 عامًا",
-          "kk": "38 жаста"
+          "ru": "2",
+          "en": "2",
+          "tr": "2",
+          "ar": "2",
+          "kk": "2"
         }
       },
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Загреб",
-          "en": "Zagreb",
-          "tr": "Zagreb",
-          "ar": "زغرب",
-          "kk": "Загреб"
-        }
-      },
-      {
-        "k": {
-          "ru": "Клиент с",
-          "en": "Client since",
-          "tr": "Müşteri",
-          "ar": "عميل منذ",
-          "kk": "Клиент"
-        },
-        "v": {
-          "ru": "2019 г.",
-          "en": "2019",
-          "tr": "2019",
-          "ar": "2019",
-          "kk": "2019 ж."
-        }
-      },
-      {
-        "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
-        },
-        "v": {
-          "ru": "ДМС · МС-88022951-X4",
-          "en": "Health · MS-88022951-X4",
-          "tr": "Sağlık · MS-88022951-X4",
-          "ar": "الصحة · MS-88022951-X4",
-          "kk": "Медициналық сақтандыру · МС-88022951-X4"
-        }
-      },
-      {
-        "k": {
-          "ru": "Документ",
-          "en": "Document",
-          "tr": "Belge",
-          "ar": "الوثيقة",
-          "kk": "Құжат"
-        },
-        "v": {
-          "ru": "Паспорт HR-X3 112233440-59182",
-          "en": "Passport HR-X3 112233440-59182",
-          "tr": "Pasaport HR-X3 112233440-59182",
-          "ar": "جواز السفر HR-X3 112233440-59182",
-          "kk": "Паспорт HR-X3 112233440-59182"
+          "ru": "12",
+          "en": "12",
+          "tr": "12",
+          "ar": "12",
+          "kk": "12"
         }
       }
     ]
   },
+  "coverImage": "covers/case-008.svg",
+  "personImage": "people/dejan.webp",
   "evidences": [
     {
       "id": "ev-ernote",
+      "order": 1,
       "type": "document",
       "title": {
-        "ru": "Справка из приёмного покоя",
-        "en": "ER Doctor's Note",
-        "tr": "Acil Servis Doktor Raporu",
-        "ar": "تقرير طبيب الطوارئ",
-        "kk": "Қабылдау бөлімінің анықтамасы"
+        "ru": "Справка приёмного покоя",
+        "en": "Emergency Department Report",
+        "tr": "Emergency Department Report",
+        "ar": "Emergency Department Report",
+        "kk": "Справка приёмного покоя"
       },
       "content": {
-        "ru": "10.03.2026: жалобы на боль в пояснице, рентген без перелома. Рекомендованы покой 5–7 дней и обезболивающее.",
-        "en": "10 Mar 2026: lower-back pain reported, X-ray shows no fracture. Rest for 5–7 days and pain relief advised.",
-        "tr": "10 Mar 2026: bel ağrısı şikâyeti, röntgende kırık yok. 5–7 gün istirahat ve ağrı kesici önerildi.",
-        "ar": "10 مارس 2026: ألم في أسفل الظهر، الأشعة لا تُظهر كسراً. يُنصح بالراحة 5–7 أيام ومسكّن للألم.",
-        "kk": "10.03.2026: бел ауырсынуы, рентгенде сынық жоқ. 5–7 күн тыныштық және ауырсынуды басатын дәрі ұсынылды."
+        "ru": "10 марта зафиксировано растяжение мышц поясницы без перелома и неврологических нарушений. Рекомендованы покой на 5–7 дней и повторный осмотр при сохранении боли.",
+        "en": "On March 10, doctors diagnosed a lower-back muscle strain with no fracture or neurological impairment. They recommended five to seven days of rest and a follow-up examination if the pain persisted.",
+        "tr": "On March 10, doctors diagnosed a lower-back muscle strain with no fracture or neurological impairment. They recommended five to seven days of rest and a follow-up examination if the pain persisted.",
+        "ar": "On March 10, doctors diagnosed a lower-back muscle strain with no fracture or neurological impairment. They recommended five to seven days of rest and a follow-up examination if the pain persisted.",
+        "kk": "10 марта зафиксировано растяжение мышц поясницы без перелома и неврологических нарушений. Рекомендованы покой на 5–7 дней и повторный осмотр при сохранении боли."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Справка подлинная, но описывает лёгкую травму с покоем на неделю — она не подтверждает трёхмесячную нетрудоспособность.",
-        "en": "The note is genuine but describes a minor injury with one week of rest — it does not support three months of incapacity.",
-        "tr": "Rapor gerçek, ancak bir haftalık istirahat gerektiren hafif bir yaralanmayı tanımlıyor — üç aylık iş göremezliği desteklemiyor.",
-        "ar": "التقرير أصلي لكنه يصف إصابة بسيطة براحة أسبوع واحد — وهو لا يدعم عجزاً لمدة ثلاثة أشهر.",
-        "kk": "Анықтама шынайы, бірақ бір апта тыныштықпен жеңіл жарақатты сипаттайды — ол үш айлық жарамсыздықты растамайды."
+        "ru": "Травма реальна, но первоначальная справка не подтверждает три месяца полной нетрудоспособности.",
+        "en": "The injury is real, but the original report does not support three months of total disability.",
+        "tr": "The injury is real, but the original report does not support three months of total disability.",
+        "ar": "The injury is real, but the original report does not support three months of total disability.",
+        "kk": "Травма реальна, но первоначальная справка не подтверждает три месяца полной нетрудоспособности."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_injury",
+        "relation": "supports",
+        "reason": {
+          "ru": "Травма реальна, но первоначальная справка не подтверждает три месяца полной нетрудоспособности.",
+          "en": "The injury is real, but the original report does not support three months of total disability.",
+          "tr": "The injury is real, but the original report does not support three months of total disability.",
+          "ar": "The injury is real, but the original report does not support three months of total disability.",
+          "kk": "Травма реальна, но первоначальная справка не подтверждает три месяца полной нетрудоспособности."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5
+    },
+    {
+      "id": "ev-sickleave",
+      "order": 2,
+      "type": "document_scan",
+      "title": {
+        "ru": "Экспертиза продлённого больничного",
+        "en": "Extended Medical Certificate Examination",
+        "tr": "Extended Medical Certificate Examination",
+        "ar": "Extended Medical Certificate Examination",
+        "kk": "Экспертиза продлённого больничного"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Под белой плашкой читается исходная запись «лёгкий труд разрешён после 7 дней»; фраза о полной нетрудоспособности добавлена позднее.",
+        "en": "Beneath the white correction, the original note reads ‘light duties permitted after 7 days’; the statement of total disability was added later.",
+        "tr": "Beneath the white correction, the original note reads ‘light duties permitted after 7 days’; the statement of total disability was added later.",
+        "ar": "Beneath the white correction, the original note reads ‘light duties permitted after 7 days’; the statement of total disability was added later.",
+        "kk": "Под белой плашкой читается исходная запись «лёгкий труд разрешён после 7 дней»; фраза о полной нетрудоспособности добавлена позднее."
+      },
+      "narrativeRole": "suspicion",
+      "statementLink": {
+        "statementId": "claim_disability_duration",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Под белой плашкой читается исходная запись «лёгкий труд разрешён после 7 дней»; фраза о полной нетрудоспособности добавлена позднее.",
+          "en": "Beneath the white correction, the original note reads ‘light duties permitted after 7 days’; the statement of total disability was added later.",
+          "tr": "Beneath the white correction, the original note reads ‘light duties permitted after 7 days’; the statement of total disability was added later.",
+          "ar": "Beneath the white correction, the original note reads ‘light duties permitted after 7 days’; the statement of total disability was added later.",
+          "kk": "Под белой плашкой читается исходная запись «лёгкий труд разрешён после 7 дней»; фраза о полной нетрудоспособности добавлена позднее."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_disability_duration",
+        "reason": {
+          "ru": "Под белой плашкой читается исходная запись «лёгкий труд разрешён после 7 дней»; фраза о полной нетрудоспособности добавлена позднее.",
+          "en": "Beneath the white correction, the original note reads ‘light duties permitted after 7 days’; the statement of total disability was added later.",
+          "tr": "Beneath the white correction, the original note reads ‘light duties permitted after 7 days’; the statement of total disability was added later.",
+          "ar": "Beneath the white correction, the original note reads ‘light duties permitted after 7 days’; the statement of total disability was added later.",
+          "kk": "Под белой плашкой читается исходная запись «лёгкий труд разрешён после 7 дней»; фраза о полной нетрудоспособности добавлена позднее."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "Страхователь предоставил распечатанную копию дистанционного продления.",
+        "en": "The policyholder submitted a printed copy of a remotely extended medical certificate.",
+        "tr": "The policyholder submitted a printed copy of a remotely extended medical certificate.",
+        "ar": "The policyholder submitted a printed copy of a remotely extended medical certificate.",
+        "kk": "Страхователь предоставил распечатанную копию дистанционного продления."
+      },
+      "instruction": {
+        "ru": "Включить боковой свет и проверить строку с режимом труда.",
+        "en": "Switch on side light and inspect the line describing work restrictions.",
+        "tr": "Switch on side light and inspect the line describing work restrictions.",
+        "ar": "Switch on side light and inspect the line describing work restrictions.",
+        "kk": "Включить боковой свет и проверить строку с режимом труда."
+      },
+      "previousType": "document",
+      "assets": {
+        "asset1": "cases/case-008/assets/interactive/ev-sickleave-base.webp",
+        "asset2": "cases/case-008/assets/interactive/ev-sickleave-scan-overlay.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Скан делает ложь о полной нетрудоспособности конкретной, не ставя под сомнение сам факт первой травмы.",
+          "en": "The scan exposes the specific lie about total disability without disputing the original injury.",
+          "tr": "The scan exposes the specific lie about total disability without disputing the original injury.",
+          "ar": "The scan exposes the specific lie about total disability without disputing the original injury.",
+          "kk": "Скан делает ложь о полной нетрудоспособности конкретной, не ставя под сомнение сам факт первой травмы."
+        },
+        "playerAction": {
+          "ru": "Включить боковой свет и проверить строку с режимом труда.",
+          "en": "Switch on side light and inspect the line describing work restrictions.",
+          "tr": "Switch on side light and inspect the line describing work restrictions.",
+          "ar": "Switch on side light and inspect the line describing work restrictions.",
+          "kk": "Включить боковой свет и проверить строку с режимом труда."
+        },
+        "conclusion": {
+          "ru": "Под белой плашкой читается исходная запись «лёгкий труд разрешён после 7 дней»; фраза о полной нетрудоспособности добавлена позднее.",
+          "en": "Beneath the white correction, the original note reads ‘light duties permitted after 7 days’; the statement of total disability was added later.",
+          "tr": "Beneath the white correction, the original note reads ‘light duties permitted after 7 days’; the statement of total disability was added later.",
+          "ar": "Beneath the white correction, the original note reads ‘light duties permitted after 7 days’; the statement of total disability was added later.",
+          "kk": "Под белой плашкой читается исходная запись «лёгкий труд разрешён после 7 дней»; фраза о полной нетрудоспособности добавлена позднее."
+        }
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "side_light",
+          "backlight"
+        ],
+        "anomalyZones": [
+          {
+            "id": "work_regime",
+            "mode": "side_light",
+            "x": 31,
+            "y": 57,
+            "width": 48,
+            "height": 9,
+            "label": "Под белой плашкой читается исходная запись «лёгкий труд разрешён после 7 дней»; фраза о полной нетрудоспособности добавлена позднее.",
+            "isContradiction": true,
+            "labelEn": "Beneath the white correction, the original note reads ‘light duties permitted after 7 days’; the statement of total disability was added later."
+          }
+        ],
+        "successCondition": {
+          "type": "select_zone",
+          "zoneId": "work_regime"
+        }
       }
     },
     {
-      "id": "ev-gym",
+      "id": "ev-work-app",
+      "order": 3,
       "type": "usage_log",
       "title": {
-        "ru": "Журнал доступа в спортзал",
-        "en": "Gym Keycard Access Log",
-        "tr": "Spor Salonu Kart Giriş Kaydı",
-        "ar": "سجل دخول صالة الرياضة",
-        "kk": "Спортзалға кіру журналы"
+        "ru": "Журнал пропусков грузовой компании",
+        "en": "Moving Company Access Log",
+        "tr": "Moving Company Access Log",
+        "ar": "Moving Company Access Log",
+        "kk": "Журнал пропусков грузовой компании"
       },
       "content": {
-        "ru": [
-          "18.03 07:02 — вход, зона свободных весов (62 мин)",
-          "25.03 06:58 — вход, зона свободных весов (71 мин)",
-          "01.04 07:10 — вход, становая тяга, личный рекорд 140 кг",
-          "09.04 06:55 — вход, зона свободных весов (68 мин)"
-        ],
-        "en": [
-          "18 Mar 07:02 — entry, free-weights area (62 min)",
-          "25 Mar 06:58 — entry, free-weights area (71 min)",
-          "01 Apr 07:10 — entry, deadlift session, PR 140 kg",
-          "09 Apr 06:55 — entry, free-weights area (68 min)"
-        ],
-        "tr": [
-          "18 Mar 07:02 — giriş, serbest ağırlık alanı (62 dk)",
-          "25 Mar 06:58 — giriş, serbest ağırlık alanı (71 dk)",
-          "01 Nis 07:10 — giriş, deadlift seansı, rekor 140 kg",
-          "09 Nis 06:55 — giriş, serbest ağırlık alanı (68 dk)"
-        ],
-        "ar": [
-          "18 مارس 07:02 — دخول، منطقة الأوزان الحرة (62 دقيقة)",
-          "25 مارس 06:58 — دخول، منطقة الأوزان الحرة (71 دقيقة)",
-          "1 أبريل 07:10 — دخول، تمرين الرفعة المميتة، رقم قياسي 140 كغ",
-          "9 أبريل 06:55 — دخول، منطقة الأوزان الحرة (68 دقيقة)"
-        ],
-        "kk": [
-          "18.03 07:02 — кіру, еркін салмақ аймағы (62 мин)",
-          "25.03 06:58 — кіру, еркін салмақ аймағы (71 мин)",
-          "01.04 07:10 — кіру, бел тарту, жеке рекорд 140 кг",
-          "09.04 06:55 — кіру, еркін салмақ аймағы (68 мин)"
-        ]
+        "ru": "Биометрический пропуск Ковача использован 18, 25 марта и 2 апреля на складе компании «Быстрый переезд». В каждую смену оформлена погрузка мебели общим весом более 600 кг.",
+        "en": "Kovac's biometric pass was used at the Fast Move warehouse on March 18, March 25, and April 2. Each shift recorded furniture-loading jobs totaling more than 600 kg.",
+        "tr": "Kovac's biometric pass was used at the Fast Move warehouse on March 18, March 25, and April 2. Each shift recorded furniture-loading jobs totaling more than 600 kg.",
+        "ar": "Kovac's biometric pass was used at the Fast Move warehouse on March 18, March 25, and April 2. Each shift recorded furniture-loading jobs totaling more than 600 kg.",
+        "kk": "Биометрический пропуск Ковача использован 18, 25 марта и 2 апреля на складе компании «Быстрый переезд». В каждую смену оформлена погрузка мебели общим весом более 600 кг."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Клиент заявляет, что прикован к постели, но карта доступа фиксирует регулярные тяжёлые тренировки в период больничного.",
-        "en": "The client claims to be bedridden, yet the keycard records regular heavy workouts during the sick-leave period.",
-        "tr": "Müşteri yatağa bağımlı olduğunu iddia ediyor, ancak kart, hastalık izni döneminde düzenli ağır antrenmanları kaydediyor.",
-        "ar": "يدّعي العميل أنه ملازم للفراش، لكن البطاقة تسجّل تمارين ثقيلة منتظمة خلال فترة الإجازة المرضية.",
-        "kk": "Клиент төсек тартып жатырмын дейді, бірақ кіру картасы ауырып жату кезеңінде тұрақты ауыр жаттығуларды тіркейді."
+        "ru": "Заявитель регулярно выполнял тяжёлую физическую работу в период, когда называл себя прикованным к постели.",
+        "en": "The claimant repeatedly performed heavy physical work while claiming to be confined to bed.",
+        "tr": "The claimant repeatedly performed heavy physical work while claiming to be confined to bed.",
+        "ar": "The claimant repeatedly performed heavy physical work while claiming to be confined to bed.",
+        "kk": "Заявитель регулярно выполнял тяжёлую физическую работу в период, когда называл себя прикованным к постели."
       },
-      "meta": {
-        "logPrompt": "access@gymnet:~$ tail -f /var/log/entry.log"
-      }
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_no_work",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Заявитель регулярно выполнял тяжёлую физическую работу в период, когда называл себя прикованным к постели.",
+          "en": "The claimant repeatedly performed heavy physical work while claiming to be confined to bed.",
+          "tr": "The claimant repeatedly performed heavy physical work while claiming to be confined to bed.",
+          "ar": "The claimant repeatedly performed heavy physical work while claiming to be confined to bed.",
+          "kk": "Заявитель регулярно выполнял тяжёлую физическую работу в период, когда называл себя прикованным к постели."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_no_work",
+        "reason": {
+          "ru": "Заявитель регулярно выполнял тяжёлую физическую работу в период, когда называл себя прикованным к постели.",
+          "en": "The claimant repeatedly performed heavy physical work while claiming to be confined to bed.",
+          "tr": "The claimant repeatedly performed heavy physical work while claiming to be confined to bed.",
+          "ar": "The claimant repeatedly performed heavy physical work while claiming to be confined to bed.",
+          "kk": "Заявитель регулярно выполнял тяжёлую физическую работу в период, когда называл себя прикованным к постели."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
-      "id": "ev-marathon",
-      "type": "photo",
+      "id": "ev-payment",
+      "order": 4,
+      "type": "bank_statement",
       "title": {
-        "ru": "Фото с марафона",
-        "en": "Marathon Finish Photo",
-        "tr": "Maraton Bitiş Fotoğrafı",
-        "ar": "صورة خط نهاية الماراثون",
-        "kk": "Марафон фотосы"
+        "ru": "Оплата смен",
+        "en": "Shift Payments",
+        "tr": "Shift Payments",
+        "ar": "Shift Payments",
+        "kk": "Оплата смен"
       },
       "content": {
-        "ru": "Снимок из соцсети с датой 12.04.2026: клиент пересекает финиш городского марафона с медалью и временем 3:48.",
-        "en": "Dated social-media photo from 12 Apr 2026: the client crossing a city marathon finish line with a medal and a time of 3:48.",
-        "tr": "12 Nis 2026 tarihli sosyal medya fotoğrafı: müşteri madalya ve 3:48 derecesiyle şehir maratonu bitiş çizgisini geçiyor.",
-        "ar": "صورة مؤرخة من وسائل التواصل بتاريخ 12 أبريل 2026: العميل يعبر خط نهاية ماراثون المدينة بميدالية وزمن 3:48.",
-        "kk": "12.04.2026 күнімен әлеуметтік желідегі сурет: клиент қалалық марафонның мәресін медальмен әрі 3:48 нәтижемен кесіп өтеді."
+        "ru": "После каждой складской смены на счёт Ковача поступала оплата с назначением «погрузочные работы». Плательщик подтвердил его личное присутствие.",
+        "en": "After each warehouse shift, Kovac received a payment labeled ‘loading services.’ The payer confirmed that he worked in person.",
+        "tr": "After each warehouse shift, Kovac received a payment labeled ‘loading services.’ The payer confirmed that he worked in person.",
+        "ar": "After each warehouse shift, Kovac received a payment labeled ‘loading services.’ The payer confirmed that he worked in person.",
+        "kk": "После каждой складской смены на счёт Ковача поступала оплата с назначением «погрузочные работы». Плательщик подтвердил его личное присутствие."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Завершение марафона физически несовместимо с заявленной трёхмесячной прикованностью к постели из-за травмы спины.",
-        "en": "Completing a marathon is physically incompatible with the claimed three months of being bedridden from a back injury.",
-        "tr": "Bir maratonu tamamlamak, bel sakatlığı nedeniyle iddia edilen üç aylık yatağa bağımlılıkla fiziksel olarak bağdaşmaz.",
-        "ar": "إكمال ماراثون يتعارض جسدياً مع ادعاء ملازمة الفراش ثلاثة أشهر بسبب إصابة الظهر.",
-        "kk": "Марафонды аяқтау арқа жарақатынан үш ай төсек тартып жату туралы мәлімдемемен дене жағынан үйлеспейді."
+        "ru": "Денежные переводы и подтверждение работодателя доказывают скрытую физическую занятость.",
+        "en": "The transfers and employer confirmation prove that he concealed paid physical work.",
+        "tr": "The transfers and employer confirmation prove that he concealed paid physical work.",
+        "ar": "The transfers and employer confirmation prove that he concealed paid physical work.",
+        "kk": "Денежные переводы и подтверждение работодателя доказывают скрытую физическую занятость."
       },
-      "meta": {
-        "filename": "IMG_20260412_103842.jpg",
-        "imageUrl": "evidence/case-008-ev-marathon.webp"
-      }
-    },
-    {
-      "id": "ev-employer",
-      "type": "document",
-      "title": {
-        "ru": "Письмо работодателя",
-        "en": "Employer Statement",
-        "tr": "İşveren Beyanı",
-        "ar": "بيان صاحب العمل",
-        "kk": "Жұмыс берушінің хаты"
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_no_work",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Денежные переводы и подтверждение работодателя доказывают скрытую физическую занятость.",
+          "en": "The transfers and employer confirmation prove that he concealed paid physical work.",
+          "tr": "The transfers and employer confirmation prove that he concealed paid physical work.",
+          "ar": "The transfers and employer confirmation prove that he concealed paid physical work.",
+          "kk": "Денежные переводы и подтверждение работодателя доказывают скрытую физическую занятость."
+        }
       },
-      "content": {
-        "ru": "Отдел кадров подтверждает, что сотрудник находится на оплачиваемом больничном с 11.03.2026 и за этот период не выходил на работу.",
-        "en": "HR confirms the employee has been on paid sick leave since 11 Mar 2026 and has not attended work during this period.",
-        "tr": "İK, çalışanın 11 Mar 2026'dan beri ücretli hastalık izninde olduğunu ve bu dönemde işe gelmediğini doğruluyor.",
-        "ar": "تؤكد الموارد البشرية أن الموظف في إجازة مرضية مدفوعة منذ 11 مارس 2026 ولم يحضر للعمل خلال هذه الفترة.",
-        "kk": "Кадр бөлімі қызметкердің 11.03.2026 бастап ақылы ауру демалысында екенін және осы кезеңде жұмысқа шықпағанын растайды."
+      "contradictionTarget": {
+        "statementId": "claim_no_work",
+        "reason": {
+          "ru": "Денежные переводы и подтверждение работодателя доказывают скрытую физическую занятость.",
+          "en": "The transfers and employer confirmation prove that he concealed paid physical work.",
+          "tr": "The transfers and employer confirmation prove that he concealed paid physical work.",
+          "ar": "The transfers and employer confirmation prove that he concealed paid physical work.",
+          "kk": "Денежные переводы и подтверждение работодателя доказывают скрытую физическую занятость."
+        }
       },
-      "isContradiction": false,
-      "contradictionExplanation": {
-        "ru": "Письмо лишь подтверждает факт больничного и не противоречит истории — противоречие создают тренировки и марафон.",
-        "en": "The letter only confirms the sick leave and does not conflict with the story — the conflict comes from the workouts and marathon.",
-        "tr": "Mektup yalnızca hastalık iznini doğrular ve hikâyeyle çelişmez — çelişki antrenmanlardan ve maratondan kaynaklanır.",
-        "ar": "الرسالة تؤكد الإجازة المرضية فقط ولا تتعارض مع الرواية — التعارض يأتي من التمارين والماراثون.",
-        "kk": "Хат тек ауру демалысын растайды және әңгімеге қайшы келмейді — қайшылықты жаттығулар мен марафон тудырады."
-      }
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Карта доступа фиксирует регулярные тяжёлые тренировки во время больничного.",
-      "Датированное фото показывает завершённый марафон после травмы.",
-      "Заявление о прикованности к постели ложно — это мошенничество, отказать."
+      "Ковач действительно получил лёгкую травму и законный короткий больничный.",
+      "Затем он продолжил дистанционно жаловаться на полную нетрудоспособность, одновременно работая грузчиком.",
+      "Под белой плашкой читается исходная запись «лёгкий труд разрешён после 7 дней»; фраза о полной нетрудоспособности добавлена позднее.",
+      "Заявленная трёхмесячная потеря трудоспособности ложна. В выплате следует отказать."
     ],
     "en": [
-      "The keycard log records regular heavy workouts during the sick leave.",
-      "A dated photo shows a completed marathon after the injury.",
-      "The bedridden claim is false — this is fraud, reject it."
+      "Beneath the white correction, the original note reads ‘light duties permitted after 7 days’; the statement of total disability was added later.",
+      "The claimant repeatedly performed heavy physical work while claiming to be confined to bed.",
+      "The transfers and employer confirmation prove that he concealed paid physical work.",
+      "The injury is real, but the original report does not support three months of total disability.",
+      "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "Kart kaydı, hastalık izni sırasında düzenli ağır antrenmanları gösteriyor.",
-      "Tarihli bir fotoğraf, yaralanmadan sonra tamamlanmış bir maratonu gösteriyor.",
-      "Yatağa bağımlılık iddiası yanlış — bu dolandırıcılık, reddedin."
+      "Beneath the white correction, the original note reads ‘light duties permitted after 7 days’; the statement of total disability was added later.",
+      "The claimant repeatedly performed heavy physical work while claiming to be confined to bed.",
+      "The transfers and employer confirmation prove that he concealed paid physical work.",
+      "The injury is real, but the original report does not support three months of total disability.",
+      "The claim is fraudulent and should be rejected."
     ],
     "ar": [
-      "سجل البطاقة يوثّق تمارين ثقيلة منتظمة خلال الإجازة المرضية.",
-      "صورة مؤرخة تُظهر ماراثوناً مكتملاً بعد الإصابة.",
-      "ادعاء ملازمة الفراش كاذب — هذا احتيال، ارفضه."
+      "Beneath the white correction, the original note reads ‘light duties permitted after 7 days’; the statement of total disability was added later.",
+      "The claimant repeatedly performed heavy physical work while claiming to be confined to bed.",
+      "The transfers and employer confirmation prove that he concealed paid physical work.",
+      "The injury is real, but the original report does not support three months of total disability.",
+      "The claim is fraudulent and should be rejected."
     ],
     "kk": [
-      "Кіру журналы ауру демалысы кезінде тұрақты ауыр жаттығуларды тіркейді.",
-      "Күні көрсетілген фото жарақаттан кейін аяқталған марафонды көрсетеді.",
-      "Төсек тартып жату туралы мәлімдеме жалған — бұл алаяқтық, бас тарту."
+      "Ковач действительно получил лёгкую травму и законный короткий больничный.",
+      "Затем он продолжил дистанционно жаловаться на полную нетрудоспособность, одновременно работая грузчиком.",
+      "Под белой плашкой читается исходная запись «лёгкий труд разрешён после 7 дней»; фраза о полной нетрудоспособности добавлена позднее.",
+      "Заявленная трёхмесячная потеря трудоспособности ложна. В выплате следует отказать."
     ]
+  },
+  "investigationBudget": 3,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "После травмы поясницы я почти не встаю с постели и не могу выполнять физическую работу. Врач оформил больничный. Прошу выплату по защите дохода за три месяца полной нетрудоспособности.",
+        "en": "Since injuring my lower back, I have barely been able to leave my bed and cannot perform physical work. A doctor certified me unfit for work. I am claiming three months of total disability under my income-protection policy.",
+        "tr": "Since injuring my lower back, I have barely been able to leave my bed and cannot perform physical work. A doctor certified me unfit for work. I am claiming three months of total disability under my income-protection policy.",
+        "ar": "Since injuring my lower back, I have barely been able to leave my bed and cannot perform physical work. A doctor certified me unfit for work. I am claiming three months of total disability under my income-protection policy.",
+        "kk": "После травмы поясницы я почти не встаю с постели и не могу выполнять физическую работу. Врач оформил больничный. Прошу выплату по защите дохода за три месяца полной нетрудоспособности."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_injury",
+      "text": {
+        "ru": "Ковач действительно получил травму.",
+        "en": "Kovac genuinely suffered an injury.",
+        "tr": "Kovac genuinely suffered an injury.",
+        "ar": "Kovac genuinely suffered an injury.",
+        "kk": "Ковач действительно получил травму."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_disability_duration",
+      "text": {
+        "ru": "Травма сделала его полностью нетрудоспособным на три месяца.",
+        "en": "The injury left him totally unable to work for three months.",
+        "tr": "The injury left him totally unable to work for three months.",
+        "ar": "The injury left him totally unable to work for three months.",
+        "kk": "Травма сделала его полностью нетрудоспособным на три месяца."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_no_work",
+      "text": {
+        "ru": "В период нетрудоспособности он не выполнял оплачиваемую физическую работу.",
+        "en": "He performed no paid physical work during the disability period.",
+        "tr": "He performed no paid physical work during the disability period.",
+        "ar": "He performed no paid physical work during the disability period.",
+        "kk": "В период нетрудоспособности он не выполнял оплачиваемую физическую работу."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Боль нельзя измерить по фотографии. Работоспособность — можно. Не путайте медицинский диагноз с тем, что заявитель говорит о своих ограничениях. — В. Лебедева",
+      "en": "Pain cannot be measured from a photograph. A person's capacity to work can. Do not confuse a medical diagnosis with what a claimant says they are unable to do. — V. Lebedeva",
+      "tr": "Pain cannot be measured from a photograph. A person's capacity to work can. Do not confuse a medical diagnosis with what a claimant says they are unable to do. — V. Lebedeva",
+      "ar": "Pain cannot be measured from a photograph. A person's capacity to work can. Do not confuse a medical diagnosis with what a claimant says they are unable to do. — V. Lebedeva",
+      "kk": "Боль нельзя измерить по фотографии. Работоспособность — можно. Не путайте медицинский диагноз с тем, что заявитель говорит о своих ограничениях. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Хорошее мошенничество редко строится на полной выдумке. Настоящая неделя боли стала основанием для выдуманных трёх месяцев.",
+      "en": "Convincing fraud is rarely built on a complete invention. One genuine week of pain became the basis for three fictional months.",
+      "tr": "Convincing fraud is rarely built on a complete invention. One genuine week of pain became the basis for three fictional months.",
+      "ar": "Convincing fraud is rarely built on a complete invention. One genuine week of pain became the basis for three fictional months.",
+      "kk": "Хорошее мошенничество редко строится на полной выдумке. Настоящая неделя боли стала основанием для выдуманных трёх месяцев."
+    },
+    "nextCaseTeaser": {
+      "ru": "Теперь — обычное ДТП. Самая опасная ошибка здесь будет искать сложный заговор там, где его нет.",
+      "en": "Next comes an ordinary traffic accident. The most dangerous mistake will be searching for an elaborate conspiracy where none exists.",
+      "tr": "Next comes an ordinary traffic accident. The most dangerous mistake will be searching for an elaborate conspiracy where none exists.",
+      "ar": "Next comes an ordinary traffic accident. The most dangerous mistake will be searching for an elaborate conspiracy where none exists.",
+      "kk": "Теперь — обычное ДТП. Самая опасная ошибка здесь будет искать сложный заговор там, где его нет."
+    },
+    "seasonClue": null,
+    "epilogue": null
   }
 }

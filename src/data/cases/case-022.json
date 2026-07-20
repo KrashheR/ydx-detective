@@ -1,310 +1,463 @@
 {
   "id": "case-022",
   "type": "standard",
-  "difficulty": "medium",
+  "campaignOrder": 20,
+  "requiredLevel": 10,
+  "act": 2,
+  "actTitle": {
+    "ru": "Пять лет назад",
+    "en": "Five Years Earlier",
+    "tr": "Five Years Earlier",
+    "ar": "Five Years Earlier",
+    "kk": "Пять лет назад"
+  },
+  "difficulty": "hard",
   "claimAmount": 2200,
   "truth": "valid",
   "title": {
-    "ru": "Кодекс Бусидо",
-    "en": "The Bushido Code",
-    "tr": "Bushido Kanunu",
-    "ar": "شريعة البوشيدو",
-    "kk": "Бусидо Кодексі"
+    "ru": "Погром в «Компасе»",
+    "en": "The Break-In at Compass",
+    "tr": "The Break-In at Compass",
+    "ar": "The Break-In at Compass",
+    "kk": "Погром в «Компасе»"
   },
   "claim": {
     "person": {
       "ru": "Михаил Тернов, 69 лет",
-      "en": "Mikhail Ternov, 69",
-      "tr": "Mikhail Ternov, 69",
-      "ar": "خاريتون تيرنوف، 69",
-      "kk": "Михаил Тернов, 69 жаста"
+      "en": "Mikhail Ternov, age 69",
+      "tr": "Mikhail Ternov, age 69",
+      "ar": "Mikhail Ternov, age 69",
+      "kk": "Михаил Тернов, 69 лет"
     },
     "story": {
-      "ru": "С болью извещаю о ночном погроме. Неизвестные взломали моё додзё, изрезали татами и сорвали со стены церемониальную катану — реликвию школы. Полагаю это нападением конкурентов и прошу возместить ущерб и стоимость похищенной катаны согласно полису.",
-      "en": "With pain I report a night-time raid. Intruders broke into my dojo, slashed the tatami, and tore the ceremonial katana — our school's relic — off the wall. I believe this was an attack by competitors and request compensation for the damage and the stolen katana under the policy.",
-      "tr": "Acıyla bir gece baskınını bildiriyorum. Saldırganlar salonuma girdi, tatamileri kesti ve okulumuzun emaneti olan tören kılıcını duvardan söktü. Bunun rakiplerin bir saldırısı olduğunu düşünüyor, hasar ve çalınan kılıç için poliçe kapsamında tazminat talep ediyorum.",
-      "ar": "بألم أُبلغ عن مداهمة ليلية. اقتحم مجهولون ناديي، ومزّقوا حصائر التاتامي، ونزعوا عن الجدار السيف الاحتفالي — تذكار مدرستنا. أعتقد أن هذا اعتداء من المنافسين وأطلب التعويض عن الضرر وعن السيف المسروق وفق الوثيقة.",
-      "kk": "Қайғымен түнгі тонау туралы хабарлаймын. Бейтаныстар менің додзёма еніп, татамилерді тіліп, қабырғадан мектебіміздің жәдігері — салтанатты катананы жұлып алды. Мұны бәсекелестердің шабуылы деп санаймын және зиян мен ұрланған катананың құнын полис бойынша өтеуді сұраймын."
+      "ru": "Ночью неизвестные взломали мою реставрационную мастерскую «Компас», разбили витрины и похитили латунный судовой хронометр вместе со старым страховым реестром, который я готовил к передаче в городской архив. Прошу возместить повреждения и застрахованную стоимость прибора.",
+      "en": "During the night, unknown intruders broke into my Compass restoration workshop, smashed display cases, and stole a brass marine chronometer along with an old insurance registry I was preparing for the city archive. I am claiming the damage and the instrument's insured value.",
+      "tr": "During the night, unknown intruders broke into my Compass restoration workshop, smashed display cases, and stole a brass marine chronometer along with an old insurance registry I was preparing for the city archive. I am claiming the damage and the instrument's insured value.",
+      "ar": "During the night, unknown intruders broke into my Compass restoration workshop, smashed display cases, and stole a brass marine chronometer along with an old insurance registry I was preparing for the city archive. I am claiming the damage and the instrument's insured value.",
+      "kk": "Ночью неизвестные взломали мою реставрационную мастерскую «Компас», разбили витрины и похитили латунный судовой хронометр вместе со старым страховым реестром, который я готовил к передаче в городской архив. Прошу возместить повреждения и застрахованную стоимость прибора."
     }
   },
-  "coverImage": "covers/case-022.svg",
-  "personImage": "people/khariton.webp",
   "client": {
     "role": {
-      "ru": "Заявитель · физ. лицо",
-      "en": "Claimant · individual",
-      "tr": "Başvuru sahibi · gerçek kişi",
-      "ar": "مقدم الطلب · شخص طبيعي",
-      "kk": "Өтініш беруші · жеке тұлға"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Возраст",
-          "en": "Age",
-          "tr": "Yaş",
-          "ar": "العمر",
-          "kk": "Жасы"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "69 лет",
-          "en": "69 years old",
-          "tr": "69 yaşında",
-          "ar": "69 عامًا",
-          "kk": "69 жаста"
+          "ru": "2",
+          "en": "2",
+          "tr": "2",
+          "ar": "2",
+          "kk": "2"
         }
       },
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Нижний Новгород",
-          "en": "Nizhny Novgorod",
-          "tr": "Nijni Novgorod",
-          "ar": "نيجني نوفغورود",
-          "kk": "Нижний Новгород"
-        }
-      },
-      {
-        "k": {
-          "ru": "Клиент с",
-          "en": "Client since",
-          "tr": "Müşteri",
-          "ar": "عميل منذ",
-          "kk": "Клиент"
-        },
-        "v": {
-          "ru": "2008 г.",
-          "en": "2008",
-          "tr": "2008",
-          "ar": "2008",
-          "kk": "2008 ж."
-        }
-      },
-      {
-        "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
-        },
-        "v": {
-          "ru": "Имущество · ИМ-22267340-X8",
-          "en": "Property · IM-22267340-X8",
-          "tr": "Mülk · IM-22267340-X8",
-          "ar": "الممتلكات · IM-22267340-X8",
-          "kk": "Мүлік · ИМ-22267340-X8"
-        }
-      },
-      {
-        "k": {
-          "ru": "Документ",
-          "en": "Document",
-          "tr": "Belge",
-          "ar": "الوثيقة",
-          "kk": "Құжат"
-        },
-        "v": {
-          "ru": "Паспорт 2207-69 №212562391-05",
-          "en": "Passport 2207-69 №212562391-05",
-          "tr": "Pasaport 2207-69 №212562391-05",
-          "ar": "جواز السفر 2207-69 №212562391-05",
-          "kk": "Паспорт 2207-69 №212562391-05"
+          "ru": "20",
+          "en": "20",
+          "tr": "20",
+          "ar": "20",
+          "kk": "20"
         }
       }
     ]
   },
+  "coverImage": "covers/case-022.svg",
+  "personImage": "people/mikhail-ternov.webp",
   "evidences": [
     {
-      "id": "ev-cctv",
-      "type": "camera_recording",
-      "title": {
-        "ru": "Запись камеры додзё",
-        "en": "Dojo CCTV",
-        "tr": "Salon Kamerası",
-        "ar": "كاميرا النادي",
-        "kk": "Додзё камерасы"
-      },
-      "content": {
-        "ru": [
-          "02:12:30 · Двое взрослых в чёрных костюмах с серебряным логотипом «СЕВЕРНЫЙ ДВОР» вскрывают замок",
-          "02:14:05 · Они снимают со стены катану и режут татами",
-          "02:15:20 · Уносят реликвию к чёрному фургону; цветных бандан ни на ком нет"
-        ],
-        "en": [
-          "02:12:30 · Two adults in black suits with a silver \"NORTH YARD\" logo pick the lock",
-          "02:14:05 · They take the katana off the wall and slash the tatami",
-          "02:15:20 · They carry the relic to a black van; no one wears a colored bandana"
-        ],
-        "tr": [
-          "02:12:30 · Gümüş \"NORTH YARD\" logolu siyah takım elbiseli iki yetişkin kilidi açıyor",
-          "02:14:05 · Kılıcı duvardan alıp tatamileri kesiyorlar",
-          "02:15:20 · Emaneti siyah bir minibüse taşıyorlar; kimsede renkli bandana yok"
-        ],
-        "ar": [
-          "02:12:30 · رجلان بالغان ببدلتين سوداوين بشعار «الساحة الشمالية» الفضي يفتحان القفل",
-          "02:14:05 · ينزعان السيف عن الجدار ويمزّقان التاتامي",
-          "02:15:20 · يحملان التذكار إلى شاحنة سوداء؛ لا أحد يرتدي باندانا ملونة"
-        ],
-        "kk": [
-          "02:12:30 · Күміс «СЕВЕРНЫЙ ДВОР» логотипі бар қара костюмді екі ересек құлыпты ашады",
-          "02:14:05 · Қабырғадан катананы алып, татамилерді тіледі",
-          "02:15:20 · Жәдігерді қара фургонға апарады; ешкімде түрлі-түсті бандана жоқ"
-        ]
-      },
-      "isContradiction": false,
-      "contradictionExplanation": {
-        "ru": "Запись прямо показывает взрослых из «СЕВЕРНЫЙ ДВОР», а не учеников — это подтверждает заявление.",
-        "en": "The footage plainly shows adults from \"NORTH YARD\", not the students — this supports the claim.",
-        "tr": "Görüntü, öğrencileri değil \"NORTH YARD\"den yetişkinleri açıkça gösteriyor — bu, talebi destekliyor.",
-        "ar": "التسجيل يُظهر بوضوح بالغين من «الساحة الشمالية» لا الطلاب — وهذا يدعم المطالبة.",
-        "kk": "Жазба оқушыларды емес, «СЕВЕРНЫЙ ДВОР»-тың ересектерін айқын көрсетеді — бұл өтінішті растайды."
-      },
-      "meta": {
-        "cameraId": "CAM-DJ1",
-        "cameraModel": "WatchCam WC-8 · 2K · H.265"
-      }
-    },
-    {
-      "id": "ev-tournament",
+      "id": "ev-forensic",
+      "order": 1,
       "type": "document",
       "title": {
-        "ru": "Сертификат турнира",
-        "en": "Tournament Certificate",
-        "tr": "Turnuva Sertifikası",
-        "ar": "شهادة البطولة",
-        "kk": "Турнир сертификаты"
+        "ru": "Осмотр служебной двери",
+        "en": "Service Door Inspection",
+        "tr": "Service Door Inspection",
+        "ar": "Service Door Inspection",
+        "kk": "Осмотр служебной двери"
       },
       "content": {
-        "ru": [
-          "Региональная федерация карате · сертификат участника",
-          "Леонид (ученик спортклуба «Факел») — 1 место, ката",
-          "Время выступления: 21:00–23:30, г. Дальногорск (200 км от додзё)",
-          "Подтверждено судейской коллегией и видеотрансляцией"
-        ],
-        "en": [
-          "Regional Karate Federation · participant certificate",
-          "Leonid (\"Torch\" sports club student) — 1st place, kata",
-          "Performance time: 21:00–23:30, city of Dalnogorsk (200 km from the dojo)",
-          "Confirmed by the judging panel and the live broadcast"
-        ],
-        "tr": [
-          "Bölgesel Karate Federasyonu · katılımcı sertifikası",
-          "Leonid (\"Meşale\" spor kulübü öğrencisi) — 1. lik, kata",
-          "Performans saati: 21:00–23:30, Dalnogorsk şehri (salondan 200 km)",
-          "Hakem heyeti ve canlı yayınla doğrulandı"
-        ],
-        "ar": [
-          "الاتحاد الإقليمي للكاراتيه · شهادة مشارك",
-          "ليونيد (طالب نادي «نينجا»، قناع أزرق) — المركز الأول، كاتا",
-          "وقت الأداء: 21:00–23:30، مدينة دالنوغورسك (200 كم عن النادي)",
-          "مؤكَّد من لجنة التحكيم والبث المباشر"
-        ],
-        "kk": [
-          "Аймақтық карате федерациясы · қатысушы сертификаты",
-          "Леонид («Алау» спорт клубының оқушысы) — 1-орын, ката",
-          "Өнер көрсету уақыты: 21:00–23:30, Дальногорск қаласы (додзёдан 200 км)",
-          "Төрешілер алқасы мен тікелей эфирмен расталған"
-        ]
+        "ru": "Сердцевина замка высверлена снаружи, металлическая стружка находится внутри помещения. Код сигнализации введён не был.",
+        "en": "The lock cylinder was drilled from outside, and metal shavings lie inside the premises. No alarm code was entered.",
+        "tr": "The lock cylinder was drilled from outside, and metal shavings lie inside the premises. No alarm code was entered.",
+        "ar": "The lock cylinder was drilled from outside, and metal shavings lie inside the premises. No alarm code was entered.",
+        "kk": "Сердцевина замка высверлена снаружи, металлическая стружка находится внутри помещения. Код сигнализации введён не был."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Леонид в ночь погрома брал золото за 200 км — у учеников железное алиби.",
-        "en": "Leonid was winning gold 200 km away on the night of the raid — the students have a solid alibi.",
-        "tr": "Leonid baskın gecesi 200 km uzakta altın kazanıyordu — öğrencilerin sağlam bir mazereti var.",
-        "ar": "القناع الأزرق (ليونيد) كان يفوز بالذهب على بُعد 200 كم ليلة المداهمة — للطلاب حجة غياب متينة.",
-        "kk": "Леонид тонау түні 200 км жерде алтын алып жатқан — оқушылардың мықты алибиі бар."
-      }
+        "ru": "Следы подтверждают реальное внешнее проникновение, а не открытие владельцем.",
+        "en": "The marks confirm a genuine forced entry from outside, not access by the owner.",
+        "tr": "The marks confirm a genuine forced entry from outside, not access by the owner.",
+        "ar": "The marks confirm a genuine forced entry from outside, not access by the owner.",
+        "kk": "Следы подтверждают реальное внешнее проникновение, а не открытие владельцем."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_break_in",
+        "relation": "supports",
+        "reason": {
+          "ru": "Следы подтверждают реальное внешнее проникновение, а не открытие владельцем.",
+          "en": "The marks confirm a genuine forced entry from outside, not access by the owner.",
+          "tr": "The marks confirm a genuine forced entry from outside, not access by the owner.",
+          "ar": "The marks confirm a genuine forced entry from outside, not access by the owner.",
+          "kk": "Следы подтверждают реальное внешнее проникновение, а не открытие владельцем."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
-      "id": "ev-photo",
-      "type": "photo",
+      "id": "ev-cctv",
+      "order": 2,
+      "type": "camera_recording",
       "title": {
-        "ru": "Фото места погрома",
-        "en": "Raid Scene Photo",
-        "tr": "Baskın Yeri Fotoğrafı",
-        "ar": "صورة مكان المداهمة",
-        "kk": "Тонау орнының суреті"
+        "ru": "Камера соседней аптеки",
+        "en": "Neighboring Pharmacy Camera",
+        "tr": "Neighboring Pharmacy Camera",
+        "ar": "Neighboring Pharmacy Camera",
+        "kk": "Камера соседней аптеки"
       },
       "content": {
-        "ru": "Интерьер додзё: порезанные татами, пустое крепление для катаны на стене, а на полу — обронённая клубная карта-пропуск «СЕВЕРНЫЙ ДВОР».",
-        "en": "Dojo interior: slashed tatami, an empty katana mount on the wall, and on the floor — a dropped \"NORTH YARD\" club keycard.",
-        "tr": "Salon iç mekânı: kesilmiş tatamiler, duvarda boş bir kılıç askısı ve yerde düşmüş bir \"NORTH YARD\" kulüp kartı.",
-        "ar": "داخل النادي: تاتامي ممزّق، وحامل سيف فارغ على الجدار، وعلى الأرض بطاقة نادي «الساحة الشمالية» ساقطة.",
-        "kk": "Додзё іші: тілінген татамилер, қабырғада катананың бос ұстатқышы, ал еденде түсіп қалған «СЕВЕРНЫЙ ДВОР» клуб картасы."
+        "ru": "В 02:12 двое взрослых выгружают инструменты из серого фургона, входят через служебный двор и через шесть минут выносят плоский архивный короб и небольшой футляр.",
+        "en": "At 2:12 a.m., two adults unload tools from a gray van, enter through the service yard, and leave six minutes later carrying a flat archive box and a small case.",
+        "tr": "At 2:12 a.m., two adults unload tools from a gray van, enter through the service yard, and leave six minutes later carrying a flat archive box and a small case.",
+        "ar": "At 2:12 a.m., two adults unload tools from a gray van, enter through the service yard, and leave six minutes later carrying a flat archive box and a small case.",
+        "kk": "В 02:12 двое взрослых выгружают инструменты из серого фургона, входят через служебный двор и через шесть минут выносят плоский архивный короб и небольшой футляр."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Карта-пропуск «СЕВЕРНЫЙ ДВОР» на месте прямо указывает на людей Арсенова.",
-        "en": "The dropped \"NORTH YARD\" keycard at the scene points straight to Arsenov's men.",
-        "tr": "Olay yerindeki \"NORTH YARD\" kartı doğrudan Arsenov'un adamlarını işaret ediyor.",
-        "ar": "بطاقة «الساحة الشمالية» في مكان الحادث تشير مباشرة إلى رجال أرسينوف.",
-        "kk": "Оқиға орнындағы «СЕВЕРНЫЙ ДВОР» картасы тікелей Арсеновтың адамдарын көрсетеді."
+        "ru": "Независимая камера подтверждает взлом, количество участников и похищенные предметы.",
+        "en": "Independent footage confirms the break-in, the number of intruders, and the stolen items.",
+        "tr": "Independent footage confirms the break-in, the number of intruders, and the stolen items.",
+        "ar": "Independent footage confirms the break-in, the number of intruders, and the stolen items.",
+        "kk": "Независимая камера подтверждает взлом, количество участников и похищенные предметы."
       },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_property_stolen",
+        "relation": "supports",
+        "reason": {
+          "ru": "Независимая камера подтверждает взлом, количество участников и похищенные предметы.",
+          "en": "Independent footage confirms the break-in, the number of intruders, and the stolen items.",
+          "tr": "Independent footage confirms the break-in, the number of intruders, and the stolen items.",
+          "ar": "Independent footage confirms the break-in, the number of intruders, and the stolen items.",
+          "kk": "Независимая камера подтверждает взлом, количество участников и похищенные предметы."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
       "meta": {
-        "filename": "IMG_20260622_021712.jpg",
-        "imageUrl": "evidence/case-022-ev-photo.jpg"
+        "imageUrl": "evidence/case-022-ev-cctv.webp"
       }
     },
     {
-      "id": "ev-witness",
-      "type": "witness_statement",
+      "id": "ev-inventory",
+      "order": 3,
+      "type": "document",
       "title": {
-        "ru": "Показания соседа",
-        "en": "Neighbor Statement",
-        "tr": "Komşu İfadesi",
-        "ar": "إفادة الجار",
-        "kk": "Көршінің айғағы"
+        "ru": "Архивная опись",
+        "en": "Archive Inventory",
+        "tr": "Archive Inventory",
+        "ar": "Archive Inventory",
+        "kk": "Архивная опись"
       },
       "content": {
-        "ru": "«Около 02:30 от додзё отъехал чёрный фургон с надписью СЕВЕРНЫЙ ДВОР. За рулём — крупный мужчина в костюме, точно не подросток».",
-        "en": "\"Around 02:30 a black van with a NORTH YARD logo drove off from the dojo. A large man in a suit was at the wheel — definitely not a teenager.\"",
-        "tr": "\"Saat 02:30 civarında salondan NORTH YARD yazılı siyah bir minibüs ayrıldı. Direksiyonda takım elbiseli iri bir adam vardı — kesinlikle bir genç değildi.\"",
-        "ar": "«نحو الساعة 02:30 انطلقت من النادي شاحنة سوداء عليها شعار الساحة الشمالية. كان يقودها رجل ضخم ببدلة — بالتأكيد ليس مراهقاً».",
-        "kk": "«Шамамен 02:30-да додзёдан СЕВЕРНЫЙ ДВОР жазуы бар қара фургон шығып кетті. Рульде костюмді ірі еркек отырды — нақты жасөспірім емес»."
+        "ru": "Хронометр зарегистрирован и оценён до происшествия. Реестр содержит копии выплат 2021 года, в том числе папку с номером 17-К.",
+        "en": "The chronometer was registered and appraised before the incident. The registry contains copies of 2021 payouts, including file 17-K.",
+        "tr": "The chronometer was registered and appraised before the incident. The registry contains copies of 2021 payouts, including file 17-K.",
+        "ar": "The chronometer was registered and appraised before the incident. The registry contains copies of 2021 payouts, including file 17-K.",
+        "kk": "Хронометр зарегистрирован и оценён до происшествия. Реестр содержит копии выплат 2021 года, в том числе папку с номером 17-К."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Независимый свидетель видел взрослого на фургоне «СЕВЕРНЫЙ ДВОР» — согласуется с делом.",
-        "en": "An independent witness saw an adult in the \"NORTH YARD\" van — consistent with the case.",
-        "tr": "Bağımsız bir tanık \"NORTH YARD\" minibüsünde bir yetişkin gördü — davayla tutarlı.",
-        "ar": "شاهد مستقل رأى بالغاً في شاحنة «الساحة الشمالية» — متوافق مع القضية.",
-        "kk": "Тәуелсіз куәгер «СЕВЕРНЫЙ ДВОР» фургонындағы ересекті көрген — іспен үйлеседі."
+        "ru": "Документ подтверждает существование и стоимость имущества, а также возможный мотив кражи реестра.",
+        "en": "The inventory confirms the existence and value of the property, as well as a possible motive for stealing the registry.",
+        "tr": "The inventory confirms the existence and value of the property, as well as a possible motive for stealing the registry.",
+        "ar": "The inventory confirms the existence and value of the property, as well as a possible motive for stealing the registry.",
+        "kk": "Документ подтверждает существование и стоимость имущества, а также возможный мотив кражи реестра."
+      },
+      "narrativeRole": "arc_context",
+      "statementLink": {
+        "statementId": "claim_property_existed",
+        "relation": "supports",
+        "reason": {
+          "ru": "Документ подтверждает существование и стоимость имущества, а также возможный мотив кражи реестра.",
+          "en": "The inventory confirms the existence and value of the property, as well as a possible motive for stealing the registry.",
+          "tr": "The inventory confirms the existence and value of the property, as well as a possible motive for stealing the registry.",
+          "ar": "The inventory confirms the existence and value of the property, as well as a possible motive for stealing the registry.",
+          "kk": "Документ подтверждает существование и стоимость имущества, а также возможный мотив кражи реестра."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "ev-fragment",
+      "order": 4,
+      "type": "document_scan",
+      "title": {
+        "ru": "Экспертиза уцелевшего листа",
+        "en": "Surviving Page Examination",
+        "tr": "Surviving Page Examination",
+        "ar": "Surviving Page Examination",
+        "kk": "Экспертиза уцелевшего листа"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Проявилась запись «К. Карелин» и маршрут «через Восточный двор после выплаты».",
+        "en": "The notes ‘K. Karelin’ and ‘via Eastern Yard after payout’ have been revealed.",
+        "tr": "The notes ‘K. Karelin’ and ‘via Eastern Yard after payout’ have been revealed.",
+        "ar": "The notes ‘K. Karelin’ and ‘via Eastern Yard after payout’ have been revealed.",
+        "kk": "Проявилась запись «К. Карелин» и маршрут «через Восточный двор после выплаты»."
+      },
+      "narrativeRole": "arc_proof",
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Проявилась запись «К. Карелин» и маршрут «через Восточный двор после выплаты».",
+          "en": "The notes ‘K. Karelin’ and ‘via Eastern Yard after payout’ have been revealed.",
+          "tr": "The notes ‘K. Karelin’ and ‘via Eastern Yard after payout’ have been revealed.",
+          "ar": "The notes ‘K. Karelin’ and ‘via Eastern Yard after payout’ have been revealed.",
+          "kk": "Проявилась запись «К. Карелин» и маршрут «через Восточный двор после выплаты»."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "description": {
+        "ru": "Лист из реестра нашли под опрокинутым шкафом в мастерской «Компас».",
+        "en": "The registry page was found beneath an overturned cabinet in the Compass workshop.",
+        "tr": "The registry page was found beneath an overturned cabinet in the Compass workshop.",
+        "ar": "The registry page was found beneath an overturned cabinet in the Compass workshop.",
+        "kk": "Лист из реестра нашли под опрокинутым шкафом в мастерской «Компас»."
+      },
+      "instruction": {
+        "ru": "Включить боковой свет и найти следы стёртой карандашной резолюции.",
+        "en": "Switch on side light and find the erased pencil authorization.",
+        "tr": "Switch on side light and find the erased pencil authorization.",
+        "ar": "Switch on side light and find the erased pencil authorization.",
+        "kk": "Включить боковой свет и найти следы стёртой карандашной резолюции."
+      },
+      "previousType": "photo",
+      "assets": {
+        "asset1": "cases/case-022/assets/interactive/ev-fragment-base.webp",
+        "asset2": "cases/case-022/assets/interactive/ev-fragment-scan-overlay.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Имя и маршрут перестают быть готовым текстовым спойлером — игрок проявляет их сам.",
+          "en": "The name and route are no longer handed to the player as a text spoiler; the player reveals them personally.",
+          "tr": "The name and route are no longer handed to the player as a text spoiler; the player reveals them personally.",
+          "ar": "The name and route are no longer handed to the player as a text spoiler; the player reveals them personally.",
+          "kk": "Имя и маршрут перестают быть готовым текстовым спойлером — игрок проявляет их сам."
+        },
+        "playerAction": {
+          "ru": "Включить боковой свет и найти следы стёртой карандашной резолюции.",
+          "en": "Switch on side light and find the erased pencil authorization.",
+          "tr": "Switch on side light and find the erased pencil authorization.",
+          "ar": "Switch on side light and find the erased pencil authorization.",
+          "kk": "Включить боковой свет и найти следы стёртой карандашной резолюции."
+        },
+        "conclusion": {
+          "ru": "Проявилась запись «К. Карелин» и маршрут «через Восточный двор после выплаты».",
+          "en": "The notes ‘K. Karelin’ and ‘via Eastern Yard after payout’ have been revealed.",
+          "tr": "The notes ‘K. Karelin’ and ‘via Eastern Yard after payout’ have been revealed.",
+          "ar": "The notes ‘K. Karelin’ and ‘via Eastern Yard after payout’ have been revealed.",
+          "kk": "Проявилась запись «К. Карелин» и маршрут «через Восточный двор после выплаты»."
+        }
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "side_light",
+          "contrast"
+        ],
+        "anomalyZones": [
+          {
+            "id": "erased_resolution",
+            "mode": "side_light",
+            "x": 46,
+            "y": 64,
+            "width": 39,
+            "height": 12,
+            "label": "Проявилась запись «К. Карелин» и маршрут «через Восточный двор после выплаты».",
+            "isContradiction": false,
+            "labelEn": "The notes ‘K. Karelin’ and ‘via Eastern Yard after payout’ have been revealed."
+          }
+        ],
+        "successCondition": {
+          "type": "select_zone",
+          "zoneId": "erased_resolution"
+        }
       }
     }
   ],
   "correctDecision": "approve",
   "explanation": {
     "ru": [
-      "Камеры и найденный пропуск указывают на взрослых налётчиков.",
-      "Погром устроил «СЕВЕРНЫЙ ДВОР» Арсенова: камера сняла взрослых в чёрном с серебряным логотипом, на полу — их карта-пропуск, сосед видел фургон.",
-      "Ученики ни при чём: Леонид в это время брал золото на турнире за 200 км. Противоречий нет — заявление подлинное, одобряем."
+      "Дверь действительно взломана снаружи, а камера фиксирует двух неизвестных.",
+      "Хронометр и реестр существовали до нападения и были вынесены налётчиками.",
+      "Проявилась запись «К. Карелин» и маршрут «через Восточный двор после выплаты».",
+      "Погром и кража подлинные. Выплату Тернову следует одобрить."
     ],
     "en": [
-      "The cameras and recovered pass point to adult intruders.",
-      "The raid was carried out by Arsenov's \"NORTH YARD\": the camera caught adults in black with a silver logo, their keycard on the floor, a neighbor saw the van.",
-      "The students are innocent: Leonid was winning gold at a tournament 200 km away. No contradictions — the claim is genuine, approve it."
+      "The marks confirm a genuine forced entry from outside, not access by the owner.",
+      "Independent footage confirms the break-in, the number of intruders, and the stolen items.",
+      "The inventory confirms the existence and value of the property, as well as a possible motive for stealing the registry.",
+      "The notes ‘K. Karelin’ and ‘via Eastern Yard after payout’ have been revealed.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "tr": [
-      "Kameralar ve bulunan kart yetişkin saldırganları gösteriyor.",
-      "Baskını Arsenov'un \"NORTH YARD\"i yaptı: kamera gümüş logolu, siyahlı yetişkinleri yakaladı, kartları yerde, komşu minibüsü gördü.",
-      "Öğrenciler masum: Leonid o sırada 200 km uzakta altın kazanıyordu. Çelişki yok — talep gerçek, onaylayın."
+      "The marks confirm a genuine forced entry from outside, not access by the owner.",
+      "Independent footage confirms the break-in, the number of intruders, and the stolen items.",
+      "The inventory confirms the existence and value of the property, as well as a possible motive for stealing the registry.",
+      "The notes ‘K. Karelin’ and ‘via Eastern Yard after payout’ have been revealed.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "ar": [
-      "تشير الكاميرات والبطاقة المضبوطة إلى مهاجمين بالغين.",
-      "المداهمة نفّذها «الساحة الشمالية» التابع لأرسينوف: التقطت الكاميرا بالغين بالأسود بشعار فضي، وبطاقتهم على الأرض، ورأى جار الشاحنة.",
-      "الطلاب أبرياء: كان ليونيد يفوز بالذهب في بطولة على بُعد 200 كم. لا تناقضات — المطالبة حقيقية، وافق عليها."
+      "The marks confirm a genuine forced entry from outside, not access by the owner.",
+      "Independent footage confirms the break-in, the number of intruders, and the stolen items.",
+      "The inventory confirms the existence and value of the property, as well as a possible motive for stealing the registry.",
+      "The notes ‘K. Karelin’ and ‘via Eastern Yard after payout’ have been revealed.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "kk": [
-      "Камералар мен табылған рұқсатнама ересек шабуылшыларды көрсетеді.",
-      "Тонауды Арсеновтың «СЕВЕРНЫЙ ДВОР»-ы жасады: камера күміс логотипті қара киімді ересектерді түсірген, еденде олардың картасы, көрші фургонды көрген.",
-      "Оқушылар кінәсіз: Леонид сол кезде 200 км жерде алтын алып жатқан. Қайшылық жоқ — талап шынайы, мақұлдаңыз."
+      "Дверь действительно взломана снаружи, а камера фиксирует двух неизвестных.",
+      "Хронометр и реестр существовали до нападения и были вынесены налётчиками.",
+      "Проявилась запись «К. Карелин» и маршрут «через Восточный двор после выплаты».",
+      "Погром и кража подлинные. Выплату Тернову следует одобрить."
     ]
+  },
+  "investigationBudget": 3,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Ночью неизвестные взломали мою реставрационную мастерскую «Компас», разбили витрины и похитили латунный судовой хронометр вместе со старым страховым реестром, который я готовил к передаче в городской архив. Прошу возместить повреждения и застрахованную стоимость прибора.",
+        "en": "During the night, unknown intruders broke into my Compass restoration workshop, smashed display cases, and stole a brass marine chronometer along with an old insurance registry I was preparing for the city archive. I am claiming the damage and the instrument's insured value.",
+        "tr": "During the night, unknown intruders broke into my Compass restoration workshop, smashed display cases, and stole a brass marine chronometer along with an old insurance registry I was preparing for the city archive. I am claiming the damage and the instrument's insured value.",
+        "ar": "During the night, unknown intruders broke into my Compass restoration workshop, smashed display cases, and stole a brass marine chronometer along with an old insurance registry I was preparing for the city archive. I am claiming the damage and the instrument's insured value.",
+        "kk": "Ночью неизвестные взломали мою реставрационную мастерскую «Компас», разбили витрины и похитили латунный судовой хронометр вместе со старым страховым реестром, который я готовил к передаче в городской архив. Прошу возместить повреждения и застрахованную стоимость прибора."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_break_in",
+      "text": {
+        "ru": "В мастерскую «Компас» проникли снаружи и устроили погром.",
+        "en": "Intruders entered the Compass workshop from outside and ransacked it.",
+        "tr": "Intruders entered the Compass workshop from outside and ransacked it.",
+        "ar": "Intruders entered the Compass workshop from outside and ransacked it.",
+        "kk": "В мастерскую «Компас» проникли снаружи и устроили погром."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_property_existed",
+      "text": {
+        "ru": "Похищенные хронометр и реестр существовали до нападения.",
+        "en": "The stolen chronometer and registry existed before the break-in.",
+        "tr": "The stolen chronometer and registry existed before the break-in.",
+        "ar": "The stolen chronometer and registry existed before the break-in.",
+        "kk": "Похищенные хронометр и реестр существовали до нападения."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_property_stolen",
+      "text": {
+        "ru": "Имущество вынесли неизвестные, а не спрятал владелец.",
+        "en": "Unknown intruders removed the property; the owner did not conceal it.",
+        "tr": "Unknown intruders removed the property; the owner did not conceal it.",
+        "ar": "Unknown intruders removed the property; the owner did not conceal it.",
+        "kk": "Имущество вынесли неизвестные, а не спрятал владелец."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Из мастерской украли не самый дорогой предмет, а старый реестр. Возможно, стоимость здесь вообще не главный вопрос. — В. Лебедева",
+      "en": "The thieves did not take the workshop's most valuable item. They took an old registry. Perhaps value is not the real issue here. — V. Lebedeva",
+      "tr": "The thieves did not take the workshop's most valuable item. They took an old registry. Perhaps value is not the real issue here. — V. Lebedeva",
+      "ar": "The thieves did not take the workshop's most valuable item. They took an old registry. Perhaps value is not the real issue here. — V. Lebedeva",
+      "kk": "Из мастерской украли не самый дорогой предмет, а старый реестр. Возможно, стоимость здесь вообще не главный вопрос. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Я узнала подпись. Константин Карелин не просто видел форму 17-К — он связывал выплаты с «Восточным двором». Кто-то пришёл за реестром раньше нас. В уцелевшей части реестра рядом с бытовыми делами встречаются промышленные реле, лабораторные партии и навигационные модули — схема давно вышла за пределы обычных квартир.",
+      "en": "I recognized the signature. Konstantin Karelin did more than see form 17-K—he linked payouts to Eastern Yard. Someone reached the registry before us. In the surviving pages, ordinary household claims appear alongside industrial relays, laboratory batches, and navigation modules. This operation moved beyond apartment fraud long ago.",
+      "tr": "I recognized the signature. Konstantin Karelin did more than see form 17-K—he linked payouts to Eastern Yard. Someone reached the registry before us. In the surviving pages, ordinary household claims appear alongside industrial relays, laboratory batches, and navigation modules. This operation moved beyond apartment fraud long ago.",
+      "ar": "I recognized the signature. Konstantin Karelin did more than see form 17-K—he linked payouts to Eastern Yard. Someone reached the registry before us. In the surviving pages, ordinary household claims appear alongside industrial relays, laboratory batches, and navigation modules. This operation moved beyond apartment fraud long ago.",
+      "kk": "Я узнала подпись. Константин Карелин не просто видел форму 17-К — он связывал выплаты с «Восточным двором». Кто-то пришёл за реестром раньше нас. В уцелевшей части реестра рядом с бытовыми делами встречаются промышленные реле, лабораторные партии и навигационные модули — схема давно вышла за пределы обычных квартир."
+    },
+    "nextCaseTeaser": {
+      "ru": "Следующий акт начнётся с денег, снятых якобы за границей. Маршрут приведёт нас всё к тому же складу.",
+      "en": "The next act begins with money supposedly withdrawn abroad. Its route leads back to the same warehouse.",
+      "tr": "The next act begins with money supposedly withdrawn abroad. Its route leads back to the same warehouse.",
+      "ar": "The next act begins with money supposedly withdrawn abroad. Its route leads back to the same warehouse.",
+      "kk": "Следующий акт начнётся с денег, снятых якобы за границей. Маршрут приведёт нас всё к тому же складу."
+    },
+    "seasonClue": {
+      "id": "karelin-route",
+      "label": {
+        "ru": "Резолюция Карелина",
+        "en": "Karelin's Authorization",
+        "tr": "Karelin's Authorization",
+        "ar": "Karelin's Authorization",
+        "kk": "Резолюция Карелина"
+      },
+      "description": {
+        "ru": "В 2021 году Карелин направлял застрахованное имущество через «Восточный двор» после выплаты.",
+        "en": "In 2021, Karelin routed insured property through Eastern Yard after payouts were issued.",
+        "tr": "In 2021, Karelin routed insured property through Eastern Yard after payouts were issued.",
+        "ar": "In 2021, Karelin routed insured property through Eastern Yard after payouts were issued.",
+        "kk": "В 2021 году Карелин направлял застрахованное имущество через «Восточный двор» после выплаты."
+      },
+      "progressIndex": 5,
+      "progressTotal": 5
+    },
+    "epilogue": null
   }
 }

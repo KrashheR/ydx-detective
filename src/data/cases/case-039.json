@@ -1,385 +1,505 @@
 {
   "id": "case-039",
   "type": "standard",
-  "difficulty": "hard",
+  "campaignOrder": 37,
+  "requiredLevel": 16,
+  "act": 4,
+  "actTitle": {
+    "ru": "Серый конвой",
+    "en": "The Gray Convoy",
+    "tr": "The Gray Convoy",
+    "ar": "The Gray Convoy",
+    "kk": "Серый конвой"
+  },
+  "difficulty": "medium",
   "claimAmount": 18400,
   "truth": "fraud",
-  "investigationBudget": 4,
   "title": {
-    "ru": "Ночной демонтаж панелей",
-    "en": "Night Panel Dismantling",
-    "tr": "Uzak Bir Kooperatifte",
-    "ar": "منذ زمن في تعاونية بعيدة",
-    "kk": "Баяғыда алыс кооперативте"
+    "ru": "Робот, разобравший солнце",
+    "en": "The Robot That Dismantled the Sun",
+    "tr": "The Robot That Dismantled the Sun",
+    "ar": "The Robot That Dismantled the Sun",
+    "kk": "Робот, разобравший солнце"
   },
   "claim": {
     "person": {
       "ru": "Никита Воронов, 38 лет",
-      "en": "Nikita Voronov, 38",
-      "tr": "Nikita Voronov, 38",
-      "ar": "نيكيتا فورونوف، 38",
-      "kk": "Никита Воронов, 38 жаста"
+      "en": "Nikita Voronov, age 38",
+      "tr": "Nikita Voronov, age 38",
+      "ar": "Nikita Voronov, age 38",
+      "kk": "Никита Воронов, 38 лет"
     },
     "story": {
-      "ru": "Ночью неизвестные в белых рабочих комбинезонах проникли на мою солнечную ферму «Сухой Хребет» и промышленным терморезаком уничтожили главный массив панелей. Сервисный робот пропал. Прошу возместить оборудование и потерю выработки.",
-      "en": "Overnight, intruders in white work suits entered my Dry Ridge solar farm and destroyed the main panel array with an industrial thermal cutter. A service robot vanished. I request compensation for the equipment and lost generation.",
-      "tr": "Gece beyaz iş tulumlu kişiler Dry Ridge güneş çiftliğime girip ana panel dizisini endüstriyel termal kesiciyle yok etti. Servis robotu kayboldu. Ekipman ve üretim kaybı için ödeme istiyorum.",
-      "ar": "تسلل ليلاً أشخاص بملابس عمل بيضاء إلى مزرعة «الحافة الجافة» الشمسية ودمروا الألواح بقاطع حراري صناعي. اختفى روبوت الخدمة. أطلب تعويض المعدات وفقدان الإنتاج.",
-      "kk": "Түнде ақ жұмыс комбинезонын киген адамдар «Құрғақ жота» күн фермама кіріп, панельдерді өнеркәсіптік термокескішпен жойды. Сервистік робот жоғалды. Жабдық пен өндіріс шығынын өтеуді сұраймын."
+      "ru": "Ночью люди в белых рабочих комбинезонах проникли на солнечную ферму, промышленным резаком уничтожили массив панелей и угнали сервисного робота. Прошу возместить оборудование и потерю выработки.",
+      "en": "During the night, people in white coveralls entered the solar farm, destroyed the panel array with industrial cutters, and stole the service robot. I am claiming the equipment and lost generation.",
+      "tr": "During the night, people in white coveralls entered the solar farm, destroyed the panel array with industrial cutters, and stole the service robot. I am claiming the equipment and lost generation.",
+      "ar": "During the night, people in white coveralls entered the solar farm, destroyed the panel array with industrial cutters, and stole the service robot. I am claiming the equipment and lost generation.",
+      "kk": "Ночью люди в белых рабочих комбинезонах проникли на солнечную ферму, промышленным резаком уничтожили массив панелей и угнали сервисного робота. Прошу возместить оборудование и потерю выработки."
     }
   },
-  "coverImage": "covers/case-039.svg",
   "client": {
     "role": {
-      "ru": "Владелец солнечной фермы",
-      "en": "Solar-farm owner",
-      "tr": "Güneş çiftliği sahibi",
-      "ar": "مالك مزرعة شمسية",
-      "kk": "Күн фермасының иесі"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Регион",
-          "en": "Region",
-          "tr": "Bölge",
-          "ar": "المنطقة",
-          "kk": "Аймақ"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "Район Сухого Хребта",
-          "en": "Dry Ridge district",
-          "tr": "Dry Ridge bölgesi",
-          "ar": "منطقة الحافة الجافة",
-          "kk": "Құрғақ жота ауданы"
+          "ru": "4",
+          "en": "4",
+          "tr": "4",
+          "ar": "4",
+          "kk": "4"
         }
       },
       {
         "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Энергия · SW-039",
-          "en": "Energy · SW-039",
-          "tr": "Enerji · SW-039",
-          "ar": "الطاقة · SW-039",
-          "kk": "Энергия · SW-039"
-        }
-      },
-      {
-        "k": {
-          "ru": "Объект",
-          "en": "Object",
-          "tr": "Nesne",
-          "ar": "الكائن",
-          "kk": "Нысан"
-        },
-        "v": {
-          "ru": "Ферма «Сухой Хребет»",
-          "en": "Dry Ridge Farm",
-          "tr": "Dry Ridge Çiftliği",
-          "ar": "مزرعة الحافة الجافة",
-          "kk": "«Құрғақ жота» фермасы"
+          "ru": "37",
+          "en": "37",
+          "tr": "37",
+          "ar": "37",
+          "kk": "37"
         }
       }
     ]
   },
+  "coverImage": "covers/case-039.svg",
+  "personImage": "people/nikita-voronov.webp",
   "evidences": [
     {
       "id": "ev-camera",
-      "relation": "contradicts",
+      "order": 1,
       "type": "camera_recording",
       "title": {
         "ru": "Камера ангара",
-        "en": "Hangar CCTV",
-        "tr": "Hangar kamerası",
-        "ar": "كاميرا الحظيرة",
-        "kk": "Ангар камерасы"
+        "en": "Hangar Camera",
+        "tr": "Hangar Camera",
+        "ar": "Hangar Camera",
+        "kk": "Камера ангара"
       },
       "content": {
-        "ru": "02:16 · Воронов надевает белый защитный костюм и вывозит робота СРВ-4.",
-        "en": "02:16 · Voronov puts on a white protective suit and wheels out the SRV-4 robot.",
-        "tr": "02:16 · Voronov beyaz koruyucu giysi giyip SRV-4 robotunu çıkarıyor.",
-        "ar": "02:16 · يرتدي فورونوف بدلة بيضاء ويُخرج روبوت SRV-4.",
-        "kk": "02:16 · Воронов ақ қорғаныс киімін киіп, SRV-4 роботын шығарады."
+        "ru": "Воронов выпускает сервисного робота, загружает программу и открывает ему ворота. Посторонних людей не видно.",
+        "en": "Voronov releases the service robot, uploads a program, and opens the gate for it. No outsiders are visible.",
+        "tr": "Voronov releases the service robot, uploads a program, and opens the gate for it. No outsiders are visible.",
+        "ar": "Voronov releases the service robot, uploads a program, and opens the gate for it. No outsiders are visible.",
+        "kk": "Воронов выпускает сервисного робота, загружает программу и открывает ему ворота. Посторонних людей не видно."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "«Штурмовиком» был сам заявитель; робот не похищен.",
-        "en": "The 'trooper' was the claimant; the robot was not stolen.",
-        "tr": "'Asker' başvuru sahibiydi; robot çalınmadı.",
-        "ar": "كان «الجندي» هو صاحب الطلب ولم يُسرق الروبوت.",
-        "kk": "«Сарбаз» өтініш берушінің өзі болған; робот ұрланбаған."
+        "ru": "Владелец сам запустил операцию перед заявленным нападением.",
+        "en": "The owner initiated the operation himself before the reported attack.",
+        "tr": "The owner initiated the operation himself before the reported attack.",
+        "ar": "The owner initiated the operation himself before the reported attack.",
+        "kk": "Владелец сам запустил операцию перед заявленным нападением."
       },
-      "meta": {
-        "cameraId": "CAM-HANGAR-S4",
-        "cameraModel": "PerimeterCam PC-4 · 4K · H.265"
-      }
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_attack",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Владелец сам запустил операцию перед заявленным нападением.",
+          "en": "The owner initiated the operation himself before the reported attack.",
+          "tr": "The owner initiated the operation himself before the reported attack.",
+          "ar": "The owner initiated the operation himself before the reported attack.",
+          "kk": "Владелец сам запустил операцию перед заявленным нападением."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_attack",
+        "reason": {
+          "ru": "Владелец сам запустил операцию перед заявленным нападением.",
+          "en": "The owner initiated the operation himself before the reported attack.",
+          "tr": "The owner initiated the operation himself before the reported attack.",
+          "ar": "The owner initiated the operation himself before the reported attack.",
+          "kk": "Владелец сам запустил операцию перед заявленным нападением."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "ev-log",
-      "relation": "contradicts",
+      "order": 2,
       "type": "usage_log",
       "title": {
         "ru": "Журнал сервисного робота",
-        "en": "Service robot log",
-        "tr": "Servis robotu günlüğü",
-        "ar": "سجل روبوت الخدمة",
-        "kk": "Сервис роботының журналы"
+        "en": "Service Robot Log",
+        "tr": "Service Robot Log",
+        "ar": "Service Robot Log",
+        "kk": "Журнал сервисного робота"
       },
       "content": {
-        "ru": [
-          "02:18 OWNER_AUTH OK",
-          "02:19 CUTTER RED MODE",
-          "02:23 PANEL_ROW_A DISMANTLED",
-          "02:31 HIDE_LOCATION cellar"
-        ],
-        "en": [
-          "02:18 OWNER_AUTH OK",
-          "02:19 CUTTER RED MODE",
-          "02:23 PANEL_ROW_A DISMANTLED",
-          "02:31 HIDE_LOCATION cellar"
-        ],
-        "tr": [
-          "02:18 OWNER_AUTH OK",
-          "02:19 CUTTER RED MODE",
-          "02:23 PANEL_ROW_A DISMANTLED",
-          "02:31 HIDE_LOCATION cellar"
-        ],
-        "ar": [
-          "02:18 OWNER_AUTH OK",
-          "02:19 CUTTER RED MODE",
-          "02:23 PANEL_ROW_A DISMANTLED",
-          "02:31 HIDE_LOCATION cellar"
-        ],
-        "kk": [
-          "02:18 OWNER_AUTH OK",
-          "02:19 CUTTER RED MODE",
-          "02:23 PANEL_ROW_A DISMANTLED",
-          "02:31 HIDE_LOCATION cellar"
-        ]
+        "ru": "Получена задача «бережный демонтаж, сохранить разъёмы». Команда подписана администраторским ключом Воронова.",
+        "en": "Task received: ‘careful dismantling; preserve connectors.’ The command is signed with Voronov's administrator key.",
+        "tr": "Task received: ‘careful dismantling; preserve connectors.’ The command is signed with Voronov's administrator key.",
+        "ar": "Task received: ‘careful dismantling; preserve connectors.’ The command is signed with Voronov's administrator key.",
+        "kk": "Получена задача «бережный демонтаж, сохранить разъёмы». Команда подписана администраторским ключом Воронова."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Робот разобрал панели по авторизации владельца.",
-        "en": "The robot dismantled the panels under owner authorization.",
-        "tr": "Robot panelleri sahibinin yetkisiyle söktü.",
-        "ar": "فكك الروبوت الألواح بتفويض المالك.",
-        "kk": "Робот панельдерді иесінің рұқсатымен бөлшектеген."
+        "ru": "Роботу приказали снять, а не уничтожить панели.",
+        "en": "The robot was ordered to remove the panels, not destroy them.",
+        "tr": "The robot was ordered to remove the panels, not destroy them.",
+        "ar": "The robot was ordered to remove the panels, not destroy them.",
+        "kk": "Роботу приказали снять, а не уничтожить панели."
       },
-      "meta": {
-        "logPrompt": "service@dryridge:~$ tail -f /var/log/service-robot.log"
-      }
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_robot_uncontrolled",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Роботу приказали снять, а не уничтожить панели.",
+          "en": "The robot was ordered to remove the panels, not destroy them.",
+          "tr": "The robot was ordered to remove the panels, not destroy them.",
+          "ar": "The robot was ordered to remove the panels, not destroy them.",
+          "kk": "Роботу приказали снять, а не уничтожить панели."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_robot_uncontrolled",
+        "reason": {
+          "ru": "Роботу приказали снять, а не уничтожить панели.",
+          "en": "The robot was ordered to remove the panels, not destroy them.",
+          "tr": "The robot was ordered to remove the panels, not destroy them.",
+          "ar": "The robot was ordered to remove the panels, not destroy them.",
+          "kk": "Роботу приказали снять, а не уничтожить панели."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
-      "id": "ev-bank",
-      "relation": "context",
-      "type": "bank_statement",
-      "title": {
-        "ru": "Долг фермы",
-        "en": "Farm debt",
-        "tr": "Çiftlik borcu",
-        "ar": "دين المزرعة",
-        "kk": "Ферма қарызы"
-      },
-      "content": {
-        "ru": [
-          "Кредит: просрочка 90 дней",
-          "Ожидаемая страховая выплата закрывает долг полностью"
-        ],
-        "en": [
-          "Loan: 90 days overdue",
-          "Expected insurance payout covers the debt in full"
-        ],
-        "tr": [
-          "Kredi: 90 gün gecikmiş",
-          "Beklenen sigorta ödemesi borcu tamamen kapatıyor"
-        ],
-        "ar": [
-          "القرض متأخر 90 يوماً",
-          "التعويض المتوقع يغطي الدين كاملاً"
-        ],
-        "kk": [
-          "Несие: 90 күн кешігу",
-          "Күтілетін төлем қарызды толық жабады"
-        ]
-      },
-      "isContradiction": false,
-      "contradictionExplanation": {
-        "ru": "Долг даёт мотив, но сам по себе не доказывает мошенничество.",
-        "en": "Debt provides motive but is not proof by itself.",
-        "tr": "Borç motivasyon sağlar ama tek başına kanıt değildir.",
-        "ar": "الدين دافع لكنه ليس دليلاً وحده.",
-        "kk": "Қарыз себеп болуы мүмкін, бірақ жалғыз өзі дәлел емес."
-      },
-      "meta": {
-        "bankName": {
-          "ru": "Галактика Кредит",
-          "en": "Galaxy Credit",
-          "tr": "Galaksi Kredi",
-          "ar": "غالاكسي كريدت",
-          "kk": "Галактика Кредит"
-        },
-        "accountMask": "•• 1977"
-      }
-    },
-    {
-      "id": "ev-document",
-      "relation": "contradicts",
+      "id": "ev-cuts",
+      "order": 3,
       "type": "document",
       "title": {
-        "ru": "Экспертиза резов",
-        "en": "Cut analysis",
-        "tr": "Kesik analizi",
-        "ar": "تحليل القطع",
-        "kk": "Кесу сараптамасы"
+        "ru": "Экспертиза креплений",
+        "en": "Mounting Examination",
+        "tr": "Mounting Examination",
+        "ar": "Mounting Examination",
+        "kk": "Экспертиза креплений"
       },
       "content": {
-        "ru": "Все панели заранее надпилены с внутренней стороны; резак прошёл по сервисной разметке.",
-        "en": "Every panel was pre-scored from the inside; the cutter followed service markings.",
-        "tr": "Tüm paneller içten önceden çizilmiş; kesici servis işaretlerini izlemiş.",
-        "ar": "شُقّت الألواح مسبقاً من الداخل واتبع القاطع علامات الصيانة.",
-        "kk": "Барлық панель іштен алдын ала тілінген; кескіш сервис белгісімен жүрген."
+        "ru": "Разъёмы отсоединены штатно, крепления срезаны по заводским линиям. Панели пригодны к повторной установке.",
+        "en": "The connectors were properly disconnected and the mounts cut along factory lines. The panels can be reinstalled.",
+        "tr": "The connectors were properly disconnected and the mounts cut along factory lines. The panels can be reinstalled.",
+        "ar": "The connectors were properly disconnected and the mounts cut along factory lines. The panels can be reinstalled.",
+        "kk": "Разъёмы отсоединены штатно, крепления срезаны по заводским линиям. Панели пригодны к повторной установке."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Разрушение было подготовлено владельцем заранее.",
-        "en": "The owner prepared the destruction in advance.",
-        "tr": "Yıkım sahibi tarafından önceden hazırlandı.",
-        "ar": "جهز المالك التدمير مسبقاً.",
-        "kk": "Қирауды иесі алдын ала дайындаған."
+        "ru": "Следы противоречат версии разрушительного нападения.",
+        "en": "The evidence contradicts the claim of a destructive attack.",
+        "tr": "The evidence contradicts the claim of a destructive attack.",
+        "ar": "The evidence contradicts the claim of a destructive attack.",
+        "kk": "Следы противоречат версии разрушительного нападения."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_panels_destroyed",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Следы противоречат версии разрушительного нападения.",
+          "en": "The evidence contradicts the claim of a destructive attack.",
+          "tr": "The evidence contradicts the claim of a destructive attack.",
+          "ar": "The evidence contradicts the claim of a destructive attack.",
+          "kk": "Следы противоречат версии разрушительного нападения."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_panels_destroyed",
+        "reason": {
+          "ru": "Следы противоречат версии разрушительного нападения.",
+          "en": "The evidence contradicts the claim of a destructive attack.",
+          "tr": "The evidence contradicts the claim of a destructive attack.",
+          "ar": "The evidence contradicts the claim of a destructive attack.",
+          "kk": "Следы противоречат версии разрушительного нападения."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/case-039-ev-panels.webp"
       }
     },
     {
       "id": "ev-gps",
-      "relation": "contradicts",
+      "order": 4,
       "type": "gps",
       "title": {
         "ru": "Метка робота",
-        "en": "Robot beacon",
-        "tr": "Robot işareti",
-        "ar": "منارة الروبوت",
-        "kk": "Робот белгісі"
+        "en": "Robot Beacon",
+        "tr": "Robot Beacon",
+        "ar": "Robot Beacon",
+        "kk": "Метка робота"
       },
       "content": {
-        "ru": [
-          "02:31 · подвал жилого дома владельца",
-          "08:00 · положение без изменений"
-        ],
-        "en": [
-          "02:31 · cellar of owner's house",
-          "08:00 · position unchanged"
-        ],
-        "tr": [
-          "02:31 · sahibin evinin bodrumu",
-          "08:00 · konum değişmedi"
-        ],
-        "ar": [
-          "02:31 · قبو منزل المالك",
-          "08:00 · الموقع ثابت"
-        ],
-        "kk": [
-          "02:31 · иесінің үй жертөлесі",
-          "08:00 · орны өзгермеген"
-        ]
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Пропавший робот спрятан дома у заявителя.",
-        "en": "The missing robot is hidden at the claimant's home.",
-        "tr": "Kayıp robot başvuru sahibinin evinde saklı.",
-        "ar": "الروبوت المفقود مخبأ في منزل صاحب الطلب.",
-        "kk": "Жоғалған робот өтініш берушінің үйінде жасырылған."
-      },
-      "meta": {
-        "company": {
-          "ru": "ОрбитаМаяк",
-          "en": "OrbitBeacon",
-          "tr": "Yörüngeİşaret",
-          "ar": "منارة المدار",
-          "kk": "ОрбитаМаяк"
-        },
-        "department": {
-          "ru": "Телематика сервисного робота",
-          "en": "Service Robot Telematics",
-          "tr": "Servis Robotu Telemetrisi",
-          "ar": "قياس الدرود عن بعد",
-          "kk": "Сервистік робот телематикасы"
-        },
-        "requestId": {
-          "ru": "OM-039-S4",
-          "en": "OM-039-S4",
-          "tr": "OM-039-S4",
-          "ar": "OM-039-S4",
-          "kk": "OM-039-S4"
-        },
-        "gpsFooter": {
-          "ru": "Координаты подтверждены двумя спутниками",
-          "en": "Coordinates verified by two satellites",
-          "tr": "Koordinatlar iki uyduyla doğrulandı",
-          "ar": "تم التحقق من الإحداثيات بقمرين صناعيين",
-          "kk": "Координаттар екі спутникпен расталды"
-        }
-      }
-    },
-    {
-      "id": "ev-witness",
-      "relation": "context",
-      "type": "witness_statement",
-      "title": {
-        "ru": "Показания соседа",
-        "en": "Neighbor statement",
-        "tr": "Komşu ifadesi",
-        "ar": "إفادة الجار",
-        "kk": "Көрші жауабы"
-      },
-      "content": {
-        "ru": "Слышал электронный свист и фразу «Да пребудет со мной выплата», но никого не видел.",
-        "en": "I heard electronic whistles and 'The insurer will never notice,' but saw nobody.",
-        "tr": "Elektronik ıslık ve 'Tazminat benimle olsun' sözünü duydum; kimseyi görmedim.",
-        "ar": "سمعت صفيراً إلكترونياً وعبارة «ليكن التعويض معي» ولم أر أحداً.",
-        "kk": "Электронды ысқырық пен «Төлем менімен болсын» дегенді естідім, ешкімді көрмедім."
+        "ru": "Робот и панели находятся в подземном боксе, арендованном Вороновым через посредника GC-17.",
+        "en": "The robot and panels are in an underground unit rented by Voronov through a GC-17 intermediary.",
+        "tr": "The robot and panels are in an underground unit rented by Voronov through a GC-17 intermediary.",
+        "ar": "The robot and panels are in an underground unit rented by Voronov through a GC-17 intermediary.",
+        "kk": "Робот и панели находятся в подземном боксе, арендованном Вороновым через посредника GC-17."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Свидетель подтверждает время, но не личность нарушителя.",
-        "en": "The witness confirms timing, not identity.",
-        "tr": "Tanık zamanı doğrular, kimliği değil.",
-        "ar": "يثبت الشاهد الوقت لا الهوية.",
-        "kk": "Куә уақытты растайды, тұлғаны емес."
-      }
+        "ru": "Имущество не утрачено и скрыто самим владельцем.",
+        "en": "The property was not lost and was concealed by its owner.",
+        "tr": "The property was not lost and was concealed by its owner.",
+        "ar": "The property was not lost and was concealed by its owner.",
+        "kk": "Имущество не утрачено и скрыто самим владельцем."
+      },
+      "narrativeRole": "arc_proof",
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Имущество не утрачено и скрыто самим владельцем.",
+          "en": "The property was not lost and was concealed by its owner.",
+          "tr": "The property was not lost and was concealed by its owner.",
+          "ar": "The property was not lost and was concealed by its owner.",
+          "kk": "Имущество не утрачено и скрыто самим владельцем."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75
+    },
+    {
+      "id": "ev-debt",
+      "order": 5,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Долг фермы",
+        "en": "Farm Debt",
+        "tr": "Farm Debt",
+        "ar": "Farm Debt",
+        "kk": "Долг фермы"
+      },
+      "content": {
+        "ru": "Проект не выполнил кредитные показатели выработки и рискует быть изъят банком.",
+        "en": "The project failed to meet its generation targets and faces repossession by the bank.",
+        "tr": "The project failed to meet its generation targets and faces repossession by the bank.",
+        "ar": "The project failed to meet its generation targets and faces repossession by the bank.",
+        "kk": "Проект не выполнил кредитные показатели выработки и рискует быть изъят банком."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Финансовый кризис объясняет мотив, но не доказывает инсценировку.",
+        "en": "The financial crisis explains motive but does not prove staging.",
+        "tr": "The financial crisis explains motive but does not prove staging.",
+        "ar": "The financial crisis explains motive but does not prove staging.",
+        "kk": "Финансовый кризис объясняет мотив, но не доказывает инсценировку."
+      },
+      "narrativeRole": "motive",
+      "statementLink": {
+        "statementId": "claim_panels_destroyed",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Финансовый кризис объясняет мотив, но не доказывает инсценировку.",
+          "en": "The financial crisis explains motive but does not prove staging.",
+          "tr": "The financial crisis explains motive but does not prove staging.",
+          "ar": "The financial crisis explains motive but does not prove staging.",
+          "kk": "Финансовый кризис объясняет мотив, но не доказывает инсценировку."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25
+    },
+    {
+      "id": "ev-neighbor",
+      "order": 6,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания соседнего оператора",
+        "en": "Neighboring Operator's Statement",
+        "tr": "Neighboring Operator's Statement",
+        "ar": "Neighboring Operator's Statement",
+        "kk": "Показания соседнего оператора"
+      },
+      "content": {
+        "ru": "Ночью он слышал только штатный электропривод робота, без машин и голосов.",
+        "en": "During the night, he heard only the robot's normal electric drive, with no vehicles or voices.",
+        "tr": "During the night, he heard only the robot's normal electric drive, with no vehicles or voices.",
+        "ar": "During the night, he heard only the robot's normal electric drive, with no vehicles or voices.",
+        "kk": "Ночью он слышал только штатный электропривод робота, без машин и голосов."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Свидетель согласуется с автономной операцией, но не идентифицирует заказчика.",
+        "en": "The witness supports an autonomous operation but cannot identify who ordered it.",
+        "tr": "The witness supports an autonomous operation but cannot identify who ordered it.",
+        "ar": "The witness supports an autonomous operation but cannot identify who ordered it.",
+        "kk": "Свидетель согласуется с автономной операцией, но не идентифицирует заказчика."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_robot_uncontrolled",
+        "relation": "supports",
+        "reason": {
+          "ru": "Свидетель согласуется с автономной операцией, но не идентифицирует заказчика.",
+          "en": "The witness supports an autonomous operation but cannot identify who ordered it.",
+          "tr": "The witness supports an autonomous operation but cannot identify who ordered it.",
+          "ar": "The witness supports an autonomous operation but cannot identify who ordered it.",
+          "kk": "Свидетель согласуется с автономной операцией, но не идентифицирует заказчика."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Камеры и журнал команд показывают умышленный демонтаж панелей.",
-      "Камера и журнал показывают, что Воронов сам приказал роботу разобрать панели.",
-      "Робот спрятан в его подвале, а предварительные надпилы доказывают страховую инсценировку."
+      "Воронов сам запустил робота и приказал бережно демонтировать панели.",
+      "Оборудование не уничтожено: оно спрятано вместе с роботом в арендованном боксе.",
+      "Ущерб инсценирован ради выплаты. Заявление следует отклонить."
     ],
     "en": [
-      "CCTV and command logs show the panels were deliberately dismantled.",
-      "CCTV and logs show Voronov ordered the robot to dismantle the panels.",
-      "The robot is hidden in his cellar, and pre-scoring proves insurance staging."
+      "The owner initiated the operation himself before the reported attack.",
+      "The robot was ordered to remove the panels, not destroy them.",
+      "The evidence contradicts the claim of a destructive attack.",
+      "The witness supports an autonomous operation but cannot identify who ordered it.",
+      "The property was not lost and was concealed by its owner.",
+      "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "Kamera ve komut kayıtları panellerin kasıtlı söküldüğünü gösteriyor.",
-      "Kamera ve günlükler Voronov'un robota panelleri söktürdüğünü gösteriyor.",
-      "Robot bodrumunda saklı ve ön kesikler sigorta mizansenini kanıtlıyor."
+      "The owner initiated the operation himself before the reported attack.",
+      "The robot was ordered to remove the panels, not destroy them.",
+      "The evidence contradicts the claim of a destructive attack.",
+      "The witness supports an autonomous operation but cannot identify who ordered it.",
+      "The property was not lost and was concealed by its owner.",
+      "The claim is fraudulent and should be rejected."
     ],
     "ar": [
-      "تُظهر الكاميرات وسجلات الأوامر تفكيك الألواح عمداً.",
-      "تظهر الكاميرا والسجلات أن فورونوف أمر الروبوت بتفكيك الألواح.",
-      "الروبوت مخبأ في قبوه والشقوق المسبقة تثبت التلفيق التأميني."
+      "The owner initiated the operation himself before the reported attack.",
+      "The robot was ordered to remove the panels, not destroy them.",
+      "The evidence contradicts the claim of a destructive attack.",
+      "The witness supports an autonomous operation but cannot identify who ordered it.",
+      "The property was not lost and was concealed by its owner.",
+      "The claim is fraudulent and should be rejected."
     ],
     "kk": [
-      "Камералар мен пәрмен журналы панельдердің әдейі бөлшектелгенін көрсетеді.",
-      "Камера мен журнал Вороновтың роботқа панельдерді бөлшектеткенін көрсетеді.",
-      "Робот оның жертөлесінде, ал алдын ала тілінулер сақтандыру қойылымын дәлелдейді."
+      "Воронов сам запустил робота и приказал бережно демонтировать панели.",
+      "Оборудование не уничтожено: оно спрятано вместе с роботом в арендованном боксе.",
+      "Ущерб инсценирован ради выплаты. Заявление следует отклонить."
     ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Ночью люди в белых рабочих комбинезонах проникли на солнечную ферму, промышленным резаком уничтожили массив панелей и угнали сервисного робота. Прошу возместить оборудование и потерю выработки.",
+        "en": "During the night, people in white coveralls entered the solar farm, destroyed the panel array with industrial cutters, and stole the service robot. I am claiming the equipment and lost generation.",
+        "tr": "During the night, people in white coveralls entered the solar farm, destroyed the panel array with industrial cutters, and stole the service robot. I am claiming the equipment and lost generation.",
+        "ar": "During the night, people in white coveralls entered the solar farm, destroyed the panel array with industrial cutters, and stole the service robot. I am claiming the equipment and lost generation.",
+        "kk": "Ночью люди в белых рабочих комбинезонах проникли на солнечную ферму, промышленным резаком уничтожили массив панелей и угнали сервисного робота. Прошу возместить оборудование и потерю выработки."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_attack",
+      "text": {
+        "ru": "Неизвестные вывели из строя солнечную ферму.",
+        "en": "Unknown intruders disabled the solar farm.",
+        "tr": "Unknown intruders disabled the solar farm.",
+        "ar": "Unknown intruders disabled the solar farm.",
+        "kk": "Неизвестные вывели из строя солнечную ферму."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_robot_uncontrolled",
+      "text": {
+        "ru": "Сервисный робот действовал без команды владельца.",
+        "en": "The service robot acted without the owner's command.",
+        "tr": "The service robot acted without the owner's command.",
+        "ar": "The service robot acted without the owner's command.",
+        "kk": "Сервисный робот действовал без команды владельца."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_panels_destroyed",
+      "text": {
+        "ru": "Панели уничтожены и не находятся под контролем Воронова.",
+        "en": "The panels were destroyed and are no longer under Voronov's control.",
+        "tr": "The panels were destroyed and are no longer under Voronov's control.",
+        "ar": "The panels were destroyed and are no longer under Voronov's control.",
+        "kk": "Панели уничтожены и не находятся под контролем Воронова."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Панели сняты слишком аккуратно для вандалов. Иногда отсутствие разрушения — самое сильное доказательство плана. — В. Лебедева",
+      "en": "The panels were removed too carefully for vandals. Sometimes the absence of destruction is the strongest evidence of a plan. — V. Lebedeva",
+      "tr": "The panels were removed too carefully for vandals. Sometimes the absence of destruction is the strongest evidence of a plan. — V. Lebedeva",
+      "ar": "The panels were removed too carefully for vandals. Sometimes the absence of destruction is the strongest evidence of a plan. — V. Lebedeva",
+      "kk": "Панели сняты слишком аккуратно для вандалов. Иногда отсутствие разрушения — самое сильное доказательство плана. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Серый конвой начал принимать не только груз, но и целые производственные массивы. Следующий маршрут ведёт на удалённый комплекс «Лунный склон».",
+      "en": "The Gray Convoy now handles not just cargo but entire industrial arrays. The next route leads to the remote Moon Slope complex.",
+      "tr": "The Gray Convoy now handles not just cargo but entire industrial arrays. The next route leads to the remote Moon Slope complex.",
+      "ar": "The Gray Convoy now handles not just cargo but entire industrial arrays. The next route leads to the remote Moon Slope complex.",
+      "kk": "Серый конвой начал принимать не только груз, но и целые производственные массивы. Следующий маршрут ведёт на удалённый комплекс «Лунный склон»."
+    },
+    "nextCaseTeaser": {
+      "ru": "На ферме «Лунный склон» сгорел ангар. В отличие от прошлых складов, владельца в эту ночь там не было — зато был серый грузовик.",
+      "en": "A hangar burned at Moon Slope farm. Unlike the owners of earlier warehouses, this owner was away that night—but a gray truck was present.",
+      "tr": "A hangar burned at Moon Slope farm. Unlike the owners of earlier warehouses, this owner was away that night—but a gray truck was present.",
+      "ar": "A hangar burned at Moon Slope farm. Unlike the owners of earlier warehouses, this owner was away that night—but a gray truck was present.",
+      "kk": "На ферме «Лунный склон» сгорел ангар. В отличие от прошлых складов, владельца в эту ночь там не было — зато был серый грузовик."
+    },
+    "seasonClue": {
+      "id": "gc-industrial",
+      "label": {
+        "ru": "Промышленный маршрут",
+        "en": "Industrial Route",
+        "tr": "Industrial Route",
+        "ar": "Industrial Route",
+        "kk": "Промышленный маршрут"
+      },
+      "description": {
+        "ru": "Сеть способна демонтировать и перепродавать крупные энергетические системы, сохраняя их целыми.",
+        "en": "The network can dismantle and resell large energy systems while keeping them intact.",
+        "tr": "The network can dismantle and resell large energy systems while keeping them intact.",
+        "ar": "The network can dismantle and resell large energy systems while keeping them intact.",
+        "kk": "Сеть способна демонтировать и перепродавать крупные энергетические системы, сохраняя их целыми."
+      },
+      "progressIndex": 4,
+      "progressTotal": 6
+    },
+    "epilogue": null
   }
 }

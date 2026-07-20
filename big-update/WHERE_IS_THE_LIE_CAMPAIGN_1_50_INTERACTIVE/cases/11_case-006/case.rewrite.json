@@ -1,0 +1,302 @@
+{
+  "id": "case-006",
+  "campaignOrder": 11,
+  "requiredLevel": 6,
+  "act": 2,
+  "actTitle": {
+    "ru": "Пять лет назад",
+    "en": "Five Years Earlier"
+  },
+  "title": {
+    "ru": "Погреб, который не нагрелся",
+    "en": "The Cellar That Never Warmed Up"
+  },
+  "difficulty": "medium",
+  "claimAmount": {
+    "value": 15000,
+    "currency": "EUR"
+  },
+  "groundTruth": "fraud",
+  "correctDecision": "reject",
+  "investigationBudget": 3,
+  "claimant": {
+    "name": {
+      "ru": "Эдуард Виноградов, 59 лет",
+      "en": "Eduard Vinogradov, age 59"
+    },
+    "migrationNote": {
+      "ru": "Сохранить существующие данные и портрет.",
+      "en": "Keep the existing profile data and portrait."
+    },
+    "portrait": null,
+    "portraitStatus": "retain_existing_project_portrait",
+    "portraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/eduard.webp",
+      "existingFile": "public/people/eduard.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Первое дело после находки в архиве 2021 года. Отключение электричества подтверждено, но нас интересует не причина аварии, а реальный ущерб. — В. Лебедева",
+      "en": "Our first case since the discovery in the 2021 archive. The power outage is confirmed, but our concern is not what caused it—it is whether any loss actually occurred. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "В старой выплатной папке найден почти такой же текст заявления. Резолюцию на нём оставил руководитель расследований Константин Карелин — человек, который когда-то учил меня этой работе.",
+      "en": "An almost identical claim was found in an old payout file. It was approved by Konstantin Karelin, the former head of investigations—and the man who once taught me this job."
+    },
+    "nextCaseTeaser": {
+      "ru": "Следующая папка — о человеке, который якобы не встаёт с постели, но продолжает получать деньги за тяжёлую работу.",
+      "en": "The next file concerns a man who claims to be confined to bed while continuing to earn money for heavy labor."
+    },
+    "seasonClue": {
+      "id": "old-signature",
+      "label": {
+        "ru": "Подпись К. Карелина",
+        "en": "K. Karelin's Signature"
+      },
+      "description": {
+        "ru": "Шаблон 17-К существовал ещё в 2021 году и проходил через бывшего руководителя отдела.",
+        "en": "The 17-K template existed as early as 2021 and passed through the former head of the department."
+      },
+      "progressIndex": 1,
+      "progressTotal": 5
+    },
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Трёхдневное отключение электричества остановило климатическую систему моего винного погреба. Коллекция марочного вина стоимостью 15 000 евро перегрелась и потеряла ценность. Прошу полную выплату.",
+    "en": "A three-day power outage stopped my wine cellar's climate-control system. My €15,000 collection of vintage wine overheated and lost its value. I am claiming the full amount."
+  },
+  "evidence": [
+    {
+      "id": "ev-utility",
+      "order": 1,
+      "type": "document",
+      "title": {
+        "ru": "Справка энергокомпании",
+        "en": "Power Company Certificate"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Энергокомпания подтверждает отключение с 18:07 пятницы до 20:54 понедельника. Авария затронула весь квартал.",
+        "en": "The power company confirms an outage from 6:07 p.m. Friday until 8:54 p.m. Monday. The entire block was affected."
+      },
+      "statusExplanation": {
+        "ru": "Отключение действительно происходило, но справка ничего не говорит о температуре внутри погреба.",
+        "en": "The outage was real, but the certificate says nothing about the temperature inside the cellar."
+      },
+      "statementLink": {
+        "statementId": "claim_outage",
+        "relation": "supports",
+        "reason": {
+          "ru": "Отключение действительно происходило, но справка ничего не говорит о температуре внутри погреба.",
+          "en": "The outage was real, but the certificate says nothing about the temperature inside the cellar."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-temp",
+      "order": 2,
+      "type": "usage_log",
+      "title": {
+        "ru": "Архив климатического датчика",
+        "en": "Climate Sensor Archive"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "Температура за трое суток держалась между 12,8 и 13,2 °C. Единственный краткий скачок до 13,7 °C длился девять минут.",
+        "en": "Over the three days, the temperature remained between 12.8°C and 13.2°C. The only brief rise, to 13.7°C, lasted nine minutes."
+      },
+      "statusExplanation": {
+        "ru": "Коллекция всё время находилась в безопасном температурном диапазоне и не могла погибнуть от перегрева.",
+        "en": "The collection remained within a safe temperature range throughout and could not have been ruined by overheating."
+      },
+      "statementLink": {
+        "statementId": "claim_cellar_overheated",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Коллекция всё время находилась в безопасном температурном диапазоне и не могла погибнуть от перегрева.",
+          "en": "The collection remained within a safe temperature range throughout and could not have been ruined by overheating."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_cellar_overheated",
+        "reason": {
+          "ru": "Коллекция всё время находилась в безопасном температурном диапазоне и не могла погибнуть от перегрева.",
+          "en": "The collection remained within a safe temperature range throughout and could not have been ruined by overheating."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-generator",
+      "order": 3,
+      "type": "document",
+      "title": {
+        "ru": "Чек и журнал генератора",
+        "en": "Generator Receipt and Log"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "За два часа до отключения Виноградов купил топливо для резервного генератора. Контроллер фиксирует непрерывную работу генератора все трое суток и питание климатической системы.",
+        "en": "Two hours before the outage, Vinogradov purchased fuel for a backup generator. Its controller records continuous operation for all three days, powering the climate-control system."
+      },
+      "statusExplanation": {
+        "ru": "Заявитель заранее включил резервное питание; охлаждение погреба не прекращалось.",
+        "en": "The claimant activated backup power in advance; the cellar's cooling never stopped."
+      },
+      "statementLink": {
+        "statementId": "claim_cellar_overheated",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Заявитель заранее включил резервное питание; охлаждение погреба не прекращалось.",
+          "en": "The claimant activated backup power in advance; the cellar's cooling never stopped."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_cellar_overheated",
+        "reason": {
+          "ru": "Заявитель заранее включил резервное питание; охлаждение погреба не прекращалось.",
+          "en": "The claimant activated backup power in advance; the cellar's cooling never stopped."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-appraisal",
+      "order": 4,
+      "type": "document",
+      "title": {
+        "ru": "Оценка коллекции",
+        "en": "Collection Appraisal"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Сертифицированный эксперт подтверждает стоимость коллекции в 15 000 евро. В документе нет заключения о порче вина после аварии.",
+        "en": "A certified appraiser confirms that the collection is worth €15,000. The report contains no finding that the wine was damaged after the outage."
+      },
+      "statusExplanation": {
+        "ru": "Стоимость коллекции реальна, но стоимость не доказывает наступление ущерба.",
+        "en": "The collection's value is genuine, but value alone does not prove a loss occurred."
+      },
+      "statementLink": {
+        "statementId": "claim_collection_destroyed",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Стоимость коллекции реальна, но стоимость не доказывает наступление ущерба.",
+          "en": "The collection's value is genuine, but value alone does not prove a loss occurred."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Отключение электричества действительно продолжалось три дня.",
+      "Резервный генератор всё это время питал климатическую систему, а температура оставалась нормальной.",
+      "Коллекция не пострадала. Виноградов попытался получить выплату за несуществующий ущерб — заявление следует отклонить."
+    ],
+    "en": [
+      "The collection remained within a safe temperature range throughout and could not have been ruined by overheating.",
+      "The claimant activated backup power in advance; the cellar's cooling never stopped.",
+      "The outage was real, but the certificate says nothing about the temperature inside the cellar.",
+      "The collection's value is genuine, but value alone does not prove a loss occurred.",
+      "The claim is fraudulent and should be rejected."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Сделать резервный генератор главным скрытым фактом.",
+      "Убрать дублирующие показания соседа.",
+      "Связать дело со старым архивом и Карелиным."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order."
+    ]
+  },
+  "assetPlan": [],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Трёхдневное отключение электричества остановило климатическую систему моего винного погреба. Коллекция марочного вина стоимостью 15 000 евро перегрелась и потеряла ценность. Прошу полную выплату.",
+        "en": "A three-day power outage stopped my wine cellar's climate-control system. My €15,000 collection of vintage wine overheated and lost its value. I am claiming the full amount."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_outage",
+      "text": {
+        "ru": "Электричество в доме отсутствовало три дня.",
+        "en": "The house was without mains power for three days."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_cellar_overheated",
+      "text": {
+        "ru": "Винный погреб всё это время оставался без охлаждения и перегрелся.",
+        "en": "The wine cellar remained without cooling throughout and overheated."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_collection_destroyed",
+      "text": {
+        "ru": "Коллекция утратила качество и требует полной выплаты.",
+        "en": "The collection lost its quality and warrants a full payout."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 0,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-006",
+    "archiveBasePath": "generated-assets/src/data/cases/case-006",
+    "claimantPortrait": null,
+    "claimantPortraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/eduard.webp",
+      "existingFile": "public/people/eduard.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": []
+  }
+}

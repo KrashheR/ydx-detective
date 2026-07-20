@@ -1,0 +1,506 @@
+{
+  "id": "case-027",
+  "campaignOrder": 25,
+  "requiredLevel": 13,
+  "act": 3,
+  "actTitle": {
+    "ru": "Восточный двор",
+    "en": "Eastern Yard"
+  },
+  "title": {
+    "ru": "Семена после ливня",
+    "en": "Seeds After the Downpour"
+  },
+  "difficulty": "medium",
+  "claimAmount": {
+    "value": 4000,
+    "currency": "EUR"
+  },
+  "groundTruth": "valid",
+  "correctDecision": "approve",
+  "investigationBudget": 4,
+  "claimant": {
+    "name": {
+      "ru": "Болат Жумабеков, 53 года",
+      "en": "Bolat Zhumabekov, age 53"
+    },
+    "migrationNote": {
+      "ru": "Исправить возраст на 53 года и использовать тот же портрет, профиль и биографию, что в деле 16.",
+      "en": "Set his age to 53 and use the same portrait, profile, and biography as in Case 16."
+    },
+    "portrait": null,
+    "portraitStatus": "retain_existing_project_portrait",
+    "portraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/bolat.webp",
+      "existingFile": "public/people/bolat.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "После града Болат перенёс остаток семенного фонда в арендованный склад. Повторная беда выглядит удобной легендой — поэтому проверяем особенно аккуратно. — В. Лебедева",
+      "en": "After the hail, Bolat moved his remaining seed stock to a rented warehouse. A second disaster makes a convenient story, so we verify this one especially carefully. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Дважды пострадавший человек мог решить, что ему теперь «положено» завысить ущерб. Болат снова указал ровно то, что потерял.",
+      "en": "After suffering twice, a person might decide they were ‘owed’ an inflated payout. Bolat once again claimed exactly what he lost."
+    },
+    "nextCaseTeaser": {
+      "ru": "На соседнем складе пожар. Владелец уверяет, что всё сгорело, но грузовые ворота открывались за час до огня.",
+      "en": "A neighboring warehouse has burned. The owner says everything was destroyed, but the loading gate opened one hour before the fire."
+    },
+    "seasonClue": null,
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Сильный ливень переполнил дренаж складского комплекса. Вода затопила нижние стеллажи с семенным зерном, которое я сохранил после града. Я прошу компенсировать только погибшие партии и сушку помещения.",
+    "en": "A severe downpour overwhelmed the warehouse complex's drainage system. Water flooded the lower racks holding the seed grain I saved after the hail. I am claiming only the ruined batches and the cost of drying the premises."
+  },
+  "evidence": [
+    {
+      "id": "ev-meteo",
+      "order": 1,
+      "type": "document",
+      "title": {
+        "ru": "Метеосводка",
+        "en": "Weather Report"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "За 80 минут выпало 62 мм осадков — редкий для района показатель. Предупреждение опубликовано после начала ливня.",
+        "en": "Sixty-two millimeters of rain fell in 80 minutes, an exceptional amount for the area. The warning was issued after the downpour had begun."
+      },
+      "statusExplanation": {
+        "ru": "Интенсивность осадков могла вызвать внезапное подтопление.",
+        "en": "The rainfall intensity was sufficient to cause sudden flooding."
+      },
+      "statementLink": {
+        "statementId": "claim_event_time",
+        "relation": "supports",
+        "reason": {
+          "ru": "Интенсивность осадков могла вызвать внезапное подтопление.",
+          "en": "The rainfall intensity was sufficient to cause sudden flooding."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-sensor",
+      "order": 2,
+      "type": "usage_log",
+      "title": {
+        "ru": "Датчик уровня воды",
+        "en": "Water-Level Sensor"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Уровень поднялся с 0 до 31 см за одиннадцать минут. Сигнал тревоги поступил уже после блокировки подъездной дороги.",
+        "en": "The water rose from 0 to 31 cm in eleven minutes. The alarm arrived only after the access road was blocked."
+      },
+      "statusExplanation": {
+        "ru": "Лог подтверждает быстрое развитие аварии и невозможность вовремя вывезти товар.",
+        "en": "The log confirms that the flood developed rapidly and the stock could not be removed in time."
+      },
+      "statementLink": {
+        "statementId": "claim_damage_scope",
+        "relation": "supports",
+        "reason": {
+          "ru": "Лог подтверждает быстрое развитие аварии и невозможность вовремя вывезти товар.",
+          "en": "The log confirms that the flood developed rapidly and the stock could not be removed in time."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-photo",
+      "order": 3,
+      "type": "shadow_time_check",
+      "title": {
+        "ru": "Проверка времени снимка стеллажей",
+        "en": "Warehouse Photograph Time Check"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Тень соответствует 17:10–17:35, сразу после пика подтопления; снимок не был сделан заранее.",
+        "en": "The shadow matches the 5:10–5:35 p.m. window immediately after the flood peak; the photograph was not taken in advance."
+      },
+      "previousType": "photo",
+      "description": {
+        "ru": "Инспектор снял залитый склад через открытые ворота; ориентация ворот указана на плане фермы.",
+        "en": "An inspector photographed the flooded warehouse through the open gate; the gate's orientation is shown on the farm plan."
+      },
+      "instruction": {
+        "ru": "Совместить тень стойки ворот с эталоном.",
+        "en": "Match the gatepost shadow to the reference."
+      },
+      "assets": {
+        "asset1": "assets/interactive/ev-photo-scene.webp",
+        "asset2": "assets/interactive/ev-photo-shadow-reference.svg"
+      },
+      "data": {
+        "claimedTime": "17:20",
+        "orientationSource": "План строения и направление ворот",
+        "slider": {
+          "from": "06:00",
+          "to": "21:00",
+          "stepMinutes": 10
+        },
+        "shadowOrigin": {
+          "x": 44,
+          "y": 65
+        },
+        "referenceShadow": {
+          "baseAngle": 0,
+          "baseLength": 100,
+          "width": 20,
+          "opacity": 0.34
+        },
+        "timeSamples": [
+          {
+            "time": "08:00",
+            "angle": 70,
+            "length": 130
+          },
+          {
+            "time": "12:00",
+            "angle": 9,
+            "length": 51
+          },
+          {
+            "time": "17:20",
+            "angle": -54,
+            "length": 108
+          },
+          {
+            "time": "20:00",
+            "angle": -76,
+            "length": 152
+          }
+        ],
+        "validTimeRanges": [
+          {
+            "from": "17:10",
+            "to": "17:35"
+          }
+        ],
+        "matchTolerance": {
+          "angle": 8,
+          "length": 16
+        },
+        "orientationSourceEn": "Building plan and gate orientation"
+      },
+      "statementLink": {
+        "statementId": "claim_event_time",
+        "relation": "supports",
+        "reason": {
+          "ru": "Тень соответствует 17:10–17:35, сразу после пика подтопления; снимок не был сделан заранее.",
+          "en": "The shadow matches the 5:10–5:35 p.m. window immediately after the flood peak; the photograph was not taken in advance."
+        }
+      },
+      "contradictionTarget": null,
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Проверка подтверждает, что вода и повреждение семян зафиксированы сразу после ливня.",
+          "en": "The check confirms that the water and seed damage were recorded immediately after the downpour."
+        },
+        "playerAction": {
+          "ru": "Совместить тень стойки ворот с эталоном.",
+          "en": "Match the gatepost shadow to the reference."
+        },
+        "conclusion": {
+          "ru": "Тень соответствует 17:10–17:35, сразу после пика подтопления; снимок не был сделан заранее.",
+          "en": "The shadow matches the 5:10–5:35 p.m. window immediately after the flood peak; the photograph was not taken in advance."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-035",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-027/evidence/case-027-ev-photo.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-027/evidence/case-027-ev-photo.webp",
+          "caseRelativeSrc": "evidence/case-027-ev-photo.webp",
+          "installTo": "public/evidence/case-027-ev-photo.webp",
+          "legacyRuntimeUrl": "evidence/case-027-ev-photo.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "9fe436fd8d96347fea4eb57aa6c4289d8c785ac447a2f8b4560529e276495b48"
+        },
+        {
+          "assetId": "asset-036",
+          "role": "interactive_scene",
+          "src": "src/data/cases/case-027/assets/interactive/ev-photo-scene.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-027/assets/interactive/ev-photo-scene.webp",
+          "caseRelativeSrc": "assets/interactive/ev-photo-scene.webp",
+          "installTo": "src/data/cases/case-027/assets/interactive/ev-photo-scene.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "34967f40b573bd25725683194f7e988d5102b1b56f89201b4fa8871efdec1616"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-027/evidence/case-027-ev-photo.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-027/evidence/case-027-ev-photo.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-027-ev-photo.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-027/evidence/case-027-ev-photo.webp",
+        "copyTo": "public/evidence/case-027-ev-photo.webp"
+      }
+    },
+    {
+      "id": "ev-seed",
+      "order": 4,
+      "type": "document",
+      "title": {
+        "ru": "Экспертиза семян",
+        "en": "Seed Examination"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Лаборатория подтверждает потерю всхожести только у намокших партий. Номера мешков совпадают с закупочными документами.",
+        "en": "The laboratory confirms loss of germination only in the wet batches. The bag numbers match the purchase records."
+      },
+      "statusExplanation": {
+        "ru": "Реальная утрата и принадлежность товара доказаны.",
+        "en": "Both the actual loss and ownership of the stock are proven."
+      },
+      "statementLink": {
+        "statementId": "claim_seed_loss",
+        "relation": "supports",
+        "reason": {
+          "ru": "Реальная утрата и принадлежность товара доказаны.",
+          "en": "Both the actual loss and ownership of the stock are proven."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-invoice",
+      "order": 5,
+      "type": "document",
+      "title": {
+        "ru": "Счёт за сушку",
+        "en": "Drying Invoice"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Подрядчик выполнил откачку воды и сушку. Стоимость соответствует площади склада и рыночным ставкам.",
+        "en": "A contractor pumped out the water and dried the premises. The price matches the warehouse area and market rates."
+      },
+      "statusExplanation": {
+        "ru": "Расходы на восстановление подтверждены.",
+        "en": "The recovery costs are documented."
+      },
+      "statementLink": {
+        "statementId": "claim_seed_loss",
+        "relation": "supports",
+        "reason": {
+          "ru": "Расходы на восстановление подтверждены.",
+          "en": "The recovery costs are documented."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Ливень и резкий подъём воды подтверждены независимыми данными.",
+      "Повреждены только партии ниже зафиксированного уровня; Болат не включил сухой товар.",
+      "Тень соответствует 17:10–17:35, сразу после пика подтопления; снимок не был сделан заранее.",
+      "Семена потеряли всхожесть, расходы реальны. Выплату следует одобрить."
+    ],
+    "en": [
+      "The rainfall intensity was sufficient to cause sudden flooding.",
+      "The log confirms that the flood developed rapidly and the stock could not be removed in time.",
+      "The shadow matches the 5:10–5:35 p.m. window immediately after the flood peak; the photograph was not taken in advance.",
+      "Both the actual loss and ownership of the stock are proven.",
+      "The recovery costs are documented.",
+      "No material statement has been disproven. The claim should be approved."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Сделать Болата настоящим возвращающимся героем.",
+      "Исправить возраст и доказать незавышенный ущерб.",
+      "Интегрировать shadow_time_check в улику ev-photo; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate shadow_time_check into evidence ev-photo; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "evidence/case-027-ev-photo.webp",
+      "action": "generate",
+      "prompt": "Realistic insurance evidence photo inside a flooded agricultural storage unit: lower seed sacks visibly wet up to a consistent 30 centimeter waterline, upper shelves and bags dry, muddy floor and drainage water, restrained natural lighting, no readable brands, no text, no watermark."
+    },
+    {
+      "file": "assets/interactive/ev-photo-scene.webp",
+      "purpose": "Фотография с одной геометрически читаемой тенью",
+      "resolution": "1600×1000",
+      "format": "WebP",
+      "transparency": false,
+      "generatedBy": "image_model",
+      "manualPost": "Отбраковать конфликтующие тени; вручную сверить origin и фактический диапазон.",
+      "prompt": "Склад семян после подтопления, мокрые нижние стеллажи, открытые ворота, одна вертикальная стойка и чёткая тень. One dominant vertical reference object with its base fully visible, one clear physically connected shadow on a level surface, single sunlight direction, minimal other shadows and reflections, free overlay space. Photorealistic insurance-investigation evidence photograph, documentary look, shot on a phone or compact camera by a non-professional, natural available light, neutral muted colors, realistic textures, high detail. No captions, no watermark, no logos, no readable real-world branding, no famous people, no recognizable copyrighted characters, no visible faces unless explicitly required. Evidence photo, not illustration or cinematic poster.",
+      "evidenceId": "ev-photo",
+      "evidenceType": "shadow_time_check"
+    },
+    {
+      "file": "assets/interactive/ev-photo-shadow-reference.svg",
+      "purpose": "Эталонная тень, управляемая ползунком времени",
+      "resolution": "viewBox 0 0 100 100",
+      "format": "SVG",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "Откалибровать angle/length по принятому изображению.",
+      "prompt": null,
+      "evidenceId": "ev-photo",
+      "evidenceType": "shadow_time_check"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Сильный ливень переполнил дренаж складского комплекса. Вода затопила нижние стеллажи с семенным зерном, которое я сохранил после града. Я прошу компенсировать только погибшие партии и сушку помещения.",
+        "en": "A severe downpour overwhelmed the warehouse complex's drainage system. Water flooded the lower racks holding the seed grain I saved after the hail. I am claiming only the ruined batches and the cost of drying the premises."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_event_time",
+      "text": {
+        "ru": "Ливень и подтопление склада произошли в заявленный день.",
+        "en": "The downpour and warehouse flooding occurred on the reported day."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_damage_scope",
+      "text": {
+        "ru": "Повреждены только партии ниже зафиксированного уровня воды.",
+        "en": "Only batches below the recorded water line were damaged."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_seed_loss",
+      "text": {
+        "ru": "Семена потеряли всхожесть, а расходы на сушку реальны.",
+        "en": "The seeds lost germination capacity, and the drying costs are genuine."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-027",
+    "archiveBasePath": "generated-assets/src/data/cases/case-027",
+    "claimantPortrait": null,
+    "claimantPortraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/bolat.webp",
+      "existingFile": "public/people/bolat.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-photo",
+        "title": {
+          "ru": "Проверка времени снимка стеллажей",
+          "en": "Warehouse Photograph Time Check"
+        },
+        "primaryImage": "src/data/cases/case-027/evidence/case-027-ev-photo.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-027/evidence/case-027-ev-photo.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-027-ev-photo.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-027/evidence/case-027-ev-photo.webp",
+          "copyTo": "public/evidence/case-027-ev-photo.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-035",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-027/evidence/case-027-ev-photo.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-027/evidence/case-027-ev-photo.webp",
+            "caseRelativeSrc": "evidence/case-027-ev-photo.webp",
+            "installTo": "public/evidence/case-027-ev-photo.webp",
+            "legacyRuntimeUrl": "evidence/case-027-ev-photo.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "9fe436fd8d96347fea4eb57aa6c4289d8c785ac447a2f8b4560529e276495b48"
+          },
+          {
+            "assetId": "asset-036",
+            "role": "interactive_scene",
+            "src": "src/data/cases/case-027/assets/interactive/ev-photo-scene.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-027/assets/interactive/ev-photo-scene.webp",
+            "caseRelativeSrc": "assets/interactive/ev-photo-scene.webp",
+            "installTo": "src/data/cases/case-027/assets/interactive/ev-photo-scene.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1600,
+            "height": 1000,
+            "sha256": "34967f40b573bd25725683194f7e988d5102b1b56f89201b4fa8871efdec1616"
+          }
+        ]
+      }
+    ]
+  }
+}

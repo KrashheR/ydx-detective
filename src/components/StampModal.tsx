@@ -7,11 +7,13 @@ import {
   type MouseEvent as ReactMouseEvent,
 } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import type { Evidence, EvidenceMeta, Language } from '../types';
+import type { Evidence, EvidenceMeta, InteractiveEvidenceProgress, Language } from '../types';
 import { loc, t } from '../i18n/ui';
 import { EVIDENCE_TAG_KEY } from './icons';
 import { RTL_LANGUAGES } from '../i18n/ui';
 import { tapHaptic } from '../utils/haptics';
+import { asset } from '../utils/asset';
+import { InteractiveEvidenceView, isInteractiveEvidence, makeInteractiveProgress } from './InteractiveEvidence';
 
 const FOCUSABLE_SELECTOR =
   'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
@@ -22,6 +24,8 @@ interface Props {
   stamped: boolean;
   /** True if a paid "Inspector Note" hint revealed this card's true status. */
   revealed: boolean;
+  interactiveProgress?: InteractiveEvidenceProgress;
+  onInteractiveProgress: (progress: InteractiveEvidenceProgress) => void;
   onToggle: () => void;
   onClose: () => void;
   position: number;
@@ -35,6 +39,8 @@ export function StampModal({
   lang,
   stamped,
   revealed,
+  interactiveProgress,
+  onInteractiveProgress,
   onToggle,
   onClose,
   position,
@@ -47,6 +53,9 @@ export function StampModal({
   const touchStart = useRef<{ x: number; y: number } | null>(null);
   const isOpen = evidence != null;
   const isRTL = RTL_LANGUAGES.has(lang);
+  const interactive = evidence ? isInteractiveEvidence(evidence) : false;
+  const analysisComplete = !interactive || interactiveProgress?.analysisCompleted === true;
+  const canStamp = evidence?.statementLink?.relation === 'contradicts' && analysisComplete;
   const titleId = evidence
     ? `stamp-modal-title-${evidence.id.replace(/[^a-zA-Z0-9_-]/g, '-')}`
     : undefined;
@@ -196,7 +205,16 @@ export function StampModal({
                 </div>
               )}
 
-              <EvidenceBody evidence={evidence} lang={lang} />
+              {interactive && isInteractiveEvidence(evidence) ? (
+                <InteractiveEvidenceView
+                  evidence={evidence}
+                  lang={lang}
+                  progress={interactiveProgress ?? makeInteractiveProgress(evidence.id)}
+                  onProgress={onInteractiveProgress}
+                />
+              ) : (
+                <EvidenceBody evidence={evidence} lang={lang} />
+              )}
 
               {stamped && (
                 <div
@@ -246,17 +264,24 @@ export function StampModal({
                   {isRTL ? '‹' : '›'}
                 </button>
               </div>
-              <button
-                type="button"
-                onClick={handleToggle}
-                className={`h-[52px] w-full rounded-[9px] border-2 border-stamp text-[15px] font-bold uppercase tracking-wide transition-all ${
-                  stamped ? 'bg-stamp text-white' : 'bg-transparent text-stamp'
-                }`}
-              >
-                {stamped
-                  ? t('contradictionMarked', lang)
-                  : t('markAsContradiction', lang)}
-              </button>
+              {evidence.statementLink?.relation === 'contradicts' ? (
+                <button
+                  type="button"
+                  onClick={handleToggle}
+                  disabled={!canStamp}
+                  className={`h-[52px] w-full rounded-[9px] border-2 border-stamp text-[15px] font-bold uppercase tracking-wide transition-all disabled:cursor-not-allowed disabled:opacity-45 ${
+                    stamped ? 'bg-stamp text-white' : 'bg-transparent text-stamp'
+                  }`}
+                >
+                  {!analysisComplete ? t('interactiveStampLocked', lang) : stamped
+                    ? t('contradictionMarked', lang)
+                    : t('markAsContradiction', lang)}
+                </button>
+              ) : (
+                <div className="flex min-h-[52px] items-center justify-center rounded-[9px] border border-accent/50 bg-accent/10 px-3 text-center text-sm font-semibold text-accent">
+                  {t('interactiveSupported', lang)}
+                </div>
+              )}
             </div>
           </motion.div>
         </motion.div>
@@ -289,21 +314,24 @@ function EvidenceBody({ evidence, lang }: { evidence: Evidence; lang: Language }
   const lines = Array.isArray(content) ? content : [content];
 
   const meta = evidence.meta;
+  const withImage = (body: React.ReactNode) => meta?.imageUrl && evidence.type !== 'photo'
+    ? <><img src={asset(meta.imageUrl)} alt="" className="mb-3 aspect-[16/10] w-full rounded-md border border-border object-cover" loading="lazy" />{body}</>
+    : body;
   switch (evidence.type) {
     case 'gps':
-      return <GpsBody lines={lines} meta={meta} lang={lang} />;
+      return withImage(<GpsBody lines={lines} meta={meta} lang={lang} />);
     case 'photo':
       return <PhotoBody lines={lines} meta={meta} />;
     case 'camera_recording':
-      return <CameraBody lines={lines} meta={meta} />;
+      return withImage(<CameraBody lines={lines} meta={meta} />);
     case 'witness_statement':
       return <WitnessBody lines={lines} />;
     case 'document':
-      return <DocumentBody lines={lines} meta={meta} lang={lang} />;
+      return withImage(<DocumentBody lines={lines} meta={meta} lang={lang} />);
     case 'usage_log':
       return <UsageLogBody lines={lines} meta={meta} />;
     case 'xray':
-      return <XRayBody lines={lines} meta={meta} lang={lang} />;
+      return withImage(<XRayBody lines={lines} meta={meta} lang={lang} />);
     case 'bank_statement':
       return <BankBody lines={lines} meta={meta} lang={lang} />;
     case 'phone_records':
@@ -531,7 +559,7 @@ function PhotoBody({ lines, meta }: { lines: string[]; meta?: EvidenceMeta }) {
               style={meta?.imageUrl ? undefined : { background: 'repeating-linear-gradient(45deg,#cbd0d6 0 9px,#c0c5cc 9px 18px)' }}
             >
               {meta?.imageUrl ? (
-                <img src={meta.imageUrl} alt="" className="h-full w-full object-cover" />
+                <img src={asset(meta.imageUrl)} alt="" className="h-full w-full object-cover" loading="lazy" />
               ) : (
                 <span className="text-3xl opacity-40">📷</span>
               )}

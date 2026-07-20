@@ -1,0 +1,551 @@
+{
+  "id": "case-034",
+  "campaignOrder": 32,
+  "requiredLevel": 16,
+  "act": 4,
+  "actTitle": {
+    "ru": "Серый конвой",
+    "en": "The Gray Convoy"
+  },
+  "title": {
+    "ru": "Серийные номера в пепле",
+    "en": "Serial Numbers in the Ashes"
+  },
+  "difficulty": "hard",
+  "claimAmount": {
+    "value": 30000,
+    "currency": "EUR"
+  },
+  "groundTruth": "fraud",
+  "correctDecision": "reject",
+  "investigationBudget": 4,
+  "claimant": {
+    "name": {
+      "ru": "Харитон Велижанин, 55 лет",
+      "en": "Khariton Velizhanin, age 55"
+    },
+    "migrationNote": {
+      "ru": "Сохранить данные и портрет.",
+      "en": "Keep the existing profile data and portrait."
+    },
+    "portrait": null,
+    "portraitStatus": "retain_existing_project_portrait",
+    "portraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/khariton.webp",
+      "existingFile": "public/people/khariton.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Пожар уничтожает форму, но не всегда уничтожает номера на металлических шасси. Сначала проверьте, что именно лежит в пепле. — В. Лебедева",
+      "en": "Fire destroys shape, but not always the numbers stamped into metal chassis. First determine what is actually lying in the ashes. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Схема получает деньги дважды: сеть продаёт настоящий товар, а владелец требует страховую выплату за сгоревший лом.",
+      "en": "The operation earns twice: the network sells the genuine stock, while the owner claims an insurance payout for burned scrap."
+    },
+    "nextCaseTeaser": {
+      "ru": "В отеле «Янтарь» разгромлен банкетный зал. На паркете остался рисунок шин, совпадающий с фургоном самого заявителя.",
+      "en": "A banquet hall at the Amber Hotel has been wrecked. Tire tracks on the parquet match the claimant's own van."
+    },
+    "seasonClue": {
+      "id": "double-profit",
+      "label": {
+        "ru": "Двойная прибыль",
+        "en": "Double Profit"
+      },
+      "description": {
+        "ru": "Серый конвой объединяет продажу настоящих активов и выплату за уничтоженные заменители.",
+        "en": "The Gray Convoy combines the sale of genuine assets with payouts for destroyed substitutes."
+      },
+      "progressIndex": 2,
+      "progressTotal": 6
+    },
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "В ночь на 20 мая полностью выгорел склад электроники. Внутри находились новые устройства и бытовая техника на 30 000 евро. Причиной считаю проводку. Прошу полную выплату.",
+    "en": "On the night of May 20, an electronics warehouse burned out completely. It contained €30,000 in new devices and appliances. I believe the wiring caused the fire and am claiming the full amount."
+  },
+  "evidence": [
+    {
+      "id": "ev-cam",
+      "order": 1,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера погрузочной зоны",
+        "en": "Loading Bay Camera"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "За четыре часа до пожара со склада вывезены запечатанные палеты с новым товаром. Велижанин контролирует погрузку.",
+        "en": "Four hours before the fire, sealed pallets of new stock were removed from the warehouse. Velizhanin supervised the loading."
+      },
+      "statusExplanation": {
+        "ru": "Ценный товар покинул склад до возгорания.",
+        "en": "The valuable stock left the warehouse before the fire."
+      },
+      "statementLink": {
+        "statementId": "claim_new_goods_destroyed",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Ценный товар покинул склад до возгорания.",
+          "en": "The valuable stock left the warehouse before the fire."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_new_goods_destroyed",
+        "reason": {
+          "ru": "Ценный товар покинул склад до возгорания.",
+          "en": "The valuable stock left the warehouse before the fire."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-serials",
+      "order": 2,
+      "type": "surface_reveal",
+      "title": {
+        "ru": "Очистка серийного номера от сажи",
+        "en": "Cleaning Soot from the Serial Number"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Под сажей обнаружен номер списанного демонстрационного корпуса, отсутствующий в страховой описи нового товара.",
+        "en": "Beneath the soot is the serial number of a decommissioned display chassis not listed in the insured new stock."
+      },
+      "previousType": "document",
+      "description": {
+        "ru": "Уцелевшее шасси сфотографировано на месте пожара до очистки поверхности.",
+        "en": "The surviving chassis was photographed at the fire scene before its surface was cleaned."
+      },
+      "instruction": {
+        "ru": "Сотрите сажу с таблички шасси и откройте сохранившийся номер.",
+        "en": "Wipe soot from the chassis plate and reveal the surviving number."
+      },
+      "assets": {
+        "baseImage": "assets/interactive/ev-serials-scene.webp",
+        "coverTexture": "shared/surface/soot.webp",
+        "revealMasks": [
+          "assets/interactive/ev-serials-discarded_serial-trace-mask.svg"
+        ],
+        "toolCursor": "shared/surface/cloth-cursor.svg"
+      },
+      "data": {
+        "mode": "erase",
+        "coverType": "soot",
+        "brush": {
+          "radius": 46,
+          "hardness": 0.66,
+          "opacity": 0.84,
+          "spacing": 8
+        },
+        "completion": {
+          "type": "discover_any",
+          "requiredTraceIds": [
+            "discarded_serial"
+          ]
+        },
+        "traces": [
+          {
+            "id": "discarded_serial",
+            "label": "Номер списанного корпуса",
+            "requiredRevealPercent": 50,
+            "mask": "assets/interactive/ev-serials-discarded_serial-trace-mask.svg",
+            "shape": "mask",
+            "isContradiction": true,
+            "conclusion": "Под сажей обнаружен номер списанного демонстрационного корпуса, отсутствующий в страховой описи нового товара.",
+            "labelEn": "Decommissioned chassis number",
+            "conclusionEn": "Beneath the soot is the serial number of a decommissioned display chassis not listed in the insured new stock."
+          }
+        ]
+      },
+      "statementLink": {
+        "statementId": "claim_new_goods_destroyed",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Под сажей обнаружен номер списанного демонстрационного корпуса, отсутствующий в страховой описи нового товара.",
+          "en": "Beneath the soot is the serial number of a decommissioned display chassis not listed in the insured new stock."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_new_goods_destroyed",
+        "reason": {
+          "ru": "Под сажей обнаружен номер списанного демонстрационного корпуса, отсутствующий в страховой описи нового товара.",
+          "en": "Beneath the soot is the serial number of a decommissioned display chassis not listed in the insured new stock."
+        }
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": false,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Серийный номер становится настоящей находкой игрока и раскрывает подмену нового товара списанными корпусами.",
+          "en": "The serial number becomes the player's own discovery and exposes the substitution of scrap chassis for new stock."
+        },
+        "playerAction": {
+          "ru": "Сотрите сажу с таблички шасси и откройте сохранившийся номер.",
+          "en": "Wipe soot from the chassis plate and reveal the surviving number."
+        },
+        "conclusion": {
+          "ru": "Под сажей обнаружен номер списанного демонстрационного корпуса, отсутствующий в страховой описи нового товара.",
+          "en": "Beneath the soot is the serial number of a decommissioned display chassis not listed in the insured new stock."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-053",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-034/evidence/case-034-ev-serials.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-034/evidence/case-034-ev-serials.webp",
+          "caseRelativeSrc": "evidence/case-034-ev-serials.webp",
+          "installTo": "public/evidence/case-034-ev-serials.webp",
+          "legacyRuntimeUrl": "evidence/case-034-ev-serials.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "bc23134f16a591015a6591fca4aee3f012d56e7c6b8f5a6fb252e691680e0ca0"
+        },
+        {
+          "assetId": "asset-054",
+          "role": "interactive_scene",
+          "src": "src/data/cases/case-034/assets/interactive/ev-serials-scene.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-034/assets/interactive/ev-serials-scene.webp",
+          "caseRelativeSrc": "assets/interactive/ev-serials-scene.webp",
+          "installTo": "src/data/cases/case-034/assets/interactive/ev-serials-scene.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "deb2e6dafc15be6fec546c9c07cfd344ead6c4c835ab62a2b09d41548a20a26e"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-034/evidence/case-034-ev-serials.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-034/evidence/case-034-ev-serials.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-034-ev-serials.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-034/evidence/case-034-ev-serials.webp",
+        "copyTo": "public/evidence/case-034-ev-serials.webp"
+      }
+    },
+    {
+      "id": "ev-panel",
+      "order": 3,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал пожарной панели",
+        "en": "Fire Panel Log"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Датчики дыма отключены мастер-кодом владельца, а питание резервной линии отсоединено вручную.",
+        "en": "The smoke detectors were disabled using the owner's master code, and backup-line power was disconnected manually."
+      },
+      "statusExplanation": {
+        "ru": "Система пожарной защиты была намеренно выведена из работы.",
+        "en": "The fire-protection system was deliberately disabled."
+      },
+      "statementLink": {
+        "statementId": "claim_accidental_cause",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Система пожарной защиты была намеренно выведена из работы.",
+          "en": "The fire-protection system was deliberately disabled."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-fire",
+      "order": 4,
+      "type": "document",
+      "title": {
+        "ru": "Заключение дознавателя",
+        "en": "Fire Investigator's Report"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Очаг расположен в куче упаковки, обнаружен ускоритель горения. Проводка повреждена огнём снаружи и не была причиной.",
+        "en": "The ignition point was in a pile of packaging where accelerant was found. The wiring was damaged from the outside by the fire and was not the cause."
+      },
+      "statusExplanation": {
+        "ru": "Версия случайного электрического пожара опровергнута.",
+        "en": "The accidental electrical-fire theory is disproven."
+      },
+      "statementLink": {
+        "statementId": "claim_accidental_cause",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Версия случайного электрического пожара опровергнута.",
+          "en": "The accidental electrical-fire theory is disproven."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_accidental_cause",
+        "reason": {
+          "ru": "Версия случайного электрического пожара опровергнута.",
+          "en": "The accidental electrical-fire theory is disproven."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-route",
+      "order": 5,
+      "type": "gps",
+      "title": {
+        "ru": "Маршрут вывезенных палет",
+        "en": "Removed Pallet Route"
+      },
+      "isContradiction": false,
+      "narrativeRole": "arc_proof",
+      "text": {
+        "ru": "Груз прибыл в распределительный терминал Серого конвоя с кодом `GC-17`.",
+        "en": "The cargo arrived at a Gray Convoy distribution terminal under code `GC-17`."
+      },
+      "statusExplanation": {
+        "ru": "Настоящий товар сохранился и передан связанной сети.",
+        "en": "The genuine stock survived and was transferred to the connected network."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Настоящий товар сохранился и передан связанной сети.",
+          "en": "The genuine stock survived and was transferred to the connected network."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-debt",
+      "order": 6,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Долговая нагрузка",
+        "en": "Debt Burden"
+      },
+      "isContradiction": false,
+      "narrativeRole": "motive",
+      "text": {
+        "ru": "Компания находится на грани дефолта, а страховая сумма позволила бы закрыть просрочки.",
+        "en": "The company is close to default, and the insurance payout would cover its arrears."
+      },
+      "statusExplanation": {
+        "ru": "Финансовое положение объясняет мотив, но не заменяет физические доказательства.",
+        "en": "The financial position explains motive but does not replace physical evidence."
+      },
+      "statementLink": {
+        "statementId": "claim_accidental_cause",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Финансовое положение объясняет мотив, но не заменяет физические доказательства.",
+          "en": "The financial position explains motive but does not replace physical evidence."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Новый товар вывезен до пожара и доставлен в терминал GC-17.",
+      "Под сажей на уцелевшем шасси найден номер списанного демонстрационного корпуса, которого нет в страховой описи.",
+      "Пожарную систему отключили, очаг подготовили. Это спланированный поджог, выплату следует отклонить."
+    ],
+    "en": [
+      "The valuable stock left the warehouse before the fire.",
+      "Beneath the soot is the serial number of a decommissioned display chassis not listed in the insured new stock.",
+      "The accidental electrical-fire theory is disproven.",
+      "The fire-protection system was deliberately disabled.",
+      "The genuine stock survived and was transferred to the connected network.",
+      "The claim is fraudulent and should be rejected."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Сделать серийные номера главным детективным поворотом.",
+      "Устранить повторяющиеся прямые признания в соцсетях.",
+      "Интегрировать surface_reveal в улику ev-serials; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate surface_reveal into evidence ev-serials; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "evidence/case-034-ev-serials.webp",
+      "action": "generate",
+      "prompt": "Forensic warehouse fire evidence photograph of several heat-damaged metal electronics chassis recovered from ash, intact blank serial plate areas visible for UI overlay, surrounding melted packaging and soot, realistic restrained fire scene, no brands, no readable text, no watermark."
+    },
+    {
+      "file": "assets/interactive/ev-serials-scene.webp",
+      "purpose": "Базовая поверхность со скрытым физическим следом, без процедурного покрытия",
+      "resolution": "1600×1000",
+      "format": "WebP",
+      "transparency": false,
+      "generatedBy": "image_model",
+      "manualPost": "Проверить плоский читаемый ракурс; удалить случайный текст; откалибровать каждую reveal mask по финальной сцене.",
+      "prompt": "Крупный план обгоревшего металлического шасси бытовой электроники с пустой заводской табличкой и старым износом; серийный номер будет UI-слоем, сажа будет процедурной. The dust, dirt, soot, frost, condensation or powder cover will be added programmatically, so do not bake the cover layer into the image. Keep the important surface large, readable and minimally distorted. Photorealistic insurance-investigation evidence photograph, documentary look, shot on a phone or compact camera by a non-professional, natural available light, neutral muted colors, realistic textures, high detail. No captions, no watermark, no logos, no readable real-world branding, no famous people, no recognizable copyrighted characters, no visible faces unless explicitly required. Evidence photo, not illustration or cinematic poster.",
+      "evidenceId": "ev-serials",
+      "evidenceType": "surface_reveal"
+    },
+    {
+      "file": "assets/interactive/ev-serials-discarded_serial-trace-mask.svg",
+      "purpose": "Маска скрытого следа: Номер списанного корпуса",
+      "resolution": "1600×1000 aligned to base image",
+      "format": "SVG",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "Совместить с base image; порог обнаружения 50%; белая область маски — значимая зона.",
+      "prompt": null,
+      "evidenceId": "ev-serials",
+      "evidenceType": "surface_reveal"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "В ночь на 20 мая полностью выгорел склад электроники. Внутри находились новые устройства и бытовая техника на 30 000 евро. Причиной считаю проводку. Прошу полную выплату.",
+        "en": "On the night of May 20, an electronics warehouse burned out completely. It contained €30,000 in new devices and appliances. I believe the wiring caused the fire and am claiming the full amount."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_fire",
+      "text": {
+        "ru": "Склад электроники полностью выгорел.",
+        "en": "The electronics warehouse burned out completely."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_new_goods_destroyed",
+      "text": {
+        "ru": "В пожаре находились и погибли новые устройства из страховой описи.",
+        "en": "The new devices in the insured inventory were inside and destroyed by the fire."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_accidental_cause",
+      "text": {
+        "ru": "Возгорание произошло из-за проводки, а защита не отключалась намеренно.",
+        "en": "The fire was caused by wiring, and the protection system was not deliberately disabled."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-034",
+    "archiveBasePath": "generated-assets/src/data/cases/case-034",
+    "claimantPortrait": null,
+    "claimantPortraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/khariton.webp",
+      "existingFile": "public/people/khariton.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-serials",
+        "title": {
+          "ru": "Очистка серийного номера от сажи",
+          "en": "Cleaning Soot from the Serial Number"
+        },
+        "primaryImage": "src/data/cases/case-034/evidence/case-034-ev-serials.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-034/evidence/case-034-ev-serials.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-034-ev-serials.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-034/evidence/case-034-ev-serials.webp",
+          "copyTo": "public/evidence/case-034-ev-serials.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-053",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-034/evidence/case-034-ev-serials.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-034/evidence/case-034-ev-serials.webp",
+            "caseRelativeSrc": "evidence/case-034-ev-serials.webp",
+            "installTo": "public/evidence/case-034-ev-serials.webp",
+            "legacyRuntimeUrl": "evidence/case-034-ev-serials.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "bc23134f16a591015a6591fca4aee3f012d56e7c6b8f5a6fb252e691680e0ca0"
+          },
+          {
+            "assetId": "asset-054",
+            "role": "interactive_scene",
+            "src": "src/data/cases/case-034/assets/interactive/ev-serials-scene.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-034/assets/interactive/ev-serials-scene.webp",
+            "caseRelativeSrc": "assets/interactive/ev-serials-scene.webp",
+            "installTo": "src/data/cases/case-034/assets/interactive/ev-serials-scene.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1600,
+            "height": 1000,
+            "sha256": "deb2e6dafc15be6fec546c9c07cfd344ead6c4c835ab62a2b09d41548a20a26e"
+          }
+        ]
+      }
+    ]
+  }
+}

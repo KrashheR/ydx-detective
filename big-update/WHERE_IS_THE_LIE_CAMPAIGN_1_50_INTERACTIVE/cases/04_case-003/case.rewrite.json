@@ -1,0 +1,347 @@
+{
+  "id": "case-003",
+  "campaignOrder": 4,
+  "requiredLevel": 2,
+  "act": 1,
+  "actTitle": {
+    "ru": "Чужой почерк",
+    "en": "Another Hand"
+  },
+  "title": {
+    "ru": "Часы в желудке",
+    "en": "A Watch in the Stomach"
+  },
+  "difficulty": "medium",
+  "claimAmount": {
+    "value": 4000,
+    "currency": "EUR"
+  },
+  "groundTruth": "fraud",
+  "correctDecision": "reject",
+  "investigationBudget": 3,
+  "claimant": {
+    "name": {
+      "ru": "Геннадий Бубликов, 52 года",
+      "en": "Gennady Bublikov, age 52"
+    },
+    "migrationNote": {
+      "ru": "Сохранить стабильный профиль и существующий портрет после визуальной сверки с канонической версией.",
+      "en": "Keep the established profile and existing portrait after visually checking them against the canonical version."
+    },
+    "portrait": null,
+    "portraitStatus": "retain_existing_project_portrait",
+    "portraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/gennady.webp",
+      "existingFile": "public/people/gennady.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Не смейтесь над заявлением до изучения рентгена. Иногда самая нелепая часть истории оказывается единственной правдивой. — В. Лебедева",
+      "en": "Do not laugh at the claim before examining the X-ray. Sometimes the most ridiculous part of a story is the only true part. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Барон невиновен. По крайней мере в страховом мошенничестве. Носок пока остаётся отдельным делом.",
+      "en": "Baron is innocent—at least of insurance fraud. The sock remains a separate investigation."
+    },
+    "nextCaseTeaser": {
+      "ru": "Новый заявитель утверждает, что его кольцо унёс дрон. В папке также упоминается енот. Это не опечатка.",
+      "en": "The next claimant says a drone carried away his ring. The file also mentions a raccoon. That is not a typo."
+    },
+    "seasonClue": null,
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Мой французский бульдог Барон проглотил застрахованные механические часы индивидуальной сборки `N-8`, семейную реликвию стоимостью 4000 евро. Ветеринар извлёк часы, но вода и желудочный сок окончательно повредили механизм. Прошу компенсировать полную стоимость.",
+    "en": "My French bulldog, Baron, swallowed my insured custom-built `N-8` mechanical watch, a family heirloom worth €4,000. A veterinarian recovered it, but water and stomach acid permanently destroyed the movement. I am claiming its full value."
+  },
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Мой французский бульдог Барон проглотил застрахованные механические часы индивидуальной сборки `N-8`, семейную реликвию стоимостью 4000 евро. Ветеринар извлёк часы, но вода и желудочный сок окончательно повредили механизм. Прошу компенсировать полную стоимость.",
+        "en": "My French bulldog, Baron, swallowed my insured custom-built `N-8` mechanical watch, a family heirloom worth €4,000. A veterinarian recovered it, but water and stomach acid permanently destroyed the movement. I am claiming its full value."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_event",
+      "text": {
+        "ru": "Барон проглотил наручные часы.",
+        "en": "Baron swallowed a wristwatch."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_object",
+      "text": {
+        "ru": "Проглочены застрахованные часы N-8 с номером N8-48217.",
+        "en": "The swallowed watch was the insured N-8, serial number N8-48217."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_loss",
+      "text": {
+        "ru": "Механизм застрахованных часов уничтожен и требует выплаты 4000 евро.",
+        "en": "The insured watch's movement was destroyed, warranting a €4,000 payout."
+      },
+      "stampable": true
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-xray",
+      "order": 1,
+      "type": "photo",
+      "title": {
+        "ru": "Рентген Барона",
+        "en": "Baron's X-Ray"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "На рентгеновском снимке в желудке собаки действительно виден предмет, похожий на наручные часы. Рядом находятся теннисный мяч и фрагмент носка.",
+        "en": "The X-ray clearly shows an object resembling a wristwatch inside the dog's stomach. A tennis ball and part of a sock are visible beside it."
+      },
+      "statusExplanation": {
+        "ru": "Барон действительно проглотил часы. Сам факт происшествия не выдуман.",
+        "en": "Baron really did swallow a watch. The incident itself was not invented."
+      },
+      "statementLink": {
+        "statementId": "claim_event",
+        "relation": "supports",
+        "reason": {
+          "ru": "Барон действительно проглотил часы. Сам факт происшествия не выдуман.",
+          "en": "Baron really did swallow a watch. The incident itself was not invented."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-003",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-003/evidence/case-003-xray-baron.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-003/evidence/case-003-xray-baron.webp",
+          "caseRelativeSrc": "evidence/case-003-xray-baron.webp",
+          "installTo": "public/evidence/case-003-xray-baron.webp",
+          "legacyRuntimeUrl": "evidence/case-003-xray-baron.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "a3f224cc2d1a60ae8a2f49299c9cdff5d96e1e49211f8d8beab4cb01516d88e7"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-003/evidence/case-003-xray-baron.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-003/evidence/case-003-xray-baron.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-003-xray-baron.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-003/evidence/case-003-xray-baron.webp",
+        "copyTo": "public/evidence/case-003-xray-baron.webp"
+      }
+    },
+    {
+      "id": "ev-vet-act",
+      "order": 2,
+      "type": "document",
+      "title": {
+        "ru": "Акт ветеринарной клиники",
+        "en": "Veterinary Clinic Report"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "Из желудка извлечены сувенирные кварцевые часы модели `M-219`, серийный номер `M219-0448`. В приложенном каталоге клиники эта модель указана по цене 29 евро.",
+        "en": "A souvenir quartz watch, model `M-219`, serial number `M219-0448`, was removed from the stomach. The clinic's attached catalog lists that model at €29."
+      },
+      "statusExplanation": {
+        "ru": "Из собаки извлекли дешёвые сувенирные часы, а не застрахованную модель стоимостью 4000 евро.",
+        "en": "The dog swallowed a cheap souvenir watch, not the insured €4,000 timepiece."
+      },
+      "statementLink": {
+        "statementId": "claim_object",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Из собаки извлекли дешёвые сувенирные часы, а не застрахованную модель стоимостью 4000 евро.",
+          "en": "The dog swallowed a cheap souvenir watch, not the insured €4,000 timepiece."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_object",
+        "reason": {
+          "ru": "Из собаки извлекли дешёвые сувенирные часы, а не застрахованную модель стоимостью 4000 евро.",
+          "en": "The dog swallowed a cheap souvenir watch, not the insured €4,000 timepiece."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-watch-policy",
+      "order": 3,
+      "type": "document",
+      "title": {
+        "ru": "Страховая карточка часов",
+        "en": "Watch Insurance Record"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "В полисе зарегистрированы механические часы индивидуальной сборки `N-8`, серийный номер `N8-48217`. На задней крышке находится уникальная гравировка: «Г. Б. · 1998».",
+        "en": "The policy lists a custom-built `N-8` mechanical watch, serial number `N8-48217`. Its case back carries a unique engraving: ‘G. B. · 1998.’"
+      },
+      "statusExplanation": {
+        "ru": "Документ устанавливает точные признаки застрахованной вещи. Он нужен для сравнения с другими уликами.",
+        "en": "The record establishes the insured item's exact identifiers for comparison with the other evidence."
+      },
+      "statementLink": {
+        "statementId": "claim_object",
+        "relation": "supports",
+        "reason": {
+          "ru": "Документ устанавливает точные признаки застрахованной вещи. Он нужен для сравнения с другими уликами.",
+          "en": "The record establishes the insured item's exact identifiers for comparison with the other evidence."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-listing",
+      "order": 4,
+      "type": "document",
+      "title": {
+        "ru": "Объявление коллекционерам",
+        "en": "Collectors' Listing"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "На следующий день после операции пользователь «Хозяин Барона» выставил на продажу часы `N-8`. На фотографии видны номер `N8-48217` и гравировка «Г. Б. · 1998». В описании указано: «Механизм исправен, часы никогда не вскрывались».",
+        "en": "The day after the operation, a user named ‘Baron's Owner’ listed an `N-8` watch for sale. The photograph shows serial number `N8-48217` and the engraving ‘G. B. · 1998.’ The description says: ‘Movement in perfect condition. Case never opened.’"
+      },
+      "statusExplanation": {
+        "ru": "Застрахованные часы остались у владельца и выставлены на продажу. Барон проглотил дешёвую замену.",
+        "en": "The insured watch remained with its owner and was offered for sale. Baron swallowed a cheap substitute."
+      },
+      "statementLink": {
+        "statementId": "claim_loss",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Застрахованные часы остались у владельца и выставлены на продажу. Барон проглотил дешёвую замену.",
+          "en": "The insured watch remained with its owner and was offered for sale. Baron swallowed a cheap substitute."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_loss",
+        "reason": {
+          "ru": "Застрахованные часы остались у владельца и выставлены на продажу. Барон проглотил дешёвую замену.",
+          "en": "The insured watch remained with its owner and was offered for sale. Baron swallowed a cheap substitute."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Бубликов сказал часть правды: Барон действительно проглотил часы.",
+      "Ветеринар извлёк сувенирную модель стоимостью 29 евро.",
+      "Застрахованные часы с уникальным номером остались у Бубликова и были выставлены на продажу.",
+      "Заявитель подменил вещь и завысил ущерб. Заявление следует отклонить."
+    ],
+    "en": [
+      "The dog swallowed a cheap souvenir watch, not the insured €4,000 timepiece.",
+      "The insured watch remained with its owner and was offered for sale. Baron swallowed a cheap substitute.",
+      "Baron really did swallow a watch. The incident itself was not invented.",
+      "The record establishes the insured item's exact identifiers for comparison with the other evidence.",
+      "The claim is fraudulent and should be rejected."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Внедрить каноническую постановку из первого акта «Архив №17».",
+      "Сохранить стабильный ID и новый campaignOrder."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "evidence/case-003-xray-baron.webp",
+      "action": "replace",
+      "purpose": "Рентген Барона с часами",
+      "prompt": "Veterinary X-ray of a French bulldog torso, clearly showing a wristwatch-shaped metallic object inside the stomach, with a small ball and a fragment of fabric also visible, medically plausible anatomy, monochrome diagnostic radiograph, documentary veterinary evidence, no text, no patient name, no logos, no watermark."
+    }
+  ],
+  "interactiveEvidenceCount": 0,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-003",
+    "archiveBasePath": "generated-assets/src/data/cases/case-003",
+    "claimantPortrait": null,
+    "claimantPortraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/gennady.webp",
+      "existingFile": "public/people/gennady.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-xray",
+        "title": {
+          "ru": "Рентген Барона",
+          "en": "Baron's X-Ray"
+        },
+        "primaryImage": "src/data/cases/case-003/evidence/case-003-xray-baron.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-003/evidence/case-003-xray-baron.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-003-xray-baron.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-003/evidence/case-003-xray-baron.webp",
+          "copyTo": "public/evidence/case-003-xray-baron.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-003",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-003/evidence/case-003-xray-baron.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-003/evidence/case-003-xray-baron.webp",
+            "caseRelativeSrc": "evidence/case-003-xray-baron.webp",
+            "installTo": "public/evidence/case-003-xray-baron.webp",
+            "legacyRuntimeUrl": "evidence/case-003-xray-baron.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "a3f224cc2d1a60ae8a2f49299c9cdff5d96e1e49211f8d8beab4cb01516d88e7"
+          }
+        ]
+      }
+    ]
+  }
+}

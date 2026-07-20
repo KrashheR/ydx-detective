@@ -1,208 +1,422 @@
 {
   "id": "case-001",
   "type": "standard",
+  "campaignOrder": 1,
+  "requiredLevel": 1,
+  "act": 1,
+  "actTitle": {
+    "ru": "Чужой почерк",
+    "en": "Another Hand",
+    "tr": "Another Hand",
+    "ar": "Another Hand",
+    "kk": "Чужой почерк"
+  },
   "difficulty": "easy",
   "claimAmount": 1200,
   "truth": "fraud",
   "title": {
-    "ru": "Затопленная квартира",
-    "en": "The Flooded Apartment",
-    "tr": "Su Basan Daire",
-    "ar": "الشقة المغمورة بالمياه",
-    "kk": "Су басқан пәтер"
+    "ru": "Телевизор, переживший потоп",
+    "en": "The TV That Survived the Flood",
+    "tr": "The TV That Survived the Flood",
+    "ar": "The TV That Survived the Flood",
+    "kk": "Телевизор, переживший потоп"
   },
   "claim": {
     "person": {
       "ru": "Игорь Семёнов, 41 год",
-      "en": "Igor Semyonov, 41",
-      "tr": "Igor Semyonov, 41",
-      "ar": "إيغور سيميونوف، 41",
-      "kk": "Игорь Семёнов, 41 жаста"
+      "en": "Igor Semyonov, age 41",
+      "tr": "Igor Semyonov, age 41",
+      "ar": "Igor Semyonov, age 41",
+      "kk": "Игорь Семёнов, 41 год"
     },
     "story": {
-      "ru": "Лопнула труба и затопила гостиную, телевизор и техника погибли. Прошу компенсацию за повреждённую электронику.",
-      "en": "A pipe burst and flooded the living room; the TV and electronics were destroyed. I request compensation for the damaged equipment.",
-      "tr": "Bir boru patladı ve oturma odasını su bastı; televizyon ve elektronik eşyalar gitti. Hasarlı cihazlar için tazminat talep ediyorum.",
-      "ar": "انفجر أنبوب وأغرق غرفة المعيشة؛ تلف التلفاز والأجهزة الإلكترونية. أطلب تعويضًا عن المعدات المتضررة.",
-      "kk": "Құбыр жарылып, қонақ бөлмесін су басты; теледидар мен техника істен шықты. Зақымдалған электроника үшін өтемақы сұраймын."
+      "ru": "14 марта в 06:20 в квартире лопнула труба отопления. Я сразу обесточил гостиную. Телевизор после этого не включал: вода уничтожила его, экран больше не работает. Прошу возместить 1200 евро.",
+      "en": "On March 14 at 6:20 a.m., a heating pipe burst in my apartment. I immediately cut the power to the living room. I never switched the TV on again; the water ruined it and the screen no longer works. I am claiming €1,200 in compensation.",
+      "tr": "On March 14 at 6:20 a.m., a heating pipe burst in my apartment. I immediately cut the power to the living room. I never switched the TV on again; the water ruined it and the screen no longer works. I am claiming €1,200 in compensation.",
+      "ar": "On March 14 at 6:20 a.m., a heating pipe burst in my apartment. I immediately cut the power to the living room. I never switched the TV on again; the water ruined it and the screen no longer works. I am claiming €1,200 in compensation.",
+      "kk": "14 марта в 06:20 в квартире лопнула труба отопления. Я сразу обесточил гостиную. Телевизор после этого не включал: вода уничтожила его, экран больше не работает. Прошу возместить 1200 евро."
     }
   },
-  "coverImage": "covers/case-001.svg",
   "client": {
     "role": {
-      "ru": "Заявитель · физ. лицо",
-      "en": "Claimant · individual",
-      "tr": "Başvuru sahibi · gerçek kişi",
-      "ar": "مقدم الطلب · شخص طبيعي",
-      "kk": "Өтініш беруші · жеке тұлға"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Возраст",
-          "en": "Age",
-          "tr": "Yaş",
-          "ar": "العمر",
-          "kk": "Жасы"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "41 год",
-          "en": "41 years old",
-          "tr": "41 yaşında",
-          "ar": "41 عامًا",
-          "kk": "41 жаста"
+          "ru": "1",
+          "en": "1",
+          "tr": "1",
+          "ar": "1",
+          "kk": "1"
         }
       },
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Москва",
-          "en": "Moscow",
-          "tr": "Moskova",
-          "ar": "موسكو",
-          "kk": "Мәскеу"
-        }
-      },
-      {
-        "k": {
-          "ru": "Клиент с",
-          "en": "Client since",
-          "tr": "Müşteri",
-          "ar": "عميل منذ",
-          "kk": "Клиент"
-        },
-        "v": {
-          "ru": "2018 г.",
-          "en": "2018",
-          "tr": "2018",
-          "ar": "2018",
-          "kk": "2018 ж."
-        }
-      },
-      {
-        "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
-        },
-        "v": {
-          "ru": "Имущество · ИМ-19873142-X9",
-          "en": "Property · IM-19873142-X9",
-          "tr": "Mülk · IM-19873142-X9",
-          "ar": "الممتلكات · IM-19873142-X9",
-          "kk": "Мүлік · ИМ-19873142-X9"
-        }
-      },
-      {
-        "k": {
-          "ru": "Документ",
-          "en": "Document",
-          "tr": "Belge",
-          "ar": "الوثيقة",
-          "kk": "Құжат"
-        },
-        "v": {
-          "ru": "Паспорт 4521-06 №198731498-23",
-          "en": "Passport 4521-06 №198731498-23",
-          "tr": "Pasaport 4521-06 №198731498-23",
-          "ar": "جواز السفر 4521-06 №198731498-23",
-          "kk": "Паспорт 4521-06 №198731498-23"
+          "ru": "1",
+          "en": "1",
+          "tr": "1",
+          "ar": "1",
+          "kk": "1"
         }
       }
     ]
   },
+  "coverImage": "covers/case-001.svg",
   "evidences": [
     {
-      "id": "ev-photo",
-      "type": "photo",
+      "id": "ev-scene",
+      "order": 1,
+      "type": "thermal_scan",
       "title": {
-        "ru": "Фото места происшествия",
-        "en": "Scene Photo",
-        "tr": "Olay Yeri Fotoğrafı",
-        "ar": "صورة مكان الحادث",
-        "kk": "Оқиға орнының суреті"
+        "ru": "Тепловой осмотр телевизора",
+        "en": "Thermal Inspection of the TV",
+        "tr": "Thermal Inspection of the TV",
+        "ar": "Thermal Inspection of the TV",
+        "kk": "Тепловой осмотр телевизора"
       },
       "content": {
-        "ru": "На фото видна сухая, включённая электроника на полке над лужей воды — индикаторы горят, экран телевизора работает.",
-        "en": "The photo shows dry, powered-on electronics on a shelf above the puddle — indicator lights are on and the TV screen is working.",
-        "tr": "Fotoğrafta su birikintisinin üzerindeki rafta kuru ve açık elektronik eşyalar görülüyor — ışıklar yanıyor, televizyon ekranı çalışıyor.",
-        "ar": "تُظهر الصورة أجهزة إلكترونية جافة وتعمل على رف فوق البركة — المؤشرات مضاءة وشاشة التلفاز تعمل.",
-        "kk": "Суретте су шалшығының үстіндегі сөреде құрғақ әрі қосулы электроника көрінеді — индикаторлар жанып тұр, теледидар экраны жұмыс істейді."
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Заявленная повреждённой техника на фото сухая и включена — ущерб инсценирован.",
-        "en": "The electronics claimed as damaged are dry and powered on in the photo — the damage is staged.",
-        "tr": "Hasarlı olduğu iddia edilen elektronik eşyalar fotoğrafta kuru ve açık — hasar sahnelenmiş.",
-        "ar": "الأجهزة المزعوم تلفها تظهر جافة وتعمل في الصورة — الضرر مفتعل.",
-        "kk": "Зақымдалған деп мәлімделген техника суретте құрғақ әрі қосулы — зиян қойылған."
+        "ru": "Осмотр проведён через 440 минут после заявленного отключения. Блок питания сохраняет 46 °C, процессор — 39 °C; контрольная модель остывает максимум за 90 минут. Телевизор включали менее чем за час до осмотра.",
+        "en": "The inspection took place 440 minutes after the claimed shutdown. The power supply was still at 46°C and the processor at 39°C; a control unit cools fully within 90 minutes. The TV had been switched on less than an hour before the inspection.",
+        "tr": "The inspection took place 440 minutes after the claimed shutdown. The power supply was still at 46°C and the processor at 39°C; a control unit cools fully within 90 minutes. The TV had been switched on less than an hour before the inspection.",
+        "ar": "The inspection took place 440 minutes after the claimed shutdown. The power supply was still at 46°C and the processor at 39°C; a control unit cools fully within 90 minutes. The TV had been switched on less than an hour before the inspection.",
+        "kk": "Осмотр проведён через 440 минут после заявленного отключения. Блок питания сохраняет 46 °C, процессор — 39 °C; контрольная модель остывает максимум за 90 минут. Телевизор включали менее чем за час до осмотра."
       },
-      "meta": {
-        "filename": "IMG_20260314_091402.jpg",
-        "imageUrl": "evidence/case-001-ev-photo.webp"
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_tv_never_restarted",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Осмотр проведён через 440 минут после заявленного отключения. Блок питания сохраняет 46 °C, процессор — 39 °C; контрольная модель остывает максимум за 90 минут. Телевизор включали менее чем за час до осмотра.",
+          "en": "The inspection took place 440 minutes after the claimed shutdown. The power supply was still at 46°C and the processor at 39°C; a control unit cools fully within 90 minutes. The TV had been switched on less than an hour before the inspection.",
+          "tr": "The inspection took place 440 minutes after the claimed shutdown. The power supply was still at 46°C and the processor at 39°C; a control unit cools fully within 90 minutes. The TV had been switched on less than an hour before the inspection.",
+          "ar": "The inspection took place 440 minutes after the claimed shutdown. The power supply was still at 46°C and the processor at 39°C; a control unit cools fully within 90 minutes. The TV had been switched on less than an hour before the inspection.",
+          "kk": "Осмотр проведён через 440 минут после заявленного отключения. Блок питания сохраняет 46 °C, процессор — 39 °C; контрольная модель остывает максимум за 90 минут. Телевизор включали менее чем за час до осмотра."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_tv_never_restarted",
+        "reason": {
+          "ru": "Осмотр проведён через 440 минут после заявленного отключения. Блок питания сохраняет 46 °C, процессор — 39 °C; контрольная модель остывает максимум за 90 минут. Телевизор включали менее чем за час до осмотра.",
+          "en": "The inspection took place 440 minutes after the claimed shutdown. The power supply was still at 46°C and the processor at 39°C; a control unit cools fully within 90 minutes. The TV had been switched on less than an hour before the inspection.",
+          "tr": "The inspection took place 440 minutes after the claimed shutdown. The power supply was still at 46°C and the processor at 39°C; a control unit cools fully within 90 minutes. The TV had been switched on less than an hour before the inspection.",
+          "ar": "The inspection took place 440 minutes after the claimed shutdown. The power supply was still at 46°C and the processor at 39°C; a control unit cools fully within 90 minutes. The TV had been switched on less than an hour before the inspection.",
+          "kk": "Осмотр проведён через 440 минут после заявленного отключения. Блок питания сохраняет 46 °C, процессор — 39 °C; контрольная модель остывает максимум за 90 минут. Телевизор включали менее чем за час до осмотра."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "Прорыв зафиксирован аварийной службой в 06:20. Тепловой осмотр проведён в 13:40 — через семь часов двадцать минут после момента, когда телевизор, по словам заявителя, был обесточен и больше не включался.",
+        "en": "Emergency services logged the burst pipe at 6:20 a.m. The thermal inspection took place at 1:40 p.m.—seven hours and twenty minutes after the claimant says the TV was unplugged and never switched on again.",
+        "tr": "Emergency services logged the burst pipe at 6:20 a.m. The thermal inspection took place at 1:40 p.m.—seven hours and twenty minutes after the claimant says the TV was unplugged and never switched on again.",
+        "ar": "Emergency services logged the burst pipe at 6:20 a.m. The thermal inspection took place at 1:40 p.m.—seven hours and twenty minutes after the claimant says the TV was unplugged and never switched on again.",
+        "kk": "Прорыв зафиксирован аварийной службой в 06:20. Тепловой осмотр проведён в 13:40 — через семь часов двадцать минут после момента, когда телевизор, по словам заявителя, был обесточен и больше не включался."
+      },
+      "instruction": {
+        "ru": "Включить тепловизор и выбрать нагретый блок питания телевизора.",
+        "en": "Switch on thermal view and select the TV's heated power supply.",
+        "tr": "Switch on thermal view and select the TV's heated power supply.",
+        "ar": "Switch on thermal view and select the TV's heated power supply.",
+        "kk": "Включить тепловизор и выбрать нагретый блок питания телевизора."
+      },
+      "previousType": "photo",
+      "assets": {
+        "asset1": "cases/case-001/assets/interactive/ev-scene-scene.webp",
+        "asset2": "cases/case-001/assets/interactive/ev-scene-heat-zones.json"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Одно переключение превращает первую разгадку в личное наблюдение игрока и не усложняет обучающий уровень.",
+          "en": "A single mode switch lets the player make the first discovery themselves without overcomplicating the tutorial.",
+          "tr": "A single mode switch lets the player make the first discovery themselves without overcomplicating the tutorial.",
+          "ar": "A single mode switch lets the player make the first discovery themselves without overcomplicating the tutorial.",
+          "kk": "Одно переключение превращает первую разгадку в личное наблюдение игрока и не усложняет обучающий уровень."
+        },
+        "playerAction": {
+          "ru": "Включить тепловизор и выбрать нагретый блок питания телевизора.",
+          "en": "Switch on thermal view and select the TV's heated power supply.",
+          "tr": "Switch on thermal view and select the TV's heated power supply.",
+          "ar": "Switch on thermal view and select the TV's heated power supply.",
+          "kk": "Включить тепловизор и выбрать нагретый блок питания телевизора."
+        },
+        "conclusion": {
+          "ru": "Осмотр проведён через 440 минут после заявленного отключения. Блок питания сохраняет 46 °C, процессор — 39 °C; контрольная модель остывает максимум за 90 минут. Телевизор включали менее чем за час до осмотра.",
+          "en": "The inspection took place 440 minutes after the claimed shutdown. The power supply was still at 46°C and the processor at 39°C; a control unit cools fully within 90 minutes. The TV had been switched on less than an hour before the inspection.",
+          "tr": "The inspection took place 440 minutes after the claimed shutdown. The power supply was still at 46°C and the processor at 39°C; a control unit cools fully within 90 minutes. The TV had been switched on less than an hour before the inspection.",
+          "ar": "The inspection took place 440 minutes after the claimed shutdown. The power supply was still at 46°C and the processor at 39°C; a control unit cools fully within 90 minutes. The TV had been switched on less than an hour before the inspection.",
+          "kk": "Осмотр проведён через 440 минут после заявленного отключения. Блок питания сохраняет 46 °C, процессор — 39 °C; контрольная модель остывает максимум за 90 минут. Телевизор включали менее чем за час до осмотра."
+        }
+      },
+      "data": {
+        "ambientTemperature": 21,
+        "observationTime": "13:40",
+        "claimedLastUseBefore": "06:20",
+        "elapsedSinceClaimedUseMinutes": 440,
+        "coolingReference": "Исправный телевизор этой конструкции остывает до температуры помещения не более чем за 90 минут после отключения.",
+        "initialMode": "normal",
+        "heatZones": [
+          {
+            "id": "power_unit",
+            "shape": "ellipse",
+            "x": 61,
+            "y": 48,
+            "width": 18,
+            "height": 14,
+            "temperature": 46,
+            "intensity": 0.9,
+            "label": "Нагретый блок питания",
+            "isContradiction": true,
+            "labelEn": "Heated power supply"
+          },
+          {
+            "id": "processor",
+            "shape": "ellipse",
+            "x": 49,
+            "y": 42,
+            "width": 13,
+            "height": 12,
+            "temperature": 39,
+            "intensity": 0.68,
+            "label": "Рабочее тепло процессора",
+            "isContradiction": true,
+            "labelEn": "Residual processor heat"
+          }
+        ],
+        "successCondition": {
+          "type": "select_any",
+          "zoneIds": [
+            "power_unit",
+            "processor"
+          ]
+        },
+        "coolingReferenceEn": "A working TV of this design cools to room temperature within 90 minutes of being switched off."
       }
     },
     {
       "id": "ev-listing",
+      "order": 2,
       "type": "document",
       "title": {
         "ru": "Объявление о продаже",
-        "en": "Resale Listing",
-        "tr": "Satış İlanı",
-        "ar": "إعلان بيع",
-        "kk": "Сату хабарландыруы"
+        "en": "For-Sale Listing",
+        "tr": "For-Sale Listing",
+        "ar": "For-Sale Listing",
+        "kk": "Объявление о продаже"
       },
       "content": {
-        "ru": "Распечатка объявления с доски: тот же телевизор выставлен на продажу как «полностью рабочий, как новый», дата публикации — через два дня после потопа.",
-        "en": "Printout of a marketplace listing: the same TV is offered for sale as 'fully working, like new', posted two days after the flood.",
-        "tr": "İlan panosundan çıktı: aynı televizyon 'tamamen çalışır, yeni gibi' diye satışa çıkarılmış, yayın tarihi su baskınından iki gün sonra.",
-        "ar": "نسخة مطبوعة من إعلان بيع: التلفاز نفسه معروض للبيع بوصف «يعمل بالكامل، كالجديد»، نُشر بعد يومين من الفيضان.",
-        "kk": "Хабарландыру тақтасынан басып шығарылған: дәл сол теледидар «толық жұмыс істейді, жаңадай» деп сатуға қойылған, жарияланған күні — су тасқынынан екі күн өткенде."
+        "ru": "В 18:10 того же дня пользователь «ИгорьС41» публикует видео продажи телевизора. На корпусе совпадают серийный номер и царапина на левой ножке; на экране открыт системный тест без ошибок. В описании: «Полностью исправен, контакта с водой не было».",
+        "en": "At 6:10 p.m. that same day, user ‘IgorS41’ posted a video offering a TV for sale. Its serial number and a scratch on the left stand match the insured set, while the screen shows a clean system test. The description reads: ‘Fully operational. Never exposed to water.’",
+        "tr": "At 6:10 p.m. that same day, user ‘IgorS41’ posted a video offering a TV for sale. Its serial number and a scratch on the left stand match the insured set, while the screen shows a clean system test. The description reads: ‘Fully operational. Never exposed to water.’",
+        "ar": "At 6:10 p.m. that same day, user ‘IgorS41’ posted a video offering a TV for sale. Its serial number and a scratch on the left stand match the insured set, while the screen shows a clean system test. The description reads: ‘Fully operational. Never exposed to water.’",
+        "kk": "В 18:10 того же дня пользователь «ИгорьС41» публикует видео продажи телевизора. На корпусе совпадают серийный номер и царапина на левой ножке; на экране открыт системный тест без ошибок. В описании: «Полностью исправен, контакта с водой не было»."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Клиент продаёт «погибший» телевизор как исправный — техника не пострадала.",
-        "en": "The client is selling the 'destroyed' TV as fully functional — the equipment was not damaged.",
-        "tr": "Müşteri 'gitti' dediği televizyonu çalışır halde satıyor — cihaz zarar görmemiş.",
-        "ar": "العميل يبيع التلفاز «التالف» على أنه يعمل — الجهاز لم يتضرر.",
-        "kk": "Клиент «істен шықты» деген теледидарды жарамды деп сатуда — техника зақымданбаған."
-      }
+        "ru": "Заявитель продаёт тот же аппарат как исправный через несколько часов после заявления. Утраты телевизора не было.",
+        "en": "Only hours after filing the claim, the claimant offered the same TV for sale as fully operational. The TV was never lost or destroyed.",
+        "tr": "Only hours after filing the claim, the claimant offered the same TV for sale as fully operational. The TV was never lost or destroyed.",
+        "ar": "Only hours after filing the claim, the claimant offered the same TV for sale as fully operational. The TV was never lost or destroyed.",
+        "kk": "Заявитель продаёт тот же аппарат как исправный через несколько часов после заявления. Утраты телевизора не было."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_tv_destroyed",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Заявитель продаёт тот же аппарат как исправный через несколько часов после заявления. Утраты телевизора не было.",
+          "en": "Only hours after filing the claim, the claimant offered the same TV for sale as fully operational. The TV was never lost or destroyed.",
+          "tr": "Only hours after filing the claim, the claimant offered the same TV for sale as fully operational. The TV was never lost or destroyed.",
+          "ar": "Only hours after filing the claim, the claimant offered the same TV for sale as fully operational. The TV was never lost or destroyed.",
+          "kk": "Заявитель продаёт тот же аппарат как исправный через несколько часов после заявления. Утраты телевизора не было."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_tv_destroyed",
+        "reason": {
+          "ru": "Заявитель продаёт тот же аппарат как исправный через несколько часов после заявления. Утраты телевизора не было.",
+          "en": "Only hours after filing the claim, the claimant offered the same TV for sale as fully operational. The TV was never lost or destroyed.",
+          "tr": "Only hours after filing the claim, the claimant offered the same TV for sale as fully operational. The TV was never lost or destroyed.",
+          "ar": "Only hours after filing the claim, the claimant offered the same TV for sale as fully operational. The TV was never lost or destroyed.",
+          "kk": "Заявитель продаёт тот же аппарат как исправный через несколько часов после заявления. Утраты телевизора не было."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "На фото техника сухая и включена — ущерб инсценирован.",
-      "Объявление показывает: тот же телевизор продаётся как рабочий.",
-      "Заявление является мошенническим, его следует отклонить."
+      "Прорыв трубы действительно произошёл.",
+      "Через семь часов после заявленного отключения телевизор сохранял рабочее тепло: его включали незадолго до осмотра.",
+      "Вечером тот же аппарат с совпадающими серийным номером и царапиной выставили на продажу как исправный.",
+      "Семёнов потребовал выплату за несуществующий ущерб. Заявление следует отклонить."
     ],
     "en": [
-      "The photo shows dry, working electronics — the damage was staged.",
-      "The listing shows the same TV being sold as fully working.",
+      "The inspection took place 440 minutes after the claimed shutdown. The power supply was still at 46°C and the processor at 39°C; a control unit cools fully within 90 minutes. The TV had been switched on less than an hour before the inspection.",
+      "Only hours after filing the claim, the claimant offered the same TV for sale as fully operational. The TV was never lost or destroyed.",
       "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "Fotoğraf kuru ve çalışan elektronik gösteriyor — hasar sahnelenmiş.",
-      "İlan, aynı televizyonun çalışır halde satıldığını gösteriyor.",
-      "Talep hileli ve reddedilmeli."
+      "The inspection took place 440 minutes after the claimed shutdown. The power supply was still at 46°C and the processor at 39°C; a control unit cools fully within 90 minutes. The TV had been switched on less than an hour before the inspection.",
+      "Only hours after filing the claim, the claimant offered the same TV for sale as fully operational. The TV was never lost or destroyed.",
+      "The claim is fraudulent and should be rejected."
     ],
     "ar": [
-      "الصورة تُظهر أجهزة جافة وتعمل — الضرر مفتعل.",
-      "الإعلان يُظهر التلفاز نفسه معروضًا للبيع وهو يعمل.",
-      "المطالبة احتيالية ويجب رفضها."
+      "The inspection took place 440 minutes after the claimed shutdown. The power supply was still at 46°C and the processor at 39°C; a control unit cools fully within 90 minutes. The TV had been switched on less than an hour before the inspection.",
+      "Only hours after filing the claim, the claimant offered the same TV for sale as fully operational. The TV was never lost or destroyed.",
+      "The claim is fraudulent and should be rejected."
     ],
     "kk": [
-      "Суретте техника құрғақ әрі қосулы — зиян қойылған.",
-      "Хабарландыру дәл сол теледидардың жұмыс істейтін күйде сатылып жатқанын көрсетеді.",
-      "Талап алаяқтық, оны қабылдамау керек."
+      "Прорыв трубы действительно произошёл.",
+      "Через семь часов после заявленного отключения телевизор сохранял рабочее тепло: его включали незадолго до осмотра.",
+      "Вечером тот же аппарат с совпадающими серийным номером и царапиной выставили на продажу как исправный.",
+      "Семёнов потребовал выплату за несуществующий ущерб. Заявление следует отклонить."
     ]
+  },
+  "investigationBudget": 2,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "14 марта в 06:20 в квартире лопнула труба отопления. Я сразу обесточил гостиную. Телевизор после этого не включал: вода уничтожила его, экран больше не работает. Прошу возместить 1200 евро.",
+        "en": "On March 14 at 6:20 a.m., a heating pipe burst in my apartment. I immediately cut the power to the living room. I never switched the TV on again; the water ruined it and the screen no longer works. I am claiming €1,200 in compensation.",
+        "tr": "On March 14 at 6:20 a.m., a heating pipe burst in my apartment. I immediately cut the power to the living room. I never switched the TV on again; the water ruined it and the screen no longer works. I am claiming €1,200 in compensation.",
+        "ar": "On March 14 at 6:20 a.m., a heating pipe burst in my apartment. I immediately cut the power to the living room. I never switched the TV on again; the water ruined it and the screen no longer works. I am claiming €1,200 in compensation.",
+        "kk": "14 марта в 06:20 в квартире лопнула труба отопления. Я сразу обесточил гостиную. Телевизор после этого не включал: вода уничтожила его, экран больше не работает. Прошу возместить 1200 евро."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_event",
+      "text": {
+        "ru": "14 марта в 06:20 в квартире произошёл прорыв трубы и вода попала в гостиную.",
+        "en": "A pipe burst in the apartment at 6:20 a.m. on March 14, flooding the living room.",
+        "tr": "A pipe burst in the apartment at 6:20 a.m. on March 14, flooding the living room.",
+        "ar": "A pipe burst in the apartment at 6:20 a.m. on March 14, flooding the living room.",
+        "kk": "14 марта в 06:20 в квартире произошёл прорыв трубы и вода попала в гостиную."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_tv_never_restarted",
+      "text": {
+        "ru": "Телевизор отключили во время прорыва и после 06:20 больше не включали.",
+        "en": "The TV was unplugged during the leak and was not switched on again after 6:20 a.m.",
+        "tr": "The TV was unplugged during the leak and was not switched on again after 6:20 a.m.",
+        "ar": "The TV was unplugged during the leak and was not switched on again after 6:20 a.m.",
+        "kk": "Телевизор отключили во время прорыва и после 06:20 больше не включали."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_tv_destroyed",
+      "text": {
+        "ru": "Застрахованный телевизор безвозвратно повреждён водой и подлежит возмещению на 1200 евро.",
+        "en": "The insured TV was damaged beyond repair by water, warranting a €1,200 payout.",
+        "tr": "The insured TV was damaged beyond repair by water, warranting a €1,200 payout.",
+        "ar": "The insured TV was damaged beyond repair by water, warranting a €1,200 payout.",
+        "kk": "Застрахованный телевизор безвозвратно повреждён водой и подлежит возмещению на 1200 евро."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Первое дело. Не ищите мошенника по лицу и не верьте готовому выводу. Найдите одну проверяемую фразу — и один факт, который с ней несовместим. — В. Лебедева",
+      "en": "Your first case. Do not judge a fraudster by their face, and do not trust a ready-made conclusion. Find one verifiable statement—and one fact that cannot coexist with it. — V. Lebedeva",
+      "tr": "Your first case. Do not judge a fraudster by their face, and do not trust a ready-made conclusion. Find one verifiable statement—and one fact that cannot coexist with it. — V. Lebedeva",
+      "ar": "Your first case. Do not judge a fraudster by their face, and do not trust a ready-made conclusion. Find one verifiable statement—and one fact that cannot coexist with it. — V. Lebedeva",
+      "kk": "Первое дело. Не ищите мошенника по лицу и не верьте готовому выводу. Найдите одну проверяемую фразу — и один факт, который с ней несовместим. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Прорыв был настоящим. Ложью оказалось не событие, а судьба телевизора. Именно так чаще всего и устроено хорошее страховое мошенничество.",
+      "en": "The burst pipe was real. The lie was not the incident, but what happened to the TV. That is how convincing insurance fraud usually works.",
+      "tr": "The burst pipe was real. The lie was not the incident, but what happened to the TV. That is how convincing insurance fraud usually works.",
+      "ar": "The burst pipe was real. The lie was not the incident, but what happened to the TV. That is how convincing insurance fraud usually works.",
+      "kk": "Прорыв был настоящим. Ложью оказалось не событие, а судьба телевизора. Именно так чаще всего и устроено хорошее страховое мошенничество."
+    },
+    "nextCaseTeaser": {
+      "ru": "Следующее заявление выглядит ещё подозрительнее: страховую сумму увеличили за три недели до пожара. Но подозрительность — не доказательство.",
+      "en": "The next claim looks even more suspicious: the coverage was increased three weeks before a fire. But suspicion is not evidence.",
+      "tr": "The next claim looks even more suspicious: the coverage was increased three weeks before a fire. But suspicion is not evidence.",
+      "ar": "The next claim looks even more suspicious: the coverage was increased three weeks before a fire. But suspicion is not evidence.",
+      "kk": "Следующее заявление выглядит ещё подозрительнее: страховую сумму увеличили за три недели до пожара. Но подозрительность — не доказательство."
+    },
+    "seasonClue": {
+      "id": "act1-clue-1",
+      "label": {
+        "ru": "Предварительная оценка 17-К",
+        "en": "17-K Preliminary Assessment",
+        "tr": "17-K Preliminary Assessment",
+        "ar": "17-K Preliminary Assessment",
+        "kk": "Предварительная оценка 17-К"
+      },
+      "description": {
+        "ru": "Смета на телевизор зарегистрирована раньше страхового обращения. В нижнем колонтитуле стоит код 17-К.",
+        "en": "The TV estimate was registered before the insurance claim. The footer bears the code 17-K.",
+        "tr": "The TV estimate was registered before the insurance claim. The footer bears the code 17-K.",
+        "ar": "The TV estimate was registered before the insurance claim. The footer bears the code 17-K.",
+        "kk": "Смета на телевизор зарегистрирована раньше страхового обращения. В нижнем колонтитуле стоит код 17-К."
+      },
+      "progressIndex": 1,
+      "progressTotal": 5
+    },
+    "epilogue": null
+  },
+  "onboarding": {
+    "phase": "first_contradiction",
+    "targetDurationSeconds": 105,
+    "teaches": [
+      "open_evidence",
+      "complete_interactive",
+      "stamp_exact_statement",
+      "reject"
+    ],
+    "menuUnlockAfterVerdict": false,
+    "successEmotion": {
+      "ru": "Я сам поймал первую ложь",
+      "en": "I caught my first lie myself",
+      "tr": "I caught my first lie myself",
+      "ar": "I caught my first lie myself",
+      "kk": "Я сам поймал первую ложь"
+    }
   }
 }

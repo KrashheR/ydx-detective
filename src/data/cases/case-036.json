@@ -1,354 +1,563 @@
 {
   "id": "case-036",
   "type": "standard",
+  "campaignOrder": 34,
+  "requiredLevel": 16,
+  "act": 4,
+  "actTitle": {
+    "ru": "Серый конвой",
+    "en": "The Gray Convoy",
+    "tr": "The Gray Convoy",
+    "ar": "The Gray Convoy",
+    "kk": "Серый конвой"
+  },
   "difficulty": "hard",
   "claimAmount": 9800,
   "truth": "valid",
-  "investigationBudget": 4,
   "title": {
-    "ru": "Гроза у подстанции",
-    "en": "Storm at the Substation",
-    "tr": "Trafo Merkezinde Fırtına",
-    "ar": "عاصفة عند محطة الكهرباء",
-    "kk": "Қосалқы станциядағы дауыл"
+    "ru": "Невозможная скорость",
+    "en": "The Impossible Speed",
+    "tr": "The Impossible Speed",
+    "ar": "The Impossible Speed",
+    "kk": "Невозможная скорость"
   },
   "claim": {
     "person": {
       "ru": "Максим Ярцев, 41 год",
-      "en": "Maksim Yartsev, 41",
-      "tr": "Maksim Yartsev, 41",
-      "ar": "مكسيم يارتسيف، 41",
-      "kk": "Максим Ярцев, 41 жаста"
+      "en": "Maxim Yartsev, age 41",
+      "tr": "Maxim Yartsev, age 41",
+      "ar": "Maxim Yartsev, age 41",
+      "kk": "Максим Ярцев, 41 год"
     },
     "story": {
-      "ru": "Во время грозы молния ударила в городскую подстанцию и по подключённому кабелю ушла в моё экспериментальное электрокупе. Машина загорелась, а журнал скорости зафиксировал аномальный скачок. Прошу оплатить восстановление.",
-      "en": "During a storm, lightning hit a municipal substation and traveled through a connected cable into my experimental electric coupe. The car caught fire and its speed log recorded an anomalous spike. I request repair coverage.",
-      "tr": "Fırtına sırasında yıldırım şehir trafo merkezine çarptı ve bağlı kablo üzerinden deneysel elektrikli kupeme ulaştı. Araç yandı ve hız kaydı anormal bir sıçrama gösterdi. Onarım bedelini istiyorum.",
-      "ar": "أثناء العاصفة ضرب البرق محطة كهرباء بلدية وانتقل عبر كابل متصل إلى سيارتي الكهربائية التجريبية. اشتعلت السيارة وسجل النظام قفزة غير طبيعية في السرعة. أطلب تغطية الإصلاح.",
-      "kk": "Дауыл кезінде найзағай қалалық қосалқы станцияға соғып, жалғанған кабель арқылы тәжірибелік электрокупеме өтті. Көлік өртеніп, жылдамдық журналы қалыптан тыс секірісті тіркеді. Жөндеуді өтеуді сұраймын."
+      "ru": "Во время грозы молния ударила в подстанцию, к которой был подключён мой экспериментальный электромобиль. Машина загорелась на зарядке, а телеметрия записала аномальный скачок скорости. Прошу оплатить восстановление.",
+      "en": "During a storm, lightning struck the substation supplying my experimental electric car. The vehicle caught fire while charging, and its telemetry recorded an abnormal speed spike. I am claiming the restoration cost.",
+      "tr": "During a storm, lightning struck the substation supplying my experimental electric car. The vehicle caught fire while charging, and its telemetry recorded an abnormal speed spike. I am claiming the restoration cost.",
+      "ar": "During a storm, lightning struck the substation supplying my experimental electric car. The vehicle caught fire while charging, and its telemetry recorded an abnormal speed spike. I am claiming the restoration cost.",
+      "kk": "Во время грозы молния ударила в подстанцию, к которой был подключён мой экспериментальный электромобиль. Машина загорелась на зарядке, а телеметрия записала аномальный скачок скорости. Прошу оплатить восстановление."
     }
   },
-  "coverImage": "covers/case-036.svg",
   "client": {
     "role": {
-      "ru": "Реставратор автомобилей",
-      "en": "Automobile restorer",
-      "tr": "Otomobil restoratörü",
-      "ar": "مرمم سيارات",
-      "kk": "Автокөлік реставраторы"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "Нортбридж",
-          "en": "Northbridge",
-          "tr": "Northbridge",
-          "ar": "نورثبريدج",
-          "kk": "Нортбридж"
+          "ru": "4",
+          "en": "4",
+          "tr": "4",
+          "ar": "4",
+          "kk": "4"
         }
       },
       {
         "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Каско · VE-41",
-          "en": "Comprehensive auto · VE-41",
-          "tr": "Kasko · VE-41",
-          "ar": "تأمين شامل للمركبة · VE-41",
-          "kk": "КАСКО · VE-41"
-        }
-      },
-      {
-        "k": {
-          "ru": "Авто",
-          "en": "Vehicle",
-          "tr": "Araç",
-          "ar": "المركبة",
-          "kk": "Авто"
-        },
-        "v": {
-          "ru": "VE-4 · 1985",
-          "en": "VE-4 · 1985",
-          "tr": "VE-4 · 1985",
-          "ar": "VE-4 · 1985",
-          "kk": "VE-4 · 1985"
+          "ru": "34",
+          "en": "34",
+          "tr": "34",
+          "ar": "34",
+          "kk": "34"
         }
       }
     ]
   },
+  "coverImage": "covers/case-036.svg",
+  "personImage": "people/maxim-yartsev.webp",
   "evidences": [
     {
       "id": "ev-weather",
+      "order": 1,
       "type": "document",
       "title": {
-        "ru": "Метеосводка",
-        "en": "Weather report",
-        "tr": "Hava raporu",
-        "ar": "تقرير الطقس",
-        "kk": "Ауа райы есебі"
+        "ru": "Грозовая карта",
+        "en": "Lightning Map",
+        "tr": "Lightning Map",
+        "ar": "Lightning Map",
+        "kk": "Грозовая карта"
       },
       "content": {
-        "ru": "22:17:03 · прямой разряд в городскую подстанцию.",
-        "en": "22:17:03 · direct strike on the municipal substation.",
-        "tr": "22:17:03 · şehir trafo merkezine doğrudan yıldırım.",
-        "ar": "22:17:03 · ضربة مباشرة لمحطة الكهرباء البلدية.",
-        "kk": "22:17:03 · қалалық қосалқы станцияға тікелей разряд."
+        "ru": "Мощный разряд зарегистрирован в подстанцию в 22:17:08.",
+        "en": "A powerful strike hit the substation at 10:17:08 p.m.",
+        "tr": "A powerful strike hit the substation at 10:17:08 p.m.",
+        "ar": "A powerful strike hit the substation at 10:17:08 p.m.",
+        "kk": "Мощный разряд зарегистрирован в подстанцию в 22:17:08."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Разряд подтверждён независимой службой.",
-        "en": "An independent service confirms the strike.",
-        "tr": "Yıldırım bağımsız servisçe doğrulandı.",
-        "ar": "أكدت جهة مستقلة الضربة.",
-        "kk": "Разрядты тәуелсіз қызмет растады."
-      }
+        "ru": "Время и место удара подтверждены.",
+        "en": "The time and location of the strike are confirmed.",
+        "tr": "The time and location of the strike are confirmed.",
+        "ar": "The time and location of the strike are confirmed.",
+        "kk": "Время и место удара подтверждены."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_lightning",
+        "relation": "supports",
+        "reason": {
+          "ru": "Время и место удара подтверждены.",
+          "en": "The time and location of the strike are confirmed.",
+          "tr": "The time and location of the strike are confirmed.",
+          "ar": "The time and location of the strike are confirmed.",
+          "kk": "Время и место удара подтверждены."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "ev-camera",
+      "order": 2,
       "type": "camera_recording",
       "title": {
-        "ru": "Камера площади",
-        "en": "Town-square CCTV",
-        "tr": "Meydan kamerası",
-        "ar": "كاميرا الساحة",
-        "kk": "Алаң камерасы"
+        "ru": "Камера зарядной площадки",
+        "en": "Charging Area Camera",
+        "tr": "Charging Area Camera",
+        "ar": "Charging Area Camera",
+        "kk": "Камера зарядной площадки"
       },
       "content": {
-        "ru": "22:17 · вспышка на подстанции; купе стоит у подключённого кабеля; водитель в стороне.",
-        "en": "22:17 · flash at the substation; coupe beside the connected cable; driver stands clear.",
-        "tr": "22:17 · trafo merkezinde parlama; kupe bağlı kablonun yanında; sürücü uzakta.",
-        "ar": "22:17 · وميض في محطة الكهرباء؛ السيارة بجوار الكابل المتصل والسائق بعيد.",
-        "kk": "22:17 · қосалқы станцияда жарқыл; купе жалғанған кабель жанында; жүргізуші алыста."
+        "ru": "Автомобиль неподвижен. В момент вспышки гаснет освещение, из зарядного порта появляется дуга, затем дым.",
+        "en": "The vehicle remains stationary. At the flash, the lights go out, an arc appears at the charging port, and smoke follows.",
+        "tr": "The vehicle remains stationary. At the flash, the lights go out, an arc appears at the charging port, and smoke follows.",
+        "ar": "The vehicle remains stationary. At the flash, the lights go out, an arc appears at the charging port, and smoke follows.",
+        "kk": "Автомобиль неподвижен. В момент вспышки гаснет освещение, из зарядного порта появляется дуга, затем дым."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Камера исключает поджог владельцем.",
-        "en": "The footage rules out arson by the owner.",
-        "tr": "Kamera sahibin kundaklamasını dışlıyor.",
-        "ar": "التسجيل يستبعد إحراق المالك للسيارة.",
-        "kk": "Камера иесінің өрт қойғанын жоққа шығарады."
+        "ru": "Камера доказывает, что машина не двигалась и загорелась одновременно с разрядом.",
+        "en": "The camera proves that the car did not move and caught fire at the moment of the strike.",
+        "tr": "The camera proves that the car did not move and caught fire at the moment of the strike.",
+        "ar": "The camera proves that the car did not move and caught fire at the moment of the strike.",
+        "kk": "Камера доказывает, что машина не двигалась и загорелась одновременно с разрядом."
       },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_stationary",
+        "relation": "supports",
+        "reason": {
+          "ru": "Камера доказывает, что машина не двигалась и загорелась одновременно с разрядом.",
+          "en": "The camera proves that the car did not move and caught fire at the moment of the strike.",
+          "tr": "The camera proves that the car did not move and caught fire at the moment of the strike.",
+          "ar": "The camera proves that the car did not move and caught fire at the moment of the strike.",
+          "kk": "Камера доказывает, что машина не двигалась и загорелась одновременно с разрядом."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
       "meta": {
-        "cameraId": "CAM-CLOCK-01",
-        "cameraModel": "NightGuard NG-9081 · 4K · H.265"
+        "imageUrl": "evidence/case-036-ev-camera.webp"
       }
     },
     {
       "id": "ev-log",
+      "order": 3,
       "type": "usage_log",
       "title": {
-        "ru": "Журнал накопителя",
-        "en": "Traction battery log",
-        "tr": "Akı bataryası günlüğü",
-        "ar": "سجل بطارية التدفق",
-        "kk": "Ағын батареясы журналы"
+        "ru": "Журнал телеметрии",
+        "en": "Telemetry Log",
+        "tr": "Telemetry Log",
+        "ar": "Telemetry Log",
+        "kk": "Журнал телеметрии"
       },
       "content": {
-        "ru": [
-          "22:04:03 INPUT 640GW",
-          "22:04:04 SPEED_SAMPLE 137KMH",
-          "22:04:04 SAFETY_SHUTDOWN"
-        ],
-        "en": [
-          "22:04:03 INPUT 640GW",
-          "22:04:04 SPEED_SAMPLE 137KMH",
-          "22:04:04 SAFETY_SHUTDOWN"
-        ],
-        "tr": [
-          "22:04:03 GİRİŞ 640GW",
-          "22:04:04 HIZ 137KMH",
-          "22:04:04 GÜVENLİ_KAPATMA"
-        ],
-        "ar": [
-          "22:04:03 INPUT 640GW",
-          "22:04:04 SPEED 137KMH",
-          "22:04:04 SAFETY_SHUTDOWN"
-        ],
-        "kk": [
-          "22:04:03 INPUT 640GW",
-          "22:04:04 SPEED 137KMH",
-          "22:04:04 SAFETY_SHUTDOWN"
-        ]
+        "ru": "В 22:17:08 датчик колеса выдаёт импульс, интерпретированный как 188 км/ч. Остальные три колеса показывают 0, координаты не меняются.",
+        "en": "At 10:17:08 p.m., one wheel sensor sends a pulse interpreted as 188 km/h. The other three wheels read 0, and the coordinates do not change.",
+        "tr": "At 10:17:08 p.m., one wheel sensor sends a pulse interpreted as 188 km/h. The other three wheels read 0, and the coordinates do not change.",
+        "ar": "At 10:17:08 p.m., one wheel sensor sends a pulse interpreted as 188 km/h. The other three wheels read 0, and the coordinates do not change.",
+        "kk": "В 22:17:08 датчик колеса выдаёт импульс, интерпретированный как 188 км/ч. Остальные три колеса показывают 0, координаты не меняются."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Телеметрия совпадает со временем молнии.",
-        "en": "Telemetry matches the lightning timestamp.",
-        "tr": "Telemetri yıldırım zamanıyla eşleşiyor.",
-        "ar": "القياس يطابق توقيت البرق.",
-        "kk": "Телеметрия найзағай уақытына сәйкес."
+        "ru": "Один повреждённый датчик создал ложную скорость; движение автомобиля исключено.",
+        "en": "A damaged sensor generated the false speed; vehicle movement is ruled out.",
+        "tr": "A damaged sensor generated the false speed; vehicle movement is ruled out.",
+        "ar": "A damaged sensor generated the false speed; vehicle movement is ruled out.",
+        "kk": "Один повреждённый датчик создал ложную скорость; движение автомобиля исключено."
       },
-      "meta": {
-        "logPrompt": "diagnostic@vehicle:~$ tail -f /var/log/traction-battery.log"
-      }
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_false_speed",
+        "relation": "supports",
+        "reason": {
+          "ru": "Один повреждённый датчик создал ложную скорость; движение автомобиля исключено.",
+          "en": "A damaged sensor generated the false speed; vehicle movement is ruled out.",
+          "tr": "A damaged sensor generated the false speed; vehicle movement is ruled out.",
+          "ar": "A damaged sensor generated the false speed; vehicle movement is ruled out.",
+          "kk": "Один повреждённый датчик создал ложную скорость; движение автомобиля исключено."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "ev-gps",
+      "order": 4,
       "type": "gps",
       "title": {
-        "ru": "Маршрут купе",
-        "en": "Coupe route",
-        "tr": "Kupa rotası",
-        "ar": "مسار السيارة",
-        "kk": "Купе бағыты"
+        "ru": "Маршрут автомобиля",
+        "en": "Vehicle Route",
+        "tr": "Vehicle Route",
+        "ar": "Vehicle Route",
+        "kk": "Маршрут автомобиля"
       },
       "content": {
-        "ru": [
-          "21:48 · мастерская",
-          "21:59 · часовая площадь",
-          "22:06 · сигнал потерян"
-        ],
-        "en": [
-          "21:48 · workshop",
-          "21:59 · clock square",
-          "22:06 · signal lost"
-        ],
-        "tr": [
-          "21:48 · atölye",
-          "21:59 · saat meydanı",
-          "22:06 · sinyal kesildi"
-        ],
-        "ar": [
-          "21:48 · الورشة",
-          "21:59 · ساحة الساعة",
-          "22:06 · انقطاع الإشارة"
-        ],
-        "kk": [
-          "21:48 · шеберхана",
-          "21:59 · сағат алаңы",
-          "22:06 · сигнал жоғалды"
-        ]
+        "ru": "Последнее перемещение завершено за два часа до грозы. Автомобиль остаётся в одной точке до эвакуации.",
+        "en": "The vehicle's last movement ended two hours before the storm. It remained at one location until recovery.",
+        "tr": "The vehicle's last movement ended two hours before the storm. It remained at one location until recovery.",
+        "ar": "The vehicle's last movement ended two hours before the storm. It remained at one location until recovery.",
+        "kk": "Последнее перемещение завершено за два часа до грозы. Автомобиль остаётся в одной точке до эвакуации."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Маршрут соответствует заявлению.",
-        "en": "The route matches the claim.",
-        "tr": "Rota beyanla uyumlu.",
-        "ar": "المسار يطابق الإفادة.",
-        "kk": "Бағыт мәлімдемеге сәйкес."
+        "ru": "GPS независимо подтверждает неподвижность.",
+        "en": "GPS independently confirms that the car did not move.",
+        "tr": "GPS independently confirms that the car did not move.",
+        "ar": "GPS independently confirms that the car did not move.",
+        "kk": "GPS независимо подтверждает неподвижность."
       },
-      "meta": {
-        "company": {
-          "ru": "ХроноНав",
-          "en": "ChronoNav",
-          "tr": "ChronoNav",
-          "ar": "كرونو ناف",
-          "kk": "ХроноНав"
-        },
-        "department": {
-          "ru": "Телематика",
-          "en": "Telematics",
-          "tr": "Telematik",
-          "ar": "القياس عن بعد",
-          "kk": "Телематика"
-        },
-        "requestId": {
-          "ru": "CN-036-121",
-          "en": "CN-036-121",
-          "tr": "CN-036-121",
-          "ar": "CN-036-121",
-          "kk": "CN-036-121"
-        },
-        "gpsFooter": {
-          "ru": "Архив защищён от редактирования",
-          "en": "Archive protected from editing",
-          "tr": "Arşiv düzenlemeye karşı korumalı",
-          "ar": "الأرشيف محمي من التعديل",
-          "kk": "Мұрағат өзгертілуден қорғалған"
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_stationary",
+        "relation": "supports",
+        "reason": {
+          "ru": "GPS независимо подтверждает неподвижность.",
+          "en": "GPS independently confirms that the car did not move.",
+          "tr": "GPS independently confirms that the car did not move.",
+          "ar": "GPS independently confirms that the car did not move.",
+          "kk": "GPS независимо подтверждает неподвижность."
         }
-      }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5
     },
     {
-      "id": "ev-witness",
-      "type": "witness_statement",
+      "id": "ev-melt",
+      "order": 5,
+      "type": "thermal_scan",
       "title": {
-        "ru": "Показания часовщика",
-        "en": "Clockmaker statement",
-        "tr": "Saatçi ifadesi",
-        "ar": "إفادة صانع الساعات",
-        "kk": "Сағатшы жауабы"
+        "ru": "Тепловая карта зарядного контура",
+        "en": "Charging Circuit Thermal Map",
+        "tr": "Charging Circuit Thermal Map",
+        "ar": "Charging Circuit Thermal Map",
+        "kk": "Тепловая карта зарядного контура"
       },
       "content": {
-        "ru": "Ярцев кричал, чтобы все отошли, и сам держался вдали от машины.",
-        "en": "Yartsev shouted for everyone to stand back and stayed away from the car himself.",
-        "tr": "Yartsev herkese uzaklaşmasını söyledi ve araçtan uzak durdu.",
-        "ar": "طلب ديلوريف من الجميع الابتعاد وبقي بعيداً عن السيارة.",
-        "kk": "Ярцев бәріне алыстауды айтып, өзі де көліктен қашық тұрды."
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Очевидец не видел инсценировки.",
-        "en": "The witness saw no staging.",
-        "tr": "Tanık mizansen görmedi.",
-        "ar": "لم ير الشاهد أي تلفيق.",
-        "kk": "Куә қойылым көрмеген."
+        "ru": "Единственный перегретый путь проходит по зарядной линии; колёса и привод холодны, автомобиль не двигался.",
+        "en": "The only overheated path follows the charging line; the wheels and drivetrain are cold, confirming the vehicle did not move.",
+        "tr": "The only overheated path follows the charging line; the wheels and drivetrain are cold, confirming the vehicle did not move.",
+        "ar": "The only overheated path follows the charging line; the wheels and drivetrain are cold, confirming the vehicle did not move.",
+        "kk": "Единственный перегретый путь проходит по зарядной линии; колёса и привод холодны, автомобиль не двигался."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_lightning",
+        "relation": "supports",
+        "reason": {
+          "ru": "Единственный перегретый путь проходит по зарядной линии; колёса и привод холодны, автомобиль не двигался.",
+          "en": "The only overheated path follows the charging line; the wheels and drivetrain are cold, confirming the vehicle did not move.",
+          "tr": "The only overheated path follows the charging line; the wheels and drivetrain are cold, confirming the vehicle did not move.",
+          "ar": "The only overheated path follows the charging line; the wheels and drivetrain are cold, confirming the vehicle did not move.",
+          "kk": "Единственный перегретый путь проходит по зарядной линии; колёса и привод холодны, автомобиль не двигался."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "Подстанция отключилась в 21:14:08. Пожарный расчёт обесточил зарядную линию в 21:16, а тепловая съёмка площадки началась в 21:24.",
+        "en": "The substation shut down at 9:14:08 p.m. Firefighters isolated the charging line at 9:16 p.m., and thermal imaging began at 9:24 p.m.",
+        "tr": "The substation shut down at 9:14:08 p.m. Firefighters isolated the charging line at 9:16 p.m., and thermal imaging began at 9:24 p.m.",
+        "ar": "The substation shut down at 9:14:08 p.m. Firefighters isolated the charging line at 9:16 p.m., and thermal imaging began at 9:24 p.m.",
+        "kk": "Подстанция отключилась в 21:14:08. Пожарный расчёт обесточил зарядную линию в 21:16, а тепловая съёмка площадки началась в 21:24."
+      },
+      "instruction": {
+        "ru": "Включить тепловизор и выбрать непрерывный тепловой путь от кабеля к порту.",
+        "en": "Switch on thermal view and select the continuous heat path from the cable to the port.",
+        "tr": "Switch on thermal view and select the continuous heat path from the cable to the port.",
+        "ar": "Switch on thermal view and select the continuous heat path from the cable to the port.",
+        "kk": "Включить тепловизор и выбрать непрерывный тепловой путь от кабеля к порту."
+      },
+      "previousType": "document",
+      "assets": {
+        "asset1": "cases/case-036/assets/interactive/ev-melt-scene.webp",
+        "asset2": "cases/case-036/assets/interactive/ev-melt-heat-zones.json"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Игрок видит путь разряда от подстанции к машине и понимает природу невозможной телеметрии.",
+          "en": "The player sees the surge path from the substation to the car and understands the impossible telemetry.",
+          "tr": "The player sees the surge path from the substation to the car and understands the impossible telemetry.",
+          "ar": "The player sees the surge path from the substation to the car and understands the impossible telemetry.",
+          "kk": "Игрок видит путь разряда от подстанции к машине и понимает природу невозможной телеметрии."
+        },
+        "playerAction": {
+          "ru": "Включить тепловизор и выбрать непрерывный тепловой путь от кабеля к порту.",
+          "en": "Switch on thermal view and select the continuous heat path from the cable to the port.",
+          "tr": "Switch on thermal view and select the continuous heat path from the cable to the port.",
+          "ar": "Switch on thermal view and select the continuous heat path from the cable to the port.",
+          "kk": "Включить тепловизор и выбрать непрерывный тепловой путь от кабеля к порту."
+        },
+        "conclusion": {
+          "ru": "Единственный перегретый путь проходит по зарядной линии; колёса и привод холодны, автомобиль не двигался.",
+          "en": "The only overheated path follows the charging line; the wheels and drivetrain are cold, confirming the vehicle did not move.",
+          "tr": "The only overheated path follows the charging line; the wheels and drivetrain are cold, confirming the vehicle did not move.",
+          "ar": "The only overheated path follows the charging line; the wheels and drivetrain are cold, confirming the vehicle did not move.",
+          "kk": "Единственный перегретый путь проходит по зарядной линии; колёса и привод холодны, автомобиль не двигался."
+        }
+      },
+      "data": {
+        "ambientTemperature": 11,
+        "observationTime": "21:24",
+        "claimedLastUseBefore": "21:16",
+        "elapsedSinceClaimedUseMinutes": 8,
+        "coolingReference": "Силовой кабель и порт сохраняют тепло несколько десятков минут; холодный привод используется как контрольная зона.",
+        "initialMode": "normal",
+        "heatZones": [
+          {
+            "id": "charge_cable",
+            "shape": "polygon",
+            "points": [
+              [
+                18,
+                72
+              ],
+              [
+                39,
+                65
+              ],
+              [
+                62,
+                52
+              ]
+            ],
+            "temperature": 63,
+            "intensity": 0.96,
+            "label": "Нагретая зарядная линия",
+            "isContradiction": false,
+            "labelEn": "Heated charging line"
+          },
+          {
+            "id": "wheel_drive",
+            "shape": "ellipse",
+            "x": 65,
+            "y": 71,
+            "width": 20,
+            "height": 14,
+            "temperature": 12,
+            "intensity": 0.08,
+            "label": "Холодный привод",
+            "isContradiction": false,
+            "isTarget": false,
+            "labelEn": "Cold drivetrain"
+          }
+        ],
+        "successCondition": {
+          "type": "select_any",
+          "zoneIds": [
+            "charge_cable"
+          ]
+        },
+        "coolingReferenceEn": "The power cable and port retain heat for several dozen minutes; the cold drivetrain serves as the control area."
       }
     },
     {
-      "id": "ev-document",
+      "id": "ev-station",
+      "order": 6,
       "type": "document",
       "title": {
-        "ru": "Экспертиза оплавления",
-        "en": "Melt-pattern report",
-        "tr": "Erime izi raporu",
-        "ar": "تقرير نمط الانصهار",
-        "kk": "Балқу ізінің есебі"
+        "ru": "Журнал подстанции",
+        "en": "Substation Log",
+        "tr": "Substation Log",
+        "ar": "Substation Log",
+        "kk": "Журнал подстанции"
       },
       "content": {
-        "ru": "Вход повреждения идёт от внешнего кабеля к батарее; следов горючей смеси нет.",
-        "en": "Damage travels from the external cable into the battery; no accelerant was found.",
-        "tr": "Hasar dış kablodan bataryaya ilerliyor; hızlandırıcı yok.",
-        "ar": "يمتد الضرر من الكابل الخارجي إلى البطارية؛ لا مواد مسرعة.",
-        "kk": "Зақым сыртқы кабельден батареяға өткен; жанғыш қоспа жоқ."
+        "ru": "Зафиксирован аварийный импульс на той же линии и отключение защиты через 0,4 секунды.",
+        "en": "An emergency pulse was recorded on the same line, followed by a protective shutdown 0.4 seconds later.",
+        "tr": "An emergency pulse was recorded on the same line, followed by a protective shutdown 0.4 seconds later.",
+        "ar": "An emergency pulse was recorded on the same line, followed by a protective shutdown 0.4 seconds later.",
+        "kk": "Зафиксирован аварийный импульс на той же линии и отключение защиты через 0,4 секунды."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Экспертиза подтверждает электрическую причину.",
-        "en": "The report confirms an electrical cause.",
-        "tr": "Rapor elektriksel nedeni doğruluyor.",
-        "ar": "يثبت التقرير السبب الكهربائي.",
-        "kk": "Сараптама электрлік себепті растайды."
-      }
+        "ru": "Энергетическая система подтверждает единую хронологию.",
+        "en": "The power system confirms the same timeline.",
+        "tr": "The power system confirms the same timeline.",
+        "ar": "The power system confirms the same timeline.",
+        "kk": "Энергетическая система подтверждает единую хронологию."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_lightning",
+        "relation": "supports",
+        "reason": {
+          "ru": "Энергетическая система подтверждает единую хронологию.",
+          "en": "The power system confirms the same timeline.",
+          "tr": "The power system confirms the same timeline.",
+          "ar": "The power system confirms the same timeline.",
+          "kk": "Энергетическая система подтверждает единую хронологию."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25
     }
   ],
   "correctDecision": "approve",
   "explanation": {
     "ru": [
-      "Телеметрия показывает, что пожар начался до удара молнии.",
-      "Молния, камера и телеметрия независимо совпадают по секундам.",
-      "Следов поджога нет: это редкий, но покрываемый страховой случай."
+      "Молния ударила в подстанцию и прошла к автомобилю через зарядную линию.",
+      "Запись 188 км/ч создана одним повреждённым датчиком; камера и GPS показывают неподвижную машину.",
+      "Единственный перегретый путь проходит по зарядной линии; колёса и привод холодны, автомобиль не двигался.",
+      "Это редкий, но реальный электрический ущерб. Выплату следует одобрить."
     ],
     "en": [
-      "Telemetry shows the fire began before the lightning strike.",
-      "Lightning data, CCTV, and telemetry independently align to the second.",
-      "There is no evidence of arson; this rare accident is covered."
+      "The time and location of the strike are confirmed.",
+      "The camera proves that the car did not move and caught fire at the moment of the strike.",
+      "A damaged sensor generated the false speed; vehicle movement is ruled out.",
+      "The only overheated path follows the charging line; the wheels and drivetrain are cold, confirming the vehicle did not move.",
+      "GPS independently confirms that the car did not move.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "tr": [
-      "Telemetri, yangının yıldırım düşmesinden önce başladığını gösteriyor.",
-      "Yıldırım verisi, kamera ve telemetri saniyesine kadar eşleşiyor.",
-      "Kundaklama izi yok; nadir ama kapsam dahilinde bir kaza."
+      "The time and location of the strike are confirmed.",
+      "The camera proves that the car did not move and caught fire at the moment of the strike.",
+      "A damaged sensor generated the false speed; vehicle movement is ruled out.",
+      "The only overheated path follows the charging line; the wheels and drivetrain are cold, confirming the vehicle did not move.",
+      "GPS independently confirms that the car did not move.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "ar": [
-      "تُظهر القياسات أن الحريق بدأ قبل ضربة البرق.",
-      "تتطابق بيانات البرق والكاميرا والقياس حتى الثانية.",
-      "لا دليل على الحرق المتعمد؛ الحادث النادر مشمول."
+      "The time and location of the strike are confirmed.",
+      "The camera proves that the car did not move and caught fire at the moment of the strike.",
+      "A damaged sensor generated the false speed; vehicle movement is ruled out.",
+      "The only overheated path follows the charging line; the wheels and drivetrain are cold, confirming the vehicle did not move.",
+      "GPS independently confirms that the car did not move.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "kk": [
-      "Телеметрия өрт найзағайдан бұрын басталғанын көрсетеді.",
-      "Найзағай, камера және телеметрия секундқа дейін сәйкес.",
-      "Өрт қою ізі жоқ; бұл сирек, бірақ өтелетін оқиға."
+      "Молния ударила в подстанцию и прошла к автомобилю через зарядную линию.",
+      "Запись 188 км/ч создана одним повреждённым датчиком; камера и GPS показывают неподвижную машину.",
+      "Единственный перегретый путь проходит по зарядной линии; колёса и привод холодны, автомобиль не двигался.",
+      "Это редкий, но реальный электрический ущерб. Выплату следует одобрить."
     ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Во время грозы молния ударила в подстанцию, к которой был подключён мой экспериментальный электромобиль. Машина загорелась на зарядке, а телеметрия записала аномальный скачок скорости. Прошу оплатить восстановление.",
+        "en": "During a storm, lightning struck the substation supplying my experimental electric car. The vehicle caught fire while charging, and its telemetry recorded an abnormal speed spike. I am claiming the restoration cost.",
+        "tr": "During a storm, lightning struck the substation supplying my experimental electric car. The vehicle caught fire while charging, and its telemetry recorded an abnormal speed spike. I am claiming the restoration cost.",
+        "ar": "During a storm, lightning struck the substation supplying my experimental electric car. The vehicle caught fire while charging, and its telemetry recorded an abnormal speed spike. I am claiming the restoration cost.",
+        "kk": "Во время грозы молния ударила в подстанцию, к которой был подключён мой экспериментальный электромобиль. Машина загорелась на зарядке, а телеметрия записала аномальный скачок скорости. Прошу оплатить восстановление."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_stationary",
+      "text": {
+        "ru": "Электромобиль стоял на зарядке и не двигался.",
+        "en": "The electric car was charging and did not move.",
+        "tr": "The electric car was charging and did not move.",
+        "ar": "The electric car was charging and did not move.",
+        "kk": "Электромобиль стоял на зарядке и не двигался."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_lightning",
+      "text": {
+        "ru": "Повреждение возникло от внешнего грозового импульса через зарядную линию.",
+        "en": "An external lightning surge entered through the charging line and caused the damage.",
+        "tr": "An external lightning surge entered through the charging line and caused the damage.",
+        "ar": "An external lightning surge entered through the charging line and caused the damage.",
+        "kk": "Повреждение возникло от внешнего грозового импульса через зарядную линию."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_false_speed",
+      "text": {
+        "ru": "Запись 188 км/ч является ошибкой повреждённого датчика.",
+        "en": "The 188 km/h reading is an error from a damaged sensor.",
+        "tr": "The 188 km/h reading is an error from a damaged sensor.",
+        "ar": "The 188 km/h reading is an error from a damaged sensor.",
+        "kk": "Запись 188 км/ч является ошибкой повреждённого датчика."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Автомобиль стоял на зарядке, однако журнал записал 188 км/ч. Не выбирайте между невозможным и ложным, пока не проверите, что именно измеряет датчик. — В. Лебедева",
+      "en": "The car was charging, yet its log recorded 188 km/h. Do not choose between impossible and false until you verify what the sensor actually measures. — V. Lebedeva",
+      "tr": "The car was charging, yet its log recorded 188 km/h. Do not choose between impossible and false until you verify what the sensor actually measures. — V. Lebedeva",
+      "ar": "The car was charging, yet its log recorded 188 km/h. Do not choose between impossible and false until you verify what the sensor actually measures. — V. Lebedeva",
+      "kk": "Автомобиль стоял на зарядке, однако журнал записал 188 км/ч. Не выбирайте между невозможным и ложным, пока не проверите, что именно измеряет датчик. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Невозможное число оказалось не ложью заявителя, а последним сообщением умирающего датчика.",
+      "en": "The impossible number was not the claimant's lie, but the final signal from a dying sensor.",
+      "tr": "The impossible number was not the claimant's lie, but the final signal from a dying sensor.",
+      "ar": "The impossible number was not the claimant's lie, but the final signal from a dying sensor.",
+      "kk": "Невозможное число оказалось не ложью заявителя, а последним сообщением умирающего датчика."
+    },
+    "nextCaseTeaser": {
+      "ru": "На границе просветили грузовик и увидели внутри три человеческих силуэта. Людей в контейнере не оказалось.",
+      "en": "A border scan revealed three human silhouettes inside a truck. There were no people in the container.",
+      "tr": "A border scan revealed three human silhouettes inside a truck. There were no people in the container.",
+      "ar": "A border scan revealed three human silhouettes inside a truck. There were no people in the container.",
+      "kk": "На границе просветили грузовик и увидели внутри три человеческих силуэта. Людей в контейнере не оказалось."
+    },
+    "seasonClue": null,
+    "epilogue": null
   }
 }

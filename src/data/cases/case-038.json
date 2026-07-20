@@ -1,334 +1,534 @@
 {
   "id": "case-038",
   "type": "standard",
+  "campaignOrder": 36,
+  "requiredLevel": 16,
+  "act": 4,
+  "actTitle": {
+    "ru": "Серый конвой",
+    "en": "The Gray Convoy",
+    "tr": "The Gray Convoy",
+    "ar": "The Gray Convoy",
+    "kk": "Серый конвой"
+  },
   "difficulty": "hard",
   "claimAmount": 11200,
   "truth": "valid",
-  "investigationBudget": 4,
   "title": {
-    "ru": "Лаборатория № 394",
+    "ru": "Лаборатория №394",
     "en": "Laboratory 394",
-    "tr": "Laboratuvar 394",
-    "ar": "المختبر 394",
-    "kk": "№394 зертхана"
+    "tr": "Laboratory 394",
+    "ar": "Laboratory 394",
+    "kk": "Лаборатория №394"
   },
   "claim": {
     "person": {
       "ru": "Антон Ланской, 46 лет",
-      "en": "Anton Lanskoy, 46",
-      "tr": "Anton Lanskoy, 46",
-      "ar": "سيفيرين سنيبوف، 46",
-      "kk": "Антон Ланской, 46 жаста"
+      "en": "Anton Lanskoy, age 46",
+      "tr": "Anton Lanskoy, age 46",
+      "ar": "Anton Lanskoy, age 46",
+      "kk": "Антон Ланской, 46 лет"
     },
     "story": {
-      "ru": "В школьной лаборатории реакционная ёмкость самопроизвольно взорвалась на уроке химии. За минуту до этого курьер доставил токсичный реагент, ошибочно промаркированный как безопасная добавка. Ученики эвакуированы, но лаборатория уничтожена.",
-      "en": "A reaction vessel exploded spontaneously during chemistry class. One minute earlier, a courier delivered a toxic reagent mislabeled as a safe additive. The pupils escaped, but the laboratory was destroyed.",
-      "tr": "Kimya dersinde bir reaksiyon kabı kendiliğinden patladı. Bir dakika önce kurye, güvenli katkı maddesi olarak yanlış etiketlenmiş zehirli bir reaktif getirdi. Öğrenciler kurtuldu ama laboratuvar yok oldu.",
-      "ar": "انفجرت حاوية تفاعل تلقائياً أثناء درس الكيمياء. وقبل دقيقة سلّم مندوب مادة كيميائية سامة وُسمت خطأً كمادة مضافة آمنة. نجا الطلاب لكن المختبر دُمر.",
-      "kk": "Химия сабағында реакциялық ыдыс өздігінен жарылды. Бір минут бұрын курьер қауіпсіз қоспа деп қате таңбаланған улы реагентті жеткізді. Оқушылар аман, зертхана қирады."
+      "ru": "На уроке химии реакционная ёмкость разрушилась после добавления вещества, доставленного как безопасный стабилизатор. Я немедленно эвакуировал класс, пострадавших нет, но лаборатория уничтожена. Прошу возместить оборудование.",
+      "en": "During a chemistry class, a reaction vessel ruptured after I added a substance delivered as a safe stabilizer. I evacuated the class immediately; no one was hurt, but the laboratory was destroyed. I am claiming the equipment loss.",
+      "tr": "During a chemistry class, a reaction vessel ruptured after I added a substance delivered as a safe stabilizer. I evacuated the class immediately; no one was hurt, but the laboratory was destroyed. I am claiming the equipment loss.",
+      "ar": "During a chemistry class, a reaction vessel ruptured after I added a substance delivered as a safe stabilizer. I evacuated the class immediately; no one was hurt, but the laboratory was destroyed. I am claiming the equipment loss.",
+      "kk": "На уроке химии реакционная ёмкость разрушилась после добавления вещества, доставленного как безопасный стабилизатор. Я немедленно эвакуировал класс, пострадавших нет, но лаборатория уничтожена. Прошу возместить оборудование."
     }
   },
-  "coverImage": "covers/case-038.svg",
   "client": {
     "role": {
-      "ru": "Преподаватель химии",
-      "en": "Chemistry teacher",
-      "tr": "Kimya öğretmeni",
-      "ar": "مدرس كيمياء",
-      "kk": "Химия мұғалімі"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "Выборг",
-          "en": "Vyborg",
-          "tr": "Vyborg",
-          "ar": "فيبورغ",
-          "kk": "Выборг"
+          "ru": "4",
+          "en": "4",
+          "tr": "4",
+          "ar": "4",
+          "kk": "4"
         }
       },
       {
         "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Школа · LAB-394",
-          "en": "School · LAB-394",
-          "tr": "Okul · LAB-394",
-          "ar": "المدرسة · LAB-394",
-          "kk": "Мектеп · LAB-394"
-        }
-      },
-      {
-        "k": {
-          "ru": "Кабинет",
-          "en": "Office",
-          "tr": "Ofis",
-          "ar": "المكتب",
-          "kk": "Кабинет"
-        },
-        "v": {
-          "ru": "Подвальная лаборатория № 394",
-          "en": "Basement Laboratory 394",
-          "tr": "Bodrum Laboratuvarı 394",
-          "ar": "الزنزانة رقم 394",
-          "kk": "№ 394 зындан"
+          "ru": "36",
+          "en": "36",
+          "tr": "36",
+          "ar": "36",
+          "kk": "36"
         }
       }
     ]
   },
+  "coverImage": "covers/case-038.svg",
+  "personImage": "people/anton-lanskoy.webp",
   "evidences": [
     {
       "id": "ev-camera",
+      "order": 1,
       "type": "camera_recording",
       "title": {
         "ru": "Камера лаборатории",
-        "en": "Lab CCTV",
-        "tr": "Laboratuvar kamerası",
-        "ar": "كاميرا المختبر",
-        "kk": "Зертхана камерасы"
+        "en": "Laboratory Camera",
+        "tr": "Laboratory Camera",
+        "ar": "Laboratory Camera",
+        "kk": "Камера лаборатории"
       },
       "content": {
-        "ru": "10:31 · посылка вскрыта; реагент попадает в реакционную ёмкость; Ланской запускает эвакуацию.",
-        "en": "10:31 · parcel opened; reagent enters the reaction vessel; Lanskoy starts evacuation.",
-        "tr": "10:31 · paket açılıyor; reaktif reaksiyon kabına düşüyor; Lanskoy tahliyeyi başlatıyor.",
-        "ar": "10:31 · فُتح الطرد ودخلت المادة حاوية التفاعل وبدأ لانسكوي الإخلاء.",
-        "kk": "10:31 · сәлемдеме ашылып, реагент реакциялық ыдысқа түседі; Ланской эвакуация бастайды."
+        "ru": "Ланской вскрывает заводскую пломбу, сверяет этикетку и добавляет отмеренное количество. Реакция начинается мгновенно; он сразу запускает эвакуацию.",
+        "en": "Lanskoy breaks the factory seal, checks the label, and adds the measured amount. The reaction begins instantly, and he immediately starts an evacuation.",
+        "tr": "Lanskoy breaks the factory seal, checks the label, and adds the measured amount. The reaction begins instantly, and he immediately starts an evacuation.",
+        "ar": "Lanskoy breaks the factory seal, checks the label, and adds the measured amount. The reaction begins instantly, and he immediately starts an evacuation.",
+        "kk": "Ланской вскрывает заводскую пломбу, сверяет этикетку и добавляет отмеренное количество. Реакция начинается мгновенно; он сразу запускает эвакуацию."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Камера подтверждает случайность и быструю реакцию учителя.",
-        "en": "Footage confirms the accident and the teacher's quick response.",
-        "tr": "Kamera kazayı ve öğretmenin hızlı tepkisini doğruluyor.",
-        "ar": "يثبت التسجيل عرضية الحادث وسرعة استجابة المدرس.",
-        "kk": "Камера кездейсоқтық пен мұғалімнің жедел әрекетін растайды."
+        "ru": "Преподаватель соблюдает инструкцию и не мог увидеть подмену до реакции.",
+        "en": "The teacher followed procedure and could not detect the substitution before the reaction.",
+        "tr": "The teacher followed procedure and could not detect the substitution before the reaction.",
+        "ar": "The teacher followed procedure and could not detect the substitution before the reaction.",
+        "kk": "Преподаватель соблюдает инструкцию и не мог увидеть подмену до реакции."
       },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_procedure",
+        "relation": "supports",
+        "reason": {
+          "ru": "Преподаватель соблюдает инструкцию и не мог увидеть подмену до реакции.",
+          "en": "The teacher followed procedure and could not detect the substitution before the reaction.",
+          "tr": "The teacher followed procedure and could not detect the substitution before the reaction.",
+          "ar": "The teacher followed procedure and could not detect the substitution before the reaction.",
+          "kk": "Преподаватель соблюдает инструкцию и не мог увидеть подмену до реакции."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
       "meta": {
-        "cameraId": "CAM-LAB-394",
-        "cameraModel": "WatchTower WT-73 · 4K · H.265"
+        "imageUrl": "evidence/case-038-ev-camera.webp"
       }
     },
     {
       "id": "ev-document",
+      "order": 2,
       "type": "document",
       "title": {
-        "ru": "Накладная курьера кампуса",
-        "en": "Campus courier manifest",
-        "tr": "Kampüs kurye irsaliyesi",
-        "ar": "بيان مندوب الحرم",
-        "kk": "Кампус курьерінің құжаты"
+        "ru": "Накладная поставщика",
+        "en": "Supplier Delivery Note",
+        "tr": "Supplier Delivery Note",
+        "ar": "Supplier Delivery Note",
+        "kk": "Накладная поставщика"
       },
       "content": {
-        "ru": "Отправитель: «Косой переулок, лавка 14». Содержимое по накладной: валериана.",
-        "en": "Sender: Crooked Alley, Warehouse 14. Manifest contents: valerian.",
-        "tr": "Gönderen: Eğri Sokak, Dükkân 14. İrsaliye: kediotu.",
-        "ar": "المرسل: الزقاق الملتوي، متجر 14. المحتوى: ناردين.",
-        "kk": "Жіберуші: Қисық көше, 14 дүкен. Құжатта: валериана."
+        "ru": "Заказан нейтральный стабилизатор S-4. Номер пломбы на накладной совпадает с упаковкой на камере.",
+        "en": "Neutral stabilizer S-4 was ordered. The seal number on the delivery note matches the package in the footage.",
+        "tr": "Neutral stabilizer S-4 was ordered. The seal number on the delivery note matches the package in the footage.",
+        "ar": "Neutral stabilizer S-4 was ordered. The seal number on the delivery note matches the package in the footage.",
+        "kk": "Заказан нейтральный стабилизатор S-4. Номер пломбы на накладной совпадает с упаковкой на камере."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Учитель получил неверно маркированный товар.",
-        "en": "The teacher received mislabeled goods.",
-        "tr": "Öğretmen yanlış etiketli ürün aldı.",
-        "ar": "تلقى المدرس بضاعة موسومة خطأ.",
-        "kk": "Мұғалім қате таңбаланған тауар алған."
-      }
+        "ru": "Документы и пломба подтверждают правильный заказ и целостность доставки.",
+        "en": "The documents and seal confirm the correct order and an intact delivery.",
+        "tr": "The documents and seal confirm the correct order and an intact delivery.",
+        "ar": "The documents and seal confirm the correct order and an intact delivery.",
+        "kk": "Документы и пломба подтверждают правильный заказ и целостность доставки."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_safe_order",
+        "relation": "supports",
+        "reason": {
+          "ru": "Документы и пломба подтверждают правильный заказ и целостность доставки.",
+          "en": "The documents and seal confirm the correct order and an intact delivery.",
+          "tr": "The documents and seal confirm the correct order and an intact delivery.",
+          "ar": "The documents and seal confirm the correct order and an intact delivery.",
+          "kk": "Документы и пломба подтверждают правильный заказ и целостность доставки."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "ev-log",
+      "order": 3,
       "type": "usage_log",
       "title": {
         "ru": "Журнал вытяжки",
-        "en": "Ventilation log",
-        "tr": "Havalandırma günlüğü",
-        "ar": "سجل التهوية",
-        "kk": "Желдету журналы"
+        "en": "Ventilation Log",
+        "tr": "Ventilation Log",
+        "ar": "Ventilation Log",
+        "kk": "Журнал вытяжки"
       },
       "content": {
-        "ru": [
-          "10:30 NORMAL",
-          "10:31 TOXIC_ALKALOID",
-          "10:31 AUTO_EVACUATION",
-          "10:32 OVERPRESSURE"
-        ],
-        "en": [
-          "10:30 NORMAL",
-          "10:31 TOXIC_ALKALOID",
-          "10:31 AUTO_EVACUATION",
-          "10:32 OVERPRESSURE"
-        ],
-        "tr": [
-          "10:30 NORMAL",
-          "10:31 TOKSİK_ALKALOİD",
-          "10:31 TAHLİYE",
-          "10:32 AŞIRI_BASINÇ"
-        ],
-        "ar": [
-          "10:30 NORMAL",
-          "10:31 TOXIC_ALKALOID",
-          "10:31 EVACUATION",
-          "10:32 OVERPRESSURE"
-        ],
-        "kk": [
-          "10:30 NORMAL",
-          "10:31 TOXIC_ALKALOID",
-          "10:31 EVACUATION",
-          "10:32 OVERPRESSURE"
-        ]
+        "ru": "Вытяжка включена до опыта и работает штатно. После всплеска автоматика блокирует газ и питание.",
+        "en": "The extraction system was activated before the experiment and operated normally. After the reaction, automation shut off gas and power.",
+        "tr": "The extraction system was activated before the experiment and operated normally. After the reaction, automation shut off gas and power.",
+        "ar": "The extraction system was activated before the experiment and operated normally. After the reaction, automation shut off gas and power.",
+        "kk": "Вытяжка включена до опыта и работает штатно. После всплеска автоматика блокирует газ и питание."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Датчики фиксируют химическую реакцию в заявленное время.",
-        "en": "Sensors record the chemical reaction at the reported time.",
-        "tr": "Sensörler bildirilen anda kimyasal tepkimeyi kaydediyor.",
-        "ar": "تسجل الحساسات التفاعل الكيميائي في الوقت المذكور.",
-        "kk": "Датчиктер химиялық реакцияны айтылған уақытта тіркеген."
+        "ru": "Защитные системы не были отключены и снизили последствия.",
+        "en": "The safety systems were active and limited the damage.",
+        "tr": "The safety systems were active and limited the damage.",
+        "ar": "The safety systems were active and limited the damage.",
+        "kk": "Защитные системы не были отключены и снизили последствия."
       },
-      "meta": {
-        "logPrompt": "labtech@chem-lab:~$ tail -f /var/log/reactor-394.log"
-      }
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_procedure",
+        "relation": "supports",
+        "reason": {
+          "ru": "Защитные системы не были отключены и снизили последствия.",
+          "en": "The safety systems were active and limited the damage.",
+          "tr": "The safety systems were active and limited the damage.",
+          "ar": "The safety systems were active and limited the damage.",
+          "kk": "Защитные системы не были отключены и снизили последствия."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
-      "id": "ev-witness",
-      "type": "witness_statement",
+      "id": "ev-analysis",
+      "order": 4,
+      "type": "document_scan",
       "title": {
-        "ru": "Показания старосты",
-        "en": "Prefect statement",
-        "tr": "Sınıf başkanı ifadesi",
-        "ar": "إفادة المراقب",
-        "kk": "Сынып басшысының жауабы"
+        "ru": "Просветка этикетки реагента",
+        "en": "Reagent Label Backlight Examination",
+        "tr": "Reagent Label Backlight Examination",
+        "ar": "Reagent Label Backlight Examination",
+        "kk": "Просветка этикетки реагента"
       },
       "content": {
-        "ru": "Ланской не касался посылки: её открыл ученик по инструкции на упаковке.",
-        "en": "Lanskoy never touched the parcel; a pupil opened it according to its instructions.",
-        "tr": "Lanskoy pakete dokunmadı; öğrenci kutudaki talimata göre açtı.",
-        "ar": "لم يلمس سنيبوف الطرد؛ فتحه طالب وفق التعليمات.",
-        "kk": "Ланской сәлемдемеге тимеді; оны оқушы нұсқаулықпен ашты."
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Свидетель исключает умышленную подмену учителем.",
-        "en": "The witness rules out deliberate substitution by the teacher.",
-        "tr": "Tanık öğretmenin kasıtlı değiştirmesini dışlıyor.",
-        "ar": "يستبعد الشاهد الاستبدال المتعمد من المدرس.",
-        "kk": "Куә мұғалімнің әдейі ауыстырғанын жоққа шығарады."
+        "ru": "Под наклейкой «S-4» видна заводская маркировка «C-9»; поставщик запечатал другой реагент.",
+        "en": "Factory marking ‘C-9’ is visible beneath the ‘S-4’ label; the supplier sealed a different reagent inside.",
+        "tr": "Factory marking ‘C-9’ is visible beneath the ‘S-4’ label; the supplier sealed a different reagent inside.",
+        "ar": "Factory marking ‘C-9’ is visible beneath the ‘S-4’ label; the supplier sealed a different reagent inside.",
+        "kk": "Под наклейкой «S-4» видна заводская маркировка «C-9»; поставщик запечатал другой реагент."
+      },
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_supplier_error",
+        "relation": "supports",
+        "reason": {
+          "ru": "Под наклейкой «S-4» видна заводская маркировка «C-9»; поставщик запечатал другой реагент.",
+          "en": "Factory marking ‘C-9’ is visible beneath the ‘S-4’ label; the supplier sealed a different reagent inside.",
+          "tr": "Factory marking ‘C-9’ is visible beneath the ‘S-4’ label; the supplier sealed a different reagent inside.",
+          "ar": "Factory marking ‘C-9’ is visible beneath the ‘S-4’ label; the supplier sealed a different reagent inside.",
+          "kk": "Под наклейкой «S-4» видна заводская маркировка «C-9»; поставщик запечатал другой реагент."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "С упаковки сняли многослойную этикетку и поместили её в экспертный сканер.",
+        "en": "The multilayer label was removed from the package and placed in a forensic scanner.",
+        "tr": "The multilayer label was removed from the package and placed in a forensic scanner.",
+        "ar": "The multilayer label was removed from the package and placed in a forensic scanner.",
+        "kk": "С упаковки сняли многослойную этикетку и поместили её в экспертный сканер."
+      },
+      "instruction": {
+        "ru": "Включить просвет и выбрать скрытую заводскую маркировку.",
+        "en": "Switch on backlight and select the hidden factory marking.",
+        "tr": "Switch on backlight and select the hidden factory marking.",
+        "ar": "Switch on backlight and select the hidden factory marking.",
+        "kk": "Включить просвет и выбрать скрытую заводскую маркировку."
+      },
+      "previousType": "document",
+      "assets": {
+        "asset1": "cases/case-038/assets/interactive/ev-analysis-base.webp",
+        "asset2": "cases/case-038/assets/interactive/ev-analysis-scan-overlay.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "В valid-деле игрок сам доказывает перемаркировку и невиновность преподавателя.",
+          "en": "In this valid claim, the player personally proves the relabeling and the teacher's innocence.",
+          "tr": "In this valid claim, the player personally proves the relabeling and the teacher's innocence.",
+          "ar": "In this valid claim, the player personally proves the relabeling and the teacher's innocence.",
+          "kk": "В valid-деле игрок сам доказывает перемаркировку и невиновность преподавателя."
+        },
+        "playerAction": {
+          "ru": "Включить просвет и выбрать скрытую заводскую маркировку.",
+          "en": "Switch on backlight and select the hidden factory marking.",
+          "tr": "Switch on backlight and select the hidden factory marking.",
+          "ar": "Switch on backlight and select the hidden factory marking.",
+          "kk": "Включить просвет и выбрать скрытую заводскую маркировку."
+        },
+        "conclusion": {
+          "ru": "Под наклейкой «S-4» видна заводская маркировка «C-9»; поставщик запечатал другой реагент.",
+          "en": "Factory marking ‘C-9’ is visible beneath the ‘S-4’ label; the supplier sealed a different reagent inside.",
+          "tr": "Factory marking ‘C-9’ is visible beneath the ‘S-4’ label; the supplier sealed a different reagent inside.",
+          "ar": "Factory marking ‘C-9’ is visible beneath the ‘S-4’ label; the supplier sealed a different reagent inside.",
+          "kk": "Под наклейкой «S-4» видна заводская маркировка «C-9»; поставщик запечатал другой реагент."
+        }
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "uv",
+          "backlight"
+        ],
+        "anomalyZones": [
+          {
+            "id": "under_label",
+            "mode": "backlight",
+            "x": 38,
+            "y": 40,
+            "width": 28,
+            "height": 14,
+            "label": "Под наклейкой «S-4» видна заводская маркировка «C-9»; поставщик запечатал другой реагент.",
+            "isContradiction": false,
+            "labelEn": "Factory marking ‘C-9’ is visible beneath the ‘S-4’ label; the supplier sealed a different reagent inside."
+          }
+        ],
+        "successCondition": {
+          "type": "select_zone",
+          "zoneId": "under_label"
+        }
       }
     },
     {
-      "id": "ev-phone",
+      "id": "ev-call",
+      "order": 5,
       "type": "phone_records",
       "title": {
-        "ru": "Звонок в службу спасения",
-        "en": "Emergency call",
-        "tr": "Acil çağrı",
-        "ar": "مكالمة الطوارئ",
-        "kk": "Жедел қоңырау"
+        "ru": "Вызов спасателей",
+        "en": "Emergency Call",
+        "tr": "Emergency Call",
+        "ar": "Emergency Call",
+        "kk": "Вызов спасателей"
       },
       "content": {
-        "ru": [
-          "10:31:18 · исходящий",
-          "Длительность 06:24 · эвакуация и химический код"
-        ],
-        "en": [
-          "10:31:18 · outgoing",
-          "Duration 06:24 · evacuation and chemical code"
-        ],
-        "tr": [
-          "10:31:18 · giden",
-          "Süre 06:24 · tahliye ve kimyasal kod"
-        ],
-        "ar": [
-          "10:31:18 · صادر",
-          "المدة 06:24 · إخلاء ورمز كيميائي"
-        ],
-        "kk": [
-          "10:31:18 · шығыс",
-          "Ұзақтығы 06:24 · эвакуация және химиялық код"
-        ]
+        "ru": "Экстренный вызов сделан через 34 секунды после начала реакции, одновременно с автоматической тревогой.",
+        "en": "The emergency call was placed 34 seconds after the reaction began, at the same time as the automatic alarm.",
+        "tr": "The emergency call was placed 34 seconds after the reaction began, at the same time as the automatic alarm.",
+        "ar": "The emergency call was placed 34 seconds after the reaction began, at the same time as the automatic alarm.",
+        "kk": "Экстренный вызов сделан через 34 секунды после начала реакции, одновременно с автоматической тревогой."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Немедленный вызов подтверждает добросовестные действия.",
-        "en": "The immediate call supports good-faith conduct.",
-        "tr": "Hemen yapılan çağrı iyi niyeti doğruluyor.",
-        "ar": "يدعم الاتصال الفوري حسن التصرف.",
-        "kk": "Дереу қоңырау адал әрекетті растайды."
+        "ru": "Хронология подтверждает быструю реакцию преподавателя.",
+        "en": "The timeline confirms the teacher's rapid response.",
+        "tr": "The timeline confirms the teacher's rapid response.",
+        "ar": "The timeline confirms the teacher's rapid response.",
+        "kk": "Хронология подтверждает быструю реакцию преподавателя."
       },
-      "meta": {
-        "carrierName": {
-          "ru": "ФилинТелеком",
-          "en": "Campus Telecom",
-          "tr": "Kampüs Telekom",
-          "ar": "أول تيليكوم",
-          "kk": "Кампус Телеком"
-        },
-        "phoneMask": "+7 ••• ••• 0394"
-      }
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_procedure",
+        "relation": "supports",
+        "reason": {
+          "ru": "Хронология подтверждает быструю реакцию преподавателя.",
+          "en": "The timeline confirms the teacher's rapid response.",
+          "tr": "The timeline confirms the teacher's rapid response.",
+          "ar": "The timeline confirms the teacher's rapid response.",
+          "kk": "Хронология подтверждает быструю реакцию преподавателя."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5
     },
     {
-      "id": "ev-document2",
+      "id": "ev-supplier",
+      "order": 6,
       "type": "document",
       "title": {
-        "ru": "Ботаническая экспертиза",
-        "en": "Botanical analysis",
-        "tr": "Botanik analizi",
-        "ar": "التحليل النباتي",
-        "kk": "Ботаникалық сараптама"
+        "ru": "Проверка поставщика",
+        "en": "Supplier Investigation",
+        "tr": "Supplier Investigation",
+        "ar": "Supplier Investigation",
+        "kk": "Проверка поставщика"
       },
       "content": {
-        "ru": "В упаковке с этикеткой «безопасная добавка» обнаружен токсичный реагент; пломба поставщика не нарушена до урока.",
-        "en": "A toxic reagent was found in a package labeled 'safe additive'; the supplier seal was intact before class.",
-        "tr": "'Güvenli katkı' etiketli pakette zehirli reaktif bulundu; tedarikçi mührü dersten önce sağlamdı.",
-        "ar": "عُثر على مادة سامة في عبوة موسومة «مادة مضافة آمنة» وكان ختم المورد سليماً قبل الدرس.",
-        "kk": "«Қауіпсіз қоспа» қаптамасынан улы реагент табылды; жеткізуші мөрі сабаққа дейін бүтін."
+        "ru": "Партия прошла через посредника, использующего склад Серого конвоя. Другие упаковки той же партии также перемаркированы.",
+        "en": "The batch passed through an intermediary using a Gray Convoy warehouse. Other packages in the same batch were also relabeled.",
+        "tr": "The batch passed through an intermediary using a Gray Convoy warehouse. Other packages in the same batch were also relabeled.",
+        "ar": "The batch passed through an intermediary using a Gray Convoy warehouse. Other packages in the same batch were also relabeled.",
+        "kk": "Партия прошла через посредника, использующего склад Серого конвоя. Другие упаковки той же партии также перемаркированы."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Причина — ошибка поставщика, а не действия страхователя.",
-        "en": "Supplier error, not the insured, caused the loss.",
-        "tr": "Zarara sigortalı değil tedarikçi hatası neden oldu.",
-        "ar": "السبب خطأ المورد لا المؤمن له.",
-        "kk": "Себеп — сақтанушы емес, жеткізуші қатесі."
-      }
+        "ru": "Ошибка возникла до получения лабораторией и связана с поставщиком.",
+        "en": "The substitution occurred before delivery and is linked to the supplier.",
+        "tr": "The substitution occurred before delivery and is linked to the supplier.",
+        "ar": "The substitution occurred before delivery and is linked to the supplier.",
+        "kk": "Ошибка возникла до получения лабораторией и связана с поставщиком."
+      },
+      "narrativeRole": "arc_proof",
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Ошибка возникла до получения лабораторией и связана с поставщиком.",
+          "en": "The substitution occurred before delivery and is linked to the supplier.",
+          "tr": "The substitution occurred before delivery and is linked to the supplier.",
+          "ar": "The substitution occurred before delivery and is linked to the supplier.",
+          "kk": "Ошибка возникла до получения лабораторией и связана с поставщиком."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75
     }
   ],
   "correctDecision": "approve",
   "explanation": {
     "ru": [
-      "Запечатанная посылка содержала ошибочно маркированный химический реагент.",
-      "Камера, пломба и ботаническая экспертиза подтверждают ошибку поставщика.",
-      "Ланской вовремя эвакуировал класс; оснований считать взрыв инсценировкой нет."
+      "Ланской заказал безопасный стабилизатор и получил запечатанную упаковку с совпадающей пломбой.",
+      "Внутри находился другой перемаркированный реагент.",
+      "Под наклейкой «S-4» видна заводская маркировка «C-9»; поставщик запечатал другой реагент.",
+      "Преподаватель соблюдал процедуру и вовремя эвакуировал учеников. Ущерб подлинный, выплату следует одобрить."
     ],
     "en": [
-      "The sealed parcel contained a mislabeled chemical reagent.",
-      "CCTV, the seal, and botanical analysis confirm supplier error.",
-      "Lanskoy evacuated the class promptly; there is no basis to call the blast staged."
+      "The teacher followed procedure and could not detect the substitution before the reaction.",
+      "The documents and seal confirm the correct order and an intact delivery.",
+      "The safety systems were active and limited the damage.",
+      "Factory marking ‘C-9’ is visible beneath the ‘S-4’ label; the supplier sealed a different reagent inside.",
+      "The timeline confirms the teacher's rapid response.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "tr": [
-      "Mühürlü paket yanlış etiketlenmiş bir kimyasal içeriyordu.",
-      "Kamera, mühür ve botanik analiz tedarikçi hatasını doğruluyor.",
-      "Lanskoy sınıfı zamanında tahliye etti; patlamanın mizansen olduğuna dair temel yok."
+      "The teacher followed procedure and could not detect the substitution before the reaction.",
+      "The documents and seal confirm the correct order and an intact delivery.",
+      "The safety systems were active and limited the damage.",
+      "Factory marking ‘C-9’ is visible beneath the ‘S-4’ label; the supplier sealed a different reagent inside.",
+      "The timeline confirms the teacher's rapid response.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "ar": [
-      "احتوت العبوة المختومة على مادة كيميائية ذات ملصق خاطئ.",
-      "تؤكد الكاميرا والختم والتحليل النباتي خطأ المورد.",
-      "أخلى سنيبوف الصف فوراً ولا أساس لاعتبار الانفجار مفبركاً."
+      "The teacher followed procedure and could not detect the substitution before the reaction.",
+      "The documents and seal confirm the correct order and an intact delivery.",
+      "The safety systems were active and limited the damage.",
+      "Factory marking ‘C-9’ is visible beneath the ‘S-4’ label; the supplier sealed a different reagent inside.",
+      "The timeline confirms the teacher's rapid response.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "kk": [
-      "Мөрленген сәлемдемеде қате таңбаланған химиялық реагент болды.",
-      "Камера, мөр және ботаникалық сараптама жеткізуші қатесін растайды.",
-      "Ланской сыныпты дер кезінде шығарды; жарылыс қойылым деуге негіз жоқ."
+      "Ланской заказал безопасный стабилизатор и получил запечатанную упаковку с совпадающей пломбой.",
+      "Внутри находился другой перемаркированный реагент.",
+      "Под наклейкой «S-4» видна заводская маркировка «C-9»; поставщик запечатал другой реагент.",
+      "Преподаватель соблюдал процедуру и вовремя эвакуировал учеников. Ущерб подлинный, выплату следует одобрить."
     ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "На уроке химии реакционная ёмкость разрушилась после добавления вещества, доставленного как безопасный стабилизатор. Я немедленно эвакуировал класс, пострадавших нет, но лаборатория уничтожена. Прошу возместить оборудование.",
+        "en": "During a chemistry class, a reaction vessel ruptured after I added a substance delivered as a safe stabilizer. I evacuated the class immediately; no one was hurt, but the laboratory was destroyed. I am claiming the equipment loss.",
+        "tr": "During a chemistry class, a reaction vessel ruptured after I added a substance delivered as a safe stabilizer. I evacuated the class immediately; no one was hurt, but the laboratory was destroyed. I am claiming the equipment loss.",
+        "ar": "During a chemistry class, a reaction vessel ruptured after I added a substance delivered as a safe stabilizer. I evacuated the class immediately; no one was hurt, but the laboratory was destroyed. I am claiming the equipment loss.",
+        "kk": "На уроке химии реакционная ёмкость разрушилась после добавления вещества, доставленного как безопасный стабилизатор. Я немедленно эвакуировал класс, пострадавших нет, но лаборатория уничтожена. Прошу возместить оборудование."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_safe_order",
+      "text": {
+        "ru": "Ланской заказал безопасный реагент S-4 и получил запечатанную тару.",
+        "en": "Lanskoy ordered safe reagent S-4 and received a sealed container.",
+        "tr": "Lanskoy ordered safe reagent S-4 and received a sealed container.",
+        "ar": "Lanskoy ordered safe reagent S-4 and received a sealed container.",
+        "kk": "Ланской заказал безопасный реагент S-4 и получил запечатанную тару."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_procedure",
+      "text": {
+        "ru": "Преподаватель соблюдал процедуру и не мог обнаружить подмену заранее.",
+        "en": "The teacher followed procedure and could not detect the switch in advance.",
+        "tr": "The teacher followed procedure and could not detect the switch in advance.",
+        "ar": "The teacher followed procedure and could not detect the switch in advance.",
+        "kk": "Преподаватель соблюдал процедуру и не мог обнаружить подмену заранее."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_supplier_error",
+      "text": {
+        "ru": "Взрыв вызвал другой реагент, ошибочно запечатанный поставщиком.",
+        "en": "A different reagent, wrongly sealed by the supplier, caused the explosion.",
+        "tr": "A different reagent, wrongly sealed by the supplier, caused the explosion.",
+        "ar": "A different reagent, wrongly sealed by the supplier, caused the explosion.",
+        "kk": "Взрыв вызвал другой реагент, ошибочно запечатанный поставщиком."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Ланской сам добавил вещество в реактор. Вопрос не в этом, а в том, мог ли он понять, что запечатанная упаковка содержит другой реагент. — В. Лебедева",
+      "en": "Lanskoy added the substance to the reactor himself. The question is whether he could have known the sealed package contained a different reagent. — V. Lebedeva",
+      "tr": "Lanskoy added the substance to the reactor himself. The question is whether he could have known the sealed package contained a different reagent. — V. Lebedeva",
+      "ar": "Lanskoy added the substance to the reactor himself. The question is whether he could have known the sealed package contained a different reagent. — V. Lebedeva",
+      "kk": "Ланской сам добавил вещество в реактор. Вопрос не в этом, а в том, мог ли он понять, что запечатанная упаковка содержит другой реагент. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "В деле Орлова поддельная деталь сломала защиту. Здесь поддельная этикетка уничтожила лабораторию. Серый конвой становится опаснее каждого отдельного мошенника.",
+      "en": "In Orlov's case, a counterfeit part defeated the safety system. Here, a false label destroyed a laboratory. The Gray Convoy is becoming more dangerous than any individual fraudster.",
+      "tr": "In Orlov's case, a counterfeit part defeated the safety system. Here, a false label destroyed a laboratory. The Gray Convoy is becoming more dangerous than any individual fraudster.",
+      "ar": "In Orlov's case, a counterfeit part defeated the safety system. Here, a false label destroyed a laboratory. The Gray Convoy is becoming more dangerous than any individual fraudster.",
+      "kk": "В деле Орлова поддельная деталь сломала защиту. Здесь поддельная этикетка уничтожила лабораторию. Серый конвой становится опаснее каждого отдельного мошенника."
+    },
+    "nextCaseTeaser": {
+      "ru": "На солнечной ферме неизвестные разобрали панели. Сервисный робот получил команды от учётной записи владельца.",
+      "en": "Unknown intruders dismantled panels at a solar farm. Its service robot received commands from the owner's account.",
+      "tr": "Unknown intruders dismantled panels at a solar farm. Its service robot received commands from the owner's account.",
+      "ar": "Unknown intruders dismantled panels at a solar farm. Its service robot received commands from the owner's account.",
+      "kk": "На солнечной ферме неизвестные разобрали панели. Сервисный робот получил команды от учётной записи владельца."
+    },
+    "seasonClue": null,
+    "epilogue": null
   }
 }

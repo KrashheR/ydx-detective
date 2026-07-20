@@ -110,3 +110,16 @@ Legacy-геттеры полных дел (`getAllCases`, `getCaseById`, `getSta
 - Уникальность id улик внутри дела гарантируется `superRefine`.
 
 Команды верификации и тесты — [08-build-test-deploy.md](08-build-test-deploy.md).
+## Campaign 1–50 runtime additions (save v9)
+
+- `Case` remains immutable static data, now including `campaignOrder`, atomic
+  `claimStatements`, evidence graph metadata, five interactive discriminated-union variants,
+  onboarding metadata and optional `finalSynthesis`.
+- `ActiveSession.stamps` stores exact `{ caseId, statementId, evidenceId }` triples.
+  Legacy `selectedEvidenceIds` remains a compatibility mirror and is normalized when a case resumes.
+- `PlayerStats` owns `interactiveEvidenceProgress`, `finalSynthesisProgress` and `metaUnlocked`;
+  no case JSON is persisted.
+- `services/platformAdapter.ts` is the runtime boundary. UI/store/persistence use it instead of a
+  portal SDK; `yandexSDK.ts` remains the sole `window.YaGames` owner.
+- Case JSON is split into lazy Vite chunks. Image-model assets are referenced under
+  `public/cases/<case-id>/` and loaded only by an opened evidence renderer.

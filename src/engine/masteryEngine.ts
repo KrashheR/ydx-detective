@@ -9,7 +9,7 @@ export function evaluateMastery(
   session: ActiveSession | null,
 ): MasteryLevel {
   if (!session || decision !== caseData.correctDecision) return 'none';
-  const { correct, falseStamps } = classifyStamps(caseData, session.selectedEvidenceIds);
+  const { correct, falseStamps } = classifyStamps(caseData, session.selectedEvidenceIds, session.stamps);
   const silver = falseStamps === 0 && correct === totalContradictions(caseData);
   if (!silver) return 'bronze';
 

@@ -1,392 +1,586 @@
 {
   "id": "case-030",
   "type": "standard",
+  "campaignOrder": 28,
+  "requiredLevel": 14,
+  "act": 3,
+  "actTitle": {
+    "ru": "Восточный двор",
+    "en": "Eastern Yard",
+    "tr": "Eastern Yard",
+    "ar": "Eastern Yard",
+    "kk": "Восточный двор"
+  },
   "difficulty": "hard",
   "claimAmount": 15000,
   "truth": "fraud",
   "title": {
-    "ru": "Подстроенное ДТП",
-    "en": "The Staged Collision",
-    "tr": "Düzmece Kaza",
-    "ar": "تصادم مُدبَّر",
-    "kk": "Ұйымдастырылған жол апаты"
+    "ru": "Столкновение ради пломбы",
+    "en": "A Collision for a Seal",
+    "tr": "A Collision for a Seal",
+    "ar": "A Collision for a Seal",
+    "kk": "Столкновение ради пломбы"
   },
   "claim": {
     "person": {
       "ru": "Деян Маркович, 44 года",
-      "en": "Dejan Markovic, 44",
-      "tr": "Dejan Markovic, 44",
-      "ar": "ديان ماركوفيتش، 44",
-      "kk": "Деян Маркович, 44 жаста"
+      "en": "Dejan Markovic, age 44",
+      "tr": "Dejan Markovic, age 44",
+      "ar": "Dejan Markovic, age 44",
+      "kk": "Деян Маркович, 44 года"
     },
     "story": {
-      "ru": "Я ехал по своей полосе, когда впереди идущая машина внезапно затормозила без всякой причины. Я не успел остановиться и въехал в неё. Это полностью вина другого водителя. Прошу возместить ремонт моего автомобиля.",
-      "en": "I was driving in my lane when the car ahead suddenly braked for no reason. I couldn't stop in time and rear-ended it. It's entirely the other driver's fault. I request compensation for repairing my car.",
-      "tr": "Kendi şeridimde gidiyordum ki öndeki araç sebepsiz yere aniden fren yaptı. Zamanında duramadım ve arkadan çarptım. Tamamen diğer sürücünün hatası. Aracımın onarımı için tazminat talep ediyorum.",
-      "ar": "كنت أقود في مساري عندما كبحت السيارة التي أمامي فجأة دون سبب. لم أتمكن من التوقف في الوقت المناسب واصطدمت بها من الخلف. الخطأ بالكامل على السائق الآخر. أطلب تعويض إصلاح سيارتي.",
-      "kk": "Мен өз жолағыммен келе жатқанда, алдымдағы көлік ешбір себепсіз кенет тежеді. Уақытында тоқтай алмай, оған соғылып қалдым. Бұл толықтай басқа жүргізушінің кінәсі. Көлігімді жөндеуге өтемақы сұраймын."
+      "ru": "Передо мной без причины резко затормозил грузовой фургон. Я не успел остановиться и повредил автомобиль. Виноват водитель фургона; прошу выплату на ремонт.",
+      "en": "A cargo van braked sharply in front of me for no reason. I could not stop in time and damaged my car. The van driver is at fault; I am claiming the repair cost.",
+      "tr": "A cargo van braked sharply in front of me for no reason. I could not stop in time and damaged my car. The van driver is at fault; I am claiming the repair cost.",
+      "ar": "A cargo van braked sharply in front of me for no reason. I could not stop in time and damaged my car. The van driver is at fault; I am claiming the repair cost.",
+      "kk": "Передо мной без причины резко затормозил грузовой фургон. Я не успел остановиться и повредил автомобиль. Виноват водитель фургона; прошу выплату на ремонт."
     }
   },
-  "coverImage": "covers/case-030.svg",
-  "personImage": "people/dejan.webp",
   "client": {
     "role": {
-      "ru": "Заявитель · физ. лицо",
-      "en": "Claimant · individual",
-      "tr": "Başvuru sahibi · gerçek kişi",
-      "ar": "مقدم الطلب · شخص طبيعي",
-      "kk": "Өтініш беруші · жеке тұлға"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Возраст",
-          "en": "Age",
-          "tr": "Yaş",
-          "ar": "العمر",
-          "kk": "Жасы"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "44 года",
-          "en": "44 years old",
-          "tr": "44 yaşında",
-          "ar": "44 عامًا",
-          "kk": "44 жаста"
+          "ru": "3",
+          "en": "3",
+          "tr": "3",
+          "ar": "3",
+          "kk": "3"
         }
       },
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Белград",
-          "en": "Belgrade",
-          "tr": "Belgrad",
-          "ar": "بلغراد",
-          "kk": "Белград"
-        }
-      },
-      {
-        "k": {
-          "ru": "Клиент с",
-          "en": "Client since",
-          "tr": "Müşteri",
-          "ar": "عميل منذ",
-          "kk": "Клиент"
-        },
-        "v": {
-          "ru": "2017 г.",
-          "en": "2017",
-          "tr": "2017",
-          "ar": "2017",
-          "kk": "2017 ж."
-        }
-      },
-      {
-        "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
-        },
-        "v": {
-          "ru": "КАСКО · КС-30355128-X2",
-          "en": "Comprehensive auto · KS-30355128-X2",
-          "tr": "Kasko · KS-30355128-X2",
-          "ar": "تأمين شامل للمركبة · KS-30355128-X2",
-          "kk": "КАСКО · КС-30355128-X2"
-        }
-      },
-      {
-        "k": {
-          "ru": "Документ",
-          "en": "Document",
-          "tr": "Belge",
-          "ar": "الوثيقة",
-          "kk": "Құжат"
-        },
-        "v": {
-          "ru": "Паспорт RS-X7 990011334-80924",
-          "en": "Passport RS-X7 990011334-80924",
-          "tr": "Pasaport RS-X7 990011334-80924",
-          "ar": "جواز السفر RS-X7 990011334-80924",
-          "kk": "Паспорт RS-X7 990011334-80924"
+          "ru": "28",
+          "en": "28",
+          "tr": "28",
+          "ar": "28",
+          "kk": "28"
         }
       }
     ]
   },
+  "coverImage": "covers/case-030.svg",
+  "personImage": "people/dejan-markovich.webp",
   "evidences": [
     {
       "id": "ev-cam",
+      "order": 1,
       "type": "camera_recording",
       "title": {
-        "ru": "Запись видеорегистратора",
-        "en": "Dashcam Recording",
-        "tr": "Araç Kamerası Kaydı",
-        "ar": "تسجيل كاميرا السيارة",
-        "kk": "Видеотіркегіш жазбасы"
+        "ru": "Видеорегистратор",
+        "en": "Dashcam Footage",
+        "tr": "Dashcam Footage",
+        "ar": "Dashcam Footage",
+        "kk": "Видеорегистратор"
       },
       "content": {
-        "ru": "На записи самого Деяна видно, как передняя машина заранее включает аварийку и плавно сбрасывает скорость на пустой дороге. В тот же момент Деян, вместо торможения, заметно прибавляет газ и направленно въезжает в задний бампер. Тормозных огней его машины почти не видно.",
-        "en": "Dejan's own footage shows the car ahead switching on its hazards early and smoothly slowing on an empty road. At the same moment Dejan, instead of braking, visibly accelerates and drives straight into the rear bumper. His brake lights barely appear.",
-        "tr": "Dejan'ın kendi kaydında öndeki araç dörtlüleri erkenden yakıp boş yolda yumuşakça yavaşlıyor. Aynı anda Dejan, fren yapmak yerine gözle görülür şekilde gaza basıp doğrudan arka tampona giriyor. Fren lambaları neredeyse hiç görünmüyor.",
-        "ar": "يُظهر تسجيل ديان نفسه السيارة الأمامية تُشغّل أضواء التحذير مبكرًا وتبطئ بسلاسة على طريق خالٍ. في اللحظة ذاتها، بدلًا من الكبح، يزيد ديان السرعة بوضوح ويصطدم مباشرة بالمصد الخلفي. أضواء فراملِه لا تكاد تظهر.",
-        "kk": "Деянның өз жазбасында алдыңғы көлік бос жолда апаттық белгісін алдын ала қосып, біркелкі баяулайды. Дәл сол сәтте Деян тежеудің орнына байқалатындай газ қосып, артқы бамперге тура соғылады. Оның тежегіш оттары әрең көрінеді."
+        "ru": "За десять секунд до удара Маркович увеличивает скорость и выключает систему автоматического торможения. Фургон тормозит плавно у разрешённого поворота.",
+        "en": "Ten seconds before impact, Markovic accelerates and disables automatic braking. The van slows normally for a permitted turn.",
+        "tr": "Ten seconds before impact, Markovic accelerates and disables automatic braking. The van slows normally for a permitted turn.",
+        "ar": "Ten seconds before impact, Markovic accelerates and disables automatic braking. The van slows normally for a permitted turn.",
+        "kk": "За десять секунд до удара Маркович увеличивает скорость и выключает систему автоматического торможения. Фургон тормозит плавно у разрешённого поворота."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Запись опровергает версию: Деян не тормозил, а ускорился и сам въехал в заранее замедлившуюся машину.",
-        "en": "The footage disproves the story: Dejan did not brake but accelerated and drove into a car that had slowed in advance.",
-        "tr": "Kayıt hikâyeyi çürütüyor: Dejan fren yapmadı, hızlandı ve önceden yavaşlayan araca girdi.",
-        "ar": "يدحض التسجيل الرواية: لم يكبح ديان بل سرّع واصطدم بسيارة أبطأت مسبقًا.",
-        "kk": "Жазба нұсқаны теріске шығарады: Деян тежеген жоқ, газ қосып, алдын ала баяулаған көлікке өзі соғылды."
+        "ru": "Заявитель сам создал столкновение и ложно описал действия второго водителя.",
+        "en": "The claimant deliberately caused the collision and falsely described the other driver's actions.",
+        "tr": "The claimant deliberately caused the collision and falsely described the other driver's actions.",
+        "ar": "The claimant deliberately caused the collision and falsely described the other driver's actions.",
+        "kk": "Заявитель сам создал столкновение и ложно описал действия второго водителя."
       },
-      "meta": {
-        "cameraId": "DVR-2",
-        "cameraModel": "RoadLog RL-67 · 1440p · H.264"
-      }
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_other_driver_fault",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Заявитель сам создал столкновение и ложно описал действия второго водителя.",
+          "en": "The claimant deliberately caused the collision and falsely described the other driver's actions.",
+          "tr": "The claimant deliberately caused the collision and falsely described the other driver's actions.",
+          "ar": "The claimant deliberately caused the collision and falsely described the other driver's actions.",
+          "kk": "Заявитель сам создал столкновение и ложно описал действия второго водителя."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_other_driver_fault",
+        "reason": {
+          "ru": "Заявитель сам создал столкновение и ложно описал действия второго водителя.",
+          "en": "The claimant deliberately caused the collision and falsely described the other driver's actions.",
+          "tr": "The claimant deliberately caused the collision and falsely described the other driver's actions.",
+          "ar": "The claimant deliberately caused the collision and falsely described the other driver's actions.",
+          "kk": "Заявитель сам создал столкновение и ложно описал действия второго водителя."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "ev-phone",
+      "order": 2,
       "type": "phone_records",
       "title": {
-        "ru": "Детализация звонков",
-        "en": "Phone Records",
-        "tr": "Arama Kayıtları",
-        "ar": "سجل المكالمات",
-        "kk": "Қоңыраулар детализациясы"
+        "ru": "Звонки между водителями",
+        "en": "Calls Between the Drivers",
+        "tr": "Calls Between the Drivers",
+        "ar": "Calls Between the Drivers",
+        "kk": "Звонки между водителями"
       },
       "content": {
-        "ru": [
-          "16:02 — Входящий, номер «Гараж» — 1 мин 12 с",
-          "16:48 — Исходящий, «А. (другой водитель)» — 3 мин 41 с",
-          "16:59 — ДТП (по протоколу)",
-          "17:05 — Исходящий, страховая линия — 6 мин 20 с",
-          "18:20 — Исходящий, «А. (другой водитель)» — 2 мин 08 с"
-        ],
-        "en": [
-          "16:02 — Incoming, \"Garage\" — 1 min 12 s",
-          "16:48 — Outgoing, \"A. (other driver)\" — 3 min 41 s",
-          "16:59 — Collision (per report)",
-          "17:05 — Outgoing, insurance line — 6 min 20 s",
-          "18:20 — Outgoing, \"A. (other driver)\" — 2 min 08 s"
-        ],
-        "tr": [
-          "16:02 — Gelen, \"Garaj\" — 1 dk 12 sn",
-          "16:48 — Giden, \"A. (diğer sürücü)\" — 3 dk 41 sn",
-          "16:59 — Kaza (rapora göre)",
-          "17:05 — Giden, sigorta hattı — 6 dk 20 sn",
-          "18:20 — Giden, \"A. (diğer sürücü)\" — 2 dk 08 sn"
-        ],
-        "ar": [
-          "16:02 — وارد، «الكراج» — 1 د 12 ث",
-          "16:48 — صادر، «أ. (السائق الآخر)» — 3 د 41 ث",
-          "16:59 — التصادم (حسب المحضر)",
-          "17:05 — صادر، خط التأمين — 6 د 20 ث",
-          "18:20 — صادر، «أ. (السائق الآخر)» — 2 د 08 ث"
-        ],
-        "kk": [
-          "16:02 — Кіріс, «Гараж» нөмірі — 1 мин 12 с",
-          "16:48 — Шығыс, «А. (басқа жүргізуші)» — 3 мин 41 с",
-          "16:59 — Жол апаты (хаттама бойынша)",
-          "17:05 — Шығыс, сақтандыру желісі — 6 мин 20 с",
-          "18:20 — Шығыс, «А. (басқа жүргізуші)» — 2 мин 08 с"
-        ]
+        "ru": "За двадцать минут до ДТП Маркович созванивался с водителем фургона трижды. После столкновения связь прекращается.",
+        "en": "During the twenty minutes before the collision, Markovic called the van driver three times. Their contact stops after the crash.",
+        "tr": "During the twenty minutes before the collision, Markovic called the van driver three times. Their contact stops after the crash.",
+        "ar": "During the twenty minutes before the collision, Markovic called the van driver three times. Their contact stops after the crash.",
+        "kk": "За двадцать минут до ДТП Маркович созванивался с водителем фургона трижды. После столкновения связь прекращается."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "За 11 минут до «случайного» ДТП Деян звонил «другому водителю» — они были знакомы и заранее общались.",
-        "en": "Eleven minutes before the \"accidental\" crash, Dejan called the \"other driver\" — they knew each other and coordinated beforehand.",
-        "tr": "\"Kazadan\" 11 dakika önce Dejan \"diğer sürücüyü\" aradı — birbirlerini tanıyor ve önceden anlaşmışlardı.",
-        "ar": "قبل 11 دقيقة من التصادم «العرضي» اتصل ديان بـ«السائق الآخر» — كانا يعرفان بعضهما ونسّقا مسبقًا.",
-        "kk": "«Кездейсоқ» жол апатынан 11 минут бұрын Деян «басқа жүргізушіге» қоңырау шалды — олар таныс әрі алдын ала келіскен."
+        "ru": "Предварительные звонки противоречат версии о случайной встрече незнакомых водителей.",
+        "en": "The calls contradict the claim that two strangers met by chance.",
+        "tr": "The calls contradict the claim that two strangers met by chance.",
+        "ar": "The calls contradict the claim that two strangers met by chance.",
+        "kk": "Предварительные звонки противоречат версии о случайной встрече незнакомых водителей."
       },
+      "narrativeRole": "suspicion",
+      "statementLink": {
+        "statementId": "claim_random_collision",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Предварительные звонки противоречат версии о случайной встрече незнакомых водителей.",
+          "en": "The calls contradict the claim that two strangers met by chance.",
+          "tr": "The calls contradict the claim that two strangers met by chance.",
+          "ar": "The calls contradict the claim that two strangers met by chance.",
+          "kk": "Предварительные звонки противоречат версии о случайной встрече незнакомых водителей."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_random_collision",
+        "reason": {
+          "ru": "Предварительные звонки противоречат версии о случайной встрече незнакомых водителей.",
+          "en": "The calls contradict the claim that two strangers met by chance.",
+          "tr": "The calls contradict the claim that two strangers met by chance.",
+          "ar": "The calls contradict the claim that two strangers met by chance.",
+          "kk": "Предварительные звонки противоречат версии о случайной встрече незнакомых водителей."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "ev-sealcam",
+      "order": 3,
+      "type": "seal_match",
+      "title": {
+        "ru": "Сопоставление пломб грузового отсека",
+        "en": "Cargo-Compartment Seal Comparison",
+        "tr": "Cargo-Compartment Seal Comparison",
+        "ar": "Cargo-Compartment Seal Comparison",
+        "kk": "Сопоставление пломб грузового отсека"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Фрагменты не совпадают: во время оформления аварии пассажир заменил заводскую пломбу другой.",
+        "en": "The fragments do not match: while the accident was being documented, a passenger replaced the factory seal with another one.",
+        "tr": "The fragments do not match: while the accident was being documented, a passenger replaced the factory seal with another one.",
+        "ar": "The fragments do not match: while the accident was being documented, a passenger replaced the factory seal with another one.",
+        "kk": "Фрагменты не совпадают: во время оформления аварии пассажир заменил заводскую пломбу другой."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_seal_untouched",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Фрагменты не совпадают: во время оформления аварии пассажир заменил заводскую пломбу другой.",
+          "en": "The fragments do not match: while the accident was being documented, a passenger replaced the factory seal with another one.",
+          "tr": "The fragments do not match: while the accident was being documented, a passenger replaced the factory seal with another one.",
+          "ar": "The fragments do not match: while the accident was being documented, a passenger replaced the factory seal with another one.",
+          "kk": "Фрагменты не совпадают: во время оформления аварии пассажир заменил заводскую пломбу другой."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_seal_untouched",
+        "reason": {
+          "ru": "Фрагменты не совпадают: во время оформления аварии пассажир заменил заводскую пломбу другой.",
+          "en": "The fragments do not match: while the accident was being documented, a passenger replaced the factory seal with another one.",
+          "tr": "The fragments do not match: while the accident was being documented, a passenger replaced the factory seal with another one.",
+          "ar": "The fragments do not match: while the accident was being documented, a passenger replaced the factory seal with another one.",
+          "kk": "Фрагменты не совпадают: во время оформления аварии пассажир заменил заводскую пломбу другой."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
       "meta": {
-        "carrierName": {
-          "ru": "Оператор связи № 30",
-          "en": "Communications Office 30",
-          "tr": "SinyalTel",
-          "ar": "سيغنال تل",
-          "kk": "Оператор связи № 30"
+        "imageUrl": "evidence/case-030-ev-sealcam.webp"
+      },
+      "description": {
+        "ru": "Первый фрагмент снят полицией до оформления ДТП, второй найден на двери после действий пассажира.",
+        "en": "Police removed the first fragment before processing the collision; the second was found on the door after the passenger intervened.",
+        "tr": "Police removed the first fragment before processing the collision; the second was found on the door after the passenger intervened.",
+        "ar": "Police removed the first fragment before processing the collision; the second was found on the door after the passenger intervened.",
+        "kk": "Первый фрагмент снят полицией до оформления ДТП, второй найден на двери после действий пассажира."
+      },
+      "instruction": {
+        "ru": "Сопоставить края и защитный узор двух пломб.",
+        "en": "Compare the edges and security patterns of the two seals.",
+        "tr": "Compare the edges and security patterns of the two seals.",
+        "ar": "Compare the edges and security patterns of the two seals.",
+        "kk": "Сопоставить края и защитный узор двух пломб."
+      },
+      "previousType": "camera_recording",
+      "assets": {
+        "asset1": "cases/case-030/assets/interactive/ev-sealcam-master-a.webp",
+        "asset2": "cases/case-030/assets/interactive/ev-sealcam-master-b.webp",
+        "asset3": "cases/case-030/assets/interactive/ev-sealcam-fragments.json"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true,
+        "transparencyMode": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Игрок физически устанавливает замену пломбы — настоящую цель контролируемого столкновения.",
+          "en": "The player physically proves that the seal was switched—the true purpose of the controlled collision.",
+          "tr": "The player physically proves that the seal was switched—the true purpose of the controlled collision.",
+          "ar": "The player physically proves that the seal was switched—the true purpose of the controlled collision.",
+          "kk": "Игрок физически устанавливает замену пломбы — настоящую цель контролируемого столкновения."
         },
-        "phoneMask": "+7 (9••) •••-••-•2"
-      }
-    },
-    {
-      "id": "ev-police",
-      "type": "document",
-      "title": {
-        "ru": "Протокол ГИБДД",
-        "en": "Police Report",
-        "tr": "Trafik Polisi Tutanağı",
-        "ar": "محضر الشرطة",
-        "kk": "Жол полициясы хаттамасы"
+        "playerAction": {
+          "ru": "Сопоставить края и защитный узор двух пломб.",
+          "en": "Compare the edges and security patterns of the two seals.",
+          "tr": "Compare the edges and security patterns of the two seals.",
+          "ar": "Compare the edges and security patterns of the two seals.",
+          "kk": "Сопоставить края и защитный узор двух пломб."
+        },
+        "conclusion": {
+          "ru": "Фрагменты не совпадают: во время оформления аварии пассажир заменил заводскую пломбу другой.",
+          "en": "The fragments do not match: while the accident was being documented, a passenger replaced the factory seal with another one.",
+          "tr": "The fragments do not match: while the accident was being documented, a passenger replaced the factory seal with another one.",
+          "ar": "The fragments do not match: while the accident was being documented, a passenger replaced the factory seal with another one.",
+          "kk": "Фрагменты не совпадают: во время оформления аварии пассажир заменил заводскую пломбу другой."
+        }
       },
-      "content": {
-        "ru": "Инспектор зафиксировал столкновение в 16:59 на участке без камер. Повреждения: задний бампер передней машины и передняя часть автомобиля Деяна. Вина в протоколе не установлена — стороны дали противоречивые объяснения, дело оставлено для разбирательства страховой.",
-        "en": "The officer recorded a collision at 16:59 on a stretch without cameras. Damage: rear bumper of the front car and front end of Dejan's vehicle. No fault was assigned — the parties gave conflicting accounts, the matter left for the insurer to resolve.",
-        "tr": "Memur, kamerasız bir kesimde 16:59'da bir çarpışma kaydetti. Hasar: öndeki aracın arka tamponu ve Dejan'ın aracının ön kısmı. Kusur belirlenmedi — taraflar çelişkili ifadeler verdi, konu sigortacıya bırakıldı.",
-        "ar": "سجّل الضابط تصادمًا الساعة 16:59 في مقطع بلا كاميرات. الأضرار: المصد الخلفي للسيارة الأمامية ومقدمة سيارة ديان. لم يُحدَّد الخطأ — قدّم الطرفان روايات متضاربة، وتُرك الأمر لشركة التأمين.",
-        "kk": "Инспектор камерасыз учаскеде 16:59-да соқтығысуды тіркеді. Зақым: алдыңғы көліктің артқы бамперіне және Деян көлігінің алдыңғы бөлігіне. Кінә хаттамада анықталмады — тараптар қарама-қайшы түсініктеме берді, іс сақтандырушыға қалдырылды."
-      },
-      "isContradiction": false,
-      "contradictionExplanation": {
-        "ru": "Протокол лишь фиксирует факт ДТП и не определяет виновного — сам по себе он не уличает заявителя.",
-        "en": "The report only records that a collision happened and assigns no fault — on its own it does not incriminate the claimant.",
-        "tr": "Tutanak yalnızca çarpışmanın olduğunu kaydeder ve kusur atamaz — tek başına başvuranı suçlamaz.",
-        "ar": "يُسجّل المحضر فقط وقوع التصادم ولا يحدد الخطأ — وحده لا يُدين مقدّم الطلب.",
-        "kk": "Хаттама тек жол апатының болғанын тіркейді, кінәліні анықтамайды — өздігінен өтініш берушіні әшкерелемейді."
-      }
-    },
-    {
-      "id": "ev-photo",
-      "type": "photo",
-      "title": {
-        "ru": "Фото повреждений",
-        "en": "Damage Photo",
-        "tr": "Hasar Fotoğrafı",
-        "ar": "صورة الأضرار",
-        "kk": "Зақымданудың суреті"
-      },
-      "content": {
-        "ru": "Снимок передней части автомобиля Деяна: смята решётка радиатора, разбита левая фара, на бампере следы краски второй машины. Повреждения умеренные, соответствуют невысокой скорости.",
-        "en": "A shot of the front of Dejan's car: crumpled grille, broken left headlight, paint transfer from the other car on the bumper. The damage is moderate, consistent with low speed.",
-        "tr": "Dejan'ın aracının ön kısmının fotoğrafı: ezilmiş ızgara, kırık sol far, tamponda diğer aracın boya izi. Hasar orta düzeyde, düşük hızla uyumlu.",
-        "ar": "صورة لمقدمة سيارة ديان: شبك مهشّم، مصباح أمامي أيسر مكسور، وأثر طلاء السيارة الأخرى على المصد. الضرر متوسط ويتوافق مع سرعة منخفضة.",
-        "kk": "Деян көлігінің алдыңғы бөлігінің суреті: радиатор торы мыжылған, сол жақ фарасы сынған, бамперде екінші көліктің бояу іздері. Зақым орташа, төмен жылдамдыққа сәйкес."
-      },
-      "isContradiction": false,
-      "contradictionExplanation": {
-        "ru": "Фото лишь подтверждает наличие повреждений; оно не показывает, кто виноват.",
-        "en": "The photo only confirms that damage exists; it does not show who is at fault.",
-        "tr": "Fotoğraf yalnızca hasarın varlığını doğrular; kimin kusurlu olduğunu göstermez.",
-        "ar": "تؤكد الصورة وجود الضرر فقط؛ ولا تُظهر المُخطئ.",
-        "kk": "Сурет тек зақымның бар екенін растайды; кінәлінің кім екенін көрсетпейді."
-      },
-      "meta": {
-        "filename": "IMG_20260530_171522.jpg",
-        "imageUrl": "evidence/case-030-ev-photo.webp"
+      "data": {
+        "movableFragment": "B",
+        "allowRotation": true,
+        "rotationStep": 3,
+        "initialTransform": {
+          "x": 72,
+          "y": 18,
+          "rotation": -14
+        },
+        "targetTransform": {
+          "x": 132,
+          "y": 48,
+          "rotation": 6
+        },
+        "tolerance": {
+          "position": 10,
+          "rotation": 5
+        },
+        "expectedMatch": false,
+        "sourceSeed": 283017,
+        "fragmentASeed": 283017,
+        "fragmentBSeed": 289144,
+        "comparisonMarkers": [
+          {
+            "id": "tear_pattern",
+            "label": "Не совпадают линия разрыва и шаг микропечати",
+            "labelEn": "Tear line and microprint spacing do not match"
+          }
+        ]
       }
     },
     {
       "id": "ev-bank",
+      "order": 4,
       "type": "bank_statement",
       "title": {
-        "ru": "Банковская выписка",
-        "en": "Bank Statement",
-        "tr": "Banka Ekstresi",
-        "ar": "كشف حساب بنكي",
-        "kk": "Банк үзіндісі"
+        "ru": "Перевод после аварии",
+        "en": "Post-Collision Transfer",
+        "tr": "Post-Collision Transfer",
+        "ar": "Post-Collision Transfer",
+        "kk": "Перевод после аварии"
       },
       "content": {
-        "ru": [
-          "30.05.2026 — Заправка, АЗС «Орбита» — 54,00 €",
-          "31.05.2026 — Перевод «А. Войнич» (другой водитель) — 1 500,00 €",
-          "31.05.2026 — Комментарий к переводу: «за помощь»",
-          "02.06.2026 — Магазин автозапчастей — 210,40 €"
-        ],
-        "en": [
-          "30.05.2026 — Fuel, \"Orbita\" station — €54.00",
-          "31.05.2026 — Transfer to \"A. Voynich\" (other driver) — €1,500.00",
-          "31.05.2026 — Transfer note: \"for the help\"",
-          "02.06.2026 — Auto parts store — €210.40"
-        ],
-        "tr": [
-          "30.05.2026 — Yakıt, \"Orbita\" istasyonu — 54,00 €",
-          "31.05.2026 — \"A. Voynich\" (diğer sürücü) havalesi — 1.500,00 €",
-          "31.05.2026 — Havale notu: \"yardım için\"",
-          "02.06.2026 — Oto yedek parça mağazası — 210,40 €"
-        ],
-        "ar": [
-          "30.05.2026 — وقود، محطة «أوربيتا» — 54٫00 €",
-          "31.05.2026 — تحويل إلى «أ. فوينيتش» (السائق الآخر) — 1٬500٫00 €",
-          "31.05.2026 — ملاحظة التحويل: «مقابل المساعدة»",
-          "02.06.2026 — متجر قطع غيار سيارات — 210٫40 €"
-        ],
-        "kk": [
-          "30.05.2026 — Жанармай, «Орбита» АЖС — 54,00 €",
-          "31.05.2026 — «А. Войнич» (басқа жүргізуші) аударымы — 1 500,00 €",
-          "31.05.2026 — Аударым түсініктемесі: «көмек үшін»",
-          "02.06.2026 — Автобөлшектер дүкені — 210,40 €"
-        ]
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "На следующий день после ДТП Деян перевёл «другому водителю» 1500 € с пометкой «за помощь» — оплата за участие в инсценировке.",
-        "en": "The day after the crash Dejan transferred €1,500 to the \"other driver\" marked \"for the help\" — payment for taking part in the staging.",
-        "tr": "Kazadan bir gün sonra Dejan \"diğer sürücüye\" \"yardım için\" notuyla 1.500 € gönderdi — düzmeceye katılım ödemesi.",
-        "ar": "في اليوم التالي للتصادم حوّل ديان 1٬500 € إلى «السائق الآخر» بملاحظة «مقابل المساعدة» — أجرٌ على المشاركة في التمثيلية.",
-        "kk": "Жол апатынан кейінгі күні Деян «басқа жүргізушіге» «көмек үшін» белгісімен 1500 € аударды — қойылымға қатысқаны үшін төлем."
-      },
-      "meta": {
-        "bankName": {
-          "ru": "Расчётный отдел № 30",
-          "en": "Settlement Office 30",
-          "tr": "Settlement Office 30",
-          "ar": "بريما بنك",
-          "kk": "Расчётный отдел № 30"
-        },
-        "accountMask": "•••• •••• •••• 8806"
-      }
-    },
-    {
-      "id": "ev-witness",
-      "type": "witness_statement",
-      "title": {
-        "ru": "Показания прохожего",
-        "en": "Bystander's Statement",
-        "tr": "Yoldan Geçenin İfadesi",
-        "ar": "إفادة أحد المارة",
-        "kk": "Жолаушының айғағы"
-      },
-      "content": {
-        "ru": "«Я шёл по тротуару и услышал глухой удар. Обернулся — две машины стоят, передняя помята сзади. Кто был виноват, не знаю, я увидел уже после столкновения. Водители вышли спокойно, без криков.»",
-        "en": "\"I was walking on the pavement and heard a dull thud. I turned around — two cars stopped, the front one dented at the back. Who was at fault I don't know, I only saw it after the impact. The drivers got out calmly, no shouting.\"",
-        "tr": "\"Kaldırımda yürüyordum, boğuk bir gümbürtü duydum. Döndüm — iki araç durmuş, öndeki arkadan ezilmişti. Kimin kusurlu olduğunu bilmiyorum, ancak çarpışmadan sonra gördüm. Sürücüler sakince indi, bağırış yoktu.\"",
-        "ar": "«كنت أسير على الرصيف وسمعت صوت ارتطام خافت. التفتُّ — سيارتان متوقفتان، الأمامية منبعجة من الخلف. لا أعرف من المخطئ، رأيت ذلك بعد الاصطدام فقط. نزل السائقان بهدوء دون صياح.»",
-        "kk": "«Тротуармен келе жатып, тұйық соққыны естідім. Артыма бұрылдым — екі көлік тұр, алдыңғысы артынан мыжылған. Кім кінәлі екенін білмеймін, соқтығыстан кейін ғана көрдім. Жүргізушілер айқай-шусыз, тыныш шықты.»"
+        "ru": "На следующий день Маркович получает 1500 евро от компании, арендующей сектор `EY-17` во «Восточном дворе».",
+        "en": "The next day, Markovic receives €1,500 from the company leasing sector `EY-17` at Eastern Yard.",
+        "tr": "The next day, Markovic receives €1,500 from the company leasing sector `EY-17` at Eastern Yard.",
+        "ar": "The next day, Markovic receives €1,500 from the company leasing sector `EY-17` at Eastern Yard.",
+        "kk": "На следующий день Маркович получает 1500 евро от компании, арендующей сектор `EY-17` во «Восточном дворе»."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Свидетель видел лишь последствия и не противоречит заявлению — его показания нейтральны.",
-        "en": "The witness only saw the aftermath and does not contradict the claim — the statement is neutral.",
-        "tr": "Tanık yalnızca sonrasını gördü ve iddiayla çelişmiyor — ifade tarafsız.",
-        "ar": "رأى الشاهد ما بعد الحادث فقط ولا يتعارض مع المطالبة — إفادته محايدة.",
-        "kk": "Куә тек салдарын көрді әрі өтінішке қайшы келмейді — айғағы бейтарап."
-      }
+        "ru": "Оплата связывает инсценировку с закрытым сектором склада.",
+        "en": "The payment links the staged collision to the warehouse's restricted sector.",
+        "tr": "The payment links the staged collision to the warehouse's restricted sector.",
+        "ar": "The payment links the staged collision to the warehouse's restricted sector.",
+        "kk": "Оплата связывает инсценировку с закрытым сектором склада."
+      },
+      "narrativeRole": "arc_proof",
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Оплата связывает инсценировку с закрытым сектором склада.",
+          "en": "The payment links the staged collision to the warehouse's restricted sector.",
+          "tr": "The payment links the staged collision to the warehouse's restricted sector.",
+          "ar": "The payment links the staged collision to the warehouse's restricted sector.",
+          "kk": "Оплата связывает инсценировку с закрытым сектором склада."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75
+    },
+    {
+      "id": "ev-police",
+      "order": 5,
+      "type": "document",
+      "title": {
+        "ru": "Первичный протокол",
+        "en": "Initial Collision Report",
+        "tr": "Initial Collision Report",
+        "ar": "Initial Collision Report",
+        "kk": "Первичный протокол"
+      },
+      "content": {
+        "ru": "На месте Маркович признан виновным за дистанцию, но факт сговора в первичном протоколе ещё не рассматривался.",
+        "en": "At the scene, Markovic was found at fault for following too closely, but the initial report did not examine possible collusion.",
+        "tr": "At the scene, Markovic was found at fault for following too closely, but the initial report did not examine possible collusion.",
+        "ar": "At the scene, Markovic was found at fault for following too closely, but the initial report did not examine possible collusion.",
+        "kk": "На месте Маркович признан виновным за дистанцию, но факт сговора в первичном протоколе ещё не рассматривался."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Документ подтверждает столкновение, но не оправдывает заявителя.",
+        "en": "The report confirms the collision but does not support the claimant's account.",
+        "tr": "The report confirms the collision but does not support the claimant's account.",
+        "ar": "The report confirms the collision but does not support the claimant's account.",
+        "kk": "Документ подтверждает столкновение, но не оправдывает заявителя."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_random_collision",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Документ подтверждает столкновение, но не оправдывает заявителя.",
+          "en": "The report confirms the collision but does not support the claimant's account.",
+          "tr": "The report confirms the collision but does not support the claimant's account.",
+          "ar": "The report confirms the collision but does not support the claimant's account.",
+          "kk": "Документ подтверждает столкновение, но не оправдывает заявителя."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "ev-damage",
+      "order": 6,
+      "type": "photo",
+      "title": {
+        "ru": "Фото автомобилей",
+        "en": "Vehicle Photographs",
+        "tr": "Vehicle Photographs",
+        "ar": "Vehicle Photographs",
+        "kk": "Фото автомобилей"
+      },
+      "content": {
+        "ru": "Повреждения реальны и соответствуют небольшому контролируемому удару. Они не объясняют действия у грузового отсека.",
+        "en": "The damage is real and consistent with a minor controlled impact. It does not explain the activity at the cargo compartment.",
+        "tr": "The damage is real and consistent with a minor controlled impact. It does not explain the activity at the cargo compartment.",
+        "ar": "The damage is real and consistent with a minor controlled impact. It does not explain the activity at the cargo compartment.",
+        "kk": "Повреждения реальны и соответствуют небольшому контролируемому удару. Они не объясняют действия у грузового отсека."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Реальный ущерб не делает инсценированное событие страховым случаем.",
+        "en": "Real damage does not turn a staged event into a covered accident.",
+        "tr": "Real damage does not turn a staged event into a covered accident.",
+        "ar": "Real damage does not turn a staged event into a covered accident.",
+        "kk": "Реальный ущерб не делает инсценированное событие страховым случаем."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_other_driver_fault",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Реальный ущерб не делает инсценированное событие страховым случаем.",
+          "en": "Real damage does not turn a staged event into a covered accident.",
+          "tr": "Real damage does not turn a staged event into a covered accident.",
+          "ar": "Real damage does not turn a staged event into a covered accident.",
+          "kk": "Реальный ущерб не делает инсценированное событие страховым случаем."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Видеорегистратор показывает, что Деян сам ускорился и въехал в заранее затормозившую машину.",
-      "Звонок «другому водителю» до ДТП и перевод 1500 € после доказывают сговор.",
-      "Заявление мошенническое — его следует отклонить."
+      "Маркович намеренно ускорился и отключил помощь при торможении.",
+      "Водители созванивались заранее, а во время оформления пассажир заменил грузовую пломбу.",
+      "Фрагменты не совпадают: во время оформления аварии пассажир заменил заводскую пломбу другой.",
+      "Столкновение было частью согласованной операции, оплаченной сектором EY-17. В выплате следует отказать."
     ],
     "en": [
-      "The dashcam shows Dejan accelerated and drove into a car that had braked in advance.",
-      "The call to the \"other driver\" before the crash and the €1,500 transfer afterward prove collusion.",
+      "The claimant deliberately caused the collision and falsely described the other driver's actions.",
+      "The calls contradict the claim that two strangers met by chance.",
+      "The fragments do not match: while the accident was being documented, a passenger replaced the factory seal with another one.",
+      "The report confirms the collision but does not support the claimant's account.",
+      "The payment links the staged collision to the warehouse's restricted sector.",
       "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "Araç kamerası, Dejan'ın hızlanıp önceden fren yapan araca girdiğini gösteriyor.",
-      "Kazadan önce \"diğer sürücüye\" arama ve sonrasında 1.500 € havale, iş birliğini kanıtlıyor.",
-      "Talep hileli — reddedilmeli."
+      "The claimant deliberately caused the collision and falsely described the other driver's actions.",
+      "The calls contradict the claim that two strangers met by chance.",
+      "The fragments do not match: while the accident was being documented, a passenger replaced the factory seal with another one.",
+      "The report confirms the collision but does not support the claimant's account.",
+      "The payment links the staged collision to the warehouse's restricted sector.",
+      "The claim is fraudulent and should be rejected."
     ],
     "ar": [
-      "تُظهر كاميرا السيارة أن ديان سرّع واصطدم بسيارة كبحت مسبقًا.",
-      "الاتصال بـ«السائق الآخر» قبل التصادم وتحويل 1٬500 € بعده يثبتان التواطؤ.",
-      "المطالبة احتيالية ويجب رفضها."
+      "The claimant deliberately caused the collision and falsely described the other driver's actions.",
+      "The calls contradict the claim that two strangers met by chance.",
+      "The fragments do not match: while the accident was being documented, a passenger replaced the factory seal with another one.",
+      "The report confirms the collision but does not support the claimant's account.",
+      "The payment links the staged collision to the warehouse's restricted sector.",
+      "The claim is fraudulent and should be rejected."
     ],
     "kk": [
-      "Видеотіркегіш Деянның газ қосып, алдын ала тежеген көлікке соғылғанын көрсетеді.",
-      "Жол апатына дейін «басқа жүргізушіге» қоңырау мен одан кейінгі 1500 € аударым сөз байласуды дәлелдейді.",
-      "Талап алаяқтық — оны қабылдамау керек."
+      "Маркович намеренно ускорился и отключил помощь при торможении.",
+      "Водители созванивались заранее, а во время оформления пассажир заменил грузовую пломбу.",
+      "Фрагменты не совпадают: во время оформления аварии пассажир заменил заводскую пломбу другой.",
+      "Столкновение было частью согласованной операции, оплаченной сектором EY-17. В выплате следует отказать."
     ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Передо мной без причины резко затормозил грузовой фургон. Я не успел остановиться и повредил автомобиль. Виноват водитель фургона; прошу выплату на ремонт.",
+        "en": "A cargo van braked sharply in front of me for no reason. I could not stop in time and damaged my car. The van driver is at fault; I am claiming the repair cost.",
+        "tr": "A cargo van braked sharply in front of me for no reason. I could not stop in time and damaged my car. The van driver is at fault; I am claiming the repair cost.",
+        "ar": "A cargo van braked sharply in front of me for no reason. I could not stop in time and damaged my car. The van driver is at fault; I am claiming the repair cost.",
+        "kk": "Передо мной без причины резко затормозил грузовой фургон. Я не успел остановиться и повредил автомобиль. Виноват водитель фургона; прошу выплату на ремонт."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_random_collision",
+      "text": {
+        "ru": "Столкновение двух ранее незнакомых водителей произошло случайно.",
+        "en": "The collision between two previously unacquainted drivers was accidental.",
+        "tr": "The collision between two previously unacquainted drivers was accidental.",
+        "ar": "The collision between two previously unacquainted drivers was accidental.",
+        "kk": "Столкновение двух ранее незнакомых водителей произошло случайно."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_other_driver_fault",
+      "text": {
+        "ru": "Второй водитель неожиданно создал аварийную ситуацию.",
+        "en": "The other driver unexpectedly created a hazard.",
+        "tr": "The other driver unexpectedly created a hazard.",
+        "ar": "The other driver unexpectedly created a hazard.",
+        "kk": "Второй водитель неожиданно создал аварийную ситуацию."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_seal_untouched",
+      "text": {
+        "ru": "Пломба грузового отсека не заменялась во время оформления ДТП.",
+        "en": "The cargo-compartment seal was not replaced while the collision was being documented.",
+        "tr": "The cargo-compartment seal was not replaced while the collision was being documented.",
+        "ar": "The cargo-compartment seal was not replaced while the collision was being documented.",
+        "kk": "Пломба грузового отсека не заменялась во время оформления ДТП."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Заявитель просит оплатить автомобиль, но странности сосредоточены вокруг грузового отсека второй машины. Возможно, ремонт — только прикрытие. — В. Лебедева",
+      "en": "The claimant wants his car repaired, but every strange detail concerns the other vehicle's cargo compartment. The repair may be only a cover. — V. Lebedeva",
+      "tr": "The claimant wants his car repaired, but every strange detail concerns the other vehicle's cargo compartment. The repair may be only a cover. — V. Lebedeva",
+      "ar": "The claimant wants his car repaired, but every strange detail concerns the other vehicle's cargo compartment. The repair may be only a cover. — V. Lebedeva",
+      "kk": "Заявитель просит оплатить автомобиль, но странности сосредоточены вокруг грузового отсека второй машины. Возможно, ремонт — только прикрытие. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Восточный двор не только хранит имущество. Он использует аварии, пожары и кражи как моменты для подмены груза.",
+      "en": "Eastern Yard does more than store property. It uses collisions, fires, and thefts as opportunities to switch cargo.",
+      "tr": "Eastern Yard does more than store property. It uses collisions, fires, and thefts as opportunities to switch cargo.",
+      "ar": "Eastern Yard does more than store property. It uses collisions, fires, and thefts as opportunities to switch cargo.",
+      "kk": "Восточный двор не только хранит имущество. Он использует аварии, пожары и кражи как моменты для подмены груза."
+    },
+    "nextCaseTeaser": {
+      "ru": "Теперь — теплица после града. Датчик замолчал раньше первых пробоин, но это не обязательно означает саботаж.",
+      "en": "Next comes a greenhouse after a hailstorm. Its sensor went silent before the first holes appeared, but that does not necessarily mean sabotage.",
+      "tr": "Next comes a greenhouse after a hailstorm. Its sensor went silent before the first holes appeared, but that does not necessarily mean sabotage.",
+      "ar": "Next comes a greenhouse after a hailstorm. Its sensor went silent before the first holes appeared, but that does not necessarily mean sabotage.",
+      "kk": "Теперь — теплица после града. Датчик замолчал раньше первых пробоин, но это не обязательно означает саботаж."
+    },
+    "seasonClue": {
+      "id": "seal-swap",
+      "label": {
+        "ru": "Подмена пломбы",
+        "en": "The Switched Seal",
+        "tr": "The Switched Seal",
+        "ar": "The Switched Seal",
+        "kk": "Подмена пломбы"
+      },
+      "description": {
+        "ru": "Сеть применяет страховые происшествия как прикрытие для перемещения контейнеров.",
+        "en": "The network uses insured incidents as cover for moving containers.",
+        "tr": "The network uses insured incidents as cover for moving containers.",
+        "ar": "The network uses insured incidents as cover for moving containers.",
+        "kk": "Сеть применяет страховые происшествия как прикрытие для перемещения контейнеров."
+      },
+      "progressIndex": 3,
+      "progressTotal": 4
+    },
+    "epilogue": null
   }
 }

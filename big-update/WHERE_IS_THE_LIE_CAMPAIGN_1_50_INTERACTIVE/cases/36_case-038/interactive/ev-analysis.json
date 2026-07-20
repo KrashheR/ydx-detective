@@ -1,0 +1,78 @@
+{
+  "id": "ev-analysis",
+  "order": 4,
+  "type": "document_scan",
+  "title": {
+    "ru": "Просветка этикетки реагента"
+  },
+  "isContradiction": false,
+  "narrativeRole": "pivot",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Под наклейкой «S-4» видна заводская маркировка «C-9»; поставщик запечатал другой реагент."
+  },
+  "previousType": "document",
+  "description": {
+    "ru": "С упаковки сняли многослойную этикетку и поместили её в экспертный сканер."
+  },
+  "instruction": {
+    "ru": "Включить просвет и выбрать скрытую заводскую маркировку."
+  },
+  "assets": {
+    "asset1": "assets/interactive/ev-analysis-base.webp",
+    "asset2": "assets/interactive/ev-analysis-scan-overlay.svg"
+  },
+  "data": {
+    "initialMode": "normal",
+    "modes": [
+      "normal",
+      "uv",
+      "backlight"
+    ],
+    "anomalyZones": [
+      {
+        "id": "under_label",
+        "mode": "backlight",
+        "x": 38,
+        "y": 40,
+        "width": 28,
+        "height": 14,
+        "label": "Под наклейкой «S-4» видна заводская маркировка «C-9»; поставщик запечатал другой реагент.",
+        "isContradiction": false
+      }
+    ],
+    "successCondition": {
+      "type": "select_zone",
+      "zoneId": "under_label"
+    }
+  },
+  "statementLink": {
+    "statementId": "claim_supplier_error",
+    "relation": "supports",
+    "reason": {
+      "ru": "Под наклейкой «S-4» видна заводская маркировка «C-9»; поставщик запечатал другой реагент."
+    }
+  },
+  "contradictionTarget": null,
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "В valid-деле игрок сам доказывает перемаркировку и невиновность преподавателя."
+    },
+    "playerAction": {
+      "ru": "Включить просвет и выбрать скрытую заводскую маркировку."
+    },
+    "conclusion": {
+      "ru": "Под наклейкой «S-4» видна заводская маркировка «C-9»; поставщик запечатал другой реагент."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

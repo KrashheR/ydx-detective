@@ -1,0 +1,28 @@
+{
+  "note": "Map these fields to the actual project schema. Do not create a second incompatible content model.",
+  "caseFields": {
+    "campaignOrder": "number",
+    "claimStatements": "{ id: string, text: LocalizedText, stampable: boolean }[]",
+    "investigationBudget": "positive integer <= evidence.length",
+    "revisionVersion": "string",
+    "onboarding": "optional JSON-driven first-session phase",
+    "finalSynthesis": "optional JSON-driven EvidenceLinkBoard config",
+    "interactiveEvidenceCount": "number",
+    "narrative": {
+      "preBrief": "LocalizedText",
+      "postVerdictNote": "LocalizedText",
+      "nextCaseTeaser": "LocalizedText",
+      "seasonClue": "null | { id, label: LocalizedText, description: LocalizedText, progressIndex, progressTotal }",
+      "epilogue": "null | LocalizedText"
+    }
+  },
+  "evidenceUnion": "ExistingEvidence | DocumentScanEvidence | ThermalScanEvidence | ShadowTimeCheckEvidence | SealMatchEvidence | SurfaceRevealEvidence",
+  "interactiveSchemaFile": "INTERACTIVE_EVIDENCE_SCHEMA.json",
+  "saveMigration": "Keep completion keyed by stable case ID. Store interactive progress by caseId + evidenceId. campaignOrder must never replace stable IDs in saves.",
+  "safeDefaults": {
+    "campaignOrder": "derive only during one-time migration, then persist content value",
+    "claimStatements": "[{ id: 'claim_main', text: claimText, stampable: false }]",
+    "interactiveEvidenceCount": 0,
+    "interactiveProgress": "empty record"
+  }
+}

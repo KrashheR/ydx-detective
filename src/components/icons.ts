@@ -13,6 +13,11 @@ export const EVIDENCE_ICON: Record<EvidenceType, string> = {
   bank_statement: '🏦',
   phone_records: '📞',
   social_media: '💬',
+  document_scan: '🔎',
+  thermal_scan: '🌡️',
+  shadow_time_check: '◷',
+  seal_match: '🧩',
+  surface_reveal: '🖌️',
 };
 
 /** Short mono chip-tag i18n key per evidence type (the archive label). */
@@ -27,6 +32,11 @@ export const EVIDENCE_TAG_KEY: Record<EvidenceType, UIKey> = {
   bank_statement: 'tag_bank',
   phone_records: 'tag_phone',
   social_media: 'tag_social',
+  document_scan: 'tag_document',
+  thermal_scan: 'tag_photo',
+  shadow_time_check: 'tag_photo',
+  seal_match: 'tag_document',
+  surface_reveal: 'tag_photo',
 };
 
 /** Format ms remaining as HH:MM:SS for the daily-case cooldown. */

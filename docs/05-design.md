@@ -162,3 +162,15 @@ sticky-футером штампа и навигацией «‹ N/M ›». Те
 инлайн-причину. Tooltip допускается как дополнительное desktop-объяснение. **Тест-гоча:** когда подпись тултипа
 повторяет строку, встречающуюся ещё где-то (напр. `rejectNeedsProof` — и в тултипе, и в
 тосте), `findByText` находит два совпадения и падает — фильтруй `{ ignore: '[role="tooltip"]' }`.
+## Interactive evidence UI
+
+`InteractiveEvidence.tsx` supplies five reusable, case-ID-independent renderers:
+`DocumentScanEvidence`, `ThermalScanEvidence`, `ShadowTimeCheckEvidence`, `SealMatchEvidence` and
+`SurfaceRevealEvidence`. Each receives only evidence JSON, persisted progress, locale and a progress
+callback. Shared chrome provides reset and three hint levels; the conclusion and contradiction state
+stay hidden until `successCondition` is met.
+
+All controls have keyboard-sized hit targets and work with Pointer Events. Surface reveal uses a
+128×128 service mask evaluated after each stroke and `touch-action: none`; seal matching supports
+drag/rotate; Arabic switches the component and final link board to RTL. Visual assets use `asset()`
+and lazy image loading, while thermal overlays, shadow geometry and masks are procedural.

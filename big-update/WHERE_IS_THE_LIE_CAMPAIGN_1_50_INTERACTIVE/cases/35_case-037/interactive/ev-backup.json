@@ -1,0 +1,110 @@
+{
+  "id": "ev-backup",
+  "order": 1,
+  "type": "shadow_time_check",
+  "title": {
+    "ru": "Проверка времени резервной записи"
+  },
+  "isContradiction": true,
+  "narrativeRole": "proof",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Тень соответствует 17:30–17:55, а не полуночи: погрузку сняли заранее и выдали за ночную кражу."
+  },
+  "previousType": "camera_recording",
+  "description": {
+    "ru": "Камера контейнерной площадки не имела часов, но в кадре виден калибровочный столб с известной ориентацией."
+  },
+  "instruction": {
+    "ru": "Сопоставить тень столба с временной шкалой."
+  },
+  "assets": {
+    "asset1": "assets/interactive/ev-backup-scene.webp",
+    "asset2": "assets/interactive/ev-backup-shadow-reference.svg"
+  },
+  "data": {
+    "claimedTime": "00:15",
+    "orientationSource": "План контейнерной площадки",
+    "slider": {
+      "from": "06:00",
+      "to": "21:00",
+      "stepMinutes": 10
+    },
+    "shadowOrigin": {
+      "x": 44,
+      "y": 65
+    },
+    "referenceShadow": {
+      "baseAngle": 0,
+      "baseLength": 100,
+      "width": 20,
+      "opacity": 0.34
+    },
+    "timeSamples": [
+      {
+        "time": "08:00",
+        "angle": 72,
+        "length": 128
+      },
+      {
+        "time": "12:00",
+        "angle": 10,
+        "length": 50
+      },
+      {
+        "time": "17:40",
+        "angle": -58,
+        "length": 115
+      },
+      {
+        "time": "20:00",
+        "angle": -77,
+        "length": 153
+      }
+    ],
+    "validTimeRanges": [
+      {
+        "from": "17:30",
+        "to": "17:55"
+      }
+    ],
+    "matchTolerance": {
+      "angle": 8,
+      "length": 16
+    }
+  },
+  "statementLink": {
+    "statementId": "claim_theft_time",
+    "relation": "contradicts",
+    "reason": {
+      "ru": "Тень соответствует 17:30–17:55, а не полуночи: погрузку сняли заранее и выдали за ночную кражу."
+    }
+  },
+  "contradictionTarget": {
+    "statementId": "claim_theft_time",
+    "reason": {
+      "ru": "Тень соответствует 17:30–17:55, а не полуночи: погрузку сняли заранее и выдали за ночную кражу."
+    }
+  },
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Проверка доказывает, что «ночная» запись подготовлена днём до отключения основных камер."
+    },
+    "playerAction": {
+      "ru": "Сопоставить тень столба с временной шкалой."
+    },
+    "conclusion": {
+      "ru": "Тень соответствует 17:30–17:55, а не полуночи: погрузку сняли заранее и выдали за ночную кражу."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

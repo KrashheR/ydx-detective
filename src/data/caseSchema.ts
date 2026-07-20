@@ -58,6 +58,11 @@ const evidenceType = z.enum([
   'bank_statement',
   'phone_records',
   'social_media',
+  'document_scan',
+  'thermal_scan',
+  'shadow_time_check',
+  'seal_match',
+  'surface_reveal',
 ]);
 
 /* -------------------------------------------------------------------------- */
@@ -89,8 +94,13 @@ const evidenceMetaSchema = z
 // Compile-time guard: schema inferred type must be assignable to EvidenceMeta.
 type _EvidenceMetaCheck = AssertAssignable<EvidenceMeta, z.infer<typeof evidenceMetaSchema>>;
 
-export const evidenceSchema = z
-  .object({
+const statementLinkSchema = z.object({
+  statementId: z.string().min(1),
+  relation: z.enum(['supports', 'contradicts', 'contextualizes', 'reveals_season_clue']),
+  reason: localizedString,
+}).strict();
+
+const evidenceBaseShape = {
     id: z.string().min(1),
     type: evidenceType,
     title: localizedString,
@@ -98,9 +108,124 @@ export const evidenceSchema = z
     isContradiction: z.boolean(),
     contradictionExplanation: localizedString,
     meta: evidenceMetaSchema.optional(),
-    relation: z.enum(['supports', 'contradicts', 'context']).optional(),
-  })
-  .strict();
+    order: z.number().int().positive().optional(),
+    narrativeRole: z.string().optional(),
+    statementLink: statementLinkSchema.optional(),
+    contradictionTarget: z.object({ statementId: z.string().min(1), reason: localizedString }).strict().nullable().optional(),
+    evidenceTier: z.enum(['core', 'supporting', 'bonus', 'arc']).optional(),
+    unlocksAfterEvidenceIds: z.array(z.string().min(1)).optional(),
+    revealsEvidenceIds: z.array(z.string().min(1)).optional(),
+    requiredForVerdict: z.boolean().optional(),
+    rewardWeight: z.number().nonnegative().optional(),
+    previousType: z.string().optional(),
+    description: localizedString.optional(),
+    instruction: localizedString.optional(),
+    assets: z.record(z.string(), z.union([z.string(), z.array(z.string())])).optional(),
+    uiHints: z.object({
+      showReset: z.boolean(), allowZoom: z.boolean(), highlightAfterHint: z.boolean(),
+      transparencyMode: z.boolean().optional(),
+    }).strict().optional(),
+    interactiveDesign: z.object({
+      why: localizedString, playerAction: localizedString, conclusion: localizedString,
+    }).strict().optional(),
+};
+
+const percent = z.number().min(0).max(100);
+const scanMode = z.enum(['normal', 'uv', 'backlight', 'contrast', 'side_light']);
+const documentScanData = z.object({
+  initialMode: scanMode,
+  modes: z.array(scanMode).min(1),
+  anomalyZones: z.array(z.object({
+    id: z.string().min(1), mode: scanMode, x: percent, y: percent,
+    width: percent, height: percent, label: z.string().min(1), labelEn: z.string().optional(),
+    isContradiction: z.boolean(),
+  }).strict()).min(1),
+  referenceFields: z.array(z.object({
+    id: z.string().min(1), label: z.string().min(1), labelEn: z.string().optional(), value: z.string().min(1),
+  }).strict()).optional(),
+  successCondition: z.union([
+    z.object({ type: z.literal('select_zone'), zoneId: z.string().min(1) }).strict(),
+    z.object({ type: z.literal('select_then_compare'), zoneId: z.string().min(1), referenceFieldId: z.string().min(1) }).strict(),
+  ]),
+}).strict();
+
+const thermalScanData = z.object({
+  ambientTemperature: z.number(), observationTime: z.string(), claimedLastUseBefore: z.string(),
+  elapsedSinceClaimedUseMinutes: z.number().nonnegative(), coolingReference: z.string().min(1),
+  coolingReferenceEn: z.string().optional(), initialMode: z.enum(['normal', 'thermal']),
+  heatZones: z.array(z.object({
+    id: z.string().min(1), shape: z.enum(['circle', 'ellipse', 'polygon']),
+    x: percent.optional(), y: percent.optional(), width: percent.optional(), height: percent.optional(),
+    points: z.array(z.union([
+      z.object({ x: percent, y: percent }).strict(),
+      z.tuple([percent, percent]),
+    ])).optional(),
+    temperature: z.number(), intensity: z.number().min(0).max(1), label: z.string().min(1),
+    labelEn: z.string().optional(), isContradiction: z.boolean().optional(), isTarget: z.boolean().optional(),
+  }).strict()).min(1),
+  successCondition: z.object({ type: z.enum(['select_any', 'select_all']), zoneIds: z.array(z.string()).min(1) }).strict(),
+}).strict();
+
+const transform = z.object({ x: z.number(), y: z.number(), rotation: z.number() }).strict();
+const shadowTimeData = z.object({
+  claimedTime: z.string(), orientationSource: z.string(), orientationSourceEn: z.string().optional(),
+  slider: z.object({ from: z.string(), to: z.string(), stepMinutes: z.number().positive() }).strict(),
+  shadowOrigin: z.object({ x: percent, y: percent }).strict(),
+  referenceShadow: z.object({ baseAngle: z.number(), baseLength: z.number(), width: z.number(), opacity: z.number().min(0).max(1) }).strict(),
+  timeSamples: z.array(z.object({ time: z.string(), angle: z.number(), length: z.number() }).strict()).min(2),
+  validTimeRanges: z.array(z.object({ from: z.string(), to: z.string() }).strict()).min(1),
+  matchTolerance: z.object({ angle: z.number().nonnegative(), length: z.number().nonnegative() }).strict(),
+}).strict();
+const sealMatchData = z.object({
+  movableFragment: z.enum(['A', 'B']), allowRotation: z.boolean(), rotationStep: z.number().positive(),
+  initialTransform: transform, targetTransform: transform,
+  tolerance: z.object({ position: z.number().nonnegative(), rotation: z.number().nonnegative() }).strict(),
+  expectedMatch: z.boolean(), sourceSeed: z.number().int(), fragmentASeed: z.number().int(), fragmentBSeed: z.number().int(),
+  comparisonMarkers: z.array(z.object({ id: z.string(), label: z.string(), labelEn: z.string().optional() }).strict()).min(1),
+}).strict();
+const surfaceRevealData = z.object({
+  mode: z.enum(['erase', 'apply', 'light_reveal']),
+  coverType: z.enum(['dust', 'condensation', 'dirt', 'soot', 'frost', 'sand', 'powder', 'custom']),
+  brush: z.object({ radius: z.number().positive(), hardness: z.number().min(0).max(1), opacity: z.number().min(0).max(1), spacing: z.number().positive().optional() }).strict(),
+  completion: z.object({
+    type: z.enum(['reveal_percentage', 'discover_any', 'discover_all']),
+    requiredRevealPercent: percent.optional(), requiredTraceIds: z.array(z.string()).optional(),
+  }).strict(),
+  traces: z.array(z.object({
+    id: z.string().min(1), label: z.string().min(1), labelEn: z.string().optional(), mask: z.string().optional(),
+    shape: z.literal('mask'), requiredRevealPercent: percent, isContradiction: z.boolean(),
+    conclusion: z.string().min(1), conclusionEn: z.string().optional(),
+  }).strict()).min(1),
+}).strict().superRefine((data, ctx) => {
+  const ids = new Set(data.traces.map((trace) => trace.id));
+  if (ids.size !== data.traces.length) ctx.addIssue({ code: z.ZodIssueCode.custom, message: 'Duplicate surface trace id' });
+  for (const id of data.completion.requiredTraceIds ?? []) {
+    if (!ids.has(id)) ctx.addIssue({ code: z.ZodIssueCode.custom, message: `Unknown required trace "${id}"` });
+  }
+  for (const [index, trace] of data.traces.entries()) {
+    if (!trace.mask) ctx.addIssue({ code: z.ZodIssueCode.custom, message: 'Mask trace requires mask path', path: ['traces', index, 'mask'] });
+  }
+});
+
+const standardEvidenceSchema = z.object(evidenceBaseShape).strict();
+const interactiveCommon = {
+  ...evidenceBaseShape,
+  description: localizedString,
+  instruction: localizedString,
+  assets: z.record(z.string(), z.union([z.string(), z.array(z.string())])),
+  statementLink: statementLinkSchema,
+  uiHints: evidenceBaseShape.uiHints.unwrap(),
+  interactiveDesign: evidenceBaseShape.interactiveDesign.unwrap(),
+};
+
+export const evidenceSchema = z.union([
+  standardEvidenceSchema.refine((value) => !['document_scan','thermal_scan','shadow_time_check','seal_match','surface_reveal'].includes(value.type)),
+  z.object({ ...interactiveCommon, type: z.literal('document_scan'), data: documentScanData }).strict(),
+  z.object({ ...interactiveCommon, type: z.literal('thermal_scan'), data: thermalScanData }).strict(),
+  z.object({ ...interactiveCommon, type: z.literal('shadow_time_check'), data: shadowTimeData }).strict(),
+  z.object({ ...interactiveCommon, type: z.literal('seal_match'), data: sealMatchData }).strict(),
+  z.object({ ...interactiveCommon, type: z.literal('surface_reveal'), data: surfaceRevealData }).strict(),
+]);
 
 export const claimSchema = z
   .object({
@@ -142,6 +267,30 @@ export const caseSchema = z
     // Optional "investigation budget": max evidence cards the player may open
     // before deciding. Omitted ⇒ unlimited (classic review-everything flow).
     investigationBudget: z.number().int().positive().optional(),
+    campaignOrder: z.number().int().min(1).max(50).optional(),
+    requiredLevel: z.number().int().positive().optional(),
+    act: z.number().int().positive().optional(),
+    actTitle: localizedString.optional(),
+    claimStatements: z.array(z.object({ id: z.string().min(1), text: localizedString, stampable: z.boolean() }).strict()).optional(),
+    contentVersion: z.string().optional(),
+    schemaVersion: z.number().int().positive().optional(),
+    revisionVersion: z.string().optional(),
+    narrative: z.object({
+      preBrief: localizedString, postVerdictNote: localizedString, nextCaseTeaser: localizedString,
+      seasonClue: z.object({ id: z.string(), label: localizedString, description: localizedString, progressIndex: z.number().int(), progressTotal: z.number().int() }).strict().nullable(),
+      epilogue: localizedContent.nullable(),
+    }).strict().optional(),
+    onboarding: z.object({
+      phase: z.string(), targetDurationSeconds: z.number().positive(), teaches: z.array(z.string()),
+      successEmotion: localizedString, menuUnlockAfterVerdict: z.boolean(), unlocks: z.array(z.string()).optional(),
+    }).strict().optional(),
+    finalSynthesis: z.object({
+      id: z.string(), title: localizedString, instruction: localizedString, unlockAfter: z.literal('correct_verdict'),
+      nodes: z.array(z.object({ id: z.string(), label: localizedString, evidenceIds: z.array(z.string()) }).strict()).min(2),
+      requiredLinks: z.array(z.tuple([z.string(), z.string()])), evidenceUnlockIds: z.array(z.string()),
+      arcEvidenceAccess: z.literal('post_verdict_free'), successConclusion: localizedString,
+      skippableAfterAttempts: z.number().int().positive(), analyticsEvent: z.string(),
+    }).strict().optional(),
   })
   .strict()
   // Cross-field invariant: evidence ids must be unique within a case so the
@@ -158,6 +307,38 @@ export const caseSchema = z
       }
       ids.add(ev.id);
     }
+    for (const [index, ev] of data.evidences.entries()) {
+      for (const dependencyId of ev.unlocksAfterEvidenceIds ?? []) {
+        if (!ids.has(dependencyId) || dependencyId === ev.id) {
+          ctx.addIssue({ code: z.ZodIssueCode.custom, message: `Invalid evidence dependency "${dependencyId}"`, path: ['evidences', index, 'unlocksAfterEvidenceIds'] });
+        }
+      }
+      for (const revealedId of ev.revealsEvidenceIds ?? []) {
+        if (!ids.has(revealedId) || revealedId === ev.id) {
+          ctx.addIssue({ code: z.ZodIssueCode.custom, message: `Invalid revealed evidence "${revealedId}"`, path: ['evidences', index, 'revealsEvidenceIds'] });
+        }
+      }
+    }
+    if (data.investigationBudget != null && data.investigationBudget > data.evidences.filter((ev) => ev.evidenceTier !== 'arc').length) {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, message: 'Investigation budget exceeds accessible evidence count', path: ['investigationBudget'] });
+    }
+    if (data.claimStatements) {
+      const statementIds = new Set<string>();
+      for (const [index, statement] of data.claimStatements.entries()) {
+        if (statementIds.has(statement.id)) ctx.addIssue({ code: z.ZodIssueCode.custom, message: `Duplicate statement id "${statement.id}"`, path: ['claimStatements', index] });
+        statementIds.add(statement.id);
+      }
+      const main = data.claimStatements.find((statement) => statement.id === 'claim_main');
+      if (!main || main.stampable) ctx.addIssue({ code: z.ZodIssueCode.custom, message: 'claim_main must exist and be non-stampable', path: ['claimStatements'] });
+      for (const [index, ev] of data.evidences.entries()) {
+        const link = ev.statementLink;
+        if (link && !statementIds.has(link.statementId)) ctx.addIssue({ code: z.ZodIssueCode.custom, message: `Unknown statement link "${link.statementId}"`, path: ['evidences', index, 'statementLink'] });
+        if (link?.relation === 'contradicts' !== ev.isContradiction) ctx.addIssue({ code: z.ZodIssueCode.custom, message: 'relation/isContradiction mismatch', path: ['evidences', index] });
+        if (link?.relation === 'contradicts' && !data.claimStatements.find((s) => s.id === link.statementId)?.stampable) ctx.addIssue({ code: z.ZodIssueCode.custom, message: 'Contradiction must target a stampable statement', path: ['evidences', index] });
+      }
+    }
+    if (data.truth === 'valid' && data.evidences.some((ev) => ev.isContradiction)) ctx.addIssue({ code: z.ZodIssueCode.custom, message: 'Valid case cannot contain contradictions', path: ['evidences'] });
+    if (data.truth === 'fraud' && !data.evidences.some((ev) => ev.isContradiction)) ctx.addIssue({ code: z.ZodIssueCode.custom, message: 'Fraud case requires a contradiction', path: ['evidences'] });
   });
 
 /* -------------------------------------------------------------------------- */

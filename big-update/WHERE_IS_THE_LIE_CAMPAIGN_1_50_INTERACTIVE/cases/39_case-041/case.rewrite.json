@@ -1,0 +1,600 @@
+{
+  "id": "case-041",
+  "campaignOrder": 39,
+  "requiredLevel": 20,
+  "act": 4,
+  "actTitle": {
+    "ru": "Серый конвой",
+    "en": "The Gray Convoy"
+  },
+  "title": {
+    "ru": "Перехватчик в ледяном каньоне",
+    "en": "The Interceptor in the Ice Canyon"
+  },
+  "difficulty": "hard",
+  "claimAmount": {
+    "value": 31600,
+    "currency": "EUR"
+  },
+  "groundTruth": "fraud",
+  "correctDecision": "reject",
+  "investigationBudget": 4,
+  "claimant": {
+    "name": {
+      "ru": "Элиан Корд, 27 лет",
+      "en": "Elian Kord, age 27"
+    },
+    "migrationNote": {
+      "ru": "Сохранить имя и портрет, но заменить космический корабль на экспериментальный высокоскоростной спасательный самолёт-перехватчик.",
+      "en": "Keep the name and portrait, but replace the spacecraft with an experimental high-speed rescue interceptor aircraft."
+    },
+    "portrait": {
+      "characterId": "elian-kord-grounded",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Элиан Корд",
+        "en": "Elian Kord, age 27"
+      },
+      "assetId": "asset-072",
+      "src": "src/data/cases/case-041/people/elian-kord-grounded.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-041/people/elian-kord-grounded.webp",
+      "caseRelativeSrc": "people/elian-kord-grounded.webp",
+      "installTo": "public/people/elian-kord-grounded.webp",
+      "legacyRuntimeUrl": "people/elian-kord-grounded.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "e2dc5867a22514ebf0e279d8456d9e84181e57687d769e28243df9e3df1d229d"
+    },
+    "portraitStatus": "generated_replacement_included",
+    "portraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/elian-kord-grounded.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-041/people/elian-kord-grounded.webp",
+      "copyTo": "public/people/elian-kord-grounded.webp",
+      "replacesExistingValue": "people/elian-kord.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Корд действительно пережил крушение. Но следы выстрелов нанесены на корпус после удара о лёд. Выясните, что стало причиной падения. — В. Лебедева",
+      "en": "Kord genuinely survived a crash. But the supposed bullet holes were made after the fuselage struck the ice. Find what actually brought the aircraft down. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Северный терминал принимает грузы по воздуху. В маршрутном журнале следующей точкой значится закрытая Навигационная академия «Меридиан».",
+      "en": "The northern terminal receives cargo by air. The route log names the closed Meridian Navigation Academy as the next stop."
+    },
+    "nextCaseTeaser": {
+      "ru": "Перед академией — последнее частное дело: из семейного архива исчез церемониальный клинок, а оплата пришла раньше кражи.",
+      "en": "Before the academy comes one last private claim: a ceremonial blade vanished from a family archive, but payment arrived before the theft."
+    },
+    "seasonClue": {
+      "id": "meridian-route",
+      "label": {
+        "ru": "Маршрут к «Меридиану»",
+        "en": "Route to Meridian"
+      },
+      "description": {
+        "ru": "Серый конвой использует инфраструктуру закрытой навигационной академии.",
+        "en": "The Gray Convoy uses the infrastructure of a closed navigation academy."
+      },
+      "progressIndex": 6,
+      "progressTotal": 6
+    },
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Во время гуманитарного рейса мой экспериментальный перехватчик атаковали контрабандисты. Машина потеряла управление и разбилась в ледяном каньоне. Я выжил и прошу оплатить самолёт и лечение.",
+    "en": "During a humanitarian flight, smugglers attacked my experimental interceptor. The aircraft lost control and crashed in an ice canyon. I survived and am claiming the aircraft and medical costs."
+  },
+  "evidence": [
+    {
+      "id": "ev-crash",
+      "order": 1,
+      "type": "photo",
+      "title": {
+        "ru": "Фото обломков",
+        "en": "Wreckage Photograph"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "Отверстия, похожие на пулевые, имеют края, загнутые наружу, и нанесены поверх уже возникших трещин корпуса.",
+        "en": "The bullet-like holes have edges bent outward and were made over cracks that had already formed in the fuselage."
+      },
+      "statusExplanation": {
+        "ru": "Повреждения созданы изнутри или после крушения и не подтверждают внешнюю атаку.",
+        "en": "The holes were made from inside or after the crash and do not support an external attack."
+      },
+      "statementLink": {
+        "statementId": "claim_attack",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Повреждения созданы изнутри или после крушения и не подтверждают внешнюю атаку.",
+          "en": "The holes were made from inside or after the crash and do not support an external attack."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_attack",
+        "reason": {
+          "ru": "Повреждения созданы изнутри или после крушения и не подтверждают внешнюю атаку.",
+          "en": "The holes were made from inside or after the crash and do not support an external attack."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-073",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-041/evidence/case-041-ev-crash.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-041/evidence/case-041-ev-crash.webp",
+          "caseRelativeSrc": "evidence/case-041-ev-crash.webp",
+          "installTo": "public/evidence/case-041-ev-crash.webp",
+          "legacyRuntimeUrl": "evidence/case-041-ev-crash.webp",
+          "format": "webp",
+          "width": 1448,
+          "height": 1086,
+          "sha256": "3c4c5c6273990e19a7bb19f16f1b97f0ab561569e0fa125324a7f080a33ccde3"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-041/evidence/case-041-ev-crash.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-041/evidence/case-041-ev-crash.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-041-ev-crash.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-041/evidence/case-041-ev-crash.webp",
+        "copyTo": "public/evidence/case-041-ev-crash.webp"
+      }
+    },
+    {
+      "id": "ev-manifest",
+      "order": 2,
+      "type": "document_scan",
+      "title": {
+        "ru": "Экспертиза грузовой ведомости",
+        "en": "Cargo Manifest Examination"
+      },
+      "isContradiction": true,
+      "narrativeRole": "suspicion",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Под значением 240 кг проявляется исходная масса 920 кг; ведомость исправили перед гуманитарным рейсом.",
+        "en": "The original weight of 920 kg appears beneath the stated 240 kg; the manifest was altered before the humanitarian flight."
+      },
+      "previousType": "document",
+      "description": {
+        "ru": "Спасатели передали обгоревший бумажный оригинал ведомости из кабины.",
+        "en": "Rescuers recovered the burned original paper manifest from the cockpit."
+      },
+      "instruction": {
+        "ru": "Включить УФ-режим и проверить поле фактической массы.",
+        "en": "Switch on UV mode and inspect the actual-weight field."
+      },
+      "assets": {
+        "asset1": "assets/interactive/ev-manifest-base.webp",
+        "asset2": "assets/interactive/ev-manifest-scan-overlay.svg"
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "uv",
+          "backlight"
+        ],
+        "anomalyZones": [
+          {
+            "id": "cargo_mass",
+            "mode": "uv",
+            "x": 61,
+            "y": 43,
+            "width": 18,
+            "height": 9,
+            "label": "Под значением 240 кг проявляется исходная масса 920 кг; ведомость исправили перед гуманитарным рейсом.",
+            "isContradiction": true,
+            "labelEn": "The original weight of 920 kg appears beneath the stated 240 kg; the manifest was altered before the humanitarian flight."
+          }
+        ],
+        "successCondition": {
+          "type": "select_zone",
+          "zoneId": "cargo_mass"
+        }
+      },
+      "statementLink": {
+        "statementId": "claim_declared_cargo",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Под значением 240 кг проявляется исходная масса 920 кг; ведомость исправили перед гуманитарным рейсом.",
+          "en": "The original weight of 920 kg appears beneath the stated 240 kg; the manifest was altered before the humanitarian flight."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_declared_cargo",
+        "reason": {
+          "ru": "Под значением 240 кг проявляется исходная масса 920 кг; ведомость исправили перед гуманитарным рейсом.",
+          "en": "The original weight of 920 kg appears beneath the stated 240 kg; the manifest was altered before the humanitarian flight."
+        }
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Скрытая масса объясняет аварию и разрушает легенду о нападении без специальных знаний авиации.",
+          "en": "The concealed weight explains the crash and disproves the attack story without requiring specialist aviation knowledge."
+        },
+        "playerAction": {
+          "ru": "Включить УФ-режим и проверить поле фактической массы.",
+          "en": "Switch on UV mode and inspect the actual-weight field."
+        },
+        "conclusion": {
+          "ru": "Под значением 240 кг проявляется исходная масса 920 кг; ведомость исправили перед гуманитарным рейсом.",
+          "en": "The original weight of 920 kg appears beneath the stated 240 kg; the manifest was altered before the humanitarian flight."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-074",
+          "role": "interactive_base",
+          "src": "src/data/cases/case-041/assets/interactive/ev-manifest-base.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-041/assets/interactive/ev-manifest-base.webp",
+          "caseRelativeSrc": "assets/interactive/ev-manifest-base.webp",
+          "installTo": "src/data/cases/case-041/assets/interactive/ev-manifest-base.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1600,
+          "height": 1100,
+          "sha256": "b0383b7079fd04132a99e43bf3f2e900200df0328c1dc1ded82088904176b8cb"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-041/assets/interactive/ev-manifest-base.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-041/assets/interactive/ev-manifest-base.webp",
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-nav",
+      "order": 3,
+      "type": "gps",
+      "title": {
+        "ru": "Навигационный трек",
+        "en": "Navigation Track"
+      },
+      "isContradiction": false,
+      "narrativeRole": "arc_proof",
+      "text": {
+        "ru": "Корд отклонился от гуманитарного маршрута к северному терминалу GC-17 и вошёл в каньон ниже безопасной высоты.",
+        "en": "Kord diverted from the humanitarian route toward the northern GC-17 terminal and entered the canyon below the safe altitude."
+      },
+      "statusExplanation": {
+        "ru": "Пилот направлялся к узлу Серого конвоя, а не следовал заявленному маршруту.",
+        "en": "The pilot was heading for a Gray Convoy hub, not following the declared route."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Пилот направлялся к узлу Серого конвоя, а не следовал заявленному маршруту.",
+          "en": "The pilot was heading for a Gray Convoy hub, not following the declared route."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-flight",
+      "order": 4,
+      "type": "usage_log",
+      "title": {
+        "ru": "Бортовой журнал",
+        "en": "Flight Log"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Система предупреждала о перегрузе и обледенении. Пилот отключил автоматический возврат за шесть минут до потери подъёмной силы.",
+        "en": "The system warned of overload and icing. The pilot disabled automatic return six minutes before losing lift."
+      },
+      "statusExplanation": {
+        "ru": "Крушение вызвали перегруз и сознательное продолжение опасного маршрута.",
+        "en": "The crash resulted from overload and the deliberate continuation of a dangerous route."
+      },
+      "statementLink": {
+        "statementId": "claim_safe_route",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Крушение вызвали перегруз и сознательное продолжение опасного маршрута.",
+          "en": "The crash resulted from overload and the deliberate continuation of a dangerous route."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_safe_route",
+        "reason": {
+          "ru": "Крушение вызвали перегруз и сознательное продолжение опасного маршрута.",
+          "en": "The crash resulted from overload and the deliberate continuation of a dangerous route."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-broker",
+      "order": 5,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Платёж брокера",
+        "en": "Broker Payment"
+      },
+      "isContradiction": false,
+      "narrativeRole": "motive",
+      "text": {
+        "ru": "Перед вылетом Корд получил оплату за доставку партии `GC-17-N`.",
+        "en": "Before takeoff, Kord received payment to deliver batch `GC-17-N`."
+      },
+      "statusExplanation": {
+        "ru": "Финансовый след подтверждает незаявленную перевозку.",
+        "en": "The financial trail confirms the undeclared transport."
+      },
+      "statementLink": {
+        "statementId": "claim_declared_cargo",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Финансовый след подтверждает незаявленную перевозку.",
+          "en": "The financial trail confirms the undeclared transport."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-rescue",
+      "order": 6,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Запись спасателей",
+        "en": "Rescue Team Record"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Корд действительно найден травмированным у обломков. Спасатели не фиксируют следов преследования или второго воздушного судна.",
+        "en": "Kord was genuinely found injured beside the wreckage. Rescuers recorded no signs of pursuit or a second aircraft."
+      },
+      "statusExplanation": {
+        "ru": "Травма реальна, но не подтверждает придуманную атаку.",
+        "en": "The injury is real but does not support the fabricated attack."
+      },
+      "statementLink": {
+        "statementId": "claim_attack",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Травма реальна, но не подтверждает придуманную атаку.",
+          "en": "The injury is real but does not support the fabricated attack."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Перехватчик не был обстрелян: отверстия появились после крушения.",
+      "Корд перевозил тяжёлый незаявленный груз для GC-17 и отключил автоматический возврат.",
+      "Под значением 240 кг проявляется исходная масса 920 кг; ведомость исправили перед гуманитарным рейсом.",
+      "Причиной падения стали перегруз и опасный маршрут, а версия атаки создана для страховой выплаты. Следует отказать."
+    ],
+    "en": [
+      "The holes were made from inside or after the crash and do not support an external attack.",
+      "The original weight of 920 kg appears beneath the stated 240 kg; the manifest was altered before the humanitarian flight.",
+      "The crash resulted from overload and the deliberate continuation of a dangerous route.",
+      "The financial trail confirms the undeclared transport.",
+      "The pilot was heading for a Gray Convoy hub, not following the declared route.",
+      "The claim is fraudulent and should be rejected."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Заменить космооперный перехватчик на правдоподобный экспериментальный самолёт.",
+      "Сделать крушение реальным, а версию атаки — подделкой.",
+      "Интегрировать document_scan в улику ev-manifest; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate document_scan into evidence ev-manifest; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "people/elian-kord-grounded.webp",
+      "action": "generate_if_needed",
+      "prompt": "Illustrated archival claimant ID portrait matching the existing insurance detective game: male experimental rescue pilot, 27 years old, athletic but tired, practical civilian flight jacket, minor healed facial scrape, guarded expression, neutral document-photo background, no space uniform, no military insignia, no famous likeness, no logos, no text, no watermark."
+    },
+    {
+      "file": "evidence/case-041-ev-crash.webp",
+      "action": "generate",
+      "prompt": "Documentary rescue evidence photograph of a crashed experimental high-speed rescue aircraft in an icy mountain canyon, broken composite fuselage and snow debris, several suspicious small holes added over existing fracture lines, realistic aviation scale, no spacecraft, no military insignia, no logos, no text, no watermark."
+    },
+    {
+      "file": "assets/interactive/ev-manifest-base.webp",
+      "purpose": "Базовая версия документа в normal-режиме",
+      "resolution": "1600×1100",
+      "format": "WebP",
+      "transparency": false,
+      "generatedBy": "image_model",
+      "manualPost": "Удалить случайный читаемый текст; выровнять документ; оставить поля для UI-слоёв.",
+      "prompt": "Create a realistic fictional administrative document for an insurance detective game. Фиктивная грузовая ведомость экспериментального самолёта, крупные поля массы и маршрута, лёгкие следы копоти. Full document visible from above, utilitarian layout, paper texture, large blank structured fields. No real organization, logo, brand, personal data or watermark. Do not render critical readable text; dates, names, codes and signatures will be added in HTML/SVG. The hidden anomaly must not be obvious in the normal version.",
+      "evidenceId": "ev-manifest",
+      "evidenceType": "document_scan"
+    },
+    {
+      "file": "assets/interactive/ev-manifest-scan-overlay.svg",
+      "purpose": "Совмещённый слой УФ/просвета/бокового света",
+      "resolution": "viewBox 0 0 100 100",
+      "format": "SVG",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "После финального base.webp откалибровать hotspot и режим проявления.",
+      "prompt": null,
+      "evidenceId": "ev-manifest",
+      "evidenceType": "document_scan"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Во время гуманитарного рейса мой экспериментальный перехватчик атаковали контрабандисты. Машина потеряла управление и разбилась в ледяном каньоне. Я выжил и прошу оплатить самолёт и лечение.",
+        "en": "During a humanitarian flight, smugglers attacked my experimental interceptor. The aircraft lost control and crashed in an ice canyon. I survived and am claiming the aircraft and medical costs."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_attack",
+      "text": {
+        "ru": "Перехватчик потерпел крушение после внешней атаки.",
+        "en": "The interceptor crashed after an external attack."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_declared_cargo",
+      "text": {
+        "ru": "На борту находилось только 240 кг заявленного гуманитарного груза.",
+        "en": "Only 240 kg of declared humanitarian cargo was on board."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_safe_route",
+      "text": {
+        "ru": "Пилот следовал разрешённым маршрутом и не отключал возврат.",
+        "en": "The pilot followed the authorized route and did not disable automatic return."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-041",
+    "archiveBasePath": "generated-assets/src/data/cases/case-041",
+    "claimantPortrait": {
+      "characterId": "elian-kord-grounded",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Элиан Корд",
+        "en": "Elian Kord, age 27"
+      },
+      "assetId": "asset-072",
+      "src": "src/data/cases/case-041/people/elian-kord-grounded.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-041/people/elian-kord-grounded.webp",
+      "caseRelativeSrc": "people/elian-kord-grounded.webp",
+      "installTo": "public/people/elian-kord-grounded.webp",
+      "legacyRuntimeUrl": "people/elian-kord-grounded.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "e2dc5867a22514ebf0e279d8456d9e84181e57687d769e28243df9e3df1d229d"
+    },
+    "claimantPortraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/elian-kord-grounded.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-041/people/elian-kord-grounded.webp",
+      "copyTo": "public/people/elian-kord-grounded.webp",
+      "replacesExistingValue": "people/elian-kord.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-crash",
+        "title": {
+          "ru": "Фото обломков",
+          "en": "Wreckage Photograph"
+        },
+        "primaryImage": "src/data/cases/case-041/evidence/case-041-ev-crash.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-041/evidence/case-041-ev-crash.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-041-ev-crash.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-041/evidence/case-041-ev-crash.webp",
+          "copyTo": "public/evidence/case-041-ev-crash.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-073",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-041/evidence/case-041-ev-crash.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-041/evidence/case-041-ev-crash.webp",
+            "caseRelativeSrc": "evidence/case-041-ev-crash.webp",
+            "installTo": "public/evidence/case-041-ev-crash.webp",
+            "legacyRuntimeUrl": "evidence/case-041-ev-crash.webp",
+            "format": "webp",
+            "width": 1448,
+            "height": 1086,
+            "sha256": "3c4c5c6273990e19a7bb19f16f1b97f0ab561569e0fa125324a7f080a33ccde3"
+          }
+        ]
+      },
+      {
+        "evidenceId": "ev-manifest",
+        "title": {
+          "ru": "Экспертиза грузовой ведомости",
+          "en": "Cargo Manifest Examination"
+        },
+        "primaryImage": "src/data/cases/case-041/assets/interactive/ev-manifest-base.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-041/assets/interactive/ev-manifest-base.webp",
+        "legacyImageBinding": null,
+        "assets": [
+          {
+            "assetId": "asset-074",
+            "role": "interactive_base",
+            "src": "src/data/cases/case-041/assets/interactive/ev-manifest-base.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-041/assets/interactive/ev-manifest-base.webp",
+            "caseRelativeSrc": "assets/interactive/ev-manifest-base.webp",
+            "installTo": "src/data/cases/case-041/assets/interactive/ev-manifest-base.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1600,
+            "height": 1100,
+            "sha256": "b0383b7079fd04132a99e43bf3f2e900200df0328c1dc1ded82088904176b8cb"
+          }
+        ]
+      }
+    ]
+  }
+}

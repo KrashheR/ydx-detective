@@ -1,0 +1,600 @@
+{
+  "id": "case-043",
+  "campaignOrder": 41,
+  "requiredLevel": 21,
+  "act": 5,
+  "actTitle": {
+    "ru": "Последний маршрут",
+    "en": "The Final Route"
+  },
+  "title": {
+    "ru": "Стажёр, который ушёл сам",
+    "en": "The Trainee Who Left Voluntarily"
+  },
+  "difficulty": "hard",
+  "claimAmount": {
+    "value": 17400,
+    "currency": "EUR"
+  },
+  "groundTruth": "fraud",
+  "correctDecision": "reject",
+  "investigationBudget": 4,
+  "claimant": {
+    "name": {
+      "ru": "Илар Роун, 61 год",
+      "en": "Ilar Roun, age 61"
+    },
+    "migrationNote": {
+      "ru": "Сохранить имя и портрет. Роль — мастер-наставник навигационной академии «Меридиан». Никакой мистической или космооперной атрибутики.",
+      "en": "Keep the name and portrait. He is a master instructor at Meridian Navigation Academy, with no mystical or space-opera elements."
+    },
+    "portrait": {
+      "characterId": "ilar-roun-grounded",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Илар Роун",
+        "en": "Ilar Roun, age 61"
+      },
+      "assetId": "asset-078",
+      "src": "src/data/cases/case-043/people/ilar-roun-grounded.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-043/people/ilar-roun-grounded.webp",
+      "caseRelativeSrc": "people/ilar-roun-grounded.webp",
+      "installTo": "public/people/ilar-roun-grounded.webp",
+      "legacyRuntimeUrl": "people/ilar-roun-grounded.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "451b40eec93e27a3435bc31268f5e00f16969a1c3fd43db1b724db4e27148bb4"
+    },
+    "portraitStatus": "generated_replacement_included",
+    "portraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/ilar-roun-grounded.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-043/people/ilar-roun-grounded.webp",
+      "copyTo": "public/people/ilar-roun-grounded.webp",
+      "replacesExistingValue": "people/ilar-roun.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Пропавший стажёр Илья Нестеров скопировал маршруты GC-17. Его наставник требует оплатить поиски и называет уход похищением. — В. Лебедева",
+      "en": "Missing trainee Ilya Nesterov copied the GC-17 routes. His mentor is claiming search expenses and calling the departure an abduction. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Илья жив. Он передаст материалы только после того, как мы научимся отличать настоящий след Серого конвоя от подброшенного. Следующее дело даст нам такую проверку.",
+      "en": "Ilya is alive. He will hand over the files only after we prove we can distinguish a genuine Gray Convoy trace from a planted one. The next case will test that."
+    },
+    "nextCaseTeaser": {
+      "ru": "В теплице редких лекарственных растений найден кусок серой упаковочной ленты. Возможно, он оставлен слишком удобно.",
+      "en": "A piece of gray packing tape was found in a greenhouse of rare medicinal plants. Perhaps it was left a little too conveniently."
+    },
+    "seasonClue": {
+      "id": "ilya-whistleblower",
+      "label": {
+        "ru": "Свидетель Илья Нестеров",
+        "en": "Witness Ilya Nesterov"
+      },
+      "description": {
+        "ru": "Стажёр скопировал внутренние маршруты GC-17 и готов стать свидетелем против сети.",
+        "en": "The trainee copied GC-17's internal routes and is prepared to testify against the network."
+      },
+      "progressIndex": 1,
+      "progressTotal": 7
+    },
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Ночью моего стажёра Илью Нестерова похитили из закрытого корпуса академии. Вместе с ним исчезли учебные материалы и маршрутные протоколы. Прошу компенсировать расходы поиска и утраченные документы.",
+    "en": "During the night, my trainee Ilya Nesterov was abducted from a secure academy building. Training materials and route protocols disappeared with him. I am claiming the search costs and lost documents."
+  },
+  "evidence": [
+    {
+      "id": "corridor-cam",
+      "order": 1,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Коридорная камера",
+        "en": "Hallway Camera"
+      },
+      "isContradiction": false,
+      "narrativeRole": "suspicion",
+      "text": {
+        "ru": "Илья идёт к выходу один, с заранее собранной сумкой. Никто не сопровождает и не преследует его.",
+        "en": "Ilya walks to the exit alone carrying a packed bag. No one accompanies or pursues him."
+      },
+      "statusExplanation": {
+        "ru": "Запись противоречит версии насильственного похищения.",
+        "en": "The footage contradicts the claim of a forced abduction."
+      },
+      "statementLink": {
+        "statementId": "claim_abduction",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Запись противоречит версии насильственного похищения.",
+          "en": "The footage contradicts the claim of a forced abduction."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "exit-pass",
+      "order": 2,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал шлюза",
+        "en": "Security Gate Log"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Выход открыт личной картой Ильи и подтверждён его биометрией. Система не фиксирует принуждения или аварийного режима.",
+        "en": "Ilya's personal card opened the exit, confirmed by his biometrics. The system recorded neither coercion nor emergency mode."
+      },
+      "statusExplanation": {
+        "ru": "Стажёр покинул корпус штатно и добровольно.",
+        "en": "The trainee left the building normally and voluntarily."
+      },
+      "statementLink": {
+        "statementId": "claim_abduction",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Стажёр покинул корпус штатно и добровольно.",
+          "en": "The trainee left the building normally and voluntarily."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_abduction",
+        "reason": {
+          "ru": "Стажёр покинул корпус штатно и добровольно.",
+          "en": "The trainee left the building normally and voluntarily."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "cache-photo",
+      "order": 3,
+      "type": "photo",
+      "title": {
+        "ru": "Тайник у станции",
+        "en": "Cache Near the Station"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "За скамьёй заранее сложены дорожный паёк, наличные, тёплая одежда и копия расписания поездов.",
+        "en": "Travel rations, cash, warm clothing, and a train timetable had been hidden behind a bench in advance."
+      },
+      "statusExplanation": {
+        "ru": "Побег был подготовлен самим стажёром.",
+        "en": "The trainee prepared his own departure."
+      },
+      "statementLink": {
+        "statementId": "claim_abduction",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Побег был подготовлен самим стажёром.",
+          "en": "The trainee prepared his own departure."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_abduction",
+        "reason": {
+          "ru": "Побег был подготовлен самим стажёром.",
+          "en": "The trainee prepared his own departure."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-079",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-043/evidence/case-043-cache-photo.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-043/evidence/case-043-cache-photo.webp",
+          "caseRelativeSrc": "evidence/case-043-cache-photo.webp",
+          "installTo": "public/evidence/case-043-cache-photo.webp",
+          "legacyRuntimeUrl": "evidence/case-043-cache-photo.webp",
+          "format": "webp",
+          "width": 1448,
+          "height": 1086,
+          "sha256": "d5066d452f2d0b46db301c2d67372efa0b29a407e2b7aee3e4c6056d3bc9f823"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-043/evidence/case-043-cache-photo.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-043/evidence/case-043-cache-photo.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-043-cache-photo.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-043/evidence/case-043-cache-photo.webp",
+        "copyTo": "public/evidence/case-043-cache-photo.webp"
+      }
+    },
+    {
+      "id": "letter",
+      "order": 4,
+      "type": "document",
+      "title": {
+        "ru": "Письмо Ильи",
+        "en": "Ilya's Letter"
+      },
+      "isContradiction": false,
+      "narrativeRole": "arc_proof",
+      "text": {
+        "ru": "«Я ухожу сам. В учебных протоколах спрятаны маршруты Серого конвоя. Если останусь, Роун заставит удалить копии. Передам их тому, кто сможет проверить».",
+        "en": "‘I am leaving voluntarily. The training protocols conceal Gray Convoy routes. If I stay, Roun will force me to delete the copies. I will give them to someone who can verify them.’"
+      },
+      "statusExplanation": {
+        "ru": "Письмо прямо сообщает о добровольном уходе и мотиве наставника скрыть правду.",
+        "en": "The letter explicitly confirms a voluntary departure and the mentor's motive to conceal the truth."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Письмо прямо сообщает о добровольном уходе и мотиве наставника скрыть правду.",
+          "en": "The letter explicitly confirms a voluntary departure and the mentor's motive to conceal the truth."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "protocol",
+      "order": 5,
+      "type": "document_scan",
+      "title": {
+        "ru": "Экспертиза экзаменационного протокола",
+        "en": "Examination Record Analysis"
+      },
+      "isContradiction": false,
+      "narrativeRole": "motive",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Оценки занижены задним числом после доступа Ильи к маршрутам; исправления подписаны Роуном.",
+        "en": "The grades were reduced retroactively after Ilya accessed the routes; Roun signed the alterations."
+      },
+      "previousType": "document",
+      "description": {
+        "ru": "Илья оставил бумажный черновик протокола вместе с копией маршрутов.",
+        "en": "Ilya left a paper draft of the record with a copy of the routes."
+      },
+      "instruction": {
+        "ru": "Включить боковой свет и найти прежние оценки под исправлениями.",
+        "en": "Switch on side light and find the original grades beneath the alterations."
+      },
+      "assets": {
+        "asset1": "assets/interactive/protocol-base.webp",
+        "asset2": "assets/interactive/protocol-scan-overlay.svg"
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "side_light",
+          "uv"
+        ],
+        "anomalyZones": [
+          {
+            "id": "changed_scores",
+            "mode": "side_light",
+            "x": 49,
+            "y": 47,
+            "width": 33,
+            "height": 20,
+            "label": "Оценки занижены задним числом после доступа Ильи к маршрутам; исправления подписаны Роуном.",
+            "isContradiction": true,
+            "labelEn": "The grades were reduced retroactively after Ilya accessed the routes; Roun signed the alterations."
+          }
+        ],
+        "successCondition": {
+          "type": "select_zone",
+          "zoneId": "changed_scores"
+        }
+      },
+      "statementLink": {
+        "statementId": "claim_documents_lost",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Оценки занижены задним числом после доступа Ильи к маршрутам; исправления подписаны Роуном.",
+          "en": "The grades were reduced retroactively after Ilya accessed the routes; Roun signed the alterations."
+        }
+      },
+      "contradictionTarget": null,
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Игрок сам обнаруживает давление на свидетеля и понимает мотив добровольного ухода.",
+          "en": "The player uncovers the pressure on the witness and understands why he left voluntarily."
+        },
+        "playerAction": {
+          "ru": "Включить боковой свет и найти прежние оценки под исправлениями.",
+          "en": "Switch on side light and find the original grades beneath the alterations."
+        },
+        "conclusion": {
+          "ru": "Оценки занижены задним числом после доступа Ильи к маршрутам; исправления подписаны Роуном.",
+          "en": "The grades were reduced retroactively after Ilya accessed the routes; Roun signed the alterations."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-080",
+          "role": "interactive_base",
+          "src": "src/data/cases/case-043/assets/interactive/protocol-base.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-043/assets/interactive/protocol-base.webp",
+          "caseRelativeSrc": "assets/interactive/protocol-base.webp",
+          "installTo": "src/data/cases/case-043/assets/interactive/protocol-base.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1600,
+          "height": 1100,
+          "sha256": "300c7d4dfacb09f1eff06750fd9ea83761d5dcdbfc088e511acf93b5cbf3fa5d"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-043/assets/interactive/protocol-base.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-043/assets/interactive/protocol-base.webp",
+      "legacyImageBinding": null
+    },
+    {
+      "id": "phone-detail",
+      "order": 6,
+      "type": "phone_records",
+      "title": {
+        "ru": "Защищённое сообщение",
+        "en": "Encrypted Message"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "После выхода Илья отправляет Вере Лебедевой контрольную фразу и обещает передать копии при гарантии безопасности.",
+        "en": "After leaving, Ilya sends Vera Lebedeva an authentication phrase and promises to transfer the copies once his safety is guaranteed."
+      },
+      "statusExplanation": {
+        "ru": "Связь после ухода подтверждает, что стажёр жив, действует осознанно и не похищен.",
+        "en": "The post-departure contact confirms that the trainee is alive, acting deliberately, and was not abducted."
+      },
+      "statementLink": {
+        "statementId": "claim_abduction",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Связь после ухода подтверждает, что стажёр жив, действует осознанно и не похищен.",
+          "en": "The post-departure contact confirms that the trainee is alive, acting deliberately, and was not abducted."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_abduction",
+        "reason": {
+          "ru": "Связь после ухода подтверждает, что стажёр жив, действует осознанно и не похищен.",
+          "en": "The post-departure contact confirms that the trainee is alive, acting deliberately, and was not abducted."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Илья самостоятельно собрал вещи, открыл шлюз своей картой и покинул академию.",
+      "Он ушёл, чтобы передать маршруты Серого конвоя и избежать давления Роуна.",
+      "Оценки занижены задним числом после доступа Ильи к маршрутам; исправления подписаны Роуном.",
+      "Похищения не было, а расходы поиска возникли из ложной версии наставника. Выплату следует отклонить."
+    ],
+    "en": [
+      "The trainee left the building normally and voluntarily.",
+      "The trainee prepared his own departure.",
+      "The post-departure contact confirms that the trainee is alive, acting deliberately, and was not abducted.",
+      "The grades were reduced retroactively after Ilya accessed the routes; Roun signed the alterations.",
+      "The footage contradicts the claim of a forced abduction.",
+      "The claim is fraudulent and should be rejected."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Сделать добровольный уход осмысленным поступком свидетеля.",
+      "Связать наставника с сокрытием маршрутов, но не раскрывать всю сеть сразу.",
+      "Интегрировать document_scan в улику protocol; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate document_scan into evidence protocol; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "people/ilar-roun-grounded.webp",
+      "action": "generate_if_needed",
+      "prompt": "Illustrated archival claimant ID portrait matching the existing insurance detective game: male navigation academy mentor, 61 years old, austere intelligent face, gray hair, plain modern academic jacket, controlled authoritative expression, neutral document-photo background, no robes, no mystical symbols, no space-opera costume, no logos, no text, no watermark."
+    },
+    {
+      "file": "evidence/case-043-cache-photo.webp",
+      "action": "generate",
+      "prompt": "Documentary evidence photo of a small prepared travel cache hidden behind a bench at a quiet railway platform: compact food pack, folded warm jacket, plain envelope of cash and a printed timetable with no readable text, realistic early-morning light, no sci-fi props, no logos, no watermark."
+    },
+    {
+      "file": "assets/interactive/protocol-base.webp",
+      "purpose": "Базовая версия документа в normal-режиме",
+      "resolution": "1600×1100",
+      "format": "WebP",
+      "transparency": false,
+      "generatedBy": "image_model",
+      "manualPost": "Удалить случайный читаемый текст; выровнять документ; оставить поля для UI-слоёв.",
+      "prompt": "Create a realistic fictional administrative document for an insurance detective game. Фиктивный учебный протокол академии без логотипа, таблица оценок с крупной зоной исправлений, текст программный. Full document visible from above, utilitarian layout, paper texture, large blank structured fields. No real organization, logo, brand, personal data or watermark. Do not render critical readable text; dates, names, codes and signatures will be added in HTML/SVG. The hidden anomaly must not be obvious in the normal version.",
+      "evidenceId": "protocol",
+      "evidenceType": "document_scan"
+    },
+    {
+      "file": "assets/interactive/protocol-scan-overlay.svg",
+      "purpose": "Совмещённый слой УФ/просвета/бокового света",
+      "resolution": "viewBox 0 0 100 100",
+      "format": "SVG",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "После финального base.webp откалибровать hotspot и режим проявления.",
+      "prompt": null,
+      "evidenceId": "protocol",
+      "evidenceType": "document_scan"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Ночью моего стажёра Илью Нестерова похитили из закрытого корпуса академии. Вместе с ним исчезли учебные материалы и маршрутные протоколы. Прошу компенсировать расходы поиска и утраченные документы.",
+        "en": "During the night, my trainee Ilya Nesterov was abducted from a secure academy building. Training materials and route protocols disappeared with him. I am claiming the search costs and lost documents."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_abduction",
+      "text": {
+        "ru": "Илью Нестерова насильно похитили из закрытого корпуса.",
+        "en": "Ilya Nesterov was forcibly abducted from the secure building."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_documents_lost",
+      "text": {
+        "ru": "Маршрутные протоколы были похищены вместе со стажёром.",
+        "en": "The route protocols were stolen with the trainee."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_search_costs",
+      "text": {
+        "ru": "Расходы поиска возникли из-за внешнего похищения, а не ложной версии наставника.",
+        "en": "The search costs resulted from an external abduction, not the mentor's false account."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-043",
+    "archiveBasePath": "generated-assets/src/data/cases/case-043",
+    "claimantPortrait": {
+      "characterId": "ilar-roun-grounded",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Илар Роун",
+        "en": "Ilar Roun, age 61"
+      },
+      "assetId": "asset-078",
+      "src": "src/data/cases/case-043/people/ilar-roun-grounded.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-043/people/ilar-roun-grounded.webp",
+      "caseRelativeSrc": "people/ilar-roun-grounded.webp",
+      "installTo": "public/people/ilar-roun-grounded.webp",
+      "legacyRuntimeUrl": "people/ilar-roun-grounded.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "451b40eec93e27a3435bc31268f5e00f16969a1c3fd43db1b724db4e27148bb4"
+    },
+    "claimantPortraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/ilar-roun-grounded.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-043/people/ilar-roun-grounded.webp",
+      "copyTo": "public/people/ilar-roun-grounded.webp",
+      "replacesExistingValue": "people/ilar-roun.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "cache-photo",
+        "title": {
+          "ru": "Тайник у станции",
+          "en": "Cache Near the Station"
+        },
+        "primaryImage": "src/data/cases/case-043/evidence/case-043-cache-photo.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-043/evidence/case-043-cache-photo.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-043-cache-photo.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-043/evidence/case-043-cache-photo.webp",
+          "copyTo": "public/evidence/case-043-cache-photo.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-079",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-043/evidence/case-043-cache-photo.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-043/evidence/case-043-cache-photo.webp",
+            "caseRelativeSrc": "evidence/case-043-cache-photo.webp",
+            "installTo": "public/evidence/case-043-cache-photo.webp",
+            "legacyRuntimeUrl": "evidence/case-043-cache-photo.webp",
+            "format": "webp",
+            "width": 1448,
+            "height": 1086,
+            "sha256": "d5066d452f2d0b46db301c2d67372efa0b29a407e2b7aee3e4c6056d3bc9f823"
+          }
+        ]
+      },
+      {
+        "evidenceId": "protocol",
+        "title": {
+          "ru": "Экспертиза экзаменационного протокола",
+          "en": "Examination Record Analysis"
+        },
+        "primaryImage": "src/data/cases/case-043/assets/interactive/protocol-base.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-043/assets/interactive/protocol-base.webp",
+        "legacyImageBinding": null,
+        "assets": [
+          {
+            "assetId": "asset-080",
+            "role": "interactive_base",
+            "src": "src/data/cases/case-043/assets/interactive/protocol-base.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-043/assets/interactive/protocol-base.webp",
+            "caseRelativeSrc": "assets/interactive/protocol-base.webp",
+            "installTo": "src/data/cases/case-043/assets/interactive/protocol-base.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1600,
+            "height": 1100,
+            "sha256": "300c7d4dfacb09f1eff06750fd9ea83761d5dcdbfc088e511acf93b5cbf3fa5d"
+          }
+        ]
+      }
+    ]
+  }
+}

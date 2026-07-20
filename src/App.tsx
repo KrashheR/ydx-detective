@@ -31,9 +31,11 @@ import {
   fetchPaymentsCatalog,
   purchaseProduct,
   restorePurchasedProductIds,
+  notifyGameplayStart,
+  notifyGameplayStop,
   type LeaderboardRow,
   type PaymentsProduct,
-} from './services/yandexSDK';
+} from './services/platformAdapter';
 import { GOAL, getAnalyticsActiveTotalMs, trackGoal } from './services/metrica';
 import { GAME_CONFIG } from './config/gameConfig';
 import { RTL_LANGUAGES, t } from './i18n/ui';
@@ -53,6 +55,7 @@ import { ResultSheet } from './components/ResultSheet';
 import { AchievementsModal } from './components/AchievementsModal';
 import { RatingModal } from './components/RatingModal';
 import { ThematicPacksModal } from './components/ThematicPacksModal';
+import { EvidenceLinkBoard } from './components/EvidenceLinkBoard';
 import { formatCountdown } from './components/icons';
 import { formatCaseLockMessage } from './utils/caseDisplay';
 import { getAdjacentEvidenceId } from './utils/evidenceNavigation';
@@ -78,6 +81,7 @@ export default function App() {
   const [rewardDoubled, setRewardDoubled] = useState(false);
   const [lowBalanceOfferDismissed, setLowBalanceOfferDismissed] = useState(false);
   const [showRating, setShowRating] = useState(false);
+  const [showFinalSynthesis, setShowFinalSynthesis] = useState(false);
   const [archiveCatalog, setArchiveCatalog] = useState<Record<string, PaymentsProduct>>({});
   const lastInterstitialActiveMsRef = useRef(0);
   // Gate: show rating modal at most once per session.
@@ -95,6 +99,12 @@ export default function App() {
     void store.init();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    if (!isHydrated) return;
+    notifyGameplayStart();
+    return notifyGameplayStop;
+  }, [isHydrated]);
 
   // DEV-ONLY: Ctrl+Shift+M grants a big balance + top rank for manual testing.
   // Compiled out of production by the `import.meta.env.DEV` guard.
@@ -291,6 +301,8 @@ export default function App() {
 
   const handleSelectCase = (c: CaseSummary) => void openCase(c);
 
+  const onboardingLocked = !stats.metaUnlocked;
+
   const handleSelectStandardCase = (info: CaseUnlockInfo<CaseSummary>) => {
     if (!isCaseUnlocked(info)) {
       flashToast(formatLockedCaseMessage(info));
@@ -413,6 +425,20 @@ export default function App() {
     } else transition();
   };
 
+  const handleResultNext = () => {
+    if (
+      selectedCase?.finalSynthesis &&
+      lastResult?.verdictCorrect &&
+      !stats.finalSynthesisProgress?.[selectedCase.id]?.completed &&
+      !stats.finalSynthesisProgress?.[selectedCase.id]?.skipped
+    ) {
+      setResultDismissed(true);
+      setShowFinalSynthesis(true);
+      return;
+    }
+    goToNextCase();
+  };
+
   const backToDesk = () => {
     setResultDismissed(true);
     setSelectedId(null);
@@ -461,7 +487,7 @@ export default function App() {
       onContextMenu={(event) => event.preventDefault()}
     >
       {/* Mobile-only grouped desk menu (replaces sidebar + folder grid on small screens) */}
-      {!selectedCase && (
+      {!selectedCase && !onboardingLocked && (
         <div className="md:hidden">
           <MobileDeskMenu
             standardCaseUnlocks={standardCaseUnlocks}
@@ -484,7 +510,7 @@ export default function App() {
       {/* Desktop 3-column layout; also used on mobile when a case is open */}
       <div className={`flex flex-col gap-4 p-4 md:h-full md:flex-row ${!selectedCase ? 'hidden md:flex' : 'flex'}`}>
         {/* Left desk column */}
-        <div className="hidden md:order-1 md:block md:h-full md:w-[272px] md:shrink-0">
+        <div className={`${onboardingLocked ? 'hidden' : 'hidden md:order-1 md:block'} md:h-full md:w-[272px] md:shrink-0`}>
           <LeftSidebar
             standardCaseUnlocks={standardCaseUnlocks}
             dailyCase={dailyCase}
@@ -521,7 +547,7 @@ export default function App() {
               }
               onApprove={handleApprove}
               onReject={handleReject}
-              onBackToDesk={backToDesk}
+              onBackToDesk={onboardingLocked ? undefined : backToDesk}
               onTabSwitch={(from, to) => trackGoal(GOAL.tabSwitch, { caseId: selectedCase.id, from, to })}
             />
           ) : (
@@ -539,7 +565,7 @@ export default function App() {
         </main>
 
         {/* Right analytics column */}
-        <div className="hidden md:block md:h-full md:w-[272px] md:shrink-0">
+        <div className={`${onboardingLocked ? 'hidden' : 'hidden md:block'} md:h-full md:w-[272px] md:shrink-0`}>
           <RightSidebar
             lang={lang}
             xp={stats.xp}
@@ -562,10 +588,16 @@ export default function App() {
         lang={lang}
         stamped={session?.selectedEvidenceIds.includes(modalEvidenceId ?? '') ?? false}
         revealed={session?.revealedEvidenceIds.includes(modalEvidenceId ?? '') ?? false}
+        interactiveProgress={modalEvidence && selectedCase
+          ? stats.interactiveEvidenceProgress?.[`${selectedCase.id}/${modalEvidence.id}`]
+          : undefined}
+        onInteractiveProgress={(progress) => {
+          if (selectedCase && modalEvidence) store.updateInteractiveProgress(selectedCase, modalEvidence.id, progress);
+        }}
         position={modalEvidence ? selectedCase?.evidences.findIndex((item) => item.id === modalEvidence.id) ?? -1 : -1}
         total={selectedCase?.evidences.length ?? 0}
         onNavigate={handleNavigateEvidence}
-        onToggle={() => modalEvidenceId && store.toggleEvidenceStamp(modalEvidenceId)}
+        onToggle={() => modalEvidenceId && selectedCase && store.toggleEvidenceStamp(modalEvidenceId, selectedCase)}
         onClose={() => setModalEvidenceId(null)}
       />
 
@@ -582,11 +614,31 @@ export default function App() {
             onMounted={() => undefined}
             onDoubleReward={handleDoubleReward}
             rewardDoubled={rewardDoubled}
-            onNext={goToNextCase}
+            onNext={handleResultNext}
             onBackToDesk={backToDesk}
+            hideBack={onboardingLocked}
           />
         )}
       </AnimatePresence>
+
+      {showFinalSynthesis && selectedCase?.finalSynthesis && (
+        <EvidenceLinkBoard
+          config={selectedCase.finalSynthesis}
+          caseData={selectedCase}
+          progress={stats.finalSynthesisProgress?.[selectedCase.id]}
+          lang={lang}
+          onAttempt={(links, correct) => store.completeFinalSynthesis(selectedCase, links, false, correct)}
+          onSkip={(links) => {
+            store.completeFinalSynthesis(selectedCase, links, true, false);
+            setShowFinalSynthesis(false);
+            backToDesk();
+          }}
+          onComplete={() => {
+            setShowFinalSynthesis(false);
+            backToDesk();
+          }}
+        />
+      )}
 
       {/* Achievements archive */}
       <AnimatePresence>

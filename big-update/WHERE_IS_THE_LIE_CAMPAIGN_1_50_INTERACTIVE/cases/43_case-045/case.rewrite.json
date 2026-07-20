@@ -1,0 +1,513 @@
+{
+  "id": "case-045",
+  "campaignOrder": 43,
+  "requiredLevel": 23,
+  "act": 5,
+  "actTitle": {
+    "ru": "Последний маршрут",
+    "en": "The Final Route"
+  },
+  "title": {
+    "ru": "Кубок через верхний люк",
+    "en": "The Cup Through the Roof Hatch"
+  },
+  "difficulty": "medium",
+  "claimAmount": {
+    "value": 23500,
+    "currency": "EUR"
+  },
+  "groundTruth": "valid",
+  "correctDecision": "approve",
+  "investigationBudget": 4,
+  "claimant": {
+    "name": {
+      "ru": "Бруно Стерн, 57 лет",
+      "en": "Bruno Stern, age 57"
+    },
+    "migrationNote": {
+      "ru": "Сохранить имя и портрет. Он хранитель музейного фонда академии, а не комедийный рассеянный персонаж.",
+      "en": "Keep the name and portrait. He is curator of the academy museum collection, not a comic absent-minded character."
+    },
+    "portrait": {
+      "characterId": "bruno-stern-grounded",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Бруно Стерн",
+        "en": "Bruno Stern, age 57"
+      },
+      "assetId": "asset-084",
+      "src": "src/data/cases/case-045/people/bruno-stern-grounded.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-045/people/bruno-stern-grounded.webp",
+      "caseRelativeSrc": "people/bruno-stern-grounded.webp",
+      "installTo": "public/people/bruno-stern-grounded.webp",
+      "legacyRuntimeUrl": "people/bruno-stern-grounded.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "1e4bf3013c824f346499d872a71d48c50d900b8c8ad39aed37369609920d26c2"
+    },
+    "portraitStatus": "generated_replacement_included",
+    "portraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/bruno-stern-grounded.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-045/people/bruno-stern-grounded.webp",
+      "copyTo": "public/people/bruno-stern-grounded.webp",
+      "replacesExistingValue": "people/bruno-stern.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Все считают, что Стерн снова перепутал ключи. Репутация свидетеля не заменяет осмотр петли, камеры и люка. — В. Лебедева",
+      "en": "Everyone assumes Stern mixed up the keys again. A witness's reputation is no substitute for examining the hinge, camera, and hatch. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Илья подтвердил: в основании кубка находился резервный маршрутный ключ. Серый конвой пришёл не за реликвией, а за доступом.",
+      "en": "Ilya confirmed that a backup route key was hidden in the cup's base. The Gray Convoy came for access, not the relic."
+    },
+    "nextCaseTeaser": {
+      "ru": "Курсантка заявляет о падении с учебной башни. Пломба страховочной линии разрезана, но медицинский снимок сделан за два месяца до происшествия.",
+      "en": "A cadet reports falling from a training tower. The safety-line seal is cut, but the medical image predates the incident by two months."
+    },
+    "seasonClue": {
+      "id": "route-key",
+      "label": {
+        "ru": "Резервный маршрутный ключ",
+        "en": "Backup Route Key"
+      },
+      "description": {
+        "ru": "Сеть похитила кубок ради ключа, открывающего закрытые транспортные маршруты академии.",
+        "en": "The network stole the cup for a key that unlocks the academy's restricted transport routes."
+      },
+      "progressIndex": 3,
+      "progressTotal": 7
+    },
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "За час до церемонии из закрытой витрины исчез исторический экзаменационный кубок академии. Замок двери не тронут; я считаю, что похититель проник через верхний сервисный люк. Прошу выплату за реликвию.",
+    "en": "One hour before the ceremony, the academy's historic examination cup vanished from a locked display case. The door lock was untouched; I believe the thief entered through the upper service hatch. I am claiming the relic's value."
+  },
+  "evidence": [
+    {
+      "id": "photo-45",
+      "order": 1,
+      "type": "photo",
+      "title": {
+        "ru": "След на верхней петле",
+        "en": "Trace on the Upper Hinge"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Петля витрины приподнята тонким инструментом сверху. На металле остался серый полимер с составом, совпадающим с промышленной упаковкой GC-17.",
+        "en": "The display-case hinge was lifted from above with a thin tool. Gray polymer on the metal matches the composition of GC-17 industrial packaging."
+      },
+      "statusExplanation": {
+        "ru": "Физический след подтверждает внешний доступ и подлинную связь с сетью.",
+        "en": "The physical trace confirms external access and a genuine link to the network."
+      },
+      "statementLink": {
+        "statementId": "claim_upper_entry",
+        "relation": "supports",
+        "reason": {
+          "ru": "Физический след подтверждает внешний доступ и подлинную связь с сетью.",
+          "en": "The physical trace confirms external access and a genuine link to the network."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-085",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-045/evidence/case-045-photo-45.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-045/evidence/case-045-photo-45.webp",
+          "caseRelativeSrc": "evidence/case-045-photo-45.webp",
+          "installTo": "public/evidence/case-045-photo-45.webp",
+          "legacyRuntimeUrl": "evidence/case-045-photo-45.webp",
+          "format": "webp",
+          "width": 1448,
+          "height": 1086,
+          "sha256": "db502c1fc2da9233bd1ba17df566b765ee71710c76cfafa97a88d4d717d17de1"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-045/evidence/case-045-photo-45.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-045/evidence/case-045-photo-45.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-045-photo-45.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-045/evidence/case-045-photo-45.webp",
+        "copyTo": "public/evidence/case-045-photo-45.webp"
+      }
+    },
+    {
+      "id": "document-45",
+      "order": 2,
+      "type": "document",
+      "title": {
+        "ru": "Опись кубка",
+        "en": "Cup Inventory Record"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Кубок зарегистрирован, оценён до происшествия и имеет скрытый полый цоколь после реставрации 2021 года.",
+        "en": "The cup was registered and appraised before the incident and has contained a concealed hollow base since its 2021 restoration."
+      },
+      "statusExplanation": {
+        "ru": "Существование и стоимость подтверждены; полый цоколь объясняет возможный дополнительный мотив.",
+        "en": "Its existence and value are confirmed; the hollow base suggests an additional motive."
+      },
+      "statementLink": {
+        "statementId": "claim_theft",
+        "relation": "supports",
+        "reason": {
+          "ru": "Существование и стоимость подтверждены; полый цоколь объясняет возможный дополнительный мотив.",
+          "en": "Its existence and value are confirmed; the hollow base suggests an additional motive."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "camera-45",
+      "order": 3,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера верхней галереи",
+        "en": "Upper Gallery Camera"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "На верхней галерее появляется человек в технической страховке. Он скрывается за балкой над витриной; через минуту возвращается с закрытым футляром, содержимое которого камера не различает.",
+        "en": "A person wearing technical safety gear appears on the upper gallery. They disappear behind a beam above the case and return one minute later carrying a closed container whose contents are not visible."
+      },
+      "statusExplanation": {
+        "ru": "Камера подтверждает верхний маршрут, но личность футляра устанавливают петля, опись и журнал люка.",
+        "en": "The camera confirms the upper route, while the hinge, inventory, and hatch log identify what was taken."
+      },
+      "statementLink": {
+        "statementId": "claim_upper_entry",
+        "relation": "supports",
+        "reason": {
+          "ru": "Камера подтверждает верхний маршрут, но личность футляра устанавливают петля, опись и журнал люка.",
+          "en": "The camera confirms the upper route, while the hinge, inventory, and hatch log identify what was taken."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-086",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-045/evidence/case-045-camera-45.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-045/evidence/case-045-camera-45.webp",
+          "caseRelativeSrc": "evidence/case-045-camera-45.webp",
+          "installTo": "public/evidence/case-045-camera-45.webp",
+          "legacyRuntimeUrl": "evidence/case-045-camera-45.webp",
+          "format": "webp",
+          "width": 1448,
+          "height": 1086,
+          "sha256": "28caa39d97156dd06a3984788352fed8c171ffe7652a238bb26da9354f39e041"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-045/evidence/case-045-camera-45.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-045/evidence/case-045-camera-45.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-045-camera-45.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-045/evidence/case-045-camera-45.webp",
+        "copyTo": "public/evidence/case-045-camera-45.webp"
+      }
+    },
+    {
+      "id": "log-45",
+      "order": 4,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал купольного люка",
+        "en": "Dome Hatch Log"
+      },
+      "isContradiction": false,
+      "narrativeRole": "arc_proof",
+      "text": {
+        "ru": "Люк открыт клонированным сервисным ключом из той же серии, что использован на ферме «Лунный склон».",
+        "en": "The hatch was opened with a cloned service key from the same series used at Moon Slope farm."
+      },
+      "statusExplanation": {
+        "ru": "Технический почерк совпадает с реальной операцией Серого конвоя.",
+        "en": "The technical signature matches a genuine Gray Convoy operation."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Технический почерк совпадает с реальной операцией Серого конвоя.",
+          "en": "The technical signature matches a genuine Gray Convoy operation."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "bank-45",
+      "order": 5,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Проверка продажи",
+        "en": "Sale Check"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Стерн не получал платежей от аукционов, посредников или сети; долгов и необычных переводов нет.",
+        "en": "Stern received no payments from auctions, intermediaries, or the network and has no debts or unusual transfers."
+      },
+      "statusExplanation": {
+        "ru": "Финансовая проверка не показывает мотива к инсценировке.",
+        "en": "The financial check reveals no motive to stage the theft."
+      },
+      "statementLink": {
+        "statementId": "claim_owner_not_involved",
+        "relation": "supports",
+        "reason": {
+          "ru": "Финансовая проверка не показывает мотива к инсценировке.",
+          "en": "The financial check reveals no motive to stage the theft."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "hidden-45",
+      "order": 6,
+      "type": "document",
+      "title": {
+        "ru": "Запись реставратора",
+        "en": "Restorer's Record"
+      },
+      "isContradiction": false,
+      "narrativeRole": "arc_context",
+      "text": {
+        "ru": "В 2021 году в цоколе кубка временно спрятали резервный маршрутный ключ академии. Изъят ли он позже, в журнале не отмечено.",
+        "en": "In 2021, a backup academy route key was temporarily hidden in the cup's base. The log does not say whether it was later removed."
+      },
+      "statusExplanation": {
+        "ru": "Кубок могли похитить ради содержимого, но это не отменяет реальность кражи.",
+        "en": "The cup may have been stolen for its contents, but the theft itself remains real."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Кубок могли похитить ради содержимого, но это не отменяет реальность кражи.",
+          "en": "The cup may have been stolen for its contents, but the theft itself remains real."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Витрину открыли сверху через сервисный люк, не используя ключи Стерна.",
+      "Камера и клонированный сервисный ключ подтверждают внешнего похитителя GC-17.",
+      "Кража реальна, реликвия существовала и не продана владельцем. Выплату следует одобрить."
+    ],
+    "en": [
+      "The physical trace confirms external access and a genuine link to the network.",
+      "Its existence and value are confirmed; the hollow base suggests an additional motive.",
+      "The camera confirms the upper route, while the hinge, inventory, and hatch log identify what was taken.",
+      "The financial check reveals no motive to stage the theft.",
+      "The technical signature matches a genuine Gray Convoy operation.",
+      "No material statement has been disproven. The claim should be approved."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Сделать valid-кражу частью главной арки.",
+      "Убрать фэнтезийное оформление академии и дать кубку функциональный секрет."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "people/bruno-stern-grounded.webp",
+      "action": "generate_if_needed",
+      "prompt": "Illustrated archival claimant ID portrait matching the existing insurance detective game: male museum collections custodian at a navigation academy, 57 years old, neat gray beard, modest vest and shirt, serious conscientious expression, neutral document-photo background, original face, no magical-school uniform, no fantasy symbols, no logos, no text, no watermark."
+    },
+    {
+      "file": "evidence/case-045-photo-45.webp",
+      "action": "generate",
+      "prompt": "Close forensic evidence photograph of the upper hinge of a secure museum trophy display case, subtle tool lift mark from above and a small residue of gray industrial polymer on metal, intact lower lock, realistic academy archive setting, no fantasy decoration, no readable text, no watermark."
+    },
+    {
+      "file": "evidence/case-045-camera-45.webp",
+      "action": "generate",
+      "prompt": "High-angle academy gallery security camera frame showing a technician-shaped intruder descending on a safety line from a ceiling service hatch toward a trophy display and lifting a padded case upward, face obscured by angle, realistic modern institution, no magic, no logos, no text, no watermark."
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "За час до церемонии из закрытой витрины исчез исторический экзаменационный кубок академии. Замок двери не тронут; я считаю, что похититель проник через верхний сервисный люк. Прошу выплату за реликвию.",
+        "en": "One hour before the ceremony, the academy's historic examination cup vanished from a locked display case. The door lock was untouched; I believe the thief entered through the upper service hatch. I am claiming the relic's value."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_theft",
+      "text": {
+        "ru": "Исторический кубок действительно исчез из закрытой витрины.",
+        "en": "The historic cup genuinely disappeared from the locked display case."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_upper_entry",
+      "text": {
+        "ru": "Похититель проник через верхний сервисный маршрут.",
+        "en": "The thief entered through the upper service route."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_owner_not_involved",
+      "text": {
+        "ru": "Стерн не продавал и не передавал кубок добровольно.",
+        "en": "Stern neither sold nor voluntarily transferred the cup."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 0,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-045",
+    "archiveBasePath": "generated-assets/src/data/cases/case-045",
+    "claimantPortrait": {
+      "characterId": "bruno-stern-grounded",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Бруно Стерн",
+        "en": "Bruno Stern, age 57"
+      },
+      "assetId": "asset-084",
+      "src": "src/data/cases/case-045/people/bruno-stern-grounded.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-045/people/bruno-stern-grounded.webp",
+      "caseRelativeSrc": "people/bruno-stern-grounded.webp",
+      "installTo": "public/people/bruno-stern-grounded.webp",
+      "legacyRuntimeUrl": "people/bruno-stern-grounded.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "1e4bf3013c824f346499d872a71d48c50d900b8c8ad39aed37369609920d26c2"
+    },
+    "claimantPortraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/bruno-stern-grounded.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-045/people/bruno-stern-grounded.webp",
+      "copyTo": "public/people/bruno-stern-grounded.webp",
+      "replacesExistingValue": "people/bruno-stern.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "photo-45",
+        "title": {
+          "ru": "След на верхней петле",
+          "en": "Trace on the Upper Hinge"
+        },
+        "primaryImage": "src/data/cases/case-045/evidence/case-045-photo-45.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-045/evidence/case-045-photo-45.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-045-photo-45.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-045/evidence/case-045-photo-45.webp",
+          "copyTo": "public/evidence/case-045-photo-45.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-085",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-045/evidence/case-045-photo-45.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-045/evidence/case-045-photo-45.webp",
+            "caseRelativeSrc": "evidence/case-045-photo-45.webp",
+            "installTo": "public/evidence/case-045-photo-45.webp",
+            "legacyRuntimeUrl": "evidence/case-045-photo-45.webp",
+            "format": "webp",
+            "width": 1448,
+            "height": 1086,
+            "sha256": "db502c1fc2da9233bd1ba17df566b765ee71710c76cfafa97a88d4d717d17de1"
+          }
+        ]
+      },
+      {
+        "evidenceId": "camera-45",
+        "title": {
+          "ru": "Камера верхней галереи",
+          "en": "Upper Gallery Camera"
+        },
+        "primaryImage": "src/data/cases/case-045/evidence/case-045-camera-45.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-045/evidence/case-045-camera-45.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-045-camera-45.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-045/evidence/case-045-camera-45.webp",
+          "copyTo": "public/evidence/case-045-camera-45.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-086",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-045/evidence/case-045-camera-45.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-045/evidence/case-045-camera-45.webp",
+            "caseRelativeSrc": "evidence/case-045-camera-45.webp",
+            "installTo": "public/evidence/case-045-camera-45.webp",
+            "legacyRuntimeUrl": "evidence/case-045-camera-45.webp",
+            "format": "webp",
+            "width": 1448,
+            "height": 1086,
+            "sha256": "28caa39d97156dd06a3984788352fed8c171ffe7652a238bb26da9354f39e041"
+          }
+        ]
+      }
+    ]
+  }
+}

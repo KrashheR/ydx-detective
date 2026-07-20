@@ -1,0 +1,91 @@
+{
+  "id": "ev-service-act",
+  "order": 2,
+  "type": "document_scan",
+  "title": {
+    "ru": "Экспертиза сервисного акта"
+  },
+  "isContradiction": true,
+  "narrativeRole": "pivot",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Окончание IMEI «7373» нанесено поверх исходного «1841»; утопленный аппарат не совпадает с телефоном в полисе."
+  },
+  "previousType": "document",
+  "description": {
+    "ru": "Аширов приложил скан акта сервисного центра как подтверждение личности утопленного телефона."
+  },
+  "instruction": {
+    "ru": "Включить УФ-режим, найти исправленные цифры и сравнить их с IMEI полиса."
+  },
+  "assets": {
+    "asset1": "assets/interactive/ev-service-act-base.webp",
+    "asset2": "assets/interactive/ev-service-act-scan-overlay.svg"
+  },
+  "data": {
+    "initialMode": "normal",
+    "modes": [
+      "normal",
+      "uv",
+      "backlight"
+    ],
+    "anomalyZones": [
+      {
+        "id": "imei_overwrite",
+        "mode": "uv",
+        "x": 58,
+        "y": 39,
+        "width": 20,
+        "height": 8,
+        "label": "Окончание IMEI «7373» нанесено поверх исходного «1841»; утопленный аппарат не совпадает с телефоном в полисе.",
+        "isContradiction": true
+      }
+    ],
+    "successCondition": {
+      "type": "select_then_compare",
+      "zoneId": "imei_overwrite",
+      "referenceFieldId": "policy_imei"
+    },
+    "referenceFields": [
+      {
+        "id": "policy_imei",
+        "label": "IMEI в полисе",
+        "value": "•••• 7373"
+      }
+    ]
+  },
+  "statementLink": {
+    "statementId": "claim_recovered_phone_is_insured",
+    "relation": "contradicts",
+    "reason": {
+      "ru": "Окончание IMEI «7373» нанесено поверх исходного «1841»; утопленный аппарат не совпадает с телефоном в полисе."
+    }
+  },
+  "contradictionTarget": {
+    "statementId": "claim_recovered_phone_is_insured",
+    "reason": {
+      "ru": "Окончание IMEI «7373» нанесено поверх исходного «1841»; утопленный аппарат не совпадает с телефоном в полисе."
+    }
+  },
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Игрок не просто сравнивает две готовые строки, а сам обнаруживает подмену идентификатора."
+    },
+    "playerAction": {
+      "ru": "Включить УФ-режим, найти исправленные цифры и сравнить их с IMEI полиса."
+    },
+    "conclusion": {
+      "ru": "Окончание IMEI «7373» нанесено поверх исходного «1841»; утопленный аппарат не совпадает с телефоном в полисе."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

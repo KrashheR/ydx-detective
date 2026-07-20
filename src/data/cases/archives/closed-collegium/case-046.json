@@ -1,345 +1,586 @@
 {
   "id": "case-046",
   "type": "standard",
+  "campaignOrder": 44,
+  "requiredLevel": 16,
+  "act": 5,
+  "actTitle": {
+    "ru": "Последний маршрут",
+    "en": "The Final Route",
+    "tr": "The Final Route",
+    "ar": "The Final Route",
+    "kk": "Последний маршрут"
+  },
   "difficulty": "hard",
   "claimAmount": 16800,
   "truth": "fraud",
-  "investigationBudget": 4,
   "title": {
-    "ru": "Падение с учебной башни",
-    "en": "Fall from the Training Tower",
-    "tr": "Fall from the Training Tower",
-    "ar": "Fall from the Training Tower",
-    "kk": "Падение с учебной башни"
+    "ru": "Падение, которого не было",
+    "en": "The Fall That Never Happened",
+    "tr": "The Fall That Never Happened",
+    "ar": "The Fall That Never Happened",
+    "kk": "Падение, которого не было"
   },
   "claim": {
     "person": {
       "ru": "Ника Рейн, 18 лет",
-      "en": "Nika Rein, 18",
-      "tr": "Nika Rein, 18",
-      "ar": "نيكا راين، 18",
-      "kk": "Ника Рейн, 18 жаста"
+      "en": "Nika Rein, age 18",
+      "tr": "Nika Rein, age 18",
+      "ar": "Nika Rein, age 18",
+      "kk": "Ника Рейн, 18 лет"
     },
     "story": {
-      "ru": "Защитная система учебной башни сорвалась во время зачётного прыжка. Я упала, пропустила финал отбора и прошу оплатить лечение и потерю стипендии.",
-      "en": "The training tower safety system failed during my qualifying jump. I fell, missed the final selection, and request medical and scholarship compensation.",
-      "tr": "Eğitim kulesinin güvenlik sistemi seçme atlayışımda arızalandı. Düştüm, final seçmesini kaçırdım; tedavi ve burs kaybı tazmini istiyorum.",
-      "ar": "تعطل نظام أمان برج التدريب أثناء قفزتي التأهيلية. سقطت وفاتني الاختيار النهائي وأطلب تعويض العلاج والمنحة.",
-      "kk": "Оқу мұнарасының қорғаныс жүйесі сынақ секірісі кезінде істен шықты. Құладым, финал іріктеуінен қалдым, ем мен стипендия шығынын сұраймын."
+      "ru": "Во время зачётного спуска с учебной башни отказала страховочная линия. Я упала, получила травму и пропустила финал отбора, из-за чего потеряла стипендию. Прошу оплатить лечение и утраченный доход.",
+      "en": "During my assessed descent from the training tower, the safety line failed. I fell, was injured, and missed the selection final, costing me my scholarship. I am claiming treatment and lost income.",
+      "tr": "During my assessed descent from the training tower, the safety line failed. I fell, was injured, and missed the selection final, costing me my scholarship. I am claiming treatment and lost income.",
+      "ar": "During my assessed descent from the training tower, the safety line failed. I fell, was injured, and missed the selection final, costing me my scholarship. I am claiming treatment and lost income.",
+      "kk": "Во время зачётного спуска с учебной башни отказала страховочная линия. Я упала, получила травму и пропустила финал отбора, из-за чего потеряла стипендию. Прошу оплатить лечение и утраченный доход."
     }
   },
-  "coverImage": "covers/case-046.svg",
-  "personImage": "people/nika-rein.webp",
   "client": {
     "role": {
-      "ru": "Курсант навигационной башни",
-      "en": "Training tower cadet",
-      "tr": "Eğitim kulesi öğrencisi",
-      "ar": "متدربة برج التدريب",
-      "kk": "Оқу мұнарасының курсанты"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Архив",
-          "en": "Archive",
-          "tr": "Arşiv",
-          "ar": "الأرشيف",
-          "kk": "Архив"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "Закрытый Коллегиум",
-          "en": "Closed Collegium",
-          "tr": "Kapalı Kolej",
-          "ar": "الكلية المغلقة",
-          "kk": "Жабық коллегиум"
+          "ru": "5",
+          "en": "5",
+          "tr": "5",
+          "ar": "5",
+          "kk": "5"
         }
       },
       {
         "k": {
-          "ru": "Застрахованный риск",
-          "en": "Insured risk",
-          "tr": "Sigortalı risk",
-          "ar": "الخطر المؤمن عليه",
-          "kk": "Сақтандырылған тәуекел"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Учебная травма",
-          "en": "Training injury",
-          "tr": "Eğitim yaralanması",
-          "ar": "إصابة تدريب",
-          "kk": "Оқу жарақаты"
-        }
-      },
-      {
-        "k": {
-          "ru": "Архивная связка",
-          "en": "Archive thread",
-          "tr": "Arşiv bağı",
-          "ar": "خيط الأرشيف",
-          "kk": "Архив байланысы"
-        },
-        "v": {
-          "ru": "Повторяющийся след: серая восковая лента; часть заявителей её имитирует, но часть дел выводит на настоящую группу.",
-          "en": "Recurring lead: gray wax ribbon; some claimants imitate it, but some files point to a real group.",
-          "tr": "Tekrarlayan iz: gri mum şerit; bazı başvuranlar taklit ediyor, bazı dosyalar gerçek bir gruba işaret ediyor.",
-          "ar": "خيط متكرر: شريط شمعي رمادي؛ بعض أصحاب المطالبات يقلدونه، لكن بعض الملفات تقود إلى جماعة حقيقية.",
-          "kk": "Қайталанатын із: сұр балауыз лента; кейбір өтініш берушілер оны қолдан жасайды, ал кейбір істер нақты топқа апарады."
+          "ru": "44",
+          "en": "44",
+          "tr": "44",
+          "ar": "44",
+          "kk": "44"
         }
       }
     ]
   },
+  "coverImage": "covers/case-046.svg",
+  "personImage": "people/nika-rein-grounded.webp",
   "evidences": [
     {
       "id": "photo-46",
-      "type": "photo",
+      "order": 1,
+      "type": "seal_match",
       "title": {
-        "ru": "Пломба страховочного кольца",
-        "en": "Safety ring seal",
-        "tr": "Emniyet halkası mührü",
-        "ar": "ختم حلقة الأمان",
-        "kk": "Қауіпсіздік сақинасының мөрі"
+        "ru": "Сопоставление пломбы страховочной линии",
+        "en": "Safety-Line Seal Comparison",
+        "tr": "Safety-Line Seal Comparison",
+        "ar": "Safety-Line Seal Comparison",
+        "kk": "Сопоставление пломбы страховочной линии"
       },
       "content": {
-        "ru": "Пломба не сорвана нагрузкой: край ровный, как после среза тонким ножом.",
-        "en": "The seal was not torn by load: the edge is even, like a cut made by a thin blade.",
-        "tr": "Mühür yükle yırtılmamış; kenarı ince bıçakla kesilmiş gibi düz.",
-        "ar": "لم يتمزق الختم بالشد؛ حافته مستوية كأنها قُطعت بشفرة رفيعة.",
-        "kk": "Мөр салмақтан үзілмеген; жиегі жұқа пышақпен кескендей тегіс."
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Пломба снята вручную, а не разрушена отказом системы.",
-        "en": "The seal was removed by hand, not destroyed by system failure.",
-        "tr": "Mühür sistem arızasıyla değil elle çıkarılmış.",
-        "ar": "أزيل الختم يدوياً لا بسبب عطل النظام.",
-        "kk": "Мөр жүйе ақауынан емес, қолмен алынған."
+        "ru": "Фрагменты не совпадают: на линии бытовая лента с серой краской, а не материал GC-17.",
+        "en": "The fragments do not match: the line carries household tape painted gray, not GC-17 material.",
+        "tr": "The fragments do not match: the line carries household tape painted gray, not GC-17 material.",
+        "ar": "The fragments do not match: the line carries household tape painted gray, not GC-17 material.",
+        "kk": "Фрагменты не совпадают: на линии бытовая лента с серой краской, а не материал GC-17."
       },
+      "narrativeRole": "suspicion",
+      "statementLink": {
+        "statementId": "claim_gc17_sabotage",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Фрагменты не совпадают: на линии бытовая лента с серой краской, а не материал GC-17.",
+          "en": "The fragments do not match: the line carries household tape painted gray, not GC-17 material.",
+          "tr": "The fragments do not match: the line carries household tape painted gray, not GC-17 material.",
+          "ar": "The fragments do not match: the line carries household tape painted gray, not GC-17 material.",
+          "kk": "Фрагменты не совпадают: на линии бытовая лента с серой краской, а не материал GC-17."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_gc17_sabotage",
+        "reason": {
+          "ru": "Фрагменты не совпадают: на линии бытовая лента с серой краской, а не материал GC-17.",
+          "en": "The fragments do not match: the line carries household tape painted gray, not GC-17 material.",
+          "tr": "The fragments do not match: the line carries household tape painted gray, not GC-17 material.",
+          "ar": "The fragments do not match: the line carries household tape painted gray, not GC-17 material.",
+          "kk": "Фрагменты не совпадают: на линии бытовая лента с серой краской, а не материал GC-17."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
       "meta": {
-        "filename": "IMG_20260646_081500.jpg",
         "imageUrl": "evidence/case-046-photo-46.webp"
       },
-      "relation": "contradicts"
+      "description": {
+        "ru": "Разрезанный ярлык с линии сравнивается с образцом настоящей транспортной ленты GC-17.",
+        "en": "The cut tag from the line is compared with genuine GC-17 transport tape.",
+        "tr": "The cut tag from the line is compared with genuine GC-17 transport tape.",
+        "ar": "The cut tag from the line is compared with genuine GC-17 transport tape.",
+        "kk": "Разрезанный ярлык с линии сравнивается с образцом настоящей транспортной ленты GC-17."
+      },
+      "instruction": {
+        "ru": "Совместить края и защитный рисунок.",
+        "en": "Align the edges and security pattern.",
+        "tr": "Align the edges and security pattern.",
+        "ar": "Align the edges and security pattern.",
+        "kk": "Совместить края и защитный рисунок."
+      },
+      "previousType": "photo",
+      "assets": {
+        "asset1": "cases/case-046/assets/interactive/photo-46-master-a.webp",
+        "asset2": "cases/case-046/assets/interactive/photo-46-master-b.webp",
+        "asset3": "cases/case-046/assets/interactive/photo-46-fragments.json"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true,
+        "transparencyMode": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Несовпадение разоблачает попытку свалить безопасную инсценировку на Серый конвой.",
+          "en": "The mismatch exposes an attempt to blame a safely staged incident on the Gray Convoy.",
+          "tr": "The mismatch exposes an attempt to blame a safely staged incident on the Gray Convoy.",
+          "ar": "The mismatch exposes an attempt to blame a safely staged incident on the Gray Convoy.",
+          "kk": "Несовпадение разоблачает попытку свалить безопасную инсценировку на Серый конвой."
+        },
+        "playerAction": {
+          "ru": "Совместить края и защитный рисунок.",
+          "en": "Align the edges and security pattern.",
+          "tr": "Align the edges and security pattern.",
+          "ar": "Align the edges and security pattern.",
+          "kk": "Совместить края и защитный рисунок."
+        },
+        "conclusion": {
+          "ru": "Фрагменты не совпадают: на линии бытовая лента с серой краской, а не материал GC-17.",
+          "en": "The fragments do not match: the line carries household tape painted gray, not GC-17 material.",
+          "tr": "The fragments do not match: the line carries household tape painted gray, not GC-17 material.",
+          "ar": "The fragments do not match: the line carries household tape painted gray, not GC-17 material.",
+          "kk": "Фрагменты не совпадают: на линии бытовая лента с серой краской, а не материал GC-17."
+        }
+      },
+      "data": {
+        "movableFragment": "B",
+        "allowRotation": true,
+        "rotationStep": 3,
+        "initialTransform": {
+          "x": 72,
+          "y": 18,
+          "rotation": -14
+        },
+        "targetTransform": {
+          "x": 132,
+          "y": 48,
+          "rotation": 6
+        },
+        "tolerance": {
+          "position": 10,
+          "rotation": 5
+        },
+        "expectedMatch": false,
+        "sourceSeed": 444617,
+        "fragmentASeed": 444617,
+        "fragmentBSeed": 449811,
+        "comparisonMarkers": [
+          {
+            "id": "tear_pattern",
+            "label": "Нет совпадения сетки, клеевого слоя и линии разрыва",
+            "labelEn": "Mesh, adhesive layer, and tear line do not match"
+          }
+        ]
+      }
     },
     {
       "id": "document-46",
-      "type": "document",
+      "order": 2,
+      "type": "xray",
       "title": {
-        "ru": "Медицинское заключение",
-        "en": "Medical report",
-        "tr": "Tıbbi rapor",
-        "ar": "تقرير طبي",
-        "kk": "Медициналық қорытынды"
+        "ru": "Медицинский снимок",
+        "en": "Medical Image",
+        "tr": "Medical Image",
+        "ar": "Medical Image",
+        "kk": "Медицинский снимок"
       },
       "content": {
-        "ru": "Снимки подтверждают ушиб плеча без перелома. Давность синяка — не менее суток до заявленного падения.",
-        "en": "Scans confirm a shoulder bruise with no fracture. Bruise age: at least one day before the reported fall.",
-        "tr": "Görüntüler kırık olmadan omuz morluğunu doğruluyor. Morluk yaşı: bildirilen düşüşten en az bir gün önce.",
-        "ar": "تؤكد الصور كدمة كتف بلا كسر. عمر الكدمة يوم واحد على الأقل قبل السقوط المبلغ عنه.",
-        "kk": "Суреттер иықтың көгергенін растайды, сыну жоқ. Көгеру жасы мәлімделген құлаудан кемінде бір күн бұрын."
+        "ru": "Приложенный снимок действительно показывает перелом запястья, но метаданные клиники и костная мозоль датируют травму двумя месяцами раньше.",
+        "en": "The submitted image does show a fractured wrist, but clinic metadata and bone healing date the injury two months earlier.",
+        "tr": "The submitted image does show a fractured wrist, but clinic metadata and bone healing date the injury two months earlier.",
+        "ar": "The submitted image does show a fractured wrist, but clinic metadata and bone healing date the injury two months earlier.",
+        "kk": "Приложенный снимок действительно показывает перелом запястья, но метаданные клиники и костная мозоль датируют травму двумя месяцами раньше."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Травма не совпадает по времени с заявленным падением.",
-        "en": "The injury timing does not match the reported fall.",
-        "tr": "Yaralanma zamanı bildirilen düşüşle uyuşmuyor.",
-        "ar": "توقيت الإصابة لا يطابق السقوط المبلغ عنه.",
-        "kk": "Жарақат уақыты мәлімделген құлаумен сәйкес емес."
+        "ru": "Старая травма выдана за последствие нового события.",
+        "en": "An old injury was presented as the result of the new event.",
+        "tr": "An old injury was presented as the result of the new event.",
+        "ar": "An old injury was presented as the result of the new event.",
+        "kk": "Старая травма выдана за последствие нового события."
       },
-      "relation": "contradicts"
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_new_injury",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Старая травма выдана за последствие нового события.",
+          "en": "An old injury was presented as the result of the new event.",
+          "tr": "An old injury was presented as the result of the new event.",
+          "ar": "An old injury was presented as the result of the new event.",
+          "kk": "Старая травма выдана за последствие нового события."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_new_injury",
+        "reason": {
+          "ru": "Старая травма выдана за последствие нового события.",
+          "en": "An old injury was presented as the result of the new event.",
+          "tr": "An old injury was presented as the result of the new event.",
+          "ar": "An old injury was presented as the result of the new event.",
+          "kk": "Старая травма выдана за последствие нового события."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "camera-46",
+      "order": 3,
       "type": "camera_recording",
       "title": {
-        "ru": "Камера площадки B",
-        "en": "Platform B camera",
-        "tr": "Platform B kamerası",
-        "ar": "كاميرا المنصة B",
-        "kk": "B алаңы камерасы"
+        "ru": "Камера нижней площадки",
+        "en": "Lower Platform Camera",
+        "tr": "Lower Platform Camera",
+        "ar": "Lower Platform Camera",
+        "kk": "Камера нижней площадки"
       },
       "content": {
-        "ru": "Рейн дважды проверяет, смотрит ли инструктор вниз, затем сама отщёлкивает страховочное кольцо перед прыжком.",
-        "en": "Rein checks twice whether the instructor is looking down, then unclips the safety ring herself before jumping.",
-        "tr": "Rein eğitmenin aşağı bakıp bakmadığını iki kez kontrol ediyor, sonra atlamadan önce emniyet halkasını kendisi açıyor.",
-        "ar": "تتأكد راين مرتين من أن المدرب ينظر إلى الأسفل، ثم تفك حلقة الأمان بنفسها قبل القفز.",
-        "kk": "Рейн нұсқаушы төмен қарап тұрғанын екі рет тексеріп, секірер алдында сақинаны өзі ағытады."
+        "ru": "Рейн пристёгнута к скрытой резервной линии и выполняет контролируемый спуск с высоты менее двух метров. Затем снимает старую шину перед прибытием врача.",
+        "en": "Rein is attached to a concealed backup line and performs a controlled descent from less than two meters. She then removes an old splint before the doctor arrives.",
+        "tr": "Rein is attached to a concealed backup line and performs a controlled descent from less than two meters. She then removes an old splint before the doctor arrives.",
+        "ar": "Rein is attached to a concealed backup line and performs a controlled descent from less than two meters. She then removes an old splint before the doctor arrives.",
+        "kk": "Рейн пристёгнута к скрытой резервной линии и выполняет контролируемый спуск с высоты менее двух метров. Затем снимает старую шину перед прибытием врача."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Запись показывает сознательное отключение страховки.",
-        "en": "The footage shows deliberate safety disconnection.",
-        "tr": "Görüntü emniyetin bilinçli kapatıldığını gösteriyor.",
-        "ar": "تظهر اللقطات تعطيل الأمان عمداً.",
-        "kk": "Жазба қауіпсіздіктің әдейі ажыратылғанын көрсетеді."
+        "ru": "Опасного падения не было; сцена подготовлена безопасным дублем.",
+        "en": "No dangerous fall occurred; the scene used a safe substitute line.",
+        "tr": "No dangerous fall occurred; the scene used a safe substitute line.",
+        "ar": "No dangerous fall occurred; the scene used a safe substitute line.",
+        "kk": "Опасного падения не было; сцена подготовлена безопасным дублем."
       },
-      "meta": {
-        "cameraId": "ARC-46",
-        "cameraModel": "SentinelCam SC-3265 - 1080p - H.264"
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_fall",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Опасного падения не было; сцена подготовлена безопасным дублем.",
+          "en": "No dangerous fall occurred; the scene used a safe substitute line.",
+          "tr": "No dangerous fall occurred; the scene used a safe substitute line.",
+          "ar": "No dangerous fall occurred; the scene used a safe substitute line.",
+          "kk": "Опасного падения не было; сцена подготовлена безопасным дублем."
+        }
       },
-      "relation": "contradicts"
+      "contradictionTarget": {
+        "statementId": "claim_fall",
+        "reason": {
+          "ru": "Опасного падения не было; сцена подготовлена безопасным дублем.",
+          "en": "No dangerous fall occurred; the scene used a safe substitute line.",
+          "tr": "No dangerous fall occurred; the scene used a safe substitute line.",
+          "ar": "No dangerous fall occurred; the scene used a safe substitute line.",
+          "kk": "Опасного падения не было; сцена подготовлена безопасным дублем."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "log-46",
+      "order": 4,
       "type": "usage_log",
       "title": {
-        "ru": "Журнал страховочной линии",
-        "en": "Safety line log",
-        "tr": "Emniyet hattı kaydı",
-        "ar": "سجل خط الأمان",
-        "kk": "Қауіпсіздік желісі журналы"
+        "ru": "Журнал основной линии",
+        "en": "Main Safety-Line Log",
+        "tr": "Main Safety-Line Log",
+        "ar": "Main Safety-Line Log",
+        "kk": "Журнал основной линии"
       },
       "content": {
-        "ru": [
-          "17:42 — личный жетон R-46: сервисный режим",
-          "17:43 — кольцо B-12 отключено локально",
-          "17:44 — падение зарегистрировано после отключения"
-        ],
-        "en": [
-          "17:42 — personal token R-46: service mode",
-          "17:43 — ring B-12 locally disabled",
-          "17:44 — fall recorded after disable"
-        ],
-        "tr": [
-          "17:42 — kişisel jeton R-46: servis modu",
-          "17:43 — B-12 halkası yerelde devre dışı",
-          "17:44 — düşüş kapatma sonrası kaydedildi"
-        ],
-        "ar": [
-          "17:42 — الرمز الشخصي R-46: وضع صيانة",
-          "17:43 — تعطيل الحلقة B-12 محلياً",
-          "17:44 — تسجيل السقوط بعد التعطيل"
-        ],
-        "kk": [
-          "17:42 — жеке жетон R-46: сервис режимі",
-          "17:43 — B-12 сақинасы жергілікті өшірілді",
-          "17:44 — құлау өшіруден кейін тіркелді"
-        ]
+        "ru": "Автоматическая страховка не получала нагрузки и оставалась исправной. Резервная линия активирована персональным жетоном Рейн.",
+        "en": "The automatic safety line registered no load and remained operational. Rein's personal token activated the backup line.",
+        "tr": "The automatic safety line registered no load and remained operational. Rein's personal token activated the backup line.",
+        "ar": "The automatic safety line registered no load and remained operational. Rein's personal token activated the backup line.",
+        "kk": "Автоматическая страховка не получала нагрузки и оставалась исправной. Резервная линия активирована персональным жетоном Рейн."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Отключение выполнено личным жетоном заявительницы.",
-        "en": "The disable action used the claimant personal token.",
-        "tr": "Devre dışı bırakma işlemi başvuranın kişisel jetonuyla yapıldı.",
-        "ar": "تم التعطيل برمز صاحبة المطالبة الشخصي.",
-        "kk": "Өшіру өтініш берушінің жеке жетонымен жасалған."
+        "ru": "Техника не отказывала, а заявительница использовала другую систему.",
+        "en": "The equipment did not fail; the claimant used a different system.",
+        "tr": "The equipment did not fail; the claimant used a different system.",
+        "ar": "The equipment did not fail; the claimant used a different system.",
+        "kk": "Техника не отказывала, а заявительница использовала другую систему."
       },
-      "meta": {
-        "logPrompt": "archive@log-46:~$ tail -f /var/log/archive.log"
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_fall",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Техника не отказывала, а заявительница использовала другую систему.",
+          "en": "The equipment did not fail; the claimant used a different system.",
+          "tr": "The equipment did not fail; the claimant used a different system.",
+          "ar": "The equipment did not fail; the claimant used a different system.",
+          "kk": "Техника не отказывала, а заявительница использовала другую систему."
+        }
       },
-      "relation": "contradicts"
+      "contradictionTarget": {
+        "statementId": "claim_fall",
+        "reason": {
+          "ru": "Техника не отказывала, а заявительница использовала другую систему.",
+          "en": "The equipment did not fail; the claimant used a different system.",
+          "tr": "The equipment did not fail; the claimant used a different system.",
+          "ar": "The equipment did not fail; the claimant used a different system.",
+          "kk": "Техника не отказывала, а заявительница использовала другую систему."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "bank-46",
+      "order": 5,
       "type": "bank_statement",
       "title": {
-        "ru": "Платёж тренеру отбора",
-        "en": "Selection coach payment",
-        "tr": "Seçme koçu ödemesi",
-        "ar": "دفعة لمدرب الاختيار",
-        "kk": "Іріктеу жаттықтырушысына төлем"
+        "ru": "Оплата ассистенту",
+        "en": "Payment to the Assistant",
+        "tr": "Payment to the Assistant",
+        "ar": "Payment to the Assistant",
+        "kk": "Оплата ассистенту"
       },
       "content": {
-        "ru": [
-          "За день до падения — перевод частному тренеру за «экстренный допуск»",
-          "После падения — запрос возврата вступительного взноса",
-          "Платёж тренеру помечен фразой «лента откроет второй шанс» — той же, что ходит после кражи кубка."
-        ],
-        "en": [
-          "Day before fall — payment to private coach for \"emergency eligibility\"",
-          "After fall — entry fee refund request",
-          "The coach payment is marked \"the ribbon opens a second chance,\" the phrase circulating after the cup theft."
-        ],
-        "tr": [
-          "Düşüşten bir gün önce — özel koça \"acil uygunluk\" ödemesi",
-          "Düşüşten sonra — giriş ücreti iade talebi",
-          "Koç ödemesinde kupa hırsızlığından sonra yayılan \"şerit ikinci şansı açar\" ifadesi var."
-        ],
-        "ar": [
-          "قبل السقوط بيوم — دفعة لمدرب خاص مقابل \"أهلية طارئة\"",
-          "بعد السقوط — طلب استرداد رسوم الدخول",
-          "تحمل دفعة المدرب عبارة \"الشريط يفتح فرصة ثانية\"، وهي العبارة المنتشرة بعد سرقة الكأس."
-        ],
-        "kk": [
-          "Құлаудан бір күн бұрын — жеке жаттықтырушыға \"шұғыл рұқсат\" үшін төлем",
-          "Құлаудан кейін — кіру жарнасын қайтару сұрауы",
-          "Жаттықтырушы төлемінде кубок ұрлығынан кейін тараған \"лента екінші мүмкіндік ашады\" деген сөз бар."
-        ]
+        "ru": "За день до зачёта Рейн переводит знакомому инструктору деньги за «ночную тренировку». Сам перевод подозрителен, но назначение не доказывает сговор.",
+        "en": "One day before the assessment, Rein pays an instructor she knows for ‘night training.’ The transfer is suspicious, but its description alone does not prove collusion.",
+        "tr": "One day before the assessment, Rein pays an instructor she knows for ‘night training.’ The transfer is suspicious, but its description alone does not prove collusion.",
+        "ar": "One day before the assessment, Rein pays an instructor she knows for ‘night training.’ The transfer is suspicious, but its description alone does not prove collusion.",
+        "kk": "За день до зачёта Рейн переводит знакомому инструктору деньги за «ночную тренировку». Сам перевод подозрителен, но назначение не доказывает сговор."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Материал важен для проверки версии, но сам по себе не является противоречием.",
-        "en": "The material matters to the review but is not a contradiction by itself.",
-        "tr": "Bu kayıt inceleme için önemlidir, ancak tek başına çelişki değildir.",
-        "ar": "هذه المادة مهمة للمراجعة لكنها ليست تناقضاً بحد ذاتها.",
-        "kk": "Материал тексеру үшін маңызды, бірақ өздігінен қайшылық емес."
+        "ru": "Финансовая улика создаёт направление проверки, но не является достаточной отдельно.",
+        "en": "The financial evidence suggests a line of inquiry but is not sufficient on its own.",
+        "tr": "The financial evidence suggests a line of inquiry but is not sufficient on its own.",
+        "ar": "The financial evidence suggests a line of inquiry but is not sufficient on its own.",
+        "kk": "Финансовая улика создаёт направление проверки, но не является достаточной отдельно."
       },
-      "meta": {
-        "bankName": {
-          "ru": "Municipal Credit",
-          "en": "Municipal Credit",
-          "tr": "Municipal Credit",
-          "ar": "Municipal Credit",
-          "kk": "Municipal Credit"
-        },
-        "accountMask": "**** **** **** 46"
+      "narrativeRole": "suspicion",
+      "statementLink": {
+        "statementId": "claim_fall",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Финансовая улика создаёт направление проверки, но не является достаточной отдельно.",
+          "en": "The financial evidence suggests a line of inquiry but is not sufficient on its own.",
+          "tr": "The financial evidence suggests a line of inquiry but is not sufficient on its own.",
+          "ar": "The financial evidence suggests a line of inquiry but is not sufficient on its own.",
+          "kk": "Финансовая улика создаёт направление проверки, но не является достаточной отдельно."
+        }
       },
-      "relation": "context"
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25
     },
     {
       "id": "witness-46",
+      "order": 6,
       "type": "witness_statement",
       "title": {
         "ru": "Показания ассистента",
-        "en": "Assistant statement",
-        "tr": "Asistan ifadesi",
-        "ar": "إفادة المساعدة",
-        "kk": "Көмекшінің жауабы"
+        "en": "Assistant's Statement",
+        "tr": "Assistant's Statement",
+        "ar": "Assistant's Statement",
+        "kk": "Показания ассистента"
       },
       "content": {
-        "ru": "«Она просила никому не говорить, что боится финального прыжка. Сказала: если башня виновата, отбор перенесут».",
-        "en": "\"She asked me not to tell anyone she feared the final jump. She said: if the tower is blamed, the selection will be postponed.\"",
-        "tr": "\"Final atlayışından korktuğunu kimseye söylemememi istedi. \"Kule suçlanırsa seçmeler ertelenir\" dedi.\"",
-        "ar": "«طلبت مني ألا أخبر أحداً بأنها تخاف القفزة النهائية. قالت: إذا لاموا البرج فسيؤجلون الاختيار».",
-        "kk": "«Ол финал секірісінен қорқатынын ешкімге айтпауымды сұрады. \"Мұнара кінәлі болса, іріктеу кейінге қалады\" деді»."
+        "ru": "Ассистент признаёт подготовку резервной линии после предъявления видео, но утверждает, что не знал о страховом требовании.",
+        "en": "After seeing the footage, the assistant admits preparing the backup line but says he knew nothing about the insurance claim.",
+        "tr": "After seeing the footage, the assistant admits preparing the backup line but says he knew nothing about the insurance claim.",
+        "ar": "After seeing the footage, the assistant admits preparing the backup line but says he knew nothing about the insurance claim.",
+        "kk": "Ассистент признаёт подготовку резервной линии после предъявления видео, но утверждает, что не знал о страховом требовании."
       },
-      "isContradiction": false,
+      "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Материал важен для проверки версии, но сам по себе не является противоречием.",
-        "en": "The material matters to the review but is not a contradiction by itself.",
-        "tr": "Bu kayıt inceleme için önemlidir, ancak tek başına çelişki değildir.",
-        "ar": "هذه المادة مهمة للمراجعة لكنها ليست تناقضاً بحد ذاتها.",
-        "kk": "Материал тексеру үшін маңызды, бірақ өздігінен қайшылық емес."
+        "ru": "Показания подтверждают постановку, хотя распределение ответственности остаётся отдельным вопросом.",
+        "en": "The statement confirms the staging, although responsibility remains a separate issue.",
+        "tr": "The statement confirms the staging, although responsibility remains a separate issue.",
+        "ar": "The statement confirms the staging, although responsibility remains a separate issue.",
+        "kk": "Показания подтверждают постановку, хотя распределение ответственности остаётся отдельным вопросом."
       },
-      "relation": "supports"
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_fall",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Показания подтверждают постановку, хотя распределение ответственности остаётся отдельным вопросом.",
+          "en": "The statement confirms the staging, although responsibility remains a separate issue.",
+          "tr": "The statement confirms the staging, although responsibility remains a separate issue.",
+          "ar": "The statement confirms the staging, although responsibility remains a separate issue.",
+          "kk": "Показания подтверждают постановку, хотя распределение ответственности остаётся отдельным вопросом."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_fall",
+        "reason": {
+          "ru": "Показания подтверждают постановку, хотя распределение ответственности остаётся отдельным вопросом.",
+          "en": "The statement confirms the staging, although responsibility remains a separate issue.",
+          "tr": "The statement confirms the staging, although responsibility remains a separate issue.",
+          "ar": "The statement confirms the staging, although responsibility remains a separate issue.",
+          "kk": "Показания подтверждают постановку, хотя распределение ответственности остаётся отдельным вопросом."
+        }
+      },
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Пломба, камера и журнал показывают ручное отключение страховки.",
-      "Рейн использует слух о серой ленте как прикрытие для личной инсценировки.",
-      "Отказ башни не подтверждён: вердикт — отказ."
+      "Страховочная система не отказывала, а пломбу изменили вручную.",
+      "Приложенный перелом старый, камера показывает безопасный постановочный спуск.",
+      "Фрагменты не совпадают: на линии бытовая лента с серой краской, а не материал GC-17.",
+      "Рейн инсценировала происшествие и использовала слухи о GC-17. Выплату следует отклонить."
     ],
     "en": [
-      "The seal, camera, and log show manual safety disconnection.",
-      "Rein uses the gray-ribbon rumor as cover for a personal staging.",
-      "Tower failure is unsupported: reject the claim."
+      "The fragments do not match: the line carries household tape painted gray, not GC-17 material.",
+      "An old injury was presented as the result of the new event.",
+      "No dangerous fall occurred; the scene used a safe substitute line.",
+      "The equipment did not fail; the claimant used a different system.",
+      "The statement confirms the staging, although responsibility remains a separate issue.",
+      "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "Mühür, kamera ve kayıt emniyetin elle kapatıldığını gösteriyor.",
-      "Rein gri şerit söylentisini kişisel sahnelemeye kılıf yapıyor.",
-      "Kule arızası desteklenmiyor: ödeme reddedilir."
+      "The fragments do not match: the line carries household tape painted gray, not GC-17 material.",
+      "An old injury was presented as the result of the new event.",
+      "No dangerous fall occurred; the scene used a safe substitute line.",
+      "The equipment did not fail; the claimant used a different system.",
+      "The statement confirms the staging, although responsibility remains a separate issue.",
+      "The claim is fraudulent and should be rejected."
     ],
     "ar": [
-      "يظهر الختم والكاميرا والسجل تعطيل الأمان يدوياً.",
-      "تستخدم راين شائعة الشريط الرمادي غطاءً لفبركة شخصية.",
-      "عطل البرج غير مثبت: القرار رفض."
+      "The fragments do not match: the line carries household tape painted gray, not GC-17 material.",
+      "An old injury was presented as the result of the new event.",
+      "No dangerous fall occurred; the scene used a safe substitute line.",
+      "The equipment did not fail; the claimant used a different system.",
+      "The statement confirms the staging, although responsibility remains a separate issue.",
+      "The claim is fraudulent and should be rejected."
     ],
     "kk": [
-      "Мөр, камера және журнал қауіпсіздіктің қолмен өшірілгенін көрсетеді.",
-      "Рейн сұр лента туралы қауесетті жеке қойылымына қалқан етеді.",
-      "Мұнара ақауы расталмады: вердикт — бас тарту."
+      "Страховочная система не отказывала, а пломбу изменили вручную.",
+      "Приложенный перелом старый, камера показывает безопасный постановочный спуск.",
+      "Фрагменты не совпадают: на линии бытовая лента с серой краской, а не материал GC-17.",
+      "Рейн инсценировала происшествие и использовала слухи о GC-17. Выплату следует отклонить."
     ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Во время зачётного спуска с учебной башни отказала страховочная линия. Я упала, получила травму и пропустила финал отбора, из-за чего потеряла стипендию. Прошу оплатить лечение и утраченный доход.",
+        "en": "During my assessed descent from the training tower, the safety line failed. I fell, was injured, and missed the selection final, costing me my scholarship. I am claiming treatment and lost income.",
+        "tr": "During my assessed descent from the training tower, the safety line failed. I fell, was injured, and missed the selection final, costing me my scholarship. I am claiming treatment and lost income.",
+        "ar": "During my assessed descent from the training tower, the safety line failed. I fell, was injured, and missed the selection final, costing me my scholarship. I am claiming treatment and lost income.",
+        "kk": "Во время зачётного спуска с учебной башни отказала страховочная линия. Я упала, получила травму и пропустила финал отбора, из-за чего потеряла стипендию. Прошу оплатить лечение и утраченный доход."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_fall",
+      "text": {
+        "ru": "Рейн сорвалась с учебной башни из-за отказа страховочной системы.",
+        "en": "Rein fell from the training tower because the safety system failed.",
+        "tr": "Rein fell from the training tower because the safety system failed.",
+        "ar": "Rein fell from the training tower because the safety system failed.",
+        "kk": "Рейн сорвалась с учебной башни из-за отказа страховочной системы."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_new_injury",
+      "text": {
+        "ru": "Представленный перелом возник в заявленном падении.",
+        "en": "The submitted fracture resulted from the reported fall.",
+        "tr": "The submitted fracture resulted from the reported fall.",
+        "ar": "The submitted fracture resulted from the reported fall.",
+        "kk": "Представленный перелом возник в заявленном падении."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_gc17_sabotage",
+      "text": {
+        "ru": "Пломбу линии повредил Серый конвой.",
+        "en": "The Gray Convoy damaged the line seal.",
+        "tr": "The Gray Convoy damaged the line seal.",
+        "ar": "The Gray Convoy damaged the line seal.",
+        "kk": "Пломбу линии повредил Серый конвой."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Рейн утверждает, что защитная система сорвалась. Травмы существуют, но их дата важнее внешнего вида. — В. Лебедева",
+      "en": "Rein says the safety system failed. The injury exists, but its date matters more than its appearance. — V. Lebedeva",
+      "tr": "Rein says the safety system failed. The injury exists, but its date matters more than its appearance. — V. Lebedeva",
+      "ar": "Rein says the safety system failed. The injury exists, but its date matters more than its appearance. — V. Lebedeva",
+      "kk": "Рейн утверждает, что защитная система сорвалась. Травмы существуют, но их дата важнее внешнего вида. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Второй поддельный след сети. После дела Морн игрок уже может отличить эффектную подсказку от доказанного почерка.",
+      "en": "A second fake network trace. After Morn's case, the player can distinguish a dramatic clue from a proven signature.",
+      "tr": "A second fake network trace. After Morn's case, the player can distinguish a dramatic clue from a proven signature.",
+      "ar": "A second fake network trace. After Morn's case, the player can distinguish a dramatic clue from a proven signature.",
+      "kk": "Второй поддельный след сети. После дела Морн игрок уже может отличить эффектную подсказку от доказанного почерка."
+    },
+    "nextCaseTeaser": {
+      "ru": "Ночью из общежития исчезла шестнадцатилетняя Аделия Варн. На этот раз внешний след подтверждён тремя независимыми системами.",
+      "en": "Sixteen-year-old Adelia Varn disappeared from the dormitory overnight. This time, three independent systems confirm external involvement.",
+      "tr": "Sixteen-year-old Adelia Varn disappeared from the dormitory overnight. This time, three independent systems confirm external involvement.",
+      "ar": "Sixteen-year-old Adelia Varn disappeared from the dormitory overnight. This time, three independent systems confirm external involvement.",
+      "kk": "Ночью из общежития исчезла шестнадцатилетняя Аделия Варн. На этот раз внешний след подтверждён тремя независимыми системами."
+    },
+    "seasonClue": null,
+    "epilogue": null
   }
 }

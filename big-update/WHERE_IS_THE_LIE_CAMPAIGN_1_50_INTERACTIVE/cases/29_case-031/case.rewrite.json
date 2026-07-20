@@ -1,0 +1,404 @@
+{
+  "id": "case-031",
+  "campaignOrder": 29,
+  "requiredLevel": 15,
+  "act": 3,
+  "actTitle": {
+    "ru": "Восточный двор",
+    "en": "Eastern Yard"
+  },
+  "title": {
+    "ru": "Двадцать минут льда",
+    "en": "Twenty Minutes of Ice"
+  },
+  "difficulty": "medium",
+  "claimAmount": {
+    "value": 7000,
+    "currency": "EUR"
+  },
+  "groundTruth": "valid",
+  "correctDecision": "approve",
+  "investigationBudget": 4,
+  "claimant": {
+    "name": {
+      "ru": "Айгуль Сапарова, 36 лет",
+      "en": "Aigul Saparova, age 36"
+    },
+    "migrationNote": {
+      "ru": "Сохранить данные и портрет. Не смешивать с Айгуль Нурлановой из дела 7.",
+      "en": "Keep the existing profile data and portrait. Do not confuse her with Aigul Nurlanova from Case 7."
+    },
+    "portrait": null,
+    "portraitStatus": "retain_existing_project_portrait",
+    "portraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/aigul.webp",
+      "existingFile": "public/people/aigul.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Климатический датчик отключился за две минуты до первых ударов града. Проверьте, что вышло из строя раньше: теплица или передающая антенна. — В. Лебедева",
+      "en": "The climate sensor went offline two minutes before the first hail impacts. Determine what failed first: the greenhouse or the transmitter antenna. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Неисправный свидетель оказался самым полезным: он молчал в сети, но сохранил память внутри.",
+      "en": "The faulty witness proved the most useful: it was silent on the network but retained its memory internally."
+    },
+    "nextCaseTeaser": {
+      "ru": "Финал акта: исчезнувший внедорожник продолжает передавать координаты из закрытого сектора Восточного двора.",
+      "en": "The act finale: a missing SUV continues transmitting coordinates from Eastern Yard's restricted sector."
+    },
+    "seasonClue": null,
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Сильный град за двадцать минут пробил кровлю теплицы и уничтожил урожай томатов и огурцов. Климатический датчик перестал передавать данные в начале грозы. Прошу оплатить ремонт и погибшую продукцию.",
+    "en": "A severe twenty-minute hailstorm punctured the greenhouse roof and destroyed the tomato and cucumber crop. The climate sensor stopped transmitting at the start of the storm. I am claiming the repairs and ruined produce."
+  },
+  "evidence": [
+    {
+      "id": "ev-weather",
+      "order": 1,
+      "type": "document",
+      "title": {
+        "ru": "Радар и размер града",
+        "en": "Radar and Hail Size"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Метеостанция фиксирует град диаметром 28–34 мм непосредственно над хозяйством.",
+        "en": "The weather station recorded hailstones 28–34 mm in diameter directly above the farm."
+      },
+      "statusExplanation": {
+        "ru": "Интенсивность и место опасного явления подтверждены.",
+        "en": "The intensity and location of the severe weather are confirmed."
+      },
+      "statementLink": {
+        "statementId": "claim_hail",
+        "relation": "supports",
+        "reason": {
+          "ru": "Интенсивность и место опасного явления подтверждены.",
+          "en": "The intensity and location of the severe weather are confirmed."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-antenna",
+      "order": 2,
+      "type": "photo",
+      "title": {
+        "ru": "Фото внешней антенны",
+        "en": "External Antenna Photograph"
+      },
+      "isContradiction": false,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "Передающая антенна датчика сбита первым крупным куском льда; кабель оборван наружным ударом. Внутренний регистратор продолжил запись.",
+        "en": "The sensor's transmitter antenna was knocked down by the first large hailstone; the cable was severed by an external impact. The internal recorder continued operating."
+      },
+      "statusExplanation": {
+        "ru": "Связь пропала из-за первого повреждения грозы, а не из-за ручного отключения.",
+        "en": "The connection failed because of the storm's first impact, not a manual shutdown."
+      },
+      "statementLink": {
+        "statementId": "claim_sensor_failure",
+        "relation": "supports",
+        "reason": {
+          "ru": "Связь пропала из-за первого повреждения грозы, а не из-за ручного отключения.",
+          "en": "The connection failed because of the storm's first impact, not a manual shutdown."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-045",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-031/evidence/case-031-ev-antenna.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-031/evidence/case-031-ev-antenna.webp",
+          "caseRelativeSrc": "evidence/case-031-ev-antenna.webp",
+          "installTo": "public/evidence/case-031-ev-antenna.webp",
+          "legacyRuntimeUrl": "evidence/case-031-ev-antenna.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "60ae706b787013425636dac507674cdf61b2ff694758ebf0a02969e45d61b873"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-031/evidence/case-031-ev-antenna.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-031/evidence/case-031-ev-antenna.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-031-ev-antenna.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-031/evidence/case-031-ev-antenna.webp",
+        "copyTo": "public/evidence/case-031-ev-antenna.webp"
+      }
+    },
+    {
+      "id": "ev-sensor",
+      "order": 3,
+      "type": "usage_log",
+      "title": {
+        "ru": "Локальная память датчика",
+        "en": "Sensor Local Memory"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "После потери сети регистратор фиксирует падение температуры, серию ударных вибраций и последующий рост влажности из-за пробитой кровли.",
+        "en": "After losing the network, the recorder logs a temperature drop, repeated impact vibrations, and a later rise in humidity as the roof is punctured."
+      },
+      "statusExplanation": {
+        "ru": "Скрытая локальная запись восстанавливает хронологию разрушения.",
+        "en": "The hidden local record reconstructs the damage timeline."
+      },
+      "statementLink": {
+        "statementId": "claim_sensor_failure",
+        "relation": "supports",
+        "reason": {
+          "ru": "Скрытая локальная запись восстанавливает хронологию разрушения.",
+          "en": "The hidden local record reconstructs the damage timeline."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-aerial",
+      "order": 4,
+      "type": "photo",
+      "title": {
+        "ru": "Аэрофото кровли",
+        "en": "Aerial Roof Photograph"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Пробоины распределены по всей наветренной стороне и направлены сверху вниз. Следов демонтажа изнутри нет.",
+        "en": "Holes are distributed across the windward side and run from top to bottom. There are no signs of dismantling from inside."
+      },
+      "statusExplanation": {
+        "ru": "Рисунок повреждений соответствует граду.",
+        "en": "The damage pattern is consistent with hail."
+      },
+      "statementLink": {
+        "statementId": "claim_damage",
+        "relation": "supports",
+        "reason": {
+          "ru": "Рисунок повреждений соответствует граду.",
+          "en": "The damage pattern is consistent with hail."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-worker",
+      "order": 5,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания работника",
+        "en": "Worker's Statement"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Работник укрылся в подсобке и слышал непрерывные удары по крыше. Он вызвал хозяйку сразу после окончания града.",
+        "en": "A worker sheltered in a utility room and heard continuous impacts on the roof. He called the owner immediately after the hail ended."
+      },
+      "statusExplanation": {
+        "ru": "Свидетель подтверждает продолжительность и внезапность события.",
+        "en": "The witness confirms the event's duration and sudden onset."
+      },
+      "statementLink": {
+        "statementId": "claim_hail",
+        "relation": "supports",
+        "reason": {
+          "ru": "Свидетель подтверждает продолжительность и внезапность события.",
+          "en": "The witness confirms the event's duration and sudden onset."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-agro",
+      "order": 6,
+      "type": "document",
+      "title": {
+        "ru": "Заключение агронома",
+        "en": "Agronomist's Report"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Гибель урожая и восстановление теплицы оценены по фактической площади. Сохранившиеся ряды исключены из требования.",
+        "en": "Crop loss and greenhouse repairs were calculated from the actual affected area. Surviving rows were excluded from the claim."
+      },
+      "statusExplanation": {
+        "ru": "Размер убытка не завышен.",
+        "en": "The loss has not been inflated."
+      },
+      "statementLink": {
+        "statementId": "claim_damage",
+        "relation": "supports",
+        "reason": {
+          "ru": "Размер убытка не завышен.",
+          "en": "The loss has not been inflated."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Связь датчика оборвал внешний удар по антенне, но локальная память продолжила запись.",
+      "Радар, вибрации и рисунок пробоин подтверждают двадцатиминутный град.",
+      "Урожай и ремонт рассчитаны по реальной площади. Выплату следует одобрить."
+    ],
+    "en": [
+      "The intensity and location of the severe weather are confirmed.",
+      "The connection failed because of the storm's first impact, not a manual shutdown.",
+      "The hidden local record reconstructs the damage timeline.",
+      "The damage pattern is consistent with hail.",
+      "The witness confirms the event's duration and sudden onset.",
+      "No material statement has been disproven. The claim should be approved."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Сделать ранний обрыв датчика честным ложным подозрением.",
+      "Убрать шесть повторяющихся подтверждений и построить хронологию."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "evidence/case-031-ev-antenna.webp",
+      "action": "generate",
+      "prompt": "Close documentary evidence photo of a greenhouse exterior sensor antenna knocked sideways by a large hail impact, fresh dent and severed cable visible, hailstones scattered on the ground, realistic storm aftermath, no readable labels, no logos, no watermark."
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Сильный град за двадцать минут пробил кровлю теплицы и уничтожил урожай томатов и огурцов. Климатический датчик перестал передавать данные в начале грозы. Прошу оплатить ремонт и погибшую продукцию.",
+        "en": "A severe twenty-minute hailstorm punctured the greenhouse roof and destroyed the tomato and cucumber crop. The climate sensor stopped transmitting at the start of the storm. I am claiming the repairs and ruined produce."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_hail",
+      "text": {
+        "ru": "Двадцатиминутный град прошёл над хозяйством.",
+        "en": "A twenty-minute hailstorm passed over the farm."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_sensor_failure",
+      "text": {
+        "ru": "Связь с датчиком пропала из-за повреждения антенны, но запись продолжилась локально.",
+        "en": "The sensor lost its connection because the antenna was damaged, but local recording continued."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_damage",
+      "text": {
+        "ru": "Кровля и урожай повреждены в заявленном объёме.",
+        "en": "The roof and crops were damaged to the extent claimed."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 0,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-031",
+    "archiveBasePath": "generated-assets/src/data/cases/case-031",
+    "claimantPortrait": null,
+    "claimantPortraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/aigul.webp",
+      "existingFile": "public/people/aigul.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-antenna",
+        "title": {
+          "ru": "Фото внешней антенны",
+          "en": "External Antenna Photograph"
+        },
+        "primaryImage": "src/data/cases/case-031/evidence/case-031-ev-antenna.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-031/evidence/case-031-ev-antenna.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-031-ev-antenna.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-031/evidence/case-031-ev-antenna.webp",
+          "copyTo": "public/evidence/case-031-ev-antenna.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-045",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-031/evidence/case-031-ev-antenna.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-031/evidence/case-031-ev-antenna.webp",
+            "caseRelativeSrc": "evidence/case-031-ev-antenna.webp",
+            "installTo": "public/evidence/case-031-ev-antenna.webp",
+            "legacyRuntimeUrl": "evidence/case-031-ev-antenna.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "60ae706b787013425636dac507674cdf61b2ff694758ebf0a02969e45d61b873"
+          }
+        ]
+      }
+    ]
+  }
+}

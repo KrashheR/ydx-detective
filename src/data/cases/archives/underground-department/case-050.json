@@ -1,340 +1,561 @@
 {
   "id": "case-050",
   "type": "standard",
+  "campaignOrder": 48,
+  "requiredLevel": 16,
+  "act": 5,
+  "actTitle": {
+    "ru": "Последний маршрут",
+    "en": "The Final Route",
+    "tr": "The Final Route",
+    "ar": "The Final Route",
+    "kk": "Последний маршрут"
+  },
   "difficulty": "hard",
   "claimAmount": 21400,
   "truth": "valid",
-  "investigationBudget": 4,
   "title": {
-    "ru": "Пожар в антикварном додзё",
-    "en": "Fire in the Antique Dojo",
-    "tr": "Fire in the Antique Dojo",
-    "ar": "Fire in the Antique Dojo",
-    "kk": "Пожар в антикварном додзё"
+    "ru": "Огонь в «Компасе»",
+    "en": "Fire at the Compass",
+    "tr": "Fire at the Compass",
+    "ar": "Fire at the Compass",
+    "kk": "Огонь в «Компасе»"
   },
   "claim": {
     "person": {
-      "ru": "Харитон Сэн, 65 лет",
-      "en": "Khariton Sen, 65",
-      "tr": "Khariton Sen, 65",
-      "ar": "خاريتون سين، 65",
-      "kk": "Харитон Сэн, 65 жаста"
+      "ru": "Михаил Тернов, 69 лет",
+      "en": "Mikhail Ternov, age 69",
+      "tr": "Mikhail Ternov, age 69",
+      "ar": "Mikhail Ternov, age 69",
+      "kk": "Михаил Тернов, 69 лет"
     },
     "story": {
-      "ru": "Конкуренты подожгли музей-додзё через служебный двор. Я успел вынести учеников, но старые маски и часть татами сгорели. Прошу выплату на восстановление.",
-      "en": "Rivals set fire to the dojo-museum through the service yard. I got the students out, but old masks and part of the tatami burned. I request payout for restoration.",
-      "tr": "Rakipler servis avlusundan dojo-müzeyi ateşe verdi. Öğrencileri çıkardım, ama eski maskeler ve tataminin bir kısmı yandı. Onarım ödemesi istiyorum.",
-      "ar": "أشعل خصوم النار في متحف الدوجو عبر ساحة الخدمة. أخرجت الطلاب، لكن الأقنعة القديمة وجزءاً من التاتامي احترق. أطلب تعويض الترميم.",
-      "kk": "Бәсекелестер қызмет ауласы арқылы додзё-музейді өртеді. Шәкірттерді шығарып үлгердім, бірақ ескі маскалар мен татамидің бір бөлігі жанды. Қалпына келтіруге төлем сұраймын."
+      "ru": "Ночью неизвестные проникли через служебный двор и подожгли мастерскую «Компас». Я успел вывести ученика из жилой комнаты, но огонь уничтожил оборудование, часть коллекции и старый страховой реестр. Прошу выплату на восстановление.",
+      "en": "During the night, unknown intruders entered through the service yard and set fire to the Compass workshop. I got my apprentice out of the living quarters, but the fire destroyed equipment, part of the collection, and the old insurance registry. I am claiming the restoration cost.",
+      "tr": "During the night, unknown intruders entered through the service yard and set fire to the Compass workshop. I got my apprentice out of the living quarters, but the fire destroyed equipment, part of the collection, and the old insurance registry. I am claiming the restoration cost.",
+      "ar": "During the night, unknown intruders entered through the service yard and set fire to the Compass workshop. I got my apprentice out of the living quarters, but the fire destroyed equipment, part of the collection, and the old insurance registry. I am claiming the restoration cost.",
+      "kk": "Ночью неизвестные проникли через служебный двор и подожгли мастерскую «Компас». Я успел вывести ученика из жилой комнаты, но огонь уничтожил оборудование, часть коллекции и старый страховой реестр. Прошу выплату на восстановление."
     }
   },
-  "coverImage": "covers/case-050.svg",
-  "personImage": "people/khariton-sen.webp",
   "client": {
     "role": {
-      "ru": "Хранитель подпольного додзё-музея",
-      "en": "Underground dojo-museum keeper",
-      "tr": "Yeraltı dojo-müzesi koruyucusu",
-      "ar": "حارس متحف الدوجو الجوفي",
-      "kk": "Жерасты додзё-музейінің сақтаушысы"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Архив",
-          "en": "Archive",
-          "tr": "Arşiv",
-          "ar": "الأرشيف",
-          "kk": "Архив"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "Подземный Отдел",
-          "en": "Underground Department",
-          "tr": "Yeraltı Dairesi",
-          "ar": "القسم الجوفي",
-          "kk": "Жерасты бөлімі"
+          "ru": "5",
+          "en": "5",
+          "tr": "5",
+          "ar": "5",
+          "kk": "5"
         }
       },
       {
         "k": {
-          "ru": "Застрахованный риск",
-          "en": "Insured risk",
-          "tr": "Sigortalı risk",
-          "ar": "الخطر المؤمن عليه",
-          "kk": "Сақтандырылған тәуекел"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Поджог музея",
-          "en": "Museum arson",
-          "tr": "Müze kundaklama",
-          "ar": "إحراق متحف",
-          "kk": "Музейді өртеу"
-        }
-      },
-      {
-        "k": {
-          "ru": "Архивная связка",
-          "en": "Archive thread",
-          "tr": "Arşiv bağı",
-          "ar": "خيط الأرشيف",
-          "kk": "Архив байланысы"
-        },
-        "v": {
-          "ru": "Повторяющийся след: East Yard — скупка, где старое оборудование и украденные модули превращают в страховые истории.",
-          "en": "Recurring lead: East Yard, the consignment yard turning old equipment and stolen modules into insurance stories.",
-          "tr": "Tekrarlayan iz: East Yard; eski ekipmanı ve çalıntı modülleri sigorta hikâyelerine çeviren komisyon alanı.",
-          "ar": "خيط متكرر: East Yard، ساحة البيع التي تحول المعدات القديمة والوحدات المسروقة إلى قصص تأمين.",
-          "kk": "Қайталанатын із: East Yard — ескі жабдық пен ұрланған модульдерді сақтандыру оқиғасына айналдыратын алаң."
+          "ru": "48",
+          "en": "48",
+          "tr": "48",
+          "ar": "48",
+          "kk": "48"
         }
       }
     ]
   },
+  "coverImage": "covers/case-050.svg",
+  "personImage": "people/khariton-sen.webp",
   "evidences": [
     {
       "id": "photo-50",
-      "type": "photo",
+      "order": 1,
+      "type": "seal_match",
       "title": {
-        "ru": "След фитиля у служебной двери",
-        "en": "Fuse trace by service door",
-        "tr": "Servis kapısında fitil izi",
-        "ar": "أثر فتيل عند باب الخدمة",
-        "kk": "Қызмет есігіндегі білте ізі"
+        "ru": "Сопоставление обгоревшего фитиля",
+        "en": "Burned Fuse Comparison",
+        "tr": "Burned Fuse Comparison",
+        "ar": "Burned Fuse Comparison",
+        "kk": "Сопоставление обгоревшего фитиля"
       },
       "content": {
-        "ru": "Обугленная дорожка идёт от внешнего двора к порогу. Очаг не в подсобке, а у служебной двери.",
-        "en": "The char trail runs from the outside yard to the threshold. The fire origin is at the service door, not in the storage room.",
-        "tr": "Kömürleşmiş iz dış avludan eşiğe gidiyor. Yangın noktası depoda değil servis kapısında.",
-        "ar": "يمتد أثر التفحم من الساحة الخارجية إلى العتبة. نقطة الحريق عند باب الخدمة لا في المخزن.",
-        "kk": "Күйген із сыртқы ауладан табалдырыққа барады. Өрт ошағы қоймада емес, қызмет есігінде."
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Улика поддерживает заявленную версию и не требует штампа противоречия.",
-        "en": "This evidence supports the claim and should not be stamped as a contradiction.",
-        "tr": "Bu kanıt başvuruyu destekler ve çelişki damgası gerektirmez.",
-        "ar": "يدعم هذا الدليل المطالبة ولا يجب ختمه كتعارض.",
-        "kk": "Бұл айғақ өтінішті қолдайды және қайшылық ретінде белгіленбеуі керек."
+        "ru": "Фрагменты совпали: поджигатели использовали материал из перехваченной партии GC-17.",
+        "en": "The fragments match: the arsonists used material from the intercepted GC-17 batch.",
+        "tr": "The fragments match: the arsonists used material from the intercepted GC-17 batch.",
+        "ar": "The fragments match: the arsonists used material from the intercepted GC-17 batch.",
+        "kk": "Фрагменты совпали: поджигатели использовали материал из перехваченной партии GC-17."
       },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_external_arson",
+        "relation": "supports",
+        "reason": {
+          "ru": "Фрагменты совпали: поджигатели использовали материал из перехваченной партии GC-17.",
+          "en": "The fragments match: the arsonists used material from the intercepted GC-17 batch.",
+          "tr": "The fragments match: the arsonists used material from the intercepted GC-17 batch.",
+          "ar": "The fragments match: the arsonists used material from the intercepted GC-17 batch.",
+          "kk": "Фрагменты совпали: поджигатели использовали материал из перехваченной партии GC-17."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
       "meta": {
-        "filename": "IMG_20260650_081500.jpg",
         "imageUrl": "evidence/case-050-photo-50.webp"
       },
-      "relation": "supports"
+      "description": {
+        "ru": "Фрагмент у двери «Компаса» сравнивается с лентой из перехваченной партии Серого конвоя.",
+        "en": "The fragment at the Compass door is compared with tape from the intercepted Gray Convoy batch.",
+        "tr": "The fragment at the Compass door is compared with tape from the intercepted Gray Convoy batch.",
+        "ar": "The fragment at the Compass door is compared with tape from the intercepted Gray Convoy batch.",
+        "kk": "Фрагмент у двери «Компаса» сравнивается с лентой из перехваченной партии Серого конвоя."
+      },
+      "instruction": {
+        "ru": "Совместить уцелевшие участки разрыва и внутренней сетки.",
+        "en": "Align the surviving torn edges and internal mesh.",
+        "tr": "Align the surviving torn edges and internal mesh.",
+        "ar": "Align the surviving torn edges and internal mesh.",
+        "kk": "Совместить уцелевшие участки разрыва и внутренней сетки."
+      },
+      "previousType": "photo",
+      "assets": {
+        "asset1": "cases/case-050/assets/interactive/photo-50-master-a.webp",
+        "asset2": "cases/case-050/assets/interactive/photo-50-fragments.json"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true,
+        "transparencyMode": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Игрок применяет навык повторно и отличает реальную атаку от прежних подброшенных следов.",
+          "en": "The player reuses the skill to distinguish a real attack from earlier planted traces.",
+          "tr": "The player reuses the skill to distinguish a real attack from earlier planted traces.",
+          "ar": "The player reuses the skill to distinguish a real attack from earlier planted traces.",
+          "kk": "Игрок применяет навык повторно и отличает реальную атаку от прежних подброшенных следов."
+        },
+        "playerAction": {
+          "ru": "Совместить уцелевшие участки разрыва и внутренней сетки.",
+          "en": "Align the surviving torn edges and internal mesh.",
+          "tr": "Align the surviving torn edges and internal mesh.",
+          "ar": "Align the surviving torn edges and internal mesh.",
+          "kk": "Совместить уцелевшие участки разрыва и внутренней сетки."
+        },
+        "conclusion": {
+          "ru": "Фрагменты совпали: поджигатели использовали материал из перехваченной партии GC-17.",
+          "en": "The fragments match: the arsonists used material from the intercepted GC-17 batch.",
+          "tr": "The fragments match: the arsonists used material from the intercepted GC-17 batch.",
+          "ar": "The fragments match: the arsonists used material from the intercepted GC-17 batch.",
+          "kk": "Фрагменты совпали: поджигатели использовали материал из перехваченной партии GC-17."
+        }
+      },
+      "data": {
+        "movableFragment": "B",
+        "allowRotation": true,
+        "rotationStep": 3,
+        "initialTransform": {
+          "x": 72,
+          "y": 18,
+          "rotation": -14
+        },
+        "targetTransform": {
+          "x": 132,
+          "y": 48,
+          "rotation": 6
+        },
+        "tolerance": {
+          "position": 10,
+          "rotation": 5
+        },
+        "expectedMatch": true,
+        "sourceSeed": 485017,
+        "fragmentASeed": 485017,
+        "fragmentBSeed": 485017,
+        "comparisonMarkers": [
+          {
+            "id": "tear_pattern",
+            "label": "Совпадают внутренняя сетка, пропитка и край разрыва",
+            "labelEn": "Internal mesh, coating, and torn edge match"
+          }
+        ]
+      }
     },
     {
       "id": "document-50",
+      "order": 2,
       "type": "document",
       "title": {
-        "ru": "Опись музейной коллекции",
-        "en": "Museum collection inventory",
-        "tr": "Müze koleksiyonu envanteri",
-        "ar": "جرد مجموعة المتحف",
-        "kk": "Музей коллекциясы тізімі"
+        "ru": "Опись мастерской",
+        "en": "Workshop Inventory",
+        "tr": "Workshop Inventory",
+        "ar": "Workshop Inventory",
+        "kk": "Опись мастерской"
       },
       "content": {
-        "ru": "Опись до пожара подтверждает маски, тренировочные свитки и татами. Повреждённые предметы были застрахованы до инцидента.",
-        "en": "The pre-fire inventory confirms the masks, training scrolls, and tatami. The damaged items were insured before the incident.",
-        "tr": "Yangın öncesi envanter maskeleri, eğitim tomarlarını ve tatamiyi doğruluyor. Hasarlı parçalar olaydan önce sigortalıydı.",
-        "ar": "يثبت جرد ما قبل الحريق الأقنعة واللفائف التدريبية والتاتامي. كانت القطع المتضررة مؤمنة قبل الحادث.",
-        "kk": "Өртке дейінгі тізім маскаларды, оқу шиыршықтарын және татамиді растайды. Зақымдалған заттар оқиғаға дейін сақтандырылған."
+        "ru": "Оборудование, приборы и архив зарегистрированы задолго до пожара. Тернов не увеличивал страховую сумму после первого налёта.",
+        "en": "The equipment, instruments, and archive were registered long before the fire. Ternov did not increase coverage after the first raid.",
+        "tr": "The equipment, instruments, and archive were registered long before the fire. Ternov did not increase coverage after the first raid.",
+        "ar": "The equipment, instruments, and archive were registered long before the fire. Ternov did not increase coverage after the first raid.",
+        "kk": "Оборудование, приборы и архив зарегистрированы задолго до пожара. Тернов не увеличивал страховую сумму после первого налёта."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Улика поддерживает заявленную версию и не требует штампа противоречия.",
-        "en": "This evidence supports the claim and should not be stamped as a contradiction.",
-        "tr": "Bu kanıt başvuruyu destekler ve çelişki damgası gerektirmez.",
-        "ar": "يدعم هذا الدليل المطالبة ولا يجب ختمه كتعارض.",
-        "kk": "Бұл айғақ өтінішті қолдайды және қайшылық ретінде белгіленбеуі керек."
+        "ru": "Имущество существовало, а страховое покрытие не менялось перед событием.",
+        "en": "The property existed, and coverage was not changed before the event.",
+        "tr": "The property existed, and coverage was not changed before the event.",
+        "ar": "The property existed, and coverage was not changed before the event.",
+        "kk": "Имущество существовало, а страховое покрытие не менялось перед событием."
       },
-      "relation": "context"
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_damage",
+        "relation": "supports",
+        "reason": {
+          "ru": "Имущество существовало, а страховое покрытие не менялось перед событием.",
+          "en": "The property existed, and coverage was not changed before the event.",
+          "tr": "The property existed, and coverage was not changed before the event.",
+          "ar": "The property existed, and coverage was not changed before the event.",
+          "kk": "Имущество существовало, а страховое покрытие не менялось перед событием."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "camera-50",
+      "order": 3,
       "type": "camera_recording",
       "title": {
         "ru": "Камера переулка",
-        "en": "Alley camera",
-        "tr": "Sokak kamerası",
-        "ar": "كاميرا الزقاق",
-        "kk": "Тар көше камерасы"
+        "en": "Alley Camera",
+        "tr": "Alley Camera",
+        "ar": "Alley Camera",
+        "kk": "Камера переулка"
       },
       "content": {
-        "ru": "22:31: двое в одинаковых куртках оставляют канистру у служебной двери и бегут к тоннельному лифту. Куртки на записи имеют нашивку East Yard, но Сэн не связан с этой площадкой.",
-        "en": "22:31: two people in matching jackets leave a canister by the service door and run toward the tunnel lift. The jackets in the footage carry an East Yard patch, but Sen is not linked to that yard.",
-        "tr": "22:31: aynı ceketli iki kişi servis kapısına bidon bırakıp tünel asansörüne koşuyor. Görüntüdeki ceketlerde East Yard arması var, ancak Sen bu alanla bağlantılı değil.",
-        "ar": "22:31 يترك شخصان بسترتين متشابهتين علبة قرب باب الخدمة ويركضان نحو مصعد النفق. تحمل السترات في التسجيل رقعة East Yard، لكن سين غير مرتبط بتلك الساحة.",
-        "kk": "22:31-де бірдей күртеше киген екі адам қызмет есігіне канистр тастап, туннель лифтіне жүгіреді. Жазбадағы күртешелерде East Yard белгісі бар, бірақ Сэн бұл алаңмен байланысты емес."
+        "ru": "Двое людей из серого фургона входят во двор с канистрой и инструментами. Тернов в это время находится в жилой части; через две минуты он выводит ученика через переднюю дверь.",
+        "en": "Two people leave a gray van and enter the yard carrying a fuel can and tools. Ternov is in the living quarters; two minutes later, he leads his apprentice out through the front door.",
+        "tr": "Two people leave a gray van and enter the yard carrying a fuel can and tools. Ternov is in the living quarters; two minutes later, he leads his apprentice out through the front door.",
+        "ar": "Two people leave a gray van and enter the yard carrying a fuel can and tools. Ternov is in the living quarters; two minutes later, he leads his apprentice out through the front door.",
+        "kk": "Двое людей из серого фургона входят во двор с канистрой и инструментами. Тернов в это время находится в жилой части; через две минуты он выводит ученика через переднюю дверь."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Улика поддерживает заявленную версию и не требует штампа противоречия.",
-        "en": "This evidence supports the claim and should not be stamped as a contradiction.",
-        "tr": "Bu kanıt başvuruyu destekler ve çelişki damgası gerektirmez.",
-        "ar": "يدعم هذا الدليل المطالبة ولا يجب ختمه كتعارض.",
-        "kk": "Бұл айғақ өтінішті қолдайды және қайшылық ретінде белгіленбеуі керек."
+        "ru": "Камера подтверждает внешних поджигателей и действия владельца по спасению человека.",
+        "en": "The footage confirms outside arsonists and the owner's rescue actions.",
+        "tr": "The footage confirms outside arsonists and the owner's rescue actions.",
+        "ar": "The footage confirms outside arsonists and the owner's rescue actions.",
+        "kk": "Камера подтверждает внешних поджигателей и действия владельца по спасению человека."
       },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_owner_response",
+        "relation": "supports",
+        "reason": {
+          "ru": "Камера подтверждает внешних поджигателей и действия владельца по спасению человека.",
+          "en": "The footage confirms outside arsonists and the owner's rescue actions.",
+          "tr": "The footage confirms outside arsonists and the owner's rescue actions.",
+          "ar": "The footage confirms outside arsonists and the owner's rescue actions.",
+          "kk": "Камера подтверждает внешних поджигателей и действия владельца по спасению человека."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
       "meta": {
-        "cameraId": "ARC-50",
-        "cameraModel": "SentinelCam SC-3265 - 1080p - H.264"
-      },
-      "relation": "supports"
+        "imageUrl": "evidence/case-050-camera-50.webp"
+      }
     },
     {
       "id": "log-50",
+      "order": 4,
       "type": "usage_log",
       "title": {
         "ru": "Журнал пожарной панели",
-        "en": "Fire panel log",
-        "tr": "Yangın paneli kaydı",
-        "ar": "سجل لوحة الحريق",
-        "kk": "Өрт панелі журналы"
+        "en": "Fire Panel Log",
+        "tr": "Fire Panel Log",
+        "ar": "Fire Panel Log",
+        "kk": "Журнал пожарной панели"
       },
       "content": {
-        "ru": [
-          "22:32 — датчик двора: вспышка у служебной двери",
-          "22:33 — автоматическое закрытие ученического зала",
-          "22:34 — ручная эвакуация запущена ключом SEN-H"
-        ],
-        "en": [
-          "22:32 — yard sensor: flash at service door",
-          "22:33 — student hall auto-closed",
-          "22:34 — manual evacuation started by SEN-H key"
-        ],
-        "tr": [
-          "22:32 — avlu sensörü: servis kapısında parlama",
-          "22:33 — öğrenci salonu otomatik kapandı",
-          "22:34 — SEN-H anahtarıyla manuel tahliye başlatıldı"
-        ],
-        "ar": [
-          "22:32 — حساس الساحة: وميض عند باب الخدمة",
-          "22:33 — إغلاق قاعة الطلاب تلقائياً",
-          "22:34 — بدء إخلاء يدوي بمفتاح SEN-H"
-        ],
-        "kk": [
-          "22:32 — аула датчигі: қызмет есігінде жарқыл",
-          "22:33 — шәкірт залы автоматты жабылды",
-          "22:34 — SEN-H кілтімен қолмен эвакуация басталды"
-        ]
+        "ru": "Тревога срабатывает штатно. Тернов не отключает датчики; вызов пожарных отправлен автоматически через 11 секунд.",
+        "en": "The alarm activates normally. Ternov does not disable the sensors; the fire-service call is sent automatically after 11 seconds.",
+        "tr": "The alarm activates normally. Ternov does not disable the sensors; the fire-service call is sent automatically after 11 seconds.",
+        "ar": "The alarm activates normally. Ternov does not disable the sensors; the fire-service call is sent automatically after 11 seconds.",
+        "kk": "Тревога срабатывает штатно. Тернов не отключает датчики; вызов пожарных отправлен автоматически через 11 секунд."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Улика поддерживает заявленную версию и не требует штампа противоречия.",
-        "en": "This evidence supports the claim and should not be stamped as a contradiction.",
-        "tr": "Bu kanıt başvuruyu destekler ve çelişki damgası gerektirmez.",
-        "ar": "يدعم هذا الدليل المطالبة ولا يجب ختمه كتعارض.",
-        "kk": "Бұл айғақ өтінішті қолдайды және қайшылық ретінде белгіленбеуі керек."
+        "ru": "Защитная система работала и не была подготовлена к инсценировке.",
+        "en": "The protection system worked and was not prepared for staging.",
+        "tr": "The protection system worked and was not prepared for staging.",
+        "ar": "The protection system worked and was not prepared for staging.",
+        "kk": "Защитная система работала и не была подготовлена к инсценировке."
       },
-      "meta": {
-        "logPrompt": "archive@log-50:~$ tail -f /var/log/archive.log"
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_owner_response",
+        "relation": "supports",
+        "reason": {
+          "ru": "Защитная система работала и не была подготовлена к инсценировке.",
+          "en": "The protection system worked and was not prepared for staging.",
+          "tr": "The protection system worked and was not prepared for staging.",
+          "ar": "The protection system worked and was not prepared for staging.",
+          "kk": "Защитная система работала и не была подготовлена к инсценировке."
+        }
       },
-      "relation": "supports"
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
-      "id": "bank-50",
-      "type": "bank_statement",
+      "id": "route-50",
+      "order": 5,
+      "type": "gps",
       "title": {
-        "ru": "Проверка закупок",
-        "en": "Purchase review",
-        "tr": "Alım kontrolü",
-        "ar": "فحص المشتريات",
-        "kk": "Сатып алуды тексеру"
+        "ru": "Маршрут серого фургона",
+        "en": "Gray Van Route",
+        "tr": "Gray Van Route",
+        "ar": "Gray Van Route",
+        "kk": "Маршрут серого фургона"
       },
       "content": {
-        "ru": [
-          "За месяц — только покупка огнетушителей и пропитки татами",
-          "Нет платежей за серу, стружку или ускорители горения"
-        ],
-        "en": [
-          "Past month — only extinguisher and tatami coating purchases",
-          "No payments for sulfur, shavings, or burn accelerants"
-        ],
-        "tr": [
-          "Son ay — yalnız söndürücü ve tatami kaplaması alımı",
-          "Kükürt, talaş veya hızlandırıcı ödemesi yok"
-        ],
-        "ar": [
-          "الشهر الماضي — مشتريات مطفآت وطلاء تاتامي فقط",
-          "لا مدفوعات لكبريت أو نشارة أو مسرعات حريق"
-        ],
-        "kk": [
-          "Соңғы ай — тек өртсөндіргіш пен татами сіңдірмесі сатып алынған",
-          "Күкірт, жоңқа немесе жану үдеткішіне төлем жоқ"
-        ]
+        "ru": "После поджога машина уходит к терминалу GC-17, затем к аэропортовому грузовому сектору.",
+        "en": "After the arson, the van travels to the GC-17 terminal and then to the airport cargo sector.",
+        "tr": "After the arson, the van travels to the GC-17 terminal and then to the airport cargo sector.",
+        "ar": "After the arson, the van travels to the GC-17 terminal and then to the airport cargo sector.",
+        "kk": "После поджога машина уходит к терминалу GC-17, затем к аэропортовому грузовому сектору."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Материал важен для проверки версии, но сам по себе не является противоречием.",
-        "en": "The material matters to the review but is not a contradiction by itself.",
-        "tr": "Bu kayıt inceleme için önemlidir, ancak tek başına çelişki değildir.",
-        "ar": "هذه المادة مهمة للمراجعة لكنها ليست تناقضاً بحد ذاتها.",
-        "kk": "Материал тексеру үшін маңызды, бірақ өздігінен қайшылық емес."
+        "ru": "Маршрут связывает нападение с последним каналом вывоза сети.",
+        "en": "The route links the attack to the network's final transport channel.",
+        "tr": "The route links the attack to the network's final transport channel.",
+        "ar": "The route links the attack to the network's final transport channel.",
+        "kk": "Маршрут связывает нападение с последним каналом вывоза сети."
       },
-      "meta": {
-        "bankName": {
-          "ru": "Municipal Credit",
-          "en": "Municipal Credit",
-          "tr": "Municipal Credit",
-          "ar": "Municipal Credit",
-          "kk": "Municipal Credit"
-        },
-        "accountMask": "**** **** **** 50"
+      "narrativeRole": "arc_proof",
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Маршрут связывает нападение с последним каналом вывоза сети.",
+          "en": "The route links the attack to the network's final transport channel.",
+          "tr": "The route links the attack to the network's final transport channel.",
+          "ar": "The route links the attack to the network's final transport channel.",
+          "kk": "Маршрут связывает нападение с последним каналом вывоза сети."
+        }
       },
-      "relation": "context"
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75
     },
     {
       "id": "witness-50",
+      "order": 6,
       "type": "witness_statement",
       "title": {
-        "ru": "Ученик вечерней группы",
-        "en": "Evening student statement",
-        "tr": "Akşam öğrencisi ifadesi",
-        "ar": "إفادة طالب المساء",
-        "kk": "Кешкі топ шәкірті"
+        "ru": "Показания ученика",
+        "en": "Apprentice's Statement",
+        "tr": "Apprentice's Statement",
+        "ar": "Apprentice's Statement",
+        "kk": "Показания ученика"
       },
       "content": {
-        "ru": "«Сэн первым вывел нас к запасному выходу. Если бы он тянул время, мы бы остались в дыму».",
-        "en": "\"Sen was the first to lead us to the emergency exit. If he had delayed, we would have stayed in the smoke.\"",
-        "tr": "\"Sen bizi ilk acil çıkışa götüren kişiydi. Gecikseydi dumanda kalırdık.\"",
-        "ar": "«كان سين أول من قادنا إلى مخرج الطوارئ. لو تأخر لبقينا في الدخان».",
-        "kk": "«Сэн бізді бірінші болып қосымша шығуға алып шықты. Ол кешіксе, түтінде қалар едік»."
+        "ru": "Ученик слышал сверление у задней двери и видел, как Тернов вывел его до распространения дыма. Он подтверждает, что копии Ильи лежали в архивном шкафу.",
+        "en": "The apprentice heard drilling at the rear door and saw Ternov lead him out before the smoke spread. He confirms that Ilya's copies were stored in the archive cabinet.",
+        "tr": "The apprentice heard drilling at the rear door and saw Ternov lead him out before the smoke spread. He confirms that Ilya's copies were stored in the archive cabinet.",
+        "ar": "The apprentice heard drilling at the rear door and saw Ternov lead him out before the smoke spread. He confirms that Ilya's copies were stored in the archive cabinet.",
+        "kk": "Ученик слышал сверление у задней двери и видел, как Тернов вывел его до распространения дыма. Он подтверждает, что копии Ильи лежали в архивном шкафу."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Улика поддерживает заявленную версию и не требует штампа противоречия.",
-        "en": "This evidence supports the claim and should not be stamped as a contradiction.",
-        "tr": "Bu kanıt başvuruyu destekler ve çelişki damgası gerektirmez.",
-        "ar": "يدعم هذا الدليل المطالبة ولا يجب ختمه كتعارض.",
-        "kk": "Бұл айғақ өтінішті қолдайды және қайшылық ретінде белгіленбеуі керек."
+        "ru": "Свидетель подтверждает внешний шум, эвакуацию и мотив нападения.",
+        "en": "The witness confirms the outside noise, evacuation, and motive for the attack.",
+        "tr": "The witness confirms the outside noise, evacuation, and motive for the attack.",
+        "ar": "The witness confirms the outside noise, evacuation, and motive for the attack.",
+        "kk": "Свидетель подтверждает внешний шум, эвакуацию и мотив нападения."
       },
-      "relation": "supports"
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_damage",
+        "relation": "supports",
+        "reason": {
+          "ru": "Свидетель подтверждает внешний шум, эвакуацию и мотив нападения.",
+          "en": "The witness confirms the outside noise, evacuation, and motive for the attack.",
+          "tr": "The witness confirms the outside noise, evacuation, and motive for the attack.",
+          "ar": "The witness confirms the outside noise, evacuation, and motive for the attack.",
+          "kk": "Свидетель подтверждает внешний шум, эвакуацию и мотив нападения."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25
     }
   ],
   "correctDecision": "approve",
   "explanation": {
     "ru": [
-      "Фото, камера и пожарная панель указывают на внешний поджог.",
-      "Нашивка East Yard делает это дело реальным ударом сети, а не инсценировкой Сэна.",
-      "Версия Сэна подтверждена: вердикт — выплатить."
+      "Фитиль и камера показывают внешний поджог людьми из серого фургона.",
+      "Тернов не отключал защиту и рисковал не имуществом, а собой, спасая ученика.",
+      "Фрагменты совпали: поджигатели использовали материал из перехваченной партии GC-17.",
+      "Серый конвой пытался уничтожить копии Ильи. Ущерб подлинный, выплату следует одобрить."
     ],
     "en": [
-      "Photo, camera, and fire panel records point to outside arson.",
-      "The East Yard patch makes this a real network strike, not Sen staging.",
-      "Sen version is supported: approve the payout."
+      "The fragments match: the arsonists used material from the intercepted GC-17 batch.",
+      "The property existed, and coverage was not changed before the event.",
+      "The footage confirms outside arsonists and the owner's rescue actions.",
+      "The protection system worked and was not prepared for staging.",
+      "The route links the attack to the network's final transport channel.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "tr": [
-      "Fotoğraf, kamera ve yangın paneli dış kundaklamayı gösteriyor.",
-      "East Yard arması bunu Sen’in sahnesi değil gerçek ağ saldırısı yapıyor.",
-      "Sen’in anlatımı destekleniyor: ödeme onaylanır."
+      "The fragments match: the arsonists used material from the intercepted GC-17 batch.",
+      "The property existed, and coverage was not changed before the event.",
+      "The footage confirms outside arsonists and the owner's rescue actions.",
+      "The protection system worked and was not prepared for staging.",
+      "The route links the attack to the network's final transport channel.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "ar": [
-      "تشير الصورة والكاميرا ولوحة الحريق إلى إحراق خارجي.",
-      "تجعل رقعة East Yard الحادث ضربة حقيقية من الشبكة لا فبركة من سين.",
-      "رواية سين مثبتة: القرار دفع التعويض."
+      "The fragments match: the arsonists used material from the intercepted GC-17 batch.",
+      "The property existed, and coverage was not changed before the event.",
+      "The footage confirms outside arsonists and the owner's rescue actions.",
+      "The protection system worked and was not prepared for staging.",
+      "The route links the attack to the network's final transport channel.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "kk": [
-      "Фото, камера және өрт панелі сыртқы өрт қоюды көрсетеді.",
-      "East Yard белгісі мұны Сэннің қойылымы емес, желінің нақты соққысы етеді.",
-      "Сэн нұсқасы расталды: вердикт — төлеу."
+      "Фитиль и камера показывают внешний поджог людьми из серого фургона.",
+      "Тернов не отключал защиту и рисковал не имуществом, а собой, спасая ученика.",
+      "Фрагменты совпали: поджигатели использовали материал из перехваченной партии GC-17.",
+      "Серый конвой пытался уничтожить копии Ильи. Ущерб подлинный, выплату следует одобрить."
     ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Ночью неизвестные проникли через служебный двор и подожгли мастерскую «Компас». Я успел вывести ученика из жилой комнаты, но огонь уничтожил оборудование, часть коллекции и старый страховой реестр. Прошу выплату на восстановление.",
+        "en": "During the night, unknown intruders entered through the service yard and set fire to the Compass workshop. I got my apprentice out of the living quarters, but the fire destroyed equipment, part of the collection, and the old insurance registry. I am claiming the restoration cost.",
+        "tr": "During the night, unknown intruders entered through the service yard and set fire to the Compass workshop. I got my apprentice out of the living quarters, but the fire destroyed equipment, part of the collection, and the old insurance registry. I am claiming the restoration cost.",
+        "ar": "During the night, unknown intruders entered through the service yard and set fire to the Compass workshop. I got my apprentice out of the living quarters, but the fire destroyed equipment, part of the collection, and the old insurance registry. I am claiming the restoration cost.",
+        "kk": "Ночью неизвестные проникли через служебный двор и подожгли мастерскую «Компас». Я успел вывести ученика из жилой комнаты, но огонь уничтожил оборудование, часть коллекции и старый страховой реестр. Прошу выплату на восстановление."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_external_arson",
+      "text": {
+        "ru": "Мастерскую «Компас» подожгли снаружи люди Серого конвоя.",
+        "en": "Gray Convoy operatives set fire to the Compass workshop from outside.",
+        "tr": "Gray Convoy operatives set fire to the Compass workshop from outside.",
+        "ar": "Gray Convoy operatives set fire to the Compass workshop from outside.",
+        "kk": "Мастерскую «Компас» подожгли снаружи люди Серого конвоя."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_owner_response",
+      "text": {
+        "ru": "Тернов не отключал защиту и спасал ученика.",
+        "en": "Ternov did not disable the protection system and rescued his apprentice.",
+        "tr": "Ternov did not disable the protection system and rescued his apprentice.",
+        "ar": "Ternov did not disable the protection system and rescued his apprentice.",
+        "kk": "Тернов не отключал защиту и спасал ученика."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_damage",
+      "text": {
+        "ru": "Имущество и архив получили реальный покрываемый ущерб.",
+        "en": "The property and archive sustained genuine covered damage.",
+        "tr": "The property and archive sustained genuine covered damage.",
+        "ar": "The property and archive sustained genuine covered damage.",
+        "kk": "Имущество и архив получили реальный покрываемый ущерб."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "После первого налёта Тернов согласился хранить копии Ильи. Теперь мастерская подожжена. Именно поэтому нельзя автоматически считать пожар инсценировкой ради выплаты. — В. Лебедева",
+      "en": "After the first raid, Ternov agreed to keep Ilya's copies. Now the workshop has been set on fire. That is precisely why we cannot automatically call it a staged payout. — V. Lebedeva",
+      "tr": "After the first raid, Ternov agreed to keep Ilya's copies. Now the workshop has been set on fire. That is precisely why we cannot automatically call it a staged payout. — V. Lebedeva",
+      "ar": "After the first raid, Ternov agreed to keep Ilya's copies. Now the workshop has been set on fire. That is precisely why we cannot automatically call it a staged payout. — V. Lebedeva",
+      "kk": "После первого налёта Тернов согласился хранить копии Ильи. Теперь мастерская подожжена. Именно поэтому нельзя автоматически считать пожар инсценировкой ради выплаты. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Тернов спас не весь архив. Один металлический маршрутный жетон пережил огонь. Он указывает на аэропортовый грузовой сектор и фургон Романа Драя.",
+      "en": "Ternov could not save the entire archive. One metal route token survived the fire. It points to an airport cargo sector and Roman Dray's van.",
+      "tr": "Ternov could not save the entire archive. One metal route token survived the fire. It points to an airport cargo sector and Roman Dray's van.",
+      "ar": "Ternov could not save the entire archive. One metal route token survived the fire. It points to an airport cargo sector and Roman Dray's van.",
+      "kk": "Тернов спас не весь архив. Один металлический маршрутный жетон пережил огонь. Он указывает на аэропортовый грузовой сектор и фургон Романа Драя."
+    },
+    "nextCaseTeaser": {
+      "ru": "Фургон с уличными сенсорами якобы угнали. Его GPS ни разу не остановился и привёл прямо к аэропорту.",
+      "en": "A van carrying street sensors was supposedly hijacked. Its GPS never stopped and led directly to the airport.",
+      "tr": "A van carrying street sensors was supposedly hijacked. Its GPS never stopped and led directly to the airport.",
+      "ar": "A van carrying street sensors was supposedly hijacked. Its GPS never stopped and led directly to the airport.",
+      "kk": "Фургон с уличными сенсорами якобы угнали. Его GPS ни разу не остановился и привёл прямо к аэропорту."
+    },
+    "seasonClue": {
+      "id": "airport-route",
+      "label": {
+        "ru": "Аэропортовый маршрут",
+        "en": "Airport Route",
+        "tr": "Airport Route",
+        "ar": "Airport Route",
+        "kk": "Аэропортовый маршрут"
+      },
+      "description": {
+        "ru": "Последний узел Серого конвоя связан с грузовым терминалом и багажными службами аэропорта.",
+        "en": "The Gray Convoy's final hub is linked to the airport cargo terminal and baggage services.",
+        "tr": "The Gray Convoy's final hub is linked to the airport cargo terminal and baggage services.",
+        "ar": "The Gray Convoy's final hub is linked to the airport cargo terminal and baggage services.",
+        "kk": "Последний узел Серого конвоя связан с грузовым терминалом и багажными службами аэропорта."
+      },
+      "progressIndex": 6,
+      "progressTotal": 7
+    },
+    "epilogue": null
   }
 }

@@ -1,297 +1,489 @@
 {
   "id": "case-021",
   "type": "standard",
+  "campaignOrder": 9,
+  "requiredLevel": 5,
+  "act": 1,
+  "actTitle": {
+    "ru": "Чужой почерк",
+    "en": "Another Hand",
+    "tr": "Another Hand",
+    "ar": "Another Hand",
+    "kk": "Чужой почерк"
+  },
   "difficulty": "hard",
   "claimAmount": 1900,
   "truth": "fraud",
   "title": {
-    "ru": "Канализационный Рок",
-    "en": "Sewer Doom",
-    "tr": "Kanalizasyon Kıyameti",
-    "ar": "قَدَر المجاري",
-    "kk": "Кәріз Тажалы"
+    "ru": "Прорыв под «Маяком»",
+    "en": "The Rupture Beneath Mayak",
+    "tr": "The Rupture Beneath Mayak",
+    "ar": "The Rupture Beneath Mayak",
+    "kk": "Прорыв под «Маяком»"
   },
   "claim": {
     "person": {
-      "ru": "Михаил Тернов, 69 лет",
-      "en": "Mikhail Ternov, 69",
-      "tr": "Mikhail Ternov, 69",
-      "ar": "خاريتون تيرنوف، 69",
-      "kk": "Михаил Тернов, 69 жаста"
+      "ru": "Лев Аркадьевич Соколов, 69 лет",
+      "en": "Lev Arkadyevich Sokolov, age 69",
+      "tr": "Lev Arkadyevich Sokolov, age 69",
+      "ar": "Lev Arkadyevich Sokolov, age 69",
+      "kk": "Лев Аркадьевич Соколов, 69 лет"
     },
     "story": {
-      "ru": "Со смирением и скорбью извещаю о форс-мажоре. Городская канализационная труба под моим додзё самопроизвольно воспламенилась и затопила помещение, уничтожив тренировочный инвентарь, татами и исторические японские знамёна, передававшиеся из поколения в поколение. Полагаю это аварией муниципальной инфраструктуры и прошу возместить ущерб согласно полису.",
-      "en": "With humility and sorrow I report a force majeure. The city sewage pipe beneath my dojo spontaneously combusted and flooded the premises, destroying training equipment, tatami mats, and historic Japanese banners passed down through generations. I deem this a municipal infrastructure failure and request compensation under the policy.",
-      "tr": "Tevazu ve kederle bir mücbir sebebi bildiriyorum. Salonumun altındaki şehir kanalizasyon borusu kendiliğinden tutuştu ve mekânı su bastı; antrenman ekipmanını, tatami minderlerini ve nesilden nesile aktarılan tarihî Japon sancaklarını yok etti. Bunu bir belediye altyapı arızası sayıyor ve poliçe kapsamında tazminat talep ediyorum.",
-      "ar": "بكل تواضع وحزن أُبلغ عن قوة قاهرة. اشتعل أنبوب مجاري المدينة أسفل ناديي من تلقاء نفسه وأغرق المكان، مدمّراً معدات التدريب وحصائر التاتامي والرايات اليابانية التاريخية المتوارثة عبر الأجيال. أعتبر هذا عطلاً في البنية التحتية البلدية وأطلب التعويض وفق الوثيقة.",
-      "kk": "Кішіпейілдік пен қайғымен форс-мажор туралы хабарлаймын. Менің додзёмның астындағы қалалық кәріз құбыры өздігінен от алып, бөлмені су басып, жаттығу мүкәммалын, татами төсеніштерін және ұрпақтан-ұрпаққа берілген тарихи жапон тулaрын жойды. Мұны муниципалдық инфрақұрылым апаты деп санаймын және полис бойынша зиянды өтеуді сұраймын."
+      "ru": "Вечером под помещением клуба произошёл самопроизвольный разрыв городской технической трубы. Вода затопила мастерскую, а короткое замыкание повредило инструменты и учебное оборудование. Работы рядом с трубой клуб не проводил. Прошу возместить ущерб в размере 1900 евро.",
+      "en": "That evening, a municipal utility pipe beneath the club premises ruptured spontaneously. Water flooded the workshop, and a short circuit damaged tools and training equipment. The club performed no work near the pipe. I am claiming €1,900 in damages.",
+      "tr": "That evening, a municipal utility pipe beneath the club premises ruptured spontaneously. Water flooded the workshop, and a short circuit damaged tools and training equipment. The club performed no work near the pipe. I am claiming €1,900 in damages.",
+      "ar": "That evening, a municipal utility pipe beneath the club premises ruptured spontaneously. Water flooded the workshop, and a short circuit damaged tools and training equipment. The club performed no work near the pipe. I am claiming €1,900 in damages.",
+      "kk": "Вечером под помещением клуба произошёл самопроизвольный разрыв городской технической трубы. Вода затопила мастерскую, а короткое замыкание повредило инструменты и учебное оборудование. Работы рядом с трубой клуб не проводил. Прошу возместить ущерб в размере 1900 евро."
     }
   },
-  "coverImage": "covers/case-021.svg",
-  "personImage": "people/khariton.webp",
   "client": {
     "role": {
-      "ru": "Заявитель · физ. лицо",
-      "en": "Claimant · individual",
-      "tr": "Başvuru sahibi · gerçek kişi",
-      "ar": "مقدم الطلب · شخص طبيعي",
-      "kk": "Өтініш беруші · жеке тұлға"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Возраст",
-          "en": "Age",
-          "tr": "Yaş",
-          "ar": "العمر",
-          "kk": "Жасы"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "69 лет",
-          "en": "69 years old",
-          "tr": "69 yaşında",
-          "ar": "69 عامًا",
-          "kk": "69 жаста"
+          "ru": "1",
+          "en": "1",
+          "tr": "1",
+          "ar": "1",
+          "kk": "1"
         }
       },
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Нижний Новгород",
-          "en": "Nizhny Novgorod",
-          "tr": "Nijni Novgorod",
-          "ar": "نيجني نوفغورود",
-          "kk": "Нижний Новгород"
-        }
-      },
-      {
-        "k": {
-          "ru": "Клиент с",
-          "en": "Client since",
-          "tr": "Müşteri",
-          "ar": "عميل منذ",
-          "kk": "Клиент"
-        },
-        "v": {
-          "ru": "2008 г.",
-          "en": "2008",
-          "tr": "2008",
-          "ar": "2008",
-          "kk": "2008 ж."
-        }
-      },
-      {
-        "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
-        },
-        "v": {
-          "ru": "Имущество · ИМ-21256239-X5",
-          "en": "Property · IM-21256239-X5",
-          "tr": "Mülk · IM-21256239-X5",
-          "ar": "الممتلكات · IM-21256239-X5",
-          "kk": "Мүлік · ИМ-21256239-X5"
-        }
-      },
-      {
-        "k": {
-          "ru": "Документ",
-          "en": "Document",
-          "tr": "Belge",
-          "ar": "الوثيقة",
-          "kk": "Құжат"
-        },
-        "v": {
-          "ru": "Паспорт 2207-69 №212562391-05",
-          "en": "Passport 2207-69 №212562391-05",
-          "tr": "Pasaport 2207-69 №212562391-05",
-          "ar": "جواز السفر 2207-69 №212562391-05",
-          "kk": "Паспорт 2207-69 №212562391-05"
+          "ru": "9",
+          "en": "9",
+          "tr": "9",
+          "ar": "9",
+          "kk": "9"
         }
       }
     ]
   },
+  "coverImage": "covers/case-021.svg",
+  "personImage": "people/lev-sokolov.webp",
   "evidences": [
     {
-      "id": "ev-debris",
-      "relation": "contradicts",
-      "type": "photo",
-      "title": {
-        "ru": "Фото затопленного подвала",
-        "en": "Flooded Basement Photo",
-        "tr": "Su Basan Bodrum Fotoğrafı",
-        "ar": "صورة القبو المغمور",
-        "kk": "Су басқан жертөле суреті"
-      },
-      "content": {
-        "ru": "Среди размокших татами лежит огромное моторизованное колесо, выкрашенное ФИОЛЕТОВОЙ краской. Рядом — чертёж с подписью «Ремонтная тележка» и фиолетовым оттиском печати. Городской трубы в кадре не видно — труба пробита изнутри.",
-        "en": "Among the soaked tatami lies a giant motorized wheel painted PURPLE. Beside it is a blueprint signed \"Workshop Cart\" with a purple ink stamp. No city pipe is visible in frame — the pipe was breached from the inside.",
-        "tr": "Islanmış tatamilerin arasında MOR renge boyanmış dev bir motorlu tekerlek duruyor. Yanında \"Parti Vagonu\" yazılı, mor mürekkep mühürlü bir teknik çizim var. Karede şehir borusu görünmüyor — boru içeriden delinmiş.",
-        "ar": "بين حصائر التاتامي المبللة تقبع عجلة آلية ضخمة مطلية باللون البنفسجي. بجانبها مخطط موقّع باسم «عربة الحفلة» مع ختم حبر بنفسجي. لا يظهر أنبوب المدينة في الصورة — فقد ثُقب الأنبوب من الداخل.",
-        "kk": "Су болған татамилер арасында КҮЛГІН түске боялған алып моторлы дөңгелек жатыр. Қасында «Ремонтная тележка» деп қол қойылған, күлгін мөр басылған сызба бар. Кадрда қалалық құбыр көрінбейді — құбыр іштен тесілген."
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Разрушения вызваны самодельным моторным «вагоном» с фиолетовой краской, а не аварией городской трубы.",
-        "en": "The damage was caused by a homemade motorized \"wagon\" with purple paint, not by a city pipe failure.",
-        "tr": "Hasar, şehir borusunun arızasından değil, mor boyalı el yapımı motorlu bir \"vagon\"dan kaynaklandı.",
-        "ar": "الضرر سببه «عربة» آلية محلية الصنع بطلاء بنفسجي، لا عطل في أنبوب المدينة.",
-        "kk": "Зақым қалалық құбыр апатынан емес, күлгін бояулы қолдан жасалған моторлы «вагоннан» болған."
-      },
-      "meta": {
-        "filename": "IMG_20260618_233117.jpg",
-        "imageUrl": "evidence/case-021-ev-debris.jpg"
-      }
-    },
-    {
-      "id": "ev-chat",
-      "relation": "contradicts",
+      "id": "ev-utility",
+      "order": 1,
       "type": "document",
       "title": {
-        "ru": "Распечатка переписки",
-        "en": "Chat Log Printout",
-        "tr": "Sohbet Kaydı Çıktısı",
-        "ar": "مطبوعة سجل المحادثة",
-        "kk": "Хат-хабар басылымы"
+        "ru": "Акт коммунальной службы",
+        "en": "Municipal Utility Report",
+        "tr": "Municipal Utility Report",
+        "ar": "Municipal Utility Report",
+        "kk": "Акт коммунальной службы"
       },
       "content": {
-        "ru": [
-          "[22:15] Кирилл : Сэнсэй, нитро-двигатель на «вагоне» нестабилен — трясёт всю трубу под нами.",
-          "[22:18] Х. Тернов: Не ищи лёгких путей, сын мой. Сосредоточься на ката. И НЕ ТРОГАЙ главный вентиль.",
-          "[22:19] Кирилл : Уже тронул. Кажется, искрит…"
-        ],
-        "en": [
-          "[22:15] Kirill : Master, the nitro engine on the \"wagon\" is unstable — it's shaking the whole pipe under us.",
-          "[22:18] K. Ternov: Do not seek shortcuts, my son. Focus on your katas. And DO NOT touch the main valve.",
-          "[22:19] Kirill : Already touched it. It seems to be sparking…"
-        ],
-        "tr": [
-          "[22:15] Kirill : Usta, \"vagon\"daki nitro motor dengesiz — altımızdaki tüm boruyu sarsıyor.",
-          "[22:18] K. Ternov: Kestirme yollar arama evladım. Katalarına odaklan. Ve ana vanaya DOKUNMA.",
-          "[22:19] Kirill : Çoktan dokundum. Galiba kıvılcım çıkarıyor…"
-        ],
-        "ar": [
-          "[22:15] كيريل (قناع بنفسجي): يا معلّم، محرك النيترو في «العربة» غير مستقر — إنه يهز الأنبوب كله تحتنا.",
-          "[22:18] ك. تيرنوف: لا تبحث عن الطرق المختصرة يا بنيّ. ركّز على الكاتا. ولا تلمس الصمام الرئيسي.",
-          "[22:19] كيريل (قناع بنفسجي): لقد لمسته بالفعل. يبدو أنه يُطلق شرراً…"
-        ],
-        "kk": [
-          "[22:15] Кирилл : Сэнсэй, «вагондағы» нитро-қозғалтқыш тұрақсыз — астымыздағы бүкіл құбырды сілкілейді.",
-          "[22:18] Х. Тернов: Жеңіл жол іздеме, балам. Катаңа шоғырлан. Және басты вентильге ТИМЕ.",
-          "[22:19] Кирилл : Тиіп те қойдым. Ұшқын шашып тұрған сияқты…"
-        ]
+        "ru": "За месяц до происшествия участок трубы прошёл плановый осмотр. Давление в день аварии оставалось в пределах нормы. Коррозия была незначительной и сама по себе не объясняет разрыв.",
+        "en": "The pipe section passed a routine inspection one month before the incident. Pressure remained within normal limits on the day of the rupture. Corrosion was minor and cannot explain the failure on its own.",
+        "tr": "The pipe section passed a routine inspection one month before the incident. Pressure remained within normal limits on the day of the rupture. Corrosion was minor and cannot explain the failure on its own.",
+        "ar": "The pipe section passed a routine inspection one month before the incident. Pressure remained within normal limits on the day of the rupture. Corrosion was minor and cannot explain the failure on its own.",
+        "kk": "За месяц до происшествия участок трубы прошёл плановый осмотр. Давление в день аварии оставалось в пределах нормы. Коррозия была незначительной и сама по себе не объясняет разрыв."
       },
-      "isContradiction": true,
+      "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Тренер знал, что самодельный двигатель трясёт трубу, и предупреждал про вентиль — это не самовозгорание городской сети, а он покрывает ученика.",
-        "en": "The coach knew the homemade engine was shaking the pipe and warned about the valve — this is not a spontaneous city failure; he is covering for his student.",
-        "tr": "Antrenör, el yapımı motorun boruyu sarstığını biliyordu ve vana konusunda uyardı — bu, kendiliğinden bir şehir arızası değil; öğrencisini koruyor.",
-        "ar": "كان المدرب يعلم أن المحرك المنزلي يهز الأنبوب وحذّر بشأن الصمام — هذا ليس عطلاً تلقائياً في الشبكة؛ إنه يتستر على طالبه.",
-        "kk": "Жаттықтырушы қолдан жасалған қозғалтқыш құбырды сілкілейтінін білген әрі вентиль туралы ескерткен — бұл қалалық желінің өздігінен жануы емес, ол оқушысын жасырып отыр."
+        "ru": "Документ делает версию о самопроизвольной аварии менее вероятной, но не устанавливает конкретную причину.",
+        "en": "The report makes a spontaneous failure less likely but does not identify the specific cause.",
+        "tr": "The report makes a spontaneous failure less likely but does not identify the specific cause.",
+        "ar": "The report makes a spontaneous failure less likely but does not identify the specific cause.",
+        "kk": "Документ делает версию о самопроизвольной аварии менее вероятной, но не устанавливает конкретную причину."
       },
-      "meta": {
-        "docHeader": {
-          "ru": "Экспорт переписки из мессенджера · стр. 1/1",
-          "en": "Messenger conversation export · page 1/1",
-          "tr": "Mesajlaşma dışa aktarımı · sayfa 1/1",
-          "ar": "تصدير محادثة المراسلة · الصفحة 1/1",
-          "kk": "Мессенджер хаттарын экспорттау · 1/1 бет"
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_cause",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Документ делает версию о самопроизвольной аварии менее вероятной, но не устанавливает конкретную причину.",
+          "en": "The report makes a spontaneous failure less likely but does not identify the specific cause.",
+          "tr": "The report makes a spontaneous failure less likely but does not identify the specific cause.",
+          "ar": "The report makes a spontaneous failure less likely but does not identify the specific cause.",
+          "kk": "Документ делает версию о самопроизвольной аварии менее вероятной, но не устанавливает конкретную причину."
         }
-      }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
-      "id": "ev-invoice",
-      "relation": "contradicts",
-      "type": "document",
+      "id": "ev-pipe-photo",
+      "order": 2,
+      "type": "surface_reveal",
       "title": {
-        "ru": "Чек хозяйственного магазина",
-        "en": "Hardware Store Receipt",
-        "tr": "Hırdavat Mağazası Fişi",
-        "ar": "إيصال متجر الأدوات",
-        "kk": "Шаруашылық дүкенінің чегі"
+        "ru": "Очистка повреждённой трубы",
+        "en": "Cleaning the Damaged Pipe",
+        "tr": "Cleaning the Damaged Pipe",
+        "ar": "Cleaning the Damaged Pipe",
+        "kk": "Очистка повреждённой трубы"
       },
       "content": {
-        "ru": [
-          "Хозмаг «Всё для мастера» · товарный чек",
-          "Покупатель: секция карате «Факел» (Х. Тернов)",
-          "Дата: за 3 часа до взрыва",
-          "Проволока сварочная промышленная — 50 м",
-          "Баллон метан-пропеллант топливный — 4 шт."
-        ],
-        "en": [
-          "Hardware store \"Master's Choice\" · sales receipt",
-          "Buyer: \"Torch\" sports club (K. Ternov)",
-          "Date: 3 hours before the blast",
-          "Industrial welding wire — 50 m",
-          "Methane fuel propellant canister — 4 pcs."
-        ],
-        "tr": [
-          "Hırdavatçı \"Ustanın Tercihi\" · satış fişi",
-          "Alıcı: \"Meşale\" spor kulübü (K. Ternov)",
-          "Tarih: patlamadan 3 saat önce",
-          "Endüstriyel kaynak teli — 50 m",
-          "Metan yakıt iticisi tüpü — 4 adet."
-        ],
-        "ar": [
-          "متجر الأدوات «خيار المعلّم» · إيصال بيع",
-          "المشتري: نادي الكاراتيه «نينجا» (ك. تيرنوف)",
-          "التاريخ: قبل 3 ساعات من الانفجار",
-          "سلك لحام صناعي — 50 م",
-          "أسطوانة وقود الميثان الدافع — 4 قطع."
-        ],
-        "kk": [
-          "«Шебердің таңдауы» шаруашылық дүкені · тауар чегі",
-          "Сатып алушы: «Алау» спорт клубы (Х. Тернов)",
-          "Күні: жарылыстан 3 сағат бұрын",
-          "Өнеркәсіптік дәнекерлеу сымы — 50 м",
-          "Метан-пропеллант отын баллоны — 4 дана."
-        ]
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Само додзё за 3 часа до взрыва купило сварочную проволоку и 4 баллона метана — это и есть газ, который взорвался. Ущерб самопричинён.",
-        "en": "The dojo itself bought welding wire and 4 methane canisters 3 hours before the blast — that is the gas that exploded. The damage is self-inflicted.",
-        "tr": "Salonun kendisi patlamadan 3 saat önce kaynak teli ve 4 metan tüpü aldı — patlayan gaz işte budur. Hasar kendi kendine verilmiş.",
-        "ar": "النادي نفسه اشترى سلك لحام و4 أسطوانات ميثان قبل الانفجار بـ3 ساعات — وهذا هو الغاز الذي انفجر. الضرر ذاتي التسبّب.",
-        "kk": "Додзёның өзі жарылыстан 3 сағат бұрын дәнекерлеу сымы мен 4 баллон метан сатып алған — жарылған газ нақ осы. Зиян өзі келтірілген."
+        "ru": "Под налётом обнаружены свежая дугообразная царапина и синяя краска от моторизованного колеса клуба; трубу пробила платформа из мастерской.",
+        "en": "Beneath the grime are a fresh curved scratch and blue paint from the club's powered wheel; the workshop platform struck and punctured the pipe.",
+        "tr": "Beneath the grime are a fresh curved scratch and blue paint from the club's powered wheel; the workshop platform struck and punctured the pipe.",
+        "ar": "Beneath the grime are a fresh curved scratch and blue paint from the club's powered wheel; the workshop platform struck and punctured the pipe.",
+        "kk": "Под налётом обнаружены свежая дугообразная царапина и синяя краска от моторизованного колеса клуба; трубу пробила платформа из мастерской."
+      },
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_cause",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Под налётом обнаружены свежая дугообразная царапина и синяя краска от моторизованного колеса клуба; трубу пробила платформа из мастерской.",
+          "en": "Beneath the grime are a fresh curved scratch and blue paint from the club's powered wheel; the workshop platform struck and punctured the pipe.",
+          "tr": "Beneath the grime are a fresh curved scratch and blue paint from the club's powered wheel; the workshop platform struck and punctured the pipe.",
+          "ar": "Beneath the grime are a fresh curved scratch and blue paint from the club's powered wheel; the workshop platform struck and punctured the pipe.",
+          "kk": "Под налётом обнаружены свежая дугообразная царапина и синяя краска от моторизованного колеса клуба; трубу пробила платформа из мастерской."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_cause",
+        "reason": {
+          "ru": "Под налётом обнаружены свежая дугообразная царапина и синяя краска от моторизованного колеса клуба; трубу пробила платформа из мастерской.",
+          "en": "Beneath the grime are a fresh curved scratch and blue paint from the club's powered wheel; the workshop platform struck and punctured the pipe.",
+          "tr": "Beneath the grime are a fresh curved scratch and blue paint from the club's powered wheel; the workshop platform struck and punctured the pipe.",
+          "ar": "Beneath the grime are a fresh curved scratch and blue paint from the club's powered wheel; the workshop platform struck and punctured the pipe.",
+          "kk": "Под налётом обнаружены свежая дугообразная царапина и синяя краска от моторизованного колеса клуба; трубу пробила платформа из мастерской."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/case-021-mayak-workshop.webp"
+      },
+      "description": {
+        "ru": "Инспектор сфотографировал вмятину до очистки мокрой грязи и технического налёта.",
+        "en": "The inspector photographed the dent before cleaning away wet dirt and industrial residue.",
+        "tr": "The inspector photographed the dent before cleaning away wet dirt and industrial residue.",
+        "ar": "The inspector photographed the dent before cleaning away wet dirt and industrial residue.",
+        "kk": "Инспектор сфотографировал вмятину до очистки мокрой грязи и технического налёта."
+      },
+      "instruction": {
+        "ru": "Сотрите грязь с края вмятины и найдите след контакта.",
+        "en": "Wipe the dirt from the edge of the dent and find the contact mark.",
+        "tr": "Wipe the dirt from the edge of the dent and find the contact mark.",
+        "ar": "Wipe the dirt from the edge of the dent and find the contact mark.",
+        "kk": "Сотрите грязь с края вмятины и найдите след контакта."
+      },
+      "previousType": "photo",
+      "assets": {
+        "baseImage": "cases/case-021/assets/interactive/ev-pipe-photo-scene.webp",
+        "coverTexture": "shared/surface/dirt.svg",
+        "revealMasks": [
+          "cases/case-021/assets/interactive/ev-pipe-photo-blue_contact_arc-trace-mask.svg"
+        ],
+        "toolCursor": "shared/surface/cloth-cursor.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": false,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Игрок собственноручно находит физический контакт платформы с трубой вместо чтения готового вывода на фотографии.",
+          "en": "The player personally uncovers proof that the platform struck the pipe instead of reading a ready-made conclusion.",
+          "tr": "The player personally uncovers proof that the platform struck the pipe instead of reading a ready-made conclusion.",
+          "ar": "The player personally uncovers proof that the platform struck the pipe instead of reading a ready-made conclusion.",
+          "kk": "Игрок собственноручно находит физический контакт платформы с трубой вместо чтения готового вывода на фотографии."
+        },
+        "playerAction": {
+          "ru": "Сотрите грязь с края вмятины и найдите след контакта.",
+          "en": "Wipe the dirt from the edge of the dent and find the contact mark.",
+          "tr": "Wipe the dirt from the edge of the dent and find the contact mark.",
+          "ar": "Wipe the dirt from the edge of the dent and find the contact mark.",
+          "kk": "Сотрите грязь с края вмятины и найдите след контакта."
+        },
+        "conclusion": {
+          "ru": "Под налётом обнаружены свежая дугообразная царапина и синяя краска от моторизованного колеса клуба; трубу пробила платформа из мастерской.",
+          "en": "Beneath the grime are a fresh curved scratch and blue paint from the club's powered wheel; the workshop platform struck and punctured the pipe.",
+          "tr": "Beneath the grime are a fresh curved scratch and blue paint from the club's powered wheel; the workshop platform struck and punctured the pipe.",
+          "ar": "Beneath the grime are a fresh curved scratch and blue paint from the club's powered wheel; the workshop platform struck and punctured the pipe.",
+          "kk": "Под налётом обнаружены свежая дугообразная царапина и синяя краска от моторизованного колеса клуба; трубу пробила платформа из мастерской."
+        }
+      },
+      "data": {
+        "mode": "erase",
+        "coverType": "dirt",
+        "brush": {
+          "radius": 46,
+          "hardness": 0.66,
+          "opacity": 0.84,
+          "spacing": 8
+        },
+        "completion": {
+          "type": "discover_any",
+          "requiredTraceIds": [
+            "blue_contact_arc"
+          ]
+        },
+        "traces": [
+          {
+            "id": "blue_contact_arc",
+            "label": "Синяя краска и дугообразная царапина",
+            "requiredRevealPercent": 54,
+            "mask": "cases/case-021/assets/interactive/ev-pipe-photo-blue_contact_arc-trace-mask.svg",
+            "shape": "mask",
+            "isContradiction": true,
+            "conclusion": "Под налётом обнаружены свежая дугообразная царапина и синяя краска от моторизованного колеса клуба; трубу пробила платформа из мастерской.",
+            "labelEn": "Blue paint and curved scratch",
+            "conclusionEn": "Beneath the grime are a fresh curved scratch and blue paint from the club's powered wheel; the workshop platform struck and punctured the pipe."
+          }
+        ]
       }
+    },
+    {
+      "id": "ev-club-chat",
+      "order": 3,
+      "type": "document",
+      "title": {
+        "ru": "Переписка участников клуба",
+        "en": "Club Members' Messages",
+        "tr": "Club Members' Messages",
+        "ar": "Club Members' Messages",
+        "kk": "Переписка участников клуба"
+      },
+      "content": {
+        "ru": "- 21:46 — Илья: «Лев Аркадьевич, левое колесо платформы сильно бьёт. Испытание лучше остановить».\n- 21:48 — Соколов: «Останавливайте двигатель и ничего не выкатывайте к техническому каналу».\n- 21:51 — Илья: «Поздно. Платформу повело, что-то пробили. Пошла вода».\n- 21:53 — Соколов: «Уберите раму от трубы. Я сейчас приеду».",
+        "en": "- 9:46 p.m.—Ilya: ‘Lev Arkadyevich, the platform's left wheel is wobbling badly. We should stop the test.’\n- 9:48 p.m.—Sokolov: ‘Shut down the motor and keep everything away from the utility channel.’\n- 9:51 p.m.—Ilya: ‘Too late. The platform veered off and punctured something. Water is coming in.’\n- 9:53 p.m.—Sokolov: ‘Move the frame away from the pipe. I am on my way.’",
+        "tr": "- 9:46 p.m.—Ilya: ‘Lev Arkadyevich, the platform's left wheel is wobbling badly. We should stop the test.’\n- 9:48 p.m.—Sokolov: ‘Shut down the motor and keep everything away from the utility channel.’\n- 9:51 p.m.—Ilya: ‘Too late. The platform veered off and punctured something. Water is coming in.’\n- 9:53 p.m.—Sokolov: ‘Move the frame away from the pipe. I am on my way.’",
+        "ar": "- 9:46 p.m.—Ilya: ‘Lev Arkadyevich, the platform's left wheel is wobbling badly. We should stop the test.’\n- 9:48 p.m.—Sokolov: ‘Shut down the motor and keep everything away from the utility channel.’\n- 9:51 p.m.—Ilya: ‘Too late. The platform veered off and punctured something. Water is coming in.’\n- 9:53 p.m.—Sokolov: ‘Move the frame away from the pipe. I am on my way.’",
+        "kk": "- 21:46 — Илья: «Лев Аркадьевич, левое колесо платформы сильно бьёт. Испытание лучше остановить».\n- 21:48 — Соколов: «Останавливайте двигатель и ничего не выкатывайте к техническому каналу».\n- 21:51 — Илья: «Поздно. Платформу повело, что-то пробили. Пошла вода».\n- 21:53 — Соколов: «Уберите раму от трубы. Я сейчас приеду»."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Соколов знал, что испытательная платформа пробила трубу. Утверждение, что клуб не проводил рядом никаких работ, ложно.",
+        "en": "Sokolov knew the test platform had punctured the pipe. His statement that the club conducted no work nearby is false.",
+        "tr": "Sokolov knew the test platform had punctured the pipe. His statement that the club conducted no work nearby is false.",
+        "ar": "Sokolov knew the test platform had punctured the pipe. His statement that the club conducted no work nearby is false.",
+        "kk": "Соколов знал, что испытательная платформа пробила трубу. Утверждение, что клуб не проводил рядом никаких работ, ложно."
+      },
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_cause",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Соколов знал, что испытательная платформа пробила трубу. Утверждение, что клуб не проводил рядом никаких работ, ложно.",
+          "en": "Sokolov knew the test platform had punctured the pipe. His statement that the club conducted no work nearby is false.",
+          "tr": "Sokolov knew the test platform had punctured the pipe. His statement that the club conducted no work nearby is false.",
+          "ar": "Sokolov knew the test platform had punctured the pipe. His statement that the club conducted no work nearby is false.",
+          "kk": "Соколов знал, что испытательная платформа пробила трубу. Утверждение, что клуб не проводил рядом никаких работ, ложно."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_cause",
+        "reason": {
+          "ru": "Соколов знал, что испытательная платформа пробила трубу. Утверждение, что клуб не проводил рядом никаких работ, ложно.",
+          "en": "Sokolov knew the test platform had punctured the pipe. His statement that the club conducted no work nearby is false.",
+          "tr": "Sokolov knew the test platform had punctured the pipe. His statement that the club conducted no work nearby is false.",
+          "ar": "Sokolov knew the test platform had punctured the pipe. His statement that the club conducted no work nearby is false.",
+          "kk": "Соколов знал, что испытательная платформа пробила трубу. Утверждение, что клуб не проводил рядом никаких работ, ложно."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "ev-voice",
+      "order": 4,
+      "type": "document",
+      "title": {
+        "ru": "Удалённое голосовое сообщение",
+        "en": "Deleted Voice Message",
+        "tr": "Deleted Voice Message",
+        "ar": "Deleted Voice Message",
+        "kk": "Удалённое голосовое сообщение"
+      },
+      "content": {
+        "ru": "Голос неизвестного: «Для страховой пишите: самопроизвольный разрыв изношенной сети. Платформу и испытание не упоминайте. Смету я подготовил, форма `17-К`. После выплаты переведёте оговорённую долю. Подпись в переписке — К.»",
+        "en": "Unknown voice: ‘Tell the insurer it was a spontaneous rupture in a worn utility line. Do not mention the platform or the test. I have prepared the estimate—form `17-K`. Transfer the agreed share after the payout. Sign our messages K.’",
+        "tr": "Unknown voice: ‘Tell the insurer it was a spontaneous rupture in a worn utility line. Do not mention the platform or the test. I have prepared the estimate—form `17-K`. Transfer the agreed share after the payout. Sign our messages K.’",
+        "ar": "Unknown voice: ‘Tell the insurer it was a spontaneous rupture in a worn utility line. Do not mention the platform or the test. I have prepared the estimate—form `17-K`. Transfer the agreed share after the payout. Sign our messages K.’",
+        "kk": "Голос неизвестного: «Для страховой пишите: самопроизвольный разрыв изношенной сети. Платформу и испытание не упоминайте. Смету я подготовил, форма `17-К`. После выплаты переведёте оговорённую долю. Подпись в переписке — К.»"
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Заявителю прямо предложили скрыть настоящую причину аварии и использовать ложную версию для получения выплаты.",
+        "en": "The claimant was explicitly instructed to conceal the true cause and use a false account to obtain a payout.",
+        "tr": "The claimant was explicitly instructed to conceal the true cause and use a false account to obtain a payout.",
+        "ar": "The claimant was explicitly instructed to conceal the true cause and use a false account to obtain a payout.",
+        "kk": "Заявителю прямо предложили скрыть настоящую причину аварии и использовать ложную версию для получения выплаты."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_cause",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Заявителю прямо предложили скрыть настоящую причину аварии и использовать ложную версию для получения выплаты.",
+          "en": "The claimant was explicitly instructed to conceal the true cause and use a false account to obtain a payout.",
+          "tr": "The claimant was explicitly instructed to conceal the true cause and use a false account to obtain a payout.",
+          "ar": "The claimant was explicitly instructed to conceal the true cause and use a false account to obtain a payout.",
+          "kk": "Заявителю прямо предложили скрыть настоящую причину аварии и использовать ложную версию для получения выплаты."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Переписка доказывает, что владелец знал об опасном самодельном двигателе.",
-      "Труба не загорелась сама: ученик Кирилл пробил газовую линию самодельным нитро-картом — это подтверждают колесо, чертёж и чек на метан и проволоку.",
-      "Из переписки видно: Тернов знал про двигатель и вентиль и теперь покрывает ученика, выдавая аварию за форс-мажор. Это мошенничество, отклоняем."
+      "Труба действительно лопнула и затопила мастерскую.",
+      "Под грязью на вмятине найдены свежая дугообразная царапина и синяя краска от колеса испытательной платформы клуба.",
+      "Соколов знал об этом и по совету консультанта скрыл испытание в заявлении.",
+      "Его мотив понятен: он пытался защитить подростков и сохранить клуб. Но сочувствие не превращает ложное заявление в подлинное. Выплату следует отклонить."
     ],
     "en": [
-      "The messages prove the owner knew about the unsafe homemade engine.",
-      "The pipe did not ignite on its own: Kirill breached the gas line with a homemade nitro kart — confirmed by the wheel, the blueprint, and the methane-and-wire receipt.",
-      "The chat shows Ternov knew about the engine and the valve and is now covering for his student by passing it off as force majeure. This is fraud; reject."
+      "Beneath the grime are a fresh curved scratch and blue paint from the club's powered wheel; the workshop platform struck and punctured the pipe.",
+      "Sokolov knew the test platform had punctured the pipe. His statement that the club conducted no work nearby is false.",
+      "The report makes a spontaneous failure less likely but does not identify the specific cause.",
+      "The claimant was explicitly instructed to conceal the true cause and use a false account to obtain a payout.",
+      "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "Mesajlar, sahibinin tehlikeli ev yapımı motoru bildiğini kanıtlıyor.",
-      "Boru kendiliğinden tutuşmadı: Kirill, el yapımı bir nitro kartla gaz hattını deldi — tekerlek, teknik çizim ve metan-tel fişi bunu doğruluyor.",
-      "Sohbet, Ternov'in motoru ve vanayı bildiğini ve şimdi olayı mücbir sebep gibi göstererek öğrencisini koruduğunu gösteriyor. Bu bir dolandırıcılık; reddedin."
+      "Beneath the grime are a fresh curved scratch and blue paint from the club's powered wheel; the workshop platform struck and punctured the pipe.",
+      "Sokolov knew the test platform had punctured the pipe. His statement that the club conducted no work nearby is false.",
+      "The report makes a spontaneous failure less likely but does not identify the specific cause.",
+      "The claimant was explicitly instructed to conceal the true cause and use a false account to obtain a payout.",
+      "The claim is fraudulent and should be rejected."
     ],
     "ar": [
-      "تثبت الرسائل أن المالك كان يعلم بالمحرك محلي الصنع غير الآمن.",
-      "الأنبوب لم يشتعل من تلقاء نفسه: الطالب ذو القناع البنفسجي ثقب خط الغاز بعربة نيترو منزلية الصنع — تؤكده العجلة والمخطط وإيصال الميثان والسلك.",
-      "تُظهر المحادثة أن تيرنوف كان يعلم بالمحرك والصمام وهو الآن يتستر على طالبه بادّعاء القوة القاهرة. هذا احتيال؛ ارفض."
+      "Beneath the grime are a fresh curved scratch and blue paint from the club's powered wheel; the workshop platform struck and punctured the pipe.",
+      "Sokolov knew the test platform had punctured the pipe. His statement that the club conducted no work nearby is false.",
+      "The report makes a spontaneous failure less likely but does not identify the specific cause.",
+      "The claimant was explicitly instructed to conceal the true cause and use a false account to obtain a payout.",
+      "The claim is fraudulent and should be rejected."
     ],
     "kk": [
-      "Хаттар иесінің қауіпті қолдан жасалған қозғалтқышты білгенін дәлелдейді.",
-      "Құбыр өздігінен от алған жоқ: Кирилл газ желісін қолдан жасалған нитро-картпен тескен — мұны дөңгелек, сызба және метан мен сым чегі растайды.",
-      "Хат-хабардан Тернов қозғалтқыш пен вентиль туралы білгені көрінеді, енді ол оқиғаны форс-мажор деп көрсетіп, оқушысын жасырып отыр. Бұл алаяқтық, қабылдамаймыз."
+      "Труба действительно лопнула и затопила мастерскую.",
+      "Под грязью на вмятине найдены свежая дугообразная царапина и синяя краска от колеса испытательной платформы клуба.",
+      "Соколов знал об этом и по совету консультанта скрыл испытание в заявлении.",
+      "Его мотив понятен: он пытался защитить подростков и сохранить клуб. Но сочувствие не превращает ложное заявление в подлинное. Выплату следует отклонить."
     ]
+  },
+  "investigationBudget": 3,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Вечером под помещением клуба произошёл самопроизвольный разрыв городской технической трубы. Вода затопила мастерскую, а короткое замыкание повредило инструменты и учебное оборудование. Работы рядом с трубой клуб не проводил. Прошу возместить ущерб в размере 1900 евро.",
+        "en": "That evening, a municipal utility pipe beneath the club premises ruptured spontaneously. Water flooded the workshop, and a short circuit damaged tools and training equipment. The club performed no work near the pipe. I am claiming €1,900 in damages.",
+        "tr": "That evening, a municipal utility pipe beneath the club premises ruptured spontaneously. Water flooded the workshop, and a short circuit damaged tools and training equipment. The club performed no work near the pipe. I am claiming €1,900 in damages.",
+        "ar": "That evening, a municipal utility pipe beneath the club premises ruptured spontaneously. Water flooded the workshop, and a short circuit damaged tools and training equipment. The club performed no work near the pipe. I am claiming €1,900 in damages.",
+        "kk": "Вечером под помещением клуба произошёл самопроизвольный разрыв городской технической трубы. Вода затопила мастерскую, а короткое замыкание повредило инструменты и учебное оборудование. Работы рядом с трубой клуб не проводил. Прошу возместить ущерб в размере 1900 евро."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_event",
+      "text": {
+        "ru": "Техническая труба разорвалась и затопила мастерскую клуба.",
+        "en": "A utility pipe ruptured and flooded the club workshop.",
+        "tr": "A utility pipe ruptured and flooded the club workshop.",
+        "ar": "A utility pipe ruptured and flooded the club workshop.",
+        "kk": "Техническая труба разорвалась и затопила мастерскую клуба."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_cause",
+      "text": {
+        "ru": "Разрыв произошёл самопроизвольно; работы и испытания рядом с трубой не проводились.",
+        "en": "The pipe ruptured spontaneously; no work or testing was conducted near it.",
+        "tr": "The pipe ruptured spontaneously; no work or testing was conducted near it.",
+        "ar": "The pipe ruptured spontaneously; no work or testing was conducted near it.",
+        "kk": "Разрыв произошёл самопроизвольно; работы и испытания рядом с трубой не проводились."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_damage",
+      "text": {
+        "ru": "Вода и короткое замыкание повредили оборудование на 1900 евро.",
+        "en": "Water and a short circuit caused €1,900 in equipment damage.",
+        "tr": "Water and a short circuit caused €1,900 in equipment damage.",
+        "ar": "Water and a short circuit caused €1,900 in equipment damage.",
+        "kk": "Вода и короткое замыкание повредили оборудование на 1900 евро."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Знакомые люди не получают скидку на правду. Изучайте заявление Соколова так, будто никогда о нём не слышали. — В. Лебедева",
+      "en": "Familiar faces receive no discount on the truth. Examine Sokolov's claim as if you had never heard of him. — V. Lebedeva",
+      "tr": "Familiar faces receive no discount on the truth. Examine Sokolov's claim as if you had never heard of him. — V. Lebedeva",
+      "ar": "Familiar faces receive no discount on the truth. Examine Sokolov's claim as if you had never heard of him. — V. Lebedeva",
+      "kk": "Знакомые люди не получают скидку на правду. Изучайте заявление Соколова так, будто никогда о нём не слышали. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Вы защитили «Маяк», когда его подставили. И отказали ему, когда он солгал. Именно так работает беспристрастность. Теперь у нас есть голос консультанта.",
+      "en": "You defended Mayak when it was framed, and rejected its claim when its director lied. That is what impartiality looks like. Now we have the consultant's voice.",
+      "tr": "You defended Mayak when it was framed, and rejected its claim when its director lied. That is what impartiality looks like. Now we have the consultant's voice.",
+      "ar": "You defended Mayak when it was framed, and rejected its claim when its director lied. That is what impartiality looks like. Now we have the consultant's voice.",
+      "kk": "Вы защитили «Маяк», когда его подставили. И отказали ему, когда он солгал. Именно так работает беспристрастность. Теперь у нас есть голос консультанта."
+    },
+    "nextCaseTeaser": {
+      "ru": "В прямом эфире разбилась техника. В черновиках трансляции найдено слово «сценарий» и знакомый код.",
+      "en": "Equipment was destroyed during a livestream. The broadcast drafts contain the word ‘script’ and a familiar code.",
+      "tr": "Equipment was destroyed during a livestream. The broadcast drafts contain the word ‘script’ and a familiar code.",
+      "ar": "Equipment was destroyed during a livestream. The broadcast drafts contain the word ‘script’ and a familiar code.",
+      "kk": "В прямом эфире разбилась техника. В черновиках трансляции найдено слово «сценарий» и знакомый код."
+    },
+    "seasonClue": {
+      "id": "act1-clue-9",
+      "label": {
+        "ru": "Голос консультанта К.",
+        "en": "The Voice of Consultant K.",
+        "tr": "The Voice of Consultant K.",
+        "ar": "The Voice of Consultant K.",
+        "kk": "Голос консультанта К."
+      },
+      "description": {
+        "ru": "Неизвестный не просто оформляет документы. Он объясняет заявителям, какую часть происшествия нужно скрыть, и получает долю после выплаты.",
+        "en": "The unknown consultant does more than prepare documents. He tells claimants which part of an incident to conceal and takes a cut after the payout.",
+        "tr": "The unknown consultant does more than prepare documents. He tells claimants which part of an incident to conceal and takes a cut after the payout.",
+        "ar": "The unknown consultant does more than prepare documents. He tells claimants which part of an incident to conceal and takes a cut after the payout.",
+        "kk": "Неизвестный не просто оформляет документы. Он объясняет заявителям, какую часть происшествия нужно скрыть, и получает долю после выплаты."
+      },
+      "progressIndex": 4,
+      "progressTotal": 5
+    },
+    "epilogue": null
   }
 }

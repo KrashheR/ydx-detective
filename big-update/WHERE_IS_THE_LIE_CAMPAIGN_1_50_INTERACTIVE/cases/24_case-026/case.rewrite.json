@@ -1,0 +1,559 @@
+{
+  "id": "case-026",
+  "campaignOrder": 24,
+  "requiredLevel": 12,
+  "act": 3,
+  "actTitle": {
+    "ru": "Восточный двор",
+    "en": "Eastern Yard"
+  },
+  "title": {
+    "ru": "Часы после кражи",
+    "en": "The Watch After the Theft"
+  },
+  "difficulty": "hard",
+  "claimAmount": {
+    "value": 12000,
+    "currency": "EUR"
+  },
+  "groundTruth": "fraud",
+  "correctDecision": "reject",
+  "investigationBudget": 4,
+  "claimant": {
+    "name": {
+      "ru": "Эдуард Кравец, 50 лет",
+      "en": "Eduard Kravets, age 50"
+    },
+    "migrationNote": {
+      "ru": "Сохранить данные и портрет.",
+      "en": "Keep the existing profile data and portrait."
+    },
+    "portrait": {
+      "characterId": "eduard-kravets",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Эдуард Кравец",
+        "en": "Eduard Kravets, age 50"
+      },
+      "assetId": "asset-032",
+      "src": "src/data/cases/case-026/people/eduard-kravets.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-026/people/eduard-kravets.webp",
+      "caseRelativeSrc": "people/eduard-kravets.webp",
+      "installTo": "public/people/eduard-kravets.webp",
+      "legacyRuntimeUrl": "people/eduard-kravets.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "1b085210755847bc30b885141fe51c65d429bb988fcf1fabff6606b752405ee0"
+    },
+    "portraitStatus": "generated_replacement_included",
+    "portraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/eduard-kravets.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-026/people/eduard-kravets.webp",
+      "copyTo": "public/people/eduard-kravets.webp",
+      "replacesExistingValue": "people/eduard.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Фотография похожих часов ничего не доказывает. Ищите уникальные признаки: номер, гравировку и историю передачи. — В. Лебедева",
+      "en": "A photograph of a similar watch proves nothing. Look for unique identifiers: the serial number, engraving, and transfer history. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "«Восточный двор» принимает не только крупную технику. Через него проходят любые вещи, которые можно продать второй раз после страховой выплаты.",
+      "en": "Eastern Yard handles more than large equipment. Anything that can be sold a second time after an insurance payout passes through it."
+    },
+    "nextCaseTeaser": {
+      "ru": "Болат Жумабеков возвращается. После града он перенёс семенной запас на склад — и теперь склад затоплен.",
+      "en": "Bolat Zhumabekov returns. After the hail, he moved his seed reserves to a warehouse—and now the warehouse has flooded."
+    },
+    "seasonClue": {
+      "id": "east-yard-auction",
+      "label": {
+        "ru": "Аукционный канал",
+        "en": "The Auction Channel"
+      },
+      "description": {
+        "ru": "Склад служит перевалочным пунктом для застрахованных ценностей, тайно проданных владельцами.",
+        "en": "The warehouse serves as a transfer point for insured valuables secretly sold by their owners."
+      },
+      "progressIndex": 1,
+      "progressTotal": 4
+    },
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "12 марта из спальни похитили коллекционные часы индивидуальной сборки стоимостью 12 000 евро. Я подал заявление в полицию и прошу выплату по страховому сертификату.",
+    "en": "On March 12, a custom-built collectible watch worth €12,000 was stolen from my bedroom. I filed a police report and am claiming payment under the insurance certificate."
+  },
+  "evidence": [
+    {
+      "id": "ev-police",
+      "order": 1,
+      "type": "document",
+      "title": {
+        "ru": "Заявление в полицию",
+        "en": "Police Report"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Кравец сообщил о пропаже часов и повреждённом ящике. Полиция зарегистрировала сведения со слов владельца.",
+        "en": "Kravets reported the missing watch and a damaged drawer. The police recorded the information provided by the owner."
+      },
+      "statusExplanation": {
+        "ru": "Регистрация заявления не подтверждает сам факт кражи.",
+        "en": "Registering a report does not prove that a theft occurred."
+      },
+      "statementLink": {
+        "statementId": "claim_theft_timing",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Регистрация заявления не подтверждает сам факт кражи.",
+          "en": "Registering a report does not prove that a theft occurred."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-photo",
+      "order": 2,
+      "type": "photo",
+      "title": {
+        "ru": "Фото с закрытого приёма",
+        "en": "Photograph from a Private Reception"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "Через семь дней после кражи Кравец запечатлён с часами той же формы. На увеличении видна редкая царапина и часть гравировки из страхового сертификата.",
+        "en": "Seven days after the reported theft, Kravets is photographed wearing the same model of watch. Enlargement reveals a rare scratch and part of the engraving listed in the insurance certificate."
+      },
+      "statusExplanation": {
+        "ru": "Уникальные признаки показывают, что заявитель продолжал носить объявленные похищенными часы.",
+        "en": "Unique identifiers show that the claimant continued wearing the watch he had reported stolen."
+      },
+      "statementLink": {
+        "statementId": "claim_watch_lost",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Уникальные признаки показывают, что заявитель продолжал носить объявленные похищенными часы.",
+          "en": "Unique identifiers show that the claimant continued wearing the watch he had reported stolen."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_watch_lost",
+        "reason": {
+          "ru": "Уникальные признаки показывают, что заявитель продолжал носить объявленные похищенными часы.",
+          "en": "Unique identifiers show that the claimant continued wearing the watch he had reported stolen."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-033",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-026/evidence/case-026-ev-photo.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-026/evidence/case-026-ev-photo.webp",
+          "caseRelativeSrc": "evidence/case-026-ev-photo.webp",
+          "installTo": "public/evidence/case-026-ev-photo.webp",
+          "legacyRuntimeUrl": "evidence/case-026-ev-photo.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "d3357ee959ce7d38c83fb32edd4ca50ff0198907e58ee7a2d46e29fbe45722a4"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-026/evidence/case-026-ev-photo.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-026/evidence/case-026-ev-photo.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-026-ev-photo.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-026/evidence/case-026-ev-photo.webp",
+        "copyTo": "public/evidence/case-026-ev-photo.webp"
+      }
+    },
+    {
+      "id": "ev-auction",
+      "order": 3,
+      "type": "document_scan",
+      "title": {
+        "ru": "Просветка акта аукционной передачи",
+        "en": "Auction Transfer Form Backlight Examination"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Исходная дата передачи — 11 марта, за день до «кражи»; позднее поверх неё напечатано 18 марта.",
+        "en": "The original transfer date is March 11, one day before the ‘theft’; March 18 was printed over it later."
+      },
+      "previousType": "document",
+      "description": {
+        "ru": "Аукционный дом передал страховщику бумажный оригинал акта приёма часов.",
+        "en": "The auction house supplied the insurer with the original paper watch-acceptance form."
+      },
+      "instruction": {
+        "ru": "Переключиться на просвет и проверить дату под копировальным слоем.",
+        "en": "Switch to backlight and inspect the date beneath the overprinted layer."
+      },
+      "assets": {
+        "asset1": "assets/interactive/ev-auction-base.webp",
+        "asset2": "assets/interactive/ev-auction-scan-overlay.svg"
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "uv",
+          "backlight"
+        ],
+        "anomalyZones": [
+          {
+            "id": "transfer_date",
+            "mode": "backlight",
+            "x": 66,
+            "y": 25,
+            "width": 15,
+            "height": 8,
+            "label": "Исходная дата передачи — 11 марта, за день до «кражи»; позднее поверх неё напечатано 18 марта.",
+            "isContradiction": true,
+            "labelEn": "The original transfer date is March 11, one day before the ‘theft’; March 18 was printed over it later."
+          }
+        ],
+        "successCondition": {
+          "type": "select_zone",
+          "zoneId": "transfer_date"
+        }
+      },
+      "statementLink": {
+        "statementId": "claim_theft_timing",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Исходная дата передачи — 11 марта, за день до «кражи»; позднее поверх неё напечатано 18 марта.",
+          "en": "The original transfer date is March 11, one day before the ‘theft’; March 18 was printed over it later."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_theft_timing",
+        "reason": {
+          "ru": "Исходная дата передачи — 11 марта, за день до «кражи»; позднее поверх неё напечатано 18 марта.",
+          "en": "The original transfer date is March 11, one day before the ‘theft’; March 18 was printed over it later."
+        }
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Игрок сам обнаруживает, что добровольная передача произошла до заявленной кражи.",
+          "en": "The player personally discovers that the voluntary transfer occurred before the reported theft."
+        },
+        "playerAction": {
+          "ru": "Переключиться на просвет и проверить дату под копировальным слоем.",
+          "en": "Switch to backlight and inspect the date beneath the overprinted layer."
+        },
+        "conclusion": {
+          "ru": "Исходная дата передачи — 11 марта, за день до «кражи»; позднее поверх неё напечатано 18 марта.",
+          "en": "The original transfer date is March 11, one day before the ‘theft’; March 18 was printed over it later."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-034",
+          "role": "interactive_base",
+          "src": "src/data/cases/case-026/assets/interactive/ev-auction-base.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-026/assets/interactive/ev-auction-base.webp",
+          "caseRelativeSrc": "assets/interactive/ev-auction-base.webp",
+          "installTo": "src/data/cases/case-026/assets/interactive/ev-auction-base.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1600,
+          "height": 1100,
+          "sha256": "e5c4861e476ca1139994867898bdd9cf60898b722da142b03649817a964ee879"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-026/assets/interactive/ev-auction-base.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-026/assets/interactive/ev-auction-base.webp",
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-bank",
+      "order": 4,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Аванс покупателя",
+        "en": "Buyer's Advance"
+      },
+      "isContradiction": false,
+      "narrativeRole": "motive",
+      "text": {
+        "ru": "До заявления о краже Кравец получил 40% цены от посредника. Остаток поступил после передачи часов на склад.",
+        "en": "Before reporting the theft, Kravets received 40% of the price from an intermediary. The balance arrived after the watch was delivered to the warehouse."
+      },
+      "statusExplanation": {
+        "ru": "Оплата началась до заявления и подтверждает заранее подготовленную продажу.",
+        "en": "Payment began before the claim and confirms a prearranged sale."
+      },
+      "statementLink": {
+        "statementId": "claim_no_voluntary_transfer",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Оплата началась до заявления и подтверждает заранее подготовленную продажу.",
+          "en": "Payment began before the claim and confirms a prearranged sale."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-appraisal",
+      "order": 5,
+      "type": "document",
+      "title": {
+        "ru": "Страховой сертификат",
+        "en": "Insurance Certificate"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Сертификат подлинный и подтверждает стоимость, номер и гравировку часов.",
+        "en": "The certificate is genuine and confirms the watch's value, serial number, and engraving."
+      },
+      "statusExplanation": {
+        "ru": "Подлинность вещи и её цена не доказывают кражу, но позволяют точно идентифицировать часы.",
+        "en": "The item's authenticity and value do not prove theft, but they allow the watch to be identified precisely."
+      },
+      "statementLink": {
+        "statementId": "claim_watch_lost",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Подлинность вещи и её цена не доказывают кражу, но позволяют точно идентифицировать часы.",
+          "en": "The item's authenticity and value do not prove theft, but they allow the watch to be identified precisely."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Уникальные повреждения и серийный номер показывают, что часы оставались у Кравца.",
+      "Он заранее получил аванс и сам передал вещь аукционному посреднику через «Восточный двор».",
+      "Исходная дата передачи — 11 марта, за день до «кражи»; позднее поверх неё напечатано 18 марта.",
+      "Кража инсценирована. Выплату следует отклонить."
+    ],
+    "en": [
+      "Unique identifiers show that the claimant continued wearing the watch he had reported stolen.",
+      "The original transfer date is March 11, one day before the ‘theft’; March 18 was printed over it later.",
+      "Registering a report does not prove that a theft occurred.",
+      "Payment began before the claim and confirms a prearranged sale.",
+      "The item's authenticity and value do not prove theft, but they allow the watch to be identified precisely.",
+      "The claim is fraudulent and should be rejected."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Сделать идентификацию часов честной и предметной.",
+      "Связать продажу с Восточным двором.",
+      "Интегрировать document_scan в улику ev-auction; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate document_scan into evidence ev-auction; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "people/eduard-kravets.webp",
+      "action": "generate",
+      "prompt": "Illustrated archival claimant ID portrait matching the existing insurance detective game: European male watch collector, 50 years old, carefully groomed hair, understated expensive jacket, composed self-assured expression, neutral document-photo background, original face distinct from Eduard Vinogradov, no real brands, no text, no watermark."
+    },
+    {
+      "file": "evidence/case-026-ev-photo.webp",
+      "action": "generate",
+      "prompt": "Candid documentary event photograph of a middle-aged man at a private reception, only torso and wrist emphasized, wearing a distinctive unbranded mechanical wristwatch with a small diagonal scratch on the case, neutral upscale interior, no readable faces required, no logos, no watermark."
+    },
+    {
+      "file": "assets/interactive/ev-auction-base.webp",
+      "purpose": "Базовая версия документа в normal-режиме",
+      "resolution": "1600×1100",
+      "format": "WebP",
+      "transparency": false,
+      "generatedBy": "image_model",
+      "manualPost": "Удалить случайный читаемый текст; выровнять документ; оставить поля для UI-слоёв.",
+      "prompt": "Create a realistic fictional administrative document for an insurance detective game. Нейтральный акт приёма коллекционных часов, крупное поле даты и серийного номера, без логотипа аукциона. Full document visible from above, utilitarian layout, paper texture, large blank structured fields. No real organization, logo, brand, personal data or watermark. Do not render critical readable text; dates, names, codes and signatures will be added in HTML/SVG. The hidden anomaly must not be obvious in the normal version.",
+      "evidenceId": "ev-auction",
+      "evidenceType": "document_scan"
+    },
+    {
+      "file": "assets/interactive/ev-auction-scan-overlay.svg",
+      "purpose": "Совмещённый слой УФ/просвета/бокового света",
+      "resolution": "viewBox 0 0 100 100",
+      "format": "SVG",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "После финального base.webp откалибровать hotspot и режим проявления.",
+      "prompt": null,
+      "evidenceId": "ev-auction",
+      "evidenceType": "document_scan"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "12 марта из спальни похитили коллекционные часы индивидуальной сборки стоимостью 12 000 евро. Я подал заявление в полицию и прошу выплату по страховому сертификату.",
+        "en": "On March 12, a custom-built collectible watch worth €12,000 was stolen from my bedroom. I filed a police report and am claiming payment under the insurance certificate."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_theft_timing",
+      "text": {
+        "ru": "Коллекционные часы были похищены 12 марта.",
+        "en": "The collectible watch was stolen on March 12."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_no_voluntary_transfer",
+      "text": {
+        "ru": "Кравец не продавал и не передавал часы до кражи.",
+        "en": "Kravets neither sold nor transferred the watch before the theft."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_watch_lost",
+      "text": {
+        "ru": "Застрахованные часы остаются утраченными.",
+        "en": "The insured watch remains lost."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-026",
+    "archiveBasePath": "generated-assets/src/data/cases/case-026",
+    "claimantPortrait": {
+      "characterId": "eduard-kravets",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Эдуард Кравец",
+        "en": "Eduard Kravets, age 50"
+      },
+      "assetId": "asset-032",
+      "src": "src/data/cases/case-026/people/eduard-kravets.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-026/people/eduard-kravets.webp",
+      "caseRelativeSrc": "people/eduard-kravets.webp",
+      "installTo": "public/people/eduard-kravets.webp",
+      "legacyRuntimeUrl": "people/eduard-kravets.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "1b085210755847bc30b885141fe51c65d429bb988fcf1fabff6606b752405ee0"
+    },
+    "claimantPortraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/eduard-kravets.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-026/people/eduard-kravets.webp",
+      "copyTo": "public/people/eduard-kravets.webp",
+      "replacesExistingValue": "people/eduard.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-photo",
+        "title": {
+          "ru": "Фото с закрытого приёма",
+          "en": "Photograph from a Private Reception"
+        },
+        "primaryImage": "src/data/cases/case-026/evidence/case-026-ev-photo.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-026/evidence/case-026-ev-photo.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-026-ev-photo.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-026/evidence/case-026-ev-photo.webp",
+          "copyTo": "public/evidence/case-026-ev-photo.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-033",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-026/evidence/case-026-ev-photo.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-026/evidence/case-026-ev-photo.webp",
+            "caseRelativeSrc": "evidence/case-026-ev-photo.webp",
+            "installTo": "public/evidence/case-026-ev-photo.webp",
+            "legacyRuntimeUrl": "evidence/case-026-ev-photo.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "d3357ee959ce7d38c83fb32edd4ca50ff0198907e58ee7a2d46e29fbe45722a4"
+          }
+        ]
+      },
+      {
+        "evidenceId": "ev-auction",
+        "title": {
+          "ru": "Просветка акта аукционной передачи",
+          "en": "Auction Transfer Form Backlight Examination"
+        },
+        "primaryImage": "src/data/cases/case-026/assets/interactive/ev-auction-base.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-026/assets/interactive/ev-auction-base.webp",
+        "legacyImageBinding": null,
+        "assets": [
+          {
+            "assetId": "asset-034",
+            "role": "interactive_base",
+            "src": "src/data/cases/case-026/assets/interactive/ev-auction-base.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-026/assets/interactive/ev-auction-base.webp",
+            "caseRelativeSrc": "assets/interactive/ev-auction-base.webp",
+            "installTo": "src/data/cases/case-026/assets/interactive/ev-auction-base.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1600,
+            "height": 1100,
+            "sha256": "e5c4861e476ca1139994867898bdd9cf60898b722da142b03649817a964ee879"
+          }
+        ]
+      }
+    ]
+  }
+}

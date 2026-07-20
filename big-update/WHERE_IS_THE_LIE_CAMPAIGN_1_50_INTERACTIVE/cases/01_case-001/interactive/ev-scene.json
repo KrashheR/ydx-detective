@@ -1,0 +1,100 @@
+{
+  "id": "ev-scene",
+  "order": 1,
+  "type": "thermal_scan",
+  "title": {
+    "ru": "Тепловой осмотр телевизора"
+  },
+  "isContradiction": true,
+  "narrativeRole": "pivot",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Осмотр проведён через 440 минут после заявленного отключения. Блок питания сохраняет 46 °C, процессор — 39 °C; контрольная модель остывает максимум за 90 минут. Телевизор включали менее чем за час до осмотра."
+  },
+  "previousType": "photo",
+  "description": {
+    "ru": "Прорыв зафиксирован аварийной службой в 06:20. Тепловой осмотр проведён в 13:40 — через семь часов двадцать минут после момента, когда телевизор, по словам заявителя, был обесточен и больше не включался."
+  },
+  "instruction": {
+    "ru": "Включить тепловизор и выбрать нагретый блок питания телевизора."
+  },
+  "assets": {
+    "asset1": "assets/interactive/ev-scene-scene.webp",
+    "asset2": "assets/interactive/ev-scene-heat-zones.json"
+  },
+  "data": {
+    "ambientTemperature": 21,
+    "observationTime": "13:40",
+    "claimedLastUseBefore": "06:20",
+    "elapsedSinceClaimedUseMinutes": 440,
+    "coolingReference": "Исправный телевизор этой конструкции остывает до температуры помещения не более чем за 90 минут после отключения.",
+    "initialMode": "normal",
+    "heatZones": [
+      {
+        "id": "power_unit",
+        "shape": "ellipse",
+        "x": 61,
+        "y": 48,
+        "width": 18,
+        "height": 14,
+        "temperature": 46,
+        "intensity": 0.9,
+        "label": "Нагретый блок питания",
+        "isContradiction": true
+      },
+      {
+        "id": "processor",
+        "shape": "ellipse",
+        "x": 49,
+        "y": 42,
+        "width": 13,
+        "height": 12,
+        "temperature": 39,
+        "intensity": 0.68,
+        "label": "Рабочее тепло процессора",
+        "isContradiction": true
+      }
+    ],
+    "successCondition": {
+      "type": "select_any",
+      "zoneIds": [
+        "power_unit",
+        "processor"
+      ]
+    }
+  },
+  "statementLink": {
+    "statementId": "claim_tv_never_restarted",
+    "relation": "contradicts",
+    "reason": {
+      "ru": "Осмотр проведён через 440 минут после заявленного отключения. Блок питания сохраняет 46 °C, процессор — 39 °C; контрольная модель остывает максимум за 90 минут. Телевизор включали менее чем за час до осмотра."
+    }
+  },
+  "contradictionTarget": {
+    "statementId": "claim_tv_never_restarted",
+    "reason": {
+      "ru": "Осмотр проведён через 440 минут после заявленного отключения. Блок питания сохраняет 46 °C, процессор — 39 °C; контрольная модель остывает максимум за 90 минут. Телевизор включали менее чем за час до осмотра."
+    }
+  },
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Одно переключение превращает первую разгадку в личное наблюдение игрока и не усложняет обучающий уровень."
+    },
+    "playerAction": {
+      "ru": "Включить тепловизор и выбрать нагретый блок питания телевизора."
+    },
+    "conclusion": {
+      "ru": "Осмотр проведён через 440 минут после заявленного отключения. Блок питания сохраняет 46 °C, процессор — 39 °C; контрольная модель остывает максимум за 90 минут. Телевизор включали менее чем за час до осмотра."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

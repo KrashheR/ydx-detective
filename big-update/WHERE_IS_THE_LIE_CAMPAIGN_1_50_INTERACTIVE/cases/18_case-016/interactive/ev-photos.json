@@ -1,0 +1,85 @@
+{
+  "id": "ev-photos",
+  "order": 2,
+  "type": "surface_reveal",
+  "title": {
+    "ru": "Проявление линии затопления"
+  },
+  "isContradiction": false,
+  "narrativeRole": "proof",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Под грязью проявилась непрерывная линия затопления на уровне нижних полок; верхние партии оставались сухими и не включены в требование."
+  },
+  "previousType": "photo",
+  "description": {
+    "ru": "После откачки воды эксперт снял нижнюю панель торгового стеллажа до санитарной очистки."
+  },
+  "instruction": {
+    "ru": "Сотрите засохшие грязевые разводы и найдите устойчивую линию воды."
+  },
+  "assets": {
+    "baseImage": "assets/interactive/ev-photos-scene.webp",
+    "coverTexture": "shared/surface/dirt.webp",
+    "revealMasks": [
+      "assets/interactive/ev-photos-waterline-trace-mask.svg"
+    ],
+    "toolCursor": "shared/surface/cloth-cursor.svg"
+  },
+  "data": {
+    "mode": "erase",
+    "coverType": "dirt",
+    "brush": {
+      "radius": 46,
+      "hardness": 0.66,
+      "opacity": 0.84,
+      "spacing": 8
+    },
+    "completion": {
+      "type": "discover_any",
+      "requiredTraceIds": [
+        "waterline"
+      ]
+    },
+    "traces": [
+      {
+        "id": "waterline",
+        "label": "Граница высоты воды",
+        "requiredRevealPercent": 52,
+        "mask": "assets/interactive/ev-photos-waterline-trace-mask.svg",
+        "shape": "mask",
+        "isContradiction": false,
+        "conclusion": "Под грязью проявилась непрерывная линия затопления на уровне нижних полок; верхние партии оставались сухими и не включены в требование."
+      }
+    ]
+  },
+  "statementLink": {
+    "statementId": "claim_damage_scope",
+    "relation": "supports",
+    "reason": {
+      "ru": "Под грязью проявилась непрерывная линия затопления на уровне нижних полок; верхние партии оставались сухими и не включены в требование."
+    }
+  },
+  "contradictionTarget": null,
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": false,
+    "highlightAfterHint": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Тактильная улика подтверждает реальную высоту воды и честный объём требования Каримовой."
+    },
+    "playerAction": {
+      "ru": "Сотрите засохшие грязевые разводы и найдите устойчивую линию воды."
+    },
+    "conclusion": {
+      "ru": "Под грязью проявилась непрерывная линия затопления на уровне нижних полок; верхние партии оставались сухими и не включены в требование."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

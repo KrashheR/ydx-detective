@@ -1,345 +1,570 @@
 {
   "id": "case-048",
   "type": "standard",
-  "difficulty": "hard",
+  "campaignOrder": 46,
+  "requiredLevel": 16,
+  "act": 5,
+  "actTitle": {
+    "ru": "Последний маршрут",
+    "en": "The Final Route",
+    "tr": "The Final Route",
+    "ar": "The Final Route",
+    "kk": "Последний маршрут"
+  },
+  "difficulty": "medium",
   "claimAmount": 12600,
   "truth": "fraud",
-  "investigationBudget": 4,
   "title": {
-    "ru": "Разгром пиццерии после ночной драки",
-    "en": "Pizza Shop Damage after a Night Brawl",
-    "tr": "Pizza Shop Damage after a Night Brawl",
-    "ar": "Pizza Shop Damage after a Night Brawl",
-    "kk": "Разгром пиццерии после ночной драки"
+    "ru": "Разгром после закрытия",
+    "en": "The Break-In After Closing",
+    "tr": "The Break-In After Closing",
+    "ar": "The Break-In After Closing",
+    "kk": "Разгром после закрытия"
   },
   "claim": {
     "person": {
       "ru": "Марко Лин, 44 года",
-      "en": "Marko Lin, 44",
-      "tr": "Marko Lin, 44",
-      "ar": "ماركو لين، 44",
-      "kk": "Марко Лин, 44 жаста"
+      "en": "Marko Lin, age 44",
+      "tr": "Marko Lin, age 44",
+      "ar": "Marko Lin, age 44",
+      "kk": "Марко Лин, 44 года"
     },
     "story": {
-      "ru": "Банда в масках ворвалась после закрытия, перевернула кухню и разбила новый туннельный тепловой шкаф. Камеры как раз не работали, поэтому прошу выплату по акту.",
-      "en": "A masked crew broke in after closing, wrecked the kitchen, and smashed the new tunnel heat cabinet. The cameras happened to be down, so I request payout under the report.",
-      "tr": "Maskeli bir ekip kapanıştan sonra içeri girip mutfağı dağıttı ve yeni tünel ısı dolabını kırdı. Kameralar tam o sırada kapalıydı; rapora göre ödeme istiyorum.",
-      "ar": "اقتحمت عصابة مقنعة المكان بعد الإغلاق وخربت المطبخ وحطمت خزانة التسخين الجديدة. كانت الكاميرات معطلة بالصدفة، لذلك أطلب التعويض حسب التقرير.",
-      "kk": "Маска киген топ жабылғаннан кейін кіріп, асүйді қиратып, жаңа туннельдік жылу шкафын сындырды. Камералар дәл сол кезде істемеген, сондықтан акт бойынша төлем сұраймын."
+      "ru": "После закрытия неизвестные проникли в пиццерию, перевернули кухню и уничтожили новый туннельный тепловой шкаф. Камеры якобы отключились во время нападения. Прошу оплатить оборудование и ремонт помещения.",
+      "en": "After closing, unknown intruders entered the pizzeria, wrecked the kitchen, and destroyed a new tunnel warming cabinet. The cameras supposedly failed during the attack. I am claiming the equipment and premises repairs.",
+      "tr": "After closing, unknown intruders entered the pizzeria, wrecked the kitchen, and destroyed a new tunnel warming cabinet. The cameras supposedly failed during the attack. I am claiming the equipment and premises repairs.",
+      "ar": "After closing, unknown intruders entered the pizzeria, wrecked the kitchen, and destroyed a new tunnel warming cabinet. The cameras supposedly failed during the attack. I am claiming the equipment and premises repairs.",
+      "kk": "После закрытия неизвестные проникли в пиццерию, перевернули кухню и уничтожили новый туннельный тепловой шкаф. Камеры якобы отключились во время нападения. Прошу оплатить оборудование и ремонт помещения."
     }
   },
-  "coverImage": "covers/case-048.svg",
-  "personImage": "people/marko-lin.webp",
   "client": {
     "role": {
-      "ru": "Владелец ночной пиццерии",
-      "en": "Night pizza shop owner",
-      "tr": "Gece pizzacısı sahibi",
-      "ar": "مالك مطعم بيتزا ليلي",
-      "kk": "Түнгі пиццерия иесі"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Архив",
-          "en": "Archive",
-          "tr": "Arşiv",
-          "ar": "الأرشيف",
-          "kk": "Архив"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "Подземный Отдел",
-          "en": "Underground Department",
-          "tr": "Yeraltı Dairesi",
-          "ar": "القسم الجوفي",
-          "kk": "Жерасты бөлімі"
+          "ru": "5",
+          "en": "5",
+          "tr": "5",
+          "ar": "5",
+          "kk": "5"
         }
       },
       {
         "k": {
-          "ru": "Застрахованный риск",
-          "en": "Insured risk",
-          "tr": "Sigortalı risk",
-          "ar": "الخطر المؤمن عليه",
-          "kk": "Сақтандырылған тәуекел"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Разгром кухни",
-          "en": "Kitchen vandalism",
-          "tr": "Mutfak tahribatı",
-          "ar": "تخريب المطبخ",
-          "kk": "Асүйдің қирауы"
-        }
-      },
-      {
-        "k": {
-          "ru": "Архивная связка",
-          "en": "Archive thread",
-          "tr": "Arşiv bağı",
-          "ar": "خيط الأرشيف",
-          "kk": "Архив байланысы"
-        },
-        "v": {
-          "ru": "Повторяющийся след: East Yard — скупка, где старое оборудование и украденные модули превращают в страховые истории.",
-          "en": "Recurring lead: East Yard, the consignment yard turning old equipment and stolen modules into insurance stories.",
-          "tr": "Tekrarlayan iz: East Yard; eski ekipmanı ve çalıntı modülleri sigorta hikâyelerine çeviren komisyon alanı.",
-          "ar": "خيط متكرر: East Yard، ساحة البيع التي تحول المعدات القديمة والوحدات المسروقة إلى قصص تأمين.",
-          "kk": "Қайталанатын із: East Yard — ескі жабдық пен ұрланған модульдерді сақтандыру оқиғасына айналдыратын алаң."
+          "ru": "46",
+          "en": "46",
+          "tr": "46",
+          "ar": "46",
+          "kk": "46"
         }
       }
     ]
   },
+  "coverImage": "covers/case-048.svg",
+  "personImage": "people/marko-lin-grounded.webp",
   "evidences": [
     {
       "id": "photo-48",
+      "order": 1,
       "type": "photo",
       "title": {
-        "ru": "Старый износ печи",
-        "en": "Old oven wear",
-        "tr": "Eski fırın aşınması",
-        "ar": "تآكل فرن قديم",
-        "kk": "Пештің ескі тозуы"
+        "ru": "Слой старого износа",
+        "en": "Layer of Old Wear",
+        "tr": "Layer of Old Wear",
+        "ar": "Layer of Old Wear",
+        "kk": "Слой старого износа"
       },
       "content": {
-        "ru": "На «новом» шкафу слой старого жира под свежей сажей; заводская плёнка давно снята.",
-        "en": "The \"new\" cabinet has old grease under fresh soot; the factory film was removed long ago.",
-        "tr": "\"Yeni\" dolapta taze isin altında eski yağ tabakası var; fabrika filmi çoktan çıkarılmış.",
-        "ar": "على الخزانة \"الجديدة\" طبقة شحم قديمة تحت السخام الجديد؛ أزيل غلاف المصنع منذ زمن.",
-        "kk": "\"Жаңа\" шкафта жаңа күйенің астында ескі май қабаты бар; зауыттық қабық әлдеқашан алынған."
+        "ru": "Под свежесогнутой панелью шкафа находятся многолетняя коррозия и старый сварной ремонт. Заводская табличка датирует устройство восемью годами ранее.",
+        "en": "Beneath the freshly bent panel are years of corrosion and an old welded repair. The factory plate dates the unit eight years earlier.",
+        "tr": "Beneath the freshly bent panel are years of corrosion and an old welded repair. The factory plate dates the unit eight years earlier.",
+        "ar": "Beneath the freshly bent panel are years of corrosion and an old welded repair. The factory plate dates the unit eight years earlier.",
+        "kk": "Под свежесогнутой панелью шкафа находятся многолетняя коррозия и старый сварной ремонт. Заводская табличка датирует устройство восемью годами ранее."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Фото показывает, что повреждённое оборудование не было новым.",
-        "en": "The photo shows the damaged equipment was not new.",
-        "tr": "Fotoğraf hasarlı ekipmanın yeni olmadığını gösteriyor.",
-        "ar": "تظهر الصورة أن المعدات المتضررة لم تكن جديدة.",
-        "kk": "Фото зақымдалған жабдықтың жаңа болмағанын көрсетеді."
+        "ru": "Шкаф не новый и до разгрома уже был сильно изношен.",
+        "en": "The cabinet was not new and was already badly worn before the incident.",
+        "tr": "The cabinet was not new and was already badly worn before the incident.",
+        "ar": "The cabinet was not new and was already badly worn before the incident.",
+        "kk": "Шкаф не новый и до разгрома уже был сильно изношен."
       },
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_new_equipment_destroyed",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Шкаф не новый и до разгрома уже был сильно изношен.",
+          "en": "The cabinet was not new and was already badly worn before the incident.",
+          "tr": "The cabinet was not new and was already badly worn before the incident.",
+          "ar": "The cabinet was not new and was already badly worn before the incident.",
+          "kk": "Шкаф не новый и до разгрома уже был сильно изношен."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_new_equipment_destroyed",
+        "reason": {
+          "ru": "Шкаф не новый и до разгрома уже был сильно изношен.",
+          "en": "The cabinet was not new and was already badly worn before the incident.",
+          "tr": "The cabinet was not new and was already badly worn before the incident.",
+          "ar": "The cabinet was not new and was already badly worn before the incident.",
+          "kk": "Шкаф не новый и до разгрома уже был сильно изношен."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
       "meta": {
-        "filename": "IMG_20260648_081500.jpg",
         "imageUrl": "evidence/case-048-photo-48.webp"
-      },
-      "relation": "contradicts"
+      }
     },
     {
       "id": "document-48",
-      "type": "document",
+      "order": 2,
+      "type": "document_scan",
       "title": {
-        "ru": "Счёт на тепловой шкаф",
-        "en": "Heat cabinet invoice",
-        "tr": "Isı dolabı faturası",
-        "ar": "فاتورة خزانة التسخين",
-        "kk": "Жылу шкафының шоты"
+        "ru": "Экспертиза счёта на оборудование",
+        "en": "Equipment Invoice Examination",
+        "tr": "Equipment Invoice Examination",
+        "ar": "Equipment Invoice Examination",
+        "kk": "Экспертиза счёта на оборудование"
       },
       "content": {
-        "ru": "Счёт выписан на демонстрационный шкаф 2019 года с пометкой «восстановленный». В заявлении он указан как новый.",
-        "en": "The invoice is for a 2019 showroom cabinet marked \"refurbished.\" The claim lists it as new.",
-        "tr": "Fatura, \"yenilenmiş\" notlu 2019 teşhir dolabı için. Başvuruda yeni olarak gösterilmiş.",
-        "ar": "الفاتورة تخص خزانة عرض 2019 مكتوب عليها \"مجددة\". في المطالبة ذُكرت كجديدة.",
-        "kk": "Шот \"қалпына келтірілген\" деп белгіленген 2019 жылғы көрме шкафына. Өтініште ол жаңа деп көрсетілген."
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Документы завышают стоимость повреждённого оборудования.",
-        "en": "The documents overstate the damaged equipment value.",
-        "tr": "Belgeler hasarlı ekipmanın değerini şişiriyor.",
-        "ar": "تضخم الوثائق قيمة المعدات المتضررة.",
-        "kk": "Құжаттар зақымдалған жабдық құнын асырып көрсетеді."
+        "ru": "Номер Лина напечатан поверх другого, а под ним видны данные соседнего ресторана; счёт не относится к уничтоженному шкафу.",
+        "en": "Lin's number was printed over another one, with a neighboring restaurant's details visible beneath it; the invoice does not belong to the destroyed cabinet.",
+        "tr": "Lin's number was printed over another one, with a neighboring restaurant's details visible beneath it; the invoice does not belong to the destroyed cabinet.",
+        "ar": "Lin's number was printed over another one, with a neighboring restaurant's details visible beneath it; the invoice does not belong to the destroyed cabinet.",
+        "kk": "Номер Лина напечатан поверх другого, а под ним видны данные соседнего ресторана; счёт не относится к уничтоженному шкафу."
       },
-      "relation": "contradicts"
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_new_equipment_destroyed",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Номер Лина напечатан поверх другого, а под ним видны данные соседнего ресторана; счёт не относится к уничтоженному шкафу.",
+          "en": "Lin's number was printed over another one, with a neighboring restaurant's details visible beneath it; the invoice does not belong to the destroyed cabinet.",
+          "tr": "Lin's number was printed over another one, with a neighboring restaurant's details visible beneath it; the invoice does not belong to the destroyed cabinet.",
+          "ar": "Lin's number was printed over another one, with a neighboring restaurant's details visible beneath it; the invoice does not belong to the destroyed cabinet.",
+          "kk": "Номер Лина напечатан поверх другого, а под ним видны данные соседнего ресторана; счёт не относится к уничтоженному шкафу."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_new_equipment_destroyed",
+        "reason": {
+          "ru": "Номер Лина напечатан поверх другого, а под ним видны данные соседнего ресторана; счёт не относится к уничтоженному шкафу.",
+          "en": "Lin's number was printed over another one, with a neighboring restaurant's details visible beneath it; the invoice does not belong to the destroyed cabinet.",
+          "tr": "Lin's number was printed over another one, with a neighboring restaurant's details visible beneath it; the invoice does not belong to the destroyed cabinet.",
+          "ar": "Lin's number was printed over another one, with a neighboring restaurant's details visible beneath it; the invoice does not belong to the destroyed cabinet.",
+          "kk": "Номер Лина напечатан поверх другого, а под ним видны данные соседнего ресторана; счёт не относится к уничтоженному шкафу."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "Соседний ресторан предоставил страховщику бумажный оригинал своего счёта.",
+        "en": "The neighboring restaurant supplied the insurer with its original paper invoice.",
+        "tr": "The neighboring restaurant supplied the insurer with its original paper invoice.",
+        "ar": "The neighboring restaurant supplied the insurer with its original paper invoice.",
+        "kk": "Соседний ресторан предоставил страховщику бумажный оригинал своего счёта."
+      },
+      "instruction": {
+        "ru": "Включить УФ-режим и проверить серийный номер и имя покупателя.",
+        "en": "Switch on UV mode and inspect the serial number and buyer's name.",
+        "tr": "Switch on UV mode and inspect the serial number and buyer's name.",
+        "ar": "Switch on UV mode and inspect the serial number and buyer's name.",
+        "kk": "Включить УФ-режим и проверить серийный номер и имя покупателя."
+      },
+      "previousType": "document",
+      "assets": {
+        "asset1": "cases/case-048/assets/interactive/document-48-base.webp",
+        "asset2": "cases/case-048/assets/interactive/document-48-scan-overlay.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Просветка показывает, как чужой документ приспособили под заявление Лина.",
+          "en": "The examination reveals how another business's document was altered for Lin's claim.",
+          "tr": "The examination reveals how another business's document was altered for Lin's claim.",
+          "ar": "The examination reveals how another business's document was altered for Lin's claim.",
+          "kk": "Просветка показывает, как чужой документ приспособили под заявление Лина."
+        },
+        "playerAction": {
+          "ru": "Включить УФ-режим и проверить серийный номер и имя покупателя.",
+          "en": "Switch on UV mode and inspect the serial number and buyer's name.",
+          "tr": "Switch on UV mode and inspect the serial number and buyer's name.",
+          "ar": "Switch on UV mode and inspect the serial number and buyer's name.",
+          "kk": "Включить УФ-режим и проверить серийный номер и имя покупателя."
+        },
+        "conclusion": {
+          "ru": "Номер Лина напечатан поверх другого, а под ним видны данные соседнего ресторана; счёт не относится к уничтоженному шкафу.",
+          "en": "Lin's number was printed over another one, with a neighboring restaurant's details visible beneath it; the invoice does not belong to the destroyed cabinet.",
+          "tr": "Lin's number was printed over another one, with a neighboring restaurant's details visible beneath it; the invoice does not belong to the destroyed cabinet.",
+          "ar": "Lin's number was printed over another one, with a neighboring restaurant's details visible beneath it; the invoice does not belong to the destroyed cabinet.",
+          "kk": "Номер Лина напечатан поверх другого, а под ним видны данные соседнего ресторана; счёт не относится к уничтоженному шкафу."
+        }
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "uv",
+          "backlight"
+        ],
+        "anomalyZones": [
+          {
+            "id": "invoice_owner",
+            "mode": "uv",
+            "x": 42,
+            "y": 38,
+            "width": 41,
+            "height": 16,
+            "label": "Номер Лина напечатан поверх другого, а под ним видны данные соседнего ресторана; счёт не относится к уничтоженному шкафу.",
+            "isContradiction": true,
+            "labelEn": "Lin's number was printed over another one, with a neighboring restaurant's details visible beneath it; the invoice does not belong to the destroyed cabinet."
+          }
+        ],
+        "successCondition": {
+          "type": "select_zone",
+          "zoneId": "invoice_owner"
+        }
+      }
     },
     {
       "id": "camera-48",
+      "order": 3,
       "type": "camera_recording",
       "title": {
-        "ru": "Камера соседнего лифта",
-        "en": "Neighboring lift camera",
-        "tr": "Yan asansör kamerası",
-        "ar": "كاميرا المصعد المجاور",
-        "kk": "Көрші лифт камерасы"
+        "ru": "Камера служебного лифта",
+        "en": "Service Lift Camera",
+        "tr": "Service Lift Camera",
+        "ar": "Service Lift Camera",
+        "kk": "Камера служебного лифта"
       },
       "content": {
-        "ru": "02:03: Лин сам выносит ящики с посудой, затем возвращается с ломом. Людей в масках на входе нет.",
-        "en": "02:03: Lin carries boxes of dishes out himself, then returns with a crowbar. No masked crew appears at the entrance.",
-        "tr": "02:03: Lin tabak kutularını kendisi çıkarıyor, sonra levye ile dönüyor. Girişte maskeli ekip yok.",
-        "ar": "02:03 يخرج لين صناديق أطباق بنفسه ثم يعود بعتلة. لا تظهر عصابة مقنعة عند المدخل.",
-        "kk": "02:03-де Лин ыдыс қораптарын өзі шығарып, кейін сүйменмен оралады. Кіреберісте маскалы топ жоқ."
+        "ru": "Лин и двое работников после закрытия вывозят исправный новый шкаф, затем возвращаются с уже списанным старым устройством.",
+        "en": "After closing, Lin and two employees remove the operational new cabinet, then return with an old decommissioned unit.",
+        "tr": "After closing, Lin and two employees remove the operational new cabinet, then return with an old decommissioned unit.",
+        "ar": "After closing, Lin and two employees remove the operational new cabinet, then return with an old decommissioned unit.",
+        "kk": "Лин и двое работников после закрытия вывозят исправный новый шкаф, затем возвращаются с уже списанным старым устройством."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Камера показывает подготовку разгрома самим владельцем.",
-        "en": "The camera shows the owner preparing the damage himself.",
-        "tr": "Kamera hasarı sahibinin hazırladığını gösteriyor.",
-        "ar": "تظهر الكاميرا أن المالك حضر الضرر بنفسه.",
-        "kk": "Камера қирауды иесінің өзі дайындағанын көрсетеді."
+        "ru": "Новое оборудование сохранено, а для инсценировки завезён старый шкаф.",
+        "en": "The new equipment was preserved, and an old cabinet was brought in for the staging.",
+        "tr": "The new equipment was preserved, and an old cabinet was brought in for the staging.",
+        "ar": "The new equipment was preserved, and an old cabinet was brought in for the staging.",
+        "kk": "Новое оборудование сохранено, а для инсценировки завезён старый шкаф."
       },
-      "meta": {
-        "cameraId": "ARC-48",
-        "cameraModel": "SentinelCam SC-3265 - 1080p - H.264"
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_new_equipment_destroyed",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Новое оборудование сохранено, а для инсценировки завезён старый шкаф.",
+          "en": "The new equipment was preserved, and an old cabinet was brought in for the staging.",
+          "tr": "The new equipment was preserved, and an old cabinet was brought in for the staging.",
+          "ar": "The new equipment was preserved, and an old cabinet was brought in for the staging.",
+          "kk": "Новое оборудование сохранено, а для инсценировки завезён старый шкаф."
+        }
       },
-      "relation": "contradicts"
+      "contradictionTarget": {
+        "statementId": "claim_new_equipment_destroyed",
+        "reason": {
+          "ru": "Новое оборудование сохранено, а для инсценировки завезён старый шкаф.",
+          "en": "The new equipment was preserved, and an old cabinet was brought in for the staging.",
+          "tr": "The new equipment was preserved, and an old cabinet was brought in for the staging.",
+          "ar": "The new equipment was preserved, and an old cabinet was brought in for the staging.",
+          "kk": "Новое оборудование сохранено, а для инсценировки завезён старый шкаф."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "log-48",
+      "order": 4,
       "type": "usage_log",
       "title": {
         "ru": "Журнал кассы и камер",
-        "en": "Register and camera log",
-        "tr": "Kasa ve kamera kaydı",
-        "ar": "سجل الصندوق والكاميرات",
-        "kk": "Касса және камера журналы"
+        "en": "Register and Camera Log",
+        "tr": "Register and Camera Log",
+        "ar": "Register and Camera Log",
+        "kk": "Журнал кассы и камер"
       },
       "content": {
-        "ru": [
-          "01:48 — касса закрыта досрочно",
-          "01:52 — камеры кухни переведены в сервис владельцем",
-          "02:19 — акт разгрома создан до вызова охраны"
-        ],
-        "en": [
-          "01:48 — register closed early",
-          "01:52 — kitchen cameras set to service by owner",
-          "02:19 — damage report created before security call"
-        ],
-        "tr": [
-          "01:48 — kasa erken kapatıldı",
-          "01:52 — mutfak kameraları sahibi tarafından servise alındı",
-          "02:19 — güvenlik çağrısından önce hasar raporu oluşturuldu"
-        ],
-        "ar": [
-          "01:48 — إغلاق الصندوق مبكراً",
-          "01:52 — نقل كاميرات المطبخ للصيانة بواسطة المالك",
-          "02:19 — إنشاء تقرير الضرر قبل استدعاء الأمن"
-        ],
-        "kk": [
-          "01:48 — касса ерте жабылды",
-          "01:52 — асүй камераларын иесі сервиске ауыстырды",
-          "02:19 — күзет шақырудан бұрын залал акті жасалды"
-        ]
+        "ru": "Камеры отключены учётной записью Лина за минуту до начала перестановки. Внешнего сбоя не было.",
+        "en": "Lin's account disabled the cameras one minute before the equipment switch. No external failure occurred.",
+        "tr": "Lin's account disabled the cameras one minute before the equipment switch. No external failure occurred.",
+        "ar": "Lin's account disabled the cameras one minute before the equipment switch. No external failure occurred.",
+        "kk": "Камеры отключены учётной записью Лина за минуту до начала перестановки. Внешнего сбоя не было."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Системные логи противоречат внезапному нападению.",
-        "en": "System logs contradict a sudden attack.",
-        "tr": "Sistem kayıtları ani saldırıyla çelişiyor.",
-        "ar": "تتناقض سجلات النظام مع هجوم مفاجئ.",
-        "kk": "Жүйе журналдары кенет шабуылға қайшы."
+        "ru": "Заявитель сам создал слепую зону.",
+        "en": "The claimant created the blind spot himself.",
+        "tr": "The claimant created the blind spot himself.",
+        "ar": "The claimant created the blind spot himself.",
+        "kk": "Заявитель сам создал слепую зону."
       },
-      "meta": {
-        "logPrompt": "archive@log-48:~$ tail -f /var/log/archive.log"
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_owner_not_involved",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Заявитель сам создал слепую зону.",
+          "en": "The claimant created the blind spot himself.",
+          "tr": "The claimant created the blind spot himself.",
+          "ar": "The claimant created the blind spot himself.",
+          "kk": "Заявитель сам создал слепую зону."
+        }
       },
-      "relation": "contradicts"
+      "contradictionTarget": {
+        "statementId": "claim_owner_not_involved",
+        "reason": {
+          "ru": "Заявитель сам создал слепую зону.",
+          "en": "The claimant created the blind spot himself.",
+          "tr": "The claimant created the blind spot himself.",
+          "ar": "The claimant created the blind spot himself.",
+          "kk": "Заявитель сам создал слепую зону."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "bank-48",
+      "order": 5,
       "type": "bank_statement",
       "title": {
-        "ru": "Покупка замены заранее",
-        "en": "Replacement bought in advance",
-        "tr": "Önceden alınan yedek",
-        "ar": "بديل مشترى مسبقاً",
-        "kk": "Ауыстыру алдын ала алынған"
+        "ru": "Предоплата за новый шкаф",
+        "en": "Advance Payment for the New Cabinet",
+        "tr": "Advance Payment for the New Cabinet",
+        "ar": "Advance Payment for the New Cabinet",
+        "kk": "Предоплата за новый шкаф"
       },
       "content": {
-        "ru": [
-          "За два дня до инцидента — предоплата нового шкафа",
-          "После инцидента — запрос страховой выплаты на полный новый комплект",
-          "Получатель предоплаты — склад East Yard, который позже всплывёт в делах отдела."
-        ],
-        "en": [
-          "Two days before incident — prepayment for a new cabinet",
-          "After incident — insurance request for a full new set",
-          "The prepayment recipient is East Yard, a warehouse that will surface again in department files."
-        ],
-        "tr": [
-          "Olaydan iki gün önce — yeni dolap için ön ödeme",
-          "Olaydan sonra — tam yeni set için sigorta talebi",
-          "Ön ödeme alıcısı, bölüm dosyalarında tekrar görülecek East Yard deposu."
-        ],
-        "ar": [
-          "قبل الحادث بيومين — دفعة مقدمة لخزانة جديدة",
-          "بعد الحادث — طلب تأمين لمجموعة جديدة كاملة",
-          "مستلم الدفعة المقدمة هو East Yard، وهو مخزن سيظهر مجدداً في ملفات القسم."
-        ],
-        "kk": [
-          "Оқиғадан екі күн бұрын — жаңа шкафқа алдын ала төлем",
-          "Оқиғадан кейін — толық жаңа жиынтыққа сақтандыру сұрауы",
-          "Алдын ала төлем алушысы — кейін бөлім істерінде қайта шығатын East Yard қоймасы."
-        ]
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Замена была заказана до заявленного нападения.",
-        "en": "The replacement was ordered before the reported attack.",
-        "tr": "Yedek, bildirilen saldırıdan önce sipariş edilmiş.",
-        "ar": "طُلب البديل قبل الهجوم المبلغ عنه.",
-        "kk": "Ауыстыру мәлімделген шабуылға дейін тапсырыс берілген."
-      },
-      "meta": {
-        "bankName": {
-          "ru": "Municipal Credit",
-          "en": "Municipal Credit",
-          "tr": "Municipal Credit",
-          "ar": "Municipal Credit",
-          "kk": "Municipal Credit"
-        },
-        "accountMask": "**** **** **** 48"
-      },
-      "relation": "contradicts"
-    },
-    {
-      "id": "witness-48",
-      "type": "witness_statement",
-      "title": {
-        "ru": "Курьер ночной смены",
-        "en": "Night courier statement",
-        "tr": "Gece kurye ifadesi",
-        "ar": "إفادة ساعي الليل",
-        "kk": "Түнгі курьер жауабы"
-      },
-      "content": {
-        "ru": "«Я видел, как Марко просил нас уехать через задний ход: “сегодня будет шумно, но без полиции”».",
-        "en": "\"I saw Marko ask us to leave through the back: “it will be noisy tonight, but no police.”\"",
-        "tr": "\"Marko’nun arka kapıdan çıkmamızı istediğini duydum: \"Bu gece gürültü olacak ama polis yok.\"",
-        "ar": "«سمعت ماركو يطلب منا الخروج من الخلف: \"سيكون هناك ضجيج الليلة، لكن بلا شرطة\"».",
-        "kk": "«Марко бізден артқы есіктен шығуды сұрады: \"бүгін шу болады, бірақ полициясыз\" деді»."
+        "ru": "Посредник East Yard переводит Лину деньги за новый шкаф до происшествия.",
+        "en": "An Eastern Yard intermediary paid Lin for the new cabinet before the incident.",
+        "tr": "An Eastern Yard intermediary paid Lin for the new cabinet before the incident.",
+        "ar": "An Eastern Yard intermediary paid Lin for the new cabinet before the incident.",
+        "kk": "Посредник East Yard переводит Лину деньги за новый шкаф до происшествия."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Материал важен для проверки версии, но сам по себе не является противоречием.",
-        "en": "The material matters to the review but is not a contradiction by itself.",
-        "tr": "Bu kayıt inceleme için önemlidir, ancak tek başına çelişki değildir.",
-        "ar": "هذه المادة مهمة للمراجعة لكنها ليست تناقضاً بحد ذاتها.",
-        "kk": "Материал тексеру үшін маңызды, бірақ өздігінен қайшылық емес."
+        "ru": "Исправное устройство было заранее продано через сеть.",
+        "en": "The operational unit had already been sold through the network.",
+        "tr": "The operational unit had already been sold through the network.",
+        "ar": "The operational unit had already been sold through the network.",
+        "kk": "Исправное устройство было заранее продано через сеть."
       },
-      "relation": "supports"
+      "narrativeRole": "arc_proof",
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Исправное устройство было заранее продано через сеть.",
+          "en": "The operational unit had already been sold through the network.",
+          "tr": "The operational unit had already been sold through the network.",
+          "ar": "The operational unit had already been sold through the network.",
+          "kk": "Исправное устройство было заранее продано через сеть."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75
+    },
+    {
+      "id": "witness-48",
+      "order": 6,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Курьер ночной смены",
+        "en": "Night-Shift Courier",
+        "tr": "Night-Shift Courier",
+        "ar": "Night-Shift Courier",
+        "kk": "Курьер ночной смены"
+      },
+      "content": {
+        "ru": "Курьер видел работников внутри после закрытия, но не наблюдал сам разгром.",
+        "en": "The courier saw employees inside after closing but did not witness the damage itself.",
+        "tr": "The courier saw employees inside after closing but did not witness the damage itself.",
+        "ar": "The courier saw employees inside after closing but did not witness the damage itself.",
+        "kk": "Курьер видел работников внутри после закрытия, но не наблюдал сам разгром."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Свидетель подтверждает присутствие персонала, однако основные доказательства дают камера и документы.",
+        "en": "The witness confirms staff presence, but the camera and documents provide the primary evidence.",
+        "tr": "The witness confirms staff presence, but the camera and documents provide the primary evidence.",
+        "ar": "The witness confirms staff presence, but the camera and documents provide the primary evidence.",
+        "kk": "Свидетель подтверждает присутствие персонала, однако основные доказательства дают камера и документы."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_owner_not_involved",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Свидетель подтверждает присутствие персонала, однако основные доказательства дают камера и документы.",
+          "en": "The witness confirms staff presence, but the camera and documents provide the primary evidence.",
+          "tr": "The witness confirms staff presence, but the camera and documents provide the primary evidence.",
+          "ar": "The witness confirms staff presence, but the camera and documents provide the primary evidence.",
+          "kk": "Свидетель подтверждает присутствие персонала, однако основные доказательства дают камера и документы."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Камера, логи и фото показывают заранее подготовленный разгром.",
-      "Предоплата East Yard делает старый шкаф частью более широкой скупочной схемы.",
-      "Нападение банды не подтверждено: вердикт — отказ."
+      "Лин вывез новый шкаф и заменил его старым изношенным устройством.",
+      "Счёт относится к другому серийному номеру, а камеры отключены его учётной записью.",
+      "Номер Лина напечатан поверх другого, а под ним видны данные соседнего ресторана; счёт не относится к уничтоженному шкафу.",
+      "Ночного нападения не было. Выплату следует отклонить."
     ],
     "en": [
-      "Camera, logs, and photo show damage prepared in advance.",
-      "The East Yard prepayment makes the old cabinet part of a wider resale scheme.",
-      "The gang attack is unsupported: reject the claim."
+      "The cabinet was not new and was already badly worn before the incident.",
+      "Lin's number was printed over another one, with a neighboring restaurant's details visible beneath it; the invoice does not belong to the destroyed cabinet.",
+      "The new equipment was preserved, and an old cabinet was brought in for the staging.",
+      "The claimant created the blind spot himself.",
+      "The operational unit had already been sold through the network.",
+      "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "Kamera, kayıtlar ve fotoğraf hasarın önceden hazırlandığını gösteriyor.",
-      "East Yard ön ödemesi eski dolabı daha geniş bir satış şemasına bağlıyor.",
-      "Çete saldırısı desteklenmiyor: ödeme reddedilir."
+      "The cabinet was not new and was already badly worn before the incident.",
+      "Lin's number was printed over another one, with a neighboring restaurant's details visible beneath it; the invoice does not belong to the destroyed cabinet.",
+      "The new equipment was preserved, and an old cabinet was brought in for the staging.",
+      "The claimant created the blind spot himself.",
+      "The operational unit had already been sold through the network.",
+      "The claim is fraudulent and should be rejected."
     ],
     "ar": [
-      "تظهر الكاميرا والسجلات والصورة ضرراً مُحضّراً مسبقاً.",
-      "تجعل دفعة East Yard الخزانة القديمة جزءاً من مخطط بيع أوسع.",
-      "هجوم العصابة غير مثبت: القرار رفض."
+      "The cabinet was not new and was already badly worn before the incident.",
+      "Lin's number was printed over another one, with a neighboring restaurant's details visible beneath it; the invoice does not belong to the destroyed cabinet.",
+      "The new equipment was preserved, and an old cabinet was brought in for the staging.",
+      "The claimant created the blind spot himself.",
+      "The operational unit had already been sold through the network.",
+      "The claim is fraudulent and should be rejected."
     ],
     "kk": [
-      "Камера, журналдар және фото алдын ала дайындалған қирауды көрсетеді.",
-      "East Yard алдын ала төлемі ескі шкафты кеңірек сату схемасына қосады.",
-      "Топ шабуылы расталмады: вердикт — бас тарту."
+      "Лин вывез новый шкаф и заменил его старым изношенным устройством.",
+      "Счёт относится к другому серийному номеру, а камеры отключены его учётной записью.",
+      "Номер Лина напечатан поверх другого, а под ним видны данные соседнего ресторана; счёт не относится к уничтоженному шкафу.",
+      "Ночного нападения не было. Выплату следует отклонить."
     ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "После закрытия неизвестные проникли в пиццерию, перевернули кухню и уничтожили новый туннельный тепловой шкаф. Камеры якобы отключились во время нападения. Прошу оплатить оборудование и ремонт помещения.",
+        "en": "After closing, unknown intruders entered the pizzeria, wrecked the kitchen, and destroyed a new tunnel warming cabinet. The cameras supposedly failed during the attack. I am claiming the equipment and premises repairs.",
+        "tr": "After closing, unknown intruders entered the pizzeria, wrecked the kitchen, and destroyed a new tunnel warming cabinet. The cameras supposedly failed during the attack. I am claiming the equipment and premises repairs.",
+        "ar": "After closing, unknown intruders entered the pizzeria, wrecked the kitchen, and destroyed a new tunnel warming cabinet. The cameras supposedly failed during the attack. I am claiming the equipment and premises repairs.",
+        "kk": "После закрытия неизвестные проникли в пиццерию, перевернули кухню и уничтожили новый туннельный тепловой шкаф. Камеры якобы отключились во время нападения. Прошу оплатить оборудование и ремонт помещения."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_attack",
+      "text": {
+        "ru": "После закрытия неизвестные разгромили ресторан.",
+        "en": "Unknown intruders wrecked the restaurant after closing.",
+        "tr": "Unknown intruders wrecked the restaurant after closing.",
+        "ar": "Unknown intruders wrecked the restaurant after closing.",
+        "kk": "После закрытия неизвестные разгромили ресторан."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_new_equipment_destroyed",
+      "text": {
+        "ru": "Уничтоженный тепловой шкаф был новым и принадлежал Лину.",
+        "en": "The destroyed warming cabinet was new and belonged to Lin.",
+        "tr": "The destroyed warming cabinet was new and belonged to Lin.",
+        "ar": "The destroyed warming cabinet was new and belonged to Lin.",
+        "kk": "Уничтоженный тепловой шкаф был новым и принадлежал Лину."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_owner_not_involved",
+      "text": {
+        "ru": "Лин не создавал слепую зону и не вывозил исправное оборудование.",
+        "en": "Lin neither created the blind spot nor removed the operational equipment.",
+        "tr": "Lin neither created the blind spot nor removed the operational equipment.",
+        "ar": "Lin neither created the blind spot nor removed the operational equipment.",
+        "kk": "Лин не создавал слепую зону и не вывозил исправное оборудование."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Лин называет уничтоженный тепловой шкаф новым. На фотографии под свежей вмятиной видна старая коррозия. Начните с возраста оборудования. — В. Лебедева",
+      "en": "Lin calls the destroyed warming cabinet new. The photograph shows old corrosion beneath a fresh dent. Start with the equipment's age. — V. Lebedeva",
+      "tr": "Lin calls the destroyed warming cabinet new. The photograph shows old corrosion beneath a fresh dent. Start with the equipment's age. — V. Lebedeva",
+      "ar": "Lin calls the destroyed warming cabinet new. The photograph shows old corrosion beneath a fresh dent. Start with the equipment's age. — V. Lebedeva",
+      "kk": "Лин называет уничтоженный тепловой шкаф новым. На фотографии под свежей вмятиной видна старая коррозия. Начните с возраста оборудования. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Сеть пытается завершить последние продажи до закрытия маршрута. Следующая партия — лабораторный реагент M-7.",
+      "en": "The network is trying to complete its final sales before the route closes. The next shipment is laboratory reagent M-7.",
+      "tr": "The network is trying to complete its final sales before the route closes. The next shipment is laboratory reagent M-7.",
+      "ar": "The network is trying to complete its final sales before the route closes. The next shipment is laboratory reagent M-7.",
+      "kk": "Сеть пытается завершить последние продажи до закрытия маршрута. Следующая партия — лабораторный реагент M-7."
+    },
+    "nextCaseTeaser": {
+      "ru": "Из лаборатории исчез контейнер M-7. Вентиляционная решётка вскрыта изнутри, а морозильный сейф открыт личным ключом директора.",
+      "en": "An M-7 container vanished from a laboratory. The ventilation grille was forced from inside, and the freezer safe was opened with the director's personal key.",
+      "tr": "An M-7 container vanished from a laboratory. The ventilation grille was forced from inside, and the freezer safe was opened with the director's personal key.",
+      "ar": "An M-7 container vanished from a laboratory. The ventilation grille was forced from inside, and the freezer safe was opened with the director's personal key.",
+      "kk": "Из лаборатории исчез контейнер M-7. Вентиляционная решётка вскрыта изнутри, а морозильный сейф открыт личным ключом директора."
+    },
+    "seasonClue": null,
+    "epilogue": null
   }
 }

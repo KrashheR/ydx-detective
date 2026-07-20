@@ -1,288 +1,585 @@
 {
   "id": "case-005",
   "type": "standard",
-  "difficulty": "medium",
+  "campaignOrder": 10,
+  "requiredLevel": 5,
+  "act": 1,
+  "actTitle": {
+    "ru": "Чужой почерк",
+    "en": "Another Hand",
+    "tr": "Another Hand",
+    "ar": "Another Hand",
+    "kk": "Чужой почерк"
+  },
+  "difficulty": "hard",
   "claimAmount": 2200,
   "truth": "fraud",
   "title": {
-    "ru": "Полтергейст в прямом эфире",
-    "en": "The Live-Streamed Poltergeist",
-    "tr": "Canlı Yayındaki Poltergeist",
-    "ar": "شبح البث المباشر",
-    "kk": "Тікелей эфирдегі полтергейст"
+    "ru": "Полтергейст вышел в эфир",
+    "en": "The Poltergeist Goes Live",
+    "tr": "The Poltergeist Goes Live",
+    "ar": "The Poltergeist Goes Live",
+    "kk": "Полтергейст вышел в эфир"
   },
   "claim": {
     "person": {
       "ru": "Стас Гром, 24 года",
-      "en": "Stas Grom, 24",
-      "tr": "Stas Grom, 24",
-      "ar": "ستاس غروم، 24",
-      "kk": "Стас Гром, 24 жаста"
+      "en": "Stas Grom, age 24",
+      "tr": "Stas Grom, age 24",
+      "ar": "Stas Grom, age 24",
+      "kk": "Стас Гром, 24 года"
     },
     "story": {
-      "ru": "Во время паранормального явления полтергейст сбросил со стола мой игровой ноутбук и монитор. Прошу компенсацию за сверхъестественный ущерб технике.",
-      "en": "During a paranormal event, a poltergeist threw my gaming laptop and monitor off the desk. I request compensation for the supernatural damage to my equipment.",
-      "tr": "Paranormal bir olay sırasında bir poltergeist oyun bilgisayarımı ve monitörümü masadan attı. Ekipmanıma verilen doğaüstü hasar için tazminat talep ediyorum.",
-      "ar": "أثناء حدث خارق للطبيعة، ألقى شبح حاسوبي المحمول للألعاب وشاشتي عن المكتب. أطلب تعويضًا عن الضرر الخارق الذي لحق بمعداتي.",
-      "kk": "Паранормаль құбылыс кезінде полтергейст менің ойын ноутбугім мен мониторымды үстелден лақтырып жіберді. Техникама келген табиғаттан тыс зиян үшін өтемақы сұраймын."
+      "ru": "Во время ночной прямой трансляции в квартире началось необъяснимое явление: дверцы шкафов открывались сами, монитор сдвинулся со стола, а ноутбук упал на пол и разбился. В квартире я находился один, к технике никто не прикасался. Прошу возместить ущерб в размере 2200 евро.",
+      "en": "During a late-night livestream, unexplained phenomena began in my apartment: cabinet doors opened by themselves, a monitor slid across the desk, and a laptop fell to the floor and shattered. I was alone in the apartment, and no one touched the equipment. I am claiming €2,200 in damages.",
+      "tr": "During a late-night livestream, unexplained phenomena began in my apartment: cabinet doors opened by themselves, a monitor slid across the desk, and a laptop fell to the floor and shattered. I was alone in the apartment, and no one touched the equipment. I am claiming €2,200 in damages.",
+      "ar": "During a late-night livestream, unexplained phenomena began in my apartment: cabinet doors opened by themselves, a monitor slid across the desk, and a laptop fell to the floor and shattered. I was alone in the apartment, and no one touched the equipment. I am claiming €2,200 in damages.",
+      "kk": "Во время ночной прямой трансляции в квартире началось необъяснимое явление: дверцы шкафов открывались сами, монитор сдвинулся со стола, а ноутбук упал на пол и разбился. В квартире я находился один, к технике никто не прикасался. Прошу возместить ущерб в размере 2200 евро."
     }
   },
-  "coverImage": "covers/case-005.svg",
-  "personImage": "people/stas.webp",
   "client": {
     "role": {
-      "ru": "Заявитель · физ. лицо",
-      "en": "Claimant · individual",
-      "tr": "Başvuru sahibi · gerçek kişi",
-      "ar": "مقدم الطلب · شخص طبيعي",
-      "kk": "Өтініш беруші · жеке тұлға"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Возраст",
-          "en": "Age",
-          "tr": "Yaş",
-          "ar": "العمر",
-          "kk": "Жасы"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "24 года",
-          "en": "24 years old",
-          "tr": "24 yaşında",
-          "ar": "24 عامًا",
-          "kk": "24 жаста"
+          "ru": "1",
+          "en": "1",
+          "tr": "1",
+          "ar": "1",
+          "kk": "1"
         }
       },
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Москва",
-          "en": "Moscow",
-          "tr": "Moskova",
-          "ar": "موسكو",
-          "kk": "Мәскеу"
-        }
-      },
-      {
-        "k": {
-          "ru": "Клиент с",
-          "en": "Client since",
-          "tr": "Müşteri",
-          "ar": "عميل منذ",
-          "kk": "Клиент"
-        },
-        "v": {
-          "ru": "2023 г.",
-          "en": "2023",
-          "tr": "2023",
-          "ar": "2023",
-          "kk": "2023 ж."
-        }
-      },
-      {
-        "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
-        },
-        "v": {
-          "ru": "Имущество · ИМ-55093461-X8",
-          "en": "Property · IM-55093461-X8",
-          "tr": "Mülk · IM-55093461-X8",
-          "ar": "الممتلكات · IM-55093461-X8",
-          "kk": "Мүлік · ИМ-55093461-X8"
-        }
-      },
-      {
-        "k": {
-          "ru": "Документ",
-          "en": "Document",
-          "tr": "Belge",
-          "ar": "الوثيقة",
-          "kk": "Құжат"
-        },
-        "v": {
-          "ru": "Паспорт 4521-99 №550934613-44",
-          "en": "Passport 4521-99 №550934613-44",
-          "tr": "Pasaport 4521-99 №550934613-44",
-          "ar": "جواز السفر 4521-99 №550934613-44",
-          "kk": "Паспорт 4521-99 №550934613-44"
+          "ru": "10",
+          "en": "10",
+          "tr": "10",
+          "ar": "10",
+          "kk": "10"
         }
       }
     ]
   },
+  "coverImage": "covers/case-005.svg",
+  "personImage": "people/stas.webp",
   "evidences": [
     {
       "id": "ev-stream",
+      "order": 1,
       "type": "camera_recording",
       "title": {
-        "ru": "Запись стрима",
-        "en": "Stream Recording",
-        "tr": "Yayın Kaydı",
-        "ar": "تسجيل البث",
-        "kk": "Стрим жазбасы"
+        "ru": "Запись опубликованного эфира",
+        "en": "Published Livestream Recording",
+        "tr": "Published Livestream Recording",
+        "ar": "Published Livestream Recording",
+        "kk": "Запись опубликованного эфира"
       },
       "content": {
-        "ru": "Его собственный стрим: проиграв матч, он вскакивает и швыряет ноутбук через всю комнату.",
-        "en": "His own livestream: after losing a match, he leaps up and hurls the laptop across the room.",
-        "tr": "Kendi canlı yayını: maçı kaybettikten sonra ayağa fırlayıp dizüstü bilgisayarı odanın öbür ucuna fırlatıyor.",
-        "ar": "بثه المباشر الخاص: بعد خسارة مباراة، يقفز ويقذف الحاسوب المحمول عبر الغرفة.",
-        "kk": "Оның өз стримі: матчта жеңілгеннен кейін ол атып тұрып, ноутбукті бөлменің арғы шетіне лақтырады."
+        "ru": "В кадре действительно открываются дверцы шкафа, с полки падает коробка, затем монитор медленно движется к краю стола. Руки Стаса в этот момент видны. Механизм воздействия в опубликованном кадре не различим.",
+        "en": "The footage does show cabinet doors opening, a box falling from a shelf, and a monitor slowly moving toward the edge of the desk. Stas's hands are visible at the time. The mechanism cannot be seen in the published frame.",
+        "tr": "The footage does show cabinet doors opening, a box falling from a shelf, and a monitor slowly moving toward the edge of the desk. Stas's hands are visible at the time. The mechanism cannot be seen in the published frame.",
+        "ar": "The footage does show cabinet doors opening, a box falling from a shelf, and a monitor slowly moving toward the edge of the desk. Stas's hands are visible at the time. The mechanism cannot be seen in the published frame.",
+        "kk": "В кадре действительно открываются дверцы шкафа, с полки падает коробка, затем монитор медленно движется к краю стола. Руки Стаса в этот момент видны. Механизм воздействия в опубликованном кадре не различим."
       },
-      "isContradiction": true,
+      "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Технику разбил сам заявитель, а не полтергейст — это на видео.",
-        "en": "The claimant himself smashed the equipment, not a poltergeist — it's on video.",
-        "tr": "Ekipmanı poltergeist değil, talep sahibinin kendisi kırdı — videoda var.",
-        "ar": "مقدم الطلب نفسه هو من حطم المعدات، وليس شبحًا — الأمر مسجل بالفيديو.",
-        "kk": "Техниканы полтергейст емес, өтініш берушінің өзі сындырды — бұл видеода бар."
+        "ru": "Запись подтверждает необычные движения предметов, но сама по себе не устанавливает их причину.",
+        "en": "The recording confirms the unusual movement but does not establish its cause.",
+        "tr": "The recording confirms the unusual movement but does not establish its cause.",
+        "ar": "The recording confirms the unusual movement but does not establish its cause.",
+        "kk": "Запись подтверждает необычные движения предметов, но сама по себе не устанавливает их причину."
       },
-      "meta": {
-        "cameraId": "LIVE-CH",
-        "cameraModel": "ArchiveCam AC-922 · 1080p · H.264"
-      }
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_event",
+        "relation": "supports",
+        "reason": {
+          "ru": "Запись подтверждает необычные движения предметов, но сама по себе не устанавливает их причину.",
+          "en": "The recording confirms the unusual movement but does not establish its cause.",
+          "tr": "The recording confirms the unusual movement but does not establish its cause.",
+          "ar": "The recording confirms the unusual movement but does not establish its cause.",
+          "kk": "Запись подтверждает необычные движения предметов, но сама по себе не устанавливает их причину."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
-      "id": "ev-sensor",
+      "id": "ev-network",
+      "order": 2,
       "type": "usage_log",
       "title": {
-        "ru": "Лог умного дома",
-        "en": "Smart-Home Log",
-        "tr": "Akıllı Ev Kaydı",
-        "ar": "سجل المنزل الذكي",
-        "kk": "Смарт-үй логы"
+        "ru": "Журнал домашней сети",
+        "en": "Home Network Log",
+        "tr": "Home Network Log",
+        "ar": "Home Network Log",
+        "kk": "Журнал домашней сети"
       },
       "content": {
-        "ru": [
-          "23:46 — в квартире зафиксирован один человек",
-          "23:47 — сильный удар по столу",
-          "23:47 — иных аномалий нет"
-        ],
-        "en": [
-          "23:46 — one person detected in the flat",
-          "23:47 — hard impact on the desk",
-          "23:47 — no other anomalies"
-        ],
-        "tr": [
-          "23:46 — dairede bir kişi tespit edildi",
-          "23:47 — masaya sert darbe",
-          "23:47 — başka anormallik yok"
-        ],
-        "ar": [
-          "23:46 — تم رصد شخص واحد في الشقة",
-          "23:47 — ارتطام قوي بالمكتب",
-          "23:47 — لا توجد أي شذوذات أخرى"
-        ],
-        "kk": [
-          "23:46 — пәтерде бір адам тіркелді",
-          "23:47 — үстелге қатты соққы",
-          "23:47 — басқа ауытқу жоқ"
-        ]
+        "ru": "Кроме устройств Стаса, с 21:12 до 01:04 к домашней сети был подключён телефон `MIRA-PHONE`. В 23:45, за минуту до первого «явления», телефон начал передавать видеопоток на локальный компьютер.",
+        "en": "In addition to Stas's devices, a phone named `MIRA-PHONE` was connected to the home network from 9:12 p.m. to 1:04 a.m. At 11:45 p.m., one minute before the first ‘phenomenon,’ it began streaming video to a local computer.",
+        "tr": "In addition to Stas's devices, a phone named `MIRA-PHONE` was connected to the home network from 9:12 p.m. to 1:04 a.m. At 11:45 p.m., one minute before the first ‘phenomenon,’ it began streaming video to a local computer.",
+        "ar": "In addition to Stas's devices, a phone named `MIRA-PHONE` was connected to the home network from 9:12 p.m. to 1:04 a.m. At 11:45 p.m., one minute before the first ‘phenomenon,’ it began streaming video to a local computer.",
+        "kk": "Кроме устройств Стаса, с 21:12 до 01:04 к домашней сети был подключён телефон `MIRA-PHONE`. В 23:45, за минуту до первого «явления», телефон начал передавать видеопоток на локальный компьютер."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Чужое устройство делает версию одиночного эфира сомнительной, но само по себе не доказывает присутствие помощника.",
+        "en": "The unknown device casts doubt on a solo broadcast but does not by itself prove that an assistant was present.",
+        "tr": "The unknown device casts doubt on a solo broadcast but does not by itself prove that an assistant was present.",
+        "ar": "The unknown device casts doubt on a solo broadcast but does not by itself prove that an assistant was present.",
+        "kk": "Чужое устройство делает версию одиночного эфира сомнительной, но само по себе не доказывает присутствие помощника."
+      },
+      "narrativeRole": "suspicion",
+      "statementLink": {
+        "statementId": "claim_alone",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Чужое устройство делает версию одиночного эфира сомнительной, но само по себе не доказывает присутствие помощника.",
+          "en": "The unknown device casts doubt on a solo broadcast but does not by itself prove that an assistant was present.",
+          "tr": "The unknown device casts doubt on a solo broadcast but does not by itself prove that an assistant was present.",
+          "ar": "The unknown device casts doubt on a solo broadcast but does not by itself prove that an assistant was present.",
+          "kk": "Чужое устройство делает версию одиночного эфира сомнительной, но само по себе не доказывает присутствие помощника."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25
+    },
+    {
+      "id": "ev-entry-camera",
+      "order": 3,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера подъезда",
+        "en": "Building Entrance Camera",
+        "tr": "Building Entrance Camera",
+        "ar": "Building Entrance Camera",
+        "kk": "Камера подъезда"
+      },
+      "content": {
+        "ru": "В 21:09 девушка с большим техническим кофром входит в квартиру Стаса. До 01:08 она из дома не выходит. В опубликованном эфире этот участок коридора находится за камерой.",
+        "en": "At 9:09 p.m., a young woman carrying a large equipment case enters Stas's apartment. She does not leave the building until 1:08 a.m. That part of the hallway is outside the livestream camera's frame.",
+        "tr": "At 9:09 p.m., a young woman carrying a large equipment case enters Stas's apartment. She does not leave the building until 1:08 a.m. That part of the hallway is outside the livestream camera's frame.",
+        "ar": "At 9:09 p.m., a young woman carrying a large equipment case enters Stas's apartment. She does not leave the building until 1:08 a.m. That part of the hallway is outside the livestream camera's frame.",
+        "kk": "В 21:09 девушка с большим техническим кофром входит в квартиру Стаса. До 01:08 она из дома не выходит. В опубликованном эфире этот участок коридора находится за камерой."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "В квартире был только он, и датчик зафиксировал удар, а не паранормальную активность.",
-        "en": "Only he was in the flat, and the sensor logged an impact — not paranormal activity.",
-        "tr": "Dairede yalnızca o vardı ve sensör paranormal değil, bir darbe kaydetti.",
-        "ar": "كان وحده في الشقة، وسجّل المستشعر ارتطامًا، لا نشاطًا خارقًا.",
-        "kk": "Пәтерде тек ол болды, әрі датчик паранормаль әрекетті емес, соққыны тіркеді."
+        "ru": "Помощница находилась в квартире во время трансляции, хотя заявитель прямо утверждает обратное.",
+        "en": "An assistant was in the apartment during the broadcast, directly contradicting the claimant's statement.",
+        "tr": "An assistant was in the apartment during the broadcast, directly contradicting the claimant's statement.",
+        "ar": "An assistant was in the apartment during the broadcast, directly contradicting the claimant's statement.",
+        "kk": "Помощница находилась в квартире во время трансляции, хотя заявитель прямо утверждает обратное."
       },
-      "meta": {
-        "logPrompt": "smartd@hive:~$ tail -f /var/log/sensors.log"
-      }
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_alone",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Помощница находилась в квартире во время трансляции, хотя заявитель прямо утверждает обратное.",
+          "en": "An assistant was in the apartment during the broadcast, directly contradicting the claimant's statement.",
+          "tr": "An assistant was in the apartment during the broadcast, directly contradicting the claimant's statement.",
+          "ar": "An assistant was in the apartment during the broadcast, directly contradicting the claimant's statement.",
+          "kk": "Помощница находилась в квартире во время трансляции, хотя заявитель прямо утверждает обратное."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_alone",
+        "reason": {
+          "ru": "Помощница находилась в квартире во время трансляции, хотя заявитель прямо утверждает обратное.",
+          "en": "An assistant was in the apartment during the broadcast, directly contradicting the claimant's statement.",
+          "tr": "An assistant was in the apartment during the broadcast, directly contradicting the claimant's statement.",
+          "ar": "An assistant was in the apartment during the broadcast, directly contradicting the claimant's statement.",
+          "kk": "Помощница находилась в квартире во время трансляции, хотя заявитель прямо утверждает обратное."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
-      "id": "ev-photo",
-      "type": "photo",
+      "id": "ev-raw-camera",
+      "order": 4,
+      "type": "camera_recording",
       "title": {
-        "ru": "Фото с места",
-        "en": "Scene Photo",
-        "tr": "Olay Yeri Fotoğrafı",
-        "ar": "صورة المكان",
-        "kk": "Оқиға орнының суреті"
+        "ru": "Исходная запись второй камеры",
+        "en": "Original Recording from the Second Camera",
+        "tr": "Original Recording from the Second Camera",
+        "ar": "Original Recording from the Second Camera",
+        "kk": "Исходная запись второй камеры"
       },
       "content": {
-        "ru": "Ноутбук с трещиной на полу рядом с пролитым энергетиком и геймпадом.",
-        "en": "A cracked laptop on the floor beside a spilled energy drink and a gamepad.",
-        "tr": "Yerde, dökülmüş bir enerji içeceği ve bir oyun kolunun yanında çatlak bir dizüstü bilgisayar.",
-        "ar": "حاسوب محمول متصدع على الأرض بجوار مشروب طاقة مسكوب ووحدة تحكم ألعاب.",
-        "kk": "Еденде төгілген энергетик пен геймпадтың қасында жарықшағы бар ноутбук."
+        "ru": "На широком необрезанном кадре перед движением монитора на секунду бликует тонкая леска. За шкафом меняется тень, но лицо человека и механизм полностью не видны. В звуковой дорожке Стас говорит: «Начинаем второй эффект».",
+        "en": "In the uncropped wide shot, a thin line briefly catches the light before the monitor moves. A shadow shifts behind the cabinet, although neither the person's face nor the full mechanism is visible. On the audio track, Stas says, ‘Starting the second effect.’",
+        "tr": "In the uncropped wide shot, a thin line briefly catches the light before the monitor moves. A shadow shifts behind the cabinet, although neither the person's face nor the full mechanism is visible. On the audio track, Stas says, ‘Starting the second effect.’",
+        "ar": "In the uncropped wide shot, a thin line briefly catches the light before the monitor moves. A shadow shifts behind the cabinet, although neither the person's face nor the full mechanism is visible. On the audio track, Stas says, ‘Starting the second effect.’",
+        "kk": "На широком необрезанном кадре перед движением монитора на секунду бликует тонкая леска. За шкафом меняется тень, но лицо человека и механизм полностью не видны. В звуковой дорожке Стас говорит: «Начинаем второй эффект»."
       },
-      "isContradiction": false,
+      "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Фото подтверждает повреждение, но само по себе не указывает на причину.",
-        "en": "The photo confirms the damage but does not, on its own, point to a cause.",
-        "tr": "Fotoğraf hasarı doğruluyor ama tek başına nedeni göstermiyor.",
-        "ar": "تؤكد الصورة الضرر لكنها وحدها لا تشير إلى السبب.",
-        "kk": "Сурет зиянды растайды, бірақ өздігінен себепті көрсетпейді."
+        "ru": "Леска, скрытая фигура и команда указывают на постановку; личность помощника устанавливается камерой подъезда и сетью.",
+        "en": "The line, hidden figure, and spoken cue indicate a staged event; the entrance camera and network log establish the assistant's presence.",
+        "tr": "The line, hidden figure, and spoken cue indicate a staged event; the entrance camera and network log establish the assistant's presence.",
+        "ar": "The line, hidden figure, and spoken cue indicate a staged event; the entrance camera and network log establish the assistant's presence.",
+        "kk": "Леска, скрытая фигура и команда указывают на постановку; личность помощника устанавливается камерой подъезда и сетью."
       },
-      "meta": {
-        "filename": "IMG_20260408_233102.jpg",
-        "imageUrl": "evidence/case-005-ev-photo.webp"
-      }
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_no_staging",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Леска, скрытая фигура и команда указывают на постановку; личность помощника устанавливается камерой подъезда и сетью.",
+          "en": "The line, hidden figure, and spoken cue indicate a staged event; the entrance camera and network log establish the assistant's presence.",
+          "tr": "The line, hidden figure, and spoken cue indicate a staged event; the entrance camera and network log establish the assistant's presence.",
+          "ar": "The line, hidden figure, and spoken cue indicate a staged event; the entrance camera and network log establish the assistant's presence.",
+          "kk": "Леска, скрытая фигура и команда указывают на постановку; личность помощника устанавливается камерой подъезда и сетью."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_no_staging",
+        "reason": {
+          "ru": "Леска, скрытая фигура и команда указывают на постановку; личность помощника устанавливается камерой подъезда и сетью.",
+          "en": "The line, hidden figure, and spoken cue indicate a staged event; the entrance camera and network log establish the assistant's presence.",
+          "tr": "The line, hidden figure, and spoken cue indicate a staged event; the entrance camera and network log establish the assistant's presence.",
+          "ar": "The line, hidden figure, and spoken cue indicate a staged event; the entrance camera and network log establish the assistant's presence.",
+          "kk": "Леска, скрытая фигура и команда указывают на постановку; личность помощника устанавливается камерой подъезда и сетью."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
-      "id": "ev-receipt",
+      "id": "ev-consultant-chat",
+      "order": 5,
       "type": "document",
       "title": {
-        "ru": "Чек на ноутбук",
-        "en": "Laptop Receipt",
-        "tr": "Dizüstü Fişi",
-        "ar": "إيصال الحاسوب",
-        "kk": "Ноутбук түбіртегі"
+        "ru": "Удалённая переписка с консультантом",
+        "en": "Deleted Messages with the Consultant",
+        "tr": "Deleted Messages with the Consultant",
+        "ar": "Deleted Messages with the Consultant",
+        "kk": "Удалённая переписка с консультантом"
       },
       "content": {
-        "ru": "Подлинный чек на покупку игрового ноутбука. Сумма соответствует заявленной.",
-        "en": "A genuine receipt for the gaming laptop. The amount matches the claim.",
-        "tr": "Oyun dizüstü bilgisayarı için gerçek bir fiş. Tutar talep ile uyuşuyor.",
-        "ar": "إيصال أصلي لشراء حاسوب الألعاب المحمول. المبلغ يطابق المطالبة.",
-        "kk": "Ойын ноутбугін сатып алуға арналған шынайы түбіртек. Сома мәлімделгенге сай."
+        "ru": "`К.`: «Сценарий “Полтергейст” согласован. Помощницу в эфире не показывать. Повреждение должно превышать 2000 евро. Для заявления используйте формулировку: “к технике никто не прикасался”. Оценка — форма `17-К`. После выплаты — 20 процентов».\n\nСтас: «А если попросят исходники?»\n\n`К.`: «Обычно не просят».",
+        "en": "`K.`: ‘The “Poltergeist” script is approved. Keep the assistant off camera. Damage must exceed €2,000. Use this wording in the claim: “No one touched the equipment.” Estimate: form `17-K`. My share is 20 percent after payout.’\n\nStas: ‘What if they ask for the raw footage?’\n\n`K.`: ‘They usually do not.’",
+        "tr": "`K.`: ‘The “Poltergeist” script is approved. Keep the assistant off camera. Damage must exceed €2,000. Use this wording in the claim: “No one touched the equipment.” Estimate: form `17-K`. My share is 20 percent after payout.’\n\nStas: ‘What if they ask for the raw footage?’\n\n`K.`: ‘They usually do not.’",
+        "ar": "`K.`: ‘The “Poltergeist” script is approved. Keep the assistant off camera. Damage must exceed €2,000. Use this wording in the claim: “No one touched the equipment.” Estimate: form `17-K`. My share is 20 percent after payout.’\n\nStas: ‘What if they ask for the raw footage?’\n\n`K.`: ‘They usually do not.’",
+        "kk": "`К.`: «Сценарий “Полтергейст” согласован. Помощницу в эфире не показывать. Повреждение должно превышать 2000 евро. Для заявления используйте формулировку: “к технике никто не прикасался”. Оценка — форма `17-К`. После выплаты — 20 процентов».\n\nСтас: «А если попросят исходники?»\n\n`К.`: «Обычно не просят»."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Консультант заранее подготовил инсценировку, текст ложного заявления и сумму ущерба. Мошенничество было спланировано до эфира.",
+        "en": "The consultant prepared the staged event, false wording, and damage amount in advance. The fraud was planned before the broadcast.",
+        "tr": "The consultant prepared the staged event, false wording, and damage amount in advance. The fraud was planned before the broadcast.",
+        "ar": "The consultant prepared the staged event, false wording, and damage amount in advance. The fraud was planned before the broadcast.",
+        "kk": "Консультант заранее подготовил инсценировку, текст ложного заявления и сумму ущерба. Мошенничество было спланировано до эфира."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_no_staging",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Консультант заранее подготовил инсценировку, текст ложного заявления и сумму ущерба. Мошенничество было спланировано до эфира.",
+          "en": "The consultant prepared the staged event, false wording, and damage amount in advance. The fraud was planned before the broadcast.",
+          "tr": "The consultant prepared the staged event, false wording, and damage amount in advance. The fraud was planned before the broadcast.",
+          "ar": "The consultant prepared the staged event, false wording, and damage amount in advance. The fraud was planned before the broadcast.",
+          "kk": "Консультант заранее подготовил инсценировку, текст ложного заявления и сумму ущерба. Мошенничество было спланировано до эфира."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_no_staging",
+        "reason": {
+          "ru": "Консультант заранее подготовил инсценировку, текст ложного заявления и сумму ущерба. Мошенничество было спланировано до эфира.",
+          "en": "The consultant prepared the staged event, false wording, and damage amount in advance. The fraud was planned before the broadcast.",
+          "tr": "The consultant prepared the staged event, false wording, and damage amount in advance. The fraud was planned before the broadcast.",
+          "ar": "The consultant prepared the staged event, false wording, and damage amount in advance. The fraud was planned before the broadcast.",
+          "kk": "Консультант заранее подготовил инсценировку, текст ложного заявления и сумму ущерба. Мошенничество было спланировано до эфира."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "ev-17k-scan",
+      "order": 6,
+      "type": "document_scan",
+      "title": {
+        "ru": "Просветка формы 17-К",
+        "en": "17-K Form Backlight Examination",
+        "tr": "17-K Form Backlight Examination",
+        "ar": "17-K Form Backlight Examination",
+        "kk": "Просветка формы 17-К"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Чек подлинный — техника действительно существует и стоила столько.",
-        "en": "The receipt is genuine — the equipment really exists and cost that much.",
-        "tr": "Fiş gerçek — ekipman gerçekten var ve bu kadara mal olmuş.",
-        "ar": "الإيصال أصلي — المعدات موجودة فعلًا وبهذه القيمة.",
-        "kk": "Түбіртек шынайы — техника шынымен бар әрі сонша тұрған."
+        "ru": "Под новым кодом виден индекс «A-17/2021»: шаблон использовали в уже выплаченном деле пять лет назад.",
+        "en": "The index ‘A-17/2021’ is visible beneath the new code: the template was used in a claim paid five years earlier.",
+        "tr": "The index ‘A-17/2021’ is visible beneath the new code: the template was used in a claim paid five years earlier.",
+        "ar": "The index ‘A-17/2021’ is visible beneath the new code: the template was used in a claim paid five years earlier.",
+        "kk": "Под новым кодом виден индекс «A-17/2021»: шаблон использовали в уже выплаченном деле пять лет назад."
+      },
+      "narrativeRole": "season_clue",
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Под новым кодом виден индекс «A-17/2021»: шаблон использовали в уже выплаченном деле пять лет назад.",
+          "en": "The index ‘A-17/2021’ is visible beneath the new code: the template was used in a claim paid five years earlier.",
+          "tr": "The index ‘A-17/2021’ is visible beneath the new code: the template was used in a claim paid five years earlier.",
+          "ar": "The index ‘A-17/2021’ is visible beneath the new code: the template was used in a claim paid five years earlier.",
+          "kk": "Под новым кодом виден индекс «A-17/2021»: шаблон использовали в уже выплаченном деле пять лет назад."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "description": {
+        "ru": "Пустой бланк из переписки консультанта передан в архивную экспертизу.",
+        "en": "The blank form from the consultant's messages was submitted for archival examination.",
+        "tr": "The blank form from the consultant's messages was submitted for archival examination.",
+        "ar": "The blank form from the consultant's messages was submitted for archival examination.",
+        "kk": "Пустой бланк из переписки консультанта передан в архивную экспертизу."
+      },
+      "instruction": {
+        "ru": "Включить просвет и найти прежний регистрационный индекс под белой корректировкой.",
+        "en": "Switch on the backlight and find the earlier registration index beneath the white correction.",
+        "tr": "Switch on the backlight and find the earlier registration index beneath the white correction.",
+        "ar": "Switch on the backlight and find the earlier registration index beneath the white correction.",
+        "kk": "Включить просвет и найти прежний регистрационный индекс под белой корректировкой."
+      },
+      "assets": {
+        "asset1": "cases/case-005/assets/interactive/ev-17k-scan-base.webp",
+        "asset2": "cases/case-005/assets/interactive/ev-17k-scan-scan-overlay.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Второе взаимодействие допустимо в финале акта и превращает клиффхэнгер в находку игрока.",
+          "en": "A second interaction is justified in an act finale and turns the cliffhanger into the player's own discovery.",
+          "tr": "A second interaction is justified in an act finale and turns the cliffhanger into the player's own discovery.",
+          "ar": "A second interaction is justified in an act finale and turns the cliffhanger into the player's own discovery.",
+          "kk": "Второе взаимодействие допустимо в финале акта и превращает клиффхэнгер в находку игрока."
+        },
+        "playerAction": {
+          "ru": "Включить просвет и найти прежний регистрационный индекс под белой корректировкой.",
+          "en": "Switch on the backlight and find the earlier registration index beneath the white correction.",
+          "tr": "Switch on the backlight and find the earlier registration index beneath the white correction.",
+          "ar": "Switch on the backlight and find the earlier registration index beneath the white correction.",
+          "kk": "Включить просвет и найти прежний регистрационный индекс под белой корректировкой."
+        },
+        "conclusion": {
+          "ru": "Под новым кодом виден индекс «A-17/2021»: шаблон использовали в уже выплаченном деле пять лет назад.",
+          "en": "The index ‘A-17/2021’ is visible beneath the new code: the template was used in a claim paid five years earlier.",
+          "tr": "The index ‘A-17/2021’ is visible beneath the new code: the template was used in a claim paid five years earlier.",
+          "ar": "The index ‘A-17/2021’ is visible beneath the new code: the template was used in a claim paid five years earlier.",
+          "kk": "Под новым кодом виден индекс «A-17/2021»: шаблон использовали в уже выплаченном деле пять лет назад."
+        }
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "uv",
+          "backlight"
+        ],
+        "anomalyZones": [
+          {
+            "id": "archive_index",
+            "mode": "backlight",
+            "x": 60,
+            "y": 82,
+            "width": 25,
+            "height": 8,
+            "label": "Под новым кодом виден индекс «A-17/2021»: шаблон использовали в уже выплаченном деле пять лет назад.",
+            "isContradiction": false,
+            "labelEn": "The index ‘A-17/2021’ is visible beneath the new code: the template was used in a claim paid five years earlier."
+          }
+        ],
+        "successCondition": {
+          "type": "select_zone",
+          "zoneId": "archive_index"
+        }
       }
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Стрим заявителя показывает, как он сам швыряет ноутбук.",
-      "Лог умного дома: в квартире был только он, зафиксирован удар, а не «полтергейст».",
-      "Ущерб умышленный — заявление мошенническое, отклонить."
+      "Опубликованный эфир был постановкой: предметы двигались с помощью лесок.",
+      "В квартире находилась помощница, присутствие которой Стас скрыл.",
+      "Исходная запись содержит его команду начать эффект.",
+      "Консультант `К.` заранее подготовил сценарий, форму `17-К` и потребовал долю выплаты.",
+      "Под новым кодом виден индекс «A-17/2021»: шаблон использовали в уже выплаченном деле пять лет назад.",
+      "Заявление следует отклонить. Одновременно расследование подтверждает существование организованной схемы."
     ],
     "en": [
-      "The claimant's own stream shows him throwing the laptop.",
-      "The smart-home log: only he was home, and it logged an impact, not a \"poltergeist\".",
-      "The damage was deliberate — the claim is fraudulent, reject."
+      "An assistant was in the apartment during the broadcast, directly contradicting the claimant's statement.",
+      "The line, hidden figure, and spoken cue indicate a staged event; the entrance camera and network log establish the assistant's presence.",
+      "The consultant prepared the staged event, false wording, and damage amount in advance. The fraud was planned before the broadcast.",
+      "The recording confirms the unusual movement but does not establish its cause.",
+      "The unknown device casts doubt on a solo broadcast but does not by itself prove that an assistant was present.",
+      "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "Talep sahibinin kendi yayını, dizüstü bilgisayarı fırlattığını gösteriyor.",
-      "Akıllı ev kaydı: evde yalnızca o vardı ve \"poltergeist\" değil, bir darbe kaydedildi.",
-      "Hasar kasıtlı — talep hileli, reddedin."
+      "An assistant was in the apartment during the broadcast, directly contradicting the claimant's statement.",
+      "The line, hidden figure, and spoken cue indicate a staged event; the entrance camera and network log establish the assistant's presence.",
+      "The consultant prepared the staged event, false wording, and damage amount in advance. The fraud was planned before the broadcast.",
+      "The recording confirms the unusual movement but does not establish its cause.",
+      "The unknown device casts doubt on a solo broadcast but does not by itself prove that an assistant was present.",
+      "The claim is fraudulent and should be rejected."
     ],
     "ar": [
-      "بث مقدم الطلب نفسه يُظهره وهو يرمي الحاسوب.",
-      "سجل المنزل الذكي: كان وحده في المنزل، وسُجّل ارتطام لا \"شبح\".",
-      "الضرر متعمد — المطالبة احتيالية، ارفضها."
+      "An assistant was in the apartment during the broadcast, directly contradicting the claimant's statement.",
+      "The line, hidden figure, and spoken cue indicate a staged event; the entrance camera and network log establish the assistant's presence.",
+      "The consultant prepared the staged event, false wording, and damage amount in advance. The fraud was planned before the broadcast.",
+      "The recording confirms the unusual movement but does not establish its cause.",
+      "The unknown device casts doubt on a solo broadcast but does not by itself prove that an assistant was present.",
+      "The claim is fraudulent and should be rejected."
     ],
     "kk": [
-      "Өтініш берушінің өз стримі оның ноутбукті лақтырғанын көрсетеді.",
-      "Смарт-үй логы: үйде тек ол болды әрі «полтергейст» емес, соққы тіркелді.",
-      "Зиян әдейі жасалған — талап алаяқтық, қабылдамаңыз."
+      "Опубликованный эфир был постановкой: предметы двигались с помощью лесок.",
+      "В квартире находилась помощница, присутствие которой Стас скрыл.",
+      "Исходная запись содержит его команду начать эффект.",
+      "Консультант `К.` заранее подготовил сценарий, форму `17-К` и потребовал долю выплаты.",
+      "Под новым кодом виден индекс «A-17/2021»: шаблон использовали в уже выплаченном деле пять лет назад.",
+      "Заявление следует отклонить. Одновременно расследование подтверждает существование организованной схемы."
     ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Во время ночной прямой трансляции в квартире началось необъяснимое явление: дверцы шкафов открывались сами, монитор сдвинулся со стола, а ноутбук упал на пол и разбился. В квартире я находился один, к технике никто не прикасался. Прошу возместить ущерб в размере 2200 евро.",
+        "en": "During a late-night livestream, unexplained phenomena began in my apartment: cabinet doors opened by themselves, a monitor slid across the desk, and a laptop fell to the floor and shattered. I was alone in the apartment, and no one touched the equipment. I am claiming €2,200 in damages.",
+        "tr": "During a late-night livestream, unexplained phenomena began in my apartment: cabinet doors opened by themselves, a monitor slid across the desk, and a laptop fell to the floor and shattered. I was alone in the apartment, and no one touched the equipment. I am claiming €2,200 in damages.",
+        "ar": "During a late-night livestream, unexplained phenomena began in my apartment: cabinet doors opened by themselves, a monitor slid across the desk, and a laptop fell to the floor and shattered. I was alone in the apartment, and no one touched the equipment. I am claiming €2,200 in damages.",
+        "kk": "Во время ночной прямой трансляции в квартире началось необъяснимое явление: дверцы шкафов открывались сами, монитор сдвинулся со стола, а ноутбук упал на пол и разбился. В квартире я находился один, к технике никто не прикасался. Прошу возместить ущерб в размере 2200 евро."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_event",
+      "text": {
+        "ru": "Во время ночного эфира предметы двигались и техника была повреждена.",
+        "en": "Objects moved and equipment was damaged during the late-night broadcast.",
+        "tr": "Objects moved and equipment was damaged during the late-night broadcast.",
+        "ar": "Objects moved and equipment was damaged during the late-night broadcast.",
+        "kk": "Во время ночного эфира предметы двигались и техника была повреждена."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_alone",
+      "text": {
+        "ru": "Стас находился в квартире один, помощников за кадром не было.",
+        "en": "Stas was alone in the apartment, with no off-camera assistants.",
+        "tr": "Stas was alone in the apartment, with no off-camera assistants.",
+        "ar": "Stas was alone in the apartment, with no off-camera assistants.",
+        "kk": "Стас находился в квартире один, помощников за кадром не было."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_no_staging",
+      "text": {
+        "ru": "К предметам никто не прикасался и эффекты не были подготовлены заранее.",
+        "en": "No one touched the objects, and the effects were not prepared in advance.",
+        "tr": "No one touched the objects, and the effects were not prepared in advance.",
+        "ar": "No one touched the objects, and the effects were not prepared in advance.",
+        "kk": "К предметам никто не прикасался и эффекты не были подготовлены заранее."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Закройте дверь. Это заявление связано как минимум с четырьмя предыдущими. Но сначала докажите само мошенничество. — В. Лебедева",
+      "en": "Close the door. This claim is linked to at least four earlier cases. But first, prove the fraud itself. — V. Lebedeva",
+      "tr": "Close the door. This claim is linked to at least four earlier cases. But first, prove the fraud itself. — V. Lebedeva",
+      "ar": "Close the door. This claim is linked to at least four earlier cases. But first, prove the fraud itself. — V. Lebedeva",
+      "kk": "Закройте дверь. Это заявление связано как минимум с четырьмя предыдущими. Но сначала докажите само мошенничество. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Семёнов, Аширов, Чернов, Соколов и Гром не знакомы. Но их документы написаны одним языком. Кто-то не совершает мошенничества сам — он учит этому других.",
+      "en": "Semyonov, Ashirov, Chernov, Sokolov, and Grom do not know one another. Yet their documents speak the same language. Someone is not committing fraud personally—he is teaching others how to do it.",
+      "tr": "Semyonov, Ashirov, Chernov, Sokolov, and Grom do not know one another. Yet their documents speak the same language. Someone is not committing fraud personally—he is teaching others how to do it.",
+      "ar": "Semyonov, Ashirov, Chernov, Sokolov, and Grom do not know one another. Yet their documents speak the same language. Someone is not committing fraud personally—he is teaching others how to do it.",
+      "kk": "Семёнов, Аширов, Чернов, Соколов и Гром не знакомы. Но их документы написаны одним языком. Кто-то не совершает мошенничества сам — он учит этому других."
+    },
+    "nextCaseTeaser": {
+      "ru": "След Архива №17 ведёт к делу, по которому деньги уже были выплачены пять лет назад.",
+      "en": "The trail of Archive No. 17 leads to a claim paid five years ago.",
+      "tr": "The trail of Archive No. 17 leads to a claim paid five years ago.",
+      "ar": "The trail of Archive No. 17 leads to a claim paid five years ago.",
+      "kk": "След Архива №17 ведёт к делу, по которому деньги уже были выплачены пять лет назад."
+    },
+    "seasonClue": {
+      "id": "act1-clue-10",
+      "label": {
+        "ru": "Архив №17 открыт",
+        "en": "Archive No. 17 Opened",
+        "tr": "Archive No. 17 Opened",
+        "ar": "Archive No. 17 Opened",
+        "kk": "Архив №17 открыт"
+      },
+      "description": {
+        "ru": "Код 17-К принадлежит не оценщику и не компании. Это метка готовых сценариев, которые неизвестный консультант продаёт заявителям за долю страховой выплаты.",
+        "en": "Code 17-K belongs to neither an assessor nor a company. It marks ready-made fraud scripts sold by an unknown consultant for a share of the insurance payout.",
+        "tr": "Code 17-K belongs to neither an assessor nor a company. It marks ready-made fraud scripts sold by an unknown consultant for a share of the insurance payout.",
+        "ar": "Code 17-K belongs to neither an assessor nor a company. It marks ready-made fraud scripts sold by an unknown consultant for a share of the insurance payout.",
+        "kk": "Код 17-К принадлежит не оценщику и не компании. Это метка готовых сценариев, которые неизвестный консультант продаёт заявителям за долю страховой выплаты."
+      },
+      "progressIndex": 5,
+      "progressTotal": 5
+    },
+    "epilogue": {
+      "ru": "АРХИВ ВЫПЛАТ · 2021 ГОД  \nНайдена первая одобренная заявка с формой `17-К`.  \nВыплата произведена. Материалы проверки отсутствуют.\nЗначит, консультант начал не с наших десяти дел. Завтра поднимем старый архив.",
+      "en": "PAYOUT ARCHIVE · 2021  \nFirst approved claim using form `17-K` located.  \nPayout issued. Review materials missing.\nSo the consultant did not begin with our ten cases. Tomorrow, we open the old archive.",
+      "tr": "PAYOUT ARCHIVE · 2021  \nFirst approved claim using form `17-K` located.  \nPayout issued. Review materials missing.\nSo the consultant did not begin with our ten cases. Tomorrow, we open the old archive.",
+      "ar": "PAYOUT ARCHIVE · 2021  \nFirst approved claim using form `17-K` located.  \nPayout issued. Review materials missing.\nSo the consultant did not begin with our ten cases. Tomorrow, we open the old archive.",
+      "kk": "АРХИВ ВЫПЛАТ · 2021 ГОД  \nНайдена первая одобренная заявка с формой `17-К`.  \nВыплата произведена. Материалы проверки отсутствуют.\nЗначит, консультант начал не с наших десяти дел. Завтра поднимем старый архив."
+    }
   }
 }

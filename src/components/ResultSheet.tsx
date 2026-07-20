@@ -32,6 +32,7 @@ interface Props {
   rewardDoubled: boolean;
   onNext: () => void;
   onBackToDesk: () => void;
+  hideBack?: boolean;
 }
 
 export function ResultSheet({
@@ -46,6 +47,7 @@ export function ResultSheet({
   rewardDoubled,
   onNext,
   onBackToDesk,
+  hideBack = false,
 }: Props) {
   const dialogRef = useRef<HTMLDivElement>(null);
   const onBackToDeskRef = useRef(onBackToDesk);
@@ -488,7 +490,9 @@ export function ResultSheet({
                   <AccuracyRow
                     key={e.id}
                     success
-                    label={`${loc(e.title, lang)} — противоречие`}
+                    label={`${e.statementLink
+                      ? loc(caseData.claimStatements?.find((statement) => statement.id === e.statementLink?.statementId)?.text ?? e.title, lang)
+                      : loc(e.title, lang)} ↔ ${loc(e.title, lang)}`}
                     value={`+${proofPerEvidence}%`}
                   />
                 ))}
@@ -822,7 +826,7 @@ export function ResultSheet({
               padding: "6px 24px 22px",
             }}
           >
-            <button
+            {!hideBack && <button
               type="button"
               onClick={onBackToDesk}
               style={{
@@ -840,7 +844,7 @@ export function ResultSheet({
               }}
             >
               {win ? `← ${t("backToDesk", lang)}` : t("backToDesk", lang)}
-            </button>
+            </button>}
             <button
               type="button"
               onClick={win ? onNext : onBackToDesk}

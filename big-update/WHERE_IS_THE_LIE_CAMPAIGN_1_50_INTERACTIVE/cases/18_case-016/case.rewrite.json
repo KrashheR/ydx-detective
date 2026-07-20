@@ -1,0 +1,409 @@
+{
+  "id": "case-016",
+  "campaignOrder": 18,
+  "requiredLevel": 9,
+  "act": 2,
+  "actTitle": {
+    "ru": "Пять лет назад",
+    "en": "Five Years Earlier"
+  },
+  "title": {
+    "ru": "Четыре дня без магазина",
+    "en": "Four Days Without a Shop"
+  },
+  "difficulty": "medium",
+  "claimAmount": {
+    "value": 7000,
+    "currency": "EUR"
+  },
+  "groundTruth": "valid",
+  "correctDecision": "approve",
+  "investigationBudget": 3,
+  "claimant": {
+    "name": {
+      "ru": "Лейла Каримова, 38 лет",
+      "en": "Leyla Karimova, age 38"
+    },
+    "migrationNote": {
+      "ru": "Сохранить данные и портрет.",
+      "en": "Keep the existing profile data and portrait."
+    },
+    "portrait": null,
+    "portraitStatus": "retain_existing_project_portrait",
+    "portraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/leyla.webp",
+      "existingFile": "public/people/leyla.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Потеря дохода проверяется отдельно от физического ущерба. Одобрить одно не значит автоматически одобрить другое. — В. Лебедева",
+      "en": "Loss of income must be verified separately from physical damage. Approving one does not automatically validate the other. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Лейла прислала фотографию открывшегося магазина. Иногда результат нашей работы — просто вернуть человеку обычный рабочий день.",
+      "en": "Leyla sent us a photograph of her reopened shop. Sometimes our work simply gives someone an ordinary working day back."
+    },
+    "nextCaseTeaser": {
+      "ru": "Анатолий Степанович сообщает о сгоревшем ботинке, заказе двадцати килограммов орехов и знакомом еноте.",
+      "en": "Anatoly Stepanovich reports a burned shoe, an order for twenty kilograms of nuts, and a familiar raccoon."
+    },
+    "seasonClue": null,
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Из-за прорыва городской магистрали магазин затопило с уровня улицы. Испорчен товар на нижних полках, помещение было закрыто четыре дня. Прошу возместить товар, сушку и подтверждённую потерю выручки.",
+    "en": "A ruptured municipal water main flooded my shop from street level. Stock on the lower shelves was damaged, and the premises remained closed for four days. I am claiming the cost of the stock, drying, and documented lost revenue."
+  },
+  "evidence": [
+    {
+      "id": "ev-municipal",
+      "order": 1,
+      "type": "document",
+      "title": {
+        "ru": "Акт водоканала",
+        "en": "Water Utility Report"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "3 апреля в 06:48 зафиксирован разрыв магистрали напротив магазина. Поток воды двигался к входу до перекрытия линии в 08:03.",
+        "en": "At 6:48 a.m. on April 3, a main ruptured opposite the shop. Water flowed toward the entrance until the line was shut off at 8:03 a.m."
+      },
+      "statusExplanation": {
+        "ru": "Источник и время затопления подтверждены городской службой.",
+        "en": "The municipal service confirms the source and timing of the flood."
+      },
+      "statementLink": {
+        "statementId": "claim_flood",
+        "relation": "supports",
+        "reason": {
+          "ru": "Источник и время затопления подтверждены городской службой.",
+          "en": "The municipal service confirms the source and timing of the flood."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-photos",
+      "order": 2,
+      "type": "surface_reveal",
+      "title": {
+        "ru": "Проявление линии затопления",
+        "en": "Revealing the Flood Line"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Под грязью проявилась непрерывная линия затопления на уровне нижних полок; верхние партии оставались сухими и не включены в требование.",
+        "en": "A continuous flood line is visible beneath the dirt at the height of the lower shelves; the upper stock remained dry and was not included in the claim."
+      },
+      "previousType": "photo",
+      "description": {
+        "ru": "После откачки воды эксперт снял нижнюю панель торгового стеллажа до санитарной очистки.",
+        "en": "After the water was pumped out, an expert removed the shelving unit's lower panel before sanitation work began."
+      },
+      "instruction": {
+        "ru": "Сотрите засохшие грязевые разводы и найдите устойчивую линию воды.",
+        "en": "Wipe away the dried mud stains and find the consistent water line."
+      },
+      "assets": {
+        "baseImage": "assets/interactive/ev-photos-scene.webp",
+        "coverTexture": "shared/surface/dirt.webp",
+        "revealMasks": [
+          "assets/interactive/ev-photos-waterline-trace-mask.svg"
+        ],
+        "toolCursor": "shared/surface/cloth-cursor.svg"
+      },
+      "data": {
+        "mode": "erase",
+        "coverType": "dirt",
+        "brush": {
+          "radius": 46,
+          "hardness": 0.66,
+          "opacity": 0.84,
+          "spacing": 8
+        },
+        "completion": {
+          "type": "discover_any",
+          "requiredTraceIds": [
+            "waterline"
+          ]
+        },
+        "traces": [
+          {
+            "id": "waterline",
+            "label": "Граница высоты воды",
+            "requiredRevealPercent": 52,
+            "mask": "assets/interactive/ev-photos-waterline-trace-mask.svg",
+            "shape": "mask",
+            "isContradiction": false,
+            "conclusion": "Под грязью проявилась непрерывная линия затопления на уровне нижних полок; верхние партии оставались сухими и не включены в требование.",
+            "labelEn": "Waterline boundary",
+            "conclusionEn": "A continuous flood line is visible beneath the dirt at the height of the lower shelves; the upper stock remained dry and was not included in the claim."
+          }
+        ]
+      },
+      "statementLink": {
+        "statementId": "claim_damage_scope",
+        "relation": "supports",
+        "reason": {
+          "ru": "Под грязью проявилась непрерывная линия затопления на уровне нижних полок; верхние партии оставались сухими и не включены в требование.",
+          "en": "A continuous flood line is visible beneath the dirt at the height of the lower shelves; the upper stock remained dry and was not included in the claim."
+        }
+      },
+      "contradictionTarget": null,
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": false,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Тактильная улика подтверждает реальную высоту воды и честный объём требования Каримовой.",
+          "en": "The tactile evidence confirms the true water level and the honest scope of Karimova's claim."
+        },
+        "playerAction": {
+          "ru": "Сотрите засохшие грязевые разводы и найдите устойчивую линию воды.",
+          "en": "Wipe away the dried mud stains and find the consistent water line."
+        },
+        "conclusion": {
+          "ru": "Под грязью проявилась непрерывная линия затопления на уровне нижних полок; верхние партии оставались сухими и не включены в требование.",
+          "en": "A continuous flood line is visible beneath the dirt at the height of the lower shelves; the upper stock remained dry and was not included in the claim."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-022",
+          "role": "interactive_scene",
+          "src": "src/data/cases/case-016/assets/interactive/ev-photos-scene.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-016/assets/interactive/ev-photos-scene.webp",
+          "caseRelativeSrc": "assets/interactive/ev-photos-scene.webp",
+          "installTo": "src/data/cases/case-016/assets/interactive/ev-photos-scene.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "bdc0b96fac1e5b63b296e5d98683adc2fa2fdd3f7d8e6763836b475a6d5b7f55"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-016/assets/interactive/ev-photos-scene.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-016/assets/interactive/ev-photos-scene.webp",
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-stock",
+      "order": 3,
+      "type": "document",
+      "title": {
+        "ru": "Складская опись",
+        "en": "Stock Inventory"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Повреждённые партии существовали до аварии и списаны по закупочной, а не розничной цене. Номера партий совпадают с фото.",
+        "en": "The damaged batches existed before the incident and were valued at wholesale, not retail, cost. Their batch numbers match the photographs."
+      },
+      "statusExplanation": {
+        "ru": "Наличие и стоимость товара подтверждены.",
+        "en": "The existence and value of the stock are confirmed."
+      },
+      "statementLink": {
+        "statementId": "claim_damage_scope",
+        "relation": "supports",
+        "reason": {
+          "ru": "Наличие и стоимость товара подтверждены.",
+          "en": "The existence and value of the stock are confirmed."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-ledger",
+      "order": 4,
+      "type": "document",
+      "title": {
+        "ru": "Кассовая книга",
+        "en": "Sales Ledger"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Четыре дня после аварии продажи равны нулю. Средний доход рассчитан по сопоставимым дням предыдущих восьми недель и совпадает с заявленной суммой.",
+        "en": "Sales were zero for four days after the incident. Average revenue was calculated from comparable days over the previous eight weeks and matches the amount claimed."
+      },
+      "statusExplanation": {
+        "ru": "Период закрытия и потеря дохода рассчитаны проверяемо.",
+        "en": "The closure period and lost income were calculated using verifiable records."
+      },
+      "statementLink": {
+        "statementId": "claim_business_interruption",
+        "relation": "supports",
+        "reason": {
+          "ru": "Период закрытия и потеря дохода рассчитаны проверяемо.",
+          "en": "The closure period and lost income were calculated using verifiable records."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Прорыв магистрали подтверждён, а очищенная линия затопления показывает, что вода достигла именно нижних полок.",
+      "Каримова заявила только реально повреждённые партии и использовала закупочные цены.",
+      "Четыре дня закрытия подтверждены кассой. Выплату следует одобрить полностью."
+    ],
+    "en": [
+      "The municipal service confirms the source and timing of the flood.",
+      "A continuous flood line is visible beneath the dirt at the height of the lower shelves; the upper stock remained dry and was not included in the claim.",
+      "The existence and value of the stock are confirmed.",
+      "The closure period and lost income were calculated using verifiable records.",
+      "No material statement has been disproven. The claim should be approved."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Разделить доказательство имущества и потери дохода.",
+      "Подчеркнуть честное незавышенное требование.",
+      "Интегрировать surface_reveal в улику ev-photos; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate surface_reveal into evidence ev-photos; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "assets/interactive/ev-photos-scene.webp",
+      "purpose": "Базовая поверхность со скрытым физическим следом, без процедурного покрытия",
+      "resolution": "1600×1000",
+      "format": "WebP",
+      "transparency": false,
+      "generatedBy": "image_model",
+      "manualPost": "Проверить плоский читаемый ракурс; удалить случайный текст; откалибровать каждую reveal mask по финальной сцене.",
+      "prompt": "Нижняя торцевая панель магазинного стеллажа и часть пола после откачки воды; чёткая физическая граница высоты затопления и мокрый низ, но без процедурной грязи и разводов поверх изображения. The dust, dirt, soot, frost, condensation or powder cover will be added programmatically, so do not bake the cover layer into the image. Keep the important surface large, readable and minimally distorted. Photorealistic insurance-investigation evidence photograph, documentary look, shot on a phone or compact camera by a non-professional, natural available light, neutral muted colors, realistic textures, high detail. No captions, no watermark, no logos, no readable real-world branding, no famous people, no recognizable copyrighted characters, no visible faces unless explicitly required. Evidence photo, not illustration or cinematic poster.",
+      "evidenceId": "ev-photos",
+      "evidenceType": "surface_reveal"
+    },
+    {
+      "file": "assets/interactive/ev-photos-waterline-trace-mask.svg",
+      "purpose": "Маска скрытого следа: Граница высоты воды",
+      "resolution": "1600×1000 aligned to base image",
+      "format": "SVG",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "Совместить с base image; порог обнаружения 52%; белая область маски — значимая зона.",
+      "prompt": null,
+      "evidenceId": "ev-photos",
+      "evidenceType": "surface_reveal"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Из-за прорыва городской магистрали магазин затопило с уровня улицы. Испорчен товар на нижних полках, помещение было закрыто четыре дня. Прошу возместить товар, сушку и подтверждённую потерю выручки.",
+        "en": "A ruptured municipal water main flooded my shop from street level. Stock on the lower shelves was damaged, and the premises remained closed for four days. I am claiming the cost of the stock, drying, and documented lost revenue."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_flood",
+      "text": {
+        "ru": "Магазин затопило из-за прорыва городской магистрали.",
+        "en": "The shop flooded because of a ruptured municipal water main."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_damage_scope",
+      "text": {
+        "ru": "Вода достигла нижних полок, но не повредила верхние партии.",
+        "en": "The water reached the lower shelves but did not damage the upper stock."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_business_interruption",
+      "text": {
+        "ru": "Магазин был закрыт четыре дня и потерял подтверждённую выручку.",
+        "en": "The shop remained closed for four days and lost documented revenue."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-016",
+    "archiveBasePath": "generated-assets/src/data/cases/case-016",
+    "claimantPortrait": null,
+    "claimantPortraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/leyla.webp",
+      "existingFile": "public/people/leyla.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-photos",
+        "title": {
+          "ru": "Проявление линии затопления",
+          "en": "Revealing the Flood Line"
+        },
+        "primaryImage": "src/data/cases/case-016/assets/interactive/ev-photos-scene.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-016/assets/interactive/ev-photos-scene.webp",
+        "legacyImageBinding": null,
+        "assets": [
+          {
+            "assetId": "asset-022",
+            "role": "interactive_scene",
+            "src": "src/data/cases/case-016/assets/interactive/ev-photos-scene.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-016/assets/interactive/ev-photos-scene.webp",
+            "caseRelativeSrc": "assets/interactive/ev-photos-scene.webp",
+            "installTo": "src/data/cases/case-016/assets/interactive/ev-photos-scene.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1600,
+            "height": 1000,
+            "sha256": "bdc0b96fac1e5b63b296e5d98683adc2fa2fdd3f7d8e6763836b475a6d5b7f55"
+          }
+        ]
+      }
+    ]
+  }
+}

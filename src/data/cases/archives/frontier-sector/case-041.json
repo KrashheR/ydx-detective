@@ -1,155 +1,270 @@
 {
   "id": "case-041",
   "type": "standard",
+  "campaignOrder": 39,
+  "requiredLevel": 16,
+  "act": 4,
+  "actTitle": {
+    "ru": "Серый конвой",
+    "en": "The Gray Convoy",
+    "tr": "The Gray Convoy",
+    "ar": "The Gray Convoy",
+    "kk": "Серый конвой"
+  },
   "difficulty": "hard",
   "claimAmount": 31600,
   "truth": "fraud",
-  "investigationBudget": 4,
   "title": {
-    "ru": "Потерянный перехватчик в ледяном каньоне",
-    "en": "Lost Interceptor in the Ice Canyon",
-    "tr": "Lost Interceptor in the Ice Canyon",
-    "ar": "Lost Interceptor in the Ice Canyon",
-    "kk": "Потерянный перехватчик в ледяном каньоне"
+    "ru": "Перехватчик в ледяном каньоне",
+    "en": "The Interceptor in the Ice Canyon",
+    "tr": "The Interceptor in the Ice Canyon",
+    "ar": "The Interceptor in the Ice Canyon",
+    "kk": "Перехватчик в ледяном каньоне"
   },
   "claim": {
     "person": {
       "ru": "Элиан Корд, 27 лет",
-      "en": "Elian Kord, 27",
-      "tr": "Elian Kord, 27",
-      "ar": "Elian Kord, 27",
+      "en": "Elian Kord, age 27",
+      "tr": "Elian Kord, age 27",
+      "ar": "Elian Kord, age 27",
       "kk": "Элиан Корд, 27 лет"
     },
     "story": {
-      "ru": "Мой перехватчик сбили пираты во время гуманитарного рейса. Я едва выжил после падения в ледяном каньоне и прошу возместить корабль и медицинские расходы.",
-      "en": "Pirates shot down my interceptor during a humanitarian run. I barely survived the crash in an ice canyon and request compensation for the craft and medical costs.",
-      "tr": "Pirates shot down my interceptor during a humanitarian run. I barely survived the crash in an ice canyon and request compensation for the craft and medical costs.",
-      "ar": "Pirates shot down my interceptor during a humanitarian run. I barely survived the crash in an ice canyon and request compensation for the craft and medical costs.",
-      "kk": "Мой перехватчик сбили пираты во время гуманитарного рейса. Я едва выжил после падения в ледяном каньоне и прошу возместить корабль и медицинские расходы."
+      "ru": "Во время гуманитарного рейса мой экспериментальный перехватчик атаковали контрабандисты. Машина потеряла управление и разбилась в ледяном каньоне. Я выжил и прошу оплатить самолёт и лечение.",
+      "en": "During a humanitarian flight, smugglers attacked my experimental interceptor. The aircraft lost control and crashed in an ice canyon. I survived and am claiming the aircraft and medical costs.",
+      "tr": "During a humanitarian flight, smugglers attacked my experimental interceptor. The aircraft lost control and crashed in an ice canyon. I survived and am claiming the aircraft and medical costs.",
+      "ar": "During a humanitarian flight, smugglers attacked my experimental interceptor. The aircraft lost control and crashed in an ice canyon. I survived and am claiming the aircraft and medical costs.",
+      "kk": "Во время гуманитарного рейса мой экспериментальный перехватчик атаковали контрабандисты. Машина потеряла управление и разбилась в ледяном каньоне. Я выжил и прошу оплатить самолёт и лечение."
     }
   },
-  "coverImage": "covers/case-041.svg",
-  "personImage": "people/elian-kord.webp",
   "client": {
     "role": {
-      "ru": "Пилот пограничного перехватчика",
-      "en": "Frontier interceptor pilot",
-      "tr": "Sınır önleyici pilotu",
-      "ar": "طيار اعتراض حدودي",
-      "kk": "Шекара тосқауыл ұшқышы"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Архив",
-          "en": "Archive",
-          "tr": "Arşiv",
-          "ar": "الأرشيف",
-          "kk": "Архив"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "Пограничный сектор",
-          "en": "Frontier Sector",
-          "tr": "Sınır Sektörü",
-          "ar": "القطاع الحدودي",
-          "kk": "Шекара секторы"
+          "ru": "4",
+          "en": "4",
+          "tr": "4",
+          "ar": "4",
+          "kk": "4"
         }
       },
       {
         "k": {
-          "ru": "Застрахованный риск",
-          "en": "Insured risk",
-          "tr": "Sigortalı risk",
-          "ar": "الخطر المؤمن عليه",
-          "kk": "Сақтандырылған тәуекел"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Крушение корабля",
-          "en": "Ship crash",
-          "tr": "Gemi kazası",
-          "ar": "تحطم سفينة",
-          "kk": "Кеме апаты"
-        }
-      },
-      {
-        "k": {
-          "ru": "Архивная связка",
-          "en": "Archive thread",
-          "tr": "Arşiv bağı",
-          "ar": "خيط الأرشيف",
-          "kk": "Архив байланысы"
-        },
-        "v": {
-          "ru": "Повторяющийся след: маркировка GC-17 и серые транспортные жетоны «Серого конвоя».",
-          "en": "Recurring lead: GC-17 markings and gray transport tokens of the Grey Convoy.",
-          "tr": "Tekrarlayan iz: GC-17 işaretleri ve Gri Konvoy’un gri taşıma jetonları.",
-          "ar": "خيط متكرر: علامات GC-17 ورموز النقل الرمادية لقافلة غراي.",
-          "kk": "Қайталанатын із: GC-17 таңбалары және Сұр конвойдың сұр көлік жетондары."
+          "ru": "39",
+          "en": "39",
+          "tr": "39",
+          "ar": "39",
+          "kk": "39"
         }
       }
     ]
   },
+  "coverImage": "covers/case-041.svg",
+  "personImage": "people/elian-kord-grounded.webp",
   "evidences": [
     {
-      "id": "crash-photo",
+      "id": "ev-crash",
+      "order": 1,
       "type": "photo",
       "title": {
-        "ru": "Фото места крушения",
-        "en": "Crash Site Photo",
-        "tr": "Crash Site Photo",
-        "ar": "Crash Site Photo",
-        "kk": "Фото места крушения"
+        "ru": "Фото обломков",
+        "en": "Wreckage Photograph",
+        "tr": "Wreckage Photograph",
+        "ar": "Wreckage Photograph",
+        "kk": "Фото обломков"
       },
       "content": {
-        "ru": "Корпус цел снаружи, повреждение сосредоточено снизу после жёсткой посадки. Следов попаданий нет.",
-        "en": "The hull is intact outside, with underside damage from a hard landing. No impact marks are visible.",
-        "tr": "The hull is intact outside, with underside damage from a hard landing. No impact marks are visible.",
-        "ar": "The hull is intact outside, with underside damage from a hard landing. No impact marks are visible.",
-        "kk": "Корпус цел снаружи, повреждение сосредоточено снизу после жёсткой посадки. Следов попаданий нет."
+        "ru": "Отверстия, похожие на пулевые, имеют края, загнутые наружу, и нанесены поверх уже возникших трещин корпуса.",
+        "en": "The bullet-like holes have edges bent outward and were made over cracks that had already formed in the fuselage.",
+        "tr": "The bullet-like holes have edges bent outward and were made over cracks that had already formed in the fuselage.",
+        "ar": "The bullet-like holes have edges bent outward and were made over cracks that had already formed in the fuselage.",
+        "kk": "Отверстия, похожие на пулевые, имеют края, загнутые наружу, и нанесены поверх уже возникших трещин корпуса."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Отсутствие обстрела противоречит версии о сбитии.",
-        "en": "No weapons damage contradicts the shootdown claim.",
-        "tr": "No weapons damage contradicts the shootdown claim.",
-        "ar": "No weapons damage contradicts the shootdown claim.",
-        "kk": "Отсутствие обстрела противоречит версии о сбитии."
+        "ru": "Повреждения созданы изнутри или после крушения и не подтверждают внешнюю атаку.",
+        "en": "The holes were made from inside or after the crash and do not support an external attack.",
+        "tr": "The holes were made from inside or after the crash and do not support an external attack.",
+        "ar": "The holes were made from inside or after the crash and do not support an external attack.",
+        "kk": "Повреждения созданы изнутри или после крушения и не подтверждают внешнюю атаку."
       },
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_attack",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Повреждения созданы изнутри или после крушения и не подтверждают внешнюю атаку.",
+          "en": "The holes were made from inside or after the crash and do not support an external attack.",
+          "tr": "The holes were made from inside or after the crash and do not support an external attack.",
+          "ar": "The holes were made from inside or after the crash and do not support an external attack.",
+          "kk": "Повреждения созданы изнутри или после крушения и не подтверждают внешнюю атаку."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_attack",
+        "reason": {
+          "ru": "Повреждения созданы изнутри или после крушения и не подтверждают внешнюю атаку.",
+          "en": "The holes were made from inside or after the crash and do not support an external attack.",
+          "tr": "The holes were made from inside or after the crash and do not support an external attack.",
+          "ar": "The holes were made from inside or after the crash and do not support an external attack.",
+          "kk": "Повреждения созданы изнутри или после крушения и не подтверждают внешнюю атаку."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
       "meta": {
-        "filename": "DJI_20260503_093810.jpg",
-        "imageUrl": "evidence/case-041-crash-photo.webp"
-      },
-      "relation": "contradicts"
+        "imageUrl": "evidence/case-041-ev-crash.webp"
+      }
     },
     {
-      "id": "cargo-manifest",
-      "type": "document",
+      "id": "ev-manifest",
+      "order": 2,
+      "type": "document_scan",
       "title": {
-        "ru": "Грузовая ведомость",
-        "en": "Cargo Manifest",
-        "tr": "Cargo Manifest",
-        "ar": "Cargo Manifest",
-        "kk": "Грузовая ведомость"
+        "ru": "Экспертиза грузовой ведомости",
+        "en": "Cargo Manifest Examination",
+        "tr": "Cargo Manifest Examination",
+        "ar": "Cargo Manifest Examination",
+        "kk": "Экспертиза грузовой ведомости"
       },
       "content": {
-        "ru": "Заявлено 180 кг медикаментов. Фактическая масса при вылете: 263 кг. Расхождение не объяснено.",
-        "en": "Declared: 180 kg of medicine. Actual departure mass: 263 kg. The difference is unexplained.",
-        "tr": "Declared: 180 kg of medicine. Actual departure mass: 263 kg. The difference is unexplained.",
-        "ar": "Declared: 180 kg of medicine. Actual departure mass: 263 kg. The difference is unexplained.",
-        "kk": "Заявлено 180 кг медикаментов. Фактическая масса при вылете: 263 кг. Расхождение не объяснено."
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Лишняя масса указывает на незаявленный груз.",
-        "en": "The extra mass indicates undeclared cargo.",
-        "tr": "The extra mass indicates undeclared cargo.",
-        "ar": "The extra mass indicates undeclared cargo.",
-        "kk": "Лишняя масса указывает на незаявленный груз."
+        "ru": "Под значением 240 кг проявляется исходная масса 920 кг; ведомость исправили перед гуманитарным рейсом.",
+        "en": "The original weight of 920 kg appears beneath the stated 240 kg; the manifest was altered before the humanitarian flight.",
+        "tr": "The original weight of 920 kg appears beneath the stated 240 kg; the manifest was altered before the humanitarian flight.",
+        "ar": "The original weight of 920 kg appears beneath the stated 240 kg; the manifest was altered before the humanitarian flight.",
+        "kk": "Под значением 240 кг проявляется исходная масса 920 кг; ведомость исправили перед гуманитарным рейсом."
       },
-      "relation": "contradicts"
+      "narrativeRole": "suspicion",
+      "statementLink": {
+        "statementId": "claim_declared_cargo",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Под значением 240 кг проявляется исходная масса 920 кг; ведомость исправили перед гуманитарным рейсом.",
+          "en": "The original weight of 920 kg appears beneath the stated 240 kg; the manifest was altered before the humanitarian flight.",
+          "tr": "The original weight of 920 kg appears beneath the stated 240 kg; the manifest was altered before the humanitarian flight.",
+          "ar": "The original weight of 920 kg appears beneath the stated 240 kg; the manifest was altered before the humanitarian flight.",
+          "kk": "Под значением 240 кг проявляется исходная масса 920 кг; ведомость исправили перед гуманитарным рейсом."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_declared_cargo",
+        "reason": {
+          "ru": "Под значением 240 кг проявляется исходная масса 920 кг; ведомость исправили перед гуманитарным рейсом.",
+          "en": "The original weight of 920 kg appears beneath the stated 240 kg; the manifest was altered before the humanitarian flight.",
+          "tr": "The original weight of 920 kg appears beneath the stated 240 kg; the manifest was altered before the humanitarian flight.",
+          "ar": "The original weight of 920 kg appears beneath the stated 240 kg; the manifest was altered before the humanitarian flight.",
+          "kk": "Под значением 240 кг проявляется исходная масса 920 кг; ведомость исправили перед гуманитарным рейсом."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "Спасатели передали обгоревший бумажный оригинал ведомости из кабины.",
+        "en": "Rescuers recovered the burned original paper manifest from the cockpit.",
+        "tr": "Rescuers recovered the burned original paper manifest from the cockpit.",
+        "ar": "Rescuers recovered the burned original paper manifest from the cockpit.",
+        "kk": "Спасатели передали обгоревший бумажный оригинал ведомости из кабины."
+      },
+      "instruction": {
+        "ru": "Включить УФ-режим и проверить поле фактической массы.",
+        "en": "Switch on UV mode and inspect the actual-weight field.",
+        "tr": "Switch on UV mode and inspect the actual-weight field.",
+        "ar": "Switch on UV mode and inspect the actual-weight field.",
+        "kk": "Включить УФ-режим и проверить поле фактической массы."
+      },
+      "previousType": "document",
+      "assets": {
+        "asset1": "cases/case-041/assets/interactive/ev-manifest-base.webp",
+        "asset2": "cases/case-041/assets/interactive/ev-manifest-scan-overlay.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Скрытая масса объясняет аварию и разрушает легенду о нападении без специальных знаний авиации.",
+          "en": "The concealed weight explains the crash and disproves the attack story without requiring specialist aviation knowledge.",
+          "tr": "The concealed weight explains the crash and disproves the attack story without requiring specialist aviation knowledge.",
+          "ar": "The concealed weight explains the crash and disproves the attack story without requiring specialist aviation knowledge.",
+          "kk": "Скрытая масса объясняет аварию и разрушает легенду о нападении без специальных знаний авиации."
+        },
+        "playerAction": {
+          "ru": "Включить УФ-режим и проверить поле фактической массы.",
+          "en": "Switch on UV mode and inspect the actual-weight field.",
+          "tr": "Switch on UV mode and inspect the actual-weight field.",
+          "ar": "Switch on UV mode and inspect the actual-weight field.",
+          "kk": "Включить УФ-режим и проверить поле фактической массы."
+        },
+        "conclusion": {
+          "ru": "Под значением 240 кг проявляется исходная масса 920 кг; ведомость исправили перед гуманитарным рейсом.",
+          "en": "The original weight of 920 kg appears beneath the stated 240 kg; the manifest was altered before the humanitarian flight.",
+          "tr": "The original weight of 920 kg appears beneath the stated 240 kg; the manifest was altered before the humanitarian flight.",
+          "ar": "The original weight of 920 kg appears beneath the stated 240 kg; the manifest was altered before the humanitarian flight.",
+          "kk": "Под значением 240 кг проявляется исходная масса 920 кг; ведомость исправили перед гуманитарным рейсом."
+        }
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "uv",
+          "backlight"
+        ],
+        "anomalyZones": [
+          {
+            "id": "cargo_mass",
+            "mode": "uv",
+            "x": 61,
+            "y": 43,
+            "width": 18,
+            "height": 9,
+            "label": "Под значением 240 кг проявляется исходная масса 920 кг; ведомость исправили перед гуманитарным рейсом.",
+            "isContradiction": true,
+            "labelEn": "The original weight of 920 kg appears beneath the stated 240 kg; the manifest was altered before the humanitarian flight."
+          }
+        ],
+        "successCondition": {
+          "type": "select_zone",
+          "zoneId": "cargo_mass"
+        }
+      }
     },
     {
-      "id": "nav-track",
+      "id": "ev-nav",
+      "order": 3,
       "type": "gps",
       "title": {
         "ru": "Навигационный трек",
@@ -159,237 +274,306 @@
         "kk": "Навигационный трек"
       },
       "content": {
-        "ru": [
-          "04:10 — вылет с базы",
-          "04:58 — отклонение к ущелью Б-12",
-          "05:21 — посадочный манёвр без сигнала бедствия"
-        ],
-        "en": [
-          "04:10 — departed base",
-          "04:58 — deviated toward B-12 gorge",
-          "05:21 — landing maneuver without distress signal"
-        ],
-        "tr": [
-          "04:10 — departed base",
-          "04:58 — deviated toward B-12 gorge",
-          "05:21 — landing maneuver without distress signal"
-        ],
-        "ar": [
-          "04:10 — departed base",
-          "04:58 — deviated toward B-12 gorge",
-          "05:21 — landing maneuver without distress signal"
-        ],
-        "kk": [
-          "04:10 — вылет с базы",
-          "04:58 — отклонение к ущелью Б-12",
-          "05:21 — посадочный манёвр без сигнала бедствия"
-        ]
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Пилот сделал незаявленный крюк и не передал сигнал боя.",
-        "en": "The pilot made an undeclared detour and sent no combat distress signal.",
-        "tr": "The pilot made an undeclared detour and sent no combat distress signal.",
-        "ar": "The pilot made an undeclared detour and sent no combat distress signal.",
-        "kk": "Пилот сделал незаявленный крюк и не передал сигнал боя."
-      },
-      "meta": {
-        "company": {
-          "ru": "CryoNav Relay",
-          "en": "CryoNav Relay",
-          "tr": "CryoNav Relay",
-          "ar": "CryoNav Relay",
-          "kk": "CryoNav Relay"
-        },
-        "department": {
-          "ru": "Архив треков малых судов",
-          "en": "Small Craft Track Archive",
-          "tr": "Small Craft Track Archive",
-          "ar": "Small Craft Track Archive",
-          "kk": "Архив треков малых судов"
-        },
-        "requestId": {
-          "ru": "CNR-2026-0503-I · Тип: маршрут перехватчика",
-          "en": "CNR-2026-0503-I · Type: interceptor route",
-          "tr": "CNR-2026-0503-I · Type: interceptor route",
-          "ar": "CNR-2026-0503-I · Type: interceptor route",
-          "kk": "CNR-2026-0503-I · Тип: маршрут перехватчика"
-        },
-        "gpsFooter": {
-          "ru": "© CryoNav 2026 · NAV ACC: ±9m",
-          "en": "© CryoNav 2026 · NAV ACC: ±9m",
-          "tr": "© CryoNav 2026 · NAV ACC: ±9m",
-          "ar": "© CryoNav 2026 · NAV ACC: ±9m",
-          "kk": "© CryoNav 2026 · NAV ACC: ±9m"
-        }
-      },
-      "relation": "contradicts"
-    },
-    {
-      "id": "bank-broker",
-      "type": "bank_statement",
-      "title": {
-        "ru": "Перевод брокера",
-        "en": "Broker Transfer",
-        "tr": "Broker Transfer",
-        "ar": "Broker Transfer",
-        "kk": "Перевод брокера"
-      },
-      "content": {
-        "ru": [
-          "02.05 — +12 000 CR · Северный минерал-брокер",
-          "03.05 — -1 300 CR · аренда ледового ангара"
-        ],
-        "en": [
-          "02 May — +12,000 CR · Northern mineral broker",
-          "03 May — -1,300 CR · ice hangar rental"
-        ],
-        "tr": [
-          "02 May — +12,000 CR · Northern mineral broker",
-          "03 May — -1,300 CR · ice hangar rental"
-        ],
-        "ar": [
-          "02 May — +12,000 CR · Northern mineral broker",
-          "03 May — -1,300 CR · ice hangar rental"
-        ],
-        "kk": [
-          "02.05 — +12 000 CR · Северный минерал-брокер",
-          "03.05 — -1 300 CR · аренда ледового ангара"
-        ]
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Крупный перевод перед рейсом связан с незаявленным грузом.",
-        "en": "A large preflight transfer fits undeclared cargo.",
-        "tr": "A large preflight transfer fits undeclared cargo.",
-        "ar": "A large preflight transfer fits undeclared cargo.",
-        "kk": "Крупный перевод перед рейсом связан с незаявленным грузом."
-      },
-      "meta": {
-        "bankName": {
-          "ru": "HelioBank",
-          "en": "HelioBank",
-          "tr": "HelioBank",
-          "ar": "HelioBank",
-          "kk": "HelioBank"
-        },
-        "accountMask": "•••• •••• •••• 8720"
-      },
-      "relation": "contradicts"
-    },
-    {
-      "id": "rescue-cam",
-      "type": "camera_recording",
-      "title": {
-        "ru": "Запись спасателей",
-        "en": "Rescue Recording",
-        "tr": "Rescue Recording",
-        "ar": "Rescue Recording",
-        "kk": "Запись спасателей"
-      },
-      "content": {
-        "ru": "Камера спасательного дрона показывает закрытые грузовые контейнеры рядом с кабиной до прибытия комиссии.",
-        "en": "The rescue drone camera shows sealed cargo containers beside the cockpit before the commission arrived.",
-        "tr": "The rescue drone camera shows sealed cargo containers beside the cockpit before the commission arrived.",
-        "ar": "The rescue drone camera shows sealed cargo containers beside the cockpit before the commission arrived.",
-        "kk": "Камера спасательного дрона показывает закрытые грузовые контейнеры рядом с кабиной до прибытия комиссии."
+        "ru": "Корд отклонился от гуманитарного маршрута к северному терминалу GC-17 и вошёл в каньон ниже безопасной высоты.",
+        "en": "Kord diverted from the humanitarian route toward the northern GC-17 terminal and entered the canyon below the safe altitude.",
+        "tr": "Kord diverted from the humanitarian route toward the northern GC-17 terminal and entered the canyon below the safe altitude.",
+        "ar": "Kord diverted from the humanitarian route toward the northern GC-17 terminal and entered the canyon below the safe altitude.",
+        "kk": "Корд отклонился от гуманитарного маршрута к северному терминалу GC-17 и вошёл в каньон ниже безопасной высоты."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Материал важен для хронологии, но сам по себе не опровергает заявление.",
-        "en": "The material matters for the timeline but does not by itself disprove the claim.",
-        "tr": "The material matters for the timeline but does not by itself disprove the claim.",
-        "ar": "The material matters for the timeline but does not by itself disprove the claim.",
-        "kk": "Материал важен для хронологии, но сам по себе не опровергает заявление."
+        "ru": "Пилот направлялся к узлу Серого конвоя, а не следовал заявленному маршруту.",
+        "en": "The pilot was heading for a Gray Convoy hub, not following the declared route.",
+        "tr": "The pilot was heading for a Gray Convoy hub, not following the declared route.",
+        "ar": "The pilot was heading for a Gray Convoy hub, not following the declared route.",
+        "kk": "Пилот направлялся к узлу Серого конвоя, а не следовал заявленному маршруту."
       },
-      "meta": {
-        "cameraId": "ICE-DRONE-4",
-        "cameraModel": "AeroSurvey AS-2 · 6K · H.265"
+      "narrativeRole": "arc_proof",
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Пилот направлялся к узлу Серого конвоя, а не следовал заявленному маршруту.",
+          "en": "The pilot was heading for a Gray Convoy hub, not following the declared route.",
+          "tr": "The pilot was heading for a Gray Convoy hub, not following the declared route.",
+          "ar": "The pilot was heading for a Gray Convoy hub, not following the declared route.",
+          "kk": "Пилот направлялся к узлу Серого конвоя, а не следовал заявленному маршруту."
+        }
       },
-      "relation": "context"
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75
     },
     {
-      "id": "radio-log",
+      "id": "ev-flight",
+      "order": 4,
       "type": "usage_log",
       "title": {
-        "ru": "Радиожурнал",
-        "en": "Radio Log",
-        "tr": "Radio Log",
-        "ar": "Radio Log",
-        "kk": "Радиожурнал"
+        "ru": "Бортовой журнал",
+        "en": "Flight Log",
+        "tr": "Flight Log",
+        "ar": "Flight Log",
+        "kk": "Бортовой журнал"
       },
       "content": {
-        "ru": [
-          "05:12 — канал чист, помехи не зафиксированы",
-          "05:20 — ручное отключение маяка",
-          "05:25 — аварийный сигнал после посадки",
-          "Фраза «серый конвой прошёл» совпадает с кодом из дела лунной фермы."
-        ],
-        "en": [
-          "05:12 — channel clear, no jamming recorded",
-          "05:20 — beacon manually disabled",
-          "05:25 — emergency signal after landing",
-          "The phrase \"grey convoy passed\" matches the code from the moon farm file."
-        ],
-        "tr": [
-          "05:12 — channel clear, no jamming recorded",
-          "05:20 — beacon manually disabled",
-          "05:25 — emergency signal after landing",
-          "\"Gri konvoy geçti\" ifadesi ay çiftliği dosyasındaki kodla eşleşiyor."
-        ],
-        "ar": [
-          "05:12 — channel clear, no jamming recorded",
-          "05:20 — beacon manually disabled",
-          "05:25 — emergency signal after landing",
-          "تطابق عبارة \"مرّت القافلة الرمادية\" رمز ملف مزرعة القمر."
-        ],
-        "kk": [
-          "05:12 — канал чист, помехи не зафиксированы",
-          "05:20 — ручное отключение маяка",
-          "05:25 — аварийный сигнал после посадки",
-          "\"Сұр конвой өтті\" тіркесі ай фермасы ісіндегі кодқа сәйкес."
-        ]
+        "ru": "Система предупреждала о перегрузе и обледенении. Пилот отключил автоматический возврат за шесть минут до потери подъёмной силы.",
+        "en": "The system warned of overload and icing. The pilot disabled automatic return six minutes before losing lift.",
+        "tr": "The system warned of overload and icing. The pilot disabled automatic return six minutes before losing lift.",
+        "ar": "The system warned of overload and icing. The pilot disabled automatic return six minutes before losing lift.",
+        "kk": "Система предупреждала о перегрузе и обледенении. Пилот отключил автоматический возврат за шесть минут до потери подъёмной силы."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Маяк отключили вручную до аварийного сигнала.",
-        "en": "The beacon was manually disabled before the emergency call.",
-        "tr": "The beacon was manually disabled before the emergency call.",
-        "ar": "The beacon was manually disabled before the emergency call.",
-        "kk": "Маяк отключили вручную до аварийного сигнала."
+        "ru": "Крушение вызвали перегруз и сознательное продолжение опасного маршрута.",
+        "en": "The crash resulted from overload and the deliberate continuation of a dangerous route.",
+        "tr": "The crash resulted from overload and the deliberate continuation of a dangerous route.",
+        "ar": "The crash resulted from overload and the deliberate continuation of a dangerous route.",
+        "kk": "Крушение вызвали перегруз и сознательное продолжение опасного маршрута."
       },
-      "meta": {
-        "logPrompt": "comms@icebase:~$ tail -f /var/log/radio-relay.log"
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_safe_route",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Крушение вызвали перегруз и сознательное продолжение опасного маршрута.",
+          "en": "The crash resulted from overload and the deliberate continuation of a dangerous route.",
+          "tr": "The crash resulted from overload and the deliberate continuation of a dangerous route.",
+          "ar": "The crash resulted from overload and the deliberate continuation of a dangerous route.",
+          "kk": "Крушение вызвали перегруз и сознательное продолжение опасного маршрута."
+        }
       },
-      "relation": "contradicts"
+      "contradictionTarget": {
+        "statementId": "claim_safe_route",
+        "reason": {
+          "ru": "Крушение вызвали перегруз и сознательное продолжение опасного маршрута.",
+          "en": "The crash resulted from overload and the deliberate continuation of a dangerous route.",
+          "tr": "The crash resulted from overload and the deliberate continuation of a dangerous route.",
+          "ar": "The crash resulted from overload and the deliberate continuation of a dangerous route.",
+          "kk": "Крушение вызвали перегруз и сознательное продолжение опасного маршрута."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "ev-broker",
+      "order": 5,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Платёж брокера",
+        "en": "Broker Payment",
+        "tr": "Broker Payment",
+        "ar": "Broker Payment",
+        "kk": "Платёж брокера"
+      },
+      "content": {
+        "ru": "Перед вылетом Корд получил оплату за доставку партии `GC-17-N`.",
+        "en": "Before takeoff, Kord received payment to deliver batch `GC-17-N`.",
+        "tr": "Before takeoff, Kord received payment to deliver batch `GC-17-N`.",
+        "ar": "Before takeoff, Kord received payment to deliver batch `GC-17-N`.",
+        "kk": "Перед вылетом Корд получил оплату за доставку партии `GC-17-N`."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Финансовый след подтверждает незаявленную перевозку.",
+        "en": "The financial trail confirms the undeclared transport.",
+        "tr": "The financial trail confirms the undeclared transport.",
+        "ar": "The financial trail confirms the undeclared transport.",
+        "kk": "Финансовый след подтверждает незаявленную перевозку."
+      },
+      "narrativeRole": "motive",
+      "statementLink": {
+        "statementId": "claim_declared_cargo",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Финансовый след подтверждает незаявленную перевозку.",
+          "en": "The financial trail confirms the undeclared transport.",
+          "tr": "The financial trail confirms the undeclared transport.",
+          "ar": "The financial trail confirms the undeclared transport.",
+          "kk": "Финансовый след подтверждает незаявленную перевозку."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "ev-rescue",
+      "order": 6,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Запись спасателей",
+        "en": "Rescue Team Record",
+        "tr": "Rescue Team Record",
+        "ar": "Rescue Team Record",
+        "kk": "Запись спасателей"
+      },
+      "content": {
+        "ru": "Корд действительно найден травмированным у обломков. Спасатели не фиксируют следов преследования или второго воздушного судна.",
+        "en": "Kord was genuinely found injured beside the wreckage. Rescuers recorded no signs of pursuit or a second aircraft.",
+        "tr": "Kord was genuinely found injured beside the wreckage. Rescuers recorded no signs of pursuit or a second aircraft.",
+        "ar": "Kord was genuinely found injured beside the wreckage. Rescuers recorded no signs of pursuit or a second aircraft.",
+        "kk": "Корд действительно найден травмированным у обломков. Спасатели не фиксируют следов преследования или второго воздушного судна."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Травма реальна, но не подтверждает придуманную атаку.",
+        "en": "The injury is real but does not support the fabricated attack.",
+        "tr": "The injury is real but does not support the fabricated attack.",
+        "ar": "The injury is real but does not support the fabricated attack.",
+        "kk": "Травма реальна, но не подтверждает придуманную атаку."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_attack",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Травма реальна, но не подтверждает придуманную атаку.",
+          "en": "The injury is real but does not support the fabricated attack.",
+          "tr": "The injury is real but does not support the fabricated attack.",
+          "ar": "The injury is real but does not support the fabricated attack.",
+          "kk": "Травма реальна, но не подтверждает придуманную атаку."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Корпус, маршрут и груз противоречат версии пиратской атаки.",
-      "Радиолог повторяет сигнал «Серого конвоя» из предыдущего архива.",
-      "Боевой фасад инсценирован: вердикт — отказ."
+      "Перехватчик не был обстрелян: отверстия появились после крушения.",
+      "Корд перевозил тяжёлый незаявленный груз для GC-17 и отключил автоматический возврат.",
+      "Под значением 240 кг проявляется исходная масса 920 кг; ведомость исправили перед гуманитарным рейсом.",
+      "Причиной падения стали перегруз и опасный маршрут, а версия атаки создана для страховой выплаты. Следует отказать."
     ],
     "en": [
-      "Hull, route, and cargo contradict a pirate attack.",
-      "The radio log repeats the Grey Convoy signal from the previous archive file.",
-      "The combat story is staged: reject the claim."
+      "The holes were made from inside or after the crash and do not support an external attack.",
+      "The original weight of 920 kg appears beneath the stated 240 kg; the manifest was altered before the humanitarian flight.",
+      "The crash resulted from overload and the deliberate continuation of a dangerous route.",
+      "The financial trail confirms the undeclared transport.",
+      "The pilot was heading for a Gray Convoy hub, not following the declared route.",
+      "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "Gövde, rota ve yük korsan saldırısıyla çelişiyor.",
-      "Radyo kaydı önceki arşivdeki Gri Konvoy sinyalini tekrarlıyor.",
-      "Savaş hikâyesi sahnelenmiş: ödeme reddedilir."
+      "The holes were made from inside or after the crash and do not support an external attack.",
+      "The original weight of 920 kg appears beneath the stated 240 kg; the manifest was altered before the humanitarian flight.",
+      "The crash resulted from overload and the deliberate continuation of a dangerous route.",
+      "The financial trail confirms the undeclared transport.",
+      "The pilot was heading for a Gray Convoy hub, not following the declared route.",
+      "The claim is fraudulent and should be rejected."
     ],
     "ar": [
-      "يتناقض الهيكل والمسار والحمولة مع هجوم قراصنة.",
-      "يكرر سجل الراديو إشارة القافلة الرمادية من الملف السابق.",
-      "قصة القتال مفبركة: القرار رفض."
+      "The holes were made from inside or after the crash and do not support an external attack.",
+      "The original weight of 920 kg appears beneath the stated 240 kg; the manifest was altered before the humanitarian flight.",
+      "The crash resulted from overload and the deliberate continuation of a dangerous route.",
+      "The financial trail confirms the undeclared transport.",
+      "The pilot was heading for a Gray Convoy hub, not following the declared route.",
+      "The claim is fraudulent and should be rejected."
     ],
     "kk": [
-      "Корпус, бағыт және жүк қарақшы шабуылына қайшы.",
-      "Радиожурнал алдыңғы архивтегі Сұр конвой сигналын қайталайды.",
-      "Ұрыс оқиғасы қойылым: вердикт — бас тарту."
+      "Перехватчик не был обстрелян: отверстия появились после крушения.",
+      "Корд перевозил тяжёлый незаявленный груз для GC-17 и отключил автоматический возврат.",
+      "Под значением 240 кг проявляется исходная масса 920 кг; ведомость исправили перед гуманитарным рейсом.",
+      "Причиной падения стали перегруз и опасный маршрут, а версия атаки создана для страховой выплаты. Следует отказать."
     ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Во время гуманитарного рейса мой экспериментальный перехватчик атаковали контрабандисты. Машина потеряла управление и разбилась в ледяном каньоне. Я выжил и прошу оплатить самолёт и лечение.",
+        "en": "During a humanitarian flight, smugglers attacked my experimental interceptor. The aircraft lost control and crashed in an ice canyon. I survived and am claiming the aircraft and medical costs.",
+        "tr": "During a humanitarian flight, smugglers attacked my experimental interceptor. The aircraft lost control and crashed in an ice canyon. I survived and am claiming the aircraft and medical costs.",
+        "ar": "During a humanitarian flight, smugglers attacked my experimental interceptor. The aircraft lost control and crashed in an ice canyon. I survived and am claiming the aircraft and medical costs.",
+        "kk": "Во время гуманитарного рейса мой экспериментальный перехватчик атаковали контрабандисты. Машина потеряла управление и разбилась в ледяном каньоне. Я выжил и прошу оплатить самолёт и лечение."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_attack",
+      "text": {
+        "ru": "Перехватчик потерпел крушение после внешней атаки.",
+        "en": "The interceptor crashed after an external attack.",
+        "tr": "The interceptor crashed after an external attack.",
+        "ar": "The interceptor crashed after an external attack.",
+        "kk": "Перехватчик потерпел крушение после внешней атаки."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_declared_cargo",
+      "text": {
+        "ru": "На борту находилось только 240 кг заявленного гуманитарного груза.",
+        "en": "Only 240 kg of declared humanitarian cargo was on board.",
+        "tr": "Only 240 kg of declared humanitarian cargo was on board.",
+        "ar": "Only 240 kg of declared humanitarian cargo was on board.",
+        "kk": "На борту находилось только 240 кг заявленного гуманитарного груза."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_safe_route",
+      "text": {
+        "ru": "Пилот следовал разрешённым маршрутом и не отключал возврат.",
+        "en": "The pilot followed the authorized route and did not disable automatic return.",
+        "tr": "The pilot followed the authorized route and did not disable automatic return.",
+        "ar": "The pilot followed the authorized route and did not disable automatic return.",
+        "kk": "Пилот следовал разрешённым маршрутом и не отключал возврат."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Корд действительно пережил крушение. Но следы выстрелов нанесены на корпус после удара о лёд. Выясните, что стало причиной падения. — В. Лебедева",
+      "en": "Kord genuinely survived a crash. But the supposed bullet holes were made after the fuselage struck the ice. Find what actually brought the aircraft down. — V. Lebedeva",
+      "tr": "Kord genuinely survived a crash. But the supposed bullet holes were made after the fuselage struck the ice. Find what actually brought the aircraft down. — V. Lebedeva",
+      "ar": "Kord genuinely survived a crash. But the supposed bullet holes were made after the fuselage struck the ice. Find what actually brought the aircraft down. — V. Lebedeva",
+      "kk": "Корд действительно пережил крушение. Но следы выстрелов нанесены на корпус после удара о лёд. Выясните, что стало причиной падения. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Северный терминал принимает грузы по воздуху. В маршрутном журнале следующей точкой значится закрытая Навигационная академия «Меридиан».",
+      "en": "The northern terminal receives cargo by air. The route log names the closed Meridian Navigation Academy as the next stop.",
+      "tr": "The northern terminal receives cargo by air. The route log names the closed Meridian Navigation Academy as the next stop.",
+      "ar": "The northern terminal receives cargo by air. The route log names the closed Meridian Navigation Academy as the next stop.",
+      "kk": "Северный терминал принимает грузы по воздуху. В маршрутном журнале следующей точкой значится закрытая Навигационная академия «Меридиан»."
+    },
+    "nextCaseTeaser": {
+      "ru": "Перед академией — последнее частное дело: из семейного архива исчез церемониальный клинок, а оплата пришла раньше кражи.",
+      "en": "Before the academy comes one last private claim: a ceremonial blade vanished from a family archive, but payment arrived before the theft.",
+      "tr": "Before the academy comes one last private claim: a ceremonial blade vanished from a family archive, but payment arrived before the theft.",
+      "ar": "Before the academy comes one last private claim: a ceremonial blade vanished from a family archive, but payment arrived before the theft.",
+      "kk": "Перед академией — последнее частное дело: из семейного архива исчез церемониальный клинок, а оплата пришла раньше кражи."
+    },
+    "seasonClue": {
+      "id": "meridian-route",
+      "label": {
+        "ru": "Маршрут к «Меридиану»",
+        "en": "Route to Meridian",
+        "tr": "Route to Meridian",
+        "ar": "Route to Meridian",
+        "kk": "Маршрут к «Меридиану»"
+      },
+      "description": {
+        "ru": "Серый конвой использует инфраструктуру закрытой навигационной академии.",
+        "en": "The Gray Convoy uses the infrastructure of a closed navigation academy.",
+        "tr": "The Gray Convoy uses the infrastructure of a closed navigation academy.",
+        "ar": "The Gray Convoy uses the infrastructure of a closed navigation academy.",
+        "kk": "Серый конвой использует инфраструктуру закрытой навигационной академии."
+      },
+      "progressIndex": 6,
+      "progressTotal": 6
+    },
+    "epilogue": null
   }
 }

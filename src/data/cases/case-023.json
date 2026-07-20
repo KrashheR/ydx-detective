@@ -1,301 +1,398 @@
 {
   "id": "case-023",
   "type": "standard",
+  "campaignOrder": 21,
+  "requiredLevel": 11,
+  "act": 3,
+  "actTitle": {
+    "ru": "Восточный двор",
+    "en": "Eastern Yard",
+    "tr": "Eastern Yard",
+    "ar": "Eastern Yard",
+    "kk": "Восточный двор"
+  },
   "difficulty": "medium",
   "claimAmount": 3500,
   "truth": "fraud",
   "title": {
-    "ru": "Карта украдена за границей",
-    "en": "Card Stolen Abroad",
-    "tr": "Yurt Dışında Çalınan Kart",
-    "ar": "بطاقة مسروقة في الخارج",
-    "kk": "Шетелде ұрланған карта"
+    "ru": "Карта, оставшаяся дома",
+    "en": "The Card Left at Home",
+    "tr": "The Card Left at Home",
+    "ar": "The Card Left at Home",
+    "kk": "Карта, оставшаяся дома"
   },
   "claim": {
     "person": {
       "ru": "Рустам Назаров, 38 лет",
-      "en": "Rustam Nazarov, 38",
-      "tr": "Rustam Nazarov, 38",
-      "ar": "رستم نزاروف، 38",
-      "kk": "Рустам Назаров, 38 жаста"
+      "en": "Rustam Nazarov, age 38",
+      "tr": "Rustam Nazarov, age 38",
+      "ar": "Rustam Nazarov, age 38",
+      "kk": "Рустам Назаров, 38 лет"
     },
     "story": {
-      "ru": "Я был в отпуске за границей с 10 по 17 марта. Где-то там у меня украли и, видимо, склонировали карту: с неё сняли 3500 евро, пока я отдыхал. Я ничего не снимал, дома меня не было. Прошу вернуть похищенные средства.",
-      "en": "I was on holiday abroad from March 10 to 17. Somewhere there my card was stolen and apparently cloned: €3,500 was withdrawn while I was away. I withdrew nothing and was not at home. I request the stolen funds be returned.",
-      "tr": "10-17 Mart arasında yurt dışında tatildeydim. Orada bir yerde kartım çalındı ve anlaşılan kopyalandı: ben yokken 3.500 avro çekilmiş. Hiçbir şey çekmedim ve evde değildim. Çalınan paranın iadesini talep ediyorum.",
-      "ar": "كنت في إجازة بالخارج من 10 إلى 17 مارس. هناك في مكان ما سُرقت بطاقتي ويبدو أنها استُنسخت: سُحب 3500 يورو أثناء غيابي. لم أسحب شيئًا ولم أكن في المنزل. أطلب إعادة الأموال المسروقة.",
-      "kk": "Мен 10-17 наурыз аралығында шетелде демалыста болдым. Сол жерде картам ұрланып, көшірілген сияқты: мен жоқта одан 3500 еуро алынған. Мен ештеңе алмадым, үйде болмадым. Ұрланған қаражатты қайтаруды сұраймын."
+      "ru": "Во время отпуска за границей у меня украли карту и сняли с неё 3500 евро. В России меня не было, операции я не совершал и никому карту не передавал. Прошу вернуть похищенные средства.",
+      "en": "While I was on vacation abroad, my card was stolen and €3,500 was withdrawn from it. I was not in Russia, did not make the transactions, and never gave the card to anyone. I am claiming reimbursement of the stolen funds.",
+      "tr": "While I was on vacation abroad, my card was stolen and €3,500 was withdrawn from it. I was not in Russia, did not make the transactions, and never gave the card to anyone. I am claiming reimbursement of the stolen funds.",
+      "ar": "While I was on vacation abroad, my card was stolen and €3,500 was withdrawn from it. I was not in Russia, did not make the transactions, and never gave the card to anyone. I am claiming reimbursement of the stolen funds.",
+      "kk": "Во время отпуска за границей у меня украли карту и сняли с неё 3500 евро. В России меня не было, операции я не совершал и никому карту не передавал. Прошу вернуть похищенные средства."
     }
   },
-  "coverImage": "covers/case-023.svg",
-  "personImage": "people/rustam.webp",
   "client": {
     "role": {
-      "ru": "Заявитель · физ. лицо",
-      "en": "Claimant · individual",
-      "tr": "Başvuru sahibi · gerçek kişi",
-      "ar": "مقدم الطلب · شخص طبيعي",
-      "kk": "Өтініш беруші · жеке тұлға"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Возраст",
-          "en": "Age",
-          "tr": "Yaş",
-          "ar": "العمر",
-          "kk": "Жасы"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "38 лет",
-          "en": "38 years old",
-          "tr": "38 yaşında",
-          "ar": "38 عامًا",
-          "kk": "38 жаста"
+          "ru": "3",
+          "en": "3",
+          "tr": "3",
+          "ar": "3",
+          "kk": "3"
         }
       },
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Уфа",
-          "en": "Ufa",
-          "tr": "Ufa",
-          "ar": "أوفا",
-          "kk": "Уфа"
-        }
-      },
-      {
-        "k": {
-          "ru": "Клиент с",
-          "en": "Client since",
-          "tr": "Müşteri",
-          "ar": "عميل منذ",
-          "kk": "Клиент"
-        },
-        "v": {
-          "ru": "2021 г.",
-          "en": "2021",
-          "tr": "2021",
-          "ar": "2021",
-          "kk": "2021 ж."
-        }
-      },
-      {
-        "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
-        },
-        "v": {
-          "ru": "Карта · КА-23278451-X1",
-          "en": "Card · KA-23278451-X1",
-          "tr": "Kart · KA-23278451-X1",
-          "ar": "البطاقة · KA-23278451-X1",
-          "kk": "Карта · КА-23278451-X1"
-        }
-      },
-      {
-        "k": {
-          "ru": "Документ",
-          "en": "Document",
-          "tr": "Belge",
-          "ar": "الوثيقة",
-          "kk": "Құжат"
-        },
-        "v": {
-          "ru": "Паспорт 8019-46 №232784513-16",
-          "en": "Passport 8019-46 №232784513-16",
-          "tr": "Pasaport 8019-46 №232784513-16",
-          "ar": "جواز السفر 8019-46 №232784513-16",
-          "kk": "Паспорт 8019-46 №232784513-16"
+          "ru": "21",
+          "en": "21",
+          "tr": "21",
+          "ar": "21",
+          "kk": "21"
         }
       }
     ]
   },
+  "coverImage": "covers/case-023.svg",
+  "personImage": "people/rustam-nazarov.webp",
   "evidences": [
     {
+      "id": "ev-travel",
+      "order": 1,
+      "type": "document",
+      "title": {
+        "ru": "Билеты и пограничные отметки",
+        "en": "Tickets and Border Records",
+        "tr": "Tickets and Border Records",
+        "ar": "Tickets and Border Records",
+        "kk": "Билеты и пограничные отметки"
+      },
+      "content": {
+        "ru": "Назаров действительно находился за границей с 10 по 17 марта.",
+        "en": "Nazarov was indeed abroad from March 10 to March 17.",
+        "tr": "Nazarov was indeed abroad from March 10 to March 17.",
+        "ar": "Nazarov was indeed abroad from March 10 to March 17.",
+        "kk": "Назаров действительно находился за границей с 10 по 17 марта."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Поездка подтверждена, но документы не устанавливают местонахождение карты.",
+        "en": "The trip is confirmed, but the documents do not establish where the card was.",
+        "tr": "The trip is confirmed, but the documents do not establish where the card was.",
+        "ar": "The trip is confirmed, but the documents do not establish where the card was.",
+        "kk": "Поездка подтверждена, но документы не устанавливают местонахождение карты."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_card_stolen",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Поездка подтверждена, но документы не устанавливают местонахождение карты.",
+          "en": "The trip is confirmed, but the documents do not establish where the card was.",
+          "tr": "The trip is confirmed, but the documents do not establish where the card was.",
+          "ar": "The trip is confirmed, but the documents do not establish where the card was.",
+          "kk": "Поездка подтверждена, но документы не устанавливают местонахождение карты."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25
+    },
+    {
       "id": "ev-bank",
+      "order": 2,
       "type": "bank_statement",
       "title": {
         "ru": "Банковская выписка",
         "en": "Bank Statement",
-        "tr": "Banka Ekstresi",
-        "ar": "كشف حساب بنكي",
-        "kk": "Банк үзіндісі"
+        "tr": "Bank Statement",
+        "ar": "Bank Statement",
+        "kk": "Банковская выписка"
       },
       "content": {
-        "ru": [
-          "12.03 09:14 — Снятие наличных, банкомат «Столица-217», ул. Садовая 4 (250 м от дома): −1 500,00 €",
-          "12.03 09:21 — Снятие наличных, банкомат «Столица-217», ул. Садовая 4: −1 000,00 €",
-          "14.03 18:02 — Перевод на счёт •••• 4471 (собственный счёт держателя): −1 000,00 €",
-          "Авторизация: чип + ПИН, подтверждено для всех операций",
-          "Итого оспаривается: −3 500,00 €"
-        ],
-        "en": [
-          "12 Mar 09:14 — Cash withdrawal, ATM “Stolitsa-217”, 4 Sadovaya St. (250 m from home): −€1,500.00",
-          "12 Mar 09:21 — Cash withdrawal, ATM “Stolitsa-217”, 4 Sadovaya St.: −€1,000.00",
-          "14 Mar 18:02 — Transfer to account •••• 4471 (holder's own account): −€1,000.00",
-          "Authorization: chip + PIN, confirmed for all operations",
-          "Total disputed: −€3,500.00"
-        ],
-        "tr": [
-          "12 Mar 09:14 — Nakit çekme, ATM “Stolitsa-217”, Sadovaya Cad. 4 (evden 250 m): −1.500,00 €",
-          "12 Mar 09:21 — Nakit çekme, ATM “Stolitsa-217”, Sadovaya Cad. 4: −1.000,00 €",
-          "14 Mar 18:02 — •••• 4471 numaralı hesaba transfer (kart sahibinin kendi hesabı): −1.000,00 €",
-          "Yetkilendirme: çip + PIN, tüm işlemler için onaylandı",
-          "Toplam itiraz edilen: −3.500,00 €"
-        ],
-        "ar": [
-          "12 مارس 09:14 — سحب نقدي، صراف «ستوليتسا-217»، شارع سادوفايا 4 (على بُعد 250 م من المنزل): −1٬500٫00 €",
-          "12 مارس 09:21 — سحب نقدي، صراف «ستوليتسا-217»، شارع سادوفايا 4: −1٬000٫00 €",
-          "14 مارس 18:02 — تحويل إلى الحساب •••• 4471 (حساب صاحب البطاقة نفسه): −1٬000٫00 €",
-          "التفويض: شريحة + رقم سري، مؤكَّد لجميع العمليات",
-          "إجمالي المتنازع عليه: −3٬500٫00 €"
-        ],
-        "kk": [
-          "12.03 09:14 — Қолма-қол ақша алу, «Столица-217» банкоматы, Садовая көш. 4 (үйден 250 м): −1 500,00 €",
-          "12.03 09:21 — Қолма-қол ақша алу, «Столица-217» банкоматы, Садовая көш. 4: −1 000,00 €",
-          "14.03 18:02 — •••• 4471 шотына аударым (карта иесінің өз шоты): −1 000,00 €",
-          "Авторизация: чип + ПИН, барлық операцияға расталды",
-          "Барлығы дауланады: −3 500,00 €"
-        ]
+        "ru": "Два снятия выполнены 12 марта в банкомате в 250 метрах от дома физическим чипом и ПИН-кодом. Ещё 1000 евро переведены на второй счёт Назарова.",
+        "en": "Two withdrawals were made on March 12 at an ATM 250 meters from Nazarov's home using the physical chip and PIN. Another €1,000 was transferred to Nazarov's second account.",
+        "tr": "Two withdrawals were made on March 12 at an ATM 250 meters from Nazarov's home using the physical chip and PIN. Another €1,000 was transferred to Nazarov's second account.",
+        "ar": "Two withdrawals were made on March 12 at an ATM 250 meters from Nazarov's home using the physical chip and PIN. Another €1,000 was transferred to Nazarov's second account.",
+        "kk": "Два снятия выполнены 12 марта в банкомате в 250 метрах от дома физическим чипом и ПИН-кодом. Ещё 1000 евро переведены на второй счёт Назарова."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Операции совершены в банкомате в 250 м от дома 12 марта, когда клиент якобы был за границей, а 1000 € переведены на его же счёт •••• 4471 — деньги не похищены, а переведены себе.",
-        "en": "The transactions were made at an ATM 250 m from his home on March 12, when the client claimed to be abroad, and €1,000 went to his own account •••• 4471 — the money was not stolen but moved to himself.",
-        "tr": "İşlemler, müşterinin yurt dışında olduğunu iddia ettiği 12 Mart'ta evine 250 m mesafedeki bir ATM'de yapıldı ve 1.000 € kendi hesabı •••• 4471'e gitti — para çalınmadı, kendisine aktarıldı.",
-        "ar": "أُجريت العمليات في صراف على بُعد 250 م من منزله في 12 مارس، حين زعم العميل أنه بالخارج، وحُوّل 1000 € إلى حسابه الخاص •••• 4471 — لم تُسرق الأموال بل نُقلت إليه نفسه.",
-        "kk": "Операциялар клиент шетелде деген 12 наурызда үйден 250 м қашықтықтағы банкоматта жасалған, ал 1000 € оның өз шоты •••• 4471-ге аударылған — ақша ұрланбаған, өзіне көшірілген."
+        "ru": "Операции совершены оригинальной картой, а часть денег заявитель перевёл самому себе.",
+        "en": "The transactions used the original card, and part of the money was transferred back to the claimant.",
+        "tr": "The transactions used the original card, and part of the money was transferred back to the claimant.",
+        "ar": "The transactions used the original card, and part of the money was transferred back to the claimant.",
+        "kk": "Операции совершены оригинальной картой, а часть денег заявитель перевёл самому себе."
       },
-      "meta": {
-        "bankName": {
-          "ru": "Расчётный отдел № 23",
-          "en": "Settlement Office 23",
-          "tr": "BaşkentBank",
-          "ar": "كابيتال بنك",
-          "kk": "АстанаБанк"
-        },
-        "accountMask": "•••• •••• •••• 4471"
-      }
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_money_lost",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Операции совершены оригинальной картой, а часть денег заявитель перевёл самому себе.",
+          "en": "The transactions used the original card, and part of the money was transferred back to the claimant.",
+          "tr": "The transactions used the original card, and part of the money was transferred back to the claimant.",
+          "ar": "The transactions used the original card, and part of the money was transferred back to the claimant.",
+          "kk": "Операции совершены оригинальной картой, а часть денег заявитель перевёл самому себе."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_money_lost",
+        "reason": {
+          "ru": "Операции совершены оригинальной картой, а часть денег заявитель перевёл самому себе.",
+          "en": "The transactions used the original card, and part of the money was transferred back to the claimant.",
+          "tr": "The transactions used the original card, and part of the money was transferred back to the claimant.",
+          "ar": "The transactions used the original card, and part of the money was transferred back to the claimant.",
+          "kk": "Операции совершены оригинальной картой, а часть денег заявитель перевёл самому себе."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
-      "id": "ev-police",
-      "type": "document",
+      "id": "ev-doorcam",
+      "order": 3,
+      "type": "camera_recording",
       "title": {
-        "ru": "Заявление в полицию",
-        "en": "Police Report",
-        "tr": "Polis Tutanağı",
-        "ar": "محضر الشرطة",
-        "kk": "Полицияға арыз"
+        "ru": "Камера у дома",
+        "en": "Camera Outside the House",
+        "tr": "Camera Outside the House",
+        "ar": "Camera Outside the House",
+        "kk": "Камера у дома"
       },
       "content": {
-        "ru": "Зарегистрированное заявление о краже банковской карты от 18 марта. Содержит описание со слов заявителя; факт хищения средств полицией не подтверждён, ведётся проверка.",
-        "en": "A registered report of a stolen bank card filed on March 18. It records the claimant's own account; the theft of funds is not confirmed by police and an inquiry is ongoing.",
-        "tr": "18 Mart'ta verilen, banka kartı hırsızlığına ilişkin kayıtlı bir tutanak. Başvuranın kendi beyanını içerir; para hırsızlığı polisçe doğrulanmamış olup inceleme sürüyor.",
-        "ar": "بلاغ مسجّل عن سرقة بطاقة مصرفية قُدّم في 18 مارس. يتضمن رواية مقدّم الطلب نفسه؛ ولم تؤكد الشرطة سرقة الأموال والتحقيق جارٍ.",
-        "kk": "18 наурызда берілген банк картасының ұрлануы туралы тіркелген арыз. Онда арыз иесінің сөзінен жазылған; қаражаттың ұрлануын полиция растамаған, тексеру жүргізілуде."
-      },
-      "isContradiction": false,
-      "contradictionExplanation": {
-        "ru": "Заявление подлинное и лишь фиксирует слова клиента; само по себе оно не доказывает ни кражу, ни мошенничество.",
-        "en": "The report is genuine and merely records the client's statement; on its own it proves neither theft nor fraud.",
-        "tr": "Tutanak gerçektir ve yalnızca müşterinin beyanını kaydeder; tek başına ne hırsızlığı ne de dolandırıcılığı kanıtlar.",
-        "ar": "المحضر أصلي ويسجّل فقط أقوال العميل؛ وهو بمفرده لا يثبت سرقة ولا احتيالًا.",
-        "kk": "Арыз шынайы әрі тек клиенттің сөзін тіркейді; өздігінен ол ұрлықты да, алаяқтықты да дәлелдемейді."
-      }
-    },
-    {
-      "id": "ev-atm",
-      "type": "photo",
-      "title": {
-        "ru": "Снимок зоны банкомата",
-        "en": "ATM Area Still",
-        "tr": "ATM Bölgesi Karesi",
-        "ar": "لقطة منطقة الصراف",
-        "kk": "Банкомат аймағының суреті"
-      },
-      "content": {
-        "ru": "Кадр охранной камеры у банкомата «Столица-217» на ул. Садовой: видна зона выдачи купюр и спина клиента в момент операции 12 марта. Лица не разобрать, но локация и время совпадают с выпиской.",
-        "en": "A security-camera frame at ATM “Stolitsa-217” on Sadovaya St.: the cash-dispense area and a customer's back are visible during the March 12 operation. The face is unclear, but the location and time match the statement.",
-        "tr": "Sadovaya Caddesi'ndeki “Stolitsa-217” ATM'sinde bir güvenlik kamerası karesi: 12 Mart işlemi sırasında para verme alanı ve bir müşterinin sırtı görülüyor. Yüz net değil ama konum ve zaman ekstreyle örtüşüyor.",
-        "ar": "لقطة من كاميرا مراقبة عند صراف «ستوليتسا-217» في شارع سادوفايا: تظهر منطقة صرف النقد وظهر زبون أثناء عملية 12 مارس. الوجه غير واضح، لكن الموقع والوقت يطابقان الكشف.",
-        "kk": "Садовая көшесіндегі «Столица-217» банкоматындағы күзет камерасының кадры: 12 наурыздағы операция кезінде ақша беру аймағы мен клиенттің арқасы көрінеді. Беті анық емес, бірақ орны мен уақыты үзіндіге сәйкес келеді."
-      },
-      "isContradiction": false,
-      "contradictionExplanation": {
-        "ru": "Снимок подлинный и подтверждает место и время операции; сам по себе он не уличает заявителя, так как лицо неразличимо.",
-        "en": "The still is genuine and confirms the place and time of the operation; on its own it does not incriminate the claimant since the face is indistinct.",
-        "tr": "Kare gerçektir ve işlemin yerini ve zamanını doğrular; yüz seçilemediği için tek başına başvuranı suçlamaz.",
-        "ar": "اللقطة أصلية وتؤكد مكان العملية ووقتها؛ ولا تُدين مقدّم الطلب بمفردها لأن الوجه غير واضح.",
-        "kk": "Сурет шынайы әрі операцияның орны мен уақытын растайды; беті анық болмағандықтан, өздігінен арыз иесін әшкерелемейді."
-      },
-      "meta": {
-        "filename": "IMG_20260312_091418.jpg",
-        "imageUrl": "evidence/case-023-ev-atm.jpg"
-      }
-    },
-    {
-      "id": "ev-issuer",
-      "type": "document",
-      "title": {
-        "ru": "Письмо банка-эмитента",
-        "en": "Card Issuer Letter",
-        "tr": "Kart Çıkaran Banka Mektubu",
-        "ar": "خطاب الجهة المُصدِرة للبطاقة",
-        "kk": "Карта эмитентінің хаты"
-      },
-      "content": {
-        "ru": "Платёжный департамент подтверждает: все оспариваемые операции выполнены физическим чипом карты с вводом корректного ПИН-кода. Признаков клонирования, скимминга или операций без чипа не выявлено. Карта в момент операций не была заблокирована.",
-        "en": "The payments department confirms: all disputed operations were performed with the card's physical chip and the correct PIN entered. No signs of cloning, skimming, or card-not-present operations were found. The card was not blocked at the time of the operations.",
-        "tr": "Ödeme departmanı doğruluyor: itiraz edilen tüm işlemler kartın fiziksel çipiyle ve doğru PIN girilerek yapıldı. Kopyalama, skimming veya çipsiz işlem belirtisi bulunamadı. Kart işlemler sırasında bloke değildi.",
-        "ar": "تؤكد إدارة المدفوعات: نُفِّذت جميع العمليات المتنازع عليها بالشريحة الفعلية للبطاقة مع إدخال الرقم السري الصحيح. لم تُكتشف أي علامات استنساخ أو نسخ مغناطيسي أو عمليات بدون بطاقة. ولم تكن البطاقة محظورة وقت العمليات.",
-        "kk": "Төлем департаменті растайды: дауланатын барлық операция картаның физикалық чипімен әрі дұрыс ПИН-код енгізумен орындалған. Көшіру, скимминг немесе чипсіз операция белгілері табылмаған. Карта операция кезінде бұғатталмаған."
+        "ru": "За вечер до вылета Назаров передаёт двоюродному брату конверт и отдельно диктует четыре цифры. Брат позже опознан на камере банкомата по куртке и часам.",
+        "en": "The evening before his flight, Nazarov hands his cousin an envelope and separately dictates four digits. The cousin is later identified on the ATM camera by his jacket and watch.",
+        "tr": "The evening before his flight, Nazarov hands his cousin an envelope and separately dictates four digits. The cousin is later identified on the ATM camera by his jacket and watch.",
+        "ar": "The evening before his flight, Nazarov hands his cousin an envelope and separately dictates four digits. The cousin is later identified on the ATM camera by his jacket and watch.",
+        "kk": "За вечер до вылета Назаров передаёт двоюродному брату конверт и отдельно диктует четыре цифры. Брат позже опознан на камере банкомата по куртке и часам."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Эмитент подтверждает чип + ПИН по всем операциям — карту нельзя было использовать без оригинала и кода, что опровергает версию о краже и клонировании.",
-        "en": "The issuer confirms chip + PIN on every operation — the card could not be used without the original and the code, which refutes the stolen-and-cloned story.",
-        "tr": "İhraççı her işlemde çip + PIN'i doğruluyor — kart, orijinali ve kod olmadan kullanılamazdı; bu da çalınma ve kopyalama iddiasını çürütüyor.",
-        "ar": "تؤكد الجهة المُصدِرة الشريحة + الرقم السري في كل عملية — لم يكن ممكنًا استخدام البطاقة دون الأصل والرمز، ما يدحض رواية السرقة والاستنساخ.",
-        "kk": "Эмитент әр операцияда чип + ПИН расталғанын растайды — картаны түпнұсқа мен кодсыз қолдану мүмкін емес, бұл ұрлау мен көшіру нұсқасын теріске шығарады."
+        "ru": "Заявитель добровольно оставил карту и ПИН сообщнику до поездки.",
+        "en": "The claimant deliberately left the card and PIN with an accomplice before traveling.",
+        "tr": "The claimant deliberately left the card and PIN with an accomplice before traveling.",
+        "ar": "The claimant deliberately left the card and PIN with an accomplice before traveling.",
+        "kk": "Заявитель добровольно оставил карту и ПИН сообщнику до поездки."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_no_access",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Заявитель добровольно оставил карту и ПИН сообщнику до поездки.",
+          "en": "The claimant deliberately left the card and PIN with an accomplice before traveling.",
+          "tr": "The claimant deliberately left the card and PIN with an accomplice before traveling.",
+          "ar": "The claimant deliberately left the card and PIN with an accomplice before traveling.",
+          "kk": "Заявитель добровольно оставил карту и ПИН сообщнику до поездки."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_no_access",
+        "reason": {
+          "ru": "Заявитель добровольно оставил карту и ПИН сообщнику до поездки.",
+          "en": "The claimant deliberately left the card and PIN with an accomplice before traveling.",
+          "tr": "The claimant deliberately left the card and PIN with an accomplice before traveling.",
+          "ar": "The claimant deliberately left the card and PIN with an accomplice before traveling.",
+          "kk": "Заявитель добровольно оставил карту и ПИН сообщнику до поездки."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/case-023-ev-doorcam.webp"
       }
+    },
+    {
+      "id": "ev-transfer",
+      "order": 4,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Платёж за услугу",
+        "en": "Payment for Assistance",
+        "tr": "Payment for Assistance",
+        "ar": "Payment for Assistance",
+        "kk": "Платёж за услугу"
+      },
+      "content": {
+        "ru": "После возвращения Назаров переводит брату 300 евро с пометкой «за помощь». В переписке обсуждается доля после страхового возврата.",
+        "en": "After returning, Nazarov transfers €300 to his cousin with the note ‘for helping.’ Their messages discuss a share of the insurance reimbursement.",
+        "tr": "After returning, Nazarov transfers €300 to his cousin with the note ‘for helping.’ Their messages discuss a share of the insurance reimbursement.",
+        "ar": "After returning, Nazarov transfers €300 to his cousin with the note ‘for helping.’ Their messages discuss a share of the insurance reimbursement.",
+        "kk": "После возвращения Назаров переводит брату 300 евро с пометкой «за помощь». В переписке обсуждается доля после страхового возврата."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Перевод и переписка подтверждают сговор, а не кражу.",
+        "en": "The transfer and messages prove collusion, not theft.",
+        "tr": "The transfer and messages prove collusion, not theft.",
+        "ar": "The transfer and messages prove collusion, not theft.",
+        "kk": "Перевод и переписка подтверждают сговор, а не кражу."
+      },
+      "narrativeRole": "motive",
+      "statementLink": {
+        "statementId": "claim_card_stolen",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Перевод и переписка подтверждают сговор, а не кражу.",
+          "en": "The transfer and messages prove collusion, not theft.",
+          "tr": "The transfer and messages prove collusion, not theft.",
+          "ar": "The transfer and messages prove collusion, not theft.",
+          "kk": "Перевод и переписка подтверждают сговор, а не кражу."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_card_stolen",
+        "reason": {
+          "ru": "Перевод и переписка подтверждают сговор, а не кражу.",
+          "en": "The transfer and messages prove collusion, not theft.",
+          "tr": "The transfer and messages prove collusion, not theft.",
+          "ar": "The transfer and messages prove collusion, not theft.",
+          "kk": "Перевод и переписка подтверждают сговор, а не кражу."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Снятия сделаны в банкомате в 250 м от дома, а 1000 € ушли на собственный счёт клиента.",
-      "Эмитент подтвердил чип + ПИН по всем операциям — кражи и клонирования не было.",
-      "Заявление мошенническое, его следует отклонить."
+      "Назаров действительно был за границей.",
+      "Карту и ПИН он заранее передал сообщнику, который снял деньги рядом с его домом.",
+      "Часть суммы вернулась на собственный счёт заявителя. Это согласованная инсценировка, выплату следует отклонить."
     ],
     "en": [
-      "The withdrawals were made at an ATM 250 m from his home, and €1,000 went to the client's own account.",
-      "The issuer confirmed chip + PIN on every operation — there was no theft or cloning.",
+      "The transactions used the original card, and part of the money was transferred back to the claimant.",
+      "The claimant deliberately left the card and PIN with an accomplice before traveling.",
+      "The transfer and messages prove collusion, not theft.",
+      "The trip is confirmed, but the documents do not establish where the card was.",
       "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "Para çekmeler evine 250 m mesafedeki bir ATM'de yapıldı ve 1.000 € müşterinin kendi hesabına gitti.",
-      "İhraççı her işlemde çip + PIN'i doğruladı — hırsızlık ya da kopyalama yoktu.",
-      "Talep hileli ve reddedilmeli."
+      "The transactions used the original card, and part of the money was transferred back to the claimant.",
+      "The claimant deliberately left the card and PIN with an accomplice before traveling.",
+      "The transfer and messages prove collusion, not theft.",
+      "The trip is confirmed, but the documents do not establish where the card was.",
+      "The claim is fraudulent and should be rejected."
     ],
     "ar": [
-      "تمت عمليات السحب في صراف على بُعد 250 م من منزله، وذهب 1000 € إلى حساب العميل الخاص.",
-      "أكدت الجهة المُصدِرة الشريحة + الرقم السري في كل عملية — لم تكن هناك سرقة ولا استنساخ.",
-      "المطالبة احتيالية ويجب رفضها."
+      "The transactions used the original card, and part of the money was transferred back to the claimant.",
+      "The claimant deliberately left the card and PIN with an accomplice before traveling.",
+      "The transfer and messages prove collusion, not theft.",
+      "The trip is confirmed, but the documents do not establish where the card was.",
+      "The claim is fraudulent and should be rejected."
     ],
     "kk": [
-      "Ақша үйден 250 м қашықтықтағы банкоматтан алынған, ал 1000 € клиенттің өз шотына кеткен.",
-      "Эмитент әр операцияда чип + ПИН растады — ұрлық та, көшіру де болмаған.",
-      "Талап алаяқтық, оны қабылдамау керек."
+      "Назаров действительно был за границей.",
+      "Карту и ПИН он заранее передал сообщнику, который снял деньги рядом с его домом.",
+      "Часть суммы вернулась на собственный счёт заявителя. Это согласованная инсценировка, выплату следует отклонить."
     ]
+  },
+  "investigationBudget": 3,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Во время отпуска за границей у меня украли карту и сняли с неё 3500 евро. В России меня не было, операции я не совершал и никому карту не передавал. Прошу вернуть похищенные средства.",
+        "en": "While I was on vacation abroad, my card was stolen and €3,500 was withdrawn from it. I was not in Russia, did not make the transactions, and never gave the card to anyone. I am claiming reimbursement of the stolen funds.",
+        "tr": "While I was on vacation abroad, my card was stolen and €3,500 was withdrawn from it. I was not in Russia, did not make the transactions, and never gave the card to anyone. I am claiming reimbursement of the stolen funds.",
+        "ar": "While I was on vacation abroad, my card was stolen and €3,500 was withdrawn from it. I was not in Russia, did not make the transactions, and never gave the card to anyone. I am claiming reimbursement of the stolen funds.",
+        "kk": "Во время отпуска за границей у меня украли карту и сняли с неё 3500 евро. В России меня не было, операции я не совершал и никому карту не передавал. Прошу вернуть похищенные средства."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_card_stolen",
+      "text": {
+        "ru": "Банковская карта была похищена без согласия Назарова.",
+        "en": "The bank card was stolen without Nazarov's consent.",
+        "tr": "The bank card was stolen without Nazarov's consent.",
+        "ar": "The bank card was stolen without Nazarov's consent.",
+        "kk": "Банковская карта была похищена без согласия Назарова."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_no_access",
+      "text": {
+        "ru": "Заявитель не передавал никому карту и ПИН.",
+        "en": "The claimant gave neither the card nor the PIN to anyone.",
+        "tr": "The claimant gave neither the card nor the PIN to anyone.",
+        "ar": "The claimant gave neither the card nor the PIN to anyone.",
+        "kk": "Заявитель не передавал никому карту и ПИН."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_money_lost",
+      "text": {
+        "ru": "Снятые средства не возвращались заявителю.",
+        "en": "None of the withdrawn funds were returned to the claimant.",
+        "tr": "None of the withdrawn funds were returned to the claimant.",
+        "ar": "None of the withdrawn funds were returned to the claimant.",
+        "kk": "Снятые средства не возвращались заявителю."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Билет подтверждает поездку человека, но не поездку его банковской карты. Отслеживайте предмет отдельно от владельца. — В. Лебедева",
+      "en": "A ticket proves that a person traveled, not that their bank card traveled with them. Track the object separately from its owner. — V. Lebedeva",
+      "tr": "A ticket proves that a person traveled, not that their bank card traveled with them. Track the object separately from its owner. — V. Lebedeva",
+      "ar": "A ticket proves that a person traveled, not that their bank card traveled with them. Track the object separately from its owner. — V. Lebedeva",
+      "kk": "Билет подтверждает поездку человека, но не поездку его банковской карты. Отслеживайте предмет отдельно от владельца. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Карелин любил повторять: «Проверяйте не алиби человека, а маршрут имущества». Неприятно признавать, что совет всё ещё хорош.",
+      "en": "Karelin liked to say, ‘Check the route of the property, not the owner's alibi.’ It is unpleasant to admit that the advice is still sound.",
+      "tr": "Karelin liked to say, ‘Check the route of the property, not the owner's alibi.’ It is unpleasant to admit that the advice is still sound.",
+      "ar": "Karelin liked to say, ‘Check the route of the property, not the owner's alibi.’ It is unpleasant to admit that the advice is still sound.",
+      "kk": "Карелин любил повторять: «Проверяйте не алиби человека, а маршрут имущества». Неприятно признавать, что совет всё ещё хорош."
+    },
+    "nextCaseTeaser": {
+      "ru": "Следующее ДТП выглядит слишком простым. Оно и есть простое — если не перепутать отсутствие загадки с отсутствием проверки.",
+      "en": "The next traffic accident looks almost too simple. It is simple—provided you do not mistake the absence of a mystery for the absence of verification.",
+      "tr": "The next traffic accident looks almost too simple. It is simple—provided you do not mistake the absence of a mystery for the absence of verification.",
+      "ar": "The next traffic accident looks almost too simple. It is simple—provided you do not mistake the absence of a mystery for the absence of verification.",
+      "kk": "Следующее ДТП выглядит слишком простым. Оно и есть простое — если не перепутать отсутствие загадки с отсутствием проверки."
+    },
+    "seasonClue": null,
+    "epilogue": null
   }
 }

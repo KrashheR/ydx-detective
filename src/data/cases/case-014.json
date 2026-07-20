@@ -1,261 +1,470 @@
 {
   "id": "case-014",
   "type": "standard",
+  "campaignOrder": 16,
+  "requiredLevel": 8,
+  "act": 2,
+  "actTitle": {
+    "ru": "Пять лет назад",
+    "en": "Five Years Earlier",
+    "tr": "Five Years Earlier",
+    "ar": "Five Years Earlier",
+    "kk": "Пять лет назад"
+  },
   "difficulty": "medium",
   "claimAmount": 13000,
   "truth": "valid",
   "title": {
-    "ru": "Град на пшеничном поле",
-    "en": "Hail on the Wheat Field",
-    "tr": "Buğday Tarlasında Dolu",
-    "ar": "البَرَد على حقل القمح",
-    "kk": "Бидай алқабындағы бұршақ"
+    "ru": "Белая полоса над полем",
+    "en": "A White Streak Across the Field",
+    "tr": "A White Streak Across the Field",
+    "ar": "A White Streak Across the Field",
+    "kk": "Белая полоса над полем"
   },
   "claim": {
     "person": {
       "ru": "Болат Жумабеков, 53 года",
-      "en": "Bolat Zhumabekov, 53",
-      "tr": "Bolat Jumabekov, 53",
-      "ar": "بولات جومابيكوف، 53",
-      "kk": "Болат Жұмабеков, 53 жаста"
+      "en": "Bolat Zhumabekov, age 53",
+      "tr": "Bolat Zhumabekov, age 53",
+      "ar": "Bolat Zhumabekov, age 53",
+      "kk": "Болат Жумабеков, 53 года"
     },
     "story": {
-      "ru": "В июле над моими полями прошёл сильный град. Колосья пшеницы полностью полегли и были выбиты. Прошу компенсацию за погибший урожай.",
-      "en": "In July a severe hailstorm passed over my fields. The wheat ears were completely flattened and beaten down. I request compensation for the lost harvest.",
-      "tr": "Temmuzda tarlalarımın üzerinden şiddetli bir dolu fırtınası geçti. Buğday başakları tamamen yatıp ezildi. Kaybolan hasat için tazminat talep ediyorum.",
-      "ar": "في يوليو مرّت عاصفة بَرَد شديدة فوق حقولي. تسطّحت سنابل القمح وتحطّمت تمامًا. أطلب تعويضًا عن المحصول الضائع.",
-      "kk": "Шілдеде менің егістігімнің үстінен қатты бұршақ өтті. Бидай масақтары толығымен жатып, ұрып тасталды. Жоғалған өнім үшін өтемақы сұраймын."
+      "ru": "Сильный град прошёл узкой полосой через моё пшеничное поле и уничтожил посевы почти на половине участка. Прошу компенсировать подтверждённую потерю урожая — 13 000 евро.",
+      "en": "A severe hailstorm cut a narrow path across my wheat field and destroyed crops on almost half the land. I am claiming €13,000 for the documented crop loss.",
+      "tr": "A severe hailstorm cut a narrow path across my wheat field and destroyed crops on almost half the land. I am claiming €13,000 for the documented crop loss.",
+      "ar": "A severe hailstorm cut a narrow path across my wheat field and destroyed crops on almost half the land. I am claiming €13,000 for the documented crop loss.",
+      "kk": "Сильный град прошёл узкой полосой через моё пшеничное поле и уничтожил посевы почти на половине участка. Прошу компенсировать подтверждённую потерю урожая — 13 000 евро."
     }
   },
-  "coverImage": "covers/case-014.svg",
-  "personImage": "people/bolat.webp",
   "client": {
     "role": {
-      "ru": "Заявитель · физ. лицо",
-      "en": "Claimant · individual",
-      "tr": "Başvuru sahibi · gerçek kişi",
-      "ar": "مقدم الطلب · شخص طبيعي",
-      "kk": "Өтініш беруші · жеке тұлға"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Возраст",
-          "en": "Age",
-          "tr": "Yaş",
-          "ar": "العمر",
-          "kk": "Жасы"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "53 года",
-          "en": "53 years old",
-          "tr": "53 yaşında",
-          "ar": "53 عامًا",
-          "kk": "53 жаста"
+          "ru": "2",
+          "en": "2",
+          "tr": "2",
+          "ar": "2",
+          "kk": "2"
         }
       },
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Астана",
-          "en": "Astana",
-          "tr": "Astana",
-          "ar": "أستانا",
-          "kk": "Астана"
-        }
-      },
-      {
-        "k": {
-          "ru": "Клиент с",
-          "en": "Client since",
-          "tr": "Müşteri",
-          "ar": "عميل منذ",
-          "kk": "Клиент"
-        },
-        "v": {
-          "ru": "2009 г.",
-          "en": "2009",
-          "tr": "2009",
-          "ar": "2009",
-          "kk": "2009 ж."
-        }
-      },
-      {
-        "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
-        },
-        "v": {
-          "ru": "Агро · АГ-14189562-X4",
-          "en": "Agriculture · AG-14189562-X4",
-          "tr": "Tarım · AG-14189562-X4",
-          "ar": "الزراعة · AG-14189562-X4",
-          "kk": "Агро · АГ-14189562-X4"
-        }
-      },
-      {
-        "k": {
-          "ru": "Документ",
-          "en": "Document",
-          "tr": "Belge",
-          "ar": "الوثيقة",
-          "kk": "Құжат"
-        },
-        "v": {
-          "ru": "Паспорт KZ-X8 002786431-581034",
-          "en": "Passport KZ-X8 002786431-581034",
-          "tr": "Pasaport KZ-X8 002786431-581034",
-          "ar": "جواز السفر KZ-X8 002786431-581034",
-          "kk": "Паспорт KZ-X8 002786431-581034"
+          "ru": "16",
+          "en": "16",
+          "tr": "16",
+          "ar": "16",
+          "kk": "16"
         }
       }
     ]
   },
+  "coverImage": "covers/case-014.svg",
+  "personImage": "people/bolat.webp",
   "evidences": [
     {
-      "id": "ev-meteo",
+      "id": "ev-weather",
+      "order": 1,
       "type": "document",
       "title": {
-        "ru": "Метеорологическая сводка",
-        "en": "Meteorological Report",
-        "tr": "Meteoroloji Raporu",
-        "ar": "تقرير الأرصاد الجوية",
-        "kk": "Метеорологиялық анықтама"
+        "ru": "Радар осадков",
+        "en": "Weather Radar",
+        "tr": "Weather Radar",
+        "ar": "Weather Radar",
+        "kk": "Радар осадков"
       },
       "content": {
-        "ru": "Гидрометцентр подтверждает сильный град диаметром до 3 см над районом 12 июля, в день, указанный в заявлении.",
-        "en": "The weather service confirms severe hail up to 3 cm in diameter over the district on 12 July, the date stated in the claim.",
-        "tr": "Meteoroloji servisi, talepte belirtilen tarih olan 12 Temmuz'da bölge üzerinde 3 cm çapına varan şiddetli dolu olduğunu doğruluyor.",
-        "ar": "تؤكد دائرة الأرصاد سقوط بَرَد شديد يصل قطره إلى 3 سم فوق المنطقة في 12 يوليو، وهو التاريخ المذكور في المطالبة.",
-        "kk": "Гидрометорталық талапта көрсетілген 12 шілде күні аудан үстінде диаметрі 3 см дейінгі қатты бұршақ болғанын растайды."
+        "ru": "Метеослужба фиксирует градовую ячейку шириной 1,8 км, прошедшую через участок Жумабекова в 16:22.",
+        "en": "The weather service recorded a 1.8 km-wide hail cell crossing Zhumabekov's land at 4:22 p.m.",
+        "tr": "The weather service recorded a 1.8 km-wide hail cell crossing Zhumabekov's land at 4:22 p.m.",
+        "ar": "The weather service recorded a 1.8 km-wide hail cell crossing Zhumabekov's land at 4:22 p.m.",
+        "kk": "Метеослужба фиксирует градовую ячейку шириной 1,8 км, прошедшую через участок Жумабекова в 16:22."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Сводка совпадает с датой и местом происшествия и подтверждает рассказ фермера.",
-        "en": "The report matches the date and location and supports the farmer's account.",
-        "tr": "Rapor, olayın tarihi ve yeriyle örtüşüyor ve çiftçinin anlatımını destekliyor.",
-        "ar": "يتطابق التقرير مع تاريخ ومكان الحادث ويدعم رواية المزارع.",
-        "kk": "Анықтама оқиға күні мен орнына сәйкес келіп, фермердің әңгімесін растайды."
-      }
+        "ru": "Погода, время и направление подтверждаются независимыми данными.",
+        "en": "Independent data confirms the weather, time, and direction.",
+        "tr": "Independent data confirms the weather, time, and direction.",
+        "ar": "Independent data confirms the weather, time, and direction.",
+        "kk": "Погода, время и направление подтверждаются независимыми данными."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_event_time",
+        "relation": "supports",
+        "reason": {
+          "ru": "Погода, время и направление подтверждаются независимыми данными.",
+          "en": "Independent data confirms the weather, time, and direction.",
+          "tr": "Independent data confirms the weather, time, and direction.",
+          "ar": "Independent data confirms the weather, time, and direction.",
+          "kk": "Погода, время и направление подтверждаются независимыми данными."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
-      "id": "ev-aerial",
-      "type": "photo",
+      "id": "ev-satellite",
+      "order": 2,
+      "type": "shadow_time_check",
       "title": {
-        "ru": "Снимки поля с дрона",
-        "en": "Aerial Field Photos",
-        "tr": "Havadan Tarla Fotoğrafları",
-        "ar": "صور جوية للحقل",
-        "kk": "Алқаптың дрондан түсірілген суреттері"
+        "ru": "Проверка времени полевого снимка",
+        "en": "Field Photograph Time Check",
+        "tr": "Field Photograph Time Check",
+        "ar": "Field Photograph Time Check",
+        "kk": "Проверка времени полевого снимка"
       },
       "content": {
-        "ru": "Аэрофотоснимки показывают полегшую пшеницу с характерным рисунком повреждений от града по всей площади поля.",
-        "en": "Aerial photos show flattened wheat with the characteristic hail-damage pattern across the entire field.",
-        "tr": "Havadan çekilen fotoğraflar, tüm tarla boyunca dolu hasarına özgü desenle yatmış buğdayı gösteriyor.",
-        "ar": "تُظهر الصور الجوية قمحًا متسطّحًا بنمط الضرر المميّز للبَرَد عبر الحقل بأكمله.",
-        "kk": "Әуеден түсірілген суреттер бүкіл алқап бойынша бұршаққа тән зақым өрнегімен жатқан бидайды көрсетеді."
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Картина повреждений соответствует граду и масштабу заявленного ущерба.",
-        "en": "The damage pattern matches hail and the scale of the claimed loss.",
-        "tr": "Hasar deseni doluyla ve iddia edilen kaybın ölçeğiyle uyumlu.",
-        "ar": "نمط الضرر يتوافق مع البَرَد ومع حجم الخسارة المُطالَب بها.",
-        "kk": "Зақым өрнегі бұршаққа және мәлімделген зиян көлеміне сәйкес келеді."
+        "ru": "Снимок сделан в 16:20–16:40 сразу после града; светлая полоса относится к заявленному событию.",
+        "en": "The photograph was taken between 4:20 and 4:40 p.m., immediately after the hail; the pale streak belongs to the reported event.",
+        "tr": "The photograph was taken between 4:20 and 4:40 p.m., immediately after the hail; the pale streak belongs to the reported event.",
+        "ar": "The photograph was taken between 4:20 and 4:40 p.m., immediately after the hail; the pale streak belongs to the reported event.",
+        "kk": "Снимок сделан в 16:20–16:40 сразу после града; светлая полоса относится к заявленному событию."
       },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_event_time",
+        "relation": "supports",
+        "reason": {
+          "ru": "Снимок сделан в 16:20–16:40 сразу после града; светлая полоса относится к заявленному событию.",
+          "en": "The photograph was taken between 4:20 and 4:40 p.m., immediately after the hail; the pale streak belongs to the reported event.",
+          "tr": "The photograph was taken between 4:20 and 4:40 p.m., immediately after the hail; the pale streak belongs to the reported event.",
+          "ar": "The photograph was taken between 4:20 and 4:40 p.m., immediately after the hail; the pale streak belongs to the reported event.",
+          "kk": "Снимок сделан в 16:20–16:40 сразу после града; светлая полоса относится к заявленному событию."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
       "meta": {
-        "filename": "DJI_20260712_143221.jpg",
-        "imageUrl": "evidence/case-014-ev-aerial.webp"
+        "imageUrl": "evidence/case-014-ev-satellite.webp"
+      },
+      "description": {
+        "ru": "Агроном сфотографировал границу повреждений; положение межевого столба нанесено на план участка.",
+        "en": "An agronomist photographed the boundary of the damage; the survey post is marked on the field plan.",
+        "tr": "An agronomist photographed the boundary of the damage; the survey post is marked on the field plan.",
+        "ar": "An agronomist photographed the boundary of the damage; the survey post is marked on the field plan.",
+        "kk": "Агроном сфотографировал границу повреждений; положение межевого столба нанесено на план участка."
+      },
+      "instruction": {
+        "ru": "Сопоставить тень межевого столба со временем прохождения грозы.",
+        "en": "Match the survey post's shadow to the storm's recorded time.",
+        "tr": "Match the survey post's shadow to the storm's recorded time.",
+        "ar": "Match the survey post's shadow to the storm's recorded time.",
+        "kk": "Сопоставить тень межевого столба со временем прохождения грозы."
+      },
+      "previousType": "photo",
+      "assets": {
+        "asset1": "cases/case-014/assets/interactive/ev-satellite-scene.webp",
+        "asset2": "cases/case-014/assets/interactive/ev-satellite-shadow-reference.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Интерактив подтверждает, что полоса повреждения появилась после конкретной градовой ячейки, а не была старой.",
+          "en": "The interaction confirms that the damage streak was caused by this hail cell and was not pre-existing.",
+          "tr": "The interaction confirms that the damage streak was caused by this hail cell and was not pre-existing.",
+          "ar": "The interaction confirms that the damage streak was caused by this hail cell and was not pre-existing.",
+          "kk": "Интерактив подтверждает, что полоса повреждения появилась после конкретной градовой ячейки, а не была старой."
+        },
+        "playerAction": {
+          "ru": "Сопоставить тень межевого столба со временем прохождения грозы.",
+          "en": "Match the survey post's shadow to the storm's recorded time.",
+          "tr": "Match the survey post's shadow to the storm's recorded time.",
+          "ar": "Match the survey post's shadow to the storm's recorded time.",
+          "kk": "Сопоставить тень межевого столба со временем прохождения грозы."
+        },
+        "conclusion": {
+          "ru": "Снимок сделан в 16:20–16:40 сразу после града; светлая полоса относится к заявленному событию.",
+          "en": "The photograph was taken between 4:20 and 4:40 p.m., immediately after the hail; the pale streak belongs to the reported event.",
+          "tr": "The photograph was taken between 4:20 and 4:40 p.m., immediately after the hail; the pale streak belongs to the reported event.",
+          "ar": "The photograph was taken between 4:20 and 4:40 p.m., immediately after the hail; the pale streak belongs to the reported event.",
+          "kk": "Снимок сделан в 16:20–16:40 сразу после града; светлая полоса относится к заявленному событию."
+        }
+      },
+      "data": {
+        "claimedTime": "16:22",
+        "orientationSource": "Геодезический план участка",
+        "slider": {
+          "from": "06:00",
+          "to": "21:00",
+          "stepMinutes": 10
+        },
+        "shadowOrigin": {
+          "x": 44,
+          "y": 65
+        },
+        "referenceShadow": {
+          "baseAngle": 0,
+          "baseLength": 100,
+          "width": 20,
+          "opacity": 0.34
+        },
+        "timeSamples": [
+          {
+            "time": "08:00",
+            "angle": 72,
+            "length": 126
+          },
+          {
+            "time": "12:00",
+            "angle": 10,
+            "length": 50
+          },
+          {
+            "time": "16:20",
+            "angle": -43,
+            "length": 93
+          },
+          {
+            "time": "20:00",
+            "angle": -75,
+            "length": 149
+          }
+        ],
+        "validTimeRanges": [
+          {
+            "from": "16:20",
+            "to": "16:40"
+          }
+        ],
+        "matchTolerance": {
+          "angle": 8,
+          "length": 16
+        },
+        "orientationSourceEn": "Land survey plan"
       }
     },
     {
-      "id": "ev-agronomist",
+      "id": "ev-agro",
+      "order": 3,
       "type": "document",
       "title": {
         "ru": "Заключение агронома",
-        "en": "Agronomist's Assessment",
-        "tr": "Ziraat Mühendisi Değerlendirmesi",
-        "ar": "تقييم المهندس الزراعي",
-        "kk": "Агроном қорытындысы"
+        "en": "Agronomist's Report",
+        "tr": "Agronomist's Report",
+        "ar": "Agronomist's Report",
+        "kk": "Заключение агронома"
       },
       "content": {
-        "ru": "Независимый агроном оценил потерю урожая на участке в 85% и стоимость ущерба около 13 000 евро.",
-        "en": "An independent agronomist assessed crop loss on the plot at 85% and the damage value at about 13,000 euros.",
-        "tr": "Bağımsız bir ziraat mühendisi, parseldeki ürün kaybını %85, hasar bedelini yaklaşık 13.000 avro olarak değerlendirdi.",
-        "ar": "قدّر مهندس زراعي مستقل خسارة المحصول في القطعة بنسبة 85% وقيمة الضرر بنحو 13000 يورو.",
-        "kk": "Тәуелсіз агроном телімдегі өнім шығынын 85% және зиян құнын шамамен 13 000 еуро деп бағалады."
+        "ru": "Агроном обследовал поле по сетке и подтвердил гибель 46% посевов. Расчёт потерь основан на средней урожайности трёх предыдущих лет.",
+        "en": "The agronomist surveyed the field on a grid and confirmed that 46% of the crop was destroyed. The loss calculation uses the average yield from the previous three years.",
+        "tr": "The agronomist surveyed the field on a grid and confirmed that 46% of the crop was destroyed. The loss calculation uses the average yield from the previous three years.",
+        "ar": "The agronomist surveyed the field on a grid and confirmed that 46% of the crop was destroyed. The loss calculation uses the average yield from the previous three years.",
+        "kk": "Агроном обследовал поле по сетке и подтвердил гибель 46% посевов. Расчёт потерь основан на средней урожайности трёх предыдущих лет."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Независимая оценка совпадает с заявленной суммой и подтверждает масштаб потерь.",
-        "en": "The independent assessment matches the claimed amount and confirms the scale of loss.",
-        "tr": "Bağımsız değerlendirme, talep edilen tutarla örtüşüyor ve kaybın ölçeğini doğruluyor.",
-        "ar": "يتطابق التقييم المستقل مع المبلغ المُطالَب به ويؤكد حجم الخسارة.",
-        "kk": "Тәуелсіз баға мәлімделген сомаға сәйкес келіп, шығын көлемін растайды."
-      }
+        "ru": "Масштаб потерь рассчитан проверяемым способом.",
+        "en": "The scale of the loss was calculated using a verifiable method.",
+        "tr": "The scale of the loss was calculated using a verifiable method.",
+        "ar": "The scale of the loss was calculated using a verifiable method.",
+        "kk": "Масштаб потерь рассчитан проверяемым способом."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_damage_boundary",
+        "relation": "supports",
+        "reason": {
+          "ru": "Масштаб потерь рассчитан проверяемым способом.",
+          "en": "The scale of the loss was calculated using a verifiable method.",
+          "tr": "The scale of the loss was calculated using a verifiable method.",
+          "ar": "The scale of the loss was calculated using a verifiable method.",
+          "kk": "Масштаб потерь рассчитан проверяемым способом."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "ev-contract",
+      "order": 4,
       "type": "document",
       "title": {
-        "ru": "Договор поставки урожая",
-        "en": "Harvest Supply Contract",
-        "tr": "Hasat Tedarik Sözleşmesi",
-        "ar": "عقد توريد المحصول",
-        "kk": "Өнім жеткізу шарты"
+        "ru": "Договор поставки зерна",
+        "en": "Grain Supply Contract",
+        "tr": "Grain Supply Contract",
+        "ar": "Grain Supply Contract",
+        "kk": "Договор поставки зерна"
       },
       "content": {
-        "ru": "Заключённый ещё весной договор с зернотрейдером на поставку ожидаемого урожая с этого поля по согласованной цене.",
-        "en": "A contract signed back in spring with a grain trader to supply the field's expected harvest at an agreed price.",
-        "tr": "İlkbaharda bir tahıl tüccarıyla, tarlanın beklenen hasadını anlaşılan fiyattan tedarik etmek için imzalanmış bir sözleşme.",
-        "ar": "عقد موقّع في الربيع مع تاجر حبوب لتوريد المحصول المتوقع من الحقل بسعر متفق عليه.",
-        "kk": "Көктемде астық трейдерімен жасалған, осы алқаптан күтілетін өнімді келісілген бағамен жеткізу туралы шарт."
+        "ru": "Заключённый до града договор подтверждает ожидаемый объём и рыночную цену. Заявленная сумма не превышает фактическую потерю.",
+        "en": "A contract signed before the hail confirms the expected volume and market price. The amount claimed does not exceed the actual loss.",
+        "tr": "A contract signed before the hail confirms the expected volume and market price. The amount claimed does not exceed the actual loss.",
+        "ar": "A contract signed before the hail confirms the expected volume and market price. The amount claimed does not exceed the actual loss.",
+        "kk": "Заключённый до града договор подтверждает ожидаемый объём и рыночную цену. Заявленная сумма не превышает фактическую потерю."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Договор подтверждает ожидаемую урожайность и обоснованность размера убытка.",
-        "en": "The contract confirms the expected yield and the reasonableness of the loss figure.",
-        "tr": "Sözleşme, beklenen verimi ve kayıp tutarının makul olduğunu doğruluyor.",
-        "ar": "يؤكد العقد الإنتاجية المتوقعة ومعقولية رقم الخسارة.",
-        "kk": "Шарт күтілетін өнімділікті және зиян мөлшерінің негізділігін растайды."
-      }
+        "ru": "Сумма ущерба соответствует реальным обязательствам фермера.",
+        "en": "The claimed loss matches the farmer's actual contractual obligations.",
+        "tr": "The claimed loss matches the farmer's actual contractual obligations.",
+        "ar": "The claimed loss matches the farmer's actual contractual obligations.",
+        "kk": "Сумма ущерба соответствует реальным обязательствам фермера."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_loss",
+        "relation": "supports",
+        "reason": {
+          "ru": "Сумма ущерба соответствует реальным обязательствам фермера.",
+          "en": "The claimed loss matches the farmer's actual contractual obligations.",
+          "tr": "The claimed loss matches the farmer's actual contractual obligations.",
+          "ar": "The claimed loss matches the farmer's actual contractual obligations.",
+          "kk": "Сумма ущерба соответствует реальным обязательствам фермера."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5
     }
   ],
   "correctDecision": "approve",
   "explanation": {
     "ru": [
-      "Метеосводка подтверждает сильный град в день и место заявления.",
-      "Снимки и оценка агронома сходятся с масштабом потерь.",
-      "Заявление достоверно, его следует одобрить."
+      "Градовая полоса прошла непосредственно через поле Жумабекова.",
+      "Полевой снимок по тени датируется минутами после града, а обследование подтверждает гибель 46% посевов.",
+      "Размер потери рассчитан по прежней урожайности и договору. Выплату следует одобрить."
     ],
     "en": [
-      "The weather report confirms severe hail at the claim's date and place.",
-      "Photos and the agronomist's assessment match the scale of loss.",
-      "The claim is genuine and should be approved."
+      "Independent data confirms the weather, time, and direction.",
+      "The photograph was taken between 4:20 and 4:40 p.m., immediately after the hail; the pale streak belongs to the reported event.",
+      "The scale of the loss was calculated using a verifiable method.",
+      "The claimed loss matches the farmer's actual contractual obligations.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "tr": [
-      "Meteoroloji raporu, talebin tarih ve yerinde şiddetli doluyu doğruluyor.",
-      "Fotoğraflar ve ziraat değerlendirmesi, kaybın ölçeğiyle örtüşüyor.",
-      "Talep gerçektir ve onaylanmalı."
+      "Independent data confirms the weather, time, and direction.",
+      "The photograph was taken between 4:20 and 4:40 p.m., immediately after the hail; the pale streak belongs to the reported event.",
+      "The scale of the loss was calculated using a verifiable method.",
+      "The claimed loss matches the farmer's actual contractual obligations.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "ar": [
-      "يؤكد تقرير الطقس سقوط بَرَد شديد في تاريخ ومكان المطالبة.",
-      "تتطابق الصور وتقييم المهندس الزراعي مع حجم الخسارة.",
-      "المطالبة صحيحة ويجب الموافقة عليها."
+      "Independent data confirms the weather, time, and direction.",
+      "The photograph was taken between 4:20 and 4:40 p.m., immediately after the hail; the pale streak belongs to the reported event.",
+      "The scale of the loss was calculated using a verifiable method.",
+      "The claimed loss matches the farmer's actual contractual obligations.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "kk": [
-      "Метеоанықтама талаптың күні мен орнында қатты бұршақты растайды.",
-      "Суреттер мен агроном бағасы шығын көлеміне сәйкес келеді.",
-      "Талап шынайы, оны мақұлдау керек."
+      "Градовая полоса прошла непосредственно через поле Жумабекова.",
+      "Полевой снимок по тени датируется минутами после града, а обследование подтверждает гибель 46% посевов.",
+      "Размер потери рассчитан по прежней урожайности и договору. Выплату следует одобрить."
     ]
+  },
+  "investigationBudget": 3,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Сильный град прошёл узкой полосой через моё пшеничное поле и уничтожил посевы почти на половине участка. Прошу компенсировать подтверждённую потерю урожая — 13 000 евро.",
+        "en": "A severe hailstorm cut a narrow path across my wheat field and destroyed crops on almost half the land. I am claiming €13,000 for the documented crop loss.",
+        "tr": "A severe hailstorm cut a narrow path across my wheat field and destroyed crops on almost half the land. I am claiming €13,000 for the documented crop loss.",
+        "ar": "A severe hailstorm cut a narrow path across my wheat field and destroyed crops on almost half the land. I am claiming €13,000 for the documented crop loss.",
+        "kk": "Сильный град прошёл узкой полосой через моё пшеничное поле и уничтожил посевы почти на половине участка. Прошу компенсировать подтверждённую потерю урожая — 13 000 евро."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_event_time",
+      "text": {
+        "ru": "Град прошёл через поле в заявленное время.",
+        "en": "Hail crossed the field at the reported time.",
+        "tr": "Hail crossed the field at the reported time.",
+        "ar": "Hail crossed the field at the reported time.",
+        "kk": "Град прошёл через поле в заявленное время."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_damage_boundary",
+      "text": {
+        "ru": "Повреждена конкретная полоса посевов, а не всё поле.",
+        "en": "A specific strip of crops was damaged, not the entire field.",
+        "tr": "A specific strip of crops was damaged, not the entire field.",
+        "ar": "A specific strip of crops was damaged, not the entire field.",
+        "kk": "Повреждена конкретная полоса посевов, а не всё поле."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_loss",
+      "text": {
+        "ru": "Расчёт потери урожая основан на реальной урожайности и договорах.",
+        "en": "The crop-loss calculation is based on actual yields and contracts.",
+        "tr": "The crop-loss calculation is based on actual yields and contracts.",
+        "ar": "The crop-loss calculation is based on actual yields and contracts.",
+        "kk": "Расчёт потери урожая основан на реальной урожайности и договорах."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Ущерб урожаю легко преувеличить фотографией крупного плана. Здесь понадобится доказать границы повреждённой зоны и реальную урожайность. — В. Лебедева",
+      "en": "A close-up photograph can easily exaggerate crop damage. Here, you must establish the boundaries of the affected area and its actual yield. — V. Lebedeva",
+      "tr": "A close-up photograph can easily exaggerate crop damage. Here, you must establish the boundaries of the affected area and its actual yield. — V. Lebedeva",
+      "ar": "A close-up photograph can easily exaggerate crop damage. Here, you must establish the boundaries of the affected area and its actual yield. — V. Lebedeva",
+      "kk": "Ущерб урожаю легко преувеличить фотографией крупного плана. Здесь понадобится доказать границы повреждённой зоны и реальную урожайность. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Болат не заявил погибшим всё поле, хотя мог рассчитывать на невнимательность. Запомните эту фамилию: честность тоже имеет продолжение.",
+      "en": "Bolat did not claim that the entire field was destroyed, although he might have expected no one to check. Remember his name: honesty has consequences too.",
+      "tr": "Bolat did not claim that the entire field was destroyed, although he might have expected no one to check. Remember his name: honesty has consequences too.",
+      "ar": "Bolat did not claim that the entire field was destroyed, although he might have expected no one to check. Remember his name: honesty has consequences too.",
+      "kk": "Болат не заявил погибшим всё поле, хотя мог рассчитывать на невнимательность. Запомните эту фамилию: честность тоже имеет продолжение."
+    },
+    "nextCaseTeaser": {
+      "ru": "В море действительно был шторм и действительно нашли затонувшее судно. Но не то, за которое просят 18 000 евро.",
+      "en": "There really was a storm at sea, and a sunken vessel really was found. But not the one behind this €18,000 claim.",
+      "tr": "There really was a storm at sea, and a sunken vessel really was found. But not the one behind this €18,000 claim.",
+      "ar": "There really was a storm at sea, and a sunken vessel really was found. But not the one behind this €18,000 claim.",
+      "kk": "В море действительно был шторм и действительно нашли затонувшее судно. Но не то, за которое просят 18 000 евро."
+    },
+    "seasonClue": null,
+    "epilogue": null
   }
 }

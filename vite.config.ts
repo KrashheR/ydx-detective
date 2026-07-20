@@ -60,6 +60,8 @@ function caseSummariesPlugin(): Plugin {
           ...(parsed.investigationBudget !== undefined
             ? { investigationBudget: parsed.investigationBudget }
             : {}),
+          ...(parsed.campaignOrder !== undefined ? { campaignOrder: parsed.campaignOrder } : {}),
+          ...(parsed.requiredLevel !== undefined ? { requiredLevel: parsed.requiredLevel } : {}),
         };
       });
       return `export default ${JSON.stringify(summaries)};`;

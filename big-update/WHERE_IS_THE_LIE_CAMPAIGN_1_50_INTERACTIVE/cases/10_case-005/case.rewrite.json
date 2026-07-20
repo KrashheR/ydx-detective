@@ -1,0 +1,508 @@
+{
+  "id": "case-005",
+  "campaignOrder": 10,
+  "requiredLevel": 5,
+  "act": 1,
+  "actTitle": {
+    "ru": "Чужой почерк",
+    "en": "Another Hand"
+  },
+  "title": {
+    "ru": "Полтергейст вышел в эфир",
+    "en": "The Poltergeist Goes Live"
+  },
+  "difficulty": "hard",
+  "claimAmount": {
+    "value": 2200,
+    "currency": "EUR"
+  },
+  "groundTruth": "fraud",
+  "correctDecision": "reject",
+  "investigationBudget": 4,
+  "claimant": {
+    "name": {
+      "ru": "Стас Гром, 24 года",
+      "en": "Stas Grom, age 24"
+    },
+    "migrationNote": {
+      "ru": "Сохранить стабильный профиль и существующий портрет после визуальной сверки с канонической версией.",
+      "en": "Keep the established profile and existing portrait after visually checking them against the canonical version."
+    },
+    "portrait": null,
+    "portraitStatus": "retain_existing_project_portrait",
+    "portraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/stas.webp",
+      "existingFile": "public/people/stas.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Закройте дверь. Это заявление связано как минимум с четырьмя предыдущими. Но сначала докажите само мошенничество. — В. Лебедева",
+      "en": "Close the door. This claim is linked to at least four earlier cases. But first, prove the fraud itself. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Семёнов, Аширов, Чернов, Соколов и Гром не знакомы. Но их документы написаны одним языком. Кто-то не совершает мошенничества сам — он учит этому других.",
+      "en": "Semyonov, Ashirov, Chernov, Sokolov, and Grom do not know one another. Yet their documents speak the same language. Someone is not committing fraud personally—he is teaching others how to do it."
+    },
+    "nextCaseTeaser": {
+      "ru": "След Архива №17 ведёт к делу, по которому деньги уже были выплачены пять лет назад.",
+      "en": "The trail of Archive No. 17 leads to a claim paid five years ago."
+    },
+    "seasonClue": {
+      "id": "act1-clue-10",
+      "label": {
+        "ru": "Архив №17 открыт",
+        "en": "Archive No. 17 Opened"
+      },
+      "description": {
+        "ru": "Код 17-К принадлежит не оценщику и не компании. Это метка готовых сценариев, которые неизвестный консультант продаёт заявителям за долю страховой выплаты.",
+        "en": "Code 17-K belongs to neither an assessor nor a company. It marks ready-made fraud scripts sold by an unknown consultant for a share of the insurance payout."
+      },
+      "progressIndex": 5,
+      "progressTotal": 5
+    },
+    "epilogue": {
+      "ru": "АРХИВ ВЫПЛАТ · 2021 ГОД  \nНайдена первая одобренная заявка с формой `17-К`.  \nВыплата произведена. Материалы проверки отсутствуют.\nЗначит, консультант начал не с наших десяти дел. Завтра поднимем старый архив.",
+      "en": "PAYOUT ARCHIVE · 2021  \nFirst approved claim using form `17-K` located.  \nPayout issued. Review materials missing.\nSo the consultant did not begin with our ten cases. Tomorrow, we open the old archive."
+    }
+  },
+  "claimText": {
+    "ru": "Во время ночной прямой трансляции в квартире началось необъяснимое явление: дверцы шкафов открывались сами, монитор сдвинулся со стола, а ноутбук упал на пол и разбился. В квартире я находился один, к технике никто не прикасался. Прошу возместить ущерб в размере 2200 евро.",
+    "en": "During a late-night livestream, unexplained phenomena began in my apartment: cabinet doors opened by themselves, a monitor slid across the desk, and a laptop fell to the floor and shattered. I was alone in the apartment, and no one touched the equipment. I am claiming €2,200 in damages."
+  },
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Во время ночной прямой трансляции в квартире началось необъяснимое явление: дверцы шкафов открывались сами, монитор сдвинулся со стола, а ноутбук упал на пол и разбился. В квартире я находился один, к технике никто не прикасался. Прошу возместить ущерб в размере 2200 евро.",
+        "en": "During a late-night livestream, unexplained phenomena began in my apartment: cabinet doors opened by themselves, a monitor slid across the desk, and a laptop fell to the floor and shattered. I was alone in the apartment, and no one touched the equipment. I am claiming €2,200 in damages."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_event",
+      "text": {
+        "ru": "Во время ночного эфира предметы двигались и техника была повреждена.",
+        "en": "Objects moved and equipment was damaged during the late-night broadcast."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_alone",
+      "text": {
+        "ru": "Стас находился в квартире один, помощников за кадром не было.",
+        "en": "Stas was alone in the apartment, with no off-camera assistants."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_no_staging",
+      "text": {
+        "ru": "К предметам никто не прикасался и эффекты не были подготовлены заранее.",
+        "en": "No one touched the objects, and the effects were not prepared in advance."
+      },
+      "stampable": true
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-stream",
+      "order": 1,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Запись опубликованного эфира",
+        "en": "Published Livestream Recording"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "В кадре действительно открываются дверцы шкафа, с полки падает коробка, затем монитор медленно движется к краю стола. Руки Стаса в этот момент видны. Механизм воздействия в опубликованном кадре не различим.",
+        "en": "The footage does show cabinet doors opening, a box falling from a shelf, and a monitor slowly moving toward the edge of the desk. Stas's hands are visible at the time. The mechanism cannot be seen in the published frame."
+      },
+      "statusExplanation": {
+        "ru": "Запись подтверждает необычные движения предметов, но сама по себе не устанавливает их причину.",
+        "en": "The recording confirms the unusual movement but does not establish its cause."
+      },
+      "statementLink": {
+        "statementId": "claim_event",
+        "relation": "supports",
+        "reason": {
+          "ru": "Запись подтверждает необычные движения предметов, но сама по себе не устанавливает их причину.",
+          "en": "The recording confirms the unusual movement but does not establish its cause."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-network",
+      "order": 2,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал домашней сети",
+        "en": "Home Network Log"
+      },
+      "isContradiction": false,
+      "narrativeRole": "suspicion",
+      "text": {
+        "ru": "Кроме устройств Стаса, с 21:12 до 01:04 к домашней сети был подключён телефон `MIRA-PHONE`. В 23:45, за минуту до первого «явления», телефон начал передавать видеопоток на локальный компьютер.",
+        "en": "In addition to Stas's devices, a phone named `MIRA-PHONE` was connected to the home network from 9:12 p.m. to 1:04 a.m. At 11:45 p.m., one minute before the first ‘phenomenon,’ it began streaming video to a local computer."
+      },
+      "statusExplanation": {
+        "ru": "Чужое устройство делает версию одиночного эфира сомнительной, но само по себе не доказывает присутствие помощника.",
+        "en": "The unknown device casts doubt on a solo broadcast but does not by itself prove that an assistant was present."
+      },
+      "statementLink": {
+        "statementId": "claim_alone",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Чужое устройство делает версию одиночного эфира сомнительной, но само по себе не доказывает присутствие помощника.",
+          "en": "The unknown device casts doubt on a solo broadcast but does not by itself prove that an assistant was present."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-entry-camera",
+      "order": 3,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера подъезда",
+        "en": "Building Entrance Camera"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "В 21:09 девушка с большим техническим кофром входит в квартиру Стаса. До 01:08 она из дома не выходит. В опубликованном эфире этот участок коридора находится за камерой.",
+        "en": "At 9:09 p.m., a young woman carrying a large equipment case enters Stas's apartment. She does not leave the building until 1:08 a.m. That part of the hallway is outside the livestream camera's frame."
+      },
+      "statusExplanation": {
+        "ru": "Помощница находилась в квартире во время трансляции, хотя заявитель прямо утверждает обратное.",
+        "en": "An assistant was in the apartment during the broadcast, directly contradicting the claimant's statement."
+      },
+      "statementLink": {
+        "statementId": "claim_alone",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Помощница находилась в квартире во время трансляции, хотя заявитель прямо утверждает обратное.",
+          "en": "An assistant was in the apartment during the broadcast, directly contradicting the claimant's statement."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_alone",
+        "reason": {
+          "ru": "Помощница находилась в квартире во время трансляции, хотя заявитель прямо утверждает обратное.",
+          "en": "An assistant was in the apartment during the broadcast, directly contradicting the claimant's statement."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-raw-camera",
+      "order": 4,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Исходная запись второй камеры",
+        "en": "Original Recording from the Second Camera"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "На широком необрезанном кадре перед движением монитора на секунду бликует тонкая леска. За шкафом меняется тень, но лицо человека и механизм полностью не видны. В звуковой дорожке Стас говорит: «Начинаем второй эффект».",
+        "en": "In the uncropped wide shot, a thin line briefly catches the light before the monitor moves. A shadow shifts behind the cabinet, although neither the person's face nor the full mechanism is visible. On the audio track, Stas says, ‘Starting the second effect.’"
+      },
+      "statusExplanation": {
+        "ru": "Леска, скрытая фигура и команда указывают на постановку; личность помощника устанавливается камерой подъезда и сетью.",
+        "en": "The line, hidden figure, and spoken cue indicate a staged event; the entrance camera and network log establish the assistant's presence."
+      },
+      "statementLink": {
+        "statementId": "claim_no_staging",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Леска, скрытая фигура и команда указывают на постановку; личность помощника устанавливается камерой подъезда и сетью.",
+          "en": "The line, hidden figure, and spoken cue indicate a staged event; the entrance camera and network log establish the assistant's presence."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_no_staging",
+        "reason": {
+          "ru": "Леска, скрытая фигура и команда указывают на постановку; личность помощника устанавливается камерой подъезда и сетью.",
+          "en": "The line, hidden figure, and spoken cue indicate a staged event; the entrance camera and network log establish the assistant's presence."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-consultant-chat",
+      "order": 5,
+      "type": "document",
+      "title": {
+        "ru": "Удалённая переписка с консультантом",
+        "en": "Deleted Messages with the Consultant"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "`К.`: «Сценарий “Полтергейст” согласован. Помощницу в эфире не показывать. Повреждение должно превышать 2000 евро. Для заявления используйте формулировку: “к технике никто не прикасался”. Оценка — форма `17-К`. После выплаты — 20 процентов».\n\nСтас: «А если попросят исходники?»\n\n`К.`: «Обычно не просят».",
+        "en": "`K.`: ‘The “Poltergeist” script is approved. Keep the assistant off camera. Damage must exceed €2,000. Use this wording in the claim: “No one touched the equipment.” Estimate: form `17-K`. My share is 20 percent after payout.’\n\nStas: ‘What if they ask for the raw footage?’\n\n`K.`: ‘They usually do not.’"
+      },
+      "statusExplanation": {
+        "ru": "Консультант заранее подготовил инсценировку, текст ложного заявления и сумму ущерба. Мошенничество было спланировано до эфира.",
+        "en": "The consultant prepared the staged event, false wording, and damage amount in advance. The fraud was planned before the broadcast."
+      },
+      "statementLink": {
+        "statementId": "claim_no_staging",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Консультант заранее подготовил инсценировку, текст ложного заявления и сумму ущерба. Мошенничество было спланировано до эфира.",
+          "en": "The consultant prepared the staged event, false wording, and damage amount in advance. The fraud was planned before the broadcast."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_no_staging",
+        "reason": {
+          "ru": "Консультант заранее подготовил инсценировку, текст ложного заявления и сумму ущерба. Мошенничество было спланировано до эфира.",
+          "en": "The consultant prepared the staged event, false wording, and damage amount in advance. The fraud was planned before the broadcast."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-17k-scan",
+      "order": 6,
+      "type": "document_scan",
+      "title": {
+        "ru": "Просветка формы 17-К",
+        "en": "17-K Form Backlight Examination"
+      },
+      "isContradiction": false,
+      "narrativeRole": "season_clue",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Под новым кодом виден индекс «A-17/2021»: шаблон использовали в уже выплаченном деле пять лет назад.",
+        "en": "The index ‘A-17/2021’ is visible beneath the new code: the template was used in a claim paid five years earlier."
+      },
+      "previousType": null,
+      "description": {
+        "ru": "Пустой бланк из переписки консультанта передан в архивную экспертизу.",
+        "en": "The blank form from the consultant's messages was submitted for archival examination."
+      },
+      "instruction": {
+        "ru": "Включить просвет и найти прежний регистрационный индекс под белой корректировкой.",
+        "en": "Switch on the backlight and find the earlier registration index beneath the white correction."
+      },
+      "assets": {
+        "asset1": "assets/interactive/ev-17k-scan-base.webp",
+        "asset2": "assets/interactive/ev-17k-scan-scan-overlay.svg"
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "uv",
+          "backlight"
+        ],
+        "anomalyZones": [
+          {
+            "id": "archive_index",
+            "mode": "backlight",
+            "x": 60,
+            "y": 82,
+            "width": 25,
+            "height": 8,
+            "label": "Под новым кодом виден индекс «A-17/2021»: шаблон использовали в уже выплаченном деле пять лет назад.",
+            "isContradiction": false,
+            "labelEn": "The index ‘A-17/2021’ is visible beneath the new code: the template was used in a claim paid five years earlier."
+          }
+        ],
+        "successCondition": {
+          "type": "select_zone",
+          "zoneId": "archive_index"
+        }
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Под новым кодом виден индекс «A-17/2021»: шаблон использовали в уже выплаченном деле пять лет назад.",
+          "en": "The index ‘A-17/2021’ is visible beneath the new code: the template was used in a claim paid five years earlier."
+        }
+      },
+      "contradictionTarget": null,
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Второе взаимодействие допустимо в финале акта и превращает клиффхэнгер в находку игрока.",
+          "en": "A second interaction is justified in an act finale and turns the cliffhanger into the player's own discovery."
+        },
+        "playerAction": {
+          "ru": "Включить просвет и найти прежний регистрационный индекс под белой корректировкой.",
+          "en": "Switch on the backlight and find the earlier registration index beneath the white correction."
+        },
+        "conclusion": {
+          "ru": "Под новым кодом виден индекс «A-17/2021»: шаблон использовали в уже выплаченном деле пять лет назад.",
+          "en": "The index ‘A-17/2021’ is visible beneath the new code: the template was used in a claim paid five years earlier."
+        }
+      },
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "imageAssets": [
+        {
+          "assetId": "asset-014",
+          "role": "interactive_base",
+          "src": "src/data/cases/case-005/assets/interactive/ev-17k-scan-base.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-005/assets/interactive/ev-17k-scan-base.webp",
+          "caseRelativeSrc": "assets/interactive/ev-17k-scan-base.webp",
+          "installTo": "src/data/cases/case-005/assets/interactive/ev-17k-scan-base.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1600,
+          "height": 1100,
+          "sha256": "049d0d7be89e43c400d81a9e11ca09abd61607d994884835f9cef04570a79efe"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-005/assets/interactive/ev-17k-scan-base.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-005/assets/interactive/ev-17k-scan-base.webp",
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Опубликованный эфир был постановкой: предметы двигались с помощью лесок.",
+      "В квартире находилась помощница, присутствие которой Стас скрыл.",
+      "Исходная запись содержит его команду начать эффект.",
+      "Консультант `К.` заранее подготовил сценарий, форму `17-К` и потребовал долю выплаты.",
+      "Под новым кодом виден индекс «A-17/2021»: шаблон использовали в уже выплаченном деле пять лет назад.",
+      "Заявление следует отклонить. Одновременно расследование подтверждает существование организованной схемы."
+    ],
+    "en": [
+      "An assistant was in the apartment during the broadcast, directly contradicting the claimant's statement.",
+      "The line, hidden figure, and spoken cue indicate a staged event; the entrance camera and network log establish the assistant's presence.",
+      "The consultant prepared the staged event, false wording, and damage amount in advance. The fraud was planned before the broadcast.",
+      "The recording confirms the unusual movement but does not establish its cause.",
+      "The unknown device casts doubt on a solo broadcast but does not by itself prove that an assistant was present.",
+      "The claim is fraudulent and should be rejected."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Внедрить каноническую постановку из первого акта «Архив №17».",
+      "Сохранить стабильный ID и новый campaignOrder.",
+      "Интегрировать document_scan в улику ev-17k-scan; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate document_scan into evidence ev-17k-scan; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "assets/interactive/ev-17k-scan-base.webp",
+      "purpose": "Базовая версия документа в normal-режиме",
+      "resolution": "1600×1100",
+      "format": "WebP",
+      "transparency": false,
+      "generatedBy": "image_model",
+      "manualPost": "Удалить случайный читаемый текст; выровнять документ; оставить поля для UI-слоёв.",
+      "prompt": "Create a realistic fictional administrative document for an insurance detective game. Служебный страховой формуляр без читаемого текста, с крупным нижним колонтитулом и участком бумажной корректировки. Full document visible from above, utilitarian layout, paper texture, large blank structured fields. No real organization, logo, brand, personal data or watermark. Do not render critical readable text; dates, names, codes and signatures will be added in HTML/SVG. The hidden anomaly must not be obvious in the normal version.",
+      "evidenceId": "ev-17k-scan",
+      "evidenceType": "document_scan"
+    },
+    {
+      "file": "assets/interactive/ev-17k-scan-scan-overlay.svg",
+      "purpose": "Совмещённый слой УФ/просвета/бокового света",
+      "resolution": "viewBox 0 0 100 100",
+      "format": "SVG",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "После финального base.webp откалибровать hotspot и режим проявления.",
+      "prompt": null,
+      "evidenceId": "ev-17k-scan",
+      "evidenceType": "document_scan"
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-005",
+    "archiveBasePath": "generated-assets/src/data/cases/case-005",
+    "claimantPortrait": null,
+    "claimantPortraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/stas.webp",
+      "existingFile": "public/people/stas.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-17k-scan",
+        "title": {
+          "ru": "Просветка формы 17-К",
+          "en": "17-K Form Backlight Examination"
+        },
+        "primaryImage": "src/data/cases/case-005/assets/interactive/ev-17k-scan-base.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-005/assets/interactive/ev-17k-scan-base.webp",
+        "legacyImageBinding": null,
+        "assets": [
+          {
+            "assetId": "asset-014",
+            "role": "interactive_base",
+            "src": "src/data/cases/case-005/assets/interactive/ev-17k-scan-base.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-005/assets/interactive/ev-17k-scan-base.webp",
+            "caseRelativeSrc": "assets/interactive/ev-17k-scan-base.webp",
+            "installTo": "src/data/cases/case-005/assets/interactive/ev-17k-scan-base.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1600,
+            "height": 1100,
+            "sha256": "049d0d7be89e43c400d81a9e11ca09abd61607d994884835f9cef04570a79efe"
+          }
+        ]
+      }
+    ]
+  }
+}

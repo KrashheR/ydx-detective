@@ -1,0 +1,89 @@
+{
+  "id": "ev-cam",
+  "order": 1,
+  "type": "seal_match",
+  "title": {
+    "ru": "Сопоставление пломб вывезенных палет"
+  },
+  "isContradiction": true,
+  "narrativeRole": "proof",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Разрыв и волокна совпали: товар из страховой описи вывезли до поджога и доставили на Восточный двор."
+  },
+  "previousType": "camera_recording",
+  "description": {
+    "ru": "Фрагмент A найден у пустого складского стеллажа, фрагмент B — в кузове грузовика на Восточном дворе."
+  },
+  "instruction": {
+    "ru": "Совместить два фрагмента контрольной ленты."
+  },
+  "assets": {
+    "asset1": "assets/interactive/ev-cam-master-a.webp",
+    "asset2": "assets/interactive/ev-cam-fragments.json"
+  },
+  "data": {
+    "movableFragment": "B",
+    "allowRotation": true,
+    "rotationStep": 3,
+    "initialTransform": {
+      "x": 72,
+      "y": 18,
+      "rotation": -14
+    },
+    "targetTransform": {
+      "x": 132,
+      "y": 48,
+      "rotation": 6
+    },
+    "tolerance": {
+      "position": 10,
+      "rotation": 5
+    },
+    "expectedMatch": true,
+    "sourceSeed": 262817,
+    "fragmentASeed": 262817,
+    "fragmentBSeed": 262817,
+    "comparisonMarkers": [
+      {
+        "id": "tear_pattern",
+        "label": "Совпадают линия разрыва, клеевой дефект и участок защитной сетки"
+      }
+    ]
+  },
+  "statementLink": {
+    "statementId": "claim_goods_destroyed",
+    "relation": "contradicts",
+    "reason": {
+      "ru": "Разрыв и волокна совпали: товар из страховой описи вывезли до поджога и доставили на Восточный двор."
+    }
+  },
+  "contradictionTarget": {
+    "statementId": "claim_goods_destroyed",
+    "reason": {
+      "ru": "Разрыв и волокна совпали: товар из страховой описи вывезли до поджога и доставили на Восточный двор."
+    }
+  },
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true,
+    "transparencyMode": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Совпадение связывает вывезенные перед пожаром палеты именно с застрахованным товаром."
+    },
+    "playerAction": {
+      "ru": "Совместить два фрагмента контрольной ленты."
+    },
+    "conclusion": {
+      "ru": "Разрыв и волокна совпали: товар из страховой описи вывезли до поджога и доставили на Восточный двор."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

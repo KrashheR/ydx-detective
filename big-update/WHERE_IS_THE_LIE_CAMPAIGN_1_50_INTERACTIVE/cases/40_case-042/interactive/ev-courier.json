@@ -1,0 +1,89 @@
+{
+  "id": "ev-courier",
+  "order": 3,
+  "type": "seal_match",
+  "title": {
+    "ru": "Сопоставление контрольного ярлыка футляра"
+  },
+  "isContradiction": true,
+  "narrativeRole": "proof",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Фрагменты совпали: Орвик сама передала курьеру футляр с застрахованным клинком до заявления о краже."
+  },
+  "previousType": "social_media",
+  "description": {
+    "ru": "Фрагмент A остался в архивной витрине, фрагмент B приклеен к квитанции курьера."
+  },
+  "instruction": {
+    "ru": "Совместить рваные края ярлыка."
+  },
+  "assets": {
+    "asset1": "assets/interactive/ev-courier-master-a.webp",
+    "asset2": "assets/interactive/ev-courier-fragments.json"
+  },
+  "data": {
+    "movableFragment": "B",
+    "allowRotation": true,
+    "rotationStep": 3,
+    "initialTransform": {
+      "x": 72,
+      "y": 18,
+      "rotation": -14
+    },
+    "targetTransform": {
+      "x": 132,
+      "y": 48,
+      "rotation": 6
+    },
+    "tolerance": {
+      "position": 10,
+      "rotation": 5
+    },
+    "expectedMatch": true,
+    "sourceSeed": 404217,
+    "fragmentASeed": 404217,
+    "fragmentBSeed": 404217,
+    "comparisonMarkers": [
+      {
+        "id": "tear_pattern",
+        "label": "Совпадают волокна бумаги, разрыв и дефект рамки"
+      }
+    ]
+  },
+  "statementLink": {
+    "statementId": "claim_forced_entry",
+    "relation": "contradicts",
+    "reason": {
+      "ru": "Фрагменты совпали: Орвик сама передала курьеру футляр с застрахованным клинком до заявления о краже."
+    }
+  },
+  "contradictionTarget": {
+    "statementId": "claim_forced_entry",
+    "reason": {
+      "ru": "Фрагменты совпали: Орвик сама передала курьеру футляр с застрахованным клинком до заявления о краже."
+    }
+  },
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true,
+    "transparencyMode": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Совпадение физически доказывает добровольную передачу именно застрахованного футляра."
+    },
+    "playerAction": {
+      "ru": "Совместить рваные края ярлыка."
+    },
+    "conclusion": {
+      "ru": "Фрагменты совпали: Орвик сама передала курьеру футляр с застрахованным клинком до заявления о краже."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

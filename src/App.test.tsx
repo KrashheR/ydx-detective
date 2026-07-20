@@ -81,13 +81,16 @@ import App from './App';
 import { useGameStore } from './store/gameStore';
 import { makeDefaultStats } from './services/persistence';
 import { getStandardCases } from './data/caseLoader';
+import type { ThermalScanEvidence } from './types';
 
 const RU = (key: Parameters<typeof t>[0]) => t(key, 'ru');
 
 function defaultSnapshot(statsOverride = {}) {
   return {
     version: GAME_CONFIG.saveVersion,
-    stats: { ...makeDefaultStats(), ...statsOverride },
+    // Most wiring tests exercise the established desk flow. Onboarding-lock
+    // behaviour has its own coverage and is disabled here deliberately.
+    stats: { ...makeDefaultStats(), metaUnlocked: true, ...statsOverride },
     session: null,
   };
 }
@@ -123,6 +126,17 @@ async function openFirstCase() {
   });
   fireEvent.click(caseButtons[0]!);
   return screen.findByRole('button', { name: new RegExp(RU('rejectPayout')) });
+}
+
+/** Complete the one-click thermal tutorial attached to campaign case 1. */
+async function completeFirstEvidenceAnalysis() {
+  const evidence = getStandardCases()[0]!.evidences[0] as ThermalScanEvidence;
+  fireEvent.click(
+    await screen.findByRole('button', { name: RU('interactiveThermal') }),
+  );
+  fireEvent.click(
+    await screen.findByRole('button', { name: evidence.data.heatZones[0]!.label }),
+  );
 }
 
 describe('hydration', () => {
@@ -168,10 +182,10 @@ describe('hydration', () => {
     await renderHydrated();
 
     expect(screen.queryByRole('button', { name: new RegExp(RU('rejectPayout')) })).not.toBeInTheDocument();
-    expect(useGameStore.getState().session).toEqual(savedSession);
+    expect(useGameStore.getState().session).toEqual(expect.objectContaining(savedSession));
 
     await openFirstCase();
-    expect(useGameStore.getState().session).toEqual(savedSession);
+    expect(useGameStore.getState().session).toEqual(expect.objectContaining(savedSession));
   });
 });
 
@@ -196,6 +210,8 @@ describe('stamping an evidence card', () => {
       .getAllByRole('button')
       .filter((b) => b.textContent?.includes(RU('openDossier')));
     fireEvent.click(evidenceButtons[0]!);
+
+    await completeFirstEvidenceAnalysis();
 
     // Modal opens with the "Mark as Contradiction" CTA.
     const markBtn = await screen.findByRole('button', {
@@ -239,6 +255,8 @@ describe('verdict gating', () => {
       .getAllByRole('button')
       .filter((b) => b.textContent?.includes(RU('openDossier')));
     fireEvent.click(evidenceButtons[0]!);
+
+    await completeFirstEvidenceAnalysis();
 
     fireEvent.click(
       await screen.findByRole('button', { name: new RegExp(RU('markAsContradiction')) }),

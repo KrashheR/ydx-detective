@@ -1,286 +1,404 @@
 {
   "id": "case-011",
   "type": "standard",
-  "difficulty": "hard",
+  "campaignOrder": 14,
+  "requiredLevel": 7,
+  "act": 2,
+  "actTitle": {
+    "ru": "Пять лет назад",
+    "en": "Five Years Earlier",
+    "tr": "Five Years Earlier",
+    "ar": "Five Years Earlier",
+    "kk": "Пять лет назад"
+  },
+  "difficulty": "medium",
   "claimAmount": 8000,
   "truth": "fraud",
   "title": {
-    "ru": "Кража драгоценностей в доме",
-    "en": "The Home Jewelry Burglary",
-    "tr": "Evdeki Mücevher Soygunu",
-    "ar": "سرقة المجوهرات من المنزل",
-    "kk": "Үйдегі зергерлік ұрлық"
+    "ru": "Дом без взломщика",
+    "en": "The House Without a Burglar",
+    "tr": "The House Without a Burglar",
+    "ar": "The House Without a Burglar",
+    "kk": "Дом без взломщика"
   },
   "claim": {
     "person": {
-      "ru": "Беатрис Колер",
-      "en": "Beatrice Kohler",
-      "tr": "Beatrice Kohler",
-      "ar": "بياتريس كولر",
-      "kk": "Беатрис Колер"
+      "ru": "Беатрис Колер, 52 года",
+      "en": "Beatrice Kohler, age 52",
+      "tr": "Beatrice Kohler, age 52",
+      "ar": "Beatrice Kohler, age 52",
+      "kk": "Беатрис Колер, 52 года"
     },
     "story": {
-      "ru": "Пока меня не было дома в ночь на 8 мая, кто-то проник внутрь и украл все мои украшения из спальни. Сигнализация почему-то не сработала. Прошу выплату по описи драгоценностей.",
-      "en": "While I was away on the night of 8 May, someone broke in and took all my jewelry from the bedroom. For some reason the alarm never went off. I am claiming for the listed jewelry.",
-      "tr": "8 Mayıs gecesi evde yokken biri içeri girip yatak odasındaki tüm mücevherlerimi aldı. Nedense alarm hiç çalmadı. Listelenen mücevherler için talepte bulunuyorum.",
-      "ar": "بينما كنت خارج المنزل ليلة 8 مايو، اقتحم أحدهم المكان وأخذ كل مجوهراتي من غرفة النوم. لسبب ما لم ينطلق الإنذار أبدًا. أطالب بقيمة المجوهرات المدرجة.",
-      "kk": "8 мамырға қараған түні үйде болмағанымда біреу ішке кіріп, жатын бөлмемдегі барлық зергерлік бұйымдарымды алып кеткен. Неге екені белгісіз, дабыл мүлде қосылмаған. Тізімдегі зергерлік бұйымдар үшін төлем сұраймын."
+      "ru": "В ночь на 8 мая неизвестный проник в дом без видимых повреждений и похитил коллекцию украшений из спальни. Сигнализация была снята чужим способом. Прошу выплату по страховой описи — 8000 евро.",
+      "en": "On the night of May 8, an unknown person entered my home without visible damage and stole a jewelry collection from the bedroom. The intruder bypassed the alarm. I am claiming the €8,000 value listed on the policy inventory.",
+      "tr": "On the night of May 8, an unknown person entered my home without visible damage and stole a jewelry collection from the bedroom. The intruder bypassed the alarm. I am claiming the €8,000 value listed on the policy inventory.",
+      "ar": "On the night of May 8, an unknown person entered my home without visible damage and stole a jewelry collection from the bedroom. The intruder bypassed the alarm. I am claiming the €8,000 value listed on the policy inventory.",
+      "kk": "В ночь на 8 мая неизвестный проник в дом без видимых повреждений и похитил коллекцию украшений из спальни. Сигнализация была снята чужим способом. Прошу выплату по страховой описи — 8000 евро."
     }
   },
-  "coverImage": "covers/case-011.svg",
-  "personImage": "people/beatrice.webp",
   "client": {
     "role": {
-      "ru": "Заявитель · физ. лицо",
-      "en": "Claimant · individual",
-      "tr": "Başvuru sahibi · gerçek kişi",
-      "ar": "مقدم الطلب · شخص طبيعي",
-      "kk": "Өтініш беруші · жеке тұлға"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Возраст",
-          "en": "Age",
-          "tr": "Yaş",
-          "ar": "العمر",
-          "kk": "Жасы"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "52 года",
-          "en": "52 years old",
-          "tr": "52 yaşında",
-          "ar": "52 عامًا",
-          "kk": "52 жаста"
+          "ru": "2",
+          "en": "2",
+          "tr": "2",
+          "ar": "2",
+          "kk": "2"
         }
       },
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Цюрих",
-          "en": "Zurich",
-          "tr": "Zürih",
-          "ar": "زيورخ",
-          "kk": "Цюрих"
-        }
-      },
-      {
-        "k": {
-          "ru": "Клиент с",
-          "en": "Client since",
-          "tr": "Müşteri",
-          "ar": "عميل منذ",
-          "kk": "Клиент"
-        },
-        "v": {
-          "ru": "2012 г.",
-          "en": "2012",
-          "tr": "2012",
-          "ar": "2012",
-          "kk": "2012 ж."
-        }
-      },
-      {
-        "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
-        },
-        "v": {
-          "ru": "Ценности · ЦЕ-11156293-X5",
-          "en": "Valuables · CE-11156293-X5",
-          "tr": "Değerli eşyalar · CE-11156293-X5",
-          "ar": "المقتنيات الثمينة · CE-11156293-X5",
-          "kk": "Құндылықтар · ЦЕ-11156293-X5"
-        }
-      },
-      {
-        "k": {
-          "ru": "Документ",
-          "en": "Document",
-          "tr": "Belge",
-          "ar": "الوثيقة",
-          "kk": "Құжат"
-        },
-        "v": {
-          "ru": "Паспорт CH-X1 556677882-24059",
-          "en": "Passport CH-X1 556677882-24059",
-          "tr": "Pasaport CH-X1 556677882-24059",
-          "ar": "جواز السفر CH-X1 556677882-24059",
-          "kk": "Паспорт CH-X1 556677882-24059"
+          "ru": "14",
+          "en": "14",
+          "tr": "14",
+          "ar": "14",
+          "kk": "14"
         }
       }
     ]
   },
+  "coverImage": "covers/case-011.svg",
+  "personImage": "people/beatrice.webp",
   "evidences": [
     {
+      "id": "ev-alarm",
+      "order": 1,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал сигнализации",
+        "en": "Alarm System Log",
+        "tr": "Alarm System Log",
+        "ar": "Alarm System Log",
+        "kk": "Журнал сигнализации"
+      },
+      "content": {
+        "ru": "В 23:14 система снята с охраны постоянным кодом владелицы. Ошибочных попыток, сервисного входа и аварийного отключения не было.",
+        "en": "At 11:14 p.m., the system was disarmed using the owner's permanent code. There were no failed attempts, service access, or emergency override.",
+        "tr": "At 11:14 p.m., the system was disarmed using the owner's permanent code. There were no failed attempts, service access, or emergency override.",
+        "ar": "At 11:14 p.m., the system was disarmed using the owner's permanent code. There were no failed attempts, service access, or emergency override.",
+        "kk": "В 23:14 система снята с охраны постоянным кодом владелицы. Ошибочных попыток, сервисного входа и аварийного отключения не было."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Сигнализация была отключена корректным личным кодом, а не обойдена неизвестным способом.",
+        "en": "The alarm was properly disarmed using the owner's personal code, not bypassed by an unknown method.",
+        "tr": "The alarm was properly disarmed using the owner's personal code, not bypassed by an unknown method.",
+        "ar": "The alarm was properly disarmed using the owner's personal code, not bypassed by an unknown method.",
+        "kk": "Сигнализация была отключена корректным личным кодом, а не обойдена неизвестным способом."
+      },
+      "narrativeRole": "suspicion",
+      "statementLink": {
+        "statementId": "claim_unauthorized_entry",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Сигнализация была отключена корректным личным кодом, а не обойдена неизвестным способом.",
+          "en": "The alarm was properly disarmed using the owner's personal code, not bypassed by an unknown method.",
+          "tr": "The alarm was properly disarmed using the owner's personal code, not bypassed by an unknown method.",
+          "ar": "The alarm was properly disarmed using the owner's personal code, not bypassed by an unknown method.",
+          "kk": "Сигнализация была отключена корректным личным кодом, а не обойдена неизвестным способом."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_unauthorized_entry",
+        "reason": {
+          "ru": "Сигнализация была отключена корректным личным кодом, а не обойдена неизвестным способом.",
+          "en": "The alarm was properly disarmed using the owner's personal code, not bypassed by an unknown method.",
+          "tr": "The alarm was properly disarmed using the owner's personal code, not bypassed by an unknown method.",
+          "ar": "The alarm was properly disarmed using the owner's personal code, not bypassed by an unknown method.",
+          "kk": "Сигнализация была отключена корректным личным кодом, а не обойдена неизвестным способом."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
       "id": "ev-forensic",
+      "order": 2,
       "type": "document",
       "title": {
-        "ru": "Заключение слесаря-криминалиста",
-        "en": "Locksmith Forensic Note",
-        "tr": "Çilingir Adli İnceleme Notu",
-        "ar": "تقرير فني الأقفال الجنائي",
-        "kk": "Құлыпшы-сарапшы қорытындысы"
+        "ru": "Осмотр дверей и окон",
+        "en": "Door and Window Inspection",
+        "tr": "Door and Window Inspection",
+        "ar": "Door and Window Inspection",
+        "kk": "Осмотр дверей и окон"
       },
       "content": {
-        "ru": "Осмотр дверей и окон: следов взлома, отжима или повреждения замков нет. Журнал сигнализации показывает, что система была снята с охраны в 23:14 корректным кодом владельца, а не отключена силой.",
-        "en": "Inspection of doors and windows: no signs of forced entry, prying or lock damage. The alarm log shows the system was disarmed at 23:14 using the owner's correct code, not defeated by force.",
-        "tr": "Kapı ve pencerelerin incelemesi: zorla giriş, zorlama ya da kilit hasarı izi yok. Alarm kaydı, sistemin saat 23:14'te sahibinin doğru koduyla devre dışı bırakıldığını, zorla etkisiz hâle getirilmediğini gösteriyor.",
-        "ar": "فحص الأبواب والنوافذ: لا توجد آثار اقتحام أو عَنوة أو تلف في الأقفال. يُظهر سجل الإنذار أن النظام أُلغي تفعيله الساعة 23:14 باستخدام رمز المالك الصحيح، لا بالقوة.",
-        "kk": "Есік пен терезелерді тексеру: бұзып кіру, сындыру немесе құлыпты зақымдау іздері жоқ. Дабыл журналы жүйенің 23:14-те иесінің дұрыс кодымен ажыратылғанын, күшпен өшірілмегенін көрсетеді."
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Нет следов взлома, а сигнализация снята личным кодом владелицы — это противоречит версии о проникновении чужого.",
-        "en": "There are no signs of a break-in and the alarm was disarmed with the owner's own code — contradicting the story of an intruder.",
-        "tr": "Zorla giriş izi yok ve alarm sahibinin kendi koduyla kapatılmış — bu, bir davetsiz misafir anlatımıyla çelişiyor.",
-        "ar": "لا توجد آثار اقتحام وأُلغي الإنذار برمز المالكة نفسها — وهذا يناقض رواية وجود متسلل.",
-        "kk": "Бұзып кіру іздері жоқ әрі дабыл иесінің жеке кодымен ажыратылған — бұл бөгде адамның кіруі туралы әңгімеге қайшы."
-      }
-    },
-    {
-      "id": "ev-doorbell",
-      "type": "camera_recording",
-      "title": {
-        "ru": "Журнал умного дверного звонка",
-        "en": "Smart Doorbell Log",
-        "tr": "Akıllı Kapı Zili Kaydı",
-        "ar": "سجل جرس الباب الذكي",
-        "kk": "Ақылды есік қоңырауының журналы"
-      },
-      "content": {
-        "ru": [
-          "7 мая, 22:48 — владелица выносит две закрытые коробки к багажнику автомобиля",
-          "7 мая, 22:53 — возвращается, выносит ещё одну коробку и сумку",
-          "7 мая, 23:10 — машина выезжает с подъездной дорожки",
-          "8 мая — за весь день у двери не зафиксировано посторонних"
-        ],
-        "en": [
-          "7 May, 22:48 — owner carries two sealed boxes to the car trunk",
-          "7 May, 22:53 — returns, carries out another box and a bag",
-          "7 May, 23:10 — the car leaves the driveway",
-          "8 May — no strangers detected at the door all day"
-        ],
-        "tr": [
-          "7 Mayıs, 22:48 — ev sahibi iki kapalı kutuyu aracın bagajına taşıyor",
-          "7 Mayıs, 22:53 — geri dönüyor, bir kutu ve bir çanta daha çıkarıyor",
-          "7 Mayıs, 23:10 — araç garaj yolundan ayrılıyor",
-          "8 Mayıs — gün boyunca kapıda yabancı tespit edilmedi"
-        ],
-        "ar": [
-          "7 مايو، 22:48 — المالكة تحمل صندوقين مغلقين إلى صندوق السيارة",
-          "7 مايو، 22:53 — تعود وتحمل صندوقًا آخر وحقيبة",
-          "7 مايو، 23:10 — السيارة تغادر الممر",
-          "8 مايو — لم يُرصد أي غريب عند الباب طوال اليوم"
-        ],
-        "kk": [
-          "7 мамыр, 22:48 — иесі екі жабық қорапты көліктің багажнигіне апарады",
-          "7 мамыр, 22:53 — қайтып келіп, тағы бір қорап пен сөмке шығарады",
-          "7 мамыр, 23:10 — көлік ауладан шығып кетеді",
-          "8 мамыр — күні бойы есік алдында бөгде адам байқалмады"
-        ]
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Владелица сама вывезла коробки за день до «кражи», и посторонних у двери не было — это опровергает версию о грабителе.",
-        "en": "The owner herself removed boxes the day before the 'burglary' and no strangers appeared — refuting the intruder story.",
-        "tr": "Ev sahibi 'soygundan' bir gün önce kutuları kendisi çıkarmış ve hiç yabancı görünmemiş — bu, soyguncu anlatımını çürütüyor.",
-        "ar": "المالكة نفسها أخرجت الصناديق قبل يوم من 'السرقة' ولم يظهر أي غريب — ما يدحض رواية اللص.",
-        "kk": "Иесінің өзі «ұрлықтан» бір күн бұрын қораптарды шығарған әрі бөгде адам көрінбеген — бұл ұры туралы әңгімені теріске шығарады."
-      },
-      "meta": {
-        "cameraId": "BELL-1",
-        "cameraModel": "EntryCam EC-202 · 1080p · H.264"
-      }
-    },
-    {
-      "id": "ev-police",
-      "type": "document",
-      "title": {
-        "ru": "Полицейское заявление",
-        "en": "Police Report Filed",
-        "tr": "Verilen Polis Tutanağı",
-        "ar": "بلاغ الشرطة المقدّم",
-        "kk": "Полицияға берілген арыз"
-      },
-      "content": {
-        "ru": "8 мая в 09:20 заявительница официально подала заявление о краже со взломом, перечислив пропавшие украшения. Дело зарегистрировано под номером, открыто расследование.",
-        "en": "On 8 May at 09:20 the claimant formally filed a burglary report, listing the missing jewelry. The case was registered with a reference number and an investigation opened.",
-        "tr": "8 Mayıs saat 09:20'de talep sahibi resmî olarak hırsızlık ihbarında bulundu ve kayıp mücevherleri listeledi. Dava bir referans numarasıyla kaydedildi ve soruşturma açıldı.",
-        "ar": "في 8 مايو الساعة 09:20 قدّمت مقدّمة الطلب بلاغًا رسميًا عن السطو، وأدرجت المجوهرات المفقودة. سُجّلت القضية برقم مرجعي وفُتح تحقيق.",
-        "kk": "8 мамыр 09:20-да өтініш беруші ұрлық туралы ресми арыз беріп, жоғалған бұйымдарды тізімдеді. Іс тіркеу нөмірімен ашылып, тергеу басталды."
+        "ru": "Следов повреждения нет. Эксперт допускает вход обычным ключом, поэтому один только осмотр не исключает постороннего.",
+        "en": "There are no signs of damage. The expert notes that someone could have entered with a normal key, so the inspection alone does not rule out an intruder.",
+        "tr": "There are no signs of damage. The expert notes that someone could have entered with a normal key, so the inspection alone does not rule out an intruder.",
+        "ar": "There are no signs of damage. The expert notes that someone could have entered with a normal key, so the inspection alone does not rule out an intruder.",
+        "kk": "Следов повреждения нет. Эксперт допускает вход обычным ключом, поэтому один только осмотр не исключает постороннего."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Само заявление в полицию реально, но лишь фиксирует слова заявительницы и не подтверждает факт взлома.",
-        "en": "The police filing is genuine but only records the claimant's account; it does not prove a break-in occurred.",
-        "tr": "Polis başvurusu gerçektir ancak yalnızca talep sahibinin beyanını kaydeder; bir soygunun gerçekleştiğini kanıtlamaz.",
-        "ar": "البلاغ حقيقي لكنه يسجّل فقط رواية مقدّمة الطلب ولا يثبت وقوع اقتحام.",
-        "kk": "Полицияға арыз шынайы, бірақ ол тек өтініш берушінің сөзін тіркейді, бұзып кіруді дәлелдемейді."
-      }
+        "ru": "Отсутствие взлома подозрительно, но само по себе не является доказательством мошенничества.",
+        "en": "The absence of forced entry is suspicious but is not evidence of fraud on its own.",
+        "tr": "The absence of forced entry is suspicious but is not evidence of fraud on its own.",
+        "ar": "The absence of forced entry is suspicious but is not evidence of fraud on its own.",
+        "kk": "Отсутствие взлома подозрительно, но само по себе не является доказательством мошенничества."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_unauthorized_entry",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Отсутствие взлома подозрительно, но само по себе не является доказательством мошенничества.",
+          "en": "The absence of forced entry is suspicious but is not evidence of fraud on its own.",
+          "tr": "The absence of forced entry is suspicious but is not evidence of fraud on its own.",
+          "ar": "The absence of forced entry is suspicious but is not evidence of fraud on its own.",
+          "kk": "Отсутствие взлома подозрительно, но само по себе не является доказательством мошенничества."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "ev-vault",
+      "order": 3,
+      "type": "document",
+      "title": {
+        "ru": "Квитанция частного хранилища",
+        "en": "Private Vault Receipt",
+        "tr": "Private Vault Receipt",
+        "ar": "Private Vault Receipt",
+        "kk": "Квитанция частного хранилища"
+      },
+      "content": {
+        "ru": "7 мая в 18:40 Колер лично поместила в банковскую ячейку три футляра. Контрольные фотографии показывают те же украшения и совпадающие серийные номера сертификатов.",
+        "en": "At 6:40 p.m. on May 7, Kohler personally deposited three cases in a safe-deposit box. Control photographs show the same jewelry and matching certificate serial numbers.",
+        "tr": "At 6:40 p.m. on May 7, Kohler personally deposited three cases in a safe-deposit box. Control photographs show the same jewelry and matching certificate serial numbers.",
+        "ar": "At 6:40 p.m. on May 7, Kohler personally deposited three cases in a safe-deposit box. Control photographs show the same jewelry and matching certificate serial numbers.",
+        "kk": "7 мая в 18:40 Колер лично поместила в банковскую ячейку три футляра. Контрольные фотографии показывают те же украшения и совпадающие серийные номера сертификатов."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Заявительница заранее вывезла и сохранила вещи, которые на следующий день объявила похищенными.",
+        "en": "The claimant removed and secured the items before reporting them stolen the next day.",
+        "tr": "The claimant removed and secured the items before reporting them stolen the next day.",
+        "ar": "The claimant removed and secured the items before reporting them stolen the next day.",
+        "kk": "Заявительница заранее вывезла и сохранила вещи, которые на следующий день объявила похищенными."
+      },
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_property_lost",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Заявительница заранее вывезла и сохранила вещи, которые на следующий день объявила похищенными.",
+          "en": "The claimant removed and secured the items before reporting them stolen the next day.",
+          "tr": "The claimant removed and secured the items before reporting them stolen the next day.",
+          "ar": "The claimant removed and secured the items before reporting them stolen the next day.",
+          "kk": "Заявительница заранее вывезла и сохранила вещи, которые на следующий день объявила похищенными."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_property_lost",
+        "reason": {
+          "ru": "Заявительница заранее вывезла и сохранила вещи, которые на следующий день объявила похищенными.",
+          "en": "The claimant removed and secured the items before reporting them stolen the next day.",
+          "tr": "The claimant removed and secured the items before reporting them stolen the next day.",
+          "ar": "The claimant removed and secured the items before reporting them stolen the next day.",
+          "kk": "Заявительница заранее вывезла и сохранила вещи, которые на следующий день объявила похищенными."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "ev-appraisal",
+      "order": 4,
       "type": "document",
       "title": {
-        "ru": "Оценка драгоценностей",
-        "en": "Jewelry Appraisal",
-        "tr": "Mücevher Değerlemesi",
-        "ar": "تقييم المجوهرات",
-        "kk": "Зергерлік бұйымдар бағалауы"
+        "ru": "Опись и оценка",
+        "en": "Inventory and Appraisal",
+        "tr": "Inventory and Appraisal",
+        "ar": "Inventory and Appraisal",
+        "kk": "Опись и оценка"
       },
       "content": {
-        "ru": "Сертифицированный геммолог оценил перечисленные изделия в феврале того же года в 7 800 €. Документ подлинный, описания соответствуют заявленному списку.",
-        "en": "A certified gemologist appraised the listed pieces in February of the same year at €7,800. The document is authentic and the descriptions match the claimed list.",
-        "tr": "Sertifikalı bir gemolog, listelenen parçaları aynı yılın şubat ayında 7.800 € olarak değerledi. Belge gerçektir ve açıklamalar talep edilen listeyle örtüşür.",
-        "ar": "قام خبير أحجار كريمة معتمد بتقييم القطع المدرجة في فبراير من العام نفسه بمبلغ 7,800 €. الوثيقة أصلية والأوصاف تطابق القائمة المطالب بها.",
-        "kk": "Сертификатталған геммолог тізімдегі бұйымдарды сол жылдың ақпанында 7 800 € деп бағалаған. Құжат түпнұсқа, сипаттамалар талап тізіміне сәйкес."
+        "ru": "Украшения действительно принадлежат Колер и оценены примерно в 8000 евро. В тексте описи повторяется характерная ошибка шаблона 17-К.",
+        "en": "The jewelry does belong to Kohler and is valued at approximately €8,000. The inventory repeats a distinctive error from the 17-K template.",
+        "tr": "The jewelry does belong to Kohler and is valued at approximately €8,000. The inventory repeats a distinctive error from the 17-K template.",
+        "ar": "The jewelry does belong to Kohler and is valued at approximately €8,000. The inventory repeats a distinctive error from the 17-K template.",
+        "kk": "Украшения действительно принадлежат Колер и оценены примерно в 8000 евро. В тексте описи повторяется характерная ошибка шаблона 17-К."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Оценка подлинная и подтверждает стоимость, но не говорит ничего о том, как именно вещи исчезли.",
-        "en": "The appraisal is genuine and confirms value, but says nothing about how the items actually disappeared.",
-        "tr": "Değerleme gerçektir ve değeri doğrular, ancak eşyaların gerçekte nasıl kaybolduğu hakkında hiçbir şey söylemez.",
-        "ar": "التقييم أصلي ويؤكد القيمة، لكنه لا يقول شيئًا عن كيفية اختفاء القطع فعليًا.",
-        "kk": "Бағалау түпнұсқа және құнды растайды, бірақ бұйымдардың қалай жоғалғаны туралы ештеңе айтпайды."
-      }
+        "ru": "Документ подтверждает собственность и стоимость, но не кражу. Ошибка связывает подготовку заявления с прежним шаблоном.",
+        "en": "The document proves ownership and value, but not theft. Its error links the claim to the earlier template.",
+        "tr": "The document proves ownership and value, but not theft. Its error links the claim to the earlier template.",
+        "ar": "The document proves ownership and value, but not theft. Its error links the claim to the earlier template.",
+        "kk": "Документ подтверждает собственность и стоимость, но не кражу. Ошибка связывает подготовку заявления с прежним шаблоном."
+      },
+      "narrativeRole": "arc_context",
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Документ подтверждает собственность и стоимость, но не кражу. Ошибка связывает подготовку заявления с прежним шаблоном.",
+          "en": "The document proves ownership and value, but not theft. Its error links the claim to the earlier template.",
+          "tr": "The document proves ownership and value, but not theft. Its error links the claim to the earlier template.",
+          "ar": "The document proves ownership and value, but not theft. Its error links the claim to the earlier template.",
+          "kk": "Документ подтверждает собственность и стоимость, но не кражу. Ошибка связывает подготовку заявления с прежним шаблоном."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Нет следов взлома, а сигнализация снята личным кодом владелицы.",
-      "Камера показывает, что она сама вывезла коробки за день до «кражи».",
-      "Заявление и оценка подлинны, но не доказывают факт ограбления — это инсценировка."
+      "Колер сама сняла сигнализацию личным кодом.",
+      "За несколько часов до предполагаемой кражи она поместила те же украшения в банковскую ячейку.",
+      "Ценности не были похищены. Проникновение инсценировано, выплату следует отклонить."
     ],
     "en": [
-      "No signs of forced entry and the alarm was disarmed with the owner's own code.",
-      "The camera shows she removed boxes herself the day before the 'burglary'.",
-      "The report and appraisal are real but prove no robbery — this is staged."
+      "The alarm was properly disarmed using the owner's personal code, not bypassed by an unknown method.",
+      "The claimant removed and secured the items before reporting them stolen the next day.",
+      "The absence of forced entry is suspicious but is not evidence of fraud on its own.",
+      "The document proves ownership and value, but not theft. Its error links the claim to the earlier template.",
+      "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "Zorla giriş izi yok ve alarm sahibinin kendi koduyla kapatılmış.",
-      "Kamera, 'soygundan' bir gün önce kutuları kendisinin çıkardığını gösteriyor.",
-      "Tutanak ve değerleme gerçek ama soygunu kanıtlamıyor — bu bir düzmece."
+      "The alarm was properly disarmed using the owner's personal code, not bypassed by an unknown method.",
+      "The claimant removed and secured the items before reporting them stolen the next day.",
+      "The absence of forced entry is suspicious but is not evidence of fraud on its own.",
+      "The document proves ownership and value, but not theft. Its error links the claim to the earlier template.",
+      "The claim is fraudulent and should be rejected."
     ],
     "ar": [
-      "لا آثار اقتحام وأُلغي الإنذار برمز المالكة نفسها.",
-      "تُظهر الكاميرا أنها أخرجت الصناديق بنفسها قبل يوم من 'السرقة'.",
-      "البلاغ والتقييم حقيقيان لكنهما لا يثبتان السطو — العملية مفبركة."
+      "The alarm was properly disarmed using the owner's personal code, not bypassed by an unknown method.",
+      "The claimant removed and secured the items before reporting them stolen the next day.",
+      "The absence of forced entry is suspicious but is not evidence of fraud on its own.",
+      "The document proves ownership and value, but not theft. Its error links the claim to the earlier template.",
+      "The claim is fraudulent and should be rejected."
     ],
     "kk": [
-      "Бұзып кіру іздері жоқ, дабыл иесінің жеке кодымен ажыратылған.",
-      "Камера оның «ұрлықтан» бір күн бұрын қораптарды өзі шығарғанын көрсетеді.",
-      "Арыз бен бағалау шынайы, бірақ ұрлықты дәлелдемейді — бұл қойылым."
+      "Колер сама сняла сигнализацию личным кодом.",
+      "За несколько часов до предполагаемой кражи она поместила те же украшения в банковскую ячейку.",
+      "Ценности не были похищены. Проникновение инсценировано, выплату следует отклонить."
     ]
+  },
+  "investigationBudget": 3,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "В ночь на 8 мая неизвестный проник в дом без видимых повреждений и похитил коллекцию украшений из спальни. Сигнализация была снята чужим способом. Прошу выплату по страховой описи — 8000 евро.",
+        "en": "On the night of May 8, an unknown person entered my home without visible damage and stole a jewelry collection from the bedroom. The intruder bypassed the alarm. I am claiming the €8,000 value listed on the policy inventory.",
+        "tr": "On the night of May 8, an unknown person entered my home without visible damage and stole a jewelry collection from the bedroom. The intruder bypassed the alarm. I am claiming the €8,000 value listed on the policy inventory.",
+        "ar": "On the night of May 8, an unknown person entered my home without visible damage and stole a jewelry collection from the bedroom. The intruder bypassed the alarm. I am claiming the €8,000 value listed on the policy inventory.",
+        "kk": "В ночь на 8 мая неизвестный проник в дом без видимых повреждений и похитил коллекцию украшений из спальни. Сигнализация была снята чужим способом. Прошу выплату по страховой описи — 8000 евро."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_theft",
+      "text": {
+        "ru": "Украшения были похищены из дома неизвестным.",
+        "en": "An unknown person stole the jewelry from the house.",
+        "tr": "An unknown person stole the jewelry from the house.",
+        "ar": "An unknown person stole the jewelry from the house.",
+        "kk": "Украшения были похищены из дома неизвестным."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_unauthorized_entry",
+      "text": {
+        "ru": "Сигнализацию отключил посторонний, а не владелица.",
+        "en": "An intruder, not the owner, disabled the alarm.",
+        "tr": "An intruder, not the owner, disabled the alarm.",
+        "ar": "An intruder, not the owner, disabled the alarm.",
+        "kk": "Сигнализацию отключил посторонний, а не владелица."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_property_lost",
+      "text": {
+        "ru": "Застрахованные ценности больше не находятся у Колер.",
+        "en": "The insured valuables are no longer in Kohler's possession.",
+        "tr": "The insured valuables are no longer in Kohler's possession.",
+        "ar": "The insured valuables are no longer in Kohler's possession.",
+        "kk": "Застрахованные ценности больше не находятся у Колер."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Отсутствие следов взлома не доказывает инсценировку: у преступника мог быть ключ. Найдите, куда исчезли сами ценности. — В. Лебедева",
+      "en": "The absence of forced entry does not prove a staged theft; a burglar could have had a key. Find out where the valuables themselves went. — V. Lebedeva",
+      "tr": "The absence of forced entry does not prove a staged theft; a burglar could have had a key. Find out where the valuables themselves went. — V. Lebedeva",
+      "ar": "The absence of forced entry does not prove a staged theft; a burglar could have had a key. Find out where the valuables themselves went. — V. Lebedeva",
+      "kk": "Отсутствие следов взлома не доказывает инсценировку: у преступника мог быть ключ. Найдите, куда исчезли сами ценности. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Третья версия формы 17-К. Карелин утверждал, что уничтожил этот учебный шаблон после увольнения. Очевидно, копии остались.",
+      "en": "A third version of form 17-K. Karelin claimed he destroyed this training template after leaving the company. Clearly, copies remained.",
+      "tr": "A third version of form 17-K. Karelin claimed he destroyed this training template after leaving the company. Clearly, copies remained.",
+      "ar": "A third version of form 17-K. Karelin claimed he destroyed this training template after leaving the company. Clearly, copies remained.",
+      "kk": "Третья версия формы 17-К. Карелин утверждал, что уничтожил этот учебный шаблон после увольнения. Очевидно, копии остались."
+    },
+    "nextCaseTeaser": {
+      "ru": "Следующая заявительница просит выплату по тяжёлому диагнозу. Здесь цена поспешного подозрения измеряется не деньгами.",
+      "en": "The next claimant seeks a critical-illness payout. Here, the cost of reckless suspicion cannot be measured in money.",
+      "tr": "The next claimant seeks a critical-illness payout. Here, the cost of reckless suspicion cannot be measured in money.",
+      "ar": "The next claimant seeks a critical-illness payout. Here, the cost of reckless suspicion cannot be measured in money.",
+      "kk": "Следующая заявительница просит выплату по тяжёлому диагнозу. Здесь цена поспешного подозрения измеряется не деньгами."
+    },
+    "seasonClue": {
+      "id": "template-copy",
+      "label": {
+        "ru": "Копия формы 17-К",
+        "en": "Copy of Form 17-K",
+        "tr": "Copy of Form 17-K",
+        "ar": "Copy of Form 17-K",
+        "kk": "Копия формы 17-К"
+      },
+      "description": {
+        "ru": "Одинаковая редкая ошибка подтверждает общий источник новых заявлений и старого внутреннего шаблона.",
+        "en": "The same unusual error confirms a common source for the new claims and the old internal template.",
+        "tr": "The same unusual error confirms a common source for the new claims and the old internal template.",
+        "ar": "The same unusual error confirms a common source for the new claims and the old internal template.",
+        "kk": "Одинаковая редкая ошибка подтверждает общий источник новых заявлений и старого внутреннего шаблона."
+      },
+      "progressIndex": 2,
+      "progressTotal": 5
+    },
+    "epilogue": null
   }
 }

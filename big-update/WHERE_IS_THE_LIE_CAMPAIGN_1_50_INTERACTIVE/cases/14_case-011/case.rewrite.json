@@ -1,0 +1,302 @@
+{
+  "id": "case-011",
+  "campaignOrder": 14,
+  "requiredLevel": 7,
+  "act": 2,
+  "actTitle": {
+    "ru": "Пять лет назад",
+    "en": "Five Years Earlier"
+  },
+  "title": {
+    "ru": "Дом без взломщика",
+    "en": "The House Without a Burglar"
+  },
+  "difficulty": "medium",
+  "claimAmount": {
+    "value": 8000,
+    "currency": "EUR"
+  },
+  "groundTruth": "fraud",
+  "correctDecision": "reject",
+  "investigationBudget": 3,
+  "claimant": {
+    "name": {
+      "ru": "Беатрис Колер, 52 года",
+      "en": "Beatrice Kohler, age 52"
+    },
+    "migrationNote": {
+      "ru": "Сохранить данные и портрет.",
+      "en": "Keep the existing profile data and portrait."
+    },
+    "portrait": null,
+    "portraitStatus": "retain_existing_project_portrait",
+    "portraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/beatrice.webp",
+      "existingFile": "public/people/beatrice.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Отсутствие следов взлома не доказывает инсценировку: у преступника мог быть ключ. Найдите, куда исчезли сами ценности. — В. Лебедева",
+      "en": "The absence of forced entry does not prove a staged theft; a burglar could have had a key. Find out where the valuables themselves went. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Третья версия формы 17-К. Карелин утверждал, что уничтожил этот учебный шаблон после увольнения. Очевидно, копии остались.",
+      "en": "A third version of form 17-K. Karelin claimed he destroyed this training template after leaving the company. Clearly, copies remained."
+    },
+    "nextCaseTeaser": {
+      "ru": "Следующая заявительница просит выплату по тяжёлому диагнозу. Здесь цена поспешного подозрения измеряется не деньгами.",
+      "en": "The next claimant seeks a critical-illness payout. Here, the cost of reckless suspicion cannot be measured in money."
+    },
+    "seasonClue": {
+      "id": "template-copy",
+      "label": {
+        "ru": "Копия формы 17-К",
+        "en": "Copy of Form 17-K"
+      },
+      "description": {
+        "ru": "Одинаковая редкая ошибка подтверждает общий источник новых заявлений и старого внутреннего шаблона.",
+        "en": "The same unusual error confirms a common source for the new claims and the old internal template."
+      },
+      "progressIndex": 2,
+      "progressTotal": 5
+    },
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "В ночь на 8 мая неизвестный проник в дом без видимых повреждений и похитил коллекцию украшений из спальни. Сигнализация была снята чужим способом. Прошу выплату по страховой описи — 8000 евро.",
+    "en": "On the night of May 8, an unknown person entered my home without visible damage and stole a jewelry collection from the bedroom. The intruder bypassed the alarm. I am claiming the €8,000 value listed on the policy inventory."
+  },
+  "evidence": [
+    {
+      "id": "ev-alarm",
+      "order": 1,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал сигнализации",
+        "en": "Alarm System Log"
+      },
+      "isContradiction": true,
+      "narrativeRole": "suspicion",
+      "text": {
+        "ru": "В 23:14 система снята с охраны постоянным кодом владелицы. Ошибочных попыток, сервисного входа и аварийного отключения не было.",
+        "en": "At 11:14 p.m., the system was disarmed using the owner's permanent code. There were no failed attempts, service access, or emergency override."
+      },
+      "statusExplanation": {
+        "ru": "Сигнализация была отключена корректным личным кодом, а не обойдена неизвестным способом.",
+        "en": "The alarm was properly disarmed using the owner's personal code, not bypassed by an unknown method."
+      },
+      "statementLink": {
+        "statementId": "claim_unauthorized_entry",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Сигнализация была отключена корректным личным кодом, а не обойдена неизвестным способом.",
+          "en": "The alarm was properly disarmed using the owner's personal code, not bypassed by an unknown method."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_unauthorized_entry",
+        "reason": {
+          "ru": "Сигнализация была отключена корректным личным кодом, а не обойдена неизвестным способом.",
+          "en": "The alarm was properly disarmed using the owner's personal code, not bypassed by an unknown method."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-forensic",
+      "order": 2,
+      "type": "document",
+      "title": {
+        "ru": "Осмотр дверей и окон",
+        "en": "Door and Window Inspection"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Следов повреждения нет. Эксперт допускает вход обычным ключом, поэтому один только осмотр не исключает постороннего.",
+        "en": "There are no signs of damage. The expert notes that someone could have entered with a normal key, so the inspection alone does not rule out an intruder."
+      },
+      "statusExplanation": {
+        "ru": "Отсутствие взлома подозрительно, но само по себе не является доказательством мошенничества.",
+        "en": "The absence of forced entry is suspicious but is not evidence of fraud on its own."
+      },
+      "statementLink": {
+        "statementId": "claim_unauthorized_entry",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Отсутствие взлома подозрительно, но само по себе не является доказательством мошенничества.",
+          "en": "The absence of forced entry is suspicious but is not evidence of fraud on its own."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-vault",
+      "order": 3,
+      "type": "document",
+      "title": {
+        "ru": "Квитанция частного хранилища",
+        "en": "Private Vault Receipt"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "7 мая в 18:40 Колер лично поместила в банковскую ячейку три футляра. Контрольные фотографии показывают те же украшения и совпадающие серийные номера сертификатов.",
+        "en": "At 6:40 p.m. on May 7, Kohler personally deposited three cases in a safe-deposit box. Control photographs show the same jewelry and matching certificate serial numbers."
+      },
+      "statusExplanation": {
+        "ru": "Заявительница заранее вывезла и сохранила вещи, которые на следующий день объявила похищенными.",
+        "en": "The claimant removed and secured the items before reporting them stolen the next day."
+      },
+      "statementLink": {
+        "statementId": "claim_property_lost",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Заявительница заранее вывезла и сохранила вещи, которые на следующий день объявила похищенными.",
+          "en": "The claimant removed and secured the items before reporting them stolen the next day."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_property_lost",
+        "reason": {
+          "ru": "Заявительница заранее вывезла и сохранила вещи, которые на следующий день объявила похищенными.",
+          "en": "The claimant removed and secured the items before reporting them stolen the next day."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-appraisal",
+      "order": 4,
+      "type": "document",
+      "title": {
+        "ru": "Опись и оценка",
+        "en": "Inventory and Appraisal"
+      },
+      "isContradiction": false,
+      "narrativeRole": "arc_context",
+      "text": {
+        "ru": "Украшения действительно принадлежат Колер и оценены примерно в 8000 евро. В тексте описи повторяется характерная ошибка шаблона 17-К.",
+        "en": "The jewelry does belong to Kohler and is valued at approximately €8,000. The inventory repeats a distinctive error from the 17-K template."
+      },
+      "statusExplanation": {
+        "ru": "Документ подтверждает собственность и стоимость, но не кражу. Ошибка связывает подготовку заявления с прежним шаблоном.",
+        "en": "The document proves ownership and value, but not theft. Its error links the claim to the earlier template."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Документ подтверждает собственность и стоимость, но не кражу. Ошибка связывает подготовку заявления с прежним шаблоном.",
+          "en": "The document proves ownership and value, but not theft. Its error links the claim to the earlier template."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Колер сама сняла сигнализацию личным кодом.",
+      "За несколько часов до предполагаемой кражи она поместила те же украшения в банковскую ячейку.",
+      "Ценности не были похищены. Проникновение инсценировано, выплату следует отклонить."
+    ],
+    "en": [
+      "The alarm was properly disarmed using the owner's personal code, not bypassed by an unknown method.",
+      "The claimant removed and secured the items before reporting them stolen the next day.",
+      "The absence of forced entry is suspicious but is not evidence of fraud on its own.",
+      "The document proves ownership and value, but not theft. Its error links the claim to the earlier template.",
+      "The claim is fraudulent and should be rejected."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Не делать отсутствие взлома единственным доказательством.",
+      "Добавить банковскую ячейку с совпадающими серийными номерами.",
+      "Продолжить линию внутреннего шаблона."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order."
+    ]
+  },
+  "assetPlan": [],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "В ночь на 8 мая неизвестный проник в дом без видимых повреждений и похитил коллекцию украшений из спальни. Сигнализация была снята чужим способом. Прошу выплату по страховой описи — 8000 евро.",
+        "en": "On the night of May 8, an unknown person entered my home without visible damage and stole a jewelry collection from the bedroom. The intruder bypassed the alarm. I am claiming the €8,000 value listed on the policy inventory."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_theft",
+      "text": {
+        "ru": "Украшения были похищены из дома неизвестным.",
+        "en": "An unknown person stole the jewelry from the house."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_unauthorized_entry",
+      "text": {
+        "ru": "Сигнализацию отключил посторонний, а не владелица.",
+        "en": "An intruder, not the owner, disabled the alarm."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_property_lost",
+      "text": {
+        "ru": "Застрахованные ценности больше не находятся у Колер.",
+        "en": "The insured valuables are no longer in Kohler's possession."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 0,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-011",
+    "archiveBasePath": "generated-assets/src/data/cases/case-011",
+    "claimantPortrait": null,
+    "claimantPortraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/beatrice.webp",
+      "existingFile": "public/people/beatrice.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": []
+  }
+}

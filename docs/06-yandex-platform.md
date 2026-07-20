@@ -1,6 +1,6 @@
-# 06 · Платформа Yandex и персистенс
+# 06 · Платформы и персистенс
 
-> **🗺️ Ключевые файлы:** `src/services/yandexSDK.ts` (единственный адаптер `window.YaGames`), `src/services/metrica.ts` (единственный адаптер `window.ym` — аналитика), `src/services/persistence.ts` (снапшот + миграция), `src/config/gameConfig.ts` (`saveVersion`, `analytics`).
+> **🗺️ Ключевые файлы:** `src/services/platformAdapter.ts` (единый контракт Yandex/CrazyGames/local), `src/services/yandexSDK.ts` (единственное место с `window.YaGames`), `src/services/metrica.ts` (единственное место с `window.ym`), `src/services/persistence.ts` (снапшот + миграция), `src/config/gameConfig.ts` (`saveVersion`, `analytics`).
 
 `src/services/yandexSDK.ts` — **единственное** место, трогающее `window.YaGames`. Движок
 никогда не зовёт SDK напрямую. Любой сбой/отсутствие SDK молча переводит в офлайн-режим;
@@ -41,7 +41,7 @@
 
 ## Миграция сейвов
 
-`GAME_CONFIG.saveVersion` — текущая версия схемы персиста (сейчас **8**). `migrate()` в
+`GAME_CONFIG.saveVersion` — текущая версия схемы персиста (сейчас **9**). `migrate()` в
 `persistence.ts` спредит текущие дефолты под старые сейвы, добивая новые поля:
 - v1 → v2: добавлены xp / streakCount / lastPlayedServerDay / unlockedAchievementIds в
   stats и revealedEvidenceIds в сессию.
@@ -197,3 +197,19 @@ npm run metrika:goals -- --list
 `npm run build`, затем загрузить **содержимое** `dist/` как ZIP в консоль Yandex Games.
 Сборка использует относительный base (`./` в `vite.config.ts`), поэтому работает с
 хостинг-пути платформы как есть. См. [08-build-test-deploy.md](08-build-test-deploy.md).
+## Portal-neutral adapter and save v9
+
+`platformAdapter.ts` selects CrazyGames when `window.CrazyGames.SDK` is present, otherwise the safe
+Yandex/local implementation. It owns the shared lifecycle, locale, advertisements and cloud-data
+contract. CrazyGames receives `gameplayStart` only after hydration makes the first real action
+available, plus `gameplayStop` on teardown; rewarded/midgame ad callbacks drive the same pause guard.
+Portal-specific Yandex IAP, rating and leaderboard features are disabled on CrazyGames.
+
+Migration v8 → v9 adds `interactiveEvidenceProgress`, `finalSynthesisProgress` and `metaUnlocked` to
+stats and `stamps` to an active session. Old selected evidence is preserved as a `claim_main` stamp,
+then normalized to the evidence's exact atomic statement when that case resumes. Existing profiles
+start with meta unlocked; only genuinely new profiles enter the three-case onboarding lock.
+
+New Metrica goals are `evidence_analysis_start`, `evidence_analysis_hint`,
+`evidence_analysis_complete`, `onboarding_complete`, `final_synthesis_complete` and
+`final_synthesis_skip`. Completion events fire only on state transition, not on every progress save.

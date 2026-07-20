@@ -1,0 +1,84 @@
+{
+  "id": "photo-50",
+  "order": 1,
+  "type": "seal_match",
+  "title": {
+    "ru": "Сопоставление обгоревшего фитиля"
+  },
+  "isContradiction": false,
+  "narrativeRole": "proof",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Фрагменты совпали: поджигатели использовали материал из перехваченной партии GC-17."
+  },
+  "previousType": "photo",
+  "description": {
+    "ru": "Фрагмент у двери «Компаса» сравнивается с лентой из перехваченной партии Серого конвоя."
+  },
+  "instruction": {
+    "ru": "Совместить уцелевшие участки разрыва и внутренней сетки."
+  },
+  "assets": {
+    "asset1": "assets/interactive/photo-50-master-a.webp",
+    "asset2": "assets/interactive/photo-50-fragments.json"
+  },
+  "data": {
+    "movableFragment": "B",
+    "allowRotation": true,
+    "rotationStep": 3,
+    "initialTransform": {
+      "x": 72,
+      "y": 18,
+      "rotation": -14
+    },
+    "targetTransform": {
+      "x": 132,
+      "y": 48,
+      "rotation": 6
+    },
+    "tolerance": {
+      "position": 10,
+      "rotation": 5
+    },
+    "expectedMatch": true,
+    "sourceSeed": 485017,
+    "fragmentASeed": 485017,
+    "fragmentBSeed": 485017,
+    "comparisonMarkers": [
+      {
+        "id": "tear_pattern",
+        "label": "Совпадают внутренняя сетка, пропитка и край разрыва"
+      }
+    ]
+  },
+  "statementLink": {
+    "statementId": "claim_external_arson",
+    "relation": "supports",
+    "reason": {
+      "ru": "Фрагменты совпали: поджигатели использовали материал из перехваченной партии GC-17."
+    }
+  },
+  "contradictionTarget": null,
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true,
+    "transparencyMode": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Игрок применяет навык повторно и отличает реальную атаку от прежних подброшенных следов."
+    },
+    "playerAction": {
+      "ru": "Совместить уцелевшие участки разрыва и внутренней сетки."
+    },
+    "conclusion": {
+      "ru": "Фрагменты совпали: поджигатели использовали материал из перехваченной партии GC-17."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

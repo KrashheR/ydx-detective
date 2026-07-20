@@ -1,261 +1,391 @@
 {
   "id": "case-003",
   "type": "standard",
+  "campaignOrder": 4,
+  "requiredLevel": 2,
+  "act": 1,
+  "actTitle": {
+    "ru": "Чужой почерк",
+    "en": "Another Hand",
+    "tr": "Another Hand",
+    "ar": "Another Hand",
+    "kk": "Чужой почерк"
+  },
   "difficulty": "medium",
   "claimAmount": 4000,
   "truth": "fraud",
   "title": {
-    "ru": "Пёс-гурман",
-    "en": "The Gourmet Dog",
-    "tr": "Gurme Köpek",
-    "ar": "الكلب الذواقة",
-    "kk": "Гурман ит"
+    "ru": "Часы в желудке",
+    "en": "A Watch in the Stomach",
+    "tr": "A Watch in the Stomach",
+    "ar": "A Watch in the Stomach",
+    "kk": "Часы в желудке"
   },
   "claim": {
     "person": {
       "ru": "Геннадий Бубликов, 52 года",
-      "en": "Gennady Bublikov, 52",
-      "tr": "Gennady Bublikov, 52",
-      "ar": "غينادي بوبليكوف، 52",
-      "kk": "Геннадий Бубликов, 52 жаста"
+      "en": "Gennady Bublikov, age 52",
+      "tr": "Gennady Bublikov, age 52",
+      "ar": "Gennady Bublikov, age 52",
+      "kk": "Геннадий Бубликов, 52 года"
     },
     "story": {
-      "ru": "Мой французский бульдог Барон проглотил мои швейцарские часы за 4000 €. Ветеринар сделал снимок. Прошу компенсацию за бесценную семейную реликвию.",
-      "en": "My French bulldog Baron swallowed my Swiss watch worth €4,000. The vet took an X-ray. I request compensation for this priceless family heirloom.",
-      "tr": "Fransız buldoğum Baron, 4.000 €'luk İsviçre saatimi yuttu. Veteriner röntgen çekti. Bu paha biçilmez aile yadigârı için tazminat talep ediyorum.",
-      "ar": "ابتلع كلبي البلدغ الفرنسي بارون ساعتي السويسرية التي تبلغ قيمتها 4000 يورو. أخذ الطبيب البيطري صورة بالأشعة. أطلب تعويضًا عن هذا الإرث العائلي الذي لا يقدر بثمن.",
-      "kk": "Менің француз бульдогым Барон 4000 €-лық швейцариялық сағатымды жұтып қойды. Ветеринар рентген түсірді. Осы баға жетпес отбасылық жәдігер үшін өтемақы сұраймын."
+      "ru": "Мой французский бульдог Барон проглотил застрахованные механические часы индивидуальной сборки `N-8`, семейную реликвию стоимостью 4000 евро. Ветеринар извлёк часы, но вода и желудочный сок окончательно повредили механизм. Прошу компенсировать полную стоимость.",
+      "en": "My French bulldog, Baron, swallowed my insured custom-built `N-8` mechanical watch, a family heirloom worth €4,000. A veterinarian recovered it, but water and stomach acid permanently destroyed the movement. I am claiming its full value.",
+      "tr": "My French bulldog, Baron, swallowed my insured custom-built `N-8` mechanical watch, a family heirloom worth €4,000. A veterinarian recovered it, but water and stomach acid permanently destroyed the movement. I am claiming its full value.",
+      "ar": "My French bulldog, Baron, swallowed my insured custom-built `N-8` mechanical watch, a family heirloom worth €4,000. A veterinarian recovered it, but water and stomach acid permanently destroyed the movement. I am claiming its full value.",
+      "kk": "Мой французский бульдог Барон проглотил застрахованные механические часы индивидуальной сборки `N-8`, семейную реликвию стоимостью 4000 евро. Ветеринар извлёк часы, но вода и желудочный сок окончательно повредили механизм. Прошу компенсировать полную стоимость."
     }
   },
-  "coverImage": "covers/case-003.svg",
-  "personImage": "people/gennady.webp",
   "client": {
     "role": {
-      "ru": "Заявитель · физ. лицо",
-      "en": "Claimant · individual",
-      "tr": "Başvuru sahibi · gerçek kişi",
-      "ar": "مقدم الطلب · شخص طبيعي",
-      "kk": "Өтініш беруші · жеке тұлға"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Возраст",
-          "en": "Age",
-          "tr": "Yaş",
-          "ar": "العمر",
-          "kk": "Жасы"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "52 года",
-          "en": "52 years old",
-          "tr": "52 yaşında",
-          "ar": "52 عامًا",
-          "kk": "52 жаста"
+          "ru": "1",
+          "en": "1",
+          "tr": "1",
+          "ar": "1",
+          "kk": "1"
         }
       },
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Саратов",
-          "en": "Saratov",
-          "tr": "Saratov",
-          "ar": "ساراتوف",
-          "kk": "Саратов"
-        }
-      },
-      {
-        "k": {
-          "ru": "Клиент с",
-          "en": "Client since",
-          "tr": "Müşteri",
-          "ar": "عميل منذ",
-          "kk": "Клиент"
-        },
-        "v": {
-          "ru": "2015 г.",
-          "en": "2015",
-          "tr": "2015",
-          "ar": "2015",
-          "kk": "2015 ж."
-        }
-      },
-      {
-        "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
-        },
-        "v": {
-          "ru": "Дом. животные · ЖИ-33071249-X2",
-          "en": "Pets · ZH-33071249-X2",
-          "tr": "Evcil hayvanlar · ZH-33071249-X2",
-          "ar": "الحيوانات الأليفة · ZH-33071249-X2",
-          "kk": "Үй жануарлары · ЖИ-33071249-X2"
-        }
-      },
-      {
-        "k": {
-          "ru": "Документ",
-          "en": "Document",
-          "tr": "Belge",
-          "ar": "الوثيقة",
-          "kk": "Құжат"
-        },
-        "v": {
-          "ru": "Паспорт 6311-87 №330712849-31",
-          "en": "Passport 6311-87 №330712849-31",
-          "tr": "Pasaport 6311-87 №330712849-31",
-          "ar": "جواز السفر 6311-87 №330712849-31",
-          "kk": "Паспорт 6311-87 №330712849-31"
+          "ru": "4",
+          "en": "4",
+          "tr": "4",
+          "ar": "4",
+          "kk": "4"
         }
       }
     ]
   },
+  "coverImage": "covers/case-003.svg",
+  "personImage": "people/gennady.webp",
   "evidences": [
     {
       "id": "ev-xray",
+      "order": 1,
       "type": "photo",
       "title": {
-        "ru": "Рентген собаки",
-        "en": "Dog X-Ray",
-        "tr": "Köpek Röntgeni",
-        "ar": "أشعة الكلب",
-        "kk": "Иттің рентгені"
+        "ru": "Рентген Барона",
+        "en": "Baron's X-Ray",
+        "tr": "Baron's X-Ray",
+        "ar": "Baron's X-Ray",
+        "kk": "Рентген Барона"
       },
       "content": {
-        "ru": "На снимке в желудке пса видны теннисный мяч и один носок. Часов нет.",
-        "en": "The X-ray shows a tennis ball and a single sock in the dog's stomach. No watch.",
-        "tr": "Röntgende köpeğin midesinde bir tenis topu ve tek bir çorap görünüyor. Saat yok.",
-        "ar": "تُظهر الأشعة كرة تنس وجوربًا واحدًا في معدة الكلب. لا توجد ساعة.",
-        "kk": "Рентгенде иттің асқазанында теннис добы мен бір шұлық көрінеді. Сағат жоқ."
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Если бы пёс съел часы, они были бы видны на снимке — но их там нет.",
-        "en": "If the dog had eaten the watch, it would appear on the X-ray — but it isn't there.",
-        "tr": "Köpek saati yeseydi röntgende görünürdü — ama orada değil.",
-        "ar": "لو ابتلع الكلب الساعة لظهرت في الأشعة، لكنها غير موجودة.",
-        "kk": "Ит сағатты жұтқан болса, ол рентгенде көрінер еді — бірақ онда жоқ."
-      },
-      "meta": {
-        "filename": "IMG_20260320_113015.jpg",
-        "imageUrl": "evidence/case-003-ev-xray.webp"
-      }
-    },
-    {
-      "id": "ev-listing",
-      "type": "document",
-      "title": {
-        "ru": "Объявление о продаже",
-        "en": "Marketplace Listing",
-        "tr": "Satılık İlanı",
-        "ar": "إعلان للبيع",
-        "kk": "Сату хабарландыруы"
-      },
-      "content": {
-        "ru": "Объявление о продаже точно таких же часов от продавца «Хозяин Барона», размещено через два дня после «происшествия».",
-        "en": "An ad selling an identical watch from seller \"Baron's Owner\", posted two days after the alleged incident.",
-        "tr": "\"Baron'un Sahibi\" adlı satıcıdan aynı saatin satış ilanı, sözde olaydan iki gün sonra yayınlanmış.",
-        "ar": "إعلان لبيع ساعة مطابقة من البائع \"صاحب بارون\"، نُشر بعد يومين من الحادثة المزعومة.",
-        "kk": "Дәл сондай сағатты сататын «Баронның иесі» атты сатушының хабарландыруы, болжамды оқиғадан екі күн өткен соң жарияланған."
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Часы, якобы съеденные собакой, выставлены на продажу самим заявителем.",
-        "en": "The watch supposedly eaten by the dog is being sold by the claimant himself.",
-        "tr": "Köpeğin yediği iddia edilen saat, talep sahibinin kendisi tarafından satılıyor.",
-        "ar": "الساعة التي يُزعم أن الكلب ابتلعها معروضة للبيع من قبل مقدم الطلب نفسه.",
-        "kk": "Ит жұтты деген сағатты өтініш берушінің өзі сатуға қойған."
-      }
-    },
-    {
-      "id": "ev-receipt",
-      "type": "document",
-      "title": {
-        "ru": "Чек на часы",
-        "en": "Watch Receipt",
-        "tr": "Saat Fişi",
-        "ar": "إيصال الساعة",
-        "kk": "Сағат түбіртегі"
-      },
-      "content": {
-        "ru": "Чек показывает, что «швейцарские часы» — это сувенирная реплика за 29 € из пляжного киоска.",
-        "en": "The receipt shows the \"Swiss watch\" is a €29 souvenir replica from a beach kiosk.",
-        "tr": "Fiş, \"İsviçre saatinin\" bir plaj büfesinden alınan 29 €'luk hatıra eşyası taklidi olduğunu gösteriyor.",
-        "ar": "يُظهر الإيصال أن \"الساعة السويسرية\" هي نسخة تذكارية مقلدة بسعر 29 يورو من كشك على الشاطئ.",
-        "kk": "Түбіртек «швейцариялық сағат» — жағажай дүңгіршегінен алынған 29 €-лық кәдесый көшірмесі екенін көрсетеді."
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Заявленная стоимость 4000 € не соответствует чеку на 29 €.",
-        "en": "The claimed value of €4,000 does not match the €29 receipt.",
-        "tr": "İddia edilen 4.000 € değer, 29 €'luk fişle örtüşmüyor.",
-        "ar": "القيمة المزعومة البالغة 4000 يورو لا تتطابق مع الإيصال البالغ 29 يورو.",
-        "kk": "Мәлімделген 4000 € құны 29 €-лық түбіртекке сәйкес келмейді."
-      }
-    },
-    {
-      "id": "ev-vetbill",
-      "type": "document",
-      "title": {
-        "ru": "Счёт ветеринара",
-        "en": "Vet Bill",
-        "tr": "Veteriner Faturası",
-        "ar": "فاتورة الطبيب البيطري",
-        "kk": "Ветеринар шоты"
-      },
-      "content": {
-        "ru": "Официальный счёт за осмотр собаки. Барон здоров, аппетит отличный.",
-        "en": "Official bill for examining the dog. Baron is healthy with a great appetite.",
-        "tr": "Köpeğin muayenesi için resmi fatura. Baron sağlıklı ve iştahı yerinde.",
-        "ar": "فاتورة رسمية لفحص الكلب. بارون بصحة جيدة وشهيته ممتازة.",
-        "kk": "Итті тексеруге арналған ресми шот. Барон сау, тәбеті жақсы."
+        "ru": "На рентгеновском снимке в желудке собаки действительно виден предмет, похожий на наручные часы. Рядом находятся теннисный мяч и фрагмент носка.",
+        "en": "The X-ray clearly shows an object resembling a wristwatch inside the dog's stomach. A tennis ball and part of a sock are visible beside it.",
+        "tr": "The X-ray clearly shows an object resembling a wristwatch inside the dog's stomach. A tennis ball and part of a sock are visible beside it.",
+        "ar": "The X-ray clearly shows an object resembling a wristwatch inside the dog's stomach. A tennis ball and part of a sock are visible beside it.",
+        "kk": "На рентгеновском снимке в желудке собаки действительно виден предмет, похожий на наручные часы. Рядом находятся теннисный мяч и фрагмент носка."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Счёт подлинный, пёс действительно был на осмотре — противоречия нет.",
-        "en": "The bill is genuine and the dog really was examined — no contradiction.",
-        "tr": "Fatura gerçek ve köpek gerçekten muayene edilmiş — çelişki yok.",
-        "ar": "الفاتورة أصلية والكلب فُحص بالفعل — لا يوجد تناقض.",
-        "kk": "Шот шынайы, ит шынымен тексеруден өткен — қайшылық жоқ."
+        "ru": "Барон действительно проглотил часы. Сам факт происшествия не выдуман.",
+        "en": "Baron really did swallow a watch. The incident itself was not invented.",
+        "tr": "Baron really did swallow a watch. The incident itself was not invented.",
+        "ar": "Baron really did swallow a watch. The incident itself was not invented.",
+        "kk": "Барон действительно проглотил часы. Сам факт происшествия не выдуман."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_event",
+        "relation": "supports",
+        "reason": {
+          "ru": "Барон действительно проглотил часы. Сам факт происшествия не выдуман.",
+          "en": "Baron really did swallow a watch. The incident itself was not invented.",
+          "tr": "Baron really did swallow a watch. The incident itself was not invented.",
+          "ar": "Baron really did swallow a watch. The incident itself was not invented.",
+          "kk": "Барон действительно проглотил часы. Сам факт происшествия не выдуман."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/case-003-xray-baron.webp"
       }
+    },
+    {
+      "id": "ev-vet-act",
+      "order": 2,
+      "type": "document",
+      "title": {
+        "ru": "Акт ветеринарной клиники",
+        "en": "Veterinary Clinic Report",
+        "tr": "Veterinary Clinic Report",
+        "ar": "Veterinary Clinic Report",
+        "kk": "Акт ветеринарной клиники"
+      },
+      "content": {
+        "ru": "Из желудка извлечены сувенирные кварцевые часы модели `M-219`, серийный номер `M219-0448`. В приложенном каталоге клиники эта модель указана по цене 29 евро.",
+        "en": "A souvenir quartz watch, model `M-219`, serial number `M219-0448`, was removed from the stomach. The clinic's attached catalog lists that model at €29.",
+        "tr": "A souvenir quartz watch, model `M-219`, serial number `M219-0448`, was removed from the stomach. The clinic's attached catalog lists that model at €29.",
+        "ar": "A souvenir quartz watch, model `M-219`, serial number `M219-0448`, was removed from the stomach. The clinic's attached catalog lists that model at €29.",
+        "kk": "Из желудка извлечены сувенирные кварцевые часы модели `M-219`, серийный номер `M219-0448`. В приложенном каталоге клиники эта модель указана по цене 29 евро."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Из собаки извлекли дешёвые сувенирные часы, а не застрахованную модель стоимостью 4000 евро.",
+        "en": "The dog swallowed a cheap souvenir watch, not the insured €4,000 timepiece.",
+        "tr": "The dog swallowed a cheap souvenir watch, not the insured €4,000 timepiece.",
+        "ar": "The dog swallowed a cheap souvenir watch, not the insured €4,000 timepiece.",
+        "kk": "Из собаки извлекли дешёвые сувенирные часы, а не застрахованную модель стоимостью 4000 евро."
+      },
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_object",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Из собаки извлекли дешёвые сувенирные часы, а не застрахованную модель стоимостью 4000 евро.",
+          "en": "The dog swallowed a cheap souvenir watch, not the insured €4,000 timepiece.",
+          "tr": "The dog swallowed a cheap souvenir watch, not the insured €4,000 timepiece.",
+          "ar": "The dog swallowed a cheap souvenir watch, not the insured €4,000 timepiece.",
+          "kk": "Из собаки извлекли дешёвые сувенирные часы, а не застрахованную модель стоимостью 4000 евро."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_object",
+        "reason": {
+          "ru": "Из собаки извлекли дешёвые сувенирные часы, а не застрахованную модель стоимостью 4000 евро.",
+          "en": "The dog swallowed a cheap souvenir watch, not the insured €4,000 timepiece.",
+          "tr": "The dog swallowed a cheap souvenir watch, not the insured €4,000 timepiece.",
+          "ar": "The dog swallowed a cheap souvenir watch, not the insured €4,000 timepiece.",
+          "kk": "Из собаки извлекли дешёвые сувенирные часы, а не застрахованную модель стоимостью 4000 евро."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "ev-watch-policy",
+      "order": 3,
+      "type": "document",
+      "title": {
+        "ru": "Страховая карточка часов",
+        "en": "Watch Insurance Record",
+        "tr": "Watch Insurance Record",
+        "ar": "Watch Insurance Record",
+        "kk": "Страховая карточка часов"
+      },
+      "content": {
+        "ru": "В полисе зарегистрированы механические часы индивидуальной сборки `N-8`, серийный номер `N8-48217`. На задней крышке находится уникальная гравировка: «Г. Б. · 1998».",
+        "en": "The policy lists a custom-built `N-8` mechanical watch, serial number `N8-48217`. Its case back carries a unique engraving: ‘G. B. · 1998.’",
+        "tr": "The policy lists a custom-built `N-8` mechanical watch, serial number `N8-48217`. Its case back carries a unique engraving: ‘G. B. · 1998.’",
+        "ar": "The policy lists a custom-built `N-8` mechanical watch, serial number `N8-48217`. Its case back carries a unique engraving: ‘G. B. · 1998.’",
+        "kk": "В полисе зарегистрированы механические часы индивидуальной сборки `N-8`, серийный номер `N8-48217`. На задней крышке находится уникальная гравировка: «Г. Б. · 1998»."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Документ устанавливает точные признаки застрахованной вещи. Он нужен для сравнения с другими уликами.",
+        "en": "The record establishes the insured item's exact identifiers for comparison with the other evidence.",
+        "tr": "The record establishes the insured item's exact identifiers for comparison with the other evidence.",
+        "ar": "The record establishes the insured item's exact identifiers for comparison with the other evidence.",
+        "kk": "Документ устанавливает точные признаки застрахованной вещи. Он нужен для сравнения с другими уликами."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_object",
+        "relation": "supports",
+        "reason": {
+          "ru": "Документ устанавливает точные признаки застрахованной вещи. Он нужен для сравнения с другими уликами.",
+          "en": "The record establishes the insured item's exact identifiers for comparison with the other evidence.",
+          "tr": "The record establishes the insured item's exact identifiers for comparison with the other evidence.",
+          "ar": "The record establishes the insured item's exact identifiers for comparison with the other evidence.",
+          "kk": "Документ устанавливает точные признаки застрахованной вещи. Он нужен для сравнения с другими уликами."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5
+    },
+    {
+      "id": "ev-listing",
+      "order": 4,
+      "type": "document",
+      "title": {
+        "ru": "Объявление коллекционерам",
+        "en": "Collectors' Listing",
+        "tr": "Collectors' Listing",
+        "ar": "Collectors' Listing",
+        "kk": "Объявление коллекционерам"
+      },
+      "content": {
+        "ru": "На следующий день после операции пользователь «Хозяин Барона» выставил на продажу часы `N-8`. На фотографии видны номер `N8-48217` и гравировка «Г. Б. · 1998». В описании указано: «Механизм исправен, часы никогда не вскрывались».",
+        "en": "The day after the operation, a user named ‘Baron's Owner’ listed an `N-8` watch for sale. The photograph shows serial number `N8-48217` and the engraving ‘G. B. · 1998.’ The description says: ‘Movement in perfect condition. Case never opened.’",
+        "tr": "The day after the operation, a user named ‘Baron's Owner’ listed an `N-8` watch for sale. The photograph shows serial number `N8-48217` and the engraving ‘G. B. · 1998.’ The description says: ‘Movement in perfect condition. Case never opened.’",
+        "ar": "The day after the operation, a user named ‘Baron's Owner’ listed an `N-8` watch for sale. The photograph shows serial number `N8-48217` and the engraving ‘G. B. · 1998.’ The description says: ‘Movement in perfect condition. Case never opened.’",
+        "kk": "На следующий день после операции пользователь «Хозяин Барона» выставил на продажу часы `N-8`. На фотографии видны номер `N8-48217` и гравировка «Г. Б. · 1998». В описании указано: «Механизм исправен, часы никогда не вскрывались»."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Застрахованные часы остались у владельца и выставлены на продажу. Барон проглотил дешёвую замену.",
+        "en": "The insured watch remained with its owner and was offered for sale. Baron swallowed a cheap substitute.",
+        "tr": "The insured watch remained with its owner and was offered for sale. Baron swallowed a cheap substitute.",
+        "ar": "The insured watch remained with its owner and was offered for sale. Baron swallowed a cheap substitute.",
+        "kk": "Застрахованные часы остались у владельца и выставлены на продажу. Барон проглотил дешёвую замену."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_loss",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Застрахованные часы остались у владельца и выставлены на продажу. Барон проглотил дешёвую замену.",
+          "en": "The insured watch remained with its owner and was offered for sale. Baron swallowed a cheap substitute.",
+          "tr": "The insured watch remained with its owner and was offered for sale. Baron swallowed a cheap substitute.",
+          "ar": "The insured watch remained with its owner and was offered for sale. Baron swallowed a cheap substitute.",
+          "kk": "Застрахованные часы остались у владельца и выставлены на продажу. Барон проглотил дешёвую замену."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_loss",
+        "reason": {
+          "ru": "Застрахованные часы остались у владельца и выставлены на продажу. Барон проглотил дешёвую замену.",
+          "en": "The insured watch remained with its owner and was offered for sale. Baron swallowed a cheap substitute.",
+          "tr": "The insured watch remained with its owner and was offered for sale. Baron swallowed a cheap substitute.",
+          "ar": "The insured watch remained with its owner and was offered for sale. Baron swallowed a cheap substitute.",
+          "kk": "Застрахованные часы остались у владельца и выставлены на продажу. Барон проглотил дешёвую замену."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "На рентгене часов в собаке нет.",
-      "Те же часы заявитель выставил на продажу.",
-      "Это сувенир за 29 €, а не реликвия за 4000 €. Заявление мошенническое — отклонить."
+      "Бубликов сказал часть правды: Барон действительно проглотил часы.",
+      "Ветеринар извлёк сувенирную модель стоимостью 29 евро.",
+      "Застрахованные часы с уникальным номером остались у Бубликова и были выставлены на продажу.",
+      "Заявитель подменил вещь и завысил ущерб. Заявление следует отклонить."
     ],
     "en": [
-      "The X-ray shows no watch inside the dog.",
-      "The claimant listed the same watch for sale.",
-      "It is a €29 souvenir, not a €4,000 heirloom. The claim is fraudulent — reject."
+      "The dog swallowed a cheap souvenir watch, not the insured €4,000 timepiece.",
+      "The insured watch remained with its owner and was offered for sale. Baron swallowed a cheap substitute.",
+      "Baron really did swallow a watch. The incident itself was not invented.",
+      "The record establishes the insured item's exact identifiers for comparison with the other evidence.",
+      "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "Röntgende köpeğin içinde saat yok.",
-      "Talep sahibi aynı saati satışa çıkarmış.",
-      "Bu 4.000 €'luk yadigâr değil, 29 €'luk bir hatıra eşyası. Talep hileli — reddedin."
+      "The dog swallowed a cheap souvenir watch, not the insured €4,000 timepiece.",
+      "The insured watch remained with its owner and was offered for sale. Baron swallowed a cheap substitute.",
+      "Baron really did swallow a watch. The incident itself was not invented.",
+      "The record establishes the insured item's exact identifiers for comparison with the other evidence.",
+      "The claim is fraudulent and should be rejected."
     ],
     "ar": [
-      "الأشعة لا تُظهر أي ساعة داخل الكلب.",
-      "عرض مقدم الطلب الساعة نفسها للبيع.",
-      "إنها تذكار بـ 29 يورو، وليست إرثًا بـ 4000 يورو. المطالبة احتيالية — ارفضها."
+      "The dog swallowed a cheap souvenir watch, not the insured €4,000 timepiece.",
+      "The insured watch remained with its owner and was offered for sale. Baron swallowed a cheap substitute.",
+      "Baron really did swallow a watch. The incident itself was not invented.",
+      "The record establishes the insured item's exact identifiers for comparison with the other evidence.",
+      "The claim is fraudulent and should be rejected."
     ],
     "kk": [
-      "Рентгенде иттің ішінде сағат жоқ.",
-      "Өтініш беруші дәл сол сағатты сатуға қойған.",
-      "Бұл 4000 €-лық жәдігер емес, 29 €-лық кәдесый. Талап алаяқтық — қабылдамаңыз."
+      "Бубликов сказал часть правды: Барон действительно проглотил часы.",
+      "Ветеринар извлёк сувенирную модель стоимостью 29 евро.",
+      "Застрахованные часы с уникальным номером остались у Бубликова и были выставлены на продажу.",
+      "Заявитель подменил вещь и завысил ущерб. Заявление следует отклонить."
     ]
+  },
+  "investigationBudget": 3,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Мой французский бульдог Барон проглотил застрахованные механические часы индивидуальной сборки `N-8`, семейную реликвию стоимостью 4000 евро. Ветеринар извлёк часы, но вода и желудочный сок окончательно повредили механизм. Прошу компенсировать полную стоимость.",
+        "en": "My French bulldog, Baron, swallowed my insured custom-built `N-8` mechanical watch, a family heirloom worth €4,000. A veterinarian recovered it, but water and stomach acid permanently destroyed the movement. I am claiming its full value.",
+        "tr": "My French bulldog, Baron, swallowed my insured custom-built `N-8` mechanical watch, a family heirloom worth €4,000. A veterinarian recovered it, but water and stomach acid permanently destroyed the movement. I am claiming its full value.",
+        "ar": "My French bulldog, Baron, swallowed my insured custom-built `N-8` mechanical watch, a family heirloom worth €4,000. A veterinarian recovered it, but water and stomach acid permanently destroyed the movement. I am claiming its full value.",
+        "kk": "Мой французский бульдог Барон проглотил застрахованные механические часы индивидуальной сборки `N-8`, семейную реликвию стоимостью 4000 евро. Ветеринар извлёк часы, но вода и желудочный сок окончательно повредили механизм. Прошу компенсировать полную стоимость."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_event",
+      "text": {
+        "ru": "Барон проглотил наручные часы.",
+        "en": "Baron swallowed a wristwatch.",
+        "tr": "Baron swallowed a wristwatch.",
+        "ar": "Baron swallowed a wristwatch.",
+        "kk": "Барон проглотил наручные часы."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_object",
+      "text": {
+        "ru": "Проглочены застрахованные часы N-8 с номером N8-48217.",
+        "en": "The swallowed watch was the insured N-8, serial number N8-48217.",
+        "tr": "The swallowed watch was the insured N-8, serial number N8-48217.",
+        "ar": "The swallowed watch was the insured N-8, serial number N8-48217.",
+        "kk": "Проглочены застрахованные часы N-8 с номером N8-48217."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_loss",
+      "text": {
+        "ru": "Механизм застрахованных часов уничтожен и требует выплаты 4000 евро.",
+        "en": "The insured watch's movement was destroyed, warranting a €4,000 payout.",
+        "tr": "The insured watch's movement was destroyed, warranting a €4,000 payout.",
+        "ar": "The insured watch's movement was destroyed, warranting a €4,000 payout.",
+        "kk": "Механизм застрахованных часов уничтожен и требует выплаты 4000 евро."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Не смейтесь над заявлением до изучения рентгена. Иногда самая нелепая часть истории оказывается единственной правдивой. — В. Лебедева",
+      "en": "Do not laugh at the claim before examining the X-ray. Sometimes the most ridiculous part of a story is the only true part. — V. Lebedeva",
+      "tr": "Do not laugh at the claim before examining the X-ray. Sometimes the most ridiculous part of a story is the only true part. — V. Lebedeva",
+      "ar": "Do not laugh at the claim before examining the X-ray. Sometimes the most ridiculous part of a story is the only true part. — V. Lebedeva",
+      "kk": "Не смейтесь над заявлением до изучения рентгена. Иногда самая нелепая часть истории оказывается единственной правдивой. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Барон невиновен. По крайней мере в страховом мошенничестве. Носок пока остаётся отдельным делом.",
+      "en": "Baron is innocent—at least of insurance fraud. The sock remains a separate investigation.",
+      "tr": "Baron is innocent—at least of insurance fraud. The sock remains a separate investigation.",
+      "ar": "Baron is innocent—at least of insurance fraud. The sock remains a separate investigation.",
+      "kk": "Барон невиновен. По крайней мере в страховом мошенничестве. Носок пока остаётся отдельным делом."
+    },
+    "nextCaseTeaser": {
+      "ru": "Новый заявитель утверждает, что его кольцо унёс дрон. В папке также упоминается енот. Это не опечатка.",
+      "en": "The next claimant says a drone carried away his ring. The file also mentions a raccoon. That is not a typo.",
+      "tr": "The next claimant says a drone carried away his ring. The file also mentions a raccoon. That is not a typo.",
+      "ar": "The next claimant says a drone carried away his ring. The file also mentions a raccoon. That is not a typo.",
+      "kk": "Новый заявитель утверждает, что его кольцо унёс дрон. В папке также упоминается енот. Это не опечатка."
+    },
+    "seasonClue": null,
+    "epilogue": null
   }
 }

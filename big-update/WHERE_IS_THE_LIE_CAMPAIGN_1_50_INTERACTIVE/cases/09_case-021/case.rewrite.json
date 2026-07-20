@@ -1,0 +1,520 @@
+{
+  "id": "case-021",
+  "campaignOrder": 9,
+  "requiredLevel": 5,
+  "act": 1,
+  "actTitle": {
+    "ru": "Чужой почерк",
+    "en": "Another Hand"
+  },
+  "title": {
+    "ru": "Прорыв под «Маяком»",
+    "en": "The Rupture Beneath Mayak"
+  },
+  "difficulty": "hard",
+  "claimAmount": {
+    "value": 1900,
+    "currency": "EUR"
+  },
+  "groundTruth": "fraud",
+  "correctDecision": "reject",
+  "investigationBudget": 3,
+  "claimant": {
+    "name": {
+      "ru": "Лев Аркадьевич Соколов, 69 лет",
+      "en": "Lev Arkadyevich Sokolov, age 69"
+    },
+    "migrationNote": {
+      "ru": "Сохранить стабильный профиль и существующий портрет после визуальной сверки с канонической версией.",
+      "en": "Keep the established profile and existing portrait after visually checking them against the canonical version."
+    },
+    "portrait": {
+      "characterId": "lev-sokolov",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Лев Аркадьевич Соколов",
+        "en": "Lev Arkadyevich Sokolov, age 69"
+      },
+      "assetId": "asset-012",
+      "src": "src/data/cases/case-021/people/lev-sokolov.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-021/people/lev-sokolov.webp",
+      "caseRelativeSrc": "people/lev-sokolov.webp",
+      "installTo": "public/people/lev-sokolov.webp",
+      "legacyRuntimeUrl": "people/lev-sokolov.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "33c405bd368a69e32b2b4bc80701fdd627ba1cc2468cc594ca356bce9b20b585"
+    },
+    "portraitStatus": "generated_replacement_included",
+    "portraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/lev-sokolov.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-021/people/lev-sokolov.webp",
+      "copyTo": "public/people/lev-sokolov.webp",
+      "replacesExistingValue": "people/khariton.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Знакомые люди не получают скидку на правду. Изучайте заявление Соколова так, будто никогда о нём не слышали. — В. Лебедева",
+      "en": "Familiar faces receive no discount on the truth. Examine Sokolov's claim as if you had never heard of him. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Вы защитили «Маяк», когда его подставили. И отказали ему, когда он солгал. Именно так работает беспристрастность. Теперь у нас есть голос консультанта.",
+      "en": "You defended Mayak when it was framed, and rejected its claim when its director lied. That is what impartiality looks like. Now we have the consultant's voice."
+    },
+    "nextCaseTeaser": {
+      "ru": "В прямом эфире разбилась техника. В черновиках трансляции найдено слово «сценарий» и знакомый код.",
+      "en": "Equipment was destroyed during a livestream. The broadcast drafts contain the word ‘script’ and a familiar code."
+    },
+    "seasonClue": {
+      "id": "act1-clue-9",
+      "label": {
+        "ru": "Голос консультанта К.",
+        "en": "The Voice of Consultant K."
+      },
+      "description": {
+        "ru": "Неизвестный не просто оформляет документы. Он объясняет заявителям, какую часть происшествия нужно скрыть, и получает долю после выплаты.",
+        "en": "The unknown consultant does more than prepare documents. He tells claimants which part of an incident to conceal and takes a cut after the payout."
+      },
+      "progressIndex": 4,
+      "progressTotal": 5
+    },
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Вечером под помещением клуба произошёл самопроизвольный разрыв городской технической трубы. Вода затопила мастерскую, а короткое замыкание повредило инструменты и учебное оборудование. Работы рядом с трубой клуб не проводил. Прошу возместить ущерб в размере 1900 евро.",
+    "en": "That evening, a municipal utility pipe beneath the club premises ruptured spontaneously. Water flooded the workshop, and a short circuit damaged tools and training equipment. The club performed no work near the pipe. I am claiming €1,900 in damages."
+  },
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Вечером под помещением клуба произошёл самопроизвольный разрыв городской технической трубы. Вода затопила мастерскую, а короткое замыкание повредило инструменты и учебное оборудование. Работы рядом с трубой клуб не проводил. Прошу возместить ущерб в размере 1900 евро.",
+        "en": "That evening, a municipal utility pipe beneath the club premises ruptured spontaneously. Water flooded the workshop, and a short circuit damaged tools and training equipment. The club performed no work near the pipe. I am claiming €1,900 in damages."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_event",
+      "text": {
+        "ru": "Техническая труба разорвалась и затопила мастерскую клуба.",
+        "en": "A utility pipe ruptured and flooded the club workshop."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_cause",
+      "text": {
+        "ru": "Разрыв произошёл самопроизвольно; работы и испытания рядом с трубой не проводились.",
+        "en": "The pipe ruptured spontaneously; no work or testing was conducted near it."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_damage",
+      "text": {
+        "ru": "Вода и короткое замыкание повредили оборудование на 1900 евро.",
+        "en": "Water and a short circuit caused €1,900 in equipment damage."
+      },
+      "stampable": true
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-utility",
+      "order": 1,
+      "type": "document",
+      "title": {
+        "ru": "Акт коммунальной службы",
+        "en": "Municipal Utility Report"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "За месяц до происшествия участок трубы прошёл плановый осмотр. Давление в день аварии оставалось в пределах нормы. Коррозия была незначительной и сама по себе не объясняет разрыв.",
+        "en": "The pipe section passed a routine inspection one month before the incident. Pressure remained within normal limits on the day of the rupture. Corrosion was minor and cannot explain the failure on its own."
+      },
+      "statusExplanation": {
+        "ru": "Документ делает версию о самопроизвольной аварии менее вероятной, но не устанавливает конкретную причину.",
+        "en": "The report makes a spontaneous failure less likely but does not identify the specific cause."
+      },
+      "statementLink": {
+        "statementId": "claim_cause",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Документ делает версию о самопроизвольной аварии менее вероятной, но не устанавливает конкретную причину.",
+          "en": "The report makes a spontaneous failure less likely but does not identify the specific cause."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-pipe-photo",
+      "order": 2,
+      "type": "surface_reveal",
+      "title": {
+        "ru": "Очистка повреждённой трубы",
+        "en": "Cleaning the Damaged Pipe"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Под налётом обнаружены свежая дугообразная царапина и синяя краска от моторизованного колеса клуба; трубу пробила платформа из мастерской.",
+        "en": "Beneath the grime are a fresh curved scratch and blue paint from the club's powered wheel; the workshop platform struck and punctured the pipe."
+      },
+      "previousType": "photo",
+      "description": {
+        "ru": "Инспектор сфотографировал вмятину до очистки мокрой грязи и технического налёта.",
+        "en": "The inspector photographed the dent before cleaning away wet dirt and industrial residue."
+      },
+      "instruction": {
+        "ru": "Сотрите грязь с края вмятины и найдите след контакта.",
+        "en": "Wipe the dirt from the edge of the dent and find the contact mark."
+      },
+      "assets": {
+        "baseImage": "assets/interactive/ev-pipe-photo-scene.webp",
+        "coverTexture": "shared/surface/dirt.webp",
+        "revealMasks": [
+          "assets/interactive/ev-pipe-photo-blue_contact_arc-trace-mask.svg"
+        ],
+        "toolCursor": "shared/surface/cloth-cursor.svg"
+      },
+      "data": {
+        "mode": "erase",
+        "coverType": "dirt",
+        "brush": {
+          "radius": 46,
+          "hardness": 0.66,
+          "opacity": 0.84,
+          "spacing": 8
+        },
+        "completion": {
+          "type": "discover_any",
+          "requiredTraceIds": [
+            "blue_contact_arc"
+          ]
+        },
+        "traces": [
+          {
+            "id": "blue_contact_arc",
+            "label": "Синяя краска и дугообразная царапина",
+            "requiredRevealPercent": 54,
+            "mask": "assets/interactive/ev-pipe-photo-blue_contact_arc-trace-mask.svg",
+            "shape": "mask",
+            "isContradiction": true,
+            "conclusion": "Под налётом обнаружены свежая дугообразная царапина и синяя краска от моторизованного колеса клуба; трубу пробила платформа из мастерской.",
+            "labelEn": "Blue paint and curved scratch",
+            "conclusionEn": "Beneath the grime are a fresh curved scratch and blue paint from the club's powered wheel; the workshop platform struck and punctured the pipe."
+          }
+        ]
+      },
+      "statementLink": {
+        "statementId": "claim_cause",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Под налётом обнаружены свежая дугообразная царапина и синяя краска от моторизованного колеса клуба; трубу пробила платформа из мастерской.",
+          "en": "Beneath the grime are a fresh curved scratch and blue paint from the club's powered wheel; the workshop platform struck and punctured the pipe."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_cause",
+        "reason": {
+          "ru": "Под налётом обнаружены свежая дугообразная царапина и синяя краска от моторизованного колеса клуба; трубу пробила платформа из мастерской.",
+          "en": "Beneath the grime are a fresh curved scratch and blue paint from the club's powered wheel; the workshop platform struck and punctured the pipe."
+        }
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": false,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Игрок собственноручно находит физический контакт платформы с трубой вместо чтения готового вывода на фотографии.",
+          "en": "The player personally uncovers proof that the platform struck the pipe instead of reading a ready-made conclusion."
+        },
+        "playerAction": {
+          "ru": "Сотрите грязь с края вмятины и найдите след контакта.",
+          "en": "Wipe the dirt from the edge of the dent and find the contact mark."
+        },
+        "conclusion": {
+          "ru": "Под налётом обнаружены свежая дугообразная царапина и синяя краска от моторизованного колеса клуба; трубу пробила платформа из мастерской.",
+          "en": "Beneath the grime are a fresh curved scratch and blue paint from the club's powered wheel; the workshop platform struck and punctured the pipe."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-011",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-021/evidence/case-021-mayak-workshop.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-021/evidence/case-021-mayak-workshop.webp",
+          "caseRelativeSrc": "evidence/case-021-mayak-workshop.webp",
+          "installTo": "public/evidence/case-021-mayak-workshop.webp",
+          "legacyRuntimeUrl": "evidence/case-021-mayak-workshop.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "a35d199d1295abbbddcbfc7414ae502ad25540fe674b401476900e176b7e90da"
+        },
+        {
+          "assetId": "asset-013",
+          "role": "interactive_scene",
+          "src": "src/data/cases/case-021/assets/interactive/ev-pipe-photo-scene.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-021/assets/interactive/ev-pipe-photo-scene.webp",
+          "caseRelativeSrc": "assets/interactive/ev-pipe-photo-scene.webp",
+          "installTo": "src/data/cases/case-021/assets/interactive/ev-pipe-photo-scene.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "e511530e4f47bc0e8e90f23cb71ddc3047d5e80898dfcc5f0122ce857108f334"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-021/evidence/case-021-mayak-workshop.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-021/evidence/case-021-mayak-workshop.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-021-mayak-workshop.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-021/evidence/case-021-mayak-workshop.webp",
+        "copyTo": "public/evidence/case-021-mayak-workshop.webp"
+      }
+    },
+    {
+      "id": "ev-club-chat",
+      "order": 3,
+      "type": "document",
+      "title": {
+        "ru": "Переписка участников клуба",
+        "en": "Club Members' Messages"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "- 21:46 — Илья: «Лев Аркадьевич, левое колесо платформы сильно бьёт. Испытание лучше остановить».\n- 21:48 — Соколов: «Останавливайте двигатель и ничего не выкатывайте к техническому каналу».\n- 21:51 — Илья: «Поздно. Платформу повело, что-то пробили. Пошла вода».\n- 21:53 — Соколов: «Уберите раму от трубы. Я сейчас приеду».",
+        "en": "- 9:46 p.m.—Ilya: ‘Lev Arkadyevich, the platform's left wheel is wobbling badly. We should stop the test.’\n- 9:48 p.m.—Sokolov: ‘Shut down the motor and keep everything away from the utility channel.’\n- 9:51 p.m.—Ilya: ‘Too late. The platform veered off and punctured something. Water is coming in.’\n- 9:53 p.m.—Sokolov: ‘Move the frame away from the pipe. I am on my way.’"
+      },
+      "statusExplanation": {
+        "ru": "Соколов знал, что испытательная платформа пробила трубу. Утверждение, что клуб не проводил рядом никаких работ, ложно.",
+        "en": "Sokolov knew the test platform had punctured the pipe. His statement that the club conducted no work nearby is false."
+      },
+      "statementLink": {
+        "statementId": "claim_cause",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Соколов знал, что испытательная платформа пробила трубу. Утверждение, что клуб не проводил рядом никаких работ, ложно.",
+          "en": "Sokolov knew the test platform had punctured the pipe. His statement that the club conducted no work nearby is false."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_cause",
+        "reason": {
+          "ru": "Соколов знал, что испытательная платформа пробила трубу. Утверждение, что клуб не проводил рядом никаких работ, ложно.",
+          "en": "Sokolov knew the test platform had punctured the pipe. His statement that the club conducted no work nearby is false."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-voice",
+      "order": 4,
+      "type": "document",
+      "title": {
+        "ru": "Удалённое голосовое сообщение",
+        "en": "Deleted Voice Message"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Голос неизвестного: «Для страховой пишите: самопроизвольный разрыв изношенной сети. Платформу и испытание не упоминайте. Смету я подготовил, форма `17-К`. После выплаты переведёте оговорённую долю. Подпись в переписке — К.»",
+        "en": "Unknown voice: ‘Tell the insurer it was a spontaneous rupture in a worn utility line. Do not mention the platform or the test. I have prepared the estimate—form `17-K`. Transfer the agreed share after the payout. Sign our messages K.’"
+      },
+      "statusExplanation": {
+        "ru": "Заявителю прямо предложили скрыть настоящую причину аварии и использовать ложную версию для получения выплаты.",
+        "en": "The claimant was explicitly instructed to conceal the true cause and use a false account to obtain a payout."
+      },
+      "statementLink": {
+        "statementId": "claim_cause",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Заявителю прямо предложили скрыть настоящую причину аварии и использовать ложную версию для получения выплаты.",
+          "en": "The claimant was explicitly instructed to conceal the true cause and use a false account to obtain a payout."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Труба действительно лопнула и затопила мастерскую.",
+      "Под грязью на вмятине найдены свежая дугообразная царапина и синяя краска от колеса испытательной платформы клуба.",
+      "Соколов знал об этом и по совету консультанта скрыл испытание в заявлении.",
+      "Его мотив понятен: он пытался защитить подростков и сохранить клуб. Но сочувствие не превращает ложное заявление в подлинное. Выплату следует отклонить."
+    ],
+    "en": [
+      "Beneath the grime are a fresh curved scratch and blue paint from the club's powered wheel; the workshop platform struck and punctured the pipe.",
+      "Sokolov knew the test platform had punctured the pipe. His statement that the club conducted no work nearby is false.",
+      "The report makes a spontaneous failure less likely but does not identify the specific cause.",
+      "The claimant was explicitly instructed to conceal the true cause and use a false account to obtain a payout.",
+      "The claim is fraudulent and should be rejected."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Внедрить каноническую постановку из первого акта «Архив №17».",
+      "Сохранить стабильный ID и новый campaignOrder.",
+      "Интегрировать surface_reveal в улику ev-pipe-photo; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate surface_reveal into evidence ev-pipe-photo; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "evidence/case-021-mayak-workshop.webp",
+      "action": "replace",
+      "purpose": "Мастерская «Маяк» после аварии",
+      "prompt": "Flooded basement robotics workshop after an internal mechanical accident: a municipal utility pipe visibly dented and ruptured from the room side, a blue motorized wheel and a broken metal platform frame lying nearby, scattered hand tools and educational electronics, restrained water damage, realistic cause-and-effect, no gas explosion spectacle, no dojo, no martial arts, no masks, no franchise references, documentary insurance evidence photograph."
+    },
+    {
+      "file": "people/lev-sokolov.webp",
+      "action": "replace",
+      "purpose": "Оригинальный портрет Льва Аркадьевича Соколова",
+      "prompt": "Illustrated archival claimant ID portrait matching the existing game's character-card style: Russian male robotics club teacher, 69 years old, kind but tired intelligent face, gray hair, simple cardigan over a checked shirt, neutral ID-photo background, original face, no Asian martial arts styling, no robe, no masks, no franchise imagery, no text, no logo."
+    },
+    {
+      "file": "assets/interactive/ev-pipe-photo-scene.webp",
+      "purpose": "Базовая поверхность со скрытым физическим следом, без процедурного покрытия",
+      "resolution": "1600×1000",
+      "format": "WebP",
+      "transparency": false,
+      "generatedBy": "image_model",
+      "manualPost": "Проверить плоский читаемый ракурс; удалить случайный текст; откалибровать каждую reveal mask по финальной сцене.",
+      "prompt": "Крупный план вдавленной металлической технической трубы в затопленной мастерской; на краю вмятины видны свежая дугообразная царапина и небольшой перенос синей краски, но без слоя грязи — покрытие будет процедурным. The dust, dirt, soot, frost, condensation or powder cover will be added programmatically, so do not bake the cover layer into the image. Keep the important surface large, readable and minimally distorted. Photorealistic insurance-investigation evidence photograph, documentary look, shot on a phone or compact camera by a non-professional, natural available light, neutral muted colors, realistic textures, high detail. No captions, no watermark, no logos, no readable real-world branding, no famous people, no recognizable copyrighted characters, no visible faces unless explicitly required. Evidence photo, not illustration or cinematic poster.",
+      "evidenceId": "ev-pipe-photo",
+      "evidenceType": "surface_reveal"
+    },
+    {
+      "file": "assets/interactive/ev-pipe-photo-blue_contact_arc-trace-mask.svg",
+      "purpose": "Маска скрытого следа: Синяя краска и дугообразная царапина",
+      "resolution": "1600×1000 aligned to base image",
+      "format": "SVG",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "Совместить с base image; порог обнаружения 54%; белая область маски — значимая зона.",
+      "prompt": null,
+      "evidenceId": "ev-pipe-photo",
+      "evidenceType": "surface_reveal"
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-021",
+    "archiveBasePath": "generated-assets/src/data/cases/case-021",
+    "claimantPortrait": {
+      "characterId": "lev-sokolov",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Лев Аркадьевич Соколов",
+        "en": "Lev Arkadyevich Sokolov, age 69"
+      },
+      "assetId": "asset-012",
+      "src": "src/data/cases/case-021/people/lev-sokolov.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-021/people/lev-sokolov.webp",
+      "caseRelativeSrc": "people/lev-sokolov.webp",
+      "installTo": "public/people/lev-sokolov.webp",
+      "legacyRuntimeUrl": "people/lev-sokolov.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "33c405bd368a69e32b2b4bc80701fdd627ba1cc2468cc594ca356bce9b20b585"
+    },
+    "claimantPortraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/lev-sokolov.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-021/people/lev-sokolov.webp",
+      "copyTo": "public/people/lev-sokolov.webp",
+      "replacesExistingValue": "people/khariton.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-pipe-photo",
+        "title": {
+          "ru": "Очистка повреждённой трубы",
+          "en": "Cleaning the Damaged Pipe"
+        },
+        "primaryImage": "src/data/cases/case-021/evidence/case-021-mayak-workshop.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-021/evidence/case-021-mayak-workshop.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-021-mayak-workshop.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-021/evidence/case-021-mayak-workshop.webp",
+          "copyTo": "public/evidence/case-021-mayak-workshop.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-011",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-021/evidence/case-021-mayak-workshop.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-021/evidence/case-021-mayak-workshop.webp",
+            "caseRelativeSrc": "evidence/case-021-mayak-workshop.webp",
+            "installTo": "public/evidence/case-021-mayak-workshop.webp",
+            "legacyRuntimeUrl": "evidence/case-021-mayak-workshop.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "a35d199d1295abbbddcbfc7414ae502ad25540fe674b401476900e176b7e90da"
+          },
+          {
+            "assetId": "asset-013",
+            "role": "interactive_scene",
+            "src": "src/data/cases/case-021/assets/interactive/ev-pipe-photo-scene.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-021/assets/interactive/ev-pipe-photo-scene.webp",
+            "caseRelativeSrc": "assets/interactive/ev-pipe-photo-scene.webp",
+            "installTo": "src/data/cases/case-021/assets/interactive/ev-pipe-photo-scene.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1600,
+            "height": 1000,
+            "sha256": "e511530e4f47bc0e8e90f23cb71ddc3047d5e80898dfcc5f0122ce857108f334"
+          }
+        ]
+      }
+    ]
+  }
+}

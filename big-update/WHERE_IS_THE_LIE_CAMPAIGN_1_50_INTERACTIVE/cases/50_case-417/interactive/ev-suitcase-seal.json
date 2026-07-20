@@ -1,0 +1,84 @@
+{
+  "id": "ev-suitcase-seal",
+  "order": 7,
+  "type": "seal_match",
+  "title": {
+    "ru": "Сопоставление транспортной пломбы чемодана"
+  },
+  "isContradiction": false,
+  "narrativeRole": "proof",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Фрагменты совпали: чемодан прошёл через последнюю отправку Серого конвоя из ангара B-17."
+  },
+  "previousType": null,
+  "description": {
+    "ru": "Фрагмент с чемодана Лукаса сравнивается с пломбой последней отправки из ангара B-17."
+  },
+  "instruction": {
+    "ru": "Совместить фрагменты серой транспортной пломбы."
+  },
+  "assets": {
+    "asset1": "assets/interactive/ev-suitcase-seal-master-a.webp",
+    "asset2": "assets/interactive/ev-suitcase-seal-fragments.json"
+  },
+  "data": {
+    "movableFragment": "B",
+    "allowRotation": true,
+    "rotationStep": 3,
+    "initialTransform": {
+      "x": 72,
+      "y": 18,
+      "rotation": -14
+    },
+    "targetTransform": {
+      "x": 132,
+      "y": 48,
+      "rotation": 6
+    },
+    "tolerance": {
+      "position": 10,
+      "rotation": 5
+    },
+    "expectedMatch": true,
+    "sourceSeed": 504217,
+    "fragmentASeed": 504217,
+    "fragmentBSeed": 504217,
+    "comparisonMarkers": [
+      {
+        "id": "tear_pattern",
+        "label": "Совпадают линия разрыва, клеевой дефект и участок защитной сетки"
+      }
+    ]
+  },
+  "statementLink": {
+    "statementId": "claim_main",
+    "relation": "reveals_season_clue",
+    "reason": {
+      "ru": "Фрагменты совпали: чемодан прошёл через последнюю отправку Серого конвоя из ангара B-17."
+    }
+  },
+  "contradictionTarget": null,
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true,
+    "transparencyMode": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Вторая финальная механика связывает личное мошенничество с последним физическим маршрутом сети."
+    },
+    "playerAction": {
+      "ru": "Совместить фрагменты серой транспортной пломбы."
+    },
+    "conclusion": {
+      "ru": "Фрагменты совпали: чемодан прошёл через последнюю отправку Серого конвоя из ангара B-17."
+    }
+  },
+  "evidenceTier": "arc",
+  "requiredForVerdict": false,
+  "rewardWeight": 0.75
+}

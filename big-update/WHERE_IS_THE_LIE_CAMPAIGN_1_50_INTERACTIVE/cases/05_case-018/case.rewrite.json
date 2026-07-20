@@ -1,0 +1,335 @@
+{
+  "id": "case-018",
+  "campaignOrder": 5,
+  "requiredLevel": 3,
+  "act": 1,
+  "actTitle": {
+    "ru": "Чужой почерк",
+    "en": "Another Hand"
+  },
+  "title": {
+    "ru": "Кольцо на высоте",
+    "en": "The High-Flying Ring"
+  },
+  "difficulty": "medium",
+  "claimAmount": {
+    "value": 1100,
+    "currency": "EUR"
+  },
+  "groundTruth": "valid",
+  "correctDecision": "approve",
+  "investigationBudget": 3,
+  "claimant": {
+    "name": {
+      "ru": "Анатолий Степанович, 71 год",
+      "en": "Anatoly Stepanovich, age 71"
+    },
+    "migrationNote": {
+      "ru": "Сохранить стабильный профиль и существующий портрет после визуальной сверки с канонической версией.",
+      "en": "Keep the established profile and existing portrait after visually checking them against the canonical version."
+    },
+    "portrait": null,
+    "portraitStatus": "retain_existing_project_portrait",
+    "portraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/anatoly.webp",
+      "existingFile": "public/people/anatoly.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Анатолий Степанович пишет заявления так, будто выступает в суде. Не позволяйте стилю отвлекать вас от фактов. — В. Лебедева",
+      "en": "Anatoly Stepanovich writes every claim as though addressing a courtroom. Do not let his style distract you from the facts. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Я завела отдельную папку на Жорика. Пока он проходит как природное явление.",
+      "en": "I have opened a separate file on Zhorik. For now, he is classified as a natural phenomenon."
+    },
+    "nextCaseTeaser": {
+      "ru": "Из закусочной исчезли сорок пицц. Заявитель уже назвал виновных. Доказательства с ним не согласны.",
+      "en": "Forty pizzas have vanished from a snack bar. The claimant has already named the culprits. The evidence disagrees."
+    },
+    "seasonClue": null,
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "22 апреля около 23:00 я работал на балконе, снял обручальное кольцо и положил его на перила. Соседский дрон снизился слишком близко, кольцо зацепилось за шасси. В этот момент енот Жорик прыгнул на аппарат, после чего дрон унесло к набережной. Кольцо упало в реку и найдено не было. Прошу возместить случайную утрату застрахованного имущества.",
+    "en": "At about 11:00 p.m. on April 22, I was working on my balcony. I removed my wedding ring and placed it on the railing. A neighbor's drone descended too close, and the ring caught on its landing gear. At that moment, Zhorik the raccoon leaped onto the drone, sending it drifting toward the riverfront. The ring fell into the river and was never recovered. I am claiming compensation for the accidental loss of insured property."
+  },
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "22 апреля около 23:00 я работал на балконе, снял обручальное кольцо и положил его на перила. Соседский дрон снизился слишком близко, кольцо зацепилось за шасси. В этот момент енот Жорик прыгнул на аппарат, после чего дрон унесло к набережной. Кольцо упало в реку и найдено не было. Прошу возместить случайную утрату застрахованного имущества.",
+        "en": "At about 11:00 p.m. on April 22, I was working on my balcony. I removed my wedding ring and placed it on the railing. A neighbor's drone descended too close, and the ring caught on its landing gear. At that moment, Zhorik the raccoon leaped onto the drone, sending it drifting toward the riverfront. The ring fell into the river and was never recovered. I am claiming compensation for the accidental loss of insured property."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_event",
+      "text": {
+        "ru": "Кольцо зацепилось за шасси соседского дрона.",
+        "en": "The ring caught on the landing gear of a neighbor's drone."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_cause",
+      "text": {
+        "ru": "Прыжок енота вызвал дрейф дрона к реке.",
+        "en": "The raccoon's leap sent the drone drifting toward the river."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_loss",
+      "text": {
+        "ru": "Кольцо упало в реку и не было возвращено владельцу.",
+        "en": "The ring fell into the river and was not recovered by its owner."
+      },
+      "stampable": true
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-camera",
+      "order": 1,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Кадр с камеры соседа",
+        "en": "Neighbor's Camera Footage"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "На кадре видно, как дрон набирает высоту у балкона. На правой стойке шасси блестит кольцо, а за нижнюю часть корпуса обеими лапами держится енот.",
+        "en": "The footage shows the drone gaining altitude beside the balcony. A ring glints on the right landing strut, while a raccoon clings to the underside with both paws."
+      },
+      "statusExplanation": {
+        "ru": "Камера подтверждает две наиболее невероятные детали заявления: кольцо на дроне и Жорика, уцепившегося за аппарат.",
+        "en": "The footage confirms the claim's two least likely details: the ring on the drone and Zhorik clinging to it."
+      },
+      "statementLink": {
+        "statementId": "claim_event",
+        "relation": "supports",
+        "reason": {
+          "ru": "Камера подтверждает две наиболее невероятные детали заявления: кольцо на дроне и Жорика, уцепившегося за аппарат.",
+          "en": "The footage confirms the claim's two least likely details: the ring on the drone and Zhorik clinging to it."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-004",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-018/evidence/case-018-drone-ring-raccoon.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-018/evidence/case-018-drone-ring-raccoon.webp",
+          "caseRelativeSrc": "evidence/case-018-drone-ring-raccoon.webp",
+          "installTo": "public/evidence/case-018-drone-ring-raccoon.webp",
+          "legacyRuntimeUrl": "evidence/case-018-drone-ring-raccoon.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "2a37e4fd135fba6756110e39d5430093bc771f7a9c9ffb3889ce8167ec5eeb11"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-018/evidence/case-018-drone-ring-raccoon.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-018/evidence/case-018-drone-ring-raccoon.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-018-drone-ring-raccoon.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-018/evidence/case-018-drone-ring-raccoon.webp",
+        "copyTo": "public/evidence/case-018-drone-ring-raccoon.webp"
+      }
+    },
+    {
+      "id": "ev-flight-log",
+      "order": 2,
+      "type": "gps_track",
+      "title": {
+        "ru": "Полётный журнал",
+        "en": "Flight Log"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "- 22:59:40 — зависание у балкона, высота 4 м;\n- 23:00:25 — резкий рост нагрузки на 1,8 кг;\n- 23:00:41 — неконтролируемый дрейф к набережной;\n- 23:01:06 — резкое снижение над водой;\n- 23:01:18 — аварийная посадка на берегу.",
+        "en": "- 10:59:40 p.m.—hovering beside balcony, altitude 4 m;\n- 11:00:25 p.m.—sudden 1.8 kg load increase;\n- 11:00:41 p.m.—uncontrolled drift toward riverfront;\n- 11:01:06 p.m.—sharp descent over water;\n- 11:01:18 p.m.—emergency landing on riverbank."
+      },
+      "statusExplanation": {
+        "ru": "Маршрут и внезапная нагрузка согласуются с записью камеры и рассказом заявителя.",
+        "en": "The route and sudden increase in load match both the footage and the claimant's account."
+      },
+      "statementLink": {
+        "statementId": "claim_cause",
+        "relation": "supports",
+        "reason": {
+          "ru": "Маршрут и внезапная нагрузка согласуются с записью камеры и рассказом заявителя.",
+          "en": "The route and sudden increase in load match both the footage and the claimant's account."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-witness",
+      "order": 3,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания владельца дрона",
+        "en": "Drone Owner's Statement"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "«Я хотел аккуратно отвести дрон от балкона, но на него прыгнул енот. Над рекой аппарат сильно качнуло. Я увидел, как с шасси что-то блестящее сорвалось в воду. После посадки кольца на дроне уже не было».",
+        "en": "‘I was trying to guide the drone away from the balcony when a raccoon jumped onto it. The drone lurched hard over the river. I saw something shiny come off the landing gear and fall into the water. The ring was no longer on the drone after it landed.’"
+      },
+      "statusExplanation": {
+        "ru": "Независимый свидетель подтверждает падение блестящего предмета в воду.",
+        "en": "An independent witness confirms that a shiny object fell into the water."
+      },
+      "statementLink": {
+        "statementId": "claim_loss",
+        "relation": "supports",
+        "reason": {
+          "ru": "Независимый свидетель подтверждает падение блестящего предмета в воду.",
+          "en": "An independent witness confirms that a shiny object fell into the water."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-search",
+      "order": 4,
+      "type": "document",
+      "title": {
+        "ru": "Акт поисковой службы",
+        "en": "Search Service Report"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Поиск проведён вдоль предполагаемой точки падения и ниже по течению. Из-за глубины, ила и сильного течения кольцо обнаружить не удалось. Координаты поиска совпадают с полётным журналом.",
+        "en": "Search teams covered the estimated drop point and the area downstream. The ring could not be found because of the depth, silt, and strong current. The search coordinates match the flight log."
+      },
+      "statusExplanation": {
+        "ru": "Кольцо не было возвращено владельцу. Реальная утрата имущества подтверждена.",
+        "en": "The ring was not recovered. The actual loss of property is confirmed."
+      },
+      "statementLink": {
+        "statementId": "claim_loss",
+        "relation": "supports",
+        "reason": {
+          "ru": "Кольцо не было возвращено владельцу. Реальная утрата имущества подтверждена.",
+          "en": "The ring was not recovered. The actual loss of property is confirmed."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Кольцо действительно зацепилось за соседский дрон.",
+      "Жорик прыгнул на аппарат, из-за чего дрон унесло к реке.",
+      "Свидетель видел падение кольца, а поисковая служба не смогла его обнаружить.",
+      "Невероятное событие подтверждено независимыми материалами. Выплату следует одобрить."
+    ],
+    "en": [
+      "The footage confirms the claim's two least likely details: the ring on the drone and Zhorik clinging to it.",
+      "The route and sudden increase in load match both the footage and the claimant's account.",
+      "An independent witness confirms that a shiny object fell into the water.",
+      "The ring was not recovered. The actual loss of property is confirmed.",
+      "No material statement has been disproven. The claim should be approved."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Внедрить каноническую постановку из первого акта «Архив №17».",
+      "Сохранить стабильный ID и новый campaignOrder."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "evidence/case-018-drone-ring-raccoon.webp",
+      "action": "replace",
+      "purpose": "Кадр дрона с кольцом и Жориком",
+      "prompt": "Night security camera frame near an apartment balcony: a small civilian quadcopter climbing away from the railing, a plain gold ring visibly caught on one landing strut, a raccoon hanging from the lower frame with both paws, realistic scale and physics, slightly compressed CCTV image, timestamp area left blank, no text, no brands, no costumes, no cartoon styling."
+    }
+  ],
+  "interactiveEvidenceCount": 0,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-018",
+    "archiveBasePath": "generated-assets/src/data/cases/case-018",
+    "claimantPortrait": null,
+    "claimantPortraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/anatoly.webp",
+      "existingFile": "public/people/anatoly.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-camera",
+        "title": {
+          "ru": "Кадр с камеры соседа",
+          "en": "Neighbor's Camera Footage"
+        },
+        "primaryImage": "src/data/cases/case-018/evidence/case-018-drone-ring-raccoon.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-018/evidence/case-018-drone-ring-raccoon.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-018-drone-ring-raccoon.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-018/evidence/case-018-drone-ring-raccoon.webp",
+          "copyTo": "public/evidence/case-018-drone-ring-raccoon.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-004",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-018/evidence/case-018-drone-ring-raccoon.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-018/evidence/case-018-drone-ring-raccoon.webp",
+            "caseRelativeSrc": "evidence/case-018-drone-ring-raccoon.webp",
+            "installTo": "public/evidence/case-018-drone-ring-raccoon.webp",
+            "legacyRuntimeUrl": "evidence/case-018-drone-ring-raccoon.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "2a37e4fd135fba6756110e39d5430093bc771f7a9c9ffb3889ce8167ec5eeb11"
+          }
+        ]
+      }
+    ]
+  }
+}

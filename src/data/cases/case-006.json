@@ -1,281 +1,404 @@
 {
   "id": "case-006",
   "type": "standard",
-  "difficulty": "hard",
+  "campaignOrder": 11,
+  "requiredLevel": 6,
+  "act": 2,
+  "actTitle": {
+    "ru": "Пять лет назад",
+    "en": "Five Years Earlier",
+    "tr": "Five Years Earlier",
+    "ar": "Five Years Earlier",
+    "kk": "Пять лет назад"
+  },
+  "difficulty": "medium",
   "claimAmount": 15000,
   "truth": "fraud",
-  "investigationBudget": 3,
   "title": {
-    "ru": "Винный погреб",
-    "en": "The Wine Cellar",
-    "tr": "Şarap Mahzeni",
-    "ar": "قبو النبيذ",
-    "kk": "Шарап жертөлесі"
+    "ru": "Погреб, который не нагрелся",
+    "en": "The Cellar That Never Warmed Up",
+    "tr": "The Cellar That Never Warmed Up",
+    "ar": "The Cellar That Never Warmed Up",
+    "kk": "Погреб, который не нагрелся"
   },
   "claim": {
     "person": {
       "ru": "Эдуард Виноградов, 59 лет",
-      "en": "Eduard Vinogradov, 59",
-      "tr": "Eduard Vinogradov, 59",
-      "ar": "إدوارد فينوغرادوف، 59",
-      "kk": "Эдуард Виноградов, 59 жаста"
+      "en": "Eduard Vinogradov, age 59",
+      "tr": "Eduard Vinogradov, age 59",
+      "ar": "Eduard Vinogradov, age 59",
+      "kk": "Эдуард Виноградов, 59 лет"
     },
     "story": {
-      "ru": "Трёхдневное отключение электричества вырубило охлаждение в моём погребе, и моя коллекция марочного вина за 15 000 € погибла. Прошу полную выплату.",
-      "en": "A three-day power outage knocked out the cooling in my cellar, and my €15,000 vintage wine collection was ruined. I request the full payout.",
-      "tr": "Üç günlük elektrik kesintisi mahzenimdeki soğutmayı devre dışı bıraktı ve 15.000 €'luk antika şarap koleksiyonum mahvoldu. Tam ödeme talep ediyorum.",
-      "ar": "أدى انقطاع التيار الكهربائي لمدة ثلاثة أيام إلى تعطل التبريد في قبوي، وأُتلفت مجموعة النبيذ المعتق التي تبلغ قيمتها 15000 يورو. أطلب التعويض الكامل.",
-      "kk": "Үш күндік электр өшуі жертөлемдегі салқындатуды істен шығарып, 15 000 €-лық марка шарап коллекциям бүлінді. Толық төлемді сұраймын."
+      "ru": "Трёхдневное отключение электричества остановило климатическую систему моего винного погреба. Коллекция марочного вина стоимостью 15 000 евро перегрелась и потеряла ценность. Прошу полную выплату.",
+      "en": "A three-day power outage stopped my wine cellar's climate-control system. My €15,000 collection of vintage wine overheated and lost its value. I am claiming the full amount.",
+      "tr": "A three-day power outage stopped my wine cellar's climate-control system. My €15,000 collection of vintage wine overheated and lost its value. I am claiming the full amount.",
+      "ar": "A three-day power outage stopped my wine cellar's climate-control system. My €15,000 collection of vintage wine overheated and lost its value. I am claiming the full amount.",
+      "kk": "Трёхдневное отключение электричества остановило климатическую систему моего винного погреба. Коллекция марочного вина стоимостью 15 000 евро перегрелась и потеряла ценность. Прошу полную выплату."
     }
   },
-  "coverImage": "covers/case-006.svg",
-  "personImage": "people/eduard.webp",
   "client": {
     "role": {
-      "ru": "Заявитель · физ. лицо",
-      "en": "Claimant · individual",
-      "tr": "Başvuru sahibi · gerçek kişi",
-      "ar": "مقدم الطلب · شخص طبيعي",
-      "kk": "Өтініш беруші · жеке тұлға"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Возраст",
-          "en": "Age",
-          "tr": "Yaş",
-          "ar": "العمر",
-          "kk": "Жасы"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "59 лет",
-          "en": "59 years old",
-          "tr": "59 yaşında",
-          "ar": "59 عامًا",
-          "kk": "59 жаста"
+          "ru": "2",
+          "en": "2",
+          "tr": "2",
+          "ar": "2",
+          "kk": "2"
         }
       },
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Санкт-Петербург",
-          "en": "Saint Petersburg",
-          "tr": "Sankt Petersburg",
-          "ar": "سانت بطرسبرغ",
-          "kk": "Санкт-Петербург"
-        }
-      },
-      {
-        "k": {
-          "ru": "Клиент с",
-          "en": "Client since",
-          "tr": "Müşteri",
-          "ar": "عميل منذ",
-          "kk": "Клиент"
-        },
-        "v": {
-          "ru": "2010 г.",
-          "en": "2010",
-          "tr": "2010",
-          "ar": "2010",
-          "kk": "2010 ж."
-        }
-      },
-      {
-        "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
-        },
-        "v": {
-          "ru": "Ценности · ЦЕ-66102784-X3",
-          "en": "Valuables · CE-66102784-X3",
-          "tr": "Değerli eşyalar · CE-66102784-X3",
-          "ar": "المقتنيات الثمينة · CE-66102784-X3",
-          "kk": "Құндылықтар · ЦЕ-66102784-X3"
-        }
-      },
-      {
-        "k": {
-          "ru": "Документ",
-          "en": "Document",
-          "tr": "Belge",
-          "ar": "الوثيقة",
-          "kk": "Құжат"
-        },
-        "v": {
-          "ru": "Паспорт 4008-61 №661027844-52",
-          "en": "Passport 4008-61 №661027844-52",
-          "tr": "Pasaport 4008-61 №661027844-52",
-          "ar": "جواز السفر 4008-61 №661027844-52",
-          "kk": "Паспорт 4008-61 №661027844-52"
+          "ru": "11",
+          "en": "11",
+          "tr": "11",
+          "ar": "11",
+          "kk": "11"
         }
       }
     ]
   },
+  "coverImage": "covers/case-006.svg",
+  "personImage": "people/eduard.webp",
   "evidences": [
     {
       "id": "ev-utility",
+      "order": 1,
       "type": "document",
       "title": {
         "ru": "Справка энергокомпании",
-        "en": "Utility Company Notice",
-        "tr": "Elektrik Şirketi Belgesi",
-        "ar": "إشعار شركة الكهرباء",
-        "kk": "Энергокомпания анықтамасы"
+        "en": "Power Company Certificate",
+        "tr": "Power Company Certificate",
+        "ar": "Power Company Certificate",
+        "kk": "Справка энергокомпании"
       },
       "content": {
-        "ru": "Энергокомпания подтверждает отключение электричества на три дня в указанные даты.",
-        "en": "The utility company confirms a three-day power outage on the stated dates.",
-        "tr": "Elektrik şirketi, belirtilen tarihlerde üç günlük bir kesinti olduğunu doğruluyor.",
-        "ar": "تؤكد شركة الكهرباء انقطاع التيار لمدة ثلاثة أيام في التواريخ المذكورة.",
-        "kk": "Энергокомпания көрсетілген күндері электрдің үш күн өшкенін растайды."
+        "ru": "Энергокомпания подтверждает отключение с 18:07 пятницы до 20:54 понедельника. Авария затронула весь квартал.",
+        "en": "The power company confirms an outage from 6:07 p.m. Friday until 8:54 p.m. Monday. The entire block was affected.",
+        "tr": "The power company confirms an outage from 6:07 p.m. Friday until 8:54 p.m. Monday. The entire block was affected.",
+        "ar": "The power company confirms an outage from 6:07 p.m. Friday until 8:54 p.m. Monday. The entire block was affected.",
+        "kk": "Энергокомпания подтверждает отключение с 18:07 пятницы до 20:54 понедельника. Авария затронула весь квартал."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Отключение действительно было — этот факт подлинный.",
-        "en": "The outage really did happen — this fact is genuine.",
-        "tr": "Kesinti gerçekten yaşandı — bu gerçek doğru.",
-        "ar": "حدث الانقطاع بالفعل — هذه الحقيقة صحيحة.",
-        "kk": "Электр шынымен өшкен — бұл факт шынайы."
-      }
+        "ru": "Отключение действительно происходило, но справка ничего не говорит о температуре внутри погреба.",
+        "en": "The outage was real, but the certificate says nothing about the temperature inside the cellar.",
+        "tr": "The outage was real, but the certificate says nothing about the temperature inside the cellar.",
+        "ar": "The outage was real, but the certificate says nothing about the temperature inside the cellar.",
+        "kk": "Отключение действительно происходило, но справка ничего не говорит о температуре внутри погреба."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_outage",
+        "relation": "supports",
+        "reason": {
+          "ru": "Отключение действительно происходило, но справка ничего не говорит о температуре внутри погреба.",
+          "en": "The outage was real, but the certificate says nothing about the temperature inside the cellar.",
+          "tr": "The outage was real, but the certificate says nothing about the temperature inside the cellar.",
+          "ar": "The outage was real, but the certificate says nothing about the temperature inside the cellar.",
+          "kk": "Отключение действительно происходило, но справка ничего не говорит о температуре внутри погреба."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "ev-temp",
+      "order": 2,
       "type": "usage_log",
       "title": {
-        "ru": "Лог температуры погреба",
-        "en": "Cellar Temperature Log",
-        "tr": "Mahzen Sıcaklık Kaydı",
-        "ar": "سجل درجة حرارة القبو",
-        "kk": "Жертөле температура логы"
+        "ru": "Архив климатического датчика",
+        "en": "Climate Sensor Archive",
+        "tr": "Climate Sensor Archive",
+        "ar": "Climate Sensor Archive",
+        "kk": "Архив климатического датчика"
       },
       "content": {
-        "ru": [
-          "День 1 — 13 °C",
-          "День 2 — 13 °C",
-          "День 3 — 13 °C"
-        ],
-        "en": [
-          "Day 1 — 13 °C",
-          "Day 2 — 13 °C",
-          "Day 3 — 13 °C"
-        ],
-        "tr": [
-          "1. Gün — 13 °C",
-          "2. Gün — 13 °C",
-          "3. Gün — 13 °C"
-        ],
-        "ar": [
-          "اليوم 1 — 13 °م",
-          "اليوم 2 — 13 °م",
-          "اليوم 3 — 13 °م"
-        ],
-        "kk": [
-          "1-күн — 13 °C",
-          "2-күн — 13 °C",
-          "3-күн — 13 °C"
-        ]
+        "ru": "Температура за трое суток держалась между 12,8 и 13,2 °C. Единственный краткий скачок до 13,7 °C длился девять минут.",
+        "en": "Over the three days, the temperature remained between 12.8°C and 13.2°C. The only brief rise, to 13.7°C, lasted nine minutes.",
+        "tr": "Over the three days, the temperature remained between 12.8°C and 13.2°C. The only brief rise, to 13.7°C, lasted nine minutes.",
+        "ar": "Over the three days, the temperature remained between 12.8°C and 13.2°C. The only brief rise, to 13.7°C, lasted nine minutes.",
+        "kk": "Температура за трое суток держалась между 12,8 и 13,2 °C. Единственный краткий скачок до 13,7 °C длился девять минут."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Температура в погребе всё время оставалась идеальной — вино не могло испортиться от жары.",
-        "en": "The cellar held a perfect temperature the whole time — the wine could not have spoiled from heat.",
-        "tr": "Mahzen tüm süre boyunca ideal sıcaklığı korudu — şarap sıcaktan bozulamazdı.",
-        "ar": "حافظ القبو على درجة حرارة مثالية طوال الوقت — لم يكن للنبيذ أن يفسد من الحرارة.",
-        "kk": "Жертөле температурасы үнемі мінсіз болды — шарап ыстықтан бұзыла алмайды."
+        "ru": "Коллекция всё время находилась в безопасном температурном диапазоне и не могла погибнуть от перегрева.",
+        "en": "The collection remained within a safe temperature range throughout and could not have been ruined by overheating.",
+        "tr": "The collection remained within a safe temperature range throughout and could not have been ruined by overheating.",
+        "ar": "The collection remained within a safe temperature range throughout and could not have been ruined by overheating.",
+        "kk": "Коллекция всё время находилась в безопасном температурном диапазоне и не могла погибнуть от перегрева."
       },
-      "meta": {
-        "logPrompt": "vinotemp@cellar:~$ tail -f /var/log/climate.log"
-      }
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_cellar_overheated",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Коллекция всё время находилась в безопасном температурном диапазоне и не могла погибнуть от перегрева.",
+          "en": "The collection remained within a safe temperature range throughout and could not have been ruined by overheating.",
+          "tr": "The collection remained within a safe temperature range throughout and could not have been ruined by overheating.",
+          "ar": "The collection remained within a safe temperature range throughout and could not have been ruined by overheating.",
+          "kk": "Коллекция всё время находилась в безопасном температурном диапазоне и не могла погибнуть от перегрева."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_cellar_overheated",
+        "reason": {
+          "ru": "Коллекция всё время находилась в безопасном температурном диапазоне и не могла погибнуть от перегрева.",
+          "en": "The collection remained within a safe temperature range throughout and could not have been ruined by overheating.",
+          "tr": "The collection remained within a safe temperature range throughout and could not have been ruined by overheating.",
+          "ar": "The collection remained within a safe temperature range throughout and could not have been ruined by overheating.",
+          "kk": "Коллекция всё время находилась в безопасном температурном диапазоне и не могла погибнуть от перегрева."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
-      "id": "ev-neighbor",
-      "type": "witness_statement",
+      "id": "ev-generator",
+      "order": 3,
+      "type": "document",
       "title": {
-        "ru": "Показания соседа",
-        "en": "Neighbor Statement",
-        "tr": "Komşu İfadesi",
-        "ar": "إفادة الجار",
-        "kk": "Көршінің айғағы"
+        "ru": "Чек и журнал генератора",
+        "en": "Generator Receipt and Log",
+        "tr": "Generator Receipt and Log",
+        "ar": "Generator Receipt and Log",
+        "kk": "Чек и журнал генератора"
       },
       "content": {
-        "ru": "«Свет вырубили, но Эдуард все выходные гонял генератор без остановки».",
-        "en": "\"The power was out, but Eduard ran his generator non-stop all weekend.\"",
-        "tr": "\"Elektrik kesikti ama Eduard tüm hafta sonu jeneratörünü durmadan çalıştırdı.\"",
-        "ar": "«انقطع التيار، لكن إدوارد شغّل مولّده دون توقف طوال عطلة نهاية الأسبوع».",
-        "kk": "«Жарық өшті, бірақ Эдуард бүкіл демалыс күндері генераторын тоқтатпай қосып қойды»."
+        "ru": "За два часа до отключения Виноградов купил топливо для резервного генератора. Контроллер фиксирует непрерывную работу генератора все трое суток и питание климатической системы.",
+        "en": "Two hours before the outage, Vinogradov purchased fuel for a backup generator. Its controller records continuous operation for all three days, powering the climate-control system.",
+        "tr": "Two hours before the outage, Vinogradov purchased fuel for a backup generator. Its controller records continuous operation for all three days, powering the climate-control system.",
+        "ar": "Two hours before the outage, Vinogradov purchased fuel for a backup generator. Its controller records continuous operation for all three days, powering the climate-control system.",
+        "kk": "За два часа до отключения Виноградов купил топливо для резервного генератора. Контроллер фиксирует непрерывную работу генератора все трое суток и питание климатической системы."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "У заявителя было резервное питание, поэтому охлаждение не прекращалось.",
-        "en": "The claimant had backup power, so the cooling never actually stopped.",
-        "tr": "Talep sahibinin yedek gücü vardı, bu yüzden soğutma aslında hiç durmadı.",
-        "ar": "كان لدى مقدم الطلب طاقة احتياطية، لذا لم يتوقف التبريد فعليًا.",
-        "kk": "Өтініш берушіде резервтік қуат болған, сондықтан салқындату нақты тоқтаған жоқ."
-      }
+        "ru": "Заявитель заранее включил резервное питание; охлаждение погреба не прекращалось.",
+        "en": "The claimant activated backup power in advance; the cellar's cooling never stopped.",
+        "tr": "The claimant activated backup power in advance; the cellar's cooling never stopped.",
+        "ar": "The claimant activated backup power in advance; the cellar's cooling never stopped.",
+        "kk": "Заявитель заранее включил резервное питание; охлаждение погреба не прекращалось."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_cellar_overheated",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Заявитель заранее включил резервное питание; охлаждение погреба не прекращалось.",
+          "en": "The claimant activated backup power in advance; the cellar's cooling never stopped.",
+          "tr": "The claimant activated backup power in advance; the cellar's cooling never stopped.",
+          "ar": "The claimant activated backup power in advance; the cellar's cooling never stopped.",
+          "kk": "Заявитель заранее включил резервное питание; охлаждение погреба не прекращалось."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_cellar_overheated",
+        "reason": {
+          "ru": "Заявитель заранее включил резервное питание; охлаждение погреба не прекращалось.",
+          "en": "The claimant activated backup power in advance; the cellar's cooling never stopped.",
+          "tr": "The claimant activated backup power in advance; the cellar's cooling never stopped.",
+          "ar": "The claimant activated backup power in advance; the cellar's cooling never stopped.",
+          "kk": "Заявитель заранее включил резервное питание; охлаждение погреба не прекращалось."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "ev-appraisal",
+      "order": 4,
       "type": "document",
       "title": {
         "ru": "Оценка коллекции",
         "en": "Collection Appraisal",
-        "tr": "Koleksiyon Değerlemesi",
-        "ar": "تقييم المجموعة",
-        "kk": "Коллекция бағасы"
+        "tr": "Collection Appraisal",
+        "ar": "Collection Appraisal",
+        "kk": "Оценка коллекции"
       },
       "content": {
-        "ru": "Независимая оценка стоимости коллекции в 15 000 €. Документ подлинный.",
-        "en": "An independent appraisal valuing the collection at €15,000. The document is genuine.",
-        "tr": "Koleksiyonu 15.000 € değerinde gösteren bağımsız bir değerleme. Belge gerçek.",
-        "ar": "تقييم مستقل يقدّر قيمة المجموعة بـ 15000 يورو. المستند أصلي.",
-        "kk": "Коллекцияны 15 000 €-ға бағалаған тәуелсіз сараптама. Құжат шынайы."
+        "ru": "Сертифицированный эксперт подтверждает стоимость коллекции в 15 000 евро. В документе нет заключения о порче вина после аварии.",
+        "en": "A certified appraiser confirms that the collection is worth €15,000. The report contains no finding that the wine was damaged after the outage.",
+        "tr": "A certified appraiser confirms that the collection is worth €15,000. The report contains no finding that the wine was damaged after the outage.",
+        "ar": "A certified appraiser confirms that the collection is worth €15,000. The report contains no finding that the wine was damaged after the outage.",
+        "kk": "Сертифицированный эксперт подтверждает стоимость коллекции в 15 000 евро. В документе нет заключения о порче вина после аварии."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Оценка подлинная — коллекция действительно столько стоит. Спор не о цене, а об ущербе.",
-        "en": "The appraisal is genuine — the collection really is worth that much. The dispute is about damage, not value.",
-        "tr": "Değerleme gerçek — koleksiyon gerçekten bu kadar değerinde. Anlaşmazlık değer değil, hasar hakkında.",
-        "ar": "التقييم أصلي — المجموعة تساوي هذا المبلغ فعلًا. النزاع حول الضرر لا القيمة.",
-        "kk": "Сараптама шынайы — коллекция шынымен сонша тұрады. Дау баға туралы емес, зиян туралы."
-      }
+        "ru": "Стоимость коллекции реальна, но стоимость не доказывает наступление ущерба.",
+        "en": "The collection's value is genuine, but value alone does not prove a loss occurred.",
+        "tr": "The collection's value is genuine, but value alone does not prove a loss occurred.",
+        "ar": "The collection's value is genuine, but value alone does not prove a loss occurred.",
+        "kk": "Стоимость коллекции реальна, но стоимость не доказывает наступление ущерба."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_collection_destroyed",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Стоимость коллекции реальна, но стоимость не доказывает наступление ущерба.",
+          "en": "The collection's value is genuine, but value alone does not prove a loss occurred.",
+          "tr": "The collection's value is genuine, but value alone does not prove a loss occurred.",
+          "ar": "The collection's value is genuine, but value alone does not prove a loss occurred.",
+          "kk": "Стоимость коллекции реальна, но стоимость не доказывает наступление ущерба."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Отключение и оценка коллекции — подлинные, и они отвлекают внимание.",
-      "Но лог показывает: в погребе всё время держалось 13 °C, а сосед видел работающий генератор.",
-      "Вино не пострадало — ущерба нет. Заявление мошенническое, отклонить."
+      "Отключение электричества действительно продолжалось три дня.",
+      "Резервный генератор всё это время питал климатическую систему, а температура оставалась нормальной.",
+      "Коллекция не пострадала. Виноградов попытался получить выплату за несуществующий ущерб — заявление следует отклонить."
     ],
     "en": [
-      "The outage and the appraisal are both genuine — and both are distractions.",
-      "But the log shows the cellar held 13 °C throughout, and the neighbor saw the generator running.",
-      "The wine was unharmed — there is no loss. The claim is fraudulent, reject."
+      "The collection remained within a safe temperature range throughout and could not have been ruined by overheating.",
+      "The claimant activated backup power in advance; the cellar's cooling never stopped.",
+      "The outage was real, but the certificate says nothing about the temperature inside the cellar.",
+      "The collection's value is genuine, but value alone does not prove a loss occurred.",
+      "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "Kesinti ve değerleme gerçek — ve ikisi de dikkat dağıtıcı.",
-      "Ama kayıt, mahzenin sürekli 13 °C'de kaldığını gösteriyor ve komşu jeneratörün çalıştığını gördü.",
-      "Şarap zarar görmedi — kayıp yok. Talep hileli, reddedin."
+      "The collection remained within a safe temperature range throughout and could not have been ruined by overheating.",
+      "The claimant activated backup power in advance; the cellar's cooling never stopped.",
+      "The outage was real, but the certificate says nothing about the temperature inside the cellar.",
+      "The collection's value is genuine, but value alone does not prove a loss occurred.",
+      "The claim is fraudulent and should be rejected."
     ],
     "ar": [
-      "الانقطاع والتقييم كلاهما حقيقي — وكلاهما عامل تشتيت.",
-      "لكن السجل يُظهر أن القبو ظل عند 13 °م طوال الوقت، والجار رأى المولّد يعمل.",
-      "لم يتضرر النبيذ — لا توجد خسارة. المطالبة احتيالية، ارفضها."
+      "The collection remained within a safe temperature range throughout and could not have been ruined by overheating.",
+      "The claimant activated backup power in advance; the cellar's cooling never stopped.",
+      "The outage was real, but the certificate says nothing about the temperature inside the cellar.",
+      "The collection's value is genuine, but value alone does not prove a loss occurred.",
+      "The claim is fraudulent and should be rejected."
     ],
     "kk": [
-      "Электрдің өшуі мен сараптама — екеуі де шынайы әрі екеуі де назар аудартатын алдамшы.",
-      "Бірақ лог жертөледе үнемі 13 °C сақталғанын көрсетеді, ал көрші генератордың жұмыс істегенін көрді.",
-      "Шарап зақымданбаған — зиян жоқ. Талап алаяқтық, қабылдамаңыз."
+      "Отключение электричества действительно продолжалось три дня.",
+      "Резервный генератор всё это время питал климатическую систему, а температура оставалась нормальной.",
+      "Коллекция не пострадала. Виноградов попытался получить выплату за несуществующий ущерб — заявление следует отклонить."
     ]
+  },
+  "investigationBudget": 3,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Трёхдневное отключение электричества остановило климатическую систему моего винного погреба. Коллекция марочного вина стоимостью 15 000 евро перегрелась и потеряла ценность. Прошу полную выплату.",
+        "en": "A three-day power outage stopped my wine cellar's climate-control system. My €15,000 collection of vintage wine overheated and lost its value. I am claiming the full amount.",
+        "tr": "A three-day power outage stopped my wine cellar's climate-control system. My €15,000 collection of vintage wine overheated and lost its value. I am claiming the full amount.",
+        "ar": "A three-day power outage stopped my wine cellar's climate-control system. My €15,000 collection of vintage wine overheated and lost its value. I am claiming the full amount.",
+        "kk": "Трёхдневное отключение электричества остановило климатическую систему моего винного погреба. Коллекция марочного вина стоимостью 15 000 евро перегрелась и потеряла ценность. Прошу полную выплату."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_outage",
+      "text": {
+        "ru": "Электричество в доме отсутствовало три дня.",
+        "en": "The house was without mains power for three days.",
+        "tr": "The house was without mains power for three days.",
+        "ar": "The house was without mains power for three days.",
+        "kk": "Электричество в доме отсутствовало три дня."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_cellar_overheated",
+      "text": {
+        "ru": "Винный погреб всё это время оставался без охлаждения и перегрелся.",
+        "en": "The wine cellar remained without cooling throughout and overheated.",
+        "tr": "The wine cellar remained without cooling throughout and overheated.",
+        "ar": "The wine cellar remained without cooling throughout and overheated.",
+        "kk": "Винный погреб всё это время оставался без охлаждения и перегрелся."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_collection_destroyed",
+      "text": {
+        "ru": "Коллекция утратила качество и требует полной выплаты.",
+        "en": "The collection lost its quality and warrants a full payout.",
+        "tr": "The collection lost its quality and warrants a full payout.",
+        "ar": "The collection lost its quality and warrants a full payout.",
+        "kk": "Коллекция утратила качество и требует полной выплаты."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Первое дело после находки в архиве 2021 года. Отключение электричества подтверждено, но нас интересует не причина аварии, а реальный ущерб. — В. Лебедева",
+      "en": "Our first case since the discovery in the 2021 archive. The power outage is confirmed, but our concern is not what caused it—it is whether any loss actually occurred. — V. Lebedeva",
+      "tr": "Our first case since the discovery in the 2021 archive. The power outage is confirmed, but our concern is not what caused it—it is whether any loss actually occurred. — V. Lebedeva",
+      "ar": "Our first case since the discovery in the 2021 archive. The power outage is confirmed, but our concern is not what caused it—it is whether any loss actually occurred. — V. Lebedeva",
+      "kk": "Первое дело после находки в архиве 2021 года. Отключение электричества подтверждено, но нас интересует не причина аварии, а реальный ущерб. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "В старой выплатной папке найден почти такой же текст заявления. Резолюцию на нём оставил руководитель расследований Константин Карелин — человек, который когда-то учил меня этой работе.",
+      "en": "An almost identical claim was found in an old payout file. It was approved by Konstantin Karelin, the former head of investigations—and the man who once taught me this job.",
+      "tr": "An almost identical claim was found in an old payout file. It was approved by Konstantin Karelin, the former head of investigations—and the man who once taught me this job.",
+      "ar": "An almost identical claim was found in an old payout file. It was approved by Konstantin Karelin, the former head of investigations—and the man who once taught me this job.",
+      "kk": "В старой выплатной папке найден почти такой же текст заявления. Резолюцию на нём оставил руководитель расследований Константин Карелин — человек, который когда-то учил меня этой работе."
+    },
+    "nextCaseTeaser": {
+      "ru": "Следующая папка — о человеке, который якобы не встаёт с постели, но продолжает получать деньги за тяжёлую работу.",
+      "en": "The next file concerns a man who claims to be confined to bed while continuing to earn money for heavy labor.",
+      "tr": "The next file concerns a man who claims to be confined to bed while continuing to earn money for heavy labor.",
+      "ar": "The next file concerns a man who claims to be confined to bed while continuing to earn money for heavy labor.",
+      "kk": "Следующая папка — о человеке, который якобы не встаёт с постели, но продолжает получать деньги за тяжёлую работу."
+    },
+    "seasonClue": {
+      "id": "old-signature",
+      "label": {
+        "ru": "Подпись К. Карелина",
+        "en": "K. Karelin's Signature",
+        "tr": "K. Karelin's Signature",
+        "ar": "K. Karelin's Signature",
+        "kk": "Подпись К. Карелина"
+      },
+      "description": {
+        "ru": "Шаблон 17-К существовал ещё в 2021 году и проходил через бывшего руководителя отдела.",
+        "en": "The 17-K template existed as early as 2021 and passed through the former head of the department.",
+        "tr": "The 17-K template existed as early as 2021 and passed through the former head of the department.",
+        "ar": "The 17-K template existed as early as 2021 and passed through the former head of the department.",
+        "kk": "Шаблон 17-К существовал ещё в 2021 году и проходил через бывшего руководителя отдела."
+      },
+      "progressIndex": 1,
+      "progressTotal": 5
+    },
+    "epilogue": null
   }
 }

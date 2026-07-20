@@ -1,345 +1,598 @@
 {
   "id": "case-049",
   "type": "standard",
+  "campaignOrder": 47,
+  "requiredLevel": 16,
+  "act": 5,
+  "actTitle": {
+    "ru": "Последний маршрут",
+    "en": "The Final Route",
+    "tr": "The Final Route",
+    "ar": "The Final Route",
+    "kk": "Последний маршрут"
+  },
   "difficulty": "hard",
   "claimAmount": 38800,
   "truth": "fraud",
-  "investigationBudget": 4,
   "title": {
-    "ru": "Кража лабораторного мутагена",
-    "en": "Laboratory Mutagen Theft",
-    "tr": "Laboratory Mutagen Theft",
-    "ar": "Laboratory Mutagen Theft",
-    "kk": "Кража лабораторного мутагена"
+    "ru": "Контейнер M-7",
+    "en": "The M-7 Container",
+    "tr": "The M-7 Container",
+    "ar": "The M-7 Container",
+    "kk": "Контейнер M-7"
   },
   "claim": {
     "person": {
       "ru": "Герман Кросс, 46 лет",
-      "en": "Herman Kross, 46",
-      "tr": "Herman Kross, 46",
-      "ar": "هيرمان كروس، 46",
-      "kk": "Герман Кросс, 46 жаста"
+      "en": "Herman Kross, age 46",
+      "tr": "Herman Kross, age 46",
+      "ar": "Herman Kross, age 46",
+      "kk": "Герман Кросс, 46 лет"
     },
     "story": {
-      "ru": "Контейнер с мутагеном украли из сервисного тоннеля. Вентиляция вскрыта, сторож ничего не видел, лаборатория потеряла препарат и неделю работы.",
-      "en": "A mutagen container was stolen through the service tunnel. The vent was opened, the guard saw nothing, and the lab lost both the reagent and a week of work.",
-      "tr": "Mutajen kabı servis tünelinden çalındı. Havalandırma açılmış, bekçi hiçbir şey görmemiş; laboratuvar reaktifi ve bir haftalık işi kaybetti.",
-      "ar": "سُرق حاوي المطفر عبر نفق الخدمة. فُتحت التهوية ولم ير الحارس شيئاً، وخسر المختبر المادة وأسبوع عمل.",
-      "kk": "Мутаген контейнері қызмет туннелі арқылы ұрланған. Желдеткіш ашылған, күзетші ештеңе көрмеген, зертхана препарат пен бір апталық жұмыстан айырылды."
+      "ru": "Из лабораторного морозильного сейфа похитили контейнер с редким реагентом M-7. Похитители проникли через сервисную вентиляцию, сторож их не видел. Прошу возместить стоимость препарата и неделю простоя.",
+      "en": "A container of rare M-7 reagent was stolen from the laboratory freezer safe. The thieves entered through the service ventilation, unseen by the guard. I am claiming the reagent's value and one week of downtime.",
+      "tr": "A container of rare M-7 reagent was stolen from the laboratory freezer safe. The thieves entered through the service ventilation, unseen by the guard. I am claiming the reagent's value and one week of downtime.",
+      "ar": "A container of rare M-7 reagent was stolen from the laboratory freezer safe. The thieves entered through the service ventilation, unseen by the guard. I am claiming the reagent's value and one week of downtime.",
+      "kk": "Из лабораторного морозильного сейфа похитили контейнер с редким реагентом M-7. Похитители проникли через сервисную вентиляцию, сторож их не видел. Прошу возместить стоимость препарата и неделю простоя."
     }
   },
-  "coverImage": "covers/case-049.svg",
-  "personImage": "people/herman-kross.webp",
   "client": {
     "role": {
-      "ru": "Заведующий тоннельной лабораторией",
-      "en": "Tunnel laboratory chief",
-      "tr": "Tünel laboratuvarı şefi",
-      "ar": "رئيس مختبر الأنفاق",
-      "kk": "Туннель зертханасының меңгерушісі"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Архив",
-          "en": "Archive",
-          "tr": "Arşiv",
-          "ar": "الأرشيف",
-          "kk": "Архив"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "Подземный Отдел",
-          "en": "Underground Department",
-          "tr": "Yeraltı Dairesi",
-          "ar": "القسم الجوفي",
-          "kk": "Жерасты бөлімі"
+          "ru": "5",
+          "en": "5",
+          "tr": "5",
+          "ar": "5",
+          "kk": "5"
         }
       },
       {
         "k": {
-          "ru": "Застрахованный риск",
-          "en": "Insured risk",
-          "tr": "Sigortalı risk",
-          "ar": "الخطر المؤمن عليه",
-          "kk": "Сақтандырылған тәуекел"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Кража реагента",
-          "en": "Reagent theft",
-          "tr": "Reaktif hırsızlığı",
-          "ar": "سرقة مادة كيميائية",
-          "kk": "Реагент ұрлығы"
-        }
-      },
-      {
-        "k": {
-          "ru": "Архивная связка",
-          "en": "Archive thread",
-          "tr": "Arşiv bağı",
-          "ar": "خيط الأرشيف",
-          "kk": "Архив байланысы"
-        },
-        "v": {
-          "ru": "Повторяющийся след: East Yard — скупка, где старое оборудование и украденные модули превращают в страховые истории.",
-          "en": "Recurring lead: East Yard, the consignment yard turning old equipment and stolen modules into insurance stories.",
-          "tr": "Tekrarlayan iz: East Yard; eski ekipmanı ve çalıntı modülleri sigorta hikâyelerine çeviren komisyon alanı.",
-          "ar": "خيط متكرر: East Yard، ساحة البيع التي تحول المعدات القديمة والوحدات المسروقة إلى قصص تأمين.",
-          "kk": "Қайталанатын із: East Yard — ескі жабдық пен ұрланған модульдерді сақтандыру оқиғасына айналдыратын алаң."
+          "ru": "47",
+          "en": "47",
+          "tr": "47",
+          "ar": "47",
+          "kk": "47"
         }
       }
     ]
   },
+  "coverImage": "covers/case-049.svg",
+  "personImage": "people/herman-kross-grounded.webp",
   "evidences": [
     {
       "id": "photo-49",
-      "type": "photo",
+      "order": 1,
+      "type": "surface_reveal",
       "title": {
-        "ru": "Вентиляционная решётка",
-        "en": "Vent grate",
-        "tr": "Havalandırma ızgarası",
-        "ar": "شبكة التهوية",
-        "kk": "Желдеткіш торы"
+        "ru": "Очистка инея в морозильном сейфе",
+        "en": "Clearing Frost Inside the Freezer Safe",
+        "tr": "Clearing Frost Inside the Freezer Safe",
+        "ar": "Clearing Frost Inside the Freezer Safe",
+        "kk": "Очистка инея в морозильном сейфе"
       },
       "content": {
-        "ru": "Винты решётки лежат внутри лаборатории, а царапины направлены изнутри наружу.",
-        "en": "The grate screws are inside the lab, and the scratches run from inside outward.",
-        "tr": "Izgara vidaları laboratuvarın içinde; çizikler içeriden dışarı yönlü.",
-        "ar": "مسامير الشبكة داخل المختبر والخدوش تتجه من الداخل إلى الخارج.",
-        "kk": "Тор бұрандалары зертхана ішінде, сызаттар іштен сыртқа бағытталған."
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
+        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Взлом имитирован изнутри лаборатории.",
-        "en": "The break-in was staged from inside the lab.",
-        "tr": "Zorlama laboratuvarın içinden sahnelenmiş.",
-        "ar": "تم تمثيل الاقتحام من داخل المختبر.",
-        "kk": "Бұзу зертхана ішінен қойылымдалған."
+        "ru": "Под инеем видны свежие полосы волочения к передней дверце, а металл у вентиляции не имеет царапин или следов инструмента; контейнер вынесли штатным путём изнутри лаборатории.",
+        "en": "Beneath the frost are fresh drag marks toward the front door, while the metal near the vent has no scratches or tool marks; the container left by the normal route from inside the laboratory.",
+        "tr": "Beneath the frost are fresh drag marks toward the front door, while the metal near the vent has no scratches or tool marks; the container left by the normal route from inside the laboratory.",
+        "ar": "Beneath the frost are fresh drag marks toward the front door, while the metal near the vent has no scratches or tool marks; the container left by the normal route from inside the laboratory.",
+        "kk": "Под инеем видны свежие полосы волочения к передней дверце, а металл у вентиляции не имеет царапин или следов инструмента; контейнер вынесли штатным путём изнутри лаборатории."
       },
+      "narrativeRole": "pivot",
+      "statementLink": {
+        "statementId": "claim_entry_route",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Под инеем видны свежие полосы волочения к передней дверце, а металл у вентиляции не имеет царапин или следов инструмента; контейнер вынесли штатным путём изнутри лаборатории.",
+          "en": "Beneath the frost are fresh drag marks toward the front door, while the metal near the vent has no scratches or tool marks; the container left by the normal route from inside the laboratory.",
+          "tr": "Beneath the frost are fresh drag marks toward the front door, while the metal near the vent has no scratches or tool marks; the container left by the normal route from inside the laboratory.",
+          "ar": "Beneath the frost are fresh drag marks toward the front door, while the metal near the vent has no scratches or tool marks; the container left by the normal route from inside the laboratory.",
+          "kk": "Под инеем видны свежие полосы волочения к передней дверце, а металл у вентиляции не имеет царапин или следов инструмента; контейнер вынесли штатным путём изнутри лаборатории."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_entry_route",
+        "reason": {
+          "ru": "Под инеем видны свежие полосы волочения к передней дверце, а металл у вентиляции не имеет царапин или следов инструмента; контейнер вынесли штатным путём изнутри лаборатории.",
+          "en": "Beneath the frost are fresh drag marks toward the front door, while the metal near the vent has no scratches or tool marks; the container left by the normal route from inside the laboratory.",
+          "tr": "Beneath the frost are fresh drag marks toward the front door, while the metal near the vent has no scratches or tool marks; the container left by the normal route from inside the laboratory.",
+          "ar": "Beneath the frost are fresh drag marks toward the front door, while the metal near the vent has no scratches or tool marks; the container left by the normal route from inside the laboratory.",
+          "kk": "Под инеем видны свежие полосы волочения к передней дверце, а металл у вентиляции не имеет царапин или следов инструмента; контейнер вынесли штатным путём изнутри лаборатории."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
       "meta": {
-        "filename": "IMG_20260649_081500.jpg",
         "imageUrl": "evidence/case-049-photo-49.webp"
       },
-      "relation": "contradicts"
+      "description": {
+        "ru": "Внутреннюю полку и заднюю стенку сфотографировали до размораживания сейфа.",
+        "en": "The inner shelf and rear wall were photographed before the safe was defrosted.",
+        "tr": "The inner shelf and rear wall were photographed before the safe was defrosted.",
+        "ar": "The inner shelf and rear wall were photographed before the safe was defrosted.",
+        "kk": "Внутреннюю полку и заднюю стенку сфотографировали до размораживания сейфа."
+      },
+      "instruction": {
+        "ru": "Счистите иней с полки и области у вентиляционной решётки.",
+        "en": "Clear frost from the shelf and the area around the ventilation grille.",
+        "tr": "Clear frost from the shelf and the area around the ventilation grille.",
+        "ar": "Clear frost from the shelf and the area around the ventilation grille.",
+        "kk": "Счистите иней с полки и области у вентиляционной решётки."
+      },
+      "previousType": "photo",
+      "assets": {
+        "baseImage": "cases/case-049/assets/interactive/photo-49-scene.webp",
+        "coverTexture": "shared/surface/frost.svg",
+        "revealMasks": [
+          "cases/case-049/assets/interactive/photo-49-front_drag_marks-trace-mask.svg",
+          "cases/case-049/assets/interactive/photo-49-undisturbed_vent-trace-mask.svg"
+        ],
+        "toolCursor": "shared/surface/cloth-cursor.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": false,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Направление физического следа опровергает проникновение через вентиляцию и дополняет журнал биометрического доступа.",
+          "en": "The direction of the physical trace disproves entry through the vent and supports the biometric access log.",
+          "tr": "The direction of the physical trace disproves entry through the vent and supports the biometric access log.",
+          "ar": "The direction of the physical trace disproves entry through the vent and supports the biometric access log.",
+          "kk": "Направление физического следа опровергает проникновение через вентиляцию и дополняет журнал биометрического доступа."
+        },
+        "playerAction": {
+          "ru": "Счистите иней с полки и области у вентиляционной решётки.",
+          "en": "Clear frost from the shelf and the area around the ventilation grille.",
+          "tr": "Clear frost from the shelf and the area around the ventilation grille.",
+          "ar": "Clear frost from the shelf and the area around the ventilation grille.",
+          "kk": "Счистите иней с полки и области у вентиляционной решётки."
+        },
+        "conclusion": {
+          "ru": "Под инеем видны свежие полосы волочения к передней дверце, а металл у вентиляции не имеет царапин или следов инструмента; контейнер вынесли штатным путём изнутри лаборатории.",
+          "en": "Beneath the frost are fresh drag marks toward the front door, while the metal near the vent has no scratches or tool marks; the container left by the normal route from inside the laboratory.",
+          "tr": "Beneath the frost are fresh drag marks toward the front door, while the metal near the vent has no scratches or tool marks; the container left by the normal route from inside the laboratory.",
+          "ar": "Beneath the frost are fresh drag marks toward the front door, while the metal near the vent has no scratches or tool marks; the container left by the normal route from inside the laboratory.",
+          "kk": "Под инеем видны свежие полосы волочения к передней дверце, а металл у вентиляции не имеет царапин или следов инструмента; контейнер вынесли штатным путём изнутри лаборатории."
+        }
+      },
+      "data": {
+        "mode": "erase",
+        "coverType": "frost",
+        "brush": {
+          "radius": 48,
+          "hardness": 0.66,
+          "opacity": 0.84,
+          "spacing": 8
+        },
+        "completion": {
+          "type": "discover_all",
+          "requiredTraceIds": [
+            "front_drag_marks",
+            "undisturbed_vent"
+          ]
+        },
+        "traces": [
+          {
+            "id": "front_drag_marks",
+            "label": "Полосы к передней дверце",
+            "requiredRevealPercent": 52,
+            "mask": "cases/case-049/assets/interactive/photo-49-front_drag_marks-trace-mask.svg",
+            "shape": "mask",
+            "isContradiction": true,
+            "conclusion": "Под инеем видны свежие полосы волочения к передней дверце, а металл у вентиляции не имеет царапин или следов инструмента; контейнер вынесли штатным путём изнутри лаборатории.",
+            "labelEn": "Drag marks toward the front door",
+            "conclusionEn": "Beneath the frost are fresh drag marks toward the front door, while the metal near the vent has no scratches or tool marks; the container left by the normal route from inside the laboratory."
+          },
+          {
+            "id": "undisturbed_vent",
+            "label": "Неповреждённый металл у вентиляции",
+            "requiredRevealPercent": 48,
+            "mask": "cases/case-049/assets/interactive/photo-49-undisturbed_vent-trace-mask.svg",
+            "shape": "mask",
+            "isContradiction": true,
+            "conclusion": "Под инеем видны свежие полосы волочения к передней дверце, а металл у вентиляции не имеет царапин или следов инструмента; контейнер вынесли штатным путём изнутри лаборатории.",
+            "labelEn": "Undamaged metal around the vent",
+            "conclusionEn": "Beneath the frost are fresh drag marks toward the front door, while the metal near the vent has no scratches or tool marks; the container left by the normal route from inside the laboratory."
+          }
+        ]
+      }
     },
     {
       "id": "document-49",
+      "order": 2,
       "type": "document",
       "title": {
         "ru": "Журнал партии M-7",
-        "en": "Batch M-7 ledger",
-        "tr": "M-7 parti defteri",
-        "ar": "سجل الدفعة M-7",
-        "kk": "M-7 партия журналы"
+        "en": "M-7 Batch Log",
+        "tr": "M-7 Batch Log",
+        "ar": "M-7 Batch Log",
+        "kk": "Журнал партии M-7"
       },
       "content": {
-        "ru": "Контейнер M-7 был списан как нестабильный за три дня до кражи, но в страховом заявлении указан как полноценный.",
-        "en": "Container M-7 was written down as unstable three days before the theft, but the insurance claim lists it as viable.",
-        "tr": "M-7 kabı hırsızlıktan üç gün önce kararsız diye düşülmüş, ancak sigorta başvurusunda sağlam gösterilmiş.",
-        "ar": "سُجلت الحاوية M-7 غير مستقرة قبل السرقة بثلاثة أيام، لكن المطالبة تذكرها صالحة.",
-        "kk": "M-7 контейнері ұрлықтан үш күн бұрын тұрақсыз деп есептен шығарылған, ал өтініште жарамды деп көрсетілген."
+        "ru": "Контейнер снят с внутреннего учёта как «передан на утилизацию» за два дня до заявления. Запись подписана Кроссом.",
+        "en": "Two days before the claim, the container was removed from internal inventory as ‘sent for disposal.’ Kross signed the entry.",
+        "tr": "Two days before the claim, the container was removed from internal inventory as ‘sent for disposal.’ Kross signed the entry.",
+        "ar": "Two days before the claim, the container was removed from internal inventory as ‘sent for disposal.’ Kross signed the entry.",
+        "kk": "Контейнер снят с внутреннего учёта как «передан на утилизацию» за два дня до заявления. Запись подписана Кроссом."
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Документы завышают ценность утраченного реагента.",
-        "en": "The documents overstate the lost reagent value.",
-        "tr": "Belgeler kayıp reaktif değerini şişiriyor.",
-        "ar": "تضخم الوثائق قيمة المادة المفقودة.",
-        "kk": "Құжаттар жоғалған реагент құнын асырып көрсетеді."
+        "ru": "Заявитель сам вывел реагент из официального оборота до мнимой кражи.",
+        "en": "The claimant removed the reagent from official inventory before the fictitious theft.",
+        "tr": "The claimant removed the reagent from official inventory before the fictitious theft.",
+        "ar": "The claimant removed the reagent from official inventory before the fictitious theft.",
+        "kk": "Заявитель сам вывел реагент из официального оборота до мнимой кражи."
       },
-      "relation": "contradicts"
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_no_authorized_access",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Заявитель сам вывел реагент из официального оборота до мнимой кражи.",
+          "en": "The claimant removed the reagent from official inventory before the fictitious theft.",
+          "tr": "The claimant removed the reagent from official inventory before the fictitious theft.",
+          "ar": "The claimant removed the reagent from official inventory before the fictitious theft.",
+          "kk": "Заявитель сам вывел реагент из официального оборота до мнимой кражи."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_no_authorized_access",
+        "reason": {
+          "ru": "Заявитель сам вывел реагент из официального оборота до мнимой кражи.",
+          "en": "The claimant removed the reagent from official inventory before the fictitious theft.",
+          "tr": "The claimant removed the reagent from official inventory before the fictitious theft.",
+          "ar": "The claimant removed the reagent from official inventory before the fictitious theft.",
+          "kk": "Заявитель сам вывел реагент из официального оборота до мнимой кражи."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "camera-49",
+      "order": 3,
       "type": "camera_recording",
       "title": {
         "ru": "Камера шлюза C",
-        "en": "Airlock C camera",
-        "tr": "Hava kilidi C kamerası",
-        "ar": "كاميرا الحاجز C",
-        "kk": "C шлюзі камерасы"
+        "en": "Airlock C Camera",
+        "tr": "Airlock C Camera",
+        "ar": "Airlock C Camera",
+        "kk": "Камера шлюза C"
       },
       "content": {
-        "ru": "23:41: Кросс один входит в лабораторию с пустым охлаждающим кейсом. Через семь минут выходит с кейсом тяжелее.",
-        "en": "23:41: Kross enters the lab alone with an empty cooling case. Seven minutes later he leaves with the case visibly heavier.",
-        "tr": "23:41: Kross boş soğutma çantasıyla laboratuvara tek başına giriyor. Yedi dakika sonra çanta belirgin şekilde ağır çıkıyor.",
-        "ar": "23:41 يدخل كروس المختبر وحده بحقيبة تبريد فارغة. بعد سبع دقائق يخرج والحقيبة أثقل بوضوح.",
-        "kk": "23:41-де Кросс бос салқындатқыш қораппен зертханаға жалғыз кіреді. Жеті минуттан соң қорап ауыр болып шығады."
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Камера связывает вынос контейнера с заявителем.",
-        "en": "The camera links container removal to the claimant.",
-        "tr": "Kamera kabın çıkarılmasını başvuranla bağlıyor.",
-        "ar": "تربط الكاميرا إخراج الحاوية بصاحب المطالبة.",
-        "kk": "Камера контейнерді шығаруды өтініш берушімен байланыстырады."
-      },
-      "meta": {
-        "cameraId": "ARC-49",
-        "cameraModel": "SentinelCam SC-3265 - 1080p - H.264"
-      },
-      "relation": "contradicts"
-    },
-    {
-      "id": "log-49",
-      "type": "usage_log",
-      "title": {
-        "ru": "Журнал морозильного сейфа",
-        "en": "Cryo safe log",
-        "tr": "Kriyo kasa kaydı",
-        "ar": "سجل الخزنة المبردة",
-        "kk": "Крио сейф журналы"
-      },
-      "content": {
-        "ru": [
-          "23:38 — доступ: KROSS-H",
-          "23:40 — контейнер M-7 извлечён штатно",
-          "23:49 — тревога о взломе создана вручную"
-        ],
-        "en": [
-          "23:38 — access: KROSS-H",
-          "23:40 — container M-7 removed normally",
-          "23:49 — break-in alarm created manually"
-        ],
-        "tr": [
-          "23:38 — erişim: KROSS-H",
-          "23:40 — M-7 kabı normal çıkarıldı",
-          "23:49 — hırsızlık alarmı elle oluşturuldu"
-        ],
-        "ar": [
-          "23:38 — دخول: KROSS-H",
-          "23:40 — إخراج الحاوية M-7 بشكل نظامي",
-          "23:49 — إنشاء إنذار اقتحام يدوياً"
-        ],
-        "kk": [
-          "23:38 — кіру: KROSS-H",
-          "23:40 — M-7 контейнері штаттық түрде алынды",
-          "23:49 — бұзу дабылы қолмен жасалды"
-        ]
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Сейф открыт штатным доступом Кросса, а не ворами.",
-        "en": "The safe was opened with Kross normal access, not by thieves.",
-        "tr": "Kasa hırsızlarca değil Kross’un normal erişimiyle açılmış.",
-        "ar": "فُتحت الخزنة بوصول كروس النظامي لا بواسطة لصوص.",
-        "kk": "Сейф ұрылармен емес, Кросстың штаттық қолжетімімен ашылған."
-      },
-      "meta": {
-        "logPrompt": "archive@log-49:~$ tail -f /var/log/archive.log"
-      },
-      "relation": "contradicts"
-    },
-    {
-      "id": "bank-49",
-      "type": "bank_statement",
-      "title": {
-        "ru": "Оплата серого брокера",
-        "en": "Gray broker payment",
-        "tr": "Gri aracı ödemesi",
-        "ar": "دفعة لوسيط رمادي",
-        "kk": "Күмәнді делдал төлемі"
-      },
-      "content": {
-        "ru": [
-          "За ночь до кражи — входящий платёж от BioSplice Transit",
-          "Назначение: «консультация по нестабильным культурам»",
-          "Платёж BioSplice прошёл через тот же расчётный узел East Yard."
-        ],
-        "en": [
-          "Night before theft — incoming payment from BioSplice Transit",
-          "Memo: \"unstable cultures consultation\"",
-          "The BioSplice payment passed through the same East Yard clearing node."
-        ],
-        "tr": [
-          "Hırsızlıktan önceki gece — BioSplice Transit’ten ödeme",
-          "Açıklama: \"kararsız kültür danışmanlığı\"",
-          "BioSplice ödemesi aynı East Yard takas düğümünden geçti."
-        ],
-        "ar": [
-          "ليلة قبل السرقة — دفعة واردة من BioSplice Transit",
-          "الوصف: \"استشارة ثقافات غير مستقرة\"",
-          "مرت دفعة BioSplice عبر عقدة تسوية East Yard نفسها."
-        ],
-        "kk": [
-          "Ұрлық алдындағы түн — BioSplice Transit-тен кіріс төлем",
-          "Мақсаты: \"тұрақсыз дақылдар бойынша кеңес\"",
-          "BioSplice төлемі сол East Yard есеп айырысу торабы арқылы өтті."
-        ]
-      },
-      "isContradiction": true,
-      "contradictionExplanation": {
-        "ru": "Платёж указывает на скрытую сделку с реагентом.",
-        "en": "The payment points to a hidden reagent deal.",
-        "tr": "Ödeme gizli reaktif anlaşmasına işaret ediyor.",
-        "ar": "تشير الدفعة إلى صفقة مخفية للمادة.",
-        "kk": "Төлем реагент бойынша жасырын мәмілені көрсетеді."
-      },
-      "meta": {
-        "bankName": {
-          "ru": "Municipal Credit",
-          "en": "Municipal Credit",
-          "tr": "Municipal Credit",
-          "ar": "Municipal Credit",
-          "kk": "Municipal Credit"
-        },
-        "accountMask": "**** **** **** 49"
-      },
-      "relation": "contradicts"
-    },
-    {
-      "id": "witness-49",
-      "type": "witness_statement",
-      "title": {
-        "ru": "Техник вентиляции",
-        "en": "Ventilation technician",
-        "tr": "Havalandırma teknisyeni",
-        "ar": "فني التهوية",
-        "kk": "Желдету технигі"
-      },
-      "content": {
-        "ru": "«Решётку не ломали с тоннеля. Я видел, что пломба была снята аккуратно и лежала на столе Кросса».",
-        "en": "\"The grate was not forced from the tunnel. I saw the seal removed neatly and placed on Kross desk.\"",
-        "tr": "\"Izgara tünelden zorlanmamıştı. Mührün düzgün çıkarılıp Kross’un masasına konduğunu gördüm.\"",
-        "ar": "«لم تُكسر الشبكة من النفق. رأيت الختم منزوعاً بعناية وموضوعاً على مكتب كروس».",
-        "kk": "«Тор туннель жақтан бұзылмаған. Мөр ұқыпты алынып, Кросстың үстелінде жатқанын көрдім»."
+        "ru": "После авторизованного открытия сейфа по шлюзу проходит закрытая лабораторная тележка. Лицо сопровождающего и содержимое контейнера перекрыты защитным экраном.",
+        "en": "After the authorized safe opening, a closed laboratory cart passes through the airlock. A protective screen obscures the escort's face and the container's contents.",
+        "tr": "After the authorized safe opening, a closed laboratory cart passes through the airlock. A protective screen obscures the escort's face and the container's contents.",
+        "ar": "After the authorized safe opening, a closed laboratory cart passes through the airlock. A protective screen obscures the escort's face and the container's contents.",
+        "kk": "После авторизованного открытия сейфа по шлюзу проходит закрытая лабораторная тележка. Лицо сопровождающего и содержимое контейнера перекрыты защитным экраном."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Материал важен для проверки версии, но сам по себе не является противоречием.",
-        "en": "The material matters to the review but is not a contradiction by itself.",
-        "tr": "Bu kayıt inceleme için önemlidir, ancak tek başına çelişki değildir.",
-        "ar": "هذه المادة مهمة للمراجعة لكنها ليست تناقضاً بحد ذاتها.",
-        "kk": "Материал тексеру үшін маңызды, бірақ өздігінен қайшылық емес."
+        "ru": "Тележка подтверждает штатный путь вывоза, но связывается с M-7 только журналом партии и платежом.",
+        "en": "The cart confirms the normal removal route, but only the batch log and payment link it to M-7.",
+        "tr": "The cart confirms the normal removal route, but only the batch log and payment link it to M-7.",
+        "ar": "The cart confirms the normal removal route, but only the batch log and payment link it to M-7.",
+        "kk": "Тележка подтверждает штатный путь вывоза, но связывается с M-7 только журналом партии и платежом."
       },
-      "relation": "supports"
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_entry_route",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Тележка подтверждает штатный путь вывоза, но связывается с M-7 только журналом партии и платежом.",
+          "en": "The cart confirms the normal removal route, but only the batch log and payment link it to M-7.",
+          "tr": "The cart confirms the normal removal route, but only the batch log and payment link it to M-7.",
+          "ar": "The cart confirms the normal removal route, but only the batch log and payment link it to M-7.",
+          "kk": "Тележка подтверждает штатный путь вывоза, но связывается с M-7 только журналом партии и платежом."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "log-49",
+      "order": 4,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал морозильного сейфа",
+        "en": "Freezer Safe Log",
+        "tr": "Freezer Safe Log",
+        "ar": "Freezer Safe Log",
+        "kk": "Журнал морозильного сейфа"
+      },
+      "content": {
+        "ru": "Сейф открыт биометрией Кросса, температура поддерживалась до извлечения, тревога отключена его кодом.",
+        "en": "Kross's biometrics opened the safe, temperature was maintained until removal, and his code disabled the alarm.",
+        "tr": "Kross's biometrics opened the safe, temperature was maintained until removal, and his code disabled the alarm.",
+        "ar": "Kross's biometrics opened the safe, temperature was maintained until removal, and his code disabled the alarm.",
+        "kk": "Сейф открыт биометрией Кросса, температура поддерживалась до извлечения, тревога отключена его кодом."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Никакого несанкционированного доступа не было.",
+        "en": "No unauthorized access occurred.",
+        "tr": "No unauthorized access occurred.",
+        "ar": "No unauthorized access occurred.",
+        "kk": "Никакого несанкционированного доступа не было."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_no_authorized_access",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Никакого несанкционированного доступа не было.",
+          "en": "No unauthorized access occurred.",
+          "tr": "No unauthorized access occurred.",
+          "ar": "No unauthorized access occurred.",
+          "kk": "Никакого несанкционированного доступа не было."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_no_authorized_access",
+        "reason": {
+          "ru": "Никакого несанкционированного доступа не было.",
+          "en": "No unauthorized access occurred.",
+          "tr": "No unauthorized access occurred.",
+          "ar": "No unauthorized access occurred.",
+          "kk": "Никакого несанкционированного доступа не было."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "bank-49",
+      "order": 5,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Оплата посредника",
+        "en": "Intermediary Payment",
+        "tr": "Intermediary Payment",
+        "ar": "Intermediary Payment",
+        "kk": "Оплата посредника"
+      },
+      "content": {
+        "ru": "Компания BioSplice переводит Кроссу аванс через счёт Серого конвоя. Назначение содержит номер партии M-7.",
+        "en": "BioSplice transfers an advance to Kross through a Gray Convoy account. The reference includes the M-7 batch number.",
+        "tr": "BioSplice transfers an advance to Kross through a Gray Convoy account. The reference includes the M-7 batch number.",
+        "ar": "BioSplice transfers an advance to Kross through a Gray Convoy account. The reference includes the M-7 batch number.",
+        "kk": "Компания BioSplice переводит Кроссу аванс через счёт Серого конвоя. Назначение содержит номер партии M-7."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Финансовый след подтверждает продажу препарата.",
+        "en": "The financial trail confirms the sale of the reagent.",
+        "tr": "The financial trail confirms the sale of the reagent.",
+        "ar": "The financial trail confirms the sale of the reagent.",
+        "kk": "Финансовый след подтверждает продажу препарата."
+      },
+      "narrativeRole": "arc_proof",
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Финансовый след подтверждает продажу препарата.",
+          "en": "The financial trail confirms the sale of the reagent.",
+          "tr": "The financial trail confirms the sale of the reagent.",
+          "ar": "The financial trail confirms the sale of the reagent.",
+          "kk": "Финансовый след подтверждает продажу препарата."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75
+    },
+    {
+      "id": "witness-49",
+      "order": 6,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Техник вентиляции",
+        "en": "Ventilation Technician",
+        "tr": "Ventilation Technician",
+        "ar": "Ventilation Technician",
+        "kk": "Техник вентиляции"
+      },
+      "content": {
+        "ru": "Техник видел решётку целой утром после передачи контейнера; её сняли позднее.",
+        "en": "The technician saw the grille intact on the morning after the container was transferred; it was removed later.",
+        "tr": "The technician saw the grille intact on the morning after the container was transferred; it was removed later.",
+        "ar": "The technician saw the grille intact on the morning after the container was transferred; it was removed later.",
+        "kk": "Техник видел решётку целой утром после передачи контейнера; её сняли позднее."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Свидетель подтверждает время инсценировки, но не нужен для идентификации продавца.",
+        "en": "The witness confirms when the staging occurred but is not needed to identify the seller.",
+        "tr": "The witness confirms when the staging occurred but is not needed to identify the seller.",
+        "ar": "The witness confirms when the staging occurred but is not needed to identify the seller.",
+        "kk": "Свидетель подтверждает время инсценировки, но не нужен для идентификации продавца."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_entry_route",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Свидетель подтверждает время инсценировки, но не нужен для идентификации продавца.",
+          "en": "The witness confirms when the staging occurred but is not needed to identify the seller.",
+          "tr": "The witness confirms when the staging occurred but is not needed to identify the seller.",
+          "ar": "The witness confirms when the staging occurred but is not needed to identify the seller.",
+          "kk": "Свидетель подтверждает время инсценировки, но не нужен для идентификации продавца."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25
     }
   ],
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Вентиляция и сейф показывают инсценировку изнутри.",
-      "BioSplice и East Yard связывают реагент с той же подпольной логистикой.",
-      "Кража неизвестными не подтверждена: вердикт — отказ."
+      "Под инеем найдены полосы волочения к передней дверце; металл у вентиляции не имеет следов инструмента, поэтому версию проникновения через канал инсценировали.",
+      "Кросс сам открыл сейф, вывел M-7 из учёта и передал его курьеру.",
+      "Реагент продан через посредника Серого конвоя. Кража инсценирована, выплату следует отклонить."
     ],
     "en": [
-      "The vent and safe records show an inside staging.",
-      "BioSplice and East Yard tie the reagent to the same underground logistics.",
-      "Theft by unknown intruders is unsupported: reject the claim."
+      "Beneath the frost are fresh drag marks toward the front door, while the metal near the vent has no scratches or tool marks; the container left by the normal route from inside the laboratory.",
+      "The claimant removed the reagent from official inventory before the fictitious theft.",
+      "No unauthorized access occurred.",
+      "The cart confirms the normal removal route, but only the batch log and payment link it to M-7.",
+      "The financial trail confirms the sale of the reagent.",
+      "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "Havalandırma ve kasa kayıtları içeriden sahnelemeyi gösteriyor.",
-      "BioSplice ve East Yard reaktifi aynı yeraltı lojistiğine bağlıyor.",
-      "Bilinmeyen hırsızlar iddiası desteklenmiyor: ödeme reddedilir."
+      "Beneath the frost are fresh drag marks toward the front door, while the metal near the vent has no scratches or tool marks; the container left by the normal route from inside the laboratory.",
+      "The claimant removed the reagent from official inventory before the fictitious theft.",
+      "No unauthorized access occurred.",
+      "The cart confirms the normal removal route, but only the batch log and payment link it to M-7.",
+      "The financial trail confirms the sale of the reagent.",
+      "The claim is fraudulent and should be rejected."
     ],
     "ar": [
-      "تظهر التهوية وسجلات الخزنة تمثيلاً من الداخل.",
-      "تربط BioSplice وEast Yard المادة باللوجستيات الجوفية نفسها.",
-      "سرقة مجهولين غير مثبتة: القرار رفض."
+      "Beneath the frost are fresh drag marks toward the front door, while the metal near the vent has no scratches or tool marks; the container left by the normal route from inside the laboratory.",
+      "The claimant removed the reagent from official inventory before the fictitious theft.",
+      "No unauthorized access occurred.",
+      "The cart confirms the normal removal route, but only the batch log and payment link it to M-7.",
+      "The financial trail confirms the sale of the reagent.",
+      "The claim is fraudulent and should be rejected."
     ],
     "kk": [
-      "Желдеткіш пен сейф жазбалары ішкі қойылымды көрсетеді.",
-      "BioSplice пен East Yard реагентті сол жерасты логистикасымен байланыстырады.",
-      "Белгісіз ұрылар нұсқасы расталмады: вердикт — бас тарту."
+      "Под инеем найдены полосы волочения к передней дверце; металл у вентиляции не имеет следов инструмента, поэтому версию проникновения через канал инсценировали.",
+      "Кросс сам открыл сейф, вывел M-7 из учёта и передал его курьеру.",
+      "Реагент продан через посредника Серого конвоя. Кража инсценирована, выплату следует отклонить."
     ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Из лабораторного морозильного сейфа похитили контейнер с редким реагентом M-7. Похитители проникли через сервисную вентиляцию, сторож их не видел. Прошу возместить стоимость препарата и неделю простоя.",
+        "en": "A container of rare M-7 reagent was stolen from the laboratory freezer safe. The thieves entered through the service ventilation, unseen by the guard. I am claiming the reagent's value and one week of downtime.",
+        "tr": "A container of rare M-7 reagent was stolen from the laboratory freezer safe. The thieves entered through the service ventilation, unseen by the guard. I am claiming the reagent's value and one week of downtime.",
+        "ar": "A container of rare M-7 reagent was stolen from the laboratory freezer safe. The thieves entered through the service ventilation, unseen by the guard. I am claiming the reagent's value and one week of downtime.",
+        "kk": "Из лабораторного морозильного сейфа похитили контейнер с редким реагентом M-7. Похитители проникли через сервисную вентиляцию, сторож их не видел. Прошу возместить стоимость препарата и неделю простоя."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_theft",
+      "text": {
+        "ru": "Контейнер M-7 похищен неизвестными.",
+        "en": "Unknown persons stole the M-7 container.",
+        "tr": "Unknown persons stole the M-7 container.",
+        "ar": "Unknown persons stole the M-7 container.",
+        "kk": "Контейнер M-7 похищен неизвестными."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_entry_route",
+      "text": {
+        "ru": "Похитители проникли через сервисную вентиляцию.",
+        "en": "The thieves entered through the service ventilation.",
+        "tr": "The thieves entered through the service ventilation.",
+        "ar": "The thieves entered through the service ventilation.",
+        "kk": "Похитители проникли через сервисную вентиляцию."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_no_authorized_access",
+      "text": {
+        "ru": "Кросс не открывал сейф и не передавал реагент добровольно.",
+        "en": "Kross neither opened the safe nor voluntarily transferred the reagent.",
+        "tr": "Kross neither opened the safe nor voluntarily transferred the reagent.",
+        "ar": "Kross neither opened the safe nor voluntarily transferred the reagent.",
+        "kk": "Кросс не открывал сейф и не передавал реагент добровольно."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Контейнер опасен и дорог, но никакой неизвестный не мог открыть морозильный сейф личным биометрическим ключом Кросса. — В. Лебедева",
+      "en": "The container is dangerous and valuable, but no unknown thief could open the freezer safe with Kross's personal biometric key. — V. Lebedeva",
+      "tr": "The container is dangerous and valuable, but no unknown thief could open the freezer safe with Kross's personal biometric key. — V. Lebedeva",
+      "ar": "The container is dangerous and valuable, but no unknown thief could open the freezer safe with Kross's personal biometric key. — V. Lebedeva",
+      "kk": "Контейнер опасен и дорог, но никакой неизвестный не мог открыть морозильный сейф личным биометрическим ключом Кросса. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Платёж BioSplice проходит через тот же расчётный узел, что и выплаты по форме 17-К. Финансовая и транспортная половины схемы наконец соединены.",
+      "en": "The BioSplice payment passes through the same clearing node as the 17-K payouts. The financial and transport halves of the operation are finally connected.",
+      "tr": "The BioSplice payment passes through the same clearing node as the 17-K payouts. The financial and transport halves of the operation are finally connected.",
+      "ar": "The BioSplice payment passes through the same clearing node as the 17-K payouts. The financial and transport halves of the operation are finally connected.",
+      "kk": "Платёж BioSplice проходит через тот же расчётный узел, что и выплаты по форме 17-К. Финансовая и транспортная половины схемы наконец соединены."
+    },
+    "nextCaseTeaser": {
+      "ru": "Мастерская «Компас» снова горит. Михаил Тернов успел вывести ученика, но старый реестр остался внутри.",
+      "en": "The Compass workshop is burning again. Mikhail Ternov got his apprentice out, but the old registry remained inside.",
+      "tr": "The Compass workshop is burning again. Mikhail Ternov got his apprentice out, but the old registry remained inside.",
+      "ar": "The Compass workshop is burning again. Mikhail Ternov got his apprentice out, but the old registry remained inside.",
+      "kk": "Мастерская «Компас» снова горит. Михаил Тернов успел вывести ученика, но старый реестр остался внутри."
+    },
+    "seasonClue": {
+      "id": "finance-logistics-link",
+      "label": {
+        "ru": "Единый расчётный узел",
+        "en": "Common Clearing Node",
+        "tr": "Common Clearing Node",
+        "ar": "Common Clearing Node",
+        "kk": "Единый расчётный узел"
+      },
+      "description": {
+        "ru": "Страховые выплаты, продажи активов и оплата курьеров Серого конвоя проходят через одну систему Карелина.",
+        "en": "Insurance payouts, asset sales, and Gray Convoy courier payments all pass through Karelin's system.",
+        "tr": "Insurance payouts, asset sales, and Gray Convoy courier payments all pass through Karelin's system.",
+        "ar": "Insurance payouts, asset sales, and Gray Convoy courier payments all pass through Karelin's system.",
+        "kk": "Страховые выплаты, продажи активов и оплата курьеров Серого конвоя проходят через одну систему Карелина."
+      },
+      "progressIndex": 5,
+      "progressTotal": 7
+    },
+    "epilogue": null
   }
 }

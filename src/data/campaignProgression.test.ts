@@ -2,9 +2,9 @@
  * Campaign-progression invariants — the "difficulty curve" contract.
  *
  * These guard the player-retention design: the standard campaign must ramp
- * gently (2-evidence onboarding → 6-evidence expert), never step *down* in
- * evidence count or required level, and drip-feed the advanced evidence types
- * (bank_statement / phone_records / social_media) into the late game.
+ * through a three-case action tutorial, then alternate dense synthesis with
+ * shorter breathers. `campaignOrder`, numeric budgets and exact links are the
+ * authoritative curve; raw card count is deliberately allowed to step down.
  *
  * The campaign ORDER is `getStandardCases()` (sorted by the unlock comparator);
  * positions below are 1-based indices into that order.
@@ -32,25 +32,21 @@ describe('campaign difficulty curve', () => {
     expect(standard.length).toBe(50);
   });
 
-  it('opens with two 2-evidence onboarding cases using only photo/document', () => {
-    const onboarding = standard.slice(0, 2);
-    for (const c of onboarding) {
-      expect(c.evidences.length).toBe(2);
-      for (const e of c.evidences) {
-        expect(['photo', 'document']).toContain(e.type);
-      }
-    }
+  it('opens with the canonical three-case interactive onboarding', () => {
+    expect(standard.slice(0, 3).map((c) => c.id)).toEqual(['case-001', 'case-009', 'case-013']);
+    expect(standard[0]!.evidences.some((e) => e.type === 'thermal_scan')).toBe(true);
+    expect(standard[1]!.truth).toBe('valid');
+    expect(standard[2]!.evidences.some((e) => e.type === 'document_scan')).toBe(true);
+    expect(standard.slice(0, 3).map((c) => c.investigationBudget)).toEqual([2, 3, 3]);
   });
 
-  it('never decreases evidence count along the campaign order', () => {
-    let prev = 0;
+  it('has contiguous campaign order and a solvable numeric budget', () => {
+    expect(standard.map((c) => c.campaignOrder)).toEqual(Array.from({ length: 50 }, (_, index) => index + 1));
     for (const c of standard) {
-      const n = c.evidences.length;
-      expect(n).toBeGreaterThanOrEqual(prev);
-      prev = n;
+      expect(c.investigationBudget).toBeTypeOf('number');
+      expect(c.investigationBudget!).toBeLessThanOrEqual(c.evidences.filter((e) => e.evidenceTier !== 'arc').length);
+      expect(c.evidences.filter((e) => e.requiredForVerdict).length).toBeLessThanOrEqual(c.investigationBudget!);
     }
-    // And it actually climbs to the 6-evidence expert tier by the end.
-    expect(standard[standard.length - 1]!.evidences.length).toBe(6);
   });
 
   it('never decreases the required level along the campaign order', () => {
@@ -70,28 +66,25 @@ describe('campaign difficulty curve', () => {
     }
   });
 
-  it('debuts the advanced evidence types only in the late game', () => {
+  it('keeps financial and phone records out of the onboarding', () => {
     const bank = debutPosition('bank_statement');
     const phone = debutPosition('phone_records');
-    const social = debutPosition('social_media');
-    // All three must actually be used somewhere…
+    // The canonical Archive 17 campaign uses bank/phone data; social_media is
+    // optional and remains supported by the renderer for daily/author content.
     expect(bank).not.toBeNull();
     expect(phone).not.toBeNull();
-    expect(social).not.toBeNull();
-    // …and not before the advanced stretch of the campaign.
-    expect(bank!).toBeGreaterThanOrEqual(18);
-    expect(phone!).toBeGreaterThanOrEqual(18);
-    expect(social!).toBeGreaterThanOrEqual(18);
+    expect(bank!).toBeGreaterThan(3);
+    expect(phone!).toBeGreaterThan(3);
   });
 });
 
 describe('truth ↔ contradiction convention (all standard cases)', () => {
-  it('fraud cases reject with >=2 contradictions; valid cases approve with 0', () => {
+  it('fraud cases reject with a direct contradiction; valid cases approve with 0', () => {
     for (const c of standard) {
       const contradictions = c.evidences.filter((e) => e.isContradiction).length;
       if (c.truth === 'fraud') {
         expect(c.correctDecision).toBe('reject');
-        expect(contradictions).toBeGreaterThanOrEqual(2);
+        expect(contradictions).toBeGreaterThanOrEqual(1);
       } else {
         expect(c.correctDecision).toBe('approve');
         expect(contradictions).toBe(0);

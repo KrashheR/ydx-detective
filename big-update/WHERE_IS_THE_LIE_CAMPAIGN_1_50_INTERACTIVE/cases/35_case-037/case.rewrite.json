@@ -1,0 +1,626 @@
+{
+  "id": "case-037",
+  "campaignOrder": 35,
+  "requiredLevel": 18,
+  "act": 4,
+  "actTitle": {
+    "ru": "Серый конвой",
+    "en": "The Gray Convoy"
+  },
+  "title": {
+    "ru": "Три силуэта в контейнере",
+    "en": "Three Silhouettes in a Container"
+  },
+  "difficulty": "hard",
+  "claimAmount": {
+    "value": 15000,
+    "currency": "EUR"
+  },
+  "groundTruth": "fraud",
+  "correctDecision": "reject",
+  "investigationBudget": 4,
+  "claimant": {
+    "name": {
+      "ru": "Денис Корин, 55 лет",
+      "en": "Denis Korin, age 55"
+    },
+    "migrationNote": {
+      "ru": "Сохранить данные и портрет. Манекены должны быть оригинальными промышленными объектами, не похожими на известных роботов или персонажей.",
+      "en": "Keep the existing profile data and portrait. The mannequins must be original industrial objects with no resemblance to recognizable robots or characters."
+    },
+    "portrait": {
+      "characterId": "denis-korin",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Денис Корин",
+        "en": "Denis Korin, age 55"
+      },
+      "assetId": "asset-060",
+      "src": "src/data/cases/case-037/people/denis-korin.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-037/people/denis-korin.webp",
+      "caseRelativeSrc": "people/denis-korin.webp",
+      "installTo": "public/people/denis-korin.webp",
+      "legacyRuntimeUrl": "people/denis-korin.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "26cda8b193c8c50c1466c8022775a94c4a3c27431dead0e39d9a036daad01c6b"
+    },
+    "portraitStatus": "generated_replacement_included",
+    "portraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/denis-korin.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-037/people/denis-korin.webp",
+      "copyTo": "public/people/denis-korin.webp",
+      "replacesExistingValue": null
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Таможенный рентген показывает три человеческих силуэта в грузовике. До открытия контейнера это звучало как совсем другое дело. — В. Лебедева",
+      "en": "A customs X-ray shows three human silhouettes inside a truck. Before the container was opened, this sounded like a very different kind of case. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Маркировка GC-17-M означает не один маршрут, а каталог категорий груза. Серый конвой работает как полноценная торговая сеть.",
+      "en": "Marking GC-17-M identifies not one route but a catalog of cargo categories. The Gray Convoy operates as a complete trading network."
+    },
+    "nextCaseTeaser": {
+      "ru": "В школьной лаборатории взорвалась реакционная ёмкость. Преподаватель заказал безопасную добавку, но получил другой реагент.",
+      "en": "A reaction vessel exploded in a school laboratory. The teacher ordered a safe additive but received a different reagent."
+    },
+    "seasonClue": {
+      "id": "gc-catalog",
+      "label": {
+        "ru": "Каталог грузов GC-17",
+        "en": "GC-17 Cargo Catalog"
+      },
+      "description": {
+        "ru": "Сеть сортирует и вывозит застрахованное имущество по категориям и международным маршрутам.",
+        "en": "The network sorts and transports insured property by category and international route."
+      },
+      "progressIndex": 3,
+      "progressTotal": 6
+    },
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Ночью из мотомастерской украли три хромированных демонстрационных манекена и коллекционный мотоцикл. Основные камеры отключились из-за скачка напряжения. Прошу полную выплату.",
+    "en": "During the night, three chrome display mannequins and a collectible motorcycle were stolen from my workshop. A power surge disabled the main cameras. I am claiming the full amount."
+  },
+  "evidence": [
+    {
+      "id": "ev-backup",
+      "order": 1,
+      "type": "shadow_time_check",
+      "title": {
+        "ru": "Проверка времени резервной записи",
+        "en": "Backup Footage Time Check"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Тень соответствует 17:30–17:55, а не полуночи: погрузку сняли заранее и выдали за ночную кражу.",
+        "en": "The shadow matches 5:30–5:55 p.m., not midnight: the loading was filmed in advance and presented as a nighttime theft."
+      },
+      "previousType": "camera_recording",
+      "description": {
+        "ru": "Камера контейнерной площадки не имела часов, но в кадре виден калибровочный столб с известной ориентацией.",
+        "en": "The container-yard camera had no clock, but a calibration post of known orientation is visible in frame."
+      },
+      "instruction": {
+        "ru": "Сопоставить тень столба с временной шкалой.",
+        "en": "Match the post's shadow to the time scale."
+      },
+      "assets": {
+        "asset1": "assets/interactive/ev-backup-scene.webp",
+        "asset2": "assets/interactive/ev-backup-shadow-reference.svg"
+      },
+      "data": {
+        "claimedTime": "00:15",
+        "orientationSource": "План контейнерной площадки",
+        "slider": {
+          "from": "06:00",
+          "to": "21:00",
+          "stepMinutes": 10
+        },
+        "shadowOrigin": {
+          "x": 44,
+          "y": 65
+        },
+        "referenceShadow": {
+          "baseAngle": 0,
+          "baseLength": 100,
+          "width": 20,
+          "opacity": 0.34
+        },
+        "timeSamples": [
+          {
+            "time": "08:00",
+            "angle": 72,
+            "length": 128
+          },
+          {
+            "time": "12:00",
+            "angle": 10,
+            "length": 50
+          },
+          {
+            "time": "17:40",
+            "angle": -58,
+            "length": 115
+          },
+          {
+            "time": "20:00",
+            "angle": -77,
+            "length": 153
+          }
+        ],
+        "validTimeRanges": [
+          {
+            "from": "17:30",
+            "to": "17:55"
+          }
+        ],
+        "matchTolerance": {
+          "angle": 8,
+          "length": 16
+        },
+        "orientationSourceEn": "Container yard plan"
+      },
+      "statementLink": {
+        "statementId": "claim_theft_time",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Тень соответствует 17:30–17:55, а не полуночи: погрузку сняли заранее и выдали за ночную кражу.",
+          "en": "The shadow matches 5:30–5:55 p.m., not midnight: the loading was filmed in advance and presented as a nighttime theft."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_theft_time",
+        "reason": {
+          "ru": "Тень соответствует 17:30–17:55, а не полуночи: погрузку сняли заранее и выдали за ночную кражу.",
+          "en": "The shadow matches 5:30–5:55 p.m., not midnight: the loading was filmed in advance and presented as a nighttime theft."
+        }
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Проверка доказывает, что «ночная» запись подготовлена днём до отключения основных камер.",
+          "en": "The check proves that the ‘nighttime’ footage was prepared during daylight before the main cameras were disabled."
+        },
+        "playerAction": {
+          "ru": "Сопоставить тень столба с временной шкалой.",
+          "en": "Match the post's shadow to the time scale."
+        },
+        "conclusion": {
+          "ru": "Тень соответствует 17:30–17:55, а не полуночи: погрузку сняли заранее и выдали за ночную кражу.",
+          "en": "The shadow matches 5:30–5:55 p.m., not midnight: the loading was filmed in advance and presented as a nighttime theft."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-062",
+          "role": "interactive_scene",
+          "src": "src/data/cases/case-037/assets/interactive/ev-backup-scene.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-037/assets/interactive/ev-backup-scene.webp",
+          "caseRelativeSrc": "assets/interactive/ev-backup-scene.webp",
+          "installTo": "src/data/cases/case-037/assets/interactive/ev-backup-scene.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "e4e09daf6516dcfc64b7078460731b9fbfd99e0eec2ed5a96081be5052ed0b2b"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-037/assets/interactive/ev-backup-scene.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-037/assets/interactive/ev-backup-scene.webp",
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-xray",
+      "order": 2,
+      "type": "xray",
+      "title": {
+        "ru": "Таможенный рентген",
+        "en": "Customs X-Ray"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "В контейнере видны три полых металлических фигуры и мотоцикл. Номера груза совпадают с документами Корина.",
+        "en": "The container holds three hollow metal figures and a motorcycle. The cargo numbers match Korin's documents."
+      },
+      "statusExplanation": {
+        "ru": "Заявленное похищенным имущество пересекало границу как оформленный груз владельца.",
+        "en": "The allegedly stolen property crossed the border as the owner's declared cargo."
+      },
+      "statementLink": {
+        "statementId": "claim_goods_lost",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Заявленное похищенным имущество пересекало границу как оформленный груз владельца.",
+          "en": "The allegedly stolen property crossed the border as the owner's declared cargo."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_goods_lost",
+        "reason": {
+          "ru": "Заявленное похищенным имущество пересекало границу как оформленный груз владельца.",
+          "en": "The allegedly stolen property crossed the border as the owner's declared cargo."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-061",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-037/evidence/case-037-ev-xray.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-037/evidence/case-037-ev-xray.webp",
+          "caseRelativeSrc": "evidence/case-037-ev-xray.webp",
+          "installTo": "public/evidence/case-037-ev-xray.webp",
+          "legacyRuntimeUrl": "evidence/case-037-ev-xray.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "fd19fd2d3e635d0013819e9d0236781f4ad14e9775345e3977393ea8c78b08f3"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-037/evidence/case-037-ev-xray.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-037/evidence/case-037-ev-xray.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-037-ev-xray.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-037/evidence/case-037-ev-xray.webp",
+        "copyTo": "public/evidence/case-037-ev-xray.webp"
+      }
+    },
+    {
+      "id": "ev-sale",
+      "order": 3,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Предоплата коллекционера",
+        "en": "Collector's Advance Payment"
+      },
+      "isContradiction": false,
+      "narrativeRole": "motive",
+      "text": {
+        "ru": "За пять дней до «кражи» Корин получил половину стоимости от зарубежного покупателя.",
+        "en": "Five days before the ‘theft,’ Korin received half the price from a foreign buyer."
+      },
+      "statusExplanation": {
+        "ru": "Продажа была согласована заранее.",
+        "en": "The sale was arranged in advance."
+      },
+      "statementLink": {
+        "statementId": "claim_goods_lost",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Продажа была согласована заранее.",
+          "en": "The sale was arranged in advance."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-cameras",
+      "order": 4,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал видеосистемы",
+        "en": "Video System Log"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Основные камеры отключены штатно администраторской учётной записью Корина. Скачка напряжения не было.",
+        "en": "The main cameras were shut down normally using Korin's administrator account. No power surge occurred."
+      },
+      "statusExplanation": {
+        "ru": "Заявитель сам создал слепую зону и солгал о технической аварии.",
+        "en": "The claimant created the blind spot himself and lied about a technical failure."
+      },
+      "statementLink": {
+        "statementId": "claim_camera_failure",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Заявитель сам создал слепую зону и солгал о технической аварии.",
+          "en": "The claimant created the blind spot himself and lied about a technical failure."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_camera_failure",
+        "reason": {
+          "ru": "Заявитель сам создал слепую зону и солгал о технической аварии.",
+          "en": "The claimant created the blind spot himself and lied about a technical failure."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-shipping",
+      "order": 5,
+      "type": "document",
+      "title": {
+        "ru": "Экспортная декларация",
+        "en": "Export Declaration"
+      },
+      "isContradiction": false,
+      "narrativeRole": "arc_proof",
+      "text": {
+        "ru": "Отправителем указан посредник Серого конвоя, код партии `GC-17-M`.",
+        "en": "A Gray Convoy intermediary is listed as the sender under batch code `GC-17-M`."
+      },
+      "statusExplanation": {
+        "ru": "Продажа использовала логистическую сеть из предыдущих дел.",
+        "en": "The sale used the logistics network identified in earlier cases."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Продажа использовала логистическую сеть из предыдущих дел.",
+          "en": "The sale used the logistics network identified in earlier cases."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-wash",
+      "order": 6,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Работник автомойки",
+        "en": "Car Wash Employee"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Накануне Корин привёз мотоцикл и манекены на очистку перед перевозкой.",
+        "en": "The day before, Korin brought the motorcycle and mannequins in for cleaning before transport."
+      },
+      "statusExplanation": {
+        "ru": "Свидетель подтверждает подготовку имущества, но не является единственным доказательством.",
+        "en": "The witness confirms preparation of the property but is not the sole evidence."
+      },
+      "statementLink": {
+        "statementId": "claim_goods_lost",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Свидетель подтверждает подготовку имущества, но не является единственным доказательством.",
+          "en": "The witness confirms preparation of the property but is not the sole evidence."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Резервная запись показывает погрузку Корина, а проверка тени датирует её вечером до заявленной ночной кражи.",
+      "Таможенный рентген и экспортная декларация подтверждают их перевозку покупателю.",
+      "Камеры отключены владельцем, кражи не было. Выплату следует отклонить."
+    ],
+    "en": [
+      "The shadow matches 5:30–5:55 p.m., not midnight: the loading was filmed in advance and presented as a nighttime theft.",
+      "The allegedly stolen property crossed the border as the owner's declared cargo.",
+      "The claimant created the blind spot himself and lied about a technical failure.",
+      "The sale was arranged in advance.",
+      "The sale used the logistics network identified in earlier cases.",
+      "The claim is fraudulent and should be rejected."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Сохранить запоминающиеся хромированные манекены без чужих визуальных кодов.",
+      "Сделать таможенный рентген эффектной уликой.",
+      "Интегрировать shadow_time_check в улику ev-backup; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate shadow_time_check into evidence ev-backup; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "people/denis-korin.webp",
+      "action": "generate",
+      "prompt": "Illustrated archival claimant ID portrait matching the existing insurance detective game: Russian male motorcycle workshop owner and collector, 55 years old, clean casual work shirt, silver-streaked hair, polished self-confident expression, neutral document-photo background, original face, no robot or action-film styling, no logos, no text, no watermark."
+    },
+    {
+      "file": "evidence/case-037-ev-xray.webp",
+      "action": "generate",
+      "prompt": "Cargo customs X-ray image of a sealed truck container showing three hollow chrome display mannequins standing upright and one motorcycle secured beside them, unmistakably objects rather than people, realistic monochrome security scan, no text, no logos, no watermark."
+    },
+    {
+      "file": "assets/interactive/ev-backup-scene.webp",
+      "purpose": "Фотография с одной геометрически читаемой тенью",
+      "resolution": "1600×1000",
+      "format": "WebP",
+      "transparency": false,
+      "generatedBy": "image_model",
+      "manualPost": "Отбраковать конфликтующие тени; вручную сверить origin и фактический диапазон.",
+      "prompt": "Контейнерная площадка: взрослый владелец со спины грузит мотоцикл и три нейтральных демонстрационных манекена, рядом один калибровочный столб с чёткой вечерней тенью; лицо не видно. One dominant vertical reference object with its base fully visible, one clear physically connected shadow on a level surface, single sunlight direction, minimal other shadows and reflections, free overlay space. Photorealistic insurance-investigation evidence photograph, documentary look, shot on a phone or compact camera by a non-professional, natural available light, neutral muted colors, realistic textures, high detail. No captions, no watermark, no logos, no readable real-world branding, no famous people, no recognizable copyrighted characters, no visible faces unless explicitly required. Evidence photo, not illustration or cinematic poster.",
+      "evidenceId": "ev-backup",
+      "evidenceType": "shadow_time_check"
+    },
+    {
+      "file": "assets/interactive/ev-backup-shadow-reference.svg",
+      "purpose": "Эталонная тень, управляемая ползунком времени",
+      "resolution": "viewBox 0 0 100 100",
+      "format": "SVG",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "Откалибровать angle/length по принятому изображению.",
+      "prompt": null,
+      "evidenceId": "ev-backup",
+      "evidenceType": "shadow_time_check"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Ночью из мотомастерской украли три хромированных демонстрационных манекена и коллекционный мотоцикл. Основные камеры отключились из-за скачка напряжения. Прошу полную выплату.",
+        "en": "During the night, three chrome display mannequins and a collectible motorcycle were stolen from my workshop. A power surge disabled the main cameras. I am claiming the full amount."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_theft_time",
+      "text": {
+        "ru": "Мотоцикл и манекены похищены после полуночи.",
+        "en": "The motorcycle and mannequins were stolen after midnight."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_camera_failure",
+      "text": {
+        "ru": "Основные камеры отключились из-за скачка напряжения.",
+        "en": "A power surge disabled the main cameras."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_goods_lost",
+      "text": {
+        "ru": "Имущество не продавалось и остаётся утраченным.",
+        "en": "The property was not sold and remains lost."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-037",
+    "archiveBasePath": "generated-assets/src/data/cases/case-037",
+    "claimantPortrait": {
+      "characterId": "denis-korin",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Денис Корин",
+        "en": "Denis Korin, age 55"
+      },
+      "assetId": "asset-060",
+      "src": "src/data/cases/case-037/people/denis-korin.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-037/people/denis-korin.webp",
+      "caseRelativeSrc": "people/denis-korin.webp",
+      "installTo": "public/people/denis-korin.webp",
+      "legacyRuntimeUrl": "people/denis-korin.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "26cda8b193c8c50c1466c8022775a94c4a3c27431dead0e39d9a036daad01c6b"
+    },
+    "claimantPortraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/denis-korin.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-037/people/denis-korin.webp",
+      "copyTo": "public/people/denis-korin.webp",
+      "replacesExistingValue": null
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-backup",
+        "title": {
+          "ru": "Проверка времени резервной записи",
+          "en": "Backup Footage Time Check"
+        },
+        "primaryImage": "src/data/cases/case-037/assets/interactive/ev-backup-scene.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-037/assets/interactive/ev-backup-scene.webp",
+        "legacyImageBinding": null,
+        "assets": [
+          {
+            "assetId": "asset-062",
+            "role": "interactive_scene",
+            "src": "src/data/cases/case-037/assets/interactive/ev-backup-scene.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-037/assets/interactive/ev-backup-scene.webp",
+            "caseRelativeSrc": "assets/interactive/ev-backup-scene.webp",
+            "installTo": "src/data/cases/case-037/assets/interactive/ev-backup-scene.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1600,
+            "height": 1000,
+            "sha256": "e4e09daf6516dcfc64b7078460731b9fbfd99e0eec2ed5a96081be5052ed0b2b"
+          }
+        ]
+      },
+      {
+        "evidenceId": "ev-xray",
+        "title": {
+          "ru": "Таможенный рентген",
+          "en": "Customs X-Ray"
+        },
+        "primaryImage": "src/data/cases/case-037/evidence/case-037-ev-xray.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-037/evidence/case-037-ev-xray.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-037-ev-xray.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-037/evidence/case-037-ev-xray.webp",
+          "copyTo": "public/evidence/case-037-ev-xray.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-061",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-037/evidence/case-037-ev-xray.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-037/evidence/case-037-ev-xray.webp",
+            "caseRelativeSrc": "evidence/case-037-ev-xray.webp",
+            "installTo": "public/evidence/case-037-ev-xray.webp",
+            "legacyRuntimeUrl": "evidence/case-037-ev-xray.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "fd19fd2d3e635d0013819e9d0236781f4ad14e9775345e3977393ea8c78b08f3"
+          }
+        ]
+      }
+    ]
+  }
+}

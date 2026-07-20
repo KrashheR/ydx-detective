@@ -22,4 +22,4 @@ export {
   showRewardedAd,
   showFullscreenAd,
   onPauseChange,
-} from './services/yandexSDK';
+} from './services/platformAdapter';

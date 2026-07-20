@@ -1,209 +1,341 @@
 {
   "id": "case-009",
   "type": "standard",
+  "campaignOrder": 2,
+  "requiredLevel": 1,
+  "act": 1,
+  "actTitle": {
+    "ru": "Чужой почерк",
+    "en": "Another Hand",
+    "tr": "Another Hand",
+    "ar": "Another Hand",
+    "kk": "Чужой почерк"
+  },
   "difficulty": "easy",
   "claimAmount": 9000,
   "truth": "valid",
   "title": {
-    "ru": "Пожар в доме",
-    "en": "The House Fire",
-    "tr": "Ev Yangını",
-    "ar": "حريق المنزل",
-    "kk": "Үйдегі өрт"
+    "ru": "Пожар без виновного",
+    "en": "A Fire Without a Culprit",
+    "tr": "A Fire Without a Culprit",
+    "ar": "A Fire Without a Culprit",
+    "kk": "Пожар без виновного"
   },
   "claim": {
     "person": {
-      "ru": "Хелена Брандт",
-      "en": "Helena Brandt",
-      "tr": "Helena Brandt",
-      "ar": "هيلينا برانت",
-      "kk": "Хелена Брандт"
+      "ru": "Хелена Брандт, 44 года",
+      "en": "Helena Brandt, age 44",
+      "tr": "Helena Brandt, age 44",
+      "ar": "Helena Brandt, age 44",
+      "kk": "Хелена Брандт, 44 года"
     },
     "story": {
-      "ru": "Ночью в моей кухне начался пожар из-за неисправной проводки. Огонь повредил кухню и часть гостиной; прошу возместить расходы на ремонт.",
-      "en": "A fire started in my kitchen at night due to faulty wiring. It damaged the kitchen and part of the living room; I am claiming the cost of repairs.",
-      "tr": "Gece, arızalı kablolama yüzünden mutfağımda yangın çıktı. Mutfağa ve oturma odasının bir kısmına zarar verdi; onarım masraflarını talep ediyorum.",
-      "ar": "اندلع حريق في مطبخي ليلاً بسبب أسلاك معطوبة. أتلف المطبخ وجزءاً من غرفة المعيشة؛ أطالب بتكاليف الإصلاح.",
-      "kk": "Түнде асханамда ақаулы сым салдарынан өрт шықты. Ол асхана мен қонақ бөлмесінің бір бөлігін зақымдады; жөндеу шығынын өтеуді сұраймын."
+      "ru": "Ночью 22 мая в кухне начался пожар. Три недели назад я увеличила страховую сумму после покупки новой техники и мебели. Пожарные установили короткое замыкание в старой розетке. В момент возгорания меня не было дома. Прошу возместить подтверждённые 9000 евро.",
+      "en": "A fire broke out in my kitchen during the night of May 22. Three weeks earlier, I increased my coverage after buying new appliances and furniture. The fire brigade traced the cause to a short circuit in an old outlet. I was not home when the fire started. I am claiming the documented loss of €9,000.",
+      "tr": "A fire broke out in my kitchen during the night of May 22. Three weeks earlier, I increased my coverage after buying new appliances and furniture. The fire brigade traced the cause to a short circuit in an old outlet. I was not home when the fire started. I am claiming the documented loss of €9,000.",
+      "ar": "A fire broke out in my kitchen during the night of May 22. Three weeks earlier, I increased my coverage after buying new appliances and furniture. The fire brigade traced the cause to a short circuit in an old outlet. I was not home when the fire started. I am claiming the documented loss of €9,000.",
+      "kk": "Ночью 22 мая в кухне начался пожар. Три недели назад я увеличила страховую сумму после покупки новой техники и мебели. Пожарные установили короткое замыкание в старой розетке. В момент возгорания меня не было дома. Прошу возместить подтверждённые 9000 евро."
     }
   },
-  "coverImage": "covers/case-009.svg",
-  "personImage": "people/helena.webp",
   "client": {
     "role": {
-      "ru": "Заявитель · физ. лицо",
-      "en": "Claimant · individual",
-      "tr": "Başvuru sahibi · gerçek kişi",
-      "ar": "مقدم الطلب · شخص طبيعي",
-      "kk": "Өтініш беруші · жеке тұлға"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Возраст",
-          "en": "Age",
-          "tr": "Yaş",
-          "ar": "العمر",
-          "kk": "Жасы"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "44 года",
-          "en": "44 years old",
-          "tr": "44 yaşında",
-          "ar": "44 عامًا",
-          "kk": "44 жаста"
+          "ru": "1",
+          "en": "1",
+          "tr": "1",
+          "ar": "1",
+          "kk": "1"
         }
       },
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Берлин",
-          "en": "Berlin",
-          "tr": "Berlin",
-          "ar": "برلين",
-          "kk": "Берлин"
-        }
-      },
-      {
-        "k": {
-          "ru": "Клиент с",
-          "en": "Client since",
-          "tr": "Müşteri",
-          "ar": "عميل منذ",
-          "kk": "Клиент"
-        },
-        "v": {
-          "ru": "2016 г.",
-          "en": "2016",
-          "tr": "2016",
-          "ar": "2016",
-          "kk": "2016 ж."
-        }
-      },
-      {
-        "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
-        },
-        "v": {
-          "ru": "Имущество · ИМ-99034067-X7",
-          "en": "Property · IM-99034067-X7",
-          "tr": "Mülk · IM-99034067-X7",
-          "ar": "الممتلكات · IM-99034067-X7",
-          "kk": "Мүлік · ИМ-99034067-X7"
-        }
-      },
-      {
-        "k": {
-          "ru": "Документ",
-          "en": "Document",
-          "tr": "Belge",
-          "ar": "الوثيقة",
-          "kk": "Құжат"
-        },
-        "v": {
-          "ru": "Паспорт DE-X9 334455668-82017",
-          "en": "Passport DE-X9 334455668-82017",
-          "tr": "Pasaport DE-X9 334455668-82017",
-          "ar": "جواز السفر DE-X9 334455668-82017",
-          "kk": "Паспорт DE-X9 334455668-82017"
+          "ru": "2",
+          "en": "2",
+          "tr": "2",
+          "ar": "2",
+          "kk": "2"
         }
       }
     ]
   },
+  "coverImage": "covers/case-009.svg",
+  "personImage": "people/helena.webp",
   "evidences": [
     {
-      "id": "ev-firereport",
+      "id": "ev-policy",
+      "order": 1,
+      "type": "document",
+      "title": {
+        "ru": "Дополнение к полису",
+        "en": "Policy Endorsement",
+        "tr": "Policy Endorsement",
+        "ar": "Policy Endorsement",
+        "kk": "Дополнение к полису"
+      },
+      "content": {
+        "ru": "За три недели до пожара Хелена увеличила лимит покрытия кухни с 5000 до 9000 евро. К заявлению на изменение полиса приложены чеки на новую вытяжку, духовой шкаф и кухонную мебель, купленные ещё раньше.",
+        "en": "Three weeks before the fire, Helena increased the kitchen coverage limit from €5,000 to €9,000. Her policy amendment included receipts for a new range hood, oven, and kitchen furniture purchased earlier.",
+        "tr": "Three weeks before the fire, Helena increased the kitchen coverage limit from €5,000 to €9,000. Her policy amendment included receipts for a new range hood, oven, and kitchen furniture purchased earlier.",
+        "ar": "Three weeks before the fire, Helena increased the kitchen coverage limit from €5,000 to €9,000. Her policy amendment included receipts for a new range hood, oven, and kitchen furniture purchased earlier.",
+        "kk": "За три недели до пожара Хелена увеличила лимит покрытия кухни с 5000 до 9000 евро. К заявлению на изменение полиса приложены чеки на новую вытяжку, духовой шкаф и кухонную мебель, купленные ещё раньше."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Время изменения полиса вызывает подозрение, но документы показывают объективную причину: стоимость имущества действительно выросла до пожара.",
+        "en": "The timing of the policy change is suspicious, but the documents provide an objective reason: the value of the insured property genuinely increased before the fire.",
+        "tr": "The timing of the policy change is suspicious, but the documents provide an objective reason: the value of the insured property genuinely increased before the fire.",
+        "ar": "The timing of the policy change is suspicious, but the documents provide an objective reason: the value of the insured property genuinely increased before the fire.",
+        "kk": "Время изменения полиса вызывает подозрение, но документы показывают объективную причину: стоимость имущества действительно выросла до пожара."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_damage_scope",
+        "relation": "supports",
+        "reason": {
+          "ru": "Время изменения полиса вызывает подозрение, но документы показывают объективную причину: стоимость имущества действительно выросла до пожара.",
+          "en": "The timing of the policy change is suspicious, but the documents provide an objective reason: the value of the insured property genuinely increased before the fire.",
+          "tr": "The timing of the policy change is suspicious, but the documents provide an objective reason: the value of the insured property genuinely increased before the fire.",
+          "ar": "The timing of the policy change is suspicious, but the documents provide an objective reason: the value of the insured property genuinely increased before the fire.",
+          "kk": "Время изменения полиса вызывает подозрение, но документы показывают объективную причину: стоимость имущества действительно выросла до пожара."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "ev-fire-report",
+      "order": 2,
       "type": "document",
       "title": {
         "ru": "Отчёт пожарной службы",
-        "en": "Fire Department Report",
-        "tr": "İtfaiye Raporu",
-        "ar": "تقرير الإطفاء",
-        "kk": "Өрт сөндіру қызметінің есебі"
+        "en": "Fire Brigade Report",
+        "tr": "Fire Brigade Report",
+        "ar": "Fire Brigade Report",
+        "kk": "Отчёт пожарной службы"
       },
       "content": {
-        "ru": "Вызов 22.05.2026 в 02:14. Очаг возгорания — кухонная розетка; причина: короткое замыкание из-за изношенной проводки. Признаков поджога не выявлено.",
-        "en": "Call-out 22 May 2026 at 02:14. Point of origin — kitchen socket; cause: short circuit from worn wiring. No signs of arson found.",
-        "tr": "Çağrı 22 May 2026 saat 02:14. Yangının çıkış noktası — mutfak prizi; neden: yıpranmış kablolamadan kısa devre. Kundakçılık izi bulunmadı.",
-        "ar": "البلاغ 22 مايو 2026 الساعة 02:14. نقطة المنشأ — مقبس المطبخ؛ السبب: دائرة قصر من أسلاك بالية. لم تُكتشف علامات إضرام متعمد.",
-        "kk": "Шақыру 22.05.2026 сағат 02:14. Өрт ошағы — асхана розеткасы; себебі: тозған сымнан қысқа тұйықталу. Өртеу белгілері табылмады."
+        "ru": "Вызов зарегистрирован 22.05.2026 в 02:14. Очаг находился внутри кухонной розетки. Обнаружены оплавленные контакты и повреждение старой проводки. Следов горючей жидкости, нескольких очагов или умышленного поджога нет.",
+        "en": "The call was logged at 2:14 a.m. on May 22, 2026. The point of origin was inside a kitchen outlet, where investigators found melted contacts and deteriorated wiring. There were no traces of accelerant, multiple ignition points, or deliberate arson.",
+        "tr": "The call was logged at 2:14 a.m. on May 22, 2026. The point of origin was inside a kitchen outlet, where investigators found melted contacts and deteriorated wiring. There were no traces of accelerant, multiple ignition points, or deliberate arson.",
+        "ar": "The call was logged at 2:14 a.m. on May 22, 2026. The point of origin was inside a kitchen outlet, where investigators found melted contacts and deteriorated wiring. There were no traces of accelerant, multiple ignition points, or deliberate arson.",
+        "kk": "Вызов зарегистрирован 22.05.2026 в 02:14. Очаг находился внутри кухонной розетки. Обнаружены оплавленные контакты и повреждение старой проводки. Следов горючей жидкости, нескольких очагов или умышленного поджога нет."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Официальный отчёт прямо подтверждает причину — неисправную проводку — и совпадает с рассказом клиента.",
-        "en": "The official report directly confirms the cause — faulty wiring — and matches the client's account.",
-        "tr": "Resmî rapor nedeni — arızalı kablolama — doğrudan doğrular ve müşterinin anlatımıyla örtüşür.",
-        "ar": "التقرير الرسمي يؤكد السبب مباشرة — الأسلاك المعطوبة — ويتطابق مع رواية العميل.",
-        "kk": "Ресми есеп себепті — ақаулы сымды — тікелей растайды және клиенттің әңгімесімен сәйкес келеді."
-      }
+        "ru": "Официальная экспертиза подтверждает короткое замыкание и не обнаруживает признаков поджога.",
+        "en": "The official examination confirms a short circuit and finds no evidence of arson.",
+        "tr": "The official examination confirms a short circuit and finds no evidence of arson.",
+        "ar": "The official examination confirms a short circuit and finds no evidence of arson.",
+        "kk": "Официальная экспертиза подтверждает короткое замыкание и не обнаруживает признаков поджога."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_fire_accidental",
+        "relation": "supports",
+        "reason": {
+          "ru": "Официальная экспертиза подтверждает короткое замыкание и не обнаруживает признаков поджога.",
+          "en": "The official examination confirms a short circuit and finds no evidence of arson.",
+          "tr": "The official examination confirms a short circuit and finds no evidence of arson.",
+          "ar": "The official examination confirms a short circuit and finds no evidence of arson.",
+          "kk": "Официальная экспертиза подтверждает короткое замыкание и не обнаруживает признаков поджога."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
-      "id": "ev-scenephotos",
-      "type": "photo",
+      "id": "ev-entry-camera",
+      "order": 3,
+      "type": "camera_recording",
       "title": {
-        "ru": "Фото с места происшествия",
-        "en": "Scene Photos",
-        "tr": "Olay Yeri Fotoğrafları",
-        "ar": "صور موقع الحادث",
-        "kk": "Оқиға орнының фотосы"
+        "ru": "Запись камеры подъезда",
+        "en": "Building Entrance Camera",
+        "tr": "Building Entrance Camera",
+        "ar": "Building Entrance Camera",
+        "kk": "Запись камеры подъезда"
       },
       "content": {
-        "ru": "Снимки: обгоревшая стена за кухонной розеткой, расплавленная вытяжка и копоть на потолке гостиной у дверного проёма.",
-        "en": "Photos: charred wall behind the kitchen socket, a melted extractor hood, and soot on the living-room ceiling near the doorway.",
-        "tr": "Fotoğraflar: mutfak prizinin arkasında kömürleşmiş duvar, erimiş aspiratör ve kapı yakınındaki oturma odası tavanında is.",
-        "ar": "صور: جدار متفحّم خلف مقبس المطبخ، شفاط منصهر، وسخام على سقف غرفة المعيشة قرب المدخل.",
-        "kk": "Суреттер: асхана розеткасының артындағы күйген қабырға, балқыған сорғыш және есік маңындағы қонақ бөлме төбесіндегі күйе."
+        "ru": "Камера фиксирует, как Хелена покидает дом в 20:18 предыдущего вечера и возвращается только в 02:31 вместе с пожарными. Между этими событиями к квартире никто не поднимался.",
+        "en": "The camera shows Helena leaving the building at 8:18 p.m. the previous evening and returning only at 2:31 a.m. with the firefighters. No one went up to the apartment in between.",
+        "tr": "The camera shows Helena leaving the building at 8:18 p.m. the previous evening and returning only at 2:31 a.m. with the firefighters. No one went up to the apartment in between.",
+        "ar": "The camera shows Helena leaving the building at 8:18 p.m. the previous evening and returning only at 2:31 a.m. with the firefighters. No one went up to the apartment in between.",
+        "kk": "Камера фиксирует, как Хелена покидает дом в 20:18 предыдущего вечера и возвращается только в 02:31 вместе с пожарными. Между этими событиями к квартире никто не поднимался."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Картина повреждений соответствует очагу у розетки и распространению огня к гостиной, как описано.",
-        "en": "The damage pattern matches an origin at the socket and the fire spreading toward the living room, as described.",
-        "tr": "Hasar deseni, prizdeki çıkış noktasıyla ve yangının oturma odasına yayılmasıyla, anlatıldığı gibi örtüşür.",
-        "ar": "نمط الأضرار يتطابق مع منشأ عند المقبس وانتشار النار نحو غرفة المعيشة، كما وُصف.",
-        "kk": "Зақым көрінісі розеткадағы ошаққа және өрттің қонақ бөлмеге таралуына сипатталғандай сәйкес келеді."
+        "ru": "Запись подтверждает отсутствие заявительницы в момент возгорания и не показывает посторонних, способных устроить поджог.",
+        "en": "The footage confirms that the claimant was away when the fire began and shows no outsider entering to start it.",
+        "tr": "The footage confirms that the claimant was away when the fire began and shows no outsider entering to start it.",
+        "ar": "The footage confirms that the claimant was away when the fire began and shows no outsider entering to start it.",
+        "kk": "Запись подтверждает отсутствие заявительницы в момент возгорания и не показывает посторонних, способных устроить поджог."
       },
-      "meta": {
-        "filename": "IMG_20260522_021805.jpg",
-        "imageUrl": "evidence/case-009-ev-scenephotos.webp"
-      }
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_absent_at_ignition",
+        "relation": "supports",
+        "reason": {
+          "ru": "Запись подтверждает отсутствие заявительницы в момент возгорания и не показывает посторонних, способных устроить поджог.",
+          "en": "The footage confirms that the claimant was away when the fire began and shows no outsider entering to start it.",
+          "tr": "The footage confirms that the claimant was away when the fire began and shows no outsider entering to start it.",
+          "ar": "The footage confirms that the claimant was away when the fire began and shows no outsider entering to start it.",
+          "kk": "Запись подтверждает отсутствие заявительницы в момент возгорания и не показывает посторонних, способных устроить поджог."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     }
   ],
   "correctDecision": "approve",
   "explanation": {
     "ru": [
-      "Отчёт пожарных подтверждает причину — неисправную проводку, без поджога.",
-      "Фото с места согласуются с очагом у розетки и рассказом клиента.",
-      "Противоречий нет — выплату следует одобрить."
+      "Увеличение покрытия объясняется покупками, совершёнными до пожара, и подтверждается чеками.",
+      "Очаг находился внутри старой розетки; следов ускорителя, второго очага и вмешательства нет.",
+      "Камера подтверждает отсутствие Хелены, а сумма соответствует реально приобретённому имуществу.",
+      "Ни одно проверяемое утверждение не опровергнуто. Выплату следует одобрить."
     ],
     "en": [
-      "The fire report confirms the cause — faulty wiring, no arson.",
-      "The scene photos match an origin at the socket and the client's account.",
-      "There are no contradictions — the claim should be approved."
+      "The timing of the policy change is suspicious, but the documents provide an objective reason: the value of the insured property genuinely increased before the fire.",
+      "The official examination confirms a short circuit and finds no evidence of arson.",
+      "The footage confirms that the claimant was away when the fire began and shows no outsider entering to start it.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "tr": [
-      "İtfaiye raporu nedeni — arızalı kablolamayı, kundaklama olmadan doğrular.",
-      "Olay yeri fotoğrafları prizdeki çıkış noktası ve müşterinin anlatımıyla örtüşür.",
-      "Çelişki yok — talep onaylanmalı."
+      "The timing of the policy change is suspicious, but the documents provide an objective reason: the value of the insured property genuinely increased before the fire.",
+      "The official examination confirms a short circuit and finds no evidence of arson.",
+      "The footage confirms that the claimant was away when the fire began and shows no outsider entering to start it.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "ar": [
-      "تقرير الإطفاء يؤكد السبب — أسلاك معطوبة، دون إضرام متعمد.",
-      "صور الموقع تتطابق مع منشأ عند المقبس ومع رواية العميل.",
-      "لا توجد تناقضات — يجب اعتماد المطالبة."
+      "The timing of the policy change is suspicious, but the documents provide an objective reason: the value of the insured property genuinely increased before the fire.",
+      "The official examination confirms a short circuit and finds no evidence of arson.",
+      "The footage confirms that the claimant was away when the fire began and shows no outsider entering to start it.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "kk": [
-      "Өрт есебі себепті — ақаулы сымды, өртеусіз растайды.",
-      "Оқиға орны фотосы розеткадағы ошаққа және клиент әңгімесіне сай келеді.",
-      "Қайшылық жоқ — төлемді мақұлдау керек."
+      "Увеличение покрытия объясняется покупками, совершёнными до пожара, и подтверждается чеками.",
+      "Очаг находился внутри старой розетки; следов ускорителя, второго очага и вмешательства нет.",
+      "Камера подтверждает отсутствие Хелены, а сумма соответствует реально приобретённому имуществу.",
+      "Ни одно проверяемое утверждение не опровергнуто. Выплату следует одобрить."
     ]
+  },
+  "investigationBudget": 3,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Ночью 22 мая в кухне начался пожар. Три недели назад я увеличила страховую сумму после покупки новой техники и мебели. Пожарные установили короткое замыкание в старой розетке. В момент возгорания меня не было дома. Прошу возместить подтверждённые 9000 евро.",
+        "en": "A fire broke out in my kitchen during the night of May 22. Three weeks earlier, I increased my coverage after buying new appliances and furniture. The fire brigade traced the cause to a short circuit in an old outlet. I was not home when the fire started. I am claiming the documented loss of €9,000.",
+        "tr": "A fire broke out in my kitchen during the night of May 22. Three weeks earlier, I increased my coverage after buying new appliances and furniture. The fire brigade traced the cause to a short circuit in an old outlet. I was not home when the fire started. I am claiming the documented loss of €9,000.",
+        "ar": "A fire broke out in my kitchen during the night of May 22. Three weeks earlier, I increased my coverage after buying new appliances and furniture. The fire brigade traced the cause to a short circuit in an old outlet. I was not home when the fire started. I am claiming the documented loss of €9,000.",
+        "kk": "Ночью 22 мая в кухне начался пожар. Три недели назад я увеличила страховую сумму после покупки новой техники и мебели. Пожарные установили короткое замыкание в старой розетке. В момент возгорания меня не было дома. Прошу возместить подтверждённые 9000 евро."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_fire_accidental",
+      "text": {
+        "ru": "Пожар начался из-за случайного короткого замыкания в кухонной розетке.",
+        "en": "The fire was caused by an accidental short circuit in a kitchen outlet.",
+        "tr": "The fire was caused by an accidental short circuit in a kitchen outlet.",
+        "ar": "The fire was caused by an accidental short circuit in a kitchen outlet.",
+        "kk": "Пожар начался из-за случайного короткого замыкания в кухонной розетке."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_absent_at_ignition",
+      "text": {
+        "ru": "Хелена отсутствовала в квартире в момент возгорания.",
+        "en": "Helena was away from the apartment when the fire started.",
+        "tr": "Helena was away from the apartment when the fire started.",
+        "ar": "Helena was away from the apartment when the fire started.",
+        "kk": "Хелена отсутствовала в квартире в момент возгорания."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_damage_scope",
+      "text": {
+        "ru": "Подтверждённый ущерб кухне и гостиной составляет 9000 евро.",
+        "en": "The documented damage to the kitchen and living room totals €9,000.",
+        "tr": "The documented damage to the kitchen and living room totals €9,000.",
+        "ar": "The documented damage to the kitchen and living room totals €9,000.",
+        "kk": "Подтверждённый ущерб кухне и гостиной составляет 9000 евро."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Страховую сумму увеличили за три недели до пожара. Это сильный повод проверить заявление — и очень слабый повод отказать без фактов. — В. Лебедева",
+      "en": "The coverage was increased three weeks before the fire. That is an excellent reason to investigate—and a very poor reason to reject a claim without evidence. — V. Lebedeva",
+      "tr": "The coverage was increased three weeks before the fire. That is an excellent reason to investigate—and a very poor reason to reject a claim without evidence. — V. Lebedeva",
+      "ar": "The coverage was increased three weeks before the fire. That is an excellent reason to investigate—and a very poor reason to reject a claim without evidence. — V. Lebedeva",
+      "kk": "Страховую сумму увеличили за три недели до пожара. Это сильный повод проверить заявление — и очень слабый повод отказать без фактов. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Вы не нашли ложь — и не придумали её ради красивого разоблачения. Для следователя это такой же важный навык, как поставить красный штамп.",
+      "en": "You found no lie—and you did not invent one just to make a dramatic accusation. For an investigator, that skill matters just as much as placing the red stamp.",
+      "tr": "You found no lie—and you did not invent one just to make a dramatic accusation. For an investigator, that skill matters just as much as placing the red stamp.",
+      "ar": "You found no lie—and you did not invent one just to make a dramatic accusation. For an investigator, that skill matters just as much as placing the red stamp.",
+      "kk": "Вы не нашли ложь — и не придумали её ради красивого разоблачения. Для следователя это такой же важный навык, как поставить красный штамп."
+    },
+    "nextCaseTeaser": {
+      "ru": "Из озера достали телефон. Проблема не в том, что он мокрый, а в том, чей он.",
+      "en": "A phone has been recovered from a lake. The question is not why it is wet, but whose phone it is.",
+      "tr": "A phone has been recovered from a lake. The question is not why it is wet, but whose phone it is.",
+      "ar": "A phone has been recovered from a lake. The question is not why it is wet, but whose phone it is.",
+      "kk": "Из озера достали телефон. Проблема не в том, что он мокрый, а в том, чей он."
+    },
+    "seasonClue": null,
+    "epilogue": null
+  },
+  "onboarding": {
+    "phase": "anti_bias",
+    "targetDurationSeconds": 120,
+    "teaches": [
+      "suspicion_is_not_contradiction",
+      "approve_without_stamp",
+      "evidence_supports_claim"
+    ],
+    "menuUnlockAfterVerdict": false,
+    "successEmotion": {
+      "ru": "Я не дал подозрению заменить доказательство",
+      "en": "I did not let suspicion replace evidence",
+      "tr": "I did not let suspicion replace evidence",
+      "ar": "I did not let suspicion replace evidence",
+      "kk": "Я не дал подозрению заменить доказательство"
+    }
   }
 }

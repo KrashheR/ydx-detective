@@ -1,0 +1,84 @@
+{
+  "id": "ev-photo",
+  "order": 1,
+  "type": "seal_match",
+  "title": {
+    "ru": "Сопоставление фитильной ленты"
+  },
+  "isContradiction": false,
+  "narrativeRole": "proof",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Разрыв, пропитка и заводская сетка совпали: поджог у «Лунного склона» связан с реальным грузом Серого конвоя."
+  },
+  "previousType": "photo",
+  "description": {
+    "ru": "Обгоревший фрагмент найден у служебной двери; контрольный кусок изъят из контейнера GC-17 по прошлому делу."
+  },
+  "instruction": {
+    "ru": "Совместить уцелевшие края двух лент."
+  },
+  "assets": {
+    "asset1": "assets/interactive/ev-photo-master-a.webp",
+    "asset2": "assets/interactive/ev-photo-fragments.json"
+  },
+  "data": {
+    "movableFragment": "B",
+    "allowRotation": true,
+    "rotationStep": 3,
+    "initialTransform": {
+      "x": 72,
+      "y": 18,
+      "rotation": -14
+    },
+    "targetTransform": {
+      "x": 132,
+      "y": 48,
+      "rotation": 6
+    },
+    "tolerance": {
+      "position": 10,
+      "rotation": 5
+    },
+    "expectedMatch": true,
+    "sourceSeed": 384017,
+    "fragmentASeed": 384017,
+    "fragmentBSeed": 384017,
+    "comparisonMarkers": [
+      {
+        "id": "tear_pattern",
+        "label": "Совпадают волокна, пропитка и участок внутренней сетки"
+      }
+    ]
+  },
+  "statementLink": {
+    "statementId": "claim_external_arson",
+    "relation": "supports",
+    "reason": {
+      "ru": "Разрыв, пропитка и заводская сетка совпали: поджог у «Лунного склона» связан с реальным грузом Серого конвоя."
+    }
+  },
+  "contradictionTarget": null,
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true,
+    "transparencyMode": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Совпадение отличает настоящий след сети от удобной подброшенной серой ленты."
+    },
+    "playerAction": {
+      "ru": "Совместить уцелевшие края двух лент."
+    },
+    "conclusion": {
+      "ru": "Разрыв, пропитка и заводская сетка совпали: поджог у «Лунного склона» связан с реальным грузом Серого конвоя."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

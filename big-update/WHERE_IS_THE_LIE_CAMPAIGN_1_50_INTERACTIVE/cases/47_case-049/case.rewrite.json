@@ -1,0 +1,619 @@
+{
+  "id": "case-049",
+  "campaignOrder": 47,
+  "requiredLevel": 27,
+  "act": 5,
+  "actTitle": {
+    "ru": "Последний маршрут",
+    "en": "The Final Route"
+  },
+  "title": {
+    "ru": "Контейнер M-7",
+    "en": "The M-7 Container"
+  },
+  "difficulty": "hard",
+  "claimAmount": {
+    "value": 38800,
+    "currency": "EUR"
+  },
+  "groundTruth": "fraud",
+  "correctDecision": "reject",
+  "investigationBudget": 4,
+  "claimant": {
+    "name": {
+      "ru": "Герман Кросс, 46 лет",
+      "en": "Herman Kross, age 46"
+    },
+    "migrationNote": {
+      "ru": "Сохранить имя и портрет. Называть содержимое редким лабораторным реагентом, не мутагеном; убрать комиксную стилистику.",
+      "en": "Keep the name and portrait. Describe the contents as a rare laboratory reagent, not a mutagen, and remove comic-book styling."
+    },
+    "portrait": {
+      "characterId": "herman-kross-grounded",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Герман Кросс",
+        "en": "Herman Kross, age 46"
+      },
+      "assetId": "asset-096",
+      "src": "src/data/cases/case-049/people/herman-kross-grounded.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-049/people/herman-kross-grounded.webp",
+      "caseRelativeSrc": "people/herman-kross-grounded.webp",
+      "installTo": "public/people/herman-kross-grounded.webp",
+      "legacyRuntimeUrl": "people/herman-kross-grounded.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "53f1ca45585ab49c4b5b977f30531b668b60a7391c7a4c72a9599fb1ac79adf1"
+    },
+    "portraitStatus": "generated_replacement_included",
+    "portraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/herman-kross-grounded.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-049/people/herman-kross-grounded.webp",
+      "copyTo": "public/people/herman-kross-grounded.webp",
+      "replacesExistingValue": "people/herman-kross.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Контейнер опасен и дорог, но никакой неизвестный не мог открыть морозильный сейф личным биометрическим ключом Кросса. — В. Лебедева",
+      "en": "The container is dangerous and valuable, but no unknown thief could open the freezer safe with Kross's personal biometric key. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Платёж BioSplice проходит через тот же расчётный узел, что и выплаты по форме 17-К. Финансовая и транспортная половины схемы наконец соединены.",
+      "en": "The BioSplice payment passes through the same clearing node as the 17-K payouts. The financial and transport halves of the operation are finally connected."
+    },
+    "nextCaseTeaser": {
+      "ru": "Мастерская «Компас» снова горит. Михаил Тернов успел вывести ученика, но старый реестр остался внутри.",
+      "en": "The Compass workshop is burning again. Mikhail Ternov got his apprentice out, but the old registry remained inside."
+    },
+    "seasonClue": {
+      "id": "finance-logistics-link",
+      "label": {
+        "ru": "Единый расчётный узел",
+        "en": "Common Clearing Node"
+      },
+      "description": {
+        "ru": "Страховые выплаты, продажи активов и оплата курьеров Серого конвоя проходят через одну систему Карелина.",
+        "en": "Insurance payouts, asset sales, and Gray Convoy courier payments all pass through Karelin's system."
+      },
+      "progressIndex": 5,
+      "progressTotal": 7
+    },
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Из лабораторного морозильного сейфа похитили контейнер с редким реагентом M-7. Похитители проникли через сервисную вентиляцию, сторож их не видел. Прошу возместить стоимость препарата и неделю простоя.",
+    "en": "A container of rare M-7 reagent was stolen from the laboratory freezer safe. The thieves entered through the service ventilation, unseen by the guard. I am claiming the reagent's value and one week of downtime."
+  },
+  "evidence": [
+    {
+      "id": "photo-49",
+      "order": 1,
+      "type": "surface_reveal",
+      "title": {
+        "ru": "Очистка инея в морозильном сейфе",
+        "en": "Clearing Frost Inside the Freezer Safe"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Под инеем видны свежие полосы волочения к передней дверце, а металл у вентиляции не имеет царапин или следов инструмента; контейнер вынесли штатным путём изнутри лаборатории.",
+        "en": "Beneath the frost are fresh drag marks toward the front door, while the metal near the vent has no scratches or tool marks; the container left by the normal route from inside the laboratory."
+      },
+      "previousType": "photo",
+      "description": {
+        "ru": "Внутреннюю полку и заднюю стенку сфотографировали до размораживания сейфа.",
+        "en": "The inner shelf and rear wall were photographed before the safe was defrosted."
+      },
+      "instruction": {
+        "ru": "Счистите иней с полки и области у вентиляционной решётки.",
+        "en": "Clear frost from the shelf and the area around the ventilation grille."
+      },
+      "assets": {
+        "baseImage": "assets/interactive/photo-49-scene.webp",
+        "coverTexture": "shared/surface/frost.webp",
+        "revealMasks": [
+          "assets/interactive/photo-49-front_drag_marks-trace-mask.svg",
+          "assets/interactive/photo-49-undisturbed_vent-trace-mask.svg"
+        ],
+        "toolCursor": "shared/surface/cloth-cursor.svg"
+      },
+      "data": {
+        "mode": "erase",
+        "coverType": "frost",
+        "brush": {
+          "radius": 48,
+          "hardness": 0.66,
+          "opacity": 0.84,
+          "spacing": 8
+        },
+        "completion": {
+          "type": "discover_all",
+          "requiredTraceIds": [
+            "front_drag_marks",
+            "undisturbed_vent"
+          ]
+        },
+        "traces": [
+          {
+            "id": "front_drag_marks",
+            "label": "Полосы к передней дверце",
+            "requiredRevealPercent": 52,
+            "mask": "assets/interactive/photo-49-front_drag_marks-trace-mask.svg",
+            "shape": "mask",
+            "isContradiction": true,
+            "conclusion": "Под инеем видны свежие полосы волочения к передней дверце, а металл у вентиляции не имеет царапин или следов инструмента; контейнер вынесли штатным путём изнутри лаборатории.",
+            "labelEn": "Drag marks toward the front door",
+            "conclusionEn": "Beneath the frost are fresh drag marks toward the front door, while the metal near the vent has no scratches or tool marks; the container left by the normal route from inside the laboratory."
+          },
+          {
+            "id": "undisturbed_vent",
+            "label": "Неповреждённый металл у вентиляции",
+            "requiredRevealPercent": 48,
+            "mask": "assets/interactive/photo-49-undisturbed_vent-trace-mask.svg",
+            "shape": "mask",
+            "isContradiction": true,
+            "conclusion": "Под инеем видны свежие полосы волочения к передней дверце, а металл у вентиляции не имеет царапин или следов инструмента; контейнер вынесли штатным путём изнутри лаборатории.",
+            "labelEn": "Undamaged metal around the vent",
+            "conclusionEn": "Beneath the frost are fresh drag marks toward the front door, while the metal near the vent has no scratches or tool marks; the container left by the normal route from inside the laboratory."
+          }
+        ]
+      },
+      "statementLink": {
+        "statementId": "claim_entry_route",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Под инеем видны свежие полосы волочения к передней дверце, а металл у вентиляции не имеет царапин или следов инструмента; контейнер вынесли штатным путём изнутри лаборатории.",
+          "en": "Beneath the frost are fresh drag marks toward the front door, while the metal near the vent has no scratches or tool marks; the container left by the normal route from inside the laboratory."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_entry_route",
+        "reason": {
+          "ru": "Под инеем видны свежие полосы волочения к передней дверце, а металл у вентиляции не имеет царапин или следов инструмента; контейнер вынесли штатным путём изнутри лаборатории.",
+          "en": "Beneath the frost are fresh drag marks toward the front door, while the metal near the vent has no scratches or tool marks; the container left by the normal route from inside the laboratory."
+        }
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": false,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Направление физического следа опровергает проникновение через вентиляцию и дополняет журнал биометрического доступа.",
+          "en": "The direction of the physical trace disproves entry through the vent and supports the biometric access log."
+        },
+        "playerAction": {
+          "ru": "Счистите иней с полки и области у вентиляционной решётки.",
+          "en": "Clear frost from the shelf and the area around the ventilation grille."
+        },
+        "conclusion": {
+          "ru": "Под инеем видны свежие полосы волочения к передней дверце, а металл у вентиляции не имеет царапин или следов инструмента; контейнер вынесли штатным путём изнутри лаборатории.",
+          "en": "Beneath the frost are fresh drag marks toward the front door, while the metal near the vent has no scratches or tool marks; the container left by the normal route from inside the laboratory."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-097",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-049/evidence/case-049-photo-49.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-049/evidence/case-049-photo-49.webp",
+          "caseRelativeSrc": "evidence/case-049-photo-49.webp",
+          "installTo": "public/evidence/case-049-photo-49.webp",
+          "legacyRuntimeUrl": "evidence/case-049-photo-49.webp",
+          "format": "webp",
+          "width": 1448,
+          "height": 1086,
+          "sha256": "db985d51e621f19ffc207f6f51ac0bf8a8669e85072a2e4fd3deb471c795be04"
+        },
+        {
+          "assetId": "asset-098",
+          "role": "interactive_scene",
+          "src": "src/data/cases/case-049/assets/interactive/photo-49-scene.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-049/assets/interactive/photo-49-scene.webp",
+          "caseRelativeSrc": "assets/interactive/photo-49-scene.webp",
+          "installTo": "src/data/cases/case-049/assets/interactive/photo-49-scene.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "df5bbe8044a3d831cdb55d500e1f071cd11a0800bfcd7b13bf325e9f6e888342"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-049/evidence/case-049-photo-49.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-049/evidence/case-049-photo-49.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-049-photo-49.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-049/evidence/case-049-photo-49.webp",
+        "copyTo": "public/evidence/case-049-photo-49.webp"
+      }
+    },
+    {
+      "id": "document-49",
+      "order": 2,
+      "type": "document",
+      "title": {
+        "ru": "Журнал партии M-7",
+        "en": "M-7 Batch Log"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Контейнер снят с внутреннего учёта как «передан на утилизацию» за два дня до заявления. Запись подписана Кроссом.",
+        "en": "Two days before the claim, the container was removed from internal inventory as ‘sent for disposal.’ Kross signed the entry."
+      },
+      "statusExplanation": {
+        "ru": "Заявитель сам вывел реагент из официального оборота до мнимой кражи.",
+        "en": "The claimant removed the reagent from official inventory before the fictitious theft."
+      },
+      "statementLink": {
+        "statementId": "claim_no_authorized_access",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Заявитель сам вывел реагент из официального оборота до мнимой кражи.",
+          "en": "The claimant removed the reagent from official inventory before the fictitious theft."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_no_authorized_access",
+        "reason": {
+          "ru": "Заявитель сам вывел реагент из официального оборота до мнимой кражи.",
+          "en": "The claimant removed the reagent from official inventory before the fictitious theft."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "camera-49",
+      "order": 3,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера шлюза C",
+        "en": "Airlock C Camera"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "После авторизованного открытия сейфа по шлюзу проходит закрытая лабораторная тележка. Лицо сопровождающего и содержимое контейнера перекрыты защитным экраном.",
+        "en": "After the authorized safe opening, a closed laboratory cart passes through the airlock. A protective screen obscures the escort's face and the container's contents."
+      },
+      "statusExplanation": {
+        "ru": "Тележка подтверждает штатный путь вывоза, но связывается с M-7 только журналом партии и платежом.",
+        "en": "The cart confirms the normal removal route, but only the batch log and payment link it to M-7."
+      },
+      "statementLink": {
+        "statementId": "claim_entry_route",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Тележка подтверждает штатный путь вывоза, но связывается с M-7 только журналом партии и платежом.",
+          "en": "The cart confirms the normal removal route, but only the batch log and payment link it to M-7."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "log-49",
+      "order": 4,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал морозильного сейфа",
+        "en": "Freezer Safe Log"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Сейф открыт биометрией Кросса, температура поддерживалась до извлечения, тревога отключена его кодом.",
+        "en": "Kross's biometrics opened the safe, temperature was maintained until removal, and his code disabled the alarm."
+      },
+      "statusExplanation": {
+        "ru": "Никакого несанкционированного доступа не было.",
+        "en": "No unauthorized access occurred."
+      },
+      "statementLink": {
+        "statementId": "claim_no_authorized_access",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Никакого несанкционированного доступа не было.",
+          "en": "No unauthorized access occurred."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_no_authorized_access",
+        "reason": {
+          "ru": "Никакого несанкционированного доступа не было.",
+          "en": "No unauthorized access occurred."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "bank-49",
+      "order": 5,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Оплата посредника",
+        "en": "Intermediary Payment"
+      },
+      "isContradiction": false,
+      "narrativeRole": "arc_proof",
+      "text": {
+        "ru": "Компания BioSplice переводит Кроссу аванс через счёт Серого конвоя. Назначение содержит номер партии M-7.",
+        "en": "BioSplice transfers an advance to Kross through a Gray Convoy account. The reference includes the M-7 batch number."
+      },
+      "statusExplanation": {
+        "ru": "Финансовый след подтверждает продажу препарата.",
+        "en": "The financial trail confirms the sale of the reagent."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Финансовый след подтверждает продажу препарата.",
+          "en": "The financial trail confirms the sale of the reagent."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "witness-49",
+      "order": 6,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Техник вентиляции",
+        "en": "Ventilation Technician"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Техник видел решётку целой утром после передачи контейнера; её сняли позднее.",
+        "en": "The technician saw the grille intact on the morning after the container was transferred; it was removed later."
+      },
+      "statusExplanation": {
+        "ru": "Свидетель подтверждает время инсценировки, но не нужен для идентификации продавца.",
+        "en": "The witness confirms when the staging occurred but is not needed to identify the seller."
+      },
+      "statementLink": {
+        "statementId": "claim_entry_route",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Свидетель подтверждает время инсценировки, но не нужен для идентификации продавца.",
+          "en": "The witness confirms when the staging occurred but is not needed to identify the seller."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Под инеем найдены полосы волочения к передней дверце; металл у вентиляции не имеет следов инструмента, поэтому версию проникновения через канал инсценировали.",
+      "Кросс сам открыл сейф, вывел M-7 из учёта и передал его курьеру.",
+      "Реагент продан через посредника Серого конвоя. Кража инсценирована, выплату следует отклонить."
+    ],
+    "en": [
+      "Beneath the frost are fresh drag marks toward the front door, while the metal near the vent has no scratches or tool marks; the container left by the normal route from inside the laboratory.",
+      "The claimant removed the reagent from official inventory before the fictitious theft.",
+      "No unauthorized access occurred.",
+      "The cart confirms the normal removal route, but only the batch log and payment link it to M-7.",
+      "The financial trail confirms the sale of the reagent.",
+      "The claim is fraudulent and should be rejected."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Заменить мутаген на правдоподобный лабораторный реагент.",
+      "Убрать комиксные мотивы и сохранить внутреннюю продажу как дедукцию.",
+      "Интегрировать surface_reveal в улику photo-49; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate surface_reveal into evidence photo-49; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "people/herman-kross-grounded.webp",
+      "action": "generate_if_needed",
+      "prompt": "Illustrated archival claimant ID portrait matching the existing insurance detective game: male laboratory director, 46 years old, clean practical lab jacket over a shirt, precise controlled expression, neutral document-photo background, original face, no comic-villain styling, no mutation imagery, no logos, no text, no watermark."
+    },
+    {
+      "file": "evidence/case-049-photo-49.webp",
+      "action": "generate",
+      "prompt": "Forensic laboratory evidence photo of a removed service ventilation grille viewed from inside a modern cold-storage lab, screws neatly placed on an interior shelf and untouched dust visible in the outer duct, realistic clean industrial setting, no biohazard spectacle, no logos, no readable text, no watermark."
+    },
+    {
+      "file": "assets/interactive/photo-49-scene.webp",
+      "purpose": "Базовая поверхность со скрытым физическим следом, без процедурного покрытия",
+      "resolution": "1600×1000",
+      "format": "WebP",
+      "transparency": false,
+      "generatedBy": "image_model",
+      "manualPost": "Проверить плоский читаемый ракурс; удалить случайный текст; откалибровать каждую reveal mask по финальной сцене.",
+      "prompt": "Почти фронтальный вид внутренней металлической полки лабораторного морозильного сейфа и задней вентиляционной решётки; свежие параллельные полосы волочения направлены к переднему краю, краска и металл вокруг вентиляции целы без царапин; без слоя инея, который будет процедурным. The dust, dirt, soot, frost, condensation or powder cover will be added programmatically, so do not bake the cover layer into the image. Keep the important surface large, readable and minimally distorted. Photorealistic insurance-investigation evidence photograph, documentary look, shot on a phone or compact camera by a non-professional, natural available light, neutral muted colors, realistic textures, high detail. No captions, no watermark, no logos, no readable real-world branding, no famous people, no recognizable copyrighted characters, no visible faces unless explicitly required. Evidence photo, not illustration or cinematic poster.",
+      "evidenceId": "photo-49",
+      "evidenceType": "surface_reveal"
+    },
+    {
+      "file": "assets/interactive/photo-49-front_drag_marks-trace-mask.svg",
+      "purpose": "Маска скрытого следа: Полосы к передней дверце",
+      "resolution": "1600×1000 aligned to base image",
+      "format": "SVG",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "Совместить с base image; порог обнаружения 52%; белая область маски — значимая зона.",
+      "prompt": null,
+      "evidenceId": "photo-49",
+      "evidenceType": "surface_reveal"
+    },
+    {
+      "file": "assets/interactive/photo-49-undisturbed_vent-trace-mask.svg",
+      "purpose": "Маска скрытого следа: Неповреждённый металл у вентиляции",
+      "resolution": "1600×1000 aligned to base image",
+      "format": "SVG",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "Совместить с base image; порог обнаружения 48%; белая область маски — значимая зона.",
+      "prompt": null,
+      "evidenceId": "photo-49",
+      "evidenceType": "surface_reveal"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Из лабораторного морозильного сейфа похитили контейнер с редким реагентом M-7. Похитители проникли через сервисную вентиляцию, сторож их не видел. Прошу возместить стоимость препарата и неделю простоя.",
+        "en": "A container of rare M-7 reagent was stolen from the laboratory freezer safe. The thieves entered through the service ventilation, unseen by the guard. I am claiming the reagent's value and one week of downtime."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_theft",
+      "text": {
+        "ru": "Контейнер M-7 похищен неизвестными.",
+        "en": "Unknown persons stole the M-7 container."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_entry_route",
+      "text": {
+        "ru": "Похитители проникли через сервисную вентиляцию.",
+        "en": "The thieves entered through the service ventilation."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_no_authorized_access",
+      "text": {
+        "ru": "Кросс не открывал сейф и не передавал реагент добровольно.",
+        "en": "Kross neither opened the safe nor voluntarily transferred the reagent."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-049",
+    "archiveBasePath": "generated-assets/src/data/cases/case-049",
+    "claimantPortrait": {
+      "characterId": "herman-kross-grounded",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Герман Кросс",
+        "en": "Herman Kross, age 46"
+      },
+      "assetId": "asset-096",
+      "src": "src/data/cases/case-049/people/herman-kross-grounded.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-049/people/herman-kross-grounded.webp",
+      "caseRelativeSrc": "people/herman-kross-grounded.webp",
+      "installTo": "public/people/herman-kross-grounded.webp",
+      "legacyRuntimeUrl": "people/herman-kross-grounded.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "53f1ca45585ab49c4b5b977f30531b668b60a7391c7a4c72a9599fb1ac79adf1"
+    },
+    "claimantPortraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/herman-kross-grounded.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-049/people/herman-kross-grounded.webp",
+      "copyTo": "public/people/herman-kross-grounded.webp",
+      "replacesExistingValue": "people/herman-kross.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "photo-49",
+        "title": {
+          "ru": "Очистка инея в морозильном сейфе",
+          "en": "Clearing Frost Inside the Freezer Safe"
+        },
+        "primaryImage": "src/data/cases/case-049/evidence/case-049-photo-49.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-049/evidence/case-049-photo-49.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-049-photo-49.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-049/evidence/case-049-photo-49.webp",
+          "copyTo": "public/evidence/case-049-photo-49.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-097",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-049/evidence/case-049-photo-49.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-049/evidence/case-049-photo-49.webp",
+            "caseRelativeSrc": "evidence/case-049-photo-49.webp",
+            "installTo": "public/evidence/case-049-photo-49.webp",
+            "legacyRuntimeUrl": "evidence/case-049-photo-49.webp",
+            "format": "webp",
+            "width": 1448,
+            "height": 1086,
+            "sha256": "db985d51e621f19ffc207f6f51ac0bf8a8669e85072a2e4fd3deb471c795be04"
+          },
+          {
+            "assetId": "asset-098",
+            "role": "interactive_scene",
+            "src": "src/data/cases/case-049/assets/interactive/photo-49-scene.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-049/assets/interactive/photo-49-scene.webp",
+            "caseRelativeSrc": "assets/interactive/photo-49-scene.webp",
+            "installTo": "src/data/cases/case-049/assets/interactive/photo-49-scene.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1600,
+            "height": 1000,
+            "sha256": "df5bbe8044a3d831cdb55d500e1f071cd11a0800bfcd7b13bf325e9f6e888342"
+          }
+        ]
+      }
+    ]
+  }
+}

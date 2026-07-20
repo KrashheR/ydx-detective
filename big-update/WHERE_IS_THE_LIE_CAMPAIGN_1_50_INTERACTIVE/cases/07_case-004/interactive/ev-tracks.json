@@ -1,0 +1,105 @@
+{
+  "id": "ev-tracks",
+  "order": 2,
+  "type": "shadow_time_check",
+  "title": {
+    "ru": "Проверка времени фотографии следов"
+  },
+  "isContradiction": false,
+  "narrativeRole": "context",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Тень соответствует 08:00–08:25 — тому же промежутку, когда шар аварийно прошёл над фермой."
+  },
+  "previousType": "photo",
+  "description": {
+    "ru": "Фото двора сделано инспектором сразу после происшествия; ориентация сеновала известна по кадастровому плану."
+  },
+  "instruction": {
+    "ru": "Совместить эталонную тень заборного столба с тенью на снимке."
+  },
+  "assets": {
+    "asset1": "assets/interactive/ev-tracks-scene.webp",
+    "asset2": "assets/interactive/ev-tracks-shadow-reference.svg"
+  },
+  "data": {
+    "claimedTime": "08:09",
+    "orientationSource": "Кадастровый план фермы и северная стрелка инспектора",
+    "slider": {
+      "from": "06:00",
+      "to": "21:00",
+      "stepMinutes": 10
+    },
+    "shadowOrigin": {
+      "x": 44,
+      "y": 65
+    },
+    "referenceShadow": {
+      "baseAngle": 0,
+      "baseLength": 100,
+      "width": 20,
+      "opacity": 0.34
+    },
+    "timeSamples": [
+      {
+        "time": "08:00",
+        "angle": 69,
+        "length": 132
+      },
+      {
+        "time": "12:00",
+        "angle": 8,
+        "length": 52
+      },
+      {
+        "time": "16:00",
+        "angle": -41,
+        "length": 88
+      },
+      {
+        "time": "20:00",
+        "angle": -76,
+        "length": 151
+      }
+    ],
+    "validTimeRanges": [
+      {
+        "from": "08:00",
+        "to": "08:25"
+      }
+    ],
+    "matchTolerance": {
+      "angle": 8,
+      "length": 16
+    }
+  },
+  "statementLink": {
+    "statementId": "claim_event_time",
+    "relation": "supports",
+    "reason": {
+      "ru": "Тень соответствует 08:00–08:25 — тому же промежутку, когда шар аварийно прошёл над фермой."
+    }
+  },
+  "contradictionTarget": null,
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Механика подтверждает хронологию невероятного, но честного дела, не создавая ложного противоречия."
+    },
+    "playerAction": {
+      "ru": "Совместить эталонную тень заборного столба с тенью на снимке."
+    },
+    "conclusion": {
+      "ru": "Тень соответствует 08:00–08:25 — тому же промежутку, когда шар аварийно прошёл над фермой."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

@@ -145,6 +145,9 @@ export function makeStats(overrides: Partial<PlayerStats> = {}): PlayerStats {
     archivePurchasedPackIds: [],
     archiveUnlockedCaseIds: [],
     archiveAdUnlockServerDayByPack: {},
+    interactiveEvidenceProgress: {},
+    finalSynthesisProgress: {},
+    metaUnlocked: true,
     ...overrides,
   };
 }

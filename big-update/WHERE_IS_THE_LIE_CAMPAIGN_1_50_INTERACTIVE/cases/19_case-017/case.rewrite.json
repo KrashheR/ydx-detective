@@ -1,0 +1,461 @@
+{
+  "id": "case-017",
+  "campaignOrder": 19,
+  "requiredLevel": 10,
+  "act": 2,
+  "actTitle": {
+    "ru": "Пять лет назад",
+    "en": "Five Years Earlier"
+  },
+  "title": {
+    "ru": "Ботинок на 800 ватт",
+    "en": "An 800-Watt Shoe"
+  },
+  "difficulty": "medium",
+  "claimAmount": {
+    "value": 2400,
+    "currency": "EUR"
+  },
+  "groundTruth": "valid",
+  "correctDecision": "approve",
+  "investigationBudget": 3,
+  "claimant": {
+    "name": {
+      "ru": "Анатолий Степанович, 71 год",
+      "en": "Anatoly Stepanovich, age 71"
+    },
+    "migrationNote": {
+      "ru": "Использовать тот же профиль и портрет, что в делах 5 и 8.",
+      "en": "Use the same profile and portrait as in Cases 5 and 8."
+    },
+    "portrait": null,
+    "portraitStatus": "retain_existing_project_portrait",
+    "portraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/anatoly.webp",
+      "existingFile": "public/people/anatoly.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Анатолий Степанович больше не обвиняет бытовую технику в самостоятельности. Это прогресс. Жорик — нет. — В. Лебедева",
+      "en": "Anatoly Stepanovich no longer accuses household appliances of acting on their own. That is progress. Zhorik is not. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Заказ орехов отменён. Ботинок опознан соседом. Папка Жорика стала толще ещё на четыре страницы.",
+      "en": "The nut order was canceled. A neighbor identified the shoe. Zhorik's file is now four pages thicker."
+    },
+    "nextCaseTeaser": {
+      "ru": "Последнее дело акта: ночной погром в мастерской, где хранился реестр старых страховых дел.",
+      "en": "The act ends with a nighttime break-in at a workshop that stored a registry of old insurance cases."
+    },
+    "seasonClue": null,
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Ночью на кухне произошло короткое замыкание и возгорание. В микроволновой печи обнаружен обугленный ботинок, на панели — следы лап. В ту же минуту голосовой помощник оформил заказ на двадцать килограммов орехов. Я не знаю, как это произошло, и прошу возместить ущерб кухне.",
+    "en": "During the night, a short circuit caused a kitchen fire. A charred shoe was found inside the microwave, with paw prints on the control panel. At the same moment, the voice assistant ordered twenty kilograms of nuts. I do not know how this happened and am claiming the kitchen damage."
+  },
+  "evidence": [
+    {
+      "id": "ev-vet",
+      "order": 1,
+      "type": "document",
+      "title": {
+        "ru": "Счёт ветеринарной клиники",
+        "en": "Veterinary Clinic Invoice"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Жорик доставлен ночью с опалёнными усами и лёгким ожогом. На шерсти обнаружены частицы кожи и скорлупы грецкого ореха.",
+        "en": "Zhorik was brought in during the night with singed whiskers and a minor burn. Leather particles and walnut-shell fragments were found in his fur."
+      },
+      "statusExplanation": {
+        "ru": "Следы на животном связывают Жорика с кухней и содержимым печи.",
+        "en": "The traces on the animal link Zhorik to the kitchen and the contents of the microwave."
+      },
+      "statementLink": {
+        "statementId": "claim_owner_not_involved",
+        "relation": "supports",
+        "reason": {
+          "ru": "Следы на животном связывают Жорика с кухней и содержимым печи.",
+          "en": "The traces on the animal link Zhorik to the kitchen and the contents of the microwave."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-photo",
+      "order": 2,
+      "type": "thermal_scan",
+      "title": {
+        "ru": "Тепловой осмотр умной кухни",
+        "en": "Smart Kitchen Thermal Inspection"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Нагрет только компактный кухонный прибор и зажатая кнопка; дополнительных очагов или следов ускорителя нет.",
+        "en": "Only the compact kitchen appliance and a jammed button are hot; there are no secondary ignition points or traces of accelerant."
+      },
+      "previousType": "photo",
+      "description": {
+        "ru": "Осмотр проведён через девять минут после срабатывания пожарной автоматики.",
+        "en": "The inspection took place nine minutes after the fire alarm activated."
+      },
+      "instruction": {
+        "ru": "Включить тепловизор и найти источник 800-ваттной нагрузки.",
+        "en": "Switch on thermal view and locate the source of the 800-watt load."
+      },
+      "assets": {
+        "asset1": "assets/interactive/ev-photo-scene.webp",
+        "asset2": "assets/interactive/ev-photo-heat-zones.json"
+      },
+      "data": {
+        "ambientTemperature": 19,
+        "observationTime": "03:58",
+        "claimedLastUseBefore": "03:49",
+        "elapsedSinceClaimedUseMinutes": 9,
+        "coolingReference": "Через девять минут локальный источник сохраняет рабочее тепло; отсутствие других горячих зон исключает второй очаг.",
+        "initialMode": "normal",
+        "heatZones": [
+          {
+            "id": "appliance",
+            "shape": "ellipse",
+            "x": 53,
+            "y": 54,
+            "width": 20,
+            "height": 18,
+            "temperature": 61,
+            "intensity": 0.95,
+            "label": "Недавно работавший нагреватель",
+            "isContradiction": false,
+            "labelEn": "Recently active heating element"
+          }
+        ],
+        "successCondition": {
+          "type": "select_any",
+          "zoneIds": [
+            "appliance"
+          ]
+        },
+        "coolingReferenceEn": "After nine minutes, the local source retains operating heat; the absence of other hot zones rules out a second ignition point."
+      },
+      "statementLink": {
+        "statementId": "claim_event",
+        "relation": "supports",
+        "reason": {
+          "ru": "Нагрет только компактный кухонный прибор и зажатая кнопка; дополнительных очагов или следов ускорителя нет.",
+          "en": "Only the compact kitchen appliance and a jammed button are hot; there are no secondary ignition points or traces of accelerant."
+        }
+      },
+      "contradictionTarget": null,
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Игрок видит, что нагреватель действительно работал, но тепловая картина не указывает на заранее подготовленный поджог.",
+          "en": "The player sees that the heating element was active, while the thermal pattern shows no sign of a prepared arson."
+        },
+        "playerAction": {
+          "ru": "Включить тепловизор и найти источник 800-ваттной нагрузки.",
+          "en": "Switch on thermal view and locate the source of the 800-watt load."
+        },
+        "conclusion": {
+          "ru": "Нагрет только компактный кухонный прибор и зажатая кнопка; дополнительных очагов или следов ускорителя нет.",
+          "en": "Only the compact kitchen appliance and a jammed button are hot; there are no secondary ignition points or traces of accelerant."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-024",
+          "role": "interactive_scene",
+          "src": "src/data/cases/case-017/assets/interactive/ev-photo-scene.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-017/assets/interactive/ev-photo-scene.webp",
+          "caseRelativeSrc": "assets/interactive/ev-photo-scene.webp",
+          "installTo": "src/data/cases/case-017/assets/interactive/ev-photo-scene.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "c30099858dbe48971a7613b2f84de8290e18078c307b8b9d0b843239265a2e52"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-017/assets/interactive/ev-photo-scene.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-017/assets/interactive/ev-photo-scene.webp",
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-speaker",
+      "order": 3,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал умной кухни",
+        "en": "Smart Kitchen Log"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "02:13:47 — нажат быстрый старт 800 Вт; 02:14:09 — распознаны щелчки и шум; 02:14:11 — ошибочно оформлен заказ орехов; 02:16:32 — линия обесточена после замыкания.",
+        "en": "2:13:47 a.m.—800 W quick-start pressed; 2:14:09 a.m.—clicking and noise detected; 2:14:11 a.m.—nut order placed in error; 2:16:32 a.m.—circuit disconnected after short circuit."
+      },
+      "statusExplanation": {
+        "ru": "Хронология техники совпадает с физическими следами.",
+        "en": "The device timeline matches the physical evidence."
+      },
+      "statementLink": {
+        "statementId": "claim_event",
+        "relation": "supports",
+        "reason": {
+          "ru": "Хронология техники совпадает с физическими следами.",
+          "en": "The device timeline matches the physical evidence."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-yardcam",
+      "order": 4,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера у кухонного окна",
+        "en": "Kitchen Window Camera"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Жорик затаскивает ботинок через приоткрытое окно, прячет его в микроволновке, разворачивается на панели и нажимает кнопку. Через минуту из окна появляется дым.",
+        "en": "Zhorik drags a shoe through the half-open window, hides it in the microwave, turns around on the control panel, and presses a button. Smoke appears at the window one minute later."
+      },
+      "statusExplanation": {
+        "ru": "Запись полностью восстанавливает случайную цепочку событий и исключает инсценировку владельцем.",
+        "en": "The footage reconstructs the entire accidental chain of events and rules out staging by the owner."
+      },
+      "statementLink": {
+        "statementId": "claim_owner_not_involved",
+        "relation": "supports",
+        "reason": {
+          "ru": "Запись полностью восстанавливает случайную цепочку событий и исключает инсценировку владельцем.",
+          "en": "The footage reconstructs the entire accidental chain of events and rules out staging by the owner."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5,
+      "imageAssets": [
+        {
+          "assetId": "asset-023",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-017/evidence/case-017-ev-yardcam.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-017/evidence/case-017-ev-yardcam.webp",
+          "caseRelativeSrc": "evidence/case-017-ev-yardcam.webp",
+          "installTo": "public/evidence/case-017-ev-yardcam.webp",
+          "legacyRuntimeUrl": "evidence/case-017-ev-yardcam.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "70c476a131f525fc4aee33e1fca4b6f619d5d434447eff7ab913d442602d9816"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-017/evidence/case-017-ev-yardcam.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-017/evidence/case-017-ev-yardcam.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-017-ev-yardcam.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-017/evidence/case-017-ev-yardcam.webp",
+        "copyTo": "public/evidence/case-017-ev-yardcam.webp"
+      }
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Жорик спрятал найденный ботинок в микроволновке и случайно нажал быстрый старт.",
+      "Шум енота голосовой помощник ошибочно принял за команду заказа.",
+      "Нагрет только компактный кухонный прибор и зажатая кнопка; дополнительных очагов или следов ускорителя нет.",
+      "Возгорание и ущерб реальны, умысла владельца нет. Выплату следует одобрить."
+    ],
+    "en": [
+      "The traces on the animal link Zhorik to the kitchen and the contents of the microwave.",
+      "Only the compact kitchen appliance and a jammed button are hot; there are no secondary ignition points or traces of accelerant.",
+      "The device timeline matches the physical evidence.",
+      "The footage reconstructs the entire accidental chain of events and rules out staging by the owner.",
+      "No material statement has been disproven. The claim should be approved."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Убрать невозможное утверждение, что микроволновка сама открылась и положила внутрь ботинок.",
+      "Сделать заявителя честным наблюдателем, а реконструкцию — задачей игрока.",
+      "Интегрировать thermal_scan в улику ev-photo; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate thermal_scan into evidence ev-photo; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "evidence/case-017-ev-yardcam.webp",
+      "action": "generate",
+      "prompt": "Night home security camera frame through a kitchen window: a raccoon dragging a single leather boot onto a counter beside an open microwave, realistic domestic kitchen, slightly grainy low-light CCTV, no fire yet, no logos, no text, no watermark, natural animal proportions."
+    },
+    {
+      "file": "assets/interactive/ev-photo-scene.webp",
+      "purpose": "Обычная фотография места для процедурной тепловой карты",
+      "resolution": "1600×1000",
+      "format": "WebP",
+      "transparency": false,
+      "generatedBy": "image_model",
+      "manualPost": "Проверить, что ключевые объекты не перекрыты и совпадают с координатами heatZones.",
+      "prompt": "Небольшая бытовая кухня после локального задымления, компактный прибор на столешнице, окно и следы лап без лиц. The thermal anomaly will be added programmatically. Do not add thermal colors, hot spots, infrared HUD or temperature labels. Photorealistic insurance-investigation evidence photograph, documentary look, shot on a phone or compact camera by a non-professional, natural available light, neutral muted colors, realistic textures, high detail. No captions, no watermark, no logos, no readable real-world branding, no famous people, no recognizable copyrighted characters, no visible faces unless explicitly required. Evidence photo, not illustration or cinematic poster.",
+      "evidenceId": "ev-photo",
+      "evidenceType": "thermal_scan"
+    },
+    {
+      "file": "assets/interactive/ev-photo-heat-zones.json",
+      "purpose": "Процедурные маски, температуры и подписи",
+      "resolution": "normalized percent coordinates",
+      "format": "JSON",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "Откалибровать зоны после утверждения изображения.",
+      "prompt": null,
+      "evidenceId": "ev-photo",
+      "evidenceType": "thermal_scan"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Ночью на кухне произошло короткое замыкание и возгорание. В микроволновой печи обнаружен обугленный ботинок, на панели — следы лап. В ту же минуту голосовой помощник оформил заказ на двадцать килограммов орехов. Я не знаю, как это произошло, и прошу возместить ущерб кухне.",
+        "en": "During the night, a short circuit caused a kitchen fire. A charred shoe was found inside the microwave, with paw prints on the control panel. At the same moment, the voice assistant ordered twenty kilograms of nuts. I do not know how this happened and am claiming the kitchen damage."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_event",
+      "text": {
+        "ru": "Кухонный прибор случайно включился и вызвал локальное возгорание.",
+        "en": "A kitchen appliance was activated accidentally and caused a localized fire."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_owner_not_involved",
+      "text": {
+        "ru": "Анатолий Степанович не запускал прибор и не готовил инсценировку.",
+        "en": "Anatoly Stepanovich neither activated the appliance nor staged the incident."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_damage",
+      "text": {
+        "ru": "Возгорание причинило реальный покрываемый ущерб.",
+        "en": "The fire caused genuine covered damage."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-017",
+    "archiveBasePath": "generated-assets/src/data/cases/case-017",
+    "claimantPortrait": null,
+    "claimantPortraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/anatoly.webp",
+      "existingFile": "public/people/anatoly.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-photo",
+        "title": {
+          "ru": "Тепловой осмотр умной кухни",
+          "en": "Smart Kitchen Thermal Inspection"
+        },
+        "primaryImage": "src/data/cases/case-017/assets/interactive/ev-photo-scene.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-017/assets/interactive/ev-photo-scene.webp",
+        "legacyImageBinding": null,
+        "assets": [
+          {
+            "assetId": "asset-024",
+            "role": "interactive_scene",
+            "src": "src/data/cases/case-017/assets/interactive/ev-photo-scene.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-017/assets/interactive/ev-photo-scene.webp",
+            "caseRelativeSrc": "assets/interactive/ev-photo-scene.webp",
+            "installTo": "src/data/cases/case-017/assets/interactive/ev-photo-scene.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1600,
+            "height": 1000,
+            "sha256": "c30099858dbe48971a7613b2f84de8290e18078c307b8b9d0b843239265a2e52"
+          }
+        ]
+      },
+      {
+        "evidenceId": "ev-yardcam",
+        "title": {
+          "ru": "Камера у кухонного окна",
+          "en": "Kitchen Window Camera"
+        },
+        "primaryImage": "src/data/cases/case-017/evidence/case-017-ev-yardcam.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-017/evidence/case-017-ev-yardcam.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-017-ev-yardcam.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-017/evidence/case-017-ev-yardcam.webp",
+          "copyTo": "public/evidence/case-017-ev-yardcam.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-023",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-017/evidence/case-017-ev-yardcam.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-017/evidence/case-017-ev-yardcam.webp",
+            "caseRelativeSrc": "evidence/case-017-ev-yardcam.webp",
+            "installTo": "public/evidence/case-017-ev-yardcam.webp",
+            "legacyRuntimeUrl": "evidence/case-017-ev-yardcam.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "70c476a131f525fc4aee33e1fca4b6f619d5d434447eff7ab913d442602d9816"
+          }
+        ]
+      }
+    ]
+  }
+}

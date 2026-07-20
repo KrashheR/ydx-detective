@@ -1,0 +1,889 @@
+{
+  "id": "case-417",
+  "campaignOrder": 50,
+  "requiredLevel": 30,
+  "act": 5,
+  "actTitle": {
+    "ru": "Последний маршрут",
+    "en": "The Final Route"
+  },
+  "title": {
+    "ru": "Последний чемодан",
+    "en": "The Last Suitcase"
+  },
+  "difficulty": "hard",
+  "claimAmount": {
+    "value": 2500,
+    "currency": "EUR"
+  },
+  "groundTruth": "fraud",
+  "correctDecision": "reject",
+  "investigationBudget": 5,
+  "claimant": {
+    "name": {
+      "ru": "Лукас Феррейра, 29 лет",
+      "en": "Lucas Ferreira, age 29"
+    },
+    "migrationNote": {
+      "ru": "Закрепить Лукаса как брата Матеуса Феррейры и свидетеля из дела 13. Сохранить существующий портрет, если он нейтрален; иначе создать новый, похожий по семейным чертам на Матеуса, но не идентичный.",
+      "en": "Establish Lucas as Mateus Ferreira's brother and the witness from Case 13. Keep the existing portrait if neutral; otherwise create a new one sharing family features with Mateus without being identical."
+    },
+    "portrait": {
+      "characterId": "lucas-ferreira",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Лукас Феррейра",
+        "en": "Lucas Ferreira, age 29"
+      },
+      "assetId": "asset-106",
+      "src": "src/data/cases/case-417/people/lucas-ferreira.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-417/people/lucas-ferreira.webp",
+      "caseRelativeSrc": "people/lucas-ferreira.webp",
+      "installTo": "public/people/lucas-ferreira.webp",
+      "legacyRuntimeUrl": "people/lucas-ferreira.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "adbaec28e9c07991660a9cb05a407d28258a13c9ac0aa83649e532c6c2858750"
+    },
+    "portraitStatus": "generated_replacement_included",
+    "portraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/lucas-ferreira.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-417/people/lucas-ferreira.webp",
+      "copyTo": "public/people/lucas-ferreira.webp",
+      "replacesExistingValue": "people/lucas.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Лукас подал заявление о потерянном чемодане. Через час его брат Матеус привёз чемодан в отдел и попросил не скрывать правду ради семьи. Это последнее дело Архива №17. — В. Лебедева",
+      "en": "Lucas filed a claim for a lost suitcase. One hour later, his brother Mateus brought the suitcase to the department and asked us not to hide the truth for the sake of family. This is the final case of Archive No. 17. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Карелин создал форму 17-К как внутреннее учебное дело, затем превратил её в инструкцию для мошенников. Он продавал настоящие активы через Серый конвой и добивался выплат за их мнимую утрату. Маршрутная книга указала его отправление из ангара B-17 в 04:40.",
+      "en": "Karelin created form 17-K as an internal training case, then turned it into a manual for fraudsters. He sold genuine assets through the Gray Convoy and obtained payouts for their fictitious loss. The route book records his departure from Hangar B-17 at 4:40 a.m."
+    },
+    "nextCaseTeaser": {
+      "ru": "Архив №17 закрыт. В маршрутной книге остаётся одна неподписанная колонка: кто внутри страховой компании одобрял первые выплаты Карелина?",
+      "en": "Archive No. 17 is closed. One unsigned column remains in the route book: who inside the insurance company approved Karelin's first payouts?"
+    },
+    "seasonClue": {
+      "id": "karelin-identity",
+      "label": {
+        "ru": "Константин Карелин",
+        "en": "Konstantin Karelin"
+      },
+      "description": {
+        "ru": "Бывший руководитель отдела и наставник Веры Лебедевой создал Архив №17 и управлял Серым конвоем.",
+        "en": "The former department head and Vera Lebedeva's mentor created Archive No. 17 and ran the Gray Convoy."
+      },
+      "progressIndex": 1,
+      "progressTotal": 1
+    },
+    "epilogue": {
+      "ru": [
+        "По маршруту из чемодана последнюю отправку задержали до выезда из ангара B-17. Константин Карелин находился среди сопровождающих груз.",
+        "Михаил Тернов начал восстанавливать мастерскую. Илья и Аделия дали показания. Болат прислал фотографию нового урожая. Анатолий Степанович сообщил, что Жорик украл только колпачок от ручки следователя.",
+        "Вера Сергеевна закрывает папку резолюцией: «Он научил меня не доверять красивой версии. Я слишком долго не применила этот совет к нему самому».",
+        "Основная история получает завершение, но колонка внутренних согласований оставляет честный крючок для следующего архива."
+      ],
+      "en": [
+        "The route recovered from the suitcase allowed the final shipment to be intercepted before it left Hangar B-17. Konstantin Karelin was among those escorting the cargo.",
+        "Mikhail Ternov began rebuilding the workshop. Ilya and Adelia gave their statements. Bolat sent a photograph of the new harvest. Anatoly Stepanovich reported that Zhorik had stolen only the cap from the investigator's pen.",
+        "Vera Lebedeva closes the file with a final note: “He taught me never to trust a story simply because it sounds convincing. It took me far too long to apply that lesson to him.”",
+        "The main story reaches a complete resolution, while the internal-approval column leaves a fair lead into the next archive."
+      ]
+    }
+  },
+  "claimText": {
+    "ru": "Авиакомпания потеряла мой сданный в багаж чемодан с электроникой и часами стоимостью 2500 евро. После прилёта я его не получил, доставка не состоялась. Прошу полное возмещение.",
+    "en": "The airline lost my checked suitcase containing electronics and watches worth €2,500. I did not receive it after landing, and delivery never occurred. I am claiming full compensation."
+  },
+  "evidence": [
+    {
+      "id": "ev-boarding",
+      "order": 1,
+      "type": "document",
+      "title": {
+        "ru": "Посадочный талон и багажная бирка",
+        "en": "Boarding Pass and Baggage Tag"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Лукас действительно летел этим рейсом и сдал один чемодан. Номер бирки совпадает с заявлением.",
+        "en": "Lucas did take the flight and checked one suitcase. The tag number matches the claim."
+      },
+      "statusExplanation": {
+        "ru": "Документ подтверждает существование багажа, но не его утрату.",
+        "en": "The document confirms the baggage existed, but not that it was lost."
+      },
+      "statementLink": {
+        "statementId": "claim_baggage_checked",
+        "relation": "supports",
+        "reason": {
+          "ru": "Документ подтверждает существование багажа, но не его утрату.",
+          "en": "The document confirms the baggage existed, but not that it was lost."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-tracking",
+      "order": 2,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал отслеживания багажа",
+        "en": "Baggage Tracking Log"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "После прилёта чемодан снят с ленты сотрудником по разовой заявке Лукаса. Получение подтверждено кодом из его телефона и личной подписью.",
+        "en": "After landing, an employee removed the suitcase from the belt at Lucas's one-time request. Collection was confirmed with a code from his phone and his signature."
+      },
+      "statusExplanation": {
+        "ru": "Лукас лично организовал выдачу чемодана вне общей ленты и получил его.",
+        "en": "Lucas personally arranged off-belt collection and received the suitcase."
+      },
+      "statementLink": {
+        "statementId": "claim_baggage_lost",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Лукас лично организовал выдачу чемодана вне общей ленты и получил его.",
+          "en": "Lucas personally arranged off-belt collection and received the suitcase."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_baggage_lost",
+        "reason": {
+          "ru": "Лукас лично организовал выдачу чемодана вне общей ленты и получил его.",
+          "en": "Lucas personally arranged off-belt collection and received the suitcase."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-garage",
+      "order": 3,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера гаража Матеуса",
+        "en": "Mateus's Garage Camera"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Лукас привозит чемодан вечером, достаёт электронику и просит брата оставить багаж до утра. Чемодан имеет серую транспортную пломбу.",
+        "en": "Lucas brings the suitcase to the garage that evening, removes the electronics, and asks his brother to keep the luggage until morning. The suitcase carries a gray transport seal."
+      },
+      "statusExplanation": {
+        "ru": "Полученный багаж находился у заявителя после рейса.",
+        "en": "The collected baggage was in the claimant's possession after the flight."
+      },
+      "statementLink": {
+        "statementId": "claim_baggage_lost",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Полученный багаж находился у заявителя после рейса.",
+          "en": "The collected baggage was in the claimant's possession after the flight."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_baggage_lost",
+        "reason": {
+          "ru": "Полученный багаж находился у заявителя после рейса.",
+          "en": "The collected baggage was in the claimant's possession after the flight."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-107",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-417/evidence/case-417-ev-garage.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-417/evidence/case-417-ev-garage.webp",
+          "caseRelativeSrc": "evidence/case-417-ev-garage.webp",
+          "installTo": "public/evidence/case-417-ev-garage.webp",
+          "legacyRuntimeUrl": "evidence/case-417-ev-garage.webp",
+          "format": "webp",
+          "width": 1448,
+          "height": 1086,
+          "sha256": "e3f00006162958146820bad6823e8d96945ed1a5e1608dfbcf2d2c5ae92fc8a4"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-417/evidence/case-417-ev-garage.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-417/evidence/case-417-ev-garage.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-417-ev-garage.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-417/evidence/case-417-ev-garage.webp",
+        "copyTo": "public/evidence/case-417-ev-garage.webp"
+      }
+    },
+    {
+      "id": "ev-listing",
+      "order": 4,
+      "type": "photo",
+      "title": {
+        "ru": "Объявления о продаже",
+        "en": "For-Sale Listings"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "На следующий день Лукас выставляет заявленные часы и электронику как новые. Серийные номера совпадают с чеками из требования.",
+        "en": "The next day, Lucas lists the claimed watches and electronics as new. Their serial numbers match the receipts in the claim."
+      },
+      "statusExplanation": {
+        "ru": "Содержимое не утрачено и продаётся самим заявителем.",
+        "en": "The contents were not lost and are being sold by the claimant."
+      },
+      "statementLink": {
+        "statementId": "claim_contents_lost",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Содержимое не утрачено и продаётся самим заявителем.",
+          "en": "The contents were not lost and are being sold by the claimant."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_contents_lost",
+        "reason": {
+          "ru": "Содержимое не утрачено и продаётся самим заявителем.",
+          "en": "The contents were not lost and are being sold by the claimant."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-payment",
+      "order": 5,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Платёж Серого конвоя",
+        "en": "Gray Convoy Payment"
+      },
+      "isContradiction": false,
+      "narrativeRole": "motive",
+      "text": {
+        "ru": "Перед рейсом Лукас получает оплату за доставку «архивного образца» из ангара B-17. После подачи страхового заявления обещан дополнительный процент.",
+        "en": "Before the flight, Lucas receives payment to deliver an ‘archive sample’ from Hangar B-17. An additional percentage is promised after he files the insurance claim."
+      },
+      "statusExplanation": {
+        "ru": "Лукас одновременно работал курьером сети и пытался получить выплату за сохранённые вещи.",
+        "en": "Lucas was both a network courier and attempting to claim a payout for property he kept."
+      },
+      "statementLink": {
+        "statementId": "claim_contents_lost",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Лукас одновременно работал курьером сети и пытался получить выплату за сохранённые вещи.",
+          "en": "Lucas was both a network courier and attempting to claim a payout for property he kept."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-bottom",
+      "order": 6,
+      "type": "document_scan",
+      "title": {
+        "ru": "Просветка оригинала формы 17-К",
+        "en": "Original 17-K Form Backlight Examination"
+      },
+      "isContradiction": false,
+      "narrativeRole": "arc_reveal",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Под наклейкой проявляется подпись Константина Карелина и таблица его долей по ранним выплатам.",
+        "en": "Beneath the label appear Konstantin Karelin's signature and a table of his shares from early payouts."
+      },
+      "previousType": "document",
+      "description": {
+        "ru": "Оригинал из двойного дна чемодана исследуется без отделения старых слоёв бумаги.",
+        "en": "The original from the suitcase's false bottom is examined without separating the old paper layers."
+      },
+      "instruction": {
+        "ru": "Включить просвет и найти первую резолюцию под поздней наклейкой.",
+        "en": "Switch on backlight and find the original authorization beneath the later label."
+      },
+      "assets": {
+        "asset1": "assets/interactive/ev-bottom-base.webp",
+        "asset2": "assets/interactive/ev-bottom-scan-overlay.svg"
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "uv",
+          "backlight"
+        ],
+        "anomalyZones": [
+          {
+            "id": "karelin_signature",
+            "mode": "backlight",
+            "x": 47,
+            "y": 68,
+            "width": 37,
+            "height": 13,
+            "label": "Под наклейкой проявляется подпись Константина Карелина и таблица его долей по ранним выплатам.",
+            "isContradiction": true,
+            "labelEn": "Beneath the label appear Konstantin Karelin's signature and a table of his shares from early payouts."
+          }
+        ],
+        "successCondition": {
+          "type": "select_zone",
+          "zoneId": "karelin_signature"
+        }
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Под наклейкой проявляется подпись Константина Карелина и таблица его долей по ранним выплатам.",
+          "en": "Beneath the label appear Konstantin Karelin's signature and a table of his shares from early payouts."
+        }
+      },
+      "contradictionTarget": null,
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Главное имя кампании добывает игрок, а не сообщает финальный текст.",
+          "en": "The player uncovers the campaign's central name instead of receiving it from the final text."
+        },
+        "playerAction": {
+          "ru": "Включить просвет и найти первую резолюцию под поздней наклейкой.",
+          "en": "Switch on backlight and find the original authorization beneath the later label."
+        },
+        "conclusion": {
+          "ru": "Под наклейкой проявляется подпись Константина Карелина и таблица его долей по ранним выплатам.",
+          "en": "Beneath the label appear Konstantin Karelin's signature and a table of his shares from early payouts."
+        }
+      },
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "imageAssets": [
+        {
+          "assetId": "asset-108",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-417/evidence/case-417-ev-bottom.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-417/evidence/case-417-ev-bottom.webp",
+          "caseRelativeSrc": "evidence/case-417-ev-bottom.webp",
+          "installTo": "public/evidence/case-417-ev-bottom.webp",
+          "legacyRuntimeUrl": "evidence/case-417-ev-bottom.webp",
+          "format": "webp",
+          "width": 1448,
+          "height": 1086,
+          "sha256": "7f9960b7fad53cc391db46838cc6127eb7ee336157725b298b355b37190d2259"
+        },
+        {
+          "assetId": "asset-109",
+          "role": "interactive_base",
+          "src": "src/data/cases/case-417/assets/interactive/ev-bottom-base.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-417/assets/interactive/ev-bottom-base.webp",
+          "caseRelativeSrc": "assets/interactive/ev-bottom-base.webp",
+          "installTo": "src/data/cases/case-417/assets/interactive/ev-bottom-base.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1600,
+          "height": 1100,
+          "sha256": "2d9dc36c4b03b0147bd861ca8f9c195e954a6613d60ae783e6a6568c2c099a71"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-417/evidence/case-417-ev-bottom.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-417/evidence/case-417-ev-bottom.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-417-ev-bottom.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-417/evidence/case-417-ev-bottom.webp",
+        "copyTo": "public/evidence/case-417-ev-bottom.webp"
+      }
+    },
+    {
+      "id": "ev-suitcase-seal",
+      "order": 7,
+      "type": "seal_match",
+      "title": {
+        "ru": "Сопоставление транспортной пломбы чемодана",
+        "en": "Suitcase Transport-Seal Comparison"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Фрагменты совпали: чемодан прошёл через последнюю отправку Серого конвоя из ангара B-17.",
+        "en": "The fragments match: the suitcase passed through the Gray Convoy's final shipment from Hangar B-17."
+      },
+      "previousType": null,
+      "description": {
+        "ru": "Фрагмент с чемодана Лукаса сравнивается с пломбой последней отправки из ангара B-17.",
+        "en": "A fragment from Lucas's suitcase is compared with the seal from the final Hangar B-17 shipment."
+      },
+      "instruction": {
+        "ru": "Совместить фрагменты серой транспортной пломбы.",
+        "en": "Align the gray transport-seal fragments."
+      },
+      "assets": {
+        "asset1": "assets/interactive/ev-suitcase-seal-master-a.webp",
+        "asset2": "assets/interactive/ev-suitcase-seal-fragments.json"
+      },
+      "data": {
+        "movableFragment": "B",
+        "allowRotation": true,
+        "rotationStep": 3,
+        "initialTransform": {
+          "x": 72,
+          "y": 18,
+          "rotation": -14
+        },
+        "targetTransform": {
+          "x": 132,
+          "y": 48,
+          "rotation": 6
+        },
+        "tolerance": {
+          "position": 10,
+          "rotation": 5
+        },
+        "expectedMatch": true,
+        "sourceSeed": 504217,
+        "fragmentASeed": 504217,
+        "fragmentBSeed": 504217,
+        "comparisonMarkers": [
+          {
+            "id": "tear_pattern",
+            "label": "Совпадают линия разрыва, клеевой дефект и участок защитной сетки",
+            "labelEn": "Tear line, adhesive defect, and security-mesh section match"
+          }
+        ]
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Фрагменты совпали: чемодан прошёл через последнюю отправку Серого конвоя из ангара B-17.",
+          "en": "The fragments match: the suitcase passed through the Gray Convoy's final shipment from Hangar B-17."
+        }
+      },
+      "contradictionTarget": null,
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true,
+        "transparencyMode": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Вторая финальная механика связывает личное мошенничество с последним физическим маршрутом сети.",
+          "en": "The second final interaction links the personal fraud to the network's final physical route."
+        },
+        "playerAction": {
+          "ru": "Совместить фрагменты серой транспортной пломбы.",
+          "en": "Align the gray transport-seal fragments."
+        },
+        "conclusion": {
+          "ru": "Фрагменты совпали: чемодан прошёл через последнюю отправку Серого конвоя из ангара B-17.",
+          "en": "The fragments match: the suitcase passed through the Gray Convoy's final shipment from Hangar B-17."
+        }
+      },
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "imageAssets": [
+        {
+          "assetId": "asset-110",
+          "role": "interactive_master_a",
+          "src": "src/data/cases/case-417/assets/interactive/ev-suitcase-seal-master-a.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-417/assets/interactive/ev-suitcase-seal-master-a.webp",
+          "caseRelativeSrc": "assets/interactive/ev-suitcase-seal-master-a.webp",
+          "installTo": "src/data/cases/case-417/assets/interactive/ev-suitcase-seal-master-a.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1400,
+          "height": 500,
+          "sha256": "dd3a038901401ea9fca76447d93aff8f4e4de4702726838450e27d3476f9ddfa"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-417/assets/interactive/ev-suitcase-seal-master-a.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-417/assets/interactive/ev-suitcase-seal-master-a.webp",
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Лукас лично получил чемодан по коду и привёз его в гараж брата.",
+      "Заявленные утраченными вещи он выставил на продажу.",
+      "В двойном дне находился архив Серого конвоя. Заявление Лукаса мошенническое и должно быть отклонено.",
+      "Под наклейкой проявляется подпись Константина Карелина и таблица его долей по ранним выплатам.",
+      "Фрагменты совпали: чемодан прошёл через последнюю отправку Серого конвоя из ангара B-17.",
+      "Документы устанавливают организатора схемы: бывшего руководителя расследований Константина Карелина."
+    ],
+    "en": [
+      "Lucas personally arranged off-belt collection and received the suitcase.",
+      "The collected baggage was in the claimant's possession after the flight.",
+      "The contents were not lost and are being sold by the claimant.",
+      "The document confirms the baggage existed, but not that it was lost.",
+      "Lucas was both a network courier and attempting to claim a payout for property he kept.",
+      "The claim is fraudulent and should be rejected."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Полностью превратить рядовое багажное дело в финал кампании.",
+      "Вернуть Матеуса и Лукаса, посеянных в деле 13.",
+      "Раскрыть личность Карелина через физические документы, а не авторский монолог.",
+      "Дать завершённый арест/перехват и небольшой крючок продолжения.",
+      "Интегрировать document_scan в улику ev-bottom; результат скрыт до завершения анализа.",
+      "Интегрировать seal_match в улику ev-suitcase-seal; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate document_scan into evidence ev-bottom; keep the result hidden until analysis is complete.",
+      "Integrate seal_match into evidence ev-suitcase-seal; keep the result hidden until analysis is complete.",
+      "Integrate the JSON-driven final synthesis and reveal it only after the required evidence chain is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "people/lucas-ferreira.webp",
+      "action": "generate_if_needed",
+      "prompt": "Illustrated archival claimant ID portrait matching the game's existing character-card style: Portuguese male, 29 years old, family resemblance to an existing honest claimant Mateus Ferreira but clearly a different younger brother, tired guarded expression, casual travel jacket, neutral document-photo background, original face, no logos, no text, no watermark."
+    },
+    {
+      "file": "evidence/case-417-ev-garage.webp",
+      "action": "generate",
+      "prompt": "Residential garage security camera frame in the evening: a young adult man opens a hard travel suitcase on a workbench and removes boxed electronics while an older brother watches with concern, a plain gray transport seal on the suitcase, realistic domestic lighting, no readable faces required, no logos, no text, no watermark."
+    },
+    {
+      "file": "evidence/case-417-ev-bottom.webp",
+      "action": "generate",
+      "prompt": "Forensic evidence photograph of an opened hard travel suitcase with a carefully constructed false bottom lifted out, revealing an old paper route ledger, a plain former employee ID card with blank text areas, stamped claim templates and handwritten accounting pages, restrained realistic office evidence style, no readable personal data, no logos, no watermark."
+    },
+    {
+      "file": "assets/interactive/ev-bottom-base.webp",
+      "purpose": "Базовая версия документа в normal-режиме",
+      "resolution": "1600×1100",
+      "format": "WebP",
+      "transparency": false,
+      "generatedBy": "image_model",
+      "manualPost": "Удалить случайный читаемый текст; выровнять документ; оставить поля для UI-слоёв.",
+      "prompt": "Create a realistic fictional administrative document for an insurance detective game. Старый служебный формуляр страховой проверки с несколькими слоями бумаги, крупной зоной резолюции и архивной фактурой. Full document visible from above, utilitarian layout, paper texture, large blank structured fields. No real organization, logo, brand, personal data or watermark. Do not render critical readable text; dates, names, codes and signatures will be added in HTML/SVG. The hidden anomaly must not be obvious in the normal version.",
+      "evidenceId": "ev-bottom",
+      "evidenceType": "document_scan"
+    },
+    {
+      "file": "assets/interactive/ev-bottom-scan-overlay.svg",
+      "purpose": "Совмещённый слой УФ/просвета/бокового света",
+      "resolution": "viewBox 0 0 100 100",
+      "format": "SVG",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "После финального base.webp откалибровать hotspot и режим проявления.",
+      "prompt": null,
+      "evidenceId": "ev-bottom",
+      "evidenceType": "document_scan"
+    },
+    {
+      "file": "assets/interactive/ev-suitcase-seal-master-a.webp",
+      "purpose": "Цельный мастер пломбы или контрольного фрагмента A",
+      "resolution": "1400×500",
+      "format": "WebP",
+      "transparency": true,
+      "generatedBy": "image_model",
+      "manualPost": "Убрать случайный текст; сохранить альфа-канал; разрезать процедурно по sourceSeed.",
+      "prompt": "Create a realistic intact security seal or evidence control label for a fictional insurance investigation. Серая транспортная пломба багажа с оригинальной абстрактной сеткой, без символов авиакомпаний и реальных кодов. Front view, full object, transparent background, detailed fibers, adhesive or polymer texture, abstract protection pattern, no real logo or brand, no watermark, no critical readable text, restrained utilitarian evidence style. Keep edges suitable for procedural tearing.",
+      "evidenceId": "ev-suitcase-seal",
+      "evidenceType": "seal_match"
+    },
+    {
+      "file": "assets/interactive/ev-suitcase-seal-fragments.json",
+      "purpose": "Seed разрыва, трансформации и допуски",
+      "resolution": "normalized component space",
+      "format": "JSON",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "Сгенерировать fragment-a.webp и fragment-b.webp из master-файлов; проверить drag/rotate/snap.",
+      "prompt": null,
+      "evidenceId": "ev-suitcase-seal",
+      "evidenceType": "seal_match"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Авиакомпания потеряла мой сданный в багаж чемодан с электроникой и часами стоимостью 2500 евро. После прилёта я его не получил, доставка не состоялась. Прошу полное возмещение.",
+        "en": "The airline lost my checked suitcase containing electronics and watches worth €2,500. I did not receive it after landing, and delivery never occurred. I am claiming full compensation."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_baggage_checked",
+      "text": {
+        "ru": "Лукас сдал чемодан в багаж на своём рейсе.",
+        "en": "Lucas checked a suitcase on his flight."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_baggage_lost",
+      "text": {
+        "ru": "После прилёта чемодан не был выдан Лукасу и остаётся потерянным.",
+        "en": "Lucas did not receive the suitcase after landing, and it remains lost."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_contents_lost",
+      "text": {
+        "ru": "Электроника и часы из чемодана утрачены и требуют выплаты 2500 евро.",
+        "en": "The suitcase's electronics and watches were lost, warranting a €2,500 payout."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 2,
+  "finalSynthesis": {
+    "id": "karelin-accusation-chain",
+    "title": {
+      "ru": "Соберите обвинение Карелина",
+      "en": "Build the Case Against Karelin"
+    },
+    "instruction": {
+      "ru": "Соедините три доказанные связи и восстановите механизм Архива №17.",
+      "en": "Connect the three proven links and reconstruct how Archive No. 17 worked."
+    },
+    "unlockAfter": "correct_verdict",
+    "nodes": [
+      {
+        "id": "template",
+        "label": {
+          "ru": "Форма 17-К",
+          "en": "Form 17-K"
+        },
+        "evidenceIds": [
+          "ev-bottom"
+        ]
+      },
+      {
+        "id": "money",
+        "label": {
+          "ru": "Доли с ранних выплат",
+          "en": "Shares from Early Payouts"
+        },
+        "evidenceIds": [
+          "ev-bottom",
+          "ev-payment"
+        ]
+      },
+      {
+        "id": "route",
+        "label": {
+          "ru": "Последняя отправка B-17",
+          "en": "Final B-17 Shipment"
+        },
+        "evidenceIds": [
+          "ev-suitcase-seal",
+          "ev-tracking"
+        ]
+      }
+    ],
+    "requiredLinks": [
+      [
+        "template",
+        "money"
+      ],
+      [
+        "money",
+        "route"
+      ]
+    ],
+    "evidenceUnlockIds": [
+      "ev-bottom",
+      "ev-suitcase-seal"
+    ],
+    "arcEvidenceAccess": "post_verdict_free",
+    "successConclusion": {
+      "ru": "Карелин превратил учебный шаблон в инструкцию, получал долю страховых выплат и выводил сохранённое имущество через маршрут B-17.",
+      "en": "Karelin turned a training template into a fraud manual, took a share of insurance payouts, and moved preserved assets through route B-17."
+    },
+    "skippableAfterAttempts": 3,
+    "analyticsEvent": "campaign_final_synthesis_completed"
+  },
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-417",
+    "archiveBasePath": "generated-assets/src/data/cases/case-417",
+    "claimantPortrait": {
+      "characterId": "lucas-ferreira",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Лукас Феррейра",
+        "en": "Lucas Ferreira, age 29"
+      },
+      "assetId": "asset-106",
+      "src": "src/data/cases/case-417/people/lucas-ferreira.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-417/people/lucas-ferreira.webp",
+      "caseRelativeSrc": "people/lucas-ferreira.webp",
+      "installTo": "public/people/lucas-ferreira.webp",
+      "legacyRuntimeUrl": "people/lucas-ferreira.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "adbaec28e9c07991660a9cb05a407d28258a13c9ac0aa83649e532c6c2858750"
+    },
+    "claimantPortraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/lucas-ferreira.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-417/people/lucas-ferreira.webp",
+      "copyTo": "public/people/lucas-ferreira.webp",
+      "replacesExistingValue": "people/lucas.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-garage",
+        "title": {
+          "ru": "Камера гаража Матеуса",
+          "en": "Mateus's Garage Camera"
+        },
+        "primaryImage": "src/data/cases/case-417/evidence/case-417-ev-garage.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-417/evidence/case-417-ev-garage.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-417-ev-garage.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-417/evidence/case-417-ev-garage.webp",
+          "copyTo": "public/evidence/case-417-ev-garage.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-107",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-417/evidence/case-417-ev-garage.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-417/evidence/case-417-ev-garage.webp",
+            "caseRelativeSrc": "evidence/case-417-ev-garage.webp",
+            "installTo": "public/evidence/case-417-ev-garage.webp",
+            "legacyRuntimeUrl": "evidence/case-417-ev-garage.webp",
+            "format": "webp",
+            "width": 1448,
+            "height": 1086,
+            "sha256": "e3f00006162958146820bad6823e8d96945ed1a5e1608dfbcf2d2c5ae92fc8a4"
+          }
+        ]
+      },
+      {
+        "evidenceId": "ev-bottom",
+        "title": {
+          "ru": "Просветка оригинала формы 17-К",
+          "en": "Original 17-K Form Backlight Examination"
+        },
+        "primaryImage": "src/data/cases/case-417/evidence/case-417-ev-bottom.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-417/evidence/case-417-ev-bottom.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-417-ev-bottom.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-417/evidence/case-417-ev-bottom.webp",
+          "copyTo": "public/evidence/case-417-ev-bottom.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-108",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-417/evidence/case-417-ev-bottom.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-417/evidence/case-417-ev-bottom.webp",
+            "caseRelativeSrc": "evidence/case-417-ev-bottom.webp",
+            "installTo": "public/evidence/case-417-ev-bottom.webp",
+            "legacyRuntimeUrl": "evidence/case-417-ev-bottom.webp",
+            "format": "webp",
+            "width": 1448,
+            "height": 1086,
+            "sha256": "7f9960b7fad53cc391db46838cc6127eb7ee336157725b298b355b37190d2259"
+          },
+          {
+            "assetId": "asset-109",
+            "role": "interactive_base",
+            "src": "src/data/cases/case-417/assets/interactive/ev-bottom-base.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-417/assets/interactive/ev-bottom-base.webp",
+            "caseRelativeSrc": "assets/interactive/ev-bottom-base.webp",
+            "installTo": "src/data/cases/case-417/assets/interactive/ev-bottom-base.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1600,
+            "height": 1100,
+            "sha256": "2d9dc36c4b03b0147bd861ca8f9c195e954a6613d60ae783e6a6568c2c099a71"
+          }
+        ]
+      },
+      {
+        "evidenceId": "ev-suitcase-seal",
+        "title": {
+          "ru": "Сопоставление транспортной пломбы чемодана",
+          "en": "Suitcase Transport-Seal Comparison"
+        },
+        "primaryImage": "src/data/cases/case-417/assets/interactive/ev-suitcase-seal-master-a.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-417/assets/interactive/ev-suitcase-seal-master-a.webp",
+        "legacyImageBinding": null,
+        "assets": [
+          {
+            "assetId": "asset-110",
+            "role": "interactive_master_a",
+            "src": "src/data/cases/case-417/assets/interactive/ev-suitcase-seal-master-a.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-417/assets/interactive/ev-suitcase-seal-master-a.webp",
+            "caseRelativeSrc": "assets/interactive/ev-suitcase-seal-master-a.webp",
+            "installTo": "src/data/cases/case-417/assets/interactive/ev-suitcase-seal-master-a.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1400,
+            "height": 500,
+            "sha256": "dd3a038901401ea9fca76447d93aff8f4e4de4702726838450e27d3476f9ddfa"
+          }
+        ]
+      }
+    ]
+  }
+}

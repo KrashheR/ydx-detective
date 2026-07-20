@@ -1,0 +1,92 @@
+{
+  "id": "ev-photo",
+  "order": 3,
+  "type": "thermal_scan",
+  "title": {
+    "ru": "Тепловой осмотр электрощита"
+  },
+  "isContradiction": false,
+  "narrativeRole": "proof",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Тепловой след идёт от вводного кабеля через защиту к повреждённой группе; картина соответствует внешнему грозовому импульсу."
+  },
+  "previousType": "photo",
+  "description": {
+    "ru": "Грозовой импульс зарегистрирован в 18:42. Питание отключено автоматически в 18:43, тепловой осмотр начат аварийным электриком в 18:51."
+  },
+  "instruction": {
+    "ru": "Включить тепловизор и проследить единственную перегретую фазу."
+  },
+  "assets": {
+    "asset1": "assets/interactive/ev-photo-scene.webp",
+    "asset2": "assets/interactive/ev-photo-heat-zones.json"
+  },
+  "data": {
+    "ambientTemperature": 20,
+    "observationTime": "18:51",
+    "claimedLastUseBefore": "18:43",
+    "elapsedSinceClaimedUseMinutes": 8,
+    "coolingReference": "Массивные клеммы сохраняют локальный нагрев 10–20 минут; направление теплового градиента проверяется вместе с журналом защиты.",
+    "initialMode": "normal",
+    "heatZones": [
+      {
+        "id": "incoming_phase",
+        "shape": "polygon",
+        "points": [
+          [
+            44,
+            82
+          ],
+          [
+            48,
+            58
+          ],
+          [
+            55,
+            35
+          ]
+        ],
+        "temperature": 57,
+        "intensity": 0.92,
+        "label": "Перегретая вводная фаза",
+        "isContradiction": false
+      }
+    ],
+    "successCondition": {
+      "type": "select_any",
+      "zoneIds": [
+        "incoming_phase"
+      ]
+    }
+  },
+  "statementLink": {
+    "statementId": "claim_lightning",
+    "relation": "supports",
+    "reason": {
+      "ru": "Тепловой след идёт от вводного кабеля через защиту к повреждённой группе; картина соответствует внешнему грозовому импульсу."
+    }
+  },
+  "contradictionTarget": null,
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Тепловой путь показывает реальный вход импульса и помогает отличить грозовой ущерб от локального поджога."
+    },
+    "playerAction": {
+      "ru": "Включить тепловизор и проследить единственную перегретую фазу."
+    },
+    "conclusion": {
+      "ru": "Тепловой след идёт от вводного кабеля через защиту к повреждённой группе; картина соответствует внешнему грозовому импульсу."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

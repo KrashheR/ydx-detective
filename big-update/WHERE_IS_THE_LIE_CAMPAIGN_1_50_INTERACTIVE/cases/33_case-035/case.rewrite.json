@@ -1,0 +1,466 @@
+{
+  "id": "case-035",
+  "campaignOrder": 33,
+  "requiredLevel": 17,
+  "act": 4,
+  "actTitle": {
+    "ru": "Серый конвой",
+    "en": "The Gray Convoy"
+  },
+  "title": {
+    "ru": "Следы шин в «Янтаре»",
+    "en": "Tire Tracks at the Amber"
+  },
+  "difficulty": "medium",
+  "claimAmount": {
+    "value": 12500,
+    "currency": "EUR"
+  },
+  "groundTruth": "fraud",
+  "correctDecision": "reject",
+  "investigationBudget": 4,
+  "claimant": {
+    "name": {
+      "ru": "Аркадий Егоров, 52 года",
+      "en": "Arkady Yegorov, age 52"
+    },
+    "migrationNote": {
+      "ru": "Сохранить данные и портрет. Удалить любые внешние отсылки к узнаваемым командам охотников за сверхъестественным.",
+      "en": "Keep the existing profile data and portrait. Remove any external references to recognizable paranormal-investigation teams."
+    },
+    "portrait": {
+      "characterId": "arkady-egorov",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Аркадий Егоров",
+        "en": "Arkady Yegorov, age 52"
+      },
+      "assetId": "asset-055",
+      "src": "src/data/cases/case-035/people/arkady-egorov.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-035/people/arkady-egorov.webp",
+      "caseRelativeSrc": "people/arkady-egorov.webp",
+      "installTo": "public/people/arkady-egorov.webp",
+      "legacyRuntimeUrl": "people/arkady-egorov.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "4447c18894ea448ba42e2ab982c3bc1460cf14752c66c331e16d29b7c6709495"
+    },
+    "portraitStatus": "generated_replacement_included",
+    "portraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/arkady-egorov.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-035/people/arkady-egorov.webp",
+      "copyTo": "public/people/arkady-egorov.webp",
+      "replacesExistingValue": null
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Неизвестный разгромил зал и уничтожил оборудование службы очистки. Но следы шин проходят через дверь, в которую чужой фургон не мог попасть без карты персонала. — В. Лебедева",
+      "en": "An unknown intruder wrecked the hall and destroyed industrial-cleaning equipment. But the tire tracks pass through a door no outside van could enter without a staff card. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Не каждый случай в отделе особых рисков должен быть сверхъестественным. Иногда достаточно плохого плана и очень характерных шин.",
+      "en": "Not every Special Risks case needs to be supernatural. Sometimes a bad plan and distinctive tires are enough."
+    },
+    "nextCaseTeaser": {
+      "ru": "Экспериментальный электромобиль показывает скорость 188 км/ч, хотя в момент грозы стоял на зарядке.",
+      "en": "An experimental electric car recorded 188 km/h even though it was charging during the storm."
+    },
+    "seasonClue": null,
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Ночью неизвестные проникли в отель «Янтарь», разгромили банкетный зал и уничтожили четыре дорогих электростатических распылителя моей службы промышленной очистки. Прошу оплатить оборудование и ремонт фургона.",
+    "en": "During the night, unknown intruders entered the Amber Hotel, wrecked the banquet hall, and destroyed four expensive electrostatic sprayers belonging to my industrial-cleaning service. I am claiming the equipment and van repairs."
+  },
+  "evidence": [
+    {
+      "id": "ev-camera",
+      "order": 1,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера погрузочной зоны",
+        "en": "Loading Bay Camera"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Фургон Егорова входит по его служебной карте. Через десять минут машина выезжает с новой вмятиной; других автомобилей нет.",
+        "en": "Yegorov's van enters using his staff card. Ten minutes later it leaves with a fresh dent; no other vehicle enters."
+      },
+      "statusExplanation": {
+        "ru": "Заявитель сам ввёл свой фургон в закрытую зону во время разгрома.",
+        "en": "The claimant personally drove his van into the restricted area during the damage."
+      },
+      "statementLink": {
+        "statementId": "claim_attack",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Заявитель сам ввёл свой фургон в закрытую зону во время разгрома.",
+          "en": "The claimant personally drove his van into the restricted area during the damage."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-tyres",
+      "order": 2,
+      "type": "photo",
+      "title": {
+        "ru": "Следы на паркете",
+        "en": "Tracks on the Parquet"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "Рисунок шин в зале совпадает с редкой зимней резиной фургона Егорова. Следы проходят через разбитую декоративную перегородку.",
+        "en": "The tire pattern in the hall matches the rare winter tires on Yegorov's van. The tracks run through the shattered decorative partition."
+      },
+      "statusExplanation": {
+        "ru": "Зал разгромлен движением собственного фургона заявителя.",
+        "en": "The hall was wrecked by the claimant's own van."
+      },
+      "statementLink": {
+        "statementId": "claim_attack",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Зал разгромлен движением собственного фургона заявителя.",
+          "en": "The hall was wrecked by the claimant's own van."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_attack",
+        "reason": {
+          "ru": "Зал разгромлен движением собственного фургона заявителя.",
+          "en": "The hall was wrecked by the claimant's own van."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-056",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-035/evidence/case-035-ev-tyres.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-035/evidence/case-035-ev-tyres.webp",
+          "caseRelativeSrc": "evidence/case-035-ev-tyres.webp",
+          "installTo": "public/evidence/case-035-ev-tyres.webp",
+          "legacyRuntimeUrl": "evidence/case-035-ev-tyres.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "21be8595d06496a6c7bcb6032f888586a4e78525ada035878d2d866613c9f6e9"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-035/evidence/case-035-ev-tyres.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-035/evidence/case-035-ev-tyres.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-035-ev-tyres.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-035/evidence/case-035-ev-tyres.webp",
+        "copyTo": "public/evidence/case-035-ev-tyres.webp"
+      }
+    },
+    {
+      "id": "ev-sprayers",
+      "order": 3,
+      "type": "document",
+      "title": {
+        "ru": "Сервисный реестр",
+        "en": "Service Inventory"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Два распылителя проданы за неделю до происшествия, ещё два сняты на запчасти. Целых четырёх устройств в отеле не было.",
+        "en": "Two sprayers were sold one week before the incident, and two others were dismantled for parts. Four intact units were never present at the hotel."
+      },
+      "statusExplanation": {
+        "ru": "Заявленное уничтоженное оборудование не существовало в указанном составе.",
+        "en": "The allegedly destroyed equipment did not exist in the stated configuration."
+      },
+      "statementLink": {
+        "statementId": "claim_equipment_destroyed",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Заявленное уничтоженное оборудование не существовало в указанном составе.",
+          "en": "The allegedly destroyed equipment did not exist in the stated configuration."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_equipment_destroyed",
+        "reason": {
+          "ru": "Заявленное уничтоженное оборудование не существовало в указанном составе.",
+          "en": "The allegedly destroyed equipment did not exist in the stated configuration."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-gps",
+      "order": 4,
+      "type": "gps",
+      "title": {
+        "ru": "Трек фургона",
+        "en": "Van Tracking Log"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "После отеля фургон следует к частному кузовному сервису, где вмятину искусственно расширяют перед осмотром.",
+        "en": "After leaving the hotel, the van travels to a private body shop where the dent is deliberately enlarged before inspection."
+      },
+      "statusExplanation": {
+        "ru": "Повреждение автомобиля было дополнительно увеличено после происшествия.",
+        "en": "The vehicle damage was deliberately increased after the incident."
+      },
+      "statementLink": {
+        "statementId": "claim_vehicle_damage",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Повреждение автомобиля было дополнительно увеличено после происшествия.",
+          "en": "The vehicle damage was deliberately increased after the incident."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_vehicle_damage",
+        "reason": {
+          "ru": "Повреждение автомобиля было дополнительно увеличено после происшествия.",
+          "en": "The vehicle damage was deliberately increased after the incident."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-admin",
+      "order": 5,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания администратора",
+        "en": "Manager's Statement"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Егоров настоял на работе без персонала и забрал временную карту зала. Администратор не видел момент повреждения.",
+        "en": "Yegorov insisted on working without hotel staff and took a temporary hall access card. The manager did not witness the damage."
+      },
+      "statusExplanation": {
+        "ru": "Показания создают контекст доступа, но сами по себе не доказывают инсценировку.",
+        "en": "The statement establishes access but does not prove staging on its own."
+      },
+      "statementLink": {
+        "statementId": "claim_attack",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Показания создают контекст доступа, но сами по себе не доказывают инсценировку.",
+          "en": "The statement establishes access but does not prove staging on its own."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-deposit",
+      "order": 6,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Оплата покупателя",
+        "en": "Buyer's Payment"
+      },
+      "isContradiction": false,
+      "narrativeRole": "arc_proof",
+      "text": {
+        "ru": "Деньги за распылители поступили от посредника, связанного с Восточным двором.",
+        "en": "Payment for the sprayers came from an intermediary linked to Eastern Yard."
+      },
+      "statusExplanation": {
+        "ru": "Оборудование было продано через известный канал до заявления.",
+        "en": "The equipment was sold through the known channel before the claim."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Оборудование было продано через известный канал до заявления.",
+          "en": "The equipment was sold through the known channel before the claim."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "В зал въезжал только фургон Егорова, а рисунок шин совпадает.",
+      "Четыре распылителя не были уничтожены: их продали или разобрали раньше.",
+      "Егоров инсценировал разгром и увеличил повреждение фургона. В выплате следует отказать."
+    ],
+    "en": [
+      "The hall was wrecked by the claimant's own van.",
+      "The allegedly destroyed equipment did not exist in the stated configuration.",
+      "The vehicle damage was deliberately increased after the incident.",
+      "The claimant personally drove his van into the restricted area during the damage.",
+      "The statement establishes access but does not prove staging on its own.",
+      "The claim is fraudulent and should be rejected."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Полностью оригинализировать дело.",
+      "Сделать след шин центральной визуальной уликой.",
+      "Сократить пять однотипных противоречий до независимых функций."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "people/arkady-egorov.webp",
+      "action": "generate",
+      "prompt": "Illustrated archival claimant ID portrait matching the existing insurance detective game: Russian male industrial cleaning company owner, 52 years old, broad face, practical dark work blazer, slightly overconfident expression, neutral document-photo background, original appearance, no uniforms from films or franchises, no logos, no text, no watermark."
+    },
+    {
+      "file": "evidence/case-035-ev-tyres.webp",
+      "action": "generate",
+      "prompt": "Documentary hotel insurance evidence photo of dark tire tracks crossing a polished banquet hall parquet floor and passing through a broken lightweight decorative divider, restrained realistic damage, no people, no logos, no text, no supernatural elements, no watermark."
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Ночью неизвестные проникли в отель «Янтарь», разгромили банкетный зал и уничтожили четыре дорогих электростатических распылителя моей службы промышленной очистки. Прошу оплатить оборудование и ремонт фургона.",
+        "en": "During the night, unknown intruders entered the Amber Hotel, wrecked the banquet hall, and destroyed four expensive electrostatic sprayers belonging to my industrial-cleaning service. I am claiming the equipment and van repairs."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_attack",
+      "text": {
+        "ru": "Неизвестные проникли в зал «Янтаря» и устроили разгром.",
+        "en": "Unknown intruders entered the Amber's hall and wrecked it."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_equipment_destroyed",
+      "text": {
+        "ru": "Новое оборудование находилось в зале и было уничтожено.",
+        "en": "The new equipment was in the hall and was destroyed."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_vehicle_damage",
+      "text": {
+        "ru": "Повреждения фургона возникли во время нападения.",
+        "en": "The van was damaged during the attack."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 0,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-035",
+    "archiveBasePath": "generated-assets/src/data/cases/case-035",
+    "claimantPortrait": {
+      "characterId": "arkady-egorov",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Аркадий Егоров",
+        "en": "Arkady Yegorov, age 52"
+      },
+      "assetId": "asset-055",
+      "src": "src/data/cases/case-035/people/arkady-egorov.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-035/people/arkady-egorov.webp",
+      "caseRelativeSrc": "people/arkady-egorov.webp",
+      "installTo": "public/people/arkady-egorov.webp",
+      "legacyRuntimeUrl": "people/arkady-egorov.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "4447c18894ea448ba42e2ab982c3bc1460cf14752c66c331e16d29b7c6709495"
+    },
+    "claimantPortraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/arkady-egorov.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-035/people/arkady-egorov.webp",
+      "copyTo": "public/people/arkady-egorov.webp",
+      "replacesExistingValue": null
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-tyres",
+        "title": {
+          "ru": "Следы на паркете",
+          "en": "Tracks on the Parquet"
+        },
+        "primaryImage": "src/data/cases/case-035/evidence/case-035-ev-tyres.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-035/evidence/case-035-ev-tyres.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-035-ev-tyres.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-035/evidence/case-035-ev-tyres.webp",
+          "copyTo": "public/evidence/case-035-ev-tyres.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-056",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-035/evidence/case-035-ev-tyres.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-035/evidence/case-035-ev-tyres.webp",
+            "caseRelativeSrc": "evidence/case-035-ev-tyres.webp",
+            "installTo": "public/evidence/case-035-ev-tyres.webp",
+            "legacyRuntimeUrl": "evidence/case-035-ev-tyres.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "21be8595d06496a6c7bcb6032f888586a4e78525ada035878d2d866613c9f6e9"
+          }
+        ]
+      }
+    ]
+  }
+}

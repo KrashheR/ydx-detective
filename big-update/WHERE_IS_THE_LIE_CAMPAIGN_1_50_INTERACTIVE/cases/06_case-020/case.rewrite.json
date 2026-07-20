@@ -1,0 +1,532 @@
+{
+  "id": "case-020",
+  "campaignOrder": 6,
+  "requiredLevel": 3,
+  "act": 1,
+  "actTitle": {
+    "ru": "Чужой почерк",
+    "en": "Another Hand"
+  },
+  "title": {
+    "ru": "Сорок пропавших пицц",
+    "en": "Forty Missing Pizzas"
+  },
+  "difficulty": "medium",
+  "claimAmount": {
+    "value": 3500,
+    "currency": "EUR"
+  },
+  "groundTruth": "fraud",
+  "correctDecision": "reject",
+  "investigationBudget": 3,
+  "claimant": {
+    "name": {
+      "ru": "Орест Чернов, 48 лет",
+      "en": "Orest Chernov, age 48"
+    },
+    "migrationNote": {
+      "ru": "Сохранить стабильный профиль и существующий портрет после визуальной сверки с канонической версией.",
+      "en": "Keep the established profile and existing portrait after visually checking them against the canonical version."
+    },
+    "portrait": {
+      "characterId": "orest-chernov",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Орест Чернов",
+        "en": "Orest Chernov, age 48"
+      },
+      "assetId": "asset-006",
+      "src": "src/data/cases/case-020/people/orest-chernov.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-020/people/orest-chernov.webp",
+      "caseRelativeSrc": "people/orest-chernov.webp",
+      "installTo": "public/people/orest-chernov.webp",
+      "legacyRuntimeUrl": "people/orest-chernov.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "511ee479b2b45eaa68ff4a0c0a60a9a568160ae3663aea463c47b3f0d8ff8792"
+    },
+    "portraitStatus": "generated_replacement_included",
+    "portraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/orest-chernov.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-020/people/orest-chernov.webp",
+      "copyTo": "public/people/orest-chernov.webp",
+      "replacesExistingValue": "people/orest.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Орест Чернов приложил к заявлению больше обвинений, чем документов. Начните с документов. — В. Лебедева",
+      "en": "Orest Chernov attached more accusations than documents to his claim. Start with the documents. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Клуб оправдан, помещение остаётся за ним. А форма `17-К` встречается уже в третьем нашем деле. Я запросила источник шаблона.",
+      "en": "The club has been cleared and keeps its premises. Meanwhile, form `17-K` has appeared in a third case. I have requested the source of the template."
+    },
+    "nextCaseTeaser": {
+      "ru": "После сорока выдуманных пицц — одна настоящая корова. Проблема в том, что её нашли в теплице.",
+      "en": "After forty imaginary pizzas comes one very real cow. The problem is that she was found inside a greenhouse."
+    },
+    "seasonClue": {
+      "id": "act1-clue-6",
+      "label": {
+        "ru": "Шаблон заявления Чернова",
+        "en": "Chernov's Claim Template"
+      },
+      "description": {
+        "ru": "Неизвестный консультант отправил Чернову готовую формулировку заявления и смету 17-К. Адрес отправителя скрыт, письмо подписано одной буквой: К.",
+        "en": "An unknown consultant sent Chernov a ready-made claim and a 17-K estimate. The sender's address is hidden; the message is signed with a single letter: K."
+      },
+      "progressIndex": 3,
+      "progressTotal": 5
+    },
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "В ночь на 12 июня участники расположенного в подвале клуба робототехники «Маяк» разбили стекло боковой двери моей закусочной и похитили сорок пицц, приготовленных для корпоративного заказа. Камера зафиксировала человека в серой клубной ветровке. Прошу возместить стоимость продукции, двери и уборки — 3500 евро.",
+    "en": "On the night of June 12, members of the Mayak robotics club in the basement smashed my snack bar's side-door window and stole forty pizzas prepared for a corporate order. A camera recorded someone wearing the club's gray jacket. I am claiming €3,500 for the food, the door, and cleanup."
+  },
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "В ночь на 12 июня участники расположенного в подвале клуба робототехники «Маяк» разбили стекло боковой двери моей закусочной и похитили сорок пицц, приготовленных для корпоративного заказа. Камера зафиксировала человека в серой клубной ветровке. Прошу возместить стоимость продукции, двери и уборки — 3500 евро.",
+        "en": "On the night of June 12, members of the Mayak robotics club in the basement smashed my snack bar's side-door window and stole forty pizzas prepared for a corporate order. A camera recorded someone wearing the club's gray jacket. I am claiming €3,500 for the food, the door, and cleanup."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_event",
+      "text": {
+        "ru": "Ночью из закусочной вынесли сорок коробок пиццы.",
+        "en": "Forty pizza boxes were removed from the snack bar during the night."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_intruder",
+      "text": {
+        "ru": "Коробки похитил неизвестный в серой ветровке без участия Чернова.",
+        "en": "An unknown person in a gray jacket stole the boxes without Chernov's involvement."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_loss",
+      "text": {
+        "ru": "Чернов утратил товар и просит страховое возмещение.",
+        "en": "Chernov lost his stock and is seeking insurance compensation."
+      },
+      "stampable": true
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-camera",
+      "order": 1,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Запись камеры закусочной",
+        "en": "Snack Bar Camera Footage"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "В 02:04 человек в серой ветровке с эмблемой клуба «Маяк» выходит через повреждённую боковую дверь с коробками. Лицо закрыто капюшоном. Затем человек садится в чёрный служебный фургон; на записи читаются последние цифры номера — `417`.",
+        "en": "At 2:04 a.m., someone in a gray jacket bearing the Mayak club emblem leaves through the damaged side door carrying boxes. Their face is hidden by a hood. The person then enters a black company van; the final digits of its plate, `417`, are visible."
+      },
+      "statusExplanation": {
+        "ru": "Ветровка делает версию Чернова правдоподобной, но лицо человека не видно. Запись подтверждает вынос коробок, а не личность виновного.",
+        "en": "The jacket makes Chernov's account plausible, but the person's face is hidden. The footage proves that boxes were removed, not who removed them."
+      },
+      "statementLink": {
+        "statementId": "claim_event",
+        "relation": "supports",
+        "reason": {
+          "ru": "Ветровка делает версию Чернова правдоподобной, но лицо человека не видно. Запись подтверждает вынос коробок, а не личность виновного.",
+          "en": "The jacket makes Chernov's account plausible, but the person's face is hidden. The footage proves that boxes were removed, not who removed them."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-005",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-020/evidence/case-020-staged-takeaway-cctv.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-020/evidence/case-020-staged-takeaway-cctv.webp",
+          "caseRelativeSrc": "evidence/case-020-staged-takeaway-cctv.webp",
+          "installTo": "public/evidence/case-020-staged-takeaway-cctv.webp",
+          "legacyRuntimeUrl": "evidence/case-020-staged-takeaway-cctv.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "b5f135f8965ec19c907e7c27d6a9e0bbfc02ed3ec60c53478daa16cff8cea12a"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-020/evidence/case-020-staged-takeaway-cctv.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-020/evidence/case-020-staged-takeaway-cctv.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-020-staged-takeaway-cctv.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-020/evidence/case-020-staged-takeaway-cctv.webp",
+        "copyTo": "public/evidence/case-020-staged-takeaway-cctv.webp"
+      }
+    },
+    {
+      "id": "ev-delivery-receipt",
+      "order": 2,
+      "type": "seal_match",
+      "title": {
+        "ru": "Сопоставление пломб коробок",
+        "en": "Box Seal Comparison"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Фрагменты совпали: коробки у клуба относятся к партии, которую Чернов сам оплатил и отправил туда до инсценировки.",
+        "en": "The fragments match: the boxes found at the club came from a batch Chernov paid for and sent there himself before staging the theft."
+      },
+      "previousType": "document",
+      "description": {
+        "ru": "Один обрывок снят с коробок у клуба «Маяк», второй остался на упаковке из ночной доставки.",
+        "en": "One fragment came from boxes found at the Mayak club; the other remained on packaging from the overnight delivery."
+      },
+      "instruction": {
+        "ru": "Повернуть фрагмент и совместить линию разрыва.",
+        "en": "Rotate the fragment and align the torn edges."
+      },
+      "assets": {
+        "asset1": "assets/interactive/ev-delivery-receipt-master-a.webp",
+        "asset2": "assets/interactive/ev-delivery-receipt-fragments.json"
+      },
+      "data": {
+        "movableFragment": "B",
+        "allowRotation": true,
+        "rotationStep": 3,
+        "initialTransform": {
+          "x": 72,
+          "y": 18,
+          "rotation": -14
+        },
+        "targetTransform": {
+          "x": 132,
+          "y": 48,
+          "rotation": 6
+        },
+        "tolerance": {
+          "position": 10,
+          "rotation": 5
+        },
+        "expectedMatch": true,
+        "sourceSeed": 610417,
+        "fragmentASeed": 610417,
+        "fragmentBSeed": 610417,
+        "comparisonMarkers": [
+          {
+            "id": "tear_pattern",
+            "label": "Совпадают волокна бумаги и три дефекта серийного узора",
+            "labelEn": "Paper fibers and three serial-pattern defects match"
+          }
+        ]
+      },
+      "statementLink": {
+        "statementId": "claim_intruder",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Фрагменты совпали: коробки у клуба относятся к партии, которую Чернов сам оплатил и отправил туда до инсценировки.",
+          "en": "The fragments match: the boxes found at the club came from a batch Chernov paid for and sent there himself before staging the theft."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_intruder",
+        "reason": {
+          "ru": "Фрагменты совпали: коробки у клуба относятся к партии, которую Чернов сам оплатил и отправил туда до инсценировки.",
+          "en": "The fragments match: the boxes found at the club came from a batch Chernov paid for and sent there himself before staging the theft."
+        }
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true,
+        "transparencyMode": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Совпавший разрыв физически связывает коробки у клуба с заказом самого Чернова.",
+          "en": "The matching tear physically links the boxes at the club to Chernov's own order."
+        },
+        "playerAction": {
+          "ru": "Повернуть фрагмент и совместить линию разрыва.",
+          "en": "Rotate the fragment and align the torn edges."
+        },
+        "conclusion": {
+          "ru": "Фрагменты совпали: коробки у клуба относятся к партии, которую Чернов сам оплатил и отправил туда до инсценировки.",
+          "en": "The fragments match: the boxes found at the club came from a batch Chernov paid for and sent there himself before staging the theft."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-007",
+          "role": "interactive_master_a",
+          "src": "src/data/cases/case-020/assets/interactive/ev-delivery-receipt-master-a.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-020/assets/interactive/ev-delivery-receipt-master-a.webp",
+          "caseRelativeSrc": "assets/interactive/ev-delivery-receipt-master-a.webp",
+          "installTo": "src/data/cases/case-020/assets/interactive/ev-delivery-receipt-master-a.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1400,
+          "height": 500,
+          "sha256": "71cddd98d6a587cfb7017bc8d0ed8b6e7e76897d7922b4c975cce286fa23a27a"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-020/assets/interactive/ev-delivery-receipt-master-a.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-020/assets/interactive/ev-delivery-receipt-master-a.webp",
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-van-log",
+      "order": 3,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал охраны и телематика фургона",
+        "en": "Security Log and Van Telematics"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "- 01:58 — охрана боковой двери отключена личным кодом владельца;\n- 02:01 — дверь открыта изнутри аварийной ручкой;\n- 02:03 — служебный фургон `М417АХ` припаркован у входа;\n- 02:11 — тот же фургон прибывает к клубу «Маяк»;\n- ключ фургона зарегистрирован на Ореста Чернова.",
+        "en": "- 1:58 a.m.—side-door alarm disabled with the owner's personal code;\n- 2:01 a.m.—door opened from inside using the emergency handle;\n- 2:03 a.m.—company van `M417AKh` parked at the entrance;\n- 2:11 a.m.—the same van arrived at the Mayak club;\n- the van key is assigned to Orest Chernov."
+      },
+      "statusExplanation": {
+        "ru": "Боковую дверь открыли изнутри кодом Чернова, а фигура на записи уехала на его служебном автомобиле. Инсценировку провёл сам заявитель.",
+        "en": "The side door was opened from inside using Chernov's code, and the person on camera left in his company vehicle. The claimant staged the theft himself."
+      },
+      "statementLink": {
+        "statementId": "claim_intruder",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Боковую дверь открыли изнутри кодом Чернова, а фигура на записи уехала на его служебном автомобиле. Инсценировку провёл сам заявитель.",
+          "en": "The side door was opened from inside using Chernov's code, and the person on camera left in his company vehicle. The claimant staged the theft himself."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_intruder",
+        "reason": {
+          "ru": "Боковую дверь открыли изнутри кодом Чернова, а фигура на записи уехала на его служебном автомобиле. Инсценировку провёл сам заявитель.",
+          "en": "The side door was opened from inside using Chernov's code, and the person on camera left in his company vehicle. The claimant staged the theft himself."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-landlord-chat",
+      "order": 4,
+      "type": "document",
+      "title": {
+        "ru": "Переписка с управляющей компанией",
+        "en": "Messages with the Property Manager"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "За две недели до происшествия Чернов просил передать ему подвальное помещение клуба для расширения кухни. Управляющая компания отказала, пока «Маяк» не нарушает договор. На следующий день после отказа Чернов получил от неизвестного консультанта шаблон заявления и смету с кодом `17-К`.",
+        "en": "Two weeks before the incident, Chernov asked to take over the club's basement space to expand his kitchen. The property manager refused as long as Mayak remained in compliance with its lease. The day after that refusal, Chernov received a claim template and estimate marked `17-K` from an unknown consultant."
+      },
+      "statusExplanation": {
+        "ru": "Переписка раскрывает мотив и связь с шаблоном, но виновность уже устанавливается журналом доступа и маршрутом автомобиля.",
+        "en": "The messages reveal a motive and a link to the template, but the access log and vehicle route already establish who staged the theft."
+      },
+      "statementLink": {
+        "statementId": "claim_intruder",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Переписка раскрывает мотив и связь с шаблоном, но виновность уже устанавливается журналом доступа и маршрутом автомобиля.",
+          "en": "The messages reveal a motive and a link to the template, but the access log and vehicle route already establish who staged the theft."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Чернов купил сорок пицц и заранее отправил их в клуб как анонимный подарок.",
+      "Затем он отключил охрану своим кодом, повредил вход изнутри и вывез коробки на собственном фургоне.",
+      "Серая ветровка понадобилась, чтобы подставить участников «Маяка» и добиться их выселения.",
+      "Фрагменты совпали: коробки у клуба относятся к партии, которую Чернов сам оплатил и отправил туда до инсценировки.",
+      "Заявление является мошенническим и должно быть отклонено."
+    ],
+    "en": [
+      "The fragments match: the boxes found at the club came from a batch Chernov paid for and sent there himself before staging the theft.",
+      "The side door was opened from inside using Chernov's code, and the person on camera left in his company vehicle. The claimant staged the theft himself.",
+      "The jacket makes Chernov's account plausible, but the person's face is hidden. The footage proves that boxes were removed, not who removed them.",
+      "The messages reveal a motive and a link to the template, but the access log and vehicle route already establish who staged the theft.",
+      "The claim is fraudulent and should be rejected."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Внедрить каноническую постановку из первого акта «Архив №17».",
+      "Сохранить стабильный ID и новый campaignOrder.",
+      "Интегрировать seal_match в улику ev-delivery-receipt; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate seal_match into evidence ev-delivery-receipt; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "evidence/case-020-staged-takeaway-cctv.webp",
+      "action": "replace",
+      "purpose": "Инсценировка у закусочной",
+      "prompt": "Night CCTV evidence outside a modest neighborhood takeaway restaurant: a hooded adult in a plain gray community workshop jacket carrying stacked pizza boxes toward a black service van, face not visible, damaged side entrance in the background, realistic municipal street lighting, no masks, no martial arts imagery, no logos, no readable license plate, grounded documentary style."
+    },
+    {
+      "file": "people/orest-chernov.webp",
+      "action": "replace_if_needed",
+      "purpose": "Оригинальный портрет Ореста Чернова",
+      "prompt": "Illustrated archival claimant ID portrait matching the existing game's character-card style: Russian male small-business owner, 48 years old, neat dark jacket over a casual shirt, self-assured tense expression, ordinary short hair, neutral office-photo background, realistic proportions, original face, no armor, no masks, no spikes, no martial arts or franchise imagery, no text, no logo."
+    },
+    {
+      "file": "assets/interactive/ev-delivery-receipt-master-a.webp",
+      "purpose": "Цельный мастер пломбы или контрольного фрагмента A",
+      "resolution": "1400×500",
+      "format": "WebP",
+      "transparency": true,
+      "generatedBy": "image_model",
+      "manualPost": "Убрать случайный текст; сохранить альфа-канал; разрезать процедурно по sourceSeed.",
+      "prompt": "Create a realistic intact security seal or evidence control label for a fictional insurance investigation. Нейтральная бумажная контрольная лента для коробок с абстрактным серийным узором, без названия пиццерии. Front view, full object, transparent background, detailed fibers, adhesive or polymer texture, abstract protection pattern, no real logo or brand, no watermark, no critical readable text, restrained utilitarian evidence style. Keep edges suitable for procedural tearing.",
+      "evidenceId": "ev-delivery-receipt",
+      "evidenceType": "seal_match"
+    },
+    {
+      "file": "assets/interactive/ev-delivery-receipt-fragments.json",
+      "purpose": "Seed разрыва, трансформации и допуски",
+      "resolution": "normalized component space",
+      "format": "JSON",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "Сгенерировать fragment-a.webp и fragment-b.webp из master-файлов; проверить drag/rotate/snap.",
+      "prompt": null,
+      "evidenceId": "ev-delivery-receipt",
+      "evidenceType": "seal_match"
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-020",
+    "archiveBasePath": "generated-assets/src/data/cases/case-020",
+    "claimantPortrait": {
+      "characterId": "orest-chernov",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Орест Чернов",
+        "en": "Orest Chernov, age 48"
+      },
+      "assetId": "asset-006",
+      "src": "src/data/cases/case-020/people/orest-chernov.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-020/people/orest-chernov.webp",
+      "caseRelativeSrc": "people/orest-chernov.webp",
+      "installTo": "public/people/orest-chernov.webp",
+      "legacyRuntimeUrl": "people/orest-chernov.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "511ee479b2b45eaa68ff4a0c0a60a9a568160ae3663aea463c47b3f0d8ff8792"
+    },
+    "claimantPortraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/orest-chernov.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-020/people/orest-chernov.webp",
+      "copyTo": "public/people/orest-chernov.webp",
+      "replacesExistingValue": "people/orest.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-camera",
+        "title": {
+          "ru": "Запись камеры закусочной",
+          "en": "Snack Bar Camera Footage"
+        },
+        "primaryImage": "src/data/cases/case-020/evidence/case-020-staged-takeaway-cctv.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-020/evidence/case-020-staged-takeaway-cctv.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-020-staged-takeaway-cctv.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-020/evidence/case-020-staged-takeaway-cctv.webp",
+          "copyTo": "public/evidence/case-020-staged-takeaway-cctv.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-005",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-020/evidence/case-020-staged-takeaway-cctv.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-020/evidence/case-020-staged-takeaway-cctv.webp",
+            "caseRelativeSrc": "evidence/case-020-staged-takeaway-cctv.webp",
+            "installTo": "public/evidence/case-020-staged-takeaway-cctv.webp",
+            "legacyRuntimeUrl": "evidence/case-020-staged-takeaway-cctv.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "b5f135f8965ec19c907e7c27d6a9e0bbfc02ed3ec60c53478daa16cff8cea12a"
+          }
+        ]
+      },
+      {
+        "evidenceId": "ev-delivery-receipt",
+        "title": {
+          "ru": "Сопоставление пломб коробок",
+          "en": "Box Seal Comparison"
+        },
+        "primaryImage": "src/data/cases/case-020/assets/interactive/ev-delivery-receipt-master-a.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-020/assets/interactive/ev-delivery-receipt-master-a.webp",
+        "legacyImageBinding": null,
+        "assets": [
+          {
+            "assetId": "asset-007",
+            "role": "interactive_master_a",
+            "src": "src/data/cases/case-020/assets/interactive/ev-delivery-receipt-master-a.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-020/assets/interactive/ev-delivery-receipt-master-a.webp",
+            "caseRelativeSrc": "assets/interactive/ev-delivery-receipt-master-a.webp",
+            "installTo": "src/data/cases/case-020/assets/interactive/ev-delivery-receipt-master-a.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1400,
+            "height": 500,
+            "sha256": "71cddd98d6a587cfb7017bc8d0ed8b6e7e76897d7922b4c975cce286fa23a27a"
+          }
+        ]
+      }
+    ]
+  }
+}

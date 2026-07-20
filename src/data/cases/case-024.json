@@ -1,301 +1,368 @@
 {
   "id": "case-024",
   "type": "standard",
-  "difficulty": "medium",
+  "campaignOrder": 22,
+  "requiredLevel": 11,
+  "act": 3,
+  "actTitle": {
+    "ru": "Восточный двор",
+    "en": "Eastern Yard",
+    "tr": "Eastern Yard",
+    "ar": "Eastern Yard",
+    "kk": "Восточный двор"
+  },
+  "difficulty": "easy",
   "claimAmount": 2000,
   "truth": "valid",
   "title": {
-    "ru": "Лёгкое ДТП на перекрёстке",
-    "en": "Minor Crash at the Junction",
-    "tr": "Kavşakta Küçük Kaza",
-    "ar": "حادث بسيط عند التقاطع",
-    "kk": "Қиылыста болған жеңіл ЖКО"
+    "ru": "Звонок в 17:41",
+    "en": "The 5:41 Call",
+    "tr": "The 5:41 Call",
+    "ar": "The 5:41 Call",
+    "kk": "Звонок в 17:41"
   },
   "claim": {
     "person": {
       "ru": "Марина Гордеева, 34 года",
-      "en": "Marina Gordeeva, 34",
-      "tr": "Marina Gordeeva, 34",
-      "ar": "مارينا غورديفا، 34",
-      "kk": "Марина Гордеева, 34 жаста"
+      "en": "Marina Gordeyeva, age 34",
+      "tr": "Marina Gordeyeva, age 34",
+      "ar": "Marina Gordeyeva, age 34",
+      "kk": "Марина Гордеева, 34 года"
     },
     "story": {
-      "ru": "22 апреля около 17:40 на перекрёстке Ленина и Парковой в меня сзади въехал другой автомобиль. Удар был несильным, но помят бампер и разбит задний фонарь. Я сразу позвонила в экстренную службу со своего телефона. Прошу компенсацию ремонта.",
-      "en": "On April 22 around 17:40, at the junction of Lenina and Parkovaya, another car rear-ended me. The impact was light, but my bumper was dented and the rear light broken. I immediately called emergency services from my phone. I request compensation for the repair.",
-      "tr": "22 Nisan, saat 17:40 sularında Lenina ve Parkovaya kavşağında bir başka araç bana arkadan çarptı. Darbe hafifti ama tamponum ezildi ve arka stop lambası kırıldı. Hemen telefonumdan acil servisi aradım. Onarım için tazminat talep ediyorum.",
-      "ar": "في 22 أبريل حوالي الساعة 17:40، عند تقاطع لينينا وباركوفايا، اصطدمت بي سيارة أخرى من الخلف. كانت الصدمة خفيفة، لكن انبعج المصد وانكسر الضوء الخلفي. اتصلت فورًا بخدمة الطوارئ من هاتفي. أطلب تعويض الإصلاح.",
-      "kk": "22 сәуірде шамамен 17:40-та Ленина мен Парковая қиылысында артымнан басқа көлік соғылды. Соққы қатты болмады, бірақ бампер мыжылып, артқы шам сынды. Мен бірден телефонымнан жедел қызметке қоңырау шалдым. Жөндеу үшін өтемақы сұраймын."
+      "ru": "22 апреля около 17:40 я остановилась перед пешеходным переходом, когда сзади в автомобиль въехала другая машина. Повреждены бампер и левый фонарь. Я сразу позвонила в экстренную службу. Прошу компенсировать ремонт.",
+      "en": "At about 5:40 p.m. on April 22, I stopped before a pedestrian crossing when another car struck mine from behind. The bumper and left tail light were damaged. I immediately called emergency services. I am claiming the repair cost.",
+      "tr": "At about 5:40 p.m. on April 22, I stopped before a pedestrian crossing when another car struck mine from behind. The bumper and left tail light were damaged. I immediately called emergency services. I am claiming the repair cost.",
+      "ar": "At about 5:40 p.m. on April 22, I stopped before a pedestrian crossing when another car struck mine from behind. The bumper and left tail light were damaged. I immediately called emergency services. I am claiming the repair cost.",
+      "kk": "22 апреля около 17:40 я остановилась перед пешеходным переходом, когда сзади в автомобиль въехала другая машина. Повреждены бампер и левый фонарь. Я сразу позвонила в экстренную службу. Прошу компенсировать ремонт."
     }
   },
-  "coverImage": "covers/case-024.svg",
-  "personImage": "people/marina.webp",
   "client": {
     "role": {
-      "ru": "Заявитель · физ. лицо",
-      "en": "Claimant · individual",
-      "tr": "Başvuru sahibi · gerçek kişi",
-      "ar": "مقدم الطلب · شخص طبيعي",
-      "kk": "Өтініш беруші · жеке тұлға"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Возраст",
-          "en": "Age",
-          "tr": "Yaş",
-          "ar": "العمر",
-          "kk": "Жасы"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "34 года",
-          "en": "34 years old",
-          "tr": "34 yaşında",
-          "ar": "34 عامًا",
-          "kk": "34 жаста"
+          "ru": "3",
+          "en": "3",
+          "tr": "3",
+          "ar": "3",
+          "kk": "3"
         }
       },
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Краснодар",
-          "en": "Krasnodar",
-          "tr": "Krasnodar",
-          "ar": "كراسنودار",
-          "kk": "Краснодар"
-        }
-      },
-      {
-        "k": {
-          "ru": "Клиент с",
-          "en": "Client since",
-          "tr": "Müşteri",
-          "ar": "عميل منذ",
-          "kk": "Клиент"
-        },
-        "v": {
-          "ru": "2022 г.",
-          "en": "2022",
-          "tr": "2022",
-          "ar": "2022",
-          "kk": "2022 ж."
-        }
-      },
-      {
-        "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
-        },
-        "v": {
-          "ru": "ОСАГО · ОС-24289562-X4",
-          "en": "Third-party auto · OS-24289562-X4",
-          "tr": "Zorunlu trafik · OS-24289562-X4",
-          "ar": "تأمين المركبات الإلزامي · OS-24289562-X4",
-          "kk": "Көлік жауапкершілігі · ОС-24289562-X4"
-        }
-      },
-      {
-        "k": {
-          "ru": "Документ",
-          "en": "Document",
-          "tr": "Belge",
-          "ar": "الوثيقة",
-          "kk": "Құжат"
-        },
-        "v": {
-          "ru": "Паспорт 2320-38 №242895620-27",
-          "en": "Passport 2320-38 №242895620-27",
-          "tr": "Pasaport 2320-38 №242895620-27",
-          "ar": "جواز السفر 2320-38 №242895620-27",
-          "kk": "Паспорт 2320-38 №242895620-27"
+          "ru": "22",
+          "en": "22",
+          "tr": "22",
+          "ar": "22",
+          "kk": "22"
         }
       }
     ]
   },
+  "coverImage": "covers/case-024.svg",
+  "personImage": "people/marina.webp",
   "evidences": [
     {
       "id": "ev-phone",
+      "order": 1,
       "type": "phone_records",
       "title": {
-        "ru": "Детализация звонков",
-        "en": "Phone Records",
-        "tr": "Arama Dökümü",
-        "ar": "سجل المكالمات",
-        "kk": "Қоңыраулар детализациясы"
+        "ru": "Экстренный звонок",
+        "en": "Emergency Call",
+        "tr": "Emergency Call",
+        "ar": "Emergency Call",
+        "kk": "Экстренный звонок"
       },
       "content": {
-        "ru": [
-          "22.04 16:58 — Входящий, абонент «Работа», 02:11",
-          "22.04 17:42 — Исходящий, экстренная служба 112, 03:48 (вышка: Ленина/Парковая)",
-          "22.04 17:51 — Исходящий, абонент «Муж», 01:20 (вышка: Ленина/Парковая)",
-          "22.04 18:30 — Входящий, абонент «Эвакуатор», 00:54",
-          "Все звонки 22 апреля, регион — город заявителя"
-        ],
-        "en": [
-          "22 Apr 16:58 — Incoming, contact “Work”, 02:11",
-          "22 Apr 17:42 — Outgoing, emergency 112, 03:48 (cell: Lenina/Parkovaya)",
-          "22 Apr 17:51 — Outgoing, contact “Husband”, 01:20 (cell: Lenina/Parkovaya)",
-          "22 Apr 18:30 — Incoming, contact “Tow truck”, 00:54",
-          "All calls on April 22, region — claimant's city"
-        ],
-        "tr": [
-          "22 Nis 16:58 — Gelen, kişi “İş”, 02:11",
-          "22 Nis 17:42 — Giden, acil servis 112, 03:48 (baz: Lenina/Parkovaya)",
-          "22 Nis 17:51 — Giden, kişi “Eş”, 01:20 (baz: Lenina/Parkovaya)",
-          "22 Nis 18:30 — Gelen, kişi “Çekici”, 00:54",
-          "Tüm aramalar 22 Nisan, bölge — başvuranın şehri"
-        ],
-        "ar": [
-          "22 أبريل 16:58 — وارد، جهة الاتصال «العمل»، 02:11",
-          "22 أبريل 17:42 — صادر، الطوارئ 112، 03:48 (الخلية: لينينا/باركوفايا)",
-          "22 أبريل 17:51 — صادر، جهة الاتصال «الزوج»، 01:20 (الخلية: لينينا/باركوفايا)",
-          "22 أبريل 18:30 — وارد، جهة الاتصال «شاحنة السحب»، 00:54",
-          "كل المكالمات في 22 أبريل، المنطقة — مدينة مقدِّمة الطلب"
-        ],
-        "kk": [
-          "22.04 16:58 — Кіріс, «Жұмыс» абоненті, 02:11",
-          "22.04 17:42 — Шығыс, жедел қызмет 112, 03:48 (мұнара: Ленина/Парковая)",
-          "22.04 17:51 — Шығыс, «Күйеу» абоненті, 01:20 (мұнара: Ленина/Парковая)",
-          "22.04 18:30 — Кіріс, «Эвакуатор» абоненті, 00:54",
-          "Барлық қоңырау 22 сәуірде, аймақ — арыз иесінің қаласы"
-        ]
+        "ru": "В 17:41:06 с телефона Гордеевой выполнен звонок 112. Базовые станции и геолокация указывают на нужный перекрёсток.",
+        "en": "At 5:41:06 p.m., Gordeyeva called 112. Cell towers and geolocation place her phone at the reported intersection.",
+        "tr": "At 5:41:06 p.m., Gordeyeva called 112. Cell towers and geolocation place her phone at the reported intersection.",
+        "ar": "At 5:41:06 p.m., Gordeyeva called 112. Cell towers and geolocation place her phone at the reported intersection.",
+        "kk": "В 17:41:06 с телефона Гордеевой выполнен звонок 112. Базовые станции и геолокация указывают на нужный перекрёсток."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Детализация подтверждает звонок в 112 в 17:42 от вышки на перекрёстке Ленина/Парковая — это совпадает с заявленным временем и местом ДТП.",
-        "en": "The records confirm the 112 call at 17:42 from the Lenina/Parkovaya cell — matching the claimed time and place of the crash.",
-        "tr": "Döküm, 17:42'de Lenina/Parkovaya bazından yapılan 112 aramasını doğruluyor — kazanın beyan edilen zaman ve yerine uyuyor.",
-        "ar": "يؤكد السجل مكالمة 112 الساعة 17:42 من خلية لينينا/باركوفايا — وهو يطابق زمان ومكان الحادث المُبلَّغ عنهما.",
-        "kk": "Детализация 17:42-те Ленина/Парковая мұнарасынан 112-ге қоңырауды растайды — бұл ЖКО-ның мәлімделген уақыты мен орнына сай."
+        "ru": "Звонок подтверждает время и место непосредственно после столкновения.",
+        "en": "The call confirms the time and location immediately after the collision.",
+        "tr": "The call confirms the time and location immediately after the collision.",
+        "ar": "The call confirms the time and location immediately after the collision.",
+        "kk": "Звонок подтверждает время и место непосредственно после столкновения."
       },
-      "meta": {
-        "carrierName": {
-          "ru": "Оператор связи № 24",
-          "en": "Communications Office 24",
-          "tr": "Volna Mobil",
-          "ar": "فولنا موبايل",
-          "kk": "Оператор связи № 24"
-        },
-        "phoneMask": "+7 (9••) •••-••-•1"
-      }
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_collision",
+        "relation": "supports",
+        "reason": {
+          "ru": "Звонок подтверждает время и место непосредственно после столкновения.",
+          "en": "The call confirms the time and location immediately after the collision.",
+          "tr": "The call confirms the time and location immediately after the collision.",
+          "ar": "The call confirms the time and location immediately after the collision.",
+          "kk": "Звонок подтверждает время и место непосредственно после столкновения."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "ev-police",
+      "order": 2,
       "type": "document",
       "title": {
-        "ru": "Протокол ГИБДД",
-        "en": "Traffic Police Report",
-        "tr": "Trafik Polisi Tutanağı",
-        "ar": "محضر شرطة المرور",
-        "kk": "ЖПИ хаттамасы"
+        "ru": "Схема ДТП",
+        "en": "Collision Diagram",
+        "tr": "Collision Diagram",
+        "ar": "Collision Diagram",
+        "kk": "Схема ДТП"
       },
       "content": {
-        "ru": "Протокол от 22 апреля, перекрёсток Ленина/Парковая, время 17:40. Зафиксировано столкновение «попутное, удар сзади»; виновником признан водитель второго автомобиля, не соблюдавший дистанцию. Повреждения автомобиля заявителя: задний бампер, левый задний фонарь.",
-        "en": "Report dated April 22, Lenina/Parkovaya junction, time 17:40. A rear-end collision was recorded; the driver of the second car was found at fault for not keeping a safe distance. Damage to the claimant's car: rear bumper, left rear light.",
-        "tr": "22 Nisan tarihli tutanak, Lenina/Parkovaya kavşağı, saat 17:40. Arkadan çarpma kaydedildi; ikinci aracın sürücüsü mesafe korumadığı için kusurlu bulundu. Başvuranın aracındaki hasar: arka tampon, sol arka stop lambası.",
-        "ar": "محضر بتاريخ 22 أبريل، تقاطع لينينا/باركوفايا، الساعة 17:40. سُجِّل اصطدام من الخلف؛ ووُجِد سائق السيارة الثانية مخطئًا لعدم الحفاظ على المسافة. أضرار سيارة مقدِّمة الطلب: المصد الخلفي، الضوء الخلفي الأيسر.",
-        "kk": "22 сәуірдегі хаттама, Ленина/Парковая қиылысы, уақыты 17:40. Артынан соғылу тіркелген; кінәлі — арақашықтықты сақтамаған екінші көлік жүргізушісі. Арыз иесінің көлігінің зақымы: артқы бампер, сол жақ артқы шам."
+        "ru": "Второй автомобиль указан позади машины Гордеевой. Водитель признал, что не заметил остановку перед пешеходом.",
+        "en": "The second vehicle is shown behind Gordeyeva's car. Its driver admitted failing to notice that she had stopped for a pedestrian.",
+        "tr": "The second vehicle is shown behind Gordeyeva's car. Its driver admitted failing to notice that she had stopped for a pedestrian.",
+        "ar": "The second vehicle is shown behind Gordeyeva's car. Its driver admitted failing to notice that she had stopped for a pedestrian.",
+        "kk": "Второй автомобиль указан позади машины Гордеевой. Водитель признал, что не заметил остановку перед пешеходом."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Протокол совпадает с рассказом по времени, месту и характеру повреждений; вина возложена на другого водителя.",
-        "en": "The report matches the account in time, place and nature of damage; fault is assigned to the other driver.",
-        "tr": "Tutanak; zaman, yer ve hasarın niteliği bakımından anlatımla örtüşür; kusur diğer sürücüye yüklenmiştir.",
-        "ar": "يتطابق المحضر مع الرواية في الزمان والمكان وطبيعة الضرر؛ والخطأ منسوب إلى السائق الآخر.",
-        "kk": "Хаттама әңгімеге уақыты, орны және зақым сипаты бойынша сай; кінә басқа жүргізушіге жүктелген."
-      }
+        "ru": "Официальная схема совпадает с рассказом заявительницы.",
+        "en": "The official diagram matches the claimant's account.",
+        "tr": "The official diagram matches the claimant's account.",
+        "ar": "The official diagram matches the claimant's account.",
+        "kk": "Официальная схема совпадает с рассказом заявительницы."
+      },
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_collision",
+        "relation": "supports",
+        "reason": {
+          "ru": "Официальная схема совпадает с рассказом заявительницы.",
+          "en": "The official diagram matches the claimant's account.",
+          "tr": "The official diagram matches the claimant's account.",
+          "ar": "The official diagram matches the claimant's account.",
+          "kk": "Официальная схема совпадает с рассказом заявительницы."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "ev-photo",
+      "order": 3,
       "type": "photo",
       "title": {
-        "ru": "Фото повреждений",
-        "en": "Damage Photo",
-        "tr": "Hasar Fotoğrafı",
-        "ar": "صورة الأضرار",
-        "kk": "Зақым суреті"
+        "ru": "Фото деформации",
+        "en": "Damage Photograph",
+        "tr": "Damage Photograph",
+        "ar": "Damage Photograph",
+        "kk": "Фото деформации"
       },
       "content": {
-        "ru": "Снимок задней части автомобиля при дневном свете: вмятина на бампере и расколотый левый задний фонарь. Характер повреждений типичен для несильного удара сзади.",
-        "en": "A daytime shot of the car's rear: a dent on the bumper and a cracked left rear light. The damage is typical of a light rear-end impact.",
-        "tr": "Aracın arkasının gündüz çekilmiş fotoğrafı: tamponda ezik ve kırılmış sol arka stop lambası. Hasar, hafif arkadan çarpmaya tipik.",
-        "ar": "لقطة نهارية لمؤخرة السيارة: انبعاج في المصد وضوء خلفي أيسر متشقق. الأضرار نموذجية لصدمة خلفية خفيفة.",
-        "kk": "Көліктің артқы бөлігінің күндізгі суреті: бамперде мыжылу және сынған сол жақ артқы шам. Зақым жеңіл артқы соққыға тән."
+        "ru": "Бампер вдавлен сзади вперёд, левый фонарь разрушен свежим ударом. Старых повреждений в заявленную смету не включено.",
+        "en": "The bumper is crushed from rear to front, and the left tail light shows fresh impact damage. No pre-existing damage is included in the estimate.",
+        "tr": "The bumper is crushed from rear to front, and the left tail light shows fresh impact damage. No pre-existing damage is included in the estimate.",
+        "ar": "The bumper is crushed from rear to front, and the left tail light shows fresh impact damage. No pre-existing damage is included in the estimate.",
+        "kk": "Бампер вдавлен сзади вперёд, левый фонарь разрушен свежим ударом. Старых повреждений в заявленную смету не включено."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Повреждения на фото соответствуют протоколу ГИБДД и заявленному характеру ДТП.",
-        "en": "The damage in the photo matches the traffic-police report and the described nature of the crash.",
-        "tr": "Fotoğraftaki hasar, trafik polisi tutanağına ve kazanın anlatılan niteliğine uyuyor.",
-        "ar": "تتوافق الأضرار في الصورة مع محضر شرطة المرور وطبيعة الحادث الموصوفة.",
-        "kk": "Суреттегі зақым ЖПИ хаттамасына және ЖКО-ның сипатына сай."
+        "ru": "Направление и свежесть повреждения соответствуют удару сзади.",
+        "en": "The direction and freshness of the damage are consistent with a rear impact.",
+        "tr": "The direction and freshness of the damage are consistent with a rear impact.",
+        "ar": "The direction and freshness of the damage are consistent with a rear impact.",
+        "kk": "Направление и свежесть повреждения соответствуют удару сзади."
       },
-      "meta": {
-        "filename": "IMG_20260422_181205.jpg",
-        "imageUrl": "evidence/case-024-ev-photo.jpg"
-      }
+      "narrativeRole": "proof",
+      "statementLink": {
+        "statementId": "claim_damage_fresh",
+        "relation": "supports",
+        "reason": {
+          "ru": "Направление и свежесть повреждения соответствуют удару сзади.",
+          "en": "The direction and freshness of the damage are consistent with a rear impact.",
+          "tr": "The direction and freshness of the damage are consistent with a rear impact.",
+          "ar": "The direction and freshness of the damage are consistent with a rear impact.",
+          "kk": "Направление и свежесть повреждения соответствуют удару сзади."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "ev-estimate",
+      "order": 4,
       "type": "document",
       "title": {
-        "ru": "Смета на ремонт",
+        "ru": "Смета ремонта",
         "en": "Repair Estimate",
-        "tr": "Onarım Tahmini",
-        "ar": "تقدير الإصلاح",
-        "kk": "Жөндеу сметасы"
+        "tr": "Repair Estimate",
+        "ar": "Repair Estimate",
+        "kk": "Смета ремонта"
       },
       "content": {
-        "ru": "Калькуляция автосервиса: замена заднего бампера и левого заднего фонаря, окраска, нормо-часы. Итоговая сумма — 2000 евро, что соответствует заявленной компенсации.",
-        "en": "A garage calculation: replacement of the rear bumper and the left rear light, painting, labour hours. Total — €2,000, matching the requested compensation.",
-        "tr": "Servis hesabı: arka tampon ve sol arka stop lambasının değişimi, boya, işçilik saatleri. Toplam — 2.000 avro, talep edilen tazminatla uyumlu.",
-        "ar": "حساب الورشة: استبدال المصد الخلفي والضوء الخلفي الأيسر، الطلاء، ساعات العمل. الإجمالي — 2000 يورو، مطابق للتعويض المطلوب.",
-        "kk": "Автосервис калькуляциясы: артқы бампер мен сол жақ артқы шамды ауыстыру, бояу, норма-сағаттар. Жалпы сома — 2000 еуро, сұралған өтемақыға сай."
+        "ru": "Сервис включает замену фонаря, ремонт бампера и креплений. Стоимость соответствует среднерыночной и не содержит лишних работ.",
+        "en": "The repair shop lists a replacement tail light and repairs to the bumper and mounts. The cost matches market rates and includes no unnecessary work.",
+        "tr": "The repair shop lists a replacement tail light and repairs to the bumper and mounts. The cost matches market rates and includes no unnecessary work.",
+        "ar": "The repair shop lists a replacement tail light and repairs to the bumper and mounts. The cost matches market rates and includes no unnecessary work.",
+        "kk": "Сервис включает замену фонаря, ремонт бампера и креплений. Стоимость соответствует среднерыночной и не содержит лишних работ."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Перечень работ соответствует зафиксированным повреждениям, а сумма совпадает с заявленной.",
-        "en": "The list of works matches the recorded damage, and the amount equals the claimed sum.",
-        "tr": "İşler listesi kaydedilen hasarla örtüşür ve tutar talep edilen meblağa eşittir.",
-        "ar": "تتوافق قائمة الأعمال مع الأضرار المسجَّلة، والمبلغ يساوي المبلغ المطالب به.",
-        "kk": "Жұмыстар тізімі тіркелген зақымға сай, ал сома мәлімделгенмен бірдей."
-      }
+        "ru": "Сумма требования соразмерна реальному ущербу.",
+        "en": "The amount claimed is proportionate to the actual damage.",
+        "tr": "The amount claimed is proportionate to the actual damage.",
+        "ar": "The amount claimed is proportionate to the actual damage.",
+        "kk": "Сумма требования соразмерна реальному ущербу."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_repair_scope",
+        "relation": "supports",
+        "reason": {
+          "ru": "Сумма требования соразмерна реальному ущербу.",
+          "en": "The amount claimed is proportionate to the actual damage.",
+          "tr": "The amount claimed is proportionate to the actual damage.",
+          "ar": "The amount claimed is proportionate to the actual damage.",
+          "kk": "Сумма требования соразмерна реальному ущербу."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5
     }
   ],
   "correctDecision": "approve",
   "explanation": {
     "ru": [
-      "Детализация подтверждает звонок в 112 с места и в момент ДТП.",
-      "Протокол ГИБДД, фото и смета согласованы между собой и с рассказом.",
-      "Заявление достоверное, его следует одобрить."
+      "Звонок, схема и фото совпадают по времени и механизму аварии.",
+      "Заявительница не включила в расчёт старые повреждения.",
+      "ДТП и сумма ремонта подтверждены. Выплату следует одобрить."
     ],
     "en": [
-      "The phone records confirm the 112 call from the scene at the time of the crash.",
-      "The traffic-police report, photo and estimate all agree with each other and the account.",
-      "The claim is genuine and should be approved."
+      "The call confirms the time and location immediately after the collision.",
+      "The official diagram matches the claimant's account.",
+      "The direction and freshness of the damage are consistent with a rear impact.",
+      "The amount claimed is proportionate to the actual damage.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "tr": [
-      "Arama dökümü, kaza anında olay yerinden yapılan 112 aramasını doğruluyor.",
-      "Trafik polisi tutanağı, fotoğraf ve tahmin birbiriyle ve anlatımla uyumlu.",
-      "Talep gerçek ve onaylanmalı."
+      "The call confirms the time and location immediately after the collision.",
+      "The official diagram matches the claimant's account.",
+      "The direction and freshness of the damage are consistent with a rear impact.",
+      "The amount claimed is proportionate to the actual damage.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "ar": [
-      "يؤكد سجل المكالمات مكالمة 112 من موقع الحادث وقت وقوعه.",
-      "محضر شرطة المرور والصورة والتقدير متوافقة فيما بينها ومع الرواية.",
-      "المطالبة صحيحة ويجب الموافقة عليها."
+      "The call confirms the time and location immediately after the collision.",
+      "The official diagram matches the claimant's account.",
+      "The direction and freshness of the damage are consistent with a rear impact.",
+      "The amount claimed is proportionate to the actual damage.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "kk": [
-      "Детализация ЖКО кезінде оқиға орнынан 112-ге қоңырауды растайды.",
-      "ЖПИ хаттамасы, сурет пен смета өзара әрі әңгімемен үйлеседі.",
-      "Талап шынайы, оны мақұлдау керек."
+      "Звонок, схема и фото совпадают по времени и механизму аварии.",
+      "Заявительница не включила в расчёт старые повреждения.",
+      "ДТП и сумма ремонта подтверждены. Выплату следует одобрить."
     ]
+  },
+  "investigationBudget": 3,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "22 апреля около 17:40 я остановилась перед пешеходным переходом, когда сзади в автомобиль въехала другая машина. Повреждены бампер и левый фонарь. Я сразу позвонила в экстренную службу. Прошу компенсировать ремонт.",
+        "en": "At about 5:40 p.m. on April 22, I stopped before a pedestrian crossing when another car struck mine from behind. The bumper and left tail light were damaged. I immediately called emergency services. I am claiming the repair cost.",
+        "tr": "At about 5:40 p.m. on April 22, I stopped before a pedestrian crossing when another car struck mine from behind. The bumper and left tail light were damaged. I immediately called emergency services. I am claiming the repair cost.",
+        "ar": "At about 5:40 p.m. on April 22, I stopped before a pedestrian crossing when another car struck mine from behind. The bumper and left tail light were damaged. I immediately called emergency services. I am claiming the repair cost.",
+        "kk": "22 апреля около 17:40 я остановилась перед пешеходным переходом, когда сзади в автомобиль въехала другая машина. Повреждены бампер и левый фонарь. Я сразу позвонила в экстренную службу. Прошу компенсировать ремонт."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_collision",
+      "text": {
+        "ru": "В 17:41 автомобиль Гордеевой получил удар сзади.",
+        "en": "At 5:41 p.m., Gordeyeva's car was struck from behind.",
+        "tr": "At 5:41 p.m., Gordeyeva's car was struck from behind.",
+        "ar": "At 5:41 p.m., Gordeyeva's car was struck from behind.",
+        "kk": "В 17:41 автомобиль Гордеевой получил удар сзади."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_damage_fresh",
+      "text": {
+        "ru": "Заявленные повреждения возникли в этом ДТП.",
+        "en": "The claimed damage resulted from this collision.",
+        "tr": "The claimed damage resulted from this collision.",
+        "ar": "The claimed damage resulted from this collision.",
+        "kk": "Заявленные повреждения возникли в этом ДТП."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_repair_scope",
+      "text": {
+        "ru": "Смета включает только ремонт последствий этого столкновения.",
+        "en": "The estimate covers only damage caused by this collision.",
+        "tr": "The estimate covers only damage caused by this collision.",
+        "ar": "The estimate covers only damage caused by this collision.",
+        "kk": "Смета включает только ремонт последствий этого столкновения."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Небольшой ущерб не означает маленькую ответственность. Проверьте время, место, направление деформации и сумму. — В. Лебедева",
+      "en": "A small loss does not mean a minor responsibility. Verify the time, place, direction of impact, and amount. — V. Lebedeva",
+      "tr": "A small loss does not mean a minor responsibility. Verify the time, place, direction of impact, and amount. — V. Lebedeva",
+      "ar": "A small loss does not mean a minor responsibility. Verify the time, place, direction of impact, and amount. — V. Lebedeva",
+      "kk": "Небольшой ущерб не означает маленькую ответственность. Проверьте время, место, направление деформации и сумму. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Никакой тайной сети. Просто человек остановился перед пешеходом, а другой не успел. Кампания должна оставаться миром, а не одной бесконечной схемой.",
+      "en": "No secret network this time. One driver stopped for a pedestrian and another failed to stop in time. The campaign must remain a world, not one endless conspiracy.",
+      "tr": "No secret network this time. One driver stopped for a pedestrian and another failed to stop in time. The campaign must remain a world, not one endless conspiracy.",
+      "ar": "No secret network this time. One driver stopped for a pedestrian and another failed to stop in time. The campaign must remain a world, not one endless conspiracy.",
+      "kk": "Никакой тайной сети. Просто человек остановился перед пешеходом, а другой не успел. Кампания должна оставаться миром, а не одной бесконечной схемой."
+    },
+    "nextCaseTeaser": {
+      "ru": "В кафе сгорела барная стойка. Владелец должен денег, но причина пожара может оказаться чужой ошибкой.",
+      "en": "A café's bar area has burned down. The owner is in debt, but the fire may have been caused by someone else's mistake.",
+      "tr": "A café's bar area has burned down. The owner is in debt, but the fire may have been caused by someone else's mistake.",
+      "ar": "A café's bar area has burned down. The owner is in debt, but the fire may have been caused by someone else's mistake.",
+      "kk": "В кафе сгорела барная стойка. Владелец должен денег, но причина пожара может оказаться чужой ошибкой."
+    },
+    "seasonClue": null,
+    "epilogue": null
   }
 }

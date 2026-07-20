@@ -1,0 +1,608 @@
+{
+  "id": "case-040",
+  "campaignOrder": 38,
+  "requiredLevel": 19,
+  "act": 4,
+  "actTitle": {
+    "ru": "Серый конвой",
+    "en": "The Gray Convoy"
+  },
+  "title": {
+    "ru": "Пожар на «Лунном склоне»",
+    "en": "The Fire at Moon Slope"
+  },
+  "difficulty": "hard",
+  "claimAmount": {
+    "value": 22100,
+    "currency": "EUR"
+  },
+  "groundTruth": "valid",
+  "correctDecision": "approve",
+  "investigationBudget": 4,
+  "claimant": {
+    "name": {
+      "ru": "Мирон Вейл, 52 года",
+      "en": "Miron Veil, age 52"
+    },
+    "migrationNote": {
+      "ru": "Сохранить имя и портрет, но перенести действие с буквальной лунной фермы на удалённый высокогорный агрокомплекс «Лунный склон». Изменить ground truth на valid.",
+      "en": "Keep the name and portrait, but move the setting from a literal lunar farm to the remote high-altitude Moon Slope agricultural complex. Change the ground truth to valid."
+    },
+    "portrait": {
+      "characterId": "miron-veil-grounded",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Мирон Вейл",
+        "en": "Miron Veil, age 52"
+      },
+      "assetId": "asset-068",
+      "src": "src/data/cases/case-040/people/miron-veil-grounded.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-040/people/miron-veil-grounded.webp",
+      "caseRelativeSrc": "people/miron-veil-grounded.webp",
+      "installTo": "public/people/miron-veil-grounded.webp",
+      "legacyRuntimeUrl": "people/miron-veil-grounded.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "fd99b21412ac2935f4c2a5ada255e4ba33342f2dbc28e24866bc980b661d6914"
+    },
+    "portraitStatus": "generated_replacement_included",
+    "portraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/miron-veil-grounded.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-040/people/miron-veil-grounded.webp",
+      "copyTo": "public/people/miron-veil-grounded.webp",
+      "replacesExistingValue": "people/miron-veil.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Вейл обвиняет Серый конвой в поджоге. После десятков инсценировок удобнее всего решить, что он просто использует известное имя. Проверяйте следы, а не репутацию версии. — В. Лебедева",
+      "en": "Veil blames the Gray Convoy for the arson. After so many staged events, it is tempting to assume he is exploiting a familiar name. Check the evidence, not the reputation of the theory. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Впервые Серый конвой сам создал страховой ущерб, чтобы забрать оборудование и уничтожить следы. Сеть перестала быть только партнёром мошенников.",
+      "en": "For the first time, the Gray Convoy caused an insured loss itself to steal equipment and destroy evidence. The network is no longer merely a partner to fraudsters."
+    },
+    "nextCaseTeaser": {
+      "ru": "Северный маршрут ведёт в ледяной каньон, где разбился экспериментальный перехватчик с незаявленным грузом.",
+      "en": "The northern route leads to an icy canyon where an experimental interceptor crashed with undeclared cargo."
+    },
+    "seasonClue": {
+      "id": "gc-attack",
+      "label": {
+        "ru": "Реальное нападение Серого конвоя",
+        "en": "A Real Gray Convoy Attack"
+      },
+      "description": {
+        "ru": "Сеть поджигает объекты и похищает оборудование без согласия владельцев.",
+        "en": "The network is setting fires and stealing equipment without the owners' consent."
+      },
+      "progressIndex": 5,
+      "progressTotal": 6
+    },
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Ночью серый грузовик проник на удалённую ферму «Лунный склон». Неизвестные подожгли грузовой ангар и уничтожили запас испарительных модулей для полива. Я был в городе. Прошу возместить реальный ущерб и сезонную остановку работ.",
+    "en": "During the night, a gray truck entered the remote Moon Slope farm. Unknown intruders set fire to the cargo hangar and destroyed a stock of irrigation evaporator modules. I was in the city. I am claiming the actual loss and seasonal interruption."
+  },
+  "evidence": [
+    {
+      "id": "ev-photo",
+      "order": 1,
+      "type": "seal_match",
+      "title": {
+        "ru": "Сопоставление фитильной ленты",
+        "en": "Fuse-Tape Comparison"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Разрыв, пропитка и заводская сетка совпали: поджог у «Лунного склона» связан с реальным грузом Серого конвоя.",
+        "en": "The tear, coating, and factory mesh match: the Moon Slope arson is linked to genuine Gray Convoy cargo."
+      },
+      "previousType": "photo",
+      "description": {
+        "ru": "Обгоревший фрагмент найден у служебной двери; контрольный кусок изъят из контейнера GC-17 по прошлому делу.",
+        "en": "The burned fragment was found by the service door; the reference piece was seized from a GC-17 container in the previous case."
+      },
+      "instruction": {
+        "ru": "Совместить уцелевшие края двух лент.",
+        "en": "Align the surviving edges of the two tapes."
+      },
+      "assets": {
+        "asset1": "assets/interactive/ev-photo-master-a.webp",
+        "asset2": "assets/interactive/ev-photo-fragments.json"
+      },
+      "data": {
+        "movableFragment": "B",
+        "allowRotation": true,
+        "rotationStep": 3,
+        "initialTransform": {
+          "x": 72,
+          "y": 18,
+          "rotation": -14
+        },
+        "targetTransform": {
+          "x": 132,
+          "y": 48,
+          "rotation": 6
+        },
+        "tolerance": {
+          "position": 10,
+          "rotation": 5
+        },
+        "expectedMatch": true,
+        "sourceSeed": 384017,
+        "fragmentASeed": 384017,
+        "fragmentBSeed": 384017,
+        "comparisonMarkers": [
+          {
+            "id": "tear_pattern",
+            "label": "Совпадают волокна, пропитка и участок внутренней сетки",
+            "labelEn": "Fibers, coating, and internal-mesh section match"
+          }
+        ]
+      },
+      "statementLink": {
+        "statementId": "claim_external_arson",
+        "relation": "supports",
+        "reason": {
+          "ru": "Разрыв, пропитка и заводская сетка совпали: поджог у «Лунного склона» связан с реальным грузом Серого конвоя.",
+          "en": "The tear, coating, and factory mesh match: the Moon Slope arson is linked to genuine Gray Convoy cargo."
+        }
+      },
+      "contradictionTarget": null,
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true,
+        "transparencyMode": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Совпадение отличает настоящий след сети от удобной подброшенной серой ленты.",
+          "en": "The match distinguishes a genuine network trace from conveniently planted gray tape."
+        },
+        "playerAction": {
+          "ru": "Совместить уцелевшие края двух лент.",
+          "en": "Align the surviving edges of the two tapes."
+        },
+        "conclusion": {
+          "ru": "Разрыв, пропитка и заводская сетка совпали: поджог у «Лунного склона» связан с реальным грузом Серого конвоя.",
+          "en": "The tear, coating, and factory mesh match: the Moon Slope arson is linked to genuine Gray Convoy cargo."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-071",
+          "role": "interactive_master_a",
+          "src": "src/data/cases/case-040/assets/interactive/ev-photo-master-a.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-040/assets/interactive/ev-photo-master-a.webp",
+          "caseRelativeSrc": "assets/interactive/ev-photo-master-a.webp",
+          "installTo": "src/data/cases/case-040/assets/interactive/ev-photo-master-a.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1400,
+          "height": 500,
+          "sha256": "f734b8b42d61b59d399d0c82a7552c891733d157e7984cfa58444a989dce88cc"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-040/assets/interactive/ev-photo-master-a.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-040/assets/interactive/ev-photo-master-a.webp",
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-camera",
+      "order": 2,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера горной дороги",
+        "en": "Mountain Road Camera"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "В 01:42 к ферме поднимается серый грузовик с модульным контейнером. В 02:19 он уезжает; в кузове видны похищенные блоки полива.",
+        "en": "At 1:42 a.m., a gray truck carrying a modular container climbs toward the farm. It leaves at 2:19 a.m. with the stolen irrigation units visible inside."
+      },
+      "statusExplanation": {
+        "ru": "Независимая камера подтверждает прибытие постороннего транспорта и вывоз имущества.",
+        "en": "Independent footage confirms the arrival of an outside vehicle and removal of the property."
+      },
+      "statementLink": {
+        "statementId": "claim_external_arson",
+        "relation": "supports",
+        "reason": {
+          "ru": "Независимая камера подтверждает прибытие постороннего транспорта и вывоз имущества.",
+          "en": "Independent footage confirms the arrival of an outside vehicle and removal of the property."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-070",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-040/evidence/case-040-ev-camera.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-040/evidence/case-040-ev-camera.webp",
+          "caseRelativeSrc": "evidence/case-040-ev-camera.webp",
+          "installTo": "public/evidence/case-040-ev-camera.webp",
+          "legacyRuntimeUrl": "evidence/case-040-ev-camera.webp",
+          "format": "webp",
+          "width": 1448,
+          "height": 1086,
+          "sha256": "5b99532ee364cb5304452aa121f4bd35179601d919ef48db411ad4f00caa04a7"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-040/evidence/case-040-ev-camera.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-040/evidence/case-040-ev-camera.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-040-ev-camera.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-040/evidence/case-040-ev-camera.webp",
+        "copyTo": "public/evidence/case-040-ev-camera.webp"
+      }
+    },
+    {
+      "id": "ev-access",
+      "order": 3,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал ворот",
+        "en": "Gate Log"
+      },
+      "isContradiction": false,
+      "narrativeRole": "arc_proof",
+      "text": {
+        "ru": "Ворота открыты клонированным сервисным пропуском, ранее обнаруженным среди данных GC-17. Ключи Вейла не использовались.",
+        "en": "The gate was opened with a cloned service pass previously found in GC-17 data. Veil's keys were not used."
+      },
+      "statusExplanation": {
+        "ru": "Доступ получен инструментом сети, а не владельцем.",
+        "en": "The network's access tool, not the owner, opened the gate."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Доступ получен инструментом сети, а не владельцем.",
+          "en": "The network's access tool, not the owner, opened the gate."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-alibi",
+      "order": 4,
+      "type": "phone_records",
+      "title": {
+        "ru": "Подтверждение местонахождения Вейла",
+        "en": "Confirmation of Veil's Location"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Телефон, банковская карта и камера гостиницы фиксируют Вейла в городе в 190 км от фермы всю ночь.",
+        "en": "Phone, bank-card, and hotel-camera records place Veil in the city, 190 km from the farm, throughout the night."
+      },
+      "statusExplanation": {
+        "ru": "Независимые источники подтверждают алиби владельца.",
+        "en": "Independent sources confirm the owner's alibi."
+      },
+      "statementLink": {
+        "statementId": "claim_owner_absent",
+        "relation": "supports",
+        "reason": {
+          "ru": "Независимые источники подтверждают алиби владельца.",
+          "en": "Independent sources confirm the owner's alibi."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-inventory",
+      "order": 5,
+      "type": "document",
+      "title": {
+        "ru": "Опись модулей",
+        "en": "Module Inventory"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Модули закуплены и установлены на складе до пожара. Серийные номера видны в кузове грузовика на улучшенном кадре.",
+        "en": "The modules were purchased and stored before the fire. Their serial numbers are visible in enhanced footage of the truck."
+      },
+      "statusExplanation": {
+        "ru": "Существование и похищение имущества подтверждены.",
+        "en": "The property's existence and theft are confirmed."
+      },
+      "statementLink": {
+        "statementId": "claim_modules_stolen",
+        "relation": "supports",
+        "reason": {
+          "ru": "Существование и похищение имущества подтверждены.",
+          "en": "The property's existence and theft are confirmed."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-route",
+      "order": 6,
+      "type": "gps",
+      "title": {
+        "ru": "Дорожные считыватели",
+        "en": "Road Readers"
+      },
+      "isContradiction": false,
+      "narrativeRole": "arc_context",
+      "text": {
+        "ru": "Грузовик следует от фермы к северному терминалу Серого конвоя, минуя Восточный двор.",
+        "en": "The truck travels from the farm to the Gray Convoy's northern terminal, bypassing Eastern Yard."
+      },
+      "statusExplanation": {
+        "ru": "Дело раскрывает следующий узел сети.",
+        "en": "The case reveals the network's next hub."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Дело раскрывает следующий узел сети.",
+          "en": "The case reveals the network's next hub."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Пожар начался снаружи, а на горной дороге зафиксирован серый грузовик.",
+      "Пропуск принадлежит инфраструктуре GC-17, Вейл находился в другом городе.",
+      "Разрыв, пропитка и заводская сетка совпали: поджог у «Лунного склона» связан с реальным грузом Серого конвоя.",
+      "Модули похищены, ущерб и остановка работ реальны. Выплату следует одобрить."
+    ],
+    "en": [
+      "The tear, coating, and factory mesh match: the Moon Slope arson is linked to genuine Gray Convoy cargo.",
+      "Independent footage confirms the arrival of an outside vehicle and removal of the property.",
+      "Independent sources confirm the owner's alibi.",
+      "The property's existence and theft are confirmed.",
+      "The network's access tool, not the owner, opened the gate.",
+      "No material statement has been disproven. The claim should be approved."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Убрать буквальную лунную и космооперную среду.",
+      "Изменить вердикт на valid, чтобы сеть стала реальной угрозой.",
+      "Сделать поджог внешним и доказуемым.",
+      "Интегрировать seal_match в улику ev-photo; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate seal_match into evidence ev-photo; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "people/miron-veil-grounded.webp",
+      "action": "generate_if_needed",
+      "prompt": "Illustrated archival claimant ID portrait matching the existing insurance detective game: male remote mountain farm owner, 52 years old, weathered face, practical insulated work jacket, calm resilient expression, neutral document-photo background, original appearance, no space suit, no futuristic armor, no logos, no text, no watermark."
+    },
+    {
+      "file": "evidence/case-040-ev-farm.webp",
+      "action": "generate",
+      "prompt": "Remote high-altitude agricultural complex at night after an arson attack: a modest cargo hangar burning near the service door, terraced fields and irrigation structures under moonlight, realistic mountain environment, no lunar surface, no spacecraft, no sci-fi uniforms, documentary insurance evidence style, no logos, no text, no watermark."
+    },
+    {
+      "file": "evidence/case-040-ev-camera.webp",
+      "action": "generate",
+      "prompt": "Grainy mountain road security camera frame at night showing an unmarked gray cargo truck leaving a remote farm, several compact irrigation modules visible in the open rear container, realistic road and scale, no readable plate, no logos, no text, no watermark."
+    },
+    {
+      "file": "assets/interactive/ev-photo-master-a.webp",
+      "purpose": "Цельный мастер пломбы или контрольного фрагмента A",
+      "resolution": "1400×500",
+      "format": "WebP",
+      "transparency": true,
+      "generatedBy": "image_model",
+      "manualPost": "Убрать случайный текст; сохранить альфа-канал; разрезать процедурно по sourceSeed.",
+      "prompt": "Create a realistic intact security seal or evidence control label for a fictional insurance investigation. Два фрагмента серой промышленной фитильной ленты, один частично обгоревший, абстрактная сетка без маркировки. Front view, full object, transparent background, detailed fibers, adhesive or polymer texture, abstract protection pattern, no real logo or brand, no watermark, no critical readable text, restrained utilitarian evidence style. Keep edges suitable for procedural tearing.",
+      "evidenceId": "ev-photo",
+      "evidenceType": "seal_match"
+    },
+    {
+      "file": "assets/interactive/ev-photo-fragments.json",
+      "purpose": "Seed разрыва, трансформации и допуски",
+      "resolution": "normalized component space",
+      "format": "JSON",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "Сгенерировать fragment-a.webp и fragment-b.webp из master-файлов; проверить drag/rotate/snap.",
+      "prompt": null,
+      "evidenceId": "ev-photo",
+      "evidenceType": "seal_match"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Ночью серый грузовик проник на удалённую ферму «Лунный склон». Неизвестные подожгли грузовой ангар и уничтожили запас испарительных модулей для полива. Я был в городе. Прошу возместить реальный ущерб и сезонную остановку работ.",
+        "en": "During the night, a gray truck entered the remote Moon Slope farm. Unknown intruders set fire to the cargo hangar and destroyed a stock of irrigation evaporator modules. I was in the city. I am claiming the actual loss and seasonal interruption."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_external_arson",
+      "text": {
+        "ru": "Ангар подожгли посторонние, прибывшие на сером грузовике.",
+        "en": "Outsiders arriving in a gray truck set fire to the hangar."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_owner_absent",
+      "text": {
+        "ru": "Вейл отсутствовал и не открывал ворота своим ключом.",
+        "en": "Veil was away and did not open the gate with his key."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_modules_stolen",
+      "text": {
+        "ru": "Модули существовали и были похищены после поджога.",
+        "en": "The modules existed and were stolen during the arson."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-040",
+    "archiveBasePath": "generated-assets/src/data/cases/case-040",
+    "claimantPortrait": {
+      "characterId": "miron-veil-grounded",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Мирон Вейл",
+        "en": "Miron Veil, age 52"
+      },
+      "assetId": "asset-068",
+      "src": "src/data/cases/case-040/people/miron-veil-grounded.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-040/people/miron-veil-grounded.webp",
+      "caseRelativeSrc": "people/miron-veil-grounded.webp",
+      "installTo": "public/people/miron-veil-grounded.webp",
+      "legacyRuntimeUrl": "people/miron-veil-grounded.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "fd99b21412ac2935f4c2a5ada255e4ba33342f2dbc28e24866bc980b661d6914"
+    },
+    "claimantPortraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/miron-veil-grounded.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-040/people/miron-veil-grounded.webp",
+      "copyTo": "public/people/miron-veil-grounded.webp",
+      "replacesExistingValue": "people/miron-veil.webp"
+    },
+    "caseSceneAssets": [
+      {
+        "assetId": "asset-069",
+        "role": "case_scene",
+        "src": "src/data/cases/case-040/evidence/case-040-ev-farm.webp",
+        "archiveSrc": "generated-assets/src/data/cases/case-040/evidence/case-040-ev-farm.webp",
+        "caseRelativeSrc": "evidence/case-040-ev-farm.webp",
+        "installTo": "public/evidence/case-040-ev-farm.webp",
+        "legacyRuntimeUrl": "evidence/case-040-ev-farm.webp",
+        "format": "webp",
+        "width": 1448,
+        "height": 1086,
+        "sha256": "84a63ce9b231ab6c7a29d89f52db44d71cba3d92ff9b7badf742736b815d5744"
+      }
+    ],
+    "evidence": [
+      {
+        "evidenceId": "ev-photo",
+        "title": {
+          "ru": "Сопоставление фитильной ленты",
+          "en": "Fuse-Tape Comparison"
+        },
+        "primaryImage": "src/data/cases/case-040/assets/interactive/ev-photo-master-a.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-040/assets/interactive/ev-photo-master-a.webp",
+        "legacyImageBinding": null,
+        "assets": [
+          {
+            "assetId": "asset-071",
+            "role": "interactive_master_a",
+            "src": "src/data/cases/case-040/assets/interactive/ev-photo-master-a.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-040/assets/interactive/ev-photo-master-a.webp",
+            "caseRelativeSrc": "assets/interactive/ev-photo-master-a.webp",
+            "installTo": "src/data/cases/case-040/assets/interactive/ev-photo-master-a.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1400,
+            "height": 500,
+            "sha256": "f734b8b42d61b59d399d0c82a7552c891733d157e7984cfa58444a989dce88cc"
+          }
+        ]
+      },
+      {
+        "evidenceId": "ev-camera",
+        "title": {
+          "ru": "Камера горной дороги",
+          "en": "Mountain Road Camera"
+        },
+        "primaryImage": "src/data/cases/case-040/evidence/case-040-ev-camera.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-040/evidence/case-040-ev-camera.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-040-ev-camera.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-040/evidence/case-040-ev-camera.webp",
+          "copyTo": "public/evidence/case-040-ev-camera.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-070",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-040/evidence/case-040-ev-camera.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-040/evidence/case-040-ev-camera.webp",
+            "caseRelativeSrc": "evidence/case-040-ev-camera.webp",
+            "installTo": "public/evidence/case-040-ev-camera.webp",
+            "legacyRuntimeUrl": "evidence/case-040-ev-camera.webp",
+            "format": "webp",
+            "width": 1448,
+            "height": 1086,
+            "sha256": "5b99532ee364cb5304452aa121f4bd35179601d919ef48db411ad4f00caa04a7"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,607 @@
+{
+  "id": "case-042",
+  "campaignOrder": 40,
+  "requiredLevel": 20,
+  "act": 4,
+  "actTitle": {
+    "ru": "Серый конвой",
+    "en": "The Gray Convoy"
+  },
+  "title": {
+    "ru": "Клинок, проданный до кражи",
+    "en": "The Blade Sold Before the Theft"
+  },
+  "difficulty": "medium",
+  "claimAmount": {
+    "value": 42800,
+    "currency": "EUR"
+  },
+  "groundTruth": "fraud",
+  "correctDecision": "reject",
+  "investigationBudget": 4,
+  "claimant": {
+    "name": {
+      "ru": "Селена Орвик, 34 года",
+      "en": "Selena Orvik, age 34"
+    },
+    "migrationNote": {
+      "ru": "Сохранить имя и портрет. Клинок — историческое холодное оружие, не энергетическое и не связанное с известной космической франшизой.",
+      "en": "Keep the name and portrait. The blade is a historical weapon, not an energy weapon and not connected to any recognizable space franchise."
+    },
+    "portrait": {
+      "characterId": "selena-orvik-grounded",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Селена Орвик",
+        "en": "Selena Orvik, age 34"
+      },
+      "assetId": "asset-075",
+      "src": "src/data/cases/case-042/people/selena-orvik-grounded.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-042/people/selena-orvik-grounded.webp",
+      "caseRelativeSrc": "people/selena-orvik-grounded.webp",
+      "installTo": "public/people/selena-orvik-grounded.webp",
+      "legacyRuntimeUrl": "people/selena-orvik-grounded.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "35aed9113d5c140cc81a8a873b32137d72b51d034a25a54a8ba2397057064767"
+    },
+    "portraitStatus": "generated_replacement_included",
+    "portraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/selena-orvik-grounded.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-042/people/selena-orvik-grounded.webp",
+      "copyTo": "public/people/selena-orvik-grounded.webp",
+      "replacesExistingValue": "people/selena-orvik.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Политический мотив звучит убедительно и потому удобен. Но деньги пришли на счёт за двенадцать часов до заявленного проникновения. — В. Лебедева",
+      "en": "A political motive sounds convincing, which makes it convenient. But the money reached the account twelve hours before the alleged break-in. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "В документах курьера найден пропуск в академию «Меридиан». Серый конвой хранит там маршрутные ключи и вербует стажёров. Следующий акт начинается внутри академии.",
+      "en": "A pass to Meridian Academy was found in the courier's records. The Gray Convoy stores route keys there and recruits trainees. The next act begins inside the academy."
+    },
+    "nextCaseTeaser": {
+      "ru": "В «Меридиане» исчез стажёр, который успел скопировать маршруты Серого конвоя. Наставник называет это похищением.",
+      "en": "A Meridian trainee vanished after copying Gray Convoy routes. His mentor calls it an abduction."
+    },
+    "seasonClue": null,
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Из семейного архива похитили церемониальный клинок XVII века. Витрина открыта без повреждений; я считаю кражу политическим посланием против семьи. Прошу выплатить страховую стоимость реликвии.",
+    "en": "A seventeenth-century ceremonial blade was stolen from my family archive. The display case was opened without damage; I believe the theft was a political message against my family. I am claiming the relic's insured value."
+  },
+  "evidence": [
+    {
+      "id": "ev-display",
+      "order": 1,
+      "type": "photo",
+      "title": {
+        "ru": "Фото витрины",
+        "en": "Display Case Photograph"
+      },
+      "isContradiction": true,
+      "narrativeRole": "suspicion",
+      "text": {
+        "ru": "Замок открыт правильным ключом, пыль на петлях не нарушена, стекло цело. Следов внешнего доступа нет.",
+        "en": "The lock was opened with the correct key, dust on the hinges is undisturbed, and the glass is intact. There is no sign of external entry."
+      },
+      "statusExplanation": {
+        "ru": "Витрину открыли штатно, а не вскрыли похитители.",
+        "en": "The display case was opened normally, not forced by thieves."
+      },
+      "statementLink": {
+        "statementId": "claim_forced_entry",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Витрину открыли штатно, а не вскрыли похитители.",
+          "en": "The display case was opened normally, not forced by thieves."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_forced_entry",
+        "reason": {
+          "ru": "Витрину открыли штатно, а не вскрыли похитители.",
+          "en": "The display case was opened normally, not forced by thieves."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-076",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-042/evidence/case-042-ev-display.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-042/evidence/case-042-ev-display.webp",
+          "caseRelativeSrc": "evidence/case-042-ev-display.webp",
+          "installTo": "public/evidence/case-042-ev-display.webp",
+          "legacyRuntimeUrl": "evidence/case-042-ev-display.webp",
+          "format": "webp",
+          "width": 1448,
+          "height": 1086,
+          "sha256": "347b22b1d936be7eb315c72530662108ee887c8e0e8e8a593d0b6529a0fdaa8d"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-042/evidence/case-042-ev-display.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-042/evidence/case-042-ev-display.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-042-ev-display.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-042/evidence/case-042-ev-display.webp",
+        "copyTo": "public/evidence/case-042-ev-display.webp"
+      }
+    },
+    {
+      "id": "ev-bank",
+      "order": 2,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Платёж аукционного посредника",
+        "en": "Auction Intermediary Payment"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "За двенадцать часов до «кражи» Орвик получила 60% стоимости клинка от закрытого аукционного дома.",
+        "en": "Twelve hours before the ‘theft,’ Orvik received 60% of the blade's value from a private auction house."
+      },
+      "statusExplanation": {
+        "ru": "Оплата за реликвию поступила до заявленного исчезновения.",
+        "en": "Payment for the relic arrived before its reported disappearance."
+      },
+      "statementLink": {
+        "statementId": "claim_no_sale",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Оплата за реликвию поступила до заявленного исчезновения.",
+          "en": "Payment for the relic arrived before its reported disappearance."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_no_sale",
+        "reason": {
+          "ru": "Оплата за реликвию поступила до заявленного исчезновения.",
+          "en": "Payment for the relic arrived before its reported disappearance."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-courier",
+      "order": 3,
+      "type": "seal_match",
+      "title": {
+        "ru": "Сопоставление контрольного ярлыка футляра",
+        "en": "Case Security-Tag Comparison"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Фрагменты совпали: Орвик сама передала курьеру футляр с застрахованным клинком до заявления о краже.",
+        "en": "The fragments match: Orvik personally gave the insured blade's case to a courier before reporting the theft."
+      },
+      "previousType": "social_media",
+      "description": {
+        "ru": "Фрагмент A остался в архивной витрине, фрагмент B приклеен к квитанции курьера.",
+        "en": "Fragment A remained in the archive display case; fragment B is attached to the courier receipt."
+      },
+      "instruction": {
+        "ru": "Совместить рваные края ярлыка.",
+        "en": "Align the tag's torn edges."
+      },
+      "assets": {
+        "asset1": "assets/interactive/ev-courier-master-a.webp",
+        "asset2": "assets/interactive/ev-courier-fragments.json"
+      },
+      "data": {
+        "movableFragment": "B",
+        "allowRotation": true,
+        "rotationStep": 3,
+        "initialTransform": {
+          "x": 72,
+          "y": 18,
+          "rotation": -14
+        },
+        "targetTransform": {
+          "x": 132,
+          "y": 48,
+          "rotation": 6
+        },
+        "tolerance": {
+          "position": 10,
+          "rotation": 5
+        },
+        "expectedMatch": true,
+        "sourceSeed": 404217,
+        "fragmentASeed": 404217,
+        "fragmentBSeed": 404217,
+        "comparisonMarkers": [
+          {
+            "id": "tear_pattern",
+            "label": "Совпадают волокна бумаги, разрыв и дефект рамки",
+            "labelEn": "Paper fibers, tear, and border defect match"
+          }
+        ]
+      },
+      "statementLink": {
+        "statementId": "claim_forced_entry",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Фрагменты совпали: Орвик сама передала курьеру футляр с застрахованным клинком до заявления о краже.",
+          "en": "The fragments match: Orvik personally gave the insured blade's case to a courier before reporting the theft."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_forced_entry",
+        "reason": {
+          "ru": "Фрагменты совпали: Орвик сама передала курьеру футляр с застрахованным клинком до заявления о краже.",
+          "en": "The fragments match: Orvik personally gave the insured blade's case to a courier before reporting the theft."
+        }
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true,
+        "transparencyMode": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Совпадение физически доказывает добровольную передачу именно застрахованного футляра.",
+          "en": "The match physically proves the voluntary transfer of the insured case."
+        },
+        "playerAction": {
+          "ru": "Совместить рваные края ярлыка.",
+          "en": "Align the tag's torn edges."
+        },
+        "conclusion": {
+          "ru": "Фрагменты совпали: Орвик сама передала курьеру футляр с застрахованным клинком до заявления о краже.",
+          "en": "The fragments match: Orvik personally gave the insured blade's case to a courier before reporting the theft."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-077",
+          "role": "interactive_master_a",
+          "src": "src/data/cases/case-042/assets/interactive/ev-courier-master-a.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-042/assets/interactive/ev-courier-master-a.webp",
+          "caseRelativeSrc": "assets/interactive/ev-courier-master-a.webp",
+          "installTo": "src/data/cases/case-042/assets/interactive/ev-courier-master-a.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1400,
+          "height": 500,
+          "sha256": "54307778e16f31b65c89237aee9544df562c5bd4d3b27118e0cb032a5882dead"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-042/assets/interactive/ev-courier-master-a.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-042/assets/interactive/ev-courier-master-a.webp",
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-access",
+      "order": 4,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал архива",
+        "en": "Archive Access Log"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "В помещение вошли по персональной карте Орвик; тревога отключена её кодом.",
+        "en": "Orvik's personal card opened the room, and her code disabled the alarm."
+      },
+      "statusExplanation": {
+        "ru": "Доступ осуществлён штатными средствами владелицы.",
+        "en": "The owner's normal credentials were used for access."
+      },
+      "statementLink": {
+        "statementId": "claim_forced_entry",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Доступ осуществлён штатными средствами владелицы.",
+          "en": "The owner's normal credentials were used for access."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_forced_entry",
+        "reason": {
+          "ru": "Доступ осуществлён штатными средствами владелицы.",
+          "en": "The owner's normal credentials were used for access."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-guard",
+      "order": 5,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания охранника",
+        "en": "Guard's Statement"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Охранник видел, как Орвик передала запечатанный футляр курьеру и назвала это отправкой на реставрацию.",
+        "en": "The guard saw Orvik give the sealed case to a courier, describing it as a restoration shipment."
+      },
+      "statusExplanation": {
+        "ru": "Независимый свидетель подтверждает добровольную передачу.",
+        "en": "An independent witness confirms the voluntary transfer."
+      },
+      "statementLink": {
+        "statementId": "claim_no_sale",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Независимый свидетель подтверждает добровольную передачу.",
+          "en": "An independent witness confirms the voluntary transfer."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_no_sale",
+        "reason": {
+          "ru": "Независимый свидетель подтверждает добровольную передачу.",
+          "en": "An independent witness confirms the voluntary transfer."
+        }
+      },
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-valuation",
+      "order": 6,
+      "type": "document",
+      "title": {
+        "ru": "Оценка реликвии",
+        "en": "Relic Appraisal"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Клинок подлинный и действительно стоит около 42 800 евро.",
+        "en": "The blade is genuine and worth approximately €42,800."
+      },
+      "statusExplanation": {
+        "ru": "Цена реальна, но не доказывает кражу.",
+        "en": "The value is genuine but does not prove theft."
+      },
+      "statementLink": {
+        "statementId": "claim_no_sale",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Цена реальна, но не доказывает кражу.",
+          "en": "The value is genuine but does not prove theft."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Витрина открыта штатно картой и ключом Орвик.",
+      "Она получила аванс и лично организовала отправку клинка через северный терминал GC-17.",
+      "Фрагменты совпали: Орвик сама передала курьеру футляр с застрахованным клинком до заявления о краже.",
+      "Политическая кража выдумана после продажи. Выплату следует отклонить."
+    ],
+    "en": [
+      "The display case was opened normally, not forced by thieves.",
+      "Payment for the relic arrived before its reported disappearance.",
+      "The fragments match: Orvik personally gave the insured blade's case to a courier before reporting the theft.",
+      "The owner's normal credentials were used for access.",
+      "An independent witness confirms the voluntary transfer.",
+      "The claim is fraudulent and should be rejected."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Убрать энергетический клинок и космооперную атрибутику.",
+      "Сделать реликвию оригинальной исторической ценностью.",
+      "Открыть путь к академии «Меридиан».",
+      "Интегрировать seal_match в улику ev-courier; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate seal_match into evidence ev-courier; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "people/selena-orvik-grounded.webp",
+      "action": "generate_if_needed",
+      "prompt": "Illustrated archival claimant ID portrait matching the existing insurance detective game: European female family archive owner, 34 years old, restrained formal jacket, composed aristocratic bearing without costume, cool controlled expression, neutral document-photo background, original face, no fantasy or space-opera styling, no logos, no text, no watermark."
+    },
+    {
+      "file": "evidence/case-042-ev-display.webp",
+      "action": "generate",
+      "prompt": "Forensic archive evidence photo of an empty museum display case for a historical seventeenth-century ceremonial sword, intact glass, properly unlocked mechanical lock and undisturbed dust on hinges, restrained private archive interior, no fantasy glow, no sci-fi elements, no logos, no text, no watermark."
+    },
+    {
+      "file": "assets/interactive/ev-courier-master-a.webp",
+      "purpose": "Цельный мастер пломбы или контрольного фрагмента A",
+      "resolution": "1400×500",
+      "format": "WebP",
+      "transparency": true,
+      "generatedBy": "image_model",
+      "manualPost": "Убрать случайный текст; сохранить альфа-канал; разрезать процедурно по sourceSeed.",
+      "prompt": "Create a realistic intact security seal or evidence control label for a fictional insurance investigation. Бумажный музейный контрольный ярлык с абстрактной рамкой и волокнистым рваным краем, без гербов и логотипов. Front view, full object, transparent background, detailed fibers, adhesive or polymer texture, abstract protection pattern, no real logo or brand, no watermark, no critical readable text, restrained utilitarian evidence style. Keep edges suitable for procedural tearing.",
+      "evidenceId": "ev-courier",
+      "evidenceType": "seal_match"
+    },
+    {
+      "file": "assets/interactive/ev-courier-fragments.json",
+      "purpose": "Seed разрыва, трансформации и допуски",
+      "resolution": "normalized component space",
+      "format": "JSON",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "Сгенерировать fragment-a.webp и fragment-b.webp из master-файлов; проверить drag/rotate/snap.",
+      "prompt": null,
+      "evidenceId": "ev-courier",
+      "evidenceType": "seal_match"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Из семейного архива похитили церемониальный клинок XVII века. Витрина открыта без повреждений; я считаю кражу политическим посланием против семьи. Прошу выплатить страховую стоимость реликвии.",
+        "en": "A seventeenth-century ceremonial blade was stolen from my family archive. The display case was opened without damage; I believe the theft was a political message against my family. I am claiming the relic's insured value."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_theft",
+      "text": {
+        "ru": "Церемониальный клинок был похищен из закрытой витрины.",
+        "en": "The ceremonial blade was stolen from a locked display case."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_forced_entry",
+      "text": {
+        "ru": "Витрину вскрыли посторонние, а владелица не передавала футляр.",
+        "en": "Outsiders forced the display case, and the owner did not transfer the case."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_no_sale",
+      "text": {
+        "ru": "Орвик не продавала клинок и не получала за него аванс.",
+        "en": "Orvik did not sell the blade or receive an advance for it."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-042",
+    "archiveBasePath": "generated-assets/src/data/cases/case-042",
+    "claimantPortrait": {
+      "characterId": "selena-orvik-grounded",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Селена Орвик",
+        "en": "Selena Orvik, age 34"
+      },
+      "assetId": "asset-075",
+      "src": "src/data/cases/case-042/people/selena-orvik-grounded.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-042/people/selena-orvik-grounded.webp",
+      "caseRelativeSrc": "people/selena-orvik-grounded.webp",
+      "installTo": "public/people/selena-orvik-grounded.webp",
+      "legacyRuntimeUrl": "people/selena-orvik-grounded.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "35aed9113d5c140cc81a8a873b32137d72b51d034a25a54a8ba2397057064767"
+    },
+    "claimantPortraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/selena-orvik-grounded.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-042/people/selena-orvik-grounded.webp",
+      "copyTo": "public/people/selena-orvik-grounded.webp",
+      "replacesExistingValue": "people/selena-orvik.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-display",
+        "title": {
+          "ru": "Фото витрины",
+          "en": "Display Case Photograph"
+        },
+        "primaryImage": "src/data/cases/case-042/evidence/case-042-ev-display.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-042/evidence/case-042-ev-display.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-042-ev-display.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-042/evidence/case-042-ev-display.webp",
+          "copyTo": "public/evidence/case-042-ev-display.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-076",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-042/evidence/case-042-ev-display.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-042/evidence/case-042-ev-display.webp",
+            "caseRelativeSrc": "evidence/case-042-ev-display.webp",
+            "installTo": "public/evidence/case-042-ev-display.webp",
+            "legacyRuntimeUrl": "evidence/case-042-ev-display.webp",
+            "format": "webp",
+            "width": 1448,
+            "height": 1086,
+            "sha256": "347b22b1d936be7eb315c72530662108ee887c8e0e8e8a593d0b6529a0fdaa8d"
+          }
+        ]
+      },
+      {
+        "evidenceId": "ev-courier",
+        "title": {
+          "ru": "Сопоставление контрольного ярлыка футляра",
+          "en": "Case Security-Tag Comparison"
+        },
+        "primaryImage": "src/data/cases/case-042/assets/interactive/ev-courier-master-a.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-042/assets/interactive/ev-courier-master-a.webp",
+        "legacyImageBinding": null,
+        "assets": [
+          {
+            "assetId": "asset-077",
+            "role": "interactive_master_a",
+            "src": "src/data/cases/case-042/assets/interactive/ev-courier-master-a.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-042/assets/interactive/ev-courier-master-a.webp",
+            "caseRelativeSrc": "assets/interactive/ev-courier-master-a.webp",
+            "installTo": "src/data/cases/case-042/assets/interactive/ev-courier-master-a.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1400,
+            "height": 500,
+            "sha256": "54307778e16f31b65c89237aee9544df562c5bd4d3b27118e0cb032a5882dead"
+          }
+        ]
+      }
+    ]
+  }
+}

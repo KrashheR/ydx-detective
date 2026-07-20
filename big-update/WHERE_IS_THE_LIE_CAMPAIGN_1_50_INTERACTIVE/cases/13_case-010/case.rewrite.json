@@ -1,0 +1,277 @@
+{
+  "id": "case-010",
+  "campaignOrder": 13,
+  "requiredLevel": 7,
+  "act": 2,
+  "actTitle": {
+    "ru": "Пять лет назад",
+    "en": "Five Years Earlier"
+  },
+  "title": {
+    "ru": "Двадцать две секунды на красном",
+    "en": "Twenty-Two Seconds at a Red Light"
+  },
+  "difficulty": "easy",
+  "claimAmount": {
+    "value": 3500,
+    "currency": "EUR"
+  },
+  "groundTruth": "valid",
+  "correctDecision": "approve",
+  "investigationBudget": 3,
+  "claimant": {
+    "name": {
+      "ru": "Матеус Феррейра, 31 год",
+      "en": "Mateus Ferreira, age 31"
+    },
+    "migrationNote": {
+      "ru": "Сохранить данные и портрет. Ввести брата Лукаса как свидетеля, чтобы честно подготовить возвращение фамилии в деле 50.",
+      "en": "Keep the existing profile data and portrait. Introduce his brother Lucas as a witness to establish the surname before its return in Case 50."
+    },
+    "portrait": null,
+    "portraitStatus": "retain_existing_project_portrait",
+    "portraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/mateus.webp",
+      "existingFile": "public/people/mateus.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "После двух отказов легко начать видеть ложь в каждом заявлении. Это профессиональная деформация, а не талант. — В. Лебедева",
+      "en": "After two rejected claims, it is easy to start seeing lies everywhere. That is professional bias, not talent. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Иногда лучший результат расследования — не найти ложь там, где её нет. Свидетель Лукас Феррейра внесён в материалы дела.",
+      "en": "Sometimes the best outcome is not finding a lie where none exists. Witness Lucas Ferreira has been entered into the case record."
+    },
+    "nextCaseTeaser": {
+      "ru": "В следующем доме замки целы, сигнализация снята правильным кодом, а драгоценности всё равно исчезли.",
+      "en": "At the next house, the locks are intact, the alarm was disarmed with the correct code, and the jewelry still vanished."
+    },
+    "seasonClue": null,
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Я остановился на красный сигнал и простоял около двадцати секунд, когда сзади в мою машину въехал седан. У меня диагностировали хлыстовую травму шеи, повреждены бампер и фонарь. Прошу оплатить лечение и ремонт.",
+    "en": "I stopped at a red light and had been stationary for about twenty seconds when a sedan struck my car from behind. I was diagnosed with whiplash, and my bumper and tail light were damaged. I am claiming the cost of treatment and repairs."
+  },
+  "evidence": [
+    {
+      "id": "ev-dashcam",
+      "order": 1,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Запись видеорегистратора",
+        "en": "Dashcam Footage"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Автомобиль Феррейры полностью остановлен у стоп-линии. Через двадцать две секунды сзади приближается седан без торможения и происходит удар.",
+        "en": "Ferreira's car is completely stationary at the stop line. Twenty-two seconds later, a sedan approaches from behind without braking and strikes it."
+      },
+      "statusExplanation": {
+        "ru": "Видео подтверждает, что заявитель стоял и не создавал аварийную ситуацию.",
+        "en": "The footage confirms that the claimant was stationary and did not create a hazard."
+      },
+      "statementLink": {
+        "statementId": "claim_collision",
+        "relation": "supports",
+        "reason": {
+          "ru": "Видео подтверждает, что заявитель стоял и не создавал аварийную ситуацию.",
+          "en": "The footage confirms that the claimant was stationary and did not create a hazard."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-er",
+      "order": 2,
+      "type": "document",
+      "title": {
+        "ru": "Медицинская выписка",
+        "en": "Medical Report"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Через 67 минут после ДТП зафиксированы боль в шее, ограничение подвижности и растяжение связок. Повреждения соответствуют резкому удару сзади.",
+        "en": "Sixty-seven minutes after the collision, doctors recorded neck pain, restricted movement, and a ligament strain. The injuries are consistent with a sudden rear impact."
+      },
+      "statusExplanation": {
+        "ru": "Время обращения и механизм травмы совпадают с аварией.",
+        "en": "The timing and mechanism of the injury match the collision."
+      },
+      "statementLink": {
+        "statementId": "claim_injury_damage",
+        "relation": "supports",
+        "reason": {
+          "ru": "Время обращения и механизм травмы совпадают с аварией.",
+          "en": "The timing and mechanism of the injury match the collision."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-police",
+      "order": 3,
+      "type": "document",
+      "title": {
+        "ru": "Протокол ДТП",
+        "en": "Collision Report"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Второй водитель признал, что отвлёкся на навигатор. Тормозной путь перед машиной Феррейры отсутствует. Вина возложена на водителя седана.",
+        "en": "The other driver admitted being distracted by the navigation system. There are no braking marks before Ferreira's car. The sedan driver was found at fault."
+      },
+      "statusExplanation": {
+        "ru": "Независимый протокол подтверждает обстоятельства и виновника.",
+        "en": "The independent report confirms both the circumstances and the at-fault driver."
+      },
+      "statementLink": {
+        "statementId": "claim_not_at_fault",
+        "relation": "supports",
+        "reason": {
+          "ru": "Независимый протокол подтверждает обстоятельства и виновника.",
+          "en": "The independent report confirms both the circumstances and the at-fault driver."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-lucas",
+      "order": 4,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания Лукаса Феррейры",
+        "en": "Statement from Lucas Ferreira"
+      },
+      "isContradiction": false,
+      "narrativeRole": "character_seed",
+      "text": {
+        "ru": "Брат заявителя приехал через двадцать минут после звонка. Он описал свежие повреждения, состояние Матеуса и присутствие второго водителя и полиции.",
+        "en": "The claimant's brother arrived twenty minutes after receiving a call. He described the fresh damage, Mateus's condition, and the presence of the other driver and police."
+      },
+      "statusExplanation": {
+        "ru": "Показания согласуются с записью и документами. Лукас впервые появляется в кампании как нейтральный свидетель.",
+        "en": "His statement matches the footage and documents. Lucas first appears in the campaign as a neutral witness."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Показания согласуются с записью и документами. Лукас впервые появляется в кампании как нейтральный свидетель.",
+          "en": "His statement matches the footage and documents. Lucas first appears in the campaign as a neutral witness."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Запись показывает неподвижный автомобиль и удар сзади.",
+      "Медицинские документы, протокол и свидетель совпадают по времени и обстоятельствам.",
+      "Заявление полностью подтверждено. Выплату следует одобрить."
+    ],
+    "en": [
+      "The footage confirms that the claimant was stationary and did not create a hazard.",
+      "The timing and mechanism of the injury match the collision.",
+      "The independent report confirms both the circumstances and the at-fault driver.",
+      "His statement matches the footage and documents. Lucas first appears in the campaign as a neutral witness.",
+      "No material statement has been disproven. The claim should be approved."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Усилить доказательную цепочку без искусственного подозрения.",
+      "Ввести Лукаса Феррейру задолго до финала."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order."
+    ]
+  },
+  "assetPlan": [],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Я остановился на красный сигнал и простоял около двадцати секунд, когда сзади в мою машину въехал седан. У меня диагностировали хлыстовую травму шеи, повреждены бампер и фонарь. Прошу оплатить лечение и ремонт.",
+        "en": "I stopped at a red light and had been stationary for about twenty seconds when a sedan struck my car from behind. I was diagnosed with whiplash, and my bumper and tail light were damaged. I am claiming the cost of treatment and repairs."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_collision",
+      "text": {
+        "ru": "Автомобиль Матеуса стоял на красном сигнале и получил удар сзади.",
+        "en": "Mateus's car was stationary at a red light when it was struck from behind."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_not_at_fault",
+      "text": {
+        "ru": "Матеус не двигался и не создавал аварийную ситуацию.",
+        "en": "Mateus was not moving and did not create a hazard."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_injury_damage",
+      "text": {
+        "ru": "Травма и ущерб возникли в результате этого столкновения.",
+        "en": "The injury and vehicle damage resulted from this collision."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 0,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-010",
+    "archiveBasePath": "generated-assets/src/data/cases/case-010",
+    "claimantPortrait": null,
+    "claimantPortraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/mateus.webp",
+      "existingFile": "public/people/mateus.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": []
+  }
+}

@@ -1,0 +1,599 @@
+{
+  "id": "case-036",
+  "campaignOrder": 34,
+  "requiredLevel": 17,
+  "act": 4,
+  "actTitle": {
+    "ru": "Серый конвой",
+    "en": "The Gray Convoy"
+  },
+  "title": {
+    "ru": "Невозможная скорость",
+    "en": "The Impossible Speed"
+  },
+  "difficulty": "hard",
+  "claimAmount": {
+    "value": 9800,
+    "currency": "EUR"
+  },
+  "groundTruth": "valid",
+  "correctDecision": "approve",
+  "investigationBudget": 4,
+  "claimant": {
+    "name": {
+      "ru": "Максим Ярцев, 41 год",
+      "en": "Maxim Yartsev, age 41"
+    },
+    "migrationNote": {
+      "ru": "Сохранить данные и портрет. Сделать технологию слегка футуристичной, но правдоподобной.",
+      "en": "Keep the existing profile data and portrait. Make the technology slightly futuristic but credible."
+    },
+    "portrait": {
+      "characterId": "maxim-yartsev",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Максим Ярцев",
+        "en": "Maxim Yartsev, age 41"
+      },
+      "assetId": "asset-057",
+      "src": "src/data/cases/case-036/people/maxim-yartsev.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-036/people/maxim-yartsev.webp",
+      "caseRelativeSrc": "people/maxim-yartsev.webp",
+      "installTo": "public/people/maxim-yartsev.webp",
+      "legacyRuntimeUrl": "people/maxim-yartsev.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "05024f12477f7dae98e70fbcb476ea01a46414dd7b35a1b0d3d0029aa946987e"
+    },
+    "portraitStatus": "generated_replacement_included",
+    "portraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/maxim-yartsev.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-036/people/maxim-yartsev.webp",
+      "copyTo": "public/people/maxim-yartsev.webp",
+      "replacesExistingValue": null
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Автомобиль стоял на зарядке, однако журнал записал 188 км/ч. Не выбирайте между невозможным и ложным, пока не проверите, что именно измеряет датчик. — В. Лебедева",
+      "en": "The car was charging, yet its log recorded 188 km/h. Do not choose between impossible and false until you verify what the sensor actually measures. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Невозможное число оказалось не ложью заявителя, а последним сообщением умирающего датчика.",
+      "en": "The impossible number was not the claimant's lie, but the final signal from a dying sensor."
+    },
+    "nextCaseTeaser": {
+      "ru": "На границе просветили грузовик и увидели внутри три человеческих силуэта. Людей в контейнере не оказалось.",
+      "en": "A border scan revealed three human silhouettes inside a truck. There were no people in the container."
+    },
+    "seasonClue": null,
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Во время грозы молния ударила в подстанцию, к которой был подключён мой экспериментальный электромобиль. Машина загорелась на зарядке, а телеметрия записала аномальный скачок скорости. Прошу оплатить восстановление.",
+    "en": "During a storm, lightning struck the substation supplying my experimental electric car. The vehicle caught fire while charging, and its telemetry recorded an abnormal speed spike. I am claiming the restoration cost."
+  },
+  "evidence": [
+    {
+      "id": "ev-weather",
+      "order": 1,
+      "type": "document",
+      "title": {
+        "ru": "Грозовая карта",
+        "en": "Lightning Map"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Мощный разряд зарегистрирован в подстанцию в 22:17:08.",
+        "en": "A powerful strike hit the substation at 10:17:08 p.m."
+      },
+      "statusExplanation": {
+        "ru": "Время и место удара подтверждены.",
+        "en": "The time and location of the strike are confirmed."
+      },
+      "statementLink": {
+        "statementId": "claim_lightning",
+        "relation": "supports",
+        "reason": {
+          "ru": "Время и место удара подтверждены.",
+          "en": "The time and location of the strike are confirmed."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-camera",
+      "order": 2,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера зарядной площадки",
+        "en": "Charging Area Camera"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Автомобиль неподвижен. В момент вспышки гаснет освещение, из зарядного порта появляется дуга, затем дым.",
+        "en": "The vehicle remains stationary. At the flash, the lights go out, an arc appears at the charging port, and smoke follows."
+      },
+      "statusExplanation": {
+        "ru": "Камера доказывает, что машина не двигалась и загорелась одновременно с разрядом.",
+        "en": "The camera proves that the car did not move and caught fire at the moment of the strike."
+      },
+      "statementLink": {
+        "statementId": "claim_stationary",
+        "relation": "supports",
+        "reason": {
+          "ru": "Камера доказывает, что машина не двигалась и загорелась одновременно с разрядом.",
+          "en": "The camera proves that the car did not move and caught fire at the moment of the strike."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-058",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-036/evidence/case-036-ev-camera.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-036/evidence/case-036-ev-camera.webp",
+          "caseRelativeSrc": "evidence/case-036-ev-camera.webp",
+          "installTo": "public/evidence/case-036-ev-camera.webp",
+          "legacyRuntimeUrl": "evidence/case-036-ev-camera.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "10069e0c91f781425ee9a40c97d6ebe9ebfca058085a398a5b50cdcb37d4f191"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-036/evidence/case-036-ev-camera.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-036/evidence/case-036-ev-camera.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-036-ev-camera.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-036/evidence/case-036-ev-camera.webp",
+        "copyTo": "public/evidence/case-036-ev-camera.webp"
+      }
+    },
+    {
+      "id": "ev-log",
+      "order": 3,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал телеметрии",
+        "en": "Telemetry Log"
+      },
+      "isContradiction": false,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "В 22:17:08 датчик колеса выдаёт импульс, интерпретированный как 188 км/ч. Остальные три колеса показывают 0, координаты не меняются.",
+        "en": "At 10:17:08 p.m., one wheel sensor sends a pulse interpreted as 188 km/h. The other three wheels read 0, and the coordinates do not change."
+      },
+      "statusExplanation": {
+        "ru": "Один повреждённый датчик создал ложную скорость; движение автомобиля исключено.",
+        "en": "A damaged sensor generated the false speed; vehicle movement is ruled out."
+      },
+      "statementLink": {
+        "statementId": "claim_false_speed",
+        "relation": "supports",
+        "reason": {
+          "ru": "Один повреждённый датчик создал ложную скорость; движение автомобиля исключено.",
+          "en": "A damaged sensor generated the false speed; vehicle movement is ruled out."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-gps",
+      "order": 4,
+      "type": "gps",
+      "title": {
+        "ru": "Маршрут автомобиля",
+        "en": "Vehicle Route"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Последнее перемещение завершено за два часа до грозы. Автомобиль остаётся в одной точке до эвакуации.",
+        "en": "The vehicle's last movement ended two hours before the storm. It remained at one location until recovery."
+      },
+      "statusExplanation": {
+        "ru": "GPS независимо подтверждает неподвижность.",
+        "en": "GPS independently confirms that the car did not move."
+      },
+      "statementLink": {
+        "statementId": "claim_stationary",
+        "relation": "supports",
+        "reason": {
+          "ru": "GPS независимо подтверждает неподвижность.",
+          "en": "GPS independently confirms that the car did not move."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-melt",
+      "order": 5,
+      "type": "thermal_scan",
+      "title": {
+        "ru": "Тепловая карта зарядного контура",
+        "en": "Charging Circuit Thermal Map"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Единственный перегретый путь проходит по зарядной линии; колёса и привод холодны, автомобиль не двигался.",
+        "en": "The only overheated path follows the charging line; the wheels and drivetrain are cold, confirming the vehicle did not move."
+      },
+      "previousType": "document",
+      "description": {
+        "ru": "Подстанция отключилась в 21:14:08. Пожарный расчёт обесточил зарядную линию в 21:16, а тепловая съёмка площадки началась в 21:24.",
+        "en": "The substation shut down at 9:14:08 p.m. Firefighters isolated the charging line at 9:16 p.m., and thermal imaging began at 9:24 p.m."
+      },
+      "instruction": {
+        "ru": "Включить тепловизор и выбрать непрерывный тепловой путь от кабеля к порту.",
+        "en": "Switch on thermal view and select the continuous heat path from the cable to the port."
+      },
+      "assets": {
+        "asset1": "assets/interactive/ev-melt-scene.webp",
+        "asset2": "assets/interactive/ev-melt-heat-zones.json"
+      },
+      "data": {
+        "ambientTemperature": 11,
+        "observationTime": "21:24",
+        "claimedLastUseBefore": "21:16",
+        "elapsedSinceClaimedUseMinutes": 8,
+        "coolingReference": "Силовой кабель и порт сохраняют тепло несколько десятков минут; холодный привод используется как контрольная зона.",
+        "initialMode": "normal",
+        "heatZones": [
+          {
+            "id": "charge_cable",
+            "shape": "polygon",
+            "points": [
+              [
+                18,
+                72
+              ],
+              [
+                39,
+                65
+              ],
+              [
+                62,
+                52
+              ]
+            ],
+            "temperature": 63,
+            "intensity": 0.96,
+            "label": "Нагретая зарядная линия",
+            "isContradiction": false,
+            "labelEn": "Heated charging line"
+          },
+          {
+            "id": "wheel_drive",
+            "shape": "ellipse",
+            "x": 65,
+            "y": 71,
+            "width": 20,
+            "height": 14,
+            "temperature": 12,
+            "intensity": 0.08,
+            "label": "Холодный привод",
+            "isContradiction": false,
+            "isTarget": false,
+            "labelEn": "Cold drivetrain"
+          }
+        ],
+        "successCondition": {
+          "type": "select_any",
+          "zoneIds": [
+            "charge_cable"
+          ]
+        },
+        "coolingReferenceEn": "The power cable and port retain heat for several dozen minutes; the cold drivetrain serves as the control area."
+      },
+      "statementLink": {
+        "statementId": "claim_lightning",
+        "relation": "supports",
+        "reason": {
+          "ru": "Единственный перегретый путь проходит по зарядной линии; колёса и привод холодны, автомобиль не двигался.",
+          "en": "The only overheated path follows the charging line; the wheels and drivetrain are cold, confirming the vehicle did not move."
+        }
+      },
+      "contradictionTarget": null,
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Игрок видит путь разряда от подстанции к машине и понимает природу невозможной телеметрии.",
+          "en": "The player sees the surge path from the substation to the car and understands the impossible telemetry."
+        },
+        "playerAction": {
+          "ru": "Включить тепловизор и выбрать непрерывный тепловой путь от кабеля к порту.",
+          "en": "Switch on thermal view and select the continuous heat path from the cable to the port."
+        },
+        "conclusion": {
+          "ru": "Единственный перегретый путь проходит по зарядной линии; колёса и привод холодны, автомобиль не двигался.",
+          "en": "The only overheated path follows the charging line; the wheels and drivetrain are cold, confirming the vehicle did not move."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-059",
+          "role": "interactive_scene",
+          "src": "src/data/cases/case-036/assets/interactive/ev-melt-scene.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-036/assets/interactive/ev-melt-scene.webp",
+          "caseRelativeSrc": "assets/interactive/ev-melt-scene.webp",
+          "installTo": "src/data/cases/case-036/assets/interactive/ev-melt-scene.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "ef4b1d9c2f7d34eb139ae80f2d597ffd2dadf9343dffabd0e2f403c8df91676a"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-036/assets/interactive/ev-melt-scene.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-036/assets/interactive/ev-melt-scene.webp",
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-station",
+      "order": 6,
+      "type": "document",
+      "title": {
+        "ru": "Журнал подстанции",
+        "en": "Substation Log"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Зафиксирован аварийный импульс на той же линии и отключение защиты через 0,4 секунды.",
+        "en": "An emergency pulse was recorded on the same line, followed by a protective shutdown 0.4 seconds later."
+      },
+      "statusExplanation": {
+        "ru": "Энергетическая система подтверждает единую хронологию.",
+        "en": "The power system confirms the same timeline."
+      },
+      "statementLink": {
+        "statementId": "claim_lightning",
+        "relation": "supports",
+        "reason": {
+          "ru": "Энергетическая система подтверждает единую хронологию.",
+          "en": "The power system confirms the same timeline."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Молния ударила в подстанцию и прошла к автомобилю через зарядную линию.",
+      "Запись 188 км/ч создана одним повреждённым датчиком; камера и GPS показывают неподвижную машину.",
+      "Единственный перегретый путь проходит по зарядной линии; колёса и привод холодны, автомобиль не двигался.",
+      "Это редкий, но реальный электрический ущерб. Выплату следует одобрить."
+    ],
+    "en": [
+      "The time and location of the strike are confirmed.",
+      "The camera proves that the car did not move and caught fire at the moment of the strike.",
+      "A damaged sensor generated the false speed; vehicle movement is ruled out.",
+      "The only overheated path follows the charging line; the wheels and drivetrain are cold, confirming the vehicle did not move.",
+      "GPS independently confirms that the car did not move.",
+      "No material statement has been disproven. The claim should be approved."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Исправить прежнее противоречивое финальное объяснение.",
+      "Сделать невозможную скорость центральным честным поворотом.",
+      "Интегрировать thermal_scan в улику ev-melt; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate thermal_scan into evidence ev-melt; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "people/maxim-yartsev.webp",
+      "action": "generate",
+      "prompt": "Illustrated archival claimant ID portrait matching the existing insurance detective game: Russian male experimental vehicle engineer, 41 years old, understated technical jacket, attentive analytical expression, short hair, neutral document-photo background, original face, no famous likeness, no futuristic costume, no logos, no text, no watermark."
+    },
+    {
+      "file": "evidence/case-036-ev-camera.webp",
+      "action": "generate",
+      "prompt": "Night security camera frame at an outdoor electric vehicle charging bay during a lightning-related grid surge: an experimental but believable electric coupe remains parked, bright electrical arc at the charging connector and first smoke visible, wet pavement, no motion blur, no brands, no text, no watermark."
+    },
+    {
+      "file": "assets/interactive/ev-melt-scene.webp",
+      "purpose": "Обычная фотография места для процедурной тепловой карты",
+      "resolution": "1600×1000",
+      "format": "WebP",
+      "transparency": false,
+      "generatedBy": "image_model",
+      "manualPost": "Проверить, что ключевые объекты не перекрыты и совпадают с координатами heatZones.",
+      "prompt": "Экспериментальный электромобиль на утилитарной зарядной площадке после грозы, зарядный кабель и порт полностью видны. The thermal anomaly will be added programmatically. Do not add thermal colors, hot spots, infrared HUD or temperature labels. Photorealistic insurance-investigation evidence photograph, documentary look, shot on a phone or compact camera by a non-professional, natural available light, neutral muted colors, realistic textures, high detail. No captions, no watermark, no logos, no readable real-world branding, no famous people, no recognizable copyrighted characters, no visible faces unless explicitly required. Evidence photo, not illustration or cinematic poster.",
+      "evidenceId": "ev-melt",
+      "evidenceType": "thermal_scan"
+    },
+    {
+      "file": "assets/interactive/ev-melt-heat-zones.json",
+      "purpose": "Процедурные маски, температуры и подписи",
+      "resolution": "normalized percent coordinates",
+      "format": "JSON",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "Откалибровать зоны после утверждения изображения.",
+      "prompt": null,
+      "evidenceId": "ev-melt",
+      "evidenceType": "thermal_scan"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Во время грозы молния ударила в подстанцию, к которой был подключён мой экспериментальный электромобиль. Машина загорелась на зарядке, а телеметрия записала аномальный скачок скорости. Прошу оплатить восстановление.",
+        "en": "During a storm, lightning struck the substation supplying my experimental electric car. The vehicle caught fire while charging, and its telemetry recorded an abnormal speed spike. I am claiming the restoration cost."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_stationary",
+      "text": {
+        "ru": "Электромобиль стоял на зарядке и не двигался.",
+        "en": "The electric car was charging and did not move."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_lightning",
+      "text": {
+        "ru": "Повреждение возникло от внешнего грозового импульса через зарядную линию.",
+        "en": "An external lightning surge entered through the charging line and caused the damage."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_false_speed",
+      "text": {
+        "ru": "Запись 188 км/ч является ошибкой повреждённого датчика.",
+        "en": "The 188 km/h reading is an error from a damaged sensor."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-036",
+    "archiveBasePath": "generated-assets/src/data/cases/case-036",
+    "claimantPortrait": {
+      "characterId": "maxim-yartsev",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Максим Ярцев",
+        "en": "Maxim Yartsev, age 41"
+      },
+      "assetId": "asset-057",
+      "src": "src/data/cases/case-036/people/maxim-yartsev.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-036/people/maxim-yartsev.webp",
+      "caseRelativeSrc": "people/maxim-yartsev.webp",
+      "installTo": "public/people/maxim-yartsev.webp",
+      "legacyRuntimeUrl": "people/maxim-yartsev.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "05024f12477f7dae98e70fbcb476ea01a46414dd7b35a1b0d3d0029aa946987e"
+    },
+    "claimantPortraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/maxim-yartsev.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-036/people/maxim-yartsev.webp",
+      "copyTo": "public/people/maxim-yartsev.webp",
+      "replacesExistingValue": null
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-camera",
+        "title": {
+          "ru": "Камера зарядной площадки",
+          "en": "Charging Area Camera"
+        },
+        "primaryImage": "src/data/cases/case-036/evidence/case-036-ev-camera.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-036/evidence/case-036-ev-camera.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-036-ev-camera.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-036/evidence/case-036-ev-camera.webp",
+          "copyTo": "public/evidence/case-036-ev-camera.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-058",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-036/evidence/case-036-ev-camera.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-036/evidence/case-036-ev-camera.webp",
+            "caseRelativeSrc": "evidence/case-036-ev-camera.webp",
+            "installTo": "public/evidence/case-036-ev-camera.webp",
+            "legacyRuntimeUrl": "evidence/case-036-ev-camera.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "10069e0c91f781425ee9a40c97d6ebe9ebfca058085a398a5b50cdcb37d4f191"
+          }
+        ]
+      },
+      {
+        "evidenceId": "ev-melt",
+        "title": {
+          "ru": "Тепловая карта зарядного контура",
+          "en": "Charging Circuit Thermal Map"
+        },
+        "primaryImage": "src/data/cases/case-036/assets/interactive/ev-melt-scene.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-036/assets/interactive/ev-melt-scene.webp",
+        "legacyImageBinding": null,
+        "assets": [
+          {
+            "assetId": "asset-059",
+            "role": "interactive_scene",
+            "src": "src/data/cases/case-036/assets/interactive/ev-melt-scene.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-036/assets/interactive/ev-melt-scene.webp",
+            "caseRelativeSrc": "assets/interactive/ev-melt-scene.webp",
+            "installTo": "src/data/cases/case-036/assets/interactive/ev-melt-scene.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1600,
+            "height": 1000,
+            "sha256": "ef4b1d9c2f7d34eb139ae80f2d597ffd2dadf9343dffabd0e2f403c8df91676a"
+          }
+        ]
+      }
+    ]
+  }
+}

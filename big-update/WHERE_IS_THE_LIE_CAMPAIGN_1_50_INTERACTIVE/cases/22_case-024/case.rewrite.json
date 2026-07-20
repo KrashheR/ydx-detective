@@ -1,0 +1,277 @@
+{
+  "id": "case-024",
+  "campaignOrder": 22,
+  "requiredLevel": 11,
+  "act": 3,
+  "actTitle": {
+    "ru": "Восточный двор",
+    "en": "Eastern Yard"
+  },
+  "title": {
+    "ru": "Звонок в 17:41",
+    "en": "The 5:41 Call"
+  },
+  "difficulty": "easy",
+  "claimAmount": {
+    "value": 2000,
+    "currency": "EUR"
+  },
+  "groundTruth": "valid",
+  "correctDecision": "approve",
+  "investigationBudget": 3,
+  "claimant": {
+    "name": {
+      "ru": "Марина Гордеева, 34 года",
+      "en": "Marina Gordeyeva, age 34"
+    },
+    "migrationNote": {
+      "ru": "Сохранить данные и портрет.",
+      "en": "Keep the existing profile data and portrait."
+    },
+    "portrait": null,
+    "portraitStatus": "retain_existing_project_portrait",
+    "portraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/marina.webp",
+      "existingFile": "public/people/marina.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Небольшой ущерб не означает маленькую ответственность. Проверьте время, место, направление деформации и сумму. — В. Лебедева",
+      "en": "A small loss does not mean a minor responsibility. Verify the time, place, direction of impact, and amount. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Никакой тайной сети. Просто человек остановился перед пешеходом, а другой не успел. Кампания должна оставаться миром, а не одной бесконечной схемой.",
+      "en": "No secret network this time. One driver stopped for a pedestrian and another failed to stop in time. The campaign must remain a world, not one endless conspiracy."
+    },
+    "nextCaseTeaser": {
+      "ru": "В кафе сгорела барная стойка. Владелец должен денег, но причина пожара может оказаться чужой ошибкой.",
+      "en": "A café's bar area has burned down. The owner is in debt, but the fire may have been caused by someone else's mistake."
+    },
+    "seasonClue": null,
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "22 апреля около 17:40 я остановилась перед пешеходным переходом, когда сзади в автомобиль въехала другая машина. Повреждены бампер и левый фонарь. Я сразу позвонила в экстренную службу. Прошу компенсировать ремонт.",
+    "en": "At about 5:40 p.m. on April 22, I stopped before a pedestrian crossing when another car struck mine from behind. The bumper and left tail light were damaged. I immediately called emergency services. I am claiming the repair cost."
+  },
+  "evidence": [
+    {
+      "id": "ev-phone",
+      "order": 1,
+      "type": "phone_records",
+      "title": {
+        "ru": "Экстренный звонок",
+        "en": "Emergency Call"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "В 17:41:06 с телефона Гордеевой выполнен звонок 112. Базовые станции и геолокация указывают на нужный перекрёсток.",
+        "en": "At 5:41:06 p.m., Gordeyeva called 112. Cell towers and geolocation place her phone at the reported intersection."
+      },
+      "statusExplanation": {
+        "ru": "Звонок подтверждает время и место непосредственно после столкновения.",
+        "en": "The call confirms the time and location immediately after the collision."
+      },
+      "statementLink": {
+        "statementId": "claim_collision",
+        "relation": "supports",
+        "reason": {
+          "ru": "Звонок подтверждает время и место непосредственно после столкновения.",
+          "en": "The call confirms the time and location immediately after the collision."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-police",
+      "order": 2,
+      "type": "document",
+      "title": {
+        "ru": "Схема ДТП",
+        "en": "Collision Diagram"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Второй автомобиль указан позади машины Гордеевой. Водитель признал, что не заметил остановку перед пешеходом.",
+        "en": "The second vehicle is shown behind Gordeyeva's car. Its driver admitted failing to notice that she had stopped for a pedestrian."
+      },
+      "statusExplanation": {
+        "ru": "Официальная схема совпадает с рассказом заявительницы.",
+        "en": "The official diagram matches the claimant's account."
+      },
+      "statementLink": {
+        "statementId": "claim_collision",
+        "relation": "supports",
+        "reason": {
+          "ru": "Официальная схема совпадает с рассказом заявительницы.",
+          "en": "The official diagram matches the claimant's account."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-photo",
+      "order": 3,
+      "type": "photo",
+      "title": {
+        "ru": "Фото деформации",
+        "en": "Damage Photograph"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Бампер вдавлен сзади вперёд, левый фонарь разрушен свежим ударом. Старых повреждений в заявленную смету не включено.",
+        "en": "The bumper is crushed from rear to front, and the left tail light shows fresh impact damage. No pre-existing damage is included in the estimate."
+      },
+      "statusExplanation": {
+        "ru": "Направление и свежесть повреждения соответствуют удару сзади.",
+        "en": "The direction and freshness of the damage are consistent with a rear impact."
+      },
+      "statementLink": {
+        "statementId": "claim_damage_fresh",
+        "relation": "supports",
+        "reason": {
+          "ru": "Направление и свежесть повреждения соответствуют удару сзади.",
+          "en": "The direction and freshness of the damage are consistent with a rear impact."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-estimate",
+      "order": 4,
+      "type": "document",
+      "title": {
+        "ru": "Смета ремонта",
+        "en": "Repair Estimate"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Сервис включает замену фонаря, ремонт бампера и креплений. Стоимость соответствует среднерыночной и не содержит лишних работ.",
+        "en": "The repair shop lists a replacement tail light and repairs to the bumper and mounts. The cost matches market rates and includes no unnecessary work."
+      },
+      "statusExplanation": {
+        "ru": "Сумма требования соразмерна реальному ущербу.",
+        "en": "The amount claimed is proportionate to the actual damage."
+      },
+      "statementLink": {
+        "statementId": "claim_repair_scope",
+        "relation": "supports",
+        "reason": {
+          "ru": "Сумма требования соразмерна реальному ущербу.",
+          "en": "The amount claimed is proportionate to the actual damage."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Звонок, схема и фото совпадают по времени и механизму аварии.",
+      "Заявительница не включила в расчёт старые повреждения.",
+      "ДТП и сумма ремонта подтверждены. Выплату следует одобрить."
+    ],
+    "en": [
+      "The call confirms the time and location immediately after the collision.",
+      "The official diagram matches the claimant's account.",
+      "The direction and freshness of the damage are consistent with a rear impact.",
+      "The amount claimed is proportionate to the actual damage.",
+      "No material statement has been disproven. The claim should be approved."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Сохранить простое valid-дело как ритмическую передышку.",
+      "Подчеркнуть незавышенную смету."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order."
+    ]
+  },
+  "assetPlan": [],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "22 апреля около 17:40 я остановилась перед пешеходным переходом, когда сзади в автомобиль въехала другая машина. Повреждены бампер и левый фонарь. Я сразу позвонила в экстренную службу. Прошу компенсировать ремонт.",
+        "en": "At about 5:40 p.m. on April 22, I stopped before a pedestrian crossing when another car struck mine from behind. The bumper and left tail light were damaged. I immediately called emergency services. I am claiming the repair cost."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_collision",
+      "text": {
+        "ru": "В 17:41 автомобиль Гордеевой получил удар сзади.",
+        "en": "At 5:41 p.m., Gordeyeva's car was struck from behind."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_damage_fresh",
+      "text": {
+        "ru": "Заявленные повреждения возникли в этом ДТП.",
+        "en": "The claimed damage resulted from this collision."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_repair_scope",
+      "text": {
+        "ru": "Смета включает только ремонт последствий этого столкновения.",
+        "en": "The estimate covers only damage caused by this collision."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 0,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-024",
+    "archiveBasePath": "generated-assets/src/data/cases/case-024",
+    "claimantPortrait": null,
+    "claimantPortraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/marina.webp",
+      "existingFile": "public/people/marina.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": []
+  }
+}

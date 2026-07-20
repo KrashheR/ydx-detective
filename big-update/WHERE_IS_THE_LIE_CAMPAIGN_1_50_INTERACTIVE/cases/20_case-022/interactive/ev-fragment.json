@@ -1,0 +1,78 @@
+{
+  "id": "ev-fragment",
+  "order": 4,
+  "type": "document_scan",
+  "title": {
+    "ru": "Экспертиза уцелевшего листа"
+  },
+  "isContradiction": false,
+  "narrativeRole": "arc_proof",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Проявилась запись «К. Карелин» и маршрут «через Восточный двор после выплаты»."
+  },
+  "previousType": "photo",
+  "description": {
+    "ru": "Лист из реестра нашли под опрокинутым шкафом в мастерской «Компас»."
+  },
+  "instruction": {
+    "ru": "Включить боковой свет и найти следы стёртой карандашной резолюции."
+  },
+  "assets": {
+    "asset1": "assets/interactive/ev-fragment-base.webp",
+    "asset2": "assets/interactive/ev-fragment-scan-overlay.svg"
+  },
+  "data": {
+    "initialMode": "normal",
+    "modes": [
+      "normal",
+      "side_light",
+      "contrast"
+    ],
+    "anomalyZones": [
+      {
+        "id": "erased_resolution",
+        "mode": "side_light",
+        "x": 46,
+        "y": 64,
+        "width": 39,
+        "height": 12,
+        "label": "Проявилась запись «К. Карелин» и маршрут «через Восточный двор после выплаты».",
+        "isContradiction": false
+      }
+    ],
+    "successCondition": {
+      "type": "select_zone",
+      "zoneId": "erased_resolution"
+    }
+  },
+  "statementLink": {
+    "statementId": "claim_main",
+    "relation": "reveals_season_clue",
+    "reason": {
+      "ru": "Проявилась запись «К. Карелин» и маршрут «через Восточный двор после выплаты»."
+    }
+  },
+  "contradictionTarget": null,
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Имя и маршрут перестают быть готовым текстовым спойлером — игрок проявляет их сам."
+    },
+    "playerAction": {
+      "ru": "Включить боковой свет и найти следы стёртой карандашной резолюции."
+    },
+    "conclusion": {
+      "ru": "Проявилась запись «К. Карелин» и маршрут «через Восточный двор после выплаты»."
+    }
+  },
+  "evidenceTier": "arc",
+  "requiredForVerdict": false,
+  "rewardWeight": 0.75
+}

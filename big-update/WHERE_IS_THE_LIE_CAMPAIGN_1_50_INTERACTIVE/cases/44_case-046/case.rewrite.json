@@ -1,0 +1,632 @@
+{
+  "id": "case-046",
+  "campaignOrder": 44,
+  "requiredLevel": 24,
+  "act": 5,
+  "actTitle": {
+    "ru": "Последний маршрут",
+    "en": "The Final Route"
+  },
+  "title": {
+    "ru": "Падение, которого не было",
+    "en": "The Fall That Never Happened"
+  },
+  "difficulty": "hard",
+  "claimAmount": {
+    "value": 16800,
+    "currency": "EUR"
+  },
+  "groundTruth": "fraud",
+  "correctDecision": "reject",
+  "investigationBudget": 4,
+  "claimant": {
+    "name": {
+      "ru": "Ника Рейн, 18 лет",
+      "en": "Nika Rein, age 18"
+    },
+    "migrationNote": {
+      "ru": "Сохранить имя и портрет. Не изображать реальное опасное падение или романтизировать самоповреждение: инсценировка проходит на страховочном дубле у нижней площадки.",
+      "en": "Keep the name and portrait. Do not depict a genuinely dangerous fall or romanticize self-harm: the staging uses a safety double near the lower platform."
+    },
+    "portrait": {
+      "characterId": "nika-rein-grounded",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Ника Рейн",
+        "en": "Nika Rein, age 18"
+      },
+      "assetId": "asset-087",
+      "src": "src/data/cases/case-046/people/nika-rein-grounded.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-046/people/nika-rein-grounded.webp",
+      "caseRelativeSrc": "people/nika-rein-grounded.webp",
+      "installTo": "public/people/nika-rein-grounded.webp",
+      "legacyRuntimeUrl": "people/nika-rein-grounded.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "287769e26a4e2df7703764ad45ba2d9aa51318c58c761147eb470cdb158faf39"
+    },
+    "portraitStatus": "generated_replacement_included",
+    "portraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/nika-rein-grounded.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-046/people/nika-rein-grounded.webp",
+      "copyTo": "public/people/nika-rein-grounded.webp",
+      "replacesExistingValue": "people/nika-rein.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Рейн утверждает, что защитная система сорвалась. Травмы существуют, но их дата важнее внешнего вида. — В. Лебедева",
+      "en": "Rein says the safety system failed. The injury exists, but its date matters more than its appearance. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Второй поддельный след сети. После дела Морн игрок уже может отличить эффектную подсказку от доказанного почерка.",
+      "en": "A second fake network trace. After Morn's case, the player can distinguish a dramatic clue from a proven signature."
+    },
+    "nextCaseTeaser": {
+      "ru": "Ночью из общежития исчезла шестнадцатилетняя Аделия Варн. На этот раз внешний след подтверждён тремя независимыми системами.",
+      "en": "Sixteen-year-old Adelia Varn disappeared from the dormitory overnight. This time, three independent systems confirm external involvement."
+    },
+    "seasonClue": null,
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Во время зачётного спуска с учебной башни отказала страховочная линия. Я упала, получила травму и пропустила финал отбора, из-за чего потеряла стипендию. Прошу оплатить лечение и утраченный доход.",
+    "en": "During my assessed descent from the training tower, the safety line failed. I fell, was injured, and missed the selection final, costing me my scholarship. I am claiming treatment and lost income."
+  },
+  "evidence": [
+    {
+      "id": "photo-46",
+      "order": 1,
+      "type": "seal_match",
+      "title": {
+        "ru": "Сопоставление пломбы страховочной линии",
+        "en": "Safety-Line Seal Comparison"
+      },
+      "isContradiction": true,
+      "narrativeRole": "suspicion",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Фрагменты не совпадают: на линии бытовая лента с серой краской, а не материал GC-17.",
+        "en": "The fragments do not match: the line carries household tape painted gray, not GC-17 material."
+      },
+      "previousType": "photo",
+      "description": {
+        "ru": "Разрезанный ярлык с линии сравнивается с образцом настоящей транспортной ленты GC-17.",
+        "en": "The cut tag from the line is compared with genuine GC-17 transport tape."
+      },
+      "instruction": {
+        "ru": "Совместить края и защитный рисунок.",
+        "en": "Align the edges and security pattern."
+      },
+      "assets": {
+        "asset1": "assets/interactive/photo-46-master-a.webp",
+        "asset2": "assets/interactive/photo-46-master-b.webp",
+        "asset3": "assets/interactive/photo-46-fragments.json"
+      },
+      "data": {
+        "movableFragment": "B",
+        "allowRotation": true,
+        "rotationStep": 3,
+        "initialTransform": {
+          "x": 72,
+          "y": 18,
+          "rotation": -14
+        },
+        "targetTransform": {
+          "x": 132,
+          "y": 48,
+          "rotation": 6
+        },
+        "tolerance": {
+          "position": 10,
+          "rotation": 5
+        },
+        "expectedMatch": false,
+        "sourceSeed": 444617,
+        "fragmentASeed": 444617,
+        "fragmentBSeed": 449811,
+        "comparisonMarkers": [
+          {
+            "id": "tear_pattern",
+            "label": "Нет совпадения сетки, клеевого слоя и линии разрыва",
+            "labelEn": "Mesh, adhesive layer, and tear line do not match"
+          }
+        ]
+      },
+      "statementLink": {
+        "statementId": "claim_gc17_sabotage",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Фрагменты не совпадают: на линии бытовая лента с серой краской, а не материал GC-17.",
+          "en": "The fragments do not match: the line carries household tape painted gray, not GC-17 material."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_gc17_sabotage",
+        "reason": {
+          "ru": "Фрагменты не совпадают: на линии бытовая лента с серой краской, а не материал GC-17.",
+          "en": "The fragments do not match: the line carries household tape painted gray, not GC-17 material."
+        }
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true,
+        "transparencyMode": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Несовпадение разоблачает попытку свалить безопасную инсценировку на Серый конвой.",
+          "en": "The mismatch exposes an attempt to blame a safely staged incident on the Gray Convoy."
+        },
+        "playerAction": {
+          "ru": "Совместить края и защитный рисунок.",
+          "en": "Align the edges and security pattern."
+        },
+        "conclusion": {
+          "ru": "Фрагменты не совпадают: на линии бытовая лента с серой краской, а не материал GC-17.",
+          "en": "The fragments do not match: the line carries household tape painted gray, not GC-17 material."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-088",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-046/evidence/case-046-photo-46.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-046/evidence/case-046-photo-46.webp",
+          "caseRelativeSrc": "evidence/case-046-photo-46.webp",
+          "installTo": "public/evidence/case-046-photo-46.webp",
+          "legacyRuntimeUrl": "evidence/case-046-photo-46.webp",
+          "format": "webp",
+          "width": 1448,
+          "height": 1086,
+          "sha256": "3b219c0c37d0f509564ba4002e28b0245472e85e6146abdb15299038d048965c"
+        },
+        {
+          "assetId": "asset-089",
+          "role": "interactive_master_a",
+          "src": "src/data/cases/case-046/assets/interactive/photo-46-master-a.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-046/assets/interactive/photo-46-master-a.webp",
+          "caseRelativeSrc": "assets/interactive/photo-46-master-a.webp",
+          "installTo": "src/data/cases/case-046/assets/interactive/photo-46-master-a.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1400,
+          "height": 500,
+          "sha256": "a7e320a2951416f8ba72d590344f4b6b866b02c01b944c8a29aa63ba5b1d34cf"
+        },
+        {
+          "assetId": "asset-090",
+          "role": "interactive_master_b",
+          "src": "src/data/cases/case-046/assets/interactive/photo-46-master-b.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-046/assets/interactive/photo-46-master-b.webp",
+          "caseRelativeSrc": "assets/interactive/photo-46-master-b.webp",
+          "installTo": "src/data/cases/case-046/assets/interactive/photo-46-master-b.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1400,
+          "height": 500,
+          "sha256": "9a8f2484fbe909bd672531ba2e5e879aa2e138caafbea793231dfe454dbeb879"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-046/evidence/case-046-photo-46.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-046/evidence/case-046-photo-46.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-046-photo-46.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-046/evidence/case-046-photo-46.webp",
+        "copyTo": "public/evidence/case-046-photo-46.webp"
+      }
+    },
+    {
+      "id": "document-46",
+      "order": 2,
+      "type": "xray",
+      "title": {
+        "ru": "Медицинский снимок",
+        "en": "Medical Image"
+      },
+      "isContradiction": true,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "Приложенный снимок действительно показывает перелом запястья, но метаданные клиники и костная мозоль датируют травму двумя месяцами раньше.",
+        "en": "The submitted image does show a fractured wrist, but clinic metadata and bone healing date the injury two months earlier."
+      },
+      "statusExplanation": {
+        "ru": "Старая травма выдана за последствие нового события.",
+        "en": "An old injury was presented as the result of the new event."
+      },
+      "statementLink": {
+        "statementId": "claim_new_injury",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Старая травма выдана за последствие нового события.",
+          "en": "An old injury was presented as the result of the new event."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_new_injury",
+        "reason": {
+          "ru": "Старая травма выдана за последствие нового события.",
+          "en": "An old injury was presented as the result of the new event."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "camera-46",
+      "order": 3,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера нижней площадки",
+        "en": "Lower Platform Camera"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Рейн пристёгнута к скрытой резервной линии и выполняет контролируемый спуск с высоты менее двух метров. Затем снимает старую шину перед прибытием врача.",
+        "en": "Rein is attached to a concealed backup line and performs a controlled descent from less than two meters. She then removes an old splint before the doctor arrives."
+      },
+      "statusExplanation": {
+        "ru": "Опасного падения не было; сцена подготовлена безопасным дублем.",
+        "en": "No dangerous fall occurred; the scene used a safe substitute line."
+      },
+      "statementLink": {
+        "statementId": "claim_fall",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Опасного падения не было; сцена подготовлена безопасным дублем.",
+          "en": "No dangerous fall occurred; the scene used a safe substitute line."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_fall",
+        "reason": {
+          "ru": "Опасного падения не было; сцена подготовлена безопасным дублем.",
+          "en": "No dangerous fall occurred; the scene used a safe substitute line."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "log-46",
+      "order": 4,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал основной линии",
+        "en": "Main Safety-Line Log"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Автоматическая страховка не получала нагрузки и оставалась исправной. Резервная линия активирована персональным жетоном Рейн.",
+        "en": "The automatic safety line registered no load and remained operational. Rein's personal token activated the backup line."
+      },
+      "statusExplanation": {
+        "ru": "Техника не отказывала, а заявительница использовала другую систему.",
+        "en": "The equipment did not fail; the claimant used a different system."
+      },
+      "statementLink": {
+        "statementId": "claim_fall",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Техника не отказывала, а заявительница использовала другую систему.",
+          "en": "The equipment did not fail; the claimant used a different system."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_fall",
+        "reason": {
+          "ru": "Техника не отказывала, а заявительница использовала другую систему.",
+          "en": "The equipment did not fail; the claimant used a different system."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "bank-46",
+      "order": 5,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Оплата ассистенту",
+        "en": "Payment to the Assistant"
+      },
+      "isContradiction": false,
+      "narrativeRole": "suspicion",
+      "text": {
+        "ru": "За день до зачёта Рейн переводит знакомому инструктору деньги за «ночную тренировку». Сам перевод подозрителен, но назначение не доказывает сговор.",
+        "en": "One day before the assessment, Rein pays an instructor she knows for ‘night training.’ The transfer is suspicious, but its description alone does not prove collusion."
+      },
+      "statusExplanation": {
+        "ru": "Финансовая улика создаёт направление проверки, но не является достаточной отдельно.",
+        "en": "The financial evidence suggests a line of inquiry but is not sufficient on its own."
+      },
+      "statementLink": {
+        "statementId": "claim_fall",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Финансовая улика создаёт направление проверки, но не является достаточной отдельно.",
+          "en": "The financial evidence suggests a line of inquiry but is not sufficient on its own."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "witness-46",
+      "order": 6,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания ассистента",
+        "en": "Assistant's Statement"
+      },
+      "isContradiction": true,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Ассистент признаёт подготовку резервной линии после предъявления видео, но утверждает, что не знал о страховом требовании.",
+        "en": "After seeing the footage, the assistant admits preparing the backup line but says he knew nothing about the insurance claim."
+      },
+      "statusExplanation": {
+        "ru": "Показания подтверждают постановку, хотя распределение ответственности остаётся отдельным вопросом.",
+        "en": "The statement confirms the staging, although responsibility remains a separate issue."
+      },
+      "statementLink": {
+        "statementId": "claim_fall",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Показания подтверждают постановку, хотя распределение ответственности остаётся отдельным вопросом.",
+          "en": "The statement confirms the staging, although responsibility remains a separate issue."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_fall",
+        "reason": {
+          "ru": "Показания подтверждают постановку, хотя распределение ответственности остаётся отдельным вопросом.",
+          "en": "The statement confirms the staging, although responsibility remains a separate issue."
+        }
+      },
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Страховочная система не отказывала, а пломбу изменили вручную.",
+      "Приложенный перелом старый, камера показывает безопасный постановочный спуск.",
+      "Фрагменты не совпадают: на линии бытовая лента с серой краской, а не материал GC-17.",
+      "Рейн инсценировала происшествие и использовала слухи о GC-17. Выплату следует отклонить."
+    ],
+    "en": [
+      "The fragments do not match: the line carries household tape painted gray, not GC-17 material.",
+      "An old injury was presented as the result of the new event.",
+      "No dangerous fall occurred; the scene used a safe substitute line.",
+      "The equipment did not fail; the claimant used a different system.",
+      "The statement confirms the staging, although responsibility remains a separate issue.",
+      "The claim is fraudulent and should be rejected."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Убрать реальное намеренное падение с большой высоты.",
+      "Сделать старый медицинский снимок главным идентификационным поворотом.",
+      "Интегрировать seal_match в улику photo-46; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate seal_match into evidence photo-46; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "people/nika-rein-grounded.webp",
+      "action": "generate_if_needed",
+      "prompt": "Illustrated archival claimant ID portrait matching the existing insurance detective game: female academy trainee, 18 years old, simple athletic training jacket, guarded ambitious expression, neutral document-photo background, original face, age-appropriate appearance, no fantasy uniform, no franchise color scheme, no logos, no text, no watermark."
+    },
+    {
+      "file": "evidence/case-046-photo-46.webp",
+      "action": "generate",
+      "prompt": "Close forensic evidence photo of a cut safety-line inspection seal on a modern training tower lower platform, clean tool cut from the accessible side and a small patch of crude gray paint added afterward, realistic climbing safety equipment, no blood, no fall scene, no logos, no text, no watermark."
+    },
+    {
+      "file": "assets/interactive/photo-46-master-a.webp",
+      "purpose": "Цельный мастер пломбы или контрольного фрагмента A",
+      "resolution": "1400×500",
+      "format": "WebP",
+      "transparency": true,
+      "generatedBy": "image_model",
+      "manualPost": "Убрать случайный текст; сохранить альфа-канал; разрезать процедурно по sourceSeed.",
+      "prompt": "Create a realistic intact security seal or evidence control label for a fictional insurance investigation. Две серые контрольные ленты: простая окрашенная бытовая и промышленная с внутренней сеткой, прозрачный фон. Front view, full object, transparent background, detailed fibers, adhesive or polymer texture, abstract protection pattern, no real logo or brand, no watermark, no critical readable text, restrained utilitarian evidence style. Keep edges suitable for procedural tearing.",
+      "evidenceId": "photo-46",
+      "evidenceType": "seal_match"
+    },
+    {
+      "file": "assets/interactive/photo-46-master-b.webp",
+      "purpose": "Второй цельный мастер для заведомо несовпадающего фрагмента B",
+      "resolution": "1400×500",
+      "format": "WebP",
+      "transparency": true,
+      "generatedBy": "image_model",
+      "manualPost": "Убрать случайный текст; сохранить альфа-канал; разрезать процедурно по sourceSeed.",
+      "prompt": "Create a realistic intact security seal or evidence control label for a fictional insurance investigation. Две серые контрольные ленты: простая окрашенная бытовая и промышленная с внутренней сеткой, прозрачный фон. Front view, full object, transparent background, detailed fibers, adhesive or polymer texture, abstract protection pattern, no real logo or brand, no watermark, no critical readable text, restrained utilitarian evidence style. Keep edges suitable for procedural tearing. Create a clearly different microscopic protection pattern and fiber layout while keeping the same general material family.",
+      "evidenceId": "photo-46",
+      "evidenceType": "seal_match"
+    },
+    {
+      "file": "assets/interactive/photo-46-fragments.json",
+      "purpose": "Seed разрыва, трансформации и допуски",
+      "resolution": "normalized component space",
+      "format": "JSON",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "Сгенерировать fragment-a.webp и fragment-b.webp из master-файлов; проверить drag/rotate/snap.",
+      "prompt": null,
+      "evidenceId": "photo-46",
+      "evidenceType": "seal_match"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Во время зачётного спуска с учебной башни отказала страховочная линия. Я упала, получила травму и пропустила финал отбора, из-за чего потеряла стипендию. Прошу оплатить лечение и утраченный доход.",
+        "en": "During my assessed descent from the training tower, the safety line failed. I fell, was injured, and missed the selection final, costing me my scholarship. I am claiming treatment and lost income."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_fall",
+      "text": {
+        "ru": "Рейн сорвалась с учебной башни из-за отказа страховочной системы.",
+        "en": "Rein fell from the training tower because the safety system failed."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_new_injury",
+      "text": {
+        "ru": "Представленный перелом возник в заявленном падении.",
+        "en": "The submitted fracture resulted from the reported fall."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_gc17_sabotage",
+      "text": {
+        "ru": "Пломбу линии повредил Серый конвой.",
+        "en": "The Gray Convoy damaged the line seal."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-046",
+    "archiveBasePath": "generated-assets/src/data/cases/case-046",
+    "claimantPortrait": {
+      "characterId": "nika-rein-grounded",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Ника Рейн",
+        "en": "Nika Rein, age 18"
+      },
+      "assetId": "asset-087",
+      "src": "src/data/cases/case-046/people/nika-rein-grounded.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-046/people/nika-rein-grounded.webp",
+      "caseRelativeSrc": "people/nika-rein-grounded.webp",
+      "installTo": "public/people/nika-rein-grounded.webp",
+      "legacyRuntimeUrl": "people/nika-rein-grounded.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "287769e26a4e2df7703764ad45ba2d9aa51318c58c761147eb470cdb158faf39"
+    },
+    "claimantPortraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/nika-rein-grounded.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-046/people/nika-rein-grounded.webp",
+      "copyTo": "public/people/nika-rein-grounded.webp",
+      "replacesExistingValue": "people/nika-rein.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "photo-46",
+        "title": {
+          "ru": "Сопоставление пломбы страховочной линии",
+          "en": "Safety-Line Seal Comparison"
+        },
+        "primaryImage": "src/data/cases/case-046/evidence/case-046-photo-46.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-046/evidence/case-046-photo-46.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-046-photo-46.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-046/evidence/case-046-photo-46.webp",
+          "copyTo": "public/evidence/case-046-photo-46.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-088",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-046/evidence/case-046-photo-46.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-046/evidence/case-046-photo-46.webp",
+            "caseRelativeSrc": "evidence/case-046-photo-46.webp",
+            "installTo": "public/evidence/case-046-photo-46.webp",
+            "legacyRuntimeUrl": "evidence/case-046-photo-46.webp",
+            "format": "webp",
+            "width": 1448,
+            "height": 1086,
+            "sha256": "3b219c0c37d0f509564ba4002e28b0245472e85e6146abdb15299038d048965c"
+          },
+          {
+            "assetId": "asset-089",
+            "role": "interactive_master_a",
+            "src": "src/data/cases/case-046/assets/interactive/photo-46-master-a.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-046/assets/interactive/photo-46-master-a.webp",
+            "caseRelativeSrc": "assets/interactive/photo-46-master-a.webp",
+            "installTo": "src/data/cases/case-046/assets/interactive/photo-46-master-a.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1400,
+            "height": 500,
+            "sha256": "a7e320a2951416f8ba72d590344f4b6b866b02c01b944c8a29aa63ba5b1d34cf"
+          },
+          {
+            "assetId": "asset-090",
+            "role": "interactive_master_b",
+            "src": "src/data/cases/case-046/assets/interactive/photo-46-master-b.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-046/assets/interactive/photo-46-master-b.webp",
+            "caseRelativeSrc": "assets/interactive/photo-46-master-b.webp",
+            "installTo": "src/data/cases/case-046/assets/interactive/photo-46-master-b.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1400,
+            "height": 500,
+            "sha256": "9a8f2484fbe909bd672531ba2e5e879aa2e138caafbea793231dfe454dbeb879"
+          }
+        ]
+      }
+    ]
+  }
+}

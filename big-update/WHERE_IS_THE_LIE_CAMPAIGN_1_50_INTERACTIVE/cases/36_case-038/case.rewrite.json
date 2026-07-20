@@ -1,0 +1,570 @@
+{
+  "id": "case-038",
+  "campaignOrder": 36,
+  "requiredLevel": 18,
+  "act": 4,
+  "actTitle": {
+    "ru": "Серый конвой",
+    "en": "The Gray Convoy"
+  },
+  "title": {
+    "ru": "Лаборатория №394",
+    "en": "Laboratory 394"
+  },
+  "difficulty": "hard",
+  "claimAmount": {
+    "value": 11200,
+    "currency": "EUR"
+  },
+  "groundTruth": "valid",
+  "correctDecision": "approve",
+  "investigationBudget": 4,
+  "claimant": {
+    "name": {
+      "ru": "Антон Ланской, 46 лет",
+      "en": "Anton Lanskoy, age 46"
+    },
+    "migrationNote": {
+      "ru": "Сохранить данные и портрет. Убрать смесь ботаники и химии из старой логики; использовать единый промышленный реагент.",
+      "en": "Keep the existing profile data and portrait. Replace the old botany-and-chemistry mix with one industrial reagent."
+    },
+    "portrait": {
+      "characterId": "anton-lanskoy",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Антон Ланской",
+        "en": "Anton Lanskoy, age 46"
+      },
+      "assetId": "asset-063",
+      "src": "src/data/cases/case-038/people/anton-lanskoy.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-038/people/anton-lanskoy.webp",
+      "caseRelativeSrc": "people/anton-lanskoy.webp",
+      "installTo": "public/people/anton-lanskoy.webp",
+      "legacyRuntimeUrl": "people/anton-lanskoy.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "c88df09f721e194b87986afb6317511a987e5b4139b98ae64df6bc8e6577e1c8"
+    },
+    "portraitStatus": "generated_replacement_included",
+    "portraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/anton-lanskoy.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-038/people/anton-lanskoy.webp",
+      "copyTo": "public/people/anton-lanskoy.webp",
+      "replacesExistingValue": null
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Ланской сам добавил вещество в реактор. Вопрос не в этом, а в том, мог ли он понять, что запечатанная упаковка содержит другой реагент. — В. Лебедева",
+      "en": "Lanskoy added the substance to the reactor himself. The question is whether he could have known the sealed package contained a different reagent. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "В деле Орлова поддельная деталь сломала защиту. Здесь поддельная этикетка уничтожила лабораторию. Серый конвой становится опаснее каждого отдельного мошенника.",
+      "en": "In Orlov's case, a counterfeit part defeated the safety system. Here, a false label destroyed a laboratory. The Gray Convoy is becoming more dangerous than any individual fraudster."
+    },
+    "nextCaseTeaser": {
+      "ru": "На солнечной ферме неизвестные разобрали панели. Сервисный робот получил команды от учётной записи владельца.",
+      "en": "Unknown intruders dismantled panels at a solar farm. Its service robot received commands from the owner's account."
+    },
+    "seasonClue": null,
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "На уроке химии реакционная ёмкость разрушилась после добавления вещества, доставленного как безопасный стабилизатор. Я немедленно эвакуировал класс, пострадавших нет, но лаборатория уничтожена. Прошу возместить оборудование.",
+    "en": "During a chemistry class, a reaction vessel ruptured after I added a substance delivered as a safe stabilizer. I evacuated the class immediately; no one was hurt, but the laboratory was destroyed. I am claiming the equipment loss."
+  },
+  "evidence": [
+    {
+      "id": "ev-camera",
+      "order": 1,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера лаборатории",
+        "en": "Laboratory Camera"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Ланской вскрывает заводскую пломбу, сверяет этикетку и добавляет отмеренное количество. Реакция начинается мгновенно; он сразу запускает эвакуацию.",
+        "en": "Lanskoy breaks the factory seal, checks the label, and adds the measured amount. The reaction begins instantly, and he immediately starts an evacuation."
+      },
+      "statusExplanation": {
+        "ru": "Преподаватель соблюдает инструкцию и не мог увидеть подмену до реакции.",
+        "en": "The teacher followed procedure and could not detect the substitution before the reaction."
+      },
+      "statementLink": {
+        "statementId": "claim_procedure",
+        "relation": "supports",
+        "reason": {
+          "ru": "Преподаватель соблюдает инструкцию и не мог увидеть подмену до реакции.",
+          "en": "The teacher followed procedure and could not detect the substitution before the reaction."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-064",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-038/evidence/case-038-ev-camera.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-038/evidence/case-038-ev-camera.webp",
+          "caseRelativeSrc": "evidence/case-038-ev-camera.webp",
+          "installTo": "public/evidence/case-038-ev-camera.webp",
+          "legacyRuntimeUrl": "evidence/case-038-ev-camera.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "92514b5c011bbf6083ee8332543b6b2464f5be2dc57a3f416b4aef764a75cd72"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-038/evidence/case-038-ev-camera.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-038/evidence/case-038-ev-camera.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-038-ev-camera.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-038/evidence/case-038-ev-camera.webp",
+        "copyTo": "public/evidence/case-038-ev-camera.webp"
+      }
+    },
+    {
+      "id": "ev-document",
+      "order": 2,
+      "type": "document",
+      "title": {
+        "ru": "Накладная поставщика",
+        "en": "Supplier Delivery Note"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Заказан нейтральный стабилизатор S-4. Номер пломбы на накладной совпадает с упаковкой на камере.",
+        "en": "Neutral stabilizer S-4 was ordered. The seal number on the delivery note matches the package in the footage."
+      },
+      "statusExplanation": {
+        "ru": "Документы и пломба подтверждают правильный заказ и целостность доставки.",
+        "en": "The documents and seal confirm the correct order and an intact delivery."
+      },
+      "statementLink": {
+        "statementId": "claim_safe_order",
+        "relation": "supports",
+        "reason": {
+          "ru": "Документы и пломба подтверждают правильный заказ и целостность доставки.",
+          "en": "The documents and seal confirm the correct order and an intact delivery."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-log",
+      "order": 3,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал вытяжки",
+        "en": "Ventilation Log"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Вытяжка включена до опыта и работает штатно. После всплеска автоматика блокирует газ и питание.",
+        "en": "The extraction system was activated before the experiment and operated normally. After the reaction, automation shut off gas and power."
+      },
+      "statusExplanation": {
+        "ru": "Защитные системы не были отключены и снизили последствия.",
+        "en": "The safety systems were active and limited the damage."
+      },
+      "statementLink": {
+        "statementId": "claim_procedure",
+        "relation": "supports",
+        "reason": {
+          "ru": "Защитные системы не были отключены и снизили последствия.",
+          "en": "The safety systems were active and limited the damage."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-analysis",
+      "order": 4,
+      "type": "document_scan",
+      "title": {
+        "ru": "Просветка этикетки реагента",
+        "en": "Reagent Label Backlight Examination"
+      },
+      "isContradiction": false,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Под наклейкой «S-4» видна заводская маркировка «C-9»; поставщик запечатал другой реагент.",
+        "en": "Factory marking ‘C-9’ is visible beneath the ‘S-4’ label; the supplier sealed a different reagent inside."
+      },
+      "previousType": "document",
+      "description": {
+        "ru": "С упаковки сняли многослойную этикетку и поместили её в экспертный сканер.",
+        "en": "The multilayer label was removed from the package and placed in a forensic scanner."
+      },
+      "instruction": {
+        "ru": "Включить просвет и выбрать скрытую заводскую маркировку.",
+        "en": "Switch on backlight and select the hidden factory marking."
+      },
+      "assets": {
+        "asset1": "assets/interactive/ev-analysis-base.webp",
+        "asset2": "assets/interactive/ev-analysis-scan-overlay.svg"
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "uv",
+          "backlight"
+        ],
+        "anomalyZones": [
+          {
+            "id": "under_label",
+            "mode": "backlight",
+            "x": 38,
+            "y": 40,
+            "width": 28,
+            "height": 14,
+            "label": "Под наклейкой «S-4» видна заводская маркировка «C-9»; поставщик запечатал другой реагент.",
+            "isContradiction": false,
+            "labelEn": "Factory marking ‘C-9’ is visible beneath the ‘S-4’ label; the supplier sealed a different reagent inside."
+          }
+        ],
+        "successCondition": {
+          "type": "select_zone",
+          "zoneId": "under_label"
+        }
+      },
+      "statementLink": {
+        "statementId": "claim_supplier_error",
+        "relation": "supports",
+        "reason": {
+          "ru": "Под наклейкой «S-4» видна заводская маркировка «C-9»; поставщик запечатал другой реагент.",
+          "en": "Factory marking ‘C-9’ is visible beneath the ‘S-4’ label; the supplier sealed a different reagent inside."
+        }
+      },
+      "contradictionTarget": null,
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "В valid-деле игрок сам доказывает перемаркировку и невиновность преподавателя.",
+          "en": "In this valid claim, the player personally proves the relabeling and the teacher's innocence."
+        },
+        "playerAction": {
+          "ru": "Включить просвет и выбрать скрытую заводскую маркировку.",
+          "en": "Switch on backlight and select the hidden factory marking."
+        },
+        "conclusion": {
+          "ru": "Под наклейкой «S-4» видна заводская маркировка «C-9»; поставщик запечатал другой реагент.",
+          "en": "Factory marking ‘C-9’ is visible beneath the ‘S-4’ label; the supplier sealed a different reagent inside."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-065",
+          "role": "interactive_base",
+          "src": "src/data/cases/case-038/assets/interactive/ev-analysis-base.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-038/assets/interactive/ev-analysis-base.webp",
+          "caseRelativeSrc": "assets/interactive/ev-analysis-base.webp",
+          "installTo": "src/data/cases/case-038/assets/interactive/ev-analysis-base.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1600,
+          "height": 1100,
+          "sha256": "5ae4b82fe00a60e11c26195d94ec3982a3b7b1e2dd0e85bb6e686e65734329d5"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-038/assets/interactive/ev-analysis-base.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-038/assets/interactive/ev-analysis-base.webp",
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-call",
+      "order": 5,
+      "type": "phone_records",
+      "title": {
+        "ru": "Вызов спасателей",
+        "en": "Emergency Call"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Экстренный вызов сделан через 34 секунды после начала реакции, одновременно с автоматической тревогой.",
+        "en": "The emergency call was placed 34 seconds after the reaction began, at the same time as the automatic alarm."
+      },
+      "statusExplanation": {
+        "ru": "Хронология подтверждает быструю реакцию преподавателя.",
+        "en": "The timeline confirms the teacher's rapid response."
+      },
+      "statementLink": {
+        "statementId": "claim_procedure",
+        "relation": "supports",
+        "reason": {
+          "ru": "Хронология подтверждает быструю реакцию преподавателя.",
+          "en": "The timeline confirms the teacher's rapid response."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-supplier",
+      "order": 6,
+      "type": "document",
+      "title": {
+        "ru": "Проверка поставщика",
+        "en": "Supplier Investigation"
+      },
+      "isContradiction": false,
+      "narrativeRole": "arc_proof",
+      "text": {
+        "ru": "Партия прошла через посредника, использующего склад Серого конвоя. Другие упаковки той же партии также перемаркированы.",
+        "en": "The batch passed through an intermediary using a Gray Convoy warehouse. Other packages in the same batch were also relabeled."
+      },
+      "statusExplanation": {
+        "ru": "Ошибка возникла до получения лабораторией и связана с поставщиком.",
+        "en": "The substitution occurred before delivery and is linked to the supplier."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Ошибка возникла до получения лабораторией и связана с поставщиком.",
+          "en": "The substitution occurred before delivery and is linked to the supplier."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Ланской заказал безопасный стабилизатор и получил запечатанную упаковку с совпадающей пломбой.",
+      "Внутри находился другой перемаркированный реагент.",
+      "Под наклейкой «S-4» видна заводская маркировка «C-9»; поставщик запечатал другой реагент.",
+      "Преподаватель соблюдал процедуру и вовремя эвакуировал учеников. Ущерб подлинный, выплату следует одобрить."
+    ],
+    "en": [
+      "The teacher followed procedure and could not detect the substitution before the reaction.",
+      "The documents and seal confirm the correct order and an intact delivery.",
+      "The safety systems were active and limited the damage.",
+      "Factory marking ‘C-9’ is visible beneath the ‘S-4’ label; the supplier sealed a different reagent inside.",
+      "The timeline confirms the teacher's rapid response.",
+      "No material statement has been disproven. The claim should be approved."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Сделать ошибку поставщика единой логичной причиной.",
+      "Подчеркнуть профессиональное и героическое поведение преподавателя.",
+      "Интегрировать document_scan в улику ev-analysis; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate document_scan into evidence ev-analysis; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "people/anton-lanskoy.webp",
+      "action": "generate",
+      "prompt": "Illustrated archival claimant ID portrait matching the existing insurance detective game: Russian male chemistry teacher, 46 years old, calm intelligent face, simple shirt and practical lab jacket with no badges, neutral document-photo background, original appearance, no magic-school robes, no famous likeness, no logos, no text, no watermark."
+    },
+    {
+      "file": "evidence/case-038-ev-camera.webp",
+      "action": "generate",
+      "prompt": "Fixed classroom laboratory security camera frame moments before a contained chemical vessel failure: a middle-aged teacher in safety goggles measures material from a sealed plain container while students stand at safe stations, realistic modern school lab, no magical elements, no visible brands, no readable text, no watermark."
+    },
+    {
+      "file": "assets/interactive/ev-analysis-base.webp",
+      "purpose": "Базовая версия документа в normal-режиме",
+      "resolution": "1600×1100",
+      "format": "WebP",
+      "transparency": false,
+      "generatedBy": "image_model",
+      "manualPost": "Удалить случайный читаемый текст; выровнять документ; оставить поля для UI-слоёв.",
+      "prompt": "Create a realistic fictional administrative document for an insurance detective game. Нейтральная этикетка химической тары с крупными пустыми полями кода и партии; без знаков реальных производителей. Full document visible from above, utilitarian layout, paper texture, large blank structured fields. No real organization, logo, brand, personal data or watermark. Do not render critical readable text; dates, names, codes and signatures will be added in HTML/SVG. The hidden anomaly must not be obvious in the normal version.",
+      "evidenceId": "ev-analysis",
+      "evidenceType": "document_scan"
+    },
+    {
+      "file": "assets/interactive/ev-analysis-scan-overlay.svg",
+      "purpose": "Совмещённый слой УФ/просвета/бокового света",
+      "resolution": "viewBox 0 0 100 100",
+      "format": "SVG",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "После финального base.webp откалибровать hotspot и режим проявления.",
+      "prompt": null,
+      "evidenceId": "ev-analysis",
+      "evidenceType": "document_scan"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "На уроке химии реакционная ёмкость разрушилась после добавления вещества, доставленного как безопасный стабилизатор. Я немедленно эвакуировал класс, пострадавших нет, но лаборатория уничтожена. Прошу возместить оборудование.",
+        "en": "During a chemistry class, a reaction vessel ruptured after I added a substance delivered as a safe stabilizer. I evacuated the class immediately; no one was hurt, but the laboratory was destroyed. I am claiming the equipment loss."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_safe_order",
+      "text": {
+        "ru": "Ланской заказал безопасный реагент S-4 и получил запечатанную тару.",
+        "en": "Lanskoy ordered safe reagent S-4 and received a sealed container."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_procedure",
+      "text": {
+        "ru": "Преподаватель соблюдал процедуру и не мог обнаружить подмену заранее.",
+        "en": "The teacher followed procedure and could not detect the switch in advance."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_supplier_error",
+      "text": {
+        "ru": "Взрыв вызвал другой реагент, ошибочно запечатанный поставщиком.",
+        "en": "A different reagent, wrongly sealed by the supplier, caused the explosion."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-038",
+    "archiveBasePath": "generated-assets/src/data/cases/case-038",
+    "claimantPortrait": {
+      "characterId": "anton-lanskoy",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Антон Ланской",
+        "en": "Anton Lanskoy, age 46"
+      },
+      "assetId": "asset-063",
+      "src": "src/data/cases/case-038/people/anton-lanskoy.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-038/people/anton-lanskoy.webp",
+      "caseRelativeSrc": "people/anton-lanskoy.webp",
+      "installTo": "public/people/anton-lanskoy.webp",
+      "legacyRuntimeUrl": "people/anton-lanskoy.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "c88df09f721e194b87986afb6317511a987e5b4139b98ae64df6bc8e6577e1c8"
+    },
+    "claimantPortraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/anton-lanskoy.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-038/people/anton-lanskoy.webp",
+      "copyTo": "public/people/anton-lanskoy.webp",
+      "replacesExistingValue": null
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-camera",
+        "title": {
+          "ru": "Камера лаборатории",
+          "en": "Laboratory Camera"
+        },
+        "primaryImage": "src/data/cases/case-038/evidence/case-038-ev-camera.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-038/evidence/case-038-ev-camera.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-038-ev-camera.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-038/evidence/case-038-ev-camera.webp",
+          "copyTo": "public/evidence/case-038-ev-camera.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-064",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-038/evidence/case-038-ev-camera.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-038/evidence/case-038-ev-camera.webp",
+            "caseRelativeSrc": "evidence/case-038-ev-camera.webp",
+            "installTo": "public/evidence/case-038-ev-camera.webp",
+            "legacyRuntimeUrl": "evidence/case-038-ev-camera.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "92514b5c011bbf6083ee8332543b6b2464f5be2dc57a3f416b4aef764a75cd72"
+          }
+        ]
+      },
+      {
+        "evidenceId": "ev-analysis",
+        "title": {
+          "ru": "Просветка этикетки реагента",
+          "en": "Reagent Label Backlight Examination"
+        },
+        "primaryImage": "src/data/cases/case-038/assets/interactive/ev-analysis-base.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-038/assets/interactive/ev-analysis-base.webp",
+        "legacyImageBinding": null,
+        "assets": [
+          {
+            "assetId": "asset-065",
+            "role": "interactive_base",
+            "src": "src/data/cases/case-038/assets/interactive/ev-analysis-base.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-038/assets/interactive/ev-analysis-base.webp",
+            "caseRelativeSrc": "assets/interactive/ev-analysis-base.webp",
+            "installTo": "src/data/cases/case-038/assets/interactive/ev-analysis-base.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1600,
+            "height": 1100,
+            "sha256": "5ae4b82fe00a60e11c26195d94ec3982a3b7b1e2dd0e85bb6e686e65734329d5"
+          }
+        ]
+      }
+    ]
+  }
+}

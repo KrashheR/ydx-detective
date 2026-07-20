@@ -1,0 +1,529 @@
+{
+  "id": "case-029",
+  "campaignOrder": 27,
+  "requiredLevel": 14,
+  "act": 3,
+  "actTitle": {
+    "ru": "Восточный двор",
+    "en": "Eastern Yard"
+  },
+  "title": {
+    "ru": "Разряд через весь дом",
+    "en": "A Surge Through the Entire House"
+  },
+  "difficulty": "hard",
+  "claimAmount": {
+    "value": 9000,
+    "currency": "EUR"
+  },
+  "groundTruth": "valid",
+  "correctDecision": "approve",
+  "investigationBudget": 4,
+  "claimant": {
+    "name": {
+      "ru": "Хелена Краузе, 39 лет",
+      "en": "Helena Krause, age 39"
+    },
+    "migrationNote": {
+      "ru": "Сохранить данные и портрет.",
+      "en": "Keep the existing profile data and portrait."
+    },
+    "portrait": null,
+    "portraitStatus": "retain_existing_project_portrait",
+    "portraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/helena.webp",
+      "existingFile": "public/people/helena.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Умный счётчик показывает потребление, которого физически не могло быть. Возможны два объяснения: подделка или повреждение самого измерителя. — В. Лебедева",
+      "en": "The smart meter shows consumption that was physically impossible. There are two possible explanations: falsified data or damage to the meter itself. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Хорошая техническая улика иногда выглядит как ложь, пока не понимаешь, что сломался сам свидетель.",
+      "en": "Good technical evidence can look like a lie until you realize that the witness itself was broken."
+    },
+    "nextCaseTeaser": {
+      "ru": "Следующее столкновение задумано не ради ремонта. Во время аварии кто-то успел заменить пломбу на грузовом отсеке.",
+      "en": "The next collision was not staged for a repair payout. During the accident, someone found time to replace a cargo-compartment seal."
+    },
+    "seasonClue": null,
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Во время грозы молния ударила в линию рядом с домом. После разряда вышли из строя холодильник, телевизор, роутер и блок отопления. Прошу возместить повреждённую технику.",
+    "en": "During a storm, lightning struck a power line near my house. The surge destroyed my refrigerator, television, router, and heating controller. I am claiming compensation for the damaged equipment."
+  },
+  "evidence": [
+    {
+      "id": "ev-meteo",
+      "order": 1,
+      "type": "document",
+      "title": {
+        "ru": "Карта грозовых разрядов",
+        "en": "Lightning Strike Map"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "В 20:18:42 зарегистрирован мощный разряд в опору линии в 34 метрах от дома.",
+        "en": "At 8:18:42 p.m., a powerful strike was recorded on a utility pole 34 meters from the house."
+      },
+      "statusExplanation": {
+        "ru": "Источник перенапряжения подтверждён точными независимыми данными.",
+        "en": "Precise independent data confirms the source of the surge."
+      },
+      "statementLink": {
+        "statementId": "claim_lightning",
+        "relation": "supports",
+        "reason": {
+          "ru": "Источник перенапряжения подтверждён точными независимыми данными.",
+          "en": "Precise independent data confirms the source of the surge."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-meter",
+      "order": 2,
+      "type": "usage_log",
+      "title": {
+        "ru": "Лог умного счётчика",
+        "en": "Smart Meter Log"
+      },
+      "isContradiction": false,
+      "narrativeRole": "pivot",
+      "text": {
+        "ru": "В секунду разряда счётчик записал невозможный скачок потребления, затем потерял связь. Эксперт помечает значение как насыщение повреждённого датчика, а не реальный расход.",
+        "en": "At the instant of the strike, the meter recorded an impossible consumption spike and then lost its connection. The expert identifies the reading as saturation of a damaged sensor, not actual usage."
+      },
+      "statusExplanation": {
+        "ru": "Странный лог объясняется поломкой измерителя от импульса и не является признаком подделки.",
+        "en": "The unusual log is explained by surge damage to the meter and is not evidence of falsification."
+      },
+      "statementLink": {
+        "statementId": "claim_meter_anomaly",
+        "relation": "supports",
+        "reason": {
+          "ru": "Странный лог объясняется поломкой измерителя от импульса и не является признаком подделки.",
+          "en": "The unusual log is explained by surge damage to the meter and is not evidence of falsification."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-photo",
+      "order": 3,
+      "type": "thermal_scan",
+      "title": {
+        "ru": "Тепловой осмотр электрощита",
+        "en": "Electrical Panel Thermal Inspection"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Тепловой след идёт от вводного кабеля через защиту к повреждённой группе; картина соответствует внешнему грозовому импульсу.",
+        "en": "The heat trail runs from the incoming cable through the protection system to the damaged circuit; the pattern matches an external lightning surge."
+      },
+      "previousType": "photo",
+      "description": {
+        "ru": "Грозовой импульс зарегистрирован в 18:42. Питание отключено автоматически в 18:43, тепловой осмотр начат аварийным электриком в 18:51.",
+        "en": "The lightning surge was recorded at 6:42 p.m. Power disconnected automatically at 6:43 p.m., and an emergency electrician began the thermal inspection at 6:51 p.m."
+      },
+      "instruction": {
+        "ru": "Включить тепловизор и проследить единственную перегретую фазу.",
+        "en": "Switch on thermal view and trace the single overheated phase."
+      },
+      "assets": {
+        "asset1": "assets/interactive/ev-photo-scene.webp",
+        "asset2": "assets/interactive/ev-photo-heat-zones.json"
+      },
+      "data": {
+        "ambientTemperature": 20,
+        "observationTime": "18:51",
+        "claimedLastUseBefore": "18:43",
+        "elapsedSinceClaimedUseMinutes": 8,
+        "coolingReference": "Массивные клеммы сохраняют локальный нагрев 10–20 минут; направление теплового градиента проверяется вместе с журналом защиты.",
+        "initialMode": "normal",
+        "heatZones": [
+          {
+            "id": "incoming_phase",
+            "shape": "polygon",
+            "points": [
+              [
+                44,
+                82
+              ],
+              [
+                48,
+                58
+              ],
+              [
+                55,
+                35
+              ]
+            ],
+            "temperature": 57,
+            "intensity": 0.92,
+            "label": "Перегретая вводная фаза",
+            "isContradiction": false,
+            "labelEn": "Overheated incoming phase"
+          }
+        ],
+        "successCondition": {
+          "type": "select_any",
+          "zoneIds": [
+            "incoming_phase"
+          ]
+        },
+        "coolingReferenceEn": "Heavy terminals retain localized heat for 10–20 minutes; the heat-gradient direction must be checked against the protection log."
+      },
+      "statementLink": {
+        "statementId": "claim_lightning",
+        "relation": "supports",
+        "reason": {
+          "ru": "Тепловой след идёт от вводного кабеля через защиту к повреждённой группе; картина соответствует внешнему грозовому импульсу.",
+          "en": "The heat trail runs from the incoming cable through the protection system to the damaged circuit; the pattern matches an external lightning surge."
+        }
+      },
+      "contradictionTarget": null,
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Тепловой путь показывает реальный вход импульса и помогает отличить грозовой ущерб от локального поджога.",
+          "en": "The thermal path shows where the surge entered and distinguishes lightning damage from a localized fire."
+        },
+        "playerAction": {
+          "ru": "Включить тепловизор и проследить единственную перегретую фазу.",
+          "en": "Switch on thermal view and trace the single overheated phase."
+        },
+        "conclusion": {
+          "ru": "Тепловой след идёт от вводного кабеля через защиту к повреждённой группе; картина соответствует внешнему грозовому импульсу.",
+          "en": "The heat trail runs from the incoming cable through the protection system to the damaged circuit; the pattern matches an external lightning surge."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-039",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-029/evidence/case-029-ev-panel.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-029/evidence/case-029-ev-panel.webp",
+          "caseRelativeSrc": "evidence/case-029-ev-panel.webp",
+          "installTo": "public/evidence/case-029-ev-panel.webp",
+          "legacyRuntimeUrl": "evidence/case-029-ev-panel.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "112bb7febc780794866fadf6e41511734ce34c0d551c85e50a172760a1da7b49"
+        },
+        {
+          "assetId": "asset-040",
+          "role": "interactive_scene",
+          "src": "src/data/cases/case-029/assets/interactive/ev-photo-scene.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-029/assets/interactive/ev-photo-scene.webp",
+          "caseRelativeSrc": "assets/interactive/ev-photo-scene.webp",
+          "installTo": "src/data/cases/case-029/assets/interactive/ev-photo-scene.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "b5b30a55412e11a0506c911b44c3448f196719c59584f680c77e1ee8328f791e"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-029/evidence/case-029-ev-panel.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-029/evidence/case-029-ev-panel.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-029-ev-panel.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-029/evidence/case-029-ev-panel.webp",
+        "copyTo": "public/evidence/case-029-ev-panel.webp"
+      }
+    },
+    {
+      "id": "ev-electrician",
+      "order": 4,
+      "type": "document",
+      "title": {
+        "ru": "Заключение электрика",
+        "en": "Electrician's Report"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Все повреждённые устройства имеют пробой входных блоков питания. Следов намеренного подключения к повышенному напряжению нет.",
+        "en": "Every damaged device shows failure in its input power supply. There is no evidence of deliberate exposure to excess voltage."
+      },
+      "statusExplanation": {
+        "ru": "Одинаковый механизм поломки подтверждает единичный внешний разряд.",
+        "en": "The shared failure mechanism confirms a single external surge."
+      },
+      "statementLink": {
+        "statementId": "claim_damage",
+        "relation": "supports",
+        "reason": {
+          "ru": "Одинаковый механизм поломки подтверждает единичный внешний разряд.",
+          "en": "The shared failure mechanism confirms a single external surge."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-receipts",
+      "order": 5,
+      "type": "document",
+      "title": {
+        "ru": "Документы на технику",
+        "en": "Equipment Records"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Серийные номера и даты покупок совпадают с повреждёнными устройствами. Заявленная стоимость учитывает амортизацию.",
+        "en": "The serial numbers and purchase dates match the damaged devices. The claimed value accounts for depreciation."
+      },
+      "statusExplanation": {
+        "ru": "Принадлежность и сумма требования подтверждены.",
+        "en": "Ownership and the amount claimed are confirmed."
+      },
+      "statementLink": {
+        "statementId": "claim_damage",
+        "relation": "supports",
+        "reason": {
+          "ru": "Принадлежность и сумма требования подтверждены.",
+          "en": "Ownership and the amount claimed are confirmed."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-neighbor",
+      "order": 6,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания соседа",
+        "en": "Neighbor's Statement"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Сосед видел вспышку у опоры и одновременно потерял питание, но его устройства защищал отдельный стабилизатор.",
+        "en": "A neighbor saw a flash at the utility pole and lost power at the same time, but his devices were protected by a separate surge regulator."
+      },
+      "statusExplanation": {
+        "ru": "Независимый свидетель подтверждает событие и объясняет разницу в ущербе.",
+        "en": "The independent witness confirms the event and explains the difference in damage."
+      },
+      "statementLink": {
+        "statementId": "claim_lightning",
+        "relation": "supports",
+        "reason": {
+          "ru": "Независимый свидетель подтверждает событие и объясняет разницу в ущербе.",
+          "en": "The independent witness confirms the event and explains the difference in damage."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Молния ударила в линию рядом с домом в точное время сбоя.",
+      "Невозможное значение счётчика — результат повреждения датчика, а не подделка.",
+      "Тепловой след идёт от вводного кабеля через защиту к повреждённой группе; картина соответствует внешнему грозовому импульсу.",
+      "Электрические следы и серийные номера подтверждают реальный покрываемый ущерб. Выплату следует одобрить."
+    ],
+    "en": [
+      "Precise independent data confirms the source of the surge.",
+      "The unusual log is explained by surge damage to the meter and is not evidence of falsification.",
+      "The heat trail runs from the incoming cable through the protection system to the damaged circuit; the pattern matches an external lightning surge.",
+      "The shared failure mechanism confirms a single external surge.",
+      "Ownership and the amount claimed are confirmed.",
+      "No material statement has been disproven. The claim should be approved."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Превратить аномальный лог в честный технический поворот.",
+      "Избежать шести однообразно подтверждающих карточек.",
+      "Интегрировать thermal_scan в улику ev-photo; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate thermal_scan into evidence ev-photo; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "evidence/case-029-ev-panel.webp",
+      "action": "generate",
+      "prompt": "Close documentary insurance photo of a residential electrical panel after a lightning surge, a surge protector visibly arc-scorched and slightly melted from the incoming line direction, realistic wiring and restrained damage, no readable labels, no logos, no watermark."
+    },
+    {
+      "file": "assets/interactive/ev-photo-scene.webp",
+      "purpose": "Обычная фотография места для процедурной тепловой карты",
+      "resolution": "1600×1000",
+      "format": "WebP",
+      "transparency": false,
+      "generatedBy": "image_model",
+      "manualPost": "Проверить, что ключевые объекты не перекрыты и совпадают с координатами heatZones.",
+      "prompt": "Открытый бытовой электрощит после аварии, целые автоматы и один визуально нейтральный вводный кабель, без цветной подсветки. The thermal anomaly will be added programmatically. Do not add thermal colors, hot spots, infrared HUD or temperature labels. Photorealistic insurance-investigation evidence photograph, documentary look, shot on a phone or compact camera by a non-professional, natural available light, neutral muted colors, realistic textures, high detail. No captions, no watermark, no logos, no readable real-world branding, no famous people, no recognizable copyrighted characters, no visible faces unless explicitly required. Evidence photo, not illustration or cinematic poster.",
+      "evidenceId": "ev-photo",
+      "evidenceType": "thermal_scan"
+    },
+    {
+      "file": "assets/interactive/ev-photo-heat-zones.json",
+      "purpose": "Процедурные маски, температуры и подписи",
+      "resolution": "normalized percent coordinates",
+      "format": "JSON",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "Откалибровать зоны после утверждения изображения.",
+      "prompt": null,
+      "evidenceId": "ev-photo",
+      "evidenceType": "thermal_scan"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Во время грозы молния ударила в линию рядом с домом. После разряда вышли из строя холодильник, телевизор, роутер и блок отопления. Прошу возместить повреждённую технику.",
+        "en": "During a storm, lightning struck a power line near my house. The surge destroyed my refrigerator, television, router, and heating controller. I am claiming compensation for the damaged equipment."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_lightning",
+      "text": {
+        "ru": "Дом получил внешний грозовой импульс через линию питания.",
+        "en": "An external lightning surge entered the house through the power line."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_meter_anomaly",
+      "text": {
+        "ru": "Невозможные показания счётчика вызваны его повреждением.",
+        "en": "The meter's impossible readings resulted from damage to the meter itself."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_damage",
+      "text": {
+        "ru": "Техника повреждена одним внешним разрядом.",
+        "en": "A single external surge damaged the equipment."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-029",
+    "archiveBasePath": "generated-assets/src/data/cases/case-029",
+    "claimantPortrait": null,
+    "claimantPortraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/helena.webp",
+      "existingFile": "public/people/helena.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-photo",
+        "title": {
+          "ru": "Тепловой осмотр электрощита",
+          "en": "Electrical Panel Thermal Inspection"
+        },
+        "primaryImage": "src/data/cases/case-029/evidence/case-029-ev-panel.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-029/evidence/case-029-ev-panel.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-029-ev-panel.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-029/evidence/case-029-ev-panel.webp",
+          "copyTo": "public/evidence/case-029-ev-panel.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-039",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-029/evidence/case-029-ev-panel.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-029/evidence/case-029-ev-panel.webp",
+            "caseRelativeSrc": "evidence/case-029-ev-panel.webp",
+            "installTo": "public/evidence/case-029-ev-panel.webp",
+            "legacyRuntimeUrl": "evidence/case-029-ev-panel.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "112bb7febc780794866fadf6e41511734ce34c0d551c85e50a172760a1da7b49"
+          },
+          {
+            "assetId": "asset-040",
+            "role": "interactive_scene",
+            "src": "src/data/cases/case-029/assets/interactive/ev-photo-scene.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-029/assets/interactive/ev-photo-scene.webp",
+            "caseRelativeSrc": "assets/interactive/ev-photo-scene.webp",
+            "installTo": "src/data/cases/case-029/assets/interactive/ev-photo-scene.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1600,
+            "height": 1000,
+            "sha256": "b5b30a55412e11a0506c911b44c3448f196719c59584f680c77e1ee8328f791e"
+          }
+        ]
+      }
+    ]
+  }
+}

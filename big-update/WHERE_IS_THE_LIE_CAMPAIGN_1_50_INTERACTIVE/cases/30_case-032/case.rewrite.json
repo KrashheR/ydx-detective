@@ -1,0 +1,617 @@
+{
+  "id": "case-032",
+  "campaignOrder": 30,
+  "requiredLevel": 15,
+  "act": 3,
+  "actTitle": {
+    "ru": "Восточный двор",
+    "en": "Eastern Yard"
+  },
+  "title": {
+    "ru": "Внедорожник за воротами",
+    "en": "The SUV Behind the Gate"
+  },
+  "difficulty": "hard",
+  "claimAmount": {
+    "value": 22000,
+    "currency": "EUR"
+  },
+  "groundTruth": "fraud",
+  "correctDecision": "reject",
+  "investigationBudget": 4,
+  "claimant": {
+    "name": {
+      "ru": "Тимур Расулов, 52 года",
+      "en": "Timur Rasulov, age 52"
+    },
+    "migrationNote": {
+      "ru": "Сохранить данные и портрет.",
+      "en": "Keep the existing profile data and portrait."
+    },
+    "portrait": null,
+    "portraitStatus": "retain_existing_project_portrait",
+    "portraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/timur.webp",
+      "existingFile": "public/people/timur.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Мы больше не ищем адрес. Мы проверяем, что происходит за воротами сектора EY-17. — В. Лебедева",
+      "en": "We are no longer searching for an address. We are finding out what happens behind the gates of sector EY-17. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "На контейнерах за воротами стоит новая метка: GC-17. Восточный двор — только одна остановка. Дальше имущество уходит в сеть, которую в документах называют «Серым конвоем». Среди грузовых кодов впервые появляется закрытая Навигационная академия «Меридиан»; пока это только один пункт в длинном маршруте.",
+      "en": "The containers behind the gate bear a new mark: GC-17. Eastern Yard is only one stop. From there, the property enters a network the documents call the Gray Convoy. The closed Meridian Navigation Academy appears among the cargo codes for the first time; for now, it is only one point on a long route."
+    },
+    "nextCaseTeaser": {
+      "ru": "Игрок переводится в отдел особых рисков. Первое дело — производственная травма на заводе, где установлены детали из партии GC-17.",
+      "en": "The player transfers to Special Risks. The first case is an industrial injury at a factory using parts from batch GC-17."
+    },
+    "seasonClue": {
+      "id": "gray-convoy",
+      "label": {
+        "ru": "Маркировка GC-17",
+        "en": "GC-17 Marking"
+      },
+      "description": {
+        "ru": "За Восточным двором обнаружена транспортная сеть «Серый конвой», перемещающая имущество после инсценированных страховых событий.",
+        "en": "Beyond Eastern Yard lies the Gray Convoy transport network, moving property after staged insured events."
+      },
+      "progressIndex": 4,
+      "progressTotal": 4
+    },
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "В ночь на 12 июля внедорожник угнали от моего гаража. Утром место было пустым, ключи находились дома. Я сразу обратился в полицию и прошу полную выплату за автомобиль.",
+    "en": "On the night of July 12, my SUV was stolen from outside my garage. The space was empty in the morning, and the keys were at home. I immediately reported it to the police and am claiming the vehicle's full value."
+  },
+  "evidence": [
+    {
+      "id": "ev-keylog",
+      "order": 1,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал бесключевого доступа",
+        "en": "Keyless Access Log"
+      },
+      "isContradiction": true,
+      "narrativeRole": "suspicion",
+      "text": {
+        "ru": "В 03:14 автомобиль открыт и запущен зарегистрированным ключом №2. Этот ключ Расулов не предъявил страховщику и назвал потерянным год назад.",
+        "en": "At 3:14 a.m., the vehicle was unlocked and started using registered key No. 2. Rasulov did not produce this key for the insurer and claimed it had been lost one year earlier."
+      },
+      "statusExplanation": {
+        "ru": "Машину открыли штатным ключом владельца, существование которого он скрыл.",
+        "en": "The vehicle was opened with the owner's genuine key, whose existence he concealed."
+      },
+      "statementLink": {
+        "statementId": "claim_keys",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Машину открыли штатным ключом владельца, существование которого он скрыл.",
+          "en": "The vehicle was opened with the owner's genuine key, whose existence he concealed."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_keys",
+        "reason": {
+          "ru": "Машину открыли штатным ключом владельца, существование которого он скрыл.",
+          "en": "The vehicle was opened with the owner's genuine key, whose existence he concealed."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-gps",
+      "order": 2,
+      "type": "gps",
+      "title": {
+        "ru": "Трекер автомобиля",
+        "en": "Vehicle Tracker"
+      },
+      "isContradiction": false,
+      "narrativeRole": "arc_proof",
+      "text": {
+        "ru": "Маршрут идёт от гаража прямо к сектору EY-17. В 04:02 автомобиль въезжает за ворота; глушение сигнала начинается только внутри.",
+        "en": "The route runs directly from the garage to sector EY-17. At 4:02 a.m., the vehicle passes through the gate; signal jamming begins only after it enters."
+      },
+      "statusExplanation": {
+        "ru": "Внедорожник не исчез случайно, а прибыл в уже известный закрытый сектор.",
+        "en": "The SUV did not disappear at random; it arrived at the known restricted sector."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Внедорожник не исчез случайно, а прибыл в уже известный закрытый сектор.",
+          "en": "The SUV did not disappear at random; it arrived at the known restricted sector."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-cam",
+      "order": 3,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера въезда",
+        "en": "Entrance Camera"
+      },
+      "isContradiction": true,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "За рулём находится Расулов. Он передаёт охране пропуск и следует к ангару 4 без признаков принуждения.",
+        "en": "Rasulov is driving. He presents a pass to security and proceeds to Hangar 4 with no sign of coercion."
+      },
+      "statusExplanation": {
+        "ru": "Заявитель лично доставил автомобиль на склад.",
+        "en": "The claimant personally delivered the vehicle to the warehouse."
+      },
+      "statementLink": {
+        "statementId": "claim_theft",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Заявитель лично доставил автомобиль на склад.",
+          "en": "The claimant personally delivered the vehicle to the warehouse."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_theft",
+        "reason": {
+          "ru": "Заявитель лично доставил автомобиль на склад.",
+          "en": "The claimant personally delivered the vehicle to the warehouse."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-047",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-032/evidence/case-032-ev-cam.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-032/evidence/case-032-ev-cam.webp",
+          "caseRelativeSrc": "evidence/case-032-ev-cam.webp",
+          "installTo": "public/evidence/case-032-ev-cam.webp",
+          "legacyRuntimeUrl": "evidence/case-032-ev-cam.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "af6440c250f1162213712c3f7c90b9d6d09897f59c345b61da004c8f0a1f188b"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-032/evidence/case-032-ev-cam.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-032/evidence/case-032-ev-cam.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-032-ev-cam.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-032/evidence/case-032-ev-cam.webp",
+        "copyTo": "public/evidence/case-032-ev-cam.webp"
+      }
+    },
+    {
+      "id": "ev-parts",
+      "order": 4,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Оплата за комплектующие",
+        "en": "Parts Payments"
+      },
+      "isContradiction": true,
+      "narrativeRole": "motive",
+      "text": {
+        "ru": "Через два дня Расулов получает три перевода от разборочной компании за двигатель, оптику и электронные модули с серийными номерами его автомобиля.",
+        "en": "Two days later, Rasulov receives three payments from a dismantling company for an engine, lights, and electronic modules bearing his vehicle's serial numbers."
+      },
+      "statusExplanation": {
+        "ru": "Автомобиль разобран и продан по частям с ведома владельца.",
+        "en": "The vehicle was dismantled and sold for parts with the owner's knowledge."
+      },
+      "statementLink": {
+        "statementId": "claim_vehicle_lost",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Автомобиль разобран и продан по частям с ведома владельца.",
+          "en": "The vehicle was dismantled and sold for parts with the owner's knowledge."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_vehicle_lost",
+        "reason": {
+          "ru": "Автомобиль разобран и продан по частям с ведома владельца.",
+          "en": "The vehicle was dismantled and sold for parts with the owner's knowledge."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-yardphoto",
+      "order": 5,
+      "type": "photo",
+      "title": {
+        "ru": "Снимок ангара 4",
+        "en": "Hangar 4 Photograph"
+      },
+      "isContradiction": false,
+      "narrativeRole": "arc_context",
+      "text": {
+        "ru": "На заднем плане видны серые контейнеры с маркировкой `GC-17`, рядом — части внедорожника и ранее вывезенные палеты.",
+        "en": "Gray containers marked `GC-17` are visible in the background beside SUV parts and pallets removed in earlier cases."
+      },
+      "statusExplanation": {
+        "ru": "Фото не нужно для доказательства личной лжи, но впервые показывает масштаб общей логистической цепочки.",
+        "en": "The photograph is not needed to prove the claimant's lie, but reveals the scale of the wider logistics chain for the first time."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Фото не нужно для доказательства личной лжи, но впервые показывает масштаб общей логистической цепочки.",
+          "en": "The photograph is not needed to prove the claimant's lie, but reveals the scale of the wider logistics chain for the first time."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "imageAssets": [
+        {
+          "assetId": "asset-046",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-032/evidence/case-032-ev-yardphoto.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-032/evidence/case-032-ev-yardphoto.webp",
+          "caseRelativeSrc": "evidence/case-032-ev-yardphoto.webp",
+          "installTo": "public/evidence/case-032-ev-yardphoto.webp",
+          "legacyRuntimeUrl": "evidence/case-032-ev-yardphoto.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "342cc3e8b8e11d1d68253c0e253fe042d84be2e1bc058e3a0ba7c779c2380958"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-032/evidence/case-032-ev-yardphoto.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-032/evidence/case-032-ev-yardphoto.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-032-ev-yardphoto.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-032/evidence/case-032-ev-yardphoto.webp",
+        "copyTo": "public/evidence/case-032-ev-yardphoto.webp"
+      }
+    },
+    {
+      "id": "ev-police",
+      "order": 6,
+      "type": "document_scan",
+      "title": {
+        "ru": "Экспертиза заявления об угоне",
+        "en": "Theft Report Examination"
+      },
+      "isContradiction": true,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "В черновике было написано «ключ №2 у меня»; строку стёрли перед подписанием заявления.",
+        "en": "The draft originally read ‘I have key No. 2’; the line was erased before the report was signed."
+      },
+      "previousType": "document",
+      "description": {
+        "ru": "Полиция предоставила бумажный черновик заявления вместе с подписанной копией.",
+        "en": "Police supplied the paper draft of the report together with the signed copy."
+      },
+      "instruction": {
+        "ru": "Включить боковой свет и проверить участок перечня ключей.",
+        "en": "Switch on side light and inspect the list of keys."
+      },
+      "assets": {
+        "asset1": "assets/interactive/ev-police-base.webp",
+        "asset2": "assets/interactive/ev-police-scan-overlay.svg"
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "side_light",
+          "contrast"
+        ],
+        "anomalyZones": [
+          {
+            "id": "second_key",
+            "mode": "side_light",
+            "x": 28,
+            "y": 61,
+            "width": 42,
+            "height": 9,
+            "label": "В черновике было написано «ключ №2 у меня»; строку стёрли перед подписанием заявления.",
+            "isContradiction": true,
+            "labelEn": "The draft originally read ‘I have key No. 2’; the line was erased before the report was signed."
+          }
+        ],
+        "successCondition": {
+          "type": "select_zone",
+          "zoneId": "second_key"
+        }
+      },
+      "statementLink": {
+        "statementId": "claim_keys",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "В черновике было написано «ключ №2 у меня»; строку стёрли перед подписанием заявления.",
+          "en": "The draft originally read ‘I have key No. 2’; the line was erased before the report was signed."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_keys",
+        "reason": {
+          "ru": "В черновике было написано «ключ №2 у меня»; строку стёрли перед подписанием заявления.",
+          "en": "The draft originally read ‘I have key No. 2’; the line was erased before the report was signed."
+        }
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Скрытая удалённая строка показывает осознанное сокрытие второго ключа.",
+          "en": "The erased line proves the deliberate concealment of the second key."
+        },
+        "playerAction": {
+          "ru": "Включить боковой свет и проверить участок перечня ключей.",
+          "en": "Switch on side light and inspect the list of keys."
+        },
+        "conclusion": {
+          "ru": "В черновике было написано «ключ №2 у меня»; строку стёрли перед подписанием заявления.",
+          "en": "The draft originally read ‘I have key No. 2’; the line was erased before the report was signed."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [
+        {
+          "assetId": "asset-048",
+          "role": "interactive_base",
+          "src": "src/data/cases/case-032/assets/interactive/ev-police-base.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-032/assets/interactive/ev-police-base.webp",
+          "caseRelativeSrc": "assets/interactive/ev-police-base.webp",
+          "installTo": "src/data/cases/case-032/assets/interactive/ev-police-base.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1600,
+          "height": 1100,
+          "sha256": "7f461b375379da8c8fae669bc81b3b78ff06569ef8e8b0dc2350d6a959963ff4"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-032/assets/interactive/ev-police-base.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-032/assets/interactive/ev-police-base.webp",
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Внедорожник запущен скрытым штатным ключом и доставлен в комплекс «Восточный двор» самим Расуловым.",
+      "После этого владелец получил деньги за детали автомобиля.",
+      "В черновике было написано «ключ №2 у меня»; строку стёрли перед подписанием заявления.",
+      "Угон инсценирован. Выплату следует отклонить."
+    ],
+    "en": [
+      "The vehicle was opened with the owner's genuine key, whose existence he concealed.",
+      "The claimant personally delivered the vehicle to the warehouse.",
+      "The vehicle was dismantled and sold for parts with the owner's knowledge.",
+      "The draft originally read ‘I have key No. 2’; the line was erased before the report was signed.",
+      "The SUV did not disappear at random; it arrived at the known restricted sector.",
+      "The claim is fraudulent and should be rejected."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Сделать внедорожник транспортным доказательством финала акта.",
+      "Впервые визуально раскрыть Серый конвой и объяснить переход к особым рискам.",
+      "Интегрировать document_scan в улику ev-police; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate document_scan into evidence ev-police; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "evidence/case-032-ev-yardphoto.webp",
+      "action": "generate",
+      "prompt": "Long-lens investigative evidence photograph inside a restricted industrial warehouse yard: gray unbranded cargo containers arranged near a dismantling bay, parts from a dark SUV and sealed pallets visible, a small blank stencil area reserved for UI-applied code GC-17, realistic surveillance perspective, muted colors, no readable text, no logos, no watermark."
+    },
+    {
+      "file": "evidence/case-032-ev-cam.webp",
+      "action": "generate",
+      "prompt": "Night gate CCTV frame showing a middle-aged man calmly driving a dark SUV into a restricted warehouse sector and presenting a pass to a guard, no struggle, realistic security lighting, faces not detailed, no readable signs or plates, no logos, no watermark."
+    },
+    {
+      "file": "assets/interactive/ev-police-base.webp",
+      "purpose": "Базовая версия документа в normal-режиме",
+      "resolution": "1600×1100",
+      "format": "WebP",
+      "transparency": false,
+      "generatedBy": "image_model",
+      "manualPost": "Удалить случайный читаемый текст; выровнять документ; оставить поля для UI-слоёв.",
+      "prompt": "Create a realistic fictional administrative document for an insurance detective game. Фиктивный полицейский бланк без гербов и реальных ведомств, крупный список ключей, фактура стёртой карандашной строки. Full document visible from above, utilitarian layout, paper texture, large blank structured fields. No real organization, logo, brand, personal data or watermark. Do not render critical readable text; dates, names, codes and signatures will be added in HTML/SVG. The hidden anomaly must not be obvious in the normal version.",
+      "evidenceId": "ev-police",
+      "evidenceType": "document_scan"
+    },
+    {
+      "file": "assets/interactive/ev-police-scan-overlay.svg",
+      "purpose": "Совмещённый слой УФ/просвета/бокового света",
+      "resolution": "viewBox 0 0 100 100",
+      "format": "SVG",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "После финального base.webp откалибровать hotspot и режим проявления.",
+      "prompt": null,
+      "evidenceId": "ev-police",
+      "evidenceType": "document_scan"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "В ночь на 12 июля внедорожник угнали от моего гаража. Утром место было пустым, ключи находились дома. Я сразу обратился в полицию и прошу полную выплату за автомобиль.",
+        "en": "On the night of July 12, my SUV was stolen from outside my garage. The space was empty in the morning, and the keys were at home. I immediately reported it to the police and am claiming the vehicle's full value."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_theft",
+      "text": {
+        "ru": "Внедорожник был угнан неизвестными.",
+        "en": "Unknown persons stole the SUV."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_keys",
+      "text": {
+        "ru": "Все штатные ключи оставались у владельца и не использовались.",
+        "en": "All genuine keys remained with the owner and were not used."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_vehicle_lost",
+      "text": {
+        "ru": "Автомобиль утрачен, а владелец не получал денег за его детали.",
+        "en": "The vehicle was lost, and the owner received no money for its parts."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-032",
+    "archiveBasePath": "generated-assets/src/data/cases/case-032",
+    "claimantPortrait": null,
+    "claimantPortraitBinding": {
+      "mode": "retain_existing",
+      "targetField": "personImage",
+      "runtimeValue": "people/timur.webp",
+      "existingFile": "public/people/timur.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-cam",
+        "title": {
+          "ru": "Камера въезда",
+          "en": "Entrance Camera"
+        },
+        "primaryImage": "src/data/cases/case-032/evidence/case-032-ev-cam.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-032/evidence/case-032-ev-cam.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-032-ev-cam.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-032/evidence/case-032-ev-cam.webp",
+          "copyTo": "public/evidence/case-032-ev-cam.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-047",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-032/evidence/case-032-ev-cam.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-032/evidence/case-032-ev-cam.webp",
+            "caseRelativeSrc": "evidence/case-032-ev-cam.webp",
+            "installTo": "public/evidence/case-032-ev-cam.webp",
+            "legacyRuntimeUrl": "evidence/case-032-ev-cam.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "af6440c250f1162213712c3f7c90b9d6d09897f59c345b61da004c8f0a1f188b"
+          }
+        ]
+      },
+      {
+        "evidenceId": "ev-yardphoto",
+        "title": {
+          "ru": "Снимок ангара 4",
+          "en": "Hangar 4 Photograph"
+        },
+        "primaryImage": "src/data/cases/case-032/evidence/case-032-ev-yardphoto.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-032/evidence/case-032-ev-yardphoto.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-032-ev-yardphoto.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-032/evidence/case-032-ev-yardphoto.webp",
+          "copyTo": "public/evidence/case-032-ev-yardphoto.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-046",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-032/evidence/case-032-ev-yardphoto.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-032/evidence/case-032-ev-yardphoto.webp",
+            "caseRelativeSrc": "evidence/case-032-ev-yardphoto.webp",
+            "installTo": "public/evidence/case-032-ev-yardphoto.webp",
+            "legacyRuntimeUrl": "evidence/case-032-ev-yardphoto.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "342cc3e8b8e11d1d68253c0e253fe042d84be2e1bc058e3a0ba7c779c2380958"
+          }
+        ]
+      },
+      {
+        "evidenceId": "ev-police",
+        "title": {
+          "ru": "Экспертиза заявления об угоне",
+          "en": "Theft Report Examination"
+        },
+        "primaryImage": "src/data/cases/case-032/assets/interactive/ev-police-base.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-032/assets/interactive/ev-police-base.webp",
+        "legacyImageBinding": null,
+        "assets": [
+          {
+            "assetId": "asset-048",
+            "role": "interactive_base",
+            "src": "src/data/cases/case-032/assets/interactive/ev-police-base.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-032/assets/interactive/ev-police-base.webp",
+            "caseRelativeSrc": "assets/interactive/ev-police-base.webp",
+            "installTo": "src/data/cases/case-032/assets/interactive/ev-police-base.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1600,
+            "height": 1100,
+            "sha256": "7f461b375379da8c8fae669bc81b3b78ff06569ef8e8b0dc2350d6a959963ff4"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -147,6 +147,26 @@ export type UIKey =
   | "tag_bank"
   | "tag_phone"
   | "tag_social"
+  | "interactiveNormal"
+  | "interactiveUv"
+  | "interactiveBacklight"
+  | "interactiveSideLight"
+  | "interactiveContrast"
+  | "interactiveThermal"
+  | "interactiveReset"
+  | "interactiveHint"
+  | "interactiveCompare"
+  | "interactiveRotateLeft"
+  | "interactiveRotateRight"
+  | "interactiveClaimedTime"
+  | "interactiveComplete"
+  | "interactiveContradiction"
+  | "interactiveSupported"
+  | "interactiveCleanSurface"
+  | "interactiveTraceFound"
+  | "interactiveProgress"
+  | "interactiveStampLocked"
+  | "finalSynthesisSkip"
   | "casesWord"
   | "errorsWord"
   | "resultWinSub"
@@ -1049,6 +1069,26 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
   tag_bank: { ru: "БАНК", en: "BANK", tr: "BANKA", ar: "بنك", kk: "БАНК" },
   tag_phone: { ru: "ЗВОНКИ", en: "CALLS", tr: "ARAMALAR", ar: "مكالمات", kk: "ҚОҢЫРАУЛАР" },
   tag_social: { ru: "СОЦСЕТЬ", en: "SOCIAL", tr: "SOSYAL", ar: "اجتماعي", kk: "ӘЛЕУМ." },
+  interactiveNormal: { ru: "Обычный вид", en: "Normal view", tr: "Normal görünüm", ar: "العرض العادي", kk: "Қалыпты көрініс" },
+  interactiveUv: { ru: "УФ-свет", en: "UV light", tr: "UV ışığı", ar: "الأشعة فوق البنفسجية", kk: "УК жарық" },
+  interactiveBacklight: { ru: "На просвет", en: "Backlight", tr: "Arka ışık", ar: "إضاءة خلفية", kk: "Артқы жарық" },
+  interactiveSideLight: { ru: "Боковой свет", en: "Side light", tr: "Yanal ışık", ar: "إضاءة جانبية", kk: "Бүйір жарық" },
+  interactiveContrast: { ru: "Контраст", en: "Contrast", tr: "Kontrast", ar: "التباين", kk: "Контраст" },
+  interactiveThermal: { ru: "Тепловизор", en: "Thermal view", tr: "Termal görünüm", ar: "العرض الحراري", kk: "Жылу көрінісі" },
+  interactiveReset: { ru: "Сбросить", en: "Reset", tr: "Sıfırla", ar: "إعادة الضبط", kk: "Қалпына келтіру" },
+  interactiveHint: { ru: "Подсказка", en: "Hint", tr: "İpucu", ar: "تلميح", kk: "Кеңес" },
+  interactiveCompare: { ru: "Сравнить", en: "Compare", tr: "Karşılaştır", ar: "مقارنة", kk: "Салыстыру" },
+  interactiveRotateLeft: { ru: "Повернуть влево", en: "Rotate left", tr: "Sola döndür", ar: "تدوير لليسار", kk: "Солға бұру" },
+  interactiveRotateRight: { ru: "Повернуть вправо", en: "Rotate right", tr: "Sağa döndür", ar: "تدوير لليمين", kk: "Оңға бұру" },
+  interactiveClaimedTime: { ru: "Заявленное время", en: "Claimed time", tr: "Beyan edilen saat", ar: "الوقت المذكور", kk: "Мәлімделген уақыт" },
+  interactiveComplete: { ru: "Анализ завершён", en: "Analysis complete", tr: "Analiz tamamlandı", ar: "اكتمل التحليل", kk: "Талдау аяқталды" },
+  interactiveContradiction: { ru: "Обнаружено противоречие", en: "Contradiction found", tr: "Çelişki bulundu", ar: "تم اكتشاف تناقض", kk: "Қайшылық табылды" },
+  interactiveSupported: { ru: "Заявление подтверждается", en: "Statement supported", tr: "Beyan doğrulandı", ar: "تم تأكيد الإفادة", kk: "Мәлімдеме расталды" },
+  interactiveCleanSurface: { ru: "Очистите поверхность", en: "Clean the surface", tr: "Yüzeyi temizleyin", ar: "نظّف السطح", kk: "Бетті тазалаңыз" },
+  interactiveTraceFound: { ru: "След обнаружен", en: "Trace discovered", tr: "İz bulundu", ar: "تم العثور على أثر", kk: "Із табылды" },
+  interactiveProgress: { ru: "Область проявляется", en: "Revealing area", tr: "Alan ortaya çıkıyor", ar: "يتم إظهار المنطقة", kk: "Аймақ айқындалуда" },
+  interactiveStampLocked: { ru: "Сначала завершите анализ", en: "Complete the analysis first", tr: "Önce analizi tamamlayın", ar: "أكمل التحليل أولاً", kk: "Алдымен талдауды аяқтаңыз" },
+  finalSynthesisSkip: { ru: "Пропустить синтез", en: "Skip synthesis", tr: "Sentezi geç", ar: "تخطي الاستنتاج", kk: "Синтезді өткізу" },
   casesWord: { ru: "дел", en: "cases", tr: "dosya", ar: "قضايا", kk: "іс" },
   errorsWord: {
     ru: "ошибок",

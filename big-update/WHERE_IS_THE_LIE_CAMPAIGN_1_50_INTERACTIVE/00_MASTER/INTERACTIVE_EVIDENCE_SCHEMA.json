@@ -1,0 +1,101 @@
+{
+  "note": "Blueprint for a TypeScript discriminated union and Zod schemas. Adapt LocalizedText and asset paths to the real repository.",
+  "evidenceTypes": [
+    "document_scan",
+    "thermal_scan",
+    "shadow_time_check",
+    "seal_match",
+    "surface_reveal"
+  ],
+  "common": {
+    "description": "LocalizedText",
+    "instruction": "LocalizedText",
+    "assets": "Record<string, string>",
+    "statementLink": {
+      "statementId": "string",
+      "relation": "contradicts | supports | contextualizes | reveals_season_clue",
+      "reason": "LocalizedText"
+    },
+    "contradictionTarget": "null | { statementId: string, reason: LocalizedText }",
+    "uiHints": {
+      "showReset": "boolean",
+      "allowZoom": "boolean",
+      "highlightAfterHint": "boolean"
+    }
+  },
+  "document_scan": {
+    "data": {
+      "initialMode": "normal | uv | backlight | contrast | side_light",
+      "modes": "mode[]",
+      "anomalyZones": "{ id, mode, x, y, width, height, label, isContradiction }[]",
+      "referenceFields": "optional { id, label, value }[]",
+      "successCondition": "{ type: select_zone, zoneId } | { type: select_then_compare, zoneId, referenceFieldId }"
+    }
+  },
+  "thermal_scan": {
+    "data": {
+      "ambientTemperature": "number",
+      "observationTime": "HH:mm",
+      "claimedLastUseBefore": "HH:mm",
+      "elapsedSinceClaimedUseMinutes": "number",
+      "coolingReference": "string",
+      "initialMode": "normal | thermal",
+      "heatZones": "circle | ellipse | polygon zones with percent coordinates, temperature, intensity, label",
+      "successCondition": "{ type: select_any | select_all, zoneIds: string[] }"
+    }
+  },
+  "shadow_time_check": {
+    "data": {
+      "claimedTime": "HH:mm",
+      "orientationSource": "string",
+      "slider": "{ from, to, stepMinutes }",
+      "shadowOrigin": "{ x, y }",
+      "referenceShadow": "{ baseAngle, baseLength, width, opacity }",
+      "timeSamples": "{ time, angle, length }[]",
+      "validTimeRanges": "{ from, to }[]",
+      "matchTolerance": "{ angle, length }"
+    }
+  },
+  "seal_match": {
+    "data": {
+      "movableFragment": "A | B",
+      "allowRotation": "boolean",
+      "rotationStep": "number",
+      "initialTransform": "{ x, y, rotation }",
+      "targetTransform": "{ x, y, rotation }",
+      "tolerance": "{ position, rotation }",
+      "expectedMatch": "boolean",
+      "sourceSeed": "number",
+      "fragmentASeed": "number",
+      "fragmentBSeed": "number",
+      "comparisonMarkers": "{ id, label }[]"
+    }
+  },
+  "surface_reveal": {
+    "data": {
+      "mode": "erase | apply | light_reveal",
+      "coverType": "dust | condensation | dirt | soot | frost | sand | powder | custom",
+      "brush": "{ radius: positive number, hardness: 0..1, opacity: 0..1, spacing?: positive number }",
+      "completion": "{ type: reveal_percentage | discover_any | discover_all, requiredRevealPercent?: 0..100, requiredTraceIds?: string[] }",
+      "traces": "{ id, label, mask?, shape?, geometry?, requiredRevealPercent, isContradiction, conclusion }[]"
+    },
+    "superRefine": [
+      "shape=mask requires mask",
+      "geometric shapes require their coordinates",
+      "reveal_percentage requires requiredRevealPercent",
+      "trace IDs must be unique",
+      "every requiredTraceId must exist",
+      "recommended trace threshold is 45..65"
+    ]
+  },
+  "progress": {
+    "evidenceId": "string",
+    "opened": "boolean",
+    "analysisCompleted": "boolean",
+    "discoveredAnomalyIds": "string[]",
+    "discoveredTraceIds": "string[]",
+    "revealPercentByTrace": "Record<string, number>",
+    "maskSnapshot": "optional string; not required for MVP",
+    "selectedContradiction": "boolean"
+  }
+}

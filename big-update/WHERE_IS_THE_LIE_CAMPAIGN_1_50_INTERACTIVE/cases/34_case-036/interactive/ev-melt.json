@@ -1,0 +1,105 @@
+{
+  "id": "ev-melt",
+  "order": 5,
+  "type": "thermal_scan",
+  "title": {
+    "ru": "Тепловая карта зарядного контура"
+  },
+  "isContradiction": false,
+  "narrativeRole": "proof",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Единственный перегретый путь проходит по зарядной линии; колёса и привод холодны, автомобиль не двигался."
+  },
+  "previousType": "document",
+  "description": {
+    "ru": "Подстанция отключилась в 21:14:08. Пожарный расчёт обесточил зарядную линию в 21:16, а тепловая съёмка площадки началась в 21:24."
+  },
+  "instruction": {
+    "ru": "Включить тепловизор и выбрать непрерывный тепловой путь от кабеля к порту."
+  },
+  "assets": {
+    "asset1": "assets/interactive/ev-melt-scene.webp",
+    "asset2": "assets/interactive/ev-melt-heat-zones.json"
+  },
+  "data": {
+    "ambientTemperature": 11,
+    "observationTime": "21:24",
+    "claimedLastUseBefore": "21:16",
+    "elapsedSinceClaimedUseMinutes": 8,
+    "coolingReference": "Силовой кабель и порт сохраняют тепло несколько десятков минут; холодный привод используется как контрольная зона.",
+    "initialMode": "normal",
+    "heatZones": [
+      {
+        "id": "charge_cable",
+        "shape": "polygon",
+        "points": [
+          [
+            18,
+            72
+          ],
+          [
+            39,
+            65
+          ],
+          [
+            62,
+            52
+          ]
+        ],
+        "temperature": 63,
+        "intensity": 0.96,
+        "label": "Нагретая зарядная линия",
+        "isContradiction": false
+      },
+      {
+        "id": "wheel_drive",
+        "shape": "ellipse",
+        "x": 65,
+        "y": 71,
+        "width": 20,
+        "height": 14,
+        "temperature": 12,
+        "intensity": 0.08,
+        "label": "Холодный привод",
+        "isContradiction": false,
+        "isTarget": false
+      }
+    ],
+    "successCondition": {
+      "type": "select_any",
+      "zoneIds": [
+        "charge_cable"
+      ]
+    }
+  },
+  "statementLink": {
+    "statementId": "claim_lightning",
+    "relation": "supports",
+    "reason": {
+      "ru": "Единственный перегретый путь проходит по зарядной линии; колёса и привод холодны, автомобиль не двигался."
+    }
+  },
+  "contradictionTarget": null,
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Игрок видит путь разряда от подстанции к машине и понимает природу невозможной телеметрии."
+    },
+    "playerAction": {
+      "ru": "Включить тепловизор и выбрать непрерывный тепловой путь от кабеля к порту."
+    },
+    "conclusion": {
+      "ru": "Единственный перегретый путь проходит по зарядной линии; колёса и привод холодны, автомобиль не двигался."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

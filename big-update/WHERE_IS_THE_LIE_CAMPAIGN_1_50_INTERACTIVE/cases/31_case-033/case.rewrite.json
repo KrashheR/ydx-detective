@@ -1,0 +1,614 @@
+{
+  "id": "case-033",
+  "campaignOrder": 31,
+  "requiredLevel": 16,
+  "act": 4,
+  "actTitle": {
+    "ru": "Серый конвой",
+    "en": "The Gray Convoy"
+  },
+  "title": {
+    "ru": "Рука в прессе",
+    "en": "A Hand in the Press"
+  },
+  "difficulty": "hard",
+  "claimAmount": {
+    "value": 11000,
+    "currency": "EUR"
+  },
+  "groundTruth": "valid",
+  "correctDecision": "approve",
+  "investigationBudget": 4,
+  "claimant": {
+    "name": {
+      "ru": "Геннадий Орлов, 49 лет",
+      "en": "Gennady Orlov, age 49"
+    },
+    "migrationNote": {
+      "ru": "Сохранить данные и портрет.",
+      "en": "Keep the existing profile data and portrait."
+    },
+    "portrait": {
+      "characterId": "gennady-orlov",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Геннадий Орлов",
+        "en": "Gennady Orlov, age 49"
+      },
+      "assetId": "asset-049",
+      "src": "src/data/cases/case-033/people/gennady-orlov.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-033/people/gennady-orlov.webp",
+      "caseRelativeSrc": "people/gennady-orlov.webp",
+      "installTo": "public/people/gennady-orlov.webp",
+      "legacyRuntimeUrl": "people/gennady-orlov.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "64ed49b1915e03539a4477cbd100541fb7d81a110a5db9567779d6baf70a38bd"
+    },
+    "portraitStatus": "generated_replacement_included",
+    "portraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/gennady-orlov.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-033/people/gennady-orlov.webp",
+      "copyTo": "public/people/gennady-orlov.webp",
+      "replacesExistingValue": "people/gennady.webp"
+    }
+  },
+  "narrative": {
+    "preBrief": {
+      "ru": "Первое дело отдела особых рисков. Работодатель утверждает, что Орлов обошёл защиту сам. Нам нужно отделить ошибку оператора от отказа автоматики. — В. Лебедева",
+      "en": "Our first Special Risks case. The employer claims Orlov bypassed the safety system himself. We must distinguish operator error from an automation failure. — V. Lebedeva"
+    },
+    "postVerdictNote": {
+      "ru": "Серый конвой торгует не только украденным. Он поставляет дешёвые подделки под видом сертифицированных деталей. Теперь у схемы есть пострадавший, а не только цифры.",
+      "en": "The Gray Convoy deals in more than stolen goods. It supplies cheap counterfeits as certified parts. The operation now has a victim, not just numbers on a page."
+    },
+    "nextCaseTeaser": {
+      "ru": "На следующем складе сгорела техника на 30 000 евро. Серийные номера в пепле принадлежат товарам, которые никогда туда не поступали.",
+      "en": "At the next warehouse, €30,000 worth of electronics supposedly burned. The serial numbers in the ashes belong to products that were never delivered there."
+    },
+    "seasonClue": {
+      "id": "gc17-counterfeit",
+      "label": {
+        "ru": "Поддельное реле GC-17",
+        "en": "Counterfeit GC-17 Relay"
+      },
+      "description": {
+        "ru": "Сеть перепродаёт опасные контрафактные детали, создавая реальные аварии.",
+        "en": "The network resells dangerous counterfeit parts, causing real accidents."
+      },
+      "progressIndex": 1,
+      "progressTotal": 6
+    },
+    "epilogue": null
+  },
+  "claimText": {
+    "ru": "Во время смены штамповочный пресс сработал без команды и зажал правую кисть. Защитная решётка и блокировка не остановили ход. Прошу выплату за производственную травму и временную потерю трудоспособности.",
+    "en": "During my shift, the stamping press cycled without a command and crushed my right hand. Neither the safety guard nor the interlock stopped it. I am claiming compensation for a workplace injury and temporary disability."
+  },
+  "evidence": [
+    {
+      "id": "ev-medical",
+      "order": 1,
+      "type": "document",
+      "title": {
+        "ru": "Медицинское заключение",
+        "en": "Medical Report"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Через 17 минут после аварии зафиксированы свежие переломы двух пястных костей и травма от сдавления.",
+        "en": "Seventeen minutes after the accident, doctors recorded fresh fractures of two metacarpal bones and a crush injury."
+      },
+      "statusExplanation": {
+        "ru": "Время и механизм травмы совпадают с заявлением.",
+        "en": "The timing and mechanism of the injury match the claim."
+      },
+      "statementLink": {
+        "statementId": "claim_accident",
+        "relation": "supports",
+        "reason": {
+          "ru": "Время и механизм травмы совпадают с заявлением.",
+          "en": "The timing and mechanism of the injury match the claim."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-photo",
+      "order": 2,
+      "type": "photo",
+      "title": {
+        "ru": "Фото рабочей зоны",
+        "en": "Work Area Photograph"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Защитная решётка согнута внутрь, аварийная кнопка нажата, на штампе имеются свежие биологические следы.",
+        "en": "The safety guard is bent inward, the emergency button is depressed, and fresh biological traces are present on the die."
+      },
+      "statusExplanation": {
+        "ru": "Физические следы подтверждают место и направление происшествия.",
+        "en": "The physical evidence confirms the location and direction of the accident."
+      },
+      "statementLink": {
+        "statementId": "claim_operator_not_at_fault",
+        "relation": "supports",
+        "reason": {
+          "ru": "Физические следы подтверждают место и направление происшествия.",
+          "en": "The physical evidence confirms the location and direction of the accident."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-machine",
+      "order": 3,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал PLC",
+        "en": "PLC Log"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "14:33:51 — ложное срабатывание датчика педали; команда оператора отсутствует; защитное реле не разомкнуло цепь; через четыре секунды нажат аварийный стоп.",
+        "en": "2:33:51 p.m.—false pedal-sensor trigger; no operator command; safety relay failed to open the circuit; emergency stop pressed four seconds later."
+      },
+      "statusExplanation": {
+        "ru": "Автоматика сама инициировала ход и не выполнила защитную остановку.",
+        "en": "The automation initiated the cycle and failed to perform a safety stop."
+      },
+      "statementLink": {
+        "statementId": "claim_accident",
+        "relation": "supports",
+        "reason": {
+          "ru": "Автоматика сама инициировала ход и не выполнила защитную остановку.",
+          "en": "The automation initiated the cycle and failed to perform a safety stop."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-witness",
+      "order": 4,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания напарника",
+        "en": "Coworker's Statement"
+      },
+      "isContradiction": false,
+      "narrativeRole": "context",
+      "text": {
+        "ru": "Напарник видел руки Орлова в зоне смены детали и слышал срабатывание без нажатия педали. Он нажал аварийный стоп.",
+        "en": "A coworker saw Orlov's hands in the part-change area and heard the press cycle without the pedal being pressed. He activated the emergency stop."
+      },
+      "statusExplanation": {
+        "ru": "Очевидец независимо подтверждает технический отказ.",
+        "en": "The eyewitness independently confirms the technical failure."
+      },
+      "statementLink": {
+        "statementId": "claim_operator_not_at_fault",
+        "relation": "supports",
+        "reason": {
+          "ru": "Очевидец независимо подтверждает технический отказ.",
+          "en": "The eyewitness independently confirms the technical failure."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    },
+    {
+      "id": "ev-relay",
+      "order": 5,
+      "type": "seal_match",
+      "title": {
+        "ru": "Сопоставление пломбы защитного реле",
+        "en": "Safety Relay Seal Comparison"
+      },
+      "isContradiction": false,
+      "narrativeRole": "arc_proof",
+      "text": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete."
+      },
+      "statusExplanation": {
+        "ru": "Пломбы не совпадают: в прессе стояло внешне похожее контрафактное реле из партии GC-17.",
+        "en": "The seals do not match: the press contained a visually similar counterfeit relay from batch GC-17."
+      },
+      "previousType": "document",
+      "description": {
+        "ru": "Фрагмент с установленного реле сравнивается с контрольной пломбой сертифицированной партии.",
+        "en": "A fragment from the installed relay is compared with the reference seal from the certified batch."
+      },
+      "instruction": {
+        "ru": "Совместить края и микроперфорацию пломб.",
+        "en": "Align the seal edges and microperforations."
+      },
+      "assets": {
+        "asset1": "assets/interactive/ev-relay-master-a.webp",
+        "asset2": "assets/interactive/ev-relay-master-b.webp",
+        "asset3": "assets/interactive/ev-relay-fragments.json"
+      },
+      "data": {
+        "movableFragment": "B",
+        "allowRotation": true,
+        "rotationStep": 3,
+        "initialTransform": {
+          "x": 72,
+          "y": 18,
+          "rotation": -14
+        },
+        "targetTransform": {
+          "x": 132,
+          "y": 48,
+          "rotation": 6
+        },
+        "tolerance": {
+          "position": 10,
+          "rotation": 5
+        },
+        "expectedMatch": false,
+        "sourceSeed": 313317,
+        "fragmentASeed": 313317,
+        "fragmentBSeed": 317700,
+        "comparisonMarkers": [
+          {
+            "id": "tear_pattern",
+            "label": "Контрафакт имеет другой шаг перфорации и рисунок волокон",
+            "labelEn": "The counterfeit has different perforation spacing and fiber pattern"
+          }
+        ]
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Пломбы не совпадают: в прессе стояло внешне похожее контрафактное реле из партии GC-17.",
+          "en": "The seals do not match: the press contained a visually similar counterfeit relay from batch GC-17."
+        }
+      },
+      "contradictionTarget": null,
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true,
+        "transparencyMode": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Игрок сам отличает контрафакт и видит, что пострадавший оператор не обходил защиту.",
+          "en": "The player identifies the counterfeit personally and sees that the injured operator did not bypass the safety system."
+        },
+        "playerAction": {
+          "ru": "Совместить края и микроперфорацию пломб.",
+          "en": "Align the seal edges and microperforations."
+        },
+        "conclusion": {
+          "ru": "Пломбы не совпадают: в прессе стояло внешне похожее контрафактное реле из партии GC-17.",
+          "en": "The seals do not match: the press contained a visually similar counterfeit relay from batch GC-17."
+        }
+      },
+      "evidenceTier": "arc",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.75,
+      "imageAssets": [
+        {
+          "assetId": "asset-050",
+          "role": "evidence_card",
+          "src": "src/data/cases/case-033/evidence/case-033-ev-relay.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-033/evidence/case-033-ev-relay.webp",
+          "caseRelativeSrc": "evidence/case-033-ev-relay.webp",
+          "installTo": "public/evidence/case-033-ev-relay.webp",
+          "legacyRuntimeUrl": "evidence/case-033-ev-relay.webp",
+          "format": "webp",
+          "width": 434,
+          "height": 326,
+          "sha256": "9d3cac65d73dd7b43e678e38c6fd0176d17ebea34e903d1a91e2d1afe7249790"
+        },
+        {
+          "assetId": "asset-051",
+          "role": "interactive_master_a",
+          "src": "src/data/cases/case-033/assets/interactive/ev-relay-master-a.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-033/assets/interactive/ev-relay-master-a.webp",
+          "caseRelativeSrc": "assets/interactive/ev-relay-master-a.webp",
+          "installTo": "src/data/cases/case-033/assets/interactive/ev-relay-master-a.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1400,
+          "height": 500,
+          "sha256": "626b5abf6904c7798d77e11893a3cdfa92278b2675e3bd07679a381433d1c367"
+        },
+        {
+          "assetId": "asset-052",
+          "role": "interactive_master_b",
+          "src": "src/data/cases/case-033/assets/interactive/ev-relay-master-b.webp",
+          "archiveSrc": "generated-assets/src/data/cases/case-033/assets/interactive/ev-relay-master-b.webp",
+          "caseRelativeSrc": "assets/interactive/ev-relay-master-b.webp",
+          "installTo": "src/data/cases/case-033/assets/interactive/ev-relay-master-b.webp",
+          "legacyRuntimeUrl": null,
+          "format": "webp",
+          "width": 1400,
+          "height": 500,
+          "sha256": "054120299b5fc61277508ec282080b53023786d486a81e40769732ab749b3839"
+        }
+      ],
+      "primaryImage": "src/data/cases/case-033/evidence/case-033-ev-relay.webp",
+      "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-033/evidence/case-033-ev-relay.webp",
+      "legacyImageBinding": {
+        "targetField": "data.imageUrl",
+        "runtimeValue": "evidence/case-033-ev-relay.webp",
+        "copyFrom": "generated-assets/src/data/cases/case-033/evidence/case-033-ev-relay.webp",
+        "copyTo": "public/evidence/case-033-ev-relay.webp"
+      }
+    },
+    {
+      "id": "ev-safety",
+      "order": 6,
+      "type": "document",
+      "title": {
+        "ru": "Акт охраны труда",
+        "en": "Occupational Safety Report"
+      },
+      "isContradiction": false,
+      "narrativeRole": "proof",
+      "text": {
+        "ru": "Обходов защиты и нарушений инструкции со стороны Орлова не найдено. Ответственность возложена на поставщика детали и службу закупок.",
+        "en": "No safety bypass or procedural violation by Orlov was found. Responsibility was assigned to the part supplier and procurement department."
+      },
+      "statusExplanation": {
+        "ru": "Проверка исключает вину заявителя.",
+        "en": "The investigation clears the claimant of fault."
+      },
+      "statementLink": {
+        "statementId": "claim_operator_not_at_fault",
+        "relation": "supports",
+        "reason": {
+          "ru": "Проверка исключает вину заявителя.",
+          "en": "The investigation clears the claimant of fault."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "bonus",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.25,
+      "imageAssets": [],
+      "primaryImage": null,
+      "primaryImageArchiveSrc": null,
+      "legacyImageBinding": null
+    }
+  ],
+  "finalExplanation": {
+    "ru": [
+      "Травма свежая и соответствует сдавлению прессом.",
+      "PLC фиксирует ложный запуск и отказ защитного реле без команды оператора.",
+      "Пломбы не совпадают: в прессе стояло внешне похожее контрафактное реле из партии GC-17.",
+      "Поддельная деталь из партии GC-17 стала причиной реального несчастного случая. Выплату следует одобрить."
+    ],
+    "en": [
+      "The timing and mechanism of the injury match the claim.",
+      "The physical evidence confirms the location and direction of the accident.",
+      "The automation initiated the cycle and failed to perform a safety stop.",
+      "The eyewitness independently confirms the technical failure.",
+      "The seals do not match: the press contained a visually similar counterfeit relay from batch GC-17.",
+      "No material statement has been disproven. The claim should be approved."
+    ]
+  },
+  "implementationChanges": {
+    "ru": [
+      "Сохранить valid-вердикт, но добавить конфликт с работодателем.",
+      "Связать реальную травму с контрафактной поставкой Серого конвоя.",
+      "Интегрировать seal_match в улику ev-relay; результат скрыт до завершения анализа."
+    ],
+    "en": [
+      "Implement the canonical Archive No. 17 campaign version represented by this bilingual case record.",
+      "Keep the stable case ID and campaign order.",
+      "Integrate seal_match into evidence ev-relay; keep the result hidden until analysis is complete."
+    ]
+  },
+  "assetPlan": [
+    {
+      "file": "people/gennady-orlov.webp",
+      "action": "generate",
+      "prompt": "Illustrated archival claimant ID portrait matching the existing insurance detective game: Russian male factory press operator, 49 years old, practical work jacket over a plain shirt, tired but direct expression, short brown-gray hair, neutral document-photo background, original face distinct from Gennady Bublikov, no injury gore, no logos, no text, no watermark."
+    },
+    {
+      "file": "evidence/case-033-ev-relay.webp",
+      "action": "generate",
+      "prompt": "Forensic industrial evidence photo of a removed safety relay from a stamping press beside a certified reference relay, externally similar but the failed unit has heat-darkened stuck contacts and rough internal construction, neutral lab table, blank label areas for UI text, no brands, no watermark."
+    },
+    {
+      "file": "assets/interactive/ev-relay-master-a.webp",
+      "purpose": "Цельный мастер пломбы или контрольного фрагмента A",
+      "resolution": "1400×500",
+      "format": "WebP",
+      "transparency": true,
+      "generatedBy": "image_model",
+      "manualPost": "Убрать случайный текст; сохранить альфа-канал; разрезать процедурно по sourceSeed.",
+      "prompt": "Create a realistic intact security seal or evidence control label for a fictional insurance investigation. Миниатюрные гарантийные наклейки промышленного реле с абстрактной микроперфорацией, без реальных сертификационных знаков. Front view, full object, transparent background, detailed fibers, adhesive or polymer texture, abstract protection pattern, no real logo or brand, no watermark, no critical readable text, restrained utilitarian evidence style. Keep edges suitable for procedural tearing.",
+      "evidenceId": "ev-relay",
+      "evidenceType": "seal_match"
+    },
+    {
+      "file": "assets/interactive/ev-relay-master-b.webp",
+      "purpose": "Второй цельный мастер для заведомо несовпадающего фрагмента B",
+      "resolution": "1400×500",
+      "format": "WebP",
+      "transparency": true,
+      "generatedBy": "image_model",
+      "manualPost": "Убрать случайный текст; сохранить альфа-канал; разрезать процедурно по sourceSeed.",
+      "prompt": "Create a realistic intact security seal or evidence control label for a fictional insurance investigation. Миниатюрные гарантийные наклейки промышленного реле с абстрактной микроперфорацией, без реальных сертификационных знаков. Front view, full object, transparent background, detailed fibers, adhesive or polymer texture, abstract protection pattern, no real logo or brand, no watermark, no critical readable text, restrained utilitarian evidence style. Keep edges suitable for procedural tearing. Create a clearly different microscopic protection pattern and fiber layout while keeping the same general material family.",
+      "evidenceId": "ev-relay",
+      "evidenceType": "seal_match"
+    },
+    {
+      "file": "assets/interactive/ev-relay-fragments.json",
+      "purpose": "Seed разрыва, трансформации и допуски",
+      "resolution": "normalized component space",
+      "format": "JSON",
+      "transparency": true,
+      "generatedBy": "frontend",
+      "manualPost": "Сгенерировать fragment-a.webp и fragment-b.webp из master-файлов; проверить drag/rotate/snap.",
+      "prompt": null,
+      "evidenceId": "ev-relay",
+      "evidenceType": "seal_match"
+    }
+  ],
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "Во время смены штамповочный пресс сработал без команды и зажал правую кисть. Защитная решётка и блокировка не остановили ход. Прошу выплату за производственную травму и временную потерю трудоспособности.",
+        "en": "During my shift, the stamping press cycled without a command and crushed my right hand. Neither the safety guard nor the interlock stopped it. I am claiming compensation for a workplace injury and temporary disability."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_accident",
+      "text": {
+        "ru": "Пресс самопроизвольно начал ход и травмировал Орлова.",
+        "en": "The press cycled on its own and injured Orlov."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_operator_not_at_fault",
+      "text": {
+        "ru": "Орлов не обходил защиту и соблюдал инструкцию.",
+        "en": "Orlov did not bypass the safety system and followed procedure."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_relay_failure",
+      "text": {
+        "ru": "Причиной стала неисправность установленного защитного реле.",
+        "en": "The installed safety relay failed and caused the accident."
+      },
+      "stampable": true
+    }
+  ],
+  "interactiveEvidenceCount": 1,
+  "revisionVersion": "retention-pass-3",
+  "assetBindings": {
+    "schemaVersion": 1,
+    "productionBasePath": "src/data/cases/case-033",
+    "archiveBasePath": "generated-assets/src/data/cases/case-033",
+    "claimantPortrait": {
+      "characterId": "gennady-orlov",
+      "role": "claimant_portrait",
+      "name": {
+        "ru": "Геннадий Орлов",
+        "en": "Gennady Orlov, age 49"
+      },
+      "assetId": "asset-049",
+      "src": "src/data/cases/case-033/people/gennady-orlov.webp",
+      "archiveSrc": "generated-assets/src/data/cases/case-033/people/gennady-orlov.webp",
+      "caseRelativeSrc": "people/gennady-orlov.webp",
+      "installTo": "public/people/gennady-orlov.webp",
+      "legacyRuntimeUrl": "people/gennady-orlov.webp",
+      "format": "webp",
+      "width": 359,
+      "height": 359,
+      "sha256": "64ed49b1915e03539a4477cbd100541fb7d81a110a5db9567779d6baf70a38bd"
+    },
+    "claimantPortraitBinding": {
+      "mode": "replace",
+      "targetField": "personImage",
+      "runtimeValue": "people/gennady-orlov.webp",
+      "copyFrom": "generated-assets/src/data/cases/case-033/people/gennady-orlov.webp",
+      "copyTo": "public/people/gennady-orlov.webp",
+      "replacesExistingValue": "people/gennady.webp"
+    },
+    "caseSceneAssets": [],
+    "evidence": [
+      {
+        "evidenceId": "ev-relay",
+        "title": {
+          "ru": "Сопоставление пломбы защитного реле",
+          "en": "Safety Relay Seal Comparison"
+        },
+        "primaryImage": "src/data/cases/case-033/evidence/case-033-ev-relay.webp",
+        "primaryImageArchiveSrc": "generated-assets/src/data/cases/case-033/evidence/case-033-ev-relay.webp",
+        "legacyImageBinding": {
+          "targetField": "data.imageUrl",
+          "runtimeValue": "evidence/case-033-ev-relay.webp",
+          "copyFrom": "generated-assets/src/data/cases/case-033/evidence/case-033-ev-relay.webp",
+          "copyTo": "public/evidence/case-033-ev-relay.webp"
+        },
+        "assets": [
+          {
+            "assetId": "asset-050",
+            "role": "evidence_card",
+            "src": "src/data/cases/case-033/evidence/case-033-ev-relay.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-033/evidence/case-033-ev-relay.webp",
+            "caseRelativeSrc": "evidence/case-033-ev-relay.webp",
+            "installTo": "public/evidence/case-033-ev-relay.webp",
+            "legacyRuntimeUrl": "evidence/case-033-ev-relay.webp",
+            "format": "webp",
+            "width": 434,
+            "height": 326,
+            "sha256": "9d3cac65d73dd7b43e678e38c6fd0176d17ebea34e903d1a91e2d1afe7249790"
+          },
+          {
+            "assetId": "asset-051",
+            "role": "interactive_master_a",
+            "src": "src/data/cases/case-033/assets/interactive/ev-relay-master-a.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-033/assets/interactive/ev-relay-master-a.webp",
+            "caseRelativeSrc": "assets/interactive/ev-relay-master-a.webp",
+            "installTo": "src/data/cases/case-033/assets/interactive/ev-relay-master-a.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1400,
+            "height": 500,
+            "sha256": "626b5abf6904c7798d77e11893a3cdfa92278b2675e3bd07679a381433d1c367"
+          },
+          {
+            "assetId": "asset-052",
+            "role": "interactive_master_b",
+            "src": "src/data/cases/case-033/assets/interactive/ev-relay-master-b.webp",
+            "archiveSrc": "generated-assets/src/data/cases/case-033/assets/interactive/ev-relay-master-b.webp",
+            "caseRelativeSrc": "assets/interactive/ev-relay-master-b.webp",
+            "installTo": "src/data/cases/case-033/assets/interactive/ev-relay-master-b.webp",
+            "legacyRuntimeUrl": null,
+            "format": "webp",
+            "width": 1400,
+            "height": 500,
+            "sha256": "054120299b5fc61277508ec282080b53023786d486a81e40769732ab749b3839"
+          }
+        ]
+      }
+    ]
+  }
+}

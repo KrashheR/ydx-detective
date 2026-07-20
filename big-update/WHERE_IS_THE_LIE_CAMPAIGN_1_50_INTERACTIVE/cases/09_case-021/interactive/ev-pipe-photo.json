@@ -1,0 +1,90 @@
+{
+  "id": "ev-pipe-photo",
+  "order": 2,
+  "type": "surface_reveal",
+  "title": {
+    "ru": "Очистка повреждённой трубы"
+  },
+  "isContradiction": true,
+  "narrativeRole": "pivot",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Под налётом обнаружены свежая дугообразная царапина и синяя краска от моторизованного колеса клуба; трубу пробила платформа из мастерской."
+  },
+  "previousType": "photo",
+  "description": {
+    "ru": "Инспектор сфотографировал вмятину до очистки мокрой грязи и технического налёта."
+  },
+  "instruction": {
+    "ru": "Сотрите грязь с края вмятины и найдите след контакта."
+  },
+  "assets": {
+    "baseImage": "assets/interactive/ev-pipe-photo-scene.webp",
+    "coverTexture": "shared/surface/dirt.webp",
+    "revealMasks": [
+      "assets/interactive/ev-pipe-photo-blue_contact_arc-trace-mask.svg"
+    ],
+    "toolCursor": "shared/surface/cloth-cursor.svg"
+  },
+  "data": {
+    "mode": "erase",
+    "coverType": "dirt",
+    "brush": {
+      "radius": 46,
+      "hardness": 0.66,
+      "opacity": 0.84,
+      "spacing": 8
+    },
+    "completion": {
+      "type": "discover_any",
+      "requiredTraceIds": [
+        "blue_contact_arc"
+      ]
+    },
+    "traces": [
+      {
+        "id": "blue_contact_arc",
+        "label": "Синяя краска и дугообразная царапина",
+        "requiredRevealPercent": 54,
+        "mask": "assets/interactive/ev-pipe-photo-blue_contact_arc-trace-mask.svg",
+        "shape": "mask",
+        "isContradiction": true,
+        "conclusion": "Под налётом обнаружены свежая дугообразная царапина и синяя краска от моторизованного колеса клуба; трубу пробила платформа из мастерской."
+      }
+    ]
+  },
+  "statementLink": {
+    "statementId": "claim_cause",
+    "relation": "contradicts",
+    "reason": {
+      "ru": "Под налётом обнаружены свежая дугообразная царапина и синяя краска от моторизованного колеса клуба; трубу пробила платформа из мастерской."
+    }
+  },
+  "contradictionTarget": {
+    "statementId": "claim_cause",
+    "reason": {
+      "ru": "Под налётом обнаружены свежая дугообразная царапина и синяя краска от моторизованного колеса клуба; трубу пробила платформа из мастерской."
+    }
+  },
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": false,
+    "highlightAfterHint": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Игрок собственноручно находит физический контакт платформы с трубой вместо чтения готового вывода на фотографии."
+    },
+    "playerAction": {
+      "ru": "Сотрите грязь с края вмятины и найдите след контакта."
+    },
+    "conclusion": {
+      "ru": "Под налётом обнаружены свежая дугообразная царапина и синяя краска от моторизованного колеса клуба; трубу пробила платформа из мастерской."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

@@ -1,0 +1,83 @@
+{
+  "id": "ev-sickleave",
+  "order": 2,
+  "type": "document_scan",
+  "title": {
+    "ru": "Экспертиза продлённого больничного"
+  },
+  "isContradiction": true,
+  "narrativeRole": "suspicion",
+  "text": {
+    "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+  },
+  "statusExplanation": {
+    "ru": "Под белой плашкой читается исходная запись «лёгкий труд разрешён после 7 дней»; фраза о полной нетрудоспособности добавлена позднее."
+  },
+  "previousType": "document",
+  "description": {
+    "ru": "Страхователь предоставил распечатанную копию дистанционного продления."
+  },
+  "instruction": {
+    "ru": "Включить боковой свет и проверить строку с режимом труда."
+  },
+  "assets": {
+    "asset1": "assets/interactive/ev-sickleave-base.webp",
+    "asset2": "assets/interactive/ev-sickleave-scan-overlay.svg"
+  },
+  "data": {
+    "initialMode": "normal",
+    "modes": [
+      "normal",
+      "side_light",
+      "backlight"
+    ],
+    "anomalyZones": [
+      {
+        "id": "work_regime",
+        "mode": "side_light",
+        "x": 31,
+        "y": 57,
+        "width": 48,
+        "height": 9,
+        "label": "Под белой плашкой читается исходная запись «лёгкий труд разрешён после 7 дней»; фраза о полной нетрудоспособности добавлена позднее.",
+        "isContradiction": true
+      }
+    ],
+    "successCondition": {
+      "type": "select_zone",
+      "zoneId": "work_regime"
+    }
+  },
+  "statementLink": {
+    "statementId": "claim_disability_duration",
+    "relation": "contradicts",
+    "reason": {
+      "ru": "Под белой плашкой читается исходная запись «лёгкий труд разрешён после 7 дней»; фраза о полной нетрудоспособности добавлена позднее."
+    }
+  },
+  "contradictionTarget": {
+    "statementId": "claim_disability_duration",
+    "reason": {
+      "ru": "Под белой плашкой читается исходная запись «лёгкий труд разрешён после 7 дней»; фраза о полной нетрудоспособности добавлена позднее."
+    }
+  },
+  "uiHints": {
+    "showReset": true,
+    "allowZoom": true,
+    "highlightAfterHint": true
+  },
+  "interactiveDesign": {
+    "why": {
+      "ru": "Скан делает ложь о полной нетрудоспособности конкретной, не ставя под сомнение сам факт первой травмы."
+    },
+    "playerAction": {
+      "ru": "Включить боковой свет и проверить строку с режимом труда."
+    },
+    "conclusion": {
+      "ru": "Под белой плашкой читается исходная запись «лёгкий труд разрешён после 7 дней»; фраза о полной нетрудоспособности добавлена позднее."
+    }
+  },
+  "evidenceTier": "core",
+  "requiredForVerdict": true,
+  "rewardWeight": 1
+}

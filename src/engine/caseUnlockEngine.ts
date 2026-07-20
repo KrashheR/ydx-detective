@@ -5,7 +5,7 @@ import type { Case, PlayerStats } from '../types';
 export type CaseUnlockStatus = 'available' | 'locked' | 'completed';
 export type CaseUnlockReason = 'requires_level' | 'complete_previous';
 
-type CaseUnlockCandidate = Pick<Case, 'id'>;
+type CaseUnlockCandidate = Pick<Case, 'id' | 'campaignOrder' | 'requiredLevel'>;
 
 export interface CaseUnlockInfo<T extends CaseUnlockCandidate = Case> {
   readonly caseData: T;
@@ -32,6 +32,7 @@ type StandardCaseRequirementMap =
   typeof GAME_CONFIG.caseUnlocks.standardCaseRequiredLevelById;
 
 export const getRequiredLevel = (caseData: CaseUnlockCandidate): number => {
+  if (caseData.requiredLevel != null) return caseData.requiredLevel;
   const requirements = GAME_CONFIG.caseUnlocks.standardCaseRequiredLevelById;
   const level = requirements[caseData.id as keyof StandardCaseRequirementMap];
   return level ?? GAME_CONFIG.caseUnlocks.defaultRequiredLevel;
@@ -42,11 +43,14 @@ const caseNumberFromId = (id: string): number => {
   return match?.[1] ? Number.parseInt(match[1], 10) : Number.MAX_SAFE_INTEGER;
 };
 
-/** Ascending unlock order: required level → case number. */
+/** Canonical campaign order; legacy content falls back to level → case number. */
 export const compareCasesByUnlockCriteria = (
   a: CaseUnlockCandidate,
   b: CaseUnlockCandidate,
 ): number => {
+  if (a.campaignOrder != null || b.campaignOrder != null) {
+    return (a.campaignOrder ?? Number.MAX_SAFE_INTEGER) - (b.campaignOrder ?? Number.MAX_SAFE_INTEGER);
+  }
   const levelA = getRequiredLevel(a);
   const levelB = getRequiredLevel(b);
   if (levelA !== levelB) return levelA - levelB;

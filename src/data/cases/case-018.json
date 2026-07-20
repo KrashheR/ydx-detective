@@ -1,290 +1,373 @@
 {
   "id": "case-018",
   "type": "standard",
-  "difficulty": "hard",
+  "campaignOrder": 5,
+  "requiredLevel": 3,
+  "act": 1,
+  "actTitle": {
+    "ru": "Чужой почерк",
+    "en": "Another Hand",
+    "tr": "Another Hand",
+    "ar": "Another Hand",
+    "kk": "Чужой почерк"
+  },
+  "difficulty": "medium",
   "claimAmount": 1100,
   "truth": "valid",
   "title": {
-    "ru": "Дрон-похититель кольца",
-    "en": "The Ring-Stealing Drone",
-    "tr": "Yüzük Çalan Drone",
-    "ar": "الدرون سارق الخاتم",
-    "kk": "Сақина ұрлаған дрон"
+    "ru": "Кольцо на высоте",
+    "en": "The High-Flying Ring",
+    "tr": "The High-Flying Ring",
+    "ar": "The High-Flying Ring",
+    "kk": "Кольцо на высоте"
   },
   "claim": {
     "person": {
       "ru": "Анатолий Степанович, 71 год",
-      "en": "Anatoly Stepanovich, 71",
-      "tr": "Anatoly Stepanovich, 71",
-      "ar": "أناتولي ستيبانوفيتش، 71",
-      "kk": "Анатолий Степанович, 71 жаста"
+      "en": "Anatoly Stepanovich, age 71",
+      "tr": "Anatoly Stepanovich, age 71",
+      "ar": "Anatoly Stepanovich, age 71",
+      "kk": "Анатолий Степанович, 71 год"
     },
     "story": {
-      "ru": "Настоящим заявляю о хищении имущества. 22 апреля около 23 часов в открытое окно гостиной влетел высокотехнологичный беспилотный аппарат, снял с моего стола золотое обручальное кольцо и скрылся в ночном направлении. Очевидцев происшествия не имелось. Прошу возместить стоимость кольца как похищенного.",
-      "en": "I hereby report the theft of property. On 22 April, at approximately 11 p.m., a high-tech unmanned aircraft flew in through the open living-room window, removed my gold wedding ring from the table, and vanished into the night. There were no eyewitnesses to the event. I request compensation for the value of the ring as stolen.",
-      "tr": "İşbu belgeyle mal hırsızlığını bildiririm. 22 Nisan'da saat 23.00 sularında açık oturma odası penceresinden yüksek teknolojili insansız bir hava aracı içeri girdi, masamdan altın evlilik yüzüğümü aldı ve gece karanlığında kayboldu. Olaya tanık olan kimse yoktu. Çalınan yüzüğün değerinin tazmin edilmesini talep ederim.",
-      "ar": "أُبلغ بموجب هذا عن سرقة ممتلكات. في الثاني والعشرين من أبريل، نحو الساعة الحادية عشرة مساءً، دخلت طائرة مسيّرة عالية التقنية عبر نافذة غرفة المعيشة المفتوحة، وأخذت خاتم زواجي الذهبي من على الطاولة، واختفت في الليل. لم يكن هناك شهود عيان على الواقعة. أطلب تعويض قيمة الخاتم باعتباره مسروقاً.",
-      "kk": "Осы арқылы мүлік ұрлығы туралы мәлімдеймін. 22 сәуірде сағат 23-те шамасында ашық қонақ бөлме терезесінен жоғары технологиялы ұшқышсыз аппарат еніп, менің үстелімнен алтын неке сақинамды алып, түнгі бағытта ғайып болды. Оқиғаның куәгерлері болмады. Ұрланған сақинаның құнын өтеуді сұраймын."
+      "ru": "22 апреля около 23:00 я работал на балконе, снял обручальное кольцо и положил его на перила. Соседский дрон снизился слишком близко, кольцо зацепилось за шасси. В этот момент енот Жорик прыгнул на аппарат, после чего дрон унесло к набережной. Кольцо упало в реку и найдено не было. Прошу возместить случайную утрату застрахованного имущества.",
+      "en": "At about 11:00 p.m. on April 22, I was working on my balcony. I removed my wedding ring and placed it on the railing. A neighbor's drone descended too close, and the ring caught on its landing gear. At that moment, Zhorik the raccoon leaped onto the drone, sending it drifting toward the riverfront. The ring fell into the river and was never recovered. I am claiming compensation for the accidental loss of insured property.",
+      "tr": "At about 11:00 p.m. on April 22, I was working on my balcony. I removed my wedding ring and placed it on the railing. A neighbor's drone descended too close, and the ring caught on its landing gear. At that moment, Zhorik the raccoon leaped onto the drone, sending it drifting toward the riverfront. The ring fell into the river and was never recovered. I am claiming compensation for the accidental loss of insured property.",
+      "ar": "At about 11:00 p.m. on April 22, I was working on my balcony. I removed my wedding ring and placed it on the railing. A neighbor's drone descended too close, and the ring caught on its landing gear. At that moment, Zhorik the raccoon leaped onto the drone, sending it drifting toward the riverfront. The ring fell into the river and was never recovered. I am claiming compensation for the accidental loss of insured property.",
+      "kk": "22 апреля около 23:00 я работал на балконе, снял обручальное кольцо и положил его на перила. Соседский дрон снизился слишком близко, кольцо зацепилось за шасси. В этот момент енот Жорик прыгнул на аппарат, после чего дрон унесло к набережной. Кольцо упало в реку и найдено не было. Прошу возместить случайную утрату застрахованного имущества."
     }
   },
-  "coverImage": "covers/case-018.svg",
-  "personImage": "people/anatoly.webp",
   "client": {
     "role": {
-      "ru": "Заявитель · физ. лицо",
-      "en": "Claimant · individual",
-      "tr": "Başvuru sahibi · gerçek kişi",
-      "ar": "مقدم الطلب · شخص طبيعي",
-      "kk": "Өтініш беруші · жеке тұлға"
+      "ru": "Заявитель · страховое дело",
+      "en": "Claimant · insurance file",
+      "tr": "Claimant · insurance file",
+      "ar": "Claimant · insurance file",
+      "kk": "Заявитель · страховое дело"
     },
     "meta": [
       {
         "k": {
-          "ru": "Возраст",
-          "en": "Age",
-          "tr": "Yaş",
-          "ar": "العمر",
-          "kk": "Жасы"
+          "ru": "Акт",
+          "en": "Act",
+          "tr": "Act",
+          "ar": "Act",
+          "kk": "Акт"
         },
         "v": {
-          "ru": "71 год",
-          "en": "71 years old",
-          "tr": "71 yaşında",
-          "ar": "71 عامًا",
-          "kk": "71 жаста"
+          "ru": "1",
+          "en": "1",
+          "tr": "1",
+          "ar": "1",
+          "kk": "1"
         }
       },
       {
         "k": {
-          "ru": "Город",
-          "en": "City",
-          "tr": "Şehir",
-          "ar": "المدينة",
-          "kk": "Қала"
+          "ru": "Порядок",
+          "en": "Campaign order",
+          "tr": "Campaign order",
+          "ar": "Campaign order",
+          "kk": "Порядок"
         },
         "v": {
-          "ru": "Воронеж",
-          "en": "Voronezh",
-          "tr": "Voronej",
-          "ar": "فورونيج",
-          "kk": "Воронеж"
-        }
-      },
-      {
-        "k": {
-          "ru": "Клиент с",
-          "en": "Client since",
-          "tr": "Müşteri",
-          "ar": "عميل منذ",
-          "kk": "Клиент"
-        },
-        "v": {
-          "ru": "2012 г.",
-          "en": "2012",
-          "tr": "2012",
-          "ar": "2012",
-          "kk": "2012 ж."
-        }
-      },
-      {
-        "k": {
-          "ru": "Полис",
-          "en": "Policy",
-          "tr": "Poliçe",
-          "ar": "البوليصة",
-          "kk": "Полис"
-        },
-        "v": {
-          "ru": "Имущество · ИМ-18223906-X6",
-          "en": "Property · IM-18223906-X6",
-          "tr": "Mülk · IM-18223906-X6",
-          "ar": "الممتلكات · IM-18223906-X6",
-          "kk": "Мүлік · ИМ-18223906-X6"
-        }
-      },
-      {
-        "k": {
-          "ru": "Документ",
-          "en": "Document",
-          "tr": "Belge",
-          "ar": "الوثيقة",
-          "kk": "Құжат"
-        },
-        "v": {
-          "ru": "Паспорт 3609-71 №172128951-83",
-          "en": "Passport 3609-71 №172128951-83",
-          "tr": "Pasaport 3609-71 №172128951-83",
-          "ar": "جواز السفر 3609-71 №172128951-83",
-          "kk": "Паспорт 3609-71 №172128951-83"
+          "ru": "5",
+          "en": "5",
+          "tr": "5",
+          "ar": "5",
+          "kk": "5"
         }
       }
     ]
   },
+  "coverImage": "covers/case-018.svg",
+  "personImage": "people/anatoly.webp",
   "evidences": [
     {
       "id": "ev-camera",
+      "order": 1,
       "type": "camera_recording",
       "title": {
         "ru": "Кадр с камеры соседа",
-        "en": "Neighbor's Camera Frame",
-        "tr": "Komşunun Kamera Karesi",
-        "ar": "لقطة من كاميرا الجار",
-        "kk": "Көршінің камера кадры"
+        "en": "Neighbor's Camera Footage",
+        "tr": "Neighbor's Camera Footage",
+        "ar": "Neighbor's Camera Footage",
+        "kk": "Кадр с камеры соседа"
       },
       "content": {
-        "ru": "Чёткий высокоскоростной кадр: дрон набирает высоту, а за его аккумулятор обеими лапами уцепился енот и висит метрах в двух над балконом заявителя. На ноге дрона поблёскивает кольцо.",
-        "en": "A crisp high-speed frame: the drone is climbing while a raccoon clings to its battery with both paws, dangling about two metres above the claimant's balcony. A ring glints on the drone's leg.",
-        "tr": "Net, yüksek hızlı bir kare: drone yükselirken bir rakun her iki patisiyle bataryasına tutunmuş, talep sahibinin balkonunun yaklaşık iki metre üzerinde sallanıyor. Drone'un ayağında bir yüzük parlıyor.",
-        "ar": "لقطة واضحة عالية السرعة: الدرون يصعد بينما يتشبث راكون ببطاريته بكلتا يديه، متدلياً على ارتفاع مترين تقريباً فوق شرفة مقدم الطلب. يلمع خاتم على قائمة الدرون.",
-        "kk": "Анық жоғары жылдамдықты кадр: дрон биіктеп барады, ал оның аккумуляторына енот екі табанымен жармасып, өтініш берушінің балконынан екі метрдей биіктікте ілініп тұр. Дронның аяғында сақина жылтырайды."
+        "ru": "На кадре видно, как дрон набирает высоту у балкона. На правой стойке шасси блестит кольцо, а за нижнюю часть корпуса обеими лапами держится енот.",
+        "en": "The footage shows the drone gaining altitude beside the balcony. A ring glints on the right landing strut, while a raccoon clings to the underside with both paws.",
+        "tr": "The footage shows the drone gaining altitude beside the balcony. A ring glints on the right landing strut, while a raccoon clings to the underside with both paws.",
+        "ar": "The footage shows the drone gaining altitude beside the balcony. A ring glints on the right landing strut, while a raccoon clings to the underside with both paws.",
+        "kk": "На кадре видно, как дрон набирает высоту у балкона. На правой стойке шасси блестит кольцо, а за нижнюю часть корпуса обеими лапами держится енот."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Кадр фиксирует и дрон, и кольцо, и енота — это подтверждает событие, а не опровергает.",
-        "en": "The frame captures the drone, the ring, and the raccoon — this supports the event rather than refuting it.",
-        "tr": "Kare; drone'u, yüzüğü ve rakunu yakalıyor — bu, olayı çürütmek yerine destekliyor.",
-        "ar": "اللقطة تلتقط الدرون والخاتم والراكون — وهذا يدعم الواقعة بدل أن ينفيها.",
-        "kk": "Кадр дронды да, сақинаны да, енотты да тіркейді — бұл оқиғаны теріске шығармай, керісінше растайды."
+        "ru": "Камера подтверждает две наиболее невероятные детали заявления: кольцо на дроне и Жорика, уцепившегося за аппарат.",
+        "en": "The footage confirms the claim's two least likely details: the ring on the drone and Zhorik clinging to it.",
+        "tr": "The footage confirms the claim's two least likely details: the ring on the drone and Zhorik clinging to it.",
+        "ar": "The footage confirms the claim's two least likely details: the ring on the drone and Zhorik clinging to it.",
+        "kk": "Камера подтверждает две наиболее невероятные детали заявления: кольцо на дроне и Жорика, уцепившегося за аппарат."
       },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_event",
+        "relation": "supports",
+        "reason": {
+          "ru": "Камера подтверждает две наиболее невероятные детали заявления: кольцо на дроне и Жорика, уцепившегося за аппарат.",
+          "en": "The footage confirms the claim's two least likely details: the ring on the drone and Zhorik clinging to it.",
+          "tr": "The footage confirms the claim's two least likely details: the ring on the drone and Zhorik clinging to it.",
+          "ar": "The footage confirms the claim's two least likely details: the ring on the drone and Zhorik clinging to it.",
+          "kk": "Камера подтверждает две наиболее невероятные детали заявления: кольцо на дроне и Жорика, уцепившегося за аппарат."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
       "meta": {
-        "cameraId": "CAM-NB7",
-        "cameraModel": "AeroCam AC-520 · 2K · H.264"
+        "imageUrl": "evidence/case-018-drone-ring-raccoon.webp"
       }
     },
     {
-      "id": "ev-gps",
+      "id": "ev-flight-log",
+      "order": 2,
       "type": "gps",
       "title": {
-        "ru": "Полётный журнал дрона",
-        "en": "Drone Flight Log",
-        "tr": "Drone Uçuş Kaydı",
-        "ar": "سجل رحلة الدرون",
-        "kk": "Дронның ұшу журналы"
+        "ru": "Полётный журнал",
+        "en": "Flight Log",
+        "tr": "Flight Log",
+        "ar": "Flight Log",
+        "kk": "Полётный журнал"
       },
       "content": {
-        "ru": [
-          "22:59:40 — Зависание над балконом, высота 4 м",
-          "23:00:05 — Удержание позиции, 45 сек, дрейф ±0.3 м",
-          "23:00:25 — Резкий рост массы +1.8 кг, набор высоты",
-          "23:01:12 — Снижение тяги, посадка во дворе соседа"
-        ],
-        "en": [
-          "22:59:40 — Hover over balcony, altitude 4 m",
-          "23:00:05 — Position hold, 45 s, drift ±0.3 m",
-          "23:00:25 — Sudden mass increase +1.8 kg, climbing",
-          "23:01:12 — Thrust drop, landing in neighbor's yard"
-        ],
-        "tr": [
-          "22:59:40 — Balkon üzerinde askıda, irtifa 4 m",
-          "23:00:05 — Pozisyon tutuşu, 45 sn, sapma ±0.3 m",
-          "23:00:25 — Ani kütle artışı +1.8 kg, tırmanış",
-          "23:01:12 — İtki düşüşü, komşunun bahçesine iniş"
-        ],
-        "ar": [
-          "22:59:40 — تحليق فوق الشرفة، الارتفاع 4 م",
-          "23:00:05 — تثبيت الموضع، 45 ثانية، انحراف ±0.3 م",
-          "23:00:25 — زيادة مفاجئة في الكتلة +1.8 كغ، صعود",
-          "23:01:12 — انخفاض الدفع، الهبوط في فناء الجار"
-        ],
-        "kk": [
-          "22:59:40 — Балкон үстінде қалқу, биіктік 4 м",
-          "23:00:05 — Орынды ұстау, 45 сек, ауытқу ±0.3 м",
-          "23:00:25 — Массаның күрт өсуі +1.8 кг, биіктеу",
-          "23:01:12 — Тартудың төмендеуі, көрші ауласына қону"
-        ]
+        "ru": "- 22:59:40 — зависание у балкона, высота 4 м;\n- 23:00:25 — резкий рост нагрузки на 1,8 кг;\n- 23:00:41 — неконтролируемый дрейф к набережной;\n- 23:01:06 — резкое снижение над водой;\n- 23:01:18 — аварийная посадка на берегу.",
+        "en": "- 10:59:40 p.m.—hovering beside balcony, altitude 4 m;\n- 11:00:25 p.m.—sudden 1.8 kg load increase;\n- 11:00:41 p.m.—uncontrolled drift toward riverfront;\n- 11:01:06 p.m.—sharp descent over water;\n- 11:01:18 p.m.—emergency landing on riverbank.",
+        "tr": "- 10:59:40 p.m.—hovering beside balcony, altitude 4 m;\n- 11:00:25 p.m.—sudden 1.8 kg load increase;\n- 11:00:41 p.m.—uncontrolled drift toward riverfront;\n- 11:01:06 p.m.—sharp descent over water;\n- 11:01:18 p.m.—emergency landing on riverbank.",
+        "ar": "- 10:59:40 p.m.—hovering beside balcony, altitude 4 m;\n- 11:00:25 p.m.—sudden 1.8 kg load increase;\n- 11:00:41 p.m.—uncontrolled drift toward riverfront;\n- 11:01:06 p.m.—sharp descent over water;\n- 11:01:18 p.m.—emergency landing on riverbank.",
+        "kk": "- 22:59:40 — зависание у балкона, высота 4 м;\n- 23:00:25 — резкий рост нагрузки на 1,8 кг;\n- 23:00:41 — неконтролируемый дрейф к набережной;\n- 23:01:06 — резкое снижение над водой;\n- 23:01:18 — аварийная посадка на берегу."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Журнал показывает зависание над балконом ровно 45 секунд и внезапный привес — это вес уцепившегося енота.",
-        "en": "The log shows a hover over the balcony of exactly 45 seconds and a sudden added weight — the mass of the clinging raccoon.",
-        "tr": "Kayıt, balkon üzerinde tam 45 saniyelik bir askıda kalış ve ani bir ağırlık artışı gösteriyor — tutunan rakunun kütlesi.",
-        "ar": "السجل يُظهر تحليقاً فوق الشرفة لمدة 45 ثانية بالضبط وزيادة مفاجئة في الوزن — وهي كتلة الراكون المتشبث.",
-        "kk": "Журнал балкон үстінде дәл 45 секунд қалқуды және кенет салмақ қосылуын көрсетеді — бұл жармасқан еноттың салмағы."
+        "ru": "Маршрут и внезапная нагрузка согласуются с записью камеры и рассказом заявителя.",
+        "en": "The route and sudden increase in load match both the footage and the claimant's account.",
+        "tr": "The route and sudden increase in load match both the footage and the claimant's account.",
+        "ar": "The route and sudden increase in load match both the footage and the claimant's account.",
+        "kk": "Маршрут и внезапная нагрузка согласуются с записью камеры и рассказом заявителя."
       },
-      "meta": {
-        "company": {
-          "ru": "Бюро воздушных маршрутов",
-          "en": "AirRoute Bureau",
-          "tr": "Aeroİz Navigasyon",
-          "ar": "ملاحة أيرو تريس",
-          "kk": "АэроІз Навигация"
-        },
-        "department": {
-          "ru": "Центр мониторинга беспилотных аппаратов",
-          "en": "Unmanned Aircraft Monitoring Center",
-          "tr": "İnsansız Hava Aracı İzleme Merkezi",
-          "ar": "مركز مراقبة الطائرات المسيّرة",
-          "kk": "Ұшқышсыз аппараттарды бақылау орталығы"
-        },
-        "requestId": {
-          "ru": "ДРН-2026-0422-К · Тип: Полётный журнал",
-          "en": "DRN-2026-0422-K · Type: Flight log",
-          "tr": "DRN-2026-0422-K · Tür: Uçuş günlüğü",
-          "ar": "DRN-2026-0422-K · النوع: سجل الرحلة",
-          "kk": "ДРН-2026-0422-К · Түрі: Ұшу журналы"
-        },
-        "gpsFooter": {
-          "ru": "© АэроСлед 2026 · GPS ACC: ±2m",
-          "en": "© AeroTrace 2026 · GPS ACC: ±2m",
-          "tr": "© Aeroİz 2026 · GPS ACC: ±2m",
-          "ar": "© أيرو تريس 2026 · دقة GPS: ±2م",
-          "kk": "© АэроІз 2026 · GPS дәлдігі: ±2 м"
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_cause",
+        "relation": "supports",
+        "reason": {
+          "ru": "Маршрут и внезапная нагрузка согласуются с записью камеры и рассказом заявителя.",
+          "en": "The route and sudden increase in load match both the footage and the claimant's account.",
+          "tr": "The route and sudden increase in load match both the footage and the claimant's account.",
+          "ar": "The route and sudden increase in load match both the footage and the claimant's account.",
+          "kk": "Маршрут и внезапная нагрузка согласуются с записью камеры и рассказом заявителя."
         }
-      }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
     },
     {
       "id": "ev-witness",
+      "order": 3,
       "type": "witness_statement",
       "title": {
-        "ru": "Показания соседского ребёнка",
-        "en": "Neighbor's Child Statement",
-        "tr": "Komşu Çocuğun İfadesi",
-        "ar": "إفادة طفل الجار",
-        "kk": "Көрші баланың айғағы"
+        "ru": "Показания владельца дрона",
+        "en": "Drone Owner's Statement",
+        "tr": "Drone Owner's Statement",
+        "ar": "Drone Owner's Statement",
+        "kk": "Показания владельца дрона"
       },
       "content": {
-        "ru": "«Я запускал дрон с балкона. Снизу что-то блестящее упало с перил, я подлетел поймать, а оно зацепилось за шасси. Потом на дрон вдруг прыгнул енот, я испугался и посадил аппарат у себя во дворе. Кольцо так и осталось в шасси».",
-        "en": "\"I was flying my drone from the balcony. Something shiny fell off the railing below, I flew down to catch it, and it snagged on the landing gear. Then a raccoon suddenly jumped onto the drone, I got scared and landed it in my yard. The ring stayed stuck in the gear.\"",
-        "tr": "\"Drone'umu balkondan uçuruyordum. Aşağıda korkuluktan parlak bir şey düştü, yakalamak için indim ve iniş takımına takıldı. Sonra birden bir rakun drone'a atladı, korktum ve aracı kendi bahçeme indirdim. Yüzük takımda kalakaldı.\"",
-        "ar": "«كنت أحلّق بطائرتي من الشرفة. سقط شيء لامع من على الدرابزين في الأسفل، فنزلت لألتقطه فعلق بعجلات الهبوط. ثم قفز راكون فجأة على الدرون، فخفت وأنزلت الطائرة في فنائي. وبقي الخاتم عالقاً في العجلات».",
-        "kk": "«Мен дронды балконнан ұшырып жүр едім. Төменде тұтқадан жылтыраған бірдеңе түсіп кетті, оны ұстайын деп төмендегенде, ол шассиге ілініп қалды. Сосын дронға кенет енот секіріп мінді, мен қорқып, аппаратты өз ауламызға қондырдым. Сақина шассиде қалып қойды»."
+        "ru": "«Я хотел аккуратно отвести дрон от балкона, но на него прыгнул енот. Над рекой аппарат сильно качнуло. Я увидел, как с шасси что-то блестящее сорвалось в воду. После посадки кольца на дроне уже не было».",
+        "en": "‘I was trying to guide the drone away from the balcony when a raccoon jumped onto it. The drone lurched hard over the river. I saw something shiny come off the landing gear and fall into the water. The ring was no longer on the drone after it landed.’",
+        "tr": "‘I was trying to guide the drone away from the balcony when a raccoon jumped onto it. The drone lurched hard over the river. I saw something shiny come off the landing gear and fall into the water. The ring was no longer on the drone after it landed.’",
+        "ar": "‘I was trying to guide the drone away from the balcony when a raccoon jumped onto it. The drone lurched hard over the river. I saw something shiny come off the landing gear and fall into the water. The ring was no longer on the drone after it landed.’",
+        "kk": "«Я хотел аккуратно отвести дрон от балкона, но на него прыгнул енот. Над рекой аппарат сильно качнуло. Я увидел, как с шасси что-то блестящее сорвалось в воду. После посадки кольца на дроне уже не было»."
       },
       "isContradiction": false,
       "contradictionExplanation": {
-        "ru": "Показания ребёнка независимо объясняют, как кольцо оказалось на дроне — без злого умысла.",
-        "en": "The child's account independently explains how the ring ended up on the drone — with no malice.",
-        "tr": "Çocuğun anlatımı, yüzüğün drone'a nasıl takıldığını bağımsız olarak açıklıyor — kötü niyet yok.",
-        "ar": "رواية الطفل تفسّر بشكل مستقل كيف انتهى الخاتم على الدرون — دون سوء نية.",
-        "kk": "Баланың айғағы сақинаның дронға қалай ілінгенін тәуелсіз түрде түсіндіреді — еш қаскөйлік жоқ."
-      }
+        "ru": "Независимый свидетель подтверждает падение блестящего предмета в воду.",
+        "en": "An independent witness confirms that a shiny object fell into the water.",
+        "tr": "An independent witness confirms that a shiny object fell into the water.",
+        "ar": "An independent witness confirms that a shiny object fell into the water.",
+        "kk": "Независимый свидетель подтверждает падение блестящего предмета в воду."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_loss",
+        "relation": "supports",
+        "reason": {
+          "ru": "Независимый свидетель подтверждает падение блестящего предмета в воду.",
+          "en": "An independent witness confirms that a shiny object fell into the water.",
+          "tr": "An independent witness confirms that a shiny object fell into the water.",
+          "ar": "An independent witness confirms that a shiny object fell into the water.",
+          "kk": "Независимый свидетель подтверждает падение блестящего предмета в воду."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1
+    },
+    {
+      "id": "ev-search",
+      "order": 4,
+      "type": "document",
+      "title": {
+        "ru": "Акт поисковой службы",
+        "en": "Search Service Report",
+        "tr": "Search Service Report",
+        "ar": "Search Service Report",
+        "kk": "Акт поисковой службы"
+      },
+      "content": {
+        "ru": "Поиск проведён вдоль предполагаемой точки падения и ниже по течению. Из-за глубины, ила и сильного течения кольцо обнаружить не удалось. Координаты поиска совпадают с полётным журналом.",
+        "en": "Search teams covered the estimated drop point and the area downstream. The ring could not be found because of the depth, silt, and strong current. The search coordinates match the flight log.",
+        "tr": "Search teams covered the estimated drop point and the area downstream. The ring could not be found because of the depth, silt, and strong current. The search coordinates match the flight log.",
+        "ar": "Search teams covered the estimated drop point and the area downstream. The ring could not be found because of the depth, silt, and strong current. The search coordinates match the flight log.",
+        "kk": "Поиск проведён вдоль предполагаемой точки падения и ниже по течению. Из-за глубины, ила и сильного течения кольцо обнаружить не удалось. Координаты поиска совпадают с полётным журналом."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Кольцо не было возвращено владельцу. Реальная утрата имущества подтверждена.",
+        "en": "The ring was not recovered. The actual loss of property is confirmed.",
+        "tr": "The ring was not recovered. The actual loss of property is confirmed.",
+        "ar": "The ring was not recovered. The actual loss of property is confirmed.",
+        "kk": "Кольцо не было возвращено владельцу. Реальная утрата имущества подтверждена."
+      },
+      "narrativeRole": "context",
+      "statementLink": {
+        "statementId": "claim_loss",
+        "relation": "supports",
+        "reason": {
+          "ru": "Кольцо не было возвращено владельцу. Реальная утрата имущества подтверждена.",
+          "en": "The ring was not recovered. The actual loss of property is confirmed.",
+          "tr": "The ring was not recovered. The actual loss of property is confirmed.",
+          "ar": "The ring was not recovered. The actual loss of property is confirmed.",
+          "kk": "Кольцо не было возвращено владельцу. Реальная утрата имущества подтверждена."
+        }
+      },
+      "contradictionTarget": null,
+      "evidenceTier": "supporting",
+      "requiredForVerdict": false,
+      "rewardWeight": 0.5
     }
   ],
   "correctDecision": "approve",
   "explanation": {
     "ru": [
-      "История о дроне-воре звучит как фантастика, но улики сходятся идеально.",
-      "На самом деле Жорик играл с кольцом на балконе и уронил его; соседский мальчишка на дроне попытался поймать блестяшку — кольцо зацепилось за шасси.",
-      "Затем за дрон ухватился сам Жорик. Кражи не было, событие реально — заявление следует одобрить."
+      "Кольцо действительно зацепилось за соседский дрон.",
+      "Жорик прыгнул на аппарат, из-за чего дрон унесло к реке.",
+      "Свидетель видел падение кольца, а поисковая служба не смогла его обнаружить.",
+      "Невероятное событие подтверждено независимыми материалами. Выплату следует одобрить."
     ],
     "en": [
-      "The thieving-drone story sounds like science fiction, but the evidence lines up perfectly.",
-      "In reality, Zhorik was playing with the ring on the balcony and dropped it; the neighbor's boy tried to catch the shiny thing with his drone — and the ring snagged on the landing gear.",
-      "Then Zhorik himself grabbed onto the drone. There was no theft, the event is real — the claim should be approved."
+      "The footage confirms the claim's two least likely details: the ring on the drone and Zhorik clinging to it.",
+      "The route and sudden increase in load match both the footage and the claimant's account.",
+      "An independent witness confirms that a shiny object fell into the water.",
+      "The ring was not recovered. The actual loss of property is confirmed.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "tr": [
-      "Hırsız drone hikâyesi bilim kurgu gibi geliyor ama kanıtlar kusursuzca örtüşüyor.",
-      "Gerçekte Zhorik balkonda yüzükle oynuyordu ve düşürdü; komşunun oğlu parlak şeyi drone'uyla yakalamaya çalıştı — yüzük iniş takımına takıldı.",
-      "Sonra Zhorik'in kendisi drone'a tutundu. Hırsızlık yoktu, olay gerçek — talep onaylanmalı."
+      "The footage confirms the claim's two least likely details: the ring on the drone and Zhorik clinging to it.",
+      "The route and sudden increase in load match both the footage and the claimant's account.",
+      "An independent witness confirms that a shiny object fell into the water.",
+      "The ring was not recovered. The actual loss of property is confirmed.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "ar": [
-      "قصة الدرون اللص تبدو كالخيال العلمي، لكن الأدلة تتطابق تماماً.",
-      "في الحقيقة كان جوريك يلعب بالخاتم على الشرفة فأسقطه؛ وحاول صبي الجار التقاط الشيء اللامع بطائرته — فعلق الخاتم بعجلات الهبوط.",
-      "ثم تشبّث جوريك نفسه بالدرون. لم تكن هناك سرقة، والواقعة حقيقية — يجب الموافقة على المطالبة."
+      "The footage confirms the claim's two least likely details: the ring on the drone and Zhorik clinging to it.",
+      "The route and sudden increase in load match both the footage and the claimant's account.",
+      "An independent witness confirms that a shiny object fell into the water.",
+      "The ring was not recovered. The actual loss of property is confirmed.",
+      "No material statement has been disproven. The claim should be approved."
     ],
     "kk": [
-      "Ұры-дрон туралы оқиға ғылыми фантастикадай естіледі, бірақ дәлелдер тамаша сәйкеседі.",
-      "Шын мәнінде Жорик балконда сақинамен ойнап жүріп оны түсіріп алды; көршінің баласы дронымен жылтыр затты ұстамақ болды — сақина шассиге ілінді.",
-      "Содан соң дронға Жориктің өзі жармасты. Ұрлық болған жоқ, оқиға шынайы — талапты мақұлдау керек."
+      "Кольцо действительно зацепилось за соседский дрон.",
+      "Жорик прыгнул на аппарат, из-за чего дрон унесло к реке.",
+      "Свидетель видел падение кольца, а поисковая служба не смогла его обнаружить.",
+      "Невероятное событие подтверждено независимыми материалами. Выплату следует одобрить."
     ]
+  },
+  "investigationBudget": 3,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "text": {
+        "ru": "22 апреля около 23:00 я работал на балконе, снял обручальное кольцо и положил его на перила. Соседский дрон снизился слишком близко, кольцо зацепилось за шасси. В этот момент енот Жорик прыгнул на аппарат, после чего дрон унесло к набережной. Кольцо упало в реку и найдено не было. Прошу возместить случайную утрату застрахованного имущества.",
+        "en": "At about 11:00 p.m. on April 22, I was working on my balcony. I removed my wedding ring and placed it on the railing. A neighbor's drone descended too close, and the ring caught on its landing gear. At that moment, Zhorik the raccoon leaped onto the drone, sending it drifting toward the riverfront. The ring fell into the river and was never recovered. I am claiming compensation for the accidental loss of insured property.",
+        "tr": "At about 11:00 p.m. on April 22, I was working on my balcony. I removed my wedding ring and placed it on the railing. A neighbor's drone descended too close, and the ring caught on its landing gear. At that moment, Zhorik the raccoon leaped onto the drone, sending it drifting toward the riverfront. The ring fell into the river and was never recovered. I am claiming compensation for the accidental loss of insured property.",
+        "ar": "At about 11:00 p.m. on April 22, I was working on my balcony. I removed my wedding ring and placed it on the railing. A neighbor's drone descended too close, and the ring caught on its landing gear. At that moment, Zhorik the raccoon leaped onto the drone, sending it drifting toward the riverfront. The ring fell into the river and was never recovered. I am claiming compensation for the accidental loss of insured property.",
+        "kk": "22 апреля около 23:00 я работал на балконе, снял обручальное кольцо и положил его на перила. Соседский дрон снизился слишком близко, кольцо зацепилось за шасси. В этот момент енот Жорик прыгнул на аппарат, после чего дрон унесло к набережной. Кольцо упало в реку и найдено не было. Прошу возместить случайную утрату застрахованного имущества."
+      },
+      "stampable": false
+    },
+    {
+      "id": "claim_event",
+      "text": {
+        "ru": "Кольцо зацепилось за шасси соседского дрона.",
+        "en": "The ring caught on the landing gear of a neighbor's drone.",
+        "tr": "The ring caught on the landing gear of a neighbor's drone.",
+        "ar": "The ring caught on the landing gear of a neighbor's drone.",
+        "kk": "Кольцо зацепилось за шасси соседского дрона."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_cause",
+      "text": {
+        "ru": "Прыжок енота вызвал дрейф дрона к реке.",
+        "en": "The raccoon's leap sent the drone drifting toward the river.",
+        "tr": "The raccoon's leap sent the drone drifting toward the river.",
+        "ar": "The raccoon's leap sent the drone drifting toward the river.",
+        "kk": "Прыжок енота вызвал дрейф дрона к реке."
+      },
+      "stampable": true
+    },
+    {
+      "id": "claim_loss",
+      "text": {
+        "ru": "Кольцо упало в реку и не было возвращено владельцу.",
+        "en": "The ring fell into the river and was not recovered by its owner.",
+        "tr": "The ring fell into the river and was not recovered by its owner.",
+        "ar": "The ring fell into the river and was not recovered by its owner.",
+        "kk": "Кольцо упало в реку и не было возвращено владельцу."
+      },
+      "stampable": true
+    }
+  ],
+  "contentVersion": "archive17_full_v1",
+  "schemaVersion": 2,
+  "revisionVersion": "retention-pass-3",
+  "narrative": {
+    "preBrief": {
+      "ru": "Анатолий Степанович пишет заявления так, будто выступает в суде. Не позволяйте стилю отвлекать вас от фактов. — В. Лебедева",
+      "en": "Anatoly Stepanovich writes every claim as though addressing a courtroom. Do not let his style distract you from the facts. — V. Lebedeva",
+      "tr": "Anatoly Stepanovich writes every claim as though addressing a courtroom. Do not let his style distract you from the facts. — V. Lebedeva",
+      "ar": "Anatoly Stepanovich writes every claim as though addressing a courtroom. Do not let his style distract you from the facts. — V. Lebedeva",
+      "kk": "Анатолий Степанович пишет заявления так, будто выступает в суде. Не позволяйте стилю отвлекать вас от фактов. — В. Лебедева"
+    },
+    "postVerdictNote": {
+      "ru": "Я завела отдельную папку на Жорика. Пока он проходит как природное явление.",
+      "en": "I have opened a separate file on Zhorik. For now, he is classified as a natural phenomenon.",
+      "tr": "I have opened a separate file on Zhorik. For now, he is classified as a natural phenomenon.",
+      "ar": "I have opened a separate file on Zhorik. For now, he is classified as a natural phenomenon.",
+      "kk": "Я завела отдельную папку на Жорика. Пока он проходит как природное явление."
+    },
+    "nextCaseTeaser": {
+      "ru": "Из закусочной исчезли сорок пицц. Заявитель уже назвал виновных. Доказательства с ним не согласны.",
+      "en": "Forty pizzas have vanished from a snack bar. The claimant has already named the culprits. The evidence disagrees.",
+      "tr": "Forty pizzas have vanished from a snack bar. The claimant has already named the culprits. The evidence disagrees.",
+      "ar": "Forty pizzas have vanished from a snack bar. The claimant has already named the culprits. The evidence disagrees.",
+      "kk": "Из закусочной исчезли сорок пицц. Заявитель уже назвал виновных. Доказательства с ним не согласны."
+    },
+    "seasonClue": null,
+    "epilogue": null
   }
 }
