@@ -342,7 +342,7 @@ export function CaseFile({
         {/* Investigation-budget counter — only on budgeted cases */}
         {budget != null ? (
           <span
-            className={`font-mono text-[11px] font-semibold ${
+            className={`rounded border border-border bg-paper px-2 py-1 font-mono text-[14px] font-semibold leading-none shadow-sm ${
               budgetExhausted ? "text-stamp" : "text-gold"
             }`}
             title={t("budgetHint", lang)}
