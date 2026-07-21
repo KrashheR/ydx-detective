@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import type { CaseResult, CaseSummary, Language, PlayerStats } from "../types";
+import type { CaseResult, CaseSummary, Language } from "../types";
 import type { CaseUnlockInfo } from "../engine/caseUnlockEngine";
 import { loc, t } from "../i18n/ui";
 import {
@@ -11,7 +11,6 @@ import { asset } from "../utils/asset";
 import { formatCountdown } from "./icons";
 import { LanguageSelector } from "./LanguageSelector";
 import { Tooltip } from "./Tooltip";
-import { SpecialArchivesEntry } from "./SpecialArchivesEntry";
 
 interface Props {
   standardCaseUnlocks: CaseUnlockInfo<CaseSummary>[];
@@ -20,16 +19,11 @@ interface Props {
   dailyMsRemaining: number;
   lang: Language;
   balance: number;
-  archiveStats: Pick<
-    PlayerStats,
-    "archivePurchasedPackIds" | "archiveUnlockedCaseIds"
-  >;
   results: Record<string, CaseResult>;
   onSelectStandardCase: (info: CaseUnlockInfo<CaseSummary>) => void;
   onSelect: (c: CaseSummary) => void;
   onDailyLocked: () => void;
   onLanguage: (lang: Language) => void;
-  onOpenSpecialArchives: () => void;
 }
 
 function caseAccuracyPct(result: CaseResult): number {
@@ -56,13 +50,11 @@ export function MobileDeskMenu({
   dailyMsRemaining,
   lang,
   balance,
-  archiveStats,
   results,
   onSelectStandardCase,
   onSelect,
   onDailyLocked,
   onLanguage,
-  onOpenSpecialArchives,
 }: Props) {
   const fmt = (n: number) => n.toLocaleString("ru-RU");
 
@@ -202,16 +194,6 @@ export function MobileDeskMenu({
             </Tooltip>
           </section>
         )}
-
-        <section className="mb-5">
-          <SpecialArchivesEntry
-            lang={lang}
-            stats={archiveStats}
-            caseUnlocks={standardCaseUnlocks}
-            onOpen={onOpenSpecialArchives}
-            compact
-          />
-        </section>
 
         {/* СЛЕДУЮЩЕЕ ДЕЛО */}
         {nextCase && (

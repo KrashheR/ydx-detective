@@ -27,24 +27,15 @@ import {
   trackAdOffer,
   canReview,
   requestReview,
-  isPaymentsAvailable,
-  fetchPaymentsCatalog,
-  purchaseProduct,
-  restorePurchasedProductIds,
   notifyGameplayStart,
   notifyGameplayStop,
   type LeaderboardRow,
-  type PaymentsProduct,
 } from './services/platformAdapter';
 import { GOAL, getAnalyticsActiveTotalMs, trackEvent, trackGoal } from './services/metrica';
 import { GAME_CONFIG } from './config/gameConfig';
 import { RTL_LANGUAGES, t } from './i18n/ui';
 import type { CaseSummary } from './types';
-import {
-  THEMATIC_PACKS,
-  getThematicPackCaseIds,
-  type ThematicPack,
-} from './data/thematicPacks';
+import { THEMATIC_PACKS, getThematicPackCaseIds } from './data/thematicPacks';
 import { LeftSidebar } from './components/LeftSidebar';
 import { RightSidebar } from './components/RightSidebar';
 import { CaseFile } from './components/CaseFile';
@@ -54,7 +45,6 @@ import { StampModal } from './components/StampModal';
 import { ResultSheet } from './components/ResultSheet';
 import { AchievementsModal } from './components/AchievementsModal';
 import { RatingModal } from './components/RatingModal';
-import { ThematicPacksModal } from './components/ThematicPacksModal';
 import { EvidenceLinkBoard } from './components/EvidenceLinkBoard';
 import { formatCountdown } from './components/icons';
 import { formatCaseLockMessage } from './utils/caseDisplay';
@@ -75,14 +65,12 @@ export default function App() {
   const [modalEvidenceId, setModalEvidenceId] = useState<string | null>(null);
   const [resultDismissed, setResultDismissed] = useState(false);
   const [showAchievements, setShowAchievements] = useState(false);
-  const [showSpecialArchives, setShowSpecialArchives] = useState(false);
   const [leaderboard, setLeaderboard] = useState<LeaderboardRow[] | null>(null);
   const [toast, setToast] = useState<string | null>(null);
   const [rewardDoubled, setRewardDoubled] = useState(false);
   const [lowBalanceOfferDismissed, setLowBalanceOfferDismissed] = useState(false);
   const [showRating, setShowRating] = useState(false);
   const [showFinalSynthesis, setShowFinalSynthesis] = useState(false);
-  const [archiveCatalog, setArchiveCatalog] = useState<Record<string, PaymentsProduct>>({});
   const lastInterstitialActiveMsRef = useRef(0);
   // Gate: show rating modal at most once per session.
   const ratingShownRef = useRef(false);
@@ -262,25 +250,6 @@ export default function App() {
     if (isHydrated && !daily.unlocked) trackAdOffer('rewarded', 'daily_unlock');
   }, [daily.unlocked, isHydrated, serverDay]);
 
-  useEffect(() => {
-    if (!showSpecialArchives) return;
-    trackGoal(GOAL.shopView, { surface: 'special_archives' });
-    if (!isPaymentsAvailable()) {
-      setArchiveCatalog({});
-      return;
-    }
-    let active = true;
-    void fetchPaymentsCatalog().then((products) => {
-      if (!active) return;
-      setArchiveCatalog(
-        Object.fromEntries(products.map((product) => [product.id, product])),
-      );
-    });
-    return () => {
-      active = false;
-    };
-  }, [showSpecialArchives]);
-
   const results = useMemo(() => Object.values(stats.results), [stats.results]);
   const accuracyPct = useMemo(() => {
     if (results.length === 0) return 0;
@@ -341,27 +310,6 @@ export default function App() {
       return;
     }
     handleSelectCase(info.caseData);
-  };
-
-  const handleSelectArchiveCase = (c: CaseSummary) => {
-    setShowSpecialArchives(false);
-    void openCase(c, { skipStandardGate: true });
-  };
-
-  const handlePurchaseArchive = async (pack: ThematicPack): Promise<boolean> => {
-    trackGoal(GOAL.productView, { productId: pack.productId, archiveId: pack.id });
-    const purchased = await purchaseProduct(pack.productId);
-    if (purchased) store.grantArchivePurchase(pack.id);
-    return purchased;
-  };
-
-  const handleRestoreArchivePurchases = async (): Promise<number> => {
-    const purchasedProductIds = await restorePurchasedProductIds();
-    const packIds = THEMATIC_PACKS
-      .filter((pack) => purchasedProductIds.includes(pack.productId))
-      .map((pack) => pack.id);
-    store.grantArchivePurchases(packIds);
-    return packIds.length;
   };
 
   const handleOpenEvidence = (id: string) => {
@@ -563,13 +511,11 @@ export default function App() {
             dailyMsRemaining={daily.msUntilUnlock}
             lang={lang}
             balance={stats.balance}
-            archiveStats={stats}
             results={stats.results}
             onSelectStandardCase={handleSelectStandardCase}
             onSelect={handleSelectCase}
             onDailyLocked={onDailyLocked}
             onLanguage={store.setLanguage}
-            onOpenSpecialArchives={() => setShowSpecialArchives(true)}
           />
         </div>
       )}
@@ -586,12 +532,10 @@ export default function App() {
             selectedId={selectedId}
             lang={lang}
             xp={stats.xp}
-            archiveStats={stats}
             onSelectStandardCase={handleSelectStandardCase}
             onSelect={handleSelectCase}
             onDailyLocked={onDailyLocked}
             onLanguage={store.setLanguage}
-            onOpenSpecialArchives={() => setShowSpecialArchives(true)}
           />
         </div>
 
@@ -714,24 +658,6 @@ export default function App() {
             lang={lang}
             unlockedIds={stats.unlockedAchievementIds}
             onClose={() => setShowAchievements(false)}
-          />
-        )}
-      </AnimatePresence>
-
-      {/* Special archives prototype shelf */}
-      <AnimatePresence>
-        {showSpecialArchives && (
-          <ThematicPacksModal
-            lang={lang}
-            stats={stats}
-            caseUnlocks={standardCaseUnlocks}
-            paymentsAvailable={isPaymentsAvailable()}
-            catalogByProductId={archiveCatalog}
-            onSelectCase={handleSelectArchiveCase}
-            onPurchasePack={handlePurchaseArchive}
-            onRestorePurchases={handleRestoreArchivePurchases}
-            onUnlockCaseWithAd={(packId, caseId) => store.unlockArchiveCaseViaAd(packId, caseId)}
-            onClose={() => setShowSpecialArchives(false)}
           />
         )}
       </AnimatePresence>

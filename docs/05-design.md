@@ -95,9 +95,8 @@ sticky-футером штампа и навигацией «‹ N/M ›». Те
 
 > v2 layout note: `ThematicPacksModal` mirrors the Claude handoff in `todo/archive-design`: dark archive header, compact left pack index on desktop, mobile horizontal pack tabs in the header, one-column case rows on the archive sheet, and a clean bottom action zone for purchase/ad unlock/restore.
 
-`SpecialArchivesEntry` выглядит как отдельный архивный объект, а не баннер: в левом сайдбаре и
-мобильном меню после daily-блока лежит стопка папок с вкладкой, плашкой `NEW` и счётчиком
-открытых дел. `ThematicPacksModal` оформлен как витрина-каталог: слева список архивов-паков,
+`SpecialArchivesEntry` и `ThematicPacksModal` сохранены как прототип, но их точка входа временно
+скрыта из интерфейса. При возвращении витрина-каталог должна показывать слева список архивов-паков,
 справа лист выбранного архива с темой, составом дел, оформлением стола и коллекционным штампом.
 На мобильном тот же контент складывается в полноэкранный лист со sticky-блоком действий снизу.
 Каталог показывает три реальные тематические подборки из `case-040…051`, но коммерческие
