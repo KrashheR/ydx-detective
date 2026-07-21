@@ -129,7 +129,7 @@ export function InvestigationServiceOrder({
                 </div>
                 <div className="shrink-0 text-right">
                   <div className="font-mono text-[12px] font-bold text-text-light">
-                    ₽ {fmt(cost)}
+                    $ {fmt(cost)}
                   </div>
                   <div className="mt-1 max-w-[96px] text-[10px] font-semibold leading-tight text-text-dim">
                     {status}

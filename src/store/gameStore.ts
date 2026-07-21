@@ -831,10 +831,10 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       // Achievements newly satisfied by this case grant one-time XP + currency.
       const unlocks = evaluateNewUnlocks({ stats: baseStats, result, caseData });
       const bonusXp = unlocks.reduce((n, a) => n + a.xpBonus, 0);
-      const bonusRub = unlocks.reduce((n, a) => n + a.rubBonus, 0);
+      const bonusCurrency = unlocks.reduce((n, a) => n + a.currencyBonus, 0);
 
       const finalXp = baseStats.xp + bonusXp;
-      const finalBalance = baseStats.balance + bonusRub;
+      const finalBalance = baseStats.balance + bonusCurrency;
       // Promotion accounts for achievement bonus XP too (it may tip a threshold).
       const rankAfter = evaluateRank(finalXp);
       const promotedToLevel =

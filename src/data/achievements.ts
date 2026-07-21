@@ -16,7 +16,7 @@ export interface Achievement {
   /** One-time career XP granted on unlock. */
   readonly xpBonus: number;
   /** One-time currency granted on unlock. */
-  readonly rubBonus: number;
+  readonly currencyBonus: number;
 }
 
 export const ACHIEVEMENTS: readonly Achievement[] = [
@@ -38,7 +38,7 @@ export const ACHIEVEMENTS: readonly Achievement[] = [
       kk: 'Алғашқы алаяқтығыңызды әшкерелеңіз.',
     },
     xpBonus: 15,
-    rubBonus: 200,
+    currencyBonus: 200,
   },
   {
     id: 'solved-10',
@@ -58,7 +58,7 @@ export const ACHIEVEMENTS: readonly Achievement[] = [
       kk: '10 істі шешіңіз.',
     },
     xpBonus: 50,
-    rubBonus: 500,
+    currencyBonus: 500,
   },
   {
     id: 'perfect-proof-hard',
@@ -78,7 +78,7 @@ export const ACHIEVEMENTS: readonly Achievement[] = [
       kk: 'Күрделі істе 100% дәлел дәлдігі.',
     },
     xpBonus: 40,
-    rubBonus: 400,
+    currencyBonus: 400,
   },
   {
     id: 'streak-5',
@@ -98,7 +98,7 @@ export const ACHIEVEMENTS: readonly Achievement[] = [
       kk: '5 күндік серияға жетіңіз.',
     },
     xpBonus: 30,
-    rubBonus: 300,
+    currencyBonus: 300,
   },
   {
     id: 'clean-hands-10',
@@ -118,7 +118,7 @@ export const ACHIEVEMENTS: readonly Achievement[] = [
       kk: '10 істі бір де бір қате мөрсіз жабыңыз.',
     },
     xpBonus: 40,
-    rubBonus: 400,
+    currencyBonus: 400,
   },
 ];
 

@@ -71,7 +71,7 @@ export function AchievementsModal({ lang, unlockedIds, onClose }: Props) {
                   <p className="font-semibold text-ink">{loc(a.title, lang)}</p>
                   <p className="text-sm text-ink/70">{loc(a.description, lang)}</p>
                   <p className="mt-0.5 font-mono text-xs text-ink/45">
-                    +{a.xpBonus} {t('xpGained', lang)} · +₽{a.rubBonus}
+                    +{a.xpBonus} {t('xpGained', lang)} · +${a.currencyBonus}
                   </p>
                 </div>
               </li>

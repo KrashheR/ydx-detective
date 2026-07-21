@@ -190,7 +190,7 @@ export function CaseSelect({
                         {loc(c.claim.person, lang)}
                       </div>
                       <div className="text-[11px] font-medium text-folder-ink-soft">
-                        {fmt(c.claimAmount)} ₽
+                        {fmt(c.claimAmount)} $
                       </div>
                     </div>
                   </div>
@@ -400,7 +400,7 @@ export function CaseSelect({
                     >
                       {locked
                         ? formatCaseLockMessage(info, lang)
-                        : `${loc(c.claim.person, lang)} · ${fmt(c.claimAmount)} ₽`}
+                        : `${loc(c.claim.person, lang)} · ${fmt(c.claimAmount)} $`}
                     </div>
 
                     {/* Bottom: difficulty pips + CTA */}

@@ -292,7 +292,7 @@ export function CaseFile({
             {isDaily && <span className="ml-1 font-bold text-gold">×2</span>}
           </span>
           <span className="font-mono text-lg font-bold text-ink">
-            {fmt(caseData.claimAmount)} ₽
+            {fmt(caseData.claimAmount)} $
           </span>
         </div>
       </div>
@@ -471,7 +471,7 @@ export function CaseFile({
                       <span aria-hidden className="text-accent">{claimPeekOpen ? "−" : "+"}</span>
                     </span>
                     <span className="mt-1 block truncate font-serif text-[13px] text-ink">
-                      {loc(caseData.claim.person, lang)} · {fmt(caseData.claimAmount)} ₽ · {claimStory}
+                      {loc(caseData.claim.person, lang)} · {fmt(caseData.claimAmount)} $ · {claimStory}
                     </span>
                     <AnimatePresence initial={false}>
                       {claimPeekOpen && (
@@ -572,7 +572,7 @@ export function CaseFile({
                   }`}
                 >
                   <span>{t("hintNote", lang)}</span>
-                  <span className="font-mono text-text-muted">₽{noteCost}</span>
+                  <span className="font-mono text-text-muted">${noteCost}</span>
                 </button>
               </Tooltip>
               {rewardedAdsAvailable && <button

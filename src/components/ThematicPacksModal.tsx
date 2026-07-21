@@ -65,7 +65,7 @@ type UnlockByCaseId = ReadonlyMap<string, CaseUnlockInfo<CaseSummary>>;
 function formatCurrency(value: number, lang: Language): string {
   return new Intl.NumberFormat(LOCALE_BY_LANGUAGE[lang], {
     style: "currency",
-    currency: "RUB",
+    currency: "USD",
     maximumFractionDigits: 0,
   }).format(value);
 }

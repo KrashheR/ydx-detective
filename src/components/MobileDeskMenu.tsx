@@ -122,7 +122,7 @@ export function MobileDeskMenu({
             <div
               className="font-mono text-[13px] font-bold text-mobile-success"
             >
-              ₽ {fmt(balance)}
+              $ {fmt(balance)}
             </div>
           </div>
         </div>
@@ -280,7 +280,7 @@ export function MobileDeskMenu({
                   <div
                     className="mt-[2px] font-mono text-[12px] font-semibold text-folder-gold-copy"
                   >
-                    {fmt(nextCase.caseData.claimAmount)} ₽ ·{" "}
+                    {fmt(nextCase.caseData.claimAmount)} $ ·{" "}
                     {nextCase.caseData.evidenceCount} {t("documents", lang)}
                   </div>
                 </div>
@@ -332,7 +332,7 @@ export function MobileDeskMenu({
                     className="font-sans text-[12px] font-medium text-folder-gold-copy"
                   >
                     {formatCaseLabel(info.caseData, lang)} ·{" "}
-                    {fmt(info.caseData.claimAmount)} ₽
+                    {fmt(info.caseData.claimAmount)} $
                   </div>
                 </div>
                 <span
@@ -402,7 +402,7 @@ export function MobileDeskMenu({
                           <div
                             className="font-mono text-[12px] font-bold text-mobile-success"
                           >
-                            +{fmt(reward)} ₽
+                            +{fmt(reward)} $
                           </div>
                           {pct !== null && (
                             <div

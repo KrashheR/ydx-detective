@@ -292,7 +292,7 @@ export function ResultSheet({
               }}
             >
               {win ? "+" : "− "}
-              {fmt(displayPayout)} ₽
+              {fmt(displayPayout)} $
             </div>
 
             {result.mastery !== "none" && (
@@ -367,8 +367,8 @@ export function ResultSheet({
                   }}
                 >
                   {win
-                    ? `+${fmt(caseData.claimAmount)} ₽`
-                    : `0 ₽`}
+                    ? `+${fmt(caseData.claimAmount)} $`
+                    : `0 $`}
                 </div>
               </div>
               <div
@@ -509,7 +509,7 @@ export function ResultSheet({
                   <AccuracyRow
                     fail
                     label={`${t("penaltyFalseStamps", lang)} ×${result.falseStamps}`}
-                    value={`− ${fmt(result.penalty)} ₽`}
+                    value={`− ${fmt(result.penalty)} $`}
                   />
                 )}
               </motion.div>
@@ -645,7 +645,7 @@ export function ResultSheet({
                           color: "#15803d",
                         }}
                       >
-                        +{fmt(Math.abs(result.total))} ₽
+                        +{fmt(Math.abs(result.total))} $
                       </span>
                       <span
                         style={{
@@ -760,7 +760,7 @@ export function ResultSheet({
                       color: "#7a6c54",
                     }}
                   >
-                    +{a.xpBonus} · +₽{a.rubBonus}
+                    +{a.xpBonus} · +${a.currencyBonus}
                   </span>
                 </div>
               ))}

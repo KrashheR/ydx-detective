@@ -1182,11 +1182,11 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     kk: "Шешім шығару үшін кемінде бір дәлелді ашыңыз.",
   },
   tipNoteUnaffordable: {
-    ru: "Недостаточно средств: нужно ₽{amount}. Закрывайте дела, чтобы пополнить баланс.",
-    en: "Not enough funds: ₽{amount} needed. Close cases to top up your balance.",
-    tr: "Yetersiz bakiye: ₽{amount} gerekli. Bakiyeni artırmak için dosyaları kapat.",
-    ar: "رصيد غير كافٍ: مطلوب ₽{amount}. أغلق القضايا لزيادة رصيدك.",
-    kk: "Қаражат жеткіліксіз: ₽{amount} қажет. Балансты толтыру үшін істерді жабыңыз.",
+    ru: "Недостаточно средств: нужно ${amount}. Закрывайте дела, чтобы пополнить баланс.",
+    en: "Not enough funds: ${amount} needed. Close cases to top up your balance.",
+    tr: "Yetersiz bakiye: ${amount} gerekli. Bakiyeni artırmak için dosyaları kapat.",
+    ar: "رصيد غير كافٍ: مطلوب ${amount}. أغلق القضايا لزيادة رصيدك.",
+    kk: "Қаражат жеткіліксіз: ${amount} қажет. Балансты толтыру үшін істерді жабыңыз.",
   },
   tipSealedCard: {
     ru: "Лимит проверок исчерпан — улику уже не открыть. Выносите вердикт по собранным данным.",

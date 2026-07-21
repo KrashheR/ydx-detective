@@ -89,7 +89,7 @@ export function DepartmentPlan({
               >
                 {maxed
                   ? t('departmentMaxed', lang)
-                  : `${t('upgradeDepartment', lang)} · ₽ ${fmt(cost)}`}
+                  : `${t('upgradeDepartment', lang)} · $ ${fmt(cost)}`}
               </motion.button>
             </div>
           );

@@ -91,7 +91,7 @@ export function RightSidebar({
           {t('companyBalance', lang)}
         </div>
         <div className="mt-1 font-mono text-[21px] font-bold text-success">
-          ₽ {displayBalance.toLocaleString('ru-RU')}
+          $ {displayBalance.toLocaleString('ru-RU')}
         </div>
         <AnimatePresence>
           {balanceDelta && (
@@ -104,7 +104,7 @@ export function RightSidebar({
               transition={{ duration: 0.8, ease: 'easeOut' }}
             >
               {balanceDelta.amount >= 0 ? '+' : '−'}
-              {Math.abs(balanceDelta.amount).toLocaleString('ru-RU')} ₽
+              {Math.abs(balanceDelta.amount).toLocaleString('ru-RU')} $
             </motion.div>
           )}
         </AnimatePresence>

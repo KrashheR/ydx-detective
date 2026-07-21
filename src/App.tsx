@@ -722,7 +722,7 @@ export default function App() {
                 onClick={() => void requestRewarded('restore_funds', store.restoreFunds)}
                 className="h-12 shrink-0 rounded-[9px] bg-accent px-4 text-sm font-semibold text-white hover:brightness-110"
               >
-                ▶ {t('restoreFunds', lang)} (₽{GAME_CONFIG.economy.restoreFundsTo})
+                ▶ {t('restoreFunds', lang)} (${GAME_CONFIG.economy.restoreFundsTo})
               </button>
               <button
                 type="button"
