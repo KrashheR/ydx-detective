@@ -80,7 +80,9 @@
 
 ## In-app purchases
 
-`yandexSDK.ts` поднимает `payments` best-effort через `getPayments({ signed: true })`.
+`yandexSDK.ts` поднимает `payments` best-effort через `getPayments({ signed: false })`.
+Права на постоянные архивы обрабатываются на клиенте, поэтому нужны открытые `productId` в
+ответе SDK; `signed: true` допустим только при отдельной серверной проверке подписи.
 Если payments API недоступен, витрина архивов остаётся browse-only: каталог можно открыть,
 но покупка и restore уходят в no-op UI без блокировки геймплея.
 

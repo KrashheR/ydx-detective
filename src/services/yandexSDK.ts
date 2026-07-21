@@ -180,8 +180,11 @@ export function initYandex(): Promise<void> {
         leaderboards = null;
       }
       try {
+        // Purchases are fulfilled and restored entirely in this client. Signed
+        // responses contain only an encrypted signature and require a server to
+        // validate them, so they cannot restore product IDs here.
         payments = sdk.getPayments
-          ? await sdk.getPayments({ signed: true })
+          ? await sdk.getPayments({ signed: false })
           : null;
       } catch {
         payments = null;

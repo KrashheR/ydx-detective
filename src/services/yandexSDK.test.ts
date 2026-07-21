@@ -133,8 +133,9 @@ describe('online mode (mocked SDK)', () => {
   });
 
   it('initializes the cloud for an authenticated player', async () => {
-    const { mod } = await freshOnline({ mode: '' });
+    const { mod, mockSdk } = await freshOnline({ mode: '' });
     expect(mod.canUseCloud()).toBe(true);
+    expect(mockSdk.getPayments).toHaveBeenCalledWith({ signed: false });
   });
 
   it('treats a "lite" (anonymous) player as no cloud', async () => {
