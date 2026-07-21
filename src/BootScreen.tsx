@@ -7,7 +7,7 @@ import {
   useSmoothedProgress,
   type BootSignals,
 } from './components/GameLoader';
-import { initYandex, notifyGameReady } from './services/platformAdapter';
+import { initPlatform, notifyLoadingStop } from './services/platformAdapter';
 import { useGameStore } from './store/gameStore';
 import { detectInitialLanguage } from './utils/initialLanguage';
 
@@ -66,7 +66,7 @@ export default function BootScreen() {
   useEffect(() => {
     let active = true;
 
-    void initYandex().then(() => {
+    void initPlatform().then(() => {
       if (!active) return;
       // initYandex resolves for both the online SDK and the offline fallback.
       setSignals((current) => ({ ...current, sdkReady: true, playerReady: true }));
@@ -106,7 +106,7 @@ export default function BootScreen() {
   const finishLoading = useCallback(() => {
     if (readyNotified.current) return;
     readyNotified.current = true;
-    notifyGameReady();
+      notifyLoadingStop();
     setLoaderVisible(false);
   }, []);
 

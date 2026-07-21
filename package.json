@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "private": true,
   "type": "module",
-  "description": "Где ложь? Симулятор детектива — data-driven insurance-investigation game for Yandex Games.",
+  "description": "Где ложь? Симулятор детектива — data-driven insurance-investigation game for CrazyGames.",
   "scripts": {
     "typecheck": "tsc --noEmit",
     "build": "vite build",
@@ -12,8 +12,6 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:cov": "vitest run --coverage",
-    "metrika:goals": "node scripts/upload-metrica-goals.mjs",
-    "metrika:goals:publish": "node scripts/upload-metrica-goals.mjs --apply",
     "playtest:validate": "node scripts/synthetic-playtest.mjs --validate",
     "playtest:run": "node scripts/synthetic-playtest.mjs"
   },

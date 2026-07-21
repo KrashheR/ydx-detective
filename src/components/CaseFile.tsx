@@ -29,6 +29,8 @@ interface Props {
   budgetExhausted: boolean;
   /** Spendable balance — gates whether a hint is bought with cash or an ad. */
   balance: number;
+  /** Rewarded placements are deliberately unavailable on the Basic portal tier. */
+  rewardedAdsAvailable: boolean;
   onOpenEvidence: (id: string) => void;
   onBuyHint: (kind: HintKind, targetEvidenceId?: string) => void;
   onApprove: () => void;
@@ -58,6 +60,7 @@ export function CaseFile({
   opensRemaining,
   budgetExhausted,
   balance,
+  rewardedAdsAvailable,
   onOpenEvidence,
   onBuyHint,
   onApprove,
@@ -572,7 +575,7 @@ export function CaseFile({
                   <span className="font-mono text-text-muted">₽{noteCost}</span>
                 </button>
               </Tooltip>
-              <button
+              {rewardedAdsAvailable && <button
                 type="button"
                 onClick={() => {
                   goToTab("evidence");
@@ -588,7 +591,7 @@ export function CaseFile({
                 <span className="whitespace-nowrap text-gold">
                   ▶ {t("watchAd", lang)}
                 </span>
-              </button>
+              </button>}
             </div>
           )}
         </div>

@@ -40,7 +40,7 @@ describe('defaults', () => {
     expect(s.xp).toBe(0);
     expect(s.completedCaseIds).toEqual([]);
     expect(s.unlockedAchievementIds).toEqual([]);
-    expect(s.lastPlayedServerDay).toBeNull();
+    expect(s.lastPlayedDay).toBeNull();
     expect(s.perfectCaseStreakCount).toBe(0);
     expect(s.archivePurchasedPackIds).toEqual([]);
     expect(s.archiveUnlockedCaseIds).toEqual([]);
@@ -104,25 +104,15 @@ describe('loadSnapshot', () => {
     expect(snapshot.stats.language).toBe('en');
   });
 
-  it('prefers the cloud over local and refreshes the local cache', async () => {
+  it('uses the portal-neutral local store without a cloud override', async () => {
     localStorage.setItem(
       LOCAL_KEY,
       JSON.stringify({ version: 2, stats: { balance: 1 }, session: null }),
     );
-    sdk.canUseCloud.mockReturnValue(true);
-    sdk.cloudGet.mockResolvedValue({
-      version: 2,
-      stats: { balance: 9999, language: 'ru' },
-      session: null,
-    });
-
     const { loadSnapshot } = await freshPersistence();
     const { snapshot, isNew } = await loadSnapshot();
     expect(isNew).toBe(false);
-    expect(snapshot.stats.balance).toBe(9999);
-    // Cloud value should have been written back to LocalStorage.
-    const cached = JSON.parse(localStorage.getItem(LOCAL_KEY)!);
-    expect(cached.stats.balance).toBe(9999);
+    expect(snapshot.stats.balance).toBe(1);
   });
 
   it('falls back to local when the cloud read throws', async () => {
@@ -179,7 +169,7 @@ describe('migration (v1 → v2) via loadSnapshot', () => {
     // Backfilled stats.
     expect(snapshot.stats.xp).toBe(0);
     expect(snapshot.stats.streakCount).toBe(0);
-    expect(snapshot.stats.lastPlayedServerDay).toBeNull();
+    expect(snapshot.stats.lastPlayedDay).toBeNull();
     expect(snapshot.stats.perfectCaseStreakCount).toBe(0);
     expect(snapshot.stats.unlockedAchievementIds).toEqual([]);
     // Backfilled session field + upgraded version.
@@ -260,13 +250,12 @@ describe('sync (debounce + flush)', () => {
     scheduleSync(snap(1));
     scheduleSync(snap(2));
     scheduleSync(snap(3));
-    expect(sdk.cloudSet).not.toHaveBeenCalled();
+    expect(JSON.parse(localStorage.getItem(LOCAL_KEY)!).stats.balance).toBe(3);
 
     await vi.advanceTimersByTimeAsync(GAME_CONFIG.sync.debounceMs);
 
-    expect(sdk.cloudSet).toHaveBeenCalledTimes(1);
-    // The latest snapshot wins.
-    expect(sdk.cloudSet).toHaveBeenCalledWith(snap(3));
+    // The latest snapshot is written synchronously through the adapter.
+    expect(JSON.parse(localStorage.getItem(LOCAL_KEY)!).stats.balance).toBe(3);
   });
 
   it('always writes LocalStorage synchronously on scheduleSync', async () => {
@@ -284,12 +273,11 @@ describe('sync (debounce + flush)', () => {
     scheduleSync(snap(1)); // arms the debounce timer
     await flushSync(snap(2)); // should write now and cancel the timer
 
-    expect(sdk.cloudSet).toHaveBeenCalledTimes(1);
-    expect(sdk.cloudSet).toHaveBeenCalledWith(snap(2));
+    expect(JSON.parse(localStorage.getItem(LOCAL_KEY)!).stats.balance).toBe(2);
 
     // No additional write when the (cancelled) debounce window elapses.
     await vi.advanceTimersByTimeAsync(GAME_CONFIG.sync.debounceMs);
-    expect(sdk.cloudSet).toHaveBeenCalledTimes(1);
+    expect(JSON.parse(localStorage.getItem(LOCAL_KEY)!).stats.balance).toBe(2);
   });
 
   it('swallows a LocalStorage quota error without throwing', async () => {

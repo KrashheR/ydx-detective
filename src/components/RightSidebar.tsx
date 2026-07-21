@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import type { Language } from '../types';
-import type { LeaderboardRow } from '../services/platformAdapter';
 import { evaluateRank } from '../engine/rankEngine';
 import { formatInvestigatorLevel, t } from '../i18n/ui';
 import { ACHIEVEMENTS } from '../data/achievements';
@@ -23,16 +22,7 @@ interface Props {
   /** Ids of unlocked achievements — drives the archive button count. */
   unlockedAchievementIds: string[];
   onOpenAchievements: () => void;
-  /** Real Yandex leaderboard rows, or null when unavailable (offline/dev). */
-  leaderboard: LeaderboardRow[] | null;
 }
-
-/** Local fallback shown when the Yandex leaderboard is unavailable. */
-const LOCAL_BOARD = [
-  { name: 'sasha_k', score: 9420 },
-  { name: 'marat99', score: 7180 },
-  { name: 'elena.d', score: 6050 },
-];
 
 /** Right column: live analytics dashboard. */
 export function RightSidebar({
@@ -46,7 +36,6 @@ export function RightSidebar({
   perfectStreak,
   unlockedAchievementIds,
   onOpenAchievements,
-  leaderboard,
 }: Props) {
   const rank = evaluateRank(xp);
   const levelTitle = formatInvestigatorLevel(rank.level, lang);
@@ -68,18 +57,6 @@ export function RightSidebar({
     const timeout = window.setTimeout(() => setBalanceDelta(null), 900);
     return () => window.clearTimeout(timeout);
   }, [balance]);
-
-  const rows: LeaderboardRow[] =
-    leaderboard ??
-    [...LOCAL_BOARD, { name: 'you', score: xp }]
-      .sort((a, b) => b.score - a.score)
-      .map((r, i) => ({
-        rank: i + 1,
-        name: r.name,
-        score: r.score,
-        avatar: null,
-        isCurrentPlayer: r.name === 'you',
-      }));
 
   return (
     <aside className="flex h-full w-full flex-col gap-3.5 overflow-y-auto rounded-xl border border-border bg-surface p-4 md:p-[18px]">
@@ -191,50 +168,6 @@ export function RightSidebar({
         </span>
       </motion.button>
 
-      {/* Weekly leaderboard */}
-      <Card>
-        <div className="mb-2 text-[11px] font-semibold tracking-[1px] text-text-dim">
-          {t('leaderboardWeek', lang)}
-        </div>
-        <ol>
-          {rows.map((row, i) => (
-            <React.Fragment key={`${row.rank}-${row.name}`}>
-              {i > 0 && row.rank > (rows[i - 1]?.rank ?? 0) + 1 && (
-                <li
-                  aria-hidden
-                  className="select-none py-0.5 text-center font-mono text-xs text-text-dim"
-                >
-                  ⋯
-                </li>
-              )}
-              <li
-                className="flex items-center gap-2.5 border-b border-border py-[7px] last:border-0"
-              >
-              <span className="w-5 font-mono text-xs font-bold text-text-dim">
-                {String(row.rank).padStart(2, '0')}
-              </span>
-              {row.avatar && (
-                <img
-                  src={row.avatar}
-                  alt=""
-                  className="h-5 w-5 shrink-0 rounded-full object-cover"
-                />
-              )}
-              <span
-                className={`min-w-0 flex-1 truncate text-xs font-semibold ${
-                  row.isCurrentPlayer ? 'text-accent' : 'text-text-light'
-                }`}
-              >
-                {row.name}
-              </span>
-              <span className="font-mono text-xs text-text-muted">
-                {row.score.toLocaleString('ru-RU')}
-              </span>
-              </li>
-            </React.Fragment>
-          ))}
-        </ol>
-      </Card>
     </aside>
   );
 }

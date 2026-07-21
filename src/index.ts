@@ -17,8 +17,8 @@ export {
 export { useGameStore, selectCaseInvestigationGate } from './store/gameStore';
 export { t, loc, UI_STRINGS } from './i18n/ui';
 export {
-  initYandex,
-  getServerTimeMs,
+  initPlatform,
+  getCurrentTimeMs,
   showRewardedAd,
   showFullscreenAd,
   onPauseChange,

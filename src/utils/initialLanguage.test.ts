@@ -16,6 +16,6 @@ describe('detectInitialLanguage', () => {
   });
 
   it('falls back safely for malformed state and unsupported locales', () => {
-    expect(detectInitialLanguage(storage('{broken'), 'de-DE')).toBe('ru');
+    expect(detectInitialLanguage(storage('{broken'), 'de-DE')).toBe('en');
   });
 });

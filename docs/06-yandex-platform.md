@@ -1,5 +1,12 @@
 # 06 · Платформы и персистенс
 
+> **Текущий релизный контур — CrazyGames Basic Launch.** `platformAdapter.ts`
+> выбирает CrazyGames SDK только в `local`/`crazygames` environment, иначе использует
+> LocalStorage. Basic-сборка не показывает рекламу, IAP или лидерборды. Для Full Launch
+> рекламу можно включить только явным `VITE_CRAZYGAMES_ADS_ENABLED=true` после согласования
+> размещений с порталом. Нижеследующие старые заметки про Yandex — исторические и не описывают
+> shipped build.
+
 > **🗺️ Ключевые файлы:** `src/services/platformAdapter.ts` (единый контракт Yandex/CrazyGames/local), `src/services/yandexSDK.ts` (единственное место с `window.YaGames`), `src/services/metrica.ts` (единственное место с `window.ym`), `src/services/persistence.ts` (снапшот + миграция), `src/config/gameConfig.ts` (`saveVersion`, `analytics`).
 
 `src/services/yandexSDK.ts` — **единственное** место, трогающее `window.YaGames`. Движок
@@ -80,6 +87,10 @@
 
 ## In-app purchases
 
+В shipped CrazyGames Basic build IAP нет: витрина архивов не предлагает покупку или
+restore. Старые entitlement-поля снапшота сохраняются только для обратной совместимости
+существующих профилей и больше не являются продуктовой поверхностью.
+
 `yandexSDK.ts` поднимает `payments` best-effort через `getPayments({ signed: true })`.
 Если payments API недоступен, витрина архивов остаётся browse-only: каталог можно открыть,
 но покупка и restore уходят в no-op UI без блокировки геймплея.
@@ -91,6 +102,9 @@
   на thematic packs и восстанавливает права локально/в облачном сейве.
 
 ## Лидерборд
+
+В shipped build лидерборд отсутствует. В частности, нельзя показывать локальные выдуманные
+имена и счёт вместо портального social feature.
 
 Имя — `LEADERBOARD_NAME = 'xp'` (`services/yandexSDK.ts`), должен быть создан в
 консоли разработчика, иначе no-op. `submitLeaderboardScore(balance)` — fire-and-forget
@@ -210,6 +224,10 @@ npm run metrika:goals -- --list
 из git. Если ID не задан в env, скрипт использует `GAME_CONFIG.analytics.counterId`.
 
 ## Деплой
+
+Для CrazyGames соберите `npm run build`, загрузите содержимое `dist/` в **Preview Portal** и
+прогоните чек-лист из `submission-assets/crazygames/README.md`. Обложки лежат рядом в трёх
+требуемых форматах: 1920×1080, 800×1200 и 800×800.
 
 `npm run build`, затем загрузить **содержимое** `dist/` как ZIP в консоль Yandex Games.
 Сборка использует относительный base (`./` в `vite.config.ts`), поэтому работает с

@@ -1681,5 +1681,5 @@ export function loc<T extends Partial<Record<Language, unknown>>>(
   field: T,
   lang: Language,
 ): T[Language] {
-  return (field[lang] ?? field.ru) as T[Language];
+  return (field[lang] ?? field.en) as T[Language];
 }

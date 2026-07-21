@@ -20,30 +20,21 @@ import {
 } from './engine/caseUnlockEngine';
 import { evaluateDailyAvailability } from './engine/rewardEngine';
 import {
-  getServerTimeMs,
-  fetchLeaderboard,
+  getCurrentTimeMs,
   showFullscreenAd,
   showRewardedAd,
   trackAdOffer,
-  canReview,
-  requestReview,
-  isPaymentsAvailable,
-  fetchPaymentsCatalog,
-  purchaseProduct,
-  restorePurchasedProductIds,
   notifyGameplayStart,
   notifyGameplayStop,
-  type LeaderboardRow,
-  type PaymentsProduct,
+  areRewardedAdsEnabled,
 } from './services/platformAdapter';
-import { GOAL, getAnalyticsActiveTotalMs, trackEvent, trackGoal } from './services/metrica';
+import { GOAL, getAnalyticsActiveTotalMs, trackEvent, trackGoal } from './services/analytics';
 import { GAME_CONFIG } from './config/gameConfig';
 import { RTL_LANGUAGES, t } from './i18n/ui';
 import type { CaseSummary } from './types';
 import {
   THEMATIC_PACKS,
   getThematicPackCaseIds,
-  type ThematicPack,
 } from './data/thematicPacks';
 import { LeftSidebar } from './components/LeftSidebar';
 import { RightSidebar } from './components/RightSidebar';
@@ -53,7 +44,6 @@ import { MobileDeskMenu } from './components/MobileDeskMenu';
 import { StampModal } from './components/StampModal';
 import { ResultSheet } from './components/ResultSheet';
 import { AchievementsModal } from './components/AchievementsModal';
-import { RatingModal } from './components/RatingModal';
 import { ThematicPacksModal } from './components/ThematicPacksModal';
 import { EvidenceLinkBoard } from './components/EvidenceLinkBoard';
 import { formatCountdown } from './components/icons';
@@ -76,25 +66,43 @@ export default function App() {
   const [resultDismissed, setResultDismissed] = useState(false);
   const [showAchievements, setShowAchievements] = useState(false);
   const [showSpecialArchives, setShowSpecialArchives] = useState(false);
-  const [leaderboard, setLeaderboard] = useState<LeaderboardRow[] | null>(null);
   const [toast, setToast] = useState<string | null>(null);
   const [rewardDoubled, setRewardDoubled] = useState(false);
   const [lowBalanceOfferDismissed, setLowBalanceOfferDismissed] = useState(false);
-  const [showRating, setShowRating] = useState(false);
   const [showFinalSynthesis, setShowFinalSynthesis] = useState(false);
-  const [archiveCatalog, setArchiveCatalog] = useState<Record<string, PaymentsProduct>>({});
   const lastInterstitialActiveMsRef = useRef(0);
-  // Gate: show rating modal at most once per session.
-  const ratingShownRef = useRef(false);
   // Gate: fire `reject_blocked` at most once per case investigation.
   const rejectBlockedCaseIdRef = useRef<string | null>(null);
   const evidenceOpenedAtRef = useRef<{ id: string; openedAt: number } | null>(null);
   const resultOpenedAtRef = useRef<number | null>(null);
   const deskViewedRef = useRef(false);
+  const rewardedRequestInFlightRef = useRef(false);
+  const rewardedAdsAvailable = areRewardedAdsEnabled();
 
   const flashToast = (msg: string) => {
     setToast(msg);
     window.setTimeout(() => setToast(null), 3800);
+  };
+
+  // App is the single owner of rewarded-ad requests. Store actions only apply
+  // a reward after this boundary confirms a completed placement.
+  const requestRewarded = async (
+    placement: Parameters<typeof showRewardedAd>[1],
+    onReward: () => void,
+  ): Promise<boolean> => {
+    if (!rewardedAdsAvailable || rewardedRequestInFlightRef.current) return false;
+    rewardedRequestInFlightRef.current = true;
+    try {
+      const result = await showRewardedAd(placement);
+      if (result.status !== 'finished') {
+        flashToast(t('adUnavailableTryLater', lang));
+        return false;
+      }
+      onReward();
+      return true;
+    } finally {
+      rewardedRequestInFlightRef.current = false;
+    }
   };
 
   // Boot the engine once: SDK init → pause-guard wiring → cloud/local hydrate.
@@ -143,7 +151,7 @@ export default function App() {
     if (lastResult) {
       setResultDismissed(false);
       setRewardDoubled(false);
-      if (lastResult.total > 0) trackAdOffer('rewarded', 'double_reward');
+      if (rewardedAdsAvailable && lastResult.total > 0) trackAdOffer('rewarded', 'double_reward');
       resultOpenedAtRef.current = Date.now();
       trackEvent('result_view', {
         caseId: lastResult.caseId,
@@ -161,8 +169,8 @@ export default function App() {
     !lowBalanceOfferDismissed;
 
   useEffect(() => {
-    if (showLowBalanceOffer) trackAdOffer('rewarded', 'restore_funds');
-  }, [showLowBalanceOffer]);
+    if (rewardedAdsAvailable && showLowBalanceOffer) trackAdOffer('rewarded', 'restore_funds');
+  }, [rewardedAdsAvailable, showLowBalanceOffer]);
 
   // A dismissed offer re-arms once the balance recovers above the threshold.
   useEffect(() => {
@@ -170,32 +178,6 @@ export default function App() {
       setLowBalanceOfferDismissed(false);
     }
   }, [stats.balance]);
-
-  // Rating prompt: show after a correct verdict at the peak of pride.
-  useEffect(() => {
-    if (!lastResult?.verdictCorrect) return;
-    if (stats.completedCaseIds.length < GAME_CONFIG.rating.minCasesForPrompt) return;
-    if (stats.ratingDismissals >= GAME_CONFIG.rating.suppressAfterDismissals) return;
-    if (ratingShownRef.current) return;
-    void canReview().then((ok) => {
-      if (!ok) return;
-      ratingShownRef.current = true;
-      setShowRating(true);
-    });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lastResult]);
-
-  // Pull the live leaderboard after hydration and whenever career XP changes.
-  useEffect(() => {
-    if (!isHydrated) return;
-    let active = true;
-    void fetchLeaderboard().then((rows) => {
-      if (active) setLeaderboard(rows);
-    });
-    return () => {
-      active = false;
-    };
-  }, [isHydrated, stats.xp]);
 
   const standardCases = useMemo(() => getStandardCaseSummaries(), []);
   const devUnlockAllLevels =
@@ -206,9 +188,9 @@ export default function App() {
   );
   // Rotate the daily pool by server-day. Server time only (see CLAUDE.md).
   // State-driven so the countdown timer re-renders every second.
-  const [serverNow, setServerNow] = useState(() => getServerTimeMs());
+  const [serverNow, setServerNow] = useState(() => getCurrentTimeMs());
   useEffect(() => {
-    const id = window.setInterval(() => setServerNow(getServerTimeMs()), 1000);
+    const id = window.setInterval(() => setServerNow(getCurrentTimeMs()), 1000);
     return () => window.clearInterval(id);
   }, []);
   const serverDay = Math.floor(serverNow / GAME_CONFIG.daily.cooldownMs);
@@ -217,13 +199,13 @@ export default function App() {
     () => getDailyCaseSummary(serverDay + 1),
     [serverDay],
   );
-  const dailyCase = stats.dailyAdUnlockServerDay === serverDay && stats.dailyAdCaseId
+  const dailyCase = stats.dailyAdUnlockDay === serverDay && stats.dailyAdCaseId
     ? getCaseSummaryById(stats.dailyAdCaseId) ?? baseDailyCase
     : baseDailyCase;
   const selectedCase = selectedId ? getCaseById(selectedId) : undefined;
 
   const daily = evaluateDailyAvailability(
-    stats.lastDailyClaimServerMs,
+    stats.lastDailyClaimMs ?? null,
     serverNow,
   );
 
@@ -258,28 +240,6 @@ export default function App() {
   }, [daily.unlocked, dailyCase, isHydrated, session?.caseId, standardCaseUnlocks,
     stats.archivePurchasedPackIds, stats.archiveUnlockedCaseIds]);
 
-  useEffect(() => {
-    if (isHydrated && !daily.unlocked) trackAdOffer('rewarded', 'daily_unlock');
-  }, [daily.unlocked, isHydrated, serverDay]);
-
-  useEffect(() => {
-    if (!showSpecialArchives) return;
-    trackGoal(GOAL.shopView, { surface: 'special_archives' });
-    if (!isPaymentsAvailable()) {
-      setArchiveCatalog({});
-      return;
-    }
-    let active = true;
-    void fetchPaymentsCatalog().then((products) => {
-      if (!active) return;
-      setArchiveCatalog(
-        Object.fromEntries(products.map((product) => [product.id, product])),
-      );
-    });
-    return () => {
-      active = false;
-    };
-  }, [showSpecialArchives]);
 
   const results = useMemo(() => Object.values(stats.results), [stats.results]);
   const accuracyPct = useMemo(() => {
@@ -321,7 +281,7 @@ export default function App() {
     store.startCase(c);
     trackGoal(GOAL.serviceView, { caseId: c.id, service: 'inspector_note' });
     trackGoal(GOAL.serviceView, { caseId: c.id, service: 'witness_canvass' });
-    trackAdOffer('rewarded', 'witness_canvass');
+    if (rewardedAdsAvailable) trackAdOffer('rewarded', 'witness_canvass');
   };
 
   const handleSelectCase = (c: CaseSummary) => void openCase(c);
@@ -346,22 +306,6 @@ export default function App() {
   const handleSelectArchiveCase = (c: CaseSummary) => {
     setShowSpecialArchives(false);
     void openCase(c, { skipStandardGate: true });
-  };
-
-  const handlePurchaseArchive = async (pack: ThematicPack): Promise<boolean> => {
-    trackGoal(GOAL.productView, { productId: pack.productId, archiveId: pack.id });
-    const purchased = await purchaseProduct(pack.productId);
-    if (purchased) store.grantArchivePurchase(pack.id);
-    return purchased;
-  };
-
-  const handleRestoreArchivePurchases = async (): Promise<number> => {
-    const purchasedProductIds = await restorePurchasedProductIds();
-    const packIds = THEMATIC_PACKS
-      .filter((pack) => purchasedProductIds.includes(pack.productId))
-      .map((pack) => pack.id);
-    store.grantArchivePurchases(packIds);
-    return packIds.length;
   };
 
   const handleOpenEvidence = (id: string) => {
@@ -454,14 +398,15 @@ export default function App() {
       caseId: lastResult?.caseId, action: 'double_reward',
       resultDwellMs: resultOpenedAtRef.current == null ? null : Date.now() - resultOpenedAtRef.current,
     });
-    showRewardedAd(() => {
+    void requestRewarded('double_reward', () => {
       store.doubleLastReward();
       setRewardDoubled(true);
-    }, 'double_reward');
+    });
   };
 
   const onDailyLocked = () => {
-    if (adDailyCase) store.unlockDailyViaAd(adDailyCase.id);
+    if (!adDailyCase) return;
+    void requestRewarded('daily_unlock', () => store.unlockDailyViaAd(adDailyCase.id));
   };
 
   const goToNextCase = () => {
@@ -485,7 +430,7 @@ export default function App() {
       activeMs - lastInterstitialActiveMsRef.current >= GAME_CONFIG.advertising.interstitialMinActiveMs
     ) {
       lastInterstitialActiveMsRef.current = activeMs;
-      showFullscreenAd(transition, 'verdict', () => store.recordInterstitialShown());
+      void showFullscreenAd('verdict').then((result) => { if (result.status === 'finished') store.recordInterstitialShown(); transition(); });
     } else transition();
   };
 
@@ -518,7 +463,7 @@ export default function App() {
       activeMs - lastInterstitialActiveMsRef.current >= GAME_CONFIG.advertising.interstitialMinActiveMs
     ) {
       lastInterstitialActiveMsRef.current = activeMs;
-      showFullscreenAd(transition, 'verdict', () => store.recordInterstitialShown());
+      void showFullscreenAd('verdict').then((result) => { if (result.status === 'finished') store.recordInterstitialShown(); transition(); });
     } else transition();
   };
 
@@ -609,9 +554,14 @@ export default function App() {
               budgetExhausted={gate.budgetExhausted}
               balance={stats.balance}
               onOpenEvidence={handleOpenEvidence}
-              onBuyHint={(kind, targetEvidenceId) =>
-                store.buyHint(selectedCase, kind, targetEvidenceId)
-              }
+              rewardedAdsAvailable={rewardedAdsAvailable}
+              onBuyHint={(kind, targetEvidenceId) => {
+                if (kind === 'note') return store.buyHint(selectedCase, kind, targetEvidenceId);
+                void requestRewarded('witness_canvass', () =>
+                  store.buyHint(selectedCase, kind, targetEvidenceId),
+                );
+                return true;
+              }}
               onApprove={handleApprove}
               onReject={handleReject}
               onBackToDesk={onboardingLocked ? undefined : backToDesk}
@@ -644,7 +594,6 @@ export default function App() {
             perfectStreak={stats.perfectCaseStreakCount}
             unlockedAchievementIds={stats.unlockedAchievementIds}
             onOpenAchievements={() => setShowAchievements(true)}
-            leaderboard={leaderboard}
           />
         </div>
       </div>
@@ -681,6 +630,7 @@ export default function App() {
             onMounted={() => undefined}
             onDoubleReward={handleDoubleReward}
             rewardDoubled={rewardDoubled}
+            canDoubleReward={rewardedAdsAvailable}
             onNext={handleResultNext}
             onBackToDesk={backToDesk}
             hideBack={onboardingLocked}
@@ -725,29 +675,17 @@ export default function App() {
             lang={lang}
             stats={stats}
             caseUnlocks={standardCaseUnlocks}
-            paymentsAvailable={isPaymentsAvailable()}
-            catalogByProductId={archiveCatalog}
             onSelectCase={handleSelectArchiveCase}
-            onPurchasePack={handlePurchaseArchive}
-            onRestorePurchases={handleRestoreArchivePurchases}
-            onUnlockCaseWithAd={(packId, caseId) => store.unlockArchiveCaseViaAd(packId, caseId)}
+            rewardedAdsAvailable={rewardedAdsAvailable}
+            onUnlockCaseWithAd={(packId, caseId) => requestRewarded(
+              'archive_unlock',
+              () => store.unlockArchiveCaseViaAd(packId, caseId),
+            )}
             onClose={() => setShowSpecialArchives(false)}
           />
         )}
       </AnimatePresence>
 
-      {/* Rating prompt */}
-      <AnimatePresence>
-        {showRating && (
-          <RatingModal
-            lang={lang}
-            onRate={async () => { trackGoal(GOAL.rating, { action: 'rate' }); await requestReview(); }}
-            onDismiss={() => { store.dismissRating(); setShowRating(false); }}
-            onNever={() => { store.suppressRating(); setShowRating(false); }}
-            onRated={() => setShowRating(false)}
-          />
-        )}
-      </AnimatePresence>
 
       {/* App-level toast (daily lock, etc.) */}
       <AnimatePresence>
@@ -765,7 +703,7 @@ export default function App() {
 
       {/* Low-balance offer → voluntary rewarded-ad top-up (never blocks play) */}
       <AnimatePresence>
-        {showLowBalanceOffer && !showResult && (
+        {rewardedAdsAvailable && showLowBalanceOffer && !showResult && (
           <motion.div
             initial={{ y: 16, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -781,7 +719,7 @@ export default function App() {
               </div>
               <button
                 type="button"
-                onClick={store.restoreFunds}
+                onClick={() => void requestRewarded('restore_funds', store.restoreFunds)}
                 className="h-12 shrink-0 rounded-[9px] bg-accent px-4 text-sm font-semibold text-white hover:brightness-110"
               >
                 ▶ {t('restoreFunds', lang)} (₽{GAME_CONFIG.economy.restoreFundsTo})

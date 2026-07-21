@@ -4,7 +4,7 @@
  */
 export const GAME_CONFIG = {
   /** Schema version of the persisted runtime snapshot. Bump on shape changes. */
-  saveVersion: 9,
+  saveVersion: 10,
 
   reward: {
     /** Fixed payout by difficulty; claimAmount remains a narrative stake. */
@@ -229,26 +229,16 @@ export const GAME_CONFIG = {
     startingBalance: 2000,
   },
 
-  sync: {
-    /** Cloud sync is debounced to at most once per this interval (ms). */
-    debounceMs: 10_000,
-  },
-
   daily: {
-    /** A daily case resets every N ms of *server* time (24h). */
+    /** A daily case resets every N ms of device time (best effort, 24h). */
     cooldownMs: 24 * 60 * 60 * 1000,
   },
+
+  sync: { debounceMs: 0 },
 
   specialArchives: {
     /** One rewarded archive-case unlock per archive pack per server day. */
     adUnlocksPerPackPerDay: 1,
-  },
-
-  rating: {
-    /** Minimum completed cases before the rating prompt is eligible to appear. */
-    minCasesForPrompt: 3,
-    /** After this many "Not now" dismissals the prompt is suppressed forever. */
-    suppressAfterDismissals: 3,
   },
 
   advertising: {
@@ -261,16 +251,9 @@ export const GAME_CONFIG = {
     economyVersion: 'legacy-v1',
     contentVersion: 'campaign-50-v3',
     experimentGroup: 'baseline',
-    /**
-     * Yandex Metrica counter ID. Replace the placeholder with the real counter
-     * created in the Metrica console (https://metrika.yandex.ru). A falsy id
-     * (0) keeps tracking a silent no-op — safe for local dev and non-Yandex
-     * builds where the counter script never loads. `src/services/metrica.ts`
-     * owns both the deferred script loader and the `ym(id, 'init', …)` call.
-     */
-    counterId: 110041851,
-    /** Enable Webvisor session recording on init. */
-    webvisor: true,
+    /** Removed transport compatibility fields; analytics is a local no-op. */
+    counterId: 0,
+    webvisor: false,
   },
 } as const;
 

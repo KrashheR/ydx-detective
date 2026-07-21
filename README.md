@@ -1,6 +1,6 @@
 # Где ложь? Симулятор детектива
 
-Data-driven insurance-investigation game for **Yandex Games and CrazyGames**.
+Data-driven insurance-investigation game for **CrazyGames**.
 React + TypeScript + Zustand + Zod + Tailwind + Framer Motion.
 
 ## Run
@@ -8,7 +8,7 @@ React + TypeScript + Zustand + Zod + Tailwind + Framer Motion.
 ```bash
 npm install
 npm run dev      # local dev (SDK auto-falls back to LocalStorage)
-npm run build    # production bundle → dist/ (base './', ready for Yandex)
+npm run build    # production bundle → dist/ (base './', ready for CrazyGames)
 npm run typecheck
 ```
 
@@ -54,11 +54,11 @@ public/covers, public/people  # placeholder SVG art
   mute). Bankruptcy (balance ≤ 0) is recovered via a rewarded video → 2000.
 - **Portal contract:** `services/platformAdapter.ts` routes lifecycle, ads,
   locale and cloud saves to Yandex or CrazyGames; LocalStorage remains the fallback.
-- **Leaderboard:** create a leaderboard named **`xp`** in the Yandex developer
-  console (change `LEADERBOARD_NAME` in `services/yandexSDK.ts` to rename).
+- **Basic Launch:** ads, IAP, and leaderboards are intentionally absent. The
+  CrazyGames SDK lifecycle and LocalStorage fallback stay enabled.
 
 ## Deploy
-`npm run build`, then upload the contents of `dist/` as a ZIP in the Yandex
+`npm run build`, then upload the contents of `dist/` as a ZIP in the CrazyGames
 Games developer console. The build uses a relative base, so it works from the
 platform's hosting path as-is.
 

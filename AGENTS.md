@@ -27,6 +27,7 @@ Index: **[docs/README.md](docs/README.md)**. Each doc starts with a "Ключе�
 | [docs/07-authoring-content.md](docs/07-authoring-content.md) | Adding a case, language, achievement, or evidence type (+ `src/data/CASE_AUTHORING_GUIDE.json`) |
 | [docs/08-build-test-deploy.md](docs/08-build-test-deploy.md) | Build, test, verify, deploy, devCheat |
 | [docs/09-synthetic-playtesting.md](docs/09-synthetic-playtesting.md) | Synthetic personas, browser playtest runner, report artifacts |
+| [docs/10-vfx-implementation-plan.md](docs/10-vfx-implementation-plan.md) | Executable VFX plan: motion system, feedback events, rollout, tests, metrics |
 
 ### 🗺️ Key file map (jump here, don't grep)
 

@@ -2,11 +2,11 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { render, screen, waitFor } from '@testing-library/react';
 
 const sdk = vi.hoisted(() => ({
-  initYandex: vi.fn(async () => undefined),
-  notifyGameReady: vi.fn(),
+  initPlatform: vi.fn(async () => undefined),
+  notifyLoadingStop: vi.fn(),
 }));
 
-vi.mock('./services/yandexSDK', () => sdk);
+vi.mock('./services/platformAdapter', () => sdk);
 vi.mock('./store/gameStore', () => ({
   useGameStore: (selector: (state: unknown) => unknown) => selector({
     stats: { language: 'ru' },
@@ -43,7 +43,7 @@ describe('BootScreen', () => {
     });
   });
 
-  it('hands off the static splash and notifies Yandex after full readiness', async () => {
+  it('hands off the static splash and stops the portal loading state after readiness', async () => {
     render(<BootScreen />);
 
     expect(document.getElementById('static-game-loader')).toBeNull();
@@ -51,7 +51,7 @@ describe('BootScreen', () => {
     expect(screen.getByTestId('react-loader')).toBeInTheDocument();
     expect(screen.getByTestId('react-loader')).toHaveAttribute('data-locale', 'en');
 
-    await waitFor(() => expect(sdk.notifyGameReady).toHaveBeenCalledTimes(1));
+    await waitFor(() => expect(sdk.notifyLoadingStop).toHaveBeenCalledTimes(1));
     expect(screen.queryByTestId('react-loader')).not.toBeInTheDocument();
   });
 });

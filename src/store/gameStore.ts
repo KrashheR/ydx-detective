@@ -12,7 +12,7 @@
  *  any mutation      → persist()    → scheduleSync()  (10s debounced cloud write)
  *  closeCase()/Result→ persist(flush:true) → flushSync()  (immediate cloud write)
  *  ad open/close     → onPauseChange() → setPaused()  (freeze game + mute audio)
- *  restoreFunds()    → showRewardedAd() → onReward → balance reset
+ *  ad rewards        → App (single owner) → store mutation
  *  daily gating      → getServerTimeMs() (NEVER device time)
  *
  * Static `Case` data is passed *into* actions by the React layer (after Zod
@@ -42,16 +42,12 @@ import {
   THEMATIC_PACKS,
 } from '../data/thematicPacks';
 import {
-  getServerTimeMs,
-  getAnalyticsUserId,
-  getYandexLang,
-  initYandex,
+  getCurrentTimeMs,
+  getPlatformLocale,
+  initPlatform,
   onPauseChange,
-  showRewardedAd,
-  trackAdOffer,
-  submitLeaderboardScore,
 } from '../services/platformAdapter';
-import { GOAL, initMetrica, setAnalyticsContext, setAnalyticsUserId, setUserParams, trackGoal } from '../services/metrica';
+import { GOAL, initAnalytics, setAnalyticsContext, setUserParams, trackGoal } from '../services/analytics';
 import {
   SUPPORTED_LANGUAGES,
   type ActiveSession,
@@ -72,8 +68,8 @@ import {
  * subtag and return null for anything we don't ship, so the caller keeps the
  * default language.
  */
-function detectYandexLanguage(): Language | null {
-  const raw = getYandexLang();
+function detectPlatformLanguage(): Language | null {
+  const raw = getPlatformLocale();
   if (!raw) return null;
   const code = raw.toLowerCase().split('-')[0] ?? '';
   return (SUPPORTED_LANGUAGES as readonly string[]).includes(code)
@@ -102,8 +98,8 @@ export type VerdictOutcome = RewardBreakdown & {
 
 /**
  * Which hint the player is buying for the active case. Both reveal one card's
- * true status; `note` is paid with balance, `canvass` is unlocked by a rewarded
- * video. (See GAME_CONFIG.hints.)
+ * true status; `note` is paid with balance and `canvass` is granted by App
+ * after a rewarded ad. (See GAME_CONFIG.hints.)
  */
 export type HintKind = 'note' | 'canvass';
 
@@ -201,11 +197,6 @@ export interface GameStoreState {
    */
   devCheat: (opts?: { balance?: number; xp?: number }) => void;
 
-  /* ---- rating prompt ---- */
-  /** Record one "Not now" dismissal. Suppresses after GAME_CONFIG.rating.suppressAfterDismissals. */
-  dismissRating: () => void;
-  /** Permanently suppress the rating prompt ("Don't ask again"). */
-  suppressRating: () => void;
 }
 
 /* ------------------------------ Helpers ---------------------------------- */
@@ -262,7 +253,7 @@ export const useGameStore = create<GameStoreState>((set, get) => {
     async init() {
       const bootStartedAt = performance.now();
       // 1) Bring up the SDK (no-op-safe if unavailable → offline mode).
-      await initYandex();
+      await initPlatform();
       // 2) Wire the global pause guard to ad lifecycles. Ad open/close anywhere
       //    in the app now flips `isPaused`, which the audio manager & game loop
       //    observe to mute contexts and freeze progression.
@@ -275,7 +266,7 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       //    keep whatever they last chose (persisted in the save).
       let stats = snapshot.stats;
       if (isNew) {
-        const detected = detectYandexLanguage();
+        const detected = detectPlatformLanguage();
         if (detected) stats = { ...stats, language: detected };
       }
 
@@ -289,8 +280,7 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       // so the game can paint before Metrica starts its network request; neither
       // a slow VPN nor a blocked mc.yandex.ru can delay play.
       window.setTimeout(() => {
-        initMetrica();
-        setAnalyticsUserId(getAnalyticsUserId());
+      initAnalytics();
         reportUserParams(stats);
         trackGoal(GOAL.bootComplete, {
           bootDurationMs: Math.round(performance.now() - bootStartedAt),
@@ -370,7 +360,7 @@ export const useGameStore = create<GameStoreState>((set, get) => {
           selectedService: null,
           hintsUsed: 0,
           extraOpens: 0,
-          startedAtServerMs: getServerTimeMs(),
+          startedAtMs: getCurrentTimeMs(),
         },
         lastResult: null,
       });
@@ -656,9 +646,7 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         return true;
       }
 
-      // kind === 'canvass' → rewarded Yandex video; reveal for free once watched.
-      // (Offline/dev: showRewardedAd grants immediately so it stays playable.)
-      showRewardedAd(() => reveal(0), 'witness_canvass');
+      reveal(0);
       return true;
     },
 
@@ -671,9 +659,9 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       const department = GAME_CONFIG.services[service].department;
       const level = stats.departmentLevels[department];
       if (level < 1) return false;
-      const nowDay = Math.floor(getServerTimeMs() / GAME_CONFIG.daily.cooldownMs);
+      const nowDay = Math.floor(getCurrentTimeMs() / GAME_CONFIG.daily.cooldownMs);
       const free = level >= GAME_CONFIG.services.freeDailyAtLevel &&
-        stats.serviceFreeUseServerDay[service] !== nowDay;
+        (stats.serviceFreeUseDay ?? {})[service] !== nowDay;
       const discount = level >= GAME_CONFIG.services.discountAtLevel
         ? 1 - GAME_CONFIG.services.discountPct / 100
         : 1;
@@ -685,9 +673,9 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         stats: {
           ...s.stats,
           balance: s.stats.balance - cost,
-          serviceFreeUseServerDay: free
-            ? { ...s.stats.serviceFreeUseServerDay, [service]: nowDay }
-            : s.stats.serviceFreeUseServerDay,
+          serviceFreeUseDay: free
+            ? { ...(s.stats.serviceFreeUseDay ?? {}), [service]: nowDay }
+            : s.stats.serviceFreeUseDay ?? {},
         },
         session: s.session && s.session.caseId === caseData.id
           ? {
@@ -750,11 +738,11 @@ export const useGameStore = create<GameStoreState>((set, get) => {
 
       // Continue (or reset) the daily streak against authoritative server time.
       const nowServerDay = Math.floor(
-        getServerTimeMs() / GAME_CONFIG.daily.cooldownMs,
+        getCurrentTimeMs() / GAME_CONFIG.daily.cooldownMs,
       );
       const streak = evaluateStreak(
         stats.streakCount,
-        stats.lastPlayedServerDay,
+        stats.lastPlayedDay ?? null,
         nowServerDay,
       );
 
@@ -784,12 +772,12 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         falseStamps,
         rewardEarned: breakdown.total,
         mastery: bestMastery(previousMastery, mastery),
-        closedAtServerMs: getServerTimeMs(),
+        closedAtMs: getCurrentTimeMs(),
       };
       const weeklyProgress = caseData.type === 'standard'
         ? updateWeeklyProgress({
             current: stats.weeklyProgress,
-            serverMs: result.closedAtServerMs,
+            serverMs: result.closedAtMs ?? 0,
             caseData,
             mastery,
             verdictCorrect: breakdown.verdictCorrect,
@@ -818,7 +806,7 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         balance: stats.balance + breakdown.total + (weeklyEarned ? GAME_CONFIG.weekly.reward : 0),
         xp: stats.xp + xpGained,
         streakCount: streak.streak,
-        lastPlayedServerDay: nowServerDay,
+        lastPlayedDay: nowServerDay,
         perfectCaseStreakCount: perfectStreak.streak,
         completedCaseIds: stats.completedCaseIds.includes(caseData.id)
           ? stats.completedCaseIds
@@ -829,10 +817,10 @@ export const useGameStore = create<GameStoreState>((set, get) => {
           ? [...stats.collectibleStampIds, weeklyStampId]
           : stats.collectibleStampIds,
         // Record daily claim against authoritative server time for gating.
-        lastDailyClaimServerMs:
+        lastDailyClaimMs:
           caseData.type === 'daily'
-            ? result.closedAtServerMs
-            : stats.lastDailyClaimServerMs,
+            ? result.closedAtMs ?? null
+            : stats.lastDailyClaimMs,
         lastDailyCaseId: caseData.type === 'daily' ? caseData.id : stats.lastDailyCaseId,
         dailyAdCaseId: caseData.type === 'daily' ? null : stats.dailyAdCaseId,
         metaUnlocked: stats.metaUnlocked || (
@@ -877,8 +865,6 @@ export const useGameStore = create<GameStoreState>((set, get) => {
 
       // Case closure is a critical moment → immediate (un-debounced) cloud write.
       persist(true);
-      // The leaderboard tracks permanent career progress, never spendable balance.
-      void submitLeaderboardScore(finalXp);
 
       // ── Analytics: the verdict is the richest signal for economy tuning. ──
       trackGoal(GOAL.verdictSubmit, {
@@ -900,7 +886,7 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         proofRatio,
         falseStamps,
         opensUsed: session?.viewedEvidenceIds.length ?? 0,
-        caseWallTimeMs: session ? Math.max(0, getServerTimeMs() - session.startedAtServerMs) : null,
+        caseWallTimeMs: session ? Math.max(0, getCurrentTimeMs() - (session.startedAtMs ?? 0)) : null,
         hintsUsed: session?.hintsUsed ?? 0,
         stampCount: selected.length,
         contradictionsFound: selected.filter((id) => caseData.evidences.find((e) => e.id === id)?.isContradiction).length,
@@ -944,26 +930,23 @@ export const useGameStore = create<GameStoreState>((set, get) => {
     },
 
     restoreFunds() {
-      // Voluntary low-balance top-up behind a rewarded ad (the reward callback
-      // only fires if the player actually watched it). Guard: never lets the
-      // ad *lower* a balance that is already at or above the restore target.
+      // App calls this only after the rewarded placement completes. Guard: never
+      // lets the reward lower a balance already at or above its target.
       const previousBalance = get().stats.balance;
       if (previousBalance >= GAME_CONFIG.economy.restoreFundsTo) return;
-      showRewardedAd(() => {
-        set((s) => ({
-          stats: {
-            ...s.stats,
-            balance: GAME_CONFIG.economy.restoreFundsTo,
-            isBankrupt: false,
-          },
-        }));
-        persist(true);
-        trackGoal(GOAL.fundsRestore, {
-          previousBalance,
-          restoredTo: GAME_CONFIG.economy.restoreFundsTo,
-        });
-        reportUserParams(get().stats);
-      }, 'restore_funds');
+      set((s) => ({
+        stats: {
+          ...s.stats,
+          balance: GAME_CONFIG.economy.restoreFundsTo,
+          isBankrupt: false,
+        },
+      }));
+      persist(true);
+      trackGoal(GOAL.fundsRestore, {
+        previousBalance,
+        restoredTo: GAME_CONFIG.economy.restoreFundsTo,
+      });
+      reportUserParams(get().stats);
     },
 
     recordInterstitialShown() {
@@ -998,29 +981,26 @@ export const useGameStore = create<GameStoreState>((set, get) => {
     },
 
     isDailyUnlocked() {
-      const { lastDailyClaimServerMs, dailyAdUnlockServerDay, dailyAdCaseId } = get().stats;
-      const today = Math.floor(getServerTimeMs() / GAME_CONFIG.daily.cooldownMs);
-      if (dailyAdCaseId && dailyAdUnlockServerDay === today) return true;
+      const { lastDailyClaimMs, dailyAdUnlockDay, dailyAdCaseId } = get().stats;
+      const today = Math.floor(getCurrentTimeMs() / GAME_CONFIG.daily.cooldownMs);
+      if (dailyAdCaseId && dailyAdUnlockDay === today) return true;
       // Authoritative server time only — never the device clock.
-      return evaluateDailyAvailability(lastDailyClaimServerMs, getServerTimeMs())
+      return evaluateDailyAvailability(lastDailyClaimMs ?? null, getCurrentTimeMs())
         .unlocked;
     },
 
     unlockDailyViaAd(caseId) {
-      const today = Math.floor(getServerTimeMs() / GAME_CONFIG.daily.cooldownMs);
-      if (get().stats.dailyAdUnlockServerDay === today) return;
-      trackAdOffer('rewarded', 'daily_unlock');
-      showRewardedAd(() => {
-        set((s) => ({
-          stats: {
-            ...s.stats,
-            dailyAdUnlockServerDay: today,
-            dailyAdCaseId: caseId,
-          },
-        }));
-        persist(true);
-        trackGoal(GOAL.dailyAdUnlock, {});
-      }, 'daily_unlock');
+      const today = Math.floor(getCurrentTimeMs() / GAME_CONFIG.daily.cooldownMs);
+      if (get().stats.dailyAdUnlockDay === today) return;
+      set((s) => ({
+        stats: {
+          ...s.stats,
+          dailyAdUnlockDay: today,
+          dailyAdCaseId: caseId,
+        },
+      }));
+      persist(true);
+      trackGoal(GOAL.dailyAdUnlock, {});
     },
 
     unlockArchiveCaseViaAd(packId, caseId) {
@@ -1028,29 +1008,26 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       if (!pack) return false;
       if (!getThematicPackCaseIds(pack).includes(caseId)) return false;
 
-      const today = Math.floor(getServerTimeMs() / GAME_CONFIG.daily.cooldownMs);
+      const today = Math.floor(getCurrentTimeMs() / GAME_CONFIG.daily.cooldownMs);
       const { stats } = get();
       if (stats.archivePurchasedPackIds.includes(packId)) return false;
       if (stats.archiveUnlockedCaseIds.includes(caseId)) return false;
-      if (stats.archiveAdUnlockServerDayByPack[packId] === today) return false;
+      if ((stats.archiveAdUnlockDayByPack ?? {})[packId] === today) return false;
 
-      trackAdOffer('rewarded', 'archive_unlock');
-      showRewardedAd(() => {
-        set((s) => ({
-          stats: {
-            ...s.stats,
-            archiveUnlockedCaseIds: s.stats.archiveUnlockedCaseIds.includes(caseId)
-              ? s.stats.archiveUnlockedCaseIds
-              : [...s.stats.archiveUnlockedCaseIds, caseId],
-            archiveAdUnlockServerDayByPack: {
-              ...s.stats.archiveAdUnlockServerDayByPack,
-              [packId]: today,
-            },
+      set((s) => ({
+        stats: {
+          ...s.stats,
+          archiveUnlockedCaseIds: s.stats.archiveUnlockedCaseIds.includes(caseId)
+            ? s.stats.archiveUnlockedCaseIds
+            : [...s.stats.archiveUnlockedCaseIds, caseId],
+          archiveAdUnlockDayByPack: {
+            ...(s.stats.archiveAdUnlockDayByPack ?? {}),
+            [packId]: today,
           },
-        }));
-        persist(true);
-        trackGoal(GOAL.adReward, { kind: 'rewarded', placement: 'archive_unlock', packId, caseId });
-      }, 'archive_unlock');
+        },
+      }));
+      persist(true);
+      trackGoal(GOAL.adReward, { kind: 'rewarded', placement: 'archive_unlock', packId, caseId });
       return true;
     },
 
@@ -1105,27 +1082,6 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       console.info(`[devCheat] balance=${balance} xp=${xp}`);
     },
 
-    dismissRating() {
-      set((s) => ({
-        stats: { ...s.stats, ratingDismissals: s.stats.ratingDismissals + 1 },
-      }));
-      persist();
-      trackGoal(GOAL.rating, {
-        action: 'dismiss',
-        dismissals: get().stats.ratingDismissals,
-      });
-    },
-
-    suppressRating() {
-      set((s) => ({
-        stats: {
-          ...s.stats,
-          ratingDismissals: GAME_CONFIG.rating.suppressAfterDismissals,
-        },
-      }));
-      persist();
-      trackGoal(GOAL.rating, { action: 'never' });
-    },
   };
 });
 

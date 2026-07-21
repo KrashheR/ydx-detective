@@ -9,18 +9,15 @@ import {
 import { RTL_LANGUAGES, loc, t } from "../i18n/ui";
 import type { CaseUnlockInfo } from "../engine/caseUnlockEngine";
 import type { CaseSummary, Language, PlayerStats } from "../types";
-import { getServerTimeMs, type PaymentsProduct } from "../services/platformAdapter";
+import { getCurrentTimeMs } from "../services/platformAdapter";
 
 interface Props {
   lang: Language;
   stats: PlayerStats;
   caseUnlocks?: readonly CaseUnlockInfo<CaseSummary>[];
-  paymentsAvailable: boolean;
-  catalogByProductId: Record<string, PaymentsProduct>;
   onSelectCase: (caseData: CaseSummary) => void;
-  onPurchasePack: (pack: ThematicPack) => Promise<boolean>;
-  onRestorePurchases: () => Promise<number>;
-  onUnlockCaseWithAd: (packId: string, caseId: string) => boolean;
+  rewardedAdsAvailable: boolean;
+  onUnlockCaseWithAd: (packId: string, caseId: string) => Promise<boolean>;
   onClose: () => void;
 }
 
@@ -148,15 +145,6 @@ function getPackStatusLabel(
   return pack.status === "preview"
     ? t("newArchive", lang)
     : t("firstCaseFree", lang);
-}
-
-function getPackPriceLabel(
-  pack: ThematicPack,
-  catalogByProductId: Record<string, PaymentsProduct>,
-  lang: Language,
-): string {
-  const product = catalogByProductId[pack.productId];
-  return product?.price ?? formatCurrency(pack.fallbackPriceRub, lang);
 }
 
 function PackSpine({
@@ -405,17 +393,14 @@ export function ThematicPacksModal({
   lang,
   stats,
   caseUnlocks = [],
-  paymentsAvailable,
-  catalogByProductId,
   onSelectCase,
-  onPurchasePack,
-  onRestorePurchases,
+  rewardedAdsAvailable,
   onUnlockCaseWithAd,
   onClose,
 }: Props) {
   const [selectedId, setSelectedId] = useState(THEMATIC_PACKS[0]?.id ?? "");
   const [busyAction, setBusyAction] = useState<
-    "purchase" | "restore" | "unlock" | null
+    "unlock" | null
   >(null);
   const [notice, setNotice] = useState<string | null>(null);
 
@@ -442,9 +427,9 @@ export function ThematicPacksModal({
     : null;
   const isRTL = RTL_LANGUAGES.has(lang);
   const purchased = selected ? isPackPurchased(stats, selected.id) : false;
-  const today = Math.floor(getServerTimeMs() / (24 * 60 * 60 * 1000));
+  const today = Math.floor(getCurrentTimeMs() / (24 * 60 * 60 * 1000));
   const rewardedSpentToday = selected
-    ? stats.archiveAdUnlockServerDayByPack[selected.id] === today
+    ? (stats.archiveAdUnlockDayByPack ?? {})[selected.id] === today
     : false;
 
   useEffect(() => {
@@ -537,14 +522,6 @@ export function ThematicPacksModal({
                 />
               ))}
             </div>
-            <div className="mt-auto border-t border-border pt-3">
-              <div className="rounded-[7px] border border-accent px-3 py-2 text-center text-[11px] font-semibold text-accent">
-                {t("purchasedArchivesNoForcedAds", lang)}
-              </div>
-              <div className="mt-1.5 text-center font-mono text-[9px] text-text-muted">
-                {t("restorePurchases", lang)}
-              </div>
-            </div>
           </div>
 
           <div className="flex min-h-0 flex-1 flex-col bg-surface">
@@ -591,32 +568,8 @@ export function ThematicPacksModal({
             </div>
 
             <div className="shrink-0 border-t border-border bg-surface-2 px-4 py-3 md:px-5 md:py-3.5">
-                <div
-                  className={`flex flex-col gap-2 md:flex-row ${
-                    isRTL ? "md:flex-row-reverse" : ""
-                  }`}
-                >
-                  <button
-                    type="button"
-                    disabled={
-                      busyAction !== null || purchased || !paymentsAvailable
-                    }
-                    onClick={async () => {
-                      setBusyAction("purchase");
-                      const ok = await onPurchasePack(selected);
-                      setBusyAction(null);
-                      setNotice(
-                        ok
-                          ? t("purchased", lang)
-                          : t("platformUnavailable", lang),
-                      );
-                    }}
-                    className="min-h-[48px] flex-1 rounded-[8px] bg-accent px-4 text-[14px] font-bold text-paper disabled:cursor-not-allowed disabled:opacity-60"
-                  >
-                    {purchased
-                      ? t("purchased", lang)
-                      : `${t("buyArchive", lang)} - ${getPackPriceLabel(selected, catalogByProductId, lang)}`}
-                  </button>
+                <div className={`flex flex-col gap-2 ${isRTL ? "md:flex-row-reverse" : ""}`}>
+                  {rewardedAdsAvailable && (
                   <button
                     type="button"
                     disabled={
@@ -625,10 +578,10 @@ export function ThematicPacksModal({
                       nextRewardedCase == null ||
                       rewardedSpentToday
                     }
-                    onClick={() => {
+                    onClick={async () => {
                       if (!nextRewardedCase) return;
                       setBusyAction("unlock");
-                      const started = onUnlockCaseWithAd(
+                      const started = await onUnlockCaseWithAd(
                         selected.id,
                         nextRewardedCase.id,
                       );
@@ -641,30 +594,14 @@ export function ThematicPacksModal({
                       ? t("nextUnlockTomorrow", lang)
                       : t("unlockNextWithAd", lang)}
                   </button>
+                  )}
                 </div>
-                <div className="mt-2.5 flex flex-col gap-2 font-mono text-[10px] leading-snug text-text-muted md:flex-row md:items-center md:justify-between">
+                <div className="mt-2.5 flex flex-col gap-2 font-mono text-[10px] leading-snug text-text-muted">
                   <span>
                     {purchased || nextRewardedCase == null
                       ? t("unlockForeverHint", lang)
                       : `${t("unlockForeverHint", lang)} ${loc(nextRewardedCase.title, lang)}.`}
                   </span>
-                  <button
-                    type="button"
-                    disabled={busyAction !== null || !paymentsAvailable}
-                    onClick={async () => {
-                      setBusyAction("restore");
-                      const restored = await onRestorePurchases();
-                      setBusyAction(null);
-                      setNotice(
-                        restored > 0
-                          ? t("purchaseRestored", lang)
-                          : t("platformUnavailable", lang),
-                      );
-                    }}
-                    className="p-0 text-start text-[11px] font-semibold text-accent underline underline-offset-2 disabled:cursor-not-allowed disabled:opacity-60"
-                  >
-                    {t("restorePurchases", lang)}
-                  </button>
                 </div>
             </div>
           </div>

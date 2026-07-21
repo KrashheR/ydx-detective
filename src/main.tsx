@@ -1,7 +1,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
-import { notifyGameReady } from "./services/platformAdapter";
+import { notifyLoadingStop } from "./services/platformAdapter";
 import { useGameStore } from "./store/gameStore";
 
 function AppWithoutLoader() {
@@ -11,7 +11,7 @@ function AppWithoutLoader() {
   React.useEffect(() => {
     if (!isHydrated || readyNotified.current) return;
     readyNotified.current = true;
-    notifyGameReady();
+    notifyLoadingStop();
   }, [isHydrated]);
 
   return <App />;

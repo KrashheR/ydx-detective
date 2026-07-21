@@ -90,7 +90,7 @@ function defaultSnapshot(statsOverride = {}) {
     version: GAME_CONFIG.saveVersion,
     // Most wiring tests exercise the established desk flow. Onboarding-lock
     // behaviour has its own coverage and is disabled here deliberately.
-    stats: { ...makeDefaultStats(), metaUnlocked: true, ...statsOverride },
+    stats: { ...makeDefaultStats(), language: 'ru', metaUnlocked: true, ...statsOverride },
     session: null,
   };
 }
@@ -278,27 +278,24 @@ describe('verdict gating', () => {
 });
 
 describe('overlays', () => {
-  it('offers a voluntary top-up at zero balance without blocking the desk', async () => {
+  it('does not show rewarded top-up UI in the Basic build', async () => {
     persist.loadSnapshot.mockResolvedValue({
       snapshot: defaultSnapshot({ balance: 0, isBankrupt: true }),
       isNew: false,
     });
     await renderHydrated();
-    // The low-balance offer is visible…
-    expect(await screen.findByText(RU('lowBalanceTitle'))).toBeInTheDocument();
-    // …but the desk stays fully playable: a case can still be opened.
+    expect(screen.queryByText(RU('lowBalanceTitle'))).not.toBeInTheDocument();
+    // The desk stays fully playable without a rewarded placement.
     await openFirstCase();
     expect(useGameStore.getState().session?.caseId).toBe(getStandardCases()[0]!.id);
   });
 
-  it('dismissing the low-balance offer hides it', async () => {
+  it('keeps the Basic desk free of a low-balance rewarded overlay', async () => {
     persist.loadSnapshot.mockResolvedValue({
       snapshot: defaultSnapshot({ balance: 0 }),
       isNew: false,
     });
     render(<App />);
-    await screen.findByText(RU('lowBalanceTitle'));
-    fireEvent.click(screen.getByRole('button', { name: RU('close') }));
     expect(screen.queryByText(RU('lowBalanceTitle'))).not.toBeInTheDocument();
   });
 

@@ -11,10 +11,10 @@ import {
 /* ----------------------------- Boundary mocks ---------------------------- */
 
 const sdk = vi.hoisted(() => ({
-  initYandex: vi.fn(async () => undefined),
+  initPlatform: vi.fn(async () => undefined),
   onPauseChange: vi.fn(),
-  getServerTimeMs: vi.fn(() => 0),
-  getYandexLang: vi.fn((): string | null => null),
+  getCurrentTimeMs: vi.fn(() => 0),
+  getPlatformLocale: vi.fn((): string | null => null),
   showRewardedAd: vi.fn((cb: () => void) => cb()),
   isPaymentsAvailable: vi.fn(() => false),
   fetchPaymentsCatalog: vi.fn(async () => []),
@@ -25,17 +25,17 @@ const sdk = vi.hoisted(() => ({
   trackAdOffer: vi.fn(), getAnalyticsUserId: vi.fn(() => null),
   submitLeaderboardScore: vi.fn(async () => undefined),
 }));
-vi.mock('../services/yandexSDK', () => sdk);
+vi.mock('../services/platformAdapter', () => sdk);
 
 const metrica = vi.hoisted(() => ({
-  initMetrica: vi.fn(),
+  initAnalytics: vi.fn(),
   setUserParams: vi.fn(),
 }));
-vi.mock('../services/metrica', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('../services/metrica')>();
+vi.mock('../services/analytics', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('../services/analytics')>();
   return {
     ...actual,
-    initMetrica: metrica.initMetrica,
+    initAnalytics: metrica.initAnalytics,
     setUserParams: metrica.setUserParams,
   };
 });
@@ -63,8 +63,8 @@ const store = () => useGameStore.getState();
 
 beforeEach(() => {
   vi.clearAllMocks();
-  sdk.getServerTimeMs.mockReturnValue(0);
-  sdk.getYandexLang.mockReturnValue(null);
+  sdk.getCurrentTimeMs.mockReturnValue(0);
+  sdk.getPlatformLocale.mockReturnValue(null);
   sdk.showRewardedAd.mockImplementation((cb: () => void) => cb());
   sdk.showFullscreenAd.mockImplementation((onDone?: () => void) => onDone?.());
   persist.loadSnapshot.mockResolvedValue({
@@ -85,34 +85,34 @@ beforeEach(() => {
 describe('init', () => {
   it('boots the SDK, wires the pause guard, and hydrates', async () => {
     await store().init();
-    expect(sdk.initYandex).toHaveBeenCalledTimes(1);
+    expect(sdk.initPlatform).toHaveBeenCalledTimes(1);
     expect(sdk.onPauseChange).toHaveBeenCalledTimes(1);
     expect(store().isHydrated).toBe(true);
   });
 
-  it('hydrates before starting Metrica in a deferred task', async () => {
+  it('hydrates before starting analytics in a deferred task', async () => {
     vi.useFakeTimers();
     try {
       await store().init();
       expect(store().isHydrated).toBe(true);
-      expect(metrica.initMetrica).not.toHaveBeenCalled();
+      expect(metrica.initAnalytics).not.toHaveBeenCalled();
 
       await vi.runAllTimersAsync();
-      expect(metrica.initMetrica).toHaveBeenCalled();
+      expect(metrica.initAnalytics).toHaveBeenCalled();
       expect(metrica.setUserParams).toHaveBeenCalled();
     } finally {
       vi.useRealTimers();
     }
   });
 
-  it('adopts the Yandex locale for a first-time player', async () => {
-    sdk.getYandexLang.mockReturnValue('en');
+  it('adopts the portal locale for a first-time player', async () => {
+    sdk.getPlatformLocale.mockReturnValue('en');
     await store().init();
     expect(store().stats.language).toBe('en');
   });
 
   it('keeps the saved language for a returning player', async () => {
-    sdk.getYandexLang.mockReturnValue('en');
+    sdk.getPlatformLocale.mockReturnValue('en');
     persist.loadSnapshot.mockResolvedValue({
       snapshot: {
         version: GAME_CONFIG.saveVersion,
@@ -225,7 +225,7 @@ describe('buyHint', () => {
     store().startCase(c);
     const ok = store().buyHint(c, 'canvass');
     expect(ok).toBe(true);
-    expect(sdk.showRewardedAd).toHaveBeenCalledTimes(1);
+    expect(sdk.showRewardedAd).not.toHaveBeenCalled();
     expect(store().stats.balance).toBe(GAME_CONFIG.economy.startingBalance); // unchanged
     expect(store().session?.revealedEvidenceIds).toEqual([c.evidences[0]!.id]);
   });
@@ -279,7 +279,7 @@ describe('buyHint', () => {
     const targetId = c.evidences[c.evidences.length - 1]!.id;
     const ok = store().buyHint(c, 'canvass', targetId);
     expect(ok).toBe(true);
-    expect(sdk.showRewardedAd).toHaveBeenCalledTimes(1);
+    expect(sdk.showRewardedAd).not.toHaveBeenCalled();
     expect(store().session?.revealedEvidenceIds).toEqual([targetId]);
   });
 
@@ -288,7 +288,7 @@ describe('buyHint', () => {
     store().startCase(c);
     expect(store().buyHint(c, 'canvass')).toBe(true);
     expect(store().buyHint(c, 'canvass')).toBe(true);
-    expect(sdk.showRewardedAd).toHaveBeenCalledTimes(2);
+    expect(sdk.showRewardedAd).not.toHaveBeenCalled();
     expect(store().session?.revealedEvidenceIds).toEqual([
       c.evidences[0]!.id,
       c.evidences[1]!.id,
@@ -318,16 +318,15 @@ describe('submitVerdict', () => {
     expect(store().stats.results[c.id]?.verdictCorrect).toBe(true);
     expect(store().lastResult?.caseId).toBe(c.id);
     expect(persist.flushSync).toHaveBeenCalled();
-    expect(sdk.submitLeaderboardScore).toHaveBeenCalledWith(store().stats.xp);
   });
 
   it('starts the daily streak at 1 against server time', () => {
-    sdk.getServerTimeMs.mockReturnValue(5 * GAME_CONFIG.daily.cooldownMs);
+    sdk.getCurrentTimeMs.mockReturnValue(5 * GAME_CONFIG.daily.cooldownMs);
     const c = makeCase({ correctDecision: 'approve', contradictions: 0, cleanCards: 1 });
     store().startCase(c);
     store().submitVerdict(c, 'approve');
     expect(store().stats.streakCount).toBe(1);
-    expect(store().stats.lastPlayedServerDay).toBe(5);
+    expect(store().stats.lastPlayedDay).toBe(5);
   });
 
   it('builds a 100%-case streak on silver-or-better closures', () => {
@@ -401,11 +400,11 @@ describe('submitVerdict', () => {
   });
 
   it('records a daily claim timestamp for daily cases', () => {
-    sdk.getServerTimeMs.mockReturnValue(999);
+    sdk.getCurrentTimeMs.mockReturnValue(999);
     const c = makeCase({ type: 'daily', correctDecision: 'approve', contradictions: 0, cleanCards: 1 });
     store().startCase(c);
     store().submitVerdict(c, 'approve');
-    expect(store().stats.lastDailyClaimServerMs).toBe(999);
+    expect(store().stats.lastDailyClaimMs).toBe(999);
   });
 });
 
@@ -429,12 +428,11 @@ describe('restoreFunds', () => {
     expect(store().stats.isBankrupt).toBe(false);
   });
 
-  it('does nothing when the ad is skipped (no reward)', () => {
-    sdk.showRewardedAd.mockImplementation(() => undefined); // never calls back
+  it('applies the reward once App has confirmed the ad placement', () => {
     useGameStore.setState({ stats: makeStats({ balance: 0, isBankrupt: true }) });
     store().restoreFunds();
-    expect(store().stats.balance).toBe(0);
-    expect(store().stats.isBankrupt).toBe(true);
+    expect(store().stats.balance).toBe(GAME_CONFIG.economy.restoreFundsTo);
+    expect(store().stats.isBankrupt).toBe(false);
   });
 
   it('never lowers a balance already at or above the restore target', () => {
@@ -472,15 +470,15 @@ describe('archive unlocks', () => {
   });
 
   it('unlocks one archive case via rewarded ad and records the server day', () => {
-    sdk.getServerTimeMs.mockReturnValue(2 * GAME_CONFIG.daily.cooldownMs);
+    sdk.getCurrentTimeMs.mockReturnValue(2 * GAME_CONFIG.daily.cooldownMs);
     const ok = store().unlockArchiveCaseViaAd('closed-collegium', 'case-045');
     expect(ok).toBe(true);
     expect(store().stats.archiveUnlockedCaseIds).toContain('case-045');
-    expect(store().stats.archiveAdUnlockServerDayByPack['closed-collegium']).toBe(2);
+    expect(store().stats.archiveAdUnlockDayByPack?.['closed-collegium']).toBe(2);
   });
 
   it('refuses a second rewarded unlock from the same pack on the same day', () => {
-    sdk.getServerTimeMs.mockReturnValue(3 * GAME_CONFIG.daily.cooldownMs);
+    sdk.getCurrentTimeMs.mockReturnValue(3 * GAME_CONFIG.daily.cooldownMs);
     expect(store().unlockArchiveCaseViaAd('closed-collegium', 'case-045')).toBe(true);
     expect(store().unlockArchiveCaseViaAd('closed-collegium', 'case-046')).toBe(false);
     expect(store().stats.archiveUnlockedCaseIds).toEqual(['case-045']);
@@ -496,8 +494,8 @@ describe('isDailyUnlocked', () => {
 
   it('is locked within the cooldown window', () => {
     const now = 10 * GAME_CONFIG.daily.cooldownMs + 1000;
-    sdk.getServerTimeMs.mockReturnValue(now);
-    useGameStore.setState({ stats: makeStats({ lastDailyClaimServerMs: now - 500 }) });
+    sdk.getCurrentTimeMs.mockReturnValue(now);
+    useGameStore.setState({ stats: makeStats({ lastDailyClaimMs: now - 500 }) });
     expect(store().isDailyUnlocked()).toBe(false);
   });
 });

@@ -24,7 +24,8 @@ export const SUPPORTED_LANGUAGES = ['ru', 'en', 'tr', 'ar', 'kk'] as const;
 
 export type Language = (typeof SUPPORTED_LANGUAGES)[number];
 
-export const DEFAULT_LANGUAGE: Language = 'ru';
+/** English is the safe fallback for unsupported portal/browser locales. */
+export const DEFAULT_LANGUAGE: Language = 'en';
 
 /**
  * A scalar string translated into every supported language.
@@ -460,8 +461,10 @@ export interface CaseResult {
   readonly rewardEarned: number;
   /** Best mastery ever achieved; replays may improve this without rewards. */
   readonly mastery: MasteryLevel;
-  /** Yandex *server* time (ms) at closure — never device time. */
-  readonly closedAtServerMs: number;
+  /** Device time (ms) at closure; daily mechanics are best-effort. */
+  readonly closedAtMs?: number;
+  /** @deprecated v9 compatibility only; migrate() normalizes it. */
+  readonly closedAtServerMs?: number;
 }
 
 /** Persisted progression / economy for a single player. */
@@ -476,9 +479,15 @@ export interface PlayerStats {
    * Server-time (ms) of the last claimed daily case, used by the daily
    * evaluator to decide whether today's daily is available again.
    */
-  lastDailyClaimServerMs: number | null;
+  lastDailyClaimMs?: number | null;
+  /** @deprecated v9 compatibility only. */
+  ratingDismissals?: number;
+  /** @deprecated v9 compatibility only. */
+  lastDailyClaimServerMs?: number | null;
   lastDailyCaseId: string | null;
-  dailyAdUnlockServerDay: number | null;
+  dailyAdUnlockDay?: number | null;
+  /** @deprecated v9 compatibility only. */
+  dailyAdUnlockServerDay?: number | null;
   dailyAdCaseId: string | null;
   /**
    * Informational marker: balance last landed at <= 0. Never blocks play (the
@@ -496,32 +505,32 @@ export interface PlayerStats {
    * ladder. Distinct from `balance`, which is the spendable currency.
    */
   xp: number;
-  /** Consecutive *server*-days the player has closed at least one case. */
+  /** Consecutive device-clock days the player has closed at least one case. */
   streakCount: number;
-  /** Server-day index of the last closed case — used by the streak evaluator. */
-  lastPlayedServerDay: number | null;
+  /** Device-clock day index of the last closed case. */
+  lastPlayedDay?: number | null;
+  /** @deprecated v9 compatibility only. */
+  lastPlayedServerDay?: number | null;
   /** Consecutive first-time cases closed with 100% proof accuracy (silver+). */
   perfectCaseStreakCount: number;
   /** Ids of one-time achievements the player has unlocked. */
   unlockedAchievementIds: string[];
-  /**
-   * How many times the player has dismissed the rating prompt ("Not now").
-   * At GAME_CONFIG.rating.suppressAfterDismissals the prompt is suppressed forever.
-   * "Don't ask again" sets this directly to the suppress threshold.
-   */
-  ratingDismissals: number;
   /** Purchased department levels, 0..3. */
   departmentLevels: Record<DepartmentId, number>;
-  /** Last server-day when each level-3 free service was consumed. */
-  serviceFreeUseServerDay: Partial<Record<InvestigationService, number>>;
+  /** Last device-clock day when each level-3 free service was consumed. */
+  serviceFreeUseDay?: Partial<Record<InvestigationService, number>>;
+  /** @deprecated v9 compatibility only. */
+  serviceFreeUseServerDay?: Partial<Record<InvestigationService, number>>;
   weeklyProgress: WeeklyProgress | null;
   collectibleStampIds: string[];
-  /** Archive packs permanently unlocked via Yandex IAP. */
+  /** Archive packs permanently unlocked via a future portal-neutral IAP flow. */
   archivePurchasedPackIds: string[];
   /** Individual archive cases permanently unlocked via rewarded ads. */
   archiveUnlockedCaseIds: string[];
-  /** Last server-day when this archive pack granted its rewarded unlock. */
-  archiveAdUnlockServerDayByPack: Record<string, number>;
+  /** Last device-clock day when this archive pack granted its rewarded unlock. */
+  archiveAdUnlockDayByPack?: Record<string, number>;
+  /** @deprecated v9 compatibility only. */
+  archiveAdUnlockServerDayByPack?: Record<string, number>;
   /** Interactive examination progress, keyed by `${caseId}/${evidenceId}`. */
   interactiveEvidenceProgress: Record<string, InteractiveEvidenceProgress>;
   /** Post-verdict synthesis progress, keyed by stable case id. */
@@ -555,8 +564,10 @@ export interface ActiveSession {
   hintsUsed: number;
   /** Extra budget openings granted by Additional Clearance. */
   extraOpens: number;
-  /** Server-time (ms) the investigation began — drives daily timers. */
-  readonly startedAtServerMs: number;
+  /** Device time (ms) the investigation began. */
+  readonly startedAtMs?: number;
+  /** @deprecated v9 compatibility only. */
+  readonly startedAtServerMs?: number;
 }
 
 export interface EvidenceStamp {
@@ -614,7 +625,7 @@ export interface RewardBreakdown {
 /*  Persistable runtime snapshot                                             */
 /* -------------------------------------------------------------------------- */
 
-/** Exactly what gets written to Yandex cloud / LocalStorage. */
+/** Exactly what gets written through the active platform storage adapter. */
 export interface PersistedState {
   readonly version: number;
   readonly stats: PlayerStats;

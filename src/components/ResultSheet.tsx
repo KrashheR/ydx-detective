@@ -30,6 +30,7 @@ interface Props {
   onMounted: () => void;
   onDoubleReward: () => void;
   rewardDoubled: boolean;
+  canDoubleReward: boolean;
   onNext: () => void;
   onBackToDesk: () => void;
   hideBack?: boolean;
@@ -45,6 +46,7 @@ export function ResultSheet({
   onMounted,
   onDoubleReward,
   rewardDoubled,
+  canDoubleReward,
   onNext,
   onBackToDesk,
   hideBack = false,
@@ -557,7 +559,7 @@ export function ResultSheet({
           )}
 
           {/* ── Double or nothing (win only) ──────────────────────── */}
-          {win && result.total > 0 && (
+          {win && result.total > 0 && canDoubleReward && (
             <div
               style={{
                 padding: "16px 24px 18px",

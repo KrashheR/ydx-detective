@@ -23,6 +23,7 @@
 | [04-iap-path-a-content.md](04-iap-path-a-content.md) | Путь A: сезонные архивы + бриф для Codex на связанные дела + механики сюжетных цепочек |
 | [05-iap-path-b-license.md](05-iap-path-b-license.md) | Путь B: «Лицензия детектива» (одноразовый премиум) |
 | [06-mobile-ux.md](06-mobile-ux.md) | Мобильный UX: sticky-вердикт, bottom-sheet улик с навигацией, шпаргалка заявления, тач-фидбек вместо hover, типографика, токены (ревью 2026-07-19) |
+| [07-crazygames-migration.md](07-crazygames-migration.md) | Исполняемый план полного удаления Yandex и перехода на CrazyGames SDK v3: Data Module, lifecycle, ads, QA, упаковка и публикация |
 
 ## Рекомендуемый порядок (спринты)
 

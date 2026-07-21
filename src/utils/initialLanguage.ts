@@ -9,7 +9,7 @@ function isLanguage(value: unknown): value is Language {
 
 /**
  * Best-effort locale available before cloud hydration. The persisted local
- * snapshot wins, then the browser locale, then Russian as the product default.
+ * snapshot wins, then the browser locale, then English as the product default.
  */
 export function detectInitialLanguage(
   storage: Pick<Storage, 'getItem'> | null = typeof localStorage === 'undefined' ? null : localStorage,

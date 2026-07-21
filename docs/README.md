@@ -22,6 +22,7 @@
 | [07-authoring-content.md](07-authoring-content.md) | Как добавить дело, язык, ачивку, тип улики | Добавляешь контент |
 | [08-build-test-deploy.md](08-build-test-deploy.md) | Команды, верификация, тесты, сборка, выкладка на Yandex | Собираешь/тестишь/деплоишь |
 | [09-synthetic-playtesting.md](09-synthetic-playtesting.md) | 10 синтетических персон, браузерный прогон и отчеты | Исследуешь UX через LLM-агентов |
+| [10-vfx-implementation-plan.md](10-vfx-implementation-plan.md) | Исполняемый план VFX: motion-система, event map, этапы, тесты, метрики | Реализуешь или проверяешь игровой visual feedback |
 
 ## Связанные документы в корне
 

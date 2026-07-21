@@ -1,137 +1,61 @@
-/** Portal-neutral boundary used by the game runtime. */
-import * as yandex from './yandexSDK';
-import type { AdPlacement, LeaderboardRow, PaymentsProduct } from './yandexSDK';
+import { getCrazyGamesLocale, getCrazyGamesSdk, initCrazyGames, isCrazyGamesReady } from './crazyGamesSDK';
 
-export type { AdPlacement, LeaderboardRow, PaymentsProduct } from './yandexSDK';
-
-type CrazyCallbacks = {
-  adStarted?: () => void;
-  adFinished?: () => void;
-  adError?: () => void;
-};
-
-type CrazySdk = {
-  init?: () => Promise<void>;
-  environment?: { locale?: string };
-  game?: { gameplayStart?: () => void; gameplayStop?: () => void; happytime?: () => void };
-  ad?: { requestAd?: (kind: 'midgame' | 'rewarded', callbacks: CrazyCallbacks) => void };
-  data?: { getItem?: (key: string) => Promise<unknown> | unknown; setItem?: (key: string, value: unknown) => Promise<void> | void };
-  user?: { getUser?: () => Promise<unknown> };
-};
-
-declare global {
-  interface Window {
-    CrazyGames?: { SDK?: CrazySdk };
-  }
-}
-
+export type AdPlacement = 'verdict' | 'inspector_note' | 'double_reward' | 'restore_funds' | 'witness_canvass' | 'daily_unlock' | 'archive_unlock' | 'unknown';
+export type AdResult = { status: 'finished' | 'unavailable' | 'error'; code?: string };
 export interface PlatformAdapter {
-  readonly id: 'yandex' | 'crazygames' | 'local';
-  init(): Promise<void>;
-  ready(): void;
-  gameplayStart(): void;
-  gameplayStop(): void;
-  getLocale(): string | null;
-  getServerTimeMs(): number;
-  canUseCloud(): boolean;
-  getAnalyticsUserId(): string | null;
-  cloudGet(): Promise<unknown | null>;
-  cloudSet(snapshot: unknown): Promise<void>;
-  showFullscreenAd(done?: () => void, placement?: AdPlacement, onShown?: () => void): void;
-  showRewardedAd(reward: () => void, placement?: AdPlacement): void;
+  readonly id: 'crazygames' | 'local'; init(): Promise<void>; loadingStart(): void; loadingStop(): void;
+  gameplayStart(): void; gameplayStop(): void; getLocale(): string | null; getCurrentTimeMs(): number;
+  getItem(key: string): string | null; setItem(key: string, value: string): void;
+  requestAd(kind: 'midgame' | 'rewarded', placement?: AdPlacement): Promise<AdResult>;
 }
-
-const CRAZY_SAVE_KEY = 'claimDetectiveSave';
-const crazyPauseListeners = new Set<(paused: boolean) => void>();
-const crazySdk = (): CrazySdk | undefined =>
-  typeof window === 'undefined' ? undefined : window.CrazyGames?.SDK;
-const emitCrazyPause = (paused: boolean) => crazyPauseListeners.forEach((listener) => listener(paused));
-
-const yandexAdapter: PlatformAdapter = {
-  id: 'yandex',
-  init() { return yandex.initYandex(); },
-  ready() { yandex.notifyGameReady(); },
-  gameplayStart: () => undefined,
-  gameplayStop: () => undefined,
-  getLocale() { return yandex.getYandexLang(); },
-  getServerTimeMs() { return yandex.getServerTimeMs(); },
-  canUseCloud() { return yandex.canUseCloud(); },
-  getAnalyticsUserId() { return yandex.getAnalyticsUserId(); },
-  cloudGet() { return yandex.cloudGet(); },
-  cloudSet(snapshot) { return yandex.cloudSet(snapshot); },
-  showFullscreenAd(done, placement, onShown) { yandex.showFullscreenAd(done, placement, onShown); },
-  showRewardedAd(reward, placement) { yandex.showRewardedAd(reward, placement); },
+const LOCAL_KEY = 'claimDetectiveSave';
+let selected: PlatformAdapter | null = null;
+let gameplay = false;
+const pauseListeners = new Set<(paused: boolean) => void>();
+const mutedListeners = new Set<(muted: boolean) => void>();
+// CrazyGames Basic launch forbids monetization. Ads are enabled only for a
+// Full-launch build after the portal has approved the placements.
+const adsEnabled = import.meta.env.VITE_CRAZYGAMES_ADS_ENABLED === 'true';
+const local: PlatformAdapter = {
+  id: 'local', async init() {}, loadingStart() {}, loadingStop() {}, gameplayStart() {}, gameplayStop() {},
+  getLocale: () => null, getCurrentTimeMs: () => Date.now(),
+  getItem: (key) => { try { return localStorage.getItem(key); } catch { return null; } },
+  setItem: (key, value) => { try { localStorage.setItem(key, value); } catch {} },
+  async requestAd() { return { status: 'unavailable', code: 'adsDisabledBasicLaunch' }; },
 };
-
-const crazyAdapter: PlatformAdapter = {
-  id: 'crazygames',
-  async init() { await crazySdk()?.init?.(); },
-  ready() {},
-  gameplayStart() { crazySdk()?.game?.gameplayStart?.(); },
-  gameplayStop() { crazySdk()?.game?.gameplayStop?.(); },
-  getLocale() { return crazySdk()?.environment?.locale ?? null; },
-  getServerTimeMs() { return Date.now(); },
-  canUseCloud() { return Boolean(crazySdk()?.data?.getItem && crazySdk()?.data?.setItem); },
-  getAnalyticsUserId() { return null; },
-  async cloudGet() { return (await crazySdk()?.data?.getItem?.(CRAZY_SAVE_KEY)) ?? null; },
-  async cloudSet(snapshot) { await crazySdk()?.data?.setItem?.(CRAZY_SAVE_KEY, snapshot); },
-  showFullscreenAd(done, _placement, onShown) {
-    const request = crazySdk()?.ad?.requestAd;
-    if (!request) { done?.(); return; }
-    emitCrazyPause(true);
-    onShown?.();
-    request('midgame', {
-      adFinished: () => { emitCrazyPause(false); done?.(); },
-      adError: () => { emitCrazyPause(false); done?.(); },
-    });
-  },
-  showRewardedAd(reward) {
-    const request = crazySdk()?.ad?.requestAd;
-    if (!request) { reward(); return; }
-    emitCrazyPause(true);
-    request('rewarded', {
-      adFinished: () => { emitCrazyPause(false); reward(); },
-      adError: () => emitCrazyPause(false),
+const crazy: PlatformAdapter = {
+  id: 'crazygames', async init() {},
+  loadingStart: () => getCrazyGamesSdk()?.game?.loadingStart?.(), loadingStop: () => getCrazyGamesSdk()?.game?.loadingStop?.(),
+  gameplayStart: () => { if (!gameplay) { gameplay = true; getCrazyGamesSdk()?.game?.gameplayStart?.(); } },
+  gameplayStop: () => { if (gameplay) { gameplay = false; getCrazyGamesSdk()?.game?.gameplayStop?.(); } },
+  getLocale: getCrazyGamesLocale, getCurrentTimeMs: () => Date.now(),
+  getItem: (key) => { try { return getCrazyGamesSdk()?.data?.getItem(key) ?? null; } catch { return null; } },
+  setItem: (key, value) => { try { getCrazyGamesSdk()?.data?.setItem(key, value); } catch {} },
+  requestAd(kind) {
+    if (!adsEnabled) return Promise.resolve({ status: 'unavailable', code: 'adsDisabledBasicLaunch' });
+    const request = getCrazyGamesSdk()?.ad?.requestAd;
+    if (!request) return Promise.resolve({ status: 'unavailable', code: 'sdkUnavailable' });
+    return new Promise((resolve) => {
+      let started = false; let settled = false;
+      const finish = (result: AdResult) => { if (!settled) { settled = true; if (started) pauseListeners.forEach((fn) => fn(false)); resolve(result); } };
+      try { request(kind, { adStarted: () => { if (!started) { started = true; pauseListeners.forEach((fn) => fn(true)); } }, adFinished: () => finish({ status: 'finished' }), adError: (error) => finish({ status: 'error', code: String(error ?? 'adError') }) }); }
+      catch (error) { finish({ status: 'error', code: String(error) }); }
     });
   },
 };
-
-export function getPlatformAdapter(): PlatformAdapter {
-  if (crazySdk()) return crazyAdapter;
-  if (typeof window !== 'undefined' && window.YaGames) return yandexAdapter;
-  return yandexAdapter; // its adapter is deliberately no-op/local-safe without YaGames
-}
-
-export const initYandex = () => getPlatformAdapter().init();
-export const notifyGameReady = () => getPlatformAdapter().ready();
+export async function initPlatform(): Promise<void> { if (selected) return; selected = await initCrazyGames() && isCrazyGamesReady() ? crazy : local; const settings = getCrazyGamesSdk()?.game?.settings; if (selected === crazy && settings?.addEventListener) settings.addEventListener('muteAudio', (muted) => mutedListeners.forEach((fn) => fn(muted))); }
+export const getPlatformAdapter = () => selected ?? local;
+export const notifyLoadingStart = () => getPlatformAdapter().loadingStart();
+export const notifyLoadingStop = () => getPlatformAdapter().loadingStop();
 export const notifyGameplayStart = () => getPlatformAdapter().gameplayStart();
 export const notifyGameplayStop = () => getPlatformAdapter().gameplayStop();
-export const getServerTimeMs = () => getPlatformAdapter().getServerTimeMs();
-export const getYandexLang = () => getPlatformAdapter().getLocale();
-export const canUseCloud = () => getPlatformAdapter().canUseCloud();
-export const getAnalyticsUserId = () => getPlatformAdapter().getAnalyticsUserId();
-export const cloudGet = () => getPlatformAdapter().cloudGet();
-export const cloudSet = (snapshot: unknown) => getPlatformAdapter().cloudSet(snapshot);
-export const showFullscreenAd = (done?: () => void, placement?: AdPlacement, onShown?: () => void) =>
-  getPlatformAdapter().showFullscreenAd(done, placement, onShown);
-export const showRewardedAd = (reward: () => void, placement?: AdPlacement) =>
-  getPlatformAdapter().showRewardedAd(reward, placement);
-export function onPauseChange(listener: (paused: boolean) => void): () => void {
-  if (getPlatformAdapter().id !== 'crazygames') return yandex.onPauseChange(listener);
-  crazyPauseListeners.add(listener);
-  return () => crazyPauseListeners.delete(listener);
-}
-
-// Portal-specific optional capabilities are disabled outside Yandex.
-const onYandex = () => getPlatformAdapter().id === 'yandex';
-export const trackAdOffer = (kind: 'fullscreen' | 'rewarded', placement: AdPlacement) => {
-  if (onYandex()) yandex.trackAdOffer(kind, placement);
-};
-export const canReview = () => onYandex() ? yandex.canReview() : Promise.resolve(false);
-export const requestReview = () => onYandex() ? yandex.requestReview() : Promise.resolve(false);
-export const isPaymentsAvailable = () => onYandex() && yandex.isPaymentsAvailable();
-export const fetchPaymentsCatalog = (): Promise<PaymentsProduct[]> => onYandex() ? yandex.fetchPaymentsCatalog() : Promise.resolve([]);
-export const purchaseProduct = (id: string) => onYandex() ? yandex.purchaseProduct(id) : Promise.resolve(false);
-export const restorePurchasedProductIds = () => onYandex() ? yandex.restorePurchasedProductIds() : Promise.resolve([]);
-export const submitLeaderboardScore = (score: number) => onYandex() ? yandex.submitLeaderboardScore(score) : Promise.resolve();
-export const fetchLeaderboard = (): Promise<LeaderboardRow[] | null> => onYandex() ? yandex.fetchLeaderboard() : Promise.resolve(null);
+export const getCurrentTimeMs = () => getPlatformAdapter().getCurrentTimeMs();
+export const getPlatformLocale = () => getPlatformAdapter().getLocale();
+export const storageGet = (key = LOCAL_KEY) => getPlatformAdapter().getItem(key);
+export const storageSet = (value: string, key = LOCAL_KEY) => getPlatformAdapter().setItem(key, value);
+export function showFullscreenAd(doneOrPlacement?: (() => void) | AdPlacement, placement?: AdPlacement, onShown?: () => void): Promise<AdResult> { const done = typeof doneOrPlacement === 'function' ? doneOrPlacement : undefined; const target = typeof doneOrPlacement === 'string' ? doneOrPlacement : placement; return getPlatformAdapter().requestAd('midgame', target).then((result) => { if (result.status === 'finished') onShown?.(); done?.(); return result; }); }
+export function showRewardedAd(rewardOrPlacement?: (() => void) | AdPlacement, placement?: AdPlacement): Promise<AdResult> { const reward = typeof rewardOrPlacement === 'function' ? rewardOrPlacement : undefined; const target = typeof rewardOrPlacement === 'string' ? rewardOrPlacement : placement; return getPlatformAdapter().requestAd('rewarded', target).then((result) => { if (result.status === 'finished') reward?.(); return result; }); }
+export const onPauseChange = (listener: (paused: boolean) => void) => { pauseListeners.add(listener); return () => pauseListeners.delete(listener); };
+export const onPlatformMuteChange = (listener: (muted: boolean) => void) => { mutedListeners.add(listener); return () => mutedListeners.delete(listener); };
+export const areRewardedAdsEnabled = () => adsEnabled;
+export const trackAdOffer = (_kind: 'fullscreen' | 'rewarded', _placement: AdPlacement) => {};
