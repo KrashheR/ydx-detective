@@ -6,7 +6,7 @@ import { t } from '../i18n/ui';
 import type { InteractiveEvidence, InteractiveEvidenceProgress, ThermalScanEvidence } from '../types';
 import { InteractiveEvidenceView, makeInteractiveProgress } from './InteractiveEvidence';
 
-const TYPES = ['document_scan', 'thermal_scan', 'shadow_time_check', 'seal_match', 'surface_reveal'] as const;
+const TYPES = ['thermal_scan', 'surface_reveal'] as const;
 
 beforeEach(() => {
   vi.spyOn(HTMLCanvasElement.prototype, 'getContext').mockReturnValue(null);
@@ -14,7 +14,7 @@ beforeEach(() => {
 
 function evidenceOf(type: typeof TYPES[number]): InteractiveEvidence {
   const evidence = getStandardCases().flatMap((item) => item.evidences).find((item) => item.type === type);
-  if (!evidence) throw new Error(`Missing campaign evidence: ${type}`);
+  if (!evidence) throw new Error(`Missing active campaign evidence: ${type}`);
   return evidence as InteractiveEvidence;
 }
 
@@ -41,8 +41,20 @@ describe('interactive evidence renderers', () => {
     expect(screen.getByRole('status')).toHaveTextContent(t('interactiveComplete', 'en'));
   });
 
+  it('reveals thermal hotspots by scanning with the pointer before clicking', () => {
+    const evidence = evidenceOf('thermal_scan') as ThermalScanEvidence;
+    const { container } = render(<Harness evidence={evidence} />);
+    fireEvent.click(screen.getByRole('button', { name: t('interactiveThermal', 'en') }));
+    const zoneButton = screen.getByRole('button', { name: evidence.data.heatZones[0]!.labelEn! });
+    expect(zoneButton).toHaveStyle({ opacity: '0' });
+    const scanArea = container.querySelector('.touch-none')!;
+    fireEvent.pointerMove(scanArea, { clientX: 5, clientY: 5 });
+    fireEvent.click(zoneButton);
+    expect(screen.getByRole('status')).toHaveTextContent(t('interactiveComplete', 'en'));
+  });
+
   it('uses RTL layout for Arabic without changing mechanics', () => {
-    const { container } = render(<Harness evidence={evidenceOf('shadow_time_check')} lang="ar" />);
+    const { container } = render(<Harness evidence={evidenceOf('surface_reveal')} lang="ar" />);
     expect(container.querySelector('section')).toHaveAttribute('dir', 'rtl');
   });
 });

@@ -7,9 +7,9 @@
   "actTitle": {
     "ru": "Серый конвой",
     "en": "The Gray Convoy",
-    "tr": "The Gray Convoy",
-    "ar": "The Gray Convoy",
-    "kk": "Серый конвой"
+    "tr": "Gri Konvoy",
+    "ar": "القافلة الرمادية",
+    "kk": "Сұр конвой"
   },
   "difficulty": "hard",
   "claimAmount": 15000,
@@ -17,42 +17,42 @@
   "title": {
     "ru": "Три силуэта в контейнере",
     "en": "Three Silhouettes in a Container",
-    "tr": "Three Silhouettes in a Container",
-    "ar": "Three Silhouettes in a Container",
-    "kk": "Три силуэта в контейнере"
+    "tr": "Bir Konteynerde Üç Siluet",
+    "ar": "ثلاث صور ظلية في حاوية",
+    "kk": "Контейнердегі үш силуэт"
   },
   "claim": {
     "person": {
       "ru": "Денис Корин, 55 лет",
       "en": "Denis Korin, age 55",
-      "tr": "Denis Korin, age 55",
-      "ar": "Denis Korin, age 55",
-      "kk": "Денис Корин, 55 лет"
+      "tr": "Denis Korin, 55 yaşında",
+      "ar": "دينيس كورين، 55 عامًا",
+      "kk": "Денис Корин, 55 жаста"
     },
     "story": {
       "ru": "Ночью из мотомастерской украли три хромированных демонстрационных манекена и коллекционный мотоцикл. Основные камеры отключились из-за скачка напряжения. Прошу полную выплату.",
       "en": "During the night, three chrome display mannequins and a collectible motorcycle were stolen from my workshop. A power surge disabled the main cameras. I am claiming the full amount.",
-      "tr": "During the night, three chrome display mannequins and a collectible motorcycle were stolen from my workshop. A power surge disabled the main cameras. I am claiming the full amount.",
-      "ar": "During the night, three chrome display mannequins and a collectible motorcycle were stolen from my workshop. A power surge disabled the main cameras. I am claiming the full amount.",
-      "kk": "Ночью из мотомастерской украли три хромированных демонстрационных манекена и коллекционный мотоцикл. Основные камеры отключились из-за скачка напряжения. Прошу полную выплату."
+      "tr": "Gece boyunca atölyemden üç adet krom vitrinli manken ve bir koleksiyonluk motosiklet çalındı. Güç dalgalanması ana kameraları devre dışı bıraktı. Tutarın tamamını talep ediyorum.",
+      "ar": "خلال الليل، سُرقت ثلاث عارضات أزياء مصنوعة من الكروم ودراجة نارية من ورشة العمل الخاصة بي. أدى ارتفاع الطاقة إلى تعطيل الكاميرات الرئيسية. أنا أطالب بالمبلغ كاملاً.",
+      "kk": "Түнде мотоцикл шеберханасынан үш хром дисплей манекені мен коллекциялық мотоцикл ұрланған. Негізгі камералар электр қуатының жоғарылауына байланысты өшірілді. Мен толық төлемді сұраймын."
     }
   },
   "client": {
     "role": {
       "ru": "Заявитель · страховое дело",
       "en": "Claimant · insurance file",
-      "tr": "Claimant · insurance file",
-      "ar": "Claimant · insurance file",
-      "kk": "Заявитель · страховое дело"
+      "tr": "Davacı · sigorta dosyası",
+      "ar": "المدعي · ملف التأمين",
+      "kk": "Өтініш беруші · сақтандыру ісі"
     },
     "meta": [
       {
         "k": {
           "ru": "Акт",
           "en": "Act",
-          "tr": "Act",
-          "ar": "Act",
-          "kk": "Акт"
+          "tr": "Bölüm",
+          "ar": "الفصل",
+          "kk": "Бөлім"
         },
         "v": {
           "ru": "4",
@@ -66,9 +66,9 @@
         "k": {
           "ru": "Порядок",
           "en": "Campaign order",
-          "tr": "Campaign order",
-          "ar": "Campaign order",
-          "kk": "Порядок"
+          "tr": "Kampanya sırası",
+          "ar": "ترتيب الحملة",
+          "kk": "Науқан реті"
         },
         "v": {
           "ru": "35",
@@ -86,39 +86,59 @@
     {
       "id": "ev-backup",
       "order": 1,
-      "type": "shadow_time_check",
+      "type": "camera_recording",
       "title": {
-        "ru": "Проверка времени резервной записи",
-        "en": "Backup Footage Time Check",
-        "tr": "Backup Footage Time Check",
-        "ar": "Backup Footage Time Check",
-        "kk": "Проверка времени резервной записи"
+        "ru": "Резервная запись ворот",
+        "en": "Gate Backup Footage",
+        "tr": "Geçit Yedekleme Görüntüsü",
+        "ar": "لقطات احتياطية للبوابة",
+        "kk": "Қақпаның резервтік жазбасы"
       },
       "content": {
-        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
-        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
-        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
-        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
-        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+        "ru": [
+          "17:42 — фургон с манекенами и мотоциклом покидает площадку.",
+          "17:44 — водитель закрывает ворота своим пропуском.",
+          "00:15 — в резервной папке создана копия фрагмента без исходного потока."
+        ],
+        "en": [
+          "17:42 — A van carrying the mannequins and motorcycle leaves the yard.",
+          "17:44 — The driver closes the gate with his own pass.",
+          "00:15 — A copy of the fragment is created in the backup folder without the source stream."
+        ],
+        "tr": [
+          "17:42 — Mankenleri ve motosikleti taşıyan bir minibüs bahçeden ayrılıyor.",
+          "17:44 — Şoför kendi geçiş kartıyla kapıyı kapatıyor.",
+          "00:15 — Yedekleme klasöründe kaynak akışı olmadan parçanın bir kopyası oluşturulur."
+        ],
+        "ar": [
+          "17:42 – شاحنة تحمل عارضات الأزياء والدراجة النارية تغادر الفناء.",
+          "17:44 - السائق يغلق البوابة بتصريحه الخاص.",
+          "00:15 — يتم إنشاء نسخة من الجزء في مجلد النسخ الاحتياطي بدون الدفق المصدر."
+        ],
+        "kk": [
+          "17:42 — Манекендер мен мотоцикл тиелген фургон алаңнан шығады.",
+          "17:44 — Жүргізуші қақпаны өз рұқсатнамасымен жабады.",
+          "00:15 — Резервтік бумада бастапқы ағынсыз үзіндінің көшірмесі жасалады."
+        ]
       },
       "isContradiction": true,
       "contradictionExplanation": {
-        "ru": "Тень соответствует 17:30–17:55, а не полуночи: погрузку сняли заранее и выдали за ночную кражу.",
-        "en": "The shadow matches 5:30–5:55 p.m., not midnight: the loading was filmed in advance and presented as a nighttime theft.",
-        "tr": "The shadow matches 5:30–5:55 p.m., not midnight: the loading was filmed in advance and presented as a nighttime theft.",
-        "ar": "The shadow matches 5:30–5:55 p.m., not midnight: the loading was filmed in advance and presented as a nighttime theft.",
-        "kk": "Тень соответствует 17:30–17:55, а не полуночи: погрузку сняли заранее и выдали за ночную кражу."
+        "ru": "Исходный поток фиксирует выезд в 17:42, а ночной файл — лишь поздняя копия: «кражу» смонтировали заранее.",
+        "en": "The source stream records the departure at 5:42 p.m.; the nighttime file is only a later copy, so the ‘theft’ was staged in advance.",
+        "tr": "Kaynak akışı kalkışı 17:42'de kaydediyor; gece dosyası yalnızca daha sonraki bir kopyadır, dolayısıyla 'hırsızlık' önceden planlanmıştır.",
+        "ar": "يسجل التدفق المصدر المغادرة الساعة 5:42 مساءً؛ الملف الليلي ما هو إلا نسخة لاحقة، لذا فإن \"السرقة\" كانت مدبرة مسبقًا.",
+        "kk": "Бастапқы ағын шығуды 17:42-де тіркейді, ал түнгі файл — кейінгі көшірме ғана: «ұрлық» алдын ала қойылған."
       },
       "narrativeRole": "proof",
       "statementLink": {
         "statementId": "claim_theft_time",
         "relation": "contradicts",
         "reason": {
-          "ru": "Тень соответствует 17:30–17:55, а не полуночи: погрузку сняли заранее и выдали за ночную кражу.",
-          "en": "The shadow matches 5:30–5:55 p.m., not midnight: the loading was filmed in advance and presented as a nighttime theft.",
-          "tr": "The shadow matches 5:30–5:55 p.m., not midnight: the loading was filmed in advance and presented as a nighttime theft.",
-          "ar": "The shadow matches 5:30–5:55 p.m., not midnight: the loading was filmed in advance and presented as a nighttime theft.",
-          "kk": "Тень соответствует 17:30–17:55, а не полуночи: погрузку сняли заранее и выдали за ночную кражу."
+          "ru": "Исходный поток фиксирует выезд в 17:42, а ночной файл — лишь поздняя копия: «кражу» смонтировали заранее.",
+          "en": "The source stream records the departure at 5:42 p.m.; the nighttime file is only a later copy, so the ‘theft’ was staged in advance.",
+          "tr": "Kaynak akışı kalkışı 17:42'de kaydediyor; gece dosyası yalnızca daha sonraki bir kopyadır, dolayısıyla 'hırsızlık' önceden planlanmıştır.",
+          "ar": "يسجل التدفق المصدر المغادرة الساعة 5:42 مساءً؛ الملف الليلي ما هو إلا نسخة لاحقة، لذا فإن \"السرقة\" كانت مدبرة مسبقًا.",
+          "kk": "Бастапқы ағын шығуды 17:42-де тіркейді, ал түнгі файл — кейінгі көшірме ғана: «ұрлық» алдын ала қойылған."
         }
       },
       "contradictionTarget": {
@@ -126,27 +146,30 @@
         "reason": {
           "ru": "Тень соответствует 17:30–17:55, а не полуночи: погрузку сняли заранее и выдали за ночную кражу.",
           "en": "The shadow matches 5:30–5:55 p.m., not midnight: the loading was filmed in advance and presented as a nighttime theft.",
-          "tr": "The shadow matches 5:30–5:55 p.m., not midnight: the loading was filmed in advance and presented as a nighttime theft.",
-          "ar": "The shadow matches 5:30–5:55 p.m., not midnight: the loading was filmed in advance and presented as a nighttime theft.",
-          "kk": "Тень соответствует 17:30–17:55, а не полуночи: погрузку сняли заранее и выдали за ночную кражу."
+          "tr": "Gölge gece yarısıyla değil, 17:30-17:55 ile eşleşiyor: Yükleme işlemi önceden filme alındı ​​ve gece hırsızlığı olarak sunuldu.",
+          "ar": "يتطابق الظل من الساعة 5:30 إلى 5:55 مساءً، وليس منتصف الليل: تم تصوير التحميل مسبقًا وتم تقديمه على أنه سرقة ليلية.",
+          "kk": "Көлеңке түн ортасына емес, 17:30-17:55-ке сәйкес келеді: жүктеме алдын ала алынып тасталды және түнгі ұрлық ретінде өтті."
         }
       },
       "evidenceTier": "core",
       "requiredForVerdict": true,
       "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/case-037-ev-backup.webp"
+      },
       "description": {
         "ru": "Камера контейнерной площадки не имела часов, но в кадре виден калибровочный столб с известной ориентацией.",
         "en": "The container-yard camera had no clock, but a calibration post of known orientation is visible in frame.",
-        "tr": "The container-yard camera had no clock, but a calibration post of known orientation is visible in frame.",
-        "ar": "The container-yard camera had no clock, but a calibration post of known orientation is visible in frame.",
-        "kk": "Камера контейнерной площадки не имела часов, но в кадре виден калибровочный столб с известной ориентацией."
+        "tr": "Konteyner sahası kamerasında saat yoktu ancak bilinen yönelime sahip bir kalibrasyon direği çerçevede görülebiliyor.",
+        "ar": "لم يكن لدى كاميرا ساحة الحاوية ساعة، ولكن عمود معايرة ذو اتجاه معروف مرئي في الإطار.",
+        "kk": "Контейнер алаңының камерасында сағат болмады, бірақ кадрда белгілі бағдары бар калибрлеу полюсі көрінеді."
       },
       "instruction": {
         "ru": "Сопоставить тень столба с временной шкалой.",
         "en": "Match the post's shadow to the time scale.",
-        "tr": "Match the post's shadow to the time scale.",
-        "ar": "Match the post's shadow to the time scale.",
-        "kk": "Сопоставить тень столба с временной шкалой."
+        "tr": "Gönderinin gölgesini zaman ölçeğiyle eşleştirin.",
+        "ar": "قم بمطابقة ظل المنشور مع المقياس الزمني.",
+        "kk": "Бағананың көлеңкесін уақыт шкаласымен сәйкестендіріңіз."
       },
       "previousType": "camera_recording",
       "assets": {
@@ -162,23 +185,23 @@
         "why": {
           "ru": "Проверка доказывает, что «ночная» запись подготовлена днём до отключения основных камер.",
           "en": "The check proves that the ‘nighttime’ footage was prepared during daylight before the main cameras were disabled.",
-          "tr": "The check proves that the ‘nighttime’ footage was prepared during daylight before the main cameras were disabled.",
-          "ar": "The check proves that the ‘nighttime’ footage was prepared during daylight before the main cameras were disabled.",
-          "kk": "Проверка доказывает, что «ночная» запись подготовлена днём до отключения основных камер."
+          "tr": "Kontrol, 'gece' görüntülerinin ana kameralar devre dışı bırakılmadan önce gündüz saatlerinde hazırlandığını kanıtlıyor.",
+          "ar": "ويثبت الفحص أن اللقطات \"الليلية\" تم إعدادها في وضح النهار قبل تعطيل الكاميرات الرئيسية.",
+          "kk": "Тексеру «түнгі» жазбаның негізгі камералар өшірілмей тұрып күндіз дайындалғанын дәлелдейді."
         },
         "playerAction": {
           "ru": "Сопоставить тень столба с временной шкалой.",
           "en": "Match the post's shadow to the time scale.",
-          "tr": "Match the post's shadow to the time scale.",
-          "ar": "Match the post's shadow to the time scale.",
-          "kk": "Сопоставить тень столба с временной шкалой."
+          "tr": "Gönderinin gölgesini zaman ölçeğiyle eşleştirin.",
+          "ar": "قم بمطابقة ظل المنشور مع المقياس الزمني.",
+          "kk": "Бағананың көлеңкесін уақыт шкаласымен сәйкестендіріңіз."
         },
         "conclusion": {
           "ru": "Тень соответствует 17:30–17:55, а не полуночи: погрузку сняли заранее и выдали за ночную кражу.",
           "en": "The shadow matches 5:30–5:55 p.m., not midnight: the loading was filmed in advance and presented as a nighttime theft.",
-          "tr": "The shadow matches 5:30–5:55 p.m., not midnight: the loading was filmed in advance and presented as a nighttime theft.",
-          "ar": "The shadow matches 5:30–5:55 p.m., not midnight: the loading was filmed in advance and presented as a nighttime theft.",
-          "kk": "Тень соответствует 17:30–17:55, а не полуночи: погрузку сняли заранее и выдали за ночную кражу."
+          "tr": "Gölge gece yarısıyla değil, 17:30-17:55 ile eşleşiyor: Yükleme işlemi önceden filme alındı ​​ve gece hırsızlığı olarak sunuldu.",
+          "ar": "يتطابق الظل من الساعة 5:30 إلى 5:55 مساءً، وليس منتصف الليل: تم تصوير التحميل مسبقًا وتم تقديمه على أنه سرقة ليلية.",
+          "kk": "Көлеңке түн ортасына емес, 17:30-17:55-ке сәйкес келеді: жүктеме алдын ала алынып тасталды және түнгі ұрлық ретінде өтті."
         }
       },
       "data": {
@@ -241,24 +264,24 @@
       "title": {
         "ru": "Таможенный рентген",
         "en": "Customs X-Ray",
-        "tr": "Customs X-Ray",
-        "ar": "Customs X-Ray",
-        "kk": "Таможенный рентген"
+        "tr": "Gümrük Röntgeni",
+        "ar": "الأشعة السينية الجمركية",
+        "kk": "Кедендік рентген"
       },
       "content": {
         "ru": "В контейнере видны три полых металлических фигуры и мотоцикл. Номера груза совпадают с документами Корина.",
         "en": "The container holds three hollow metal figures and a motorcycle. The cargo numbers match Korin's documents.",
-        "tr": "The container holds three hollow metal figures and a motorcycle. The cargo numbers match Korin's documents.",
-        "ar": "The container holds three hollow metal figures and a motorcycle. The cargo numbers match Korin's documents.",
-        "kk": "В контейнере видны три полых металлических фигуры и мотоцикл. Номера груза совпадают с документами Корина."
+        "tr": "Konteynerde üç içi boş metal figür ve bir motosiklet bulunur. Kargo numaraları Korin'in belgeleriyle eşleşiyor.",
+        "ar": "تحتوي الحاوية على ثلاثة أشكال معدنية مجوفة ودراجة نارية. أرقام الشحن تتطابق مع وثائق كورين.",
+        "kk": "Контейнерде үш қуыс металл фигуралар мен мотоцикл көрінеді. Жүк нөмірлері Кориннің құжаттарымен сәйкес келеді."
       },
       "isContradiction": true,
       "contradictionExplanation": {
         "ru": "Заявленное похищенным имущество пересекало границу как оформленный груз владельца.",
         "en": "The allegedly stolen property crossed the border as the owner's declared cargo.",
-        "tr": "The allegedly stolen property crossed the border as the owner's declared cargo.",
-        "ar": "The allegedly stolen property crossed the border as the owner's declared cargo.",
-        "kk": "Заявленное похищенным имущество пересекало границу как оформленный груз владельца."
+        "tr": "Çalındığı iddia edilen mal, sahibinin beyan ettiği kargo olarak sınırı geçti.",
+        "ar": "عبرت الممتلكات المزعومة المسروقة الحدود باعتبارها البضائع المعلنة للمالك.",
+        "kk": "Ұрланған деп танылған мүлік иесінің тіркелген жүкі ретінде шекарадан өткен."
       },
       "narrativeRole": "pivot",
       "statementLink": {
@@ -267,9 +290,9 @@
         "reason": {
           "ru": "Заявленное похищенным имущество пересекало границу как оформленный груз владельца.",
           "en": "The allegedly stolen property crossed the border as the owner's declared cargo.",
-          "tr": "The allegedly stolen property crossed the border as the owner's declared cargo.",
-          "ar": "The allegedly stolen property crossed the border as the owner's declared cargo.",
-          "kk": "Заявленное похищенным имущество пересекало границу как оформленный груз владельца."
+          "tr": "Çalındığı iddia edilen mal, sahibinin beyan ettiği kargo olarak sınırı geçti.",
+          "ar": "عبرت الممتلكات المزعومة المسروقة الحدود باعتبارها البضائع المعلنة للمالك.",
+          "kk": "Ұрланған деп танылған мүлік иесінің тіркелген жүкі ретінде шекарадан өткен."
         }
       },
       "contradictionTarget": {
@@ -277,9 +300,9 @@
         "reason": {
           "ru": "Заявленное похищенным имущество пересекало границу как оформленный груз владельца.",
           "en": "The allegedly stolen property crossed the border as the owner's declared cargo.",
-          "tr": "The allegedly stolen property crossed the border as the owner's declared cargo.",
-          "ar": "The allegedly stolen property crossed the border as the owner's declared cargo.",
-          "kk": "Заявленное похищенным имущество пересекало границу как оформленный груз владельца."
+          "tr": "Çalındığı iddia edilen mal, sahibinin beyan ettiği kargo olarak sınırı geçti.",
+          "ar": "عبرت الممتلكات المزعومة المسروقة الحدود باعتبارها البضائع المعلنة للمالك.",
+          "kk": "Ұрланған деп танылған мүлік иесінің тіркелген жүкі ретінде шекарадан өткен."
         }
       },
       "evidenceTier": "core",
@@ -296,24 +319,24 @@
       "title": {
         "ru": "Предоплата коллекционера",
         "en": "Collector's Advance Payment",
-        "tr": "Collector's Advance Payment",
-        "ar": "Collector's Advance Payment",
-        "kk": "Предоплата коллекционера"
+        "tr": "Koleksiyoncunun Avans Ödemesi",
+        "ar": "الدفعة المقدمة لهواة الجمع",
+        "kk": "Коллектордың аванстық төлемі"
       },
       "content": {
         "ru": "За пять дней до «кражи» Корин получил половину стоимости от зарубежного покупателя.",
         "en": "Five days before the ‘theft,’ Korin received half the price from a foreign buyer.",
-        "tr": "Five days before the ‘theft,’ Korin received half the price from a foreign buyer.",
-        "ar": "Five days before the ‘theft,’ Korin received half the price from a foreign buyer.",
-        "kk": "За пять дней до «кражи» Корин получил половину стоимости от зарубежного покупателя."
+        "tr": "Korin, ‘hırsızlıktan’ beş gün önce yabancı bir alıcıdan yarı fiyatına almıştı.",
+        "ar": "قبل خمسة أيام من \"السرقة\"، تلقت كورين نصف السعر من مشتر أجنبي.",
+        "kk": "«Ұрлықтан» бес күн бұрын Корин шетелдік сатып алушыдан жарты құнын алды."
       },
       "isContradiction": false,
       "contradictionExplanation": {
         "ru": "Продажа была согласована заранее.",
         "en": "The sale was arranged in advance.",
-        "tr": "The sale was arranged in advance.",
-        "ar": "The sale was arranged in advance.",
-        "kk": "Продажа была согласована заранее."
+        "tr": "Satış önceden ayarlandı.",
+        "ar": "تم ترتيب البيع مقدما.",
+        "kk": "Сату туралы алдын ала келісілген."
       },
       "narrativeRole": "motive",
       "statementLink": {
@@ -322,9 +345,9 @@
         "reason": {
           "ru": "Продажа была согласована заранее.",
           "en": "The sale was arranged in advance.",
-          "tr": "The sale was arranged in advance.",
-          "ar": "The sale was arranged in advance.",
-          "kk": "Продажа была согласована заранее."
+          "tr": "Satış önceden ayarlandı.",
+          "ar": "تم ترتيب البيع مقدما.",
+          "kk": "Сату туралы алдын ала келісілген."
         }
       },
       "contradictionTarget": null,
@@ -339,24 +362,24 @@
       "title": {
         "ru": "Журнал видеосистемы",
         "en": "Video System Log",
-        "tr": "Video System Log",
-        "ar": "Video System Log",
-        "kk": "Журнал видеосистемы"
+        "tr": "Video Sistemi Günlüğü",
+        "ar": "سجل نظام الفيديو",
+        "kk": "Бейне жүйе журналы"
       },
       "content": {
         "ru": "Основные камеры отключены штатно администраторской учётной записью Корина. Скачка напряжения не было.",
         "en": "The main cameras were shut down normally using Korin's administrator account. No power surge occurred.",
-        "tr": "The main cameras were shut down normally using Korin's administrator account. No power surge occurred.",
-        "ar": "The main cameras were shut down normally using Korin's administrator account. No power surge occurred.",
-        "kk": "Основные камеры отключены штатно администраторской учётной записью Корина. Скачка напряжения не было."
+        "tr": "Ana kameralar Korin'in yönetici hesabı kullanılarak normal şekilde kapatıldı. Herhangi bir güç dalgalanması yaşanmadı.",
+        "ar": "تم إغلاق الكاميرات الرئيسية بشكل طبيعي باستخدام حساب مسؤول كورين. لم يحدث أي زيادة في الطاقة.",
+        "kk": "Негізгі камералар әдетте Кориннің әкімші тіркелгісі арқылы өшіріледі. Ешқандай кернеу болған жоқ."
       },
       "isContradiction": true,
       "contradictionExplanation": {
         "ru": "Заявитель сам создал слепую зону и солгал о технической аварии.",
         "en": "The claimant created the blind spot himself and lied about a technical failure.",
-        "tr": "The claimant created the blind spot himself and lied about a technical failure.",
-        "ar": "The claimant created the blind spot himself and lied about a technical failure.",
-        "kk": "Заявитель сам создал слепую зону и солгал о технической аварии."
+        "tr": "Davacı kör noktayı kendisi oluşturmuş ve teknik bir arıza konusunda yalan söylemiştir.",
+        "ar": "أنشأ المدعي النقطة العمياء بنفسه وكذب بشأن عطل فني.",
+        "kk": "Арызданушы соқыр нүктені өзі жасап, техникалық апат туралы өтірік айтқан."
       },
       "narrativeRole": "proof",
       "statementLink": {
@@ -365,9 +388,9 @@
         "reason": {
           "ru": "Заявитель сам создал слепую зону и солгал о технической аварии.",
           "en": "The claimant created the blind spot himself and lied about a technical failure.",
-          "tr": "The claimant created the blind spot himself and lied about a technical failure.",
-          "ar": "The claimant created the blind spot himself and lied about a technical failure.",
-          "kk": "Заявитель сам создал слепую зону и солгал о технической аварии."
+          "tr": "Davacı kör noktayı kendisi oluşturmuş ve teknik bir arıza konusunda yalan söylemiştir.",
+          "ar": "أنشأ المدعي النقطة العمياء بنفسه وكذب بشأن عطل فني.",
+          "kk": "Арызданушы соқыр нүктені өзі жасап, техникалық апат туралы өтірік айтқан."
         }
       },
       "contradictionTarget": {
@@ -375,9 +398,9 @@
         "reason": {
           "ru": "Заявитель сам создал слепую зону и солгал о технической аварии.",
           "en": "The claimant created the blind spot himself and lied about a technical failure.",
-          "tr": "The claimant created the blind spot himself and lied about a technical failure.",
-          "ar": "The claimant created the blind spot himself and lied about a technical failure.",
-          "kk": "Заявитель сам создал слепую зону и солгал о технической аварии."
+          "tr": "Davacı kör noktayı kendisi oluşturmuş ve teknik bir arıza konusunda yalan söylemiştir.",
+          "ar": "أنشأ المدعي النقطة العمياء بنفسه وكذب بشأن عطل فني.",
+          "kk": "Арызданушы соқыр нүктені өзі жасап, техникалық апат туралы өтірік айтқан."
         }
       },
       "evidenceTier": "core",
@@ -391,24 +414,24 @@
       "title": {
         "ru": "Экспортная декларация",
         "en": "Export Declaration",
-        "tr": "Export Declaration",
-        "ar": "Export Declaration",
-        "kk": "Экспортная декларация"
+        "tr": "İhracat Beyannamesi",
+        "ar": "إعلان التصدير",
+        "kk": "Экспорттық декларация"
       },
       "content": {
         "ru": "Отправителем указан посредник Серого конвоя, код партии `GC-17-M`.",
         "en": "A Gray Convoy intermediary is listed as the sender under batch code `GC-17-M`.",
-        "tr": "A Gray Convoy intermediary is listed as the sender under batch code `GC-17-M`.",
-        "ar": "A Gray Convoy intermediary is listed as the sender under batch code `GC-17-M`.",
-        "kk": "Отправителем указан посредник Серого конвоя, код партии `GC-17-M`."
+        "tr": "Bir Gri Konvoy aracısı, \"GC-17-M\" toplu kodu altında gönderen olarak listeleniyor.",
+        "ar": "يتم إدراج وسيط Gray Convoy باعتباره المرسل تحت الرمز الدفعي `GC-17-M`.",
+        "kk": "Жіберуші сұр конвойдың делдалын көрсетті, партия коды «GC-17-M»."
       },
       "isContradiction": false,
       "contradictionExplanation": {
         "ru": "Продажа использовала логистическую сеть из предыдущих дел.",
         "en": "The sale used the logistics network identified in earlier cases.",
-        "tr": "The sale used the logistics network identified in earlier cases.",
-        "ar": "The sale used the logistics network identified in earlier cases.",
-        "kk": "Продажа использовала логистическую сеть из предыдущих дел."
+        "tr": "Satışta daha önceki vakalarda tanımlanan lojistik ağı kullanıldı.",
+        "ar": "واستخدمت عملية البيع الشبكة اللوجستية التي تم تحديدها في الحالات السابقة.",
+        "kk": "Сату алдыңғы жағдайлардағы логистикалық желіні пайдаланды."
       },
       "narrativeRole": "arc_proof",
       "statementLink": {
@@ -417,9 +440,9 @@
         "reason": {
           "ru": "Продажа использовала логистическую сеть из предыдущих дел.",
           "en": "The sale used the logistics network identified in earlier cases.",
-          "tr": "The sale used the logistics network identified in earlier cases.",
-          "ar": "The sale used the logistics network identified in earlier cases.",
-          "kk": "Продажа использовала логистическую сеть из предыдущих дел."
+          "tr": "Satışta daha önceki vakalarda tanımlanan lojistik ağı kullanıldı.",
+          "ar": "واستخدمت عملية البيع الشبكة اللوجستية التي تم تحديدها في الحالات السابقة.",
+          "kk": "Сату алдыңғы жағдайлардағы логистикалық желіні пайдаланды."
         }
       },
       "contradictionTarget": null,
@@ -434,24 +457,24 @@
       "title": {
         "ru": "Работник автомойки",
         "en": "Car Wash Employee",
-        "tr": "Car Wash Employee",
-        "ar": "Car Wash Employee",
-        "kk": "Работник автомойки"
+        "tr": "Araba Yıkama Çalışanı",
+        "ar": "موظف غسيل سيارات",
+        "kk": "Көлік жуушы"
       },
       "content": {
         "ru": "Накануне Корин привёз мотоцикл и манекены на очистку перед перевозкой.",
         "en": "The day before, Korin brought the motorcycle and mannequins in for cleaning before transport.",
-        "tr": "The day before, Korin brought the motorcycle and mannequins in for cleaning before transport.",
-        "ar": "The day before, Korin brought the motorcycle and mannequins in for cleaning before transport.",
-        "kk": "Накануне Корин привёз мотоцикл и манекены на очистку перед перевозкой."
+        "tr": "Korin, bir gün önce motosikleti ve mankenleri taşınmadan önce temizlik için getirdi.",
+        "ar": "في اليوم السابق، أحضر كورين الدراجة النارية وعارضات الأزياء للتنظيف قبل النقل.",
+        "kk": "Корин бір күн бұрын мотоцикл мен манекендерді тасымалдау алдында тазалауға әкелді."
       },
       "isContradiction": false,
       "contradictionExplanation": {
         "ru": "Свидетель подтверждает подготовку имущества, но не является единственным доказательством.",
         "en": "The witness confirms preparation of the property but is not the sole evidence.",
-        "tr": "The witness confirms preparation of the property but is not the sole evidence.",
-        "ar": "The witness confirms preparation of the property but is not the sole evidence.",
-        "kk": "Свидетель подтверждает подготовку имущества, но не является единственным доказательством."
+        "tr": "Tanık mülkün hazırlandığını doğrular ancak tek delil değildir.",
+        "ar": "يؤكد الشاهد إعداد الممتلكات ولكنه ليس الدليل الوحيد.",
+        "kk": "Куә мүліктің дайындығын растайды, бірақ бұл жалғыз дәлел емес."
       },
       "narrativeRole": "context",
       "statementLink": {
@@ -460,9 +483,9 @@
         "reason": {
           "ru": "Свидетель подтверждает подготовку имущества, но не является единственным доказательством.",
           "en": "The witness confirms preparation of the property but is not the sole evidence.",
-          "tr": "The witness confirms preparation of the property but is not the sole evidence.",
-          "ar": "The witness confirms preparation of the property but is not the sole evidence.",
-          "kk": "Свидетель подтверждает подготовку имущества, но не является единственным доказательством."
+          "tr": "Tanık mülkün hazırlandığını doğrular ancak tek delil değildir.",
+          "ar": "يؤكد الشاهد إعداد الممتلكات ولكنه ليس الدليل الوحيد.",
+          "kk": "Куә мүліктің дайындығын растайды, бірақ бұл жалғыз дәлел емес."
         }
       },
       "contradictionTarget": null,
@@ -487,25 +510,25 @@
       "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "The shadow matches 5:30–5:55 p.m., not midnight: the loading was filmed in advance and presented as a nighttime theft.",
-      "The allegedly stolen property crossed the border as the owner's declared cargo.",
-      "The claimant created the blind spot himself and lied about a technical failure.",
-      "The sale was arranged in advance.",
-      "The sale used the logistics network identified in earlier cases.",
-      "The claim is fraudulent and should be rejected."
+      "Gölge gece yarısıyla değil, 17:30-17:55 ile eşleşiyor: Yükleme işlemi önceden filme alındı ​​ve gece hırsızlığı olarak sunuldu.",
+      "Çalındığı iddia edilen mal, sahibinin beyan ettiği kargo olarak sınırı geçti.",
+      "Davacı kör noktayı kendisi oluşturmuş ve teknik bir arıza konusunda yalan söylemiştir.",
+      "Satış önceden ayarlandı.",
+      "Satışta daha önceki vakalarda tanımlanan lojistik ağı kullanıldı.",
+      "İddia sahtedir ve reddedilmelidir."
     ],
     "ar": [
-      "The shadow matches 5:30–5:55 p.m., not midnight: the loading was filmed in advance and presented as a nighttime theft.",
-      "The allegedly stolen property crossed the border as the owner's declared cargo.",
-      "The claimant created the blind spot himself and lied about a technical failure.",
-      "The sale was arranged in advance.",
-      "The sale used the logistics network identified in earlier cases.",
-      "The claim is fraudulent and should be rejected."
+      "يتطابق الظل من الساعة 5:30 إلى 5:55 مساءً، وليس منتصف الليل: تم تصوير التحميل مسبقًا وتم تقديمه على أنه سرقة ليلية.",
+      "عبرت الممتلكات المزعومة المسروقة الحدود باعتبارها البضائع المعلنة للمالك.",
+      "أنشأ المدعي النقطة العمياء بنفسه وكذب بشأن عطل فني.",
+      "تم ترتيب البيع مقدما.",
+      "واستخدمت عملية البيع الشبكة اللوجستية التي تم تحديدها في الحالات السابقة.",
+      "المطالبة احتيالية ويجب رفضها."
     ],
     "kk": [
-      "Резервная запись показывает погрузку Корина, а проверка тени датирует её вечером до заявленной ночной кражи.",
-      "Таможенный рентген и экспортная декларация подтверждают их перевозку покупателю.",
-      "Камеры отключены владельцем, кражи не было. Выплату следует отклонить."
+      "Сақтық көшірме жазбасы Коринді алып кетуді көрсетеді, ал көлеңкелі тексеру оны түнде ұрланғанға дейінгі кешке көрсетеді.",
+      "Кедендік рентген және экспорттық декларация олардың сатып алушыға тасымалдануын растайды.",
+      "Камераларды иесі өшірген, ұрлық болған жоқ. Төлем қабылданбауы керек."
     ]
   },
   "investigationBudget": 4,
@@ -515,9 +538,9 @@
       "text": {
         "ru": "Ночью из мотомастерской украли три хромированных демонстрационных манекена и коллекционный мотоцикл. Основные камеры отключились из-за скачка напряжения. Прошу полную выплату.",
         "en": "During the night, three chrome display mannequins and a collectible motorcycle were stolen from my workshop. A power surge disabled the main cameras. I am claiming the full amount.",
-        "tr": "During the night, three chrome display mannequins and a collectible motorcycle were stolen from my workshop. A power surge disabled the main cameras. I am claiming the full amount.",
-        "ar": "During the night, three chrome display mannequins and a collectible motorcycle were stolen from my workshop. A power surge disabled the main cameras. I am claiming the full amount.",
-        "kk": "Ночью из мотомастерской украли три хромированных демонстрационных манекена и коллекционный мотоцикл. Основные камеры отключились из-за скачка напряжения. Прошу полную выплату."
+        "tr": "Gece boyunca atölyemden üç adet krom vitrinli manken ve bir koleksiyonluk motosiklet çalındı. Güç dalgalanması ana kameraları devre dışı bıraktı. Tutarın tamamını talep ediyorum.",
+        "ar": "خلال الليل، سُرقت ثلاث عارضات أزياء مصنوعة من الكروم ودراجة نارية من ورشة العمل الخاصة بي. أدى ارتفاع الطاقة إلى تعطيل الكاميرات الرئيسية. أنا أطالب بالمبلغ كاملاً.",
+        "kk": "Түнде мотоцикл шеберханасынан үш хром дисплей манекені мен коллекциялық мотоцикл ұрланған. Негізгі камералар электр қуатының жоғарылауына байланысты өшірілді. Мен толық төлемді сұраймын."
       },
       "stampable": false
     },
@@ -526,9 +549,9 @@
       "text": {
         "ru": "Мотоцикл и манекены похищены после полуночи.",
         "en": "The motorcycle and mannequins were stolen after midnight.",
-        "tr": "The motorcycle and mannequins were stolen after midnight.",
-        "ar": "The motorcycle and mannequins were stolen after midnight.",
-        "kk": "Мотоцикл и манекены похищены после полуночи."
+        "tr": "Motosiklet ve mankenler gece yarısından sonra çalındı.",
+        "ar": "تمت سرقة الدراجة النارية وعارضات الأزياء بعد منتصف الليل.",
+        "kk": "Мотоцикл мен манекендер түн ортасынан кейін ұрланған."
       },
       "stampable": true
     },
@@ -537,9 +560,9 @@
       "text": {
         "ru": "Основные камеры отключились из-за скачка напряжения.",
         "en": "A power surge disabled the main cameras.",
-        "tr": "A power surge disabled the main cameras.",
-        "ar": "A power surge disabled the main cameras.",
-        "kk": "Основные камеры отключились из-за скачка напряжения."
+        "tr": "Güç dalgalanması ana kameraları devre dışı bıraktı.",
+        "ar": "أدى ارتفاع الطاقة إلى تعطيل الكاميرات الرئيسية.",
+        "kk": "Негізгі камералар электр қуатының жоғарылауына байланысты өшірілді."
       },
       "stampable": true
     },
@@ -548,9 +571,9 @@
       "text": {
         "ru": "Имущество не продавалось и остаётся утраченным.",
         "en": "The property was not sold and remains lost.",
-        "tr": "The property was not sold and remains lost.",
-        "ar": "The property was not sold and remains lost.",
-        "kk": "Имущество не продавалось и остаётся утраченным."
+        "tr": "Mülk satılmadı ve kayıp durumda kaldı.",
+        "ar": "لم يتم بيع العقار ولا يزال مفقودًا.",
+        "kk": "Мүлік сатылған жоқ және жоғалып кетті."
       },
       "stampable": true
     }
@@ -562,39 +585,39 @@
     "preBrief": {
       "ru": "Таможенный рентген показывает три человеческих силуэта в грузовике. До открытия контейнера это звучало как совсем другое дело. — В. Лебедева",
       "en": "A customs X-ray shows three human silhouettes inside a truck. Before the container was opened, this sounded like a very different kind of case. — V. Lebedeva",
-      "tr": "A customs X-ray shows three human silhouettes inside a truck. Before the container was opened, this sounded like a very different kind of case. — V. Lebedeva",
-      "ar": "A customs X-ray shows three human silhouettes inside a truck. Before the container was opened, this sounded like a very different kind of case. — V. Lebedeva",
-      "kk": "Таможенный рентген показывает три человеческих силуэта в грузовике. До открытия контейнера это звучало как совсем другое дело. — В. Лебедева"
+      "tr": "Gümrük röntgeninde bir kamyonun içinde üç insan silueti görülüyor. Konteyner açılmadan önce bu çok farklı bir vaka gibi geliyordu. — V. Lebedeva",
+      "ar": "تظهر الأشعة السينية الجمركية ثلاثة صور ظلية بشرية داخل شاحنة. قبل فتح الحاوية، بدا الأمر وكأنه حالة مختلفة تمامًا. - في. ليبيديفا",
+      "kk": "Кедендік рентген жүк көлігіндегі үш адамның сұлбасын көрсетеді. Контейнерді ашпас бұрын бұл мүлдем басқа мәселе сияқты болды. — В. Лебедева"
     },
     "postVerdictNote": {
       "ru": "Маркировка GC-17-M означает не один маршрут, а каталог категорий груза. Серый конвой работает как полноценная торговая сеть.",
       "en": "Marking GC-17-M identifies not one route but a catalog of cargo categories. The Gray Convoy operates as a complete trading network.",
-      "tr": "Marking GC-17-M identifies not one route but a catalog of cargo categories. The Gray Convoy operates as a complete trading network.",
-      "ar": "Marking GC-17-M identifies not one route but a catalog of cargo categories. The Gray Convoy operates as a complete trading network.",
-      "kk": "Маркировка GC-17-M означает не один маршрут, а каталог категорий груза. Серый конвой работает как полноценная торговая сеть."
+      "tr": "GC-17-M işaretlemesi tek bir rotayı değil kargo kategorilerinin bir kataloğunu tanımlar. Gri Konvoy tam bir ticaret ağı olarak faaliyet göstermektedir.",
+      "ar": "إن وضع علامة GC-17-M لا يحدد مسارًا واحدًا بل كتالوجًا لفئات البضائع. تعمل Gray Convoy كشبكة تجارية كاملة.",
+      "kk": "GC-17-M таңбалауы бір бағытты емес, жүк санаттарының каталогын білдіреді. Сұр колонна толыққанды сауда желісі ретінде жұмыс істейді."
     },
     "nextCaseTeaser": {
       "ru": "В школьной лаборатории взорвалась реакционная ёмкость. Преподаватель заказал безопасную добавку, но получил другой реагент.",
       "en": "A reaction vessel exploded in a school laboratory. The teacher ordered a safe additive but received a different reagent.",
-      "tr": "A reaction vessel exploded in a school laboratory. The teacher ordered a safe additive but received a different reagent.",
-      "ar": "A reaction vessel exploded in a school laboratory. The teacher ordered a safe additive but received a different reagent.",
-      "kk": "В школьной лаборатории взорвалась реакционная ёмкость. Преподаватель заказал безопасную добавку, но получил другой реагент."
+      "tr": "Bir okul laboratuarında bir reaksiyon kabı patladı. Öğretmen güvenli bir katkı maddesi sipariş etti ancak farklı bir reaktif aldı.",
+      "ar": "انفجر وعاء التفاعل في مختبر المدرسة. طلب المعلم مادة مضافة آمنة لكنه حصل على كاشف مختلف.",
+      "kk": "Мектеп зертханасындағы реакциялық ыдыс жарылған. Мұғалім қауіпсіз қоспаға тапсырыс берді, бірақ басқа реагент алды."
     },
     "seasonClue": {
       "id": "gc-catalog",
       "label": {
         "ru": "Каталог грузов GC-17",
         "en": "GC-17 Cargo Catalog",
-        "tr": "GC-17 Cargo Catalog",
-        "ar": "GC-17 Cargo Catalog",
-        "kk": "Каталог грузов GC-17"
+        "tr": "GC-17 Kargo Kataloğu",
+        "ar": "كتالوج البضائع GC-17",
+        "kk": "Жүктердің каталогы GC-17"
       },
       "description": {
         "ru": "Сеть сортирует и вывозит застрахованное имущество по категориям и международным маршрутам.",
         "en": "The network sorts and transports insured property by category and international route.",
-        "tr": "The network sorts and transports insured property by category and international route.",
-        "ar": "The network sorts and transports insured property by category and international route.",
-        "kk": "Сеть сортирует и вывозит застрахованное имущество по категориям и международным маршрутам."
+        "tr": "Ağ, sigortalı mülkleri kategoriye ve uluslararası rotaya göre sıralar ve taşır.",
+        "ar": "تقوم الشبكة بفرز ونقل الممتلكات المؤمن عليها حسب الفئة والطريق الدولي.",
+        "kk": "Желі сақтандырылған мүлікті санат және халықаралық бағыт бойынша сұрыптайды және экспорттайды."
       },
       "progressIndex": 3,
       "progressTotal": 6

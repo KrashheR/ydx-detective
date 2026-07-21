@@ -123,8 +123,9 @@ sticky-футером штампа и навигацией «‹ N/M ›». Те
 
 ## Поток штамповки и анимации
 
-Отклонение требует обоснования (открыть улику → «Отметить как противоречие»). Отклонение с
-нулём штампов выводит промпт _«Отклонение должно быть обосновано…»_ вместо сабмита
+Отклонение требует обоснования (открыть любую улику → «Отметить как противоречие»). Штамп
+доступен и на подтверждающих уликах: ошибочная отметка снижает награду. Отклонение с нулём
+штампов выводит промпт _«Отклонение должно быть обосновано…»_ вместо сабмита
 (см. `handleReject`). Анимации (подъём карточки, выезд документа, демпфер масштаба
 чернильного штампа) — на Framer Motion.
 
@@ -174,3 +175,17 @@ All controls have keyboard-sized hit targets and work with Pointer Events. Surfa
 128×128 service mask evaluated after each stroke and `touch-action: none`; seal matching supports
 drag/rotate; Arabic switches the component and final link board to RTL. Visual assets use `asset()`
 and lazy image loading, while thermal overlays, shadow geometry and masks are procedural.
+
+Thermal scan hotspots are not pre-rendered: `heatZones` stay invisible on the grayscaled image until
+the player's pointer comes within `THERMAL_SCAN_RADIUS` (percent units, tracked via `onPointerMove` on
+the image container), at which point the zone's opacity ramps up by proximity — the player scans the
+photo to discover the anomaly rather than clicking an already-glowing marker. A pointer-following ring
+(fixed 84×84px, so it stays circular regardless of the 16:10 container) gives scanning feedback even
+when no zone is nearby. A compact temperature readout follows at the ring's upper-right edge on an
+opaque archive-paper backing: it blends `ambientTemperature` toward the nearest zone's `temperature`
+by proximity and shifts from the standard muted brown to red as the pointer approaches heat. The
+`observationTime`/elapsed-minutes cells stay below the image since they're needed for the cooling-time
+reasoning. Hint level 3 force-reveals all zones (matching the
+level-3 highlight convention in `DocumentScanEvidence`); clicking a zone still works before it is
+visually revealed so keyboard/screen-reader users (who tab to the button's `aria-label`) aren't
+disadvantaged by a mouse-only discovery mechanic.

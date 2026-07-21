@@ -79,16 +79,13 @@ describe('metrica adapter — enabled', () => {
     expect(firstInit?.[2]).toMatchObject({ webvisor: true });
   });
 
-  it('forwards trackGoal as a reachGoal call with params', () => {
+  it('sends non-conversion tracking through the repeatable event stream', () => {
     m.initMetrica();
     m.trackGoal(m.GOAL.hintBuy, { kind: 'note', cost: 200 });
-    expect(ym).toHaveBeenCalledWith(99, 'reachGoal', 'hint_buy', {
-      economyVersion: 'test-economy',
-      contentVersion: 'test-content',
-      experimentGroup: 'control',
-      kind: 'note',
-      cost: 200,
-    });
+    expect(ym).toHaveBeenCalledWith(99, 'params', expect.objectContaining({
+      analyticsEvent: 'hint_buy', economyVersion: 'test-economy',
+      contentVersion: 'test-content', experimentGroup: 'control', kind: 'note', cost: 200,
+    }));
   });
 
   it('forwards setUserParams as a userParams call', () => {
@@ -118,9 +115,9 @@ describe('metrica adapter — enabled', () => {
 
     expect(ym).toHaveBeenCalledWith(
       99,
-      'reachGoal',
-      'ad_open',
+      'params',
       expect.objectContaining({
+        analyticsEvent: 'ad_open',
         adsPerSession: 1,
         verdictsSinceLastAd: 2,
       }),
@@ -131,9 +128,9 @@ describe('metrica adapter — enabled', () => {
     m.trackGoal(m.GOAL.adOpen, { kind: 'rewarded', placement: 'witness_canvass' });
     expect(ym).toHaveBeenCalledWith(
       99,
-      'reachGoal',
-      'ad_open',
+      'params',
       expect.objectContaining({
+        analyticsEvent: 'ad_open',
         adsPerSession: 2,
         verdictsSinceLastAd: 1,
       }),
@@ -148,8 +145,8 @@ describe('metrica adapter — enabled', () => {
     m.setAnalyticsAdPaused(false);
 
     const goals = ym.mock.calls
-      .filter((call) => call[1] === 'reachGoal')
-      .map((call) => call[2]);
+      .filter((call) => call[1] === 'params')
+      .map((call) => (call[2] as { analyticsEvent: string }).analyticsEvent);
     expect(goals).toContain('active_interval');
     expect(goals).toContain('session_pause');
     expect(goals).toContain('session_resume');

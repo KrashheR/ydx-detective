@@ -8,6 +8,7 @@
     "typecheck": "tsc --noEmit",
     "build": "vite build",
     "dev": "vite",
+    "dev:all-levels": "vite --mode all-levels",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:cov": "vitest run --coverage",

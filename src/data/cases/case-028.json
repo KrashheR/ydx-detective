@@ -7,9 +7,9 @@
   "actTitle": {
     "ru": "Восточный двор",
     "en": "Eastern Yard",
-    "tr": "Eastern Yard",
-    "ar": "Eastern Yard",
-    "kk": "Восточный двор"
+    "tr": "Doğu Bahçesi",
+    "ar": "الفناء الشرقي",
+    "kk": "Шығыс ауласы"
   },
   "difficulty": "hard",
   "claimAmount": 18000,
@@ -17,23 +17,23 @@
   "title": {
     "ru": "Склад без товара",
     "en": "The Empty Warehouse",
-    "tr": "The Empty Warehouse",
-    "ar": "The Empty Warehouse",
-    "kk": "Склад без товара"
+    "tr": "Boş Depo",
+    "ar": "المستودع الفارغ",
+    "kk": "Тауарсыз қойма"
   },
   "claim": {
     "person": {
       "ru": "Дамир Аскаров, 47 лет",
       "en": "Damir Askarov, age 47",
-      "tr": "Damir Askarov, age 47",
-      "ar": "Damir Askarov, age 47",
-      "kk": "Дамир Аскаров, 47 лет"
+      "tr": "Damir Askarov, 47 yaşında",
+      "ar": "دامير عسكروف، 47 عامًا",
+      "kk": "Дамир Асқаров, 47 жаста"
     },
     "story": {
-      "ru": "В ночь на 14 апреля склад сгорел вместе со всем товаром. Я был дома, сигнализация не сработала, о пожаре узнал утром. Прошу выплатить 18 000 евро за здание и уничтоженные запасы.",
+      "ru": "В ночь на 14 апреля склад сгорел вместе со всем товаром. Я был дома, сигнализация не сработала, о пожаре узнал утром. Прошу выплатить 18 000 рублей за здание и уничтоженные запасы.",
       "en": "On the night of April 14, my warehouse burned down with all its stock inside. I was at home, the alarm failed, and I learned about the fire in the morning. I am claiming €18,000 for the building and destroyed inventory.",
-      "tr": "On the night of April 14, my warehouse burned down with all its stock inside. I was at home, the alarm failed, and I learned about the fire in the morning. I am claiming €18,000 for the building and destroyed inventory.",
-      "ar": "On the night of April 14, my warehouse burned down with all its stock inside. I was at home, the alarm failed, and I learned about the fire in the morning. I am claiming €18,000 for the building and destroyed inventory.",
+      "tr": "14 Nisan gecesi depom içindeki tüm stoklarla birlikte yandı. Evdeydim, alarm çalışmıyordu ve sabah yangını öğrendim. Bina ve tahrip edilen envanter için 18.000 € talep ediyorum.",
+      "ar": "في ليلة 14 أبريل/نيسان، احترق المستودع الخاص بي وبداخله كل المخزون. كنت في المنزل، وفشل جهاز الإنذار، وعلمت بنبأ الحريق في الصباح. أطالب بمبلغ 18000 يورو للمبنى والمخزون المدمر.",
       "kk": "В ночь на 14 апреля склад сгорел вместе со всем товаром. Я был дома, сигнализация не сработала, о пожаре узнал утром. Прошу выплатить 18 000 евро за здание и уничтоженные запасы."
     }
   },
@@ -41,18 +41,18 @@
     "role": {
       "ru": "Заявитель · страховое дело",
       "en": "Claimant · insurance file",
-      "tr": "Claimant · insurance file",
-      "ar": "Claimant · insurance file",
-      "kk": "Заявитель · страховое дело"
+      "tr": "Davacı · sigorta dosyası",
+      "ar": "المدعي · ملف التأمين",
+      "kk": "Өтініш беруші · сақтандыру ісі"
     },
     "meta": [
       {
         "k": {
           "ru": "Акт",
           "en": "Act",
-          "tr": "Act",
-          "ar": "Act",
-          "kk": "Акт"
+          "tr": "Bölüm",
+          "ar": "الفصل",
+          "kk": "Бөлім"
         },
         "v": {
           "ru": "3",
@@ -66,9 +66,9 @@
         "k": {
           "ru": "Порядок",
           "en": "Campaign order",
-          "tr": "Campaign order",
-          "ar": "Campaign order",
-          "kk": "Порядок"
+          "tr": "Kampanya sırası",
+          "ar": "ترتيب الحملة",
+          "kk": "Науқан реті"
         },
         "v": {
           "ru": "26",
@@ -86,28 +86,28 @@
     {
       "id": "ev-cam",
       "order": 1,
-      "type": "seal_match",
+      "type": "document",
       "title": {
-        "ru": "Сопоставление пломб вывезенных палет",
-        "en": "Removed Pallet Seal Comparison",
-        "tr": "Removed Pallet Seal Comparison",
-        "ar": "Removed Pallet Seal Comparison",
-        "kk": "Сопоставление пломб вывезенных палет"
+        "ru": "Экспертная сверка пломб вывезенных палет",
+        "en": "Expert comparison report",
+        "tr": "Uzman karşılaştırma raporu",
+        "ar": "تقرير مقارنة الخبراء",
+        "kk": "Экспортталатын паллеттерде пломбаларды сараптамалық тексеру"
       },
       "content": {
-        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
-        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
-        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
-        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
-        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+        "ru": "Совпадают линия разрыва, клеевой дефект и участок защитной сетки",
+        "en": "Tear line, adhesive defect, and security-mesh section match",
+        "tr": "Yırtılma çizgisi, yapışkan kusur ve güvenlik ağı bölümü uyumu",
+        "ar": "الخط المسيل للدموع، والعيوب اللاصقة، وتطابق قسم الشبكة الأمنية",
+        "kk": "Жырту сызығы, жабысқақ ақау және қорғаныс торының бөлімі сәйкес келеді"
       },
       "isContradiction": true,
       "contradictionExplanation": {
         "ru": "Разрыв и волокна совпали: товар из страховой описи вывезли до поджога и доставили на Восточный двор.",
         "en": "The tear and fibers match: stock from the insured inventory was removed before the arson and delivered to Eastern Yard.",
-        "tr": "The tear and fibers match: stock from the insured inventory was removed before the arson and delivered to Eastern Yard.",
-        "ar": "The tear and fibers match: stock from the insured inventory was removed before the arson and delivered to Eastern Yard.",
-        "kk": "Разрыв и волокна совпали: товар из страховой описи вывезли до поджога и доставили на Восточный двор."
+        "tr": "Yırtık ve lifler eşleşiyor: sigortalı envanterdeki stoklar kundaklamadan önce çıkarıldı ve Eastern Yard'a teslim edildi.",
+        "ar": "تطابق التمزق والألياف: تمت إزالة المخزون من المخزون المؤمن عليه قبل الحرق العمد وتم تسليمه إلى Eastern Yard.",
+        "kk": "Жарылу мен талшықтар сәйкес келді: сақтандыру қорындағы тауарлар өртке дейін шығарылып, Шығыс аулаға жеткізілді."
       },
       "narrativeRole": "proof",
       "statementLink": {
@@ -116,9 +116,9 @@
         "reason": {
           "ru": "Разрыв и волокна совпали: товар из страховой описи вывезли до поджога и доставили на Восточный двор.",
           "en": "The tear and fibers match: stock from the insured inventory was removed before the arson and delivered to Eastern Yard.",
-          "tr": "The tear and fibers match: stock from the insured inventory was removed before the arson and delivered to Eastern Yard.",
-          "ar": "The tear and fibers match: stock from the insured inventory was removed before the arson and delivered to Eastern Yard.",
-          "kk": "Разрыв и волокна совпали: товар из страховой описи вывезли до поджога и доставили на Восточный двор."
+          "tr": "Yırtık ve lifler eşleşiyor: sigortalı envanterdeki stoklar kundaklamadan önce çıkarıldı ve Eastern Yard'a teslim edildi.",
+          "ar": "تطابق التمزق والألياف: تمت إزالة المخزون من المخزون المؤمن عليه قبل الحرق العمد وتم تسليمه إلى Eastern Yard.",
+          "kk": "Жарылу мен талшықтар сәйкес келді: сақтандыру қорындағы тауарлар өртке дейін шығарылып, Шығыс аулаға жеткізілді."
         }
       },
       "contradictionTarget": {
@@ -126,95 +126,15 @@
         "reason": {
           "ru": "Разрыв и волокна совпали: товар из страховой описи вывезли до поджога и доставили на Восточный двор.",
           "en": "The tear and fibers match: stock from the insured inventory was removed before the arson and delivered to Eastern Yard.",
-          "tr": "The tear and fibers match: stock from the insured inventory was removed before the arson and delivered to Eastern Yard.",
-          "ar": "The tear and fibers match: stock from the insured inventory was removed before the arson and delivered to Eastern Yard.",
-          "kk": "Разрыв и волокна совпали: товар из страховой описи вывезли до поджога и доставили на Восточный двор."
+          "tr": "Yırtık ve lifler eşleşiyor: sigortalı envanterdeki stoklar kundaklamadan önce çıkarıldı ve Eastern Yard'a teslim edildi.",
+          "ar": "تطابق التمزق والألياف: تمت إزالة المخزون من المخزون المؤمن عليه قبل الحرق العمد وتم تسليمه إلى Eastern Yard.",
+          "kk": "Жарылу мен талшықтар сәйкес келді: сақтандыру қорындағы тауарлар өртке дейін шығарылып, Шығыс аулаға жеткізілді."
         }
       },
       "evidenceTier": "core",
       "requiredForVerdict": true,
       "rewardWeight": 1,
-      "meta": {
-        "imageUrl": "evidence/case-028-ev-cam.webp"
-      },
-      "description": {
-        "ru": "Фрагмент A найден у пустого складского стеллажа, фрагмент B — в кузове грузовика на Восточном дворе.",
-        "en": "Fragment A was found beside an empty warehouse rack; fragment B was found inside a truck at Eastern Yard.",
-        "tr": "Fragment A was found beside an empty warehouse rack; fragment B was found inside a truck at Eastern Yard.",
-        "ar": "Fragment A was found beside an empty warehouse rack; fragment B was found inside a truck at Eastern Yard.",
-        "kk": "Фрагмент A найден у пустого складского стеллажа, фрагмент B — в кузове грузовика на Восточном дворе."
-      },
-      "instruction": {
-        "ru": "Совместить два фрагмента контрольной ленты.",
-        "en": "Align the two security-tape fragments.",
-        "tr": "Align the two security-tape fragments.",
-        "ar": "Align the two security-tape fragments.",
-        "kk": "Совместить два фрагмента контрольной ленты."
-      },
-      "previousType": "camera_recording",
-      "assets": {
-        "asset1": "cases/case-028/assets/interactive/ev-cam-master-a.webp",
-        "asset2": "cases/case-028/assets/interactive/ev-cam-fragments.json"
-      },
-      "uiHints": {
-        "showReset": true,
-        "allowZoom": true,
-        "highlightAfterHint": true,
-        "transparencyMode": true
-      },
-      "interactiveDesign": {
-        "why": {
-          "ru": "Совпадение связывает вывезенные перед пожаром палеты именно с застрахованным товаром.",
-          "en": "The match links the pallets removed before the fire directly to the insured stock.",
-          "tr": "The match links the pallets removed before the fire directly to the insured stock.",
-          "ar": "The match links the pallets removed before the fire directly to the insured stock.",
-          "kk": "Совпадение связывает вывезенные перед пожаром палеты именно с застрахованным товаром."
-        },
-        "playerAction": {
-          "ru": "Совместить два фрагмента контрольной ленты.",
-          "en": "Align the two security-tape fragments.",
-          "tr": "Align the two security-tape fragments.",
-          "ar": "Align the two security-tape fragments.",
-          "kk": "Совместить два фрагмента контрольной ленты."
-        },
-        "conclusion": {
-          "ru": "Разрыв и волокна совпали: товар из страховой описи вывезли до поджога и доставили на Восточный двор.",
-          "en": "The tear and fibers match: stock from the insured inventory was removed before the arson and delivered to Eastern Yard.",
-          "tr": "The tear and fibers match: stock from the insured inventory was removed before the arson and delivered to Eastern Yard.",
-          "ar": "The tear and fibers match: stock from the insured inventory was removed before the arson and delivered to Eastern Yard.",
-          "kk": "Разрыв и волокна совпали: товар из страховой описи вывезли до поджога и доставили на Восточный двор."
-        }
-      },
-      "data": {
-        "movableFragment": "B",
-        "allowRotation": true,
-        "rotationStep": 3,
-        "initialTransform": {
-          "x": 72,
-          "y": 18,
-          "rotation": -14
-        },
-        "targetTransform": {
-          "x": 132,
-          "y": 48,
-          "rotation": 6
-        },
-        "tolerance": {
-          "position": 10,
-          "rotation": 5
-        },
-        "expectedMatch": true,
-        "sourceSeed": 262817,
-        "fragmentASeed": 262817,
-        "fragmentBSeed": 262817,
-        "comparisonMarkers": [
-          {
-            "id": "tear_pattern",
-            "label": "Совпадают линия разрыва, клеевой дефект и участок защитной сетки",
-            "labelEn": "Tear line, adhesive defect, and security-mesh section match"
-          }
-        ]
-      }
+      "previousType": "camera_recording"
     },
     {
       "id": "ev-alarm",
@@ -223,24 +143,24 @@
       "title": {
         "ru": "Журнал сигнализации",
         "en": "Alarm System Log",
-        "tr": "Alarm System Log",
-        "ar": "Alarm System Log",
-        "kk": "Журнал сигнализации"
+        "tr": "Alarm Sistemi Günlüğü",
+        "ar": "سجل نظام الإنذار",
+        "kk": "Дабыл журналы"
       },
       "content": {
         "ru": "В 01:12 система снята мастер-кодом владельца; датчики дыма переведены в сервисный режим. В 02:04 питание панели отключено вручную.",
         "en": "At 1:12 a.m., the system was disarmed using the owner's master code and the smoke detectors were put into service mode. At 2:04 a.m., power to the panel was disconnected manually.",
-        "tr": "At 1:12 a.m., the system was disarmed using the owner's master code and the smoke detectors were put into service mode. At 2:04 a.m., power to the panel was disconnected manually.",
-        "ar": "At 1:12 a.m., the system was disarmed using the owner's master code and the smoke detectors were put into service mode. At 2:04 a.m., power to the panel was disconnected manually.",
-        "kk": "В 01:12 система снята мастер-кодом владельца; датчики дыма переведены в сервисный режим. В 02:04 питание панели отключено вручную."
+        "tr": "Gece saat 01.12'de sistem sahibinin ana kodu kullanılarak devre dışı bırakıldı ve duman dedektörleri hizmet moduna alındı. Gece 02.04'te panele giden güç manuel olarak kesildi.",
+        "ar": "في الساعة 1:12 صباحًا، تم تعطيل النظام باستخدام الرمز الرئيسي للمالك وتم وضع أجهزة كشف الدخان في وضع الخدمة. وفي الساعة 2:04 صباحًا، تم فصل الطاقة عن اللوحة يدويًا.",
+        "kk": "01:12-де жүйе иесінің басты коды бойынша өшірілді; түтін детекторлары қызмет көрсету режиміне ауыстырылды. 02:04-те панельдің қуаты қолмен өшірілді."
       },
       "isContradiction": true,
       "contradictionExplanation": {
         "ru": "Сигнализация не отказала: её последовательно отключили доступом владельца.",
         "en": "The alarm did not fail; it was deliberately disabled using the owner's access.",
-        "tr": "The alarm did not fail; it was deliberately disabled using the owner's access.",
-        "ar": "The alarm did not fail; it was deliberately disabled using the owner's access.",
-        "kk": "Сигнализация не отказала: её последовательно отключили доступом владельца."
+        "tr": "Alarm başarısız olmadı; sahibinin erişimi kullanılarak kasıtlı olarak devre dışı bırakıldı.",
+        "ar": "لم يفشل الإنذار. تم تعطيله عمدًا باستخدام وصول المالك.",
+        "kk": "Дабыл сәтсіз аяқталды: ол иесінің қол жеткізуімен дәйекті түрде өшірілді."
       },
       "narrativeRole": "proof",
       "statementLink": {
@@ -249,9 +169,9 @@
         "reason": {
           "ru": "Сигнализация не отказала: её последовательно отключили доступом владельца.",
           "en": "The alarm did not fail; it was deliberately disabled using the owner's access.",
-          "tr": "The alarm did not fail; it was deliberately disabled using the owner's access.",
-          "ar": "The alarm did not fail; it was deliberately disabled using the owner's access.",
-          "kk": "Сигнализация не отказала: её последовательно отключили доступом владельца."
+          "tr": "Alarm başarısız olmadı; sahibinin erişimi kullanılarak kasıtlı olarak devre dışı bırakıldı.",
+          "ar": "لم يفشل الإنذار. تم تعطيله عمدًا باستخدام وصول المالك.",
+          "kk": "Дабыл сәтсіз аяқталды: ол иесінің қол жеткізуімен дәйекті түрде өшірілді."
         }
       },
       "contradictionTarget": {
@@ -259,9 +179,9 @@
         "reason": {
           "ru": "Сигнализация не отказала: её последовательно отключили доступом владельца.",
           "en": "The alarm did not fail; it was deliberately disabled using the owner's access.",
-          "tr": "The alarm did not fail; it was deliberately disabled using the owner's access.",
-          "ar": "The alarm did not fail; it was deliberately disabled using the owner's access.",
-          "kk": "Сигнализация не отказала: её последовательно отключили доступом владельца."
+          "tr": "Alarm başarısız olmadı; sahibinin erişimi kullanılarak kasıtlı olarak devre dışı bırakıldı.",
+          "ar": "لم يفشل الإنذار. تم تعطيله عمدًا باستخدام وصول المالك.",
+          "kk": "Дабыл сәтсіз аяқталды: ол иесінің қол жеткізуімен дәйекті түрде өшірілді."
         }
       },
       "evidenceTier": "core",
@@ -275,24 +195,24 @@
       "title": {
         "ru": "Экспертиза очага",
         "en": "Fire-Origin Examination",
-        "tr": "Fire-Origin Examination",
-        "ar": "Fire-Origin Examination",
-        "kk": "Экспертиза очага"
+        "tr": "Yangının Kaynağının İncelenmesi",
+        "ar": "فحص أصل النار",
+        "kk": "Ошақты тексеру"
       },
       "content": {
         "ru": "Обнаружены два независимых очага и следы ускорителя горения у пустых стеллажей. Электрическая проводка не является источником.",
         "en": "Investigators found two independent ignition points and traces of accelerant beside empty racks. The electrical wiring was not the source.",
-        "tr": "Investigators found two independent ignition points and traces of accelerant beside empty racks. The electrical wiring was not the source.",
-        "ar": "Investigators found two independent ignition points and traces of accelerant beside empty racks. The electrical wiring was not the source.",
-        "kk": "Обнаружены два независимых очага и следы ускорителя горения у пустых стеллажей. Электрическая проводка не является источником."
+        "tr": "Müfettişler boş rafların yanında iki bağımsız ateşleme noktası ve hızlandırıcı izleri buldu. Kaynak elektrik kabloları değildi.",
+        "ar": "عثر المحققون على نقطتي اشتعال مستقلتين وآثار مسرع بجانب الرفوف الفارغة. ولم تكن الأسلاك الكهربائية هي المصدر.",
+        "kk": "Бос сөрелердің жанынан екі тәуелсіз өрт пен жану үдеткішінің іздері табылды. Электр сымдары көз емес."
       },
       "isContradiction": true,
       "contradictionExplanation": {
         "ru": "Пожар был подготовлен умышленно и не похож на случайную аварию.",
         "en": "The fire was deliberately prepared and was not an accident.",
-        "tr": "The fire was deliberately prepared and was not an accident.",
-        "ar": "The fire was deliberately prepared and was not an accident.",
-        "kk": "Пожар был подготовлен умышленно и не похож на случайную аварию."
+        "tr": "Yangın kasıtlı olarak hazırlanmıştır ve bir kaza değildir.",
+        "ar": "الحريق تم إعداده عمدا ولم يكن حادثا.",
+        "kk": "Өрт әдейі дайындалған және апатқа ұқсамайды."
       },
       "narrativeRole": "pivot",
       "statementLink": {
@@ -301,9 +221,9 @@
         "reason": {
           "ru": "Пожар был подготовлен умышленно и не похож на случайную аварию.",
           "en": "The fire was deliberately prepared and was not an accident.",
-          "tr": "The fire was deliberately prepared and was not an accident.",
-          "ar": "The fire was deliberately prepared and was not an accident.",
-          "kk": "Пожар был подготовлен умышленно и не похож на случайную аварию."
+          "tr": "Yangın kasıtlı olarak hazırlanmıştır ve bir kaza değildir.",
+          "ar": "الحريق تم إعداده عمدا ولم يكن حادثا.",
+          "kk": "Өрт әдейі дайындалған және апатқа ұқсамайды."
         }
       },
       "contradictionTarget": {
@@ -311,9 +231,9 @@
         "reason": {
           "ru": "Пожар был подготовлен умышленно и не похож на случайную аварию.",
           "en": "The fire was deliberately prepared and was not an accident.",
-          "tr": "The fire was deliberately prepared and was not an accident.",
-          "ar": "The fire was deliberately prepared and was not an accident.",
-          "kk": "Пожар был подготовлен умышленно и не похож на случайную аварию."
+          "tr": "Yangın kasıtlı olarak hazırlanmıştır ve bir kaza değildir.",
+          "ar": "الحريق تم إعداده عمدا ولم يكن حادثا.",
+          "kk": "Өрт әдейі дайындалған және апатқа ұқсамайды."
         }
       },
       "evidenceTier": "core",
@@ -327,24 +247,24 @@
       "title": {
         "ru": "Маршруты грузовиков",
         "en": "Truck Routes",
-        "tr": "Truck Routes",
-        "ar": "Truck Routes",
-        "kk": "Маршруты грузовиков"
+        "tr": "Kamyon Güzergahları",
+        "ar": "طرق الشاحنات",
+        "kk": "Жүк көліктерінің бағыттары"
       },
       "content": {
         "ru": "Все три машины прибыли в закрытый сектор комплекса «Восточный двор». Въезд оформлен пропуском `EY-17`.",
         "en": "All three vehicles arrived at the restricted sector of Eastern Yard. Entry was authorized with pass `EY-17`.",
-        "tr": "All three vehicles arrived at the restricted sector of Eastern Yard. Entry was authorized with pass `EY-17`.",
-        "ar": "All three vehicles arrived at the restricted sector of Eastern Yard. Entry was authorized with pass `EY-17`.",
-        "kk": "Все три машины прибыли в закрытый сектор комплекса «Восточный двор». Въезд оформлен пропуском `EY-17`."
+        "tr": "Her üç araç da Eastern Yard'ın kısıtlı bölgesine ulaştı. Girişe 'EY-17' şifresi ile izin verildi.",
+        "ar": "وصلت جميع المركبات الثلاث إلى القطاع المحظور في الساحة الشرقية. تم السماح بالدخول بالمرور EY-17.",
+        "kk": "Үш көлік те Шығыс аула кешенінің жабық секторына келді. Жазба «EY-17» рұқсатымен беріледі."
       },
       "isContradiction": false,
       "contradictionExplanation": {
         "ru": "Вывезенный товар доставлен на связанный со схемой склад.",
         "en": "The removed stock was delivered to a warehouse connected to the operation.",
-        "tr": "The removed stock was delivered to a warehouse connected to the operation.",
-        "ar": "The removed stock was delivered to a warehouse connected to the operation.",
-        "kk": "Вывезенный товар доставлен на связанный со схемой склад."
+        "tr": "Kaldırılan stok, operasyona bağlı bir depoya teslim edildi.",
+        "ar": "تم تسليم المخزون الذي تمت إزالته إلى مستودع متصل بالعملية.",
+        "kk": "Экспортталатын тауарлар схемаға сәйкес қоймаға жеткізіледі."
       },
       "narrativeRole": "arc_proof",
       "statementLink": {
@@ -353,9 +273,9 @@
         "reason": {
           "ru": "Вывезенный товар доставлен на связанный со схемой склад.",
           "en": "The removed stock was delivered to a warehouse connected to the operation.",
-          "tr": "The removed stock was delivered to a warehouse connected to the operation.",
-          "ar": "The removed stock was delivered to a warehouse connected to the operation.",
-          "kk": "Вывезенный товар доставлен на связанный со схемой склад."
+          "tr": "Kaldırılan stok, operasyona bağlı bir depoya teslim edildi.",
+          "ar": "تم تسليم المخزون الذي تمت إزالته إلى مستودع متصل بالعملية.",
+          "kk": "Экспортталатын тауарлар схемаға сәйкес қоймаға жеткізіледі."
         }
       },
       "contradictionTarget": null,
@@ -370,24 +290,24 @@
       "title": {
         "ru": "Кредитная задолженность",
         "en": "Outstanding Loans",
-        "tr": "Outstanding Loans",
-        "ar": "Outstanding Loans",
-        "kk": "Кредитная задолженность"
+        "tr": "Ödenmemiş Krediler",
+        "ar": "القروض المستحقة",
+        "kk": "Несиелік қарыз"
       },
       "content": {
         "ru": "Аскаров просрочил выплаты по двум кредитам, а страховая сумма превышает рыночную стоимость бизнеса.",
         "en": "Askarov is behind on two loans, and the insured amount exceeds the business's market value.",
-        "tr": "Askarov is behind on two loans, and the insured amount exceeds the business's market value.",
-        "ar": "Askarov is behind on two loans, and the insured amount exceeds the business's market value.",
-        "kk": "Аскаров просрочил выплаты по двум кредитам, а страховая сумма превышает рыночную стоимость бизнеса."
+        "tr": "Askarov iki kredide geride kaldı ve sigortalı tutar işletmenin piyasa değerini aşıyor.",
+        "ar": "يتأخر \"أسكروف\" في سداد قرضين، ويتجاوز المبلغ المؤمن عليه القيمة السوقية للشركة.",
+        "kk": "Асқаров екі несие бойынша төлемдер бойынша артта қалды, ал сақтандыру сомасы бизнестің нарықтық құнынан асып түседі."
       },
       "isContradiction": false,
       "contradictionExplanation": {
         "ru": "Долг создаёт мотив, но не доказывает поджог без камер, сигнализации или экспертизы.",
         "en": "Debt creates a motive, but does not prove arson without camera footage, alarm records, or forensic evidence.",
-        "tr": "Debt creates a motive, but does not prove arson without camera footage, alarm records, or forensic evidence.",
-        "ar": "Debt creates a motive, but does not prove arson without camera footage, alarm records, or forensic evidence.",
-        "kk": "Долг создаёт мотив, но не доказывает поджог без камер, сигнализации или экспертизы."
+        "tr": "Borç bir saik oluşturur ancak kamera görüntüleri, alarm kayıtları veya adli tıp delilleri olmadan kundakçılığı kanıtlamaz.",
+        "ar": "يخلق الدين دافعًا، لكنه لا يثبت الحرق العمد بدون لقطات الكاميرا، أو سجلات الإنذار، أو أدلة الطب الشرعي.",
+        "kk": "Қарыз мотив тудырады, бірақ камераларсыз, дабылдарсыз немесе сот-медициналық сараптамасыз өрт қоюды дәлелдемейді."
       },
       "narrativeRole": "motive",
       "statementLink": {
@@ -396,9 +316,9 @@
         "reason": {
           "ru": "Долг создаёт мотив, но не доказывает поджог без камер, сигнализации или экспертизы.",
           "en": "Debt creates a motive, but does not prove arson without camera footage, alarm records, or forensic evidence.",
-          "tr": "Debt creates a motive, but does not prove arson without camera footage, alarm records, or forensic evidence.",
-          "ar": "Debt creates a motive, but does not prove arson without camera footage, alarm records, or forensic evidence.",
-          "kk": "Долг создаёт мотив, но не доказывает поджог без камер, сигнализации или экспертизы."
+          "tr": "Borç bir saik oluşturur ancak kamera görüntüleri, alarm kayıtları veya adli tıp delilleri olmadan kundakçılığı kanıtlamaz.",
+          "ar": "يخلق الدين دافعًا، لكنه لا يثبت الحرق العمد بدون لقطات الكاميرا، أو سجلات الإنذار، أو أدلة الطب الشرعي.",
+          "kk": "Қарыз мотив тудырады, бірақ камераларсыз, дабылдарсыз немесе сот-медициналық сараптамасыз өрт қоюды дәлелдемейді."
         }
       },
       "contradictionTarget": null,
@@ -424,26 +344,26 @@
       "The claim is fraudulent and should be rejected."
     ],
     "tr": [
-      "The tear and fibers match: stock from the insured inventory was removed before the arson and delivered to Eastern Yard.",
-      "The alarm did not fail; it was deliberately disabled using the owner's access.",
-      "The fire was deliberately prepared and was not an accident.",
-      "Debt creates a motive, but does not prove arson without camera footage, alarm records, or forensic evidence.",
-      "The removed stock was delivered to a warehouse connected to the operation.",
-      "The claim is fraudulent and should be rejected."
+      "Yırtık ve lifler eşleşiyor: sigortalı envanterdeki stoklar kundaklamadan önce çıkarıldı ve Eastern Yard'a teslim edildi.",
+      "Alarm başarısız olmadı; sahibinin erişimi kullanılarak kasıtlı olarak devre dışı bırakıldı.",
+      "Yangın kasıtlı olarak hazırlanmıştır ve bir kaza değildir.",
+      "Borç bir saik oluşturur ancak kamera görüntüleri, alarm kayıtları veya adli tıp delilleri olmadan kundakçılığı kanıtlamaz.",
+      "Kaldırılan stok, operasyona bağlı bir depoya teslim edildi.",
+      "İddia sahtedir ve reddedilmelidir."
     ],
     "ar": [
-      "The tear and fibers match: stock from the insured inventory was removed before the arson and delivered to Eastern Yard.",
-      "The alarm did not fail; it was deliberately disabled using the owner's access.",
-      "The fire was deliberately prepared and was not an accident.",
-      "Debt creates a motive, but does not prove arson without camera footage, alarm records, or forensic evidence.",
-      "The removed stock was delivered to a warehouse connected to the operation.",
-      "The claim is fraudulent and should be rejected."
+      "تطابق التمزق والألياف: تمت إزالة المخزون من المخزون المؤمن عليه قبل الحرق العمد وتم تسليمه إلى Eastern Yard.",
+      "لم يفشل الإنذار. تم تعطيله عمدًا باستخدام وصول المالك.",
+      "الحريق تم إعداده عمدا ولم يكن حادثا.",
+      "يخلق الدين دافعًا، لكنه لا يثبت الحرق العمد بدون لقطات الكاميرا، أو سجلات الإنذار، أو أدلة الطب الشرعي.",
+      "تم تسليم المخزون الذي تمت إزالته إلى مستودع متصل بالعملية.",
+      "المطالبة احتيالية ويجب رفضها."
     ],
     "kk": [
-      "Товар вывезен со склада до пожара и доставлен в комплекс «Восточный двор».",
-      "Сигнализацию отключили мастер-кодом, а экспертиза обнаружила два подготовленных очага.",
-      "Разрыв и волокна совпали: товар из страховой описи вывезли до поджога и доставили на Восточный двор.",
-      "Аскаров сохранил имущество и поджёг пустой склад ради выплаты. Заявление следует отклонить."
+      "Тауар өртке дейін қоймадан шығарылып, «Восточный двор» кешеніне жеткізілген.",
+      "Дабыл бас кодпен өшірілді, сараптама екі дайындалған өртті анықтады.",
+      "Жарылу мен талшықтар сәйкес келді: сақтандыру қорындағы тауарлар өртке дейін шығарылып, Шығыс аулаға жеткізілді.",
+      "Асқаров мүлікті сақтап, төлем үшін бос қойманы өртеп жіберген. Өтініш қабылданбауы керек."
     ]
   },
   "investigationBudget": 4,
@@ -451,10 +371,10 @@
     {
       "id": "claim_main",
       "text": {
-        "ru": "В ночь на 14 апреля склад сгорел вместе со всем товаром. Я был дома, сигнализация не сработала, о пожаре узнал утром. Прошу выплатить 18 000 евро за здание и уничтоженные запасы.",
+        "ru": "В ночь на 14 апреля склад сгорел вместе со всем товаром. Я был дома, сигнализация не сработала, о пожаре узнал утром. Прошу выплатить 18 000 рублей за здание и уничтоженные запасы.",
         "en": "On the night of April 14, my warehouse burned down with all its stock inside. I was at home, the alarm failed, and I learned about the fire in the morning. I am claiming €18,000 for the building and destroyed inventory.",
-        "tr": "On the night of April 14, my warehouse burned down with all its stock inside. I was at home, the alarm failed, and I learned about the fire in the morning. I am claiming €18,000 for the building and destroyed inventory.",
-        "ar": "On the night of April 14, my warehouse burned down with all its stock inside. I was at home, the alarm failed, and I learned about the fire in the morning. I am claiming €18,000 for the building and destroyed inventory.",
+        "tr": "14 Nisan gecesi depom içindeki tüm stoklarla birlikte yandı. Evdeydim, alarm çalışmıyordu ve sabah yangını öğrendim. Bina ve tahrip edilen envanter için 18.000 € talep ediyorum.",
+        "ar": "في ليلة 14 أبريل/نيسان، احترق المستودع الخاص بي وبداخله كل المخزون. كنت في المنزل، وفشل جهاز الإنذار، وعلمت بنبأ الحريق في الصباح. أطالب بمبلغ 18000 يورو للمبنى والمخزون المدمر.",
         "kk": "В ночь на 14 апреля склад сгорел вместе со всем товаром. Я был дома, сигнализация не сработала, о пожаре узнал утром. Прошу выплатить 18 000 евро за здание и уничтоженные запасы."
       },
       "stampable": false
@@ -464,9 +384,9 @@
       "text": {
         "ru": "Ночью склад загорелся и получил серьёзные повреждения.",
         "en": "The warehouse caught fire during the night and sustained serious damage.",
-        "tr": "The warehouse caught fire during the night and sustained serious damage.",
-        "ar": "The warehouse caught fire during the night and sustained serious damage.",
-        "kk": "Ночью склад загорелся и получил серьёзные повреждения."
+        "tr": "Depoda gece saatlerinde çıkan yangında ciddi hasar meydana geldi.",
+        "ar": "اشتعلت النيران في المستودع أثناء الليل ولحقت به أضرار جسيمة.",
+        "kk": "Түнде қойма өртеніп, қатты зақымданған."
       },
       "stampable": true
     },
@@ -475,9 +395,9 @@
       "text": {
         "ru": "Застрахованные палеты оставались внутри до возгорания и погибли в огне.",
         "en": "The insured pallets remained inside until the fire and were destroyed.",
-        "tr": "The insured pallets remained inside until the fire and were destroyed.",
-        "ar": "The insured pallets remained inside until the fire and were destroyed.",
-        "kk": "Застрахованные палеты оставались внутри до возгорания и погибли в огне."
+        "tr": "Sigortalı paletler yangına kadar içeride kaldı ve imha edildi.",
+        "ar": "وبقيت المنصات المؤمنة بالداخل حتى الحريق وتم تدميرها.",
+        "kk": "Сақтандырылған поддондар өртке дейін ішінде қалып, өртте жоғалып кетті."
       },
       "stampable": true
     },
@@ -486,9 +406,9 @@
       "text": {
         "ru": "Пожар возник случайно, а сигнализация отказала сама.",
         "en": "The fire started accidentally, and the alarm failed on its own.",
-        "tr": "The fire started accidentally, and the alarm failed on its own.",
-        "ar": "The fire started accidentally, and the alarm failed on its own.",
-        "kk": "Пожар возник случайно, а сигнализация отказала сама."
+        "tr": "Yangın kazara başladı ve alarm kendi kendine başarısız oldu.",
+        "ar": "اندلع الحريق عن طريق الخطأ، وفشل الإنذار من تلقاء نفسه.",
+        "kk": "Өрт абайсызда басталып, дабыл жүйесі өздігінен істен шыққан."
       },
       "stampable": true
     }
@@ -500,39 +420,39 @@
     "preBrief": {
       "ru": "Бюджет — три улики из пяти. Для отказа достаточно доказать, что товар вывезен и пожар подготовлен. Мотив полезен, но не обязателен. — В. Лебедева",
       "en": "Your budget is three of five pieces of evidence. To reject the claim, it is enough to prove that the stock was removed and the fire was prepared. Motive is useful, but not essential. — V. Lebedeva",
-      "tr": "Your budget is three of five pieces of evidence. To reject the claim, it is enough to prove that the stock was removed and the fire was prepared. Motive is useful, but not essential. — V. Lebedeva",
-      "ar": "Your budget is three of five pieces of evidence. To reject the claim, it is enough to prove that the stock was removed and the fire was prepared. Motive is useful, but not essential. — V. Lebedeva",
-      "kk": "Бюджет — три улики из пяти. Для отказа достаточно доказать, что товар вывезен и пожар подготовлен. Мотив полезен, но не обязателен. — В. Лебедева"
+      "tr": "Bütçeniz beş kanıttan üçüdür. İddiayı reddetmek için kütüğün kaldırıldığını ve yangının hazırlandığını kanıtlamak yeterlidir. Güdü faydalıdır ancak gerekli değildir. — V. Lebedeva",
+      "ar": "ميزانيتك هي ثلاثة من خمسة أدلة. ولرفض المطالبة يكفي إثبات إزالة المخزون وتحضير النار. الدافع مفيد ولكنه ليس ضروريا. - في. ليبيديفا",
+      "kk": "Бюджет – бестен үш белгі. Бас тарту үшін тауарлардың шығарылғанын және өрттің дайындалғанын дәлелдеу жеткілікті. Мотив пайдалы, бірақ қажет емес. — В. Лебедева"
     },
     "postVerdictNote": {
       "ru": "Пропуск `EY-17` открывает закрытый сектор Восточного двора. Это уже не случайный склад — у схемы есть собственная логистика.",
       "en": "Pass `EY-17` opens the restricted sector of Eastern Yard. This is no random warehouse—the operation has its own logistics network.",
-      "tr": "Pass `EY-17` opens the restricted sector of Eastern Yard. This is no random warehouse—the operation has its own logistics network.",
-      "ar": "Pass `EY-17` opens the restricted sector of Eastern Yard. This is no random warehouse—the operation has its own logistics network.",
-      "kk": "Пропуск `EY-17` открывает закрытый сектор Восточного двора. Это уже не случайный склад — у схемы есть собственная логистика."
+      "tr": "'EY-17' geçişi, Eastern Yard'ın kısıtlı sektörünü açıyor. Bu rastgele bir depo değil; operasyonun kendi lojistik ağı var.",
+      "ar": "يفتح الممر EY-17 القطاع المحظور في Eastern Yard. هذا ليس مستودعًا عشوائيًا، فالعملية لديها شبكة لوجستية خاصة بها.",
+      "kk": "«EY-17» асуы Шығыс ауланың жабық секторын ашады. Бұл енді кездейсоқ қойма емес - схеманың өз логистикасы бар."
     },
     "nextCaseTeaser": {
       "ru": "После умышленного огня — настоящий удар молнии. Необычный лог счётчика сначала будет выглядеть как подделка.",
       "en": "After a deliberate fire comes a genuine lightning strike. The meter's unusual log will initially look fabricated.",
-      "tr": "After a deliberate fire comes a genuine lightning strike. The meter's unusual log will initially look fabricated.",
-      "ar": "After a deliberate fire comes a genuine lightning strike. The meter's unusual log will initially look fabricated.",
-      "kk": "После умышленного огня — настоящий удар молнии. Необычный лог счётчика сначала будет выглядеть как подделка."
+      "tr": "Kasıtlı bir yangının ardından gerçek bir yıldırım çarpması gelir. Sayacın olağandışı günlüğü başlangıçta fabrikasyon gibi görünecek.",
+      "ar": "بعد الحريق المتعمد تأتي ضربة صاعقة حقيقية. سيبدو السجل غير المعتاد لجهاز القياس ملفقًا في البداية.",
+      "kk": "Әдейі өрттен кейін - нағыз найзағай. Ерекше есептегіш журнал бастапқыда жалған болып көрінеді."
     },
     "seasonClue": {
       "id": "ey17-gate",
       "label": {
         "ru": "Пропуск EY-17",
         "en": "EY-17 Access Pass",
-        "tr": "EY-17 Access Pass",
-        "ar": "EY-17 Access Pass",
-        "kk": "Пропуск EY-17"
+        "tr": "EY-17 Erişim Kartı",
+        "ar": "تصريح الدخول EY-17",
+        "kk": "EY-17 өту"
       },
       "description": {
         "ru": "Застрахованные активы поступают в закрытый сектор Восточного двора до инсценированных утрат.",
         "en": "Insured assets enter Eastern Yard's restricted sector before their losses are staged.",
-        "tr": "Insured assets enter Eastern Yard's restricted sector before their losses are staged.",
-        "ar": "Insured assets enter Eastern Yard's restricted sector before their losses are staged.",
-        "kk": "Застрахованные активы поступают в закрытый сектор Восточного двора до инсценированных утрат."
+        "tr": "Sigortalı varlıklar, zararları ortaya çıkmadan önce Eastern Yard'ın kısıtlı sektörüne girer.",
+        "ar": "تدخل الأصول المؤمن عليها إلى القطاع المحظور في Eastern Yard قبل أن يتم تنظيم خسائرها.",
+        "kk": "Сақтандырылған активтер шығыс сотының жабық секторына залалдарды жоюға дейін беріледі."
       },
       "progressIndex": 2,
       "progressTotal": 4

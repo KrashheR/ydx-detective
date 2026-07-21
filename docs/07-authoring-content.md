@@ -173,14 +173,17 @@ Every evidence uses `statementLink.relation` (`supports`, `contradicts`, `contex
 `unlocksAfterEvidenceIds` and `revealsEvidenceIds`. Zod validates IDs, targets, truth/relation
 agreement, budget and interactive payloads.
 
-The five additional evidence types are `document_scan`, `thermal_scan`, `shadow_time_check`,
-`seal_match` and `surface_reveal`. Their `data` fields are explicit discriminated schemas; never add
-case-ID conditions to renderers. Put generated WebP assets in `public/cases/<case-id>/assets/` and
-keep critical dates, identifiers and conclusions in JSON/DOM rather than baked into images.
+The interactive evidence types used by the campaign are `thermal_scan`, `shadow_time_check` and
+`surface_reveal`. Their `data` fields are explicit discriminated schemas; never add case-ID
+conditions to renderers. `document_scan` and `seal_match` remain supported only for compatibility
+with old saves and must not be used in new case content. Put generated WebP assets in
+`public/cases/<case-id>/assets/` and keep critical dates, identifiers and conclusions in JSON/DOM
+rather than baked into images.
 
 The canonical bulk import is reproducible with `node scripts/import-campaign-50.mjs`. It reads the
 shipped aggregate, preserves stable case/evidence IDs, normalizes `gps_track` to `gps`, and uses each
 case's explicit `assetBindings` to copy claimant/evidence images and assign their runtime URLs (including
 `retain_existing` portraits). It also mirrors generated interactive WebP files under `public/cases/`
-and writes the 50 existing registry paths. The supplied campaign has authored RU and EN;
-TR/AR use the fact-preserving EN fallback and KK uses RU until professional localized copy is added.
+and writes the 50 existing registry paths. The supplied campaign has authored localized copy for RU,
+EN, TR, AR and KK. Keep every locale in sync whenever case content is revised; do not substitute one
+locale as a fallback for another.

@@ -128,6 +128,9 @@ const evidenceBaseShape = {
     interactiveDesign: z.object({
       why: localizedString, playerAction: localizedString, conclusion: localizedString,
     }).strict().optional(),
+    // Legacy campaign imports may retain an analysis payload after an interactive
+    // card is recast as a standard evidence renderer; it is intentionally ignored.
+    data: z.unknown().optional(),
 };
 
 const percent = z.number().min(0).max(100);

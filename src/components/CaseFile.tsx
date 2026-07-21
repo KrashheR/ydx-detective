@@ -261,7 +261,7 @@ export function CaseFile({
           {loc(caseData.claim.story, lang)}
         </p>
 
-        {caseData.claimStatements && (
+        {/* {caseData.claimStatements && (
           <div className="mt-4 space-y-2" aria-label={t("statement", lang)}>
             {caseData.claimStatements.filter((item) => item.id !== "claim_main").map((item, index) => {
               const stamped = session?.stamps?.some((stamp) => stamp.statementId === item.id) ?? false;
@@ -280,7 +280,7 @@ export function CaseFile({
               );
             })}
           </div>
-        )}
+        )} */}
 
         {/* Claim sum box */}
         <div className="mt-[18px] flex items-center justify-between gap-3 rounded-md border border-dashed border-document-dash bg-white px-[15px] py-[13px]">

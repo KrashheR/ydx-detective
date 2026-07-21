@@ -25,6 +25,11 @@ export interface CaseUnlockSummary {
   readonly completed: number;
 }
 
+export interface CaseUnlockOptions {
+  /** Development preview: make every standard campaign case selectable. */
+  readonly unlockAll?: boolean;
+}
+
 const isCompletedCase = (stats: PlayerStats, caseData: CaseUnlockCandidate): boolean =>
   stats.completedCaseIds.includes(caseData.id);
 
@@ -61,6 +66,7 @@ export const compareCasesByUnlockCriteria = (
 export const evaluateCaseUnlocks = <T extends CaseUnlockCandidate>(
   standardCases: readonly T[],
   stats: PlayerStats,
+  options: CaseUnlockOptions = {},
 ): CaseUnlockInfo<T>[] => {
   const currentLevel = evaluateRank(stats.xp).level;
 
@@ -83,7 +89,7 @@ export const evaluateCaseUnlocks = <T extends CaseUnlockCandidate>(
       };
     }
 
-    if (!hasRequiredLevel) {
+    if (!options.unlockAll && !hasRequiredLevel) {
       return {
         caseData,
         status: 'locked',
@@ -94,7 +100,7 @@ export const evaluateCaseUnlocks = <T extends CaseUnlockCandidate>(
       };
     }
 
-    if (!previousCompleted) {
+    if (!options.unlockAll && !previousCompleted) {
       return {
         caseData,
         status: 'locked',

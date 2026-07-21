@@ -32,12 +32,17 @@ describe('campaign difficulty curve', () => {
     expect(standard.length).toBe(50);
   });
 
-  it('opens with the canonical three-case interactive onboarding', () => {
+  it('opens with the canonical three-case onboarding', () => {
     expect(standard.slice(0, 3).map((c) => c.id)).toEqual(['case-001', 'case-009', 'case-013']);
     expect(standard[0]!.evidences.some((e) => e.type === 'thermal_scan')).toBe(true);
     expect(standard[1]!.truth).toBe('valid');
-    expect(standard[2]!.evidences.some((e) => e.type === 'document_scan')).toBe(true);
+    expect(standard[2]!.evidences.some((e) => e.type === 'document')).toBe(true);
     expect(standard.slice(0, 3).map((c) => c.investigationBudget)).toEqual([2, 3, 3]);
+  });
+
+  it('does not assign retired scan or seal-matching mechanics to campaign cases', () => {
+    expect(debutPosition('document_scan')).toBeNull();
+    expect(debutPosition('seal_match')).toBeNull();
   });
 
   it('has contiguous campaign order and a solvable numeric budget', () => {

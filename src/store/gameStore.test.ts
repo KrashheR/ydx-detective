@@ -22,7 +22,7 @@ const sdk = vi.hoisted(() => ({
   restorePurchasedProductIds: vi.fn(async () => []),
   // Inspector Note now runs behind a fullscreen ad; offline/dev grants `onDone`.
   showFullscreenAd: vi.fn((onDone?: () => void) => onDone?.()),
-  trackAdOffer: vi.fn(),
+  trackAdOffer: vi.fn(), getAnalyticsUserId: vi.fn(() => null),
   submitLeaderboardScore: vi.fn(async () => undefined),
 }));
 vi.mock('../services/yandexSDK', () => sdk);
@@ -184,6 +184,16 @@ describe('markEvidenceAsViewed / toggleEvidenceStamp', () => {
     expect(store().session?.selectedEvidenceIds).toContain(id);
     store().toggleEvidenceStamp(id);
     expect(store().session?.selectedEvidenceIds).not.toContain(id);
+  });
+
+  it('allows a viewed supporting evidence card to be stamped as a contradiction', () => {
+    const c = makeCase({ contradictions: 0, cleanCards: 1 });
+    store().startCase(c);
+    const id = c.evidences[0]!.id;
+    store().markEvidenceAsViewed(id, c);
+
+    expect(store().toggleEvidenceStamp(id, c)).toBe(true);
+    expect(store().session?.selectedEvidenceIds).toContain(id);
   });
 });
 

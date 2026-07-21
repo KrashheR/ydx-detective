@@ -102,8 +102,18 @@ export function DocumentScanEvidence({ evidence, progress, lang, onProgress }: P
   </Shell>;
 }
 
+const THERMAL_SCAN_RADIUS = 20;
+
+function heatReadoutColor(proximity: number): string {
+  const p = Math.max(0, Math.min(1, proximity));
+  const from = [107, 87, 51]; const to = [214, 40, 34];
+  const [r, g, b] = from.map((channel, index) => Math.round(channel + (to[index]! - channel) * p));
+  return `rgb(${r} ${g} ${b})`;
+}
+
 export function ThermalScanEvidence({ evidence, progress, lang, onProgress }: Props<ThermalScanEvidence>) {
   const [thermal, setThermal] = useState(false);
+  const [scanPos, setScanPos] = useState<{ x: number; y: number } | null>(null);
   const selected = new Set(progress.discoveredAnomalyIds);
   const choose = (id: string) => {
     const discovered = [...new Set([...selected, id])];
@@ -112,20 +122,40 @@ export function ThermalScanEvidence({ evidence, progress, lang, onProgress }: Pr
     onProgress({ ...progress, discoveredAnomalyIds: discovered, attempts: progress.attempts + 1, analysisCompleted: complete });
     if (complete) tapHaptic();
   };
+  const scan = (event: ReactPointerEvent<HTMLDivElement>) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    if (!rect.width || !rect.height) return;
+    setScanPos({ x: (event.clientX - rect.left) / rect.width * 100, y: (event.clientY - rect.top) / rect.height * 100 });
+  };
+  useEffect(() => setScanPos(null), [progress.resetCount]);
   const image = firstImage(evidence);
+  const positioned = evidence.data.heatZones.map((zone) => {
+    const point = zone.points?.[0];
+    const pointX = point ? ('x' in point ? point.x : point[0]) : 50;
+    const pointY = point ? ('y' in point ? point.y : point[1]) : 50;
+    const x = zone.x ?? pointX; const y = zone.y ?? pointY;
+    const distance = scanPos ? Math.hypot(scanPos.x - x, scanPos.y - y) : Infinity;
+    const proximity = Math.max(0, 1 - distance / THERMAL_SCAN_RADIUS);
+    return { zone, x, y, proximity };
+  });
+  const dominant = positioned.reduce((best, item) => (item.proximity > best.proximity ? item : best), positioned[0]!);
+  const liveTemperature = evidence.data.ambientTemperature + dominant.proximity * (dominant.zone.temperature - evidence.data.ambientTemperature);
+  const readoutColor = heatReadoutColor(dominant.proximity);
   return <Shell {...{ evidence, progress, lang, onProgress }}>
     <div className="grid grid-cols-2 gap-2"><button type="button" onClick={() => setThermal(false)} className={`min-h-11 rounded-md border ${!thermal ? 'border-accent bg-accent/10' : 'border-border'}`}>{t('interactiveNormal', lang)}</button><button type="button" onClick={() => setThermal(true)} className={`min-h-11 rounded-md border ${thermal ? 'border-accent bg-accent/10' : 'border-border'}`}>{t('interactiveThermal', lang)}</button></div>
-    <div className="relative aspect-[16/10] overflow-hidden rounded-md border border-border bg-folder-edge">
+    <div className="relative aspect-[16/10] touch-none overflow-hidden rounded-md border border-border bg-folder-edge" onPointerMove={thermal ? scan : undefined} onPointerLeave={() => setScanPos(null)} onPointerCancel={() => setScanPos(null)}>
       {image && <img src={asset(image)} alt="" className={`h-full w-full object-cover ${thermal ? 'grayscale contrast-125' : ''}`} />}
-      {thermal && evidence.data.heatZones.map((zone) => {
-        const point = zone.points?.[0];
-        const pointX = point ? ('x' in point ? point.x : point[0]) : 50;
-        const pointY = point ? ('y' in point ? point.y : point[1]) : 50;
-        const x = zone.x ?? pointX; const y = zone.y ?? pointY;
-        return <button key={zone.id} type="button" aria-label={localizedSidecar(zone.label, zone.labelEn, lang)} onClick={() => choose(zone.id)} className={`absolute min-h-11 min-w-11 rounded-full border-2 border-white/80 ${selected.has(zone.id) ? 'ring-4 ring-stamp/50' : ''}`} style={{ left: `${x}%`, top: `${y}%`, width: `${zone.width ?? 14}%`, height: `${zone.height ?? 14}%`, transform: 'translate(-50%,-50%)', background: `radial-gradient(circle, rgba(255,255,255,.95), rgba(180,35,31,${zone.intensity}), transparent 72%)` }}><span className="sr-only">{zone.temperature} °C</span></button>;
+      {thermal && scanPos && <div className="pointer-events-none absolute rounded-full border border-white/40" style={{ left: `${scanPos.x}%`, top: `${scanPos.y}%`, width: '84px', height: '84px', transform: 'translate(-50%,-50%)' }} />}
+      {thermal && scanPos && <output aria-live="polite" className="pointer-events-none absolute rounded-md border border-border bg-surface/95 px-2 py-1 font-mono text-sm font-bold tabular-nums shadow-lift transition-colors duration-150" style={{ left: `${scanPos.x}%`, top: `${scanPos.y}%`, color: readoutColor, textShadow: `0 0 ${dominant.proximity * 14}px ${readoutColor}`, transform: 'translate(48px,-52px)' }}>{liveTemperature.toFixed(1)} °C</output>}
+      {thermal && positioned.map(({ zone, x, y, proximity }) => {
+        const opacity = selected.has(zone.id) || progress.hintLevel === 3 ? 1 : proximity;
+        return <button key={zone.id} type="button" aria-label={localizedSidecar(zone.label, zone.labelEn, lang)} onClick={() => choose(zone.id)} className={`absolute min-h-11 min-w-11 rounded-full border-2 transition-opacity duration-150 border-white/80 ${selected.has(zone.id) ? 'ring-4 ring-stamp/50' : ''}`} style={{ left: `${x}%`, top: `${y}%`, width: `${zone.width ?? 14}%`, height: `${zone.height ?? 14}%`, transform: 'translate(-50%,-50%)', opacity, background: `radial-gradient(circle, rgba(255,255,255,.95), rgba(180,35,31,${zone.intensity}), transparent 72%)` }}><span className="sr-only">{zone.temperature} °C</span></button>;
       })}
     </div>
-    <div className="grid grid-cols-3 gap-2 font-mono text-[11px] text-text-muted"><span>{evidence.data.observationTime}</span><span>{evidence.data.elapsedSinceClaimedUseMinutes} min</span><span>{evidence.data.ambientTemperature} °C</span></div>
+    <div className="grid grid-cols-2 gap-2 font-mono text-[11px] text-text-muted">
+      <span>{evidence.data.observationTime}</span>
+      <span className="text-right">{evidence.data.elapsedSinceClaimedUseMinutes} min</span>
+    </div>
   </Shell>;
 }
 

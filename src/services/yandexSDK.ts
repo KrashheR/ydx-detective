@@ -22,6 +22,8 @@ interface YandexPlayer {
   setData(data: Record<string, unknown>, flush?: boolean): Promise<void>;
   getData(keys?: string[]): Promise<Record<string, unknown>>;
   getMode(): 'lite' | ''; // 'lite' === anonymous (no cloud persistence guaranteed)
+  /** Stable opaque platform identifier; never send profile fields to analytics. */
+  getUniqueID?(): string;
 }
 
 interface AdvCallbacks {
@@ -205,6 +207,15 @@ export function canUseCloud(): boolean {
   return sdk !== null && player !== null && isAuthenticated;
 }
 
+/** Opaque cross-device identifier for analytics. Null in anonymous/offline mode. */
+export function getAnalyticsUserId(): string | null {
+  try {
+    return player?.getUniqueID?.() ?? null;
+  } catch {
+    return null;
+  }
+}
+
 /**
  * Authoritative time for daily-case gating. Falls back to device time ONLY when
  * the SDK is unavailable — callers should treat a non-cloud session's daily
@@ -275,7 +286,11 @@ export function trackAdOffer(kind: 'fullscreen' | 'rewarded', placement: AdPlace
   trackGoal(GOAL.adOffer, { kind, placement });
 }
 
-export function showFullscreenAd(onDone?: () => void, placement: AdPlacement = 'unknown'): void {
+export function showFullscreenAd(
+  onDone?: () => void,
+  placement: AdPlacement = 'unknown',
+  onShown?: () => void,
+): void {
   trackGoal(GOAL.adAccept, { kind: 'fullscreen', placement });
   if (!sdk) {
     trackGoal(GOAL.adClose, { kind: 'fullscreen', placement, wasShown: false, offline: true });
@@ -288,6 +303,7 @@ export function showFullscreenAd(onDone?: () => void, placement: AdPlacement = '
         setAnalyticsAdPaused(true);
         broadcastPause(true);
         trackGoal(GOAL.adOpen, { kind: 'fullscreen', placement });
+        onShown?.();
       },
       onClose: (wasShown) => {
         broadcastPause(false);
@@ -315,6 +331,7 @@ export function showRewardedAd(onReward: () => void, placement: AdPlacement = 'u
     // Offline / no SDK: in dev we grant the reward so the game stays playable.
     onReward();
     trackGoal(GOAL.adReward, { kind: 'rewarded', placement, offline: true });
+    trackGoal(GOAL.rewardedComplete, { placement, offline: true });
     return;
   }
   let rewarded = false;
@@ -335,6 +352,7 @@ export function showRewardedAd(onReward: () => void, placement: AdPlacement = 'u
         if (rewarded) {
           onReward();
           trackGoal(GOAL.adReward, { kind: 'rewarded', placement });
+          trackGoal(GOAL.rewardedComplete, { placement });
         }
       },
       onError: (error) => {

@@ -106,7 +106,8 @@ These cut across the whole codebase; everything else lives in the docs above.
 7. **The standard campaign has exactly 50 canonical positions.** Order by the immutable
    `campaignOrder` field; stable case IDs must never be renumbered. Every case has an integer
    investigation budget, atomic claim statements and validated evidence links. Cases 1–3 are the
-   onboarding flow; five interactive evidence types are introduced through the campaign, and case 50
+   onboarding flow; three interactive evidence types (`thermal_scan`, `shadow_time_check`,
+   `surface_reveal`) are introduced through the campaign, and case 50
    owns the generic final synthesis. `requiredLevel` remains capped at 16. The invariant is enforced by
    `src/data/campaignProgression.test.ts`; all 15 evidence types have renderers.
    Details: [docs/03](docs/03-gameplay.md) / [docs/07](docs/07-authoring-content.md).

@@ -11,7 +11,8 @@
  *
  * Counter surface used:
  *   ym(id, 'init', opts)               → bring up the counter
- *   ym(id, 'reachGoal', name, params)  → per-event funnel goals
+ *   ym(id, 'reachGoal', name, params)  → sparse conversion goals
+ *   ym(id, 'params', payload)          → high-frequency event stream
  *   ym(id, 'userParams', params)       → per-player profile (level/balance/…)
  *
  * The counter ID is single-sourced in GAME_CONFIG.analytics. Both the queueing
@@ -49,6 +50,12 @@ declare global {
  * values: renaming one orphans its history in the Metrica console.
  */
 export const GOAL = {
+  bootComplete: 'boot_complete',
+  bootFailed: 'boot_failed',
+  firstCaseStart: 'first_case_start',
+  firstCaseComplete: 'first_case_complete',
+  caseComplete: 'case_complete',
+  rewardedComplete: 'rewarded_complete',
   sessionStart: 'session_start',
   sessionEnd: 'session_end',
   activeInterval: 'active_interval',
@@ -117,6 +124,27 @@ let activeSinceMs: number | null = null;
 let activeTotalMs = 0;
 let adPaused = false;
 let lastAdClosedAtMs: number | null = null;
+let eventSeq = 0;
+const sessionId = typeof crypto !== 'undefined' && crypto.randomUUID
+  ? crypto.randomUUID()
+  : `s-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+let analyticsContext: Record<string, unknown> = {};
+const ANON_ID_KEY = 'claimDetectiveAnalyticsId';
+
+/** Only conversion milestones are Metrica goals; everything else is telemetry. */
+/** Catalog synchronized to the Metrica Management API (not the event stream). */
+export const CONVERSION_GOAL_NAMES = [
+  GOAL.bootComplete,
+  GOAL.firstCaseStart,
+  GOAL.firstCaseComplete,
+  GOAL.caseComplete,
+  GOAL.onboardingComplete,
+  GOAL.dailyClaim,
+  GOAL.rewardDouble,
+  GOAL.rewardedComplete,
+  GOAL.purchaseSuccess,
+] as const;
+const CONVERSION_GOALS = new Set<string>(CONVERSION_GOAL_NAMES);
 
 /**
  * Session-scoped ad-frequency aggregates (reset on module reload, i.e. per
@@ -161,6 +189,7 @@ function endSession(reason: 'pagehide' | 'beforeunload'): void {
     exitedAfterAd: msSinceAdClose != null && msSinceAdClose <= 10_000,
     adsPerSession,
     verdictsSinceLastAd,
+    ...analyticsContext,
   });
   sessionOpen = false;
 }
@@ -281,6 +310,10 @@ export function trackGoal(
     verdictsSinceLastAd = 0;
   }
 
+  if (!CONVERSION_GOALS.has(name)) {
+    trackEvent(name, mergedParams);
+    return;
+  }
   const counter = ym();
   if (!enabled || !counter) return;
   try {
@@ -291,6 +324,35 @@ export function trackGoal(
   } catch {
     /* swallow — analytics is best-effort */
   }
+}
+
+/**
+ * Send behavioural telemetry without consuming a Metrica goal. `params` is
+ * deliberately used for repeatable actions such as evidence reading and tabs:
+ * unlike reachGoal it is not subject to the one-goal-per-second deduplication.
+ */
+export function trackEvent(name: string, params?: Record<string, unknown>): void {
+  const counter = ym();
+  if (!enabled || !counter) return;
+  try {
+    counter(GAME_CONFIG.analytics.counterId, 'params', {
+      analyticsEvent: name,
+      eventVersion: 2,
+      eventSeq: ++eventSeq,
+      sessionId,
+      timestampMs: Date.now(),
+      ...releaseParams(),
+      ...analyticsContext,
+      ...params,
+    });
+  } catch {
+    /* swallow — analytics is best-effort */
+  }
+}
+
+/** Context is attached to session-end/pause and future telemetry snapshots. */
+export function setAnalyticsContext(context: Record<string, unknown>): void {
+  analyticsContext = { ...analyticsContext, ...context };
 }
 
 /**
@@ -305,6 +367,32 @@ export function setUserParams(params: Record<string, unknown>): void {
       ...releaseParams(),
       ...params,
     });
+  } catch {
+    /* swallow — analytics is best-effort */
+  }
+}
+
+/** Set an opaque stable ID for cross-device attribution; never use PII here. */
+export function setAnalyticsUserId(platformId: string | null): void {
+  if (typeof window === 'undefined') return;
+  let userId = platformId;
+  if (!userId) {
+    try {
+      userId = window.localStorage.getItem(ANON_ID_KEY);
+      if (!userId) {
+        userId = typeof crypto !== 'undefined' && crypto.randomUUID
+          ? `anon-${crypto.randomUUID()}`
+          : `anon-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+        window.localStorage.setItem(ANON_ID_KEY, userId);
+      }
+    } catch {
+      return;
+    }
+  }
+  const counter = ym();
+  if (!enabled || !counter) return;
+  try {
+    counter(GAME_CONFIG.analytics.counterId, 'setUserID', userId);
   } catch {
     /* swallow — analytics is best-effort */
   }

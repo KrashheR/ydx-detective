@@ -43,6 +43,7 @@ import {
 } from '../data/thematicPacks';
 import {
   getServerTimeMs,
+  getAnalyticsUserId,
   getYandexLang,
   initYandex,
   onPauseChange,
@@ -50,7 +51,7 @@ import {
   trackAdOffer,
   submitLeaderboardScore,
 } from '../services/platformAdapter';
-import { GOAL, initMetrica, setUserParams, trackGoal } from '../services/metrica';
+import { GOAL, initMetrica, setAnalyticsContext, setAnalyticsUserId, setUserParams, trackGoal } from '../services/metrica';
 import {
   SUPPORTED_LANGUAGES,
   type ActiveSession,
@@ -259,6 +260,7 @@ export const useGameStore = create<GameStoreState>((set, get) => {
     lastResult: null,
 
     async init() {
+      const bootStartedAt = performance.now();
       // 1) Bring up the SDK (no-op-safe if unavailable → offline mode).
       await initYandex();
       // 2) Wire the global pause guard to ad lifecycles. Ad open/close anywhere
@@ -288,7 +290,13 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       // a slow VPN nor a blocked mc.yandex.ru can delay play.
       window.setTimeout(() => {
         initMetrica();
+        setAnalyticsUserId(getAnalyticsUserId());
         reportUserParams(stats);
+        trackGoal(GOAL.bootComplete, {
+          bootDurationMs: Math.round(performance.now() - bootStartedAt),
+          isNewPlayer: isNew,
+          saveSource: isNew ? 'new' : 'existing',
+        });
       }, 0);
     },
 
@@ -319,11 +327,11 @@ export const useGameStore = create<GameStoreState>((set, get) => {
             })))
           .map((stamp) => {
             const evidence = caseData.evidences.find((item) => item.id === stamp.evidenceId);
-            if (!evidence || evidence.statementLink?.relation !== 'contradicts') return null;
+            if (!evidence) return null;
             return {
               caseId: caseData.id,
               evidenceId: evidence.id,
-              statementId: stamp.statementId === 'claim_main'
+              statementId: stamp.statementId === 'claim_main' && evidence.statementLink
                 ? evidence.statementLink.statementId
                 : stamp.statementId,
             };
@@ -376,6 +384,19 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         evidenceCount: caseData.evidences.length,
         budget: caseData.investigationBudget ?? null,
       });
+      const completedCasesBefore = get().stats.completedCaseIds.length;
+      if (completedCasesBefore === 0) trackGoal(GOAL.firstCaseStart, {
+        caseId: caseData.id,
+        campaignPosition: caseData.campaignOrder,
+      });
+      setAnalyticsContext({
+        surface: 'investigation',
+        caseId: caseData.id,
+        investigationStartedAtMs: Date.now(),
+        viewedCount: 0,
+        stampedCount: 0,
+        hintsUsed: 0,
+      });
     },
 
     markEvidenceAsViewed(id, caseData) {
@@ -423,6 +444,12 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         viewedCount: get().session?.viewedEvidenceIds.length ?? 0,
         budget: budget ?? null,
       });
+      setAnalyticsContext({
+        surface: 'investigation', caseId: caseData.id,
+        viewedCount: get().session?.viewedEvidenceIds.length ?? 0,
+        stampedCount: get().session?.selectedEvidenceIds.length ?? 0,
+        hintsUsed: get().session?.hintsUsed ?? 0,
+      });
       return true;
     },
 
@@ -449,12 +476,11 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       const before = get();
       const evidence = caseData.evidences.find((item) => item.id === id);
       const link = evidence?.statementLink;
-      const statement = caseData.claimStatements?.find((item) => item.id === link?.statementId);
       const progress = before.stats.interactiveEvidenceProgress[`${caseData.id}/${id}`];
       const interactive = evidence != null && ['document_scan', 'thermal_scan', 'shadow_time_check', 'seal_match', 'surface_reveal'].includes(evidence.type);
       if (
         !before.session || before.session.caseId !== caseData.id ||
-        !evidence || link?.relation !== 'contradicts' || !statement?.stampable ||
+        !evidence ||
         !before.session.viewedEvidenceIds.includes(id) ||
         (interactive && !progress?.analysisCompleted)
       ) return false;
@@ -465,7 +491,7 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         const next = removing ? selected.filter((x) => x !== id) : [...selected, id];
         const stamps = removing
           ? (s.session.stamps ?? []).filter((stamp) => stamp.evidenceId !== id)
-          : [...(s.session.stamps ?? []), { caseId: caseData.id, statementId: link.statementId, evidenceId: id }];
+          : [...(s.session.stamps ?? []), { caseId: caseData.id, statementId: link?.statementId ?? 'claim_main', evidenceId: id }];
         return {
           session: { ...s.session, selectedEvidenceIds: next, stamps },
           stats: progress
@@ -486,9 +512,16 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         trackGoal(GOAL.evidenceStamp, {
           caseId: after.caseId,
           evidenceId: id,
-          statementId: link.statementId,
+          statementId: link?.statementId ?? 'claim_main',
           stamped: after.selectedEvidenceIds.includes(id),
           stampCount: after.selectedEvidenceIds.length,
+          isContradiction: evidence?.isContradiction ?? null,
+          evidencePosition: caseData.evidences.findIndex((item) => item.id === id) + 1,
+        });
+        setAnalyticsContext({
+          surface: 'investigation', caseId: after.caseId,
+          viewedCount: after.viewedEvidenceIds.length, stampedCount: after.selectedEvidenceIds.length,
+          hintsUsed: after.hintsUsed,
         });
       }
       return true;
@@ -867,7 +900,16 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         proofRatio,
         falseStamps,
         opensUsed: session?.viewedEvidenceIds.length ?? 0,
+        caseWallTimeMs: session ? Math.max(0, getServerTimeMs() - session.startedAtServerMs) : null,
+        hintsUsed: session?.hintsUsed ?? 0,
+        stampCount: selected.length,
+        contradictionsFound: selected.filter((id) => caseData.evidences.find((e) => e.id === id)?.isContradiction).length,
+        totalContradictions: totalContradictions(caseData),
+        campaignPosition: caseData.campaignOrder,
       });
+      trackGoal(GOAL.caseComplete, { caseId: caseData.id, campaignPosition: caseData.campaignOrder });
+      if (stats.completedCaseIds.length === 0) trackGoal(GOAL.firstCaseComplete, { caseId: caseData.id });
+      setAnalyticsContext({ surface: 'result', caseId: caseData.id, verdictCorrect: breakdown.verdictCorrect });
       if (!stats.metaUnlocked && finalStats.metaUnlocked) {
         trackGoal(GOAL.onboardingComplete, { caseId: caseData.id });
       }

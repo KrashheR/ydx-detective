@@ -67,6 +67,14 @@ describe('evaluateCaseUnlocks', () => {
     expect(infos[1]!.status).toBe('available');
     expect(infos[1]!.reason).toBeNull();
   });
+
+  it('makes every case available for the development all-levels preview', () => {
+    const stats = makeStats({ xp: 0 });
+    const infos = evaluateCaseUnlocks([c1, c3], stats, { unlockAll: true });
+
+    expect(infos.map((info) => info.status)).toEqual(['available', 'available']);
+    expect(infos.map((info) => info.reason)).toEqual([null, null]);
+  });
 });
 
 describe('isCaseUnlocked / getNextAvailableCase / summarize', () => {

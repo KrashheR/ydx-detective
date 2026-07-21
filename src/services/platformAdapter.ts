@@ -34,9 +34,10 @@ export interface PlatformAdapter {
   getLocale(): string | null;
   getServerTimeMs(): number;
   canUseCloud(): boolean;
+  getAnalyticsUserId(): string | null;
   cloudGet(): Promise<unknown | null>;
   cloudSet(snapshot: unknown): Promise<void>;
-  showFullscreenAd(done?: () => void, placement?: AdPlacement): void;
+  showFullscreenAd(done?: () => void, placement?: AdPlacement, onShown?: () => void): void;
   showRewardedAd(reward: () => void, placement?: AdPlacement): void;
 }
 
@@ -55,9 +56,10 @@ const yandexAdapter: PlatformAdapter = {
   getLocale() { return yandex.getYandexLang(); },
   getServerTimeMs() { return yandex.getServerTimeMs(); },
   canUseCloud() { return yandex.canUseCloud(); },
+  getAnalyticsUserId() { return yandex.getAnalyticsUserId(); },
   cloudGet() { return yandex.cloudGet(); },
   cloudSet(snapshot) { return yandex.cloudSet(snapshot); },
-  showFullscreenAd(done, placement) { yandex.showFullscreenAd(done, placement); },
+  showFullscreenAd(done, placement, onShown) { yandex.showFullscreenAd(done, placement, onShown); },
   showRewardedAd(reward, placement) { yandex.showRewardedAd(reward, placement); },
 };
 
@@ -70,12 +72,14 @@ const crazyAdapter: PlatformAdapter = {
   getLocale() { return crazySdk()?.environment?.locale ?? null; },
   getServerTimeMs() { return Date.now(); },
   canUseCloud() { return Boolean(crazySdk()?.data?.getItem && crazySdk()?.data?.setItem); },
+  getAnalyticsUserId() { return null; },
   async cloudGet() { return (await crazySdk()?.data?.getItem?.(CRAZY_SAVE_KEY)) ?? null; },
   async cloudSet(snapshot) { await crazySdk()?.data?.setItem?.(CRAZY_SAVE_KEY, snapshot); },
-  showFullscreenAd(done) {
+  showFullscreenAd(done, _placement, onShown) {
     const request = crazySdk()?.ad?.requestAd;
     if (!request) { done?.(); return; }
     emitCrazyPause(true);
+    onShown?.();
     request('midgame', {
       adFinished: () => { emitCrazyPause(false); done?.(); },
       adError: () => { emitCrazyPause(false); done?.(); },
@@ -105,10 +109,11 @@ export const notifyGameplayStop = () => getPlatformAdapter().gameplayStop();
 export const getServerTimeMs = () => getPlatformAdapter().getServerTimeMs();
 export const getYandexLang = () => getPlatformAdapter().getLocale();
 export const canUseCloud = () => getPlatformAdapter().canUseCloud();
+export const getAnalyticsUserId = () => getPlatformAdapter().getAnalyticsUserId();
 export const cloudGet = () => getPlatformAdapter().cloudGet();
 export const cloudSet = (snapshot: unknown) => getPlatformAdapter().cloudSet(snapshot);
-export const showFullscreenAd = (done?: () => void, placement?: AdPlacement) =>
-  getPlatformAdapter().showFullscreenAd(done, placement);
+export const showFullscreenAd = (done?: () => void, placement?: AdPlacement, onShown?: () => void) =>
+  getPlatformAdapter().showFullscreenAd(done, placement, onShown);
 export const showRewardedAd = (reward: () => void, placement?: AdPlacement) =>
   getPlatformAdapter().showRewardedAd(reward, placement);
 export function onPauseChange(listener: (paused: boolean) => void): () => void {

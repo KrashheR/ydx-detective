@@ -26,46 +26,15 @@ const API_BASE = 'https://api-metrika.yandex.net/management/v1';
 
 /** Runtime identifier → display name in Metrica. */
 const GOALS = [
-  ['session_start', 'Сессия начата'],
-  ['session_end', 'Сессия завершена'],
-  ['active_interval', 'Интервал активной игры'],
-  ['session_pause', 'Сессия приостановлена'],
-  ['session_resume', 'Сессия продолжена'],
-  ['case_start', 'Дело начато'],
-  ['investigation_interrupt', 'Расследование прервано'],
-  ['investigation_resume', 'Расследование продолжено'],
-  ['evidence_view', 'Улика открыта'],
-  ['evidence_stamp', 'Улика отмечена штампом'],
-  ['hint_buy', 'Подсказка куплена'],
-  ['verdict_submit', 'Вердикт вынесен'],
-  ['reward_double', 'Награда удвоена'],
-  ['funds_restore', 'Средства восстановлены'],
-  ['achievement_unlock', 'Достижение получено'],
-  ['rank_up', 'Ранг повышен'],
-  ['bankruptcy', 'Наступило банкротство'],
+  ['boot_complete', 'Загрузка игры завершена'],
+  ['first_case_start', 'Первое дело начато'],
+  ['first_case_complete', 'Первое дело завершено'],
+  ['case_complete', 'Дело завершено'],
+  ['onboarding_complete', 'Онбординг завершён'],
   ['daily_claim', 'Ежедневное дело завершено'],
-  ['daily_ad_unlock', 'Ежедневное дело открыто рекламой'],
-  ['rating_action', 'Действие с рейтингом'],
-  ['ad_offer', 'Реклама предложена'],
-  ['ad_accept', 'Реклама запрошена'],
-  ['ad_open', 'Реклама открыта'],
-  ['ad_close', 'Реклама закрыта'],
-  ['ad_reward', 'Награда за рекламу получена'],
-  ['ad_error', 'Ошибка рекламы'],
-  ['service_view', 'Услуга показана'],
-  ['service_select', 'Услуга выбрана'],
-  ['service_buy', 'Услуга куплена'],
-  ['service_use', 'Услуга использована'],
-  ['shop_view', 'Магазин открыт'],
-  ['product_view', 'Товар показан'],
-  ['purchase_start', 'Покупка начата'],
+  ['reward_double', 'Награда удвоена'],
   ['purchase_success', 'Покупка завершена'],
-  ['purchase_error', 'Ошибка покупки'],
-  ['purchase_restore', 'Покупки восстановлены'],
-  ['reject_blocked', 'Отклонение заблокировано без доказательств'],
-  ['budget_exhausted', 'Бюджет расследования исчерпан'],
-  ['locked_case_click', 'Клик по закрытому делу'],
-  ['tab_switch', 'Переключение вкладки расследования'],
+  ['rewarded_complete', 'Rewarded-реклама завершена'],
 ];
 
 function loadLocalEnv() {
@@ -99,9 +68,15 @@ function hasArg(name) {
 
 function runtimeGoalIdentifiers() {
   const source = readFileSync(resolve(ROOT, 'src/services/metrica.ts'), 'utf8');
-  const catalog = source.match(/export const GOAL = \{([\s\S]*?)\}\s+as const;/)?.[1];
-  if (!catalog) throw new Error('Cannot read the GOAL catalog from src/services/metrica.ts.');
-  return [...catalog.matchAll(/:\s*'([a-z0-9_]+)'/g)].map((match) => match[1]);
+  const catalog = source.match(/export const CONVERSION_GOAL_NAMES = \[([\s\S]*?)\]\s+as const;/)?.[1];
+  if (!catalog) throw new Error('Cannot read the conversion goal catalog from src/services/metrica.ts.');
+  return [...catalog.matchAll(/GOAL\.\w+/g)]
+    .map((match) => match[0].replace('GOAL.', ''))
+    .map((key) => {
+      const goalCatalog = source.match(/export const GOAL = \{([\s\S]*?)\}\s+as const;/)?.[1] ?? '';
+      return goalCatalog.match(new RegExp(`\\b${key}:\\s*'([a-z0-9_]+)'`))?.[1];
+    })
+    .filter(Boolean);
 }
 
 function assertCatalogInSync() {

@@ -52,7 +52,7 @@ const sdk = vi.hoisted(() => ({
   getYandexLang: vi.fn((): string | null => null),
   showRewardedAd: vi.fn((cb: () => void) => cb()),
   showFullscreenAd: vi.fn((onDone?: () => void) => onDone?.()),
-  trackAdOffer: vi.fn(),
+  trackAdOffer: vi.fn(), getAnalyticsUserId: vi.fn(() => null),
   submitLeaderboardScore: vi.fn(async () => undefined),
   fetchLeaderboard: vi.fn(async () => null),
   canUseCloud: vi.fn(() => false),

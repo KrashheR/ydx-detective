@@ -123,7 +123,18 @@ null при недоступности → UI фолбэчит.
 
 **Поверхность адаптера:**
 - `initMetrica()` — поднять счётчик (один раз).
-- `trackGoal(name, params?)` → `ym(id, 'reachGoal', …)` — событие воронки.
+- `trackGoal(name, params?)` → `ym(id, 'reachGoal', …)` только для редких конверсий:
+  `boot_complete`, first-case milestones, `case_complete`, onboarding, daily,
+  rewarded completion и успешной покупки.
+- `trackEvent(name, params?)` → `ym(id, 'params', …)` для повторяемой телеметрии. Каждый
+  event получает `eventVersion`, `eventSeq`, `sessionId` и timestamp, поэтому открытия
+  улик, штампы, вкладки и ad lifecycle не расходуют цели и не попадают под дедупликацию
+  `reachGoal`.
+- `setAnalyticsContext(snapshot)` подмешивает текущую попытку в lifecycle-события: при
+  уходе со страницы сохраняются caseId, стадия, просмотренные/отштампованные улики и hints.
+- `setAnalyticsUserId()` передаёт только opaque Yandex `getUniqueID()`; при offline/lite
+  режиме используется persistent anonymous ID. Имена, аватары, email и любые PII не идут в
+  Метрику.
 - `setUserParams(params)` → `ym(id, 'userParams', …)` — профиль игрока (уровень, баланс,
   xp, число дел, серия, язык, банкротство). Шлётся на буте и после действий, меняющих эти
   величины (`submitVerdict`, `restoreFunds`, `doubleLastReward`).
@@ -139,13 +150,19 @@ null при недоступности → UI фолбэчит.
 `metrica.ts` (сбрасываются при перезагрузке страницы, т.е. живут ровно одну сессию); `trackGoal`
 инкрементирует их при `verdict_submit`/`ad_open` и подмешивает в `ad_open`/`session_end`.
 Кумулятивный `interstitialsSeenTotal` (персистентный, за все сессии) живёт в `PlayerStats`
-(с saveVersion 8): `App.tsx` зовёт `store.recordInterstitialShown()` перед каждым показом
-интерстишла (обе ветки `showFullscreenAd`).
+(с saveVersion 8) и инкрементируется только из `onOpen` реально показанного интерстишла;
+неудачная/offline-заявка не маскируется под показ.
 
-**Где эмитятся события.** Стор — эмиттер (как и для лидерборда): цели зовутся из действий
-`gameStore.ts`, где уже посчитаны payload'ы. Имена целей — каталог `GOAL` в `metrica.ts`
-(единый источник, держать в лок-степе с этой таблицей; переименование цели обнуляет её
-историю в консоли Метрики).
+**V2 core loop.** После гидратации отправляется `boot_complete` c длительностью и источником
+сейва. `case_start`/`verdict_submit` включают campaign position, попытку, время дела,
+использованные подсказки и качество доказательств. UI отправляет `evidence_open` и
+`evidence_close` (порядок, first-open, dwell time, способ навигации, безопасная разметка
+contradiction), а также `result_view`/`result_action`. Это позволяет отдельно измерять
+прочтение, решение и продолжение после награды.
+
+**Где эмитятся события.** Стор и UI — эмиттеры (как и для лидерборда): доменные payload'ы
+собираются рядом с действием. Имена событий — каталог `GOAL` в `metrica.ts`; только
+`CONVERSION_GOAL_NAMES` синхронизируется с целями в консоли, остальные строки — event stream.
 
 | Цель (`GOAL`) | Откуда | Ключевые параметры |
 | --- | --- | --- |
@@ -177,8 +194,8 @@ null при недоступности → UI фолбэчит.
 `contentVersion`, `experimentGroup`. Персист не
 меняется — трекинг always-on, без opt-out, `saveVersion` не бампается.
 
-**Синхронизация целей.** `scripts/upload-metrica-goals.mjs` сверяет свой полный каталог
-с `GOAL` из `metrica.ts`, читает существующие цели через Management API и создаёт только
+**Синхронизация целей.** `scripts/upload-metrica-goals.mjs` сверяет каталог конверсий
+`CONVERSION_GOAL_NAMES` из `metrica.ts`, читает существующие цели через Management API и создаёт только
 отсутствующие. По умолчанию команда безопасно делает dry-run; существующие цели не
 изменяются и не удаляются:
 

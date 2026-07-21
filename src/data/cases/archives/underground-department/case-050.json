@@ -7,9 +7,9 @@
   "actTitle": {
     "ru": "Последний маршрут",
     "en": "The Final Route",
-    "tr": "The Final Route",
-    "ar": "The Final Route",
-    "kk": "Последний маршрут"
+    "tr": "Nihai Rota",
+    "ar": "الطريق النهائي",
+    "kk": "Соңғы жол"
   },
   "difficulty": "hard",
   "claimAmount": 21400,
@@ -17,42 +17,42 @@
   "title": {
     "ru": "Огонь в «Компасе»",
     "en": "Fire at the Compass",
-    "tr": "Fire at the Compass",
-    "ar": "Fire at the Compass",
-    "kk": "Огонь в «Компасе»"
+    "tr": "Pusulada Ateş",
+    "ar": "النار في البوصلة",
+    "kk": "Компастағы өрт"
   },
   "claim": {
     "person": {
       "ru": "Михаил Тернов, 69 лет",
       "en": "Mikhail Ternov, age 69",
-      "tr": "Mikhail Ternov, age 69",
-      "ar": "Mikhail Ternov, age 69",
-      "kk": "Михаил Тернов, 69 лет"
+      "tr": "Mihail Ternov, 69 yaşında",
+      "ar": "ميخائيل تيرنوف، 69 عامًا",
+      "kk": "Михаил Тернов, 69 жаста"
     },
     "story": {
       "ru": "Ночью неизвестные проникли через служебный двор и подожгли мастерскую «Компас». Я успел вывести ученика из жилой комнаты, но огонь уничтожил оборудование, часть коллекции и старый страховой реестр. Прошу выплату на восстановление.",
       "en": "During the night, unknown intruders entered through the service yard and set fire to the Compass workshop. I got my apprentice out of the living quarters, but the fire destroyed equipment, part of the collection, and the old insurance registry. I am claiming the restoration cost.",
-      "tr": "During the night, unknown intruders entered through the service yard and set fire to the Compass workshop. I got my apprentice out of the living quarters, but the fire destroyed equipment, part of the collection, and the old insurance registry. I am claiming the restoration cost.",
-      "ar": "During the night, unknown intruders entered through the service yard and set fire to the Compass workshop. I got my apprentice out of the living quarters, but the fire destroyed equipment, part of the collection, and the old insurance registry. I am claiming the restoration cost.",
-      "kk": "Ночью неизвестные проникли через служебный двор и подожгли мастерскую «Компас». Я успел вывести ученика из жилой комнаты, но огонь уничтожил оборудование, часть коллекции и старый страховой реестр. Прошу выплату на восстановление."
+      "tr": "Gece boyunca kimliği belirsiz kişiler servis alanına girdi ve Pusula atölyesini ateşe verdi. Çırağımı yaşam alanından çıkardım ama yangın ekipmanları, tahsilatın bir kısmını ve eski sigorta kaydını yok etti. Restorasyon bedelini talep ediyorum.",
+      "ar": "وخلال الليل دخل مجهولون إلى ساحة الخدمة وأضرموا النار في ورشة كومباس. لقد أخرجت تلميذي من أماكن المعيشة، لكن الحريق دمر المعدات وجزءًا من المجموعة وسجل التأمين القديم. أنا أطالب بتكلفة الترميم.",
+      "kk": "Түнде белгісіз біреулер қызмет көрсету алаңы арқылы кіріп, «Компас» шеберханасын өртеп жіберген. Мен студентті қонақ бөлмеден шығарып үлгердім, бірақ өрт құрал-жабдықты, коллекцияның бір бөлігін және ескі сақтандыру журналын жанып кетті. Мен қалпына келтіру үшін төлем сұраймын."
     }
   },
   "client": {
     "role": {
       "ru": "Заявитель · страховое дело",
       "en": "Claimant · insurance file",
-      "tr": "Claimant · insurance file",
-      "ar": "Claimant · insurance file",
-      "kk": "Заявитель · страховое дело"
+      "tr": "Davacı · sigorta dosyası",
+      "ar": "المدعي · ملف التأمين",
+      "kk": "Өтініш беруші · сақтандыру ісі"
     },
     "meta": [
       {
         "k": {
           "ru": "Акт",
           "en": "Act",
-          "tr": "Act",
-          "ar": "Act",
-          "kk": "Акт"
+          "tr": "Bölüm",
+          "ar": "الفصل",
+          "kk": "Бөлім"
         },
         "v": {
           "ru": "5",
@@ -66,9 +66,9 @@
         "k": {
           "ru": "Порядок",
           "en": "Campaign order",
-          "tr": "Campaign order",
-          "ar": "Campaign order",
-          "kk": "Порядок"
+          "tr": "Kampanya sırası",
+          "ar": "ترتيب الحملة",
+          "kk": "Науқан реті"
         },
         "v": {
           "ru": "48",
@@ -86,28 +86,28 @@
     {
       "id": "photo-50",
       "order": 1,
-      "type": "seal_match",
+      "type": "document",
       "title": {
-        "ru": "Сопоставление обгоревшего фитиля",
-        "en": "Burned Fuse Comparison",
-        "tr": "Burned Fuse Comparison",
-        "ar": "Burned Fuse Comparison",
-        "kk": "Сопоставление обгоревшего фитиля"
+        "ru": "Экспертная сверка обгоревшего фитиля",
+        "en": "Expert comparison report",
+        "tr": "Uzman karşılaştırma raporu",
+        "ar": "تقرير مقارنة الخبراء",
+        "kk": "Күйіп кеткен фитильді сараптамалық тексеру"
       },
       "content": {
-        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
-        "en": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
-        "tr": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
-        "ar": "This evidence is available for interactive examination. The result remains hidden until the analysis is complete.",
-        "kk": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа."
+        "ru": "Совпадают внутренняя сетка, пропитка и край разрыва",
+        "en": "Internal mesh, coating, and torn edge match",
+        "tr": "İç ağ, kaplama ve yırtık kenar eşleşmesi",
+        "ar": "شبكة داخلية، طلاء، وتطابق الحواف الممزقة",
+        "kk": "Ішкі тор, сіңдіру және жыртылу жиегі сәйкес келеді"
       },
       "isContradiction": false,
       "contradictionExplanation": {
         "ru": "Фрагменты совпали: поджигатели использовали материал из перехваченной партии GC-17.",
         "en": "The fragments match: the arsonists used material from the intercepted GC-17 batch.",
-        "tr": "The fragments match: the arsonists used material from the intercepted GC-17 batch.",
-        "ar": "The fragments match: the arsonists used material from the intercepted GC-17 batch.",
-        "kk": "Фрагменты совпали: поджигатели использовали материал из перехваченной партии GC-17."
+        "tr": "Parçalar eşleşiyor: Kundakçılar, ele geçirilen GC-17 grubundan malzeme kullanmış.",
+        "ar": "الشظايا متطابقة: استخدم منفذو الحريق مواد من دفعة GC-17 التي تم اعتراضها.",
+        "kk": "Фрагменттер сәйкес келді: өрт сөндірушілер GC-17 ұсталған партиясының материалын пайдаланды."
       },
       "narrativeRole": "proof",
       "statementLink": {
@@ -116,96 +116,16 @@
         "reason": {
           "ru": "Фрагменты совпали: поджигатели использовали материал из перехваченной партии GC-17.",
           "en": "The fragments match: the arsonists used material from the intercepted GC-17 batch.",
-          "tr": "The fragments match: the arsonists used material from the intercepted GC-17 batch.",
-          "ar": "The fragments match: the arsonists used material from the intercepted GC-17 batch.",
-          "kk": "Фрагменты совпали: поджигатели использовали материал из перехваченной партии GC-17."
+          "tr": "Parçalar eşleşiyor: Kundakçılar, ele geçirilen GC-17 grubundan malzeme kullanmış.",
+          "ar": "الشظايا متطابقة: استخدم منفذو الحريق مواد من دفعة GC-17 التي تم اعتراضها.",
+          "kk": "Фрагменттер сәйкес келді: өрт сөндірушілер GC-17 ұсталған партиясының материалын пайдаланды."
         }
       },
       "contradictionTarget": null,
       "evidenceTier": "core",
       "requiredForVerdict": true,
       "rewardWeight": 1,
-      "meta": {
-        "imageUrl": "evidence/case-050-photo-50.webp"
-      },
-      "description": {
-        "ru": "Фрагмент у двери «Компаса» сравнивается с лентой из перехваченной партии Серого конвоя.",
-        "en": "The fragment at the Compass door is compared with tape from the intercepted Gray Convoy batch.",
-        "tr": "The fragment at the Compass door is compared with tape from the intercepted Gray Convoy batch.",
-        "ar": "The fragment at the Compass door is compared with tape from the intercepted Gray Convoy batch.",
-        "kk": "Фрагмент у двери «Компаса» сравнивается с лентой из перехваченной партии Серого конвоя."
-      },
-      "instruction": {
-        "ru": "Совместить уцелевшие участки разрыва и внутренней сетки.",
-        "en": "Align the surviving torn edges and internal mesh.",
-        "tr": "Align the surviving torn edges and internal mesh.",
-        "ar": "Align the surviving torn edges and internal mesh.",
-        "kk": "Совместить уцелевшие участки разрыва и внутренней сетки."
-      },
-      "previousType": "photo",
-      "assets": {
-        "asset1": "cases/case-050/assets/interactive/photo-50-master-a.webp",
-        "asset2": "cases/case-050/assets/interactive/photo-50-fragments.json"
-      },
-      "uiHints": {
-        "showReset": true,
-        "allowZoom": true,
-        "highlightAfterHint": true,
-        "transparencyMode": true
-      },
-      "interactiveDesign": {
-        "why": {
-          "ru": "Игрок применяет навык повторно и отличает реальную атаку от прежних подброшенных следов.",
-          "en": "The player reuses the skill to distinguish a real attack from earlier planted traces.",
-          "tr": "The player reuses the skill to distinguish a real attack from earlier planted traces.",
-          "ar": "The player reuses the skill to distinguish a real attack from earlier planted traces.",
-          "kk": "Игрок применяет навык повторно и отличает реальную атаку от прежних подброшенных следов."
-        },
-        "playerAction": {
-          "ru": "Совместить уцелевшие участки разрыва и внутренней сетки.",
-          "en": "Align the surviving torn edges and internal mesh.",
-          "tr": "Align the surviving torn edges and internal mesh.",
-          "ar": "Align the surviving torn edges and internal mesh.",
-          "kk": "Совместить уцелевшие участки разрыва и внутренней сетки."
-        },
-        "conclusion": {
-          "ru": "Фрагменты совпали: поджигатели использовали материал из перехваченной партии GC-17.",
-          "en": "The fragments match: the arsonists used material from the intercepted GC-17 batch.",
-          "tr": "The fragments match: the arsonists used material from the intercepted GC-17 batch.",
-          "ar": "The fragments match: the arsonists used material from the intercepted GC-17 batch.",
-          "kk": "Фрагменты совпали: поджигатели использовали материал из перехваченной партии GC-17."
-        }
-      },
-      "data": {
-        "movableFragment": "B",
-        "allowRotation": true,
-        "rotationStep": 3,
-        "initialTransform": {
-          "x": 72,
-          "y": 18,
-          "rotation": -14
-        },
-        "targetTransform": {
-          "x": 132,
-          "y": 48,
-          "rotation": 6
-        },
-        "tolerance": {
-          "position": 10,
-          "rotation": 5
-        },
-        "expectedMatch": true,
-        "sourceSeed": 485017,
-        "fragmentASeed": 485017,
-        "fragmentBSeed": 485017,
-        "comparisonMarkers": [
-          {
-            "id": "tear_pattern",
-            "label": "Совпадают внутренняя сетка, пропитка и край разрыва",
-            "labelEn": "Internal mesh, coating, and torn edge match"
-          }
-        ]
-      }
+      "previousType": "photo"
     },
     {
       "id": "document-50",
@@ -214,24 +134,24 @@
       "title": {
         "ru": "Опись мастерской",
         "en": "Workshop Inventory",
-        "tr": "Workshop Inventory",
-        "ar": "Workshop Inventory",
-        "kk": "Опись мастерской"
+        "tr": "Atölye Envanteri",
+        "ar": "جرد ورشة العمل",
+        "kk": "Шеберхананың инвентаризациясы"
       },
       "content": {
         "ru": "Оборудование, приборы и архив зарегистрированы задолго до пожара. Тернов не увеличивал страховую сумму после первого налёта.",
         "en": "The equipment, instruments, and archive were registered long before the fire. Ternov did not increase coverage after the first raid.",
-        "tr": "The equipment, instruments, and archive were registered long before the fire. Ternov did not increase coverage after the first raid.",
-        "ar": "The equipment, instruments, and archive were registered long before the fire. Ternov did not increase coverage after the first raid.",
-        "kk": "Оборудование, приборы и архив зарегистрированы задолго до пожара. Тернов не увеличивал страховую сумму после первого налёта."
+        "tr": "Ekipman, aletler ve arşiv yangından çok önce kayıt altına alınmıştı. Ternov, ilk baskının ardından kapsamı artırmadı.",
+        "ar": "تم تسجيل المعدات والأدوات والأرشيف قبل وقت طويل من الحريق. لم يقم تيرنوف بزيادة التغطية بعد الغارة الأولى.",
+        "kk": "Жабдықтар, аспаптар мен мұрағаттар өрттен көп бұрын тіркелген. Тернов бірінші рейдтен кейін сақтандыру сомасын арттырмаған."
       },
       "isContradiction": false,
       "contradictionExplanation": {
         "ru": "Имущество существовало, а страховое покрытие не менялось перед событием.",
         "en": "The property existed, and coverage was not changed before the event.",
-        "tr": "The property existed, and coverage was not changed before the event.",
-        "ar": "The property existed, and coverage was not changed before the event.",
-        "kk": "Имущество существовало, а страховое покрытие не менялось перед событием."
+        "tr": "Mülkiyet mevcuttu ve olaydan önce kapsam değişmemişti.",
+        "ar": "الخاصية موجودة، ولم يتم تغيير التغطية قبل الحدث.",
+        "kk": "Мүлік болған және сақтандыру жағдайы оқиғаға дейін өзгерген жоқ."
       },
       "narrativeRole": "context",
       "statementLink": {
@@ -240,9 +160,9 @@
         "reason": {
           "ru": "Имущество существовало, а страховое покрытие не менялось перед событием.",
           "en": "The property existed, and coverage was not changed before the event.",
-          "tr": "The property existed, and coverage was not changed before the event.",
-          "ar": "The property existed, and coverage was not changed before the event.",
-          "kk": "Имущество существовало, а страховое покрытие не менялось перед событием."
+          "tr": "Mülkiyet mevcuttu ve olaydan önce kapsam değişmemişti.",
+          "ar": "الخاصية موجودة، ولم يتم تغيير التغطية قبل الحدث.",
+          "kk": "Мүлік болған және сақтандыру жағдайы оқиғаға дейін өзгерген жоқ."
         }
       },
       "contradictionTarget": null,
@@ -257,24 +177,24 @@
       "title": {
         "ru": "Камера переулка",
         "en": "Alley Camera",
-        "tr": "Alley Camera",
-        "ar": "Alley Camera",
-        "kk": "Камера переулка"
+        "tr": "Sokak Kamerası",
+        "ar": "كاميرا الزقاق",
+        "kk": "Жолақты камера"
       },
       "content": {
         "ru": "Двое людей из серого фургона входят во двор с канистрой и инструментами. Тернов в это время находится в жилой части; через две минуты он выводит ученика через переднюю дверь.",
         "en": "Two people leave a gray van and enter the yard carrying a fuel can and tools. Ternov is in the living quarters; two minutes later, he leads his apprentice out through the front door.",
-        "tr": "Two people leave a gray van and enter the yard carrying a fuel can and tools. Ternov is in the living quarters; two minutes later, he leads his apprentice out through the front door.",
-        "ar": "Two people leave a gray van and enter the yard carrying a fuel can and tools. Ternov is in the living quarters; two minutes later, he leads his apprentice out through the front door.",
-        "kk": "Двое людей из серого фургона входят во двор с канистрой и инструментами. Тернов в это время находится в жилой части; через две минуты он выводит ученика через переднюю дверь."
+        "tr": "İki kişi gri bir minibüsten iniyor ve ellerinde yakıt bidonları ve aletlerle avluya giriyor. Ternov yaşam alanlarında; iki dakika sonra çırağını ön kapıdan dışarı çıkarıyor.",
+        "ar": "شخصان يغادران شاحنة رمادية ويدخلان الفناء حاملين علبة وقود وأدوات. ترنوف في أماكن المعيشة. وبعد دقيقتين، يقود تلميذه إلى الخارج عبر الباب الأمامي.",
+        "kk": "Сұр фургоннан екі ер адам канистр мен құралдармен аулаға кіреді. Тернов бұл уақытта тұрғын ауданда; екі минуттан кейін ол студентті есіктен алып шығады."
       },
       "isContradiction": false,
       "contradictionExplanation": {
         "ru": "Камера подтверждает внешних поджигателей и действия владельца по спасению человека.",
         "en": "The footage confirms outside arsonists and the owner's rescue actions.",
-        "tr": "The footage confirms outside arsonists and the owner's rescue actions.",
-        "ar": "The footage confirms outside arsonists and the owner's rescue actions.",
-        "kk": "Камера подтверждает внешних поджигателей и действия владельца по спасению человека."
+        "tr": "Görüntüler dışarıdaki kundakçıları ve kundakçının kurtarma eylemlerini doğruluyor.",
+        "ar": "تؤكد اللقطات منفذي الحرائق الخارجيين وإجراءات إنقاذ المالك.",
+        "kk": "Камера сыртқы өртенушілер мен иесінің адамды құтқару әрекетін растайды."
       },
       "narrativeRole": "proof",
       "statementLink": {
@@ -283,9 +203,9 @@
         "reason": {
           "ru": "Камера подтверждает внешних поджигателей и действия владельца по спасению человека.",
           "en": "The footage confirms outside arsonists and the owner's rescue actions.",
-          "tr": "The footage confirms outside arsonists and the owner's rescue actions.",
-          "ar": "The footage confirms outside arsonists and the owner's rescue actions.",
-          "kk": "Камера подтверждает внешних поджигателей и действия владельца по спасению человека."
+          "tr": "Görüntüler dışarıdaki kundakçıları ve kundakçının kurtarma eylemlerini doğruluyor.",
+          "ar": "تؤكد اللقطات منفذي الحرائق الخارجيين وإجراءات إنقاذ المالك.",
+          "kk": "Камера сыртқы өртенушілер мен иесінің адамды құтқару әрекетін растайды."
         }
       },
       "contradictionTarget": null,
@@ -303,24 +223,24 @@
       "title": {
         "ru": "Журнал пожарной панели",
         "en": "Fire Panel Log",
-        "tr": "Fire Panel Log",
-        "ar": "Fire Panel Log",
-        "kk": "Журнал пожарной панели"
+        "tr": "Yangın Paneli Günlüğü",
+        "ar": "سجل لوحة النار",
+        "kk": "Өрт панелінің журналы"
       },
       "content": {
         "ru": "Тревога срабатывает штатно. Тернов не отключает датчики; вызов пожарных отправлен автоматически через 11 секунд.",
         "en": "The alarm activates normally. Ternov does not disable the sensors; the fire-service call is sent automatically after 11 seconds.",
-        "tr": "The alarm activates normally. Ternov does not disable the sensors; the fire-service call is sent automatically after 11 seconds.",
-        "ar": "The alarm activates normally. Ternov does not disable the sensors; the fire-service call is sent automatically after 11 seconds.",
-        "kk": "Тревога срабатывает штатно. Тернов не отключает датчики; вызов пожарных отправлен автоматически через 11 секунд."
+        "tr": "Alarm normal şekilde etkinleşir. Ternov sensörleri devre dışı bırakmıyor; itfaiye çağrısı 11 saniye sonra otomatik olarak gönderilir.",
+        "ar": "يتم تنشيط المنبه بشكل طبيعي. لا يقوم Ternov بتعطيل أجهزة الاستشعار؛ يتم إرسال مكالمة خدمة الإطفاء تلقائيًا بعد 11 ثانية.",
+        "kk": "Дабыл қалыпты түрде іске қосылады. Тернов сенсорларды өшірмейді; Өрт сөндірушінің қоңырауы 11 секундтан кейін автоматты түрде жіберілді."
       },
       "isContradiction": false,
       "contradictionExplanation": {
         "ru": "Защитная система работала и не была подготовлена к инсценировке.",
         "en": "The protection system worked and was not prepared for staging.",
-        "tr": "The protection system worked and was not prepared for staging.",
-        "ar": "The protection system worked and was not prepared for staging.",
-        "kk": "Защитная система работала и не была подготовлена к инсценировке."
+        "tr": "Koruma sistemi çalıştı ve evrelemeye hazır değildi.",
+        "ar": "نظام الحماية كان يعمل ولم يكن جاهزاً للتدريج.",
+        "kk": "Қорғаныс жүйесі жұмыс істеп, қойылымға дайындалмаған."
       },
       "narrativeRole": "proof",
       "statementLink": {
@@ -329,9 +249,9 @@
         "reason": {
           "ru": "Защитная система работала и не была подготовлена к инсценировке.",
           "en": "The protection system worked and was not prepared for staging.",
-          "tr": "The protection system worked and was not prepared for staging.",
-          "ar": "The protection system worked and was not prepared for staging.",
-          "kk": "Защитная система работала и не была подготовлена к инсценировке."
+          "tr": "Koruma sistemi çalıştı ve evrelemeye hazır değildi.",
+          "ar": "نظام الحماية كان يعمل ولم يكن جاهزاً للتدريج.",
+          "kk": "Қорғаныс жүйесі жұмыс істеп, қойылымға дайындалмаған."
         }
       },
       "contradictionTarget": null,
@@ -346,24 +266,24 @@
       "title": {
         "ru": "Маршрут серого фургона",
         "en": "Gray Van Route",
-        "tr": "Gray Van Route",
-        "ar": "Gray Van Route",
-        "kk": "Маршрут серого фургона"
+        "tr": "Gri Van Rotası",
+        "ar": "طريق غراي فان",
+        "kk": "Сұр фургон бағыты"
       },
       "content": {
         "ru": "После поджога машина уходит к терминалу GC-17, затем к аэропортовому грузовому сектору.",
         "en": "After the arson, the van travels to the GC-17 terminal and then to the airport cargo sector.",
-        "tr": "After the arson, the van travels to the GC-17 terminal and then to the airport cargo sector.",
-        "ar": "After the arson, the van travels to the GC-17 terminal and then to the airport cargo sector.",
-        "kk": "После поджога машина уходит к терминалу GC-17, затем к аэропортовому грузовому сектору."
+        "tr": "Kundaklamanın ardından minibüs GC-17 terminaline, oradan da havalimanı kargo sektörüne gidiyor.",
+        "ar": "بعد الحرق المتعمد، تسافر الشاحنة إلى صالة GC-17 ثم إلى قطاع الشحن بالمطار.",
+        "kk": "Өрт қойылғаннан кейін көлік GC-17 терминалына, одан кейін әуежайдың жүк секторына барады."
       },
       "isContradiction": false,
       "contradictionExplanation": {
         "ru": "Маршрут связывает нападение с последним каналом вывоза сети.",
         "en": "The route links the attack to the network's final transport channel.",
-        "tr": "The route links the attack to the network's final transport channel.",
-        "ar": "The route links the attack to the network's final transport channel.",
-        "kk": "Маршрут связывает нападение с последним каналом вывоза сети."
+        "tr": "Rota, saldırıyı ağın son taşıma kanalına bağlar.",
+        "ar": "يربط المسار الهجوم بقناة النقل النهائية للشبكة.",
+        "kk": "Маршрут шабуылды соңғы желіні эвакуациялау арнасына қосады."
       },
       "narrativeRole": "arc_proof",
       "statementLink": {
@@ -372,9 +292,9 @@
         "reason": {
           "ru": "Маршрут связывает нападение с последним каналом вывоза сети.",
           "en": "The route links the attack to the network's final transport channel.",
-          "tr": "The route links the attack to the network's final transport channel.",
-          "ar": "The route links the attack to the network's final transport channel.",
-          "kk": "Маршрут связывает нападение с последним каналом вывоза сети."
+          "tr": "Rota, saldırıyı ağın son taşıma kanalına bağlar.",
+          "ar": "يربط المسار الهجوم بقناة النقل النهائية للشبكة.",
+          "kk": "Маршрут шабуылды соңғы желіні эвакуациялау арнасына қосады."
         }
       },
       "contradictionTarget": null,
@@ -389,24 +309,24 @@
       "title": {
         "ru": "Показания ученика",
         "en": "Apprentice's Statement",
-        "tr": "Apprentice's Statement",
-        "ar": "Apprentice's Statement",
-        "kk": "Показания ученика"
+        "tr": "Çırağın Beyanı",
+        "ar": "بيان المتدرب",
+        "kk": "Оқушының айғағы"
       },
       "content": {
         "ru": "Ученик слышал сверление у задней двери и видел, как Тернов вывел его до распространения дыма. Он подтверждает, что копии Ильи лежали в архивном шкафу.",
         "en": "The apprentice heard drilling at the rear door and saw Ternov lead him out before the smoke spread. He confirms that Ilya's copies were stored in the archive cabinet.",
-        "tr": "The apprentice heard drilling at the rear door and saw Ternov lead him out before the smoke spread. He confirms that Ilya's copies were stored in the archive cabinet.",
-        "ar": "The apprentice heard drilling at the rear door and saw Ternov lead him out before the smoke spread. He confirms that Ilya's copies were stored in the archive cabinet.",
-        "kk": "Ученик слышал сверление у задней двери и видел, как Тернов вывел его до распространения дыма. Он подтверждает, что копии Ильи лежали в архивном шкафу."
+        "tr": "Çırak arka kapının delindiğini duydu ve duman yayılmadan önce Ternov'un onu dışarı çıkardığını gördü. İlya'nın kopyalarının arşiv dolabında saklandığını doğruluyor.",
+        "ar": "سمع المتدرب حفرًا عند الباب الخلفي ورأى تيرنوف يقوده إلى الخارج قبل أن ينتشر الدخان. ويؤكد أن نسخ إيليا كانت مخزنة في خزانة الأرشيف.",
+        "kk": "Студент артқы есіктен бұрғылауды естіп, түтін тарамай тұрып Терновтың оны шығарып алғанын көрді. Ол мұрағат кабинетінде Ильяның көшірмелері болғанын растайды."
       },
       "isContradiction": false,
       "contradictionExplanation": {
         "ru": "Свидетель подтверждает внешний шум, эвакуацию и мотив нападения.",
         "en": "The witness confirms the outside noise, evacuation, and motive for the attack.",
-        "tr": "The witness confirms the outside noise, evacuation, and motive for the attack.",
-        "ar": "The witness confirms the outside noise, evacuation, and motive for the attack.",
-        "kk": "Свидетель подтверждает внешний шум, эвакуацию и мотив нападения."
+        "tr": "Tanık saldırının dışarıdan gelen gürültüyü, tahliyeyi ve nedenini doğruladı.",
+        "ar": "ويؤكد الشاهد الضجيج الخارجي والإخلاء والدافع وراء الهجوم.",
+        "kk": "Куәгер сыртқы шуды, эвакуацияны және шабуылдың себебін растайды."
       },
       "narrativeRole": "context",
       "statementLink": {
@@ -415,9 +335,9 @@
         "reason": {
           "ru": "Свидетель подтверждает внешний шум, эвакуацию и мотив нападения.",
           "en": "The witness confirms the outside noise, evacuation, and motive for the attack.",
-          "tr": "The witness confirms the outside noise, evacuation, and motive for the attack.",
-          "ar": "The witness confirms the outside noise, evacuation, and motive for the attack.",
-          "kk": "Свидетель подтверждает внешний шум, эвакуацию и мотив нападения."
+          "tr": "Tanık saldırının dışarıdan gelen gürültüyü, tahliyeyi ve nedenini doğruladı.",
+          "ar": "ويؤكد الشاهد الضجيج الخارجي والإخلاء والدافع وراء الهجوم.",
+          "kk": "Куәгер сыртқы шуды, эвакуацияны және шабуылдың себебін растайды."
         }
       },
       "contradictionTarget": null,
@@ -443,26 +363,26 @@
       "No material statement has been disproven. The claim should be approved."
     ],
     "tr": [
-      "The fragments match: the arsonists used material from the intercepted GC-17 batch.",
-      "The property existed, and coverage was not changed before the event.",
-      "The footage confirms outside arsonists and the owner's rescue actions.",
-      "The protection system worked and was not prepared for staging.",
-      "The route links the attack to the network's final transport channel.",
-      "No material statement has been disproven. The claim should be approved."
+      "Parçalar eşleşiyor: Kundakçılar, ele geçirilen GC-17 grubundan malzeme kullanmış.",
+      "Mülkiyet mevcuttu ve olaydan önce kapsam değişmemişti.",
+      "Görüntüler dışarıdaki kundakçıları ve kundakçının kurtarma eylemlerini doğruluyor.",
+      "Koruma sistemi çalıştı ve evrelemeye hazır değildi.",
+      "Rota, saldırıyı ağın son taşıma kanalına bağlar.",
+      "Hiçbir maddi beyanın çürütülmediği kanıtlanmıştır. İddianın onaylanması gerekiyor."
     ],
     "ar": [
-      "The fragments match: the arsonists used material from the intercepted GC-17 batch.",
-      "The property existed, and coverage was not changed before the event.",
-      "The footage confirms outside arsonists and the owner's rescue actions.",
-      "The protection system worked and was not prepared for staging.",
-      "The route links the attack to the network's final transport channel.",
-      "No material statement has been disproven. The claim should be approved."
+      "الشظايا متطابقة: استخدم منفذو الحريق مواد من دفعة GC-17 التي تم اعتراضها.",
+      "الخاصية موجودة، ولم يتم تغيير التغطية قبل الحدث.",
+      "تؤكد اللقطات منفذي الحرائق الخارجيين وإجراءات إنقاذ المالك.",
+      "نظام الحماية كان يعمل ولم يكن جاهزاً للتدريج.",
+      "يربط المسار الهجوم بقناة النقل النهائية للشبكة.",
+      "لم يتم دحض أي بيان مادي. ينبغي الموافقة على المطالبة."
     ],
     "kk": [
-      "Фитиль и камера показывают внешний поджог людьми из серого фургона.",
-      "Тернов не отключал защиту и рисковал не имуществом, а собой, спасая ученика.",
-      "Фрагменты совпали: поджигатели использовали материал из перехваченной партии GC-17.",
-      "Серый конвой пытался уничтожить копии Ильи. Ущерб подлинный, выплату следует одобрить."
+      "Сақтандырғыш пен камера сұр фургондағы адамдар қойған сыртқы өртті көрсетеді.",
+      "Тернов қорғанысты өшірмей, өз меншігіне емес, өзіне қауіп төндірді, шәкіртін құтқарды.",
+      "Фрагменттер сәйкес келді: өрт сөндірушілер GC-17 ұсталған партиясының материалын пайдаланды.",
+      "Сұр колонна Ильяның көшірмелерін жоюға тырысты. Зақым шынайы және төлемді бекіту керек."
     ]
   },
   "investigationBudget": 4,
@@ -472,9 +392,9 @@
       "text": {
         "ru": "Ночью неизвестные проникли через служебный двор и подожгли мастерскую «Компас». Я успел вывести ученика из жилой комнаты, но огонь уничтожил оборудование, часть коллекции и старый страховой реестр. Прошу выплату на восстановление.",
         "en": "During the night, unknown intruders entered through the service yard and set fire to the Compass workshop. I got my apprentice out of the living quarters, but the fire destroyed equipment, part of the collection, and the old insurance registry. I am claiming the restoration cost.",
-        "tr": "During the night, unknown intruders entered through the service yard and set fire to the Compass workshop. I got my apprentice out of the living quarters, but the fire destroyed equipment, part of the collection, and the old insurance registry. I am claiming the restoration cost.",
-        "ar": "During the night, unknown intruders entered through the service yard and set fire to the Compass workshop. I got my apprentice out of the living quarters, but the fire destroyed equipment, part of the collection, and the old insurance registry. I am claiming the restoration cost.",
-        "kk": "Ночью неизвестные проникли через служебный двор и подожгли мастерскую «Компас». Я успел вывести ученика из жилой комнаты, но огонь уничтожил оборудование, часть коллекции и старый страховой реестр. Прошу выплату на восстановление."
+        "tr": "Gece boyunca kimliği belirsiz kişiler servis alanına girdi ve Pusula atölyesini ateşe verdi. Çırağımı yaşam alanından çıkardım ama yangın ekipmanları, tahsilatın bir kısmını ve eski sigorta kaydını yok etti. Restorasyon bedelini talep ediyorum.",
+        "ar": "وخلال الليل دخل مجهولون إلى ساحة الخدمة وأضرموا النار في ورشة كومباس. لقد أخرجت تلميذي من أماكن المعيشة، لكن الحريق دمر المعدات وجزءًا من المجموعة وسجل التأمين القديم. أنا أطالب بتكلفة الترميم.",
+        "kk": "Түнде белгісіз біреулер қызмет көрсету алаңы арқылы кіріп, «Компас» шеберханасын өртеп жіберген. Мен студентті қонақ бөлмеден шығарып үлгердім, бірақ өрт құрал-жабдықты, коллекцияның бір бөлігін және ескі сақтандыру журналын жанып кетті. Мен қалпына келтіру үшін төлем сұраймын."
       },
       "stampable": false
     },
@@ -483,9 +403,9 @@
       "text": {
         "ru": "Мастерскую «Компас» подожгли снаружи люди Серого конвоя.",
         "en": "Gray Convoy operatives set fire to the Compass workshop from outside.",
-        "tr": "Gray Convoy operatives set fire to the Compass workshop from outside.",
-        "ar": "Gray Convoy operatives set fire to the Compass workshop from outside.",
-        "kk": "Мастерскую «Компас» подожгли снаружи люди Серого конвоя."
+        "tr": "Gri Konvoy görevlileri Pusula atölyesini dışarıdan ateşe verdi.",
+        "ar": "أشعل عملاء Gray Convoy النار في ورشة Compass من الخارج.",
+        "kk": "Компас шеберханасын Сұр колоннаның адамдары сыртынан өртеп жіберген."
       },
       "stampable": true
     },
@@ -494,9 +414,9 @@
       "text": {
         "ru": "Тернов не отключал защиту и спасал ученика.",
         "en": "Ternov did not disable the protection system and rescued his apprentice.",
-        "tr": "Ternov did not disable the protection system and rescued his apprentice.",
-        "ar": "Ternov did not disable the protection system and rescued his apprentice.",
-        "kk": "Тернов не отключал защиту и спасал ученика."
+        "tr": "Ternov koruma sistemini devre dışı bırakmadı ve çırağını kurtardı.",
+        "ar": "لم يقم تيرنوف بتعطيل نظام الحماية وأنقذ تلميذه.",
+        "kk": "Тернов қорғанысты өшірмей, оқушыны аман алып қалды."
       },
       "stampable": true
     },
@@ -505,9 +425,9 @@
       "text": {
         "ru": "Имущество и архив получили реальный покрываемый ущерб.",
         "en": "The property and archive sustained genuine covered damage.",
-        "tr": "The property and archive sustained genuine covered damage.",
-        "ar": "The property and archive sustained genuine covered damage.",
-        "kk": "Имущество и архив получили реальный покрываемый ущерб."
+        "tr": "Mülk ve arşiv, gerçek anlamda örtülü hasara maruz kaldı.",
+        "ar": "تعرضت الممتلكات والأرشيف لأضرار حقيقية مغطاة.",
+        "kk": "Мүлік пен мұрағат нақты жабылған залал алды."
       },
       "stampable": true
     }
@@ -519,39 +439,39 @@
     "preBrief": {
       "ru": "После первого налёта Тернов согласился хранить копии Ильи. Теперь мастерская подожжена. Именно поэтому нельзя автоматически считать пожар инсценировкой ради выплаты. — В. Лебедева",
       "en": "After the first raid, Ternov agreed to keep Ilya's copies. Now the workshop has been set on fire. That is precisely why we cannot automatically call it a staged payout. — V. Lebedeva",
-      "tr": "After the first raid, Ternov agreed to keep Ilya's copies. Now the workshop has been set on fire. That is precisely why we cannot automatically call it a staged payout. — V. Lebedeva",
-      "ar": "After the first raid, Ternov agreed to keep Ilya's copies. Now the workshop has been set on fire. That is precisely why we cannot automatically call it a staged payout. — V. Lebedeva",
-      "kk": "После первого налёта Тернов согласился хранить копии Ильи. Теперь мастерская подожжена. Именно поэтому нельзя автоматически считать пожар инсценировкой ради выплаты. — В. Лебедева"
+      "tr": "İlk baskından sonra Ternov, Ilya'nın kopyalarını saklamayı kabul etti. Şimdi atölye ateşe verildi. Tam da bu nedenle buna otomatik olarak aşamalı ödeme diyemeyiz. — V. Lebedeva",
+      "ar": "بعد الغارة الأولى، وافق تيرنوف على الاحتفاظ بنسخ إيليا. الآن تم إشعال النار في الورشة. ولهذا السبب بالتحديد لا يمكننا أن نسميها تلقائيًا دفعًا مرحليًا. - في. ليبيديفا",
+      "kk": "Бірінші рейдтен кейін Тернов Ильяның көшірмелерін сақтауға келісті. Қазір шеберхана өртеніп жатыр. Сондықтан төлем үшін өртті автоматты түрде қойылған деп санауға болмайды. — В. Лебедева"
     },
     "postVerdictNote": {
       "ru": "Тернов спас не весь архив. Один металлический маршрутный жетон пережил огонь. Он указывает на аэропортовый грузовой сектор и фургон Романа Драя.",
       "en": "Ternov could not save the entire archive. One metal route token survived the fire. It points to an airport cargo sector and Roman Dray's van.",
-      "tr": "Ternov could not save the entire archive. One metal route token survived the fire. It points to an airport cargo sector and Roman Dray's van.",
-      "ar": "Ternov could not save the entire archive. One metal route token survived the fire. It points to an airport cargo sector and Roman Dray's van.",
-      "kk": "Тернов спас не весь архив. Один металлический маршрутный жетон пережил огонь. Он указывает на аэропортовый грузовой сектор и фургон Романа Драя."
+      "tr": "Ternov arşivin tamamını kurtaramadı. Bir metal rota jetonu yangından sağ kurtuldu. Havaalanı kargo sektörünü ve Roman Dray'in minibüsünü işaret ediyor.",
+      "ar": "لم يتمكن Ternov من حفظ الأرشيف بأكمله. نجا أحد رموز الطريق المعدنية من الحريق. إنه يشير إلى قطاع الشحن بالمطار وشاحنة رومان دراي.",
+      "kk": "Тернов мұрағатты толығымен сақтамады. Бір металл маршрут белгісі өрттен аман қалды. Ол әуежайдың жүк аймағын және Роман Драйдың фургонын көрсетеді."
     },
     "nextCaseTeaser": {
       "ru": "Фургон с уличными сенсорами якобы угнали. Его GPS ни разу не остановился и привёл прямо к аэропорту.",
       "en": "A van carrying street sensors was supposedly hijacked. Its GPS never stopped and led directly to the airport.",
-      "tr": "A van carrying street sensors was supposedly hijacked. Its GPS never stopped and led directly to the airport.",
-      "ar": "A van carrying street sensors was supposedly hijacked. Its GPS never stopped and led directly to the airport.",
-      "kk": "Фургон с уличными сенсорами якобы угнали. Его GPS ни разу не остановился и привёл прямо к аэропорту."
+      "tr": "Sokak sensörlerini taşıyan bir minibüsün kaçırıldığı iddia edildi. GPS'i hiç durmadı ve doğrudan havaalanına yönlendirildi.",
+      "ar": "من المفترض أنه تم اختطاف شاحنة تحمل أجهزة استشعار للشوارع. نظام تحديد المواقع العالمي (GPS) الخاص به لم يتوقف أبدًا وكان يقود مباشرة إلى المطار.",
+      "kk": "Көше сенсорлары бар фургон ұрланған деген болжам бар. Оның GPS құрылғысы ешқашан тоқтамай, оны тікелей әуежайға апарды."
     },
     "seasonClue": {
       "id": "airport-route",
       "label": {
         "ru": "Аэропортовый маршрут",
         "en": "Airport Route",
-        "tr": "Airport Route",
-        "ar": "Airport Route",
-        "kk": "Аэропортовый маршрут"
+        "tr": "Havaalanı Güzergahı",
+        "ar": "طريق المطار",
+        "kk": "Әуежай бағыты"
       },
       "description": {
         "ru": "Последний узел Серого конвоя связан с грузовым терминалом и багажными службами аэропорта.",
         "en": "The Gray Convoy's final hub is linked to the airport cargo terminal and baggage services.",
-        "tr": "The Gray Convoy's final hub is linked to the airport cargo terminal and baggage services.",
-        "ar": "The Gray Convoy's final hub is linked to the airport cargo terminal and baggage services.",
-        "kk": "Последний узел Серого конвоя связан с грузовым терминалом и багажными службами аэропорта."
+        "tr": "Gri Konvoy'un son merkezi, havaalanı kargo terminali ve bagaj hizmetleriyle bağlantılıdır.",
+        "ar": "يرتبط المحور الأخير لـ Gray Convoy بمحطة الشحن بالمطار وخدمات الأمتعة.",
+        "kk": "Сұр колоннаның соңғы түйіні әуежайдың жүк терминалы мен багаж қызметтеріне қосылған."
       },
       "progressIndex": 6,
       "progressTotal": 7

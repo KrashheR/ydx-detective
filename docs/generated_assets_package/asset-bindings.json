@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Production image assets for cases 001, 004, 014, 027, 037 and 051",
+  "bindings": [
+    {
+      "caseId": "case-001",
+      "assetRole": "claimant_portrait",
+      "characterId": "igor-semyonov",
+      "file": "public/people/igor-semyonov.webp",
+      "runtimePath": "people/igor-semyonov.webp",
+      "targetField": "personImage"
+    },
+    {
+      "caseId": "case-004",
+      "evidenceId": "ev-tracks",
+      "assetRole": "evidence_image",
+      "file": "public/evidence/case-004-ev-tracks.webp",
+      "runtimePath": "evidence/case-004-ev-tracks.webp",
+      "targetField": "evidence[].data.imageUrl"
+    },
+    {
+      "caseId": "case-014",
+      "evidenceId": "ev-satellite",
+      "assetRole": "evidence_image",
+      "file": "public/evidence/case-014-ev-satellite.webp",
+      "runtimePath": "evidence/case-014-ev-satellite.webp",
+      "targetField": "evidence[].data.imageUrl"
+    },
+    {
+      "caseId": "case-027",
+      "evidenceId": "ev-photo",
+      "assetRole": "evidence_image",
+      "file": "public/evidence/case-027-ev-photo.webp",
+      "runtimePath": "evidence/case-027-ev-photo.webp",
+      "targetField": "evidence[].data.imageUrl"
+    },
+    {
+      "caseId": "case-037",
+      "evidenceId": "ev-backup",
+      "assetRole": "evidence_image",
+      "file": "public/evidence/case-037-ev-backup.webp",
+      "runtimePath": "evidence/case-037-ev-backup.webp",
+      "targetField": "evidence[].data.imageUrl"
+    },
+    {
+      "caseId": "case-051",
+      "evidenceId": "photo-staged-van",
+      "assetRole": "evidence_image",
+      "file": "public/evidence/case-051-photo-staged-van.webp",
+      "runtimePath": "evidence/case-051-photo-staged-van.webp",
+      "targetField": "evidence[].data.imageUrl"
+    }
+  ]
+}

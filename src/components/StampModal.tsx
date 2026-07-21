@@ -55,7 +55,7 @@ export function StampModal({
   const isRTL = RTL_LANGUAGES.has(lang);
   const interactive = evidence ? isInteractiveEvidence(evidence) : false;
   const analysisComplete = !interactive || interactiveProgress?.analysisCompleted === true;
-  const canStamp = evidence?.statementLink?.relation === 'contradicts' && analysisComplete;
+  const canStamp = analysisComplete;
   const titleId = evidence
     ? `stamp-modal-title-${evidence.id.replace(/[^a-zA-Z0-9_-]/g, '-')}`
     : undefined;
@@ -264,24 +264,18 @@ export function StampModal({
                   {isRTL ? '‹' : '›'}
                 </button>
               </div>
-              {evidence.statementLink?.relation === 'contradicts' ? (
-                <button
-                  type="button"
-                  onClick={handleToggle}
-                  disabled={!canStamp}
-                  className={`h-[52px] w-full rounded-[9px] border-2 border-stamp text-[15px] font-bold uppercase tracking-wide transition-all disabled:cursor-not-allowed disabled:opacity-45 ${
-                    stamped ? 'bg-stamp text-white' : 'bg-transparent text-stamp'
-                  }`}
-                >
-                  {!analysisComplete ? t('interactiveStampLocked', lang) : stamped
-                    ? t('contradictionMarked', lang)
-                    : t('markAsContradiction', lang)}
-                </button>
-              ) : (
-                <div className="flex min-h-[52px] items-center justify-center rounded-[9px] border border-accent/50 bg-accent/10 px-3 text-center text-sm font-semibold text-accent">
-                  {t('interactiveSupported', lang)}
-                </div>
-              )}
+              <button
+                type="button"
+                onClick={handleToggle}
+                disabled={!canStamp}
+                className={`h-[52px] w-full rounded-[9px] border-2 border-stamp text-[15px] font-bold uppercase tracking-wide transition-all disabled:cursor-not-allowed disabled:opacity-45 ${
+                  stamped ? 'bg-stamp text-white' : 'bg-transparent text-stamp'
+                }`}
+              >
+                {!analysisComplete ? t('interactiveStampLocked', lang) : stamped
+                  ? t('contradictionMarked', lang)
+                  : t('markAsContradiction', lang)}
+              </button>
             </div>
           </motion.div>
         </motion.div>

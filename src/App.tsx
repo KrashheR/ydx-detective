@@ -36,7 +36,7 @@ import {
   type LeaderboardRow,
   type PaymentsProduct,
 } from './services/platformAdapter';
-import { GOAL, getAnalyticsActiveTotalMs, trackGoal } from './services/metrica';
+import { GOAL, getAnalyticsActiveTotalMs, trackEvent, trackGoal } from './services/metrica';
 import { GAME_CONFIG } from './config/gameConfig';
 import { RTL_LANGUAGES, t } from './i18n/ui';
 import type { CaseSummary } from './types';
@@ -88,6 +88,9 @@ export default function App() {
   const ratingShownRef = useRef(false);
   // Gate: fire `reject_blocked` at most once per case investigation.
   const rejectBlockedCaseIdRef = useRef<string | null>(null);
+  const evidenceOpenedAtRef = useRef<{ id: string; openedAt: number } | null>(null);
+  const resultOpenedAtRef = useRef<number | null>(null);
+  const deskViewedRef = useRef(false);
 
   const flashToast = (msg: string) => {
     setToast(msg);
@@ -105,6 +108,12 @@ export default function App() {
     notifyGameplayStart();
     return notifyGameplayStop;
   }, [isHydrated]);
+
+  useEffect(() => {
+    if (!isHydrated || deskViewedRef.current) return;
+    deskViewedRef.current = true;
+    trackEvent('desk_view', { completedCases: stats.completedCaseIds.length });
+  }, [isHydrated, stats.completedCaseIds.length]);
 
   // DEV-ONLY: Ctrl+Shift+M grants a big balance + top rank for manual testing.
   // Compiled out of production by the `import.meta.env.DEV` guard.
@@ -135,6 +144,13 @@ export default function App() {
       setResultDismissed(false);
       setRewardDoubled(false);
       if (lastResult.total > 0) trackAdOffer('rewarded', 'double_reward');
+      resultOpenedAtRef.current = Date.now();
+      trackEvent('result_view', {
+        caseId: lastResult.caseId,
+        verdictCorrect: lastResult.verdictCorrect,
+        mastery: lastResult.mastery,
+        reward: lastResult.total,
+      });
     }
   }, [lastResult]);
 
@@ -182,9 +198,11 @@ export default function App() {
   }, [isHydrated, stats.xp]);
 
   const standardCases = useMemo(() => getStandardCaseSummaries(), []);
+  const devUnlockAllLevels =
+    import.meta.env.DEV && import.meta.env.VITE_UNLOCK_ALL_LEVELS === 'true';
   const standardCaseUnlocks = useMemo(
-    () => evaluateCaseUnlocks(standardCases, stats),
-    [standardCases, stats],
+    () => evaluateCaseUnlocks(standardCases, stats, { unlockAll: devUnlockAllLevels }),
+    [devUnlockAllLevels, standardCases, stats],
   );
   // Rotate the daily pool by server-day. Server time only (see CLAUDE.md).
   // State-driven so the countdown timer re-renders every second.
@@ -290,6 +308,13 @@ export default function App() {
       }
     }
 
+    trackEvent('case_card_click', {
+      caseId: summary.id,
+      caseType: summary.type,
+      campaignPosition: summary.campaignOrder ?? null,
+      sourceSurface: opts?.skipStandardGate ? 'archive' : 'desk',
+    });
+
     const c = await loadCaseById(summary.id);
     if (!c) return;
     setSelectedId(c.id);
@@ -341,6 +366,7 @@ export default function App() {
 
   const handleOpenEvidence = (id: string) => {
     if (!selectedCase) return;
+    const wasViewed = session?.viewedEvidenceIds.includes(id) ?? false;
     // On budgeted cases, opening a *new* card may be refused once the budget is
     // spent. Re-opening an already-viewed card always succeeds.
     const opened = store.markEvidenceAsViewed(id, selectedCase);
@@ -353,7 +379,37 @@ export default function App() {
       });
       return;
     }
+    const previous = evidenceOpenedAtRef.current;
+    if (previous && previous.id !== id) {
+      trackEvent('evidence_close', {
+        caseId: selectedCase.id, evidenceId: previous.id,
+        dwellMs: Date.now() - previous.openedAt, navigationMethod: 'next_previous',
+      });
+    }
+    const evidence = selectedCase.evidences.find((item) => item.id === id);
+    trackEvent('evidence_open', {
+      caseId: selectedCase.id, evidenceId: id, evidenceType: evidence?.type ?? null,
+      isContradiction: evidence?.isContradiction ?? null,
+      firstOpen: !wasViewed,
+      openIndex: (session?.viewedEvidenceIds.length ?? 0) + 1,
+      evidencePosition: selectedCase.evidences.findIndex((item) => item.id === id) + 1,
+    });
+    evidenceOpenedAtRef.current = { id, openedAt: Date.now() };
     setModalEvidenceId(id);
+  };
+
+  const handleCloseEvidence = () => {
+    const opened = evidenceOpenedAtRef.current;
+    if (opened && selectedCase) {
+      trackEvent('evidence_close', {
+        caseId: selectedCase.id, evidenceId: opened.id,
+        dwellMs: Date.now() - opened.openedAt,
+        stampedOnClose: session?.selectedEvidenceIds.includes(opened.id) ?? false,
+        navigationMethod: 'close',
+      });
+    }
+    evidenceOpenedAtRef.current = null;
+    setModalEvidenceId(null);
   };
 
   const handleNavigateEvidence = (direction: -1 | 1) => {
@@ -394,6 +450,10 @@ export default function App() {
   };
 
   const handleDoubleReward = () => {
+    trackEvent('result_action', {
+      caseId: lastResult?.caseId, action: 'double_reward',
+      resultDwellMs: resultOpenedAtRef.current == null ? null : Date.now() - resultOpenedAtRef.current,
+    });
     showRewardedAd(() => {
       store.doubleLastReward();
       setRewardDoubled(true);
@@ -406,6 +466,11 @@ export default function App() {
 
   const goToNextCase = () => {
     const next = getNextAvailableCase(standardCaseUnlocks, selectedId);
+    trackEvent('result_action', {
+      caseId: lastResult?.caseId, action: 'next_case',
+      resultDwellMs: resultOpenedAtRef.current == null ? null : Date.now() - resultOpenedAtRef.current,
+      nextCaseAvailable: Boolean(next),
+    });
     setResultDismissed(true);
     const transition = () => void store.closeCase().then(() => {
       if (!next) {
@@ -420,8 +485,7 @@ export default function App() {
       activeMs - lastInterstitialActiveMsRef.current >= GAME_CONFIG.advertising.interstitialMinActiveMs
     ) {
       lastInterstitialActiveMsRef.current = activeMs;
-      store.recordInterstitialShown();
-      showFullscreenAd(transition, 'verdict');
+      showFullscreenAd(transition, 'verdict', () => store.recordInterstitialShown());
     } else transition();
   };
 
@@ -440,6 +504,10 @@ export default function App() {
   };
 
   const backToDesk = () => {
+    if (lastResult) trackEvent('result_action', {
+      caseId: lastResult.caseId, action: 'desk',
+      resultDwellMs: resultOpenedAtRef.current == null ? null : Date.now() - resultOpenedAtRef.current,
+    });
     setResultDismissed(true);
     setSelectedId(null);
     const transition = () => void store.closeCase();
@@ -450,8 +518,7 @@ export default function App() {
       activeMs - lastInterstitialActiveMsRef.current >= GAME_CONFIG.advertising.interstitialMinActiveMs
     ) {
       lastInterstitialActiveMsRef.current = activeMs;
-      store.recordInterstitialShown();
-      showFullscreenAd(transition, 'verdict');
+      showFullscreenAd(transition, 'verdict', () => store.recordInterstitialShown());
     } else transition();
   };
 
@@ -565,7 +632,7 @@ export default function App() {
         </main>
 
         {/* Right analytics column */}
-        <div className={`${onboardingLocked ? 'hidden' : 'hidden md:block'} md:h-full md:w-[272px] md:shrink-0`}>
+        <div className={`${onboardingLocked ? 'hidden' : 'hidden md:order-3 md:block'} md:h-full md:w-[272px] md:shrink-0`}>
           <RightSidebar
             lang={lang}
             xp={stats.xp}
@@ -598,7 +665,7 @@ export default function App() {
         total={selectedCase?.evidences.length ?? 0}
         onNavigate={handleNavigateEvidence}
         onToggle={() => modalEvidenceId && selectedCase && store.toggleEvidenceStamp(modalEvidenceId, selectedCase)}
-        onClose={() => setModalEvidenceId(null)}
+        onClose={handleCloseEvidence}
       />
 
       {/* Result sheet */}
