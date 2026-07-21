@@ -28,7 +28,7 @@ export const GAME_CONFIG = {
     /** Penalty per evidence card wrongly stamped as a contradiction. */
     falseStampPenalty: 50,
     /** Reward multiplier applied to `type === 'daily'` cases. */
-    dailyMultiplier: 2,
+    dailyMultiplier: 1.25,
   },
 
   /**
