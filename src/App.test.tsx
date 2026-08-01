@@ -111,11 +111,23 @@ beforeEach(() => {
   });
 });
 
-/** Render and wait until hydration completes on the desk. */
+/**
+ * Render and wait until hydration completes. The app boots straight into a case
+ * (resumed session, else the next unlocked campaign case), so we wait for the
+ * investigation folder rather than the desk.
+ */
 async function renderHydrated() {
   const utils = render(<App />);
-  await screen.findAllByText(RU('selectCasePrompt'));
+  await screen.findByRole('button', { name: new RegExp(RU('rejectPayout')) });
   return utils;
+}
+
+/** Leave the auto-opened case and wait for the desk to render. */
+async function goToDesk() {
+  fireEvent.click(
+    (await screen.findAllByRole('button', { name: new RegExp(RU('backToDesk')) }))[0]!,
+  );
+  await screen.findAllByText(RU('selectCasePrompt'));
 }
 
 /** Open the first story case from the desk and wait for its verdict panel. */
@@ -140,14 +152,15 @@ async function completeFirstEvidenceAnalysis() {
 }
 
 describe('hydration', () => {
-  it('shows the loading placeholder before hydration, then opens the desk', async () => {
+  it('shows the loading placeholder before hydration, then opens the first case', async () => {
     render(<App />);
     // Synchronous first render: store not hydrated yet.
     expect(screen.getByText('…')).toBeInTheDocument();
-    // A fresh game waits for explicit case selection.
-    expect((await screen.findAllByText(RU('selectCasePrompt'))).length).toBeGreaterThan(0);
-    expect(screen.queryByRole('button', { name: new RegExp(RU('rejectPayout')) })).not.toBeInTheDocument();
-    expect(useGameStore.getState().session).toBeNull();
+    // A fresh game boots straight into the first campaign case — no desk stop.
+    expect(
+      await screen.findByRole('button', { name: new RegExp(RU('rejectPayout')) }),
+    ).toBeInTheDocument();
+    expect(useGameStore.getState().session?.caseId).toBe(getStandardCases()[0]!.id);
   });
 
   it('prevents the browser context menu inside the game', async () => {
@@ -165,7 +178,7 @@ describe('hydration', () => {
     expect(contextMenu.defaultPrevented).toBe(true);
   });
 
-  it('stays on the desk with a saved investigation until the player selects it', async () => {
+  it('resumes a saved investigation on boot without wiping its progress', async () => {
     const firstCase = getStandardCases()[0]!;
     const savedSession = {
       caseId: firstCase.id,
@@ -181,17 +194,56 @@ describe('hydration', () => {
 
     await renderHydrated();
 
-    expect(screen.queryByRole('button', { name: new RegExp(RU('rejectPayout')) })).not.toBeInTheDocument();
     expect(useGameStore.getState().session).toEqual(expect.objectContaining(savedSession));
+  });
+});
 
-    await openFirstCase();
-    expect(useGameStore.getState().session).toEqual(expect.objectContaining(savedSession));
+describe('mobile desk visibility', () => {
+  /** The 3-column layout wrapper; `hidden` on it means a blank mobile screen. */
+  const columnsClassName = () => screen.getByRole('main').parentElement!.className;
+
+  it('keeps the columns visible on small screens while onboarding suppresses the mobile menu', async () => {
+    persist.loadSnapshot.mockResolvedValue({
+      snapshot: defaultSnapshot({ metaUnlocked: false }),
+      isNew: true,
+    });
+
+    await renderHydrated();
+
+    expect(columnsClassName()).not.toMatch(/(^|\s)hidden(\s|$)/);
+  });
+
+  it('hides the columns on small screens once the mobile desk menu takes over', async () => {
+    persist.loadSnapshot.mockResolvedValue({ snapshot: defaultSnapshot(), isNew: false });
+
+    await renderHydrated();
+    await goToDesk();
+
+    expect(columnsClassName()).toMatch(/(^|\s)hidden md:flex(\s|$)/);
+  });
+
+  it('keeps both side columns mounted and desktop-visible during onboarding', async () => {
+    persist.loadSnapshot.mockResolvedValue({
+      snapshot: defaultSnapshot({ metaUnlocked: false }),
+      isNew: true,
+    });
+
+    await renderHydrated();
+
+    const columns = screen.getByRole('main').parentElement!;
+    const [left, right] = [columns.firstElementChild!, columns.lastElementChild!];
+    // `hidden md:block` is the desktop-only pattern; a bare `hidden` would mean
+    // the panels never show up at all.
+    for (const column of [left, right]) {
+      expect(column.className).toMatch(/md:block/);
+    }
   });
 });
 
 describe('opening a case', () => {
   it('switches from the desk to the investigation folder', async () => {
     await renderHydrated();
+    await goToDesk();
     const rejectBtn = await openFirstCase();
     expect(rejectBtn).toBeInTheDocument();
     expect(screen.getByRole('button', { name: new RegExp(RU('approvePayout')) })).toBeInTheDocument();
@@ -203,7 +255,6 @@ describe('opening a case', () => {
 describe('stamping an evidence card', () => {
   it('marks a card as a contradiction via the modal', async () => {
     await renderHydrated();
-    await openFirstCase();
 
     const main = screen.getByRole('main');
     const evidenceButtons = within(main)
@@ -230,7 +281,6 @@ describe('stamping an evidence card', () => {
 describe('verdict gating', () => {
   it('refuses to reject without stamped proof and shows the justification prompt', async () => {
     await renderHydrated();
-    await openFirstCase();
 
     // Reject stays clickable, but the handler blocks an unjustified rejection.
     const rejectBtn = screen.getByRole('button', { name: new RegExp(RU('rejectPayout')) });
@@ -248,7 +298,6 @@ describe('verdict gating', () => {
 
   it('completes a stamp → reject → result-sheet flow', async () => {
     await renderHydrated();
-    await openFirstCase();
 
     const main = screen.getByRole('main');
     const evidenceButtons = within(main)
@@ -284,7 +333,8 @@ describe('overlays', () => {
       isNew: false,
     });
     await renderHydrated();
-    // The low-balance offer is visible…
+    await goToDesk();
+    // The low-balance offer is visible on the desk…
     expect(await screen.findByText(RU('lowBalanceTitle'))).toBeInTheDocument();
     // …but the desk stays fully playable: a case can still be opened.
     await openFirstCase();
@@ -296,9 +346,10 @@ describe('overlays', () => {
       snapshot: defaultSnapshot({ balance: 0 }),
       isNew: false,
     });
-    render(<App />);
-    await screen.findByText(RU('lowBalanceTitle'));
-    fireEvent.click(screen.getByRole('button', { name: RU('close') }));
+    await renderHydrated();
+    await goToDesk();
+    const offer = (await screen.findByText(RU('lowBalanceTitle'))).closest('div.paper-sheet')!;
+    fireEvent.click(within(offer as HTMLElement).getByRole('button', { name: RU('close') }));
     expect(screen.queryByText(RU('lowBalanceTitle'))).not.toBeInTheDocument();
   });
 

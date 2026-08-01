@@ -1,4 +1,4 @@
-import type { BootSignals, BootWeights, LoaderPhase } from './types';
+import type { BootSignals, BootWeights } from './types';
 
 export const DEFAULT_BOOT_WEIGHTS: BootWeights = {
   sdkReady: 20,
@@ -27,11 +27,4 @@ export function calculateBootProgress(
 
 export function areBootSignalsReady(signals: BootSignals): boolean {
   return Object.values(signals).every(Boolean);
-}
-
-export function getBootPhase(signals: BootSignals): LoaderPhase {
-  if (!signals.sdkReady || !signals.playerReady) return 'sdk';
-  if (!signals.saveHydrated) return 'save';
-  if (!signals.casesValidated || !signals.assetsReady) return 'content';
-  return 'ready';
 }

@@ -1,4 +1,4 @@
-# Где ложь? Симулятор детектива
+# Найди ложь! Детективные дела
 
 Data-driven insurance-investigation game for **Yandex Games and CrazyGames**.
 React + TypeScript + Zustand + Zod + Tailwind + Framer Motion.

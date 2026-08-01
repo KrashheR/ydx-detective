@@ -31,6 +31,8 @@ interface Props {
   onDoubleReward: () => void;
   rewardDoubled: boolean;
   onNext: () => void;
+  /** Restart the same case from scratch (offered after a failed verdict). */
+  onReplay: () => void;
   onBackToDesk: () => void;
   hideBack?: boolean;
 }
@@ -46,6 +48,7 @@ export function ResultSheet({
   onDoubleReward,
   rewardDoubled,
   onNext,
+  onReplay,
   onBackToDesk,
   hideBack = false,
 }: Props) {
@@ -819,51 +822,99 @@ export function ResultSheet({
           </div>
 
           {/* ── Action buttons ───────────────────────────────────── */}
+          {/* Win: [← desk] [next case]. Loss: the two real choices side by side —
+              re-run the same case, or move on — with the desk as a quiet link. */}
           <div
             style={{
               display: "flex",
+              flexDirection: "column",
               gap: 10,
               padding: "6px 24px 22px",
             }}
           >
-            {!hideBack && <button
-              type="button"
-              onClick={onBackToDesk}
-              style={{
-                flexShrink: 0,
-                padding: "0 18px",
-                height: 50,
-                border: "1.5px solid #d6c9ad",
-                borderRadius: 10,
-                background: "transparent",
-                color: "#7a6c54",
-                fontFamily: "'Inter', sans-serif",
-                fontSize: 13,
-                fontWeight: 600,
-                cursor: "pointer",
-              }}
-            >
-              {win ? `← ${t("backToDesk", lang)}` : t("backToDesk", lang)}
-            </button>}
-            <button
-              type="button"
-              onClick={win ? onNext : onBackToDesk}
-              style={{
-                flex: 1,
-                height: 50,
-                border: "none",
-                borderRadius: 10,
-                background: win ? "#3a3024" : "#b4231f",
-                color: "#fff",
-                fontFamily: "'Inter', sans-serif",
-                fontSize: 16,
-                fontWeight: 700,
-                letterSpacing: 0.3,
-                cursor: "pointer",
-              }}
-            >
-              {win ? `${t("nextCase", lang)} →` : t("replayCase", lang)}
-            </button>
+            <div style={{ display: "flex", gap: 10 }}>
+              {win && !hideBack && (
+                <button
+                  type="button"
+                  onClick={onBackToDesk}
+                  style={{
+                    flexShrink: 0,
+                    padding: "0 18px",
+                    height: 50,
+                    border: "1.5px solid #d6c9ad",
+                    borderRadius: 10,
+                    background: "transparent",
+                    color: "#7a6c54",
+                    fontFamily: "'Inter', sans-serif",
+                    fontSize: 13,
+                    fontWeight: 600,
+                    cursor: "pointer",
+                  }}
+                >
+                  ← {t("backToDesk", lang)}
+                </button>
+              )}
+              {!win && (
+                <button
+                  type="button"
+                  onClick={onReplay}
+                  style={{
+                    flex: 1,
+                    height: 50,
+                    padding: "0 12px",
+                    border: "none",
+                    borderRadius: 10,
+                    background: "#b4231f",
+                    color: "#fff",
+                    fontFamily: "'Inter', sans-serif",
+                    fontSize: 14,
+                    fontWeight: 700,
+                    letterSpacing: 0.3,
+                    cursor: "pointer",
+                  }}
+                >
+                  {t("replayCase", lang)}
+                </button>
+              )}
+              <button
+                type="button"
+                onClick={onNext}
+                style={{
+                  flex: 1,
+                  height: 50,
+                  padding: "0 12px",
+                  border: win ? "none" : "1.5px solid #d3b0a8",
+                  borderRadius: 10,
+                  background: win ? "#3a3024" : "transparent",
+                  color: win ? "#fff" : "#8a4b42",
+                  fontFamily: "'Inter', sans-serif",
+                  fontSize: win ? 16 : 14,
+                  fontWeight: 700,
+                  letterSpacing: 0.3,
+                  cursor: "pointer",
+                }}
+              >
+                {t("nextCase", lang)} →
+              </button>
+            </div>
+            {!win && !hideBack && (
+              <button
+                type="button"
+                onClick={onBackToDesk}
+                style={{
+                  height: 34,
+                  border: "none",
+                  background: "transparent",
+                  color: "#a98379",
+                  fontFamily: "'Inter', sans-serif",
+                  fontSize: 13,
+                  fontWeight: 600,
+                  cursor: "pointer",
+                }}
+              >
+                ← {t("backToDesk", lang)}
+              </button>
+            )}
           </div>
         </div>
       </motion.div>

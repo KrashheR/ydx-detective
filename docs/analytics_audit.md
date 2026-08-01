@@ -1,4 +1,4 @@
-# Product Analytics Audit — «Где ложь? Симулятор детектива»
+# Product Analytics Audit — «Найди ложь! Детективные дела»
 
 Дата ревью: 20 июля 2026
 
@@ -151,7 +151,7 @@ trackEvent(name, params)  // частая телеметрия через params
 - `boot_failed`;
 - длительности отдельных фаз загрузки.
 
-Дополнительно обнаружен архитектурный drift: в проекте есть полноценный `BootScreen.tsx`, но production entry `src/main.tsx` рендерит `AppWithoutLoader`, а не `BootScreen`. Поэтому подготовленные boot signals фактически не участвуют в production flow.
+Ранее здесь фиксировался архитектурный drift: `src/main.tsx` рендерил `AppWithoutLoader` вместо `BootScreen`, из-за чего boot signals не участвовали в production flow. Drift устранён — entry монтирует `BootScreen`, сигналы снова живые и пригодны для замеров фаз.
 
 ### Решение
 

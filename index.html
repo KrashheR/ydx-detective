@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>Где ложь? Симулятор детектива</title>
+    <title>Найди ложь! Детективные дела</title>
 
     <!-- Loaded before JavaScript so the first rendered frame is the game loader. -->
     <link rel="stylesheet" href="/src/index.css" />
@@ -26,7 +26,6 @@
     <section
       id="static-game-loader"
       class="game-loader game-loader--static theme-manila"
-      hidden
       role="status"
       aria-live="polite"
     >
@@ -39,17 +38,8 @@
       </picture>
       <div class="game-loader__wash" aria-hidden="true"></div>
       <div class="game-loader__vignette" aria-hidden="true"></div>
-      <div class="game-loader__brand">
-        <h1 class="game-loader__title">
-          <span data-loader-copy="title"></span>
-          <span class="game-loader__question" aria-hidden="true"></span>
-        </h1>
-        <div class="game-loader__subtitle" data-loader-copy="subtitle"></div>
-        <div class="game-loader__stamp" data-loader-copy="stamp"></div>
-      </div>
       <div class="game-loader__status-card">
         <div class="game-loader__status-row">
-          <span data-loader-copy="phase"></span>
           <span class="game-loader__percent" aria-hidden="true">…</span>
         </div>
         <div
@@ -58,45 +48,11 @@
         >
           <div class="game-loader__fill"></div>
         </div>
-        <p class="game-loader__tip">
-          <span aria-hidden="true" class="game-loader__tip-icon">⌕</span>
-          <span data-loader-copy="tip"></span>
-        </p>
       </div>
     </section>
     <div id="root"></div>
-    <script>
-      // This compact copy table mirrors loader keys in src/i18n/ui.ts because it
-      // must run before the TypeScript bundle exists.
-      (function () {
-        var copies = {
-          ru: ['Где ложь', 'Симулятор детектива', 'Дело загружается', 'Загружаем игру…', 'Отказ в выплате требует доказательств. Найди и отметь противоречие.'],
-          en: ['Where Is the Lie', 'Detective Simulator', 'Loading case', 'Loading game…', 'A rejected claim needs proof. Find and mark a contradiction.'],
-          tr: ['Yalan Nerede', 'Dedektif Simülatörü', 'Dosya yükleniyor', 'Oyun yükleniyor…', 'Ödemeyi reddetmek için kanıt gerekir. Çelişkiyi bul ve işaretle.'],
-          ar: ['أين الكذبة', 'محاكي المحقق', 'جارٍ تحميل القضية', 'جارٍ تحميل اللعبة…', 'رفض التعويض يحتاج إلى دليل. اعثر على التناقض وحدده.'],
-          kk: ['Өтірік қайда', 'Детектив симуляторы', 'Іс жүктелуде', 'Ойын жүктелуде…', 'Төлемнен бас тарту үшін дәлел керек. Қайшылықты тауып, белгіле.']
-        };
-        var savedLocale = '';
-        try {
-          var saved = JSON.parse(localStorage.getItem('claimDetectiveSave') || 'null');
-          savedLocale = saved && saved.stats ? saved.stats.language : '';
-        } catch (_) {}
-        var browserLocale = String(navigator.language || '').slice(0, 2).toLowerCase();
-        var locale = Object.prototype.hasOwnProperty.call(copies, savedLocale)
-          ? savedLocale
-          : (Object.prototype.hasOwnProperty.call(copies, browserLocale) ? browserLocale : 'ru');
-        var copy = copies[locale];
-        var splash = document.getElementById('static-game-loader');
-        var fields = splash.querySelectorAll('[data-loader-copy]');
-        for (var i = 0; i < fields.length; i += 1) fields[i].textContent = copy[i];
-        splash.dir = locale === 'ar' ? 'rtl' : 'ltr';
-        document.documentElement.lang = locale;
-        document.documentElement.dir = locale === 'ar' ? 'rtl' : 'ltr';
-        splash.querySelector('.game-loader__question').textContent = locale === 'ar' ? '؟' : '?';
-        splash.setAttribute('aria-label', copy[3]);
-        splash.querySelector('[role="progressbar"]').setAttribute('aria-label', copy[3]);
-      })();
-    </script>
+    <!-- The splash carries no copy, so no pre-JS locale detection is needed:
+         `App.tsx` sets <html lang/dir> once the language is known. -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -7,8 +7,11 @@
 
 ## Сессия расследования (`ActiveSession`)
 
-После загрузки игра всегда показывает стол и ждёт явного выбора дела, в том числе при
-наличии сохранённой активной сессии.
+После загрузки игра **сразу открывает дело**, минуя стол: если есть сохранённая активная
+сессия — она возобновляется, иначе открывается первое разблокированное непройденное дело
+кампании. Автооткрытие срабатывает один раз за сессию (`autoOpenedRef` в `App.tsx`); если
+подходящего дела нет (кампания пройдена), игрок как раньше попадает на стол. Стол
+доступен по кнопке «назад к столу» из папки дела.
 При выборе дела `startCase` создаёт сессию. Она персистится рядом со статами, поэтому
 при повторном выборе того же дела прогресс расследования восстанавливается. Поля:
 
@@ -201,7 +204,9 @@ Arc evidence is hidden from the ordinary investigation and never consumes `inves
 All 50 cases have a numeric budget, validated against the accessible non-arc evidence.
 
 The first three cases are one onboarding chain. Until a correct case-3 verdict sets `metaUnlocked`,
-the long-lived meta navigation is hidden and the result sheet advances to the next case. Case 1
+the mobile desk menu and the "back to desk" affordance are suppressed and the result sheet advances
+to the next case (the desktop side columns stay visible throughout — see
+[docs/05](05-design.md#layout)). Case 1
 teaches thermal analysis and a precise false-statement stamp; case 2 teaches that suspicion is not
 proof; case 3 introduces document comparison.
 

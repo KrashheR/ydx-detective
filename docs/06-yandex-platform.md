@@ -12,9 +12,8 @@
 `index.html` с `async`; адаптер опрашивает `window.YaGames` до 4с, затем вызывает
 `getPlayer({ scopes: false })` (без промпта прав).
 `canUseCloud()` истинно только когда SDK+player готовы и игрок не `lite` (анонимный).
-`features.LoadingAPI.ready()` не вызывается сразу после SDK. Пока loader временно
-отключён, оболочка в `main.tsx` вызывает `notifyGameReady()` сразу после гидратации.
-При включённом loader это делает `BootScreen` после достижения 100%.
+`features.LoadingAPI.ready()` не вызывается сразу после SDK: `notifyGameReady()`
+зовёт `BootScreen` после достижения 100% прогресса (или по 8-секундному safety-net).
 
 Используемая поверхность SDK:
 - `getPlayer()` → `player.setData / getData` (облачные сейвы)

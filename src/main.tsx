@@ -1,24 +1,11 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App";
-import { notifyGameReady } from "./services/platformAdapter";
-import { useGameStore } from "./store/gameStore";
+import BootScreen from "./BootScreen";
 
-function AppWithoutLoader() {
-  const isHydrated = useGameStore((state) => state.isHydrated);
-  const readyNotified = React.useRef(false);
-
-  React.useEffect(() => {
-    if (!isHydrated || readyNotified.current) return;
-    readyNotified.current = true;
-    notifyGameReady();
-  }, [isHydrated]);
-
-  return <App />;
-}
-
+// BootScreen owns the loading screen: it lazy-loads App, tracks the boot
+// signals behind the progress bar and calls notifyGameReady() when done.
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <AppWithoutLoader />
+    <BootScreen />
   </React.StrictMode>,
 );

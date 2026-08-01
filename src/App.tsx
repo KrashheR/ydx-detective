@@ -79,6 +79,8 @@ export default function App() {
   const evidenceOpenedAtRef = useRef<{ id: string; openedAt: number } | null>(null);
   const resultOpenedAtRef = useRef<number | null>(null);
   const deskViewedRef = useRef(false);
+  // Gate: auto-open a case at most once per session (see the boot effect below).
+  const autoOpenedRef = useRef(false);
 
   const flashToast = (msg: string) => {
     setToast(msg);
@@ -266,7 +268,7 @@ export default function App() {
 
   const openCase = async (
     summary: CaseSummary,
-    opts?: { skipStandardGate?: boolean },
+    opts?: { skipStandardGate?: boolean; sourceSurface?: string },
   ) => {
     if (summary.type === 'standard' && !opts?.skipStandardGate) {
       const unlock = standardCaseUnlocks.find((info) => info.caseData.id === summary.id);
@@ -281,7 +283,8 @@ export default function App() {
       caseId: summary.id,
       caseType: summary.type,
       campaignPosition: summary.campaignOrder ?? null,
-      sourceSurface: opts?.skipStandardGate ? 'archive' : 'desk',
+      sourceSurface:
+        opts?.sourceSurface ?? (opts?.skipStandardGate ? 'archive' : 'desk'),
     });
 
     const c = await loadCaseById(summary.id);
@@ -295,7 +298,32 @@ export default function App() {
 
   const handleSelectCase = (c: CaseSummary) => void openCase(c);
 
+  // Boot straight into a case instead of the desk/menu: resume the in-progress
+  // investigation if there is one, otherwise open the next unlocked, not yet
+  // completed campaign case. Runs once per session; the desk stays reachable via
+  // the normal "back" affordance. If nothing qualifies (campaign finished), the
+  // player lands on the desk as before.
+  useEffect(() => {
+    if (!isHydrated || autoOpenedRef.current || selectedId) return;
+    autoOpenedRef.current = true;
+
+    const resume = session?.caseId ? getCaseSummaryById(session.caseId) : undefined;
+    const next = standardCaseUnlocks
+      .filter(isCaseUnlocked)
+      .map((info) => info.caseData)
+      .find((c) => !stats.completedCaseIds.includes(c.id));
+    const target = resume ?? next;
+    if (target) void openCase(target, { skipStandardGate: true, sourceSurface: 'autostart' });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isHydrated]);
+
   const onboardingLocked = !stats.metaUnlocked;
+  // The grouped mobile desk menu replaces the 3-column layout on small screens —
+  // but only when it actually renders. During onboarding it is suppressed, so the
+  // 3-column layout must stay visible on mobile too, otherwise a first-time
+  // player gets an empty screen (the desk menu is hidden, the columns are
+  // `hidden md:flex`).
+  const mobileDeskMenuShown = !selectedCase && !onboardingLocked;
 
   const handleSelectStandardCase = (info: CaseUnlockInfo<CaseSummary>) => {
     if (!isCaseUnlocked(info)) {
@@ -451,6 +479,19 @@ export default function App() {
     goToNextCase();
   };
 
+  // Failed case → re-open the very same case with a clean session, so the player
+  // can try again without a trip through the desk.
+  const handleReplayCase = () => {
+    if (!selectedCase) return;
+    const caseToReplay = selectedCase;
+    trackEvent('result_action', {
+      caseId: lastResult?.caseId, action: 'replay_case',
+      resultDwellMs: resultOpenedAtRef.current == null ? null : Date.now() - resultOpenedAtRef.current,
+    });
+    setResultDismissed(true);
+    void store.closeCase().then(() => store.startCase(caseToReplay));
+  };
+
   const backToDesk = () => {
     if (lastResult) trackEvent('result_action', {
       caseId: lastResult.caseId, action: 'desk',
@@ -502,7 +543,7 @@ export default function App() {
       onContextMenu={(event) => event.preventDefault()}
     >
       {/* Mobile-only grouped desk menu (replaces sidebar + folder grid on small screens) */}
-      {!selectedCase && !onboardingLocked && (
+      {mobileDeskMenuShown && (
         <div className="md:hidden">
           <MobileDeskMenu
             standardCaseUnlocks={standardCaseUnlocks}
@@ -521,9 +562,11 @@ export default function App() {
       )}
 
       {/* Desktop 3-column layout; also used on mobile when a case is open */}
-      <div className={`flex flex-col gap-4 p-4 md:h-full md:flex-row ${!selectedCase ? 'hidden md:flex' : 'flex'}`}>
-        {/* Left desk column */}
-        <div className={`${onboardingLocked ? 'hidden' : 'hidden md:order-1 md:block'} md:h-full md:w-[272px] md:shrink-0`}>
+      <div className={`flex flex-col gap-4 p-4 md:h-full md:flex-row ${mobileDeskMenuShown ? 'hidden md:flex' : 'flex'}`}>
+        {/* Left desk column. Visible from `md` up regardless of onboarding: the
+            game now boots straight into a case, so gating the columns on
+            `metaUnlocked` left the whole onboarding chain without side panels. */}
+        <div className="hidden md:order-1 md:block md:h-full md:w-[272px] md:shrink-0">
           <LeftSidebar
             standardCaseUnlocks={standardCaseUnlocks}
             dailyCase={dailyCase}
@@ -576,7 +619,7 @@ export default function App() {
         </main>
 
         {/* Right analytics column */}
-        <div className={`${onboardingLocked ? 'hidden' : 'hidden md:order-3 md:block'} md:h-full md:w-[272px] md:shrink-0`}>
+        <div className="hidden md:order-3 md:block md:h-full md:w-[272px] md:shrink-0">
           <RightSidebar
             lang={lang}
             xp={stats.xp}
@@ -626,6 +669,7 @@ export default function App() {
             onDoubleReward={handleDoubleReward}
             rewardDoubled={rewardDoubled}
             onNext={handleResultNext}
+            onReplay={handleReplayCase}
             onBackToDesk={backToDesk}
             hideBack={onboardingLocked}
           />

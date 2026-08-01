@@ -1,5 +1,5 @@
 /**
- * Где ложь? Симулятор детектива — Core domain types.
+ * Найди ложь! Детективные дела — Core domain types.
  *
  * These types describe two strictly separated concerns:
  *

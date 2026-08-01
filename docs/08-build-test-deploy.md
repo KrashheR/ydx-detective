@@ -18,8 +18,9 @@ npm run metrika:goals:publish  # создать отсутствующие це�
 
 `BootScreen.tsx` загружает `App.tsx` динамическим чанком и продолжает статический
 splash из `index.html` React-лоадером до завершения SDK/сейва/контента. Фоны остаются
-в `public/game-loader/` и выбираются через responsive `<picture>`. Сейчас loader
-временно отключён: entry point импортирует `App` напрямую, splash скрыт.
+в `public/game-loader/` и выбираются через responsive `<picture>`; `BootScreen`
+прелоадит подходящий фон перед снятием сплэша. Текста на сплэше нет — только процент
+и полоса прогресса.
 
 ## Верификация = `npm run typecheck` И `npm test`
 

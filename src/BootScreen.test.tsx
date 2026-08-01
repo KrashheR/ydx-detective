@@ -20,8 +20,8 @@ vi.mock('./components/GameLoader', async (importOriginal) => {
   const actual = await importOriginal<typeof import('./components/GameLoader')>();
   return {
     ...actual,
-    GameLoader: ({ visible, locale }: { visible: boolean; locale: string }) => (
-      visible ? <div data-testid="react-loader" data-locale={locale} /> : null
+    GameLoader: ({ visible }: { visible: boolean }) => (
+      visible ? <div data-testid="react-loader" /> : null
     ),
     useSmoothedProgress: (_target: number, ready: boolean) => ready ? 100 : 10,
   };
@@ -49,7 +49,6 @@ describe('BootScreen', () => {
     expect(document.getElementById('static-game-loader')).toBeNull();
     expect(await screen.findByText('game-ready')).toBeInTheDocument();
     expect(screen.getByTestId('react-loader')).toBeInTheDocument();
-    expect(screen.getByTestId('react-loader')).toHaveAttribute('data-locale', 'en');
 
     await waitFor(() => expect(sdk.notifyGameReady).toHaveBeenCalledTimes(1));
     expect(screen.queryByTestId('react-loader')).not.toBeInTheDocument();

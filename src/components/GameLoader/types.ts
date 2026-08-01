@@ -1,17 +1,5 @@
 import type { CSSProperties } from 'react';
 
-export type LoaderLocale = 'ru' | 'en' | 'tr' | 'ar' | 'kk';
-
-export type LoaderPhase = 'sdk' | 'save' | 'content' | 'ready';
-
-export interface LoaderCopy {
-  title: string;
-  subtitle: string;
-  stamp: string;
-  phases: Record<LoaderPhase, string>;
-  tip: string;
-}
-
 export interface BootSignals {
   sdkReady: boolean;
   playerReady: boolean;
@@ -28,15 +16,12 @@ export interface BootWeights {
   assetsReady: number;
 }
 
+/** The splash is text-free by design: no copy, locale or phase label. */
 export interface GameLoaderProps {
   visible: boolean;
   progress: number;
-  locale?: LoaderLocale;
-  phase?: LoaderPhase;
-  copy?: Partial<LoaderCopy>;
   backgroundDesktopSrc?: string;
   backgroundMobileSrc?: string;
-  showTip?: boolean;
   className?: string;
   style?: CSSProperties;
   zIndex?: number;

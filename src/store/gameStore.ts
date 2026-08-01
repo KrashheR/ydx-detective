@@ -1,5 +1,5 @@
 /**
- * Где ложь? Симулятор детектива — central Zustand store.
+ * Найди ложь! Детективные дела — central Zustand store.
  *
  * This is the single runtime authority for mutable player state. It composes:
  *   • the pure reward engine        (src/engine/rewardEngine.ts)

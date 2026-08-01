@@ -6,7 +6,7 @@ re-deriving from source or expanding everything here. **If a doc and the source 
 
 ## What this is
 
-**Где ложь? Симулятор детектива** (*Where is the Lie? Detective Simulator*) — a data-driven
+**Найди ложь! Детективные дела** (*Spot the Lie! Detective Puzzles*) — a data-driven
 insurance-investigation game for **Yandex Games**. React + TypeScript + Zustand + Zod + Tailwind +
 Framer Motion, bundled with Vite. The player reviews a claim, opens evidence cards, stamps the ones
 that contradict the claim, and renders an approve/reject verdict; reward scores both the verdict and

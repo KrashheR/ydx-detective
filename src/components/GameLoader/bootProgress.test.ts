@@ -1,9 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import {
-  areBootSignalsReady,
-  calculateBootProgress,
-  getBootPhase,
-} from './bootProgress';
+import { areBootSignalsReady, calculateBootProgress } from './bootProgress';
 import type { BootSignals } from './types';
 
 const signals = (overrides: Partial<BootSignals> = {}): BootSignals => ({
@@ -26,16 +22,6 @@ describe('boot progress', () => {
       casesValidated: true,
       assetsReady: true,
     }))).toBe(100);
-  });
-
-  it('reports the phase of the first unfinished boot boundary', () => {
-    expect(getBootPhase(signals())).toBe('sdk');
-    expect(getBootPhase(signals({ sdkReady: true, playerReady: true }))).toBe('save');
-    expect(getBootPhase(signals({
-      sdkReady: true,
-      playerReady: true,
-      saveHydrated: true,
-    }))).toBe('content');
   });
 
   it('requires every signal before declaring the game ready', () => {

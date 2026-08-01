@@ -3,13 +3,11 @@ import {
   GameLoader,
   areBootSignalsReady,
   calculateBootProgress,
-  getBootPhase,
   useSmoothedProgress,
   type BootSignals,
 } from './components/GameLoader';
 import { initYandex, notifyGameReady } from './services/platformAdapter';
 import { useGameStore } from './store/gameStore';
-import { detectInitialLanguage } from './utils/initialLanguage';
 
 const appModulePromise = import('./App');
 
@@ -42,9 +40,6 @@ async function waitForCriticalAssets(): Promise<void> {
 
 export default function BootScreen() {
   const isHydrated = useGameStore((state) => state.isHydrated);
-  // Freeze the pre-hydration locale for the whole splash lifetime. Otherwise
-  // Zustand's default `ru` flashes between the localized static and hydrated UI.
-  const [loaderLanguage] = useState(detectInitialLanguage);
   const [AppComponent, setAppComponent] = useState<ComponentType | null>(null);
   const [loaderVisible, setLoaderVisible] = useState(true);
   const readyNotified = useRef(false);
@@ -101,7 +96,6 @@ export default function BootScreen() {
     [signals],
   );
   const progress = useSmoothedProgress(rawProgress, ready, { initialValue: 10 });
-  const phase = getBootPhase(signals);
 
   const finishLoading = useCallback(() => {
     if (readyNotified.current) return;
@@ -133,12 +127,7 @@ export default function BootScreen() {
   return (
     <>
       {AppComponent ? <AppComponent /> : null}
-      <GameLoader
-        visible={loaderVisible}
-        progress={progress}
-        phase={phase}
-        locale={loaderLanguage}
-      />
+      <GameLoader visible={loaderVisible} progress={progress} />
     </>
   );
 }
