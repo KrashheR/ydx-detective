@@ -4,7 +4,7 @@
  */
 export const GAME_CONFIG = {
   /** Schema version of the persisted runtime snapshot. Bump on shape changes. */
-  saveVersion: 10,
+  saveVersion: 11,
 
   reward: {
     /** Fixed payout by difficulty; claimAmount remains a narrative stake. */

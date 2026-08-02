@@ -62,6 +62,16 @@ vi.mock('../services/persistence', async (importOriginal) => {
 
 import { useGameStore, selectCaseInvestigationGate } from './gameStore';
 import { makeDefaultStats } from '../services/persistence';
+import { THEMATIC_PACKS } from '../data/thematicPacks';
+import { PURCHASABLE_STAMP_TEXTS } from '../data/stampTexts';
+import {
+  BUNDLES,
+  COMPLETE_BUNDLE_ID,
+  STAMP_BUNDLE_ID,
+  getBundle,
+  getBundleDiscountPercent,
+  getBundleListPriceRub,
+} from '../data/bundles';
 
 const store = () => useGameStore.getState();
 
@@ -562,6 +572,68 @@ describe('stamp captions (cosmetic IAP)', () => {
     ]);
     // Restore is a silent entitlement sync — it never changes what is inked.
     expect(store().stats.activeStampTextId).toBeNull();
+  });
+});
+
+describe('stamp ink (free cosmetic)', () => {
+  it('records a known ink and normalizes the default back to null', () => {
+    store().setActiveStampInk('blue');
+    expect(store().stats.activeStampInkId).toBe('blue');
+    store().setActiveStampInk('red');
+    expect(store().stats.activeStampInkId).toBeNull();
+  });
+
+  it('falls back to the default for an unknown ink id', () => {
+    store().setActiveStampInk('chartreuse');
+    expect(store().stats.activeStampInkId).toBeNull();
+  });
+});
+
+describe('bundles (IAP)', () => {
+  it('grants every archive and caption the complete bundle contains', () => {
+    store().grantBundlePurchase(COMPLETE_BUNDLE_ID);
+    const { stats } = store();
+    expect(stats.purchasedBundleIds).toEqual([COMPLETE_BUNDLE_ID]);
+    for (const pack of THEMATIC_PACKS) {
+      expect(stats.archivePurchasedPackIds).toContain(pack.id);
+    }
+    for (const stamp of PURCHASABLE_STAMP_TEXTS) {
+      expect(stats.ownedStampTextIds).toContain(stamp.id);
+    }
+  });
+
+  it('grants only the captions for the stamp bundle', () => {
+    store().grantBundlePurchase(STAMP_BUNDLE_ID);
+    expect(store().stats.archivePurchasedPackIds).toEqual([]);
+    expect(store().stats.ownedStampTextIds).toHaveLength(
+      PURCHASABLE_STAMP_TEXTS.length,
+    );
+  });
+
+  it('re-grants the whole bundle on restore — a reinstall loses nothing', () => {
+    // The bundle product id matches no pack and no caption on its own, so this
+    // is the path that silently drops a purchase if the mapping is missing.
+    store().applyRestoredPurchases([getBundle(COMPLETE_BUNDLE_ID)!.productId]);
+    const { stats } = store();
+    expect(stats.archivePurchasedPackIds).toHaveLength(THEMATIC_PACKS.length);
+    expect(stats.ownedStampTextIds).toHaveLength(PURCHASABLE_STAMP_TEXTS.length);
+  });
+
+  it('ignores an unknown bundle id', () => {
+    store().grantBundlePurchase('bundle.nope');
+    expect(store().stats.purchasedBundleIds).toEqual([]);
+  });
+
+  it('never advertises a discount the contents do not support', () => {
+    for (const bundle of BUNDLES) {
+      const list = getBundleListPriceRub(bundle);
+      expect(bundle.fallbackPriceRub).toBeLessThan(list);
+      const advertised = getBundleDiscountPercent(bundle);
+      // Floored, so the real saving is always at least what is advertised.
+      expect((list - bundle.fallbackPriceRub) / list).toBeGreaterThanOrEqual(
+        advertised / 100,
+      );
+    }
   });
 });
 

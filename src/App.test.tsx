@@ -264,14 +264,18 @@ describe('opening a case', () => {
   });
 });
 
-describe('special archives', () => {
-  it('opens the packs shelf from the desk and lists every story pack', async () => {
+describe('bureau of special cases', () => {
+  /** Enter the Bureau through the top bar — the canonical entry point. */
+  const openBureau = async () => {
+    fireEvent.click(
+      (await screen.findAllByRole('button', { name: new RegExp(RU('navBureau')) }))[0]!,
+    );
+  };
+
+  it('opens the archives shelf from the top bar and lists every story pack', async () => {
     await renderHydrated();
     await goToDesk();
-
-    fireEvent.click(
-      (await screen.findAllByRole('button', { name: new RegExp(RU('specialArchives')) }))[0]!,
-    );
+    await openBureau();
 
     // Every premium pack is on the shelf; retired expert archives are not.
     for (const pack of THEMATIC_PACKS) {
@@ -280,15 +284,18 @@ describe('special archives', () => {
     expect(screen.queryByText(/Пограничного Сектора/)).not.toBeInTheDocument();
   });
 
-  it('opens a story-pack case straight from the shelf, bypassing the campaign gate', async () => {
+  it('opens a story-pack case from an archive page, bypassing the campaign gate', async () => {
     await renderHydrated();
     await goToDesk();
+    await openBureau();
 
+    const pack = THEMATIC_PACKS[0]!;
+    // The shelf card is fully clickable and leads to the archive's own page.
     fireEvent.click(
-      (await screen.findAllByRole('button', { name: new RegExp(RU('specialArchives')) }))[0]!,
+      (await screen.findAllByRole('button', { name: new RegExp(loc(pack.title, 'ru')) }))[0]!,
     );
 
-    const firstPackCaseId = getThematicPackCaseIds(THEMATIC_PACKS[0]!)[0]!;
+    const firstPackCaseId = getThematicPackCaseIds(pack)[0]!;
     const firstPackCase = getCaseById(firstPackCaseId)!;
     fireEvent.click(
       (await screen.findAllByRole('button', {
@@ -298,6 +305,18 @@ describe('special archives', () => {
 
     await screen.findByRole('button', { name: new RegExp(RU('rejectPayout')) });
     expect(useGameStore.getState().session?.caseId).toBe(firstPackCaseId);
+  });
+
+  it('shows the whole shelf: archives, the stamp workshop and the bundle offer', async () => {
+    await renderHydrated();
+    await goToDesk();
+    await openBureau();
+
+    fireEvent.click(await screen.findByRole('tab', { name: new RegExp(RU('bureauTabStamps')) }));
+    expect(await screen.findByText(RU('workshopChooseStamp'))).toBeInTheDocument();
+
+    fireEvent.click(await screen.findByRole('tab', { name: new RegExp(RU('bureauTabBundles')) }));
+    expect(await screen.findByText(RU('bundleHeroTitle'))).toBeInTheDocument();
   });
 });
 

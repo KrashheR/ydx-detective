@@ -49,6 +49,8 @@ export function makeDefaultStats(): PlayerStats {
     noAdsPurchased: false,
     ownedStampTextIds: [],
     activeStampTextId: null,
+    activeStampInkId: null,
+    purchasedBundleIds: [],
     archiveUnlockedCaseIds: [],
     archiveAdUnlockServerDayByPack: {},
     interactiveEvidenceProgress: {},
@@ -83,6 +85,12 @@ export function makeDefaultSnapshot(): PersistedState {
  *     an empty list + `null` means the free `classic` caption, which is exactly
  *     what every pre-v10 profile was printing, and purchases are likewise
  *     re-granted from the platform on restore.
+ *   • v10 → v11 — the Bureau of Special Cases adds `activeStampInkId` (free ink
+ *     colour of the stamp impression) and `purchasedBundleIds` (the archive +
+ *     stamp bundle IAPs). Both are backfilled by the defaults spread: `null`
+ *     ink is exactly the archive red every pre-v11 profile printed, and an
+ *     empty bundle list loses nothing because bundles re-grant their contents
+ *     through `applyRestoredPurchases`.
  */
 function migrate(raw: unknown): PersistedState | null {
   if (!raw || typeof raw !== 'object') return null;

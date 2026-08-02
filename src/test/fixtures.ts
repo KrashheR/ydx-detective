@@ -146,6 +146,8 @@ export function makeStats(overrides: Partial<PlayerStats> = {}): PlayerStats {
     noAdsPurchased: false,
     ownedStampTextIds: [],
     activeStampTextId: null,
+    activeStampInkId: null,
+    purchasedBundleIds: [],
     archiveUnlockedCaseIds: [],
     archiveAdUnlockServerDayByPack: {},
     interactiveEvidenceProgress: {},

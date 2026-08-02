@@ -52,11 +52,13 @@ import { StampModal } from './components/StampModal';
 import { ResultSheet } from './components/ResultSheet';
 import { CaseResolutionSheet } from './components/CaseResolutionSheet';
 import { AchievementsModal } from './components/AchievementsModal';
-import { StampShopModal } from './components/StampShopModal';
 import { SpecialArchivesEntry } from './components/SpecialArchivesEntry';
-import { ThematicPacksModal } from './components/ThematicPacksModal';
+import { TopBar } from './components/TopBar';
+import { BureauScreen, type BureauTab } from './components/BureauScreen';
 import type { ThematicPack } from './data/thematicPacks';
 import type { StampText } from './data/stampTexts';
+import { getStampInkColor } from './data/stampTexts';
+import { getBundle } from './data/bundles';
 import { RatingModal } from './components/RatingModal';
 import { EvidenceLinkBoard } from './components/EvidenceLinkBoard';
 import { formatCountdown } from './components/icons';
@@ -80,8 +82,8 @@ export default function App() {
   /** The human-reaction card gates the reward sheet until acknowledged. */
   const [resolutionAcknowledged, setResolutionAcknowledged] = useState(false);
   const [showAchievements, setShowAchievements] = useState(false);
-  const [showStampShop, setShowStampShop] = useState(false);
-  const [showArchives, setShowArchives] = useState(false);
+  /** Which Bureau tab is open, or `null` when the desk is showing. */
+  const [bureauTab, setBureauTab] = useState<BureauTab | null>(null);
   /** Live Yandex prices, keyed by product id. Empty until the shop is opened. */
   const [paymentsCatalog, setPaymentsCatalog] = useState<Record<string, PaymentsProduct>>({});
   const [leaderboard, setLeaderboard] = useState<LeaderboardRow[] | null>(null);
@@ -151,6 +153,18 @@ export default function App() {
     document.documentElement.dir = RTL_LANGUAGES.has(lang) ? 'rtl' : 'ltr';
     document.title = t('gameTitle', lang);
   }, [lang]);
+
+  // The stamp impression's ink colour is a single variable, so the three places
+  // that print it (evidence card, stamp modal, workshop) stay in sync without
+  // threading a prop through the whole case tree — and the theme's `--stamp`
+  // chrome red is left untouched. Mirrored onto `<html>` for anything that
+  // portals outside the React root.
+  useEffect(() => {
+    document.documentElement.style.setProperty(
+      '--stamp-ink',
+      getStampInkColor(stats.activeStampInkId),
+    );
+  }, [stats.activeStampInkId]);
 
   // A fresh verdict re-opens the result sheet and resets the double-reward slot.
   useEffect(() => {
@@ -465,20 +479,28 @@ export default function App() {
     if (adDailyCase) store.unlockDailyViaAd(adDailyCase.id);
   };
 
-  /* ------------------------- Stamp workshop (IAP) ------------------------- */
+  /* ------------------- Bureau of Special Cases (IAP) --------------------- */
 
-  const openStampShop = () => {
-    setShowStampShop(true);
-    // Live prices are localized/currency-correct; the fallback rubles are only
-    // a placeholder when the catalog is unreachable.
+  /**
+   * Open the Bureau on a given shelf. Live prices are localized and
+   * currency-correct; the fallback rubles are only a placeholder for when the
+   * catalog is unreachable (offline / off-Yandex).
+   */
+  const openBureau = (tab: BureauTab) => {
+    setBureauTab(tab);
     void fetchPaymentsCatalog().then((products) => {
       if (products.length === 0) return;
       setPaymentsCatalog(
         Object.fromEntries(products.map((product) => [product.id, product])),
       );
     });
-    trackGoal(GOAL.shopView, { shop: 'stamp_texts' });
+    trackGoal(GOAL.shopView, {
+      shop: tab === 'stamps' ? 'stamp_texts' : tab === 'bundles' ? 'bundles' : 'special_archives',
+    });
   };
+
+  const openArchives = () => openBureau('archives');
+  const openStampShop = () => openBureau('stamps');
 
   const handlePurchaseStampText = async (stamp: StampText): Promise<boolean> => {
     if (!stamp.productId) return false;
@@ -487,23 +509,20 @@ export default function App() {
     return ok;
   };
 
-  /* ----------------------- Special archives (IAP) ------------------------ */
-
-  const openArchives = () => {
-    setShowArchives(true);
-    void fetchPaymentsCatalog().then((products) => {
-      if (products.length === 0) return;
-      setPaymentsCatalog(
-        Object.fromEntries(products.map((product) => [product.id, product])),
-      );
-    });
-    trackGoal(GOAL.shopView, { shop: 'special_archives' });
-  };
-
   const handlePurchasePack = async (pack: ThematicPack): Promise<boolean> => {
     if (!pack.productId.trim()) return false;
     const ok = await purchaseProduct(pack.productId);
     if (ok) store.grantArchivePurchase(pack.id);
+    return ok;
+  };
+
+  const handlePurchaseBundle = async (bundleId: string): Promise<boolean> => {
+    const bundle = getBundle(bundleId);
+    if (!bundle) return false;
+    const ok = await purchaseProduct(bundle.productId);
+    // The bundle grants its contents — a restore later re-grants them the same
+    // way, so nothing about it is a one-off side effect of this click.
+    if (ok) store.grantBundlePurchase(bundle.id);
     return ok;
   };
 
@@ -647,11 +666,73 @@ export default function App() {
     );
   }
 
+  const bureauOpen = bureauTab !== null;
+
   return (
     <div
-      className={`theme-${FOLDER_LOOK} min-h-full bg-bg md:h-full md:overflow-hidden`}
+      className={`theme-${FOLDER_LOOK} flex min-h-full flex-col bg-bg md:h-full md:overflow-hidden`}
+      // Set inline as well as in the effect below: effects run after paint, so a
+      // returning blue-ink profile would otherwise flash one archive-red frame.
+      style={
+        {
+          '--stamp-ink': getStampInkColor(stats.activeStampInkId),
+        } as React.CSSProperties
+      }
       onContextMenu={(event) => event.preventDefault()}
     >
+      {/* Department letterhead — the one chrome shared by the desk and the Bureau */}
+      <TopBar
+        lang={lang}
+        xp={stats.xp}
+        balance={stats.balance}
+        bureauOpen={bureauOpen}
+        // NEW means "you have not discovered this yet", not "you have not paid
+        // yet": it clears as soon as the player engages with the Bureau at all
+        // (a free sample counts), so it can never become permanent decoration.
+        bureauHasNews={
+          stats.archivePurchasedPackIds.length === 0 &&
+          !stats.completedCaseIds.some((caseId) =>
+            THEMATIC_PACKS.some((pack) =>
+              getThematicPackCaseIds(pack).includes(caseId),
+            ),
+          )
+        }
+        onOpenInvestigation={() => setBureauTab(null)}
+        onOpenBureau={() => openBureau('archives')}
+        onRestorePurchases={handleRestorePurchases}
+        paymentsAvailable={isPaymentsAvailable()}
+      />
+
+      {/* The Bureau takes over the whole workspace below the letterhead — it is
+          a destination the top bar links to, not a modal over the case. */}
+      <AnimatePresence mode="wait">
+        {bureauOpen && (
+          <div className="min-h-0 flex-1 overflow-y-auto">
+            <BureauScreen
+              key="bureau"
+              lang={lang}
+              stats={stats}
+              caseUnlocks={standardCaseUnlocks}
+              paymentsAvailable={isPaymentsAvailable()}
+              catalogByProductId={paymentsCatalog}
+              initialTab={bureauTab ?? 'archives'}
+              onSelectCase={(summary) => {
+                setBureauTab(null);
+                void openCase(summary, { skipStandardGate: true, sourceSurface: 'archive' });
+              }}
+              onPurchasePack={handlePurchasePack}
+              onPurchaseStampText={handlePurchaseStampText}
+              onPurchaseBundle={handlePurchaseBundle}
+              onEquipStampText={store.setActiveStampText}
+              onPickStampInk={store.setActiveStampInk}
+              onUnlockCaseWithAd={store.unlockArchiveCaseViaAd}
+              onClose={() => setBureauTab(null)}
+            />
+          </div>
+        )}
+      </AnimatePresence>
+
+      <div className={bureauOpen ? 'hidden' : 'contents'}>
       {/* Mobile-only grouped desk menu (replaces sidebar + folder grid on small screens) */}
       {mobileDeskMenuShown && (
         <div className="md:hidden">
@@ -683,7 +764,7 @@ export default function App() {
       )}
 
       {/* Desktop 3-column layout; also used on mobile when a case is open */}
-      <div className={`flex flex-col gap-4 p-4 md:h-full md:flex-row ${mobileDeskMenuShown ? 'hidden md:flex' : 'flex'}`}>
+      <div className={`flex flex-col gap-4 p-4 md:min-h-0 md:flex-1 md:flex-row ${mobileDeskMenuShown ? 'hidden md:flex' : 'flex'}`}>
         {/* Left desk column. Visible from `md` up regardless of onboarding: the
             game now boots straight into a case, so gating the columns on
             `metaUnlocked` left the whole onboarding chain without side panels. */}
@@ -767,6 +848,7 @@ export default function App() {
           />
         </div>
       </div>
+      </div>
 
       {/* Evidence stamping modal */}
       <StampModal
@@ -838,44 +920,6 @@ export default function App() {
           }}
         />
       )}
-
-      {/* Stamp workshop — cosmetic caption IAP */}
-      <AnimatePresence>
-        {showStampShop && (
-          <StampShopModal
-            lang={lang}
-            ownedStampTextIds={stats.ownedStampTextIds}
-            activeStampTextId={stats.activeStampTextId}
-            paymentsAvailable={isPaymentsAvailable()}
-            catalogByProductId={paymentsCatalog}
-            onPurchase={handlePurchaseStampText}
-            onEquip={store.setActiveStampText}
-            onRestore={handleRestorePurchases}
-            onClose={() => setShowStampShop(false)}
-          />
-        )}
-      </AnimatePresence>
-
-      {/* Special archives — premium story packs */}
-      <AnimatePresence>
-        {showArchives && (
-          <ThematicPacksModal
-            lang={lang}
-            stats={stats}
-            caseUnlocks={standardCaseUnlocks}
-            paymentsAvailable={isPaymentsAvailable()}
-            catalogByProductId={paymentsCatalog}
-            onSelectCase={(summary) => {
-              setShowArchives(false);
-              void openCase(summary, { skipStandardGate: true, sourceSurface: 'archive' });
-            }}
-            onPurchasePack={handlePurchasePack}
-            onRestorePurchases={handleRestorePurchases}
-            onUnlockCaseWithAd={store.unlockArchiveCaseViaAd}
-            onClose={() => setShowArchives(false)}
-          />
-        )}
-      </AnimatePresence>
 
       {/* Achievements archive */}
       <AnimatePresence>

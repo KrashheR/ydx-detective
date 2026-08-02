@@ -42,7 +42,13 @@ import {
   getThematicPackIdByProductId,
   THEMATIC_PACKS,
 } from '../data/thematicPacks';
-import { STAMP_TEXTS, getStampTextByProductId } from '../data/stampTexts';
+import {
+  DEFAULT_STAMP_INK_ID,
+  STAMP_INKS,
+  STAMP_TEXTS,
+  getStampTextByProductId,
+} from '../data/stampTexts';
+import { getBundle, getBundleByProductId } from '../data/bundles';
 import { initRemoteConfig } from '../services/remoteConfig';
 import {
   getServerTimeMs,
@@ -195,9 +201,14 @@ export interface GameStoreState {
   grantStampTextPurchases: (stampTextIds: readonly string[]) => void;
   /** Ink an owned caption onto the contradiction stamp; `null` = free default. */
   setActiveStampText: (stampTextId: string | null) => void;
+  /** Pick the (free) ink colour of the stamp impression; `null` = archive red. */
+  setActiveStampInk: (stampInkId: string | null) => void;
+  /** Permanently grant a bundle and everything it contains (purchase/restore). */
+  grantBundlePurchase: (bundleId: string) => void;
   /**
    * Apply a restored set of platform product ids — the single place that maps
-   * Yandex product ids onto entitlements (archive packs + No Ads + stamp texts).
+   * Yandex product ids onto entitlements (archive packs + No Ads + stamp texts
+   * + bundles, which re-grant their own contents).
    */
   applyRestoredPurchases: (productIds: readonly string[]) => void;
 
@@ -1140,6 +1151,35 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       persist(true);
     },
 
+    setActiveStampInk(stampInkId) {
+      // Ink is free and purely cosmetic; an unknown id falls back to the default.
+      const resolved =
+        stampInkId === null || stampInkId === DEFAULT_STAMP_INK_ID
+          ? null
+          : (STAMP_INKS.find((ink) => ink.id === stampInkId)?.id ?? null);
+      set((s) => ({ stats: { ...s.stats, activeStampInkId: resolved } }));
+      persist(true);
+    },
+
+    grantBundlePurchase(bundleId) {
+      const bundle = getBundle(bundleId);
+      if (!bundle) return;
+      // A bundle owns nothing itself — it grants its contents, which is what the
+      // rest of the game reads. Recording the id keeps the shelf honest ("already
+      // yours") and lets a future bundle add contents retroactively.
+      set((s) => ({
+        stats: {
+          ...s.stats,
+          purchasedBundleIds: s.stats.purchasedBundleIds.includes(bundle.id)
+            ? s.stats.purchasedBundleIds
+            : [...s.stats.purchasedBundleIds, bundle.id],
+        },
+      }));
+      get().grantArchivePurchases(bundle.packIds);
+      get().grantStampTextPurchases(bundle.stampTextIds);
+      persist(true);
+    },
+
     applyRestoredPurchases(productIds) {
       if (productIds.length === 0) return;
       const packIds = productIds
@@ -1152,6 +1192,13 @@ export const useGameStore = create<GameStoreState>((set, get) => {
           .map((productId) => getStampTextByProductId(productId)?.id)
           .filter((stampTextId): stampTextId is string => stampTextId !== undefined),
       );
+      // Bundles carry no entitlement of their own: restoring one has to re-grant
+      // every pack and caption it contains, or a reinstall would silently lose
+      // the whole purchase.
+      for (const productId of productIds) {
+        const bundle = getBundleByProductId(productId);
+        if (bundle) get().grantBundlePurchase(bundle.id);
+      }
     },
 
     setPaused(paused) {

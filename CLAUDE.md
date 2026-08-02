@@ -51,6 +51,10 @@ Paths are stable. Read the matching doc for *why*, then the source for *how*.
 | Case Zod validation (kept in lockstep with types) | `src/data/caseSchema.ts` |
 | Case registry (add new case JSON here) | `src/data/caseLoader.ts` + `src/data/cases/*.json` |
 | Premium story packs (shelf metadata + case-id map) | `src/data/thematicPacks.ts`; content in `scripts/story-packs/`, cases in `src/data/cases/packs/` |
+| Bundle IAPs (contents + derived list price / discount) | `src/data/bundles.ts` |
+| Who may open which archive case | `src/engine/archiveAccessEngine.ts` |
+| Bureau of Special Cases (whole commercial shelf) | `src/components/BureauScreen.tsx` (+ `BureauArchives` / `BureauWorkshop` / `BureauBundles`) |
+| Global header (brand, Bureau entry, resource chips) | `src/components/TopBar.tsx` |
 | Финальные реплики / разбор дела (авторинг + раскладка) | `scripts/data/resolutions/*.json` + `scripts/apply-resolutions.mjs` |
 | UI strings / i18n | `src/i18n/ui.ts` |
 | Presentational components | `src/components/*.tsx` |

@@ -581,6 +581,13 @@ export interface PlayerStats {
   ownedStampTextIds: string[];
   /** Caption currently inked on the stamp; `null` = the free default. */
   activeStampTextId: string | null;
+  /**
+   * Ink colour of the stamp impression; `null` = the default archive red. Free
+   * cosmetics — the ids come from `STAMP_INKS` in `src/data/stampTexts.ts`.
+   */
+  activeStampInkId: string | null;
+  /** Bundle products permanently unlocked via Yandex IAP. */
+  purchasedBundleIds: string[];
   /** Individual archive cases permanently unlocked via rewarded ads. */
   archiveUnlockedCaseIds: string[];
   /** Last server-day when this archive pack granted its rewarded unlock. */

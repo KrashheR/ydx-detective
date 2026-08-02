@@ -229,7 +229,7 @@ export function StampModal({
                   style={{ animation: 'stampIn .45s cubic-bezier(.2,1.3,.35,1)' }}
                 >
                   <div
-                    className={`whitespace-nowrap rounded-[5px] border-4 border-stamp px-[18px] py-2 text-center font-mono font-semibold uppercase tracking-wide text-stamp ${
+                    className={`whitespace-nowrap rounded-[5px] border-4 px-[18px] py-2 text-center font-mono font-semibold uppercase tracking-wide ${
                       // Long bought captions get a smaller die so the ink block
                       // still fits the document on narrow phones.
                       stampCaption.length > 13 ? 'text-[17px]' : 'text-[22px]'
@@ -238,6 +238,10 @@ export function StampModal({
                       transform: 'translate(-50%,-50%) rotate(-13deg)',
                       opacity: 0.88,
                       background: 'rgba(255,255,255,.04)',
+                      // The impression follows the player's chosen ink, not the
+                      // theme's chrome red.
+                      borderColor: 'var(--stamp-ink)',
+                      color: 'var(--stamp-ink)',
                     }}
                   >
                     {stampCaption}

@@ -245,7 +245,76 @@ export type UIKey =
     | "resolutionStampRejected"
     | "chainLabelTruth"
     | "chainLabelCrack"
-    | "chainLabelVerdict";
+    | "chainLabelVerdict"
+    // --- Bureau of Special Cases (topbar + commercial shelf) ---
+    | "brandTitle"
+    | "brandShort"
+    | "brandTagline"
+    | "navInvestigation"
+    | "navBureau"
+    | "settings"
+    | "region"
+    | "bureauEyebrow"
+    | "bureauHeroTitle"
+    | "bureauHeroLead"
+    | "bureauBackToCase"
+    | "bureauBackToArchives"
+    | "bureauTabArchives"
+    | "bureauTabStamps"
+    | "bureauTabBundles"
+    | "bureauTabBundlesBadge"
+    | "archiveCardEyebrow"
+    | "archiveCardMore"
+    | "archiveOneCaseFree"
+    | "archiveDetailFeatureCases"
+    | "archiveDetailFeatureEvidence"
+    | "archiveDetailFeatureStamp"
+    | "archiveDetailPlayFree"
+    | "archiveDetailOpenWhole"
+    | "archiveDetailContinue"
+    | "archiveIncludedTitle"
+    | "archiveIncludedDuration"
+    | "archiveIncludedEvidence"
+    | "archiveIncludedEvidenceNote"
+    | "archiveIncludedHeroes"
+    | "archiveIncludedHeroesNote"
+    | "archiveIncludedBonus"
+    | "archiveContentsEyebrow"
+    | "archiveContentsTitle"
+    | "archiveCaseFreeLabel"
+    | "archiveCaseInArchiveLabel"
+    | "archiveCasePlay"
+    | "workshopEyebrow"
+    | "workshopTitle"
+    | "workshopLead"
+    | "workshopFittingRoom"
+    | "workshopCatalogTab"
+    | "workshopPreviewLabel"
+    | "workshopPreviewNote"
+    | "workshopPaperNumber"
+    | "workshopPaperTitle"
+    | "workshopPaperBody"
+    | "workshopPaperSignature"
+    | "workshopInkColor"
+    | "workshopInkRed"
+    | "workshopInkBlue"
+    | "workshopInkGreen"
+    | "buyAction"
+    | "archiveIncludedHeroesKicker"
+    | "workshopCollection"
+    | "workshopChooseStamp"
+    | "workshopStampInUse"
+    | "workshopStampFitting"
+    | "bundleStampsEyebrow"
+    | "bundleStampsTitle"
+    | "bundleBuy"
+    | "bundleHeroEyebrow"
+    | "bundleHeroTitle"
+    | "bundleHeroLead"
+    | "bundleHeroCta"
+    | "bundleSavings"
+    | "bundleOwned"
+    | "purchaseNotCompleted";
 
 export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
   approve: {
@@ -1648,6 +1717,473 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     tr: "Bu neden yeterli",
     ar: "لماذا هذا يكفي",
     kk: "Неге бұл жеткілікті",
+  },
+
+  /* ---------------- Bureau of Special Cases (topbar + shelf) --------------- */
+
+  brandTitle: {
+    ru: "Найди ложь",
+    en: "Spot the Lie",
+    tr: "Yalan Nerede",
+    ar: "أين الكذبة",
+    kk: "Өтірік қайда",
+  },
+  brandShort: { ru: "НЛ", en: "SL", tr: "YN", ar: "أك", kk: "ӨҚ" },
+  brandTagline: {
+    ru: "Детективные дела",
+    en: "Detective puzzles",
+    tr: "Dedektif dosyaları",
+    ar: "قضايا بوليسية",
+    kk: "Детектив істері",
+  },
+  navInvestigation: {
+    ru: "Расследование",
+    en: "Investigation",
+    tr: "Soruşturma",
+    ar: "التحقيق",
+    kk: "Тергеу",
+  },
+  navBureau: {
+    ru: "Бюро особых дел",
+    en: "Bureau of Special Cases",
+    tr: "Özel Dosyalar Bürosu",
+    ar: "مكتب القضايا الخاصة",
+    kk: "Ерекше істер бюросы",
+  },
+  settings: {
+    ru: "Настройки",
+    en: "Settings",
+    tr: "Ayarlar",
+    ar: "الإعدادات",
+    kk: "Баптаулар",
+  },
+  region: { ru: "Регион", en: "Region", tr: "Bölge", ar: "المنطقة", kk: "Аймақ" },
+  bureauEyebrow: {
+    ru: "Бюро особых дел · закрытый отдел",
+    en: "Bureau of Special Cases · restricted unit",
+    tr: "Özel Dosyalar Bürosu · kapalı birim",
+    ar: "مكتب القضايا الخاصة · قسم مغلق",
+    kk: "Ерекше істер бюросы · жабық бөлім",
+  },
+  bureauHeroTitle: {
+    ru: "Истории, которые не попали в обычные сводки",
+    en: "The stories that never made the official reports",
+    tr: "Resmî raporlara girmeyen hikâyeler",
+    ar: "قصص لم تدخل التقارير الرسمية",
+    kk: "Ресми есептерге кірмеген оқиғалар",
+  },
+  bureauHeroLead: {
+    ru: "Три тематических архива. Тридцать самостоятельных расследований с новыми героями, уликами и финальными развязками.",
+    en: "Three themed archives. Thirty standalone investigations with new characters, evidence and endings.",
+    tr: "Üç temalı arşiv. Yeni karakterler, deliller ve finallerle otuz bağımsız soruşturma.",
+    ar: "ثلاثة أرشيفات موضوعية. ثلاثون تحقيقًا مستقلًا بشخصيات وأدلة ونهايات جديدة.",
+    kk: "Үш тақырыптық архив. Жаңа кейіпкерлері, дәлелдері мен шешімдері бар отыз дербес тергеу.",
+  },
+  bureauBackToCase: {
+    ru: "← Вернуться к делу",
+    en: "← Back to the case",
+    tr: "← Dosyaya dön",
+    ar: "← العودة إلى القضية",
+    kk: "← Іске оралу",
+  },
+  bureauBackToArchives: {
+    ru: "← Все архивы",
+    en: "← All archives",
+    tr: "← Tüm arşivler",
+    ar: "← كل الأرشيفات",
+    kk: "← Барлық архивтер",
+  },
+  bureauTabArchives: {
+    ru: "Архивы",
+    en: "Archives",
+    tr: "Arşivler",
+    ar: "الأرشيفات",
+    kk: "Архивтер",
+  },
+  bureauTabStamps: {
+    ru: "Штампы",
+    en: "Stamps",
+    tr: "Damgalar",
+    ar: "الأختام",
+    kk: "Мөрлер",
+  },
+  bureauTabBundles: {
+    ru: "Наборы",
+    en: "Bundles",
+    tr: "Paketler",
+    ar: "الحزم",
+    kk: "Жинақтар",
+  },
+  bureauTabBundlesBadge: {
+    ru: "до −{percent}%",
+    en: "up to −{percent}%",
+    tr: "−{percent}%'e varan",
+    ar: "حتى −{percent}%",
+    kk: "−{percent}%-ға дейін",
+  },
+  archiveCardEyebrow: {
+    ru: "Архив №{number} · {total} дел",
+    en: "Archive No. {number} · {total} cases",
+    tr: "Arşiv No. {number} · {total} dosya",
+    ar: "الأرشيف رقم {number} · {total} قضية",
+    kk: "№{number} архив · {total} іс",
+  },
+  archiveCardMore: {
+    ru: "Подробнее",
+    en: "Details",
+    tr: "Ayrıntılar",
+    ar: "التفاصيل",
+    kk: "Толығырақ",
+  },
+  archiveOneCaseFree: {
+    ru: "1 дело бесплатно",
+    en: "1 case free",
+    tr: "1 dosya ücretsiz",
+    ar: "قضية واحدة مجانًا",
+    kk: "1 іс тегін",
+  },
+  archiveDetailFeatureCases: {
+    ru: "новых дел",
+    en: "new cases",
+    tr: "yeni dosya",
+    ar: "قضايا جديدة",
+    kk: "жаңа іс",
+  },
+  archiveDetailFeatureEvidence: {
+    ru: "улик",
+    en: "clues",
+    tr: "delil",
+    ar: "دليلًا",
+    kk: "дәлел",
+  },
+  archiveDetailFeatureStamp: {
+    ru: "особый штамп",
+    en: "special stamp",
+    tr: "özel damga",
+    ar: "ختم خاص",
+    kk: "ерекше мөр",
+  },
+  archiveDetailPlayFree: {
+    ru: "Играть первое дело бесплатно",
+    en: "Play the first case free",
+    tr: "İlk dosyayı ücretsiz oyna",
+    ar: "العب القضية الأولى مجانًا",
+    kk: "Бірінші істі тегін ойнау",
+  },
+  archiveDetailOpenWhole: {
+    ru: "Открыть весь архив",
+    en: "Unlock the whole archive",
+    tr: "Arşivin tamamını aç",
+    ar: "افتح الأرشيف كاملًا",
+    kk: "Бүкіл архивті ашу",
+  },
+  archiveDetailContinue: {
+    ru: "Продолжить расследование",
+    en: "Continue the investigation",
+    tr: "Soruşturmaya devam et",
+    ar: "متابعة التحقيق",
+    kk: "Тергеуді жалғастыру",
+  },
+  archiveIncludedTitle: {
+    ru: "В архив входит",
+    en: "The archive includes",
+    tr: "Arşive dahil",
+    ar: "يشمل الأرشيف",
+    kk: "Архивке кіреді",
+  },
+  archiveIncludedDuration: {
+    ru: "≈ 2–3 часа расследований",
+    en: "≈ 2–3 hours of investigation",
+    tr: "≈ 2–3 saatlik soruşturma",
+    ar: "≈ 2–3 ساعات من التحقيق",
+    kk: "≈ 2–3 сағат тергеу",
+  },
+  archiveIncludedEvidence: {
+    ru: "{count}+ новых улик",
+    en: "{count}+ new clues",
+    tr: "{count}+ yeni delil",
+    ar: "{count}+ دليل جديد",
+    kk: "{count}+ жаңа дәлел",
+  },
+  archiveIncludedEvidenceNote: {
+    ru: "Документы, снимки и показания",
+    en: "Documents, photos and statements",
+    tr: "Belgeler, fotoğraflar ve ifadeler",
+    ar: "مستندات وصور وإفادات",
+    kk: "Құжаттар, суреттер және айғақтар",
+  },
+  archiveIncludedHeroes: {
+    ru: "Новые герои",
+    en: "New characters",
+    tr: "Yeni karakterler",
+    ar: "شخصيات جديدة",
+    kk: "Жаңа кейіпкерлер",
+  },
+  archiveIncludedHeroesNote: {
+    ru: "Соседи, свидетели и заявители",
+    en: "Neighbours, witnesses and claimants",
+    tr: "Komşular, tanıklar ve başvuranlar",
+    ar: "جيران وشهود ومطالبون",
+    kk: "Көршілер, куәгерлер және өтініш берушілер",
+  },
+  archiveIncludedBonus: {
+    ru: "Бонус",
+    en: "Bonus",
+    tr: "Bonus",
+    ar: "مكافأة",
+    kk: "Бонус",
+  },
+  archiveContentsEyebrow: {
+    ru: "Состав архива",
+    en: "Archive contents",
+    tr: "Arşiv içeriği",
+    ar: "محتويات الأرشيف",
+    kk: "Архив құрамы",
+  },
+  archiveContentsTitle: {
+    ru: "Дела архива",
+    en: "Cases in the archive",
+    tr: "Arşivdeki dosyalar",
+    ar: "قضايا الأرشيف",
+    kk: "Архив істері",
+  },
+  archiveCaseFreeLabel: {
+    ru: "Доступно бесплатно",
+    en: "Free to play",
+    tr: "Ücretsiz erişim",
+    ar: "متاح مجانًا",
+    kk: "Тегін қолжетімді",
+  },
+  archiveCaseInArchiveLabel: {
+    ru: "В составе архива",
+    en: "Part of the archive",
+    tr: "Arşive dahil",
+    ar: "ضمن الأرشيف",
+    kk: "Архив құрамында",
+  },
+  archiveCasePlay: {
+    ru: "Играть →",
+    en: "Play →",
+    tr: "Oyna →",
+    ar: "العب →",
+    kk: "Ойнау →",
+  },
+  workshopEyebrow: {
+    ru: "Бюро особых дел · мастерская",
+    en: "Bureau of Special Cases · workshop",
+    tr: "Özel Dosyalar Bürosu · atölye",
+    ar: "مكتب القضايا الخاصة · الورشة",
+    kk: "Ерекше істер бюросы · шеберхана",
+  },
+  workshopTitle: {
+    ru: "Штамп с вашим характером",
+    en: "A stamp with your own character",
+    tr: "Karakterinizi taşıyan bir damga",
+    ar: "ختم يحمل شخصيتك",
+    kk: "Мінезіңізге сай мөр",
+  },
+  workshopLead: {
+    ru: "Примерьте вердикт на настоящем документе. Штамп меняет подачу, но не правила и награду.",
+    en: "Try a verdict on a real document. The stamp changes the delivery, never the rules or the reward.",
+    tr: "Kararı gerçek bir belge üzerinde deneyin. Damga sunumu değiştirir; kuralları ve ödülü değil.",
+    ar: "جرّب الحكم على مستند حقيقي. الختم يغيّر الأسلوب، لا القواعد ولا المكافأة.",
+    kk: "Шешімді нақты құжатта байқап көріңіз. Мөр стильді өзгертеді, ережені мен сыйақыны емес.",
+  },
+  workshopFittingRoom: {
+    ru: "Примерочная",
+    en: "Fitting room",
+    tr: "Deneme odası",
+    ar: "غرفة القياس",
+    kk: "Байқау бөлмесі",
+  },
+  workshopCatalogTab: {
+    ru: "Каталог мастерской",
+    en: "Workshop catalogue",
+    tr: "Atölye kataloğu",
+    ar: "كتالوج الورشة",
+    kk: "Шеберхана каталогы",
+  },
+  workshopPreviewLabel: {
+    ru: "Предпросмотр в деле",
+    en: "Preview on a case",
+    tr: "Dosya üzerinde önizleme",
+    ar: "معاينة داخل القضية",
+    kk: "Іс ішінде алдын ала қарау",
+  },
+  workshopPreviewNote: {
+    ru: "можно менять в любой момент",
+    en: "can be changed at any time",
+    tr: "istediğiniz zaman değiştirilebilir",
+    ar: "يمكن تغييره في أي وقت",
+    kk: "кез келген уақытта өзгертуге болады",
+  },
+  workshopPaperNumber: {
+    ru: "Страховое заявление № 2718",
+    en: "Insurance claim No. 2718",
+    tr: "Sigorta başvurusu No. 2718",
+    ar: "مطالبة تأمين رقم 2718",
+    kk: "№2718 сақтандыру өтініші",
+  },
+  workshopPaperTitle: {
+    ru: "Обстоятельства происшествия",
+    en: "Circumstances of the incident",
+    tr: "Olayın koşulları",
+    ar: "ملابسات الحادث",
+    kk: "Оқиға мән-жайы",
+  },
+  workshopPaperBody: {
+    ru: "По словам заявителя, сейф самостоятельно покинул помещение через окно второго этажа. Свидетели утверждают, что до этого у сейфа выросли колёса.",
+    en: "According to the claimant, the safe left the room by itself through a second-floor window. Witnesses claim it had grown wheels beforehand.",
+    tr: "Başvurana göre kasa ikinci kattaki pencereden kendi başına çıkmış. Tanıklar kasanın öncesinde tekerlek çıkardığını söylüyor.",
+    ar: "يقول المطالِب إن الخزنة غادرت الغرفة بنفسها عبر نافذة الطابق الثاني. ويؤكد الشهود أنها أنبتت عجلات قبل ذلك.",
+    kk: "Өтініш берушінің айтуынша, сейф екінші қабаттың терезесі арқылы өз бетінше шығып кеткен. Куәгерлер оған дейін сейфте дөңгелек өскенін айтады.",
+  },
+  workshopPaperSignature: {
+    ru: "Инспектор ___________",
+    en: "Inspector ___________",
+    tr: "Müfettiş ___________",
+    ar: "المفتش ___________",
+    kk: "Инспектор ___________",
+  },
+  workshopInkColor: {
+    ru: "Цвет чернил",
+    en: "Ink colour",
+    tr: "Mürekkep rengi",
+    ar: "لون الحبر",
+    kk: "Сия түсі",
+  },
+  workshopInkRed: {
+    ru: "Красные чернила",
+    en: "Red ink",
+    tr: "Kırmızı mürekkep",
+    ar: "حبر أحمر",
+    kk: "Қызыл сия",
+  },
+  workshopInkBlue: {
+    ru: "Синие чернила",
+    en: "Blue ink",
+    tr: "Mavi mürekkep",
+    ar: "حبر أزرق",
+    kk: "Көк сия",
+  },
+  workshopInkGreen: {
+    ru: "Зелёные чернила",
+    en: "Green ink",
+    tr: "Yeşil mürekkep",
+    ar: "حبر أخضر",
+    kk: "Жасыл сия",
+  },
+  buyAction: {
+    ru: "Купить",
+    en: "Buy",
+    tr: "Satın al",
+    ar: "شراء",
+    kk: "Сатып алу",
+  },
+  archiveIncludedHeroesKicker: {
+    ru: "Досье",
+    en: "Dossier",
+    tr: "Dosya",
+    ar: "ملف",
+    kk: "Досье",
+  },
+  workshopCollection: {
+    ru: "Коллекция",
+    en: "Collection",
+    tr: "Koleksiyon",
+    ar: "المجموعة",
+    kk: "Топтама",
+  },
+  workshopChooseStamp: {
+    ru: "Выберите штамп",
+    en: "Choose a stamp",
+    tr: "Bir damga seçin",
+    ar: "اختر ختمًا",
+    kk: "Мөрді таңдаңыз",
+  },
+  workshopStampInUse: {
+    ru: "Используется",
+    en: "In use",
+    tr: "Kullanımda",
+    ar: "قيد الاستخدام",
+    kk: "Қолданылуда",
+  },
+  workshopStampFitting: {
+    ru: "Примерка",
+    en: "Trying on",
+    tr: "Deneme",
+    ar: "قيد القياس",
+    kk: "Байқау",
+  },
+  bundleStampsEyebrow: {
+    ru: "Набор следователя · −{percent}%",
+    en: "Investigator's set · −{percent}%",
+    tr: "Müfettiş seti · −{percent}%",
+    ar: "طقم المحقق · −{percent}%",
+    kk: "Тергеуші жинағы · −{percent}%",
+  },
+  bundleStampsTitle: {
+    ru: "Все шуточные штампы",
+    en: "Every novelty stamp",
+    tr: "Tüm esprili damgalar",
+    ar: "كل الأختام الطريفة",
+    kk: "Барлық әзіл мөрлер",
+  },
+  bundleBuy: {
+    ru: "Купить набор",
+    en: "Buy the bundle",
+    tr: "Paketi satın al",
+    ar: "شراء الحزمة",
+    kk: "Жинақты сатып алу",
+  },
+  bundleHeroEyebrow: {
+    ru: "Лучшее предложение Бюро",
+    en: "The Bureau's best offer",
+    tr: "Büronun en iyi teklifi",
+    ar: "أفضل عرض من المكتب",
+    kk: "Бюроның үздік ұсынысы",
+  },
+  bundleHeroTitle: {
+    ru: "Полное собрание дел",
+    en: "The complete case collection",
+    tr: "Dosyaların tam koleksiyonu",
+    ar: "المجموعة الكاملة للقضايا",
+    kk: "Істердің толық жинағы",
+  },
+  bundleHeroLead: {
+    ru: "Все три архива и коллекция шуточных штампов.",
+    en: "All three archives plus the full novelty-stamp collection.",
+    tr: "Üç arşivin tamamı ve esprili damga koleksiyonu.",
+    ar: "الأرشيفات الثلاثة كاملة مع مجموعة الأختام الطريفة.",
+    kk: "Үш архивтің барлығы және әзіл мөрлер топтамасы.",
+  },
+  bundleHeroCta: {
+    ru: "Получить полное собрание",
+    en: "Get the complete collection",
+    tr: "Tam koleksiyonu al",
+    ar: "احصل على المجموعة الكاملة",
+    kk: "Толық жинақты алу",
+  },
+  bundleSavings: {
+    ru: "экономия {amount}",
+    en: "you save {amount}",
+    tr: "{amount} tasarruf",
+    ar: "توفير {amount}",
+    kk: "{amount} үнемдейсіз",
+  },
+  purchaseNotCompleted: {
+    ru: "Покупка не завершена",
+    en: "Purchase not completed",
+    tr: "Satın alma tamamlanmadı",
+    ar: "لم تكتمل عملية الشراء",
+    kk: "Сатып алу аяқталмады",
+  },
+  bundleOwned: {
+    ru: "Всё уже открыто",
+    en: "Everything is already unlocked",
+    tr: "Her şey zaten açık",
+    ar: "كل شيء مفتوح بالفعل",
+    kk: "Бәрі ашылған",
   },
 };
 

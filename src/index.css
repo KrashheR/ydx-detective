@@ -47,6 +47,17 @@
     --folder-ink-soft: rgba(243, 244, 246, 0.6);
   }
 
+  /* ---------------------------------------------------------------------- *
+   * Stamp ink. `--stamp` above is the theme's *chrome* red (budget warnings,
+   * toasts, anomaly zones); `--stamp-ink` is the colour of the actual stamp
+   * impression the player prints, which the Bureau's workshop lets them
+   * recolour. App.tsx sets it from `PlayerStats.activeStampInkId`; the default
+   * here keeps every impression archive red when no choice was made.
+   * ---------------------------------------------------------------------- */
+  :root {
+    --stamp-ink: #9d281f;
+  }
+
   /* Custom scrollbars to match the sepia archive desk. */
   ::-webkit-scrollbar {
     width: 9px;

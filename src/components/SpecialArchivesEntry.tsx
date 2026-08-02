@@ -1,10 +1,16 @@
 import { motion } from "framer-motion";
-import { RTL_LANGUAGES, loc, t } from "../i18n/ui";
+import { loc, t } from "../i18n/ui";
 import {
   THEMATIC_PACKS,
   getThematicPackCases,
   getThematicPackTotalCases,
 } from "../data/thematicPacks";
+import {
+  countAccessibleArchiveCases,
+  indexUnlocksByCaseId,
+  isPackPurchased,
+} from "../engine/archiveAccessEngine";
+import { FAN_SLOT_CLASSES, PackCover, getFanPacks } from "./BureauArchives";
 import type { CaseUnlockInfo } from "../engine/caseUnlockEngine";
 import type { CaseSummary, Language, PlayerStats } from "../types";
 
@@ -12,37 +18,19 @@ interface Props {
   lang: Language;
   stats: Pick<
     PlayerStats,
-    "archivePurchasedPackIds" | "archiveUnlockedCaseIds"
+    "archivePurchasedPackIds" | "archiveUnlockedCaseIds" | "completedCaseIds"
   >;
   caseUnlocks?: readonly CaseUnlockInfo<CaseSummary>[];
   onOpen: () => void;
   compact?: boolean;
 }
 
-function countAccessibleCases(
-  stats: Pick<PlayerStats, "archivePurchasedPackIds" | "archiveUnlockedCaseIds">,
-  pack: (typeof THEMATIC_PACKS)[number],
-  caseUnlocks: readonly CaseUnlockInfo<CaseSummary>[],
-): number {
-  const archiveCases = getThematicPackCases(pack);
-  if (archiveCases.length === 0) return 0;
-
-  const unlockByCaseId = new Map(
-    caseUnlocks.map((info) => [info.caseData.id, info.status]),
-  );
-  return archiveCases.filter(
-    (caseData, index) => {
-      const campaignStatus = unlockByCaseId.get(caseData.id);
-      if (campaignStatus && campaignStatus !== "locked") return true;
-      return (
-        stats.archivePurchasedPackIds.includes(pack.id) ||
-        index === 0 ||
-        stats.archiveUnlockedCaseIds.includes(caseData.id)
-      );
-    },
-  ).length;
-}
-
+/**
+ * The Bureau's shop window on the desk: three archive covers fanned out like
+ * folders pulled from a drawer, under one CTA. It advertises the *featured*
+ * archive — the first pack still offering its free sample — and never competes
+ * visually with the open case, which is why it lives in the side column.
+ */
 export function SpecialArchivesEntry({
   lang,
   stats,
@@ -50,11 +38,23 @@ export function SpecialArchivesEntry({
   onOpen,
   compact = false,
 }: Props) {
-  const pack = THEMATIC_PACKS[0];
-  const opened = pack ? countAccessibleCases(stats, pack, caseUnlocks) : 0;
-  const total = pack ? getThematicPackTotalCases(pack) : 0;
-  const isRTL = RTL_LANGUAGES.has(lang);
-  const isComplete = total > 0 && opened >= total;
+  const unlockByCaseId = indexUnlocksByCaseId(caseUnlocks);
+  // Feature the first archive the player has not bought yet; once everything is
+  // owned the card becomes a library entrance rather than an offer.
+  const featured =
+    THEMATIC_PACKS.find((pack) => !isPackPurchased(stats, pack.id)) ??
+    THEMATIC_PACKS[0];
+  const allOwned = THEMATIC_PACKS.every((pack) => isPackPurchased(stats, pack.id));
+
+  const opened = featured
+    ? countAccessibleArchiveCases(
+        { ...stats, completedCaseIds: stats.completedCaseIds },
+        featured,
+        unlockByCaseId,
+      )
+    : 0;
+  const total = featured ? getThematicPackTotalCases(featured) : 0;
+  const fanPacks = getFanPacks();
 
   return (
     <motion.button
@@ -62,124 +62,47 @@ export function SpecialArchivesEntry({
       onClick={onOpen}
       whileTap={{ scale: 0.99 }}
       transition={{ duration: 0.18, ease: "easeOut" }}
-      className="group relative mt-2 block w-full text-start"
+      // `shrink-0`: the promo is the tallest card in a scrolling flex column and
+      // would otherwise be squeezed down to its cover strip.
+      className="relative mt-2 block w-full shrink-0 overflow-hidden rounded-[5px] border border-bureau-gold-dim bg-gradient-to-br from-bureau-2 to-bureau text-center text-white shadow-folder"
     >
-      {/* Background folder 1 — olive sage, peeks above the main folder */}
-      <div
-        className={`absolute rounded-[3px_8px_0_0] border ${
-          compact ? "h-[62px]" : "h-[58px]"
-        }`}
-        style={{
-          top: "-6px",
-          [isRTL ? "right" : "left"]: compact ? "12px" : "11px",
-          [isRTL ? "left" : "right"]: "-5px",
-          background: "#6E8475",
-          borderColor: "#3A5141",
-        }}
-        aria-hidden
-      />
-      {/* Background folder 2 — warm sienna, peeks above the main folder */}
-      <div
-        className={`absolute rounded-[3px_8px_0_0] border ${
-          compact ? "h-[66px]" : "h-[62px]"
-        }`}
-        style={{
-          top: "-3px",
-          [isRTL ? "right" : "left"]: "6px",
-          [isRTL ? "left" : "right"]: "-2px",
-          background: "#b98f73",
-          borderColor: "#7a5a52",
-        }}
+      <span
+        className="pointer-events-none absolute inset-[7px] border border-bureau-gold/30"
         aria-hidden
       />
 
-      {/* Main folder cover */}
-      <div
-        className={`relative border border-folder-edge bg-folder text-folder-ink ${
-          compact
-            ? "rounded-[2px_11px_11px_11px] px-[15px] py-[14px]"
-            : "rounded-[2px_10px_10px_10px] px-[13px] py-3"
-        }`}
-        style={{
-          boxShadow: compact
-            ? "0 12px 24px rgba(40,28,10,0.24)"
-            : "0 10px 22px rgba(40,28,10,0.22)",
-        }}
-      >
-        {/* Folder tab that protrudes above the cover */}
-        <span
-          className={`absolute rounded-t-[6px] bg-folder-edge ${
-            compact ? "h-[15px] w-[104px]" : "h-[14px] w-[92px]"
-          }`}
-          style={{
-            top: "-9px",
-            [isRTL ? "right" : "left"]: compact ? "16px" : "14px",
-          }}
-          aria-hidden
-        />
-
-        {/* "NEW" badge in the top-right corner */}
-        {!isComplete ? (
+      {/* Fanned covers */}
+      <span className="relative mt-2.5 block h-[126px]" aria-hidden>
+        {fanPacks.map((pack, index) => (
           <span
-            className={`absolute rounded-[4px] bg-accent font-mono font-bold uppercase tracking-[.12em] text-paper ${
-              compact
-                ? "top-[13px] px-2 py-[3px] text-[9px]"
-                : "top-[11px] px-[7px] py-[3px] text-[8px]"
-            }`}
-            style={{ [isRTL ? "left" : "right"]: compact ? "13px" : "11px" }}
+            key={`${pack.id}-${index}`}
+            className={`absolute start-1/2 top-4 block h-[92px] w-[92px] overflow-hidden border-2 border-bureau-gold-dim shadow-card ${FAN_SLOT_CLASSES[index]}`}
           >
-            {t("newArchive", lang)}
+            <PackCover pack={pack} className="h-full w-full" />
           </span>
-        ) : null}
+        ))}
+      </span>
 
-        {/* Title + subtitle */}
-        <div className={compact ? "max-w-[78%]" : "max-w-[175px]"}>
-          <div
-            className={`font-serif font-bold text-ink ${
-              compact ? "text-[17px]" : "text-[15px]"
-            }`}
-          >
-            {t("specialArchives", lang)}
-          </div>
-          <p
-            className={`mt-[3px] leading-[1.4] text-folder-ink ${
-              compact ? "text-[12px]" : "text-[11px]"
-            }`}
-          >
-            {pack ? loc(pack.title, lang) : t("specialArchivesSubtitle", lang)}
-          </p>
-        </div>
-
-        {/* Bottom row: case counter + CTA pill */}
-        <div
-          className={`flex items-center justify-between gap-2 border-t border-folder-edge/45 ${
-            compact ? "mt-[13px] pt-[11px]" : "mt-[11px] pt-[10px]"
-          }`}
-        >
-          <span
-            className={`font-mono font-semibold uppercase tracking-[.07em] text-folder-ink ${
-              compact ? "text-[12px]" : "text-[9px]"
-            }`}
-          >
-            {t("openedCases", lang)
-              .replace("{opened}", String(opened))
-              .replace("{total}", String(total))}
-          </span>
-          <span
-            className={`shrink-0 whitespace-nowrap font-mono font-semibold ${
-              compact
-                ? "rounded-[5px] px-2 py-[4px] text-[12px]"
-                : "rounded-[4px] px-[7px] py-[3px] text-[9px]"
-            } ${
-              isComplete
-                ? "border border-success text-success"
-                : "bg-accent text-paper"
-            }`}
-          >
-            {isComplete ? t("purchased", lang) : t("firstCaseFree", lang)}
-          </span>
-        </div>
-      </div>
+      <span className={`block px-4 pb-4 pt-1 ${compact ? "text-[13px]" : ""}`}>
+        <span className="block font-mono text-[8px] font-black uppercase leading-relaxed tracking-[.14em] text-bureau-gold">
+          {allOwned
+            ? t("specialArchives", lang)
+            : `${t("newArchive", lang)} · ${t("archiveOneCaseFree", lang)}`}
+        </span>
+        <span className="mt-1.5 block font-serif text-[17px] font-bold leading-tight">
+          {featured ? loc(featured.title, lang) : t("specialArchives", lang)}
+        </span>
+        <span className="mt-1 block font-mono text-[10px] text-bureau-muted">
+          {featured
+            ? t("openedCases", lang)
+                .replace("{opened}", String(opened))
+                .replace("{total}", String(total || getThematicPackCases(featured).length))
+            : t("specialArchivesSubtitle", lang)}
+        </span>
+        <span className="mx-auto mt-3 block max-w-[170px] bg-bureau-copper px-3 py-2.5 font-mono text-[9px] font-black uppercase tracking-[.04em] text-white">
+          {allOwned ? t("openCaseAction", lang) : t("archiveDetailPlayFree", lang)}
+        </span>
+      </span>
     </motion.button>
   );
 }

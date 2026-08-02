@@ -50,6 +50,28 @@ export default {
         'document-faint': '#9CA3AF',
         'document-rule': '#D1CFC8',
         'document-dash': '#C7C2B6',
+        // --- Bureau of Special Cases (dark commercial frame + topbar) ---
+        // A single night-office palette shared by the topbar and every Bureau
+        // screen, so the shelf reads as one closed department distinct from the
+        // sepia desk. Paper inside the Bureau still uses the desk paper tokens.
+        topbar: '#171C1B',
+        'topbar-line': '#3F3A2C',
+        'topbar-chip': '#202825',
+        'topbar-chip-border': '#3A423C',
+        'topbar-ink': '#F4E6C8',
+        'topbar-muted': '#B9AA8E',
+        bureau: '#17201F', // Bureau screen background
+        'bureau-2': '#222C29', // raised panel on the Bureau background
+        'bureau-3': '#202724', // locked case tile
+        'bureau-line': '#494B43',
+        'bureau-gold': '#D2A451',
+        'bureau-gold-dim': '#A9863F',
+        'bureau-copper': '#8D432D',
+        'bureau-ink': '#F2E5CA', // primary text on the Bureau background
+        'bureau-muted': '#BDB3A0',
+        'bureau-dim': '#928979',
+        'bureau-paper': '#E9DEC3', // paper card sitting on the Bureau background
+        'bureau-paper-2': '#D8C7A3', // workshop bench paper
         toast: '#2B2018',
         'toast-ink': '#FEE2E2',
         'modal-backdrop': 'rgb(8 11 17 / 0.8)',

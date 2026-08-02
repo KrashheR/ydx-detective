@@ -147,11 +147,19 @@ id дописывается в `revealedEvidenceIds`, поэтому раскр�
 будущей «Кабинета следователя» (план 03, механика 2.5), где уровень получит реальную функцию.
 Ежедневные дела не гейтятся уровнем — только кулдауном.
 
-## Особые архивы (сюжетные паки)
+## Бюро особых дел (сюжетные паки, штампы, наборы)
 
-Вход в «Особые архивы» снова доступен: `App.tsx` отдаёт карточку `SpecialArchivesEntry` в
-`RightSidebar` (десктоп, проп `archivesSlot`) и в `MobileDeskMenu` (мобайл, `compact`), клик
-открывает `ThematicPacksModal`. `THEMATIC_PACKS` в `src/data/thematicPacks.ts` содержит
+Вся коммерческая часть живёт в одном полноэкранном разделе `BureauScreen` с тремя вкладками:
+**Архивы** (`BureauArchives`), **Штампы** (`BureauWorkshop`) и **Наборы** (`BureauBundles`).
+Входов два: кнопка «Бюро особых дел» в `TopBar` (всегда видна, с бейджем NEW пока куплены не все
+архивы) и карточка-витрина `SpecialArchivesEntry` в `RightSidebar` / `MobileDeskMenu`. Раздел
+заменяет собой стол, а не накрывает его модалкой: `App.tsx` держит `bureauTab` (`null` = стол).
+
+Логика доступа к делам пака вынесена из UI в `src/engine/archiveAccessEngine.ts`
+(`getArchiveCaseStatus`, `countAccessibleArchiveCases`, `getNextRewardedCase`) — её читают и
+витрина, и карточка на столе.
+
+`THEMATIC_PACKS` в `src/data/thematicPacks.ts` содержит
 **только три сюжетных пака** — «СНТ „Ромашка“. Тайна тринадцатого участка», «Поезд №13. Билет до
 станции Тихая» и «Санаторий „Прибой“. Последняя смена», по 10 дел каждый (`dacha-romashka-01…10`,
 `night-train-01…10`, `sanatorium-priboy-01…10`, `src/data/cases/packs/<pack-id>/`,
@@ -168,8 +176,20 @@ id дописывается в `revealedEvidenceIds`, поэтому раскр�
   `stats.archiveUnlockedCaseIds`;
 - rewarded-разблокировка ограничена одним unlock на пак за серверный день; факт расхода хранится в
   `stats.archiveAdUnlockServerDayByPack`;
-- archive entitlements override обычный campaign lock внутри `ThematicPacksModal`, но не меняют
-  canonical campaign order и не переписывают `caseUnlockEngine`.
+- archive entitlements override обычный campaign lock внутри `archiveAccessEngine`, но не меняют
+  canonical campaign order и не переписывают `caseUnlockEngine`;
+- на странице архива CTA меняется местами: пока бесплатный пробник не пройден первичен
+  «Играть первое дело бесплатно», после прохождения — покупка («Продолжить расследование»).
+
+### Наборы (bundles)
+
+`src/data/bundles.ts` описывает две bundle-покупки: `bundle.stamps` (все шуточные подписи) и
+`bundle.complete` (три архива + все подписи). Bundle не является отдельной сущностью прогресса —
+он **выдаёт содержимое** (`grantBundlePurchase` → `grantArchivePurchases` + `grantStampTextPurchases`)
+и пишет id в `stats.purchasedBundleIds`. Цена «до» и процент скидки всегда **выводятся** из
+`fallbackPriceRub` содержимого (`getBundleListPriceRub` / `getBundleDiscountPercent`, floor), поэтому
+реклама скидки не может разойтись с составом. `applyRestoredPurchases` обязана мапить bundle
+product id обратно на содержимое — иначе переустановка теряет покупку целиком.
 
 ### Кривая сложности (прогрессия для удержания)
 

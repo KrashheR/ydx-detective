@@ -105,6 +105,46 @@ export const STAMP_TEXTS: readonly StampText[] = [
   },
 ];
 
+/* --------------------------------- Ink ----------------------------------- */
+
+/**
+ * Ink colours the stamp impression can be cut in — catalog data, not a design
+ * token: the value is picked by a runtime id, so it is applied as an inline
+ * colour on the three impression sites (stamp modal, evidence card, workshop
+ * preview) and never remaps the `stamp` token, which also paints unrelated
+ * chrome (budget warnings, toasts, anomaly zones).
+ *
+ * Every ink is free — the paid axis is the caption, not the colour.
+ */
+export interface StampInk {
+  readonly id: string;
+  /** CSS colour of the impression. */
+  readonly color: string;
+  /** `UIKey` of the accessible label. */
+  readonly labelKey: "workshopInkRed" | "workshopInkBlue" | "workshopInkGreen";
+}
+
+/** Archive red — what every profile printed before the ink picker existed. */
+export const DEFAULT_STAMP_INK_ID = "red";
+
+export const STAMP_INKS: readonly StampInk[] = [
+  { id: DEFAULT_STAMP_INK_ID, color: "#9D281F", labelKey: "workshopInkRed" },
+  { id: "blue", color: "#263E68", labelKey: "workshopInkBlue" },
+  { id: "green", color: "#3F6847", labelKey: "workshopInkGreen" },
+];
+
+export function getStampInk(id: string | null | undefined): StampInk {
+  return (
+    STAMP_INKS.find((ink) => ink.id === id) ??
+    STAMP_INKS.find((ink) => ink.id === DEFAULT_STAMP_INK_ID)!
+  );
+}
+
+/** The impression colour for an ink id; `null`/unknown → archive red. */
+export function getStampInkColor(id: string | null | undefined): string {
+  return getStampInk(id).color;
+}
+
 /** Purchasable entries only — the shop shelf. */
 export const PURCHASABLE_STAMP_TEXTS: readonly StampText[] = STAMP_TEXTS.filter(
   (stamp) => stamp.productId !== null,

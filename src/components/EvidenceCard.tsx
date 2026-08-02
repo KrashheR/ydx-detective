@@ -119,7 +119,8 @@ export function EvidenceCard({
         {stamped && (
           <span
             aria-hidden
-            className={`absolute right-[-26px] top-3 rotate-[34deg] whitespace-nowrap bg-stamp py-[3px] font-mono font-bold uppercase text-white ${
+            style={{ background: 'var(--stamp-ink)' }}
+            className={`absolute right-[-26px] top-3 rotate-[34deg] whitespace-nowrap py-[3px] font-mono font-bold uppercase text-white ${
               // Bought captions run longer than "ПРОТИВОРЕЧИЕ" — tighten the
               // ribbon instead of letting it swallow the card corner.
               stampCaption.length > 16

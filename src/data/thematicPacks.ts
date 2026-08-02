@@ -16,6 +16,18 @@ export interface ThematicPack {
   readonly openedCases: number;
   readonly status: ThematicPackStatus;
   readonly accent: "archive" | "polar" | "cliff";
+  /**
+   * Shelf artwork for the Bureau, relative to `public/`. Optional because the
+   * retired expert-file packs in `RETIRED_THEMATIC_PACKS` were never given
+   * cover art — the shelf falls back to the folder-spine look for those.
+   */
+  readonly coverImage?: string;
+  /** Period line above the title on the archive page ("Лето 1998"). */
+  readonly era?: LocalizedString;
+  /** One-line epigraph quoted on the archive page. */
+  readonly epigraph?: LocalizedString;
+  /** Approximate number of new evidence cards — advertised as "{n}+ улик". */
+  readonly evidenceCount?: number;
 }
 
 const l = (
@@ -82,6 +94,16 @@ export const THEMATIC_PACKS: readonly ThematicPack[] = [
     openedCases: 1,
     status: "ad_available",
     accent: "polar",
+    coverImage: "covers/packs/dacha-romashka-archive.webp",
+    era: l("Лето 1998", "Summer 1998", "1998 Yazı", "صيف 1998", "1998 жылғы жаз"),
+    epigraph: l(
+      "«На даче все всё знают. Просто рассказывают в неправильном порядке»",
+      "\"On the allotments everybody knows everything. They just tell it in the wrong order.\"",
+      "«Bahçelerde herkes her şeyi bilir. Sadece yanlış sırayla anlatır.»",
+      "«في البساتين يعرف الجميع كل شيء، لكنهم يروونه بترتيب خاطئ»",
+      "«Бақшада бәрі бәрін біледі. Тек дұрыс емес ретпен айтады»",
+    ),
+    evidenceCount: 30,
   },
   {
     id: "night-train",
@@ -117,6 +139,16 @@ export const THEMATIC_PACKS: readonly ThematicPack[] = [
     openedCases: 1,
     status: "ad_available",
     accent: "cliff",
+    coverImage: "covers/packs/night-train-archive.webp",
+    era: l("Ночь на 12 марта", "The night of 12 March", "12 Mart gecesi", "ليلة 12 مارس", "12 наурызға қараған түн"),
+    epigraph: l(
+      "«Ночной состав идёт без остановок. Но один пассажир точно не доедет до конечной»",
+      "\"The night train runs without stops. But one passenger will not reach the last station.\"",
+      "«Gece treni duraksız gider. Ama bir yolcu son durağa varmayacak.»",
+      "«قطار الليل يسير بلا توقف. لكن راكبًا واحدًا لن يصل إلى المحطة الأخيرة»",
+      "«Түнгі құрам аялдамасыз жүреді. Бірақ бір жолаушы соңғы аялдамаға жетпейді»",
+    ),
+    evidenceCount: 30,
   },
   {
     id: "sanatorium-priboy",
@@ -152,6 +184,16 @@ export const THEMATIC_PACKS: readonly ThematicPack[] = [
     openedCases: 1,
     status: "ad_available",
     accent: "archive",
+    coverImage: "covers/packs/sanatorium-priboy-archive.webp",
+    era: l("Октябрь, последняя смена", "October, the last shift", "Ekim, son vardiya", "أكتوبر، الوردية الأخيرة", "Қазан, соңғы ауысым"),
+    epigraph: l(
+      "«Закрытый курорт, штормовая ночь и постояльцы, которым есть что скрывать»",
+      "\"A closed resort, a stormy night, and guests with something to hide.\"",
+      "«Kapalı bir tatil yeri, fırtınalı bir gece ve saklayacak şeyi olan misafirler.»",
+      "«منتجع مغلق وليلة عاصفة ونزلاء لديهم ما يخفونه»",
+      "«Жабық курорт, дауылды түн және жасыратыны бар қонақтар»",
+    ),
+    evidenceCount: 30,
   },
 ];
 

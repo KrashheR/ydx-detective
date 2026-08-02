@@ -41,7 +41,7 @@
 
 ## Миграция сейвов
 
-`GAME_CONFIG.saveVersion` — текущая версия схемы персиста (сейчас **10**). `migrate()` в
+`GAME_CONFIG.saveVersion` — текущая версия схемы персиста (сейчас **11**). `migrate()` в
 `persistence.ts` спредит текущие дефолты под старые сейвы, добивая новые поля:
 - v1 → v2: добавлены xp / streakCount / lastPlayedServerDay / unlockedAchievementIds в
   stats и revealedEvidenceIds в сессию.
@@ -61,6 +61,11 @@
   `ownedStampTextIds` / `activeStampTextId` — косметические подписи штампа противоречия
   (пустой список + `null` = бесплатный `classic`, ровно то, что печатали все старые профили;
   покупки так же возвращаются через restore).
+- v10 → v11: Бюро особых дел добавляет `activeStampInkId` (бесплатный цвет оттиска штампа) и
+  `purchasedBundleIds` (bundle-покупки архивов и подписей). Оба бэкфиллятся спредом дефолтов:
+  `null` цвет — ровно тот архивно-красный, что печатали все профили до v11, а пустой список
+  наборов ничего не теряет, потому что bundle заново выдаёт своё содержимое через
+  `applyRestoredPurchases`.
 
 Бампай версию и расширяй `migrate()` при любом изменении формы персиста.
 
@@ -247,7 +252,7 @@ contradiction), а также `result_view`/`result_action`. Это позвол
 | `rating_action` | `dismissRating` / `suppressRating` / `App.tsx` (onRate) | action (`dismiss`/`never`/`rate`), dismissals |
 | `ad_offer`, `ad_accept`, `ad_open`, `ad_close`, `ad_reward`, `ad_error` | UI + `yandexSDK.ts` | kind, placement, wasShown, rewarded, error; `ad_open` дополнительно несёт сессионные агрегаты `adsPerSession`/`verdictsSinceLastAd` (см. ниже) |
 | `service_view`, `service_select`, `service_buy`, `service_use` | `App.tsx` / `buyHint` | service, caseId, cost, balanceBefore/After |
-| `shop_view`, `product_view`, `purchase_start`, `purchase_success`, `purchase_error`, `purchase_restore` | `ThematicPacksModal` / `StampShopModal` (через `App.tsx`) + `yandexSDK.ts` | productId, archiveId, price, error; у мастерской штампов `shop_view` несёт `shop: 'stamp_texts'` |
+| `shop_view`, `product_view`, `purchase_start`, `purchase_success`, `purchase_error`, `purchase_restore` | `BureauScreen` (через `App.tsx`) + `yandexSDK.ts` | productId, archiveId, price, error; `shop_view` несёт `shop: 'special_archives' \| 'stamp_texts' \| 'bundles'` по открытой вкладке Бюро |
 | `reject_blocked` | `App.tsx` (`handleReject`, при попытке отклонить без штампов; 1 раз за открытое дело) | caseId, viewedCount, stampedCount |
 | `budget_exhausted` | `App.tsx` (`handleOpenEvidence`, когда `markEvidenceAsViewed` отказывает) | caseId, budget, opensUsed |
 | `locked_case_click` | `App.tsx` (`handleSelectStandardCase`, клик по замкнутой карточке) | caseId, `lockReason: 'level' \| 'sequence'`, campaignPosition |
