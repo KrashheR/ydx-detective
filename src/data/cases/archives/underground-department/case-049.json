@@ -610,5 +610,105 @@
       "progressTotal": 7
     },
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "german_kross",
+      "displayName": {
+        "ru": "Герман Кросс",
+        "en": "German Kross",
+        "tr": "German Kross",
+        "ar": "غيرمان كروس",
+        "kk": "Герман Кросс"
+      },
+      "portraitState": "professional_annoyance"
+    },
+    "finalLine": {
+      "ru": "Никто не полез бы через вентиляцию. Именно поэтому версия казалась хорошей.",
+      "en": "Nobody would ever crawl through the ventilation. That is precisely why the story looked good.",
+      "tr": "Kimse havalandırmadan girmezdi. Senaryonun iyi görünmesinin sebebi de tam buydu.",
+      "ar": "ما كان أحد ليزحف عبر التهوية. ولهذا بالذات بدت الرواية جيدة.",
+      "kk": "Ешкім желдеткіш арқылы кірмес еді. Нұсқаның жақсы көрінген себебі де дәл сол."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Контейнер M-7 действительно покинул морозильный сейф, и партия имела реальную стоимость.",
+          "en": "Container M-7 really did leave the freezer safe, and the batch had genuine value.",
+          "tr": "M-7 konteyneri gerçekten dondurucu kasadan çıktı ve parti gerçek bir değere sahipti.",
+          "ar": "غادرت الحاوية M-7 الخزنة المجمَّدة فعلًا، وكانت الدفعة ذات قيمة حقيقية.",
+          "kk": "M-7 контейнері мұздатқыш сейфтен шынымен шыққан, ал партияның нақты құны болған."
+        },
+        "evidenceIds": [
+          "camera-49"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Под инеем — полосы волочения к передней дверце, а металл у вентиляции без царапин и следов инструмента. Техник видел решётку целой утром: её сняли позже.",
+          "en": "Under the frost run drag marks towards the front door, while the metal by the vent bears no scratches or tool traces. The technician saw the grille intact that morning: it was removed later.",
+          "tr": "Kırağının altında ön kapıya doğru sürükleme izleri var; havalandırmanın yanındaki metalde ise çizik ya da alet izi yok. Teknisyen o sabah ızgarayı sağlam gördü: sonradan sökülmüş.",
+          "ar": "تحت الصقيع آثار جرّ نحو الباب الأمامي، بينما المعدن قرب فتحة التهوية بلا خدوش أو آثار أدوات. رأى الفنيّ الشبكة سليمة صباحًا: أُزيلت لاحقًا.",
+          "kk": "Қырауүстінде алдыңғы есікке қарай сүйреу іздері бар, ал желдеткіш маңындағы металда сызат та, аспап ізі де жоқ. Техник таңертең торды бүтін көрген: оны кейін шешкен."
+        },
+        "evidenceIds": [
+          "photo-49",
+          "witness-49"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Журнал сейфа не знает несанкционированного доступа, партию вывели из официального оборота до «кражи», а аванс поступил с назначением «M-7».",
+          "en": "The safe log knows no unauthorised access, the batch was taken off the official register before the “theft”, and the advance came in referencing “M-7”.",
+          "tr": "Kasa kaydında yetkisiz erişim yok, parti “hırsızlıktan” önce resmî kayıttan düşülmüş ve avans “M-7” açıklamasıyla gelmiş.",
+          "ar": "لا يعرف سجل الخزنة أي دخول غير مصرَّح، وأُخرجت الدفعة من السجل الرسمي قبل «السرقة»، ووصلت الدفعة المقدَّمة بوصف «M-7».",
+          "kk": "Сейф журналы рұқсатсыз қатынауды білмейді, партия «ұрлықтан» бұрын ресми айналымнан шығарылған, ал аванс «M-7» тағайындауымен түскен."
+        },
+        "evidenceIds": [
+          "log-49",
+          "document-49",
+          "bank-49"
+        ]
+      }
+    ],
+    "arcReveal": {
+      "title": {
+        "ru": "Единый расчётный узел",
+        "en": "Common Clearing Node",
+        "tr": "Ortak Temizleme Düğümü",
+        "ar": "عقدة المقاصة المشتركة",
+        "kk": "Бірыңғай есеп айырысу түйіні"
+      },
+      "text": {
+        "ru": "Страховые выплаты, продажи активов и оплата курьеров Серого конвоя проходят через одну систему Карелина.",
+        "en": "Insurance payouts, asset sales, and Gray Convoy courier payments all pass through Karelin's system.",
+        "tr": "Sigorta ödemeleri, varlık satışları ve Gri Konvoy kurye ödemelerinin tümü Karelin'in sisteminden geçiyor.",
+        "ar": "تمر مدفوعات التأمين ومبيعات الأصول ومدفوعات البريد السريع من Gray Convoy عبر نظام Karelin.",
+        "kk": "Сақтандыру төлемдері, активтерді сату және Gray Convoy курьерлеріне төлемдер бір Карелин жүйесі арқылы өтеді."
+      }
+    }
   }
 }

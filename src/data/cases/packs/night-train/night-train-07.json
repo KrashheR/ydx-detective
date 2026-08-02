@@ -1,0 +1,520 @@
+{
+  "id": "night-train-07",
+  "type": "archive",
+  "difficulty": "hard",
+  "claimAmount": 64000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Пассажир с билетом из прошлого",
+    "en": "The Passenger with a Ticket from the Past",
+    "tr": "Geçmişten Bir Bileti Olan Yolcu",
+    "ar": "الراكب صاحب تذكرة من الماضي",
+    "kk": "Өткеннен келген билеті бар жолаушы"
+  },
+  "claim": {
+    "person": {
+      "ru": "«Михаил Ветров», 62 года — краевед",
+      "en": "\"Mikhail Vetrov\", age 62 — local historian",
+      "tr": "«Mihail Vetrov», 62 yaşında — yerel tarihçi",
+      "ar": "«ميخائيل فيتروف»، 62 عامًا — باحث في تاريخ المنطقة",
+      "kk": "«Михаил Ветров», 62 жаста — өлкетанушы"
+    },
+    "story": {
+      "ru": "Билет до Тихой — коллекционный, ему тридцать лет, я его не заполнял. Сегодня я вошёл в поезд в Горинске по своему паспорту и электронному билету на имя Михаила Ветрова. Прошу снять с меня подозрения и вернуть доступ ко всем вагонам.",
+      "en": "The ticket to Tikhaya is a collector's item, thirty years old, and I did not fill it in. Today I boarded at Gorinsk with my own passport and an e-ticket in the name of Mikhail Vetrov. I ask that the suspicion be dropped and my access to all cars restored.",
+      "tr": "Tihaya bileti koleksiyonluk, otuz yıllık ve onu ben doldurmadım. Bugün trene Gorinsk’te kendi pasaportum ve Mihail Vetrov adına elektronik biletle bindim. Şüphelerin kaldırılmasını ve tüm vagonlara erişimimin iadesini talep ediyorum.",
+      "ar": "تذكرة تيخايا قطعة اقتناء عمرها ثلاثون عامًا ولم أملأها أنا. اليوم صعدت في غورينسك بجواز سفري وتذكرة إلكترونية باسم ميخائيل فيتروف. أطلب رفع الشبهة عني وإعادة وصولي إلى جميع العربات.",
+      "kk": "Тихаяға дейінгі билет — коллекциялық, отыз жылдық, оны мен толтырмадым. Бүгін пойызға Горинскіде өз төлқұжатыммен және Михаил Ветров атына рәсімделген электронды билетпен отырдым. Күдікті алып тастап, барлық вагондарға рұқсатымды қайтаруды сұраймын."
+    }
+  },
+  "coverImage": "covers/packs/night-train-07.svg",
+  "personImage": "people/packs/night-train/oleg_belyaev.webp",
+  "client": {
+    "role": {
+      "ru": "Проверяемое лицо · пассажир вагона №5",
+      "en": "Person under review · passenger of car No. 5",
+      "tr": "İncelenen kişi · 5 No.lu vagon yolcusu",
+      "ar": "شخص قيد التدقيق · راكب العربة رقم 5",
+      "kk": "Тексерілуші · №5 вагон жолаушысы"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Вагон",
+          "en": "Car",
+          "tr": "Vagon",
+          "ar": "العربة",
+          "kk": "Вагон"
+        },
+        "v": {
+          "ru": "№5",
+          "en": "No. 5",
+          "tr": "No. 5",
+          "ar": "رقم 5",
+          "kk": "№5"
+        }
+      },
+      {
+        "k": {
+          "ru": "Рейс",
+          "en": "Service",
+          "tr": "Sefer",
+          "ar": "الرحلة",
+          "kk": "Рейс"
+        },
+        "v": {
+          "ru": "Поезд №13, ночной",
+          "en": "Train No. 13, night service",
+          "tr": "13 No.lu tren, gece seferi",
+          "ar": "القطار رقم 13، الرحلة الليلية",
+          "kk": "№13 пойыз, түнгі рейс"
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "TR07-E1",
+      "order": 1,
+      "type": "document_scan",
+      "title": {
+        "ru": "UV-скан бумажного билета",
+        "en": "UV Scan of the Paper Ticket",
+        "tr": "Kâğıt Biletin UV Taraması",
+        "ar": "مسح التذكرة الورقية بالأشعة فوق البنفسجية",
+        "kk": "Қағаз билеттің UV сканы"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Имя, дата и станция назначения нанесены современным тонером поверх бланка 1996 года, а на обороте — свежий отпечаток пальца самого пассажира.",
+        "en": "The name, date and destination were applied with modern toner over the 1996 blank, and the back carries a fresh fingerprint of the passenger himself.",
+        "tr": "Ad, tarih ve varış istasyonu, 1996 blankosunun üzerine modern tonerle basılmış; arka yüzde ise yolcunun taze parmak izi var.",
+        "ar": "طُبع الاسم والتاريخ والمحطة بحبر حديث فوق نموذج 1996، وعلى الظهر بصمة طازجة للراكب نفسه.",
+        "kk": "Аты, күні және баратын станция 1996 жылғы бланкінің үстіне заманауи тонермен басылған, ал артында жолаушының өз саусақ ізі жаңа қалған."
+      },
+      "statementLink": {
+        "statementId": "claim_ticket",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Имя, дата и станция назначения нанесены современным тонером поверх бланка 1996 года, а на обороте — свежий отпечаток пальца самого пассажира.",
+          "en": "The name, date and destination were applied with modern toner over the 1996 blank, and the back carries a fresh fingerprint of the passenger himself.",
+          "tr": "Ad, tarih ve varış istasyonu, 1996 blankosunun üzerine modern tonerle basılmış; arka yüzde ise yolcunun taze parmak izi var.",
+          "ar": "طُبع الاسم والتاريخ والمحطة بحبر حديث فوق نموذج 1996، وعلى الظهر بصمة طازجة للراكب نفسه.",
+          "kk": "Аты, күні және баратын станция 1996 жылғы бланкінің үстіне заманауи тонермен басылған, ал артында жолаушының өз саусақ ізі жаңа қалған."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_ticket",
+        "reason": {
+          "ru": "Имя, дата и станция назначения нанесены современным тонером поверх бланка 1996 года, а на обороте — свежий отпечаток пальца самого пассажира.",
+          "en": "The name, date and destination were applied with modern toner over the 1996 blank, and the back carries a fresh fingerprint of the passenger himself.",
+          "tr": "Ad, tarih ve varış istasyonu, 1996 blankosunun üzerine modern tonerle basılmış; arka yüzde ise yolcunun taze parmak izi var.",
+          "ar": "طُبع الاسم والتاريخ والمحطة بحبر حديث فوق نموذج 1996، وعلى الظهر بصمة طازجة للراكب نفسه.",
+          "kk": "Аты, күні және баратын станция 1996 жылғы бланкінің үстіне заманауи тонермен басылған, ал артында жолаушының өз саусақ ізі жаңа қалған."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "Бланк 1996 года подлинный: бумага, сетка и защитная нить соответствуют году выпуска. Заполненные поля выглядят слишком ровными.",
+        "en": "The 1996 blank is genuine: paper, guilloche and security thread match the year of issue. The filled-in fields look far too even.",
+        "tr": "1996 blankosu gerçek: kâğıt, gilyoş ve güvenlik şeridi basım yılıyla uyuşuyor. Doldurulan alanlar ise fazlasıyla düzgün görünüyor.",
+        "ar": "النموذج الأصلي لعام 1996 حقيقي: الورق والزخرفة وخيط الأمان تطابق سنة الإصدار. لكن الحقول المعبأة تبدو منتظمة أكثر من اللازم.",
+        "kk": "1996 жылғы бланк түпнұсқа: қағазы, торы және қорғаныш жібі шыққан жылға сай. Ал толтырылған жолдар тым тегіс көрінеді."
+      },
+      "instruction": {
+        "ru": "Просветите поля ультрафиолетом и сверьте способ нанесения с годом бланка.",
+        "en": "Examine the fields under ultraviolet and compare the printing method with the blank's year.",
+        "tr": "Alanları ultraviyoleyle inceleyin ve baskı yöntemini blankonun yılıyla karşılaştırın.",
+        "ar": "افحص الحقول بالأشعة فوق البنفسجية وقارن أسلوب الطباعة بسنة النموذج.",
+        "kk": "Жолдарды ультракүлгінмен қарап, жазу тәсілін бланк жылымен салыстырыңыз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/night-train/tr07-e1.webp"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Тонер и типографская краска светятся по-разному: игрок сам отделяет подлинный бланк от свежего заполнения.",
+          "en": "Toner and letterpress ink fluoresce differently: the player separates the genuine blank from the recent filling themselves.",
+          "tr": "Toner ve matbaa mürekkebi farklı parlar: oyuncu gerçek blankoyu yeni doldurmadan kendisi ayırır.",
+          "ar": "يتوهج الحبر الجاف وحبر الطباعة بشكل مختلف: يفصل اللاعب بنفسه النموذج الأصلي عن التعبئة الحديثة.",
+          "kk": "Тонер мен баспа бояуы әртүрлі жарқырайды: ойыншы түпнұсқа бланкіні жаңа толтырудан өзі ажыратады."
+        },
+        "playerAction": {
+          "ru": "Просветите поля ультрафиолетом и сверьте способ нанесения с годом бланка.",
+          "en": "Examine the fields under ultraviolet and compare the printing method with the blank's year.",
+          "tr": "Alanları ultraviyoleyle inceleyin ve baskı yöntemini blankonun yılıyla karşılaştırın.",
+          "ar": "افحص الحقول بالأشعة فوق البنفسجية وقارن أسلوب الطباعة بسنة النموذج.",
+          "kk": "Жолдарды ультракүлгінмен қарап, жазу тәсілін бланк жылымен салыстырыңыз."
+        },
+        "conclusion": {
+          "ru": "Имя, дата и станция назначения нанесены современным тонером поверх бланка 1996 года, а на обороте — свежий отпечаток пальца самого пассажира.",
+          "en": "The name, date and destination were applied with modern toner over the 1996 blank, and the back carries a fresh fingerprint of the passenger himself.",
+          "tr": "Ad, tarih ve varış istasyonu, 1996 blankosunun üzerine modern tonerle basılmış; arka yüzde ise yolcunun taze parmak izi var.",
+          "ar": "طُبع الاسم والتاريخ والمحطة بحبر حديث فوق نموذج 1996، وعلى الظهر بصمة طازجة للراكب نفسه.",
+          "kk": "Аты, күні және баратын станция 1996 жылғы бланкінің үстіне заманауи тонермен басылған, ал артында жолаушының өз саусақ ізі жаңа қалған."
+        }
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "uv",
+          "side_light"
+        ],
+        "anomalyZones": [
+          {
+            "id": "modern-toner",
+            "mode": "uv",
+            "x": 34,
+            "y": 40,
+            "width": 30,
+            "height": 14,
+            "label": "Поля напечатаны современным тонером",
+            "labelEn": "Fields printed with modern toner",
+            "isContradiction": true
+          },
+          {
+            "id": "security-thread",
+            "mode": "uv",
+            "x": 12,
+            "y": 22,
+            "width": 8,
+            "height": 56,
+            "label": "Защитная нить 1996 года",
+            "labelEn": "1996 security thread",
+            "isContradiction": false
+          },
+          {
+            "id": "fingerprint",
+            "mode": "side_light",
+            "x": 66,
+            "y": 66,
+            "width": 18,
+            "height": 18,
+            "label": "Свежий отпечаток на обороте",
+            "labelEn": "Fresh fingerprint on the back",
+            "isContradiction": false
+          }
+        ],
+        "referenceFields": [
+          {
+            "id": "blank-year",
+            "label": "Год выпуска бланка",
+            "labelEn": "Year the blank was issued",
+            "value": "1996"
+          }
+        ],
+        "successCondition": {
+          "type": "select_then_compare",
+          "zoneId": "modern-toner",
+          "referenceFieldId": "blank-year"
+        }
+      }
+    },
+    {
+      "id": "TR07-E2",
+      "order": 2,
+      "type": "usage_log",
+      "title": {
+        "ru": "Лог турникета и служебной двери",
+        "en": "Turnstile and Service Door Log",
+        "tr": "Turnike ve Servis Kapısı Kaydı",
+        "ar": "سجل البوابة وباب الخدمة",
+        "kk": "Турникет пен қызметтік есік журналы"
+      },
+      "content": {
+        "ru": "Электронный билет на имя Ветрова на турникетах вокзала не сканировался ни разу. 20:41 — открытие технической двери перрона по пропуску подрядчика вагона-ресторана; вместе с ним проходит второй человек.",
+        "en": "The e-ticket in Vetrov's name was never scanned at any station turnstile. 20:41 — the platform service door was opened with the restaurant-car contractor's pass; a second person walks through with him.",
+        "tr": "Vetrov adına düzenlenen elektronik bilet, gardaki hiçbir turnikede okutulmamış. 20:41 — peronun teknik kapısı, restoran vagonu yüklenicisinin kartıyla açılıyor; yanında ikinci bir kişi geçiyor.",
+        "ar": "لم تُمسح التذكرة الإلكترونية باسم فيتروف على أي بوابة في المحطة. 20:41 — فُتح باب الخدمة في الرصيف ببطاقة متعهد عربة المطعم، ومعه يعبر شخص ثانٍ.",
+        "kk": "Ветров атындағы электронды билет вокзал турникеттерінде бірде-бір рет сканерленбеген. 20:41 — перронның техникалық есігі мейрамхана вагоны мердігерінің рұқсатымен ашылған; онымен бірге екінші адам өтеді."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "По электронному билету пассажир в поезд не входил: он прошёл через техническую дверь вместе с подрядчиком.",
+        "en": "The passenger never boarded on the e-ticket: he came through the service door together with the contractor.",
+        "tr": "Yolcu elektronik biletle binmedi: yükleniciyle birlikte teknik kapıdan geçti.",
+        "ar": "لم يصعد الراكب بالتذكرة الإلكترونية: دخل من باب الخدمة برفقة المتعهد.",
+        "kk": "Жолаушы электронды билетпен кірмеген: ол мердігермен бірге техникалық есіктен өткен."
+      },
+      "statementLink": {
+        "statementId": "claim_boarding",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "По электронному билету пассажир в поезд не входил: он прошёл через техническую дверь вместе с подрядчиком.",
+          "en": "The passenger never boarded on the e-ticket: he came through the service door together with the contractor.",
+          "tr": "Yolcu elektronik biletle binmedi: yükleniciyle birlikte teknik kapıdan geçti.",
+          "ar": "لم يصعد الراكب بالتذكرة الإلكترونية: دخل من باب الخدمة برفقة المتعهد.",
+          "kk": "Жолаушы электронды билетпен кірмеген: ол мердігермен бірге техникалық есіктен өткен."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_boarding",
+        "reason": {
+          "ru": "По электронному билету пассажир в поезд не входил: он прошёл через техническую дверь вместе с подрядчиком.",
+          "en": "The passenger never boarded on the e-ticket: he came through the service door together with the contractor.",
+          "tr": "Yolcu elektronik biletle binmedi: yükleniciyle birlikte teknik kapıdan geçti.",
+          "ar": "لم يصعد الراكب بالتذكرة الإلكترونية: دخل من باب الخدمة برفقة المتعهد.",
+          "kk": "Жолаушы электронды билетпен кірмеген: ол мердігермен бірге техникалық есіктен өткен."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr07-e2.webp",
+        "logPrompt": "gate turnstile log"
+      }
+    },
+    {
+      "id": "TR07-E3",
+      "order": 3,
+      "type": "document",
+      "title": {
+        "ru": "Проверка реестра пассажиров",
+        "en": "Passenger Register Check",
+        "tr": "Yolcu Kayıt Kontrolü",
+        "ar": "التحقق من سجل الركاب",
+        "kk": "Жолаушылар тізілімін тексеру"
+      },
+      "content": {
+        "ru": "Ветров Михаил Сергеевич, 1949 г. р., бывший почтовый экспедитор, умер в 2014 году. Паспортные данные в брони совпадают, фотография в реестре не совпадает с пассажиром.",
+        "en": "Vetrov, Mikhail Sergeyevich, born 1949, a former postal forwarder, died in 2014. The passport data in the booking matches, but the register photograph does not match the passenger.",
+        "tr": "Vetrov Mihail Sergeyeviç, 1949 doğumlu, eski posta sevkiyatçısı, 2014’te vefat etmiş. Rezervasyondaki pasaport bilgileri uyuşuyor ama kayıttaki fotoğraf yolcuyla uyuşmuyor.",
+        "ar": "فيتروف ميخائيل سيرغييفيتش، مواليد 1949، مُرسِل بريد سابق، توفي عام 2014. بيانات جواز السفر في الحجز مطابقة، لكن صورة السجل لا تطابق الراكب.",
+        "kk": "Ветров Михаил Сергеевич, 1949 жылы туған, бұрынғы пошта экспедиторы, 2014 жылы қайтыс болған. Броньдағы төлқұжат деректері сәйкес, ал тізілімдегі фото жолаушыға сай емес."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Имя принадлежит умершему человеку, но официальный вход и заполнение билета доказывают лог турникета и UV-скан.",
+        "en": "The name belongs to a dead man, though the turnstile log and the UV scan are what prove the boarding route and the filled-in ticket.",
+        "tr": "İsim ölmüş bir kişiye ait; binişi ve biletin doldurulmasını ise turnike kaydı ile UV taraması kanıtlıyor.",
+        "ar": "الاسم يعود إلى شخص متوفى، أما طريقة الصعود وتعبئة التذكرة فيثبتهما سجل البوابة والمسح فوق البنفسجي.",
+        "kk": "Есім қайтыс болған адамға тиесілі, ал кіру жолы мен билеттің толтырылуын турникет журналы мен UV сканы дәлелдейді."
+      },
+      "statementLink": {
+        "statementId": "claim_boarding",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Имя принадлежит умершему человеку, но официальный вход и заполнение билета доказывают лог турникета и UV-скан.",
+          "en": "The name belongs to a dead man, though the turnstile log and the UV scan are what prove the boarding route and the filled-in ticket.",
+          "tr": "İsim ölmüş bir kişiye ait; binişi ve biletin doldurulmasını ise turnike kaydı ile UV taraması kanıtlıyor.",
+          "ar": "الاسم يعود إلى شخص متوفى، أما طريقة الصعود وتعبئة التذكرة فيثبتهما سجل البوابة والمسح فوق البنفسجي.",
+          "kk": "Есім қайтыс болған адамға тиесілі, ал кіру жолы мен билеттің толтырылуын турникет журналы мен UV сканы дәлелдейді."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr07-e3.webp"
+      }
+    },
+    {
+      "id": "TR07-E4",
+      "order": 4,
+      "type": "photo",
+      "title": {
+        "ru": "Личное дело завода «Меридиан», 1996",
+        "en": "Meridian Factory Personnel File, 1996",
+        "tr": "«Meridian» Fabrikası Personel Dosyası, 1996",
+        "ar": "ملف موظف مصنع «ميريديان»، 1996",
+        "kk": "«Меридиан» зауытының жеке ісі, 1996"
+      },
+      "content": {
+        "ru": "Карточка бухгалтера Олега Андреевича Беляева, 1964 г. р. На фотографии — форма носа, линия подбородка и шрам над левой бровью, совпадающие с пассажиром вагона №5.",
+        "en": "The file of accountant Oleg Andreyevich Belyaev, born 1964. The photograph shows a nose shape, jawline and scar above the left brow matching the passenger from car No. 5.",
+        "tr": "Muhasebeci Oleg Andreyeviç Belyayev’in kartı, 1964 doğumlu. Fotoğraftaki burun biçimi, çene hattı ve sol kaş üstündeki yara izi, 5 No.lu vagon yolcusuyla örtüşüyor.",
+        "ar": "بطاقة المحاسب أوليغ أندرييفيتش بيلاييف، مواليد 1964. تُظهر الصورة شكل الأنف وخط الفك وندبة فوق الحاجب الأيسر تطابق راكب العربة رقم 5.",
+        "kk": "Бухгалтер Олег Андреевич Беляевтің карточкасы, 1964 жылы туған. Фотодағы мұрын пішіні, иек сызығы және сол қас үстіндегі тыртық №5 вагон жолаушысымен сәйкес."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Совпадение внешности раскрывает настоящее имя пассажира, но остаётся вспомогательным: решают билет, турникет и телефон.",
+        "en": "The facial match reveals the passenger's real name yet stays supporting evidence: the ticket, the turnstile and the phone decide the case.",
+        "tr": "Yüz benzerliği yolcunun gerçek adını ortaya çıkarıyor ama destekleyici kalıyor: kararı bilet, turnike ve telefon veriyor.",
+        "ar": "يكشف تطابق الملامح الاسم الحقيقي للراكب لكنه يبقى دليلًا مساندًا: الحسم للتذكرة والبوابة والهاتف.",
+        "kk": "Бет-әлпет ұқсастығы жолаушының нағыз есімін ашады, бірақ қосымша дәйек болып қала береді: шешімді билет, турникет және телефон береді."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Совпадение внешности раскрывает настоящее имя пассажира, но остаётся вспомогательным: решают билет, турникет и телефон.",
+          "en": "The facial match reveals the passenger's real name yet stays supporting evidence: the ticket, the turnstile and the phone decide the case.",
+          "tr": "Yüz benzerliği yolcunun gerçek adını ortaya çıkarıyor ama destekleyici kalıyor: kararı bilet, turnike ve telefon veriyor.",
+          "ar": "يكشف تطابق الملامح الاسم الحقيقي للراكب لكنه يبقى دليلًا مساندًا: الحسم للتذكرة والبوابة والهاتف.",
+          "kk": "Бет-әлпет ұқсастығы жолаушының нағыз есімін ашады, бірақ қосымша дәйек болып қала береді: шешімді билет, турникет және телефон береді."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr07-e4.webp",
+        "filename": "tr07-e4.webp"
+      }
+    },
+    {
+      "id": "TR07-E5",
+      "order": 5,
+      "type": "phone_records",
+      "title": {
+        "ru": "Телефонная выписка",
+        "en": "Phone Records",
+        "tr": "Telefon Dökümü",
+        "ar": "كشف المكالمات",
+        "kk": "Телефон үзіндісі"
+      },
+      "content": {
+        "ru": "Временный номер пассажира: 19:52 — оплата электронного билета на имя Ветрова; 22:14 и 00:41 — исходящие абоненту в зоне грузового съезда платформы Тихая.",
+        "en": "The passenger's temporary number: 19:52 — payment for the e-ticket in Vetrov's name; 22:14 and 00:41 — outgoing calls to a subscriber in the area of the Tikhaya freight ramp.",
+        "tr": "Yolcunun geçici numarası: 19:52 — Vetrov adına elektronik biletin ödemesi; 22:14 ve 00:41 — Tihaya yük rampası bölgesindeki bir aboneye giden aramalar.",
+        "ar": "الرقم المؤقت للراكب: 19:52 — دفع ثمن التذكرة الإلكترونية باسم فيتروف؛ 22:14 و00:41 — مكالمتان صادرتان إلى مشترك قرب منحدر الشحن في تيخايا.",
+        "kk": "Жолаушының уақытша нөмірі: 19:52 — Ветров атындағы электронды билетті төлеу; 22:14 және 00:41 — Тихая платформасының жүк түсіру аймағындағы абонентке шыққан қоңыраулар."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Выписка связывает пассажира с покупкой билета и с человеком у платформы, но факт входа через служебную дверь фиксирует лог турникета.",
+        "en": "The records tie the passenger to the ticket purchase and to the man by the platform, while the turnstile log records the service-door entry.",
+        "tr": "Döküm, yolcuyu bilet alımına ve perondaki adama bağlıyor; servis kapısından girişi ise turnike kaydı belgeliyor.",
+        "ar": "يربط الكشف الراكبَ بشراء التذكرة وبالرجل قرب الرصيف، أما الدخول من باب الخدمة فيوثقه سجل البوابة.",
+        "kk": "Үзінді жолаушыны билет сатып алумен және платформадағы адаммен байланыстырады, ал қызметтік есіктен кіруді турникет журналы тіркейді."
+      },
+      "statementLink": {
+        "statementId": "claim_boarding",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Выписка связывает пассажира с покупкой билета и с человеком у платформы, но факт входа через служебную дверь фиксирует лог турникета.",
+          "en": "The records tie the passenger to the ticket purchase and to the man by the platform, while the turnstile log records the service-door entry.",
+          "tr": "Döküm, yolcuyu bilet alımına ve perondaki adama bağlıyor; servis kapısından girişi ise turnike kaydı belgeliyor.",
+          "ar": "يربط الكشف الراكبَ بشراء التذكرة وبالرجل قرب الرصيف، أما الدخول من باب الخدمة فيوثقه سجل البوابة.",
+          "kk": "Үзінді жолаушыны билет сатып алумен және платформадағы адаммен байланыстырады, ал қызметтік есіктен кіруді турникет журналы тіркейді."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr07-e5.webp",
+        "phoneMask": "+7 ••• ••• 96 13"
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Бланк 1996 года подлинный, но имя и станция напечатаны современным тонером, а на обороте отпечаток пассажира.",
+      "Электронный билет на турникетах не сканировался: пассажир вошёл через техническую дверь с подрядчиком.",
+      "Михаил Ветров умер в 2014 году; под его именем едет бывший бухгалтер завода «Меридиан» Олег Беляев."
+    ],
+    "en": [
+      "The 1996 blank is genuine, but the name and station were printed with modern toner and the back carries the passenger's fingerprint.",
+      "The e-ticket was never scanned at the turnstiles: the passenger came in through the service door with a contractor.",
+      "Mikhail Vetrov died in 2014; the man travelling under his name is Oleg Belyaev, the Meridian factory's former accountant."
+    ],
+    "tr": [
+      "1996 blankosu gerçek ama ad ve istasyon modern tonerle basılmış, arkasında da yolcunun parmak izi var.",
+      "Elektronik bilet turnikelerde hiç okutulmadı: yolcu, teknik kapıdan yükleniciyle birlikte girdi.",
+      "Mihail Vetrov 2014’te öldü; onun adıyla seyahat eden kişi «Meridian» fabrikasının eski muhasebecisi Oleg Belyayev."
+    ],
+    "ar": [
+      "نموذج 1996 أصلي، لكن الاسم والمحطة طُبعا بحبر حديث وعلى ظهره بصمة الراكب.",
+      "لم تُمسح التذكرة الإلكترونية على البوابات: دخل الراكب من باب الخدمة مع متعهد.",
+      "توفي ميخائيل فيتروف عام 2014، ومن يسافر باسمه هو أوليغ بيلاييف المحاسب السابق لمصنع «ميريديان»."
+    ],
+    "kk": [
+      "1996 жылғы бланк түпнұсқа, бірақ есім мен станция заманауи тонермен басылған, артында жолаушының саусақ ізі бар.",
+      "Электронды билет турникетте сканерленбеген: жолаушы мердігермен бірге техникалық есіктен кірген.",
+      "Михаил Ветров 2014 жылы қайтыс болған; оның атымен «Меридиан» зауытының бұрынғы бухгалтері Олег Беляев жүр."
+    ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "stampable": false,
+      "text": {
+        "ru": "Пассажир едет законно и не имеет отношения к старому билету.",
+        "en": "The passenger travels lawfully and has nothing to do with the old ticket.",
+        "tr": "Yolcu yasal biçimde seyahat ediyor ve eski biletle ilgisi yok.",
+        "ar": "الراكب يسافر بشكل قانوني ولا علاقة له بالتذكرة القديمة.",
+        "kk": "Жолаушы заңды жүр және ескі билетке қатысы жоқ."
+      }
+    },
+    {
+      "id": "claim_ticket",
+      "stampable": true,
+      "text": {
+        "ru": "Бумажный билет до Тихой — коллекционный, я его не заполнял.",
+        "en": "The paper ticket to Tikhaya is a collector's item and I did not fill it in.",
+        "tr": "Tihaya’ya giden kâğıt bilet koleksiyonluk ve onu ben doldurmadım.",
+        "ar": "التذكرة الورقية إلى تيخايا قطعة اقتناء ولم أملأها.",
+        "kk": "Тихаяға дейінгі қағаз билет — коллекциялық, оны мен толтырмадым."
+      }
+    },
+    {
+      "id": "claim_boarding",
+      "stampable": true,
+      "text": {
+        "ru": "Я вошёл в поезд в Горинске по электронному билету на своё имя.",
+        "en": "I boarded the train at Gorinsk with an e-ticket in my own name.",
+        "tr": "Trene Gorinsk’te kendi adıma düzenlenmiş elektronik biletle bindim.",
+        "ar": "صعدت إلى القطار في غورينسك بتذكرة إلكترونية باسمي.",
+        "kk": "Пойызға Горинскіде өз атыма рәсімделген электронды билетпен отырдым."
+      }
+    }
+  ],
+  "contentVersion": "night-train-1.0",
+  "narrative": {
+    "preBrief": {
+      "ru": "Это не страховой случай, а служебная проверка. Но правил проверки поезд не отменял.",
+      "en": "This is not an insurance case but an internal review. The train has not suspended the rules of review, though.",
+      "tr": "Bu bir sigorta vakası değil, hizmet içi bir inceleme. Yine de tren, inceleme kurallarını askıya almadı.",
+      "ar": "هذه ليست حالة تأمين بل تدقيق داخلي، لكن القطار لم يعلّق قواعد التدقيق.",
+      "kk": "Бұл сақтандыру оқиғасы емес, қызметтік тексеру. Дегенмен пойыз тексеру ережелерін жоймаған."
+    },
+    "postVerdictNote": {
+      "ru": "Сходство на старой фотографии ничего не доказывает. Билет, звонки и отпечаток — доказывают.",
+      "en": "A resemblance in an old photograph proves nothing. The ticket, the calls and the fingerprint do.",
+      "tr": "Eski bir fotoğraftaki benzerlik hiçbir şey kanıtlamaz. Bilet, aramalar ve parmak izi kanıtlar.",
+      "ar": "الشبه في صورة قديمة لا يثبت شيئًا. أما التذكرة والمكالمات والبصمة فتثبت.",
+      "kk": "Ескі фотодағы ұқсастық ештеңе дәлелдемейді. Билет, қоңыраулар мен саусақ ізі дәлелдейді."
+    },
+    "nextCaseTeaser": {
+      "ru": "Приходит распоряжение музея выгрузить архивный ящик из вагона, которого в составе нет.",
+      "en": "A museum instruction arrives ordering the archive crate unloaded from a car the train does not have.",
+      "tr": "Müzeden, trende bulunmayan bir vagondan arşiv sandığının indirilmesini isteyen bir talimat geliyor.",
+      "ar": "يصل أمر من المتحف بإنزال صندوق الأرشيف من عربة لا وجود لها في القطار.",
+      "kk": "Мұражайдан құрамда жоқ вагоннан архив жәшігін түсіру туралы өкім келеді."
+    },
+    "seasonClue": {
+      "id": "belyaev-identity",
+      "progressIndex": 7,
+      "progressTotal": 10,
+      "label": {
+        "ru": "Настоящее имя пассажира",
+        "en": "The Passenger's Real Name",
+        "tr": "Yolcunun Gerçek Adı",
+        "ar": "الاسم الحقيقي للراكب",
+        "kk": "Жолаушының нағыз есімі"
+      },
+      "description": {
+        "ru": "«Краевед Ветров» — Олег Беляев, бухгалтер завода, получившего страховую выплату за исчезнувшие часы 1996 года.",
+        "en": "\"Local historian Vetrov\" is Oleg Belyaev, accountant of the factory that received the insurance payout for the watches lost in 1996.",
+        "tr": "«Yerel tarihçi Vetrov», 1996’da kaybolan saatler için sigorta tazminatı alan fabrikanın muhasebecisi Oleg Belyayev.",
+        "ar": "«الباحث فيتروف» هو أوليغ بيلاييف، محاسب المصنع الذي تلقى تعويض التأمين عن ساعات 1996 المفقودة.",
+        "kk": "«Өлкетанушы Ветров» — 1996 жылы жоғалған сағаттар үшін сақтандыру төлемін алған зауыттың бухгалтері Олег Беляев."
+      }
+    },
+    "epilogue": null
+  }
+}

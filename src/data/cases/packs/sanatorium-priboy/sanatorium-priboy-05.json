@@ -1,0 +1,509 @@
+{
+  "id": "sanatorium-priboy-05",
+  "type": "archive",
+  "difficulty": "medium",
+  "claimAmount": 520000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Последняя процедура",
+    "en": "The Last Treatment",
+    "tr": "Son Tedavi",
+    "ar": "الجلسة الأخيرة",
+    "kk": "Соңғы емшара"
+  },
+  "claim": {
+    "person": {
+      "ru": "Андрей Ильич Светлов, 39 лет",
+      "en": "Andrey Ilyich Svetlov, age 39",
+      "tr": "Andrey İlyiç Svetlov, 39 yaşında",
+      "ar": "أندريه إيليتش سفيتلوف، 39 عامًا",
+      "kk": "Андрей Ильич Светлов, 39 жаста"
+    },
+    "story": {
+      "ru": "28 июля в 16:20 мне провели подводный массаж в кабинете 12 водолечебницы. Из-за неисправности ванны я получил травму позвоночника. Процедура подтверждена медицинской картой и подписью врача.",
+      "en": "On 28 July at 16:20 I was given an underwater massage in room 12 of the hydrotherapy building. A fault in the bath left me with a spinal injury. The treatment is confirmed by my medical record and the doctor's signature.",
+      "tr": "28 Temmuz saat 16:20’de hidroterapi binasının 12 numaralı odasında su altı masajı yapıldı. Küvetteki arıza yüzünden omurga yaralanması geçirdim. Tedavi, tıbbi kayıt ve doktor imzasıyla doğrulanıyor.",
+      "ar": "في 28 يوليو الساعة 16:20 تلقيتُ تدليكًا تحت الماء في الغرفة 12 بمبنى العلاج المائي. وبسبب عطل في الحوض أُصبتُ في العمود الفقري. والجلسة مؤكدة بالسجل الطبي وتوقيع الطبيب.",
+      "kk": "28 шілде сағат 16:20-да су емханасының 12-кабинетінде маған су астындағы массаж жасалды. Ванна ақаулығынан омыртқа жарақатын алдым. Емшара медициналық карта мен дәрігердің қолымен расталған."
+    }
+  },
+  "coverImage": "covers/packs/sanatorium-priboy-05.svg",
+  "personImage": "people/packs/sanatorium-priboy/andrey_svetlov.webp",
+  "client": {
+    "role": {
+      "ru": "Заявитель · отдыхающий санатория «Прибой»",
+      "en": "Claimant · guest of the Priboy sanatorium",
+      "tr": "Talep sahibi · «Priboy» sanatoryumu konuğu",
+      "ar": "مقدم الطلب · نزيل مصحة «بريبوي»",
+      "kk": "Өтініш беруші · «Прибой» санаторийінің демалушысы"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Номер",
+          "en": "Room",
+          "tr": "Oda",
+          "ar": "الغرفة",
+          "kk": "Нөмір"
+        },
+        "v": {
+          "ru": "№305",
+          "en": "No. 305",
+          "tr": "No. 305",
+          "ar": "رقم 305",
+          "kk": "№305"
+        }
+      },
+      {
+        "k": {
+          "ru": "Смена",
+          "en": "Shift",
+          "tr": "Vardiya",
+          "ar": "الوردية",
+          "kk": "Ауысым"
+        },
+        "v": {
+          "ru": "Последняя смена, август 2026",
+          "en": "The last shift, August 2026",
+          "tr": "Son vardiya, Ağustos 2026",
+          "ar": "الوردية الأخيرة، أغسطس 2026",
+          "kk": "Соңғы ауысым, 2026 жылғы тамыз"
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "SP05-E1",
+      "order": 1,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал отключений водолечебницы",
+        "en": "Hydrotherapy Shutdown Log",
+        "tr": "Hidroterapi Kesinti Kaydı",
+        "ar": "سجل انقطاعات العلاج المائي",
+        "kk": "Су емханасының өшірулер журналы"
+      },
+      "content": {
+        "ru": "28 июля: подача воды в лечебный корпус перекрыта с 13:00 до 19:00 — плановая замена задвижки на вводе. Кабинеты 8–14 обесточены и осушены, ключи сданы на пост.",
+        "en": "28 July: water supply to the treatment wing shut off from 13:00 to 19:00 — scheduled replacement of the inlet valve. Rooms 8–14 were de-energised and drained, and their keys handed to the desk.",
+        "tr": "28 Temmuz: tedavi bloğuna su 13:00–19:00 arasında kapatıldı — giriş vanasının planlı değişimi. 8–14 numaralı odaların elektriği kesildi, suları boşaltıldı ve anahtarları görevliye teslim edildi.",
+        "ar": "28 يوليو: قُطعت المياه عن جناح العلاج من 13:00 إلى 19:00 — استبدال مُبرمَج لصمام الدخول. وفُصلت الغرف 8–14 عن الكهرباء وأُفرغت وسُلّمت مفاتيحها إلى النقطة.",
+        "kk": "28 шілде: емдеу корпусына су 13:00-ден 19:00-ге дейін жабылды — кірістегі ысырманы жоспарлы ауыстыру. 8–14 кабинеттер тогынан ажыратылып, суы төгіліп, кілттері постқа тапсырылды."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "В 16:20 в кабинете 12 не было ни воды, ни электричества — заявленная процедура физически не могла состояться.",
+        "en": "At 16:20 room 12 had neither water nor power — the declared treatment could not physically have taken place.",
+        "tr": "16:20’de 12 numaralı odada ne su ne elektrik vardı; beyan edilen tedavi fiziksel olarak yapılamazdı.",
+        "ar": "في 16:20 لم يكن في الغرفة 12 ماء ولا كهرباء، فالجلسة المعلنة يستحيل ماديًا أن تكون قد جرت.",
+        "kk": "16:20-да 12-кабинетте су да, ток та болмаған — мәлімделген емшара физикалық тұрғыда өтуі мүмкін емес."
+      },
+      "statementLink": {
+        "statementId": "claim_procedure",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "В 16:20 в кабинете 12 не было ни воды, ни электричества — заявленная процедура физически не могла состояться.",
+          "en": "At 16:20 room 12 had neither water nor power — the declared treatment could not physically have taken place.",
+          "tr": "16:20’de 12 numaralı odada ne su ne elektrik vardı; beyan edilen tedavi fiziksel olarak yapılamazdı.",
+          "ar": "في 16:20 لم يكن في الغرفة 12 ماء ولا كهرباء، فالجلسة المعلنة يستحيل ماديًا أن تكون قد جرت.",
+          "kk": "16:20-да 12-кабинетте су да, ток та болмаған — мәлімделген емшара физикалық тұрғыда өтуі мүмкін емес."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_procedure",
+        "reason": {
+          "ru": "В 16:20 в кабинете 12 не было ни воды, ни электричества — заявленная процедура физически не могла состояться.",
+          "en": "At 16:20 room 12 had neither water nor power — the declared treatment could not physically have taken place.",
+          "tr": "16:20’de 12 numaralı odada ne su ne elektrik vardı; beyan edilen tedavi fiziksel olarak yapılamazdı.",
+          "ar": "في 16:20 لم يكن في الغرفة 12 ماء ولا كهرباء، فالجلسة المعلنة يستحيل ماديًا أن تكون قد جرت.",
+          "kk": "16:20-да 12-кабинетте су да, ток та болмаған — мәлімделген емшара физикалық тұрғыда өтуі мүмкін емес."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/sanatorium-priboy/sp05-e1.webp",
+        "logPrompt": "water shutdown log, hydrotherapy building"
+      }
+    },
+    {
+      "id": "SP05-E2",
+      "order": 2,
+      "type": "xray",
+      "title": {
+        "ru": "Рентгеновский снимок позвоночника",
+        "en": "Spinal X-Ray",
+        "tr": "Omurga Röntgeni",
+        "ar": "صورة أشعة للعمود الفقري",
+        "kk": "Омыртқаның рентген түсірілімі"
+      },
+      "content": {
+        "ru": "Компрессионное изменение в поясничном отделе с признаками давнего сращения. В метаданных файла сохранены дата съёмки — 14 января, за шесть месяцев до заезда — и название сторонней клиники.",
+        "en": "A compression change in the lumbar region with signs of long-healed fusion. The file metadata still holds the exposure date — 14 January, six months before check-in — and the name of an outside clinic.",
+        "tr": "Bel bölgesinde eski kaynama belirtileri gösteren bir kompresyon değişikliği. Dosya üst verisinde çekim tarihi — 14 Ocak, girişten altı ay önce — ve dışarıdan bir kliniğin adı duruyor.",
+        "ar": "تغيّر انضغاطي في المنطقة القطنية مع علامات التحام قديم. وتحتفظ بيانات الملف بتاريخ التصوير — 14 يناير، قبل ستة أشهر من الوصول — واسم عيادة خارجية.",
+        "kk": "Бел омыртқасында ескі бітісу белгілері бар компрессиялық өзгеріс. Файл метадеректерінде түсіру күні — 14 қаңтар, келуден алты ай бұрын — және бөгде клиниканың атауы сақталған."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Снимок сделан за полгода до заезда и показывает старое сросшееся повреждение — травма не могла возникнуть в санатории 28 июля.",
+        "en": "The image was taken six months before check-in and shows an old healed injury — the damage cannot have arisen at the sanatorium on 28 July.",
+        "tr": "Görüntü girişten altı ay önce çekilmiş ve eski, kaynamış bir hasarı gösteriyor; yaralanma 28 Temmuz’da sanatoryumda oluşmuş olamaz.",
+        "ar": "أُخذت الصورة قبل ستة أشهر من الوصول وتُظهر إصابة قديمة ملتحمة، فيستحيل أن تكون قد حدثت في المصحة يوم 28 يوليو.",
+        "kk": "Түсірілім келуден жарты жыл бұрын жасалған және ескі бітіскен зақымды көрсетеді — жарақат 28 шілдеде санаторийде пайда болуы мүмкін емес."
+      },
+      "statementLink": {
+        "statementId": "claim_injury",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Снимок сделан за полгода до заезда и показывает старое сросшееся повреждение — травма не могла возникнуть в санатории 28 июля.",
+          "en": "The image was taken six months before check-in and shows an old healed injury — the damage cannot have arisen at the sanatorium on 28 July.",
+          "tr": "Görüntü girişten altı ay önce çekilmiş ve eski, kaynamış bir hasarı gösteriyor; yaralanma 28 Temmuz’da sanatoryumda oluşmuş olamaz.",
+          "ar": "أُخذت الصورة قبل ستة أشهر من الوصول وتُظهر إصابة قديمة ملتحمة، فيستحيل أن تكون قد حدثت في المصحة يوم 28 يوليو.",
+          "kk": "Түсірілім келуден жарты жыл бұрын жасалған және ескі бітіскен зақымды көрсетеді — жарақат 28 шілдеде санаторийде пайда болуы мүмкін емес."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_injury",
+        "reason": {
+          "ru": "Снимок сделан за полгода до заезда и показывает старое сросшееся повреждение — травма не могла возникнуть в санатории 28 июля.",
+          "en": "The image was taken six months before check-in and shows an old healed injury — the damage cannot have arisen at the sanatorium on 28 July.",
+          "tr": "Görüntü girişten altı ay önce çekilmiş ve eski, kaynamış bir hasarı gösteriyor; yaralanma 28 Temmuz’da sanatoryumda oluşmuş olamaz.",
+          "ar": "أُخذت الصورة قبل ستة أشهر من الوصول وتُظهر إصابة قديمة ملتحمة، فيستحيل أن تكون قد حدثت في المصحة يوم 28 يوليو.",
+          "kk": "Түсірілім келуден жарты жыл бұрын жасалған және ескі бітіскен зақымды көрсетеді — жарақат 28 шілдеде санаторийде пайда болуы мүмкін емес."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/sanatorium-priboy/sp05-e2.webp",
+        "clinicName": {
+          "ru": "Клиника «Меридиан-Мед»",
+          "en": "Meridian-Med Clinic",
+          "tr": "«Meridian-Med» Kliniği",
+          "ar": "عيادة «ميريديان-ميد»",
+          "kk": "«Меридиан-Мед» клиникасы"
+        }
+      }
+    },
+    {
+      "id": "SP05-E3",
+      "order": 3,
+      "type": "document",
+      "title": {
+        "ru": "Медицинская карта",
+        "en": "Medical Record",
+        "tr": "Tıbbi Kayıt",
+        "ar": "السجل الطبي",
+        "kk": "Медициналық карта"
+      },
+      "content": {
+        "ru": "Записи за 26–30 июля сделаны синей пастой одним почерком. Строка о подводном массаже 28 июля внесена чёрными чернилами и втиснута между строками с меньшим интервалом.",
+        "en": "The entries for 26–30 July are in blue ballpoint, one hand. The line about the underwater massage on 28 July is in black ink and squeezed between lines at a tighter spacing.",
+        "tr": "26–30 Temmuz kayıtları tek elden mavi tükenmez kalemle yazılmış. 28 Temmuz’daki su altı masajı satırı siyah mürekkeple ve satır aralarına sıkıştırılarak eklenmiş.",
+        "ar": "كُتبت قيود 26–30 يوليو بحبر أزرق وبخط واحد. أما سطر التدليك تحت الماء في 28 يوليو فبحبر أسود ومحشور بين السطور بتباعد أضيق.",
+        "kk": "26–30 шілдедегі жазбалар бір қолмен көк қаламмен жазылған. 28 шілдедегі су астындағы массаж туралы жол қара сиямен, жолдар арасына тығыз сыналап жазылған."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Запись явно добавлена позже остальных, но сама по себе не определяет ни дату, ни происхождение травмы.",
+        "en": "The entry was clearly added after the others, yet on its own it fixes neither the date nor the origin of the injury.",
+        "tr": "Kayıt açıkça diğerlerinden sonra eklenmiş; ancak tek başına ne tarihi ne de yaralanmanın kaynağını belirliyor.",
+        "ar": "أُضيف القيد بوضوح بعد البقية، لكنه وحده لا يحدد تاريخ الإصابة ولا منشأها.",
+        "kk": "Жазба басқалардан кейін қосылғаны анық, бірақ өздігінен жарақаттың күнін де, шығу тегін де анықтамайды."
+      },
+      "statementLink": {
+        "statementId": "claim_procedure",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Запись явно добавлена позже остальных, но сама по себе не определяет ни дату, ни происхождение травмы.",
+          "en": "The entry was clearly added after the others, yet on its own it fixes neither the date nor the origin of the injury.",
+          "tr": "Kayıt açıkça diğerlerinden sonra eklenmiş; ancak tek başına ne tarihi ne de yaralanmanın kaynağını belirliyor.",
+          "ar": "أُضيف القيد بوضوح بعد البقية، لكنه وحده لا يحدد تاريخ الإصابة ولا منشأها.",
+          "kk": "Жазба басқалардан кейін қосылғаны анық, бірақ өздігінен жарақаттың күнін де, шығу тегін де анықтамайды."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/sanatorium-priboy/sp05-e3.webp"
+      }
+    },
+    {
+      "id": "SP05-E4",
+      "order": 4,
+      "type": "seal_match",
+      "title": {
+        "ru": "Сверка печати врача",
+        "en": "Comparison of the Doctor's Seal",
+        "tr": "Doktor Mührünün Karşılaştırması",
+        "ar": "مطابقة ختم الطبيب",
+        "kk": "Дәрігер мөрінің салыстырмасы"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Печать подлинная и совпадает с эталоном, но износ клише соответствует состоянию начала двухтысячных: оттиск поставлен на пустой бланк много лет назад.",
+        "en": "The seal is genuine and matches the reference, yet the wear of the die corresponds to the early 2000s: the impression was made on a blank form years ago.",
+        "tr": "Mühür gerçek ve referansla örtüşüyor; ancak kalıbın aşınması 2000’lerin başına denk geliyor: iz, yıllar önce boş bir forma basılmış.",
+        "ar": "الختم أصلي ويطابق المرجع، لكن تآكل القالب يوافق أوائل الألفينيات: وُضعت البصمة على نموذج فارغ قبل سنوات.",
+        "kk": "Мөр шынайы және эталонмен сәйкес, бірақ клишенің тозуы 2000-жылдардың басына сай: таңба бос бланкіге көп жыл бұрын қойылған."
+      },
+      "statementLink": {
+        "statementId": "claim_procedure",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Печать подлинная и совпадает с эталоном, но износ клише соответствует состоянию начала двухтысячных: оттиск поставлен на пустой бланк много лет назад.",
+          "en": "The seal is genuine and matches the reference, yet the wear of the die corresponds to the early 2000s: the impression was made on a blank form years ago.",
+          "tr": "Mühür gerçek ve referansla örtüşüyor; ancak kalıbın aşınması 2000’lerin başına denk geliyor: iz, yıllar önce boş bir forma basılmış.",
+          "ar": "الختم أصلي ويطابق المرجع، لكن تآكل القالب يوافق أوائل الألفينيات: وُضعت البصمة على نموذج فارغ قبل سنوات.",
+          "kk": "Мөр шынайы және эталонмен сәйкес, бірақ клишенің тозуы 2000-жылдардың басына сай: таңба бос бланкіге көп жыл бұрын қойылған."
+        }
+      },
+      "evidenceTier": "supporting",
+      "description": {
+        "ru": "Оттиск личной печати врача с бланка сопоставляют с эталоном из личного дела.",
+        "en": "The impression of the doctor's personal seal from the form is compared with the reference in the personnel file.",
+        "tr": "Formdaki doktorun kişisel mühür izi, özlük dosyasındaki referansla karşılaştırılıyor.",
+        "ar": "تُقارن بصمة ختم الطبيب الشخصي على النموذج بالمرجع الموجود في ملفه الوظيفي.",
+        "kk": "Бланктегі дәрігердің жеке мөрінің таңбасы жеке іс қағазындағы эталонмен салыстырылады."
+      },
+      "instruction": {
+        "ru": "Совместите оттиск с эталоном и оцените износ клише.",
+        "en": "Align the impression with the reference and assess the wear of the die.",
+        "tr": "İzi referansla hizalayın ve kalıbın aşınmasını değerlendirin.",
+        "ar": "حاذِ البصمة مع المرجع وقيّم تآكل القالب.",
+        "kk": "Таңбаны эталонмен беттестіріп, клишенің тозуын бағалаңыз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/sanatorium-priboy/sp05-e4.webp"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Игрок сам убеждается, что печать подлинная, и переносит вопрос с подделки на дату.",
+          "en": "The player satisfies themselves that the seal is genuine and shifts the question from forgery to timing.",
+          "tr": "Oyuncu mührün gerçek olduğuna kendisi kanaat getirir ve soruyu sahtecilikten tarihe kaydırır.",
+          "ar": "يتأكد اللاعب بنفسه من أصالة الختم فينقل السؤال من التزوير إلى التاريخ.",
+          "kk": "Ойыншы мөрдің шынайы екеніне өзі көз жеткізіп, сұрақты қолдан жасаудан күнге ауыстырады."
+        },
+        "playerAction": {
+          "ru": "Совместите оттиск с эталоном и оцените износ клише.",
+          "en": "Align the impression with the reference and assess the wear of the die.",
+          "tr": "İzi referansla hizalayın ve kalıbın aşınmasını değerlendirin.",
+          "ar": "حاذِ البصمة مع المرجع وقيّم تآكل القالب.",
+          "kk": "Таңбаны эталонмен беттестіріп, клишенің тозуын бағалаңыз."
+        },
+        "conclusion": {
+          "ru": "Печать подлинная и совпадает с эталоном, но износ клише соответствует состоянию начала двухтысячных: оттиск поставлен на пустой бланк много лет назад.",
+          "en": "The seal is genuine and matches the reference, yet the wear of the die corresponds to the early 2000s: the impression was made on a blank form years ago.",
+          "tr": "Mühür gerçek ve referansla örtüşüyor; ancak kalıbın aşınması 2000’lerin başına denk geliyor: iz, yıllar önce boş bir forma basılmış.",
+          "ar": "الختم أصلي ويطابق المرجع، لكن تآكل القالب يوافق أوائل الألفينيات: وُضعت البصمة على نموذج فارغ قبل سنوات.",
+          "kk": "Мөр шынайы және эталонмен сәйкес, бірақ клишенің тозуы 2000-жылдардың басына сай: таңба бос бланкіге көп жыл бұрын қойылған."
+        }
+      },
+      "data": {
+        "movableFragment": "A",
+        "allowRotation": true,
+        "rotationStep": 5,
+        "initialTransform": {
+          "x": 60,
+          "y": 128,
+          "rotation": 8
+        },
+        "targetTransform": {
+          "x": 170,
+          "y": 106,
+          "rotation": 0
+        },
+        "tolerance": {
+          "position": 16,
+          "rotation": 8
+        },
+        "expectedMatch": true,
+        "sourceSeed": 200311,
+        "fragmentASeed": 6142,
+        "fragmentBSeed": 3357,
+        "comparisonMarkers": [
+          {
+            "id": "doctor-name",
+            "label": "Фамилия врача",
+            "labelEn": "Doctor's surname"
+          },
+          {
+            "id": "licence-number",
+            "label": "Номер лицензии",
+            "labelEn": "Licence number"
+          },
+          {
+            "id": "worn-edge",
+            "label": "Изношенный край клише",
+            "labelEn": "Worn edge of the die"
+          }
+        ]
+      }
+    },
+    {
+      "id": "SP05-E5",
+      "order": 5,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показание Нины Гуреевой",
+        "en": "Statement by Nina Gureeva",
+        "tr": "Nina Gureyeva’nın İfadesi",
+        "ar": "إفادة نينا غورييفا",
+        "kk": "Нина Гурееваның айғақтамасы"
+      },
+      "content": {
+        "ru": "«Подписанные пустые бланки хранились в западном крыле — так было заведено ещё при прежнем директоре». Увидев оборот бланка, она замолкает: там её собственная пометка 1998 года — «П.О. — перевести ночью».",
+        "en": "\"Signed blank forms were kept in the west wing — that was the practice back under the previous director.\" Seeing the back of the form, she falls silent: it carries her own 1998 note — \"P.O. — move at night.\"",
+        "tr": "«İmzalı boş formlar batı kanadında saklanırdı; bu, önceki müdür zamanından kalma bir uygulamaydı.» Formun arkasını görünce susuyor: orada 1998’den kendi notu var — «P.O. — gece nakledilecek».",
+        "ar": "«كانت النماذج الفارغة الموقّعة تُحفظ في الجناح الغربي، وهذا معمول به منذ عهد المدير السابق.» وحين ترى ظهر النموذج تصمت: عليه ملاحظتها من عام 1998 — «ب.أ. — يُنقل ليلًا».",
+        "kk": "«Қол қойылған бос бланкілер батыс қанатта сақталатын — бұл бұрынғы директор кезінен қалған тәртіп». Бланктің артын көрген соң ол үнсіз қалады: онда өзінің 1998 жылғы белгісі — «П.О. — түнде ауыстыру»."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Нина признаёт, что Павел после шторма был жив, но отказывается объяснять дальше; к дате процедуры и происхождению травмы это отношения не имеет.",
+        "en": "Nina admits Pavel was alive after the storm but refuses to explain further; this bears on neither the treatment date nor the origin of the injury.",
+        "tr": "Nina, Pavel’in fırtınadan sonra hayatta olduğunu kabul ediyor ama fazlasını açıklamayı reddediyor; bunun tedavi tarihiyle de yaralanmanın kaynağıyla da ilgisi yok.",
+        "ar": "تعترف نينا بأن بافيل كان حيًا بعد العاصفة لكنها ترفض الشرح أكثر؛ ولا علاقة لذلك بتاريخ الجلسة ولا بمنشأ الإصابة.",
+        "kk": "Нина Павелдің дауылдан кейін тірі болғанын мойындайды, бірақ әрі қарай түсіндіруден бас тартады; бұның емшара күні мен жарақат тегіне қатысы жоқ."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Нина признаёт, что Павел после шторма был жив, но отказывается объяснять дальше; к дате процедуры и происхождению травмы это отношения не имеет.",
+          "en": "Nina admits Pavel was alive after the storm but refuses to explain further; this bears on neither the treatment date nor the origin of the injury.",
+          "tr": "Nina, Pavel’in fırtınadan sonra hayatta olduğunu kabul ediyor ama fazlasını açıklamayı reddediyor; bunun tedavi tarihiyle de yaralanmanın kaynağıyla da ilgisi yok.",
+          "ar": "تعترف نينا بأن بافيل كان حيًا بعد العاصفة لكنها ترفض الشرح أكثر؛ ولا علاقة لذلك بتاريخ الجلسة ولا بمنشأ الإصابة.",
+          "kk": "Нина Павелдің дауылдан кейін тірі болғанын мойындайды, бірақ әрі қарай түсіндіруден бас тартады; бұның емшара күні мен жарақат тегіне қатысы жоқ."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/sanatorium-priboy/sp05-e5.webp"
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Вода в лечебном корпусе была перекрыта с 13:00 до 19:00 — в 16:20 процедуры быть не могло.",
+      "Рентген сделан за полгода до заезда в сторонней клинике и показывает старое сросшееся повреждение.",
+      "Запись в карте внесена другими чернилами, а печать врача стояла на пустом бланке с начала двухтысячных."
+    ],
+    "en": [
+      "Water to the treatment wing was shut off from 13:00 to 19:00 — no treatment was possible at 16:20.",
+      "The X-ray was taken six months before check-in at an outside clinic and shows an old healed injury.",
+      "The record entry is in different ink, and the doctor's seal had been on a blank form since the early 2000s."
+    ],
+    "tr": [
+      "Tedavi bloğuna su 13:00–19:00 arasında kapalıydı; 16:20’de tedavi mümkün değildi.",
+      "Röntgen, girişten altı ay önce dışarıdaki bir klinikte çekilmiş ve eski, kaynamış bir hasarı gösteriyor.",
+      "Kayıt farklı mürekkeple yazılmış ve doktorun mührü 2000’lerin başından beri boş bir formda duruyordu."
+    ],
+    "ar": [
+      "قُطعت المياه عن جناح العلاج من 13:00 إلى 19:00، فلا جلسة ممكنة في 16:20.",
+      "أُخذت صورة الأشعة قبل ستة أشهر من الوصول في عيادة خارجية وتُظهر إصابة قديمة ملتحمة.",
+      "قيد السجل بحبر مختلف، وختم الطبيب كان على نموذج فارغ منذ أوائل الألفينيات."
+    ],
+    "kk": [
+      "Емдеу корпусына су 13:00-ден 19:00-ге дейін жабылған — 16:20-да емшара болуы мүмкін емес.",
+      "Рентген келуден жарты жыл бұрын бөгде клиникада жасалған және ескі бітіскен зақымды көрсетеді.",
+      "Картадағы жазба басқа сиямен енгізілген, дәрігер мөрі 2000-жылдардың басынан бері бос бланкіде тұрған."
+    ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "stampable": false,
+      "text": {
+        "ru": "Травма получена в санатории и подлежит страховому возмещению.",
+        "en": "The injury was sustained at the sanatorium and is subject to insurance compensation.",
+        "tr": "Yaralanma sanatoryumda meydana geldi ve sigorta tazminatına tabidir.",
+        "ar": "وقعت الإصابة في المصحة وهي خاضعة للتعويض التأميني.",
+        "kk": "Жарақат санаторийде алынды және сақтандыру өтеміне жатады."
+      }
+    },
+    {
+      "id": "claim_procedure",
+      "stampable": true,
+      "text": {
+        "ru": "28 июля в 16:20 мне провели подводный массаж в кабинете 12.",
+        "en": "On 28 July at 16:20 an underwater massage was performed on me in room 12.",
+        "tr": "28 Temmuz 16:20’de 12 numaralı odada bana su altı masajı yapıldı.",
+        "ar": "في 28 يوليو الساعة 16:20 أُجري لي تدليك تحت الماء في الغرفة 12.",
+        "kk": "28 шілде 16:20-да 12-кабинетте маған су астындағы массаж жасалды."
+      }
+    },
+    {
+      "id": "claim_injury",
+      "stampable": true,
+      "text": {
+        "ru": "Травма позвоночника возникла из-за неисправности ванны.",
+        "en": "The spinal injury was caused by a fault in the bath.",
+        "tr": "Omurga yaralanması küvetteki arızadan kaynaklandı.",
+        "ar": "نتجت إصابة العمود الفقري عن عطل في الحوض.",
+        "kk": "Омыртқа жарақаты ванна ақаулығынан пайда болды."
+      }
+    }
+  ],
+  "contentVersion": "sanatorium-priboy-1.0",
+  "narrative": {
+    "preBrief": {
+      "ru": "Водолечебница закрывается послезавтра. Последняя процедура в её журнале так и не состоялась.",
+      "en": "The hydrotherapy building closes the day after tomorrow. The last treatment in its log never happened.",
+      "tr": "Hidroterapi binası yarından sonra kapanıyor. Kaydındaki son tedavi ise hiç yapılmadı.",
+      "ar": "يُغلق مبنى العلاج المائي بعد غد. أما الجلسة الأخيرة في سجله فلم تحدث قط.",
+      "kk": "Су емханасы бүрсігүні жабылады. Оның журналындағы соңғы емшара мүлде өткен жоқ."
+    },
+    "postVerdictNote": {
+      "ru": "Нина ставит диагноз быстрее, чем давление: «Спина у него действительно больная. Особенно когда нужно отвечать прямо».",
+      "en": "Nina diagnoses faster than she measures blood pressure: \"His back really does hurt. Especially when he has to answer plainly.\"",
+      "tr": "Nina teşhisi tansiyondan hızlı koyuyor: «Sırtı gerçekten ağrıyor. Özellikle dürüst cevap vermesi gerektiğinde.»",
+      "ar": "تشخّص نينا أسرع من قياس الضغط: «ظهره يؤلمه فعلًا. خصوصًا حين يلزمه أن يجيب بصراحة.»",
+      "kk": "Нина қан қысымынан да жылдам диагноз қояды: «Оның арқасы шынымен ауырады. Әсіресе тура жауап беру керек болғанда»."
+    },
+    "nextCaseTeaser": {
+      "ru": "Медсестра признала главное: тело никто не видел.",
+      "en": "The nurse has admitted the main thing: nobody saw the body.",
+      "tr": "Hemşire asıl olanı kabul etti: cesedi kimse görmedi.",
+      "ar": "اعترفت الممرضة بالأهم: لم يرَ أحد الجثة.",
+      "kk": "Медбике ең бастысын мойындады: денені ешкім көрмеген."
+    },
+    "seasonClue": {
+      "id": "nina-night-note",
+      "progressIndex": 5,
+      "progressTotal": 10,
+      "label": {
+        "ru": "Пометка «П.О. — перевести ночью»",
+        "en": "The Note \"P.O. — move at night\"",
+        "tr": "«P.O. — gece nakledilecek» Notu",
+        "ar": "ملاحظة «ب.أ. — يُنقل ليلًا»",
+        "kk": "«П.О. — түнде ауыстыру» белгісі"
+      },
+      "description": {
+        "ru": "Почерк Нины, 1998 год. Она признаёт, что после шторма Павел был жив, но объяснять отказывается.",
+        "en": "Nina's handwriting, 1998. She admits Pavel was alive after the storm but refuses to explain.",
+        "tr": "Nina’nın el yazısı, 1998. Fırtınadan sonra Pavel’in yaşadığını kabul ediyor ama açıklamayı reddediyor.",
+        "ar": "خط نينا، عام 1998. تعترف بأن بافيل كان حيًا بعد العاصفة لكنها ترفض التفسير.",
+        "kk": "Нинаның қолтаңбасы, 1998 жыл. Ол дауылдан кейін Павелдің тірі болғанын мойындайды, бірақ түсіндіруден бас тартады."
+      }
+    },
+    "epilogue": null
+  }
+}

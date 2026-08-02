@@ -91,6 +91,14 @@ interface YandexSDK {
     showFullscreenAdv(opts: { callbacks?: AdvCallbacks }): void;
     showRewardedVideo(opts: { callbacks?: AdvCallbacks }): void;
   };
+  /**
+   * Remote configuration ("flags"). Values are always **strings**; remote flags
+   * win over the `defaultFlags` we pass in. Absent on older SDK builds.
+   */
+  getFlags?(opts?: {
+    defaultFlags?: Record<string, string>;
+    clientFeatures?: { name: string; value: string }[];
+  }): Promise<Record<string, string>>;
   /** Optional feedback (rating) API — absent on older SDK builds. */
   feedback?: {
     canReview(): Promise<{ value: boolean; reason?: string }>;
@@ -246,6 +254,25 @@ export function getYandexLang(): string | null {
     return sdk?.environment?.i18n?.lang ?? null;
   } catch {
     return null;
+  }
+}
+
+/* --------------------------- Remote configuration ------------------------- */
+
+/**
+ * Fetch the console-managed flag set. Yandex returns every value as a string;
+ * parsing/clamping belongs to `src/services/remoteConfig.ts`. Returns `{}` on
+ * any failure (offline, old SDK build, no flag config) so callers keep their
+ * local defaults.
+ */
+export async function getRemoteFlags(
+  defaultFlags: Record<string, string> = {},
+): Promise<Record<string, string>> {
+  if (!sdk?.getFlags) return {};
+  try {
+    return (await sdk.getFlags({ defaultFlags })) ?? {};
+  } catch {
+    return {};
   }
 }
 

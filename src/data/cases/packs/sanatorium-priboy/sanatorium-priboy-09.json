@@ -1,0 +1,580 @@
+{
+  "id": "sanatorium-priboy-09",
+  "type": "archive",
+  "difficulty": "hard",
+  "claimAmount": 750000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Человек, которого не было",
+    "en": "The Man Who Never Was",
+    "tr": "Hiç Var Olmayan Adam",
+    "ar": "الرجل الذي لم يكن",
+    "kk": "Болмаған адам"
+  },
+  "claim": {
+    "person": {
+      "ru": "Глеб Викторович Лебедев, 52 года",
+      "en": "Gleb Viktorovich Lebedev, age 52",
+      "tr": "Gleb Viktoroviç Lebedev, 52 yaşında",
+      "ar": "غليب فيكتوروفيتش ليبيديف، 52 عامًا",
+      "kk": "Глеб Викторович Лебедев, 52 жаста"
+    },
+    "story": {
+      "ru": "Ночью в западном крыле задержан человек, назвавшийся Павлом Мельниковым. Он не имеет отношения к санаторию и выдаёт себя за погибшего Орлова, чтобы получить доступ к ценным документам. Ущерб архиву прошу возместить.",
+      "en": "A man calling himself Pavel Melnikov was detained in the west wing at night. He has nothing to do with the sanatorium and is passing himself off as the late Orlov to gain access to valuable documents. I request compensation for the damage to the archive.",
+      "tr": "Gece batı kanadında kendini Pavel Melnikov diye tanıtan bir adam yakalandı. Sanatoryumla hiçbir ilgisi yok ve değerli belgelere ulaşmak için merhum Orlov gibi görünüyor. Arşivin zararının tazminini talep ediyorum.",
+      "ar": "ليلًا احتُجز في الجناح الغربي رجل عرّف نفسه بأنه بافيل ميلنيكوف. لا علاقة له بالمصحة وينتحل شخصية أورلوف المتوفى للوصول إلى وثائق ثمينة. وأطلب تعويض الضرر اللاحق بالأرشيف.",
+      "kk": "Түнде батыс қанатта өзін Павел Мельников деп атаған адам ұсталды. Оның санаторийге қатысы жоқ, құнды құжаттарға қол жеткізу үшін қайтыс болған Орлов болып көрінеді. Архивке келген залалды өтеуді сұраймын."
+    }
+  },
+  "coverImage": "covers/packs/sanatorium-priboy-09.svg",
+  "personImage": "people/packs/sanatorium-priboy/gleb_lebedev.webp",
+  "client": {
+    "role": {
+      "ru": "Заявитель · представитель покупателя «Горизонт Девелопмент»",
+      "en": "Claimant · representative of the buyer, Horizon Development",
+      "tr": "Talep sahibi · alıcı «Horizon Development» temsilcisi",
+      "ar": "مقدم الطلب · ممثل المشتري «هورايزن ديفلوبمنت»",
+      "kk": "Өтініш беруші · «Горизонт Девелопмент» сатып алушысының өкілі"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Смена",
+          "en": "Shift",
+          "tr": "Vardiya",
+          "ar": "الوردية",
+          "kk": "Ауысым"
+        },
+        "v": {
+          "ru": "Последняя смена, август 2026",
+          "en": "The last shift, August 2026",
+          "tr": "Son vardiya, Ağustos 2026",
+          "ar": "الوردية الأخيرة، أغسطس 2026",
+          "kk": "Соңғы ауысым, 2026 жылғы тамыз"
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "SP09-E1",
+      "order": 1,
+      "type": "document_scan",
+      "title": {
+        "ru": "УФ-скан служебного пропуска",
+        "en": "UV Scan of a Staff Pass",
+        "tr": "Personel Kartının UV Taraması",
+        "ar": "مسح فوق بنفسجي لبطاقة موظف",
+        "kk": "Қызметтік рұқсатнаманың УК-сканы"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Под верхней ламинацией сохранился исходный пропуск инженера по автоматике П. А. Орлова с табельным номером 0417 — тем же, что в архивной картотеке. Задержанный связан с санаторием напрямую.",
+        "en": "Beneath the upper lamination the original pass of automation engineer P. A. Orlov survives, staff number 0417 — the same as in the archive index. The detained man is directly connected to the sanatorium.",
+        "tr": "Üst laminasyonun altında otomasyon mühendisi P. A. Orlov’un 0417 sicil numaralı asıl kartı duruyor; arşiv kartoteğindekiyle aynı. Yakalanan kişinin sanatoryumla doğrudan bağı var.",
+        "ar": "تحت التغليف العلوي بقيت البطاقة الأصلية لمهندس الأتمتة ب. أ. أورلوف بالرقم الوظيفي 0417، وهو نفسه في فهرس الأرشيف. فالموقوف مرتبط بالمصحة مباشرة.",
+        "kk": "Үстіңгі ламинацияның астында автоматика инженері П. А. Орловтың 0417 табельдік нөмірі бар бастапқы рұқсатнамасы сақталған — архив картотекасындағымен бірдей. Ұсталған адамның санаторийге тікелей қатысы бар."
+      },
+      "statementLink": {
+        "statementId": "claim_nolink",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Под верхней ламинацией сохранился исходный пропуск инженера по автоматике П. А. Орлова с табельным номером 0417 — тем же, что в архивной картотеке. Задержанный связан с санаторием напрямую.",
+          "en": "Beneath the upper lamination the original pass of automation engineer P. A. Orlov survives, staff number 0417 — the same as in the archive index. The detained man is directly connected to the sanatorium.",
+          "tr": "Üst laminasyonun altında otomasyon mühendisi P. A. Orlov’un 0417 sicil numaralı asıl kartı duruyor; arşiv kartoteğindekiyle aynı. Yakalanan kişinin sanatoryumla doğrudan bağı var.",
+          "ar": "تحت التغليف العلوي بقيت البطاقة الأصلية لمهندس الأتمتة ب. أ. أورلوف بالرقم الوظيفي 0417، وهو نفسه في فهرس الأرشيف. فالموقوف مرتبط بالمصحة مباشرة.",
+          "kk": "Үстіңгі ламинацияның астында автоматика инженері П. А. Орловтың 0417 табельдік нөмірі бар бастапқы рұқсатнамасы сақталған — архив картотекасындағымен бірдей. Ұсталған адамның санаторийге тікелей қатысы бар."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_nolink",
+        "reason": {
+          "ru": "Под верхней ламинацией сохранился исходный пропуск инженера по автоматике П. А. Орлова с табельным номером 0417 — тем же, что в архивной картотеке. Задержанный связан с санаторием напрямую.",
+          "en": "Beneath the upper lamination the original pass of automation engineer P. A. Orlov survives, staff number 0417 — the same as in the archive index. The detained man is directly connected to the sanatorium.",
+          "tr": "Üst laminasyonun altında otomasyon mühendisi P. A. Orlov’un 0417 sicil numaralı asıl kartı duruyor; arşiv kartoteğindekiyle aynı. Yakalanan kişinin sanatoryumla doğrudan bağı var.",
+          "ar": "تحت التغليف العلوي بقيت البطاقة الأصلية لمهندس الأتمتة ب. أ. أورلوف بالرقم الوظيفي 0417، وهو نفسه في فهرس الأرشيف. فالموقوف مرتبط بالمصحة مباشرة.",
+          "kk": "Үстіңгі ламинацияның астында автоматика инженері П. А. Орловтың 0417 табельдік нөмірі бар бастапқы рұқсатнамасы сақталған — архив картотекасындағымен бірдей. Ұсталған адамның санаторийге тікелей қатысы бар."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "При задержанном найден старый пропуск санатория на фамилию Мельников. Ламинация выглядит новее самого бланка.",
+        "en": "An old sanatorium pass in the name of Melnikov was found on the detained man. The lamination looks newer than the form itself.",
+        "tr": "Yakalanan kişinin üzerinde Melnikov adına eski bir sanatoryum kartı bulundu. Laminasyon, kartın kendisinden daha yeni görünüyor.",
+        "ar": "وُجدت مع الموقوف بطاقة مصحة قديمة باسم ميلنيكوف. ويبدو التغليف أحدث من النموذج نفسه.",
+        "kk": "Ұсталған адамнан Мельников тегіне жазылған ескі санаторий рұқсатнамасы табылды. Ламинациясы бланктің өзінен жаңалау көрінеді."
+      },
+      "instruction": {
+        "ru": "Просветите пропуск ультрафиолетом и сравните табельный номер с архивной картотекой.",
+        "en": "Examine the pass under ultraviolet and compare the staff number with the archive index.",
+        "tr": "Kartı morötesi altında inceleyin ve sicil numarasını arşiv kartotekiyle karşılaştırın.",
+        "ar": "افحص البطاقة تحت الأشعة فوق البنفسجية وقارن الرقم الوظيفي بفهرس الأرشيف.",
+        "kk": "Рұқсатнаманы ультракүлгінмен қарап, табельдік нөмірді архив картотекасымен салыстырыңыз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/sanatorium-priboy/sp09-e1.webp"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Табельный номер — объективный признак, не зависящий от внешности и памяти свидетелей.",
+          "en": "The staff number is an objective marker independent of appearance and of witnesses' memory.",
+          "tr": "Sicil numarası, görünüşten ve tanık hafızasından bağımsız nesnel bir işarettir.",
+          "ar": "الرقم الوظيفي علامة موضوعية لا تعتمد على المظهر ولا على ذاكرة الشهود.",
+          "kk": "Табельдік нөмір — сыртқы келбет пен куәгер жадына тәуелсіз объективті белгі."
+        },
+        "playerAction": {
+          "ru": "Просветите пропуск ультрафиолетом и сравните табельный номер с архивной картотекой.",
+          "en": "Examine the pass under ultraviolet and compare the staff number with the archive index.",
+          "tr": "Kartı morötesi altında inceleyin ve sicil numarasını arşiv kartotekiyle karşılaştırın.",
+          "ar": "افحص البطاقة تحت الأشعة فوق البنفسجية وقارن الرقم الوظيفي بفهرس الأرشيف.",
+          "kk": "Рұқсатнаманы ультракүлгінмен қарап, табельдік нөмірді архив картотекасымен салыстырыңыз."
+        },
+        "conclusion": {
+          "ru": "Под верхней ламинацией сохранился исходный пропуск инженера по автоматике П. А. Орлова с табельным номером 0417 — тем же, что в архивной картотеке. Задержанный связан с санаторием напрямую.",
+          "en": "Beneath the upper lamination the original pass of automation engineer P. A. Orlov survives, staff number 0417 — the same as in the archive index. The detained man is directly connected to the sanatorium.",
+          "tr": "Üst laminasyonun altında otomasyon mühendisi P. A. Orlov’un 0417 sicil numaralı asıl kartı duruyor; arşiv kartoteğindekiyle aynı. Yakalanan kişinin sanatoryumla doğrudan bağı var.",
+          "ar": "تحت التغليف العلوي بقيت البطاقة الأصلية لمهندس الأتمتة ب. أ. أورلوف بالرقم الوظيفي 0417، وهو نفسه في فهرس الأرشيف. فالموقوف مرتبط بالمصحة مباشرة.",
+          "kk": "Үстіңгі ламинацияның астында автоматика инженері П. А. Орловтың 0417 табельдік нөмірі бар бастапқы рұқсатнамасы сақталған — архив картотекасындағымен бірдей. Ұсталған адамның санаторийге тікелей қатысы бар."
+        }
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "uv",
+          "side_light"
+        ],
+        "anomalyZones": [
+          {
+            "id": "original-pass",
+            "mode": "uv",
+            "x": 26,
+            "y": 34,
+            "width": 40,
+            "height": 16,
+            "label": "Исходный пропуск: Орлов П. А., инженер по автоматике",
+            "labelEn": "Original pass: Orlov P. A., automation engineer",
+            "isContradiction": true
+          },
+          {
+            "id": "relamination-seam",
+            "mode": "side_light",
+            "x": 60,
+            "y": 68,
+            "width": 26,
+            "height": 12,
+            "label": "Шов повторной ламинации",
+            "labelEn": "Re-lamination seam",
+            "isContradiction": false
+          }
+        ],
+        "referenceFields": [
+          {
+            "id": "archive-number",
+            "label": "Табельный номер в картотеке",
+            "labelEn": "Staff number in the index",
+            "value": "0417"
+          }
+        ],
+        "successCondition": {
+          "type": "select_then_compare",
+          "zoneId": "original-pass",
+          "referenceFieldId": "archive-number"
+        }
+      }
+    },
+    {
+      "id": "SP09-E2",
+      "order": 2,
+      "type": "seal_match",
+      "title": {
+        "ru": "Совмещение негатива и снимка задержанного",
+        "en": "Overlay of the Negative and the Detainee's Photograph",
+        "tr": "Negatif ile Yakalananın Fotoğrafının Çakıştırılması",
+        "ar": "تركيب الفيلم السالب مع صورة الموقوف",
+        "kk": "Негатив пен ұсталған адам суретін беттестіру"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Совпадают шрам у правого виска и характерный дефект эмали переднего зуба, а также расстояние между зрачками. Задержанный и Павел Орлов — одно лицо.",
+        "en": "The scar by the right temple, the distinctive enamel defect of the front tooth and the interpupillary distance all coincide. The detainee and Pavel Orlov are the same person.",
+        "tr": "Sağ şakaktaki yara izi, ön dişteki belirgin mine kusuru ve göz bebekleri arası mesafe örtüşüyor. Yakalanan kişi ile Pavel Orlov aynı kişidir.",
+        "ar": "تتطابق ندبة الصدغ الأيمن وعيب المينا المميز في السن الأمامية والمسافة بين البؤبؤين. فالموقوف وبافيل أورلوف شخص واحد.",
+        "kk": "Оң самайдағы тыртық, алдыңғы тістің эмаль ақауы және қарашықтар арақашықтығы сәйкес келеді. Ұсталған адам мен Павел Орлов — бір адам."
+      },
+      "statementLink": {
+        "statementId": "claim_impostor",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Совпадают шрам у правого виска и характерный дефект эмали переднего зуба, а также расстояние между зрачками. Задержанный и Павел Орлов — одно лицо.",
+          "en": "The scar by the right temple, the distinctive enamel defect of the front tooth and the interpupillary distance all coincide. The detainee and Pavel Orlov are the same person.",
+          "tr": "Sağ şakaktaki yara izi, ön dişteki belirgin mine kusuru ve göz bebekleri arası mesafe örtüşüyor. Yakalanan kişi ile Pavel Orlov aynı kişidir.",
+          "ar": "تتطابق ندبة الصدغ الأيمن وعيب المينا المميز في السن الأمامية والمسافة بين البؤبؤين. فالموقوف وبافيل أورلوف شخص واحد.",
+          "kk": "Оң самайдағы тыртық, алдыңғы тістің эмаль ақауы және қарашықтар арақашықтығы сәйкес келеді. Ұсталған адам мен Павел Орлов — бір адам."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_impostor",
+        "reason": {
+          "ru": "Совпадают шрам у правого виска и характерный дефект эмали переднего зуба, а также расстояние между зрачками. Задержанный и Павел Орлов — одно лицо.",
+          "en": "The scar by the right temple, the distinctive enamel defect of the front tooth and the interpupillary distance all coincide. The detainee and Pavel Orlov are the same person.",
+          "tr": "Sağ şakaktaki yara izi, ön dişteki belirgin mine kusuru ve göz bebekleri arası mesafe örtüşüyor. Yakalanan kişi ile Pavel Orlov aynı kişidir.",
+          "ar": "تتطابق ندبة الصدغ الأيمن وعيب المينا المميز في السن الأمامية والمسافة بين البؤبؤين. فالموقوف وبافيل أورلوف شخص واحد.",
+          "kk": "Оң самайдағы тыртық, алдыңғы тістің эмаль ақауы және қарашықтар арақашықтығы сәйкес келеді. Ұсталған адам мен Павел Орлов — бір адам."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "Кадр с плёнки 1998 года и сегодняшний снимок приведены к одному масштабу для покадрового совмещения.",
+        "en": "A frame from the 1998 film and today's photograph have been brought to the same scale for frame-by-frame overlay.",
+        "tr": "1998 filminden bir kare ile bugünkü fotoğraf, kare kare çakıştırma için aynı ölçeğe getirildi.",
+        "ar": "جرى ضبط لقطة من فيلم 1998 وصورة اليوم على المقياس نفسه للتركيب.",
+        "kk": "1998 жылғы плёнканың кадры мен бүгінгі сурет беттестіру үшін бір масштабқа келтірілген."
+      },
+      "instruction": {
+        "ru": "Совместите изображения и проверьте совпадение устойчивых признаков.",
+        "en": "Align the images and check whether the stable features coincide.",
+        "tr": "Görüntüleri hizalayın ve kalıcı özelliklerin örtüşüp örtüşmediğini kontrol edin.",
+        "ar": "حاذِ الصورتين وتحقق من تطابق السمات الثابتة.",
+        "kk": "Кескіндерді беттестіріп, тұрақты белгілердің сәйкестігін тексеріңіз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/sanatorium-priboy/sp09-e2.webp"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Опознание строится на неизменных признаках, а не на эмоциональном узнавании родственниками.",
+          "en": "Identification rests on unchanging features rather than on emotional recognition by relatives.",
+          "tr": "Teşhis, yakınların duygusal tanımasına değil değişmeyen özelliklere dayanır.",
+          "ar": "يقوم التعرف على سمات ثابتة لا على تعرّف عاطفي من الأقارب.",
+          "kk": "Тану туыстардың эмоциялық тануына емес, өзгермейтін белгілерге негізделеді."
+        },
+        "playerAction": {
+          "ru": "Совместите изображения и проверьте совпадение устойчивых признаков.",
+          "en": "Align the images and check whether the stable features coincide.",
+          "tr": "Görüntüleri hizalayın ve kalıcı özelliklerin örtüşüp örtüşmediğini kontrol edin.",
+          "ar": "حاذِ الصورتين وتحقق من تطابق السمات الثابتة.",
+          "kk": "Кескіндерді беттестіріп, тұрақты белгілердің сәйкестігін тексеріңіз."
+        },
+        "conclusion": {
+          "ru": "Совпадают шрам у правого виска и характерный дефект эмали переднего зуба, а также расстояние между зрачками. Задержанный и Павел Орлов — одно лицо.",
+          "en": "The scar by the right temple, the distinctive enamel defect of the front tooth and the interpupillary distance all coincide. The detainee and Pavel Orlov are the same person.",
+          "tr": "Sağ şakaktaki yara izi, ön dişteki belirgin mine kusuru ve göz bebekleri arası mesafe örtüşüyor. Yakalanan kişi ile Pavel Orlov aynı kişidir.",
+          "ar": "تتطابق ندبة الصدغ الأيمن وعيب المينا المميز في السن الأمامية والمسافة بين البؤبؤين. فالموقوف وبافيل أورلوف شخص واحد.",
+          "kk": "Оң самайдағы тыртық, алдыңғы тістің эмаль ақауы және қарашықтар арақашықтығы сәйкес келеді. Ұсталған адам мен Павел Орлов — бір адам."
+        }
+      },
+      "data": {
+        "movableFragment": "A",
+        "allowRotation": true,
+        "rotationStep": 5,
+        "initialTransform": {
+          "x": 52,
+          "y": 136,
+          "rotation": 12
+        },
+        "targetTransform": {
+          "x": 174,
+          "y": 102,
+          "rotation": 0
+        },
+        "tolerance": {
+          "position": 16,
+          "rotation": 8
+        },
+        "expectedMatch": true,
+        "sourceSeed": 199829,
+        "fragmentASeed": 7014,
+        "fragmentBSeed": 2298,
+        "comparisonMarkers": [
+          {
+            "id": "temple-scar",
+            "label": "Шрам у правого виска",
+            "labelEn": "Scar by the right temple"
+          },
+          {
+            "id": "enamel-defect",
+            "label": "Дефект эмали переднего зуба",
+            "labelEn": "Enamel defect of the front tooth"
+          },
+          {
+            "id": "pupil-distance",
+            "label": "Расстояние между зрачками",
+            "labelEn": "Interpupillary distance"
+          }
+        ]
+      }
+    },
+    {
+      "id": "SP09-E3",
+      "order": 3,
+      "type": "phone_records",
+      "title": {
+        "ru": "Биллинг за девятнадцать лет",
+        "en": "Nineteen Years of Call Records",
+        "tr": "On Dokuz Yıllık Arama Kaydı",
+        "ar": "سجل مكالمات على مدى تسعة عشر عامًا",
+        "kk": "Он тоғыз жылдық биллинг"
+      },
+      "content": {
+        "ru": "С 2007 по 2026 год — один исходящий вызов в год на домашний номер Н. С. Гуреевой, всегда 14 марта. Длительность от 20 секунд до 4 минут. Других контактов с этим номером нет.",
+        "en": "From 2007 to 2026 — one outgoing call a year to the home number of N. S. Gureeva, always on 14 March. Duration from 20 seconds to 4 minutes. No other contact with that number.",
+        "tr": "2007’den 2026’ya — N. S. Gureyeva’nın ev numarasına yılda bir giden arama, hep 14 Mart’ta. Süre 20 saniye ile 4 dakika arası. Bu numarayla başka görüşme yok.",
+        "ar": "من 2007 إلى 2026 — مكالمة صادرة واحدة سنويًا إلى رقم منزل ن. س. غورييفا، دائمًا في 14 مارس. المدة من 20 ثانية إلى 4 دقائق. ولا اتصالات أخرى بهذا الرقم.",
+        "kk": "2007-ден 2026-ға дейін — Н. С. Гурееваның үй нөміріне жылына бір шығыс қоңырау, әрқашан 14 наурызда. Ұзақтығы 20 секундтан 4 минутқа дейін. Бұл нөмірмен басқа байланыс жоқ."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "14 марта — день рождения Марины Орловой. Звонки показывают многолетнюю связь с персоналом, но личность абонента сами по себе не устанавливают.",
+        "en": "14 March is Marina Orlova's birthday. The calls show a long-standing link with the staff yet do not by themselves establish the caller's identity.",
+        "tr": "14 Mart, Marina Orlova’nın doğum günü. Aramalar personelle uzun süreli bir bağı gösteriyor ama arayanın kimliğini tek başına belirlemiyor.",
+        "ar": "14 مارس هو عيد ميلاد مارينا أورلوفا. تُظهر المكالمات صلة طويلة الأمد بالعاملين لكنها وحدها لا تثبت هوية المتصل.",
+        "kk": "14 наурыз — Марина Орлованың туған күні. Қоңыраулар қызметкерлермен ұзақ жылғы байланысты көрсетеді, бірақ абоненттің жеке басын өздігінен анықтамайды."
+      },
+      "statementLink": {
+        "statementId": "claim_nolink",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "14 марта — день рождения Марины Орловой. Звонки показывают многолетнюю связь с персоналом, но личность абонента сами по себе не устанавливают.",
+          "en": "14 March is Marina Orlova's birthday. The calls show a long-standing link with the staff yet do not by themselves establish the caller's identity.",
+          "tr": "14 Mart, Marina Orlova’nın doğum günü. Aramalar personelle uzun süreli bir bağı gösteriyor ama arayanın kimliğini tek başına belirlemiyor.",
+          "ar": "14 مارس هو عيد ميلاد مارينا أورلوفا. تُظهر المكالمات صلة طويلة الأمد بالعاملين لكنها وحدها لا تثبت هوية المتصل.",
+          "kk": "14 наурыз — Марина Орлованың туған күні. Қоңыраулар қызметкерлермен ұзақ жылғы байланысты көрсетеді, бірақ абоненттің жеке басын өздігінен анықтамайды."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/sanatorium-priboy/sp09-e3.webp",
+        "phoneMask": "+7 ••• ••• 05 22",
+        "carrierName": {
+          "ru": "Приморская связь",
+          "en": "Primorsky Telecom",
+          "tr": "Primorskiy Telekom",
+          "ar": "بريمورسكي تيليكوم",
+          "kk": "Приморье байланысы"
+        }
+      }
+    },
+    {
+      "id": "SP09-E4",
+      "order": 4,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Признание Веры Сазоновой",
+        "en": "Vera Sazonova's Admission",
+        "tr": "Vera Sazonova’nın İtirafı",
+        "ar": "اعتراف فيرا سازونوفا",
+        "kk": "Вера Сазонованың мойындауы"
+      },
+      "content": {
+        "ru": "«Это я вырезала его с фотографии. Лебедев ходил по корпусам и собирал все снимки, где было его лицо. Я помогла ему уйти той ночью и двадцать восемь лет говорила, что почти его не знала».",
+        "en": "\"It was I who cut him out of the photograph. Lebedev went round the wings collecting every picture with his face in it. I helped him leave that night, and for twenty-eight years I said I hardly knew him.\"",
+        "tr": "«Onu fotoğraftan ben kestim. Lebedev bloklarda dolaşıp yüzünün göründüğü bütün fotoğrafları topluyordu. O gece gitmesine yardım ettim ve yirmi sekiz yıl boyunca onu pek tanımadığımı söyledim.»",
+        "ar": "«أنا من قصّه من الصورة. كان ليبيديف يجول في الأجنحة ويجمع كل صورة يظهر فيها وجهه. ساعدته على الرحيل تلك الليلة، وطوال ثمانية وعشرين عامًا قلت إنني بالكاد أعرفه.»",
+        "kk": "«Оны фотодан мен қиып алдым. Лебедев корпустарды аралап, оның беті түскен барлық суретті жинап жүрді. Сол түні кетуіне көмектестім және жиырма сегіз жыл бойы оны әрең білетінімді айттым»."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Признание объясняет вырезанную фотографию и исчезновение, но опознание должно опираться на объективные признаки, а не на слова свидетеля.",
+        "en": "The admission explains the cut photograph and the disappearance, yet identification must rest on objective features rather than a witness's words.",
+        "tr": "İtiraf, kesilmiş fotoğrafı ve kayboluşu açıklıyor; ancak teşhis, tanığın sözlerine değil nesnel özelliklere dayanmalı.",
+        "ar": "يفسّر الاعتراف الصورة المقصوصة والاختفاء، لكن التعرف يجب أن يستند إلى سمات موضوعية لا إلى أقوال شاهد.",
+        "kk": "Мойындау қиылған фотоны және жоғалуды түсіндіреді, бірақ тану куәгердің сөзіне емес, объективті белгілерге сүйенуі керек."
+      },
+      "statementLink": {
+        "statementId": "claim_impostor",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Признание объясняет вырезанную фотографию и исчезновение, но опознание должно опираться на объективные признаки, а не на слова свидетеля.",
+          "en": "The admission explains the cut photograph and the disappearance, yet identification must rest on objective features rather than a witness's words.",
+          "tr": "İtiraf, kesilmiş fotoğrafı ve kayboluşu açıklıyor; ancak teşhis, tanığın sözlerine değil nesnel özelliklere dayanmalı.",
+          "ar": "يفسّر الاعتراف الصورة المقصوصة والاختفاء، لكن التعرف يجب أن يستند إلى سمات موضوعية لا إلى أقوال شاهد.",
+          "kk": "Мойындау қиылған фотоны және жоғалуды түсіндіреді, бірақ тану куәгердің сөзіне емес, объективті белгілерге сүйенуі керек."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/sanatorium-priboy/sp09-e4.webp"
+      }
+    },
+    {
+      "id": "SP09-E5",
+      "order": 5,
+      "type": "document",
+      "title": {
+        "ru": "Журнал аварий 1998 года",
+        "en": "1998 Incident Log",
+        "tr": "1998 Arıza Defteri",
+        "ar": "سجل الأعطال لعام 1998",
+        "kk": "1998 жылғы апаттар журналы"
+      },
+      "content": {
+        "ru": "Оригинал извлечён из корпуса старого лампового радиоприёмника. Записи связывают «Волну-98» с Г. В. Лебедевым и перечисляют подменённые накладные 1998 года. Последняя страница — свежая: в новом электрощите отключена защита от перегрева.",
+        "en": "The original was taken from the casing of an old valve radio. Its entries link Volna-98 to G. V. Lebedev and list the substituted 1998 invoices. The final page is recent: in the new switchboard the overheat protection is disabled.",
+        "tr": "Asıl nüsha, eski bir lambalı radyonun gövdesinden çıkarıldı. Kayıtlar «Volna-98»i G. V. Lebedev’le ilişkilendiriyor ve 1998’de değiştirilen irsaliyeleri sıralıyor. Son sayfa yeni: yeni panoda aşırı ısınma koruması devre dışı.",
+        "ar": "أُخرج الأصل من هيكل مذياع صمامي قديم. تربط القيود «فولنا-98» بـغ. ف. ليبيديف وتُعدّد الفواتير المستبدلة عام 1998. والصفحة الأخيرة حديثة: في اللوحة الجديدة عُطّلت حماية الحرارة الزائدة.",
+        "kk": "Түпнұсқа ескі шамды радиоқабылдағыштың корпусынан алынды. Жазбалар «Волна-98»-ді Г. В. Лебедевпен байланыстырады және 1998 жылғы ауыстырылған жүкқұжаттарды тізеді. Соңғы бет жаңа: жаңа электр қалқанында қызып кетуден қорғаныс өшірілген."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Журнал раскрывает схему и предупреждает об аварии, но к личности задержанного и его связи с санаторием прямо не относится.",
+        "en": "The log exposes the scheme and warns of an accident, yet it bears directly on neither the detainee's identity nor his link to the sanatorium.",
+        "tr": "Defter, düzeni açığa çıkarıyor ve bir kazayı haber veriyor; ancak yakalananın kimliğiyle de sanatoryumla bağıyla da doğrudan ilgili değil.",
+        "ar": "يكشف السجل المخطط وينذر بحادث، لكنه لا يتعلق مباشرة بهوية الموقوف ولا بصلته بالمصحة.",
+        "kk": "Журнал схеманы ашады және апаттан ескертеді, бірақ ұсталған адамның жеке басына да, санаториймен байланысына да тікелей қатысы жоқ."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Журнал раскрывает схему и предупреждает об аварии, но к личности задержанного и его связи с санаторием прямо не относится.",
+          "en": "The log exposes the scheme and warns of an accident, yet it bears directly on neither the detainee's identity nor his link to the sanatorium.",
+          "tr": "Defter, düzeni açığa çıkarıyor ve bir kazayı haber veriyor; ancak yakalananın kimliğiyle de sanatoryumla bağıyla da doğrudan ilgili değil.",
+          "ar": "يكشف السجل المخطط وينذر بحادث، لكنه لا يتعلق مباشرة بهوية الموقوف ولا بصلته بالمصحة.",
+          "kk": "Журнал схеманы ашады және апаттан ескертеді, бірақ ұсталған адамның жеке басына да, санаториймен байланысына да тікелей қатысы жоқ."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/sanatorium-priboy/sp09-e5.webp"
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Под ламинацией пропуска сохранился исходный документ Орлова с табельным номером 0417 из архивной картотеки.",
+      "Совмещение негатива 1998 года и сегодняшнего снимка даёт совпадение шрама, дефекта эмали и расстояния между зрачками.",
+      "Вера признаёт, что вырезала Павла с фотографии и помогла ему уйти; журнал аварий был спрятан им самим."
+    ],
+    "en": [
+      "Beneath the pass lamination the original Orlov document survives, staff number 0417 from the archive index.",
+      "Overlaying the 1998 negative with today's photograph matches the scar, the enamel defect and the interpupillary distance.",
+      "Vera admits she cut Pavel out of the photograph and helped him leave; the incident log was hidden by him."
+    ],
+    "tr": [
+      "Kartın laminasyonu altında, arşiv kartoteğindeki 0417 sicil numaralı asıl Orlov belgesi duruyor.",
+      "1998 negatifi ile bugünkü fotoğrafın çakıştırılması yara izini, mine kusurunu ve göz bebeği mesafesini örtüştürüyor.",
+      "Vera, Pavel’i fotoğraftan kestiğini ve gitmesine yardım ettiğini kabul ediyor; arıza defterini de o saklamış."
+    ],
+    "ar": [
+      "تحت تغليف البطاقة بقيت وثيقة أورلوف الأصلية بالرقم الوظيفي 0417 من فهرس الأرشيف.",
+      "تركيب سالب 1998 مع صورة اليوم يطابق الندبة وعيب المينا والمسافة بين البؤبؤين.",
+      "تعترف فيرا بأنها قصّت بافيل من الصورة وساعدته على الرحيل؛ وسجل الأعطال خبّأه هو نفسه."
+    ],
+    "kk": [
+      "Рұқсатнама ламинациясының астында архив картотекасындағы 0417 табельдік нөмірі бар Орловтың бастапқы құжаты сақталған.",
+      "1998 жылғы негатив пен бүгінгі суретті беттестіру тыртықты, эмаль ақауын және қарашықтар арақашықтығын сәйкестендіреді.",
+      "Вера Павелді фотодан қиып алғанын және кетуіне көмектескенін мойындайды; апаттар журналын оның өзі жасырған."
+    ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "stampable": false,
+      "text": {
+        "ru": "Задержанный незаконно проник в архив, ущерб подлежит возмещению.",
+        "en": "The detained man entered the archive unlawfully and the damage is reimbursable.",
+        "tr": "Yakalanan kişi arşive hukuka aykırı girdi ve zarar tazmin edilmelidir.",
+        "ar": "دخل الموقوف الأرشيف بصورة غير قانونية والضرر قابل للتعويض.",
+        "kk": "Ұсталған адам архивке заңсыз кірді, залал өтелуге тиіс."
+      }
+    },
+    {
+      "id": "claim_impostor",
+      "stampable": true,
+      "text": {
+        "ru": "Задержанный выдаёт себя за Павла Орлова и не является им.",
+        "en": "The detained man is impersonating Pavel Orlov and is not him.",
+        "tr": "Yakalanan kişi Pavel Orlov’u taklit ediyor ve o değil.",
+        "ar": "الموقوف ينتحل شخصية بافيل أورلوف وليس هو.",
+        "kk": "Ұсталған адам Павел Орлов болып көрінеді, бірақ ол емес."
+      }
+    },
+    {
+      "id": "claim_nolink",
+      "stampable": true,
+      "text": {
+        "ru": "У задержанного нет никакого отношения к санаторию и его документам.",
+        "en": "The detained man has no connection whatever to the sanatorium or its documents.",
+        "tr": "Yakalanan kişinin sanatoryumla ve belgeleriyle hiçbir bağı yok.",
+        "ar": "لا صلة للموقوف بالمصحة ولا بوثائقها إطلاقًا.",
+        "kk": "Ұсталған адамның санаторийге де, оның құжаттарына да қатысы жоқ."
+      }
+    }
+  ],
+  "contentVersion": "sanatorium-priboy-1.0",
+  "narrative": {
+    "preBrief": {
+      "ru": "Ночь перед сделкой. В западном крыле задержан человек, которого двадцать восемь лет считали утонувшим.",
+      "en": "The night before the sale. In the west wing they have detained a man believed drowned for twenty-eight years.",
+      "tr": "Satıştan önceki gece. Batı kanadında, yirmi sekiz yıldır boğulduğu sanılan bir adam yakalandı.",
+      "ar": "ليلة ما قبل الصفقة. في الجناح الغربي احتُجز رجل ظُنّ غريقًا طوال ثمانية وعشرين عامًا.",
+      "kk": "Мәміле алдындағы түн. Батыс қанатта жиырма сегіз жыл суға кетті деп саналған адам ұсталды."
+    },
+    "postVerdictNote": {
+      "ru": "Марина не бросается отцу на шею: «Ты мог написать». Павел отвечает: «Каждый год писал. Потом рвал. Это не оправдание, просто количество».",
+      "en": "Marina does not throw herself on her father's neck: \"You could have written.\" Pavel answers: \"I wrote every year. Then tore it up. That is not an excuse, only a quantity.\"",
+      "tr": "Marina babasının boynuna atılmıyor: «Yazabilirdin.» Pavel yanıtlıyor: «Her yıl yazdım. Sonra yırttım. Bu bir mazeret değil, sadece bir sayı.»",
+      "ar": "لا ترتمي مارينا على عنق أبيها: «كان بإمكانك أن تكتب.» يجيب بافيل: «كتبتُ كل عام. ثم مزّقت. هذا ليس عذرًا، بل مجرد عدد.»",
+      "kk": "Марина әкесінің мойнына асылмайды: «Хат жазсаң болатын еді». Павел жауап береді: «Жыл сайын жаздым. Сосын жыртып тастадым. Бұл ақтау емес, жай ғана сан»."
+    },
+    "nextCaseTeaser": {
+      "ru": "Он вернулся. Но вместе с ним вернулась причина пожара.",
+      "en": "He has come back. And the cause of the fire has come back with him.",
+      "tr": "O döndü. Ama onunla birlikte yangının nedeni de döndü.",
+      "ar": "لقد عاد. لكن عاد معه سبب الحريق.",
+      "kk": "Ол оралды. Бірақ онымен бірге өрттің себебі де оралды."
+    },
+    "seasonClue": {
+      "id": "incident-log-original",
+      "progressIndex": 9,
+      "progressTotal": 10,
+      "label": {
+        "ru": "Оригинал журнала аварий",
+        "en": "The Original Incident Log",
+        "tr": "Arıza Defterinin Aslı",
+        "ar": "أصل سجل الأعطال",
+        "kk": "Апаттар журналының түпнұсқасы"
+      },
+      "description": {
+        "ru": "Павел достаёт журнал из корпуса старого радиоприёмника. На последней странице — свежая запись: в новом электрощите отключена защита от перегрева.",
+        "en": "Pavel takes the log out of an old radio's casing. The last page holds a fresh entry: in the new switchboard the overheat protection is disabled.",
+        "tr": "Pavel defteri eski bir radyonun gövdesinden çıkarıyor. Son sayfada yeni bir kayıt var: yeni panoda aşırı ısınma koruması devre dışı.",
+        "ar": "يُخرج بافيل السجل من هيكل مذياع قديم. وفي الصفحة الأخيرة قيد حديث: في اللوحة الجديدة عُطّلت حماية الحرارة الزائدة.",
+        "kk": "Павел журналды ескі радиоқабылдағыштың корпусынан алады. Соңғы бетте жаңа жазба: жаңа электр қалқанында қызып кетуден қорғаныс өшірілген."
+      }
+    },
+    "epilogue": null
+  }
+}

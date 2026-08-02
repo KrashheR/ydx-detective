@@ -1,0 +1,520 @@
+{
+  "id": "dacha-romashka-09",
+  "type": "archive",
+  "difficulty": "hard",
+  "claimAmount": 154000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Наследник из папки",
+    "en": "The Heir from the Folder",
+    "tr": "Dosyadan Çıkan Mirasçı",
+    "ar": "الوريث الخارج من الملف",
+    "kk": "Папкадан шыққан мұрагер"
+  },
+  "claim": {
+    "person": {
+      "ru": "Алевтина Николаевна Шмелёва, 64 года",
+      "en": "Alevtina Nikolayevna Shmelyova, age 64",
+      "tr": "Alevtina Nikolayevna Şmelyova, 64 yaşında",
+      "ar": "أليفتينا نيكولايفنا شميليوفا، 64 عامًا",
+      "kk": "Алевтина Николаевна Шмелёва, 64 жаста"
+    },
+    "story": {
+      "ru": "Ночью крыша правления протекла и случайно размочила закрытую папку №13. Шкаф никто не открывал, документы не выносились и не заменялись. Прошу возместить восстановление архива.",
+      "en": "At night the office roof leaked and accidentally soaked the closed folder No. 13. Nobody opened the cabinet; no documents were taken out or replaced. I am claiming the cost of restoring the archive.",
+      "tr": "Gece kooperatif binasının çatısı aktı ve kapalı 13 No.lu dosyayı kazara ıslattı. Dolabı kimse açmadı, hiçbir belge çıkarılmadı veya değiştirilmedi. Arşivin onarımı için tazminat istiyorum.",
+      "ar": "ليلًا تسرّب الماء من سقف المقر فبلّل مصادفةً الملف المغلق رقم 13. لم يفتح أحد الخزانة ولم تُخرج أي وثيقة أو تُستبدل. أطالب بتكلفة ترميم الأرشيف.",
+      "kk": "Түнде басқарманың шатыры ағып, жабық №13 папканы кездейсоқ су қылды. Шкафты ешкім ашқан жоқ, құжаттар шығарылмады және ауыстырылмады. Архивті қалпына келтіру шығынын өтеуді сұраймын."
+    }
+  },
+  "coverImage": "covers/packs/dacha-romashka-09.svg",
+  "personImage": "people/packs/dacha-romashka/alevtina_shmelyova.webp",
+  "client": {
+    "role": {
+      "ru": "Заявитель · член СНТ «Ромашка»",
+      "en": "Claimant · member of the Romashka garden association",
+      "tr": "Başvuru sahibi · Romashka bahçe kooperatifi üyesi",
+      "ar": "مقدم الطلب · عضو في جمعية «روماشكا» للبساتين",
+      "kk": "Өтініш беруші · «Ромашка» бақ серіктестігінің мүшесі"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Участок",
+          "en": "Plot",
+          "tr": "Parsel",
+          "ar": "القطعة",
+          "kk": "Учаске"
+        },
+        "v": {
+          "ru": "№2",
+          "en": "No. 2",
+          "tr": "No. 2",
+          "ar": "رقم 2",
+          "kk": "№2"
+        }
+      },
+      {
+        "k": {
+          "ru": "Сезон",
+          "en": "Season",
+          "tr": "Sezon",
+          "ar": "الموسم",
+          "kk": "Маусым"
+        },
+        "v": {
+          "ru": "Август",
+          "en": "August",
+          "tr": "Ağustos",
+          "ar": "أغسطس",
+          "kk": "Тамыз"
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "DA09-E1",
+      "order": 1,
+      "type": "document",
+      "title": {
+        "ru": "Анализ состава влаги",
+        "en": "Analysis of the Moisture",
+        "tr": "Nem Bileşimi Analizi",
+        "ar": "تحليل تركيب الرطوبة",
+        "kk": "Ылғал құрамының талдауы"
+      },
+      "content": {
+        "ru": "В пробах с листов — лимонная кислота, сахароза и следы ягодного пигмента: состав совпадает с компотом из графина на столе. Дождевой воды и частиц кровельного покрытия не обнаружено.",
+        "en": "The samples from the sheets contain citric acid, sucrose and berry pigment traces: the composition matches the compote in the carafe on the table. No rainwater and no roofing particles were found.",
+        "tr": "Yapraklardan alınan numunelerde sitrik asit, sakaroz ve meyve pigmenti izleri var: bileşim, masadaki sürahideki komposto ile örtüşüyor. Yağmur suyu ve çatı kaplaması parçacığı bulunmadı.",
+        "ar": "تحتوي عيّنات الأوراق على حمض الستريك والسكروز وآثار صبغة توت: يطابق التركيب شراب الكومبوت في الإبريق على الطاولة. ولم يُعثر على ماء مطر ولا جزيئات من مادة السقف.",
+        "kk": "Парақтардан алынған сынамада лимон қышқылы, сахароза және жидек пигментінің іздері бар: құрамы үстелдегі графиндегі компотпен сәйкес келеді. Жаңбыр суы да, шатыр жабынының бөлшектері де табылмаған."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Бумагу залили компотом со стола, а не дождевой водой с крыши — заявленная протечка не подтверждается составом влаги.",
+        "en": "The paper was soaked with compote from the table, not rainwater from the roof — the moisture composition does not support the claimed leak.",
+        "tr": "Kâğıt, çatıdan gelen yağmur suyuyla değil masadaki kompostoyla ıslanmış; nem bileşimi beyan edilen sızıntıyı desteklemiyor.",
+        "ar": "بُلّل الورق بالكومبوت من الطاولة لا بماء المطر من السقف، فتركيب الرطوبة لا يدعم التسرّب المزعوم.",
+        "kk": "Қағазды шатырдан аққан жаңбыр суы емес, үстелдегі компот сулаған — ылғал құрамы мәлімделген ағуды растамайды."
+      },
+      "statementLink": {
+        "statementId": "claim_leak",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Бумагу залили компотом со стола, а не дождевой водой с крыши — заявленная протечка не подтверждается составом влаги.",
+          "en": "The paper was soaked with compote from the table, not rainwater from the roof — the moisture composition does not support the claimed leak.",
+          "tr": "Kâğıt, çatıdan gelen yağmur suyuyla değil masadaki kompostoyla ıslanmış; nem bileşimi beyan edilen sızıntıyı desteklemiyor.",
+          "ar": "بُلّل الورق بالكومبوت من الطاولة لا بماء المطر من السقف، فتركيب الرطوبة لا يدعم التسرّب المزعوم.",
+          "kk": "Қағазды шатырдан аққан жаңбыр суы емес, үстелдегі компот сулаған — ылғал құрамы мәлімделген ағуды растамайды."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_leak",
+        "reason": {
+          "ru": "Бумагу залили компотом со стола, а не дождевой водой с крыши — заявленная протечка не подтверждается составом влаги.",
+          "en": "The paper was soaked with compote from the table, not rainwater from the roof — the moisture composition does not support the claimed leak.",
+          "tr": "Kâğıt, çatıdan gelen yağmur suyuyla değil masadaki kompostoyla ıslanmış; nem bileşimi beyan edilen sızıntıyı desteklemiyor.",
+          "ar": "بُلّل الورق بالكومبوت من الطاولة لا بماء المطر من السقف، فتركيب الرطوبة لا يدعم التسرّب المزعوم.",
+          "kk": "Қағазды шатырдан аққан жаңбыр суы емес, үстелдегі компот сулаған — ылғал құрамы мәлімделген ағуды растамайды."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da09-e1.webp"
+      }
+    },
+    {
+      "id": "DA09-E2",
+      "order": 2,
+      "type": "usage_log",
+      "title": {
+        "ru": "Лог замка архивного шкафа",
+        "en": "Archive Cabinet Lock Log",
+        "tr": "Arşiv Dolabı Kilit Kaydı",
+        "ar": "سجل قفل خزانة الأرشيف",
+        "kk": "Архив шкафы құлыбының журналы"
+      },
+      "content": {
+        "ru": "23:18 — открытие гостевым кодом G-04 (выдан Р. В. Жукову для сверки границ). 23:41 — закрытие. 00:06 — повторное открытие тем же кодом. 00:22 — закрытие.",
+        "en": "23:18 — opened with guest code G-04 (issued to R. V. Zhukov for boundary checks). 23:41 — closed. 00:06 — opened again with the same code. 00:22 — closed.",
+        "tr": "23:18 — G-04 misafir koduyla açıldı (sınır kontrolü için R. V. Jukov’a verilmiş). 23:41 — kapatıldı. 00:06 — aynı kodla yeniden açıldı. 00:22 — kapatıldı.",
+        "ar": "23:18 — فُتحت برمز الضيف G-04 (صادر لـر. ف. جوكوف لمطابقة الحدود). 23:41 — أُغلقت. 00:06 — فُتحت ثانية بالرمز نفسه. 00:22 — أُغلقت.",
+        "kk": "23:18 — G-04 қонақ кодымен ашылды (шекараны салыстыру үшін Р. В. Жуковқа берілген). 23:41 — жабылды. 00:06 — сол кодпен қайта ашылды. 00:22 — жабылды."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Шкаф открывали дважды за ночь гостевым кодом — утверждение о закрытом и нетронутом архиве неверно.",
+        "en": "The cabinet was opened twice that night with a guest code — the statement that the archive stayed closed and untouched is false.",
+        "tr": "Dolap o gece misafir koduyla iki kez açılmış; arşivin kapalı ve dokunulmamış kaldığı ifadesi yanlış.",
+        "ar": "فُتحت الخزانة مرتين تلك الليلة برمز ضيف، فادعاء بقاء الأرشيف مغلقًا وسليمًا غير صحيح.",
+        "kk": "Шкаф түнде қонақ кодымен екі рет ашылған — архив жабық әрі қолсұғылмаған деген тұжырым дұрыс емес."
+      },
+      "statementLink": {
+        "statementId": "claim_cabinet",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Шкаф открывали дважды за ночь гостевым кодом — утверждение о закрытом и нетронутом архиве неверно.",
+          "en": "The cabinet was opened twice that night with a guest code — the statement that the archive stayed closed and untouched is false.",
+          "tr": "Dolap o gece misafir koduyla iki kez açılmış; arşivin kapalı ve dokunulmamış kaldığı ifadesi yanlış.",
+          "ar": "فُتحت الخزانة مرتين تلك الليلة برمز ضيف، فادعاء بقاء الأرشيف مغلقًا وسليمًا غير صحيح.",
+          "kk": "Шкаф түнде қонақ кодымен екі рет ашылған — архив жабық әрі қолсұғылмаған деген тұжырым дұрыс емес."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_cabinet",
+        "reason": {
+          "ru": "Шкаф открывали дважды за ночь гостевым кодом — утверждение о закрытом и нетронутом архиве неверно.",
+          "en": "The cabinet was opened twice that night with a guest code — the statement that the archive stayed closed and untouched is false.",
+          "tr": "Dolap o gece misafir koduyla iki kez açılmış; arşivin kapalı ve dokunulmamış kaldığı ifadesi yanlış.",
+          "ar": "فُتحت الخزانة مرتين تلك الليلة برمز ضيف، فادعاء بقاء الأرشيف مغلقًا وسليمًا غير صحيح.",
+          "kk": "Шкаф түнде қонақ кодымен екі рет ашылған — архив жабық әрі қолсұғылмаған деген тұжырым дұрыс емес."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da09-e2.webp",
+        "logPrompt": "archive cabinet lock log"
+      }
+    },
+    {
+      "id": "DA09-E3",
+      "order": 3,
+      "type": "document_scan",
+      "title": {
+        "ru": "UV-скан доверенности наследника",
+        "en": "UV Scan of the Heir's Power of Attorney",
+        "tr": "Mirasçı Vekâletnamesinin UV Taraması",
+        "ar": "مسح بالأشعة فوق البنفسجية لتوكيل الوريث",
+        "kk": "Мұрагер сенімхатының UV сканы"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Подпись и текст доверенности напечатаны тем же принтером, что и межевой план Жукова, — документ изготовлен внутри схемы.",
+        "en": "The signature and text of the power of attorney came from the same printer as Zhukov's boundary plan — the document was produced inside the scheme.",
+        "tr": "Vekâletnamenin imzası ve metni, Jukov’un sınır planıyla aynı yazıcıdan çıkmış; belge şemanın içinde üretilmiş.",
+        "ar": "طُبع توقيع التوكيل ونصه بالطابعة نفسها التي طبعت مخطط جوكوف، أي أن الوثيقة صُنعت داخل المخطط.",
+        "kk": "Сенімхаттың қолтаңбасы мен мәтіні Жуковтың межелік жоспарымен бір принтерден шыққан — құжат схеманың ішінде жасалған."
+      },
+      "statementLink": {
+        "statementId": "claim_cabinet",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Подпись и текст доверенности напечатаны тем же принтером, что и межевой план Жукова, — документ изготовлен внутри схемы.",
+          "en": "The signature and text of the power of attorney came from the same printer as Zhukov's boundary plan — the document was produced inside the scheme.",
+          "tr": "Vekâletnamenin imzası ve metni, Jukov’un sınır planıyla aynı yazıcıdan çıkmış; belge şemanın içinde üretilmiş.",
+          "ar": "طُبع توقيع التوكيل ونصه بالطابعة نفسها التي طبعت مخطط جوكوف، أي أن الوثيقة صُنعت داخل المخطط.",
+          "kk": "Сенімхаттың қолтаңбасы мен мәтіні Жуковтың межелік жоспарымен бір принтерден шыққан — құжат схеманың ішінде жасалған."
+        }
+      },
+      "evidenceTier": "supporting",
+      "description": {
+        "ru": "Среди промокших листов оказалась сухая доверенность от наследника. Рядом для сверки лежит межевой план, распечатанный Жуковым.",
+        "en": "Among the soaked sheets lay a dry power of attorney from the heir. Beside it, for comparison, is the boundary plan printed by Zhukov.",
+        "tr": "Islanmış yaprakların arasında mirasçıdan gelen kuru bir vekâletname bulundu. Yanında karşılaştırma için Jukov’un yazdırdığı sınır planı duruyor.",
+        "ar": "بين الأوراق المبلَّلة وُجد توكيل جاف من الوريث، وبجانبه للمقارنة مخطط الحدود الذي طبعه جوكوف.",
+        "kk": "Су болған парақтардың арасынан мұрагердің құрғақ сенімхаты табылды. Қасында салыстыру үшін Жуков басып шығарған межелік жоспар жатыр."
+      },
+      "instruction": {
+        "ru": "В ультрафиолете найдите маркировку принтера и сверьте её с межевым планом.",
+        "en": "Under ultraviolet, find the printer marking and compare it with the boundary plan.",
+        "tr": "Ultraviyole altında yazıcı işaretini bulun ve sınır planıyla karşılaştırın.",
+        "ar": "تحت الأشعة فوق البنفسجية، ابحث عن علامة الطابعة وقارنها بمخطط الحدود.",
+        "kk": "Ультракүлгін сәулемен принтер таңбасын тауып, оны межелік жоспармен салыстырыңыз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/dacha-romashka/da09-e3.webp"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Маркировка принтера уникальна: игрок сам связывает документ «наследника» с оборудованием кадастрового инженера.",
+          "en": "Printer markings are unique: the player themselves ties the \"heir's\" document to the cadastral engineer's equipment.",
+          "tr": "Yazıcı işaretleri benzersizdir: oyuncu «mirasçının» belgesini kadastro mühendisinin cihazına kendisi bağlar.",
+          "ar": "علامات الطابعة فريدة: يربط اللاعب بنفسه وثيقة «الوريث» بجهاز مهندس المساحة.",
+          "kk": "Принтер таңбасы бірегей: ойыншы «мұрагердің» құжатын кадастр инженерінің жабдығымен өзі байланыстырады."
+        },
+        "playerAction": {
+          "ru": "В ультрафиолете найдите маркировку принтера и сверьте её с межевым планом.",
+          "en": "Under ultraviolet, find the printer marking and compare it with the boundary plan.",
+          "tr": "Ultraviyole altında yazıcı işaretini bulun ve sınır planıyla karşılaştırın.",
+          "ar": "تحت الأشعة فوق البنفسجية، ابحث عن علامة الطابعة وقارنها بمخطط الحدود.",
+          "kk": "Ультракүлгін сәулемен принтер таңбасын тауып, оны межелік жоспармен салыстырыңыз."
+        },
+        "conclusion": {
+          "ru": "Подпись и текст доверенности напечатаны тем же принтером, что и межевой план Жукова, — документ изготовлен внутри схемы.",
+          "en": "The signature and text of the power of attorney came from the same printer as Zhukov's boundary plan — the document was produced inside the scheme.",
+          "tr": "Vekâletnamenin imzası ve metni, Jukov’un sınır planıyla aynı yazıcıdan çıkmış; belge şemanın içinde üretilmiş.",
+          "ar": "طُبع توقيع التوكيل ونصه بالطابعة نفسها التي طبعت مخطط جوكوف، أي أن الوثيقة صُنعت داخل المخطط.",
+          "kk": "Сенімхаттың қолтаңбасы мен мәтіні Жуковтың межелік жоспарымен бір принтерден шыққан — құжат схеманың ішінде жасалған."
+        }
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "uv",
+          "contrast"
+        ],
+        "anomalyZones": [
+          {
+            "id": "printer-code",
+            "mode": "uv",
+            "x": 58,
+            "y": 66,
+            "width": 20,
+            "height": 14,
+            "label": "Маркировка принтера KX-7741",
+            "labelEn": "Printer marking KX-7741",
+            "isContradiction": true
+          },
+          {
+            "id": "stamp-ink",
+            "mode": "contrast",
+            "x": 24,
+            "y": 58,
+            "width": 18,
+            "height": 16,
+            "label": "Оттиск штампа",
+            "labelEn": "Stamp impression",
+            "isContradiction": false
+          },
+          {
+            "id": "header-line",
+            "mode": "uv",
+            "x": 30,
+            "y": 18,
+            "width": 30,
+            "height": 12,
+            "label": "Шапка бланка",
+            "labelEn": "Form header",
+            "isContradiction": false
+          }
+        ],
+        "referenceFields": [
+          {
+            "id": "survey-plan-printer",
+            "label": "Межевой план Жукова: принтер",
+            "labelEn": "Zhukov's boundary plan: printer",
+            "value": "KX-7741"
+          }
+        ],
+        "successCondition": {
+          "type": "select_then_compare",
+          "zoneId": "printer-code",
+          "referenceFieldId": "survey-plan-printer"
+        }
+      }
+    },
+    {
+      "id": "DA09-E4",
+      "order": 4,
+      "type": "phone_records",
+      "title": {
+        "ru": "Телефонная выписка",
+        "en": "Phone Records",
+        "tr": "Telefon Dökümü",
+        "ar": "كشف المكالمات",
+        "kk": "Телефон үзіндісі"
+      },
+      "content": {
+        "ru": "За три месяца — 47 звонков на номер «наследника», в среднем по две минуты, почти всегда перед собраниями правления. Номер оформлен на помощника Жукова.",
+        "en": "Over three months: 47 calls to the \"heir's\" number, averaging two minutes, almost always before board meetings. The number is registered to Zhukov's assistant.",
+        "tr": "Üç ayda «mirasçının» numarasına 47 arama, ortalama iki dakika, neredeyse hep yönetim toplantılarından önce. Numara Jukov’un asistanına kayıtlı.",
+        "ar": "خلال ثلاثة أشهر: 47 مكالمة إلى رقم «الوريث»، بمعدل دقيقتين، وغالبًا قبل اجتماعات المجلس. الرقم مسجَّل باسم مساعد جوكوف.",
+        "kk": "Үш айда «мұрагердің» нөміріне 47 қоңырау, орташа екі минуттан, әрдайым дерлік басқарма отырыстарының алдында. Нөмір Жуковтың көмекшісіне тіркелген."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Выписка раскрывает подставного наследника, но заявленные протечка и закрытый шкаф опровергаются другими уликами.",
+        "en": "The records expose the fake heir, while the claimed leak and closed cabinet are disproved by other evidence.",
+        "tr": "Döküm sahte mirasçıyı ortaya çıkarıyor; beyan edilen sızıntı ve kapalı dolabı ise başka kanıtlar çürütüyor.",
+        "ar": "يكشف الكشف الوريثَ الوهمي، أما التسرّب المزعوم والخزانة المغلقة فتدحضهما أدلة أخرى.",
+        "kk": "Үзінді жалған мұрагерді әшкерелейді, ал мәлімделген ағу мен жабық шкафты басқа айғақтар теріске шығарады."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Выписка раскрывает подставного наследника, но заявленные протечка и закрытый шкаф опровергаются другими уликами.",
+          "en": "The records expose the fake heir, while the claimed leak and closed cabinet are disproved by other evidence.",
+          "tr": "Döküm sahte mirasçıyı ortaya çıkarıyor; beyan edilen sızıntı ve kapalı dolabı ise başka kanıtlar çürütüyor.",
+          "ar": "يكشف الكشف الوريثَ الوهمي، أما التسرّب المزعوم والخزانة المغلقة فتدحضهما أدلة أخرى.",
+          "kk": "Үзінді жалған мұрагерді әшкерелейді, ал мәлімделген ағу мен жабық шкафты басқа айғақтар теріске шығарады."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da09-e4.webp",
+        "phoneMask": "+7 ••• ••• 30 62"
+      }
+    },
+    {
+      "id": "DA09-E5",
+      "order": 5,
+      "type": "photo",
+      "title": {
+        "ru": "Протокол 1976 года",
+        "en": "The 1976 Minutes",
+        "tr": "1976 Tutanağı",
+        "ar": "محضر عام 1976",
+        "kk": "1976 жылғы хаттама"
+      },
+      "content": {
+        "ru": "Лист по ошибке подшит в папку дороги. На обороте от руки: «К. С. — коллективная собственность садоводов. Капсулу десятилетия заложить под деревом первого урожая».",
+        "en": "The sheet was filed by mistake in the road folder. On the back, in handwriting: \"K. S. — collective property of the gardeners. Bury the decade capsule under the tree of the first harvest.\"",
+        "tr": "Yaprak yanlışlıkla yol dosyasına konmuş. Arkasında el yazısıyla: «K. S. — bahçıvanların kolektif mülkiyeti. On yıl kapsülü ilk hasadın ağacının altına gömülsün.»",
+        "ar": "أُدرجت الورقة خطأً في ملف الطريق. وعلى ظهرها بخط اليد: «ك. س. — ملكية جماعية للبستانيين. تُدفن كبسولة العقد تحت شجرة الحصاد الأول.»",
+        "kk": "Парақ қателесіп жол папкасына тігілген. Артында қолжазбамен: «К. С. — бақшашылардың ұжымдық меншігі. Онжылдық капсуласын алғашқы өнім ағашының астына көму керек»."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Расшифровка «К. С.» рушит легенду о владельце и указывает на капсулу, но к протечке и шкафу отношения не имеет.",
+        "en": "Decoding \"K. S.\" destroys the owner legend and points to the capsule, yet it bears on neither the leak nor the cabinet.",
+        "tr": "«K. S.»nin çözülmesi malik efsanesini yıkıyor ve kapsülü işaret ediyor ama sızıntı veya dolapla ilgisi yok.",
+        "ar": "فك رمز «ك. س.» يهدم أسطورة المالك ويشير إلى الكبسولة، لكنه لا يمس التسرّب ولا الخزانة.",
+        "kk": "«К. С.» шешімі иесі туралы аңызды құлатады және капсуланы меңзейді, бірақ ағуға да, шкафқа да қатысы жоқ."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Расшифровка «К. С.» рушит легенду о владельце и указывает на капсулу, но к протечке и шкафу отношения не имеет.",
+          "en": "Decoding \"K. S.\" destroys the owner legend and points to the capsule, yet it bears on neither the leak nor the cabinet.",
+          "tr": "«K. S.»nin çözülmesi malik efsanesini yıkıyor ve kapsülü işaret ediyor ama sızıntı veya dolapla ilgisi yok.",
+          "ar": "فك رمز «ك. س.» يهدم أسطورة المالك ويشير إلى الكبسولة، لكنه لا يمس التسرّب ولا الخزانة.",
+          "kk": "«К. С.» шешімі иесі туралы аңызды құлатады және капсуланы меңзейді, бірақ ағуға да, шкафқа да қатысы жоқ."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da09-e5.webp",
+        "filename": "da09-e5.webp"
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Влага на листах — компот со стола, дождевой воды и частиц кровли нет.",
+      "Замок архива дважды открывали гостевым кодом кадастрового инженера.",
+      "Доверенность «наследника» напечатана на том же принтере, что и межевой план Жукова."
+    ],
+    "en": [
+      "The moisture on the sheets is compote from the table; there is no rainwater and no roofing debris.",
+      "The archive lock was opened twice with the cadastral engineer's guest code.",
+      "The \"heir's\" power of attorney came from the same printer as Zhukov's boundary plan."
+    ],
+    "tr": [
+      "Yapraklardaki nem masadaki komposto; yağmur suyu ve çatı parçacığı yok.",
+      "Arşiv kilidi kadastro mühendisinin misafir koduyla iki kez açıldı.",
+      "«Mirasçının» vekâletnamesi, Jukov’un sınır planıyla aynı yazıcıdan çıktı."
+    ],
+    "ar": [
+      "الرطوبة على الأوراق كومبوت من الطاولة، ولا ماء مطر ولا بقايا سقف.",
+      "فُتح قفل الأرشيف مرتين برمز الضيف الخاص بمهندس المساحة.",
+      "طُبع توكيل «الوريث» بالطابعة نفسها التي طبعت مخطط جوكوف."
+    ],
+    "kk": [
+      "Парақтардағы ылғал — үстелдегі компот, жаңбыр суы мен шатыр бөлшектері жоқ.",
+      "Архив құлпы кадастр инженерінің қонақ кодымен екі рет ашылған.",
+      "«Мұрагердің» сенімхаты Жуковтың межелік жоспарымен бір принтерден шыққан."
+    ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "stampable": false,
+      "text": {
+        "ru": "Архивная папка испорчена протечкой, восстановление подлежит оплате.",
+        "en": "The archive folder was ruined by a leak and its restoration should be paid for.",
+        "tr": "Arşiv dosyası su sızıntısıyla bozuldu ve onarımı ödenmelidir.",
+        "ar": "أُتلف ملف الأرشيف بسبب تسرّب ويجب دفع تكلفة ترميمه.",
+        "kk": "Архив папкасы ағып кеткен судан бүлінді, қалпына келтіру төленуге тиіс."
+      }
+    },
+    {
+      "id": "claim_leak",
+      "stampable": true,
+      "text": {
+        "ru": "Бумаги намокли из-за протечки крыши.",
+        "en": "The papers got wet because the roof leaked.",
+        "tr": "Kâğıtlar çatı aktığı için ıslandı.",
+        "ar": "ابتلّت الأوراق بسبب تسرّب السقف.",
+        "kk": "Қағаздар шатырдың ағуынан су болды."
+      }
+    },
+    {
+      "id": "claim_cabinet",
+      "stampable": true,
+      "text": {
+        "ru": "Шкаф в ту ночь никто не открывал.",
+        "en": "Nobody opened the cabinet that night.",
+        "tr": "O gece dolabı kimse açmadı.",
+        "ar": "لم يفتح أحد الخزانة تلك الليلة.",
+        "kk": "Ол түні шкафты ешкім ашқан жоқ."
+      }
+    }
+  ],
+  "contentVersion": "dacha-romashka-1.0",
+  "narrative": {
+    "preBrief": {
+      "ru": "Промокшая папка — самая честная улика этой ночи. Она намокла не там, где должна была.",
+      "en": "The soaked folder is the most honest evidence of the night. It got wet in the wrong place.",
+      "tr": "Islanmış dosya, bu gecenin en dürüst kanıtı. Yanlış yerde ıslanmış.",
+      "ar": "الملف المبلَّل هو أصدق دليل في هذه الليلة، فقد ابتلّ في المكان الخطأ.",
+      "kk": "Су болған папка — осы түннің ең адал айғағы. Ол дұрыс емес жерден суланған."
+    },
+    "postVerdictNote": {
+      "ru": "Сокращения допускают трактовку. Участок на трактовку не оформляют.",
+      "en": "Abbreviations allow interpretation. Land is not registered on an interpretation.",
+      "tr": "Kısaltmalar yoruma açıktır. Ama arazi yoruma göre tapulanmaz.",
+      "ar": "الاختصارات تحتمل التأويل، لكن الأرض لا تُسجَّل بتأويل.",
+      "kk": "Қысқартулар түрліше түсіндіріледі. Бірақ учаске түсіндірмеге рәсімделмейді."
+    },
+    "nextCaseTeaser": {
+      "ru": "Утром юбилея сад уходит под воду, а камень у первой яблони оказывается сдвинут.",
+      "en": "On the morning of the jubilee the orchard goes under water and the stone by the first apple tree has been moved.",
+      "tr": "Jübile sabahı bahçe suyla kaplanıyor ve ilk elma ağacının yanındaki taş yerinden oynatılmış.",
+      "ar": "صباح اليوبيل يغرق البستان بالماء ويتبيّن أن الحجر قرب أول شجرة تفاح قد أُزيح.",
+      "kk": "Мерейтой таңында бақты су басады, ал бірінші алма ағашының жанындағы тас жылжытылған болып шығады."
+    },
+    "seasonClue": {
+      "id": "ks-decoded",
+      "progressIndex": 9,
+      "progressTotal": 10,
+      "label": {
+        "ru": "Расшифровка «К. С.»",
+        "en": "\"K. S.\" Decoded",
+        "tr": "«K. S.» Çözüldü",
+        "ar": "فك رمز «ك. س.»",
+        "kk": "«К. С.» шешімі"
+      },
+      "description": {
+        "ru": "«К. С.» означает «коллективная собственность», а не инициалы. Оригинал акта лежит в капсуле под первой яблоней.",
+        "en": "\"K. S.\" stands for \"collective property\", not initials. The original deed lies in the capsule under the first apple tree.",
+        "tr": "«K. S.» baş harfler değil, «kolektif mülkiyet» anlamına geliyor. Aslı belge, ilk elma ağacının altındaki kapsülde.",
+        "ar": "«ك. س.» تعني «الملكية الجماعية» لا الأحرف الأولى لاسم. وأصل السند في الكبسولة تحت أول شجرة تفاح.",
+        "kk": "«К. С.» — бас әріптер емес, «ұжымдық меншік» дегенді білдіреді. Актінің түпнұсқасы бірінші алма ағашының астындағы капсулада."
+      }
+    },
+    "epilogue": null
+  }
+}

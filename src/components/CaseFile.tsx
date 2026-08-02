@@ -29,6 +29,8 @@ interface Props {
   budgetExhausted: boolean;
   /** Spendable balance — gates whether a hint is bought with cash or an ad. */
   balance: number;
+  /** Cosmetic stamp caption the player has inked; `null` = the free default. */
+  stampTextId?: string | null;
   onOpenEvidence: (id: string) => void;
   onBuyHint: (kind: HintKind, targetEvidenceId?: string) => void;
   onApprove: () => void;
@@ -58,6 +60,7 @@ export function CaseFile({
   opensRemaining,
   budgetExhausted,
   balance,
+  stampTextId = null,
   onOpenEvidence,
   onBuyHint,
   onApprove,
@@ -315,6 +318,7 @@ export function CaseFile({
             sealed={budgetExhausted && !viewed}
             targetable={targetable}
             dimmed={targeting != null && !targetable}
+            stampTextId={stampTextId}
             onClick={() => {
               if (targeting) {
                 if (!targetable) return;

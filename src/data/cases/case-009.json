@@ -385,5 +385,87 @@
       "ar": "ولم أدع الشك يحل محل الأدلة",
       "kk": "Мен күдіктің дәлелді алмастыруына жол бермедім"
     }
+  },
+  "resolution": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "helena_brandt",
+      "displayName": {
+        "ru": "Хелена Брандт",
+        "en": "Helena Brandt",
+        "tr": "Helena Brandt",
+        "ar": "هيلينا برانت",
+        "kk": "Хелена Брандт"
+      },
+      "portraitState": "relief"
+    },
+    "finalLine": {
+      "ru": "Спасибо, что проверили розетку, а не мои намерения.",
+      "en": "Thank you for checking the socket instead of my intentions.",
+      "tr": "Niyetimi değil, prizi kontrol ettiğiniz için teşekkürler.",
+      "ar": "شكرًا لأنكم فحصتم المقبس لا نواياي.",
+      "kk": "Ниетімді емес, розетканы тексергеніңізге рақмет."
+    },
+    "emotionalMode": "relief",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что вызывало подозрение",
+          "en": "What looked suspicious",
+          "tr": "Şüphe uyandıran şey",
+          "ar": "ما بدا مريبًا",
+          "kk": "Не күдік тудырды"
+        },
+        "text": {
+          "ru": "За три недели до пожара лимит покрытия кухни вырос почти вдвое. Совпадение выглядит скверно.",
+          "en": "Three weeks before the fire the kitchen coverage limit nearly doubled. The timing looks bad.",
+          "tr": "Yangından üç hafta önce mutfak teminat limiti neredeyse iki katına çıktı. Zamanlama kötü görünüyor.",
+          "ar": "قبل الحريق بثلاثة أسابيع تضاعف حدّ تغطية المطبخ تقريبًا. التوقيت يبدو سيئًا.",
+          "kk": "Өрттен үш апта бұрын ас үй жабындысының лимиті екі есеге жуық өсті. Тұспа-тұс келуі жаман көрінеді."
+        },
+        "evidenceIds": [
+          "ev-policy"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Чем это объясняется",
+          "en": "What explains it",
+          "tr": "Bunu açıklayan şey",
+          "ar": "ما يفسر ذلك",
+          "kk": "Мұны не түсіндіреді"
+        },
+        "text": {
+          "ru": "К изменению полиса приложены чеки на технику и мебель, купленные до этой даты. Лимит догонял реальную стоимость кухни.",
+          "en": "The policy change came with receipts for appliances and furniture bought before that date. The limit was catching up with the kitchen's real value.",
+          "tr": "Poliçe değişikliğine, o tarihten önce alınan cihaz ve mobilya fişleri eklenmişti. Limit, mutfağın gerçek değerine yetişiyordu.",
+          "ar": "رافق تعديل البوليصة إيصالات لأجهزة وأثاث اشتُريت قبل ذلك التاريخ. كان الحدّ يلاحق القيمة الحقيقية للمطبخ.",
+          "kk": "Полисті өзгертуге сол күнге дейін сатып алынған техника мен жиһаз чектері тіркелген. Лимит ас үйдің нақты құнына жетіп жатты."
+        },
+        "evidenceIds": [
+          "ev-policy"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Очаг — внутри старой розетки, следов ускорителя и второго очага нет, а камера подтверждает: между 20:18 и 02:31 в квартиру никто не поднимался.",
+          "en": "The seat of the fire was inside the old socket, with no accelerant and no second ignition point, and the camera confirms nobody went up to the flat between 8:18 p.m. and 2:31 a.m.",
+          "tr": "Yangının odağı eski prizin içindeydi; hızlandırıcı ya da ikinci odak yok. Kamera da 20.18 ile 02.31 arasında daireye kimsenin çıkmadığını doğruluyor.",
+          "ar": "كان مصدر الحريق داخل المقبس القديم، بلا مسرّع ولا بؤرة ثانية، والكاميرا تؤكّد أن أحدًا لم يصعد إلى الشقة بين 20:18 و02:31.",
+          "kk": "Өрт ошағы ескі розетканың ішінде, жеделдеткіш пен екінші ошақтың ізі жоқ, ал камера 20:18 бен 02:31 аралығында пәтерге ешкім көтерілмегенін растайды."
+        },
+        "evidenceIds": [
+          "ev-fire-report",
+          "ev-entry-camera"
+        ]
+      }
+    ]
   }
 }

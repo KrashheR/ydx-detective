@@ -12,8 +12,8 @@
 
 | Поле | Тип | Заметки |
 | ---- | --- | ------- |
-| `id` | string | `case-NNN` или `case-NNN-daily`; уникален |
-| `type` | `standard \| daily` | daily → ×5 награда, ×2 XP, файл в `cases/daily/` |
+| `id` | string | `case-NNN`, `case-NNN-daily` или `<pack-id>-NN` (сюжетный пак); уникален |
+| `type` | `standard \| daily \| archive` | daily → ×5 награда, ×2 XP, файл в `cases/daily/`; archive → дело премиум-пака, файл в `cases/packs/<pack-id>/`, вне 50 позиций кампании |
 | `difficulty` | `easy \| medium \| hard` | вес XP: 10 / 20 / 35 |
 | `claimAmount` | number | сумма заявки (EUR/база награды) |
 | `truth` | `valid \| fraud` | истина дела; для авторинга/аналитики |
@@ -26,6 +26,7 @@
 | `correctDecision` | `approve \| reject` | `reject` если fraud, `approve` если valid |
 | `explanation` | LocalizedLines | ровно 3 коротких вывода для ResultSheet (массив строк, 5 языков) |
 | `investigationBudget` | number? | если задан — бюджетное дело (см. ниже) |
+| `resolution` | CaseResolution? | реакция человека после верного вердикта (см. ниже) |
 
 Улика (`Evidence`):
 
@@ -42,6 +43,33 @@
 
 **Правило truth ↔ улики:** fraud → `isContradiction: true` у **≥2** улик и
 `correctDecision: reject`. valid → **0** противоречий и `correctDecision: approve`.
+
+## Как написать финал дела (`resolution`)
+
+Финальную реплику и разбор **не редактируют внутри `src/data/cases/*.json`**. Источник правды —
+`scripts/data/resolutions/act1..act5.json` + `daily.json` (ключ = `id` дела), а раскладку делает
+идемпотентный `node scripts/apply-resolutions.mjs`. Скрипт падает, если `verdict` расходится с
+`correctDecision` или если звено ссылается на несуществующую улику.
+
+| Поле | Тип | Заметки |
+| ---- | --- | ------- |
+| `verdict` | `approve \| reject` | обязан совпадать с `correctDecision` |
+| `speaker.characterId` | string | стабилен для повторяющихся героев (`anatoly_stepanovich`, `bolat_zhumabekov`, `mihail_ternov`, …) |
+| `speaker.displayName` | LocalizedString | одно и то же имя во всех делах героя |
+| `speaker.portraitState` | string? | подсказка выражения; при отсутствии арта берётся `personImage` |
+| `finalLine` | LocalizedString | 5–18 слов, характер и эмоция — **не** пересказ доказательств |
+| `emotionalMode` | `relief \| humour \| bittersweet \| defeat \| grave \| threat` | задаёт ритм, наклон портрета и отсутствие комедийных акцентов в тяжёлых делах |
+| `reasoningChain` | ≤3 звена | `labelKey` (`truth`/`crack`/`verdict`/`suspicion`/`explained`) + `text` + `evidenceIds` |
+| `veraLine` | LocalizedString? | одна строка Веры; сейчас ровно в 15 делах из 56 — выше ~15 второй голос снова превращается в обязательную сводку |
+| `arcReveal` | `{title,text,evidenceIds?}`? | сюжетное открытие; чаще задаётся флагом `arcRevealFromSeasonClue: true`, который переиспользует уже локализованный `narrative.seasonClue` |
+
+Правила текста: мошенник не обязан признаваться во всём, честный заявитель не обязан благодарить,
+юмор недопустим в делах о болезни, травме и похищении. Персонаж не должен произносить факты,
+которых знать не может — сюжетное открытие живёт в `arcReveal`, а не в его реплике.
+
+Инварианты кампании проверяет `src/data/caseResolution.test.ts`: наличие `resolution` у всех
+56 дел, совпадение вердикта, полнота пяти языков, ≤3 звена с реальными `evidenceIds` и единое имя
+у одного `characterId`.
 
 ## Типы улик (`EvidenceType`)
 
@@ -73,8 +101,9 @@ meta-поля по типам (детали и примеры — в `CASE_AUTHO
 
 ## Как добавить новое дело
 
-1. Создай JSON в `src/data/cases/` (стандартное), `src/data/cases/daily/` (ежедневное) или
-   `src/data/cases/archives/<archive-id>/` (дело особого архива; один архив — одна папка).
+1. Создай JSON в `src/data/cases/` (стандартное), `src/data/cases/daily/` (ежедневное),
+   `src/data/cases/packs/<pack-id>/` (дело премиум-пака, `type: "archive"`) или
+   `src/data/cases/archives/<archive-id>/` (легаси-дела экспертных архивов, они же кампания 39–50).
    Следуй схеме выше; заполни **все 5 языков** (`ru/en/tr/ar/kk`) во **всех** LocalizedString,
    включая `client.meta[].v` и видимые текстовые поля `evidence.meta`.
 2. Дополнительная регистрация не нужна: Vite-плагин summary и lazy glob в
@@ -96,7 +125,21 @@ meta-поля по типам (детали и примеры — в `CASE_AUTHO
 опционален; портрет не должен содержать логотипы, документы, государственную символику или создавать
 узнаваемое сходство с реальным человеком либо персонажем.
 
-Для особых архивов держи антологию игровой, а не только тематической: в паке должен быть микс
+## Сюжетные паки (`type: "archive"`)
+
+Премиум-паки живут в собственном пространстве id и **не входят** в 50 позиций кампании: у их дел нет
+`campaignOrder`, `requiredLevel` и `act`, а `getStandardCaseSummaries()` их не видит. Контент трёх
+текущих паков («СНТ „Ромашка“», «Поезд №13» и «Санаторий „Прибой“») авторится в
+`scripts/story-packs/<pack>.mjs` и
+раскладывается в JSON командой `node scripts/generate-story-packs.mjs` — сгенерированный JSON и есть
+поставляемый источник правды, он коммитится. Стандарт пака: 10 последовательных дел, ровно 5 улик и
+ровно 2 штампуемых противоречия в каждом; остальные карточки ведут сквозную линию через
+`narrative.seasonClue` и не должны быть правильной целью штампа. Финальное дело несёт
+`finalSynthesis` и `narrative.epilogue`. Ассеты: улики — `public/evidence/packs/<pack-id>/<id>.webp`,
+портреты — `public/people/packs/<pack-id>/<character>.webp`, обложки генерируются в
+`public/covers/packs/`. Регистрация пака на витрине — `THEMATIC_PACKS` в `src/data/thematicPacks.ts`.
+
+Для легаси-архивов держи антологию игровой, а не только тематической: в паке должен быть микс
 `fraud` и `valid`, разные типы развязок и уникальные финальные объяснения. Лучше строить архив как
 мини-сезон: один повторяющийся след, организация, предмет или код проявляется в 3–4 делах, но не
 каждый заявитель одинаково виновен. Не оставляй `Archive file detail`/копипастные заглушки в

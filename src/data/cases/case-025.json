@@ -538,5 +538,95 @@
     },
     "seasonClue": null,
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "lorenzo_conti",
+      "displayName": {
+        "ru": "Лоренцо Конти",
+        "en": "Lorenzo Conti",
+        "tr": "Lorenzo Conti",
+        "ar": "لورنزو كونتي",
+        "kk": "Лоренцо Конти"
+      },
+      "portraitState": "tired_honest"
+    },
+    "finalLine": {
+      "ru": "Я боялся, что из-за долгов стану виноватым ещё до экспертизы.",
+      "en": "I was afraid my debts would make me guilty before the examination even started.",
+      "tr": "Borçlarım yüzünden bilirkişi raporu daha çıkmadan suçlu ilan edilmekten korktum.",
+      "ar": "خشيت أن تجعلني الديون مذنبًا قبل أن يبدأ الفحص أصلًا.",
+      "kk": "Қарызым сараптамаға дейін-ақ мені кінәлі етеді деп қорықтым."
+    },
+    "emotionalMode": "relief",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что вызывало подозрение",
+          "en": "What looked suspicious",
+          "tr": "Şüphe uyandıran şey",
+          "ar": "ما بدا مريبًا",
+          "kk": "Не күдік тудырды"
+        },
+        "text": {
+          "ru": "У кафе есть кредит, и пожар выглядит удобным. Это повод для проверки версии умысла.",
+          "en": "The café carries a loan and the fire looks convenient. That is reason enough to test the arson theory.",
+          "tr": "Kafenin kredisi var ve yangın işine gelir görünüyor. Bu, kasıt ihtimalini sınamak için yeterli sebep.",
+          "ar": "على المقهى قرض، والحريق يبدو مناسبًا. هذا سبب كافٍ لاختبار فرضية العمد.",
+          "kk": "Кафенің несиесі бар, ал өрт ыңғайлы көрінеді. Бұл қасақаналық нұсқасын тексеруге себеп."
+        },
+        "evidenceIds": [
+          "ev-ledger"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Чем это объясняется",
+          "en": "What explains it",
+          "tr": "Bunu açıklayan şey",
+          "ar": "ما يفسر ذلك",
+          "kk": "Мұны не түсіндіреді"
+        },
+        "text": {
+          "ru": "Очищенный блок питания показывает дугу изнутри наружу, а история ремонта объясняет её: неделю назад поставили восстановленный блок с неподходящим предохранителем.",
+          "en": "The cleaned power unit shows an arc running from inside outwards, and the repair history explains it: a refurbished unit with the wrong fuse was fitted a week earlier.",
+          "tr": "Temizlenen güç ünitesi içten dışa doğru bir ark izi gösteriyor; onarım geçmişi de bunu açıklıyor: bir hafta önce yanlış sigortalı, yenilenmiş bir ünite takılmış.",
+          "ar": "تُظهر وحدة الطاقة بعد التنظيف قوسًا كهربائيًا يمتدّ من الداخل إلى الخارج، ويفسّر ذلك سجلّ الإصلاح: رُكّبت قبل أسبوع وحدة مجدَّدة بمصهر غير مناسب.",
+          "kk": "Тазартылған қуат блогы іштен сыртқа шыққан доғаны көрсетеді, ал жөндеу тарихы оны түсіндіреді: апта бұрын жарамсыз сақтандырғышы бар қалпына келтірілген блок қойылған."
+        },
+        "evidenceIds": [
+          "ev-fire",
+          "ev-repair"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Камера исключает вмешательство в критический промежуток, свидетель подтверждает запах горелой электроники. Долг остаётся мотивом, но не доказательством.",
+          "en": "The camera rules out interference during the critical window and a witness confirms the smell of burning electronics. The debt stays a motive, never a proof.",
+          "tr": "Kamera kritik aralıkta müdahaleyi dışlıyor, tanık da yanan elektronik kokusunu doğruluyor. Borç bir gerekçe olarak kalır, kanıt değil.",
+          "ar": "تستبعد الكاميرا أي تدخّل في الفترة الحرجة، ويؤكّد شاهد رائحة إلكترونيات محترقة. يبقى الدَّين دافعًا لا دليلًا.",
+          "kk": "Камера шешуші аралықта араласуды жоққа шығарады, куә күйген электроника иісін растайды. Қарыз уәж болып қалады, дәлел емес."
+        },
+        "evidenceIds": [
+          "ev-cctv",
+          "ev-evacuation"
+        ]
+      }
+    ],
+    "veraLine": {
+      "ru": "Долг — это мотив. Мотив никогда не заменяет причину пожара.",
+      "en": "Debt is a motive. A motive never substitutes for the cause of a fire.",
+      "tr": "Borç bir gerekçedir. Gerekçe, yangının nedeninin yerini asla tutmaz.",
+      "ar": "الدَّين دافع. والدافع لا يحلّ أبدًا محلّ سبب الحريق.",
+      "kk": "Қарыз — уәж. Уәж ешқашан өрттің себебін алмастырмайды."
+    }
   }
 }

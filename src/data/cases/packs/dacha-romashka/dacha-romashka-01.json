@@ -1,0 +1,498 @@
+{
+  "id": "dacha-romashka-01",
+  "type": "archive",
+  "difficulty": "easy",
+  "claimAmount": 96000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Град размером с антоновку",
+    "en": "Hail the Size of an Apple",
+    "tr": "Elma Büyüklüğünde Dolu",
+    "ar": "برَد بحجم التفاحة",
+    "kk": "Алма көлеміндегі бұршақ"
+  },
+  "claim": {
+    "person": {
+      "ru": "Галина Фёдоровна Кукушкина, 68 лет",
+      "en": "Galina Fyodorovna Kukushkina, age 68",
+      "tr": "Galina Fyodorovna Kukuşkina, 68 yaşında",
+      "ar": "غالينا فيودوروفنا كوكوشكينا، 68 عامًا",
+      "kk": "Галина Фёдоровна Кукушкина, 68 жаста"
+    },
+    "story": {
+      "ru": "В 22:40 начался град. Он разбил северную стену моей бельгийской стеклянной теплицы. Никаких людей и техники рядом не было; до этого все секции были целы. Прошу возместить стоимость стеклянных секций полностью.",
+      "en": "Hail started at 22:40. It shattered the north wall of my Belgian glass greenhouse. No people and no machinery were anywhere near it, and every section was intact before that. I am claiming the full cost of the glass sections.",
+      "tr": "Saat 22:40’ta dolu başladı. Belçika yapımı cam seramın kuzey duvarını paramparça etti. Yakınında hiç kimse ve hiçbir makine yoktu, öncesinde tüm bölmeler sağlamdı. Cam bölmelerin bedelinin tamamını talep ediyorum.",
+      "ar": "بدأ البرَد في الساعة 22:40 وحطّم الجدار الشمالي لدفيئتي الزجاجية البلجيكية. لم يكن أحد ولا أي آلة بالقرب منها، وكانت جميع الأقسام سليمة قبل ذلك. أطالب بكامل قيمة الأقسام الزجاجية.",
+      "kk": "Сағат 22:40-та бұршақ басталды. Ол менің бельгиялық шыны жылыжайымның солтүстік қабырғасын қиратты. Жанында ешкім де, техника да болған жоқ, оған дейін барлық секция бүтін еді. Шыны секциялардың құнын толық өтеуді сұраймын."
+    }
+  },
+  "coverImage": "covers/packs/dacha-romashka-01.svg",
+  "personImage": "people/packs/dacha-romashka/galina_kukushkina.webp",
+  "client": {
+    "role": {
+      "ru": "Заявитель · член СНТ «Ромашка»",
+      "en": "Claimant · member of the Romashka garden association",
+      "tr": "Başvuru sahibi · Romashka bahçe kooperatifi üyesi",
+      "ar": "مقدم الطلب · عضو في جمعية «روماشكا» للبساتين",
+      "kk": "Өтініш беруші · «Ромашка» бақ серіктестігінің мүшесі"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Участок",
+          "en": "Plot",
+          "tr": "Parsel",
+          "ar": "القطعة",
+          "kk": "Учаске"
+        },
+        "v": {
+          "ru": "№7",
+          "en": "No. 7",
+          "tr": "No. 7",
+          "ar": "رقم 7",
+          "kk": "№7"
+        }
+      },
+      {
+        "k": {
+          "ru": "Сезон",
+          "en": "Season",
+          "tr": "Sezon",
+          "ar": "الموسم",
+          "kk": "Маусым"
+        },
+        "v": {
+          "ru": "Август",
+          "en": "August",
+          "tr": "Ağustos",
+          "ar": "أغسطس",
+          "kk": "Тамыз"
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "DA01-E1",
+      "order": 1,
+      "type": "document",
+      "title": {
+        "ru": "Справка метеостанции",
+        "en": "Weather Station Report",
+        "tr": "Meteoroloji İstasyonu Raporu",
+        "ar": "تقرير محطة الأرصاد",
+        "kk": "Метеостанция анықтамасы"
+      },
+      "content": {
+        "ru": "Ночь на 2 августа: дождь 4 мм, порывы ветра до 11 м/с. Град в радиусе 20 км не зафиксирован ни одним постом наблюдения.",
+        "en": "Night of 2 August: 4 mm of rain, gusts up to 11 m/s. No hail was recorded by any observation post within 20 km.",
+        "tr": "2 Ağustos gecesi: 4 mm yağmur, saniyede 11 metreye varan rüzgâr. 20 km yarıçapındaki hiçbir gözlem istasyonu dolu kaydetmedi.",
+        "ar": "ليلة 2 أغسطس: 4 مم من المطر ورياح تصل إلى 11 م/ث. لم تسجل أي محطة رصد في نطاق 20 كم أي برَد.",
+        "kk": "2 тамызға қараған түн: 4 мм жаңбыр, желдің екпіні 11 м/с дейін. 20 км радиуста бірде-бір бақылау бекеті бұршақ тіркемеген."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Града в ту ночь не было вовсе, поэтому заявленная причина повреждения не могла существовать.",
+        "en": "There was no hail at all that night, so the stated cause of the damage could not have existed.",
+        "tr": "O gece hiç dolu yağmadı, dolayısıyla belirtilen hasar nedeni var olamazdı.",
+        "ar": "لم يكن هناك برَد على الإطلاق تلك الليلة، لذا فإن السبب المذكور للضرر لا يمكن أن يكون قد حدث.",
+        "kk": "Ол түні бұршақ мүлдем болмаған, сондықтан мәлімделген зақым себебі болуы мүмкін емес."
+      },
+      "statementLink": {
+        "statementId": "claim_cause",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Града в ту ночь не было вовсе, поэтому заявленная причина повреждения не могла существовать.",
+          "en": "There was no hail at all that night, so the stated cause of the damage could not have existed.",
+          "tr": "O gece hiç dolu yağmadı, dolayısıyla belirtilen hasar nedeni var olamazdı.",
+          "ar": "لم يكن هناك برَد على الإطلاق تلك الليلة، لذا فإن السبب المذكور للضرر لا يمكن أن يكون قد حدث.",
+          "kk": "Ол түні бұршақ мүлдем болмаған, сондықтан мәлімделген зақым себебі болуы мүмкін емес."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_cause",
+        "reason": {
+          "ru": "Града в ту ночь не было вовсе, поэтому заявленная причина повреждения не могла существовать.",
+          "en": "There was no hail at all that night, so the stated cause of the damage could not have existed.",
+          "tr": "O gece hiç dolu yağmadı, dolayısıyla belirtilen hasar nedeni var olamazdı.",
+          "ar": "لم يكن هناك برَد على الإطلاق تلك الليلة، لذا فإن السبب المذكور للضرر لا يمكن أن يكون قد حدث.",
+          "kk": "Ол түні бұршақ мүлдем болмаған, сондықтан мәлімделген зақым себебі болуы мүмкін емес."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da01-e1.webp"
+      }
+    },
+    {
+      "id": "DA01-E2",
+      "order": 2,
+      "type": "photo",
+      "title": {
+        "ru": "Фото повреждённой стены",
+        "en": "Photo of the Damaged Wall",
+        "tr": "Hasarlı Duvarın Fotoğrafı",
+        "ar": "صورة الجدار المتضرر",
+        "kk": "Зақымданған қабырғаның фотосы"
+      },
+      "content": {
+        "ru": "Крупный план пролома: секции из сотового поликарбоната, на раме — три старых шва, заклеенных строительным скотчем и выгоревших на солнце.",
+        "en": "Close-up of the breach: the sections are twin-wall polycarbonate, and the frame carries three old seams patched with duct tape and bleached by the sun.",
+        "tr": "Kırığın yakın çekimi: bölmeler çift cidarlı polikarbonat, çerçevede güneşte solmuş, koli bandıyla yamanmış üç eski dikiş var.",
+        "ar": "لقطة قريبة للفتحة: الأقسام من البولي كربونات المزدوج، وعلى الإطار ثلاثة وصلات قديمة مرقّعة بشريط لاصق وباهتة من الشمس.",
+        "kk": "Сынықтың жақыннан түсірілген суреті: секциялар ұялы поликарбонаттан, жақтауда құрылыс скотчімен жамалған, күнге оңған үш ескі жік бар."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Секции не стеклянные, а поликарбонатные, и рама ремонтировалась задолго до грозы — заявленные материал и «безупречное состояние» не соответствуют объекту.",
+        "en": "The sections are polycarbonate rather than glass and the frame was repaired long before the storm — the claimed material and \"intact condition\" do not match the object.",
+        "tr": "Bölmeler cam değil polikarbonat ve çerçeve fırtınadan çok önce onarılmış — beyan edilen malzeme ve «sağlam durum» nesneyle örtüşmüyor.",
+        "ar": "الأقسام من البولي كربونات وليست زجاجًا، والإطار أُصلح قبل العاصفة بوقت طويل، فالمادة المعلنة و«الحالة السليمة» لا تطابقان الواقع.",
+        "kk": "Секциялар шыны емес, поликарбонат, ал жақтау дауылдан әлдеқайда бұрын жөнделген — мәлімделген материал мен «мінсіз күй» шындыққа сай емес."
+      },
+      "statementLink": {
+        "statementId": "claim_material",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Секции не стеклянные, а поликарбонатные, и рама ремонтировалась задолго до грозы — заявленные материал и «безупречное состояние» не соответствуют объекту.",
+          "en": "The sections are polycarbonate rather than glass and the frame was repaired long before the storm — the claimed material and \"intact condition\" do not match the object.",
+          "tr": "Bölmeler cam değil polikarbonat ve çerçeve fırtınadan çok önce onarılmış — beyan edilen malzeme ve «sağlam durum» nesneyle örtüşmüyor.",
+          "ar": "الأقسام من البولي كربونات وليست زجاجًا، والإطار أُصلح قبل العاصفة بوقت طويل، فالمادة المعلنة و«الحالة السليمة» لا تطابقان الواقع.",
+          "kk": "Секциялар шыны емес, поликарбонат, ал жақтау дауылдан әлдеқайда бұрын жөнделген — мәлімделген материал мен «мінсіз күй» шындыққа сай емес."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_material",
+        "reason": {
+          "ru": "Секции не стеклянные, а поликарбонатные, и рама ремонтировалась задолго до грозы — заявленные материал и «безупречное состояние» не соответствуют объекту.",
+          "en": "The sections are polycarbonate rather than glass and the frame was repaired long before the storm — the claimed material and \"intact condition\" do not match the object.",
+          "tr": "Bölmeler cam değil polikarbonat ve çerçeve fırtınadan çok önce onarılmış — beyan edilen malzeme ve «sağlam durum» nesneyle örtüşmüyor.",
+          "ar": "الأقسام من البولي كربونات وليست زجاجًا، والإطار أُصلح قبل العاصفة بوقت طويل، فالمادة المعلنة و«الحالة السليمة» لا تطابقان الواقع.",
+          "kk": "Секциялар шыны емес, поликарбонат, ал жақтау дауылдан әлдеқайда бұрын жөнделген — мәлімделген материал мен «мінсіз күй» шындыққа сай емес."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da01-e2.webp",
+        "filename": "da01-e2.webp"
+      }
+    },
+    {
+      "id": "DA01-E3",
+      "order": 3,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера участка №14",
+        "en": "Camera on Plot No. 14",
+        "tr": "14 No.lu Parselin Kamerası",
+        "ar": "كاميرا القطعة رقم 14",
+        "kk": "№14 учаскенің камерасы"
+      },
+      "content": {
+        "ru": "21:58 — вдоль теплицы проезжает красная садовая тележка со сколом белой краски на левой ручке. Из неё торчит длинная геодезическая рейка. Лицо человека закрыто капюшоном.",
+        "en": "21:58 — a red garden cart with a chip of white paint on its left handle rolls past the greenhouse. A long surveyor's rod sticks out of it. The person's face is hidden by a hood.",
+        "tr": "21:58 — sol sapında beyaz boya çentiği olan kırmızı bir bahçe arabası seranın önünden geçiyor. İçinden uzun bir jeodezik mira çıkıyor. Kişinin yüzü kapüşonla gizli.",
+        "ar": "21:58 — عربة حديقة حمراء بها كشط طلاء أبيض على مقبضها الأيسر تمر بجانب الدفيئة، ويبرز منها قضيب مساحة طويل. وجه الشخص مخفي بقلنسوة.",
+        "kk": "21:58 — сол сабында ақ бояуы сыдырылған қызыл бақша арбасы жылыжайдың жанынан өтеді. Ішінен ұзын геодезиялық рейка шығып тұр. Адамның беті капюшонмен жабылған."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Запись показывает, что рядом с теплицей всё-таки был предмет, способный ударить стену, но не позволяет назвать виновного и не опровергает конкретную фразу заявления.",
+        "en": "The recording shows an object capable of striking the wall was near the greenhouse after all, yet it names no culprit and disproves no specific sentence of the claim.",
+        "tr": "Kayıt, seranın yanında duvara çarpabilecek bir nesnenin bulunduğunu gösteriyor ama suçluyu adlandırmıyor ve iddianın belirli bir cümlesini çürütmüyor.",
+        "ar": "يُظهر التسجيل وجود جسم قادر على ضرب الجدار قرب الدفيئة، لكنه لا يحدد الفاعل ولا يدحض جملة بعينها في الادعاء.",
+        "kk": "Жазба жылыжайдың қасында қабырғаны соға алатын зат болғанын көрсетеді, бірақ кінәліні атамайды және өтініштің нақты сөйлемін теріске шығармайды."
+      },
+      "statementLink": {
+        "statementId": "claim_cause",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Запись показывает, что рядом с теплицей всё-таки был предмет, способный ударить стену, но не позволяет назвать виновного и не опровергает конкретную фразу заявления.",
+          "en": "The recording shows an object capable of striking the wall was near the greenhouse after all, yet it names no culprit and disproves no specific sentence of the claim.",
+          "tr": "Kayıt, seranın yanında duvara çarpabilecek bir nesnenin bulunduğunu gösteriyor ama suçluyu adlandırmıyor ve iddianın belirli bir cümlesini çürütmüyor.",
+          "ar": "يُظهر التسجيل وجود جسم قادر على ضرب الجدار قرب الدفيئة، لكنه لا يحدد الفاعل ولا يدحض جملة بعينها في الادعاء.",
+          "kk": "Жазба жылыжайдың қасында қабырғаны соға алатын зат болғанын көрсетеді, бірақ кінәліні атамайды және өтініштің нақты сөйлемін теріске шығармайды."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da01-e3.webp",
+        "cameraId": "PLOT-14-GATE",
+        "cameraModel": "DachaCam 2"
+      }
+    },
+    {
+      "id": "DA01-E4",
+      "order": 4,
+      "type": "surface_reveal",
+      "title": {
+        "ru": "Осмотр рамы теплицы",
+        "en": "Examining the Greenhouse Frame",
+        "tr": "Sera Çerçevesinin İncelenmesi",
+        "ar": "فحص إطار الدفيئة",
+        "kk": "Жылыжай жақтауын қарау"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Под землёй проступает свежая жёлтая краска межевого колышка — след ночных работ у теплицы, но он не опровергает ни одну фразу заявления напрямую.",
+        "en": "Under the soil appears fresh yellow paint from a survey stake — a trace of night work by the greenhouse, though it directly disproves no sentence of the claim.",
+        "tr": "Toprağın altında bir sınır kazığının taze sarı boyası beliriyor: seranın yanındaki gece çalışmasının izi, ancak iddianın hiçbir cümlesini doğrudan çürütmüyor.",
+        "ar": "يظهر تحت التراب طلاء أصفر طازج من وتد مساحة، وهو أثر عمل ليلي قرب الدفيئة لكنه لا يدحض مباشرة أي جملة في الادعاء.",
+        "kk": "Топырақтың астынан межелік қазықтың жаңа сары бояуы шығады — бұл жылыжай маңындағы түнгі жұмыстың ізі, бірақ өтініштің ешбір сөйлемін тікелей теріске шығармайды."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Под землёй проступает свежая жёлтая краска межевого колышка — след ночных работ у теплицы, но он не опровергает ни одну фразу заявления напрямую.",
+          "en": "Under the soil appears fresh yellow paint from a survey stake — a trace of night work by the greenhouse, though it directly disproves no sentence of the claim.",
+          "tr": "Toprağın altında bir sınır kazığının taze sarı boyası beliriyor: seranın yanındaki gece çalışmasının izi, ancak iddianın hiçbir cümlesini doğrudan çürütmüyor.",
+          "ar": "يظهر تحت التراب طلاء أصفر طازج من وتد مساحة، وهو أثر عمل ليلي قرب الدفيئة لكنه لا يدحض مباشرة أي جملة في الادعاء.",
+          "kk": "Топырақтың астынан межелік қазықтың жаңа сары бояуы шығады — бұл жылыжай маңындағы түнгі жұмыстың ізі, бірақ өтініштің ешбір сөйлемін тікелей теріске шығармайды."
+        }
+      },
+      "evidenceTier": "supporting",
+      "description": {
+        "ru": "Инспектор снял налипшую землю с нижней перекладины рамы и попросил очистить её до основания.",
+        "en": "The inspector scraped caked soil off the lower crossbar and asked for it to be cleaned down to the metal.",
+        "tr": "Müfettiş alt çıtadaki kurumuş toprağı kazıdı ve metale kadar temizlenmesini istedi.",
+        "ar": "أزال المفتش التراب المتيبس عن العارضة السفلية وطلب تنظيفها حتى المعدن.",
+        "kk": "Инспектор жақтаудың төменгі көлденеңінен кепкен топырақты алып, оны негізіне дейін тазалауды өтінді."
+      },
+      "instruction": {
+        "ru": "Сотрите землю с нижней перекладины и найдите посторонний след.",
+        "en": "Wipe the soil from the lower crossbar and find the foreign mark.",
+        "tr": "Alt çıtadaki toprağı silin ve yabancı izi bulun.",
+        "ar": "امسح التراب عن العارضة السفلية وابحث عن الأثر الغريب.",
+        "kk": "Төменгі көлденеңдегі топырақты сүртіп, бөгде ізді табыңыз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/dacha-romashka/da01-e4.webp",
+        "coverTexture": "shared/surface/dirt.svg",
+        "revealMasks": [
+          "shared/surface/trace-mask.svg"
+        ],
+        "toolCursor": "shared/surface/cloth-cursor.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": false,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Игрок сам находит свежий жёлтый след и связывает ночное происшествие с межеванием, а не читает готовый вывод.",
+          "en": "The player uncovers the fresh yellow mark themselves and links the night incident to land surveying instead of reading a ready conclusion.",
+          "tr": "Oyuncu taze sarı izi kendisi bulur ve gece olayını hazır bir sonucu okumak yerine arazi ölçümüyle ilişkilendirir.",
+          "ar": "يكتشف اللاعب العلامة الصفراء الطازجة بنفسه ويربط حادثة الليل بأعمال المساحة بدلًا من قراءة استنتاج جاهز.",
+          "kk": "Ойыншы жаңа сары ізді өзі тауып, түнгі оқиғаны дайын тұжырымды оқудың орнына жер өлшеумен байланыстырады."
+        },
+        "playerAction": {
+          "ru": "Сотрите землю с нижней перекладины и найдите посторонний след.",
+          "en": "Wipe the soil from the lower crossbar and find the foreign mark.",
+          "tr": "Alt çıtadaki toprağı silin ve yabancı izi bulun.",
+          "ar": "امسح التراب عن العارضة السفلية وابحث عن الأثر الغريب.",
+          "kk": "Төменгі көлденеңдегі топырақты сүртіп, бөгде ізді табыңыз."
+        },
+        "conclusion": {
+          "ru": "Под землёй проступает свежая жёлтая краска межевого колышка — след ночных работ у теплицы, но он не опровергает ни одну фразу заявления напрямую.",
+          "en": "Under the soil appears fresh yellow paint from a survey stake — a trace of night work by the greenhouse, though it directly disproves no sentence of the claim.",
+          "tr": "Toprağın altında bir sınır kazığının taze sarı boyası beliriyor: seranın yanındaki gece çalışmasının izi, ancak iddianın hiçbir cümlesini doğrudan çürütmüyor.",
+          "ar": "يظهر تحت التراب طلاء أصفر طازج من وتد مساحة، وهو أثر عمل ليلي قرب الدفيئة لكنه لا يدحض مباشرة أي جملة في الادعاء.",
+          "kk": "Топырақтың астынан межелік қазықтың жаңа сары бояуы шығады — бұл жылыжай маңындағы түнгі жұмыстың ізі, бірақ өтініштің ешбір сөйлемін тікелей теріске шығармайды."
+        }
+      },
+      "data": {
+        "mode": "erase",
+        "coverType": "dirt",
+        "brush": {
+          "radius": 44,
+          "hardness": 0.6,
+          "opacity": 0.85,
+          "spacing": 8
+        },
+        "completion": {
+          "type": "discover_any",
+          "requiredTraceIds": [
+            "yellow_stake_paint"
+          ]
+        },
+        "traces": [
+          {
+            "id": "yellow_stake_paint",
+            "label": "Жёлтая краска межевого колышка",
+            "labelEn": "Yellow paint from a survey stake",
+            "requiredRevealPercent": 52,
+            "mask": "shared/surface/trace-mask.svg",
+            "shape": "mask",
+            "isContradiction": false,
+            "conclusion": "Под землёй проступает свежая жёлтая краска межевого колышка — след ночных работ у теплицы.",
+            "conclusionEn": "Under the soil appears fresh yellow paint from a survey stake — a trace of night work by the greenhouse."
+          }
+        ]
+      }
+    },
+    {
+      "id": "DA01-E5",
+      "order": 5,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания Максима Соловьёва",
+        "en": "Statement by Maksim Solovyov",
+        "tr": "Maksim Solovyov’un İfadesi",
+        "ar": "إفادة مكسيم سولوفيوف",
+        "kk": "Максим Соловьёвтың айғағы"
+      },
+      "content": {
+        "ru": "«Треск я услышал ещё до дождя — сухой, короткий, будто по стене чем-то приложили. Потом Галина Фёдоровна сказала: „Вот теперь точно бельгийская“. Я решил, что это про сорт яблок».",
+        "en": "\"I heard the crack before the rain — dry and short, like something hit the wall. Then Galina Fyodorovna said: 'Now it really is Belgian.' I assumed she meant a variety of apple.\"",
+        "tr": "«Çatırtıyı yağmurdan önce duydum — kuru ve kısaydı, sanki duvara bir şey vurdu. Sonra Galina Fyodorovna, „İşte şimdi gerçekten Belçika malı“ dedi. Elma çeşidini kastettiğini sandım.»",
+        "ar": "«سمعت الطقطقة قبل المطر، جافة وقصيرة كأن شيئًا ارتطم بالجدار. ثم قالت غالينا فيودوروفنا: „الآن صارت بلجيكية حقًا“. ظننت أنها تقصد نوع التفاح.»",
+        "kk": "«Сықырды жаңбырға дейін естідім — құрғақ, қысқа, қабырғаға бірдеңемен ұрғандай. Содан Галина Фёдоровна: „Міне, енді нағыз бельгиялық“, — деді. Мен алма сұрыпы туралы деп ойладым»."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Свидетель подтверждает удар до дождя, но говорит только о звуке и фразе — этого мало, чтобы засчитать штамп по конкретному пункту заявления.",
+        "en": "The witness confirms an impact before the rain, but only reports a sound and a remark — not enough to stamp any single sentence of the claim.",
+        "tr": "Tanık yağmurdan önce bir darbeyi doğruluyor ama yalnızca bir sesi ve bir cümleyi aktarıyor; bu, iddianın herhangi bir cümlesini damgalamak için yeterli değil.",
+        "ar": "يؤكد الشاهد وقوع ارتطام قبل المطر، لكنه ينقل صوتًا وعبارة فقط، وهذا لا يكفي لختم أي جملة بعينها.",
+        "kk": "Куә жаңбырға дейінгі соққыны растайды, бірақ тек дыбыс пен сөзді айтады — бұл өтініштің нақты тармағына мөр басуға жеткіліксіз."
+      },
+      "statementLink": {
+        "statementId": "claim_cause",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Свидетель подтверждает удар до дождя, но говорит только о звуке и фразе — этого мало, чтобы засчитать штамп по конкретному пункту заявления.",
+          "en": "The witness confirms an impact before the rain, but only reports a sound and a remark — not enough to stamp any single sentence of the claim.",
+          "tr": "Tanık yağmurdan önce bir darbeyi doğruluyor ama yalnızca bir sesi ve bir cümleyi aktarıyor; bu, iddianın herhangi bir cümlesini damgalamak için yeterli değil.",
+          "ar": "يؤكد الشاهد وقوع ارتطام قبل المطر، لكنه ينقل صوتًا وعبارة فقط، وهذا لا يكفي لختم أي جملة بعينها.",
+          "kk": "Куә жаңбырға дейінгі соққыны растайды, бірақ тек дыбыс пен сөзді айтады — бұл өтініштің нақты тармағына мөр басуға жеткіліксіз."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da01-e5.webp"
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Метеостанция не зафиксировала града в радиусе 20 км — заявленная причина невозможна.",
+      "Секции теплицы поликарбонатные, а рама ремонтировалась скотчем задолго до грозы.",
+      "Повреждение нанесено предметом с проезжавшей тележки, поэтому выплата в заявленном объёме невозможна."
+    ],
+    "en": [
+      "The weather station recorded no hail within 20 km — the stated cause is impossible.",
+      "The greenhouse sections are polycarbonate and the frame was taped up long before the storm.",
+      "The damage came from an object on the passing cart, so the claimed amount cannot be paid."
+    ],
+    "tr": [
+      "Meteoroloji istasyonu 20 km içinde dolu kaydetmedi — belirtilen neden imkânsız.",
+      "Sera bölmeleri polikarbonat ve çerçeve fırtınadan çok önce bantla onarılmış.",
+      "Hasar, geçen arabadaki bir nesneden kaynaklandı; bu nedenle talep edilen tutar ödenemez."
+    ],
+    "ar": [
+      "لم تسجل محطة الأرصاد أي برَد ضمن 20 كم، فالسبب المذكور مستحيل.",
+      "أقسام الدفيئة من البولي كربونات والإطار رُقّع بالشريط اللاصق قبل العاصفة بوقت طويل.",
+      "نتج الضرر عن جسم على العربة المارة، لذا لا يمكن دفع المبلغ المطالب به."
+    ],
+    "kk": [
+      "Метеостанция 20 км радиуста бұршақ тіркемеген — мәлімделген себеп мүмкін емес.",
+      "Жылыжай секциялары поликарбонаттан, ал жақтау дауылдан бұрын скотчпен жамалған.",
+      "Зақымды өтіп бара жатқан арбадағы зат келтірген, сондықтан мәлімделген сома төленбейді."
+    ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "stampable": false,
+      "text": {
+        "ru": "Теплица повреждена ночным градом, ущерб подлежит полному возмещению.",
+        "en": "The greenhouse was damaged by night hail and the loss is fully reimbursable.",
+        "tr": "Sera gece dolusundan zarar gördü ve kayıp tamamen tazmin edilmelidir.",
+        "ar": "تضررت الدفيئة من برَد ليلي والخسارة قابلة للتعويض بالكامل.",
+        "kk": "Жылыжай түнгі бұршақтан зақымданды және залал толық өтелуге тиіс."
+      }
+    },
+    {
+      "id": "claim_cause",
+      "stampable": true,
+      "text": {
+        "ru": "В 22:40 начался град, и именно он разбил северную стену.",
+        "en": "Hail began at 22:40 and it was the hail that shattered the north wall.",
+        "tr": "Dolu 22:40’ta başladı ve kuzey duvarını parçalayan doluydu.",
+        "ar": "بدأ البرَد في الساعة 22:40 وهو ما حطّم الجدار الشمالي.",
+        "kk": "Бұршақ 22:40-та басталып, солтүстік қабырғаны дәл сол қиратты."
+      }
+    },
+    {
+      "id": "claim_material",
+      "stampable": true,
+      "text": {
+        "ru": "Теплица бельгийская, стеклянная, и до грозы все секции были целы.",
+        "en": "The greenhouse is Belgian glass and every section was intact before the storm.",
+        "tr": "Sera Belçika camıdır ve fırtınadan önce tüm bölmeler sağlamdı.",
+        "ar": "الدفيئة زجاجية بلجيكية وكانت جميع الأقسام سليمة قبل العاصفة.",
+        "kk": "Жылыжай — бельгиялық шыны, дауылға дейін барлық секция бүтін болатын."
+      }
+    }
+  ],
+  "contentVersion": "dacha-romashka-1.0",
+  "narrative": {
+    "preBrief": {
+      "ru": "Юбилейный август в СНТ «Ромашка». Первое заявление сезона — и первая ночь, о которой соседи рассказывают по-разному.",
+      "en": "A jubilee August in the Romashka garden association. The first claim of the season — and the first night the neighbours remember differently.",
+      "tr": "Romashka bahçe kooperatifinde jübile ağustosu. Sezonun ilk talebi ve komşuların farklı hatırladığı ilk gece.",
+      "ar": "أغسطس اليوبيل في جمعية «روماشكا». أول مطالبة في الموسم، وأول ليلة يتذكرها الجيران بروايات مختلفة.",
+      "kk": "«Ромашка» серіктестігіндегі мерейтойлық тамыз. Маусымның алғашқы өтініші — және көршілер әртүрлі есіне алатын алғашқы түн."
+    },
+    "postVerdictNote": {
+      "ru": "Град приходит сверху. Этот пришёл сбоку — и с геодезической рейкой.",
+      "en": "Hail comes from above. This one came from the side — with a surveyor's rod.",
+      "tr": "Dolu yukarıdan gelir. Bu yandan geldi — hem de jeodezik mirayla.",
+      "ar": "البرَد يأتي من الأعلى. أما هذا فقد جاء من الجانب، ومعه قضيب مساحة.",
+      "kk": "Бұршақ жоғарыдан жауады. Бұл бүйірден келді — әрі геодезиялық рейкамен."
+    },
+    "nextCaseTeaser": {
+      "ru": "Тем же утром пчеловод с соседнего участка заявляет о краже улья.",
+      "en": "That same morning the beekeeper next door reports a stolen hive.",
+      "tr": "Aynı sabah yandaki parselin arıcısı bir kovanın çalındığını bildiriyor.",
+      "ar": "في الصباح نفسه يبلّغ النحّال المجاور عن سرقة خلية.",
+      "kk": "Сол таңда көрші учаскедегі омарташы ұяның ұрланғанын мәлімдейді."
+    },
+    "seasonClue": {
+      "id": "cart-and-stake",
+      "progressIndex": 1,
+      "progressTotal": 10,
+      "label": {
+        "ru": "Красная тележка и сдвинутый колышек",
+        "en": "The Red Cart and a Moved Stake",
+        "tr": "Kırmızı Araba ve Kaydırılmış Kazık",
+        "ar": "العربة الحمراء ووتد مُزاح",
+        "kk": "Қызыл арба және жылжытылған қазық"
+      },
+      "description": {
+        "ru": "За теплицей стоит новый жёлтый колышек: граница участка №13 сдвинута на сорок сантиметров. Кто-то межует по ночам.",
+        "en": "A new yellow stake stands behind the greenhouse: the boundary of plot No. 13 has shifted by forty centimetres. Someone is surveying at night.",
+        "tr": "Seranın arkasında yeni bir sarı kazık duruyor: 13 No.lu parselin sınırı kırk santimetre kaymış. Biri geceleri ölçüm yapıyor.",
+        "ar": "خلف الدفيئة وتد أصفر جديد: حدّ القطعة رقم 13 أُزيح أربعين سنتيمترًا. أحدهم يجري مسحًا ليلًا.",
+        "kk": "Жылыжайдың артында жаңа сары қазық тұр: №13 учаскенің шекарасы қырық сантиметрге жылжыған. Біреу түнде жер өлшеп жүр."
+      }
+    },
+    "epilogue": null
+  }
+}

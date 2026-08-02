@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { motion } from "framer-motion";
 import type { CaseResult, CaseSummary, Language } from "../types";
 import type { CaseUnlockInfo } from "../engine/caseUnlockEngine";
@@ -8,6 +9,7 @@ import {
   formatCaseLockTooltip,
 } from "../utils/caseDisplay";
 import { asset } from "../utils/asset";
+import { getStampCaption } from "../data/stampTexts";
 import { formatCountdown } from "./icons";
 import { LanguageSelector } from "./LanguageSelector";
 import { Tooltip } from "./Tooltip";
@@ -24,6 +26,12 @@ interface Props {
   onSelect: (c: CaseSummary) => void;
   onDailyLocked: () => void;
   onLanguage: (lang: Language) => void;
+  /** Caption currently inked on the contradiction stamp; `null` = default. */
+  activeStampTextId?: string | null;
+  /** Opens the cosmetic stamp-caption shop; omitted hides the entry. */
+  onOpenStampShop?: () => void;
+  /** Special-archives entry card, injected by `App.tsx` (omit to hide it). */
+  archivesSlot?: ReactNode;
 }
 
 function caseAccuracyPct(result: CaseResult): number {
@@ -55,6 +63,9 @@ export function MobileDeskMenu({
   onSelect,
   onDailyLocked,
   onLanguage,
+  activeStampTextId = null,
+  onOpenStampShop,
+  archivesSlot,
 }: Props) {
   const fmt = (n: number) => n.toLocaleString("ru-RU");
 
@@ -122,6 +133,27 @@ export function MobileDeskMenu({
 
       {/* ── Scrollable content ────────────────────────────────────────────── */}
       <div className="flex-1 overflow-y-auto px-4 pb-6 pt-[14px]">
+        {archivesSlot ? <div className="mb-5">{archivesSlot}</div> : null}
+
+        {/* Stamp workshop — the mobile entry to the cosmetic caption shop */}
+        {onOpenStampShop && (
+          <motion.button
+            type="button"
+            onClick={onOpenStampShop}
+            whileTap={{ scale: 0.98 }}
+            transition={{ duration: 0.12 }}
+            className="mb-5 flex w-full items-center justify-between gap-2 rounded-[11px] border border-border bg-surface-2 px-4 py-3 text-left"
+          >
+            <span className="flex items-center gap-2 text-[13px] font-semibold text-text-light">
+              <span aria-hidden>🖋</span>
+              {t("stampShop", lang)}
+            </span>
+            <span className="max-w-[130px] truncate font-mono text-[11px] text-text-dim">
+              {getStampCaption(activeStampTextId, lang)}
+            </span>
+          </motion.button>
+        )}
+
         {/* ДЕЛО ДНЯ */}
         {dailyCase && (
           <section className="mb-5">

@@ -1,0 +1,598 @@
+{
+  "id": "dacha-romashka-07",
+  "type": "archive",
+  "difficulty": "medium",
+  "claimAmount": 87000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Привидение в малиннике",
+    "en": "The Ghost in the Raspberry Patch",
+    "tr": "Ahududu Çalılığındaki Hayalet",
+    "ar": "شبح في حقل التوت",
+    "kk": "Таңқурай арасындағы елес"
+  },
+  "claim": {
+    "person": {
+      "ru": "Лида Соловьёва, 27 лет",
+      "en": "Lida Solovyova, age 27",
+      "tr": "Lida Solovyova, 27 yaşında",
+      "ar": "ليدا سولوفيوفا، 27 عامًا",
+      "kk": "Лида Соловьёва, 27 жаста"
+    },
+    "story": {
+      "ru": "В 02:15 неизвестный в белом проник через калитку, умышленно ударил камеру и разрезал ножом рекламный тент. Я не выходила из дома и увидела всё только утром. Прошу возместить камеру и тент.",
+      "en": "At 02:15 a stranger in white came through the gate, deliberately struck the camera and cut the advertising awning with a knife. I never left the house and saw it all only in the morning. I am claiming the camera and the awning.",
+      "tr": "Saat 02:15’te beyazlar içinde bir yabancı bahçe kapısından girdi, kamerayı kasten vurdu ve reklam tentesini bıçakla kesti. Evden hiç çıkmadım ve her şeyi ancak sabah gördüm. Kamera ve tente için tazminat istiyorum.",
+      "ar": "في الساعة 02:15 دخل شخص يرتدي الأبيض من البوابة وضرب الكاميرا عمدًا وقطع المظلة الإعلانية بسكين. لم أغادر المنزل ورأيت كل شيء في الصباح فقط. أطالب بتعويض الكاميرا والمظلة.",
+      "kk": "Сағат 02:15-те ақ киімді бейтаныс қақпадан кіріп, камераны әдейі соғып, жарнамалық тентіні пышақпен тілді. Мен үйден шықпадым, бәрін тек таңертең көрдім. Камера мен тентінің құнын өтеуді сұраймын."
+    }
+  },
+  "coverImage": "covers/packs/dacha-romashka-07.svg",
+  "personImage": "people/packs/dacha-romashka/lida_solovyova.webp",
+  "client": {
+    "role": {
+      "ru": "Заявитель · член СНТ «Ромашка»",
+      "en": "Claimant · member of the Romashka garden association",
+      "tr": "Başvuru sahibi · Romashka bahçe kooperatifi üyesi",
+      "ar": "مقدم الطلب · عضو في جمعية «روماشكا» للبساتين",
+      "kk": "Өтініш беруші · «Ромашка» бақ серіктестігінің мүшесі"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Участок",
+          "en": "Plot",
+          "tr": "Parsel",
+          "ar": "القطعة",
+          "kk": "Учаске"
+        },
+        "v": {
+          "ru": "№11",
+          "en": "No. 11",
+          "tr": "No. 11",
+          "ar": "رقم 11",
+          "kk": "№11"
+        }
+      },
+      {
+        "k": {
+          "ru": "Сезон",
+          "en": "Season",
+          "tr": "Sezon",
+          "ar": "الموسم",
+          "kk": "Маусым"
+        },
+        "v": {
+          "ru": "Август",
+          "en": "August",
+          "tr": "Ağustos",
+          "ar": "أغسطس",
+          "kk": "Тамыз"
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "DA07-E1",
+      "order": 1,
+      "type": "shadow_time_check",
+      "title": {
+        "ru": "Резервная камера: проверка по тени",
+        "en": "Backup Camera: Shadow Time Check",
+        "tr": "Yedek Kamera: Gölgeyle Saat Kontrolü",
+        "ar": "الكاميرا الاحتياطية: التحقق بالظل",
+        "kk": "Резервтік камера: көлеңке бойынша тексеру"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Тень соответствует 00:42, а не 02:15, и белая фигура заходит со стороны общего сада, а не через калитку.",
+        "en": "The shadow matches 00:42 rather than 02:15, and the white figure enters from the common orchard, not through the gate.",
+        "tr": "Gölge 02:15’e değil 00:42’ye uyuyor ve beyaz figür bahçe kapısından değil, ortak bahçe tarafından giriyor.",
+        "ar": "يوافق الظل الساعة 00:42 لا 02:15، والشخص الأبيض يدخل من جهة البستان المشترك لا من البوابة.",
+        "kk": "Көлеңке 02:15-ке емес, 00:42-ге сәйкес келеді, ал ақ фигура қақпадан емес, ортақ бақ жағынан кіреді."
+      },
+      "statementLink": {
+        "statementId": "claim_time",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Тень соответствует 00:42, а не 02:15, и белая фигура заходит со стороны общего сада, а не через калитку.",
+          "en": "The shadow matches 00:42 rather than 02:15, and the white figure enters from the common orchard, not through the gate.",
+          "tr": "Gölge 02:15’e değil 00:42’ye uyuyor ve beyaz figür bahçe kapısından değil, ortak bahçe tarafından giriyor.",
+          "ar": "يوافق الظل الساعة 00:42 لا 02:15، والشخص الأبيض يدخل من جهة البستان المشترك لا من البوابة.",
+          "kk": "Көлеңке 02:15-ке емес, 00:42-ге сәйкес келеді, ал ақ фигура қақпадан емес, ортақ бақ жағынан кіреді."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_time",
+        "reason": {
+          "ru": "Тень соответствует 00:42, а не 02:15, и белая фигура заходит со стороны общего сада, а не через калитку.",
+          "en": "The shadow matches 00:42 rather than 02:15, and the white figure enters from the common orchard, not through the gate.",
+          "tr": "Gölge 02:15’e değil 00:42’ye uyuyor ve beyaz figür bahçe kapısından değil, ortak bahçe tarafından giriyor.",
+          "ar": "يوافق الظل الساعة 00:42 لا 02:15، والشخص الأبيض يدخل من جهة البستان المشترك لا من البوابة.",
+          "kk": "Көлеңке 02:15-ке емес, 00:42-ге сәйкес келеді, ал ақ фигура қақпадан емес, ортақ бақ жағынан кіреді."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "Резервная камера снимает малинник под фонарём правления. Метка времени на ней сбита, но фонарь стоит неподвижно.",
+        "en": "The backup camera watches the raspberry patch under the association lamp. Its timestamp is broken, but the lamp never moves.",
+        "tr": "Yedek kamera, kooperatif lambasının altındaki ahududu çalılığını çekiyor. Zaman damgası bozuk ama lamba yerinden oynamıyor.",
+        "ar": "تصوّر الكاميرا الاحتياطية حقل التوت تحت مصباح الجمعية. طابعها الزمني معطّل، لكن المصباح ثابت لا يتحرك.",
+        "kk": "Резервтік камера басқарма шамының астындағы таңқурайды түсіреді. Ондағы уақыт белгісі бұзылған, бірақ шам қозғалмайды."
+      },
+      "instruction": {
+        "ru": "Двигайте шкалу времени, пока тень фигуры не совпадёт с тенью на записи.",
+        "en": "Move the time scale until the figure's shadow matches the shadow on the recording.",
+        "tr": "Figürün gölgesi kayıttaki gölgeyle örtüşene kadar zaman ölçeğini kaydırın.",
+        "ar": "حرّك شريط الوقت حتى يتطابق ظل الشخص مع الظل في التسجيل.",
+        "kk": "Фигураның көлеңкесі жазбадағы көлеңкемен дәл келгенше уақыт шкаласын жылжытыңыз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/dacha-romashka/da07-e1.webp"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Тень от неподвижного фонаря даёт независимые часы: игрок сам устанавливает настоящее время события.",
+          "en": "The shadow of a fixed lamp works as an independent clock: the player establishes the real time of the event themselves.",
+          "tr": "Sabit lambanın gölgesi bağımsız bir saat gibidir: oyuncu olayın gerçek saatini kendisi belirler.",
+          "ar": "ظل المصباح الثابت يعمل كساعة مستقلة: يحدد اللاعب بنفسه الوقت الحقيقي للحادثة.",
+          "kk": "Қозғалмайтын шамның көлеңкесі тәуелсіз сағат іспетті: ойыншы оқиғаның нақты уақытын өзі анықтайды."
+        },
+        "playerAction": {
+          "ru": "Двигайте шкалу времени, пока тень фигуры не совпадёт с тенью на записи.",
+          "en": "Move the time scale until the figure's shadow matches the shadow on the recording.",
+          "tr": "Figürün gölgesi kayıttaki gölgeyle örtüşene kadar zaman ölçeğini kaydırın.",
+          "ar": "حرّك شريط الوقت حتى يتطابق ظل الشخص مع الظل في التسجيل.",
+          "kk": "Фигураның көлеңкесі жазбадағы көлеңкемен дәл келгенше уақыт шкаласын жылжытыңыз."
+        },
+        "conclusion": {
+          "ru": "Тень соответствует 00:42, а не 02:15, и белая фигура заходит со стороны общего сада, а не через калитку.",
+          "en": "The shadow matches 00:42 rather than 02:15, and the white figure enters from the common orchard, not through the gate.",
+          "tr": "Gölge 02:15’e değil 00:42’ye uyuyor ve beyaz figür bahçe kapısından değil, ortak bahçe tarafından giriyor.",
+          "ar": "يوافق الظل الساعة 00:42 لا 02:15، والشخص الأبيض يدخل من جهة البستان المشترك لا من البوابة.",
+          "kk": "Көлеңке 02:15-ке емес, 00:42-ге сәйкес келеді, ал ақ фигура қақпадан емес, ортақ бақ жағынан кіреді."
+        }
+      },
+      "data": {
+        "claimedTime": "02:15",
+        "orientationSource": "Фонарь правления, столб №4",
+        "orientationSourceEn": "Association lamp, post No. 4",
+        "slider": {
+          "from": "00:00",
+          "to": "03:00",
+          "stepMinutes": 3
+        },
+        "shadowOrigin": {
+          "x": 44,
+          "y": 62
+        },
+        "referenceShadow": {
+          "baseAngle": 24,
+          "baseLength": 118,
+          "width": 9,
+          "opacity": 0.55
+        },
+        "timeSamples": [
+          {
+            "time": "00:00",
+            "angle": 8,
+            "length": 96
+          },
+          {
+            "time": "00:42",
+            "angle": 24,
+            "length": 118
+          },
+          {
+            "time": "01:30",
+            "angle": 41,
+            "length": 142
+          },
+          {
+            "time": "02:15",
+            "angle": 58,
+            "length": 168
+          },
+          {
+            "time": "03:00",
+            "angle": 72,
+            "length": 190
+          }
+        ],
+        "validTimeRanges": [
+          {
+            "from": "00:33",
+            "to": "00:51"
+          }
+        ],
+        "matchTolerance": {
+          "angle": 6,
+          "length": 14
+        }
+      }
+    },
+    {
+      "id": "DA07-E2",
+      "order": 2,
+      "type": "photo",
+      "title": {
+        "ru": "Фото повреждённого тента",
+        "en": "Photo of the Damaged Awning",
+        "tr": "Hasarlı Tentenin Fotoğrafı",
+        "ar": "صورة المظلة المتضررة",
+        "kk": "Зақымданған тенттің фотосы"
+      },
+      "content": {
+        "ru": "Разрыв идёт от внутреннего шва наружу: край ткани вытянут и распушён, нитки вытащены петлями. Ровного среза, характерного для ножа, нет ни на одном крае.",
+        "en": "The tear runs from the inner seam outwards: the fabric edge is stretched and frayed, with threads pulled into loops. Not a single edge shows the clean cut a knife leaves.",
+        "tr": "Yırtık iç dikişten dışarı doğru gidiyor: kumaşın kenarı gerilmiş ve lifleri açılmış, iplikler ilmek ilmek çekilmiş. Hiçbir kenarda bıçağın bıraktığı düzgün kesik yok.",
+        "ar": "يمتد التمزق من الدرزة الداخلية إلى الخارج: حافة القماش ممطوطة ومنسّلة والخيوط مسحوبة على شكل عُرى. ولا تُظهر أي حافة القطع النظيف الذي يتركه السكين.",
+        "kk": "Жыртық ішкі жіктен сыртқа қарай кетеді: матаның шеті созылып, түктеніп, жіптері ілмектеніп шыққан. Бірде-бір шетте пышаққа тән тегіс кесік жоқ."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Ткань порвана зацепом изнутри, а не разрезана ножом — умышленного пореза не было.",
+        "en": "The fabric was torn by a snag from the inside rather than cut with a knife — there was no deliberate slash.",
+        "tr": "Kumaş içeriden bir takılmayla yırtılmış, bıçakla kesilmemiş; kasıtlı bir kesik yok.",
+        "ar": "تمزّق القماش من الداخل بسبب تعلّق لا بقطع سكين، فلا وجود لقطع متعمد.",
+        "kk": "Мата ішкі жағынан ілініп жыртылған, пышақпен тілінбеген — әдейі кесу болмаған."
+      },
+      "statementLink": {
+        "statementId": "claim_cut",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Ткань порвана зацепом изнутри, а не разрезана ножом — умышленного пореза не было.",
+          "en": "The fabric was torn by a snag from the inside rather than cut with a knife — there was no deliberate slash.",
+          "tr": "Kumaş içeriden bir takılmayla yırtılmış, bıçakla kesilmemiş; kasıtlı bir kesik yok.",
+          "ar": "تمزّق القماش من الداخل بسبب تعلّق لا بقطع سكين، فلا وجود لقطع متعمد.",
+          "kk": "Мата ішкі жағынан ілініп жыртылған, пышақпен тілінбеген — әдейі кесу болмаған."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_cut",
+        "reason": {
+          "ru": "Ткань порвана зацепом изнутри, а не разрезана ножом — умышленного пореза не было.",
+          "en": "The fabric was torn by a snag from the inside rather than cut with a knife — there was no deliberate slash.",
+          "tr": "Kumaş içeriden bir takılmayla yırtılmış, bıçakla kesilmemiş; kasıtlı bir kesik yok.",
+          "ar": "تمزّق القماش من الداخل بسبب تعلّق لا بقطع سكين، فلا وجود لقطع متعمد.",
+          "kk": "Мата ішкі жағынан ілініп жыртылған, пышақпен тілінбеген — әдейі кесу болмаған."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da07-e2.webp",
+        "filename": "da07-e2.webp"
+      }
+    },
+    {
+      "id": "DA07-E3",
+      "order": 3,
+      "type": "usage_log",
+      "title": {
+        "ru": "Лог робота-поливальщика",
+        "en": "Watering Robot Log",
+        "tr": "Sulama Robotu Kaydı",
+        "ar": "سجل روبوت الري",
+        "kk": "Суару роботының журналы"
+      },
+      "content": {
+        "ru": "00:39 — маршрут изменён вручную с террасы. 00:44 — сопротивление на оси, аварийная остановка у стойки тента. 00:47 — движение возобновлено.",
+        "en": "00:39 — route changed manually from the terrace. 00:44 — resistance on the axle, emergency stop by the awning post. 00:47 — movement resumed.",
+        "tr": "00:39 — güzergâh terastan elle değiştirildi. 00:44 — akstaki direnç, tente direğinin yanında acil duruş. 00:47 — hareket yeniden başladı.",
+        "ar": "00:39 — تغيير المسار يدويًا من الشرفة. 00:44 — مقاومة في المحور وتوقف طارئ قرب عمود المظلة. 00:47 — استئناف الحركة.",
+        "kk": "00:39 — бағыт террасадан қолмен өзгертілді. 00:44 — біліктегі кедергі, тент тірегінің қасында апаттық тоқтау. 00:47 — қозғалыс жалғасты."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Лог показывает, что заявительница выходила ночью и что тент зацепило устройство, но характер повреждения устанавливает фотография.",
+        "en": "The log shows the claimant went out at night and that the device snagged the awning, but the photograph is what establishes the nature of the damage.",
+        "tr": "Kayıt, talep sahibinin gece dışarı çıktığını ve cihazın tenteye takıldığını gösteriyor; hasarın niteliğini ise fotoğraf belirliyor.",
+        "ar": "يُظهر السجل أن مقدمة الطلب خرجت ليلًا وأن الجهاز علق بالمظلة، أما طبيعة الضرر فتحددها الصورة.",
+        "kk": "Журнал өтініш берушінің түнде шыққанын және құрылғының тентіге ілінгенін көрсетеді, ал зақым сипатын фотосурет анықтайды."
+      },
+      "statementLink": {
+        "statementId": "claim_cut",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Лог показывает, что заявительница выходила ночью и что тент зацепило устройство, но характер повреждения устанавливает фотография.",
+          "en": "The log shows the claimant went out at night and that the device snagged the awning, but the photograph is what establishes the nature of the damage.",
+          "tr": "Kayıt, talep sahibinin gece dışarı çıktığını ve cihazın tenteye takıldığını gösteriyor; hasarın niteliğini ise fotoğraf belirliyor.",
+          "ar": "يُظهر السجل أن مقدمة الطلب خرجت ليلًا وأن الجهاز علق بالمظلة، أما طبيعة الضرر فتحددها الصورة.",
+          "kk": "Журнал өтініш берушінің түнде шыққанын және құрылғының тентіге ілінгенін көрсетеді, ал зақым сипатын фотосурет анықтайды."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da07-e3.webp",
+        "logPrompt": "irrigation robot log"
+      }
+    },
+    {
+      "id": "DA07-E4",
+      "order": 4,
+      "type": "surface_reveal",
+      "title": {
+        "ru": "Осмотр корпуса камеры",
+        "en": "Examining the Camera Housing",
+        "tr": "Kamera Gövdesinin İncelenmesi",
+        "ar": "فحص هيكل الكاميرا",
+        "kk": "Камера корпусын тексеру"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "На корпусе — жёлтая краска и круглый отпечаток геодезической рейки: камеру задели оборудованием, а не ударили умышленно.",
+        "en": "The housing carries yellow paint and the round imprint of a surveyor's rod: the camera was knocked by equipment, not struck on purpose.",
+        "tr": "Gövdede sarı boya ve jeodezik miranın yuvarlak izi var: kameraya ekipman çarpmış, kasten vurulmamış.",
+        "ar": "على الهيكل طلاء أصفر وبصمة دائرية لقضيب المساحة: ارتطمت الكاميرا بمعدة ولم تُضرب عمدًا.",
+        "kk": "Корпуста сары бояу мен геодезиялық рейканың дөңгелек ізі бар: камераға жабдық тиген, әдейі соққы жасалмаған."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "На корпусе — жёлтая краска и круглый отпечаток геодезической рейки: камеру задели оборудованием, а не ударили умышленно.",
+          "en": "The housing carries yellow paint and the round imprint of a surveyor's rod: the camera was knocked by equipment, not struck on purpose.",
+          "tr": "Gövdede sarı boya ve jeodezik miranın yuvarlak izi var: kameraya ekipman çarpmış, kasten vurulmamış.",
+          "ar": "على الهيكل طلاء أصفر وبصمة دائرية لقضيب المساحة: ارتطمت الكاميرا بمعدة ولم تُضرب عمدًا.",
+          "kk": "Корпуста сары бояу мен геодезиялық рейканың дөңгелек ізі бар: камераға жабдық тиген, әдейі соққы жасалмаған."
+        }
+      },
+      "evidenceTier": "supporting",
+      "description": {
+        "ru": "Камеру сняли со столба вместе с налипшей ночной пылью и передали на осмотр.",
+        "en": "The camera was taken off its post with the night dust still on it and handed over for examination.",
+        "tr": "Kamera, üzerindeki gece tozuyla birlikte direkten indirilip incelemeye verildi.",
+        "ar": "أُنزلت الكاميرا عن العمود بما عليها من غبار الليل وسُلّمت للفحص.",
+        "kk": "Камера түнгі шаңымен бірге бағанадан алынып, тексеруге берілді."
+      },
+      "instruction": {
+        "ru": "Очистите корпус и определите, чем нанесён удар.",
+        "en": "Clean the housing and determine what caused the impact.",
+        "tr": "Gövdeyi temizleyin ve darbenin neyle yapıldığını belirleyin.",
+        "ar": "نظّف الهيكل وحدّد سبب الارتطام.",
+        "kk": "Корпусты тазалап, соққының немен түскенін анықтаңыз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/dacha-romashka/da07-e4.webp",
+        "coverTexture": "shared/surface/dirt.svg",
+        "revealMasks": [
+          "shared/surface/trace-mask.svg"
+        ],
+        "toolCursor": "shared/surface/cloth-cursor.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": false,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "След от рейки и жёлтая краска связывают повреждение с ночным межеванием, а не с вандалом.",
+          "en": "The rod mark and yellow paint tie the damage to night surveying rather than to a vandal.",
+          "tr": "Mira izi ve sarı boya, hasarı bir vandala değil gece ölçümüne bağlıyor.",
+          "ar": "يربط أثر القضيب والطلاء الأصفر الضرر بأعمال المساحة الليلية لا بمخرّب.",
+          "kk": "Рейка ізі мен сары бояу зақымды бұзақымен емес, түнгі жер өлшеумен байланыстырады."
+        },
+        "playerAction": {
+          "ru": "Очистите корпус и определите, чем нанесён удар.",
+          "en": "Clean the housing and determine what caused the impact.",
+          "tr": "Gövdeyi temizleyin ve darbenin neyle yapıldığını belirleyin.",
+          "ar": "نظّف الهيكل وحدّد سبب الارتطام.",
+          "kk": "Корпусты тазалап, соққының немен түскенін анықтаңыз."
+        },
+        "conclusion": {
+          "ru": "На корпусе — жёлтая краска и круглый отпечаток геодезической рейки: камеру задели оборудованием, а не ударили умышленно.",
+          "en": "The housing carries yellow paint and the round imprint of a surveyor's rod: the camera was knocked by equipment, not struck on purpose.",
+          "tr": "Gövdede sarı boya ve jeodezik miranın yuvarlak izi var: kameraya ekipman çarpmış, kasten vurulmamış.",
+          "ar": "على الهيكل طلاء أصفر وبصمة دائرية لقضيب المساحة: ارتطمت الكاميرا بمعدة ولم تُضرب عمدًا.",
+          "kk": "Корпуста сары бояу мен геодезиялық рейканың дөңгелек ізі бар: камераға жабдық тиген, әдейі соққы жасалмаған."
+        }
+      },
+      "data": {
+        "mode": "erase",
+        "coverType": "dust",
+        "brush": {
+          "radius": 40,
+          "hardness": 0.58,
+          "opacity": 0.82,
+          "spacing": 8
+        },
+        "completion": {
+          "type": "discover_any",
+          "requiredTraceIds": [
+            "rod-imprint"
+          ]
+        },
+        "traces": [
+          {
+            "id": "rod-imprint",
+            "label": "Жёлтая краска и круглый след рейки",
+            "labelEn": "Yellow paint and the round rod mark",
+            "requiredRevealPercent": 52,
+            "mask": "shared/surface/trace-mask.svg",
+            "shape": "mask",
+            "isContradiction": false,
+            "conclusion": "На корпусе — жёлтая краска и круглый отпечаток геодезической рейки.",
+            "conclusionEn": "The housing carries yellow paint and the round imprint of a surveyor's rod."
+          }
+        ]
+      }
+    },
+    {
+      "id": "DA07-E5",
+      "order": 5,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Увеличенный кадр записи",
+        "en": "Enlarged Frame from the Recording",
+        "tr": "Kayıttan Büyütülmüş Kare",
+        "ar": "إطار مكبَّر من التسجيل",
+        "kk": "Жазбаның ұлғайтылған кадрі"
+      },
+      "content": {
+        "ru": "При увеличении «белый плащ» оказывается защитным чехлом на геодезической рейке. Ниже видны рабочие ботинки и штанина с отражающей полосой.",
+        "en": "Enlarged, the \"white cloak\" turns out to be a protective cover on a surveyor's rod. Below it are work boots and a trouser leg with a reflective strip.",
+        "tr": "Büyütüldüğünde «beyaz pelerin», jeodezik miranın koruyucu kılıfı çıkıyor. Altında iş botları ve reflektörlü bir pantolon paçası görünüyor.",
+        "ar": "عند التكبير يتبيّن أن «العباءة البيضاء» غطاء واقٍ على قضيب المساحة، وتحته حذاء عمل وساق بنطال بشريط عاكس.",
+        "kk": "Ұлғайтқанда «ақ плащ» геодезиялық рейканың қорғаныш қаптамасы болып шығады. Төменде жұмыс бәтеңкесі мен шағылыстырғыш жолағы бар шалбар балағы көрінеді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Кадр показывает, кто был в саду ночью, но время и маршрут устанавливает проверка по тени.",
+        "en": "The frame shows who was in the orchard at night, while the shadow check establishes the time and the route.",
+        "tr": "Kare, geceleyin bahçede kimin olduğunu gösteriyor; saati ve güzergâhı ise gölge kontrolü belirliyor.",
+        "ar": "يُظهر الإطار من كان في البستان ليلًا، أما الوقت والمسار فيحددهما فحص الظل.",
+        "kk": "Кадр түнде бақта кім болғанын көрсетеді, ал уақыт пен бағытты көлеңке тексерісі анықтайды."
+      },
+      "statementLink": {
+        "statementId": "claim_time",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Кадр показывает, кто был в саду ночью, но время и маршрут устанавливает проверка по тени.",
+          "en": "The frame shows who was in the orchard at night, while the shadow check establishes the time and the route.",
+          "tr": "Kare, geceleyin bahçede kimin olduğunu gösteriyor; saati ve güzergâhı ise gölge kontrolü belirliyor.",
+          "ar": "يُظهر الإطار من كان في البستان ليلًا، أما الوقت والمسار فيحددهما فحص الظل.",
+          "kk": "Кадр түнде бақта кім болғанын көрсетеді, ал уақыт пен бағытты көлеңке тексерісі анықтайды."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da07-e5.webp",
+        "cameraId": "BACKUP-RASP",
+        "cameraModel": "DachaCam 1"
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Тень на резервной записи соответствует 00:42, а не заявленным 02:15.",
+      "Фигура входит со стороны общего сада, а не через калитку.",
+      "Тент порван зацепом робота-поливальщика, камера задета геодезической рейкой."
+    ],
+    "en": [
+      "The shadow on the backup recording matches 00:42, not the claimed 02:15.",
+      "The figure enters from the common orchard rather than through the gate.",
+      "The awning was torn by the watering robot and the camera was knocked by a surveyor's rod."
+    ],
+    "tr": [
+      "Yedek kayıttaki gölge, beyan edilen 02:15’e değil 00:42’ye uyuyor.",
+      "Figür bahçe kapısından değil, ortak bahçe tarafından giriyor.",
+      "Tenteyi sulama robotu yırttı, kameraya ise jeodezik mira çarptı."
+    ],
+    "ar": [
+      "يوافق الظل في التسجيل الاحتياطي الساعة 00:42 لا 02:15 المعلنة.",
+      "يدخل الشخص من جهة البستان المشترك لا من البوابة.",
+      "مزّق روبوت الري المظلة، وارتطم قضيب المساحة بالكاميرا."
+    ],
+    "kk": [
+      "Резервтік жазбадағы көлеңке мәлімделген 02:15-ке емес, 00:42-ге сәйкес.",
+      "Фигура қақпадан емес, ортақ бақ жағынан кіреді.",
+      "Тентіні суару роботы жыртқан, камераға геодезиялық рейка тиген."
+    ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "stampable": false,
+      "text": {
+        "ru": "Имущество повреждено ночным вандалом, ущерб подлежит возмещению.",
+        "en": "The property was damaged by a night vandal and the loss is reimbursable.",
+        "tr": "Mülk gece bir vandal tarafından zarar gördü ve kayıp tazmin edilmelidir.",
+        "ar": "تضرر المال على يد مخرّب ليلي والخسارة قابلة للتعويض.",
+        "kk": "Мүлікті түнгі бұзақы зақымдады, залал өтелуге тиіс."
+      }
+    },
+    {
+      "id": "claim_time",
+      "stampable": true,
+      "text": {
+        "ru": "Всё произошло в 02:15, и неизвестный вошёл через калитку.",
+        "en": "It all happened at 02:15 and the stranger came in through the gate.",
+        "tr": "Her şey 02:15’te oldu ve yabancı bahçe kapısından girdi.",
+        "ar": "حدث كل شيء في الساعة 02:15 ودخل الغريب من البوابة.",
+        "kk": "Бәрі 02:15-те болды, бейтаныс қақпадан кірді."
+      }
+    },
+    {
+      "id": "claim_cut",
+      "stampable": true,
+      "text": {
+        "ru": "Тент разрезали ножом умышленно.",
+        "en": "The awning was deliberately cut with a knife.",
+        "tr": "Tente kasten bıçakla kesildi.",
+        "ar": "قُطعت المظلة بسكين عن عمد.",
+        "kk": "Тентіні әдейі пышақпен тілген."
+      }
+    }
+  ],
+  "contentVersion": "dacha-romashka-1.0",
+  "narrative": {
+    "preBrief": {
+      "ru": "Видео с привидением уже разошлось по соседним СНТ. Осталось выяснить, во сколько оно снято.",
+      "en": "The ghost video has already spread across the neighbouring associations. All that remains is to establish when it was filmed.",
+      "tr": "Hayalet videosu komşu kooperatiflere çoktan yayıldı. Geriye ne zaman çekildiğini belirlemek kaldı.",
+      "ar": "انتشر فيديو الشبح في الجمعيات المجاورة. بقي أن نحدد متى صُوّر.",
+      "kk": "Елес туралы видео көрші серіктестіктерге тарап та кетті. Енді оның қашан түсірілгенін анықтау қалды."
+    },
+    "postVerdictNote": {
+      "ru": "У привидения оказались рабочие ботинки и очень точный график.",
+      "en": "The ghost turned out to have work boots and a very precise schedule.",
+      "tr": "Hayaletin iş botları ve çok düzenli bir programı çıktı.",
+      "ar": "تبيّن أن للشبح حذاء عمل وجدولًا زمنيًا دقيقًا جدًا.",
+      "kk": "Елестің жұмыс бәтеңкесі мен өте дәл кестесі бар болып шықты."
+    },
+    "nextCaseTeaser": {
+      "ru": "На участке №13 сгорел дом, которого никто никогда не видел.",
+      "en": "On plot No. 13 a house nobody has ever seen has burned down.",
+      "tr": "13 No.lu parselde kimsenin görmediği bir ev yandı.",
+      "ar": "في القطعة رقم 13 احترق بيت لم يره أحد قط.",
+      "kk": "№13 учаскеде ешкім көрмеген үй өртенді."
+    },
+    "seasonClue": {
+      "id": "zhukov-on-camera",
+      "progressIndex": 7,
+      "progressTotal": 10,
+      "label": {
+        "ru": "Жуков на ночной записи",
+        "en": "Zhukov on the Night Recording",
+        "tr": "Gece Kaydında Jukov",
+        "ar": "جوكوف في التسجيل الليلي",
+        "kk": "Түнгі жазбадағы Жуков"
+      },
+      "description": {
+        "ru": "Кадастровый инженер впервые попал в кадр ночью. Он объясняет это просьбой «наследника Соколова».",
+        "en": "The cadastral engineer appears on camera at night for the first time. He explains it as a request from \"Sokolov's heir\".",
+        "tr": "Kadastro mühendisi ilk kez gece görüntüye takıldı. Bunu «Sokolov’un mirasçısının» ricasıyla açıklıyor.",
+        "ar": "ظهر مهندس المساحة في التصوير الليلي لأول مرة، ويفسّر ذلك بطلب من «وريث سوكولوف».",
+        "kk": "Кадастр инженері түнгі кадрға алғаш рет түсті. Ол мұны «Соколовтың мұрагерінің» өтініші деп түсіндіреді."
+      }
+    },
+    "epilogue": null
+  }
+}

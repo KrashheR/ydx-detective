@@ -517,5 +517,105 @@
       "progressTotal": 6
     },
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "nikita_voronov",
+      "displayName": {
+        "ru": "Никита Воронов",
+        "en": "Nikita Voronov",
+        "tr": "Nikita Voronov",
+        "ar": "نيكيتا فورونوف",
+        "kk": "Никита Воронов"
+      },
+      "portraitState": "bitter_irony"
+    },
+    "finalLine": {
+      "ru": "Робот выполнил приказ идеально. В отличие от меня.",
+      "en": "The machine carried out its order perfectly. Unlike me.",
+      "tr": "Makine emrini kusursuz yerine getirdi. Benim aksime.",
+      "ar": "نفّذت الآلة أمرها بإتقان. على عكسي أنا.",
+      "kk": "Робот бұйрықты мінсіз орындады. Менен айырмашылығы сол."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Панели действительно исчезли с фермы, а проект не выполнил кредитные показатели выработки — мотив реален.",
+          "en": "The panels really are gone from the farm, and the project missed its loan output targets — the motive is real.",
+          "tr": "Paneller çiftlikten gerçekten kayboldu ve proje kredi üretim hedeflerini tutturamadı — gerekçe gerçek.",
+          "ar": "اختفت الألواح فعلًا من المزرعة، ولم يحقّق المشروع مؤشّرات الإنتاج المطلوبة للقرض — الدافع حقيقي.",
+          "kk": "Панельдер шынымен фермадан жоғалған, ал жоба несиелік өндіру көрсеткіштерін орындамаған — уәж нақты."
+        },
+        "evidenceIds": [
+          "ev-debt"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Крепления сняты аккуратно, а не разрушены, и журнал показывает команду «демонтировать», а не аварию. Сосед слышал только штатный электропривод.",
+          "en": "The mounts were neatly removed rather than destroyed, and the log shows a “dismantle” command, not a fault. The neighbour heard only the normal electric drive.",
+          "tr": "Bağlantılar tahrip edilmemiş, özenle sökülmüş; kayıtta arıza değil “sök” komutu var. Komşu yalnızca normal elektrik tahrikini duymuş.",
+          "ar": "فُكَّت التثبيتات بعناية لا بالتحطيم، ويُظهر السجل أمر «فكّ» لا عطلًا. ولم يسمع الجار سوى محرّك كهربائي عادي.",
+          "kk": "Бекітпелер қиратылмай, ұқыпты шешілген, ал журналда апат емес, «бөлшекте» командасы тұр. Көрші тек қалыпты электр жетегін естіген."
+        },
+        "evidenceIds": [
+          "ev-cuts",
+          "ev-log",
+          "ev-neighbor"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Камера ангара показывает, кто запустил операцию, а метка приводит и машину, и панели в арендованный им бокс. Имущество цело.",
+          "en": "The hangar camera shows who started the operation, and the tracker leads both the machine and the panels to a box he rented. The property is intact.",
+          "tr": "Hangar kamerası işlemi kimin başlattığını gösteriyor; takip cihazı da hem makineyi hem panelleri onun kiraladığı bir depoya götürüyor. Mal sağlam.",
+          "ar": "تُظهر كاميرا الحظيرة من بدأ العملية، ويقود جهاز التتبّع الآلة والألواح معًا إلى مخزن استأجره. الممتلكات سليمة.",
+          "kk": "Ангар камерасы операцияны кім бастағанын көрсетеді, ал белгі машинаны да, панельдерді де оның жалдаған боксына апарады. Мүлік бүтін."
+        },
+        "evidenceIds": [
+          "ev-camera",
+          "ev-gps"
+        ]
+      }
+    ],
+    "arcReveal": {
+      "title": {
+        "ru": "Промышленный маршрут",
+        "en": "Industrial Route",
+        "tr": "Sanayi Yolu",
+        "ar": "الطريق الصناعي",
+        "kk": "Өнеркәсіптік жол"
+      },
+      "text": {
+        "ru": "Сеть способна демонтировать и перепродавать крупные энергетические системы, сохраняя их целыми.",
+        "en": "The network can dismantle and resell large energy systems while keeping them intact.",
+        "tr": "Ağ, büyük enerji sistemlerini sağlam tutarken parçalarına ayırıp yeniden satabilir.",
+        "ar": "يمكن للشبكة تفكيك وإعادة بيع أنظمة الطاقة الكبيرة مع الحفاظ عليها سليمة.",
+        "kk": "Желі ірі энергетикалық жүйелерді бұзбаған күйде бөлшектеуге және қайта сатуға қабілетті."
+      }
+    }
   }
 }

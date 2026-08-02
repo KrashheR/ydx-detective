@@ -51,10 +51,21 @@ const sdk = vi.hoisted(() => ({
   getServerTimeMs: vi.fn(() => 0),
   getYandexLang: vi.fn((): string | null => null),
   showRewardedAd: vi.fn((cb: () => void) => cb()),
-  showFullscreenAd: vi.fn((onDone?: () => void) => onDone?.()),
+  // Mirrors the real SDK order: `onShown` fires from `onOpen`, then `onDone`
+  // from `onClose` — the ad-pacing cooldown restarts on the shown path only.
+  showFullscreenAd: vi.fn((onDone?: () => void, _placement?: string, onShown?: () => void) => {
+    onShown?.();
+    onDone?.();
+  }),
+  getRemoteFlags: vi.fn(async (): Promise<Record<string, string>> => ({})),
   trackAdOffer: vi.fn(), getAnalyticsUserId: vi.fn(() => null),
   submitLeaderboardScore: vi.fn(async () => undefined),
   fetchLeaderboard: vi.fn(async () => null),
+  // Payments boundary — the archives shelf and stamp shop read the catalog.
+  isPaymentsAvailable: vi.fn(() => false),
+  fetchPaymentsCatalog: vi.fn(async () => []),
+  purchaseProduct: vi.fn(async () => false),
+  restorePurchasedProductIds: vi.fn(async () => []),
   canUseCloud: vi.fn(() => false),
   cloudGet: vi.fn(async () => null),
   cloudSet: vi.fn(async () => undefined),
@@ -80,7 +91,8 @@ vi.mock('./services/persistence', async (importOriginal) => {
 import App from './App';
 import { useGameStore } from './store/gameStore';
 import { makeDefaultStats } from './services/persistence';
-import { getStandardCases } from './data/caseLoader';
+import { getCaseById, getStandardCases } from './data/caseLoader';
+import { THEMATIC_PACKS, getThematicPackCaseIds } from './data/thematicPacks';
 import type { ThermalScanEvidence } from './types';
 
 const RU = (key: Parameters<typeof t>[0]) => t(key, 'ru');
@@ -252,6 +264,43 @@ describe('opening a case', () => {
   });
 });
 
+describe('special archives', () => {
+  it('opens the packs shelf from the desk and lists every story pack', async () => {
+    await renderHydrated();
+    await goToDesk();
+
+    fireEvent.click(
+      (await screen.findAllByRole('button', { name: new RegExp(RU('specialArchives')) }))[0]!,
+    );
+
+    // Every premium pack is on the shelf; retired expert archives are not.
+    for (const pack of THEMATIC_PACKS) {
+      expect((await screen.findAllByText(loc(pack.title, 'ru'))).length).toBeGreaterThan(0);
+    }
+    expect(screen.queryByText(/Пограничного Сектора/)).not.toBeInTheDocument();
+  });
+
+  it('opens a story-pack case straight from the shelf, bypassing the campaign gate', async () => {
+    await renderHydrated();
+    await goToDesk();
+
+    fireEvent.click(
+      (await screen.findAllByRole('button', { name: new RegExp(RU('specialArchives')) }))[0]!,
+    );
+
+    const firstPackCaseId = getThematicPackCaseIds(THEMATIC_PACKS[0]!)[0]!;
+    const firstPackCase = getCaseById(firstPackCaseId)!;
+    fireEvent.click(
+      (await screen.findAllByRole('button', {
+        name: new RegExp(loc(firstPackCase.title, 'ru')),
+      }))[0]!,
+    );
+
+    await screen.findByRole('button', { name: new RegExp(RU('rejectPayout')) });
+    expect(useGameStore.getState().session?.caseId).toBe(firstPackCaseId);
+  });
+});
+
 describe('stamping an evidence card', () => {
   it('marks a card as a contradiction via the modal', async () => {
     await renderHydrated();
@@ -318,10 +367,15 @@ describe('verdict gating', () => {
     expect(rejectBtn).toBeEnabled();
     fireEvent.click(rejectBtn);
 
-    // The result sheet appears (Back-to-Desk action present).
-    expect(
-      (await screen.findAllByRole('button', { name: new RegExp(RU('backToDesk')) }))[0],
-    ).toBeInTheDocument();
+    // The person reacts first: the reward sheet stays behind the resolution card.
+    const resolution = getStandardCases()[0]!.resolution!;
+    expect(await screen.findByText(new RegExp(loc(resolution.finalLine, 'ru')))).toBeInTheDocument();
+    expect(screen.queryByText(RU('accuracyBreakdown'))).toBeNull();
+
+    // Continue hands over to the reward sheet.
+    fireEvent.click(screen.getByRole('button', { name: RU('resolutionContinue') }));
+
+    expect(await screen.findByText(RU('accuracyBreakdown'))).toBeInTheDocument();
     expect(useGameStore.getState().lastResult).not.toBeNull();
   });
 });

@@ -436,5 +436,109 @@
       "progressTotal": 5
     },
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "mihail_ternov",
+      "displayName": {
+        "ru": "Михаил Тернов",
+        "en": "Mikhail Ternov",
+        "tr": "Mihail Ternov",
+        "ar": "ميخائيل تيرنوف",
+        "kk": "Михаил Тернов"
+      },
+      "portraitState": "worried"
+    },
+    "finalLine": {
+      "ru": "Хронометр жалко. Но за реестром они пришли не ради денег.",
+      "en": "I am sorry about the chronometer. But they did not come for the register because of money.",
+      "tr": "Kronometreye yazık oldu. Ama sicil defteri için gelmeleri para meselesi değildi.",
+      "ar": "يؤسفني أمر الكرونومتر. لكنهم لم يأتوا إلى السجل من أجل المال.",
+      "kk": "Хронометрді аяймын. Бірақ тізілім үшін олар ақшаның кесірінен келген жоқ."
+    },
+    "emotionalMode": "threat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Сердцевина замка высверлена снаружи, стружка лежит внутри помещения, код сигнализации не вводился. Взлом внешний.",
+          "en": "The lock cylinder was drilled from outside, the shavings lie inside the room and no alarm code was entered. The break-in came from outside.",
+          "tr": "Kilit göbeği dışarıdan delinmiş, talaşlar içeride ve alarm kodu girilmemiş. Zorla giriş dışarıdan.",
+          "ar": "حُفرت أسطوانة القفل من الخارج، والبرادة داخل الغرفة، ولم يُدخل رمز الإنذار. الاقتحام خارجي.",
+          "kk": "Құлыптың өзегі сырттан бұрғыланған, жаңқа бөлме ішінде жатыр, дабыл коды енгізілмеген. Бұзып кіру сырттан."
+        },
+        "evidenceIds": [
+          "ev-forensic"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Камера аптеки в 02:12 фиксирует двоих у серого фургона: они входят с инструментом и через шесть минут выносят архивный короб и футляр.",
+          "en": "At 2:12 a.m. the pharmacy camera catches two men at a grey van: they go in with tools and six minutes later carry out an archive box and a case.",
+          "tr": "Saat 02.12'de eczane kamerası gri bir minibüsün yanında iki kişiyi kaydediyor: aletlerle giriyorlar ve altı dakika sonra bir arşiv kutusu ile bir kılıf çıkarıyorlar.",
+          "ar": "عند 02:12 ترصد كاميرا الصيدلية رجلين قرب شاحنة رمادية: يدخلان بأدوات ويخرجان بعد ست دقائق بصندوق أرشيف وعلبة.",
+          "kk": "02:12-де дәріхана камерасы сұр фургон жанындағы екі адамды түсіреді: олар аспаппен кіріп, алты минуттан кейін мұрағат қорабы мен футлярды алып шығады."
+        },
+        "evidenceIds": [
+          "ev-cctv"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Хронометр и реестр были зарегистрированы и оценены до нападения. Ущерб реальный, инсценировки нет.",
+          "en": "The chronometer and the register were registered and appraised before the attack. The loss is real; nothing was staged.",
+          "tr": "Kronometre ve sicil, saldırıdan önce kayıtlı ve değerlenmişti. Zarar gerçek; sahneleme yok.",
+          "ar": "كان الكرونومتر والسجل مسجَّلين ومقيَّمين قبل الهجوم. الخسارة حقيقية ولا تمثيل فيها.",
+          "kk": "Хронометр мен тізілім шабуылға дейін тіркеліп, бағаланған. Шығын шынайы, қойылым жоқ."
+        },
+        "evidenceIds": [
+          "ev-inventory"
+        ]
+      }
+    ],
+    "veraLine": {
+      "ru": "Резолюция доказывает участие в процессе, а не руководство им. Пока Карелин может быть и организатором, и проверяющим.",
+      "en": "The endorsement proves involvement in the process, not command of it. For now Karelin may be either the organiser or the auditor.",
+      "tr": "Bu şerh, sürece dahil olduğunu kanıtlar; onu yönettiğini değil. Şimdilik Karelin hem düzenleyici hem de denetçi olabilir.",
+      "ar": "التأشيرة تُثبت مشاركة في العملية لا قيادةً لها. حتى الآن قد يكون كاريلين المنظِّم أو المدقِّق.",
+      "kk": "Бұрыштама үдеріске қатысқанын дәлелдейді, оны басқарғанын емес. Әзірге Карелин ұйымдастырушы да, тексеруші де болуы мүмкін."
+    },
+    "arcReveal": {
+      "title": {
+        "ru": "Резолюция Карелина",
+        "en": "Karelin's Authorization",
+        "tr": "Karelin'in Yetkisi",
+        "ar": "إذن كارلين",
+        "kk": "Карелиннің шешімі"
+      },
+      "text": {
+        "ru": "В 2021 году Карелин направлял застрахованное имущество через «Восточный двор» после выплаты.",
+        "en": "In 2021, Karelin routed insured property through Eastern Yard after payouts were issued.",
+        "tr": "2021'de Karelin, ödemeler yapıldıktan sonra sigortalı mülkü Eastern Yard'a yönlendirdi.",
+        "ar": "في عام 2021، قامت كارلين بتوجيه الممتلكات المؤمن عليها عبر Eastern Yard بعد إصدار المدفوعات.",
+        "kk": "2021 жылы Карелин сақтандырылған мүлікті төлемнен кейін «Восточный двор» арқылы жіберді."
+      }
+    }
   }
 }

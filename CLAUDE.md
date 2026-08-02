@@ -41,6 +41,8 @@ Paths are stable. Read the matching doc for *why*, then the source for *how*.
 | Daily-streak math | `src/engine/streakEngine.ts` |
 | Achievement unlock predicates | `src/engine/achievementsEngine.ts` (catalog: `src/data/achievements.ts`) |
 | Case unlock / sequence / level gating | `src/engine/caseUnlockEngine.ts` |
+| Forced-ad (interstitial) pacing | `src/engine/adPolicyEngine.ts` |
+| Remote configuration (Yandex flags → ad pacing) | `src/services/remoteConfig.ts` |
 | All economy/tuning constants (reward split, ranks, streak, hints, saveVersion) | `src/config/gameConfig.ts` |
 | Persistence: where/when snapshot is written + save migration | `src/services/persistence.ts` |
 | Portal-neutral SDK contract | `src/services/platformAdapter.ts` (Yandex implementation: `src/services/yandexSDK.ts`) |
@@ -48,6 +50,8 @@ Paths are stable. Read the matching doc for *why*, then the source for *how*.
 | Types (`Case`/`Evidence`/`PlayerStats`/`ActiveSession`/`PersistedState`) | `src/types/index.ts` |
 | Case Zod validation (kept in lockstep with types) | `src/data/caseSchema.ts` |
 | Case registry (add new case JSON here) | `src/data/caseLoader.ts` + `src/data/cases/*.json` |
+| Premium story packs (shelf metadata + case-id map) | `src/data/thematicPacks.ts`; content in `scripts/story-packs/`, cases in `src/data/cases/packs/` |
+| Финальные реплики / разбор дела (авторинг + раскладка) | `scripts/data/resolutions/*.json` + `scripts/apply-resolutions.mjs` |
 | UI strings / i18n | `src/i18n/ui.ts` |
 | Presentational components | `src/components/*.tsx` |
 | Design tokens (do not hardcode hex — use token names) | `tailwind.config.js` |
@@ -95,7 +99,10 @@ These cut across the whole codebase; everything else lives in the docs above.
    must degrade to offline mode. Engines never call the SDK directly. The same single-adapter rule applies to
    analytics: **`src/services/metrica.ts` is the only place that touches `window.ym`** (Yandex Metrica), and a
    missing counter / placeholder `counterId` makes every track call a silent no-op. Details: [docs/06](docs/06-yandex-platform.md).
-5. **All economy tuning lives in `src/config/gameConfig.ts`**, not in the engines — and bump
+5. **All economy tuning lives in `src/config/gameConfig.ts`**, not in the engines. The one
+   runtime override is ad pacing: `GAME_CONFIG.advertising` holds the **defaults**, and
+   `src/services/remoteConfig.ts` may replace the four interstitial timings from the Yandex
+   flags API (parsed, clamped, never persisted). Add new tuning to `gameConfig` first — and bump
    `GAME_CONFIG.saveVersion` + extend `migrate()` whenever the persisted shape changes. Details: [docs/04](docs/04-economy-progression.md) / [docs/06](docs/06-yandex-platform.md).
 6. **All user-facing text must go through i18n — never hardcode strings in components or engines.**
    Every new UI string belongs in `src/i18n/ui.ts`: add it as a `UIKey`, then provide translations for
@@ -109,6 +116,10 @@ These cut across the whole codebase; everything else lives in the docs above.
    onboarding flow; five interactive evidence types are introduced through the campaign, and case 50
    owns the generic final synthesis. `requiredLevel` remains capped at 16. The invariant is enforced by
    `src/data/campaignProgression.test.ts`; all 15 evidence types have renderers.
+   **Premium story packs never touch those 50 slots:** their cases are `type: "archive"`, live in
+   `src/data/cases/packs/<pack-id>/` with their own id space and no `campaignOrder`, and are reached
+   only through `THEMATIC_PACKS`. Content is authored in `scripts/story-packs/` and emitted by
+   `node scripts/generate-story-packs.mjs` (the generated JSON is the shipped source of truth).
    Details: [docs/03](docs/03-gameplay.md) / [docs/07](docs/07-authoring-content.md).
 
 ## Design language (hard constraint)

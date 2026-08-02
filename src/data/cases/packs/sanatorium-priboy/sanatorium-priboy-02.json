@@ -1,0 +1,592 @@
+{
+  "id": "sanatorium-priboy-02",
+  "type": "archive",
+  "difficulty": "easy",
+  "claimAmount": 1800000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Минеральная вода повышенной ценности",
+    "en": "Mineral Water of Enhanced Value",
+    "tr": "Yüksek Değerli Maden Suyu",
+    "ar": "مياه معدنية بقيمة مضاعفة",
+    "kk": "Құны асырылған минералды су"
+  },
+  "claim": {
+    "person": {
+      "ru": "Аркадий Семёнович Рогов, 61 год",
+      "en": "Arkady Semyonovich Rogov, age 61",
+      "tr": "Arkadiy Semyonoviç Rogov, 61 yaşında",
+      "ar": "أركادي سيميونوفيتش روغوف، 61 عامًا",
+      "kk": "Аркадий Семёнович Рогов, 61 жаста"
+    },
+    "story": {
+      "ru": "Дозатор модели МВ-40 для минеральных ванн доставлен 30 июля, принят комиссией и похищен в ту же ночь из процедурного корпуса. Ущерб подтверждён накладной поставщика «Волна-Мед» — один миллион восемьсот тысяч рублей.",
+      "en": "The MV-40 doser for the mineral baths was delivered on 30 July, accepted by the commission and stolen the same night from the treatment wing. The loss is confirmed by the invoice of the supplier Volna-Med — one million eight hundred thousand roubles.",
+      "tr": "Maden banyoları için MV-40 dozaj cihazı 30 Temmuz’da teslim edildi, komisyonca kabul edildi ve aynı gece tedavi bloğundan çalındı. Zarar, «Volna-Med» tedarikçisinin irsaliyesiyle doğrulanıyor: bir milyon sekiz yüz bin ruble.",
+      "ar": "سُلّم جهاز الجرعات MV-40 لحمامات المياه المعدنية في 30 يوليو، وقبِلته اللجنة، وسُرق في الليلة نفسها من جناح العلاج. والخسارة مؤكدة بفاتورة المورّد «فولنا-ميد»: مليون وثمانمائة ألف روبل.",
+      "kk": "Минералды ванналарға арналған МВ-40 дозаторы 30 шілдеде жеткізілді, комиссия қабылдады және сол түні емдеу корпусынан ұрланды. Залал «Волна-Мед» жеткізушісінің жүкқұжатымен расталған — бір миллион сегіз жүз мың рубль."
+    }
+  },
+  "coverImage": "covers/packs/sanatorium-priboy-02.svg",
+  "personImage": "people/packs/sanatorium-priboy/arkady_rogov.webp",
+  "client": {
+    "role": {
+      "ru": "Заявитель · директор санатория «Прибой»",
+      "en": "Claimant · director of the Priboy sanatorium",
+      "tr": "Talep sahibi · «Priboy» sanatoryumu müdürü",
+      "ar": "مقدم الطلب · مدير مصحة «بريبوي»",
+      "kk": "Өтініш беруші · «Прибой» санаторийінің директоры"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Смена",
+          "en": "Shift",
+          "tr": "Vardiya",
+          "ar": "الوردية",
+          "kk": "Ауысым"
+        },
+        "v": {
+          "ru": "Последняя смена, август 2026",
+          "en": "The last shift, August 2026",
+          "tr": "Son vardiya, Ağustos 2026",
+          "ar": "الوردية الأخيرة، أغسطس 2026",
+          "kk": "Соңғы ауысым, 2026 жылғы тамыз"
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "SP02-E1",
+      "order": 1,
+      "type": "document",
+      "title": {
+        "ru": "Накладная «Волна-Мед»",
+        "en": "Volna-Med Delivery Invoice",
+        "tr": "«Volna-Med» İrsaliyesi",
+        "ar": "فاتورة «فولنا-ميد»",
+        "kk": "«Волна-Мед» жүкқұжаты"
+      },
+      "content": {
+        "ru": "Место приёмки: процедурный корпус, кабинет 3-17. Дата — 30 июля, подпись кладовщика отсутствует, вместо неё оттиск «принято комиссией».",
+        "en": "Place of acceptance: treatment wing, room 3-17. Date 30 July; the storekeeper's signature is missing and replaced by an \"accepted by commission\" stamp.",
+        "tr": "Kabul yeri: tedavi bloğu, oda 3-17. Tarih 30 Temmuz; depo sorumlusunun imzası yok, yerine «komisyonca kabul edildi» kaşesi var.",
+        "ar": "مكان الاستلام: جناح العلاج، الغرفة 3-17. التاريخ 30 يوليو، ولا يوجد توقيع أمين المخزن بل ختم «مقبول من اللجنة».",
+        "kk": "Қабылдау орны: емдеу корпусы, 3-17 кабинет. Күні — 30 шілде, қоймашының қолы жоқ, орнына «комиссия қабылдады» мөртабаны."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "В процедурном корпусе всего два этажа: кабинета 3-17 не существует, поэтому доставка по этому адресу не могла состояться.",
+        "en": "The treatment wing has only two floors: room 3-17 does not exist, so no delivery to that address could have taken place.",
+        "tr": "Tedavi bloğu yalnızca iki katlı: 3-17 numaralı oda yok, dolayısıyla bu adrese teslimat yapılmış olamaz.",
+        "ar": "جناح العلاج من طابقين فقط: الغرفة 3-17 غير موجودة، لذا يستحيل أن يكون التسليم قد تم إلى هذا العنوان.",
+        "kk": "Емдеу корпусында бар болғаны екі қабат: 3-17 кабинет жоқ, сондықтан бұл мекенжайға жеткізу болуы мүмкін емес."
+      },
+      "statementLink": {
+        "statementId": "claim_delivery",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "В процедурном корпусе всего два этажа: кабинета 3-17 не существует, поэтому доставка по этому адресу не могла состояться.",
+          "en": "The treatment wing has only two floors: room 3-17 does not exist, so no delivery to that address could have taken place.",
+          "tr": "Tedavi bloğu yalnızca iki katlı: 3-17 numaralı oda yok, dolayısıyla bu adrese teslimat yapılmış olamaz.",
+          "ar": "جناح العلاج من طابقين فقط: الغرفة 3-17 غير موجودة، لذا يستحيل أن يكون التسليم قد تم إلى هذا العنوان.",
+          "kk": "Емдеу корпусында бар болғаны екі қабат: 3-17 кабинет жоқ, сондықтан бұл мекенжайға жеткізу болуы мүмкін емес."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_delivery",
+        "reason": {
+          "ru": "В процедурном корпусе всего два этажа: кабинета 3-17 не существует, поэтому доставка по этому адресу не могла состояться.",
+          "en": "The treatment wing has only two floors: room 3-17 does not exist, so no delivery to that address could have taken place.",
+          "tr": "Tedavi bloğu yalnızca iki katlı: 3-17 numaralı oda yok, dolayısıyla bu adrese teslimat yapılmış olamaz.",
+          "ar": "جناح العلاج من طابقين فقط: الغرفة 3-17 غير موجودة، لذا يستحيل أن يكون التسليم قد تم إلى هذا العنوان.",
+          "kk": "Емдеу корпусында бар болғаны екі қабат: 3-17 кабинет жоқ, сондықтан бұл мекенжайға жеткізу болуы мүмкін емес."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/sanatorium-priboy/sp02-e1.webp"
+      }
+    },
+    {
+      "id": "SP02-E2",
+      "order": 2,
+      "type": "seal_match",
+      "title": {
+        "ru": "Сверка печати приёмочной комиссии",
+        "en": "Comparison of the Acceptance Commission Seal",
+        "tr": "Kabul Komisyonu Mührünün Karşılaştırması",
+        "ar": "مطابقة ختم لجنة الاستلام",
+        "kk": "Қабылдау комиссиясы мөрінің салыстырмасы"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Оттиск собран из фрагментов двух разных печатей: центр совпадает с эталоном, а внешнее кольцо смещено и принадлежит другому клише. Приёмочной комиссии не было.",
+        "en": "The impression is assembled from fragments of two different seals: the centre matches the reference while the outer ring is offset and belongs to another die. There was no acceptance commission.",
+        "tr": "İz, iki farklı mührün parçalarından birleştirilmiş: merkez referansla örtüşüyor, dış halka ise kaymış ve başka bir kalıba ait. Kabul komisyonu hiç toplanmadı.",
+        "ar": "البصمة مركّبة من أجزاء ختمين مختلفين: المركز يطابق المرجع بينما الحلقة الخارجية مزاحة وتعود لقالب آخر. لم تكن هناك لجنة استلام.",
+        "kk": "Мөртабан екі түрлі мөрдің фрагменттерінен құрастырылған: ортасы эталонмен сәйкес, сыртқы сақинасы ығысқан және басқа клишеге тиесілі. Қабылдау комиссиясы болмаған."
+      },
+      "statementLink": {
+        "statementId": "claim_commission",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Оттиск собран из фрагментов двух разных печатей: центр совпадает с эталоном, а внешнее кольцо смещено и принадлежит другому клише. Приёмочной комиссии не было.",
+          "en": "The impression is assembled from fragments of two different seals: the centre matches the reference while the outer ring is offset and belongs to another die. There was no acceptance commission.",
+          "tr": "İz, iki farklı mührün parçalarından birleştirilmiş: merkez referansla örtüşüyor, dış halka ise kaymış ve başka bir kalıba ait. Kabul komisyonu hiç toplanmadı.",
+          "ar": "البصمة مركّبة من أجزاء ختمين مختلفين: المركز يطابق المرجع بينما الحلقة الخارجية مزاحة وتعود لقالب آخر. لم تكن هناك لجنة استلام.",
+          "kk": "Мөртабан екі түрлі мөрдің фрагменттерінен құрастырылған: ортасы эталонмен сәйкес, сыртқы сақинасы ығысқан және басқа клишеге тиесілі. Қабылдау комиссиясы болмаған."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_commission",
+        "reason": {
+          "ru": "Оттиск собран из фрагментов двух разных печатей: центр совпадает с эталоном, а внешнее кольцо смещено и принадлежит другому клише. Приёмочной комиссии не было.",
+          "en": "The impression is assembled from fragments of two different seals: the centre matches the reference while the outer ring is offset and belongs to another die. There was no acceptance commission.",
+          "tr": "İz, iki farklı mührün parçalarından birleştirilmiş: merkez referansla örtüşüyor, dış halka ise kaymış ve başka bir kalıba ait. Kabul komisyonu hiç toplanmadı.",
+          "ar": "البصمة مركّبة من أجزاء ختمين مختلفين: المركز يطابق المرجع بينما الحلقة الخارجية مزاحة وتعود لقالب آخر. لم تكن هناك لجنة استلام.",
+          "kk": "Мөртабан екі түрлі мөрдің фрагменттерінен құрастырылған: ортасы эталонмен сәйкес, сыртқы сақинасы ығысқан және басқа клишеге тиесілі. Қабылдау комиссиясы болмаған."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "Оттиск с накладной сопоставляют с эталонным оттиском комиссии из архива санатория.",
+        "en": "The stamp from the invoice is compared with the commission's reference impression from the sanatorium archive.",
+        "tr": "İrsaliyedeki mühür izi, sanatoryum arşivindeki komisyonun referans iziyle karşılaştırılıyor.",
+        "ar": "يُقارن ختم الفاتورة بالبصمة المرجعية للجنة من أرشيف المصحة.",
+        "kk": "Жүкқұжаттағы мөртабан санаторий архивіндегі комиссияның эталондық мөртабанымен салыстырылады."
+      },
+      "instruction": {
+        "ru": "Совместите фрагмент оттиска с эталоном и проверьте, сходится ли он целиком.",
+        "en": "Align the impression fragment with the reference and check whether it matches as a whole.",
+        "tr": "Mühür parçasını referansla hizalayın ve bütün olarak örtüşüp örtüşmediğini kontrol edin.",
+        "ar": "حاذِ جزء البصمة مع المرجع وتحقق مما إذا كان يتطابق ككل.",
+        "kk": "Мөртабан фрагментін эталонмен беттестіріп, толық сәйкес келетінін тексеріңіз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/sanatorium-priboy/sp02-e2.webp"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Игрок сам видит, что края оттиска не сходятся: печать собрана, а не поставлена.",
+          "en": "The player sees for themselves that the edges do not meet: the seal was assembled, not stamped.",
+          "tr": "Oyuncu kenarların örtüşmediğini kendisi görür: mühür basılmamış, birleştirilmiş.",
+          "ar": "يرى اللاعب بنفسه أن الحواف لا تلتقي: الختم مركّب لا مطبوع.",
+          "kk": "Ойыншы шеттердің сәйкеспейтінін өзі көреді: мөр басылмаған, құрастырылған."
+        },
+        "playerAction": {
+          "ru": "Совместите фрагмент оттиска с эталоном и проверьте, сходится ли он целиком.",
+          "en": "Align the impression fragment with the reference and check whether it matches as a whole.",
+          "tr": "Mühür parçasını referansla hizalayın ve bütün olarak örtüşüp örtüşmediğini kontrol edin.",
+          "ar": "حاذِ جزء البصمة مع المرجع وتحقق مما إذا كان يتطابق ككل.",
+          "kk": "Мөртабан фрагментін эталонмен беттестіріп, толық сәйкес келетінін тексеріңіз."
+        },
+        "conclusion": {
+          "ru": "Оттиск собран из фрагментов двух разных печатей: центр совпадает с эталоном, а внешнее кольцо смещено и принадлежит другому клише. Приёмочной комиссии не было.",
+          "en": "The impression is assembled from fragments of two different seals: the centre matches the reference while the outer ring is offset and belongs to another die. There was no acceptance commission.",
+          "tr": "İz, iki farklı mührün parçalarından birleştirilmiş: merkez referansla örtüşüyor, dış halka ise kaymış ve başka bir kalıba ait. Kabul komisyonu hiç toplanmadı.",
+          "ar": "البصمة مركّبة من أجزاء ختمين مختلفين: المركز يطابق المرجع بينما الحلقة الخارجية مزاحة وتعود لقالب آخر. لم تكن هناك لجنة استلام.",
+          "kk": "Мөртабан екі түрлі мөрдің фрагменттерінен құрастырылған: ортасы эталонмен сәйкес, сыртқы сақинасы ығысқан және басқа клишеге тиесілі. Қабылдау комиссиясы болмаған."
+        }
+      },
+      "data": {
+        "movableFragment": "A",
+        "allowRotation": true,
+        "rotationStep": 5,
+        "initialTransform": {
+          "x": 48,
+          "y": 140,
+          "rotation": 14
+        },
+        "targetTransform": {
+          "x": 168,
+          "y": 108,
+          "rotation": 0
+        },
+        "tolerance": {
+          "position": 16,
+          "rotation": 8
+        },
+        "expectedMatch": false,
+        "sourceSeed": 199807,
+        "fragmentASeed": 4310,
+        "fragmentBSeed": 8126,
+        "comparisonMarkers": [
+          {
+            "id": "outer-ring",
+            "label": "Внешнее кольцо",
+            "labelEn": "Outer ring"
+          },
+          {
+            "id": "commission-text",
+            "label": "Надпись «приёмочная комиссия»",
+            "labelEn": "\"Acceptance commission\" text"
+          },
+          {
+            "id": "center-star",
+            "label": "Центральная эмблема",
+            "labelEn": "Central emblem"
+          }
+        ]
+      }
+    },
+    {
+      "id": "SP02-E3",
+      "order": 3,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Банковская выписка санатория",
+        "en": "Sanatorium Bank Statement",
+        "tr": "Sanatoryum Banka Ekstresi",
+        "ar": "كشف حساب المصحة",
+        "kk": "Санаторийдің банк үзіндісі"
+      },
+      "content": {
+        "ru": "29 июля — платёж 1 800 000 ₽ в пользу ООО «Волна-Мед». Назначение: «оборудование по договору 30/07». Сведения об учредителе в выписке скрыты по запросу получателя.",
+        "en": "29 July — payment of 1,800,000 ₽ to Volna-Med LLC. Purpose: \"equipment under contract 30/07\". The founder's details are withheld in the statement at the recipient's request.",
+        "tr": "29 Temmuz — «Volna-Med» Ltd. lehine 1.800.000 ₽ ödeme. Açıklama: «30/07 sözleşmesi kapsamında ekipman». Kurucu bilgileri, alıcının talebiyle ekstrede gizlenmiş.",
+        "ar": "29 يوليو — دفعة بقيمة 1800000 ₽ لصالح شركة «فولنا-ميد». الغرض: «معدات بموجب العقد 30/07». وبيانات المؤسس محجوبة في الكشف بناءً على طلب المستفيد.",
+        "kk": "29 шілде — «Волна-Мед» ЖШС пайдасына 1 800 000 ₽ төлем. Мақсаты: «30/07 шарты бойынша жабдық». Құрылтайшы туралы мәліметтер алушының өтінішімен жасырылған."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Платёж ушёл за сутки до заявленной поставки, но сам по себе он не опровергает ни дату доставки, ни приёмку — он лишь показывает, кому были нужны эти документы.",
+        "en": "The payment left a day before the declared delivery, yet on its own it refutes neither the delivery date nor the acceptance — it only shows who needed those papers.",
+        "tr": "Ödeme, beyan edilen teslimattan bir gün önce yapılmış; ancak tek başına ne teslim tarihini ne de kabulü çürütür, yalnızca bu belgelere kimin ihtiyaç duyduğunu gösterir.",
+        "ar": "خرجت الدفعة قبل يوم من التسليم المعلن، لكنها وحدها لا تنفي تاريخ التسليم ولا الاستلام، بل تُظهر فقط من كان بحاجة لتلك الأوراق.",
+        "kk": "Төлем мәлімделген жеткізуден бір тәулік бұрын кеткен, бірақ ол өздігінен жеткізу күнін де, қабылдауды да жоққа шығармайды — тек бұл құжаттар кімге керек болғанын көрсетеді."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Платёж ушёл за сутки до заявленной поставки, но сам по себе он не опровергает ни дату доставки, ни приёмку — он лишь показывает, кому были нужны эти документы.",
+          "en": "The payment left a day before the declared delivery, yet on its own it refutes neither the delivery date nor the acceptance — it only shows who needed those papers.",
+          "tr": "Ödeme, beyan edilen teslimattan bir gün önce yapılmış; ancak tek başına ne teslim tarihini ne de kabulü çürütür, yalnızca bu belgelere kimin ihtiyaç duyduğunu gösterir.",
+          "ar": "خرجت الدفعة قبل يوم من التسليم المعلن، لكنها وحدها لا تنفي تاريخ التسليم ولا الاستلام، بل تُظهر فقط من كان بحاجة لتلك الأوراق.",
+          "kk": "Төлем мәлімделген жеткізуден бір тәулік бұрын кеткен, бірақ ол өздігінен жеткізу күнін де, қабылдауды да жоққа шығармайды — тек бұл құжаттар кімге керек болғанын көрсетеді."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/sanatorium-priboy/sp02-e3.webp",
+        "bankName": {
+          "ru": "Приморский банк",
+          "en": "Primorsky Bank",
+          "tr": "Primorskiy Bank",
+          "ar": "بنك بريمورسكي",
+          "kk": "Приморский банк"
+        },
+        "accountMask": "•••• 4098"
+      }
+    },
+    {
+      "id": "SP02-E4",
+      "order": 4,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера разгрузочной площадки",
+        "en": "Loading Bay Camera",
+        "tr": "Boşaltma Alanı Kamerası",
+        "ar": "كاميرا منطقة التفريغ",
+        "kk": "Түсіру алаңының камерасы"
+      },
+      "content": {
+        "ru": "30 июля, 19:40 — двое грузчиков заносят картонную коробку примерно метр на метр. Паспортные габариты дозатора МВ-40 — 2,1 метра в высоту; коробку несут вдвоём без тележки.",
+        "en": "30 July, 19:40 — two loaders carry in a cardboard box roughly one metre by one. The MV-40 doser is 2.1 metres tall by specification; the box is carried by two men without a trolley.",
+        "tr": "30 Temmuz, 19:40 — iki hamal yaklaşık bir metreye bir metre bir karton kutu taşıyor. MV-40’ın katalog yüksekliği 2,1 metre; kutuyu iki kişi arabasız taşıyor.",
+        "ar": "30 يوليو، 19:40 — عاملان يحملان صندوقًا كرتونيًا نحو متر في متر. ارتفاع جهاز MV-40 وفق المواصفات 2.1 متر، والصندوق يحمله رجلان بلا عربة.",
+        "kk": "30 шілде, 19:40 — екі жүкші шамамен бір метрге бір метр картон қорапты алып кіреді. МВ-40 дозаторының паспорттық биіктігі — 2,1 метр; қорапты арбасыз екеу көтеріп жүр."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Габариты груза не соответствуют прибору, но запись не показывает содержимое коробки и сама по себе не закрывает вопрос о поставке.",
+        "en": "The cargo dimensions do not match the device, yet the recording does not show what is inside the box and by itself settles nothing about the delivery.",
+        "tr": "Yükün ölçüleri cihazla uyuşmuyor; ancak kayıt kutunun içini göstermiyor ve tek başına teslimat sorusunu kapatmıyor.",
+        "ar": "أبعاد الحمولة لا تطابق الجهاز، لكن التسجيل لا يُظهر محتوى الصندوق ولا يحسم وحده مسألة التسليم.",
+        "kk": "Жүктің габариттері аспапқа сәйкес келмейді, бірақ жазба қораптың ішін көрсетпейді және өздігінен жеткізу мәселесін шешпейді."
+      },
+      "statementLink": {
+        "statementId": "claim_delivery",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Габариты груза не соответствуют прибору, но запись не показывает содержимое коробки и сама по себе не закрывает вопрос о поставке.",
+          "en": "The cargo dimensions do not match the device, yet the recording does not show what is inside the box and by itself settles nothing about the delivery.",
+          "tr": "Yükün ölçüleri cihazla uyuşmuyor; ancak kayıt kutunun içini göstermiyor ve tek başına teslimat sorusunu kapatmıyor.",
+          "ar": "أبعاد الحمولة لا تطابق الجهاز، لكن التسجيل لا يُظهر محتوى الصندوق ولا يحسم وحده مسألة التسليم.",
+          "kk": "Жүктің габариттері аспапқа сәйкес келмейді, бірақ жазба қораптың ішін көрсетпейді және өздігінен жеткізу мәселесін шешпейді."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/sanatorium-priboy/sp02-e4.webp",
+        "cameraId": "DOCK-1",
+        "cameraModel": "Priboy Watch 4"
+      }
+    },
+    {
+      "id": "SP02-E5",
+      "order": 5,
+      "type": "thermal_scan",
+      "title": {
+        "ru": "Тепловой осмотр доставленной коробки",
+        "en": "Thermal Inspection of the Delivered Box",
+        "tr": "Teslim Edilen Kutunun Termal İncelemesi",
+        "ar": "الفحص الحراري للصندوق المُسلَّم",
+        "kk": "Жеткізілген қораптың жылулық тексерісі"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Внутри — старый насос, остановленный несколько часов назад. На корпусе инвентарная табличка «Прибой, 1998» и выцветший логотип-волна «Волна-98».",
+        "en": "Inside is an old pump switched off a few hours earlier. Its casing carries the inventory plate \"Priboy, 1998\" and the faded wave logo of Volna-98.",
+        "tr": "İçinde birkaç saat önce durdurulmuş eski bir pompa var. Gövdesinde «Priboy, 1998» envanter plakası ve «Volna-98»in solmuş dalga logosu bulunuyor.",
+        "ar": "في الداخل مضخة قديمة أُوقفت قبل ساعات. على هيكلها لوحة جرد «بريبوي، 1998» وشعار الموجة الباهت لـ«فولنا-98».",
+        "kk": "Ішінде бірнеше сағат бұрын тоқтатылған ескі сорғы бар. Корпусында «Прибой, 1998» түгендеу тақтайшасы және «Волна-98»-дің оңған толқын логотипі."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Внутри — старый насос, остановленный несколько часов назад. На корпусе инвентарная табличка «Прибой, 1998» и выцветший логотип-волна «Волна-98».",
+          "en": "Inside is an old pump switched off a few hours earlier. Its casing carries the inventory plate \"Priboy, 1998\" and the faded wave logo of Volna-98.",
+          "tr": "İçinde birkaç saat önce durdurulmuş eski bir pompa var. Gövdesinde «Priboy, 1998» envanter plakası ve «Volna-98»in solmuş dalga logosu bulunuyor.",
+          "ar": "في الداخل مضخة قديمة أُوقفت قبل ساعات. على هيكلها لوحة جرد «بريبوي، 1998» وشعار الموجة الباهت لـ«فولنا-98».",
+          "kk": "Ішінде бірнеше сағат бұрын тоқтатылған ескі сорғы бар. Корпусында «Прибой, 1998» түгендеу тақтайшасы және «Волна-98»-дің оңған толқын логотипі."
+        }
+      },
+      "evidenceTier": "supporting",
+      "description": {
+        "ru": "Коробку нашли за складом нетронутой. Съёмку провели через полчаса после того, как её выкатили на площадку.",
+        "en": "The box was found untouched behind the storeroom. It was imaged half an hour after being wheeled out onto the bay.",
+        "tr": "Kutu, deponun arkasında dokunulmamış halde bulundu. Alana çıkarıldıktan yarım saat sonra görüntülendi.",
+        "ar": "وُجد الصندوق سليمًا خلف المخزن، وصُوّر بعد نصف ساعة من إخراجه إلى الساحة.",
+        "kk": "Қорап қойманың артынан қолсұғылмаған күйде табылды. Алаңға шығарылғаннан жарты сағаттан кейін түсірілді."
+      },
+      "instruction": {
+        "ru": "Включите тепловой режим и найдите узел внутри коробки, который недавно работал.",
+        "en": "Switch to thermal mode and find the unit inside the box that was running recently.",
+        "tr": "Termal moda geçin ve kutunun içinde yakın zamanda çalışmış olan parçayı bulun.",
+        "ar": "انتقل إلى الوضع الحراري وابحث داخل الصندوق عن الجزء الذي كان يعمل مؤخرًا.",
+        "kk": "Жылулық режимді қосып, қорап ішіндегі жақында жұмыс істеген торапты табыңыз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/sanatorium-priboy/sp02-e5.webp"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Новый прибор в заводской упаковке не может быть тёплым: игрок сам устанавливает, что внутри работавшее оборудование.",
+          "en": "A new device in factory packaging cannot be warm: the player establishes for themselves that the box holds equipment that has been in use.",
+          "tr": "Fabrika ambalajındaki yeni bir cihaz sıcak olamaz: oyuncu kutuda çalışmış bir ekipman olduğunu kendisi saptar.",
+          "ar": "الجهاز الجديد في تغليف المصنع لا يمكن أن يكون دافئًا: يثبت اللاعب بنفسه أن داخل الصندوق معدات كانت قيد التشغيل.",
+          "kk": "Зауыттық қаптамадағы жаңа аспап жылы бола алмайды: ойыншы қорап ішінде жұмыс істеген жабдық бар екенін өзі анықтайды."
+        },
+        "playerAction": {
+          "ru": "Включите тепловой режим и найдите узел внутри коробки, который недавно работал.",
+          "en": "Switch to thermal mode and find the unit inside the box that was running recently.",
+          "tr": "Termal moda geçin ve kutunun içinde yakın zamanda çalışmış olan parçayı bulun.",
+          "ar": "انتقل إلى الوضع الحراري وابحث داخل الصندوق عن الجزء الذي كان يعمل مؤخرًا.",
+          "kk": "Жылулық режимді қосып, қорап ішіндегі жақында жұмыс істеген торапты табыңыз."
+        },
+        "conclusion": {
+          "ru": "Внутри — старый насос, остановленный несколько часов назад. На корпусе инвентарная табличка «Прибой, 1998» и выцветший логотип-волна «Волна-98».",
+          "en": "Inside is an old pump switched off a few hours earlier. Its casing carries the inventory plate \"Priboy, 1998\" and the faded wave logo of Volna-98.",
+          "tr": "İçinde birkaç saat önce durdurulmuş eski bir pompa var. Gövdesinde «Priboy, 1998» envanter plakası ve «Volna-98»in solmuş dalga logosu bulunuyor.",
+          "ar": "في الداخل مضخة قديمة أُوقفت قبل ساعات. على هيكلها لوحة جرد «بريبوي، 1998» وشعار الموجة الباهت لـ«فولنا-98».",
+          "kk": "Ішінде бірнеше сағат бұрын тоқтатылған ескі сорғы бар. Корпусында «Прибой, 1998» түгендеу тақтайшасы және «Волна-98»-дің оңған толқын логотипі."
+        }
+      },
+      "data": {
+        "ambientTemperature": 24,
+        "observationTime": "11:20",
+        "claimedLastUseBefore": "—",
+        "elapsedSinceClaimedUseMinutes": 0,
+        "coolingReference": "Неработавшее оборудование в упаковке имеет температуру воздуха, +24 °C",
+        "coolingReferenceEn": "Unused equipment in packaging sits at ambient temperature, +24 °C",
+        "initialMode": "normal",
+        "heatZones": [
+          {
+            "id": "old-pump-motor",
+            "shape": "circle",
+            "x": 52,
+            "y": 58,
+            "width": 18,
+            "height": 18,
+            "temperature": 61,
+            "intensity": 0.84,
+            "label": "Двигатель старого насоса",
+            "labelEn": "Old pump motor",
+            "isContradiction": true,
+            "isTarget": true
+          },
+          {
+            "id": "cardboard-wall",
+            "shape": "circle",
+            "x": 22,
+            "y": 34,
+            "width": 14,
+            "height": 14,
+            "temperature": 25,
+            "intensity": 0.12,
+            "label": "Стенка коробки",
+            "labelEn": "Box wall"
+          },
+          {
+            "id": "packing-foam",
+            "shape": "circle",
+            "x": 74,
+            "y": 76,
+            "width": 14,
+            "height": 14,
+            "temperature": 24,
+            "intensity": 0.08,
+            "label": "Упаковочный пенопласт",
+            "labelEn": "Packing foam"
+          }
+        ],
+        "successCondition": {
+          "type": "select_any",
+          "zoneIds": [
+            "old-pump-motor"
+          ]
+        }
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "В накладной указан кабинет 3-17, которого нет: в процедурном корпусе два этажа.",
+      "Печать приёмочной комиссии собрана из фрагментов двух разных оттисков.",
+      "В коробке лежит тёплый насос «Прибой, 1998» — нового дозатора МВ-40 не существовало."
+    ],
+    "en": [
+      "The invoice names room 3-17, which does not exist: the treatment wing has two floors.",
+      "The acceptance commission seal is assembled from fragments of two different impressions.",
+      "The box holds a warm pump marked \"Priboy, 1998\" — the new MV-40 doser never existed."
+    ],
+    "tr": [
+      "İrsaliyede var olmayan 3-17 numaralı oda yazıyor: tedavi bloğu iki katlı.",
+      "Kabul komisyonu mührü, iki farklı izin parçalarından birleştirilmiş.",
+      "Kutuda «Priboy, 1998» yazılı sıcak bir pompa var — yeni MV-40 dozaj cihazı hiç var olmadı."
+    ],
+    "ar": [
+      "تذكر الفاتورة الغرفة 3-17 غير الموجودة: جناح العلاج من طابقين.",
+      "ختم لجنة الاستلام مركّب من أجزاء بصمتين مختلفتين.",
+      "في الصندوق مضخة دافئة تحمل «بريبوي، 1998» — جهاز MV-40 الجديد لم يوجد قط."
+    ],
+    "kk": [
+      "Жүкқұжатта жоқ 3-17 кабинет көрсетілген: емдеу корпусында екі қабат бар.",
+      "Қабылдау комиссиясының мөрі екі түрлі мөртабанның фрагменттерінен құрастырылған.",
+      "Қорапта «Прибой, 1998» деген жылы сорғы жатыр — жаңа МВ-40 дозаторы болмаған."
+    ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "stampable": false,
+      "text": {
+        "ru": "Похищен новый дозатор МВ-40, ущерб подлежит возмещению.",
+        "en": "A new MV-40 doser was stolen and the loss is reimbursable.",
+        "tr": "Yeni bir MV-40 dozaj cihazı çalındı ve zarar tazmin edilmelidir.",
+        "ar": "سُرق جهاز جرعات MV-40 جديد والخسارة قابلة للتعويض.",
+        "kk": "Жаңа МВ-40 дозаторы ұрланды, залал өтелуге тиіс."
+      }
+    },
+    {
+      "id": "claim_delivery",
+      "stampable": true,
+      "text": {
+        "ru": "Дозатор доставлен 30 июля в процедурный корпус.",
+        "en": "The doser was delivered to the treatment wing on 30 July.",
+        "tr": "Dozaj cihazı 30 Temmuz’da tedavi bloğuna teslim edildi.",
+        "ar": "سُلّم الجهاز إلى جناح العلاج في 30 يوليو.",
+        "kk": "Дозатор 30 шілдеде емдеу корпусына жеткізілді."
+      }
+    },
+    {
+      "id": "claim_commission",
+      "stampable": true,
+      "text": {
+        "ru": "Приёмку подтверждает печать комиссии на накладной.",
+        "en": "The acceptance is confirmed by the commission's seal on the invoice.",
+        "tr": "Kabul, irsaliyedeki komisyon mührüyle doğrulanıyor.",
+        "ar": "يؤكد القبولَ ختمُ اللجنة على الفاتورة.",
+        "kk": "Қабылдауды жүкқұжаттағы комиссия мөрі растайды."
+      }
+    }
+  ],
+  "contentVersion": "sanatorium-priboy-1.0",
+  "narrative": {
+    "preBrief": {
+      "ru": "Директор просит закрыть кражу дорогого оборудования одним днём. Он торопится сильнее, чем требует сделка.",
+      "en": "The director asks for the theft of expensive equipment to be closed within a day. He is in more of a hurry than the sale requires.",
+      "tr": "Müdür, pahalı ekipman hırsızlığının bir günde kapatılmasını istiyor. Satışın gerektirdiğinden daha aceleci.",
+      "ar": "يطلب المدير إغلاق ملف سرقة معدات باهظة في يوم واحد. وهو أكثر عجلة مما تقتضيه الصفقة.",
+      "kk": "Директор қымбат жабдық ұрлығын бір күнде жабуды сұрайды. Ол мәміле талап еткеннен де қатты асығады."
+    },
+    "postVerdictNote": {
+      "ru": "Рогов не спорит: «У нас минеральная вода лечебная. А накладные, похоже, галлюциногенные».",
+      "en": "Rogov does not argue: \"Our mineral water is medicinal. Our invoices, it seems, are hallucinogenic.\"",
+      "tr": "Rogov itiraz etmiyor: «Bizim maden suyumuz şifalı. İrsaliyelerimiz ise anlaşılan halüsinojen.»",
+      "ar": "لا يجادل روغوف: «مياهنا المعدنية علاجية. أما فواتيرنا فيبدو أنها مهلوسة.»",
+      "kk": "Рогов таласпайды: «Бізде минералды су емдік. Ал жүкқұжаттар, байқасаң, галлюциногендік»."
+    },
+    "nextCaseTeaser": {
+      "ru": "Фирма закрыта двадцать лет. Её печать поставили вчера.",
+      "en": "The firm has been shut for twenty years. Its seal was stamped yesterday.",
+      "tr": "Şirket yirmi yıldır kapalı. Mührü ise dün basıldı.",
+      "ar": "الشركة مغلقة منذ عشرين عامًا. وختمها وُضع بالأمس.",
+      "kk": "Фирма жиырма жыл бұрын жабылған. Оның мөрі кеше басылған."
+    },
+    "seasonClue": {
+      "id": "volna-98-logo",
+      "progressIndex": 2,
+      "progressTotal": 10,
+      "label": {
+        "ru": "Логотип-волна «Волны-98»",
+        "en": "The Wave Logo of Volna-98",
+        "tr": "«Volna-98»in Dalga Logosu",
+        "ar": "شعار الموجة لـ«فولنا-98»",
+        "kk": "«Волна-98»-дің толқын логотипі"
+      },
+      "description": {
+        "ru": "Инвентарная табличка 1998 года и логотип фирмы, которой давно нет, оказались внутри сегодняшней поставки.",
+        "en": "A 1998 inventory plate and the logo of a firm long since gone turned up inside today's delivery.",
+        "tr": "1998 tarihli bir envanter plakası ve çoktan yok olmuş bir şirketin logosu, bugünkü teslimatın içinden çıktı.",
+        "ar": "ظهرت لوحة جرد من 1998 وشعار شركة زالت منذ زمن داخل شحنة اليوم.",
+        "kk": "1998 жылғы түгендеу тақтайшасы мен әлдеқашан жоқ фирманың логотипі бүгінгі жеткізілім ішінен шықты."
+      }
+    },
+    "epilogue": null
+  }
+}

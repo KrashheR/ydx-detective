@@ -629,5 +629,104 @@
       "progressTotal": 6
     },
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "khariton_velizhanin",
+      "displayName": {
+        "ru": "Харитон Велижанин",
+        "en": "Khariton Velizhanin",
+        "tr": "Hariton Velijanin",
+        "ar": "خاريتون فيليجانين",
+        "kk": "Харитон Велижанин"
+      },
+      "portraitState": "grim"
+    },
+    "finalLine": {
+      "ru": "Сажа должна была спрятать номера. Даже огонь теперь работает не на всех.",
+      "en": "The soot was supposed to hide the numbers. Even fire does not work for everyone any more.",
+      "tr": "Kurumun numaraları gizlemesi gerekiyordu. Artık ateş bile herkes için çalışmıyor.",
+      "ar": "كان على السخام أن يُخفي الأرقام. حتى النار لم تعد تعمل لصالح الجميع.",
+      "kk": "Күйе нөмірлерді жасыруы керек еді. Енді от та бәрінің пайдасына жұмыс істемейді."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Пожар на складе реален, а компания на грани дефолта — мотив налицо. Это ещё не доказательство.",
+          "en": "The warehouse fire is real and the company is close to default — the motive is plain. That is still not proof.",
+          "tr": "Depo yangını gerçek ve şirket iflasın eşiğinde — gerekçe ortada. Ama bu hâlâ kanıt değil.",
+          "ar": "حريق المستودع حقيقي والشركة على شفا التعثّر — الدافع ظاهر. لكنه ليس دليلًا بعد.",
+          "kk": "Қоймадағы өрт шынайы, ал компания дефолт алдында — уәж айқын. Бұл әлі дәлел емес."
+        },
+        "evidenceIds": [
+          "ev-debt"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Под сажей на уцелевшем шасси проступает номер списанного демонстрационного корпуса, которого нет в страховой описи нового товара.",
+          "en": "Under the soot on the surviving chassis appears the serial of a written-off demo unit, absent from the insured inventory of new goods.",
+          "tr": "Kurtulan şasideki kurumun altından, yeni malların sigorta envanterinde bulunmayan hurdaya ayrılmış bir teşhir ünitesinin numarası çıkıyor.",
+          "ar": "تحت السخام على الهيكل الباقي يظهر رقم وحدة عرض مشطوبة، لا وجود لها في جرد التأمين للبضاعة الجديدة.",
+          "kk": "Аман қалған шассидегі күйенің астынан жаңа тауардың сақтандыру тізімдемесінде жоқ, есептен шығарылған көрме корпусының нөмірі шығады."
+        },
+        "evidenceIds": [
+          "ev-serials"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Камера показывает вывоз ценного товара до возгорания, датчики дыма отключены мастер-кодом, а дознаватель отвергает случайную причину. В огне был заменитель.",
+          "en": "The camera shows the valuable stock leaving before ignition, the smoke detectors were disabled with a master code, and the investigator rules out an accidental cause. What burned was a stand-in.",
+          "tr": "Kamera değerli malın yangından önce çıkarıldığını gösteriyor, duman dedektörleri ana kodla devre dışı bırakılmış ve müfettiş kazara nedeni dışlıyor. Yanan, yerine konan mallardı.",
+          "ar": "تُظهر الكاميرا خروج البضاعة الثمينة قبل الاشتعال، وأُبطلت كواشف الدخان برمز رئيسي، ويستبعد المحقّق السبب العرضي. ما احترق كان بديلًا.",
+          "kk": "Камера құнды тауардың өрттен бұрын шығарылғанын көрсетеді, түтін датчиктері мастер-кодпен өшірілген, ал тергеуші кездейсоқ себепті жоққа шығарады. Отта жанғаны — алмастырғыш."
+        },
+        "evidenceIds": [
+          "ev-cam",
+          "ev-panel",
+          "ev-fire"
+        ]
+      }
+    ],
+    "arcReveal": {
+      "title": {
+        "ru": "Двойная прибыль",
+        "en": "Double Profit",
+        "tr": "Çifte Kâr",
+        "ar": "ربح مضاعف",
+        "kk": "Екі есе пайда"
+      },
+      "text": {
+        "ru": "Серый конвой объединяет продажу настоящих активов и выплату за уничтоженные заменители.",
+        "en": "The Gray Convoy combines the sale of genuine assets with payouts for destroyed substitutes.",
+        "tr": "Gri Konvoy, gerçek varlıkların satışını yok edilen ikameler için yapılan ödemelerle birleştirir.",
+        "ar": "تجمع Gray Convoy بين بيع الأصول الأصلية ودفعات للبدائل المدمرة.",
+        "kk": "Сұр колонна нақты активтерді сатуды және жойылған алмастырғыштарды төлеуді біріктіреді."
+      }
+    }
   }
 }

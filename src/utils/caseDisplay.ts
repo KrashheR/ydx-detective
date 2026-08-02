@@ -1,4 +1,4 @@
-import { getStandardCaseSummaries } from '../data/caseLoader';
+import { getArchiveCaseSummaries, getStandardCaseSummaries } from '../data/caseLoader';
 import type { CaseUnlockInfo } from '../engine/caseUnlockEngine';
 import { formatCaseNumber, t, tDifficulty } from '../i18n/ui';
 import type { Case, Language } from '../types';
@@ -8,6 +8,16 @@ type CaseDisplayData = Pick<Case, 'id' | 'type'>;
 /** Player-facing label for a case — "Case 1" / "Дело 1", or the daily-case title. */
 export const formatCaseLabel = (caseData: CaseDisplayData, lang: Language): string => {
   if (caseData.type === 'daily') return t('dailyCase', lang);
+
+  // Story-pack files are numbered inside their own pack (`<pack-id>-NN`), not
+  // against the campaign shelf they never appear on.
+  if (caseData.type === 'archive') {
+    const packPrefix = caseData.id.slice(0, caseData.id.lastIndexOf('-') + 1);
+    const packIdx = getArchiveCaseSummaries()
+      .filter((c) => c.id.startsWith(packPrefix))
+      .findIndex((c) => c.id === caseData.id);
+    return packIdx < 0 ? caseData.id : formatCaseNumber(packIdx + 1, lang);
+  }
 
   const idx = getStandardCaseSummaries().findIndex((c) => c.id === caseData.id);
   if (idx < 0) return caseData.id;

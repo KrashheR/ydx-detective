@@ -475,5 +475,89 @@
     },
     "seasonClue": null,
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "anton_lanskoy",
+      "displayName": {
+        "ru": "Антон Ланской",
+        "en": "Anton Lanskoy",
+        "tr": "Anton Lanskoy",
+        "ar": "أنطون لانسكوي",
+        "kk": "Антон Ланской"
+      },
+      "portraitState": "shaken_relief"
+    },
+    "finalLine": {
+      "ru": "Я прочёл этикетку дважды. Надо было читать то, что под ней.",
+      "en": "I read the label twice. I should have read what was underneath it.",
+      "tr": "Etiketi iki kez okudum. Asıl altındakini okumalıymışım.",
+      "ar": "قرأت الملصق مرّتين. كان عليّ أن أقرأ ما تحته.",
+      "kk": "Жапсырманы екі рет оқыдым. Астындағыны оқуым керек еді."
+    },
+    "emotionalMode": "grave",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Ланской заказал нейтральный стабилизатор S-4 и получил запечатанную упаковку; номер пломбы на накладной совпадает с той, что видна на камере.",
+          "en": "Lanskoy ordered the neutral stabiliser S-4 and received a sealed package; the seal number on the waybill matches the one visible on camera.",
+          "tr": "Lanskoy nötr stabilizatör S-4 sipariş etti ve mühürlü bir paket aldı; irsaliyedeki mühür numarası kamerada görünenle aynı.",
+          "ar": "طلب لانسكوي المثبّت المحايد S-4 وتسلّم عبوة مختومة؛ ورقم الختم في بوليصة الشحن يطابق الظاهر في الكاميرا.",
+          "kk": "Ланской бейтарап S-4 тұрақтандырғышын тапсырыс беріп, пломбаланған қаптама алған; жүкқұжаттағы пломба нөмірі камерада көрінетінмен сәйкес."
+        },
+        "evidenceIds": [
+          "ev-document",
+          "ev-camera"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Под наклейкой «S-4» проступает заводская маркировка «C-9». В запечатанной упаковке находился другой реагент.",
+          "en": "Under the “S-4” sticker the factory marking “C-9” shows through. The sealed package held a different reagent.",
+          "tr": "“S-4” etiketinin altından fabrika işareti “C-9” beliriyor. Mühürlü pakette başka bir reaktif vardı.",
+          "ar": "تحت ملصق «S-4» تظهر علامة المصنع «C-9». كانت العبوة المختومة تحوي كاشفًا آخر.",
+          "kk": "«S-4» жапсырмасының астынан «C-9» зауыттық таңбасы шығады. Пломбаланған қаптамада басқа реагент болған."
+        },
+        "evidenceIds": [
+          "ev-analysis"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Вытяжка работала штатно, экстренный вызов сделан через 34 секунды, а проверка поставщика показала перемаркировку всей партии. Процедура соблюдена.",
+          "en": "The fume hood ran normally, the emergency call went out after 34 seconds, and the supplier check showed the whole batch was relabelled. Procedure was followed.",
+          "tr": "Çeker ocak düzgün çalışıyordu, acil çağrı 34 saniye içinde yapıldı ve tedarikçi denetimi tüm partinin yeniden etiketlendiğini gösterdi. Prosedüre uyulmuş.",
+          "ar": "عملت خزانة السحب بشكل طبيعي، وصدر نداء الطوارئ بعد 34 ثانية، وأظهر فحص المورّد إعادة وسم الدفعة بأكملها. الإجراء متَّبع.",
+          "kk": "Сорғыш қалыпты жұмыс істеген, шұғыл шақыру 34 секундтан кейін жасалған, ал жеткізушіні тексеру бүкіл партияның қайта таңбаланғанын көрсетті. Рәсім сақталған."
+        },
+        "evidenceIds": [
+          "ev-log",
+          "ev-call",
+          "ev-supplier"
+        ]
+      }
+    ]
   }
 }

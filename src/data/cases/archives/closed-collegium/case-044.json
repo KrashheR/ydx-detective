@@ -615,5 +615,111 @@
       "progressTotal": 7
     },
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "evelina_morn",
+      "displayName": {
+        "ru": "Эвелина Морн",
+        "en": "Evelina Morn",
+        "tr": "Evelina Morn",
+        "ar": "إيفلينا مورن",
+        "kk": "Эвелина Морн"
+      },
+      "portraitState": "cynical_calm"
+    },
+    "finalLine": {
+      "ru": "Серую ленту теперь боятся больше огня. Я на это и рассчитывала.",
+      "en": "People fear grey tape more than fire now. That is exactly what I counted on.",
+      "tr": "Artık gri bandı yangından çok korkuyorlar. Ben de tam buna güvendim.",
+      "ar": "صاروا يخافون الشريط الرمادي أكثر من النار. وعلى هذا راهنت.",
+      "kk": "Сұр таспадан енді оттан да көп қорқады. Мен дәл соған сенген едім."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Пожар в теплице реальный, а за день до него комиссия забраковала партию: уничтожать растения владелице пришлось бы за свой счёт.",
+          "en": "The greenhouse fire is real, and the day before it a commission condemned the batch: destroying the plants would have been the owner's own expense.",
+          "tr": "Seradaki yangın gerçek ve bir gün önce komisyon partiyi reddetmişti: bitkileri imha etmek sahibinin kendi cebinden olacaktı.",
+          "ar": "حريق الدفيئة حقيقي، وقبله بيوم أدانت اللجنة الدفعة: وكان إتلاف النباتات سيقع على نفقة المالكة.",
+          "kk": "Жылыжайдағы өрт шынайы, ал одан бір күн бұрын комиссия партияны жарамсыз деп таныған: өсімдіктерді жою иесінің өз есебінен болар еді."
+        },
+        "evidenceIds": [
+          "document-44"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Тепловой осмотр показывает единственную горячую точку — металлическую чашу на отключённом нагревателе. Воздух и грядки были холоднее порога возгорания.",
+          "en": "The thermal survey shows a single hot spot — a metal bowl on a switched-off heater. Air and beds were below the ignition threshold.",
+          "tr": "Termal inceleme tek bir sıcak nokta gösteriyor: kapalı bir ısıtıcının üzerindeki metal kâse. Hava ve tarhlar tutuşma eşiğinin altındaydı.",
+          "ar": "يُظهر المسح الحراري بؤرة ساخنة واحدة: وعاء معدني فوق مدفأة مطفأة. أما الهواء والأحواض فكانت دون عتبة الاشتعال.",
+          "kk": "Жылу тексеруі жалғыз ыстық нүктені көрсетеді — өшірілген жылытқыштағы металл ыдыс. Ауа мен жүйектер жану шегінен төмен болған."
+        },
+        "evidenceIds": [
+          "photo-44",
+          "log-44"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Клей серой ленты не совпадает с упаковкой GC-17: она бытовая и куплена в местном магазине. След сети подброшен, а концентрат оплачен наличными за несколько часов до пожара.",
+          "en": "The grey tape's adhesive does not match GC-17 packaging: it is a consumer product from a local shop. The network's trace was planted, and the accelerant was paid for in cash hours before the fire.",
+          "tr": "Gri bandın yapıştırıcısı GC-17 ambalajıyla uyuşmuyor: yerel bir dükkândan alınmış tüketici ürünü. Şebekenin izi yerleştirilmiş; hızlandırıcı da yangından saatler önce nakit ödenmiş.",
+          "ar": "لاصق الشريط الرمادي لا يطابق تغليف GC-17: إنه منتج استهلاكي من متجر محلي. أثر الشبكة مدسوس، والمُسرّع دُفع ثمنه نقدًا قبل الحريق بساعات.",
+          "kk": "Сұр таспаның желімі GC-17 қаптамасымен сәйкес келмейді: ол жергілікті дүкенде сатылатын тұрмыстық өнім. Желі ізі әдейі тасталған, ал концентрат өрттен бірнеше сағат бұрын қолма-қол төленген."
+        },
+        "evidenceIds": [
+          "tape-44",
+          "bank-44"
+        ]
+      }
+    ],
+    "veraLine": {
+      "ru": "Серый след сам по себе не означает Серый конвой. Известность сети сделала её удобным прикрытием для одиночек.",
+      "en": "A grey trace by itself does not mean the Grey Convoy. The network's notoriety has made it a convenient cover for loners.",
+      "tr": "Gri bir iz tek başına Gri Konvoy demek değildir. Şebekenin ünü, onu tek başına çalışanlar için elverişli bir paravana çevirdi.",
+      "ar": "الأثر الرمادي بذاته لا يعني «القافلة الرمادية». فشهرة الشبكة جعلتها غطاءً مريحًا للمنفردين.",
+      "kk": "Сұр із өздігінен Сұр керуенді білдірмейді. Желінің әйгілілігі оны жалғыз әрекет етушілер үшін ыңғайлы жамылғыға айналдырды."
+    },
+    "arcReveal": {
+      "title": {
+        "ru": "Поддельная метка",
+        "en": "The Planted Mark",
+        "tr": "Dikilen İşaret",
+        "ar": "العلامة المزروعة",
+        "kk": "Жалған тег"
+      },
+      "text": {
+        "ru": "Известность Серого конвоя провоцирует одиночных мошенников подбрасывать ложные следы. Нужна проверка состава и контекста.",
+        "en": "The Gray Convoy's notoriety encourages lone fraudsters to plant false traces. Composition and context must be verified.",
+        "tr": "Gri Konvoy'un kötü şöhreti, yalnız dolandırıcıları sahte izler bırakmaya teşvik ediyor. Kompozisyon ve bağlam doğrulanmalıdır.",
+        "ar": "تشجع سمعة Gray Convoy السيئة المحتالين المنفردين على زرع آثار كاذبة. يجب التحقق من التكوين والسياق.",
+        "kk": "Сұр конвойдың даңқы жеке алаяқтарды жалған жолдарды отырғызуға итермелейді. Біз композиция мен контекстті тексеруіміз керек."
+      }
+    }
   }
 }

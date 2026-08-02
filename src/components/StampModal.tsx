@@ -9,6 +9,7 @@ import {
 import { AnimatePresence, motion } from 'framer-motion';
 import type { Evidence, EvidenceMeta, InteractiveEvidenceProgress, Language } from '../types';
 import { loc, t } from '../i18n/ui';
+import { getStampCaption, getStampSubline } from '../data/stampTexts';
 import { EVIDENCE_TAG_KEY } from './icons';
 import { RTL_LANGUAGES } from '../i18n/ui';
 import { tapHaptic } from '../utils/haptics';
@@ -25,6 +26,8 @@ interface Props {
   /** True if a paid "Inspector Note" hint revealed this card's true status. */
   revealed: boolean;
   interactiveProgress?: InteractiveEvidenceProgress;
+  /** Cosmetic stamp caption the player has inked; `null` = the free default. */
+  stampTextId?: string | null;
   onInteractiveProgress: (progress: InteractiveEvidenceProgress) => void;
   onToggle: () => void;
   onClose: () => void;
@@ -40,6 +43,7 @@ export function StampModal({
   stamped,
   revealed,
   interactiveProgress,
+  stampTextId = null,
   onInteractiveProgress,
   onToggle,
   onClose,
@@ -53,6 +57,8 @@ export function StampModal({
   const touchStart = useRef<{ x: number; y: number } | null>(null);
   const isOpen = evidence != null;
   const isRTL = RTL_LANGUAGES.has(lang);
+  const stampCaption = getStampCaption(stampTextId, lang);
+  const stampSubline = getStampSubline(stampTextId);
   const interactive = evidence ? isInteractiveEvidence(evidence) : false;
   const analysisComplete = !interactive || interactiveProgress?.analysisCompleted === true;
   const canStamp = analysisComplete;
@@ -223,16 +229,20 @@ export function StampModal({
                   style={{ animation: 'stampIn .45s cubic-bezier(.2,1.3,.35,1)' }}
                 >
                   <div
-                    className="rounded-[5px] border-4 border-stamp px-[18px] py-2 text-center font-mono text-[22px] font-semibold uppercase tracking-wide text-stamp"
+                    className={`whitespace-nowrap rounded-[5px] border-4 border-stamp px-[18px] py-2 text-center font-mono font-semibold uppercase tracking-wide text-stamp ${
+                      // Long bought captions get a smaller die so the ink block
+                      // still fits the document on narrow phones.
+                      stampCaption.length > 13 ? 'text-[17px]' : 'text-[22px]'
+                    }`}
                     style={{
                       transform: 'translate(-50%,-50%) rotate(-13deg)',
                       opacity: 0.88,
                       background: 'rgba(255,255,255,.04)',
                     }}
                   >
-                    {t('contradiction', lang)}
-                    <div className="mt-0.5 text-[12px] md:text-[10px] tracking-[4px]">
-                      CONTRADICTION
+                    {stampCaption}
+                    <div className="mt-0.5 text-[12px] tracking-[4px] md:text-[10px]">
+                      {stampSubline}
                     </div>
                   </div>
                 </div>

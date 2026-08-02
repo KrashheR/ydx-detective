@@ -219,5 +219,87 @@
       "Өрттен үш ай бұрын Красин 72 700 ₽ ұрлады — және мұны жасыру үшін мұрағатты жойды.",
       "Красин — өтірікші. Талаптан бас тарту."
     ]
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "alexey_krasin",
+      "displayName": {
+        "ru": "Алексей Красин",
+        "en": "Alexey Krasin",
+        "tr": "Aleksey Krasin",
+        "ar": "أليكسي كراسين",
+        "kk": "Алексей Красин"
+      },
+      "portraitState": "exposed"
+    },
+    "finalLine": {
+      "ru": "Стажёр был удобной версией. Пока вы не открыли журнал.",
+      "en": "The intern was a convenient version. Until you opened the log.",
+      "tr": "Stajyer elverişli bir versiyondu. Siz kaydı açana kadar.",
+      "ar": "كان المتدرّب رواية مريحة. إلى أن فتحتم السجل.",
+      "kk": "Тағылымдамашы ыңғайлы нұсқа еді. Сіздер журналды ашқанша."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Вентиляция действительно была отключена, и пожар с уничтожением архива реален.",
+          "en": "The ventilation really was shut down, and the fire that destroyed the archive is real.",
+          "tr": "Havalandırma gerçekten kapatıldı ve arşivi yok eden yangın gerçek.",
+          "ar": "أُوقفت التهوية فعلًا، والحريق الذي أتلف الأرشيف حقيقي.",
+          "kk": "Желдету шынымен өшірілген, ал мұрағатты жойған өрт нақты."
+        },
+        "evidenceIds": [
+          "ev-access-log"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "У вентшахты Б-7 за десять минут до отключения фиксируется только карта Красина; начальник смены опровергает версию о стажёре.",
+          "en": "Ten minutes before the shutdown only Krasin's card is logged at shaft B-7; the shift supervisor rejects the intern story.",
+          "tr": "Kapanmadan on dakika önce B-7 bacasında yalnızca Krasin'in kartı kayıtlı; vardiya amiri stajyer hikâyesini çürütüyor.",
+          "ar": "قبل الإيقاف بعشر دقائق لا تُسجَّل عند العمود B-7 سوى بطاقة كراسين؛ ورئيس الوردية يدحض رواية المتدرّب.",
+          "kk": "Өшірілуден он минут бұрын Б-7 шахтасында тек Красиннің картасы тіркелген; ауысым бастығы тағылымдамашы туралы нұсқаны жоққа шығарады."
+        },
+        "evidenceIds": [
+          "ev-access-log",
+          "ev-witness"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Внутренний аудит показывает системное перенаправление средств за три месяца до пожара. Уничтоженный архив хранил именно эти документы.",
+          "en": "The internal audit shows funds systematically diverted over the three months before the fire. The destroyed archive held exactly those records.",
+          "tr": "İç denetim, yangından önceki üç ayda fonların sistematik olarak yönlendirildiğini gösteriyor. Yok edilen arşiv tam da bu belgeleri tutuyordu.",
+          "ar": "يُظهر التدقيق الداخلي تحويلًا منهجيًا للأموال خلال الأشهر الثلاثة السابقة للحريق. والأرشيف المُتلَف كان يحفظ تلك المستندات بالذات.",
+          "kk": "Ішкі аудит өрттен үш ай бұрын қаражаттың жүйелі түрде бағытталғанын көрсетеді. Жойылған мұрағатта дәл сол құжаттар сақталған."
+        },
+        "evidenceIds": [
+          "ev-audit"
+        ]
+      }
+    ]
   }
 }

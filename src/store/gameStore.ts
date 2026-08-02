@@ -39,8 +39,11 @@ import {
 } from '../services/persistence';
 import {
   getThematicPackCaseIds,
+  getThematicPackIdByProductId,
   THEMATIC_PACKS,
 } from '../data/thematicPacks';
+import { STAMP_TEXTS, getStampTextByProductId } from '../data/stampTexts';
+import { initRemoteConfig } from '../services/remoteConfig';
 import {
   getServerTimeMs,
   getAnalyticsUserId,
@@ -184,6 +187,19 @@ export interface GameStoreState {
   grantArchivePurchase: (packId: string) => void;
   /** Restore purchased archive rights from the platform. */
   grantArchivePurchases: (packIds: readonly string[]) => void;
+  /** Permanently grant the No Ads entitlement (purchase or restore). */
+  grantNoAds: () => void;
+  /** Permanently grant a cosmetic stamp caption and ink it immediately. */
+  grantStampTextPurchase: (stampTextId: string) => void;
+  /** Restore purchased stamp captions from the platform (no auto-select). */
+  grantStampTextPurchases: (stampTextIds: readonly string[]) => void;
+  /** Ink an owned caption onto the contradiction stamp; `null` = free default. */
+  setActiveStampText: (stampTextId: string | null) => void;
+  /**
+   * Apply a restored set of platform product ids — the single place that maps
+   * Yandex product ids onto entitlements (archive packs + No Ads + stamp texts).
+   */
+  applyRestoredPurchases: (productIds: readonly string[]) => void;
 
   /* ---- ad-linked rewards ---- */
   /** Add the total of the last verdict again to balance (rewarded-video double). */
@@ -267,6 +283,9 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       //    in the app now flips `isPaused`, which the audio manager & game loop
       //    observe to mute contexts and freeze progression.
       onPauseChange((paused) => get().setPaused(paused));
+      // 2b) Ad pacing is remotely tunable. Fire-and-forget: the policy reads
+      //     local defaults until (and unless) the flags land.
+      void initRemoteConfig();
 
       // 3) Hydrate from cloud (preferred) or LocalStorage.
       const { snapshot, isNew } = await loadSnapshot();
@@ -1079,6 +1098,62 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       persist(true);
     },
 
+    grantNoAds() {
+      if (get().stats.noAdsPurchased) return;
+      set((s) => ({ stats: { ...s.stats, noAdsPurchased: true } }));
+      persist(true);
+    },
+
+    grantStampTextPurchase(stampTextId) {
+      const stamp = STAMP_TEXTS.find((item) => item.id === stampTextId);
+      if (!stamp || stamp.productId === null) return;
+      set((s) => ({
+        stats: {
+          ...s.stats,
+          ownedStampTextIds: s.stats.ownedStampTextIds.includes(stampTextId)
+            ? s.stats.ownedStampTextIds
+            : [...s.stats.ownedStampTextIds, stampTextId],
+          // A just-bought caption is what the player wants to see printed.
+          activeStampTextId: stampTextId,
+        },
+      }));
+      persist(true);
+    },
+
+    grantStampTextPurchases(stampTextIds) {
+      if (stampTextIds.length === 0) return;
+      set((s) => ({
+        stats: {
+          ...s.stats,
+          ownedStampTextIds: Array.from(
+            new Set([...s.stats.ownedStampTextIds, ...stampTextIds]),
+          ),
+        },
+      }));
+      persist(true);
+    },
+
+    setActiveStampText(stampTextId) {
+      // Only an owned caption can be inked; `null` always falls back to free.
+      if (stampTextId !== null && !get().stats.ownedStampTextIds.includes(stampTextId)) return;
+      set((s) => ({ stats: { ...s.stats, activeStampTextId: stampTextId } }));
+      persist(true);
+    },
+
+    applyRestoredPurchases(productIds) {
+      if (productIds.length === 0) return;
+      const packIds = productIds
+        .map(getThematicPackIdByProductId)
+        .filter((packId): packId is string => packId !== null);
+      get().grantArchivePurchases(packIds);
+      if (productIds.includes(GAME_CONFIG.advertising.noAdsProductId)) get().grantNoAds();
+      get().grantStampTextPurchases(
+        productIds
+          .map((productId) => getStampTextByProductId(productId)?.id)
+          .filter((stampTextId): stampTextId is string => stampTextId !== undefined),
+      );
+    },
+
     setPaused(paused) {
       set({ isPaused: paused });
     },
@@ -1098,11 +1173,15 @@ export const useGameStore = create<GameStoreState>((set, get) => {
           balance,
           xp,
           isBankrupt: balance <= GAME_CONFIG.economy.bankruptcyThreshold,
+          // Payments are dead off-Yandex, so the shop is otherwise untestable.
+          ownedStampTextIds: STAMP_TEXTS.filter((stamp) => stamp.productId !== null).map(
+            (stamp) => stamp.id,
+          ),
         },
       }));
       persist(true);
       // eslint-disable-next-line no-console
-      console.info(`[devCheat] balance=${balance} xp=${xp}`);
+      console.info(`[devCheat] balance=${balance} xp=${xp} +all stamp captions`);
     },
 
     dismissRating() {

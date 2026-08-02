@@ -415,5 +415,87 @@
     },
     "seasonClue": null,
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "marina_gordeeva",
+      "displayName": {
+        "ru": "Марина Гордеева",
+        "en": "Marina Gordeeva",
+        "tr": "Marina Gordeyeva",
+        "ar": "مارينا غورديفا",
+        "kk": "Марина Гордеева"
+      },
+      "portraitState": "relief"
+    },
+    "finalLine": {
+      "ru": "Двадцать две секунды стояла. Хорошо, что кто-то их наконец посчитал.",
+      "en": "I stood there twenty-two seconds. Good that somebody finally counted them.",
+      "tr": "Yirmi iki saniye durdum. İyi ki birileri sonunda onları saydı.",
+      "ar": "وقفت اثنتين وعشرين ثانية. جيّد أن أحدًا أحصاها أخيرًا.",
+      "kk": "Жиырма екі секунд тұрдым. Ақыры біреу оларды санағаны жақсы."
+    },
+    "emotionalMode": "relief",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что вызывало подозрение",
+          "en": "What looked suspicious",
+          "tr": "Şüphe uyandıran şey",
+          "ar": "ما بدا مريبًا",
+          "kk": "Не күдік тудырды"
+        },
+        "text": {
+          "ru": "Звонок 112 зарегистрирован в 17:41:06 — раньше, чем стоит отметка времени в первичных материалах ДТП.",
+          "en": "The 112 call is logged at 17:41:06 — earlier than the timestamp in the initial crash paperwork.",
+          "tr": "112 araması 17:41:06'da kayıtlı — kaza evrakındaki ilk zaman damgasından daha erken.",
+          "ar": "سُجّلت مكالمة 112 عند 17:41:06 — أبكر من الطابع الزمني في أوراق الحادث الأولية.",
+          "kk": "112 қоңырауы 17:41:06-да тіркелген — ЖКО-ның бастапқы материалдарындағы уақыт белгісінен ерте."
+        },
+        "evidenceIds": [
+          "ev-phone"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Чем это объясняется",
+          "en": "What explains it",
+          "tr": "Bunu açıklayan şey",
+          "ar": "ما يفسر ذلك",
+          "kk": "Мұны не түсіндіреді"
+        },
+        "text": {
+          "ru": "Базовые станции и геолокация указывают именно на этот перекрёсток, а схема ставит второй автомобиль позади. Расхождение — в настройке часов, а не в событии.",
+          "en": "Cell towers and geolocation point to that very junction, and the sketch places the second car behind. The discrepancy is in a clock setting, not in the event.",
+          "tr": "Baz istasyonları ve konum verisi tam o kavşağı gösteriyor, kroki de ikinci aracı arkaya koyuyor. Fark, olayda değil saat ayarında.",
+          "ar": "تشير الأبراج والموقع الجغرافي إلى ذلك التقاطع بعينه، والمخطّط يضع السيارة الثانية خلفًا. الفارق في ضبط الساعة لا في الحادث.",
+          "kk": "Базалық станциялар мен геолокация дәл сол қиылысты көрсетеді, ал схема екінші көлікті артта орналастырады. Айырма — оқиғада емес, сағат бабында."
+        },
+        "evidenceIds": [
+          "ev-police"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Бампер вдавлен сзади вперёд, фонарь разбит свежим ударом, а старые повреждения в смету не включены. Требование соответствует реальному ремонту.",
+          "en": "The bumper is pushed in from the rear, the lamp is freshly broken, and old damage is left out of the estimate. The claim matches the actual repair.",
+          "tr": "Tampon arkadan öne doğru içeri göçmüş, far taze bir darbeyle kırılmış ve eski hasar keşfe dahil edilmemiş. Talep, gerçek onarımla örtüşüyor.",
+          "ar": "الصادم منضغط من الخلف إلى الأمام، والمصباح مكسور بضربة حديثة، والأضرار القديمة غير مدرجة في التقدير. المطالبة تطابق الإصلاح الفعلي.",
+          "kk": "Бампер артынан алға майысқан, шам жаңа соққыдан сынған, ал ескі зақымдар сметаға енгізілмеген. Талап нақты жөндеуге сай."
+        },
+        "evidenceIds": [
+          "ev-photo",
+          "ev-estimate"
+        ]
+      }
+    ]
   }
 }

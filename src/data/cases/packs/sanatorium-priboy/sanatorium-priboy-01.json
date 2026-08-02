@@ -1,0 +1,498 @@
+{
+  "id": "sanatorium-priboy-01",
+  "type": "archive",
+  "difficulty": "easy",
+  "claimAmount": 180000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Номер с видом на алиби",
+    "en": "A Room with a View of an Alibi",
+    "tr": "Mazeret Manzaralı Oda",
+    "ar": "غرفة بإطلالة على حجة غياب",
+    "kk": "Алибиге қарайтын нөмір"
+  },
+  "claim": {
+    "person": {
+      "ru": "Семён Игоревич Бардин, 47 лет",
+      "en": "Semyon Igorevich Bardin, age 47",
+      "tr": "Semyon İgoreviç Bardin, 47 yaşında",
+      "ar": "سيميون إيغوريفيتش باردين، 47 عامًا",
+      "kk": "Семён Игоревич Бардин, 47 жаста"
+    },
+    "story": {
+      "ru": "С 20:00 до 21:30 я не покидал прощальный концерт. В номер никто не входил: единственный ключ находился на стойке администратора. Чемодан взломали, часы и 180 000 рублей исчезли.",
+      "en": "From 20:00 to 21:30 I never left the farewell concert. Nobody entered my room: the only key was lying at the reception desk. My suitcase was forced open, and a watch and 180,000 roubles are gone.",
+      "tr": "Saat 20:00–21:30 arasında veda konserinden hiç ayrılmadım. Odama kimse girmedi: tek anahtar resepsiyon bankosundaydı. Bavulum zorlanarak açıldı, bir saat ve 180.000 ruble kayboldu.",
+      "ar": "من الساعة 20:00 حتى 21:30 لم أغادر حفل الوداع. لم يدخل أحد غرفتي: المفتاح الوحيد كان على مكتب الاستقبال. كُسرت حقيبتي واختفت ساعة و180000 روبل.",
+      "kk": "20:00-ден 21:30-ге дейін мен қоштасу концертінен шыққан жоқпын. Нөмірге ешкім кірген жоқ: жалғыз кілт әкімшінің сөресінде жатты. Чемодан бұзылып ашылған, сағат пен 180 000 рубль жоғалған."
+    }
+  },
+  "coverImage": "covers/packs/sanatorium-priboy-01.svg",
+  "personImage": "people/packs/sanatorium-priboy/semyon_bardin.webp",
+  "client": {
+    "role": {
+      "ru": "Заявитель · отдыхающий санатория «Прибой»",
+      "en": "Claimant · guest of the Priboy sanatorium",
+      "tr": "Talep sahibi · «Priboy» sanatoryumu konuğu",
+      "ar": "مقدم الطلب · نزيل مصحة «بريبوي»",
+      "kk": "Өтініш беруші · «Прибой» санаторийінің демалушысы"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Номер",
+          "en": "Room",
+          "tr": "Oda",
+          "ar": "الغرفة",
+          "kk": "Нөмір"
+        },
+        "v": {
+          "ru": "№214",
+          "en": "No. 214",
+          "tr": "No. 214",
+          "ar": "رقم 214",
+          "kk": "№214"
+        }
+      },
+      {
+        "k": {
+          "ru": "Смена",
+          "en": "Shift",
+          "tr": "Vardiya",
+          "ar": "الوردية",
+          "kk": "Ауысым"
+        },
+        "v": {
+          "ru": "Последняя смена, август 2026",
+          "en": "The last shift, August 2026",
+          "tr": "Son vardiya, Ağustos 2026",
+          "ar": "الوردية الأخيرة، أغسطس 2026",
+          "kk": "Соңғы ауысым, 2026 жылғы тамыз"
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "SP01-E1",
+      "order": 1,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал электронного замка",
+        "en": "Electronic Lock Log",
+        "tr": "Elektronik Kilit Kaydı",
+        "ar": "سجل القفل الإلكتروني",
+        "kk": "Электрондық құлып журналы"
+      },
+      "content": {
+        "ru": "20:47 — дверь 214 открыта гостевым ключом-картой №214-G, закреплённым за Бардиным. 20:58 — дверь закрыта тем же ключом. Служебные карты в этот интервал не использовались.",
+        "en": "20:47 — door 214 opened with guest key card No. 214-G, issued to Bardin. 20:58 — door closed with the same key. No service card was used within that interval.",
+        "tr": "20:47 — 214 numaralı kapı, Bardin’e verilen 214-G misafir kartıyla açıldı. 20:58 — aynı kartla kapatıldı. Bu aralıkta hiçbir servis kartı kullanılmadı.",
+        "ar": "20:47 — فُتح الباب 214 ببطاقة النزيل رقم 214-G المسجلة باسم باردين. 20:58 — أُغلق بالبطاقة نفسها. ولم تُستخدم أي بطاقة خدمة خلال تلك الفترة.",
+        "kk": "20:47 — 214 есігі Бардинге тіркелген №214-G қонақ кілт-картасымен ашылған. 20:58 — сол кілтпен жабылған. Бұл аралықта қызметтік карталар қолданылмаған."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Номер открыт собственным ключом заявителя, который по заявлению всё время лежал на стойке — запертого без доступа номера не было.",
+        "en": "The room was opened with the claimant's own key, which he says never left the reception desk — there was no locked room without access.",
+        "tr": "Oda, talep sahibinin kendi anahtarıyla açıldı; oysa anahtarın hiç bankodan ayrılmadığını söylüyor — erişimsiz kilitli bir oda söz konusu değil.",
+        "ar": "فُتحت الغرفة بمفتاح مقدم الطلب نفسه الذي يقول إنه لم يفارق مكتب الاستقبال، فلا وجود لغرفة مقفلة يتعذر الوصول إليها.",
+        "kk": "Нөмір өтініш берушінің өз кілтімен ашылған, ал ол кілт үнемі сөреде жатты дейді — қол жетімсіз құлыптаулы нөмір болмаған."
+      },
+      "statementLink": {
+        "statementId": "claim_locked",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Номер открыт собственным ключом заявителя, который по заявлению всё время лежал на стойке — запертого без доступа номера не было.",
+          "en": "The room was opened with the claimant's own key, which he says never left the reception desk — there was no locked room without access.",
+          "tr": "Oda, talep sahibinin kendi anahtarıyla açıldı; oysa anahtarın hiç bankodan ayrılmadığını söylüyor — erişimsiz kilitli bir oda söz konusu değil.",
+          "ar": "فُتحت الغرفة بمفتاح مقدم الطلب نفسه الذي يقول إنه لم يفارق مكتب الاستقبال، فلا وجود لغرفة مقفلة يتعذر الوصول إليها.",
+          "kk": "Нөмір өтініш берушінің өз кілтімен ашылған, ал ол кілт үнемі сөреде жатты дейді — қол жетімсіз құлыптаулы нөмір болмаған."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_locked",
+        "reason": {
+          "ru": "Номер открыт собственным ключом заявителя, который по заявлению всё время лежал на стойке — запертого без доступа номера не было.",
+          "en": "The room was opened with the claimant's own key, which he says never left the reception desk — there was no locked room without access.",
+          "tr": "Oda, talep sahibinin kendi anahtarıyla açıldı; oysa anahtarın hiç bankodan ayrılmadığını söylüyor — erişimsiz kilitli bir oda söz konusu değil.",
+          "ar": "فُتحت الغرفة بمفتاح مقدم الطلب نفسه الذي يقول إنه لم يفارق مكتب الاستقبال، فلا وجود لغرفة مقفلة يتعذر الوصول إليها.",
+          "kk": "Нөмір өтініш берушінің өз кілтімен ашылған, ал ол кілт үнемі сөреде жатты дейді — қол жетімсіз құлыптаулы нөмір болмаған."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/sanatorium-priboy/sp01-e1.webp",
+        "logPrompt": "electronic lock log, room 214"
+      }
+    },
+    {
+      "id": "SP01-E2",
+      "order": 2,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Кадр санаторного фотографа",
+        "en": "Frame by the Sanatorium Photographer",
+        "tr": "Sanatoryum Fotoğrafçısının Karesi",
+        "ar": "لقطة مصوّر المصحة",
+        "kk": "Санаторий фотографының кадры"
+      },
+      "content": {
+        "ru": "20:45 — Бардин снят в проходе у лестницы западного холла, спиной к сцене. На переднем плане Борис Крестов продолжает объявлять номер: концерт идёт без перерыва до 21:30.",
+        "en": "20:45 — Bardin is captured in the passage by the west-hall staircase, his back to the stage. In the foreground Boris Krestov is still announcing the act: the concert runs without a break until 21:30.",
+        "tr": "20:45 — Bardin, batı holündeki merdivenin yanındaki geçitte, sırtı sahneye dönük olarak görüntülenmiş. Ön planda Boris Krestov numarayı duyurmayı sürdürüyor: konser 21:30’a kadar arasız sürüyor.",
+        "ar": "20:45 — يظهر باردين في الممر قرب درج البهو الغربي مديرًا ظهره للمسرح. وفي المقدمة لا يزال بوريس كريستوف يقدّم الفقرة: الحفل مستمر بلا استراحة حتى 21:30.",
+        "kk": "20:45 — Бардин батыс холдағы баспалдақ маңындағы өтпеде, сахнаға арқасын беріп түсірілген. Алдыңғы қатарда Борис Крестов нөмірді жариялап тұр: концерт 21:30-ға дейін үзіліссіз жүреді."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "В 20:45 заявитель находится не в зале, а на пути к жилому корпусу — за две минуты до открытия его номера.",
+        "en": "At 20:45 the claimant is not in the hall but on his way to the residential wing — two minutes before his room was opened.",
+        "tr": "20:45’te talep sahibi salonda değil, konaklama bloğuna giden yolda; odasının açılmasından iki dakika önce.",
+        "ar": "في 20:45 لم يكن مقدم الطلب في القاعة بل في طريقه إلى جناح الإقامة، قبل دقيقتين من فتح غرفته.",
+        "kk": "20:45-те өтініш беруші залда емес, тұрғын корпусқа бара жатыр — нөмірі ашылардан екі минут бұрын."
+      },
+      "statementLink": {
+        "statementId": "claim_concert",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "В 20:45 заявитель находится не в зале, а на пути к жилому корпусу — за две минуты до открытия его номера.",
+          "en": "At 20:45 the claimant is not in the hall but on his way to the residential wing — two minutes before his room was opened.",
+          "tr": "20:45’te talep sahibi salonda değil, konaklama bloğuna giden yolda; odasının açılmasından iki dakika önce.",
+          "ar": "في 20:45 لم يكن مقدم الطلب في القاعة بل في طريقه إلى جناح الإقامة، قبل دقيقتين من فتح غرفته.",
+          "kk": "20:45-те өтініш беруші залда емес, тұрғын корпусқа бара жатыр — нөмірі ашылардан екі минут бұрын."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_concert",
+        "reason": {
+          "ru": "В 20:45 заявитель находится не в зале, а на пути к жилому корпусу — за две минуты до открытия его номера.",
+          "en": "At 20:45 the claimant is not in the hall but on his way to the residential wing — two minutes before his room was opened.",
+          "tr": "20:45’te talep sahibi salonda değil, konaklama bloğuna giden yolda; odasının açılmasından iki dakika önce.",
+          "ar": "في 20:45 لم يكن مقدم الطلب في القاعة بل في طريقه إلى جناح الإقامة، قبل دقيقتين من فتح غرفته.",
+          "kk": "20:45-те өтініш беруші залда емес, тұрғын корпусқа бара жатыр — нөмірі ашылардан екі минут бұрын."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/sanatorium-priboy/sp01-e2.webp",
+        "cameraId": "HALL-2",
+        "cameraModel": "Priboy Watch 4"
+      }
+    },
+    {
+      "id": "SP01-E3",
+      "order": 3,
+      "type": "document",
+      "title": {
+        "ru": "Опись осмотра номера",
+        "en": "Room Inspection Inventory",
+        "tr": "Oda İnceleme Tutanağı",
+        "ar": "محضر معاينة الغرفة",
+        "kk": "Нөмірді тексеру тізімдемесі"
+      },
+      "content": {
+        "ru": "Дверная коробка, петли и личинка замка без повреждений. Замок чемодана открыт штатно, кодовые барабаны выставлены на рабочую комбинацию, следов отжима нет.",
+        "en": "The door frame, hinges and lock cylinder are undamaged. The suitcase lock was opened normally, the code wheels stand at the working combination, and there are no pry marks.",
+        "tr": "Kapı kasası, menteşeler ve kilit göbeği hasarsız. Bavul kilidi normal şekilde açılmış, kod tamburları çalışma kombinasyonunda ve zorlama izi yok.",
+        "ar": "إطار الباب والمفصلات وأسطوانة القفل سليمة. قفل الحقيبة فُتح بشكل طبيعي، وأسطوانات الرمز على التركيبة المعتادة، ولا آثار عنوة.",
+        "kk": "Есік жақтауы, топсалар мен құлып өзегі бүлінбеген. Чемодан құлпы қалыпты ашылған, код барабандары жұмыс комбинациясында тұр, сындыру ізі жоқ."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Отсутствие взлома выглядит подозрительно, но само по себе не опровергает ни запертую дверь, ни присутствие на концерте: замок мог открыть любой обладатель кода.",
+        "en": "The absence of forced entry looks suspicious, yet on its own it refutes neither the locked door nor the concert alibi: anyone knowing the code could open the lock.",
+        "tr": "Zorlama izinin olmaması şüpheli görünse de tek başına ne kilitli kapıyı ne de konser mazeretini çürütür: kodu bilen herkes kilidi açabilirdi.",
+        "ar": "غياب آثار الاقتحام يبدو مريبًا، لكنه وحده لا ينفي الباب المقفل ولا الوجود في الحفل: أي شخص يعرف الرمز يستطيع فتح القفل.",
+        "kk": "Бұзу ізінің жоқтығы күдікті көрінеді, бірақ ол өздігінен құлыптаулы есікті де, концерттегі болуды да жоққа шығармайды: кодты білетін кез келген адам аша алады."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Отсутствие взлома выглядит подозрительно, но само по себе не опровергает ни запертую дверь, ни присутствие на концерте: замок мог открыть любой обладатель кода.",
+          "en": "The absence of forced entry looks suspicious, yet on its own it refutes neither the locked door nor the concert alibi: anyone knowing the code could open the lock.",
+          "tr": "Zorlama izinin olmaması şüpheli görünse de tek başına ne kilitli kapıyı ne de konser mazeretini çürütür: kodu bilen herkes kilidi açabilirdi.",
+          "ar": "غياب آثار الاقتحام يبدو مريبًا، لكنه وحده لا ينفي الباب المقفل ولا الوجود في الحفل: أي شخص يعرف الرمز يستطيع فتح القفل.",
+          "kk": "Бұзу ізінің жоқтығы күдікті көрінеді, бірақ ол өздігінен құлыптаулы есікті де, концерттегі болуды да жоққа шығармайды: кодты білетін кез келген адам аша алады."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/sanatorium-priboy/sp01-e3.webp"
+      }
+    },
+    {
+      "id": "SP01-E4",
+      "order": 4,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показание Веры Сазоновой",
+        "en": "Statement by Vera Sazonova",
+        "tr": "Vera Sazonova’nın İfadesi",
+        "ar": "إفادة فيرا سازونوفا",
+        "kk": "Вера Сазонованың айғақтамасы"
+      },
+      "content": {
+        "ru": "«Запасной ключ от 214-го висел на пломбе до 22:10, пломбу снимали при мне. А гостевую карту постояльцы носят с собой — я не нянька при чужих карманах».",
+        "en": "\"The spare key to 214 hung under seal until 22:10; the seal was broken in my presence. As for the guest card, residents carry it themselves — I am not a nursemaid for other people's pockets.\"",
+        "tr": "«214’ün yedek anahtarı 22:10’a kadar mühürlüydü, mühür benim önümde açıldı. Misafir kartını ise konuklar yanlarında taşır — başkalarının cebine dadılık etmem.»",
+        "ar": "«المفتاح الاحتياطي للغرفة 214 كان مختومًا حتى 22:10، وفُضّ الختم أمامي. أما بطاقة النزيل فيحملها النزلاء بأنفسهم، ولستُ مربية لجيوب الآخرين.»",
+        "kk": "«214-тің қосалқы кілті 22:10-ға дейін пломбада ілулі тұрды, пломба менің көзімше алынды. Ал қонақ картасын тұрғындар өзімен алып жүреді — мен бөтен қалталардың бағушысы емеспін»."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Свидетельство закрывает версию о запасном ключе и оставляет единственным работающим ключом гостевую карту самого заявителя.",
+        "en": "The statement rules out the spare key and leaves the claimant's own guest card as the only working key.",
+        "tr": "İfade yedek anahtar ihtimalini kapatıyor ve çalışan tek anahtar olarak talep sahibinin misafir kartını bırakıyor.",
+        "ar": "تستبعد الإفادة فرضية المفتاح الاحتياطي وتترك بطاقة النزيل الخاصة بمقدم الطلب المفتاح الوحيد العامل.",
+        "kk": "Айғақтама қосалқы кілт нұсқасын жабады және жұмыс істейтін жалғыз кілт ретінде өтініш берушінің қонақ картасын қалдырады."
+      },
+      "statementLink": {
+        "statementId": "claim_locked",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Свидетельство закрывает версию о запасном ключе и оставляет единственным работающим ключом гостевую карту самого заявителя.",
+          "en": "The statement rules out the spare key and leaves the claimant's own guest card as the only working key.",
+          "tr": "İfade yedek anahtar ihtimalini kapatıyor ve çalışan tek anahtar olarak talep sahibinin misafir kartını bırakıyor.",
+          "ar": "تستبعد الإفادة فرضية المفتاح الاحتياطي وتترك بطاقة النزيل الخاصة بمقدم الطلب المفتاح الوحيد العامل.",
+          "kk": "Айғақтама қосалқы кілт нұсқасын жабады және жұмыс істейтін жалғыз кілт ретінде өтініш берушінің қонақ картасын қалдырады."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/sanatorium-priboy/sp01-e4.webp"
+      }
+    },
+    {
+      "id": "SP01-E5",
+      "order": 5,
+      "type": "surface_reveal",
+      "title": {
+        "ru": "Запылённая рамка над столом",
+        "en": "The Dusty Frame Above the Desk",
+        "tr": "Masanın Üstündeki Tozlu Çerçeve",
+        "ar": "الإطار المغبر فوق المكتب",
+        "kk": "Үстел үстіндегі шаңды рамка"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Под пылью — групповое фото 1998 года: в среднем ряду вырезана одна фигура, на обороте надпись «Последняя смена. 29.08.98».",
+        "en": "Under the dust is a 1998 group photograph: one figure has been cut out of the middle row, and the back reads \"The last shift. 29.08.98\".",
+        "tr": "Tozun altında 1998 tarihli bir grup fotoğrafı var: orta sıradan bir kişi kesilmiş ve arkasında «Son vardiya. 29.08.98» yazıyor.",
+        "ar": "تحت الغبار صورة جماعية من عام 1998: قُصّ شخص من الصف الأوسط، وعلى ظهرها «الوردية الأخيرة. 29.08.98».",
+        "kk": "Шаңның астында 1998 жылғы топтық фото: ортаңғы қатардан бір тұлға қиып алынған, артында «Соңғы ауысым. 29.08.98» деп жазылған."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Под пылью — групповое фото 1998 года: в среднем ряду вырезана одна фигура, на обороте надпись «Последняя смена. 29.08.98».",
+          "en": "Under the dust is a 1998 group photograph: one figure has been cut out of the middle row, and the back reads \"The last shift. 29.08.98\".",
+          "tr": "Tozun altında 1998 tarihli bir grup fotoğrafı var: orta sıradan bir kişi kesilmiş ve arkasında «Son vardiya. 29.08.98» yazıyor.",
+          "ar": "تحت الغبار صورة جماعية من عام 1998: قُصّ شخص من الصف الأوسط، وعلى ظهرها «الوردية الأخيرة. 29.08.98».",
+          "kk": "Шаңның астында 1998 жылғы топтық фото: ортаңғы қатардан бір тұлға қиып алынған, артында «Соңғы ауысым. 29.08.98» деп жазылған."
+        }
+      },
+      "evidenceTier": "supporting",
+      "description": {
+        "ru": "В номере 214 над столом висит рамка, которую не снимали много лет. Стекло покрыто плотным слоем пыли.",
+        "en": "A frame that has not been taken down for years hangs above the desk in room 214. The glass is covered with a thick layer of dust.",
+        "tr": "214 numaralı odada masanın üstünde yıllardır indirilmemiş bir çerçeve asılı. Cam kalın bir toz tabakasıyla kaplı.",
+        "ar": "في الغرفة 214 يتدلى فوق المكتب إطار لم يُنزل منذ سنوات، وزجاجه مغطى بطبقة كثيفة من الغبار.",
+        "kk": "214 нөмірде үстел үстінде жылдар бойы алынбаған рамка ілулі тұр. Шынысы қалың шаң қабатымен жабылған."
+      },
+      "instruction": {
+        "ru": "Счистите пыль со стекла и рассмотрите снимок под ней.",
+        "en": "Wipe the dust off the glass and examine the photograph beneath it.",
+        "tr": "Camdaki tozu silin ve altındaki fotoğrafı inceleyin.",
+        "ar": "امسح الغبار عن الزجاج وافحص الصورة تحته.",
+        "kk": "Шыныдағы шаңды сүртіп, астындағы суретті қараңыз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/sanatorium-priboy/sp01-e5.webp",
+        "coverTexture": "shared/surface/dirt.svg",
+        "revealMasks": [
+          "shared/surface/trace-mask.svg"
+        ],
+        "toolCursor": "shared/surface/cloth-cursor.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": false,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Игрок сам открывает первую нить сезона и видит, что с фотографии кого-то аккуратно вырезали.",
+          "en": "The player uncovers the season's first thread themselves and sees that someone has been carefully cut out of the photograph.",
+          "tr": "Oyuncu sezonun ilk ipucunu kendisi açığa çıkarır ve fotoğraftan birinin özenle kesildiğini görür.",
+          "ar": "يكشف اللاعب بنفسه أول خيط في الموسم ويرى أن أحدهم قُصّ من الصورة بعناية.",
+          "kk": "Ойыншы маусымның алғашқы жібін өзі ашады және фотодан біреудің ұқыпты қиылып алынғанын көреді."
+        },
+        "playerAction": {
+          "ru": "Счистите пыль со стекла и рассмотрите снимок под ней.",
+          "en": "Wipe the dust off the glass and examine the photograph beneath it.",
+          "tr": "Camdaki tozu silin ve altındaki fotoğrafı inceleyin.",
+          "ar": "امسح الغبار عن الزجاج وافحص الصورة تحته.",
+          "kk": "Шыныдағы шаңды сүртіп, астындағы суретті қараңыз."
+        },
+        "conclusion": {
+          "ru": "Под пылью — групповое фото 1998 года: в среднем ряду вырезана одна фигура, на обороте надпись «Последняя смена. 29.08.98».",
+          "en": "Under the dust is a 1998 group photograph: one figure has been cut out of the middle row, and the back reads \"The last shift. 29.08.98\".",
+          "tr": "Tozun altında 1998 tarihli bir grup fotoğrafı var: orta sıradan bir kişi kesilmiş ve arkasında «Son vardiya. 29.08.98» yazıyor.",
+          "ar": "تحت الغبار صورة جماعية من عام 1998: قُصّ شخص من الصف الأوسط، وعلى ظهرها «الوردية الأخيرة. 29.08.98».",
+          "kk": "Шаңның астында 1998 жылғы топтық фото: ортаңғы қатардан бір тұлға қиып алынған, артында «Соңғы ауысым. 29.08.98» деп жазылған."
+        }
+      },
+      "data": {
+        "mode": "erase",
+        "coverType": "dust",
+        "brush": {
+          "radius": 44,
+          "hardness": 0.6,
+          "opacity": 0.86,
+          "spacing": 8
+        },
+        "completion": {
+          "type": "discover_any",
+          "requiredTraceIds": [
+            "cut-out-figure"
+          ]
+        },
+        "traces": [
+          {
+            "id": "cut-out-figure",
+            "label": "Пустой силуэт в среднем ряду",
+            "labelEn": "An empty silhouette in the middle row",
+            "requiredRevealPercent": 52,
+            "mask": "shared/surface/trace-mask.svg",
+            "shape": "mask",
+            "isContradiction": false,
+            "conclusion": "На групповом снимке 1998 года одна фигура вырезана ножницами по контуру; на обороте — «Последняя смена. 29.08.98».",
+            "conclusionEn": "In the 1998 group photograph one figure has been cut out along its outline; the back reads \"The last shift. 29.08.98\"."
+          }
+        ]
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Журнал замка показывает, что номер 214 открыт гостевой картой самого Бардина в 20:47.",
+      "За две минуты до этого фотограф снял заявителя у лестницы, хотя он утверждал, что не покидал концерт.",
+      "Взлома не было: чемодан открыт штатно, а запасной ключ до 22:10 оставался под пломбой."
+    ],
+    "en": [
+      "The lock log shows room 214 opened with Bardin's own guest card at 20:47.",
+      "Two minutes earlier the photographer captured the claimant by the staircase, though he claimed never to have left the concert.",
+      "There was no break-in: the suitcase was opened normally and the spare key stayed under seal until 22:10."
+    ],
+    "tr": [
+      "Kilit kaydı, 214 numaralı odanın 20:47’de Bardin’in kendi misafir kartıyla açıldığını gösteriyor.",
+      "İki dakika önce fotoğrafçı, konserden hiç ayrılmadığını söyleyen talep sahibini merdivenin yanında görüntülemiş.",
+      "Zorla giriş yok: bavul normal şekilde açılmış ve yedek anahtar 22:10’a kadar mühür altında kalmış."
+    ],
+    "ar": [
+      "يُظهر سجل القفل أن الغرفة 214 فُتحت ببطاقة باردين الخاصة في 20:47.",
+      "وقبل دقيقتين صوّر المصوّر مقدم الطلب قرب الدرج، رغم زعمه أنه لم يغادر الحفل.",
+      "لا اقتحام: فُتحت الحقيبة بشكل طبيعي وبقي المفتاح الاحتياطي مختومًا حتى 22:10."
+    ],
+    "kk": [
+      "Құлып журналы 214 нөмірдің 20:47-де Бардиннің өз қонақ картасымен ашылғанын көрсетеді.",
+      "Екі минут бұрын фотограф концерттен шықпадым деген өтініш берушіні баспалдақ маңында түсірген.",
+      "Бұзып кіру болмаған: чемодан қалыпты ашылған, қосалқы кілт 22:10-ға дейін пломбада тұрған."
+    ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "stampable": false,
+      "text": {
+        "ru": "Кража из запертого номера подлежит возмещению.",
+        "en": "The theft from a locked room is reimbursable.",
+        "tr": "Kilitli odadan yapılan hırsızlık tazmin edilmelidir.",
+        "ar": "السرقة من غرفة مقفلة قابلة للتعويض.",
+        "kk": "Құлыптаулы нөмірден болған ұрлық өтелуге тиіс."
+      }
+    },
+    {
+      "id": "claim_locked",
+      "stampable": true,
+      "text": {
+        "ru": "Номер был заперт, единственный ключ лежал на стойке администратора.",
+        "en": "The room was locked and the only key lay at the reception desk.",
+        "tr": "Oda kilitliydi ve tek anahtar resepsiyon bankosundaydı.",
+        "ar": "كانت الغرفة مقفلة والمفتاح الوحيد على مكتب الاستقبال.",
+        "kk": "Нөмір құлыптаулы болды, жалғыз кілт әкімші сөресінде жатты."
+      }
+    },
+    {
+      "id": "claim_concert",
+      "stampable": true,
+      "text": {
+        "ru": "С 20:00 до 21:30 я не покидал концерт.",
+        "en": "From 20:00 to 21:30 I did not leave the concert.",
+        "tr": "20:00–21:30 arasında konserden ayrılmadım.",
+        "ar": "من 20:00 حتى 21:30 لم أغادر الحفل.",
+        "kk": "20:00-ден 21:30-ге дейін концерттен шықпадым."
+      }
+    }
+  ],
+  "contentVersion": "sanatorium-priboy-1.0",
+  "narrative": {
+    "preBrief": {
+      "ru": "Последняя смена «Прибоя» началась с обычной кражи в обычном номере. Через два дня здание передадут застройщику.",
+      "en": "The Priboy's last shift begins with an ordinary theft in an ordinary room. In two days the building passes to a developer.",
+      "tr": "«Priboy»un son vardiyası, sıradan bir odadaki sıradan bir hırsızlıkla başlıyor. İki gün sonra bina bir müteahhide devredilecek.",
+      "ar": "تبدأ الوردية الأخيرة لـ«بريبوي» بسرقة عادية في غرفة عادية. وبعد يومين يُسلَّم المبنى إلى شركة تطوير.",
+      "kk": "«Прибойдың» соңғы ауысымы кәдімгі нөмірдегі кәдімгі ұрлықтан басталды. Екі күннен кейін ғимарат құрылыс салушыға беріледі."
+    },
+    "postVerdictNote": {
+      "ru": "Вера быстро пытается забрать снимок со стола: «Это не улика. Это плохая привычка бумаги — переживать людей».",
+      "en": "Vera moves quickly to take the photograph off the desk: \"That is not evidence. That is paper's bad habit of outliving people.\"",
+      "tr": "Vera fotoğrafı masadan almak için hemen yaklaşıyor: «Bu kanıt değil. Bu, kâğıdın insanlardan uzun yaşama huyu.»",
+      "ar": "تسارع فيرا لأخذ الصورة عن المكتب: «هذه ليست دليلًا. هذه عادة الورق السيئة في أن يعمّر بعد الناس.»",
+      "kk": "Вера суретті үстелден жылдам алып кетпек болады: «Бұл дәлел емес. Бұл қағаздың адамдардан ұзақ жасайтын жаман әдеті»."
+    },
+    "nextCaseTeaser": {
+      "ru": "На обороте снимка — дата, которой нет в архиве.",
+      "en": "On the back of the photograph is a date the archive does not have.",
+      "tr": "Fotoğrafın arkasında arşivde bulunmayan bir tarih var.",
+      "ar": "على ظهر الصورة تاريخ لا وجود له في الأرشيف.",
+      "kk": "Суреттің артында архивте жоқ күн тұр."
+    },
+    "seasonClue": {
+      "id": "cut-photograph",
+      "progressIndex": 1,
+      "progressTotal": 10,
+      "label": {
+        "ru": "Групповое фото 1998 года",
+        "en": "The 1998 Group Photograph",
+        "tr": "1998 Grup Fotoğrafı",
+        "ar": "الصورة الجماعية لعام 1998",
+        "kk": "1998 жылғы топтық фото"
+      },
+      "description": {
+        "ru": "Снимок сделан после концерта «Прощание с летом». Одна фигура вырезана по контуру, и никто из персонала не хочет говорить, чья она.",
+        "en": "The picture was taken after the \"Farewell to Summer\" concert. One figure has been cut out along its outline, and no member of staff will say whose it is.",
+        "tr": "Fotoğraf «Yaza Veda» konserinden sonra çekilmiş. Bir kişi konturu boyunca kesilmiş ve personelden kimse kime ait olduğunu söylemek istemiyor.",
+        "ar": "التُقطت الصورة بعد حفل «وداع الصيف». قُصّ أحد الأشخاص على طول محيطه، ولا أحد من العاملين يريد قول لمن هو.",
+        "kk": "Сурет «Жазмен қоштасу» концертінен кейін түсірілген. Бір тұлға контуры бойынша қиылған, қызметкерлердің ешқайсысы оның кім екенін айтқысы келмейді."
+      }
+    },
+    "epilogue": null
+  }
+}

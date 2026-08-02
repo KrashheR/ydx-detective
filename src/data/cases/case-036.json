@@ -575,5 +575,89 @@
     },
     "seasonClue": null,
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "maxim_yartsev",
+      "displayName": {
+        "ru": "Максим Ярцев",
+        "en": "Maxim Yartsev",
+        "tr": "Maksim Yartsev",
+        "ar": "مكسيم يارتسيف",
+        "kk": "Максим Ярцев"
+      },
+      "portraitState": "techie_humour"
+    },
+    "finalLine": {
+      "ru": "Сто восемьдесят восемь на зарядке. Наконец машина быстрее меня.",
+      "en": "One hundred eighty-eight while parked at the charger. At last the car is faster than me.",
+      "tr": "Şarjdayken yüz seksen sekiz. Sonunda araba benden hızlı.",
+      "ar": "مئة وثمانية وثمانون وهي على الشاحن. أخيرًا صارت السيارة أسرع مني.",
+      "kk": "Зарядта тұрып жүз сексен сегіз. Ақыры көлік менен жылдам."
+    },
+    "emotionalMode": "humour",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что вызывало подозрение",
+          "en": "What looked suspicious",
+          "tr": "Şüphe uyandıran şey",
+          "ar": "ما بدا مريبًا",
+          "kk": "Не күдік тудырды"
+        },
+        "text": {
+          "ru": "Телеметрия записала 188 км/ч в момент повреждения — значение, которое само по себе выглядит как попытка обмана.",
+          "en": "Telemetry logged 188 km/h at the moment of damage — a figure that by itself looks like an attempt at fraud.",
+          "tr": "Telemetri, hasar anında 188 km/s kaydetti — tek başına dolandırıcılık girişimi gibi görünen bir değer.",
+          "ar": "سجّلت القياسات عن بُعد 188 كم/س لحظة الضرر — رقم يبدو بحدّ ذاته كمحاولة احتيال.",
+          "kk": "Телеметрия зақым сәтінде 188 км/сағ жазған — өздігінен алаяқтық әрекеті сияқты көрінетін мән."
+        },
+        "evidenceIds": [
+          "ev-log"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Чем это объясняется",
+          "en": "What explains it",
+          "tr": "Bunu açıklayan şey",
+          "ar": "ما يفسر ذلك",
+          "kk": "Мұны не түсіндіреді"
+        },
+        "text": {
+          "ru": "Импульс выдало одно колесо, три других показывают 0, координаты не менялись, а камера фиксирует неподвижную машину и дугу из зарядного порта.",
+          "en": "One wheel produced the pulse, the other three read 0, the coordinates never changed, and the camera shows a stationary car with an arc from the charging port.",
+          "tr": "Darbeyi tek tekerlek üretti, diğer üçü 0 gösteriyor, koordinatlar değişmedi ve kamera hareketsiz aracı ve şarj portundan çıkan arkı gösteriyor.",
+          "ar": "أنتجت عجلة واحدة النبضة، والثلاث الأخريات تقرأ 0، ولم تتغيّر الإحداثيات، والكاميرا تُظهر سيارة ساكنة وقوسًا كهربائيًا من منفذ الشحن.",
+          "kk": "Импульсті бір дөңгелек берген, қалған үшеуі 0 көрсетеді, координаттар өзгермеген, ал камера қозғалыссыз көлікті және зарядтау портынан шыққан доғаны түсірген."
+        },
+        "evidenceIds": [
+          "ev-camera",
+          "ev-gps"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Единственный перегретый путь идёт по зарядной линии; колёса и привод холодные. Разряд в подстанцию в 22:17:08 объясняет всё.",
+          "en": "The only overheated path runs along the charging line; wheels and drivetrain are cold. The 22:17:08 strike on the substation explains everything.",
+          "tr": "Aşırı ısınan tek hat şarj hattı; tekerlekler ve aktarma organları soğuk. 22:17:08'deki trafo merkezine düşen yıldırım her şeyi açıklıyor.",
+          "ar": "المسار المفرط السخونة الوحيد هو خط الشحن؛ أما العجلات ومجموعة النقل فباردة. وضربة الساعة 22:17:08 على المحطة الفرعية تفسّر كل شيء.",
+          "kk": "Жалғыз қызып кеткен жол зарядтау желісімен өтеді; дөңгелектер мен жетек суық. 22:17:08-дегі қосалқы станцияға түскен разряд бәрін түсіндіреді."
+        },
+        "evidenceIds": [
+          "ev-melt",
+          "ev-weather",
+          "ev-station"
+        ]
+      }
+    ]
   }
 }

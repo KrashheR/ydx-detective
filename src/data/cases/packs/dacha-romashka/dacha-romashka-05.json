@@ -1,0 +1,510 @@
+{
+  "id": "dacha-romashka-05",
+  "type": "archive",
+  "difficulty": "medium",
+  "claimAmount": 132000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Потоп из сухого крана",
+    "en": "A Flood from a Dry Tap",
+    "tr": "Kuru Musluktan Sel",
+    "ar": "فيضان من صنبور جاف",
+    "kk": "Құрғақ шүмектен су тасқыны"
+  },
+  "claim": {
+    "person": {
+      "ru": "Алевтина Николаевна Шмелёва, 64 года",
+      "en": "Alevtina Nikolayevna Shmelyova, age 64",
+      "tr": "Alevtina Nikolayevna Şmelyova, 64 yaşında",
+      "ar": "أليفتينا نيكولايفنا شميليوفا، 64 عامًا",
+      "kk": "Алевтина Николаевна Шмелёва, 64 жаста"
+    },
+    "story": {
+      "ru": "После полуночи лопнула магистральная труба. Меня на участке не было, водой затопило весь погреб и уничтожило 180 банок урожая. Прошу возместить заготовки и ремонт погреба.",
+      "en": "After midnight the mains pipe burst. I was not on the plot; the water flooded the entire cellar and destroyed 180 jars of preserves. I am claiming the preserves and the cellar repair.",
+      "tr": "Gece yarısından sonra ana boru patladı. Parselde değildim; su tüm kileri bastı ve 180 kavanoz konserveyi mahvetti. Konserveler ve kiler onarımı için tazminat istiyorum.",
+      "ar": "بعد منتصف الليل انفجر الأنبوب الرئيسي. لم أكن في القطعة، وأغرقت المياه القبو بأكمله وأتلفت 180 مرطبانًا من المؤن. أطالب بتعويض المؤن وإصلاح القبو.",
+      "kk": "Түн ортасынан кейін магистральдық құбыр жарылды. Мен учаскеде болмадым, су бүкіл жертөлені басып, 180 банка дайындықты бүлдірді. Дайындықтар мен жертөле жөндеуін өтеуді сұраймын."
+    }
+  },
+  "coverImage": "covers/packs/dacha-romashka-05.svg",
+  "personImage": "people/packs/dacha-romashka/alevtina_shmelyova.webp",
+  "client": {
+    "role": {
+      "ru": "Заявитель · член СНТ «Ромашка»",
+      "en": "Claimant · member of the Romashka garden association",
+      "tr": "Başvuru sahibi · Romashka bahçe kooperatifi üyesi",
+      "ar": "مقدم الطلب · عضو في جمعية «روماشكا» للبساتين",
+      "kk": "Өтініш беруші · «Ромашка» бақ серіктестігінің мүшесі"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Участок",
+          "en": "Plot",
+          "tr": "Parsel",
+          "ar": "القطعة",
+          "kk": "Учаске"
+        },
+        "v": {
+          "ru": "№2",
+          "en": "No. 2",
+          "tr": "No. 2",
+          "ar": "رقم 2",
+          "kk": "№2"
+        }
+      },
+      {
+        "k": {
+          "ru": "Сезон",
+          "en": "Season",
+          "tr": "Sezon",
+          "ar": "الموسم",
+          "kk": "Маусым"
+        },
+        "v": {
+          "ru": "Август",
+          "en": "August",
+          "tr": "Ağustos",
+          "ar": "أغسطس",
+          "kk": "Тамыз"
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "DA05-E1",
+      "order": 1,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал водонапорной башни",
+        "en": "Water Tower Journal",
+        "tr": "Su Kulesi Kaydı",
+        "ar": "سجل خزان المياه",
+        "kk": "Су мұнарасының журналы"
+      },
+      "content": {
+        "ru": "22:00 — подача по СНТ прекращена на профилактику. 00:00–06:00 — давление в магистрали 0,0 бар. Подача возобновлена в 06:10.",
+        "en": "22:00 — supply to the association shut off for maintenance. 00:00–06:00 — mains pressure 0.0 bar. Supply resumed at 06:10.",
+        "tr": "22:00 — kooperatife su verilmesi bakım için durduruldu. 00:00–06:00 — ana hat basıncı 0,0 bar. Su 06:10’da yeniden verildi.",
+        "ar": "22:00 — أُوقف الإمداد عن الجمعية للصيانة. 00:00–06:00 — ضغط الشبكة 0.0 بار. استؤنف الإمداد في 06:10.",
+        "kk": "22:00 — серіктестікке су беру профилактикаға тоқтатылды. 00:00–06:00 — магистральдағы қысым 0,0 бар. Су 06:10-да қайта берілді."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Ночью в магистрали не было ни воды, ни давления — труба физически не могла залить погреб.",
+        "en": "The mains held neither water nor pressure that night — the pipe physically could not have flooded the cellar.",
+        "tr": "O gece ana hatta ne su ne de basınç vardı; boru kileri fiziksel olarak dolduramazdı.",
+        "ar": "لم يكن في الشبكة ماء ولا ضغط تلك الليلة، فالأنبوب لا يمكنه فيزيائيًا إغراق القبو.",
+        "kk": "Түнде магистральда су да, қысым да болмаған — құбыр жертөлені физикалық тұрғыда баса алмайды."
+      },
+      "statementLink": {
+        "statementId": "claim_source",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Ночью в магистрали не было ни воды, ни давления — труба физически не могла залить погреб.",
+          "en": "The mains held neither water nor pressure that night — the pipe physically could not have flooded the cellar.",
+          "tr": "O gece ana hatta ne su ne de basınç vardı; boru kileri fiziksel olarak dolduramazdı.",
+          "ar": "لم يكن في الشبكة ماء ولا ضغط تلك الليلة، فالأنبوب لا يمكنه فيزيائيًا إغراق القبو.",
+          "kk": "Түнде магистральда су да, қысым да болмаған — құбыр жертөлені физикалық тұрғыда баса алмайды."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_source",
+        "reason": {
+          "ru": "Ночью в магистрали не было ни воды, ни давления — труба физически не могла залить погреб.",
+          "en": "The mains held neither water nor pressure that night — the pipe physically could not have flooded the cellar.",
+          "tr": "O gece ana hatta ne su ne de basınç vardı; boru kileri fiziksel olarak dolduramazdı.",
+          "ar": "لم يكن في الشبكة ماء ولا ضغط تلك الليلة، فالأنبوب لا يمكنه فيزيائيًا إغراق القبو.",
+          "kk": "Түнде магистральда су да, қысым да болмаған — құбыр жертөлені физикалық тұрғыда баса алмайды."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da05-e1.webp",
+        "logPrompt": "water tower journal"
+      }
+    },
+    {
+      "id": "DA05-E2",
+      "order": 2,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера у калитки",
+        "en": "Camera at the Gate",
+        "tr": "Bahçe Kapısındaki Kamera",
+        "ar": "الكاميرا عند البوابة",
+        "kk": "Қақпа алдындағы камера"
+      },
+      "content": {
+        "ru": "23:37 — заявительница возвращается на участок с сумкой. 23:52 — открывает сливной клапан надувного бассейна, вода уходит вдоль дорожки к люку погреба. 00:14 — уходит в дом.",
+        "en": "23:37 — the claimant returns to the plot with a bag. 23:52 — she opens the drain valve of the inflatable pool and the water runs along the path towards the cellar hatch. 00:14 — she goes into the house.",
+        "tr": "23:37 — talep sahibi elinde çantayla parsele dönüyor. 23:52 — şişme havuzun tahliye vanasını açıyor, su patika boyunca kiler kapağına doğru akıyor. 00:14 — eve giriyor.",
+        "ar": "23:37 — تعود مقدمة الطلب إلى القطعة وبيدها حقيبة. 23:52 — تفتح صمام تصريف المسبح النفخي فتجري المياه على الممر نحو فتحة القبو. 00:14 — تدخل المنزل.",
+        "kk": "23:37 — өтініш беруші сөмкесімен учаскеге оралады. 23:52 — үрмелі бассейннің ағызу клапанын ашады, су жол бойымен жертөле люгіне қарай ағады. 00:14 — үйге кіреді."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Заявительница была на участке и сама открыла слив бассейна — и отсутствие, и источник воды указаны неверно.",
+        "en": "The claimant was on the plot and opened the pool drain herself — both her absence and the source of the water are stated falsely.",
+        "tr": "Talep sahibi parseldeydi ve havuzun tahliyesini kendisi açtı; hem yokluğu hem de suyun kaynağı yanlış bildirilmiş.",
+        "ar": "كانت مقدمة الطلب في القطعة وفتحت تصريف المسبح بنفسها، فغيابها ومصدر المياه كلاهما مذكور خطأ.",
+        "kk": "Өтініш беруші учаскеде болған және бассейннің ағызғышын өзі ашқан — болмауы да, судың көзі де дұрыс көрсетілмеген."
+      },
+      "statementLink": {
+        "statementId": "claim_absence",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Заявительница была на участке и сама открыла слив бассейна — и отсутствие, и источник воды указаны неверно.",
+          "en": "The claimant was on the plot and opened the pool drain herself — both her absence and the source of the water are stated falsely.",
+          "tr": "Talep sahibi parseldeydi ve havuzun tahliyesini kendisi açtı; hem yokluğu hem de suyun kaynağı yanlış bildirilmiş.",
+          "ar": "كانت مقدمة الطلب في القطعة وفتحت تصريف المسبح بنفسها، فغيابها ومصدر المياه كلاهما مذكور خطأ.",
+          "kk": "Өтініш беруші учаскеде болған және бассейннің ағызғышын өзі ашқан — болмауы да, судың көзі де дұрыс көрсетілмеген."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_absence",
+        "reason": {
+          "ru": "Заявительница была на участке и сама открыла слив бассейна — и отсутствие, и источник воды указаны неверно.",
+          "en": "The claimant was on the plot and opened the pool drain herself — both her absence and the source of the water are stated falsely.",
+          "tr": "Talep sahibi parseldeydi ve havuzun tahliyesini kendisi açtı; hem yokluğu hem de suyun kaynağı yanlış bildirilmiş.",
+          "ar": "كانت مقدمة الطلب في القطعة وفتحت تصريف المسبح بنفسها، فغيابها ومصدر المياه كلاهما مذكور خطأ.",
+          "kk": "Өтініш беруші учаскеде болған және бассейннің ағызғышын өзі ашқан — болмауы да, судың көзі де дұрыс көрсетілмеген."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da05-e2.webp",
+        "cameraId": "GATE-2",
+        "cameraModel": "DachaCam 2"
+      }
+    },
+    {
+      "id": "DA05-E3",
+      "order": 3,
+      "type": "document",
+      "title": {
+        "ru": "Лабораторная справка по воде",
+        "en": "Water Laboratory Report",
+        "tr": "Su Laboratuvar Raporu",
+        "ar": "تقرير مختبر المياه",
+        "kk": "Су бойынша зертхана анықтамасы"
+      },
+      "content": {
+        "ru": "В пробе из погреба обнаружены стабилизированный хлор и альгицид — состав средства для бассейнов. Железа и ржавчины, характерных для магистрали, нет.",
+        "en": "The cellar sample contains stabilised chlorine and an algaecide — the composition of pool chemicals. There is no iron or rust typical of the mains.",
+        "tr": "Kilerden alınan numunede stabilize klor ve alg önleyici bulundu; bunlar havuz kimyasallarının bileşimi. Ana hatta özgü demir ve pas yok.",
+        "ar": "تحتوي عيّنة القبو على كلور مثبَّت ومبيد طحالب، وهي تركيبة مواد المسابح. ولا يوجد حديد أو صدأ يميّز الشبكة الرئيسية.",
+        "kk": "Жертөледен алынған сынамада тұрақтандырылған хлор мен альгицид табылды — бассейн құралының құрамы. Магистральға тән темір мен тот жоқ."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Анализ показывает происхождение воды, но самостоятельный вывод о времени и присутствии дают журнал башни и камера.",
+        "en": "The analysis shows where the water came from, while the journal and the camera settle the timing and her presence.",
+        "tr": "Analiz suyun kaynağını gösteriyor; zamanı ve mevcudiyeti ise kule kaydı ile kamera belirliyor.",
+        "ar": "يُظهر التحليل مصدر المياه، أما التوقيت والحضور فيحسمهما سجل الخزان والكاميرا.",
+        "kk": "Талдау судың шығу тегін көрсетеді, ал уақыт пен қатысуды мұнара журналы мен камера анықтайды."
+      },
+      "statementLink": {
+        "statementId": "claim_source",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Анализ показывает происхождение воды, но самостоятельный вывод о времени и присутствии дают журнал башни и камера.",
+          "en": "The analysis shows where the water came from, while the journal and the camera settle the timing and her presence.",
+          "tr": "Analiz suyun kaynağını gösteriyor; zamanı ve mevcudiyeti ise kule kaydı ile kamera belirliyor.",
+          "ar": "يُظهر التحليل مصدر المياه، أما التوقيت والحضور فيحسمهما سجل الخزان والكاميرا.",
+          "kk": "Талдау судың шығу тегін көрсетеді, ал уақыт пен қатысуды мұнара журналы мен камера анықтайды."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da05-e3.webp"
+      }
+    },
+    {
+      "id": "DA05-E4",
+      "order": 4,
+      "type": "photo",
+      "title": {
+        "ru": "Фото стеллажей погреба",
+        "en": "Photo of the Cellar Shelves",
+        "tr": "Kiler Raflarının Fotoğrafı",
+        "ar": "صورة رفوف القبو",
+        "kk": "Жертөле сөрелерінің фотосы"
+      },
+      "content": {
+        "ru": "Вода поднялась на 14 см. Пострадали 16 банок нижнего ряда; на верхних полках 164 банки целы, этикетки сухие.",
+        "en": "The water rose 14 cm. Sixteen jars on the bottom row were affected; 164 jars on the upper shelves are intact with dry labels.",
+        "tr": "Su 14 cm yükselmiş. Alt sıradaki 16 kavanoz zarar görmüş; üst raflardaki 164 kavanoz sağlam, etiketleri kuru.",
+        "ar": "ارتفعت المياه 14 سم. تضرر 16 مرطبانًا في الصف السفلي، بينما 164 مرطبانًا في الرفوف العليا سليمة وملصقاتها جافة.",
+        "kk": "Су 14 см көтерілген. Төменгі қатардағы 16 банка зақымданған; жоғарғы сөрелердегі 164 банка бүтін, жапсырмалары құрғақ."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Масштаб ущерба завышен более чем в десять раз, но объём — вопрос суммы выплаты, а не проверяемая фраза о причине или присутствии.",
+        "en": "The scale of the loss is overstated more than tenfold, yet volume affects the payout rather than being a checkable sentence about cause or presence.",
+        "tr": "Zararın ölçeği on kattan fazla abartılmış; ancak miktar, neden veya mevcudiyete dair doğrulanabilir bir cümle değil, ödeme tutarını ilgilendirir.",
+        "ar": "حجم الضرر مبالغ فيه أكثر من عشرة أضعاف، لكن الكمية تخص مبلغ التعويض لا جملة قابلة للتحقق عن السبب أو الحضور.",
+        "kk": "Залал көлемі он еседен астам асырылған, бірақ көлем — төлем сомасына қатысты мәселе, себеп немесе қатысу туралы тексерілетін тұжырым емес."
+      },
+      "statementLink": {
+        "statementId": "claim_scale",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Масштаб ущерба завышен более чем в десять раз, но объём — вопрос суммы выплаты, а не проверяемая фраза о причине или присутствии.",
+          "en": "The scale of the loss is overstated more than tenfold, yet volume affects the payout rather than being a checkable sentence about cause or presence.",
+          "tr": "Zararın ölçeği on kattan fazla abartılmış; ancak miktar, neden veya mevcudiyete dair doğrulanabilir bir cümle değil, ödeme tutarını ilgilendirir.",
+          "ar": "حجم الضرر مبالغ فيه أكثر من عشرة أضعاف، لكن الكمية تخص مبلغ التعويض لا جملة قابلة للتحقق عن السبب أو الحضور.",
+          "kk": "Залал көлемі он еседен астам асырылған, бірақ көлем — төлем сомасына қатысты мәселе, себеп немесе қатысу туралы тексерілетін тұжырым емес."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da05-e4.webp",
+        "filename": "da05-e4.webp"
+      }
+    },
+    {
+      "id": "DA05-E5",
+      "order": 5,
+      "type": "surface_reveal",
+      "title": {
+        "ru": "Осмотр нижней полки",
+        "en": "Examining the Bottom Shelf",
+        "tr": "Alt Rafın İncelenmesi",
+        "ar": "فحص الرف السفلي",
+        "kk": "Төменгі сөрені тексеру"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Под грязью читается старая табличка: «Участок коллективного сада №13». К причине потопа она отношения не имеет.",
+        "en": "Under the dirt an old sign reads: \"Collective orchard plot No. 13\". It has no bearing on the cause of the flood.",
+        "tr": "Çamurun altında eski bir levha okunuyor: «Kolektif bahçe parseli No. 13». Su baskınının nedeniyle ilgisi yok.",
+        "ar": "تحت الوحل تُقرأ لافتة قديمة: «قطعة البستان الجماعي رقم 13». ولا علاقة لها بسبب الفيضان.",
+        "kk": "Кірдің астынан ескі тақтайша оқылады: «Ұжымдық бақтың №13 учаскесі». Су тасқынының себебіне қатысы жоқ."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Под грязью читается старая табличка: «Участок коллективного сада №13». К причине потопа она отношения не имеет.",
+          "en": "Under the dirt an old sign reads: \"Collective orchard plot No. 13\". It has no bearing on the cause of the flood.",
+          "tr": "Çamurun altında eski bir levha okunuyor: «Kolektif bahçe parseli No. 13». Su baskınının nedeniyle ilgisi yok.",
+          "ar": "تحت الوحل تُقرأ لافتة قديمة: «قطعة البستان الجماعي رقم 13». ولا علاقة لها بسبب الفيضان.",
+          "kk": "Кірдің астынан ескі тақтайша оқылады: «Ұжымдық бақтың №13 учаскесі». Су тасқынының себебіне қатысы жоқ."
+        }
+      },
+      "evidenceTier": "supporting",
+      "description": {
+        "ru": "Нижнюю полку погреба сколотили из старой доски. После потопа она покрыта илом и грязью.",
+        "en": "The bottom shelf of the cellar was knocked together from an old board. After the flood it is covered in silt and dirt.",
+        "tr": "Kilerin alt rafı eski bir tahtadan çakılmış. Su baskınından sonra üzeri mil ve çamurla kaplı.",
+        "ar": "رُكّب الرف السفلي للقبو من لوح قديم، وبعد الفيضان صار مغطى بالطمي والوحل.",
+        "kk": "Жертөленің төменгі сөресі ескі тақтайдан құрастырылған. Су тасқынынан кейін ол лай мен кірге көмілген."
+      },
+      "instruction": {
+        "ru": "Очистите доску и прочитайте, что на ней написано.",
+        "en": "Clean the board and read what is written on it.",
+        "tr": "Tahtayı temizleyin ve üzerinde yazanı okuyun.",
+        "ar": "نظّف اللوح واقرأ ما هو مكتوب عليه.",
+        "kk": "Тақтайды тазалап, үстіндегі жазуды оқыңыз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/dacha-romashka/da05-e5.webp",
+        "coverTexture": "shared/surface/dirt.svg",
+        "revealMasks": [
+          "shared/surface/trace-mask.svg"
+        ],
+        "toolCursor": "shared/surface/cloth-cursor.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": false,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Полка оказывается старой табличкой правления: игрок сам добывает документальную деталь общей тайны.",
+          "en": "The shelf turns out to be an old association sign: the player uncovers a documentary piece of the season's mystery themselves.",
+          "tr": "Raf, kooperatifin eski bir levhası çıkıyor: oyuncu sezon gizeminin belgesel bir parçasını kendisi buluyor.",
+          "ar": "يتبيّن أن الرف لافتة قديمة للجمعية: يكتشف اللاعب بنفسه قطعة وثائقية من لغز الموسم.",
+          "kk": "Сөре басқарманың ескі тақтайшасы болып шығады: ойыншы маусым құпиясының құжаттық бөлігін өзі табады."
+        },
+        "playerAction": {
+          "ru": "Очистите доску и прочитайте, что на ней написано.",
+          "en": "Clean the board and read what is written on it.",
+          "tr": "Tahtayı temizleyin ve üzerinde yazanı okuyun.",
+          "ar": "نظّف اللوح واقرأ ما هو مكتوب عليه.",
+          "kk": "Тақтайды тазалап, үстіндегі жазуды оқыңыз."
+        },
+        "conclusion": {
+          "ru": "Под грязью читается старая табличка: «Участок коллективного сада №13». К причине потопа она отношения не имеет.",
+          "en": "Under the dirt an old sign reads: \"Collective orchard plot No. 13\". It has no bearing on the cause of the flood.",
+          "tr": "Çamurun altında eski bir levha okunuyor: «Kolektif bahçe parseli No. 13». Su baskınının nedeniyle ilgisi yok.",
+          "ar": "تحت الوحل تُقرأ لافتة قديمة: «قطعة البستان الجماعي رقم 13». ولا علاقة لها بسبب الفيضان.",
+          "kk": "Кірдің астынан ескі тақтайша оқылады: «Ұжымдық бақтың №13 учаскесі». Су тасқынының себебіне қатысы жоқ."
+        }
+      },
+      "data": {
+        "mode": "erase",
+        "coverType": "dirt",
+        "brush": {
+          "radius": 46,
+          "hardness": 0.6,
+          "opacity": 0.86,
+          "spacing": 8
+        },
+        "completion": {
+          "type": "discover_any",
+          "requiredTraceIds": [
+            "collective-plot-sign"
+          ]
+        },
+        "traces": [
+          {
+            "id": "collective-plot-sign",
+            "label": "Табличка «Участок коллективного сада №13»",
+            "labelEn": "Sign \"Collective orchard plot No. 13\"",
+            "requiredRevealPercent": 52,
+            "mask": "shared/surface/trace-mask.svg",
+            "shape": "mask",
+            "isContradiction": false,
+            "conclusion": "Под грязью читается старая табличка: «Участок коллективного сада №13».",
+            "conclusionEn": "Under the dirt an old sign reads: \"Collective orchard plot No. 13\"."
+          }
+        ]
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Ночью подача воды была отключена, давление в магистрали равнялось нулю.",
+      "Камера зафиксировала возвращение хозяйки и открытый слив надувного бассейна.",
+      "В воде найдены реагенты для бассейна, а пострадали 16 банок из 180."
+    ],
+    "en": [
+      "The water supply was shut off that night and mains pressure was zero.",
+      "The camera recorded the owner returning and opening the inflatable pool's drain.",
+      "The water contained pool chemicals, and 16 of the 180 jars were affected."
+    ],
+    "tr": [
+      "O gece su verilmesi kapalıydı ve ana hat basıncı sıfırdı.",
+      "Kamera, sahibinin döndüğünü ve şişme havuzun tahliyesini açtığını kaydetti.",
+      "Suda havuz kimyasalları bulundu ve 180 kavanozdan 16’sı zarar gördü."
+    ],
+    "ar": [
+      "كان الإمداد بالمياه مقطوعًا تلك الليلة وضغط الشبكة صفرًا.",
+      "سجّلت الكاميرا عودة صاحبة القبو وفتحها تصريف المسبح النفخي.",
+      "احتوت المياه على مواد المسابح، وتضرر 16 مرطبانًا من أصل 180."
+    ],
+    "kk": [
+      "Түнде су беру өшірілген, магистральдағы қысым нөлге тең болған.",
+      "Камера үй иесінің оралғанын және үрмелі бассейннің ағызғышын ашқанын тіркеген.",
+      "Суда бассейн реагенттері табылған, ал 180 банканың 16-сы зақымданған."
+    ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "stampable": false,
+      "text": {
+        "ru": "Погреб затоплен из-за аварии на общей магистрали, ущерб подлежит возмещению.",
+        "en": "The cellar was flooded by a failure of the shared mains and the loss is reimbursable.",
+        "tr": "Kiler, ortak ana hattaki bir arıza yüzünden su altında kaldı ve kayıp tazmin edilmelidir.",
+        "ar": "غُمر القبو بسبب عطل في الشبكة الرئيسية المشتركة والخسارة قابلة للتعويض.",
+        "kk": "Жертөле ортақ магистральдағы апаттан су басты, залал өтелуге тиіс."
+      }
+    },
+    {
+      "id": "claim_source",
+      "stampable": true,
+      "text": {
+        "ru": "После полуночи лопнула магистральная труба, вода пришла из неё.",
+        "en": "The mains pipe burst after midnight and the water came from it.",
+        "tr": "Ana boru gece yarısından sonra patladı ve su oradan geldi.",
+        "ar": "انفجر الأنبوب الرئيسي بعد منتصف الليل ومنه جاءت المياه.",
+        "kk": "Түн ортасынан кейін магистральдық құбыр жарылып, су содан келген."
+      }
+    },
+    {
+      "id": "claim_absence",
+      "stampable": true,
+      "text": {
+        "ru": "В момент аварии меня на участке не было.",
+        "en": "I was not on the plot when the failure happened.",
+        "tr": "Arıza sırasında parselde değildim.",
+        "ar": "لم أكن في القطعة وقت وقوع العطل.",
+        "kk": "Апат болған сәтте мен учаскеде болмадым."
+      }
+    },
+    {
+      "id": "claim_scale",
+      "stampable": false,
+      "text": {
+        "ru": "Погреб затопило целиком, погибли 180 банок.",
+        "en": "The cellar was flooded completely and 180 jars were lost.",
+        "tr": "Kiler tamamen su altında kaldı ve 180 kavanoz kayboldu.",
+        "ar": "غُمر القبو بالكامل وتلف 180 مرطبانًا.",
+        "kk": "Жертөлені су толық басып, 180 банка жойылды."
+      }
+    }
+  ],
+  "contentVersion": "dacha-romashka-1.0",
+  "narrative": {
+    "preBrief": {
+      "ru": "Казначей СНТ ведёт учёт всему. Кроме, кажется, собственного бассейна.",
+      "en": "The association's treasurer keeps a record of everything. Except, it seems, her own pool.",
+      "tr": "Kooperatifin saymanı her şeyin kaydını tutar. Görünüşe göre kendi havuzu hariç.",
+      "ar": "أمينة صندوق الجمعية تسجّل كل شيء. إلا مسبحها الخاص على ما يبدو.",
+      "kk": "Серіктестік қазынашысы бәрін есепке алады. Тек өз бассейнінен басқа."
+    },
+    "postVerdictNote": {
+      "ru": "Документы иногда всплывают. Этот — буквально, вместе с банками.",
+      "en": "Documents sometimes surface. This one did so literally, along with the jars.",
+      "tr": "Belgeler bazen su yüzüne çıkar. Bu, kavanozlarla birlikte tam anlamıyla çıktı.",
+      "ar": "الوثائق تطفو أحيانًا. وهذه طفت حرفيًا مع المرطبانات.",
+      "kk": "Құжаттар кейде қалқып шығады. Бұл — сөзбе-сөз, банкалармен бірге."
+    },
+    "nextCaseTeaser": {
+      "ru": "У председателя пропадает новая газонокосилка — прямо перед репетицией юбилея.",
+      "en": "The chairman's new lawnmower disappears — right before the jubilee rehearsal.",
+      "tr": "Başkanın yeni çim biçme makinesi jübile provasından hemen önce kayboluyor.",
+      "ar": "تختفي جزّازة العشب الجديدة لدى الرئيس قبيل بروفة اليوبيل مباشرة.",
+      "kk": "Төрағаның жаңа шөп шапқышы мерейтой репетициясының алдында жоғалады."
+    },
+    "seasonClue": {
+      "id": "plot-13-sign",
+      "progressIndex": 5,
+      "progressTotal": 10,
+      "label": {
+        "ru": "Табличка участка №13",
+        "en": "The Plot No. 13 Sign",
+        "tr": "13 No.lu Parselin Levhası",
+        "ar": "لافتة القطعة رقم 13",
+        "kk": "№13 учаске тақтайшасы"
+      },
+      "description": {
+        "ru": "Официальная табличка называет тринадцатый участок коллективным садом. Частного владельца в ней нет.",
+        "en": "The official sign calls plot thirteen a collective orchard. There is no private owner on it.",
+        "tr": "Resmî levha, on üçüncü parseli kolektif bahçe olarak adlandırıyor. Üzerinde özel bir malik yok.",
+        "ar": "تسمّي اللافتة الرسمية القطعة الثالثة عشرة بستانًا جماعيًا، ولا يرد فيها أي مالك خاص.",
+        "kk": "Ресми тақтайша он үшінші учаскені ұжымдық бақ деп атайды. Онда жеке иесі жоқ."
+      }
+    },
+    "epilogue": null
+  }
+}

@@ -46,7 +46,13 @@ export type LocalizedLines = Record<Language, string[]>;
 /*  Static case data                                                         */
 /* -------------------------------------------------------------------------- */
 
-export type CaseType = 'standard' | 'daily';
+/**
+ * `standard` — the 50-slot canonical campaign. `daily` — the rotating daily
+ * file. `archive` — premium story-pack cases: they live in their own id space,
+ * carry no `campaignOrder`, and are reached only through a thematic pack, so
+ * they never enter the campaign shelf or its progression curve.
+ */
+export type CaseType = 'standard' | 'daily' | 'archive';
 export type Difficulty = 'easy' | 'medium' | 'hard';
 
 /** Ground truth of the claim — used for analytics / authoring, not scoring. */
@@ -396,6 +402,54 @@ export interface Case {
     readonly unlocks?: readonly string[];
   };
   readonly finalSynthesis?: FinalSynthesis;
+  /**
+   * Human closing of the case: the claimant's own reaction to the verdict,
+   * an optional compact reasoning chain shown on demand, and an optional
+   * arc reveal. Static case content — never player state.
+   */
+  readonly resolution?: CaseResolution;
+}
+
+/** Emotional register of the resolution card — drives pacing, sound and tone. */
+export type ResolutionMood =
+  | 'relief'
+  | 'humour'
+  | 'bittersweet'
+  | 'defeat'
+  | 'grave'
+  | 'threat';
+
+/** One link of the compact "why this verdict" chain (max three per case). */
+export interface ResolutionChainLink {
+  readonly label: LocalizedString;
+  readonly text: LocalizedString;
+  /** Evidence cards this link is drawn from; must exist in `evidences`. */
+  readonly evidenceIds: readonly string[];
+}
+
+export interface CaseResolution {
+  /** Verdict this line belongs to — always the case's correct decision. */
+  readonly verdict: Decision;
+  readonly speaker: {
+    /** Stable character id, shared across a recurring character's cases. */
+    readonly characterId: string;
+    readonly displayName: LocalizedString;
+    /** Portrait expression hint; falls back to `personImage` when absent. */
+    readonly portraitState?: string;
+  };
+  /** The character's single closing line, shown after a correct verdict. */
+  readonly finalLine: LocalizedString;
+  readonly emotionalMode: ResolutionMood;
+  /** Compact разбор opened on demand: what was true → what broke → why. */
+  readonly reasoningChain?: readonly ResolutionChainLink[];
+  /** Optional one-line professional note from Vera (≈10–15 cases only). */
+  readonly veraLine?: LocalizedString;
+  /** Optional arc discovery, visually separate from the insurance verdict. */
+  readonly arcReveal?: {
+    readonly title: LocalizedString;
+    readonly text: LocalizedString;
+    readonly evidenceIds?: readonly string[];
+  };
 }
 
 export interface FinalSynthesis {
@@ -518,6 +572,15 @@ export interface PlayerStats {
   collectibleStampIds: string[];
   /** Archive packs permanently unlocked via Yandex IAP. */
   archivePurchasedPackIds: string[];
+  /** Permanent "No Ads" IAP — suppresses every forced (interstitial) ad. */
+  noAdsPurchased: boolean;
+  /**
+   * Cosmetic contradiction-stamp captions bought through Yandex IAP. Ids only —
+   * the caption text itself is static catalog data (`src/data/stampTexts.ts`).
+   */
+  ownedStampTextIds: string[];
+  /** Caption currently inked on the stamp; `null` = the free default. */
+  activeStampTextId: string | null;
   /** Individual archive cases permanently unlocked via rewarded ads. */
   archiveUnlockedCaseIds: string[];
   /** Last server-day when this archive pack granted its rewarded unlock. */

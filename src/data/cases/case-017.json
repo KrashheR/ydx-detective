@@ -494,5 +494,87 @@
     },
     "seasonClue": null,
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "anatoly_stepanovich",
+      "displayName": {
+        "ru": "Анатолий Степанович",
+        "en": "Anatoly Stepanovich",
+        "tr": "Anatoli Stepanoviç",
+        "ar": "أناتولي ستيبانوفيتش",
+        "kk": "Анатолий Степанович"
+      },
+      "portraitState": "comic_summary"
+    },
+    "finalLine": {
+      "ru": "Орехи отменили. Ботинок вернули. Осталось объясниться с енотом.",
+      "en": "The nuts are cancelled. The boot is back. All that is left is a talk with the raccoon.",
+      "tr": "Cevizler iptal edildi. Bot geri geldi. Geriye bir tek rakunla konuşmak kaldı.",
+      "ar": "أُلغي طلب الجوز. وعاد الحذاء. لم يبقَ سوى حديث مع الراكون.",
+      "kk": "Жаңғақтар бас тартылды. Бәтеңке қайтарылды. Енді жанатпен түсінісу қалды."
+    },
+    "emotionalMode": "humour",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Клиника приняла Жорика ночью с опалёнными усами; на шерсти — частицы кожи и скорлупы грецкого ореха.",
+          "en": "The clinic admitted Zhorik at night with singed whiskers; his fur carried leather particles and walnut shell.",
+          "tr": "Klinik, Jorik'i gece bıyıkları yanmış hâlde kabul etti; tüylerinde deri parçacıkları ve ceviz kabuğu vardı.",
+          "ar": "استقبلت العيادة جوريك ليلًا بشوارب محترقة؛ وعلى فروه جزيئات جلد وقشر جوز.",
+          "kk": "Клиника Жорикті түнде мұрты күйген күйде қабылдаған; жүнінде тері мен грек жаңғағының қабығы бар."
+        },
+        "evidenceIds": [
+          "ev-vet"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Журнал кухни: 02:13:47 нажат быстрый старт 800 Вт, через 22 секунды шум распознан как команда заказа, в 02:16:32 линия обесточена после замыкания.",
+          "en": "Kitchen log: 02:13:47 quick start at 800 W, 22 seconds later noise parsed as an order command, 02:16:32 the line cut out after a short.",
+          "tr": "Mutfak kaydı: 02:13:47 800 W hızlı başlatma, 22 saniye sonra gürültü sipariş komutu sanıldı, 02:16:32 kısa devre sonrası hat kesildi.",
+          "ar": "سجل المطبخ: 02:13:47 تشغيل سريع بقدرة 800 واط، وبعد 22 ثانية فُسِّرت الضوضاء كأمر طلب، وعند 02:16:32 انقطع الخط بعد تماس.",
+          "kk": "Ас үй журналы: 02:13:47-де 800 Вт жылдам іске қосу, 22 секундтан кейін шу тапсырыс командасы деп танылған, 02:16:32-де тұйықталудан кейін желі өшкен."
+        },
+        "evidenceIds": [
+          "ev-speaker"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Нагрет только сам прибор и зажатая кнопка; дополнительных очагов нет, а камера показывает, кто затащил ботинок в микроволновку. Умысла владельца нет.",
+          "en": "Only the appliance itself and the stuck button are hot; there is no second ignition point, and the camera shows who dragged the boot into the microwave. The owner had no intent.",
+          "tr": "Yalnızca cihazın kendisi ve sıkışan düğme ısınmış; ikinci bir odak yok ve kamera botu mikrodalgaya kimin soktuğunu gösteriyor. Sahibinin kastı yok.",
+          "ar": "الساخن هو الجهاز نفسه والزر العالق فقط؛ لا بؤرة ثانية، والكاميرا تُظهر من جرّ الحذاء إلى الميكروويف. لا نيّة لدى المالك.",
+          "kk": "Тек аспаптың өзі мен басылып қалған түйме қызған; қосымша ошақ жоқ, ал камера бәтеңкені микротолқынды пешке кім сүйрегенін көрсетеді. Иесінің қасақаналығы жоқ."
+        },
+        "evidenceIds": [
+          "ev-photo",
+          "ev-yardcam"
+        ]
+      }
+    ]
   }
 }

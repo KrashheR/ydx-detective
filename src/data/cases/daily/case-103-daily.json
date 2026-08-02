@@ -242,5 +242,87 @@
       "Құлаудан үш минут бұрын жасалған қоңырау — тікелей дәлел: бұл жоспарланған трюк болды, қуу емес.",
       "Апат әдейі ұйымдастырылған. Талаптан бас тарту."
     ]
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "anton_belyarov",
+      "displayName": {
+        "ru": "Антон Беляров",
+        "en": "Anton Belyarov",
+        "tr": "Anton Belyarov",
+        "ar": "أنطون بيليَاروف",
+        "kk": "Антон Беляров"
+      },
+      "portraitState": "sheepish"
+    },
+    "finalLine": {
+      "ru": "В кино мост выглядел ниже. И страховка — проще.",
+      "en": "In the movies the bridge looked lower. And the insurance simpler.",
+      "tr": "Filmlerde köprü daha alçak görünüyordu. Sigorta da daha kolay.",
+      "ar": "في الأفلام بدا الجسر أقلّ ارتفاعًا. والتأمين أبسط.",
+      "kk": "Кинода көпір аласарақ көрінген. Сақтандыру да оңайырақ."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Автомобиль действительно упал с моста, и повреждения реальны.",
+          "en": "The car really did go off the bridge, and the damage is real.",
+          "tr": "Araç gerçekten köprüden düştü ve hasar gerçek.",
+          "ar": "سقطت السيارة من الجسر فعلًا، والأضرار حقيقية.",
+          "kk": "Көлік шынымен көпірден құлаған, зақымдар нақты."
+        },
+        "evidenceIds": [
+          "ev-witness"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Охранник моста не видел никакого второго автомобиля, а GPS фиксирует заезд от развлекательного центра и умышленное ускорение.",
+          "en": "The bridge guard saw no second vehicle at all, and GPS records a run from the entertainment centre and a deliberate acceleration.",
+          "tr": "Köprü görevlisi ikinci bir araç görmedi; GPS ise eğlence merkezinden gelen bir sürüş ve kasıtlı hızlanma kaydediyor.",
+          "ar": "لم يرَ حارس الجسر أي سيارة ثانية، ويسجّل الـGPS انطلاقًا من مركز الترفيه وتسارعًا متعمَّدًا.",
+          "kk": "Көпір күзетшісі ешқандай екінші көлікті көрмеген, ал GPS ойын-сауық орталығынан шыққан жүріс пен әдейі жеделдетуді тіркеген."
+        },
+        "evidenceIds": [
+          "ev-witness",
+          "ev-gps"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "За три минуты до падения он звонит и обещает «сделать кое-что невероятное». Это трюк, а не погоня.",
+          "en": "Three minutes before the fall he calls and promises to “do something incredible”. That is a stunt, not a chase.",
+          "tr": "Düşüşten üç dakika önce arayıp “inanılmaz bir şey yapacağını” söylüyor. Bu bir gösteri, kovalamaca değil.",
+          "ar": "قبل السقوط بثلاث دقائق يتّصل واعدًا بأن «يفعل شيئًا لا يُصدَّق». هذه حركة استعراضية لا مطاردة.",
+          "kk": "Құлаудан үш минут бұрын ол қоңырау шалып, «керемет бірдеңе жасаймын» деп уәде береді. Бұл — трюк, қуғын емес."
+        },
+        "evidenceIds": [
+          "ev-phone"
+        ]
+      }
+    ]
   }
 }

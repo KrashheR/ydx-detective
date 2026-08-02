@@ -127,6 +127,8 @@ const onYandex = () => getPlatformAdapter().id === 'yandex';
 export const trackAdOffer = (kind: 'fullscreen' | 'rewarded', placement: AdPlacement) => {
   if (onYandex()) yandex.trackAdOffer(kind, placement);
 };
+export const getRemoteFlags = (defaultFlags: Record<string, string> = {}): Promise<Record<string, string>> =>
+  onYandex() ? yandex.getRemoteFlags(defaultFlags) : Promise.resolve({});
 export const canReview = () => onYandex() ? yandex.canReview() : Promise.resolve(false);
 export const requestReview = () => onYandex() ? yandex.requestReview() : Promise.resolve(false);
 export const isPaymentsAvailable = () => onYandex() && yandex.isPaymentsAvailable();

@@ -442,5 +442,87 @@
     },
     "seasonClue": null,
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "deyan_kovach",
+      "displayName": {
+        "ru": "Деян Ковач",
+        "en": "Dejan Kovač",
+        "tr": "Dejan Kovaç",
+        "ar": "ديان كوفاتش",
+        "kk": "Деян Ковач"
+      },
+      "portraitState": "brazen"
+    },
+    "finalLine": {
+      "ru": "Неделя боли была настоящей. Остальные одиннадцать — просто убедительными.",
+      "en": "One week of pain was real. The other eleven were merely convincing.",
+      "tr": "Bir haftalık acı gerçekti. Diğer on bir hafta sadece inandırıcıydı.",
+      "ar": "أسبوع الألم كان حقيقيًا. أما الأحد عشر الباقية فكانت مقنعة فحسب.",
+      "kk": "Бір апталық ауырсыну шын болды. Қалған он бірі — тек сенімді ғана."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "10 марта приёмный покой зафиксировал растяжение поясничных мышц: травма настоящая, покой на 5–7 дней обоснован.",
+          "en": "On March 10 the emergency room recorded a lumbar muscle strain: the injury is real and 5–7 days of rest were justified.",
+          "tr": "10 Mart'ta acil servis bel kası zorlanması kaydetti: yaralanma gerçek ve 5–7 günlük istirahat yerinde.",
+          "ar": "في 10 مارس سجّل قسم الطوارئ شدًّا في عضلات أسفل الظهر: الإصابة حقيقية، والراحة 5–7 أيام مبرَّرة.",
+          "kk": "10 наурызда қабылдау бөлмесі бел бұлшықетінің созылуын тіркеген: жарақат шын, 5–7 күн тыныштық негізді."
+        },
+        "evidenceIds": [
+          "ev-ernote"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Под белой плашкой в больничном читается исходная запись: «лёгкий труд разрешён после 7 дней». Фраза о полной нетрудоспособности дописана позже.",
+          "en": "Under the white patch on the sick note the original line reads: “light work permitted after 7 days”. The wording about total incapacity was added later.",
+          "tr": "Rapordaki beyaz kapamanın altında özgün satır okunuyor: “7 gün sonra hafif işe izin verilir”. Tam iş göremezlik ifadesi sonradan eklenmiş.",
+          "ar": "تحت الشريط الأبيض في الإجازة المرضية يظهر السطر الأصلي: «يُسمح بالعمل الخفيف بعد 7 أيام». وعبارة العجز الكامل أُضيفت لاحقًا.",
+          "kk": "Ауру парағындағы ақ жапсырманың астында бастапқы жазу оқылады: «7 күннен кейін жеңіл жұмысқа рұқсат». Толық еңбекке жарамсыздық туралы тіркес кейін қосылған."
+        },
+        "evidenceIds": [
+          "ev-sickleave"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Журнал пропусков и оплата смен показывают регулярную тяжёлую работу в те самые месяцы. Трёхмесячная нетрудоспособность не подтверждается.",
+          "en": "The gate log and the shift payments show regular heavy work in exactly those months. Three months of incapacity is not supported.",
+          "tr": "Giriş kayıtları ve vardiya ödemeleri, tam o aylarda düzenli ağır iş yapıldığını gösteriyor. Üç aylık iş göremezlik doğrulanmıyor.",
+          "ar": "يُظهر سجل الدخول ودفعات الورديات عملًا شاقًا منتظمًا في تلك الأشهر بالذات. عجز ثلاثة أشهر غير مدعوم.",
+          "kk": "Өткізу журналы мен ауысым төлемдері дәл сол айларда тұрақты ауыр жұмыс атқарылғанын көрсетеді. Үш айлық еңбекке жарамсыздық расталмайды."
+        },
+        "evidenceIds": [
+          "ev-work-app",
+          "ev-payment"
+        ]
+      }
+    ]
   }
 }

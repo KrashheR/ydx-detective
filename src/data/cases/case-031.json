@@ -507,5 +507,88 @@
     },
     "seasonClue": null,
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "aigul_saparova",
+      "displayName": {
+        "ru": "Айгуль Сапарова",
+        "en": "Aigul Saparova",
+        "tr": "Aygül Saparova",
+        "ar": "أيغول سابَاروفا",
+        "kk": "Айгүл Сапарова"
+      },
+      "portraitState": "warm_irony"
+    },
+    "finalLine": {
+      "ru": "Антенна замолчала, а память — нет. Упрямая техника.",
+      "en": "The antenna went silent, the memory did not. Stubborn machinery.",
+      "tr": "Anten sustu ama hafıza susmadı. İnatçı makine.",
+      "ar": "صمت الهوائي أما الذاكرة فلا. أجهزة عنيدة.",
+      "kk": "Антенна үнсіз қалды, ал жады — жоқ. Қыңыр техника."
+    },
+    "emotionalMode": "relief",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что вызывало подозрение",
+          "en": "What looked suspicious",
+          "tr": "Şüphe uyandıran şey",
+          "ar": "ما بدا مريبًا",
+          "kk": "Не күдік тудырды"
+        },
+        "text": {
+          "ru": "Датчик потерял связь ровно в начале события — удобный момент, чтобы усомниться в записи.",
+          "en": "The sensor lost its link exactly when the event began — a convenient moment to doubt the record.",
+          "tr": "Sensör tam olay başlarken bağlantısını yitirdi — kaydı şüpheyle karşılamak için elverişli bir an.",
+          "ar": "فقد المستشعر اتصاله في اللحظة التي بدأ فيها الحدث تمامًا — وقت مناسب للتشكيك في السجل.",
+          "kk": "Датчик байланысты дәл оқиға басталғанда жоғалтқан — жазбаға күмәндануға ыңғайлы сәт."
+        },
+        "evidenceIds": [
+          "ev-antenna"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Чем это объясняется",
+          "en": "What explains it",
+          "tr": "Bunu açıklayan şey",
+          "ar": "ما يفسر ذلك",
+          "kk": "Мұны не түсіндіреді"
+        },
+        "text": {
+          "ru": "Антенну сбил первый крупный кусок льда, кабель оборван снаружи, а локальная память продолжила писать: падение температуры, серия ударов, рост влажности.",
+          "en": "The first large hailstone knocked the antenna out, the cable was torn from outside, and the local memory kept recording: temperature drop, a burst of impacts, rising humidity.",
+          "tr": "İlk büyük dolu tanesi anteni devirdi, kablo dışarıdan koptu ve yerel hafıza kaydı sürdürdü: sıcaklık düşüşü, bir dizi darbe, artan nem.",
+          "ar": "أسقطت أول قطعة برد كبيرة الهوائي، وانقطع الكابل من الخارج، وواصلت الذاكرة المحلية التسجيل: هبوط الحرارة، سلسلة ارتطامات، ارتفاع الرطوبة.",
+          "kk": "Антеннаны бірінші ірі мұз кесегі құлатқан, кабель сырттан үзілген, ал жергілікті жады жазуын жалғастырған: температураның төмендеуі, соққылар сериясы, ылғалдың артуы."
+        },
+        "evidenceIds": [
+          "ev-sensor"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Радар подтверждает град 28–34 мм, пробоины идут сверху вниз по наветренной стороне, а агроном считал только фактическую площадь.",
+          "en": "Radar confirms 28–34 mm hail, the punctures run top-down along the windward side, and the agronomist counted only the actual affected area.",
+          "tr": "Radar 28–34 mm doluyu doğruluyor, delikler rüzgâr alan yüzde yukarıdan aşağıya iniyor ve ziraatçı yalnızca fiilî alanı hesapladı.",
+          "ar": "يؤكّد الرادار بَرَدًا بقطر 28–34 ملم، والثقوب تمتدّ من الأعلى إلى الأسفل على الجهة المواجهة للريح، والمهندس الزراعي احتسب المساحة الفعلية فقط.",
+          "kk": "Радар 28–34 мм бұршақты растайды, тесіктер жел жақ бетінде жоғарыдан төмен бағытталған, ал агроном тек нақты аумақты есептеген."
+        },
+        "evidenceIds": [
+          "ev-weather",
+          "ev-aerial",
+          "ev-agro"
+        ]
+      }
+    ]
   }
 }

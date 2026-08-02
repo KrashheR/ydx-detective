@@ -39,10 +39,10 @@
   },
   "client": {
     "role": {
-      "ru": "Наставник навигационной академии",
-      "en": "Navigation academy mentor",
-      "tr": "Seyrüsefer akademisi mentoru",
-      "ar": "مرشد أكاديمية الملاحة",
+      "ru": "Наставник учебно-логистического комплекса",
+      "en": "Training-and-logistics complex mentor",
+      "tr": "Eğitim-lojistik tesisi mentoru",
+      "ar": "مرشد مجمّع التدريب واللوجستيات",
       "kk": "Навигация академиясының тәлімгері"
     },
     "meta": [
@@ -520,5 +520,104 @@
       "progressTotal": 7
     },
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "ilar_roun",
+      "displayName": {
+        "ru": "Илар Роун",
+        "en": "Ilar Roun",
+        "tr": "Ilar Roun",
+        "ar": "إيلار روون",
+        "kk": "Илар Роун"
+      },
+      "portraitState": "controlling"
+    },
+    "finalLine": {
+      "ru": "Он был моим стажёром. Я имел право решать, когда он может уйти.",
+      "en": "He was my trainee. It was mine to decide when he could leave.",
+      "tr": "O benim stajyerimdi. Ne zaman gidebileceğine karar vermek benim hakkımdı.",
+      "ar": "كان متدرّبي. وكان من حقّي أن أقرّر متى يمكنه الرحيل.",
+      "kk": "Ол менің тәлімгерлігімдегі тағылымдамашы еді. Қашан кетуге болатынын шешу менің құқығым болатын."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Илья действительно исчез из академии, и расходы на поиск были реально понесены.",
+          "en": "Ilya really did vanish from the academy, and the search costs were genuinely incurred.",
+          "tr": "İlya akademiden gerçekten kayboldu ve arama masrafları gerçekten yapıldı.",
+          "ar": "اختفى إيليا من الأكاديمية فعلًا، وتكاليف البحث صُرفت حقًا.",
+          "kk": "Илья шынымен академиядан жоғалған, ал іздеу шығындары нақты жұмсалған."
+        },
+        "evidenceIds": [
+          "corridor-cam"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Шлюз открыт его собственной картой, сумка собрана заранее, а у станции найден подготовленный им тайник. Уход добровольный.",
+          "en": "The airlock was opened with his own card, the bag was packed in advance, and a cache he prepared was found by the station. He left of his own accord.",
+          "tr": "Geçiş kapısı kendi kartıyla açılmış, çanta önceden hazırlanmış ve istasyonun yanında onun hazırladığı bir zula bulunmuş. Ayrılış gönüllü.",
+          "ar": "فُتحت البوابة ببطاقته الخاصة، والحقيبة مُعدّة سلفًا، ووُجدت قرب المحطة مخبأة جهّزها بنفسه. الرحيل طوعي.",
+          "kk": "Шлюз оның өз картасымен ашылған, сөмке алдын ала жиналған, ал станция маңынан оның дайындаған тайнигі табылған. Кету ерікті."
+        },
+        "evidenceIds": [
+          "exit-pass",
+          "cache-photo"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Защищённое сообщение после ухода показывает: стажёр жив и действует осознанно, а оценки в протоколе занижены задним числом и подписаны Роуном. Похищения не было.",
+          "en": "A secure message sent afterwards shows the trainee is alive and acting deliberately, while the exam marks were lowered retroactively and signed by Roun. There was no abduction.",
+          "tr": "Sonrasında gönderilen güvenli mesaj, stajyerin hayatta olduğunu ve bilinçli davrandığını gösteriyor; sınav notları ise geriye dönük düşürülmüş ve Roun tarafından imzalanmış. Kaçırılma yok.",
+          "ar": "تُظهر رسالة مؤمَّنة أُرسلت لاحقًا أن المتدرّب حيّ ويتصرّف بوعي، فيما خُفّضت الدرجات بأثر رجعي ووقّعها روون. لا وجود لاختطاف.",
+          "kk": "Кейін жіберілген қорғалған хабарлама тағылымдамашының тірі әрі саналы әрекет етіп жүргенін көрсетеді, ал хаттамадағы бағалар кейінгі күнмен төмендетіліп, Роун қол қойған. Ұрлау болмаған."
+        },
+        "evidenceIds": [
+          "phone-detail",
+          "protocol"
+        ]
+      }
+    ],
+    "arcReveal": {
+      "title": {
+        "ru": "Свидетель Илья Нестеров",
+        "en": "Witness Ilya Nesterov",
+        "tr": "İlya Nesterov'a tanık olun",
+        "ar": "شاهد ايليا نيستيروف",
+        "kk": "Куә Илья Нестеров"
+      },
+      "text": {
+        "ru": "Стажёр скопировал внутренние маршруты GC-17 и готов стать свидетелем против сети.",
+        "en": "The trainee copied GC-17's internal routes and is prepared to testify against the network.",
+        "tr": "Stajyer GC-17'nin dahili rotalarını kopyaladı ve ağa karşı ifade vermeye hazırlanıyor.",
+        "ar": "قام المتدرب بنسخ المسارات الداخلية لـ GC-17 وهو مستعد للإدلاء بشهادته ضد الشبكة.",
+        "kk": "Интерн GC-17 ішкі маршруттарын көшіріп алды және желіге қарсы куәгер болуға дайын."
+      }
+    }
   }
 }

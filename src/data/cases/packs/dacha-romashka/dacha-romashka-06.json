@@ -1,0 +1,526 @@
+{
+  "id": "dacha-romashka-06",
+  "type": "archive",
+  "difficulty": "medium",
+  "claimAmount": 165000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Газонокосилка особого назначения",
+    "en": "A Lawnmower on Special Assignment",
+    "tr": "Özel Görevli Çim Biçme Makinesi",
+    "ar": "جزّازة عشب في مهمة خاصة",
+    "kk": "Ерекше тапсырмадағы шөп шапқыш"
+  },
+  "claim": {
+    "person": {
+      "ru": "Павел Андреевич Ершов, 59 лет",
+      "en": "Pavel Andreyevich Yershov, age 59",
+      "tr": "Pavel Andreyeviç Yerşov, 59 yaşında",
+      "ar": "بافيل أندرييفيتش يرشوف، 59 عامًا",
+      "kk": "Павел Андреевич Ершов, 59 жаста"
+    },
+    "story": {
+      "ru": "После 18:00 сарай был заперт. Ночью неизвестные взломали дверь и похитили новую косилку модели GT-900, купленную неделю назад. Ключ был только у меня. Прошу возместить стоимость техники.",
+      "en": "After 18:00 the shed was locked. During the night intruders forced the door and stole a new GT-900 mower bought a week ago. I had the only key. I am claiming the value of the machine.",
+      "tr": "Saat 18:00’den sonra kulübe kilitliydi. Gece kimliği belirsiz kişiler kapıyı zorlayıp bir hafta önce alınmış yeni GT-900 çim biçme makinesini çaldı. Anahtar yalnızca bendeydi. Makinenin bedelini talep ediyorum.",
+      "ar": "بعد الساعة 18:00 كان المخزن مقفلًا. وفي الليل كسر مجهولون الباب وسرقوا جزّازة GT-900 الجديدة المشتراة قبل أسبوع. المفتاح كان لديّ وحدي. أطالب بقيمة الآلة.",
+      "kk": "Сағат 18:00-ден кейін сарай құлыптаулы болды. Түнде белгісіздер есікті бұзып, бір апта бұрын алынған жаңа GT-900 шөп шапқышын ұрлап кетті. Кілт тек менде еді. Техниканың құнын өтеуді сұраймын."
+    }
+  },
+  "coverImage": "covers/packs/dacha-romashka-06.svg",
+  "personImage": "people/packs/dacha-romashka/pavel_ershov.webp",
+  "client": {
+    "role": {
+      "ru": "Заявитель · член СНТ «Ромашка»",
+      "en": "Claimant · member of the Romashka garden association",
+      "tr": "Başvuru sahibi · Romashka bahçe kooperatifi üyesi",
+      "ar": "مقدم الطلب · عضو في جمعية «روماشكا» للبساتين",
+      "kk": "Өтініш беруші · «Ромашка» бақ серіктестігінің мүшесі"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Участок",
+          "en": "Plot",
+          "tr": "Parsel",
+          "ar": "القطعة",
+          "kk": "Учаске"
+        },
+        "v": {
+          "ru": "№1",
+          "en": "No. 1",
+          "tr": "No. 1",
+          "ar": "رقم 1",
+          "kk": "№1"
+        }
+      },
+      {
+        "k": {
+          "ru": "Сезон",
+          "en": "Season",
+          "tr": "Sezon",
+          "ar": "الموسم",
+          "kk": "Маусым"
+        },
+        "v": {
+          "ru": "Август",
+          "en": "August",
+          "tr": "Ağustos",
+          "ar": "أغسطس",
+          "kk": "Тамыз"
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "DA06-E1",
+      "order": 1,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал электронного замка сарая",
+        "en": "Shed Smart-Lock Log",
+        "tr": "Kulübe Akıllı Kilit Kaydı",
+        "ar": "سجل القفل الذكي للمخزن",
+        "kk": "Сарайдың электрондық құлып журналы"
+      },
+      "content": {
+        "ru": "19:14 — открытие штатным запасным ключом №2. 19:41 — закрытие. Ошибок, взломов и попыток подбора за сутки не зарегистрировано; корпус и петли целы.",
+        "en": "19:14 — opened with registered spare key No. 2. 19:41 — closed. No errors, forced entries or brute-force attempts were logged in 24 hours; the case and hinges are intact.",
+        "tr": "19:14 — kayıtlı 2 No.lu yedek anahtarla açıldı. 19:41 — kapatıldı. 24 saat içinde hata, zorlama veya deneme kaydı yok; gövde ve menteşeler sağlam.",
+        "ar": "19:14 — فُتح بالمفتاح الاحتياطي المسجَّل رقم 2. 19:41 — أُغلق. لم تُسجَّل أخطاء أو اقتحام أو محاولات خلال 24 ساعة، والهيكل والمفصلات سليمة.",
+        "kk": "19:14 — тіркелген №2 қосалқы кілтпен ашылған. 19:41 — жабылған. Тәулік ішінде қате, бұзып кіру немесе таңдау әрекеті тіркелмеген; корпус пен топсалар бүтін."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Дверь открыли законным запасным ключом, следов взлома нет — и второй ключ существует.",
+        "en": "The door was opened with a legitimate spare key and shows no signs of forced entry — a second key exists.",
+        "tr": "Kapı meşru bir yedek anahtarla açılmış ve zorlama izi yok; ikinci bir anahtar var.",
+        "ar": "فُتح الباب بمفتاح احتياطي شرعي دون أي أثر اقتحام، وهناك مفتاح ثانٍ بالفعل.",
+        "kk": "Есік заңды қосалқы кілтпен ашылған, бұзу ізі жоқ — әрі екінші кілт бар."
+      },
+      "statementLink": {
+        "statementId": "claim_break_in",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Дверь открыли законным запасным ключом, следов взлома нет — и второй ключ существует.",
+          "en": "The door was opened with a legitimate spare key and shows no signs of forced entry — a second key exists.",
+          "tr": "Kapı meşru bir yedek anahtarla açılmış ve zorlama izi yok; ikinci bir anahtar var.",
+          "ar": "فُتح الباب بمفتاح احتياطي شرعي دون أي أثر اقتحام، وهناك مفتاح ثانٍ بالفعل.",
+          "kk": "Есік заңды қосалқы кілтпен ашылған, бұзу ізі жоқ — әрі екінші кілт бар."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_break_in",
+        "reason": {
+          "ru": "Дверь открыли законным запасным ключом, следов взлома нет — и второй ключ существует.",
+          "en": "The door was opened with a legitimate spare key and shows no signs of forced entry — a second key exists.",
+          "tr": "Kapı meşru bir yedek anahtarla açılmış ve zorlama izi yok; ikinci bir anahtar var.",
+          "ar": "فُتح الباب بمفتاح احتياطي شرعي دون أي أثر اقتحام، وهناك مفتاح ثانٍ بالفعل.",
+          "kk": "Есік заңды қосалқы кілтпен ашылған, бұзу ізі жоқ — әрі екінші кілт бар."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da06-e1.webp",
+        "logPrompt": "shed smart-lock log"
+      }
+    },
+    {
+      "id": "DA06-E2",
+      "order": 2,
+      "type": "document_scan",
+      "title": {
+        "ru": "Сверка чека и серийного номера",
+        "en": "Checking the Receipt and Serial Number",
+        "tr": "Fiş ve Seri Numarası Karşılaştırması",
+        "ar": "مطابقة الإيصال والرقم التسلسلي",
+        "kk": "Түбіртек пен сериялық нөмірді салыстыру"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "В копии цифра 6 переправлена на 9: куплена модель GT-600 три года назад, а не новая GT-900.",
+        "en": "In the copy the digit 6 was reworked into a 9: the machine bought three years ago was a GT-600, not a new GT-900.",
+        "tr": "Kopyada 6 rakamı 9’a çevrilmiş: üç yıl önce alınan makine yeni GT-900 değil, GT-600.",
+        "ar": "في النسخة حُوّل الرقم 6 إلى 9: الآلة المشتراة قبل ثلاث سنوات هي GT-600 لا GT-900 جديدة.",
+        "kk": "Көшірмеде 6 саны 9-ға түзетілген: үш жыл бұрын алынған модель — GT-600, жаңа GT-900 емес."
+      },
+      "statementLink": {
+        "statementId": "claim_model",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "В копии цифра 6 переправлена на 9: куплена модель GT-600 три года назад, а не новая GT-900.",
+          "en": "In the copy the digit 6 was reworked into a 9: the machine bought three years ago was a GT-600, not a new GT-900.",
+          "tr": "Kopyada 6 rakamı 9’a çevrilmiş: üç yıl önce alınan makine yeni GT-900 değil, GT-600.",
+          "ar": "في النسخة حُوّل الرقم 6 إلى 9: الآلة المشتراة قبل ثلاث سنوات هي GT-600 لا GT-900 جديدة.",
+          "kk": "Көшірмеде 6 саны 9-ға түзетілген: үш жыл бұрын алынған модель — GT-600, жаңа GT-900 емес."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_model",
+        "reason": {
+          "ru": "В копии цифра 6 переправлена на 9: куплена модель GT-600 три года назад, а не новая GT-900.",
+          "en": "In the copy the digit 6 was reworked into a 9: the machine bought three years ago was a GT-600, not a new GT-900.",
+          "tr": "Kopyada 6 rakamı 9’a çevrilmiş: üç yıl önce alınan makine yeni GT-900 değil, GT-600.",
+          "ar": "في النسخة حُوّل الرقم 6 إلى 9: الآلة المشتراة قبل ثلاث سنوات هي GT-600 لا GT-900 جديدة.",
+          "kk": "Көшірмеде 6 саны 9-ға түзетілген: үш жыл бұрын алынған модель — GT-600, жаңа GT-900 емес."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "К заявлению приложена копия чека. Оригинал хранится в бухгалтерии правления и доступен для сверки.",
+        "en": "A copy of the receipt is attached to the claim. The original is kept in the association's accounts and can be compared.",
+        "tr": "Talebe fişin bir kopyası eklenmiş. Aslı kooperatifin muhasebesinde saklanıyor ve karşılaştırılabilir.",
+        "ar": "أُرفقت بالمطالبة نسخة من الإيصال، والأصل محفوظ في محاسبة الجمعية ويمكن مطابقته.",
+        "kk": "Өтінішке түбіртектің көшірмесі тіркелген. Түпнұсқа басқарма бухгалтериясында сақтаулы және салыстыруға болады."
+      },
+      "instruction": {
+        "ru": "Смените режим подсветки, найдите правку в номере модели и сверьте её с реестром.",
+        "en": "Change the lighting mode, find the alteration in the model number and compare it with the register.",
+        "tr": "Aydınlatma modunu değiştirin, model numarasındaki tahrifatı bulun ve kayıtla karşılaştırın.",
+        "ar": "غيّر وضع الإضاءة، وابحث عن التعديل في رقم الموديل، وقارنه بالسجل.",
+        "kk": "Жарық режимін ауыстырып, модель нөміріндегі түзетуді тауып, тізіліммен салыстырыңыз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/dacha-romashka/da06-e2.webp"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Правку видно только в боковом свете: игрок сам ловит подмену цифры, а не верит копии на слово.",
+          "en": "The alteration shows only in side light: the player catches the changed digit themselves instead of trusting the copy.",
+          "tr": "Tahrifat yalnızca yan ışıkta görünür: oyuncu değiştirilen rakamı kopyaya güvenmek yerine kendisi yakalar.",
+          "ar": "لا يظهر التعديل إلا بالإضاءة الجانبية: يكتشف اللاعب الرقم المبدَّل بنفسه بدل الوثوق بالنسخة.",
+          "kk": "Түзету тек бүйір жарықта көрінеді: ойыншы көшірмеге сеніп қалмай, ауыстырылған цифрды өзі табады."
+        },
+        "playerAction": {
+          "ru": "Смените режим подсветки, найдите правку в номере модели и сверьте её с реестром.",
+          "en": "Change the lighting mode, find the alteration in the model number and compare it with the register.",
+          "tr": "Aydınlatma modunu değiştirin, model numarasındaki tahrifatı bulun ve kayıtla karşılaştırın.",
+          "ar": "غيّر وضع الإضاءة، وابحث عن التعديل في رقم الموديل، وقارنه بالسجل.",
+          "kk": "Жарық режимін ауыстырып, модель нөміріндегі түзетуді тауып, тізіліммен салыстырыңыз."
+        },
+        "conclusion": {
+          "ru": "В копии цифра 6 переправлена на 9: куплена модель GT-600 три года назад, а не новая GT-900.",
+          "en": "In the copy the digit 6 was reworked into a 9: the machine bought three years ago was a GT-600, not a new GT-900.",
+          "tr": "Kopyada 6 rakamı 9’a çevrilmiş: üç yıl önce alınan makine yeni GT-900 değil, GT-600.",
+          "ar": "في النسخة حُوّل الرقم 6 إلى 9: الآلة المشتراة قبل ثلاث سنوات هي GT-600 لا GT-900 جديدة.",
+          "kk": "Көшірмеде 6 саны 9-ға түзетілген: үш жыл бұрын алынған модель — GT-600, жаңа GT-900 емес."
+        }
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "side_light",
+          "uv"
+        ],
+        "anomalyZones": [
+          {
+            "id": "model-digit",
+            "mode": "side_light",
+            "x": 46,
+            "y": 38,
+            "width": 16,
+            "height": 14,
+            "label": "Исправленная цифра в номере модели",
+            "labelEn": "Reworked digit in the model number",
+            "isContradiction": true
+          },
+          {
+            "id": "shop-stamp",
+            "mode": "side_light",
+            "x": 16,
+            "y": 62,
+            "width": 18,
+            "height": 16,
+            "label": "Штамп магазина",
+            "labelEn": "Shop stamp",
+            "isContradiction": false
+          },
+          {
+            "id": "paper-fold",
+            "mode": "uv",
+            "x": 70,
+            "y": 20,
+            "width": 16,
+            "height": 18,
+            "label": "Складка бумаги",
+            "labelEn": "Fold in the paper",
+            "isContradiction": false
+          }
+        ],
+        "referenceFields": [
+          {
+            "id": "register-model",
+            "label": "Реестр правления: модель и год",
+            "labelEn": "Association register: model and year",
+            "value": "GT-600 · 2023"
+          }
+        ],
+        "successCondition": {
+          "type": "select_then_compare",
+          "zoneId": "model-digit",
+          "referenceFieldId": "register-model"
+        }
+      }
+    },
+    {
+      "id": "DA06-E3",
+      "order": 3,
+      "type": "social_media",
+      "title": {
+        "ru": "Пост с репетиции юбилея",
+        "en": "Post from the Jubilee Rehearsal",
+        "tr": "Jübile Provasından Gönderi",
+        "ar": "منشور من بروفة اليوبيل",
+        "kk": "Мерейтой репетициясынан жазба"
+      },
+      "content": {
+        "ru": "20:50 — косилка, украшенная ромашками, тянет по дорожке макет огромного кабачка. Подпись: «Генеральная репетиция! Спасибо анонимному спонсору техники».",
+        "en": "20:50 — the mower, decorated with daisies, tows a giant mock-up marrow along the path. Caption: \"Dress rehearsal! Thanks to the anonymous equipment sponsor.\"",
+        "tr": "20:50 — papatyalarla süslenmiş makine, patikada dev bir kabak maketini çekiyor. Açıklama: «Genel prova! Ekipmanın isimsiz sponsoruna teşekkürler.»",
+        "ar": "20:50 — الجزّازة المزيّنة بالأقحوان تجرّ مجسّم كوسا عملاقة على الممر. التعليق: «بروفة عامة! شكرًا لراعي المعدات المجهول.»",
+        "kk": "20:50 — түймедақпен безендірілген шөп шапқыш жол бойымен алып асқабақтың макетін сүйрейді. Жазба: «Бас репетиция! Техниканың беймәлім демеушісіне рахмет»."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Техника цела и участвует в празднике, но факт пропажи как таковой опровергают журнал замка и чек.",
+        "en": "The machine is intact and taking part in the celebration, yet the lock log and the receipt are what disprove the claim itself.",
+        "tr": "Makine sağlam ve kutlamada yer alıyor; ancak iddiayı çürüten şey kilit kaydı ile fiş.",
+        "ar": "الآلة سليمة وتشارك في الاحتفال، لكن ما يدحض الادعاء هو سجل القفل والإيصال.",
+        "kk": "Техника аман әрі мерекеге қатысуда, бірақ өтінішті құлып журналы мен түбіртек теріске шығарады."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Техника цела и участвует в празднике, но факт пропажи как таковой опровергают журнал замка и чек.",
+          "en": "The machine is intact and taking part in the celebration, yet the lock log and the receipt are what disprove the claim itself.",
+          "tr": "Makine sağlam ve kutlamada yer alıyor; ancak iddiayı çürüten şey kilit kaydı ile fiş.",
+          "ar": "الآلة سليمة وتشارك في الاحتفال، لكن ما يدحض الادعاء هو سجل القفل والإيصال.",
+          "kk": "Техника аман әрі мерекеге қатысуда, бірақ өтінішті құлып журналы мен түбіртек теріске шығарады."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da06-e3.webp",
+        "socialPlatform": "DachaBlog"
+      }
+    },
+    {
+      "id": "DA06-E4",
+      "order": 4,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания Галины Кукушкиной",
+        "en": "Statement by Galina Kukushkina",
+        "tr": "Galina Kukuşkina’nın İfadesi",
+        "ar": "إفادة غالينا كوكوشكينا",
+        "kk": "Галина Кукушкинаның айғағы"
+      },
+      "content": {
+        "ru": "«Запасной ключ взяла Нина Петровна, жена председателя. Решила сделать мужу сюрприз к юбилею и одолжила косилку для представления. Мы все знали, кроме него».",
+        "en": "\"Nina Petrovna, the chairman's wife, took the spare key. She wanted to surprise her husband for the jubilee and lent the mower to the show. Everyone knew except him.\"",
+        "tr": "«Yedek anahtarı başkanın eşi Nina Petrovna aldı. Kocasına jübile sürprizi yapmak isteyip makineyi gösteriye ödünç verdi. Onun dışında herkes biliyordu.»",
+        "ar": "«أخذت المفتاح الاحتياطي نينا بيتروفنا زوجة الرئيس. أرادت مفاجأة زوجها في اليوبيل فأعارت الجزّازة للعرض. كنا نعرف جميعًا إلا هو.»",
+        "kk": "«Қосалқы кілтті төрағаның жұбайы Нина Петровна алды. Күйеуіне мерейтойға тосынсый жасамақ болып, шөп шапқышты қойылымға берді. Одан басқа бәріміз білдік»."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Показания объясняют, кто взял ключ, но сам факт открытия штатным ключом уже зафиксирован журналом замка.",
+        "en": "The statement explains who took the key, though the lock log has already recorded that a registered key opened the door.",
+        "tr": "İfade anahtarı kimin aldığını açıklıyor ama kapının kayıtlı bir anahtarla açıldığını kilit kaydı zaten göstermişti.",
+        "ar": "تشرح الإفادة من أخذ المفتاح، لكن سجل القفل أثبت أصلًا أن الباب فُتح بمفتاح مسجَّل.",
+        "kk": "Айғақ кілтті кім алғанын түсіндіреді, бірақ есіктің тіркелген кілтпен ашылғанын құлып журналы әлдеқашан тіркеген."
+      },
+      "statementLink": {
+        "statementId": "claim_break_in",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Показания объясняют, кто взял ключ, но сам факт открытия штатным ключом уже зафиксирован журналом замка.",
+          "en": "The statement explains who took the key, though the lock log has already recorded that a registered key opened the door.",
+          "tr": "İfade anahtarı kimin aldığını açıklıyor ama kapının kayıtlı bir anahtarla açıldığını kilit kaydı zaten göstermişti.",
+          "ar": "تشرح الإفادة من أخذ المفتاح، لكن سجل القفل أثبت أصلًا أن الباب فُتح بمفتاح مسجَّل.",
+          "kk": "Айғақ кілтті кім алғанын түсіндіреді, бірақ есіктің тіркелген кілтпен ашылғанын құлып журналы әлдеқашан тіркеген."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da06-e4.webp"
+      }
+    },
+    {
+      "id": "DA06-E5",
+      "order": 5,
+      "type": "gps",
+      "title": {
+        "ru": "GPS-маячок косилки",
+        "en": "Mower GPS Beacon",
+        "tr": "Makinenin GPS Vericisi",
+        "ar": "جهاز تتبع الجزّازة",
+        "kk": "Шөп шапқыштың GPS маягы"
+      },
+      "content": {
+        "ru": "19:22 — сарай. 19:48 — правление. 20:06 — участок №13, стоянка 9 минут; рядом зафиксирована метка красной тележки. 20:31 — сцена у пруда.",
+        "en": "19:22 — the shed. 19:48 — the association office. 20:06 — plot No. 13, a 9-minute stop; the red cart's tag was logged next to it. 20:31 — the stage by the pond.",
+        "tr": "19:22 — kulübe. 19:48 — kooperatif binası. 20:06 — 13 No.lu parsel, 9 dakikalık duruş; yanında kırmızı arabanın etiketi kaydedildi. 20:31 — göletin yanındaki sahne.",
+        "ar": "19:22 — المخزن. 19:48 — مقر الجمعية. 20:06 — القطعة رقم 13، توقف 9 دقائق، وسُجّلت بجانبها علامة العربة الحمراء. 20:31 — المسرح قرب البركة.",
+        "kk": "19:22 — сарай. 19:48 — басқарма. 20:06 — №13 учаске, 9 минут аялдама; қасында қызыл арбаның белгісі тіркелген. 20:31 — тоған жанындағы сахна."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Трек показывает ночное движение тележки от правления к участку №13, но к взлому и модели косилки отношения не имеет.",
+        "en": "The track shows the cart moving from the office to plot No. 13 at night, yet it bears on neither the break-in nor the mower model.",
+        "tr": "İz, arabanın geceleyin kooperatiften 13 No.lu parsele gittiğini gösteriyor ama ne zorla girişle ne de model numarasıyla ilgili.",
+        "ar": "يُظهر المسار تحرك العربة ليلًا من المقر إلى القطعة رقم 13، لكنه لا يمس الاقتحام ولا موديل الجزّازة.",
+        "kk": "Трек арбаның түнде басқармадан №13 учаскеге қарай жылжығанын көрсетеді, бірақ бұзып кіруге де, шөп шапқыш моделіне де қатысы жоқ."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Трек показывает ночное движение тележки от правления к участку №13, но к взлому и модели косилки отношения не имеет.",
+          "en": "The track shows the cart moving from the office to plot No. 13 at night, yet it bears on neither the break-in nor the mower model.",
+          "tr": "İz, arabanın geceleyin kooperatiften 13 No.lu parsele gittiğini gösteriyor ama ne zorla girişle ne de model numarasıyla ilgili.",
+          "ar": "يُظهر المسار تحرك العربة ليلًا من المقر إلى القطعة رقم 13، لكنه لا يمس الاقتحام ولا موديل الجزّازة.",
+          "kk": "Трек арбаның түнде басқармадан №13 учаскеге қарай жылжығанын көрсетеді, бірақ бұзып кіруге де, шөп шапқыш моделіне де қатысы жоқ."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da06-e5.webp",
+        "gpsFooter": {
+          "ru": "Трек маячка косилки",
+          "en": "Mower beacon track",
+          "tr": "Makine vericisi izi",
+          "ar": "مسار جهاز التتبع",
+          "kk": "Шөп шапқыш маягының тректі"
+        }
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Замок открыт штатным запасным ключом, следов взлома нет.",
+      "В копии чека цифра модели исправлена: техника — GT-600 трёхлетней давности.",
+      "Косилка не похищена: её одолжили для юбилейного представления."
+    ],
+    "en": [
+      "The lock was opened with a registered spare key and shows no forced entry.",
+      "The model digit on the receipt copy was altered: the machine is a three-year-old GT-600.",
+      "The mower was not stolen: it was borrowed for the jubilee show."
+    ],
+    "tr": [
+      "Kilit kayıtlı yedek anahtarla açıldı, zorlama izi yok.",
+      "Fiş kopyasındaki model rakamı değiştirilmiş: makine üç yıllık bir GT-600.",
+      "Makine çalınmadı; jübile gösterisi için ödünç alındı."
+    ],
+    "ar": [
+      "فُتح القفل بمفتاح احتياطي مسجَّل ولا أثر للاقتحام.",
+      "عُدِّل رقم الموديل في نسخة الإيصال: الآلة GT-600 عمرها ثلاث سنوات.",
+      "لم تُسرق الجزّازة، بل استُعيرت لعرض اليوبيل."
+    ],
+    "kk": [
+      "Құлып тіркелген қосалқы кілтпен ашылған, бұзу ізі жоқ.",
+      "Түбіртек көшірмесінде модель цифры түзетілген: техника — үш жылдық GT-600.",
+      "Шөп шапқыш ұрланбаған: оны мерейтой қойылымына алған."
+    ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "stampable": false,
+      "text": {
+        "ru": "Косилка похищена из запертого сарая, ущерб подлежит возмещению.",
+        "en": "The mower was stolen from a locked shed and the loss is reimbursable.",
+        "tr": "Makine kilitli kulübeden çalındı ve kayıp tazmin edilmelidir.",
+        "ar": "سُرقت الجزّازة من مخزن مقفل والخسارة قابلة للتعويض.",
+        "kk": "Шөп шапқыш құлыптаулы сарайдан ұрланды, залал өтелуге тиіс."
+      }
+    },
+    {
+      "id": "claim_break_in",
+      "stampable": true,
+      "text": {
+        "ru": "Ночью дверь сарая взломали, ключ был только у меня.",
+        "en": "The shed door was forced during the night and I had the only key.",
+        "tr": "Kulübenin kapısı gece zorlandı ve anahtar yalnızca bendeydi.",
+        "ar": "كُسر باب المخزن ليلًا والمفتاح كان لديّ وحدي.",
+        "kk": "Түнде сарайдың есігі бұзылды, кілт тек менде болатын."
+      }
+    },
+    {
+      "id": "claim_model",
+      "stampable": true,
+      "text": {
+        "ru": "Похищена новая косилка модели GT-900, купленная неделю назад.",
+        "en": "The stolen mower was a new GT-900 model bought a week ago.",
+        "tr": "Çalınan makine bir hafta önce alınmış yeni GT-900 modeliydi.",
+        "ar": "الجزّازة المسروقة موديل GT-900 جديد اشتُري قبل أسبوع.",
+        "kk": "Ұрланған шөп шапқыш — бір апта бұрын алынған жаңа GT-900 моделі."
+      }
+    }
+  ],
+  "contentVersion": "dacha-romashka-1.0",
+  "narrative": {
+    "preBrief": {
+      "ru": "Председатель требует найти воров. Воры в это время репетируют финальный номер.",
+      "en": "The chairman demands the thieves be found. The thieves are rehearsing the closing number.",
+      "tr": "Başkan hırsızların bulunmasını istiyor. Hırsızlar ise final gösterisini prova ediyor.",
+      "ar": "يطالب الرئيس بالعثور على اللصوص. واللصوص في هذه الأثناء يبروفون الفقرة الختامية.",
+      "kk": "Төраға ұрыларды табуды талап етеді. Ұрылар сол уақытта финалдық нөмірді жаттап жүр."
+    },
+    "postVerdictNote": {
+      "ru": "Сюрприз удался. Просто не тому человеку и не в том документе.",
+      "en": "The surprise worked. Just on the wrong person and in the wrong document.",
+      "tr": "Sürpriz tuttu. Sadece yanlış kişide ve yanlış belgede.",
+      "ar": "نجحت المفاجأة، لكن مع الشخص الخطأ وفي الوثيقة الخطأ.",
+      "kk": "Тосынсый сәтті шықты. Тек басқа адамға және басқа құжатта."
+    },
+    "nextCaseTeaser": {
+      "ru": "В малиннике замечено привидение в белом. Видео уже собирает просмотры.",
+      "en": "A ghost in white has been spotted in the raspberry patch. The video is already gathering views.",
+      "tr": "Ahududu çalılığında beyazlar içinde bir hayalet görüldü. Video şimdiden izlenme topluyor.",
+      "ar": "شوهد شبح أبيض في حقل التوت. والفيديو يجمع المشاهدات بالفعل.",
+      "kk": "Таңқурай арасынан ақ киімді елес байқалды. Видео қазірдің өзінде қаралым жинауда."
+    },
+    "seasonClue": {
+      "id": "cart-signature",
+      "progressIndex": 6,
+      "progressTotal": 10,
+      "label": {
+        "ru": "Подпись «Р. Ж.» в журнале выдачи",
+        "en": "The \"R. Zh.\" Signature in the Equipment Register",
+        "tr": "Zimmet Defterindeki «R. J.» İmzası",
+        "ar": "توقيع «ر. ج.» في سجل العهدة",
+        "kk": "Беру журналындағы «Р. Ж.» қолтаңбасы"
+      },
+      "description": {
+        "ru": "Красную тележку ночью брали под подпись «Р. Ж.». Что на ней возили — пока неизвестно.",
+        "en": "The red cart was signed out at night under the initials \"R. Zh.\" What it carried is still unknown.",
+        "tr": "Kırmızı araba geceleyin «R. J.» imzasıyla alınmış. Neyin taşındığı henüz bilinmiyor.",
+        "ar": "أُخذت العربة الحمراء ليلًا بتوقيع «ر. ج.». وما نُقل عليها ما زال مجهولًا.",
+        "kk": "Қызыл арба түнде «Р. Ж.» қолтаңбасымен алынған. Онымен не тасығаны әзірге белгісіз."
+      }
+    },
+    "epilogue": null
+  }
+}

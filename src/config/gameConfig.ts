@@ -4,7 +4,7 @@
  */
 export const GAME_CONFIG = {
   /** Schema version of the persisted runtime snapshot. Bump on shape changes. */
-  saveVersion: 9,
+  saveVersion: 10,
 
   reward: {
     /** Fixed payout by difficulty; claimAmount remains a narrative stake. */
@@ -251,9 +251,23 @@ export const GAME_CONFIG = {
     suppressAfterDismissals: 3,
   },
 
+  /**
+   * Forced (fullscreen) ad pacing. Interstitials only ever fire after a verdict
+   * or when leaving a finished case — never mid-investigation. Every numeric
+   * field below is overridable through the Yandex remote configuration; see
+   * `src/services/remoteConfig.ts` for the flag names and clamping.
+   */
   advertising: {
-    interstitialMinCompletedCases: 3,
-    interstitialMinActiveMs: 10 * 60 * 1000,
+    /** Lifetime completed cases before the very first interstitial is eligible. */
+    firstMinCompletedCases: 2,
+    /** Active play time before the first interstitial of a session (ms). */
+    firstMinActiveMs: 7 * 60 * 1000,
+    /** Active play time between two *shown* interstitials (ms). */
+    repeatMinActiveMs: 6 * 60 * 1000,
+    /** Finished cases between two *shown* interstitials. */
+    minCasesBetweenInterstitials: 2,
+    /** Yandex IAP product granting a permanent ad-free experience. */
+    noAdsProductId: 'noads.forever',
   },
 
   analytics: {

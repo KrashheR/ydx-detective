@@ -1,0 +1,424 @@
+{
+  "id": "dacha-romashka-02",
+  "type": "archive",
+  "difficulty": "easy",
+  "claimAmount": 74000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Улей ушёл сам",
+    "en": "The Hive Left on Its Own",
+    "tr": "Kovan Kendi Kendine Gitti",
+    "ar": "الخلية غادرت بنفسها",
+    "kk": "Ұя өзі кетті"
+  },
+  "claim": {
+    "person": {
+      "ru": "Семён Ильич Прудников, 61 год",
+      "en": "Semyon Ilyich Prudnikov, age 61",
+      "tr": "Semyon İlyiç Prudnikov, 61 yaşında",
+      "ar": "سيميون إيليتش برودنيكوف، 61 عامًا",
+      "kk": "Семён Ильич Прудников, 61 жаста"
+    },
+    "story": {
+      "ru": "Между 12:00 и 14:00 злоумышленник вынес закрытый улей №4 вместе с карпатской маткой. Я лично закрыл леток и всё время был дома. Прошу возместить улей и племенную семью.",
+      "en": "Between 12:00 and 14:00 an intruder carried off sealed hive No. 4 together with its Carpathian queen. I closed the entrance myself and was home the whole time. I am claiming the hive and the pedigree colony.",
+      "tr": "Saat 12:00 ile 14:00 arasında bir davetsiz misafir, kapalı 4 No.lu kovanı Karpat ana arısıyla birlikte götürdü. Girişi kendim kapattım ve tüm süre boyunca evdeydim. Kovanın ve soylu kolonisinin bedelini talep ediyorum.",
+      "ar": "بين الساعة 12:00 و14:00 حمل متسلل الخلية رقم 4 المغلقة مع ملكتها الكارباتية. أغلقت المدخل بنفسي وكنت في المنزل طوال الوقت. أطالب بقيمة الخلية والطائفة الأصيلة.",
+      "kk": "Сағат 12:00 бен 14:00 аралығында біреу жабық №4 ұяны карпат аналығымен бірге алып кетті. Ұяның аузын өзім жаптым және үнемі үйде болдым. Ұя мен асыл тұқымды ара отбасының құнын өтеуді сұраймын."
+    }
+  },
+  "coverImage": "covers/packs/dacha-romashka-02.svg",
+  "personImage": "people/packs/dacha-romashka/semyon_prudnikov.webp",
+  "client": {
+    "role": {
+      "ru": "Заявитель · член СНТ «Ромашка»",
+      "en": "Claimant · member of the Romashka garden association",
+      "tr": "Başvuru sahibi · Romashka bahçe kooperatifi üyesi",
+      "ar": "مقدم الطلب · عضو في جمعية «روماشكا» للبساتين",
+      "kk": "Өтініш беруші · «Ромашка» бақ серіктестігінің мүшесі"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Участок",
+          "en": "Plot",
+          "tr": "Parsel",
+          "ar": "القطعة",
+          "kk": "Учаске"
+        },
+        "v": {
+          "ru": "№9",
+          "en": "No. 9",
+          "tr": "No. 9",
+          "ar": "رقم 9",
+          "kk": "№9"
+        }
+      },
+      {
+        "k": {
+          "ru": "Сезон",
+          "en": "Season",
+          "tr": "Sezon",
+          "ar": "الموسم",
+          "kk": "Маусым"
+        },
+        "v": {
+          "ru": "Август",
+          "en": "August",
+          "tr": "Ağustos",
+          "ar": "أغسطس",
+          "kk": "Тамыз"
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "DA02-E1",
+      "order": 1,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера у пруда",
+        "en": "Camera by the Pond",
+        "tr": "Göletin Yanındaki Kamera",
+        "ar": "الكاميرا قرب البركة",
+        "kk": "Тоған жанындағы камера"
+      },
+      "content": {
+        "ru": "14:12 — заявитель сам везёт пустой корпус улья №4 на красной садовой тележке в сторону мастерской. Рамки видны насквозь, пчёл в корпусе нет.",
+        "en": "14:12 — the claimant himself wheels the empty body of hive No. 4 towards the workshop on a red garden cart. The frames are visible through it; there are no bees inside.",
+        "tr": "14:12 — talep sahibi 4 No.lu kovanın boş gövdesini kırmızı bahçe arabasıyla kendi eliyle atölyeye götürüyor. Çerçeveler baştan sona görünüyor, içinde arı yok.",
+        "ar": "14:12 — مقدم الطلب نفسه يدفع هيكل الخلية رقم 4 الفارغ نحو الورشة على عربة حديقة حمراء. الإطارات مرئية بالكامل ولا نحل بالداخل.",
+        "kk": "14:12 — өтініш беруші №4 ұяның бос корпусын қызыл бақша арбасымен шеберхана жаққа өзі апарады. Жақтаулар мөлдір көрінеді, корпуста ара жоқ."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Улей никто не выносил: пустой корпус перевёз сам владелец, причём уже без пчёл.",
+        "en": "Nobody carried the hive off: the owner moved the empty body himself, and by then it held no bees.",
+        "tr": "Kovanı kimse götürmedi: boş gövdeyi sahibi taşıdı ve o sırada içinde arı yoktu.",
+        "ar": "لم يحمل أحد الخلية: نقل المالك نفسه الهيكل الفارغ، ولم يكن فيه نحل أصلًا.",
+        "kk": "Ұяны ешкім алып кеткен жоқ: бос корпусты иесі өзі, оның үстіне араларсыз тасыған."
+      },
+      "statementLink": {
+        "statementId": "claim_theft",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Улей никто не выносил: пустой корпус перевёз сам владелец, причём уже без пчёл.",
+          "en": "Nobody carried the hive off: the owner moved the empty body himself, and by then it held no bees.",
+          "tr": "Kovanı kimse götürmedi: boş gövdeyi sahibi taşıdı ve o sırada içinde arı yoktu.",
+          "ar": "لم يحمل أحد الخلية: نقل المالك نفسه الهيكل الفارغ، ولم يكن فيه نحل أصلًا.",
+          "kk": "Ұяны ешкім алып кеткен жоқ: бос корпусты иесі өзі, оның үстіне араларсыз тасыған."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_theft",
+        "reason": {
+          "ru": "Улей никто не выносил: пустой корпус перевёз сам владелец, причём уже без пчёл.",
+          "en": "Nobody carried the hive off: the owner moved the empty body himself, and by then it held no bees.",
+          "tr": "Kovanı kimse götürmedi: boş gövdeyi sahibi taşıdı ve o sırada içinde arı yoktu.",
+          "ar": "لم يحمل أحد الخلية: نقل المالك نفسه الهيكل الفارغ، ولم يكن فيه نحل أصلًا.",
+          "kk": "Ұяны ешкім алып кеткен жоқ: бос корпусты иесі өзі, оның үстіне араларсыз тасыған."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da02-e1.webp",
+        "cameraId": "POND-CAM",
+        "cameraModel": "DachaCam 2"
+      }
+    },
+    {
+      "id": "DA02-E2",
+      "order": 2,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал датчика улья №4",
+        "en": "Sensor Log of Hive No. 4",
+        "tr": "4 No.lu Kovanın Sensör Kaydı",
+        "ar": "سجل مستشعر الخلية رقم 4",
+        "kk": "№4 ұя датчигінің журналы"
+      },
+      "content": {
+        "ru": "11:20 — 34 °C, леток закрыт. 11:47 — 41 °C, леток по-прежнему закрыт. 11:51 — крышка открыта вручную. В 11:49 карта заявителя оплачивает покупку в магазине у шоссе.",
+        "en": "11:20 — 34 °C, entrance closed. 11:47 — 41 °C, entrance still closed. 11:51 — lid opened by hand. At 11:49 the claimant's card pays for a purchase at the shop by the highway.",
+        "tr": "11:20 — 34 °C, giriş kapalı. 11:47 — 41 °C, giriş hâlâ kapalı. 11:51 — kapak elle açıldı. 11:49’da talep sahibinin kartı karayolundaki markette bir alışverişi ödüyor.",
+        "ar": "11:20 — 34 °م، المدخل مغلق. 11:47 — 41 °م، المدخل ما زال مغلقًا. 11:51 — رُفع الغطاء يدويًا. وفي 11:49 تدفع بطاقة مقدم الطلب ثمن مشترياته في متجر الطريق السريع.",
+        "kk": "11:20 — 34 °C, ұяның аузы жабық. 11:47 — 41 °C, ауыз әлі жабық. 11:51 — қақпақ қолмен ашылды. 11:49-да өтініш берушінің картасы тас жол бойындағы дүкенде төлем жасайды."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "В момент перегрева и открытия крышки заявитель был в магазине, а леток он закрыл наглухо — ни присутствия, ни контроля за ульем не было.",
+        "en": "When the hive overheated and the lid was opened the claimant was at the shop, and he had sealed the entrance shut — neither his presence nor his control holds up.",
+        "tr": "Kovan aşırı ısınıp kapak açıldığında talep sahibi markette; girişi de sımsıkı kapatmıştı — ne mevcudiyeti ne de denetimi doğrulanıyor.",
+        "ar": "عند ارتفاع الحرارة وفتح الغطاء كان مقدم الطلب في المتجر، وكان قد أحكم إغلاق المدخل، فلا حضوره ولا إشرافه صحيح.",
+        "kk": "Ұя қызып, қақпақ ашылған сәтте өтініш беруші дүкенде болған, ал ауызды ол тарс жауып тастаған — қатысуы да, бақылауы да расталмайды."
+      },
+      "statementLink": {
+        "statementId": "claim_presence",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "В момент перегрева и открытия крышки заявитель был в магазине, а леток он закрыл наглухо — ни присутствия, ни контроля за ульем не было.",
+          "en": "When the hive overheated and the lid was opened the claimant was at the shop, and he had sealed the entrance shut — neither his presence nor his control holds up.",
+          "tr": "Kovan aşırı ısınıp kapak açıldığında talep sahibi markette; girişi de sımsıkı kapatmıştı — ne mevcudiyeti ne de denetimi doğrulanıyor.",
+          "ar": "عند ارتفاع الحرارة وفتح الغطاء كان مقدم الطلب في المتجر، وكان قد أحكم إغلاق المدخل، فلا حضوره ولا إشرافه صحيح.",
+          "kk": "Ұя қызып, қақпақ ашылған сәтте өтініш беруші дүкенде болған, ал ауызды ол тарс жауып тастаған — қатысуы да, бақылауы да расталмайды."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_presence",
+        "reason": {
+          "ru": "В момент перегрева и открытия крышки заявитель был в магазине, а леток он закрыл наглухо — ни присутствия, ни контроля за ульем не было.",
+          "en": "When the hive overheated and the lid was opened the claimant was at the shop, and he had sealed the entrance shut — neither his presence nor his control holds up.",
+          "tr": "Kovan aşırı ısınıp kapak açıldığında talep sahibi markette; girişi de sımsıkı kapatmıştı — ne mevcudiyeti ne de denetimi doğrulanıyor.",
+          "ar": "عند ارتفاع الحرارة وفتح الغطاء كان مقدم الطلب في المتجر، وكان قد أحكم إغلاق المدخل، فلا حضوره ولا إشرافه صحيح.",
+          "kk": "Ұя қызып, қақпақ ашылған сәтте өтініш беруші дүкенде болған, ал ауызды ол тарс жауып тастаған — қатысуы да, бақылауы да расталмайды."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da02-e2.webp",
+        "logPrompt": "hive-4 sensor log"
+      }
+    },
+    {
+      "id": "DA02-E3",
+      "order": 3,
+      "type": "photo",
+      "title": {
+        "ru": "Фото роя на яблоне",
+        "en": "Photo of the Swarm on the Apple Tree",
+        "tr": "Elma Ağacındaki Oğulun Fotoğrafı",
+        "ar": "صورة السرب على شجرة التفاح",
+        "kk": "Алма ағашындағы аралар үйірінің фотосы"
+      },
+      "content": {
+        "ru": "Пчелиная семья висит на нижней ветви старой яблони участка №13. На стволе — выцветший металлический ярлык: «Общий сад. Дерево №1».",
+        "en": "The colony hangs from the lower branch of the old apple tree on plot No. 13. A faded metal tag on the trunk reads: \"Common Orchard. Tree No. 1\".",
+        "tr": "Koloni, 13 No.lu parseldeki yaşlı elma ağacının alt dalında asılı. Gövdedeki solmuş metal etikette şöyle yazıyor: «Ortak Bahçe. Ağaç No. 1».",
+        "ar": "الطائفة معلّقة على الغصن السفلي لشجرة التفاح القديمة في القطعة رقم 13. وعلى الجذع لوحة معدنية باهتة مكتوب عليها: «البستان المشترك. الشجرة رقم 1».",
+        "kk": "Ара отбасы №13 учаскедегі кәрі алма ағашының төменгі бұтағында ілініп тұр. Дінінде оңған металл тақтайша: «Ортақ бақ. №1 ағаш»."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Ярлык показывает, что старый сад числился общим, но к вопросу о краже улья это отношения не имеет.",
+        "en": "The tag shows the old orchard was registered as common land, but it has no bearing on whether the hive was stolen.",
+        "tr": "Etiket, eski bahçenin ortak arazi olarak kayıtlı olduğunu gösteriyor ama kovanın çalınıp çalınmadığıyla ilgisi yok.",
+        "ar": "تُظهر اللوحة أن البستان القديم كان مسجلًا كأرض مشتركة، لكن لا علاقة لذلك بمسألة سرقة الخلية.",
+        "kk": "Тақтайша ескі бақтың ортақ болып тіркелгенін көрсетеді, бірақ ұяның ұрлануына қатысы жоқ."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Ярлык показывает, что старый сад числился общим, но к вопросу о краже улья это отношения не имеет.",
+          "en": "The tag shows the old orchard was registered as common land, but it has no bearing on whether the hive was stolen.",
+          "tr": "Etiket, eski bahçenin ortak arazi olarak kayıtlı olduğunu gösteriyor ama kovanın çalınıp çalınmadığıyla ilgisi yok.",
+          "ar": "تُظهر اللوحة أن البستان القديم كان مسجلًا كأرض مشتركة، لكن لا علاقة لذلك بمسألة سرقة الخلية.",
+          "kk": "Тақтайша ескі бақтың ортақ болып тіркелгенін көрсетеді, бірақ ұяның ұрлануына қатысы жоқ."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da02-e3.webp",
+        "filename": "da02-e3.webp"
+      }
+    },
+    {
+      "id": "DA02-E4",
+      "order": 4,
+      "type": "document",
+      "title": {
+        "ru": "Накладная питомника",
+        "en": "Apiary Delivery Note",
+        "tr": "Arı Üretim Merkezi İrsaliyesi",
+        "ar": "إشعار تسليم من المنحل",
+        "kk": "Питомник жүкқұжаты"
+      },
+      "content": {
+        "ru": "Матка приобретена в областном питомнике два года назад: обычная местная линия, 1 400 ₽. В заявлении она оценена в 26 000 ₽ как карпатская племенная.",
+        "en": "The queen was bought from the regional apiary two years ago: an ordinary local line, 1,400 ₽. The claim values her at 26,000 ₽ as a pedigree Carpathian.",
+        "tr": "Ana arı iki yıl önce bölge üretim merkezinden alınmış: sıradan yerel hat, 1.400 ₽. Talepte ise soylu Karpat arısı olarak 26.000 ₽ değer biçilmiş.",
+        "ar": "اشتُريت الملكة من منحل المحافظة قبل عامين: سلالة محلية عادية بـ1400 ₽. وفي المطالبة قُدّرت بـ26000 ₽ باعتبارها كارباتية أصيلة.",
+        "kk": "Аналық екі жыл бұрын облыстық питомниктен алынған: қарапайым жергілікті желі, 1 400 ₽. Өтініште ол асыл тұқымды карпат ретінде 26 000 ₽ деп бағаланған."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Порода и цена завышены, но это искажение суммы, а не опровержение конкретной фразы о краже или присутствии.",
+        "en": "The breed and price are inflated, yet that overstates the amount rather than disproving a specific sentence about the theft or his presence.",
+        "tr": "Irk ve fiyat şişirilmiş; bu tutarı abartıyor ama hırsızlık veya mevcudiyetle ilgili belirli bir cümleyi çürütmüyor.",
+        "ar": "السلالة والسعر مبالغ فيهما، وهذا تضخيم للمبلغ لا دحض لجملة محددة عن السرقة أو الحضور.",
+        "kk": "Тұқым мен баға асырылған, бірақ бұл соманы бұрмалау — ұрлық немесе қатысу туралы нақты сөйлемді теріске шығармайды."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Порода и цена завышены, но это искажение суммы, а не опровержение конкретной фразы о краже или присутствии.",
+          "en": "The breed and price are inflated, yet that overstates the amount rather than disproving a specific sentence about the theft or his presence.",
+          "tr": "Irk ve fiyat şişirilmiş; bu tutarı abartıyor ama hırsızlık veya mevcudiyetle ilgili belirli bir cümleyi çürütmüyor.",
+          "ar": "السلالة والسعر مبالغ فيهما، وهذا تضخيم للمبلغ لا دحض لجملة محددة عن السرقة أو الحضور.",
+          "kk": "Тұқым мен баға асырылған, бірақ бұл соманы бұрмалау — ұрлық немесе қатысу туралы нақты сөйлемді теріске шығармайды."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da02-e4.webp"
+      }
+    },
+    {
+      "id": "DA02-E5",
+      "order": 5,
+      "type": "phone_records",
+      "title": {
+        "ru": "Запись телефонного звонка",
+        "en": "Recorded Phone Call",
+        "tr": "Kaydedilmiş Telefon Görüşmesi",
+        "ar": "تسجيل مكالمة هاتفية",
+        "kk": "Телефон қоңырауының жазбасы"
+      },
+      "content": {
+        "ru": "11:44, исходящий Вениамину Лаптеву, 38 секунд: «Открой у меня крышку на четвёртом, срочно. Эта твоя умная вентиляция опять умнее нас».",
+        "en": "11:44, outgoing to Veniamin Laptev, 38 seconds: \"Open the lid on number four for me, quickly. That smart ventilation of yours is outsmarting us again.\"",
+        "tr": "11:44, Veniamin Laptev’e giden arama, 38 saniye: «Dördüncüdeki kapağı aç, acele et. Şu akıllı havalandırman yine bizden akıllı çıktı.»",
+        "ar": "11:44، مكالمة صادرة إلى فينيامين لابتيف، 38 ثانية: «افتح غطاء الرابعة بسرعة. تهويتك الذكية هذه أذكى منا من جديد.»",
+        "kk": "11:44, Вениамин Лаптевке шыққан қоңырау, 38 секунд: «Төртіншінің қақпағын аш, тез. Мына сенің ақылды желдеткішің тағы да бізден ақылды болды»."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Звонок объясняет, кто открыл крышку, но сам по себе не опровергает ни кражу, ни присутствие — это подтверждающая деталь.",
+        "en": "The call explains who opened the lid, but on its own it disproves neither the theft nor his presence — it is a corroborating detail.",
+        "tr": "Görüşme kapağı kimin açtığını açıklıyor ama tek başına ne hırsızlığı ne de mevcudiyeti çürütüyor; destekleyici bir ayrıntı.",
+        "ar": "تشرح المكالمة من فتح الغطاء، لكنها وحدها لا تدحض السرقة ولا الحضور؛ إنها تفصيل مؤيد.",
+        "kk": "Қоңырау қақпақты кім ашқанын түсіндіреді, бірақ өздігінен ұрлықты да, қатысуды да теріске шығармайды — бұл қосымша дәйек."
+      },
+      "statementLink": {
+        "statementId": "claim_presence",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Звонок объясняет, кто открыл крышку, но сам по себе не опровергает ни кражу, ни присутствие — это подтверждающая деталь.",
+          "en": "The call explains who opened the lid, but on its own it disproves neither the theft nor his presence — it is a corroborating detail.",
+          "tr": "Görüşme kapağı kimin açtığını açıklıyor ama tek başına ne hırsızlığı ne de mevcudiyeti çürütüyor; destekleyici bir ayrıntı.",
+          "ar": "تشرح المكالمة من فتح الغطاء، لكنها وحدها لا تدحض السرقة ولا الحضور؛ إنها تفصيل مؤيد.",
+          "kk": "Қоңырау қақпақты кім ашқанын түсіндіреді, бірақ өздігінен ұрлықты да, қатысуды да теріске шығармайды — бұл қосымша дәйек."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da02-e5.webp",
+        "phoneMask": "+7 ••• ••• 41 07"
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Камера у пруда показывает: пустой улей вывез сам заявитель, кражи не было.",
+      "Датчик зафиксировал перегрев при закрытом летке, а карта заявителя в это время расплачивалась в магазине.",
+      "Пчёлы выроились из-за перекрытой вентиляции; завышенная порода лишь дополняет искажение."
+    ],
+    "en": [
+      "The pond camera shows the claimant wheeled the empty hive away himself — there was no theft.",
+      "The sensor logged overheating with the entrance sealed while his card was paying at the shop.",
+      "The colony swarmed because ventilation was blocked; the inflated breed only adds to the distortion."
+    ],
+    "tr": [
+      "Gölet kamerası, boş kovanı talep sahibinin kendisinin götürdüğünü gösteriyor: hırsızlık yok.",
+      "Sensör, giriş kapalıyken aşırı ısınmayı kaydetti; o sırada kartı markette ödeme yapıyordu.",
+      "Koloni havalandırma kapalı olduğu için oğul verdi; şişirilmiş ırk çarpıtmayı tamamlıyor."
+    ],
+    "ar": [
+      "تُظهر كاميرا البركة أن مقدم الطلب نقل الخلية الفارغة بنفسه: لا سرقة.",
+      "سجّل المستشعر ارتفاع الحرارة والمدخل مغلق، بينما كانت بطاقته تدفع في المتجر.",
+      "خرج السرب بسبب انسداد التهوية، والسلالة المبالغ فيها تزيد التشويه."
+    ],
+    "kk": [
+      "Тоған камерасы бос ұяны өтініш берушінің өзі әкеткенін көрсетеді — ұрлық болмаған.",
+      "Датчик ауыз жабық күйде қызып кеткенін тіркеген, сол кезде картасы дүкенде төлем жасаған.",
+      "Аралар желдетілмегендіктен үйірленген; асырылған тұқым бұрмалауды толықтырады."
+    ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "stampable": false,
+      "text": {
+        "ru": "Улей с пчелиной семьёй похищен, ущерб подлежит возмещению.",
+        "en": "The hive with its colony was stolen and the loss is reimbursable.",
+        "tr": "Koloniyle birlikte kovan çalındı ve kayıp tazmin edilmelidir.",
+        "ar": "سُرقت الخلية مع طائفتها والخسارة قابلة للتعويض.",
+        "kk": "Ара отбасы бар ұя ұрланды, залал өтелуге тиіс."
+      }
+    },
+    {
+      "id": "claim_theft",
+      "stampable": true,
+      "text": {
+        "ru": "Закрытый улей №4 вместе с пчёлами вынес посторонний человек.",
+        "en": "A stranger carried off sealed hive No. 4 together with the bees.",
+        "tr": "Kapalı 4 No.lu kovanı arılarla birlikte bir yabancı götürdü.",
+        "ar": "حمل شخص غريب الخلية رقم 4 المغلقة مع النحل.",
+        "kk": "Жабық №4 ұяны араларымен бірге бөгде адам алып кеткен."
+      }
+    },
+    {
+      "id": "claim_presence",
+      "stampable": true,
+      "text": {
+        "ru": "Я лично закрыл леток и всё это время находился дома.",
+        "en": "I closed the hive entrance myself and stayed home the entire time.",
+        "tr": "Kovan girişini kendim kapattım ve tüm süre boyunca evde kaldım.",
+        "ar": "أغلقت مدخل الخلية بنفسي وبقيت في المنزل طوال الوقت.",
+        "kk": "Ұяның аузын өзім жауып, осы уақыт бойы үйде болдым."
+      }
+    }
+  ],
+  "contentVersion": "dacha-romashka-1.0",
+  "narrative": {
+    "preBrief": {
+      "ru": "Пчеловод уверен, что улей украли. Пчёлы, судя по всему, придерживаются другой версии.",
+      "en": "The beekeeper is certain the hive was stolen. The bees, apparently, have a different account.",
+      "tr": "Arıcı kovanın çalındığına emin. Arılar ise görünüşe göre başka bir versiyonda ısrarcı.",
+      "ar": "النحّال واثق أن الخلية سُرقت. أما النحل فلديه رواية أخرى على ما يبدو.",
+      "kk": "Омарташы ұя ұрланды деп сенімді. Аралардың нұсқасы, бәрі көрсеткендей, басқаша."
+    },
+    "postVerdictNote": {
+      "ru": "Пчёлы не сбежали — они просто ушли туда, где сад всегда был общим.",
+      "en": "The bees did not escape — they simply moved to where the orchard has always been common land.",
+      "tr": "Arılar kaçmadı; sadece bahçenin hep ortak olduğu yere taşındılar.",
+      "ar": "لم يهرب النحل، بل انتقل إلى حيث كان البستان مشتركًا دائمًا.",
+      "kk": "Аралар қашқан жоқ — олар бақ әрқашан ортақ болған жерге көшті."
+    },
+    "nextCaseTeaser": {
+      "ru": "Следующей ночью с конкурсной грядки исчезает главный кабачок сезона.",
+      "en": "The next night the season's champion marrow vanishes from the contest bed.",
+      "tr": "Ertesi gece yarışma tarhından sezonun baş kabağı kayboluyor.",
+      "ar": "في الليلة التالية يختفي كوسا الموسم البطل من مشتل المسابقة.",
+      "kk": "Келесі түні байқау алаңынан маусымның бас асқабағы жоғалады."
+    },
+    "seasonClue": {
+      "id": "common-orchard-tag",
+      "progressIndex": 2,
+      "progressTotal": 10,
+      "label": {
+        "ru": "Ярлык «Общий сад»",
+        "en": "The \"Common Orchard\" Tag",
+        "tr": "«Ortak Bahçe» Etiketi",
+        "ar": "لوحة «البستان المشترك»",
+        "kk": "«Ортақ бақ» тақтайшасы"
+      },
+      "description": {
+        "ru": "Старая яблоня на участке №13 подписана как дерево общего сада. Почему тогда участок собираются продавать?",
+        "en": "The old apple tree on plot No. 13 is labelled as a tree of the common orchard. So why is the plot up for sale?",
+        "tr": "13 No.lu parseldeki yaşlı elma ağacı ortak bahçenin ağacı olarak etiketlenmiş. Peki parsel neden satılıyor?",
+        "ar": "شجرة التفاح القديمة في القطعة رقم 13 موسومة كشجرة من البستان المشترك. فلماذا تُعرض القطعة للبيع؟",
+        "kk": "№13 учаскедегі кәрі алма ағашы ортақ бақтың ағашы деп белгіленген. Онда учаске неге сатылмақ?"
+      }
+    },
+    "epilogue": null
+  }
+}

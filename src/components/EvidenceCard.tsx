@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import type { Evidence, Language } from "../types";
 import { loc, t } from "../i18n/ui";
+import { getStampCaption } from "../data/stampTexts";
 import { EVIDENCE_TAG_KEY } from "./icons";
 import { Tooltip } from "./Tooltip";
 
@@ -24,6 +25,8 @@ interface Props {
   targetable?: boolean;
   /** Visually de-emphasize cards that cannot be selected in hint targeting mode. */
   dimmed?: boolean;
+  /** Cosmetic stamp caption the player has inked; `null` = the free default. */
+  stampTextId?: string | null;
   onClick: () => void;
 }
 
@@ -37,9 +40,11 @@ export function EvidenceCard({
   sealed = false,
   targetable = false,
   dimmed = false,
+  stampTextId = null,
   onClick,
 }: Props) {
   const unavailable = sealed && !targetable;
+  const stampCaption = getStampCaption(stampTextId, lang);
   return (
     <Tooltip
       className="block h-full"
@@ -114,9 +119,17 @@ export function EvidenceCard({
         {stamped && (
           <span
             aria-hidden
-            className="absolute right-[-26px] top-3 rotate-[34deg] bg-stamp px-7 py-[3px] font-mono text-[8px] font-bold uppercase tracking-wider text-white"
+            className={`absolute right-[-26px] top-3 rotate-[34deg] whitespace-nowrap bg-stamp py-[3px] font-mono font-bold uppercase text-white ${
+              // Bought captions run longer than "ПРОТИВОРЕЧИЕ" — tighten the
+              // ribbon instead of letting it swallow the card corner.
+              stampCaption.length > 16
+                ? "px-3 text-[6px] tracking-normal"
+                : stampCaption.length > 13
+                  ? "px-4 text-[7px] tracking-normal"
+                  : "px-7 text-[8px] tracking-wider"
+            }`}
           >
-            {t("contradiction", lang)}
+            {stampCaption}
           </span>
         )}
       </motion.button>

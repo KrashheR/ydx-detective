@@ -1,0 +1,698 @@
+{
+  "case-033": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "gennady_orlov",
+      "displayName": {
+        "ru": "Геннадий Орлов",
+        "en": "Gennady Orlov",
+        "tr": "Gennadi Orlov",
+        "ar": "غينادي أورلوف",
+        "kk": "Геннадий Орлов"
+      },
+      "portraitState": "relieved_guilt"
+    },
+    "finalLine": {
+      "ru": "Я трижды проверил защиту. Спасибо, что проверили её в четвёртый.",
+      "en": "I checked the guard three times. Thank you for checking it a fourth.",
+      "tr": "Koruyucuyu üç kez kontrol ettim. Dördüncü kez siz kontrol ettiğiniz için teşekkürler.",
+      "ar": "فحصت واقي الأمان ثلاث مرات. شكرًا لأنكم فحصتموه مرة رابعة.",
+      "kk": "Қорғанысты үш рет тексердім. Төртінші рет сіздер тексергеніңізге рақмет."
+    },
+    "emotionalMode": "grave",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Через 17 минут после аварии зафиксированы свежие переломы двух пястных костей и травма от сдавления.",
+          "en": "Seventeen minutes after the accident, fresh fractures of two metacarpal bones and a crush injury were recorded.",
+          "tr": "Kazadan on yedi dakika sonra iki metakarp kemiğinde taze kırık ve ezilme yaralanması kaydedildi.",
+          "ar": "بعد سبع عشرة دقيقة من الحادث سُجّلت كسور حديثة في عظمتين مشطيتين وإصابة سحق.",
+          "kk": "Оқиғадан он жеті минут өткенде екі алақан сүйегінің жаңа сынығы мен қысылу жарақаты тіркелген."
+        },
+        "evidenceIds": [
+          "ev-medical",
+          "ev-photo"
+        ]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "PLC записал ложное срабатывание датчика педали без команды оператора; защитное реле цепь не разомкнуло.",
+          "en": "The PLC logged a false pedal-sensor trigger with no operator command; the safety relay failed to break the circuit.",
+          "tr": "PLC, operatör komutu olmadan hatalı bir pedal sensörü tetiklemesi kaydetti; emniyet rölesi devreyi kesmedi.",
+          "ar": "سجّل الـPLC تفعيلًا خاطئًا لمستشعر الدوّاسة دون أمر من المشغّل؛ ولم يقطع مُرحّل الأمان الدائرة.",
+          "kk": "PLC оператор командасынсыз педаль датчигінің жалған іске қосылуын жазған; қорғаныш релесі тізбекті ажыратпаған."
+        },
+        "evidenceIds": [
+          "ev-machine",
+          "ev-witness"
+        ]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Шаг перфорации и рисунок волокон на пломбе реле не совпадают с заводскими. Оператор процедуру не нарушал — вина лежит на детали, а не на нём.",
+          "en": "The perforation pitch and fibre pattern on the relay seal do not match the factory sample. The operator broke no procedure — the fault lies with the part, not with him.",
+          "tr": "Röle mühründeki delik aralığı ve lif deseni fabrika örneğiyle uyuşmuyor. Operatör hiçbir prosedürü ihlal etmedi — kusur onda değil, parçada.",
+          "ar": "خطوة التثقيب ونمط الألياف على ختم المُرحّل لا يطابقان عيّنة المصنع. لم يخالف المشغّل أي إجراء — العيب في القطعة لا فيه.",
+          "kk": "Реле пломбасындағы тесік қадамы мен талшық өрнегі зауыттық үлгіге сай емес. Оператор рәсімді бұзған жоқ — кінә бөлшекте, онда емес."
+        },
+        "evidenceIds": [
+          "ev-relay",
+          "ev-safety"
+        ]
+      }
+    ],
+    "veraLine": {
+      "ru": "Происхождение детали не решает страховой вопрос. Выплата одобрена потому, что оператор не нарушил процедуру.",
+      "en": "Where the part came from does not settle the insurance question. The payout stands because the operator followed procedure.",
+      "tr": "Parçanın nereden geldiği sigorta sorusunu çözmez. Ödeme, operatör prosedüre uyduğu için geçerlidir.",
+      "ar": "مصدر القطعة لا يحسم مسألة التأمين. التعويض قائم لأن المشغّل التزم بالإجراء.",
+      "kk": "Бөлшектің шыққан жері сақтандыру мәселесін шешпейді. Төлем расталды, себебі оператор рәсімді бұзған жоқ."
+    },
+    "arcRevealFromSeasonClue": true
+  },
+  "case-034": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "khariton_velizhanin",
+      "displayName": {
+        "ru": "Харитон Велижанин",
+        "en": "Khariton Velizhanin",
+        "tr": "Hariton Velijanin",
+        "ar": "خاريتون فيليجانين",
+        "kk": "Харитон Велижанин"
+      },
+      "portraitState": "grim"
+    },
+    "finalLine": {
+      "ru": "Сажа должна была спрятать номера. Даже огонь теперь работает не на всех.",
+      "en": "The soot was supposed to hide the numbers. Even fire does not work for everyone any more.",
+      "tr": "Kurumun numaraları gizlemesi gerekiyordu. Artık ateş bile herkes için çalışmıyor.",
+      "ar": "كان على السخام أن يُخفي الأرقام. حتى النار لم تعد تعمل لصالح الجميع.",
+      "kk": "Күйе нөмірлерді жасыруы керек еді. Енді от та бәрінің пайдасына жұмыс істемейді."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Пожар на складе реален, а компания на грани дефолта — мотив налицо. Это ещё не доказательство.",
+          "en": "The warehouse fire is real and the company is close to default — the motive is plain. That is still not proof.",
+          "tr": "Depo yangını gerçek ve şirket iflasın eşiğinde — gerekçe ortada. Ama bu hâlâ kanıt değil.",
+          "ar": "حريق المستودع حقيقي والشركة على شفا التعثّر — الدافع ظاهر. لكنه ليس دليلًا بعد.",
+          "kk": "Қоймадағы өрт шынайы, ал компания дефолт алдында — уәж айқын. Бұл әлі дәлел емес."
+        },
+        "evidenceIds": [
+          "ev-debt"
+        ]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "Под сажей на уцелевшем шасси проступает номер списанного демонстрационного корпуса, которого нет в страховой описи нового товара.",
+          "en": "Under the soot on the surviving chassis appears the serial of a written-off demo unit, absent from the insured inventory of new goods.",
+          "tr": "Kurtulan şasideki kurumun altından, yeni malların sigorta envanterinde bulunmayan hurdaya ayrılmış bir teşhir ünitesinin numarası çıkıyor.",
+          "ar": "تحت السخام على الهيكل الباقي يظهر رقم وحدة عرض مشطوبة، لا وجود لها في جرد التأمين للبضاعة الجديدة.",
+          "kk": "Аман қалған шассидегі күйенің астынан жаңа тауардың сақтандыру тізімдемесінде жоқ, есептен шығарылған көрме корпусының нөмірі шығады."
+        },
+        "evidenceIds": [
+          "ev-serials"
+        ]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Камера показывает вывоз ценного товара до возгорания, датчики дыма отключены мастер-кодом, а дознаватель отвергает случайную причину. В огне был заменитель.",
+          "en": "The camera shows the valuable stock leaving before ignition, the smoke detectors were disabled with a master code, and the investigator rules out an accidental cause. What burned was a stand-in.",
+          "tr": "Kamera değerli malın yangından önce çıkarıldığını gösteriyor, duman dedektörleri ana kodla devre dışı bırakılmış ve müfettiş kazara nedeni dışlıyor. Yanan, yerine konan mallardı.",
+          "ar": "تُظهر الكاميرا خروج البضاعة الثمينة قبل الاشتعال، وأُبطلت كواشف الدخان برمز رئيسي، ويستبعد المحقّق السبب العرضي. ما احترق كان بديلًا.",
+          "kk": "Камера құнды тауардың өрттен бұрын шығарылғанын көрсетеді, түтін датчиктері мастер-кодпен өшірілген, ал тергеуші кездейсоқ себепті жоққа шығарады. Отта жанғаны — алмастырғыш."
+        },
+        "evidenceIds": [
+          "ev-cam",
+          "ev-panel",
+          "ev-fire"
+        ]
+      }
+    ],
+    "arcRevealFromSeasonClue": true
+  },
+  "case-035": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "arkady_egorov",
+      "displayName": {
+        "ru": "Аркадий Егоров",
+        "en": "Arkady Egorov",
+        "tr": "Arkadi Yegorov",
+        "ar": "أركادي يغوروف",
+        "kk": "Аркадий Егоров"
+      },
+      "portraitState": "absurd_pride"
+    },
+    "finalLine": {
+      "ru": "Признаю: разгромить зал фургоном было эффектнее, чем умнее.",
+      "en": "I admit it: wrecking the hall with a van was more spectacular than it was clever.",
+      "tr": "İtiraf ediyorum: salonu minibüsle dağıtmak akıllıcadan çok gösterişliydi.",
+      "ar": "أعترف: تحطيم القاعة بشاحنة كان مبهرًا أكثر مما كان ذكيًا.",
+      "kk": "Мойындаймын: залды фургонмен қиратқаным ақылдыдан гөрі әсерлі болды."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Разгром зала настоящий, а администратор действительно не видел момент повреждения — Егоров настоял на работе без персонала.",
+          "en": "The wrecked hall is real, and the manager genuinely did not see the moment of damage — Egorov insisted on working without staff.",
+          "tr": "Dağıtılmış salon gerçek ve müdür hasar anını gerçekten görmedi — Yegorov personelsiz çalışmakta ısrar etmişti.",
+          "ar": "الخراب في القاعة حقيقي، والمدير لم يرَ فعلًا لحظة الضرر — إذ أصرّ يغوروف على العمل دون موظفين.",
+          "kk": "Залдың қирағаны шын, ал әкімші зақым сәтін шынымен көрмеген — Егоров қызметкерсіз жұмыс істеуді талап еткен."
+        },
+        "evidenceIds": [
+          "ev-admin"
+        ]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "В зал по служебной карте въезжал только его фургон, и рисунок протектора на паркете совпадает с его шинами.",
+          "en": "Only his van entered the hall on a service card, and the tread pattern on the parquet matches its tyres.",
+          "tr": "Salona hizmet kartıyla yalnızca onun minibüsü girdi ve parkedeki diş deseni onun lastikleriyle eşleşiyor.",
+          "ar": "لم تدخل القاعة ببطاقة الخدمة سوى شاحنته، ونمط المداس على الباركيه يطابق إطاراتها.",
+          "kk": "Залға қызметтік картамен тек оның фургоны кірген, ал паркеттегі протектор өрнегі оның дөңгелектерімен сәйкес."
+        },
+        "evidenceIds": [
+          "ev-camera",
+          "ev-tyres"
+        ]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Сервисный реестр показывает: части заявленного оборудования в указанном составе не существовало, а трек фургона фиксирует, что вмятину увеличили уже после происшествия.",
+          "en": "The service register shows part of the claimed equipment never existed in that configuration, and the van's track shows the dent was enlarged after the incident.",
+          "tr": "Servis kaydı, talep edilen ekipmanın bir kısmının o bileşimde hiç var olmadığını gösteriyor; minibüsün izi de göçüğün olaydan sonra büyütüldüğünü ortaya koyuyor.",
+          "ar": "يُظهر سجل الصيانة أن جزءًا من المعدّات المطالَب بها لم يوجد قط بذلك التكوين، ويُظهر مسار الشاحنة أن الانبعاج وُسِّع بعد الحادث.",
+          "kk": "Сервистік тізілім көрсетеді: мәлімделген жабдықтың бір бөлігі көрсетілген құрамда мүлде болмаған, ал фургон тректері майысқан жердің оқиғадан кейін ұлғайтылғанын тіркеген."
+        },
+        "evidenceIds": [
+          "ev-sprayers",
+          "ev-gps"
+        ]
+      }
+    ]
+  },
+  "case-036": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "maxim_yartsev",
+      "displayName": {
+        "ru": "Максим Ярцев",
+        "en": "Maxim Yartsev",
+        "tr": "Maksim Yartsev",
+        "ar": "مكسيم يارتسيف",
+        "kk": "Максим Ярцев"
+      },
+      "portraitState": "techie_humour"
+    },
+    "finalLine": {
+      "ru": "Сто восемьдесят восемь на зарядке. Наконец машина быстрее меня.",
+      "en": "One hundred eighty-eight while parked at the charger. At last the car is faster than me.",
+      "tr": "Şarjdayken yüz seksen sekiz. Sonunda araba benden hızlı.",
+      "ar": "مئة وثمانية وثمانون وهي على الشاحن. أخيرًا صارت السيارة أسرع مني.",
+      "kk": "Зарядта тұрып жүз сексен сегіз. Ақыры көлік менен жылдам."
+    },
+    "emotionalMode": "humour",
+    "reasoningChain": [
+      {
+        "labelKey": "suspicion",
+        "text": {
+          "ru": "Телеметрия записала 188 км/ч в момент повреждения — значение, которое само по себе выглядит как попытка обмана.",
+          "en": "Telemetry logged 188 km/h at the moment of damage — a figure that by itself looks like an attempt at fraud.",
+          "tr": "Telemetri, hasar anında 188 km/s kaydetti — tek başına dolandırıcılık girişimi gibi görünen bir değer.",
+          "ar": "سجّلت القياسات عن بُعد 188 كم/س لحظة الضرر — رقم يبدو بحدّ ذاته كمحاولة احتيال.",
+          "kk": "Телеметрия зақым сәтінде 188 км/сағ жазған — өздігінен алаяқтық әрекеті сияқты көрінетін мән."
+        },
+        "evidenceIds": [
+          "ev-log"
+        ]
+      },
+      {
+        "labelKey": "explained",
+        "text": {
+          "ru": "Импульс выдало одно колесо, три других показывают 0, координаты не менялись, а камера фиксирует неподвижную машину и дугу из зарядного порта.",
+          "en": "One wheel produced the pulse, the other three read 0, the coordinates never changed, and the camera shows a stationary car with an arc from the charging port.",
+          "tr": "Darbeyi tek tekerlek üretti, diğer üçü 0 gösteriyor, koordinatlar değişmedi ve kamera hareketsiz aracı ve şarj portundan çıkan arkı gösteriyor.",
+          "ar": "أنتجت عجلة واحدة النبضة، والثلاث الأخريات تقرأ 0، ولم تتغيّر الإحداثيات، والكاميرا تُظهر سيارة ساكنة وقوسًا كهربائيًا من منفذ الشحن.",
+          "kk": "Импульсті бір дөңгелек берген, қалған үшеуі 0 көрсетеді, координаттар өзгермеген, ал камера қозғалыссыз көлікті және зарядтау портынан шыққан доғаны түсірген."
+        },
+        "evidenceIds": [
+          "ev-camera",
+          "ev-gps"
+        ]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Единственный перегретый путь идёт по зарядной линии; колёса и привод холодные. Разряд в подстанцию в 22:17:08 объясняет всё.",
+          "en": "The only overheated path runs along the charging line; wheels and drivetrain are cold. The 22:17:08 strike on the substation explains everything.",
+          "tr": "Aşırı ısınan tek hat şarj hattı; tekerlekler ve aktarma organları soğuk. 22:17:08'deki trafo merkezine düşen yıldırım her şeyi açıklıyor.",
+          "ar": "المسار المفرط السخونة الوحيد هو خط الشحن؛ أما العجلات ومجموعة النقل فباردة. وضربة الساعة 22:17:08 على المحطة الفرعية تفسّر كل شيء.",
+          "kk": "Жалғыз қызып кеткен жол зарядтау желісімен өтеді; дөңгелектер мен жетек суық. 22:17:08-дегі қосалқы станцияға түскен разряд бәрін түсіндіреді."
+        },
+        "evidenceIds": [
+          "ev-melt",
+          "ev-weather",
+          "ev-station"
+        ]
+      }
+    ]
+  },
+  "case-037": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "denis_korin",
+      "displayName": {
+        "ru": "Денис Корин",
+        "en": "Denis Korin",
+        "tr": "Denis Korin",
+        "ar": "دينيس كورين",
+        "kk": "Денис Корин"
+      },
+      "portraitState": "nervous_irony"
+    },
+    "finalLine": {
+      "ru": "На рентгене они и правда выглядят людьми. На это я и рассчитывал.",
+      "en": "On the X-ray they really do look like people. That is exactly what I counted on.",
+      "tr": "Röntgende gerçekten insana benziyorlar. Ben de tam buna güvenmiştim.",
+      "ar": "في صورة الأشعة يبدون بشرًا بالفعل. وعلى هذا راهنت.",
+      "kk": "Рентгенде олар шынымен адамға ұқсайды. Мен дәл соған сенген едім."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Мотоцикл и манекены существуют: накануне их привозили на автомойку для очистки перед перевозкой.",
+          "en": "The motorcycle and the mannequins are real: the day before they were taken to a car wash to be cleaned for transport.",
+          "tr": "Motosiklet ve mankenler gerçek: bir gün önce nakliye öncesi temizlik için oto yıkamaya götürülmüşler.",
+          "ar": "الدرّاجة والدُّمى موجودة فعلًا: في اليوم السابق نُقلت إلى مغسلة سيارات لتنظيفها قبل الشحن.",
+          "kk": "Мотоцикл мен манекендер бар: алдыңғы күні оларды тасымалдау алдында тазалау үшін автожуғышқа әкелген."
+        },
+        "evidenceIds": [
+          "ev-wash"
+        ]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "Резервная запись ворот фиксирует выезд в 17:42, а «ночной» файл оказался поздней копией. Журнал видеосистемы показывает, что слепую зону создал сам владелец.",
+          "en": "The backup gate recording shows a departure at 17:42, while the “night” file turns out to be a later copy. The video-system log shows the owner created the blind spot himself.",
+          "tr": "Yedek kapı kaydı 17:42'de bir çıkış gösteriyor; “gece” dosyası ise sonradan alınmış bir kopya. Video sistem kaydı, kör noktayı sahibin kendisinin oluşturduğunu gösteriyor.",
+          "ar": "يُظهر التسجيل الاحتياطي للبوابة خروجًا عند 17:42، بينما تبيّن أن ملف «الليل» نسخة لاحقة. ويُظهر سجل نظام الفيديو أن المالك هو من أوجد النقطة العمياء.",
+          "kk": "Қақпаның резервтік жазбасы 17:42-де шығуды тіркейді, ал «түнгі» файл кейінгі көшірме болып шықты. Бейнежүйе журналы соқыр аймақты иесінің өзі жасағанын көрсетеді."
+        },
+        "evidenceIds": [
+          "ev-backup",
+          "ev-cameras"
+        ]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Таможенный рентген и экспортная декларация показывают то же имущество как оформленный груз владельца, а предоплата поступила за пять дней до «кражи».",
+          "en": "The customs X-ray and the export declaration show the same property as the owner's declared cargo, and the advance arrived five days before the “theft”.",
+          "tr": "Gümrük röntgeni ve ihracat beyannamesi aynı malı sahibinin beyan ettiği yük olarak gösteriyor; avans da “hırsızlıktan” beş gün önce gelmiş.",
+          "ar": "تُظهر أشعة الجمارك وبيان التصدير الممتلكات نفسها كشحنة معلَنة باسم المالك، والدفعة المقدَّمة وصلت قبل «السرقة» بخمسة أيام.",
+          "kk": "Кеден рентгені мен экспорттық декларация сол мүлікті иесінің ресімделген жүгі ретінде көрсетеді, ал алдын ала төлем «ұрлықтан» бес күн бұрын түскен."
+        },
+        "evidenceIds": [
+          "ev-xray",
+          "ev-shipping",
+          "ev-sale"
+        ]
+      }
+    ],
+    "arcRevealFromSeasonClue": true
+  },
+  "case-038": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "anton_lanskoy",
+      "displayName": {
+        "ru": "Антон Ланской",
+        "en": "Anton Lanskoy",
+        "tr": "Anton Lanskoy",
+        "ar": "أنطون لانسكوي",
+        "kk": "Антон Ланской"
+      },
+      "portraitState": "shaken_relief"
+    },
+    "finalLine": {
+      "ru": "Я прочёл этикетку дважды. Надо было читать то, что под ней.",
+      "en": "I read the label twice. I should have read what was underneath it.",
+      "tr": "Etiketi iki kez okudum. Asıl altındakini okumalıymışım.",
+      "ar": "قرأت الملصق مرّتين. كان عليّ أن أقرأ ما تحته.",
+      "kk": "Жапсырманы екі рет оқыдым. Астындағыны оқуым керек еді."
+    },
+    "emotionalMode": "grave",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Ланской заказал нейтральный стабилизатор S-4 и получил запечатанную упаковку; номер пломбы на накладной совпадает с той, что видна на камере.",
+          "en": "Lanskoy ordered the neutral stabiliser S-4 and received a sealed package; the seal number on the waybill matches the one visible on camera.",
+          "tr": "Lanskoy nötr stabilizatör S-4 sipariş etti ve mühürlü bir paket aldı; irsaliyedeki mühür numarası kamerada görünenle aynı.",
+          "ar": "طلب لانسكوي المثبّت المحايد S-4 وتسلّم عبوة مختومة؛ ورقم الختم في بوليصة الشحن يطابق الظاهر في الكاميرا.",
+          "kk": "Ланской бейтарап S-4 тұрақтандырғышын тапсырыс беріп, пломбаланған қаптама алған; жүкқұжаттағы пломба нөмірі камерада көрінетінмен сәйкес."
+        },
+        "evidenceIds": [
+          "ev-document",
+          "ev-camera"
+        ]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "Под наклейкой «S-4» проступает заводская маркировка «C-9». В запечатанной упаковке находился другой реагент.",
+          "en": "Under the “S-4” sticker the factory marking “C-9” shows through. The sealed package held a different reagent.",
+          "tr": "“S-4” etiketinin altından fabrika işareti “C-9” beliriyor. Mühürlü pakette başka bir reaktif vardı.",
+          "ar": "تحت ملصق «S-4» تظهر علامة المصنع «C-9». كانت العبوة المختومة تحوي كاشفًا آخر.",
+          "kk": "«S-4» жапсырмасының астынан «C-9» зауыттық таңбасы шығады. Пломбаланған қаптамада басқа реагент болған."
+        },
+        "evidenceIds": [
+          "ev-analysis"
+        ]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Вытяжка работала штатно, экстренный вызов сделан через 34 секунды, а проверка поставщика показала перемаркировку всей партии. Процедура соблюдена.",
+          "en": "The fume hood ran normally, the emergency call went out after 34 seconds, and the supplier check showed the whole batch was relabelled. Procedure was followed.",
+          "tr": "Çeker ocak düzgün çalışıyordu, acil çağrı 34 saniye içinde yapıldı ve tedarikçi denetimi tüm partinin yeniden etiketlendiğini gösterdi. Prosedüre uyulmuş.",
+          "ar": "عملت خزانة السحب بشكل طبيعي، وصدر نداء الطوارئ بعد 34 ثانية، وأظهر فحص المورّد إعادة وسم الدفعة بأكملها. الإجراء متَّبع.",
+          "kk": "Сорғыш қалыпты жұмыс істеген, шұғыл шақыру 34 секундтан кейін жасалған, ал жеткізушіні тексеру бүкіл партияның қайта таңбаланғанын көрсетті. Рәсім сақталған."
+        },
+        "evidenceIds": [
+          "ev-log",
+          "ev-call",
+          "ev-supplier"
+        ]
+      }
+    ]
+  },
+  "case-039": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "nikita_voronov",
+      "displayName": {
+        "ru": "Никита Воронов",
+        "en": "Nikita Voronov",
+        "tr": "Nikita Voronov",
+        "ar": "نيكيتا فورونوف",
+        "kk": "Никита Воронов"
+      },
+      "portraitState": "bitter_irony"
+    },
+    "finalLine": {
+      "ru": "Робот выполнил приказ идеально. В отличие от меня.",
+      "en": "The machine carried out its order perfectly. Unlike me.",
+      "tr": "Makine emrini kusursuz yerine getirdi. Benim aksime.",
+      "ar": "نفّذت الآلة أمرها بإتقان. على عكسي أنا.",
+      "kk": "Робот бұйрықты мінсіз орындады. Менен айырмашылығы сол."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Панели действительно исчезли с фермы, а проект не выполнил кредитные показатели выработки — мотив реален.",
+          "en": "The panels really are gone from the farm, and the project missed its loan output targets — the motive is real.",
+          "tr": "Paneller çiftlikten gerçekten kayboldu ve proje kredi üretim hedeflerini tutturamadı — gerekçe gerçek.",
+          "ar": "اختفت الألواح فعلًا من المزرعة، ولم يحقّق المشروع مؤشّرات الإنتاج المطلوبة للقرض — الدافع حقيقي.",
+          "kk": "Панельдер шынымен фермадан жоғалған, ал жоба несиелік өндіру көрсеткіштерін орындамаған — уәж нақты."
+        },
+        "evidenceIds": [
+          "ev-debt"
+        ]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "Крепления сняты аккуратно, а не разрушены, и журнал показывает команду «демонтировать», а не аварию. Сосед слышал только штатный электропривод.",
+          "en": "The mounts were neatly removed rather than destroyed, and the log shows a “dismantle” command, not a fault. The neighbour heard only the normal electric drive.",
+          "tr": "Bağlantılar tahrip edilmemiş, özenle sökülmüş; kayıtta arıza değil “sök” komutu var. Komşu yalnızca normal elektrik tahrikini duymuş.",
+          "ar": "فُكَّت التثبيتات بعناية لا بالتحطيم، ويُظهر السجل أمر «فكّ» لا عطلًا. ولم يسمع الجار سوى محرّك كهربائي عادي.",
+          "kk": "Бекітпелер қиратылмай, ұқыпты шешілген, ал журналда апат емес, «бөлшекте» командасы тұр. Көрші тек қалыпты электр жетегін естіген."
+        },
+        "evidenceIds": [
+          "ev-cuts",
+          "ev-log",
+          "ev-neighbor"
+        ]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Камера ангара показывает, кто запустил операцию, а метка приводит и машину, и панели в арендованный им бокс. Имущество цело.",
+          "en": "The hangar camera shows who started the operation, and the tracker leads both the machine and the panels to a box he rented. The property is intact.",
+          "tr": "Hangar kamerası işlemi kimin başlattığını gösteriyor; takip cihazı da hem makineyi hem panelleri onun kiraladığı bir depoya götürüyor. Mal sağlam.",
+          "ar": "تُظهر كاميرا الحظيرة من بدأ العملية، ويقود جهاز التتبّع الآلة والألواح معًا إلى مخزن استأجره. الممتلكات سليمة.",
+          "kk": "Ангар камерасы операцияны кім бастағанын көрсетеді, ал белгі машинаны да, панельдерді де оның жалдаған боксына апарады. Мүлік бүтін."
+        },
+        "evidenceIds": [
+          "ev-camera",
+          "ev-gps"
+        ]
+      }
+    ],
+    "arcRevealFromSeasonClue": true
+  },
+  "case-040": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "miron_veil",
+      "displayName": {
+        "ru": "Мирон Вейл",
+        "en": "Miron Veil",
+        "tr": "Miron Veil",
+        "ar": "ميرون فيل",
+        "kk": "Мирон Вейл"
+      },
+      "portraitState": "wary_relief"
+    },
+    "finalLine": {
+      "ru": "Я боялся, вы увидите серый грузовик — и решите, что я всё придумал.",
+      "en": "I was afraid you would see the grey truck and decide I had made it all up.",
+      "tr": "Gri kamyonu görüp her şeyi uydurduğuma karar vereceğinizden korktum.",
+      "ar": "خشيت أن تروا الشاحنة الرمادية فتحكموا بأنني اختلقت كل شيء.",
+      "kk": "Сұр жүк көлігін көріп, бәрін ойдан шығардым деп шешесіздер деп қорықтым."
+    },
+    "emotionalMode": "threat",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Пожар начался снаружи, а модули полива были закуплены и установлены на складе задолго до него.",
+          "en": "The fire started from outside, and the irrigation modules were bought and installed in the store long before it.",
+          "tr": "Yangın dışarıdan başladı ve sulama modülleri ondan çok önce alınıp depoya kurulmuştu.",
+          "ar": "بدأ الحريق من الخارج، وكانت وحدات الريّ قد اشتُريت ورُكّبت في المخزن قبله بوقت طويل.",
+          "kk": "Өрт сырттан басталған, ал суару модульдері одан әлдеқайда бұрын сатып алынып, қоймаға орнатылған."
+        },
+        "evidenceIds": [
+          "ev-inventory"
+        ]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "Волокна, пропитка и внутренняя сетка фитильной ленты совпадают с промышленным материалом, а ворота открыл клонированный сервисный пропуск — ключи Вейла не использовались.",
+          "en": "The fibres, impregnation and inner mesh of the fuse tape match an industrial material, and the gate was opened with a cloned service pass — Veil's keys were never used.",
+          "tr": "Fitil bandının lifleri, emprenyesi ve iç ağı endüstriyel bir malzemeyle eşleşiyor; kapı da klonlanmış bir servis kartıyla açılmış — Veil'in anahtarları hiç kullanılmamış.",
+          "ar": "ألياف شريط الفتيل وتشريبه وشبكته الداخلية تطابق مادة صناعية، وفُتحت البوابة ببطاقة خدمة مستنسَخة — ولم تُستخدم مفاتيح فيل إطلاقًا.",
+          "kk": "Білте таспасының талшықтары, сіңдірмесі және ішкі торы өнеркәсіптік материалмен сәйкес, ал қақпаны клондалған сервистік рұқсатнама ашқан — Вейлдің кілттері қолданылмаған."
+        },
+        "evidenceIds": [
+          "ev-photo",
+          "ev-access"
+        ]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Всю ночь Вейл был в 190 км от фермы, а серый грузовик с похищенными блоками ушёл от неё к северному терминалу. Владелец здесь пострадавший.",
+          "en": "Veil spent the whole night 190 km from the farm, while the grey truck carrying the stolen units drove from it to the northern terminal. Here the owner is the victim.",
+          "tr": "Veil bütün geceyi çiftlikten 190 km uzakta geçirdi; çalınan üniteleri taşıyan gri kamyon ise oradan kuzey terminaline gitti. Burada sahibi mağdur.",
+          "ar": "قضى فيل الليل كلّه على بعد 190 كم من المزرعة، بينما اتّجهت الشاحنة الرمادية بالوحدات المسروقة منها إلى المحطة الشمالية. المالك هنا هو الضحية.",
+          "kk": "Вейл түні бойы фермадан 190 км жерде болған, ал ұрланған блоктары бар сұр жүк көлігі одан солтүстік терминалға кеткен. Мұнда иесі — зардап шеккен."
+        },
+        "evidenceIds": [
+          "ev-alibi",
+          "ev-camera",
+          "ev-route"
+        ]
+      }
+    ],
+    "veraLine": {
+      "ru": "Мы четыре акта учились подозревать владельца. Здесь эта привычка была бы ошибкой.",
+      "en": "For four acts we learned to suspect the owner. Here that habit would have been a mistake.",
+      "tr": "Dört perde boyunca sahibinden şüphelenmeyi öğrendik. Burada bu alışkanlık bir hata olurdu.",
+      "ar": "طوال أربعة فصول تعلّمنا الشكّ في المالك. وهنا كانت تلك العادة لتكون خطأ.",
+      "kk": "Төрт перде бойы иесіне күдіктенуді үйрендік. Мұнда бұл әдет қателік болар еді."
+    },
+    "arcRevealFromSeasonClue": true
+  },
+  "case-041": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "elian_kord",
+      "displayName": {
+        "ru": "Элиан Корд",
+        "en": "Elian Kord",
+        "tr": "Elian Kord",
+        "ar": "إليان كورد",
+        "kk": "Элиан Корд"
+      },
+      "portraitState": "worn_out"
+    },
+    "finalLine": {
+      "ru": "Падение я пережил. С правдой, похоже, вышло хуже.",
+      "en": "I survived the crash. With the truth, it seems, I did worse.",
+      "tr": "Düşüşten sağ çıktım. Gerçekle ise galiba daha kötüsü oldu.",
+      "ar": "نجوت من السقوط. أما مع الحقيقة، فيبدو أن الأمر كان أسوأ.",
+      "kk": "Құлаудан аман қалдым. Ал шындықпен, байқасам, одан да жаман болды."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Крушение и травмы настоящие: спасатели нашли Корда у обломков. Следов преследования или второго судна они не зафиксировали.",
+          "en": "The crash and the injuries are real: rescuers found Kord by the wreckage. They recorded no signs of pursuit or of a second aircraft.",
+          "tr": "Düşüş ve yaralanmalar gerçek: kurtarma ekibi Kord'u enkazın yanında buldu. Takip ya da ikinci bir hava aracına dair iz kaydetmediler.",
+          "ar": "التحطّم والإصابات حقيقية: عثر رجال الإنقاذ على كورد قرب الحطام. ولم يسجّلوا أي أثر لمطاردة أو لطائرة ثانية.",
+          "kk": "Апат пен жарақаттар шынайы: құтқарушылар Кордты сынықтар жанынан тапқан. Қуғын не екінші әуе кемесінің ізін тіркемеген."
+        },
+        "evidenceIds": [
+          "ev-rescue"
+        ]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "Отверстия в обшивке созданы изнутри или уже после падения — обстрела не было.",
+          "en": "The holes in the skin were made from inside or after the crash — there was no gunfire.",
+          "tr": "Gövdedeki delikler içeriden ya da düşüşten sonra açılmış — ateş edilmemiş.",
+          "ar": "الثقوب في الهيكل أُحدثت من الداخل أو بعد السقوط — لم يكن هناك إطلاق نار.",
+          "kk": "Қаптамадағы тесіктер іштен немесе құлағаннан кейін жасалған — атыс болмаған."
+        },
+        "evidenceIds": [
+          "ev-crash"
+        ]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Под значением 240 кг в ведомости проступает исходная масса 920 кг, а трек показывает отклонение к северному терминалу ниже безопасной высоты. Причина падения — перегруз и маршрут.",
+          "en": "Under the 240 kg entry in the manifest the original mass of 920 kg shows through, and the track shows a detour to the northern terminal below safe altitude. The cause was overload and route.",
+          "tr": "Yük belgesindeki 240 kg değerinin altından özgün 920 kg kütlesi çıkıyor; iz kaydı da güvenli irtifanın altında kuzey terminaline sapmayı gösteriyor. Nedeni aşırı yük ve rota.",
+          "ar": "تحت قيمة 240 كغ في البيان تظهر الكتلة الأصلية 920 كغ، ويُظهر المسار انحرافًا نحو المحطة الشمالية دون الارتفاع الآمن. السبب هو الحمولة الزائدة والمسار.",
+          "kk": "Ведомостьтегі 240 кг мәнінің астынан бастапқы 920 кг массасы шығады, ал трек қауіпсіз биіктіктен төмен солтүстік терминалға ауытқығанын көрсетеді. Құлау себебі — артық жүк пен маршрут."
+        },
+        "evidenceIds": [
+          "ev-manifest",
+          "ev-nav",
+          "ev-flight"
+        ]
+      }
+    ],
+    "arcRevealFromSeasonClue": true
+  },
+  "case-042": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "selena_orvik",
+      "displayName": {
+        "ru": "Селена Орвик",
+        "en": "Selena Orvik",
+        "tr": "Selena Orvik",
+        "ar": "سيلينا أورفيك",
+        "kk": "Селена Орвик"
+      },
+      "portraitState": "cold_irony"
+    },
+    "finalLine": {
+      "ru": "Политическое послание звучало достойнее, чем «я продала фамильный клинок».",
+      "en": "A political message sounded more dignified than “I sold the family blade”.",
+      "tr": "Siyasi bir mesaj, “aile kılıcını sattım”dan daha onurlu geliyordu.",
+      "ar": "بدت الرسالة السياسية أكثر كرامة من عبارة «بعتُ نصل العائلة».",
+      "kk": "Саяси үндеу «әулет қылышын сатып жібердім» дегеннен гөрі лайықтырақ естілді."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Клинок подлинный, оценка подтверждена, и он действительно покинул витрину.",
+          "en": "The blade is genuine, its valuation is confirmed, and it really did leave the display case.",
+          "tr": "Kılıç gerçek, değerlemesi doğrulanmış ve vitrinden gerçekten çıkmış.",
+          "ar": "النصل أصلي وتقييمه مؤكَّد، وقد غادر الفاترينة فعلًا.",
+          "kk": "Қылыш түпнұсқа, бағасы расталған, әрі витринадан шынымен кеткен."
+        },
+        "evidenceIds": [
+          "ev-valuation"
+        ]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "Витрину открыли штатно её картой и ключом, журнал архива фиксирует доступ владелицы, а охранник подтверждает добровольную передачу футляра курьеру.",
+          "en": "The case was opened normally with her card and key, the archive log records the owner's access, and the guard confirms the case was handed to a courier voluntarily.",
+          "tr": "Vitrin, onun kartı ve anahtarıyla usulüne uygun açılmış, arşiv kaydı sahibinin erişimini gösteriyor ve görevli kılıfın kuryeye gönüllü verildiğini doğruluyor.",
+          "ar": "فُتحت الفاترينة بشكل اعتيادي ببطاقتها ومفتاحها، ويسجّل دفتر الأرشيف دخول المالكة، ويؤكّد الحارس تسليم العلبة إلى مندوب طوعًا.",
+          "kk": "Витрина оның картасы мен кілтімен қалыпты ашылған, мұрағат журналы иесінің қатынауын тіркеген, ал күзетші футлярдың курьерге ерікті берілгенін растайды."
+        },
+        "evidenceIds": [
+          "ev-display",
+          "ev-access",
+          "ev-guard"
+        ]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Фрагменты контрольного ярлыка футляра совпали, а платёж аукционного посредника поступил до заявленного исчезновения. Кража придумана после продажи.",
+          "en": "The fragments of the case's control tag match, and the auction broker's payment arrived before the claimed disappearance. The theft was invented after the sale.",
+          "tr": "Kılıfın kontrol etiketinin parçaları eşleşiyor ve müzayede aracısının ödemesi iddia edilen kayboluştan önce gelmiş. Hırsızlık, satıştan sonra uydurulmuş.",
+          "ar": "شظايا بطاقة التحقّق الخاصة بالعلبة متطابقة، ودفعة وسيط المزاد وصلت قبل الاختفاء المزعوم. السرقة اختُلقت بعد البيع.",
+          "kk": "Футлярдың бақылау жапсырмасының сынықтары сәйкес келді, ал аукцион делдалының төлемі мәлімделген жоғалудан бұрын түскен. Ұрлық сатылымнан кейін ойлап табылған."
+        },
+        "evidenceIds": [
+          "ev-courier",
+          "ev-bank"
+        ]
+      }
+    ],
+    "arcReveal": {
+      "title": {
+        "ru": "Маршрутный пропуск «Меридиан»",
+        "en": "“Meridian” Route Pass",
+        "tr": "“Meridian” Güzergâh Kartı",
+        "ar": "تصريح مسار «ميريديان»",
+        "kk": "«Меридиан» маршрут рұқсатнамасы"
+      },
+      "text": {
+        "ru": "Пропуск курьера открывает не только северный терминал. Он зарегистрирован в закрытом учебно-логистическом комплексе «Меридиан» — там готовят персонал для авиационных, портовых и грузовых маршрутов. Кто им управляет, пока неизвестно.",
+        "en": "The courier's pass opens more than the northern terminal. It is registered at “Meridian”, a closed training-and-logistics complex that prepares staff for aviation, port and freight routes. Who runs it is still unknown.",
+        "tr": "Kuryenin kartı yalnızca kuzey terminalini açmıyor. Havacılık, liman ve yük güzergâhları için personel yetiştiren kapalı eğitim-lojistik tesisi “Meridian”da kayıtlı. Orayı kimin yönettiği hâlâ bilinmiyor.",
+        "ar": "تصريح المندوب لا يفتح المحطة الشمالية وحدها. فهو مسجَّل في «ميريديان»، مجمّع تدريب ولوجستيات مغلق يُعدّ العاملين لمسارات الطيران والموانئ والشحن. ومن يديره لا يزال مجهولًا.",
+        "kk": "Курьердің рұқсатнамасы тек солтүстік терминалды ашпайды. Ол авиация, порт және жүк маршруттарына мамандар даярлайтын жабық оқу-логистикалық «Меридиан» кешенінде тіркелген. Оны кім басқаратыны әзірге белгісіз."
+      },
+      "evidenceIds": [
+        "ev-courier"
+      ]
+    }
+  }
+}

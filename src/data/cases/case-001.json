@@ -467,5 +467,109 @@
       "ar": "لقد اكتشفت كذبتي الأولى بنفسي",
       "kk": "Бірінші өтірікті өзім ұстадым"
     }
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "igor_semyonov",
+      "displayName": {
+        "ru": "Игорь Семёнов",
+        "en": "Igor Semyonov",
+        "tr": "Igor Semyonov",
+        "ar": "إيجور سيميونوف",
+        "kk": "Игорь Семенов"
+      },
+      "portraitState": "excuse"
+    },
+    "finalLine": {
+      "ru": "Прорыв был настоящим. Я думал, этого хватит, чтобы поверили во всё остальное.",
+      "en": "The burst pipe was real. I thought that would be enough to make you believe the rest.",
+      "tr": "Boru gerçekten patladı. Gerisine de inanmanız için bunun yeteceğini sanmıştım.",
+      "ar": "الانفجار كان حقيقيًا. ظننت أن ذلك يكفي لتصدّقوا الباقي.",
+      "kk": "Құбыр шынымен жарылды. Қалғанына сену үшін осы жетеді деп ойладым."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Аварийная служба зафиксировала прорыв трубы 14 марта в 06:20. Событие подлинное.",
+          "en": "Emergency services logged the burst pipe on March 14 at 6:20 a.m. The incident is genuine.",
+          "tr": "Acil servis, 14 Mart saat 06.20'de boru patlamasını kaydetti. Olay gerçek.",
+          "ar": "سجّلت خدمة الطوارئ انفجار الأنبوب في 14 مارس الساعة 6:20 صباحًا. الحادث حقيقي.",
+          "kk": "Апаттық қызмет 14 наурызда сағат 06:20-да құбырдың жарылғанын тіркеді. Оқиға шынайы."
+        },
+        "evidenceIds": [
+          "ev-scene"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Через 440 минут после заявленного отключения блок питания сохранял 46 °C. Такой корпус остывает не дольше 90 минут.",
+          "en": "440 minutes after the claimed shutdown the power supply was still at 46 °C. A set of this design cools within 90 minutes.",
+          "tr": "İddia edilen kapatmadan 440 dakika sonra güç kaynağı hâlâ 46 °C idi. Bu tasarımdaki bir cihaz 90 dakikada soğur.",
+          "ar": "بعد 440 دقيقة من الإطفاء المزعوم كان مصدر الطاقة عند 46 °م. جهاز بهذا التصميم يبرد خلال 90 دقيقة.",
+          "kk": "Мәлімделген өшіруден 440 минут өткенде қуат блогы 46 °C сақтап тұрды. Мұндай корпус 90 минутта суиды."
+        },
+        "evidenceIds": [
+          "ev-scene"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Вечером тот же аппарат — тот же серийный номер, та же царапина — продавался как исправный. Ущерба, за который просят выплату, нет.",
+          "en": "That same evening the same set — same serial number, same scratch — was listed for sale as fully working. The loss being claimed does not exist.",
+          "tr": "Aynı akşam aynı cihaz — aynı seri numarası, aynı çizik — çalışır durumda satışa çıkarıldı. Talep edilen zarar mevcut değil.",
+          "ar": "في المساء ذاته عُرض الجهاز نفسه — الرقم التسلسلي نفسه والخدش نفسه — للبيع كجهاز سليم. الضرر المطالب به غير موجود.",
+          "kk": "Сол кеші дәл сол құрылғы — сол сериялық нөмір, сол сызат — жарамды деп сатылымға қойылды. Өтеу сұралған шығын жоқ."
+        },
+        "evidenceIds": [
+          "ev-listing"
+        ]
+      }
+    ],
+    "veraLine": {
+      "ru": "Событие может быть настоящим, а ущерб — выдуманным. Проверяйте не историю, а предмет.",
+      "en": "The event can be real while the damage is invented. Verify the object, not the story.",
+      "tr": "Olay gerçek olabilir ama hasar uydurma. Hikâyeyi değil, nesneyi doğrulayın.",
+      "ar": "قد يكون الحدث حقيقيًا والضرر مُختلقًا. تحقّق من الشيء لا من الحكاية.",
+      "kk": "Оқиға шын, ал шығын ойдан шығарылған болуы мүмкін. Әңгімені емес, затты тексеріңіз."
+    },
+    "arcReveal": {
+      "title": {
+        "ru": "Предварительная оценка 17-К",
+        "en": "17-K Preliminary Assessment",
+        "tr": "17-K Ön Değerlendirme",
+        "ar": "17-ك التقييم الأولي",
+        "kk": "Алдын ала бағалау 17-К"
+      },
+      "text": {
+        "ru": "Смета на телевизор зарегистрирована раньше страхового обращения. В нижнем колонтитуле стоит код 17-К.",
+        "en": "The TV estimate was registered before the insurance claim. The footer bears the code 17-K.",
+        "tr": "TV tahmini sigorta talebinden önce kaydedildi. Altbilgi 17-K kodunu taşıyor.",
+        "ar": "تم تسجيل التقدير التلفزيوني قبل المطالبة التأمينية. يحمل التذييل الرمز 17-K.",
+        "kk": "Теледидардың бағасы сақтандыруға дейін тіркелген. Төменгі деректемеде 17-К коды бар."
+      }
+    }
   }
 }

@@ -21,6 +21,7 @@
 - `adv.showFullscreenAdv / showRewardedVideo` → жизненный цикл рекламы (pause guard)
 - `getLeaderboards()` → лидерборд (best-effort)
 - `getPayments()` → каталог IAP, покупка архива, restore purchases (best-effort)
+- `getFlags()` → удалённая конфигурация (тайминги рекламы; может отсутствовать)
 - `feedback.canReview / requestReview` → нативный рейтинг (может отсутствовать)
 - `environment.i18n.lang` → автоопределение языка
 
@@ -40,7 +41,7 @@
 
 ## Миграция сейвов
 
-`GAME_CONFIG.saveVersion` — текущая версия схемы персиста (сейчас **9**). `migrate()` в
+`GAME_CONFIG.saveVersion` — текущая версия схемы персиста (сейчас **10**). `migrate()` в
 `persistence.ts` спредит текущие дефолты под старые сейвы, добивая новые поля:
 - v1 → v2: добавлены xp / streakCount / lastPlayedServerDay / unlockedAchievementIds в
   stats и revealedEvidenceIds в сессию.
@@ -55,6 +56,11 @@
 - v7 → v8: банкротство больше не гейт — `isBankrupt` принудительно сбрасывается в `false`
   (разблокировка застрявших на старом жёстком экране); добавлен кумулятивный счётчик
   `interstitialsSeenTotal` (бэкфиллится в 0).
+- v9 → v10: добавлен `noAdsPurchased` — постоянное право «без рекламы» (бэкфиллится в
+  `false`; реальные покупки возвращаются через restore purchases). Той же версией добавлены
+  `ownedStampTextIds` / `activeStampTextId` — косметические подписи штампа противоречия
+  (пустой список + `null` = бесплатный `classic`, ровно то, что печатали все старые профили;
+  покупки так же возвращаются через restore).
 
 Бампай версию и расширяй `migrate()` при любом изменении формы персиста.
 
@@ -71,11 +77,53 @@
 Каждый вызов размечен стабильным `placement`; адаптер отдельно фиксирует принятие предложения,
 реальный показ, закрытие, награду и ошибку. Время открытой рекламы не входит в active time.
 
-- `showFullscreenAd(onDone)` — интерстишл; `onDone` продолжает действие после закрытия.
-  Применяется: каждый 3-й вердикт (`AD_EVERY_N_VERDICTS`), Inspector Note.
+- `showFullscreenAd(onDone, placement, onShown)` — интерстишл; `onDone` продолжает действие
+  после закрытия, `onShown` вызывается из `onOpen`, т.е. только при **реальном** показе.
+  Применяется: закрытие завершённого дела (см. ниже) и Inspector Note.
 - `showRewardedAd(onReward)` — rewarded-видео; `onReward` срабатывает только при реальной
   награде. Применяется: restore funds, удвоение награды, Witness Canvass и
   permanent unlock следующего архивного дела. В офлайн/dev (нет SDK) награда выдаётся мгновенно.
+
+### Частота forced-рекламы
+
+Единственные места показа интерстишла — выход из **завершённого** дела: «следующее дело» и
+«на стол» (оба идут через `closeFinishedCaseWithAdGate` в `App.tsx`). Внутри расследования и
+при уходе без вердикта реклама не показывается. Решение принимает чистый
+`evaluateInterstitial` (`src/engine/adPolicyEngine.ts`):
+
+1. **Права важнее темпа.** Купленный `noAdsPurchased` и дела внутри купленного архивного
+   пака (`isPurchasedArchiveCase`) не показывают forced-рекламу никогда.
+2. **Первый показ** — не раньше `firstMinCompletedCases` (2) завершённых дел за всё время и
+   `firstMinActiveMs` (7 мин) активной игры в сессии. Правило «раз в два дела» к первому
+   показу не применяется, иначе вернувшийся игрок каждый раз доплачивал бы двумя делами.
+3. **Дальше** — одновременно `repeatMinActiveMs` (6 мин) активного времени и
+   `minCasesBetweenInterstitials` (2) закрытых дела с прошлого показа.
+4. **Отсчёт идёт от показанной рекламы**, а не от вызова: и кулдаун, и счётчик дел
+   сбрасываются в `onShown`. Нет SDK / ошибка рекламы — таймер не двигается, игрок ничего
+   не теряет.
+
+Активное время берётся из `getAnalyticsActiveTotalMs()` (Метрика): фоновая вкладка и время
+самой рекламы в него не входят. Счётчики живут в рефах `App.tsx` — они сессионные и
+намеренно не персистятся.
+
+## Удалённая конфигурация (`services/remoteConfig.ts`)
+
+Тайминги рекламы должны крутиться без пересборки, поэтому они опубликованы флагами Yandex
+(консоль разработчика → удалённая конфигурация). `yandexSDK.getRemoteFlags(defaultFlags)` —
+единственная обёртка над `ysdk.getFlags()`; значения флагов у Yandex **всегда строки**.
+
+| Флаг | Смысл | Дефолт |
+| --- | --- | --- |
+| `ad_first_min_cases` | дел до первого интерстишла | 2 |
+| `ad_first_min_active_sec` | активных секунд до первого показа | 420 |
+| `ad_repeat_min_active_sec` | активных секунд между показами | 360 |
+| `ad_min_cases_between` | дел между показами | 2 |
+
+`initRemoteConfig()` вызывается из `gameStore.init()` fire-and-forget: игра никогда не ждёт
+сеть. До ответа (и навсегда вне Yandex) `getAdPolicyConfig()` отдаёт локальные дефолты из
+`GAME_CONFIG.advertising`. Каждое числовое значение парсится и клампится (пустая строка и
+мусор → дефолт, не `NaN`; потолки — 60 мин и 20 дел). Флаги **не** персистятся: они живут в
+module-state ровно одну сессию.
 
 ## In-app purchases
 
@@ -88,8 +136,22 @@
 - `fetchPaymentsCatalog()` — читает каталог продуктов и цену для кнопки покупки архива.
 - `purchaseProduct(productId)` — инициирует покупку полного архива; после успешного ответа UI
   пишет entitlement в `stats.archivePurchasedPackIds`.
-- `restorePurchasedProductIds()` — читает уже купленные продукты платформы; UI маппит product ids
-  на thematic packs и восстанавливает права локально/в облачном сейве.
+- `restorePurchasedProductIds()` — читает уже купленные продукты платформы; App отдаёт список в
+  `store.applyRestoredPurchases(productIds)` — **единственное** место маппинга product id →
+  право (архивные паки, `GAME_CONFIG.advertising.noAdsProductId` → `noAdsPurchased`, штампы).
+
+**No Ads.** Постоянное право «без рекламы» — продукт `GAME_CONFIG.advertising.noAdsProductId`
+(`noads.forever`; id должен совпадать с созданным в консоли Yandex). Право хранится в
+`stats.noAdsPurchased`, выдаётся через `grantNoAds()` (покупка) или restore и снимает **всю**
+forced-рекламу; rewarded-видео по желанию игрока (удвоение награды, restore funds) остаётся.
+
+**Подписи штампа.** Каталог — `src/data/stampTexts.ts` (`STAMP_TEXTS`), по одному продукту
+`stamp.<id>` на подпись, поэтому restore — прямой маппинг 1:1 через `getStampTextByProductId`.
+Бесплатная запись `classic` не продаётся и берёт текст из ключа `contradiction`, так что
+шрифт оттиска остаётся в i18n. Покупка (`grantStampTextPurchase`) сразу ставит подпись на
+штамп; restore (`grantStampTextPurchases`) только выдаёт право и ничего не переключает.
+`setActiveStampText` пускает только уже купленный id, `null` = бесплатная подпись.
+Право чисто косметическое: ни на награду, ни на точность оно не влияет.
 
 ## Лидерборд
 
@@ -185,7 +247,7 @@ contradiction), а также `result_view`/`result_action`. Это позвол
 | `rating_action` | `dismissRating` / `suppressRating` / `App.tsx` (onRate) | action (`dismiss`/`never`/`rate`), dismissals |
 | `ad_offer`, `ad_accept`, `ad_open`, `ad_close`, `ad_reward`, `ad_error` | UI + `yandexSDK.ts` | kind, placement, wasShown, rewarded, error; `ad_open` дополнительно несёт сессионные агрегаты `adsPerSession`/`verdictsSinceLastAd` (см. ниже) |
 | `service_view`, `service_select`, `service_buy`, `service_use` | `App.tsx` / `buyHint` | service, caseId, cost, balanceBefore/After |
-| `shop_view`, `product_view`, `purchase_start`, `purchase_success`, `purchase_error`, `purchase_restore` | `ThematicPacksModal` + `yandexSDK.ts` | productId, archiveId, price, error |
+| `shop_view`, `product_view`, `purchase_start`, `purchase_success`, `purchase_error`, `purchase_restore` | `ThematicPacksModal` / `StampShopModal` (через `App.tsx`) + `yandexSDK.ts` | productId, archiveId, price, error; у мастерской штампов `shop_view` несёт `shop: 'stamp_texts'` |
 | `reject_blocked` | `App.tsx` (`handleReject`, при попытке отклонить без штампов; 1 раз за открытое дело) | caseId, viewedCount, stampedCount |
 | `budget_exhausted` | `App.tsx` (`handleOpenEvidence`, когда `markEvidenceAsViewed` отказывает) | caseId, budget, opensUsed |
 | `locked_case_click` | `App.tsx` (`handleSelectStandardCase`, клик по замкнутой карточке) | caseId, `lockReason: 'level' \| 'sequence'`, campaignPosition |

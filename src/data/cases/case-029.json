@@ -593,5 +593,88 @@
     },
     "seasonClue": null,
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "helena_krause",
+      "displayName": {
+        "ru": "Хелена Краузе",
+        "en": "Helena Krause",
+        "tr": "Helena Krause",
+        "ar": "هيلينا كراوزه",
+        "kk": "Хелена Краузе"
+      },
+      "portraitState": "dry_irony"
+    },
+    "finalLine": {
+      "ru": "Значит, соврал счётчик, а подозревали меня. Почти по-человечески.",
+      "en": "So the meter lied and I was the suspect. Almost human of it.",
+      "tr": "Demek sayaç yalan söyledi, şüphelenilen de ben oldum. Neredeyse insanca.",
+      "ar": "إذًا العدّاد هو من كذب، والشبهة وقعت عليّ. يكاد يكون تصرّفًا بشريًا.",
+      "kk": "Демек, есептегіш өтірік айтқан, ал күдіктенгені мен болдым. Тіпті адамға ұқсас."
+    },
+    "emotionalMode": "relief",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что вызывало подозрение",
+          "en": "What looked suspicious",
+          "tr": "Şüphe uyandıran şey",
+          "ar": "ما بدا مريبًا",
+          "kk": "Не күдік тудырды"
+        },
+        "text": {
+          "ru": "Счётчик записал невозможный скачок потребления в секунду разряда — на бумаге это выглядит как подключение к повышенному напряжению.",
+          "en": "The meter recorded an impossible consumption spike at the instant of the strike — on paper it looks like a deliberate over-voltage hookup.",
+          "tr": "Sayaç, yıldırım anında imkânsız bir tüketim sıçraması kaydetti — kâğıt üzerinde bu, kasıtlı bir yüksek gerilim bağlantısı gibi görünüyor.",
+          "ar": "سجّل العدّاد قفزة استهلاك مستحيلة لحظة الصاعقة — وعلى الورق تبدو كتوصيل متعمَّد بجهد مرتفع.",
+          "kk": "Есептегіш разряд сәтінде мүмкін емес тұтыну секірісін жазған — қағаз жүзінде бұл жоғары кернеуге әдейі қосылу сияқты көрінеді."
+        },
+        "evidenceIds": [
+          "ev-meter"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Чем это объясняется",
+          "en": "What explains it",
+          "tr": "Bunu açıklayan şey",
+          "ar": "ما يفسر ذلك",
+          "kk": "Мұны не түсіндіреді"
+        },
+        "text": {
+          "ru": "В 20:18:42 карта разрядов фиксирует удар в опору в 34 метрах от дома. Значение счётчика — насыщение повреждённого датчика, а не реальный расход.",
+          "en": "At 20:18:42 the lightning map records a strike on a pole 34 metres from the house. The meter value is a damaged sensor saturating, not real consumption.",
+          "tr": "20:18:42'de yıldırım haritası, evden 34 metre uzaktaki direğe düşen bir yıldırımı kaydediyor. Sayaç değeri, hasarlı sensörün doyması; gerçek tüketim değil.",
+          "ar": "عند 20:18:42 تسجّل خريطة الصواعق ضربة على عمود يبعد 34 مترًا عن المنزل. قيمة العدّاد ناتجة عن تشبّع مستشعر تالف لا عن استهلاك حقيقي.",
+          "kk": "20:18:42-де разряд картасы үйден 34 метр жердегі тірекке түскен соққыны тіркейді. Есептегіш мәні — бүлінген датчиктің қанығуы, нақты шығын емес."
+        },
+        "evidenceIds": [
+          "ev-meteo"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Тепловой след идёт от вводного кабеля через защиту к повреждённой группе, у всех устройств пробиты входные блоки, а серийные номера совпадают с документами.",
+          "en": "The thermal trail runs from the service cable through the protection to the damaged circuit, every device has a blown input stage, and the serial numbers match the paperwork.",
+          "tr": "Isı izi, giriş kablosundan koruma üzerinden hasarlı gruba uzanıyor; tüm cihazların giriş katı delinmiş ve seri numaraları belgelerle örtüşüyor.",
+          "ar": "يمتدّ الأثر الحراري من كابل التغذية عبر الحماية إلى الدائرة المتضرّرة، وكل الأجهزة تعرّضت لانهيار في مرحلة الدخل، وأرقامها التسلسلية تطابق المستندات.",
+          "kk": "Жылу ізі кіріс кабелінен қорғаныс арқылы зақымдалған топқа барады, барлық құрылғының кіріс блогы тесілген, ал сериялық нөмірлер құжаттармен сәйкес."
+        },
+        "evidenceIds": [
+          "ev-photo",
+          "ev-electrician",
+          "ev-receipts"
+        ]
+      }
+    ]
   }
 }

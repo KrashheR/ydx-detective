@@ -1,0 +1,585 @@
+{
+  "id": "night-train-03",
+  "type": "archive",
+  "difficulty": "medium",
+  "claimAmount": 480000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Чай с чужим алиби",
+    "en": "Tea with Somebody Else's Alibi",
+    "tr": "Başkasının Mazeretiyle Çay",
+    "ar": "شاي بحجة غياب مستعارة",
+    "kk": "Бөтен алибимен шай"
+  },
+  "claim": {
+    "person": {
+      "ru": "Денис Громов, 44 года",
+      "en": "Denis Gromov, age 44",
+      "tr": "Denis Gromov, 44 yaşında",
+      "ar": "دينيس غروموف، 44 عامًا",
+      "kk": "Денис Громов, 44 жаста"
+    },
+    "story": {
+      "ru": "В 23:05 я спал один в закрытом купе. Проводница вошла без стука, уронила стакан кипятка на единственный подписанный оригинал договора и сразу ушла. Документ восстановить невозможно, сделка сорвалась.",
+      "en": "At 23:05 I was asleep alone in a locked compartment. The conductor came in without knocking, dropped a glass of boiling water on the only signed original of the contract and left at once. The document cannot be restored and the deal fell through.",
+      "tr": "Saat 23:05’te kilitli kompartımanda tek başıma uyuyordum. Kondüktör kapıyı çalmadan girdi, sözleşmenin tek imzalı aslının üzerine kaynar su bardağını düşürdü ve hemen çıktı. Belge kurtarılamaz, anlaşma bozuldu.",
+      "ar": "في الساعة 23:05 كنت نائمًا وحدي في مقصورة مقفلة. دخلت المضيفة دون طرق وأسقطت كوب ماء مغلي على النسخة الأصلية الموقّعة الوحيدة من العقد ثم خرجت فورًا. لا يمكن استرجاع الوثيقة وقد فشلت الصفقة.",
+      "kk": "Сағат 23:05-те құлыптаулы купеде жалғыз ұйықтап жаттым. Кондуктор қақпай кіріп, шарттың жалғыз қол қойылған түпнұсқасына қайнаған су стақанын төңкеріп, бірден шығып кетті. Құжатты қалпына келтіру мүмкін емес, мәміле бұзылды."
+    }
+  },
+  "coverImage": "covers/packs/night-train-03.svg",
+  "personImage": "people/packs/night-train/denis_gromov.webp",
+  "client": {
+    "role": {
+      "ru": "Заявитель · пассажир поезда №13",
+      "en": "Claimant · passenger of train No. 13",
+      "tr": "Talep sahibi · 13 No.lu trenin yolcusu",
+      "ar": "مقدم الطلب · راكب في القطار رقم 13",
+      "kk": "Өтініш беруші · №13 пойыз жолаушысы"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Вагон",
+          "en": "Car",
+          "tr": "Vagon",
+          "ar": "العربة",
+          "kk": "Вагон"
+        },
+        "v": {
+          "ru": "№4",
+          "en": "No. 4",
+          "tr": "No. 4",
+          "ar": "رقم 4",
+          "kk": "№4"
+        }
+      },
+      {
+        "k": {
+          "ru": "Рейс",
+          "en": "Service",
+          "tr": "Sefer",
+          "ar": "الرحلة",
+          "kk": "Рейс"
+        },
+        "v": {
+          "ru": "Поезд №13, ночной",
+          "en": "Train No. 13, night service",
+          "tr": "13 No.lu tren, gece seferi",
+          "ar": "القطار رقم 13، الرحلة الليلية",
+          "kk": "№13 пойыз, түнгі рейс"
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "TR03-E1",
+      "order": 1,
+      "type": "usage_log",
+      "title": {
+        "ru": "Датчик выдачи термопота",
+        "en": "Water Boiler Dispensing Log",
+        "tr": "Termos Su Isıtıcı Kaydı",
+        "ar": "سجل توزيع سخّان الماء",
+        "kk": "Термопот беру датчигі"
+      },
+      "content": {
+        "ru": "22:31 — последняя выдача кипятка в вагоне. 22:50–23:40 — режим очистки: подача заблокирована, температура бака 46 °C. Ручных выдач за этот период нет.",
+        "en": "22:31 — last dispensing of boiling water in the car. 22:50–23:40 — cleaning mode: dispensing blocked, tank temperature 46 °C. No manual draws in that period.",
+        "tr": "22:31 — vagonda son kaynar su verilişi. 22:50–23:40 — temizlik modu: veriliş kilitli, depo sıcaklığı 46 °C. Bu sürede elle alım yok.",
+        "ar": "22:31 — آخر صبّ للماء المغلي في العربة. 22:50–23:40 — وضع التنظيف: الصبّ محجوب وحرارة الخزان 46 °م. لا سحب يدوي في تلك الفترة.",
+        "kk": "22:31 — вагондағы соңғы қайнаған су беру. 22:50–23:40 — тазалау режимі: беру бұғатталған, бак температурасы 46 °C. Бұл кезеңде қолмен алу жоқ."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "В 23:05 кипятка в вагоне физически не было — проводница не могла пролить его на документ.",
+        "en": "At 23:05 there was physically no boiling water in the car — the conductor cannot have spilled any on the document.",
+        "tr": "23:05’te vagonda fiziksel olarak kaynar su yoktu; kondüktör belgeye kaynar su dökemezdi.",
+        "ar": "في 23:05 لم يكن في العربة ماء مغلي أصلًا، فلا يمكن أن تكون المضيفة سكبته على الوثيقة.",
+        "kk": "23:05-те вагонда қайнаған су физикалық тұрғыда болмаған — кондуктор оны құжатқа төге алмайды."
+      },
+      "statementLink": {
+        "statementId": "claim_boiling",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "В 23:05 кипятка в вагоне физически не было — проводница не могла пролить его на документ.",
+          "en": "At 23:05 there was physically no boiling water in the car — the conductor cannot have spilled any on the document.",
+          "tr": "23:05’te vagonda fiziksel olarak kaynar su yoktu; kondüktör belgeye kaynar su dökemezdi.",
+          "ar": "في 23:05 لم يكن في العربة ماء مغلي أصلًا، فلا يمكن أن تكون المضيفة سكبته على الوثيقة.",
+          "kk": "23:05-те вагонда қайнаған су физикалық тұрғыда болмаған — кондуктор оны құжатқа төге алмайды."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_boiling",
+        "reason": {
+          "ru": "В 23:05 кипятка в вагоне физически не было — проводница не могла пролить его на документ.",
+          "en": "At 23:05 there was physically no boiling water in the car — the conductor cannot have spilled any on the document.",
+          "tr": "23:05’te vagonda fiziksel olarak kaynar su yoktu; kondüktör belgeye kaynar su dökemezdi.",
+          "ar": "في 23:05 لم يكن في العربة ماء مغلي أصلًا، فلا يمكن أن تكون المضيفة سكبته على الوثيقة.",
+          "kk": "23:05-те вагонда қайнаған су физикалық тұрғыда болмаған — кондуктор оны құжатқа төге алмайды."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr03-e1.webp",
+        "logPrompt": "car 4 water boiler log"
+      }
+    },
+    {
+      "id": "TR03-E2",
+      "order": 2,
+      "type": "document_scan",
+      "title": {
+        "ru": "Метаданные печати договора",
+        "en": "Print Metadata of the Contract",
+        "tr": "Sözleşmenin Baskı Üstverisi",
+        "ar": "بيانات طباعة العقد",
+        "kk": "Шарттың басып шығару метадеректері"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Лист напечатан в 23:19 — через четырнадцать минут после заявленного пролива, а обе подписи являются вставленными изображениями.",
+        "en": "The sheet was printed at 23:19 — fourteen minutes after the alleged spill — and both signatures are inserted images.",
+        "tr": "Sayfa 23:19’da, iddia edilen dökülmeden on dört dakika sonra basılmış ve her iki imza da yerleştirilmiş görüntü.",
+        "ar": "طُبعت الورقة في 23:19، أي بعد الانسكاب المزعوم بأربع عشرة دقيقة، والتوقيعان كلاهما صورتان مدرجتان.",
+        "kk": "Парақ 23:19-да — мәлімделген төгілуден он төрт минут кейін басылған, ал екі қолтаңба да қыстырылған сурет."
+      },
+      "statementLink": {
+        "statementId": "claim_original",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Лист напечатан в 23:19 — через четырнадцать минут после заявленного пролива, а обе подписи являются вставленными изображениями.",
+          "en": "The sheet was printed at 23:19 — fourteen minutes after the alleged spill — and both signatures are inserted images.",
+          "tr": "Sayfa 23:19’da, iddia edilen dökülmeden on dört dakika sonra basılmış ve her iki imza da yerleştirilmiş görüntü.",
+          "ar": "طُبعت الورقة في 23:19، أي بعد الانسكاب المزعوم بأربع عشرة دقيقة، والتوقيعان كلاهما صورتان مدرجتان.",
+          "kk": "Парақ 23:19-да — мәлімделген төгілуден он төрт минут кейін басылған, ал екі қолтаңба да қыстырылған сурет."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_original",
+        "reason": {
+          "ru": "Лист напечатан в 23:19 — через четырнадцать минут после заявленного пролива, а обе подписи являются вставленными изображениями.",
+          "en": "The sheet was printed at 23:19 — fourteen minutes after the alleged spill — and both signatures are inserted images.",
+          "tr": "Sayfa 23:19’da, iddia edilen dökülmeden on dört dakika sonra basılmış ve her iki imza da yerleştirilmiş görüntü.",
+          "ar": "طُبعت الورقة في 23:19، أي بعد الانسكاب المزعوم بأربع عشرة دقيقة، والتوقيعان كلاهما صورتان مدرجتان.",
+          "kk": "Парақ 23:19-да — мәлімделген төгілуден он төрт минут кейін басылған, ал екі қолтаңба да қыстырылған сурет."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "«Испорченный оригинал» распечатан на переносном принтере, который заявитель везёт с собой. Служебная строка печати сохранилась в нижнем поле.",
+        "en": "The \"ruined original\" was printed on the portable printer the claimant carries with him. The printer's service line survives in the bottom margin.",
+        "tr": "«Zarar gören asıl» belge, talep sahibinin yanında taşıdığı taşınabilir yazıcıdan çıkmış. Yazıcının servis satırı alt kenarda duruyor.",
+        "ar": "طُبع «الأصل التالف» على الطابعة المحمولة التي يحملها مقدم الطلب، وسطر خدمة الطابعة ما زال في الهامش السفلي.",
+        "kk": "«Бүлінген түпнұсқа» өтініш беруші өзімен алып жүрген тасымалы принтерде басылған. Принтердің қызметтік жолы төменгі жиекте сақталған."
+      },
+      "instruction": {
+        "ru": "Найдите служебную строку печати и сверьте её время с временем происшествия.",
+        "en": "Find the printer's service line and compare its time with the time of the incident.",
+        "tr": "Yazıcının servis satırını bulun ve saatini olayın saatiyle karşılaştırın.",
+        "ar": "ابحث عن سطر خدمة الطابعة وقارن وقته بوقت الحادثة.",
+        "kk": "Принтердің қызметтік жолын тауып, уақытын оқиға уақытымен салыстырыңыз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/night-train/tr03-e2.webp"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Время печати нельзя подделать вручную: игрок сам доказывает, что «оригинал» появился позже происшествия.",
+          "en": "The print time cannot be forged by hand: the player proves for themselves that the \"original\" appeared after the incident.",
+          "tr": "Baskı saati elle sahtelenemez: oyuncu «aslın» olaydan sonra ortaya çıktığını kendisi kanıtlar.",
+          "ar": "لا يمكن تزوير وقت الطباعة يدويًا: يثبت اللاعب بنفسه أن «الأصل» ظهر بعد الحادثة.",
+          "kk": "Басып шығару уақытын қолмен қолдан жасау мүмкін емес: ойыншы «түпнұсқаның» оқиғадан кейін пайда болғанын өзі дәлелдейді."
+        },
+        "playerAction": {
+          "ru": "Найдите служебную строку печати и сверьте её время с временем происшествия.",
+          "en": "Find the printer's service line and compare its time with the time of the incident.",
+          "tr": "Yazıcının servis satırını bulun ve saatini olayın saatiyle karşılaştırın.",
+          "ar": "ابحث عن سطر خدمة الطابعة وقارن وقته بوقت الحادثة.",
+          "kk": "Принтердің қызметтік жолын тауып, уақытын оқиға уақытымен салыстырыңыз."
+        },
+        "conclusion": {
+          "ru": "Лист напечатан в 23:19 — через четырнадцать минут после заявленного пролива, а обе подписи являются вставленными изображениями.",
+          "en": "The sheet was printed at 23:19 — fourteen minutes after the alleged spill — and both signatures are inserted images.",
+          "tr": "Sayfa 23:19’da, iddia edilen dökülmeden on dört dakika sonra basılmış ve her iki imza da yerleştirilmiş görüntü.",
+          "ar": "طُبعت الورقة في 23:19، أي بعد الانسكاب المزعوم بأربع عشرة دقيقة، والتوقيعان كلاهما صورتان مدرجتان.",
+          "kk": "Парақ 23:19-да — мәлімделген төгілуден он төрт минут кейін басылған, ал екі қолтаңба да қыстырылған сурет."
+        }
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "uv",
+          "contrast"
+        ],
+        "anomalyZones": [
+          {
+            "id": "print-timestamp",
+            "mode": "uv",
+            "x": 56,
+            "y": 74,
+            "width": 24,
+            "height": 12,
+            "label": "Служебная строка печати: 23:19",
+            "labelEn": "Printer service line: 23:19",
+            "isContradiction": true
+          },
+          {
+            "id": "raster-signature",
+            "mode": "contrast",
+            "x": 24,
+            "y": 60,
+            "width": 22,
+            "height": 14,
+            "label": "Подпись из растрового изображения",
+            "labelEn": "Signature pasted as a raster image",
+            "isContradiction": false
+          }
+        ],
+        "referenceFields": [
+          {
+            "id": "incident-time",
+            "label": "Время происшествия по заявлению",
+            "labelEn": "Time of the incident per the claim",
+            "value": "23:05"
+          }
+        ],
+        "successCondition": {
+          "type": "select_then_compare",
+          "zoneId": "print-timestamp",
+          "referenceFieldId": "incident-time"
+        }
+      }
+    },
+    {
+      "id": "TR03-E3",
+      "order": 3,
+      "type": "photo",
+      "title": {
+        "ru": "Фото столика и подстаканника",
+        "en": "Photo of the Table and Glass Holder",
+        "tr": "Masa ve Bardaklığın Fotoğrafı",
+        "ar": "صورة الطاولة وحامل الكوب",
+        "kk": "Үстел мен стақан ұстағыштың фотосы"
+      },
+      "content": {
+        "ru": "На столике липкое кольцо от сладкого чая из пластиковой бутылки заявителя. Конденсата, следов пара и деформации бумаги от кипятка нет.",
+        "en": "The table shows a sticky ring from the claimant's bottled sweet tea. There is no condensation, no steam marks and no heat deformation of the paper.",
+        "tr": "Masada, talep sahibinin şişe çayından kalan yapışkan bir halka var. Yoğuşma, buhar izi ve kâğıtta ısı deformasyonu yok.",
+        "ar": "على الطاولة حلقة لزجة من شاي محلّى من زجاجة مقدم الطلب. لا تكاثف ولا آثار بخار ولا تشوّه حراري في الورق.",
+        "kk": "Үстелде өтініш берушінің бөтелкедегі тәтті шайынан қалған жабысқақ шеңбер бар. Конденсат та, бу ізі де, қағаздың ыстықтан деформациялануы да жоқ."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Жидкость была холодной и своей, но время и статус документа устанавливают журнал термопота и метаданные печати.",
+        "en": "The liquid was cold and his own, while the boiler log and the print metadata establish the timing and the document's status.",
+        "tr": "Sıvı soğuktu ve kendisine aitti; zamanı ve belgenin durumunu ise ısıtıcı kaydı ile baskı üstverisi belirliyor.",
+        "ar": "كان السائل باردًا ومن عنده، أما التوقيت ووضع الوثيقة فيحددهما سجل السخّان وبيانات الطباعة.",
+        "kk": "Сұйықтық суық әрі өзінікі болған, ал уақыт пен құжат мәртебесін термопот журналы мен басып шығару метадеректері анықтайды."
+      },
+      "statementLink": {
+        "statementId": "claim_boiling",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Жидкость была холодной и своей, но время и статус документа устанавливают журнал термопота и метаданные печати.",
+          "en": "The liquid was cold and his own, while the boiler log and the print metadata establish the timing and the document's status.",
+          "tr": "Sıvı soğuktu ve kendisine aitti; zamanı ve belgenin durumunu ise ısıtıcı kaydı ile baskı üstverisi belirliyor.",
+          "ar": "كان السائل باردًا ومن عنده، أما التوقيت ووضع الوثيقة فيحددهما سجل السخّان وبيانات الطباعة.",
+          "kk": "Сұйықтық суық әрі өзінікі болған, ал уақыт пен құжат мәртебесін термопот журналы мен басып шығару метадеректері анықтайды."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr03-e3.webp",
+        "filename": "tr03-e3.webp"
+      }
+    },
+    {
+      "id": "TR03-E4",
+      "order": 4,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал электронного замка купе",
+        "en": "Compartment Smart-Lock Log",
+        "tr": "Kompartıman Akıllı Kilit Kaydı",
+        "ar": "سجل القفل الذكي للمقصورة",
+        "kk": "Купенің электрондық құлып журналы"
+      },
+      "content": {
+        "ru": "23:02 — дверь открыта изнутри самим пассажиром. 23:08 — выход в коридор, дверь закрыта снаружи. 23:26 — возвращение. Служебной картой проводницы дверь за смену не открывали.",
+        "en": "23:02 — door opened from inside by the passenger himself. 23:08 — exit into the corridor, door closed from outside. 23:26 — return. The conductor's service card never opened this door during the shift.",
+        "tr": "23:02 — kapı yolcunun kendisi tarafından içeriden açıldı. 23:08 — koridora çıkış, kapı dışarıdan kapatıldı. 23:26 — dönüş. Kondüktörün servis kartı vardiya boyunca bu kapıyı hiç açmadı.",
+        "ar": "23:02 — فُتح الباب من الداخل بيد الراكب نفسه. 23:08 — خروج إلى الممر وإغلاق الباب من الخارج. 23:26 — العودة. لم تفتح بطاقة المضيفة هذا الباب طوال الوردية.",
+        "kk": "23:02 — есікті жолаушының өзі іштен ашқан. 23:08 — дәлізге шығу, есік сырттан жабылған. 23:26 — оралу. Кондуктордың қызметтік картасы ауысым бойы бұл есікті ашпаған."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Купе не было закрытым, а проводница в него не входила — но точную невозможность кипятка показывает датчик термопота.",
+        "en": "The compartment was not locked and the conductor never entered — though it is the boiler sensor that shows boiling water was impossible.",
+        "tr": "Kompartıman kilitli değildi ve kondüktör hiç girmedi; kaynar suyun imkânsız olduğunu ise ısıtıcı sensörü gösteriyor.",
+        "ar": "لم تكن المقصورة مقفلة ولم تدخلها المضيفة، لكن استحالة وجود ماء مغلي يظهرها مستشعر السخّان.",
+        "kk": "Купе жабық болмаған, кондуктор кірмеген — бірақ қайнаған судың мүмкін еместігін термопот датчигі көрсетеді."
+      },
+      "statementLink": {
+        "statementId": "claim_boiling",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Купе не было закрытым, а проводница в него не входила — но точную невозможность кипятка показывает датчик термопота.",
+          "en": "The compartment was not locked and the conductor never entered — though it is the boiler sensor that shows boiling water was impossible.",
+          "tr": "Kompartıman kilitli değildi ve kondüktör hiç girmedi; kaynar suyun imkânsız olduğunu ise ısıtıcı sensörü gösteriyor.",
+          "ar": "لم تكن المقصورة مقفلة ولم تدخلها المضيفة، لكن استحالة وجود ماء مغلي يظهرها مستشعر السخّان.",
+          "kk": "Купе жабық болмаған, кондуктор кірмеген — бірақ қайнаған судың мүмкін еместігін термопот датчигі көрсетеді."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr03-e4.webp",
+        "logPrompt": "compartment 4 lock log"
+      }
+    },
+    {
+      "id": "TR03-E5",
+      "order": 5,
+      "type": "surface_reveal",
+      "title": {
+        "ru": "Водяной знак бумаги",
+        "en": "Watermark of the Paper",
+        "tr": "Kâğıdın Filigranı",
+        "ar": "العلامة المائية للورق",
+        "kk": "Қағаздың су таңбасы"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Бумага изготовлена заводом «Меридиан» для архивных бланков; целая пачка такой бумаги лежит в дипломате, который заявитель считает своим.",
+        "en": "The paper was made by the Meridian factory for archive forms; a whole ream of it lies in the briefcase the claimant believes is his.",
+        "tr": "Kâğıt, «Meridian» fabrikasınca arşiv formları için üretilmiş; bu kâğıttan bir top, talep sahibinin kendisine ait sandığı evrak çantasında duruyor.",
+        "ar": "صُنع الورق في مصنع «ميريديان» لنماذج الأرشيف، ورزمة كاملة منه في الحقيبة التي يظنها مقدم الطلب حقيبته.",
+        "kk": "Қағазды «Меридиан» зауыты архив бланкілері үшін жасаған; сондай қағаздың бір бумасы өтініш беруші өзінікі деп жүрген дипломатта жатыр."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Бумага изготовлена заводом «Меридиан» для архивных бланков; целая пачка такой бумаги лежит в дипломате, который заявитель считает своим.",
+          "en": "The paper was made by the Meridian factory for archive forms; a whole ream of it lies in the briefcase the claimant believes is his.",
+          "tr": "Kâğıt, «Meridian» fabrikasınca arşiv formları için üretilmiş; bu kâğıttan bir top, talep sahibinin kendisine ait sandığı evrak çantasında duruyor.",
+          "ar": "صُنع الورق في مصنع «ميريديان» لنماذج الأرشيف، ورزمة كاملة منه في الحقيبة التي يظنها مقدم الطلب حقيبته.",
+          "kk": "Қағазды «Меридиан» зауыты архив бланкілері үшін жасаған; сондай қағаздың бір бумасы өтініш беруші өзінікі деп жүрген дипломатта жатыр."
+        }
+      },
+      "evidenceTier": "supporting",
+      "description": {
+        "ru": "Лист лежит на просветном столе, поверхность покрыта высохшими разводами чая.",
+        "en": "The sheet lies on a light table; its surface is covered with dried tea streaks.",
+        "tr": "Sayfa ışıklı masada duruyor; yüzeyi kurumuş çay lekeleriyle kaplı.",
+        "ar": "الورقة على طاولة إضاءة، وسطحها مغطى بآثار شاي جافة.",
+        "kk": "Парақ жарық үстелде жатыр, бетін кепкен шай іздері жапқан."
+      },
+      "instruction": {
+        "ru": "Аккуратно снимите разводы и рассмотрите водяной знак.",
+        "en": "Carefully lift the streaks and examine the watermark.",
+        "tr": "Lekeleri dikkatlice kaldırın ve filigranı inceleyin.",
+        "ar": "أزل الآثار بحذر وافحص العلامة المائية.",
+        "kk": "Іздерді абайлап кетіріп, су таңбасын қараңыз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/night-train/tr03-e5.webp",
+        "coverTexture": "shared/surface/dirt.svg",
+        "revealMasks": [
+          "shared/surface/trace-mask.svg"
+        ],
+        "toolCursor": "shared/surface/cloth-cursor.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": false,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Водяной знак определяет происхождение бумаги: игрок сам находит архивную канцелярию завода в чужом дипломате.",
+          "en": "The watermark identifies the paper's origin: the player finds the factory's archive stationery in a stranger's briefcase themselves.",
+          "tr": "Filigran kâğıdın kökenini belirler: oyuncu, fabrikanın arşiv kırtasiyesini yabancı bir evrak çantasında kendisi bulur.",
+          "ar": "تحدد العلامة المائية أصل الورق: يجد اللاعب بنفسه قرطاسية أرشيف المصنع داخل حقيبة شخص آخر.",
+          "kk": "Су таңбасы қағаздың шығу тегін анықтайды: ойыншы зауыттың архив кеңсе қағазын бөтен дипломаттан өзі табады."
+        },
+        "playerAction": {
+          "ru": "Аккуратно снимите разводы и рассмотрите водяной знак.",
+          "en": "Carefully lift the streaks and examine the watermark.",
+          "tr": "Lekeleri dikkatlice kaldırın ve filigranı inceleyin.",
+          "ar": "أزل الآثار بحذر وافحص العلامة المائية.",
+          "kk": "Іздерді абайлап кетіріп, су таңбасын қараңыз."
+        },
+        "conclusion": {
+          "ru": "Бумага изготовлена заводом «Меридиан» для архивных бланков; целая пачка такой бумаги лежит в дипломате, который заявитель считает своим.",
+          "en": "The paper was made by the Meridian factory for archive forms; a whole ream of it lies in the briefcase the claimant believes is his.",
+          "tr": "Kâğıt, «Meridian» fabrikasınca arşiv formları için üretilmiş; bu kâğıttan bir top, talep sahibinin kendisine ait sandığı evrak çantasında duruyor.",
+          "ar": "صُنع الورق في مصنع «ميريديان» لنماذج الأرشيف، ورزمة كاملة منه في الحقيبة التي يظنها مقدم الطلب حقيبته.",
+          "kk": "Қағазды «Меридиан» зауыты архив бланкілері үшін жасаған; сондай қағаздың бір бумасы өтініш беруші өзінікі деп жүрген дипломатта жатыр."
+        }
+      },
+      "data": {
+        "mode": "erase",
+        "coverType": "dirt",
+        "brush": {
+          "radius": 38,
+          "hardness": 0.55,
+          "opacity": 0.8,
+          "spacing": 8
+        },
+        "completion": {
+          "type": "discover_any",
+          "requiredTraceIds": [
+            "meridian-watermark"
+          ]
+        },
+        "traces": [
+          {
+            "id": "meridian-watermark",
+            "label": "Водяной знак завода «Меридиан»",
+            "labelEn": "Meridian factory watermark",
+            "requiredRevealPercent": 52,
+            "mask": "shared/surface/trace-mask.svg",
+            "shape": "mask",
+            "isContradiction": false,
+            "conclusion": "Бумага изготовлена заводом «Меридиан» для архивных бланков.",
+            "conclusionEn": "The paper was made by the Meridian factory for archive forms."
+          }
+        ]
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "В 23:05 термопот стоял в режиме очистки: кипятка в вагоне не было.",
+      "«Единственный оригинал» напечатан в 23:19, уже после происшествия, а подписи — картинки.",
+      "Купе открывал сам заявитель, а бумага в его дипломате оказалась архивной канцелярией завода «Меридиан»."
+    ],
+    "en": [
+      "At 23:05 the boiler was in cleaning mode: there was no boiling water in the car.",
+      "The \"only original\" was printed at 23:19, after the incident, and the signatures are images.",
+      "The claimant opened the compartment himself, and the paper in his briefcase turned out to be Meridian archive stationery."
+    ],
+    "tr": [
+      "23:05’te ısıtıcı temizlik modundaydı: vagonda kaynar su yoktu.",
+      "«Tek asıl» belge olaydan sonra, 23:19’da basılmış ve imzalar birer görüntü.",
+      "Kompartımanı talep sahibi kendisi açtı ve evrak çantasındaki kâğıt «Meridian» arşiv kırtasiyesi çıktı."
+    ],
+    "ar": [
+      "في 23:05 كان السخّان في وضع التنظيف: لم يكن في العربة ماء مغلي.",
+      "طُبع «الأصل الوحيد» في 23:19 بعد الحادثة، والتوقيعان صورتان.",
+      "فتح مقدم الطلب المقصورة بنفسه، وتبيّن أن الورق في حقيبته قرطاسية أرشيف «ميريديان»."
+    ],
+    "kk": [
+      "23:05-те термопот тазалау режимінде тұрған: вагонда қайнаған су болмаған.",
+      "«Жалғыз түпнұсқа» оқиғадан кейін, 23:19-да басылған, ал қолтаңбалар — сурет.",
+      "Купені өтініш берушінің өзі ашқан, ал дипломатындағы қағаз «Меридиан» зауытының архив кеңсе қағазы болып шықты."
+    ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "stampable": false,
+      "text": {
+        "ru": "Оригинал договора уничтожен по вине поездной бригады, убытки подлежат возмещению.",
+        "en": "The original contract was destroyed through the train crew's fault and the losses are reimbursable.",
+        "tr": "Sözleşmenin aslı tren ekibinin hatasıyla yok edildi ve zararlar tazmin edilmelidir.",
+        "ar": "أُتلف أصل العقد بخطأ طاقم القطار والخسائر قابلة للتعويض.",
+        "kk": "Шарттың түпнұсқасы пойыз бригадасының кінәсінен жойылды, шығын өтелуге тиіс."
+      }
+    },
+    {
+      "id": "claim_boiling",
+      "stampable": true,
+      "text": {
+        "ru": "В 23:05 проводница пролила на документ стакан кипятка.",
+        "en": "At 23:05 the conductor spilled a glass of boiling water on the document.",
+        "tr": "Saat 23:05’te kondüktör belgenin üzerine kaynar su bardağı döktü.",
+        "ar": "في الساعة 23:05 سكبت المضيفة كوب ماء مغلي على الوثيقة.",
+        "kk": "23:05-те кондуктор құжатқа қайнаған су стақанын төкті."
+      }
+    },
+    {
+      "id": "claim_original",
+      "stampable": true,
+      "text": {
+        "ru": "Испорченный лист был единственным подписанным оригиналом договора.",
+        "en": "The ruined sheet was the only signed original of the contract.",
+        "tr": "Zarar gören sayfa, sözleşmenin tek imzalı aslıydı.",
+        "ar": "كانت الورقة التالفة النسخة الأصلية الموقّعة الوحيدة للعقد.",
+        "kk": "Бүлінген парақ шарттың жалғыз қол қойылған түпнұсқасы болды."
+      }
+    }
+  ],
+  "contentVersion": "night-train-1.0",
+  "narrative": {
+    "preBrief": {
+      "ru": "Поставщик оборудования требует компенсацию за сорванную сделку. Сделка пока существует только в его пересказе.",
+      "en": "An equipment supplier demands compensation for a collapsed deal. So far the deal exists only in his retelling.",
+      "tr": "Ekipman tedarikçisi bozulan bir anlaşma için tazminat istiyor. Anlaşma şimdilik yalnızca onun anlatımında var.",
+      "ar": "يطالب مورّد المعدات بتعويض عن صفقة فاشلة. والصفقة حتى الآن موجودة في روايته فقط.",
+      "kk": "Жабдық жеткізушісі бұзылған мәміле үшін өтемақы талап етеді. Мәміле әзірге тек оның әңгімесінде бар."
+    },
+    "postVerdictNote": {
+      "ru": "Кипяток в поезде настоящий. Подписи, как выяснилось, не всегда.",
+      "en": "The boiling water on this train is real. The signatures, it turns out, are not always.",
+      "tr": "Bu trende kaynar su gerçek. Anlaşılan imzalar her zaman değil.",
+      "ar": "الماء المغلي في هذا القطار حقيقي. أما التواقيع فليست كذلك دائمًا.",
+      "kk": "Пойыздағы қайнаған су нағыз. Ал қолтаңбалар, белгілі болғандай, әрдайым емес."
+    },
+    "nextCaseTeaser": {
+      "ru": "Из купе №6 исчезает конверт с документами, а оба супруга уверяют, что были в ресторане.",
+      "en": "An envelope of documents vanishes from compartment No. 6 while both spouses insist they were in the restaurant car.",
+      "tr": "6 No.lu kompartımandan belge zarfı kayboluyor, iki eş de restoran vagonunda olduklarında ısrar ediyor.",
+      "ar": "يختفي ظرف وثائق من المقصورة رقم 6 بينما يؤكد الزوجان أنهما كانا في عربة المطعم.",
+      "kk": "№6 купеден құжаты бар конверт жоғалады, ал екі жұбайы да мейрамханада болдық дейді."
+    },
+    "seasonClue": {
+      "id": "meridian-paper",
+      "progressIndex": 3,
+      "progressTotal": 10,
+      "label": {
+        "ru": "Бумага завода «Меридиан»",
+        "en": "Meridian Factory Paper",
+        "tr": "«Meridian» Fabrikası Kâğıdı",
+        "ar": "ورق مصنع «ميريديان»",
+        "kk": "«Меридиан» зауытының қағазы"
+      },
+      "description": {
+        "ru": "В дипломате пассажира оказалась чужая архивная канцелярия. Кто-то в поезде поменял одинаковые дипломаты.",
+        "en": "A passenger's briefcase turned out to hold somebody else's archive stationery. Someone on this train swapped two identical briefcases.",
+        "tr": "Bir yolcunun evrak çantasından başkasının arşiv kırtasiyesi çıktı. Trende biri birbirinin aynısı iki çantayı değiştirmiş.",
+        "ar": "تبيّن أن حقيبة راكب تحوي قرطاسية أرشيف لشخص آخر. أحدهم في القطار بدّل حقيبتين متطابقتين.",
+        "kk": "Жолаушының дипломатынан бөтен архив кеңсе қағазы шықты. Пойызда біреу бірдей дипломаттарды ауыстырған."
+      }
+    },
+    "epilogue": null
+  }
+}

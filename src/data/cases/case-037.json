@@ -639,5 +639,105 @@
       "progressTotal": 6
     },
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "denis_korin",
+      "displayName": {
+        "ru": "Денис Корин",
+        "en": "Denis Korin",
+        "tr": "Denis Korin",
+        "ar": "دينيس كورين",
+        "kk": "Денис Корин"
+      },
+      "portraitState": "nervous_irony"
+    },
+    "finalLine": {
+      "ru": "На рентгене они и правда выглядят людьми. На это я и рассчитывал.",
+      "en": "On the X-ray they really do look like people. That is exactly what I counted on.",
+      "tr": "Röntgende gerçekten insana benziyorlar. Ben de tam buna güvenmiştim.",
+      "ar": "في صورة الأشعة يبدون بشرًا بالفعل. وعلى هذا راهنت.",
+      "kk": "Рентгенде олар шынымен адамға ұқсайды. Мен дәл соған сенген едім."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Мотоцикл и манекены существуют: накануне их привозили на автомойку для очистки перед перевозкой.",
+          "en": "The motorcycle and the mannequins are real: the day before they were taken to a car wash to be cleaned for transport.",
+          "tr": "Motosiklet ve mankenler gerçek: bir gün önce nakliye öncesi temizlik için oto yıkamaya götürülmüşler.",
+          "ar": "الدرّاجة والدُّمى موجودة فعلًا: في اليوم السابق نُقلت إلى مغسلة سيارات لتنظيفها قبل الشحن.",
+          "kk": "Мотоцикл мен манекендер бар: алдыңғы күні оларды тасымалдау алдында тазалау үшін автожуғышқа әкелген."
+        },
+        "evidenceIds": [
+          "ev-wash"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Резервная запись ворот фиксирует выезд в 17:42, а «ночной» файл оказался поздней копией. Журнал видеосистемы показывает, что слепую зону создал сам владелец.",
+          "en": "The backup gate recording shows a departure at 17:42, while the “night” file turns out to be a later copy. The video-system log shows the owner created the blind spot himself.",
+          "tr": "Yedek kapı kaydı 17:42'de bir çıkış gösteriyor; “gece” dosyası ise sonradan alınmış bir kopya. Video sistem kaydı, kör noktayı sahibin kendisinin oluşturduğunu gösteriyor.",
+          "ar": "يُظهر التسجيل الاحتياطي للبوابة خروجًا عند 17:42، بينما تبيّن أن ملف «الليل» نسخة لاحقة. ويُظهر سجل نظام الفيديو أن المالك هو من أوجد النقطة العمياء.",
+          "kk": "Қақпаның резервтік жазбасы 17:42-де шығуды тіркейді, ал «түнгі» файл кейінгі көшірме болып шықты. Бейнежүйе журналы соқыр аймақты иесінің өзі жасағанын көрсетеді."
+        },
+        "evidenceIds": [
+          "ev-backup",
+          "ev-cameras"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Таможенный рентген и экспортная декларация показывают то же имущество как оформленный груз владельца, а предоплата поступила за пять дней до «кражи».",
+          "en": "The customs X-ray and the export declaration show the same property as the owner's declared cargo, and the advance arrived five days before the “theft”.",
+          "tr": "Gümrük röntgeni ve ihracat beyannamesi aynı malı sahibinin beyan ettiği yük olarak gösteriyor; avans da “hırsızlıktan” beş gün önce gelmiş.",
+          "ar": "تُظهر أشعة الجمارك وبيان التصدير الممتلكات نفسها كشحنة معلَنة باسم المالك، والدفعة المقدَّمة وصلت قبل «السرقة» بخمسة أيام.",
+          "kk": "Кеден рентгені мен экспорттық декларация сол мүлікті иесінің ресімделген жүгі ретінде көрсетеді, ал алдын ала төлем «ұрлықтан» бес күн бұрын түскен."
+        },
+        "evidenceIds": [
+          "ev-xray",
+          "ev-shipping",
+          "ev-sale"
+        ]
+      }
+    ],
+    "arcReveal": {
+      "title": {
+        "ru": "Каталог грузов GC-17",
+        "en": "GC-17 Cargo Catalog",
+        "tr": "GC-17 Kargo Kataloğu",
+        "ar": "كتالوج البضائع GC-17",
+        "kk": "Жүктердің каталогы GC-17"
+      },
+      "text": {
+        "ru": "Сеть сортирует и вывозит застрахованное имущество по категориям и международным маршрутам.",
+        "en": "The network sorts and transports insured property by category and international route.",
+        "tr": "Ağ, sigortalı mülkleri kategoriye ve uluslararası rotaya göre sıralar ve taşır.",
+        "ar": "تقوم الشبكة بفرز ونقل الممتلكات المؤمن عليها حسب الفئة والطريق الدولي.",
+        "kk": "Желі сақтандырылған мүлікті санат және халықаралық бағыт бойынша сұрыптайды және экспорттайды."
+      }
+    }
   }
 }

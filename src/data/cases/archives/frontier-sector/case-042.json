@@ -520,5 +520,108 @@
     },
     "seasonClue": null,
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "selena_orvik",
+      "displayName": {
+        "ru": "Селена Орвик",
+        "en": "Selena Orvik",
+        "tr": "Selena Orvik",
+        "ar": "سيلينا أورفيك",
+        "kk": "Селена Орвик"
+      },
+      "portraitState": "cold_irony"
+    },
+    "finalLine": {
+      "ru": "Политическое послание звучало достойнее, чем «я продала фамильный клинок».",
+      "en": "A political message sounded more dignified than “I sold the family blade”.",
+      "tr": "Siyasi bir mesaj, “aile kılıcını sattım”dan daha onurlu geliyordu.",
+      "ar": "بدت الرسالة السياسية أكثر كرامة من عبارة «بعتُ نصل العائلة».",
+      "kk": "Саяси үндеу «әулет қылышын сатып жібердім» дегеннен гөрі лайықтырақ естілді."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Клинок подлинный, оценка подтверждена, и он действительно покинул витрину.",
+          "en": "The blade is genuine, its valuation is confirmed, and it really did leave the display case.",
+          "tr": "Kılıç gerçek, değerlemesi doğrulanmış ve vitrinden gerçekten çıkmış.",
+          "ar": "النصل أصلي وتقييمه مؤكَّد، وقد غادر الفاترينة فعلًا.",
+          "kk": "Қылыш түпнұсқа, бағасы расталған, әрі витринадан шынымен кеткен."
+        },
+        "evidenceIds": [
+          "ev-valuation"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Витрину открыли штатно её картой и ключом, журнал архива фиксирует доступ владелицы, а охранник подтверждает добровольную передачу футляра курьеру.",
+          "en": "The case was opened normally with her card and key, the archive log records the owner's access, and the guard confirms the case was handed to a courier voluntarily.",
+          "tr": "Vitrin, onun kartı ve anahtarıyla usulüne uygun açılmış, arşiv kaydı sahibinin erişimini gösteriyor ve görevli kılıfın kuryeye gönüllü verildiğini doğruluyor.",
+          "ar": "فُتحت الفاترينة بشكل اعتيادي ببطاقتها ومفتاحها، ويسجّل دفتر الأرشيف دخول المالكة، ويؤكّد الحارس تسليم العلبة إلى مندوب طوعًا.",
+          "kk": "Витрина оның картасы мен кілтімен қалыпты ашылған, мұрағат журналы иесінің қатынауын тіркеген, ал күзетші футлярдың курьерге ерікті берілгенін растайды."
+        },
+        "evidenceIds": [
+          "ev-display",
+          "ev-access",
+          "ev-guard"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Фрагменты контрольного ярлыка футляра совпали, а платёж аукционного посредника поступил до заявленного исчезновения. Кража придумана после продажи.",
+          "en": "The fragments of the case's control tag match, and the auction broker's payment arrived before the claimed disappearance. The theft was invented after the sale.",
+          "tr": "Kılıfın kontrol etiketinin parçaları eşleşiyor ve müzayede aracısının ödemesi iddia edilen kayboluştan önce gelmiş. Hırsızlık, satıştan sonra uydurulmuş.",
+          "ar": "شظايا بطاقة التحقّق الخاصة بالعلبة متطابقة، ودفعة وسيط المزاد وصلت قبل الاختفاء المزعوم. السرقة اختُلقت بعد البيع.",
+          "kk": "Футлярдың бақылау жапсырмасының сынықтары сәйкес келді, ал аукцион делдалының төлемі мәлімделген жоғалудан бұрын түскен. Ұрлық сатылымнан кейін ойлап табылған."
+        },
+        "evidenceIds": [
+          "ev-courier",
+          "ev-bank"
+        ]
+      }
+    ],
+    "arcReveal": {
+      "title": {
+        "ru": "Маршрутный пропуск «Меридиан»",
+        "en": "“Meridian” Route Pass",
+        "tr": "“Meridian” Güzergâh Kartı",
+        "ar": "تصريح مسار «ميريديان»",
+        "kk": "«Меридиан» маршрут рұқсатнамасы"
+      },
+      "text": {
+        "ru": "Пропуск курьера открывает не только северный терминал. Он зарегистрирован в закрытом учебно-логистическом комплексе «Меридиан» — там готовят персонал для авиационных, портовых и грузовых маршрутов. Кто им управляет, пока неизвестно.",
+        "en": "The courier's pass opens more than the northern terminal. It is registered at “Meridian”, a closed training-and-logistics complex that prepares staff for aviation, port and freight routes. Who runs it is still unknown.",
+        "tr": "Kuryenin kartı yalnızca kuzey terminalini açmıyor. Havacılık, liman ve yük güzergâhları için personel yetiştiren kapalı eğitim-lojistik tesisi “Meridian”da kayıtlı. Orayı kimin yönettiği hâlâ bilinmiyor.",
+        "ar": "تصريح المندوب لا يفتح المحطة الشمالية وحدها. فهو مسجَّل في «ميريديان»، مجمّع تدريب ولوجستيات مغلق يُعدّ العاملين لمسارات الطيران والموانئ والشحن. ومن يديره لا يزال مجهولًا.",
+        "kk": "Курьердің рұқсатнамасы тек солтүстік терминалды ашпайды. Ол авиация, порт және жүк маршруттарына мамандар даярлайтын жабық оқу-логистикалық «Меридиан» кешенінде тіркелген. Оны кім басқаратыны әзірге белгісіз."
+      },
+      "evidenceIds": [
+        "ev-courier"
+      ]
+    }
   }
 }

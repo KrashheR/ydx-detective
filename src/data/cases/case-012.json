@@ -430,5 +430,110 @@
       "progressTotal": 5
     },
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "helga_novak",
+      "displayName": {
+        "ru": "Хельга Новак",
+        "en": "Helga Novak",
+        "tr": "Helga Novak",
+        "ar": "هيلغا نوفاك",
+        "kk": "Хельга Новак"
+      },
+      "portraitState": "dignity"
+    },
+    "finalLine": {
+      "ru": "Я не хотела побеждать страховую. Я хотела успеть лечиться.",
+      "en": "I did not want to beat the insurer. I wanted time enough to be treated.",
+      "tr": "Sigortayı yenmek istemedim. Tedavi olmaya yetişmek istedim.",
+      "ar": "لم أُرد أن أهزم شركة التأمين. أردت أن يتّسع الوقت للعلاج.",
+      "kk": "Мен сақтандыруды жеңгім келген жоқ. Емделуге үлгергім келді."
+    },
+    "emotionalMode": "grave",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Биопсия от 12 марта, операция 28 марта и гистология согласуются между собой. Диагноз подтверждён.",
+          "en": "The March 12 biopsy, the March 28 surgery and the histology agree with one another. The diagnosis is confirmed.",
+          "tr": "12 Mart biyopsisi, 28 Mart ameliyatı ve histoloji birbiriyle uyumlu. Tanı doğrulandı.",
+          "ar": "خزعة 12 مارس وجراحة 28 مارس ونتيجة النسيج متوافقة فيما بينها. التشخيص مؤكَّد.",
+          "kk": "12 наурыздағы биопсия, 28 наурыздағы операция және гистология өзара сәйкес. Диагноз расталды."
+        },
+        "evidenceIds": [
+          "ev-diagnosis"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Чем это объясняется",
+          "en": "What explains it",
+          "tr": "Bunu açıklayan şey",
+          "ar": "ما يفسر ذلك",
+          "kk": "Мұны не түсіндіреді"
+        },
+        "text": {
+          "ru": "Онколог подтверждает: состояние отвечает определению критического заболевания в полисе, а журнал выдачи показывает три последовательных цикла терапии.",
+          "en": "The oncologist confirms the condition meets the policy's critical-illness definition, and the dispensing log shows three consecutive treatment cycles.",
+          "tr": "Onkolog, durumun poliçedeki kritik hastalık tanımına uyduğunu doğruluyor; ilaç kaydı da art arda üç tedavi döngüsünü gösteriyor.",
+          "ar": "يؤكّد طبيب الأورام أن الحالة تنطبق عليها تعريف المرض الحرج في البوليصة، ويُظهر سجل الصرف ثلاث دورات علاجية متتالية.",
+          "kk": "Онколог растайды: жағдай полистегі ауыр науқас анықтамасына сай, ал беру журналы қатарынан үш ем циклін көрсетеді."
+        },
+        "evidenceIds": [
+          "ev-oncologist",
+          "ev-pharmacy"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Полис действует четырнадцать месяцев, взносы уплачены, период ожидания завершён до диагноза. Оснований для отказа нет.",
+          "en": "The policy has run for fourteen months, premiums are paid and the waiting period ended before the diagnosis. There are no grounds for refusal.",
+          "tr": "Poliçe on dört aydır yürürlükte, primler ödenmiş ve bekleme süresi tanıdan önce dolmuş. Reddetmek için gerekçe yok.",
+          "ar": "البوليصة سارية منذ أربعة عشر شهرًا، والأقساط مدفوعة، وفترة الانتظار انتهت قبل التشخيص. لا مسوّغ للرفض.",
+          "kk": "Полис он төрт ай жарамды, жарналар төленген, күту кезеңі диагнозға дейін аяқталған. Бас тартуға негіз жоқ."
+        },
+        "evidenceIds": [
+          "ev-policy"
+        ]
+      }
+    ],
+    "veraLine": {
+      "ru": "Пять лет назад по такому же делу отказали. Основанием была страница условий, которой в полисе не существовало. Подпись под отказом — моя.",
+      "en": "Five years ago a case just like this was refused. The grounds were a page of terms that did not exist in the policy. The signature under that refusal is mine.",
+      "tr": "Beş yıl önce tıpkı böyle bir dosya reddedilmişti. Gerekçe, poliçede hiç bulunmayan bir şartlar sayfasıydı. O reddin altındaki imza benim.",
+      "ar": "قبل خمس سنوات رُفضت قضية مطابقة لهذه. وكان المسوّغ صفحة شروط لا وجود لها في البوليصة. التوقيع أسفل ذلك الرفض توقيعي أنا.",
+      "kk": "Бес жыл бұрын дәл осындай іс бойынша бас тартылған. Негіз ретінде полисте мүлде болмаған шарттар беті келтірілген. Сол бас тартудағы қол — менікі."
+    },
+    "arcReveal": {
+      "title": {
+        "ru": "Поддельное основание отказа",
+        "en": "Fabricated Grounds for Denial",
+        "tr": "İnkar için Uydurulmuş Gerekçeler",
+        "ar": "أسباب ملفقة للإنكار",
+        "kk": "Бас тартуға жалған негіздер"
+      },
+      "text": {
+        "ru": "Карелин использовал знание системы в обе стороны: готовил ложные выплаты и блокировал законные.",
+        "en": "Karelin exploited his knowledge of the system in both directions: arranging fraudulent payouts and blocking legitimate ones.",
+        "tr": "Karelin, sistem hakkındaki bilgisini her iki yönde de kullandı: sahte ödemeler düzenlemek ve meşru ödemeleri engellemek.",
+        "ar": "استغل كارلين معرفته بالنظام في كلا الاتجاهين: ترتيب المدفوعات الاحتيالية وحظر المدفوعات المشروعة.",
+        "kk": "Карелин жүйе туралы білімін екі бағытта да пайдаланды: ол жалған төлемдер дайындап, заңды төлемдерді бұғаттады."
+      }
+    }
   }
 }

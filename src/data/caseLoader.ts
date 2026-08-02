@@ -49,6 +49,17 @@ export function getStandardCaseSummaries(): CaseSummary[] {
     .sort(compareCasesByUnlockCriteria);
 }
 
+/**
+ * Premium story-pack summaries, ordered by id so a pack's case sequence is
+ * stable. Archive cases are deliberately excluded from the standard campaign
+ * getters — a thematic pack is their only entry point.
+ */
+export function getArchiveCaseSummaries(): CaseSummary[] {
+  return summaries
+    .filter((s) => s.type === 'archive')
+    .sort((a, b) => a.id.localeCompare(b.id));
+}
+
 /** All daily summaries, deterministically ordered by id so rotation is stable. */
 export function getDailyCaseSummaries(): CaseSummary[] {
   return summaries
@@ -140,6 +151,13 @@ export function getStandardCases(): Case[] {
   return getAllCases()
     .filter((c) => c.type === 'standard')
     .sort(compareCasesByUnlockCriteria);
+}
+
+/** All *loaded* archive (story-pack) cases, ordered by id. */
+export function getArchiveCases(): Case[] {
+  return getAllCases()
+    .filter((c) => c.type === 'archive')
+    .sort((a, b) => a.id.localeCompare(b.id));
 }
 
 /** All *loaded* daily cases, ordered by id so rotation is stable. */

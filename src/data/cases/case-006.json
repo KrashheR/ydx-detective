@@ -448,5 +448,102 @@
       "progressTotal": 5
     },
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "eduard_vinogradov",
+      "displayName": {
+        "ru": "Эдуард Виноградов",
+        "en": "Eduard Vinogradov",
+        "tr": "Eduard Vinogradov",
+        "ar": "إدوارد فينوغرادوف",
+        "kk": "Эдуард Виноградов"
+      },
+      "portraitState": "grim_humour"
+    },
+    "finalLine": {
+      "ru": "Генератор спас вино. Меня, как видите, не спас.",
+      "en": "The generator saved the wine. Me, as you can see, it did not.",
+      "tr": "Jeneratör şarabı kurtardı. Gördüğünüz gibi beni kurtarmadı.",
+      "ar": "أنقذ المولّد النبيذ. أما أنا، فكما ترون، لم يُنقذني.",
+      "kk": "Генератор шарапты құтқарды. Мені, көріп тұрсыздар, құтқармады."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Отключение длилось с 18:07 пятницы до 20:54 понедельника и затронуло весь квартал. Авария подлинная.",
+          "en": "The outage ran from 6:07 p.m. Friday to 8:54 p.m. Monday and hit the whole block. The failure is genuine.",
+          "tr": "Kesinti cuma 18.07'den pazartesi 20.54'e kadar sürdü ve tüm mahalleyi etkiledi. Arıza gerçek.",
+          "ar": "استمرّ الانقطاع من 18:07 الجمعة حتى 20:54 الاثنين وطال الحيّ كلّه. العطل حقيقي.",
+          "kk": "Электр жұманың 18:07-нен дүйсенбінің 20:54-не дейін өшіп, бүкіл шағын ауданды қамтыған. Апат шынайы."
+        },
+        "evidenceIds": [
+          "ev-utility"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Архив климатического датчика показывает: температура в погребе ни разу не вышла за безопасный диапазон.",
+          "en": "The climate sensor archive shows the cellar temperature never left the safe range.",
+          "tr": "İklim sensörü arşivi, mahzen sıcaklığının güvenli aralığın dışına hiç çıkmadığını gösteriyor.",
+          "ar": "يُظهر أرشيف مستشعر المناخ أن حرارة القبو لم تغادر النطاق الآمن قط.",
+          "kk": "Климаттық датчик мұрағаты жертөле температурасының қауіпсіз аралықтан бір рет те шықпағанын көрсетеді."
+        },
+        "evidenceIds": [
+          "ev-temp"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Чек и журнал резервного генератора объясняют почему: питание климатической системы не прерывалось. Порчи коллекции не было.",
+          "en": "The receipt and log of the backup generator explain why: power to the climate system never stopped. The collection was never spoiled.",
+          "tr": "Yedek jeneratörün fişi ve kaydı nedenini açıklıyor: iklim sistemine giden enerji hiç kesilmedi. Koleksiyon bozulmadı.",
+          "ar": "يفسّر إيصال المولّد الاحتياطي وسجلّه السبب: لم تنقطع التغذية عن نظام التبريد. لم تفسد المجموعة.",
+          "kk": "Резервтік генератордың чегі мен журналы себебін түсіндіреді: климаттық жүйенің қуаты үзілмеген. Коллекция бүлінген жоқ."
+        },
+        "evidenceIds": [
+          "ev-generator"
+        ]
+      }
+    ],
+    "arcReveal": {
+      "title": {
+        "ru": "Подпись К. Карелина",
+        "en": "K. Karelin's Signature",
+        "tr": "K. Karelin'in İmzası",
+        "ar": "توقيع ك. كارلين",
+        "kk": "К.Карелиннің қолы"
+      },
+      "text": {
+        "ru": "Шаблон 17-К существовал ещё в 2021 году и проходил через бывшего руководителя отдела.",
+        "en": "The 17-K template existed as early as 2021 and passed through the former head of the department.",
+        "tr": "17-K şablonu 2021 gibi erken bir tarihte mevcuttu ve eski bölüm başkanından geçti.",
+        "ar": "كان قالب 17-K موجودًا في وقت مبكر من عام 2021 ومرر عبر رئيس القسم السابق.",
+        "kk": "17-K үлгісі 2021 жылы болған және бұрынғы бөлім басшысынан өткен."
+      }
+    }
   }
 }

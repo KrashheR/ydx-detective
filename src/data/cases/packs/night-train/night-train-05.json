@@ -1,0 +1,588 @@
+{
+  "id": "night-train-05",
+  "type": "archive",
+  "difficulty": "medium",
+  "claimAmount": 300000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Дипломат с двойным дном",
+    "en": "The Briefcase with a False Bottom",
+    "tr": "Çift Tabanlı Evrak Çantası",
+    "ar": "حقيبة ذات قاع مزدوج",
+    "kk": "Қос түбі бар дипломат"
+  },
+  "claim": {
+    "person": {
+      "ru": "Денис Громов, 44 года",
+      "en": "Denis Gromov, age 44",
+      "tr": "Denis Gromov, 44 yaşında",
+      "ar": "دينيس غروموف، 44 عامًا",
+      "kk": "Денис Громов, 44 жаста"
+    },
+    "story": {
+      "ru": "Я не выпускал дипломат из рук после посадки. В 00:20 обнаружил сорванный замок: из тайного отделения исчезли 300 тысяч наличными. Этот старый бумажный хлам мне подбросили уже в вагоне.",
+      "en": "I never let the briefcase out of my hands after boarding. At 00:20 I found the lock broken: 300 thousand in cash had gone from the hidden compartment. This old paper junk was planted on me inside the car.",
+      "tr": "Bindiğimden beri evrak çantasını elimden bırakmadım. Saat 00:20’de kilidin kırıldığını gördüm: gizli bölmeden 300 bin nakit kaybolmuştu. Bu eski kâğıt yığınını bana vagonda koydular.",
+      "ar": "لم أترك الحقيبة من يدي منذ الصعود. في الساعة 00:20 وجدت القفل مكسورًا: اختفى 300 ألف نقدًا من الجيب السري. أما هذه الأوراق القديمة فقد دُسّت عليّ داخل العربة.",
+      "kk": "Отырғаннан бері дипломатты қолымнан түсірген жоқпын. 00:20-да құлыптың бұзылғанын байқадым: жасырын бөліктен 300 мың қолма-қол ақша жоғалыпты. Мына ескі қағаз үйіндісін маған вагонда салып қойған."
+    }
+  },
+  "coverImage": "covers/packs/night-train-05.svg",
+  "personImage": "people/packs/night-train/denis_gromov.webp",
+  "client": {
+    "role": {
+      "ru": "Заявитель · пассажир поезда №13",
+      "en": "Claimant · passenger of train No. 13",
+      "tr": "Talep sahibi · 13 No.lu trenin yolcusu",
+      "ar": "مقدم الطلب · راكب في القطار رقم 13",
+      "kk": "Өтініш беруші · №13 пойыз жолаушысы"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Вагон",
+          "en": "Car",
+          "tr": "Vagon",
+          "ar": "العربة",
+          "kk": "Вагон"
+        },
+        "v": {
+          "ru": "№4",
+          "en": "No. 4",
+          "tr": "No. 4",
+          "ar": "رقم 4",
+          "kk": "№4"
+        }
+      },
+      {
+        "k": {
+          "ru": "Рейс",
+          "en": "Service",
+          "tr": "Sefer",
+          "ar": "الرحلة",
+          "kk": "Рейс"
+        },
+        "v": {
+          "ru": "Поезд №13, ночной",
+          "en": "Train No. 13, night service",
+          "tr": "13 No.lu tren, gece seferi",
+          "ar": "القطار رقم 13، الرحلة الليلية",
+          "kk": "№13 пойыз, түнгі рейс"
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "TR05-E1",
+      "order": 1,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера досмотра на вокзале",
+        "en": "Station Screening Camera",
+        "tr": "Gar Güvenlik Kamerası",
+        "ar": "كاميرا التفتيش في المحطة",
+        "kk": "Вокзалдағы тексеру камерасы"
+      },
+      "content": {
+        "ru": "20:52 — на ленте досмотра дипломат заявителя с глубокой царапиной справа от замка. 20:58 — у стойки упаковки рядом стоит второй такой же дипломат. 21:03 — заявитель забирает чемоданчик с царапиной слева.",
+        "en": "20:52 — on the screening belt the claimant's briefcase has a deep scratch to the right of the lock. 20:58 — a second identical briefcase stands next to it at the wrapping desk. 21:03 — the claimant picks up the case scratched on the left.",
+        "tr": "20:52 — kontrol bandında talep sahibinin çantası, kilidin sağında derin bir çizikle görünüyor. 20:58 — paketleme tezgâhında yanına aynısından ikinci bir çanta konuyor. 21:03 — talep sahibi çiziği solda olan çantayı alıyor.",
+        "ar": "20:52 — على سير التفتيش تظهر حقيبة مقدم الطلب بخدش عميق يمين القفل. 20:58 — توضع بجوارها حقيبة ثانية مطابقة عند طاولة التغليف. 21:03 — يأخذ مقدم الطلب الحقيبة المخدوشة من اليسار.",
+        "kk": "20:52 — тексеру таспасында өтініш берушінің дипломаты құлыптың оң жағындағы терең сызатымен көрінеді. 20:58 — орау сөресінің қасында дәл сондай екінші дипломат тұр. 21:03 — өтініш беруші сызаты сол жақтағы дипломатты алады."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Дипломаты перепутали ещё на вокзале, до посадки: заявитель везёт чужой кейс, а не тот, что держал в руках.",
+        "en": "The briefcases were swapped at the station, before boarding: the claimant is carrying somebody else's case, not the one he held.",
+        "tr": "Çantalar daha garda, binişten önce karışmış: talep sahibi elinde tuttuğu çantayı değil, başkasınınkini taşıyor.",
+        "ar": "تبادلت الحقيبتان في المحطة قبل الصعود: يحمل مقدم الطلب حقيبة شخص آخر لا التي كانت بيده.",
+        "kk": "Дипломаттар вокзалда, отырар алдында ауысып кеткен: өтініш беруші өзі ұстаған дипломатты емес, бөтен кейсті алып жүр."
+      },
+      "statementLink": {
+        "statementId": "claim_possession",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Дипломаты перепутали ещё на вокзале, до посадки: заявитель везёт чужой кейс, а не тот, что держал в руках.",
+          "en": "The briefcases were swapped at the station, before boarding: the claimant is carrying somebody else's case, not the one he held.",
+          "tr": "Çantalar daha garda, binişten önce karışmış: talep sahibi elinde tuttuğu çantayı değil, başkasınınkini taşıyor.",
+          "ar": "تبادلت الحقيبتان في المحطة قبل الصعود: يحمل مقدم الطلب حقيبة شخص آخر لا التي كانت بيده.",
+          "kk": "Дипломаттар вокзалда, отырар алдында ауысып кеткен: өтініш беруші өзі ұстаған дипломатты емес, бөтен кейсті алып жүр."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_possession",
+        "reason": {
+          "ru": "Дипломаты перепутали ещё на вокзале, до посадки: заявитель везёт чужой кейс, а не тот, что держал в руках.",
+          "en": "The briefcases were swapped at the station, before boarding: the claimant is carrying somebody else's case, not the one he held.",
+          "tr": "Çantalar daha garda, binişten önce karışmış: talep sahibi elinde tuttuğu çantayı değil, başkasınınkini taşıyor.",
+          "ar": "تبادلت الحقيبتان في المحطة قبل الصعود: يحمل مقدم الطلب حقيبة شخص آخر لا التي كانت بيده.",
+          "kk": "Дипломаттар вокзалда, отырар алдында ауысып кеткен: өтініш беруші өзі ұстаған дипломатты емес, бөтен кейсті алып жүр."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr05-e1.webp",
+        "cameraId": "SCREENING-1",
+        "cameraModel": "StationEye 2"
+      }
+    },
+    {
+      "id": "TR05-E2",
+      "order": 2,
+      "type": "seal_match",
+      "title": {
+        "ru": "Осмотр замка дипломата",
+        "en": "Examining the Briefcase Lock",
+        "tr": "Çanta Kilidinin İncelenmesi",
+        "ar": "فحص قفل الحقيبة",
+        "kk": "Дипломат құлпын тексеру"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Механизм полностью совпадает с эталоном, деформации нет: замок открыли штатным кодом `1996`, а не сорвали.",
+        "en": "The mechanism matches the reference exactly with no deformation: the lock was opened with its own code `1996`, not forced.",
+        "tr": "Mekanizma referansla tam örtüşüyor, deformasyon yok: kilit kırılmamış, kendi kodu `1996` ile açılmış.",
+        "ar": "تطابق الآلية المرجع تمامًا دون تشوّه: فُتح القفل برمزه `1996` ولم يُكسر.",
+        "kk": "Механизм эталонмен толық сәйкес, деформация жоқ: құлып бұзылмаған, өз коды `1996` арқылы ашылған."
+      },
+      "statementLink": {
+        "statementId": "claim_lock",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Механизм полностью совпадает с эталоном, деформации нет: замок открыли штатным кодом `1996`, а не сорвали.",
+          "en": "The mechanism matches the reference exactly with no deformation: the lock was opened with its own code `1996`, not forced.",
+          "tr": "Mekanizma referansla tam örtüşüyor, deformasyon yok: kilit kırılmamış, kendi kodu `1996` ile açılmış.",
+          "ar": "تطابق الآلية المرجع تمامًا دون تشوّه: فُتح القفل برمزه `1996` ولم يُكسر.",
+          "kk": "Механизм эталонмен толық сәйкес, деформация жоқ: құлып бұзылмаған, өз коды `1996` арқылы ашылған."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_lock",
+        "reason": {
+          "ru": "Механизм полностью совпадает с эталоном, деформации нет: замок открыли штатным кодом `1996`, а не сорвали.",
+          "en": "The mechanism matches the reference exactly with no deformation: the lock was opened with its own code `1996`, not forced.",
+          "tr": "Mekanizma referansla tam örtüşüyor, deformasyon yok: kilit kırılmamış, kendi kodu `1996` ile açılmış.",
+          "ar": "تطابق الآلية المرجع تمامًا دون تشوّه: فُتح القفل برمزه `1996` ولم يُكسر.",
+          "kk": "Механизм эталонмен толық сәйкес, деформация жоқ: құлып бұзылмаған, өз коды `1996` арқылы ашылған."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "Механизм замка сфотографирован рядом с эталонным замком той же модели, снятым с нового кейса.",
+        "en": "The lock mechanism was photographed beside a reference lock of the same model taken from a new case.",
+        "tr": "Kilit mekanizması, yeni bir çantadan alınan aynı modeldeki referans kilidin yanında fotoğraflandı.",
+        "ar": "صُوّرت آلية القفل بجوار قفل مرجعي من الطراز نفسه مأخوذ من حقيبة جديدة.",
+        "kk": "Құлып механизмі жаңа кейстен алынған сол модельдегі эталондық құлыптың қасында суретке түсірілген."
+      },
+      "instruction": {
+        "ru": "Совместите механизм с эталоном и проверьте, есть ли деформация от вскрытия.",
+        "en": "Align the mechanism with the reference and check whether there is any deformation from forcing.",
+        "tr": "Mekanizmayı referansla hizalayın ve zorlamadan kaynaklı deformasyon olup olmadığını kontrol edin.",
+        "ar": "حاذِ الآلية مع المرجع وتحقق من وجود أي تشوّه ناتج عن الكسر.",
+        "kk": "Механизмді эталонмен беттестіріп, ашудан деформация бар-жоғын тексеріңіз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/night-train/tr05-e2.webp"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Сорванный замок оставляет смещение язычка: игрок сам проверяет, было ли вскрытие.",
+          "en": "A forced lock leaves the latch displaced: the player checks for themselves whether it was broken open.",
+          "tr": "Zorlanan kilitte dil kayar: oyuncu kilidin kırılıp kırılmadığını kendisi kontrol eder.",
+          "ar": "القفل المكسور يترك اللسان مزاحًا: يتحقق اللاعب بنفسه مما إذا كان قد فُتح عنوة.",
+          "kk": "Бұзылған құлыпта тіл жылжып қалады: ойыншы ашылған-ашылмағанын өзі тексереді."
+        },
+        "playerAction": {
+          "ru": "Совместите механизм с эталоном и проверьте, есть ли деформация от вскрытия.",
+          "en": "Align the mechanism with the reference and check whether there is any deformation from forcing.",
+          "tr": "Mekanizmayı referansla hizalayın ve zorlamadan kaynaklı deformasyon olup olmadığını kontrol edin.",
+          "ar": "حاذِ الآلية مع المرجع وتحقق من وجود أي تشوّه ناتج عن الكسر.",
+          "kk": "Механизмді эталонмен беттестіріп, ашудан деформация бар-жоғын тексеріңіз."
+        },
+        "conclusion": {
+          "ru": "Механизм полностью совпадает с эталоном, деформации нет: замок открыли штатным кодом `1996`, а не сорвали.",
+          "en": "The mechanism matches the reference exactly with no deformation: the lock was opened with its own code `1996`, not forced.",
+          "tr": "Mekanizma referansla tam örtüşüyor, deformasyon yok: kilit kırılmamış, kendi kodu `1996` ile açılmış.",
+          "ar": "تطابق الآلية المرجع تمامًا دون تشوّه: فُتح القفل برمزه `1996` ولم يُكسر.",
+          "kk": "Механизм эталонмен толық сәйкес, деформация жоқ: құлып бұзылмаған, өз коды `1996` арқылы ашылған."
+        }
+      },
+      "data": {
+        "movableFragment": "A",
+        "allowRotation": true,
+        "rotationStep": 5,
+        "initialTransform": {
+          "x": 56,
+          "y": 132,
+          "rotation": 10
+        },
+        "targetTransform": {
+          "x": 172,
+          "y": 104,
+          "rotation": 0
+        },
+        "tolerance": {
+          "position": 16,
+          "rotation": 8
+        },
+        "expectedMatch": true,
+        "sourceSeed": 199613,
+        "fragmentASeed": 5521,
+        "fragmentBSeed": 7734,
+        "comparisonMarkers": [
+          {
+            "id": "latch-tongue",
+            "label": "Язычок замка",
+            "labelEn": "Lock latch"
+          },
+          {
+            "id": "code-wheels",
+            "label": "Кодовые барабаны",
+            "labelEn": "Code wheels"
+          },
+          {
+            "id": "hinge-plate",
+            "label": "Пластина петли",
+            "labelEn": "Hinge plate"
+          }
+        ]
+      }
+    },
+    {
+      "id": "TR05-E3",
+      "order": 3,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Банковская выписка заявителя",
+        "en": "The Claimant's Bank Statement",
+        "tr": "Talep Sahibinin Banka Ekstresi",
+        "ar": "كشف حساب مقدم الطلب",
+        "kk": "Өтініш берушінің банк үзіндісі"
+      },
+      "content": {
+        "ru": "За тридцать дней: максимальное снятие наличных — 40 000 ₽, остаток на счетах перед поездкой — 51 300 ₽. Операций на 300 000 ₽ нет ни по одному счёту.",
+        "en": "Over thirty days: the largest cash withdrawal was 40,000 ₽ and the balance before the trip was 51,300 ₽. No 300,000 ₽ transaction appears on any account.",
+        "tr": "Otuz günde: en yüksek nakit çekim 40.000 ₽, yolculuk öncesi bakiye 51.300 ₽. Hiçbir hesapta 300.000 ₽’lik işlem yok.",
+        "ar": "خلال ثلاثين يومًا: أكبر سحب نقدي 40000 ₽ والرصيد قبل الرحلة 51300 ₽. لا توجد عملية بـ300000 ₽ في أي حساب.",
+        "kk": "Отыз күнде: ең үлкен қолма-қол алу — 40 000 ₽, сапар алдындағы қалдық — 51 300 ₽. Бірде-бір шотта 300 000 ₽ операция жоқ."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Заявленных денег у заявителя не было, но подмену и целость замка доказывают камера и осмотр механизма.",
+        "en": "The claimant never had the money in question, though it is the camera and the lock examination that prove the swap and the intact lock.",
+        "tr": "Talep sahibinin söz konusu parası hiç olmadı; değişimi ve kilidin sağlamlığını ise kamera ile kilit incelemesi kanıtlıyor.",
+        "ar": "لم يكن لدى مقدم الطلب المبلغ المزعوم، أما التبادل وسلامة القفل فتثبتهما الكاميرا وفحص الآلية.",
+        "kk": "Өтініш берушіде мәлімделген ақша болмаған, ал ауысу мен құлыптың бүтіндігін камера мен механизм тексерісі дәлелдейді."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Заявленных денег у заявителя не было, но подмену и целость замка доказывают камера и осмотр механизма.",
+          "en": "The claimant never had the money in question, though it is the camera and the lock examination that prove the swap and the intact lock.",
+          "tr": "Talep sahibinin söz konusu parası hiç olmadı; değişimi ve kilidin sağlamlığını ise kamera ile kilit incelemesi kanıtlıyor.",
+          "ar": "لم يكن لدى مقدم الطلب المبلغ المزعوم، أما التبادل وسلامة القفل فتثبتهما الكاميرا وفحص الآلية.",
+          "kk": "Өтініш берушіде мәлімделген ақша болмаған, ал ауысу мен құлыптың бүтіндігін камера мен механизм тексерісі дәлелдейді."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr05-e3.webp",
+        "bankName": {
+          "ru": "Северный банк",
+          "en": "Severny Bank",
+          "tr": "Severnıy Bank",
+          "ar": "بنك سيفيرني",
+          "kk": "Солтүстік банк"
+        },
+        "accountMask": "•••• 6120"
+      }
+    },
+    {
+      "id": "TR05-E4",
+      "order": 4,
+      "type": "surface_reveal",
+      "title": {
+        "ru": "Содержимое двойного дна",
+        "en": "Contents of the False Bottom",
+        "tr": "Çift Tabanın İçeriği",
+        "ar": "محتوى القاع المزدوج",
+        "kk": "Қос түптің ішіндегісі"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Под пылью — пачка чистых билетных бланков серии `ТХ-96`, списанных тридцать лет назад; ровно одного листа не хватает.",
+        "en": "Under the dust is a stack of blank tickets of series `TX-96`, written off thirty years ago; exactly one sheet is missing.",
+        "tr": "Tozun altında otuz yıl önce hurdaya ayrılmış `TX-96` serisi boş bilet blankoları var; tam olarak bir yaprak eksik.",
+        "ar": "تحت الغبار رزمة تذاكر فارغة من سلسلة `TX-96` شُطبت قبل ثلاثين عامًا، وينقصها ورقة واحدة بالضبط.",
+        "kk": "Шаңның астында отыз жыл бұрын есептен шығарылған `ТХ-96` сериялы бос билет бланкілері бар; дәл бір парақ жетіспейді."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Под пылью — пачка чистых билетных бланков серии `ТХ-96`, списанных тридцать лет назад; ровно одного листа не хватает.",
+          "en": "Under the dust is a stack of blank tickets of series `TX-96`, written off thirty years ago; exactly one sheet is missing.",
+          "tr": "Tozun altında otuz yıl önce hurdaya ayrılmış `TX-96` serisi boş bilet blankoları var; tam olarak bir yaprak eksik.",
+          "ar": "تحت الغبار رزمة تذاكر فارغة من سلسلة `TX-96` شُطبت قبل ثلاثين عامًا، وينقصها ورقة واحدة بالضبط.",
+          "kk": "Шаңның астында отыз жыл бұрын есептен шығарылған `ТХ-96` сериялы бос билет бланкілері бар; дәл бір парақ жетіспейді."
+        }
+      },
+      "evidenceTier": "supporting",
+      "description": {
+        "ru": "Под нижней панелью кейса лежит плотная пачка бумаги, засыпанная старой пылью и крошкой картона.",
+        "en": "Under the case's bottom panel lies a thick stack of paper, buried in old dust and cardboard crumbs.",
+        "tr": "Çantanın alt panelinin altında, eski toz ve karton kırıntılarıyla örtülü kalın bir kâğıt destesi var.",
+        "ar": "تحت اللوح السفلي للحقيبة رزمة ورق سميكة مغطاة بغبار قديم وفتات كرتون.",
+        "kk": "Кейстің төменгі тақтайшасының астында ескі шаң мен картон қиқымына көмілген қалың қағаз бумасы жатыр."
+      },
+      "instruction": {
+        "ru": "Расчистите пачку и определите, что это за бланки.",
+        "en": "Clear the stack and identify what kind of blanks these are.",
+        "tr": "Desteyi temizleyin ve bu blankoların ne olduğunu belirleyin.",
+        "ar": "نظّف الرزمة وحدّد نوع هذه النماذج.",
+        "kk": "Буманы тазалап, бұл қандай бланкілер екенін анықтаңыз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/night-train/tr05-e4.webp",
+        "coverTexture": "shared/surface/dirt.svg",
+        "revealMasks": [
+          "shared/surface/trace-mask.svg"
+        ],
+        "toolCursor": "shared/surface/cloth-cursor.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": false,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Пачка объясняет, зачем кому-то менять дипломаты: игрок сам находит материал для поддельного билета.",
+          "en": "The stack explains why anyone would swap briefcases: the player finds the material for a forged ticket themselves.",
+          "tr": "Deste, birinin neden çanta değiştireceğini açıklıyor: oyuncu sahte bilet malzemesini kendisi buluyor.",
+          "ar": "تفسّر الرزمة سبب رغبة أحدهم في تبديل الحقائب: يجد اللاعب بنفسه مادة تذكرة مزوّرة.",
+          "kk": "Бума біреудің дипломаттарды неге ауыстырғанын түсіндіреді: ойыншы жалған билетке арналған материалды өзі табады."
+        },
+        "playerAction": {
+          "ru": "Расчистите пачку и определите, что это за бланки.",
+          "en": "Clear the stack and identify what kind of blanks these are.",
+          "tr": "Desteyi temizleyin ve bu blankoların ne olduğunu belirleyin.",
+          "ar": "نظّف الرزمة وحدّد نوع هذه النماذج.",
+          "kk": "Буманы тазалап, бұл қандай бланкілер екенін анықтаңыз."
+        },
+        "conclusion": {
+          "ru": "Под пылью — пачка чистых билетных бланков серии `ТХ-96`, списанных тридцать лет назад; ровно одного листа не хватает.",
+          "en": "Under the dust is a stack of blank tickets of series `TX-96`, written off thirty years ago; exactly one sheet is missing.",
+          "tr": "Tozun altında otuz yıl önce hurdaya ayrılmış `TX-96` serisi boş bilet blankoları var; tam olarak bir yaprak eksik.",
+          "ar": "تحت الغبار رزمة تذاكر فارغة من سلسلة `TX-96` شُطبت قبل ثلاثين عامًا، وينقصها ورقة واحدة بالضبط.",
+          "kk": "Шаңның астында отыз жыл бұрын есептен шығарылған `ТХ-96` сериялы бос билет бланкілері бар; дәл бір парақ жетіспейді."
+        }
+      },
+      "data": {
+        "mode": "erase",
+        "coverType": "dust",
+        "brush": {
+          "radius": 42,
+          "hardness": 0.58,
+          "opacity": 0.84,
+          "spacing": 8
+        },
+        "completion": {
+          "type": "discover_any",
+          "requiredTraceIds": [
+            "tx96-blanks"
+          ]
+        },
+        "traces": [
+          {
+            "id": "tx96-blanks",
+            "label": "Чистые бланки серии ТХ-96, не хватает одного",
+            "labelEn": "Blank TX-96 tickets, one sheet missing",
+            "requiredRevealPercent": 52,
+            "mask": "shared/surface/trace-mask.svg",
+            "shape": "mask",
+            "isContradiction": false,
+            "conclusion": "Под пылью — пачка чистых билетных бланков серии ТХ-96; ровно одного листа не хватает.",
+            "conclusionEn": "Under the dust is a stack of blank TX-96 tickets; exactly one sheet is missing."
+          }
+        ]
+      }
+    },
+    {
+      "id": "TR05-E5",
+      "order": 5,
+      "type": "photo",
+      "title": {
+        "ru": "Бирка упаковочной стойки",
+        "en": "Wrapping Desk Tag",
+        "tr": "Paketleme Tezgâhı Etiketi",
+        "ar": "بطاقة طاولة التغليف",
+        "kk": "Орау сөресінің биркасы"
+      },
+      "content": {
+        "ru": "На ручке чужого дипломата — бирка платной упаковки с номером телефона владельца. Номер совпадает с временным номером пассажира из вагона №5, представившегося краеведом.",
+        "en": "The stranger's briefcase carries a paid-wrapping tag with the owner's phone number. It matches the temporary number of the passenger from car No. 5 who introduced himself as a local historian.",
+        "tr": "Yabancı çantanın sapında, sahibinin telefon numarasının yazılı olduğu ücretli paketleme etiketi var. Numara, kendini yerel tarihçi olarak tanıtan 5 No.lu vagon yolcusunun geçici numarasıyla aynı.",
+        "ar": "على مقبض الحقيبة الغريبة بطاقة تغليف مدفوع تحمل رقم هاتف المالك، وهو يطابق الرقم المؤقت لراكب العربة رقم 5 الذي قدّم نفسه كباحث في تاريخ المنطقة.",
+        "kk": "Бөтен дипломаттың сабында иесінің телефон нөмірі жазылған ақылы орау биркасы бар. Нөмір өзін өлкетанушымын деп таныстырған №5 вагон жолаушысының уақытша нөмірімен сәйкес."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Бирка называет владельца второго дипломата, но подмену на вокзале доказывает запись камеры досмотра.",
+        "en": "The tag names the owner of the second briefcase, while the screening camera proves the swap happened at the station.",
+        "tr": "Etiket ikinci çantanın sahibini gösteriyor; değişimin garda olduğunu ise kontrol kamerası kanıtlıyor.",
+        "ar": "تحدد البطاقة صاحب الحقيبة الثانية، أما حدوث التبادل في المحطة فتثبته كاميرا التفتيش.",
+        "kk": "Бирка екінші дипломаттың иесін атайды, ал ауысудың вокзалда болғанын тексеру камерасы дәлелдейді."
+      },
+      "statementLink": {
+        "statementId": "claim_possession",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Бирка называет владельца второго дипломата, но подмену на вокзале доказывает запись камеры досмотра.",
+          "en": "The tag names the owner of the second briefcase, while the screening camera proves the swap happened at the station.",
+          "tr": "Etiket ikinci çantanın sahibini gösteriyor; değişimin garda olduğunu ise kontrol kamerası kanıtlıyor.",
+          "ar": "تحدد البطاقة صاحب الحقيبة الثانية، أما حدوث التبادل في المحطة فتثبته كاميرا التفتيش.",
+          "kk": "Бирка екінші дипломаттың иесін атайды, ал ауысудың вокзалда болғанын тексеру камерасы дәлелдейді."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr05-e5.webp",
+        "filename": "tr05-e5.webp"
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Камера досмотра показывает: дипломаты перепутали на вокзале, до посадки.",
+      "Замок цел и открыт штатным кодом — вскрытия не было.",
+      "Наличных на 300 000 ₽ у заявителя не было, а в чужом кейсе лежат бланки серии ТХ-96 без одного листа."
+    ],
+    "en": [
+      "The screening camera shows the briefcases were swapped at the station, before boarding.",
+      "The lock is intact and was opened with its own code — there was no break-in.",
+      "The claimant never held 300,000 ₽ in cash, and the stranger's case holds TX-96 ticket blanks with one sheet missing."
+    ],
+    "tr": [
+      "Kontrol kamerası, çantaların garda, binişten önce karıştığını gösteriyor.",
+      "Kilit sağlam ve kendi koduyla açılmış; zorla giriş yok.",
+      "Talep sahibinde 300.000 ₽ nakit hiç olmadı ve yabancı çantada bir yaprağı eksik TX-96 blankoları var."
+    ],
+    "ar": [
+      "تُظهر كاميرا التفتيش أن الحقيبتين تبادلتا في المحطة قبل الصعود.",
+      "القفل سليم وفُتح برمزه الأصلي، فلا اقتحام.",
+      "لم يكن لدى مقدم الطلب 300000 ₽ نقدًا، وفي الحقيبة الغريبة نماذج TX-96 تنقصها ورقة واحدة."
+    ],
+    "kk": [
+      "Тексеру камерасы дипломаттардың вокзалда, отырар алдында ауысқанын көрсетеді.",
+      "Құлып бүтін әрі өз кодымен ашылған — бұзып ашу болмаған.",
+      "Өтініш берушіде 300 000 ₽ қолма-қол ақша болмаған, ал бөтен кейсте бір парағы жетіспейтін ТХ-96 бланкілері жатыр."
+    ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "stampable": false,
+      "text": {
+        "ru": "Из дипломата похищены наличные, ущерб подлежит возмещению.",
+        "en": "Cash was stolen from the briefcase and the loss is reimbursable.",
+        "tr": "Evrak çantasından nakit çalındı ve kayıp tazmin edilmelidir.",
+        "ar": "سُرق نقد من الحقيبة والخسارة قابلة للتعويض.",
+        "kk": "Дипломаттан қолма-қол ақша ұрланды, залал өтелуге тиіс."
+      }
+    },
+    {
+      "id": "claim_possession",
+      "stampable": true,
+      "text": {
+        "ru": "Дипломат не покидал моих рук, а старые бумаги подбросили в вагоне.",
+        "en": "The briefcase never left my hands and the old papers were planted inside the car.",
+        "tr": "Evrak çantası elimden hiç çıkmadı ve eski kâğıtlar vagonda konuldu.",
+        "ar": "لم تفارق الحقيبة يدي والأوراق القديمة دُسّت داخل العربة.",
+        "kk": "Дипломат қолымнан шыққан жоқ, ал ескі қағаздарды вагонда салып қойған."
+      }
+    },
+    {
+      "id": "claim_lock",
+      "stampable": true,
+      "text": {
+        "ru": "Замок дипломата сорвали.",
+        "en": "The briefcase lock was broken open.",
+        "tr": "Evrak çantasının kilidi kırıldı.",
+        "ar": "كُسر قفل الحقيبة.",
+        "kk": "Дипломаттың құлпы бұзылған."
+      }
+    }
+  ],
+  "contentVersion": "night-train-1.0",
+  "narrative": {
+    "preBrief": {
+      "ru": "Пропажу наличных обычно замечают сразу. Здесь сначала заметили чужие бумаги.",
+      "en": "Missing cash is usually noticed at once. Here the stranger's papers were noticed first.",
+      "tr": "Kaybolan nakit genelde hemen fark edilir. Burada önce yabancı kâğıtlar fark edildi.",
+      "ar": "عادة ما يُلاحظ اختفاء النقد فورًا. هنا لوحظت أوراق الغريب أولًا.",
+      "kk": "Ақшаның жоғалғанын әдетте бірден байқайды. Мұнда алдымен бөтен қағаздарды байқады."
+    },
+    "postVerdictNote": {
+      "ru": "Дипломат действительно с двойным дном. У заявления дна оказалось больше.",
+      "en": "The briefcase really does have a false bottom. The claim turned out to have several more.",
+      "tr": "Çantanın gerçekten çift tabanı var. İddianınsa daha fazlası çıktı.",
+      "ar": "الحقيبة فعلًا ذات قاع مزدوج. أما الادعاء فقد تبيّن أن له قيعانًا أكثر.",
+      "kk": "Дипломаттың шынымен қос түбі бар. Ал өтініштің түбі одан да көп болып шықты."
+    },
+    "nextCaseTeaser": {
+      "ru": "В вагоне-ресторане исчезает единственная запись новой песни — и появляется фраза про семь минут.",
+      "en": "In the restaurant car the only recording of a new song disappears — and a line about seven minutes appears.",
+      "tr": "Restoran vagonunda yeni bir şarkının tek kaydı kayboluyor ve yedi dakikayla ilgili bir cümle ortaya çıkıyor.",
+      "ar": "في عربة المطعم يختفي التسجيل الوحيد لأغنية جديدة، وتظهر عبارة عن سبع دقائق.",
+      "kk": "Мейрамхана вагонында жаңа әннің жалғыз жазбасы жоғалады — және жеті минут туралы сөз шығады."
+    },
+    "seasonClue": {
+      "id": "tx96-blanks",
+      "progressIndex": 5,
+      "progressTotal": 10,
+      "label": {
+        "ru": "Бланки серии ТХ-96",
+        "en": "TX-96 Ticket Blanks",
+        "tr": "TX-96 Serisi Blankolar",
+        "ar": "نماذج السلسلة TX-96",
+        "kk": "ТХ-96 сериялы бланкілер"
+      },
+      "description": {
+        "ru": "На подлинном списанном бланке можно изготовить убедительный билет старого образца. Недостаёт ровно одного листа.",
+        "en": "A genuine written-off blank can be turned into a convincing old-style ticket. Exactly one sheet is missing.",
+        "tr": "Gerçek bir hurda blankodan inandırıcı, eski usul bir bilet yapılabilir. Tam bir yaprak eksik.",
+        "ar": "يمكن من نموذج أصلي مشطوب صنع تذكرة قديمة الطراز مقنعة. وينقص ورقة واحدة بالضبط.",
+        "kk": "Есептен шыққан түпнұсқа бланкіден сенімді ескі үлгідегі билет жасауға болады. Дәл бір парақ жетіспейді."
+      }
+    },
+    "epilogue": null
+  }
+}

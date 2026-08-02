@@ -592,5 +592,88 @@
     },
     "seasonClue": null,
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "bolat_zhumabekov",
+      "displayName": {
+        "ru": "Болат Жумабеков",
+        "en": "Bolat Zhumabekov",
+        "tr": "Bolat Jumabekov",
+        "ar": "بولات جوماباييف",
+        "kk": "Болат Жұмабеков"
+      },
+      "portraitState": "dignity"
+    },
+    "finalLine": {
+      "ru": "Вода испортила семена. Моё имя она не получит.",
+      "en": "The water ruined the seed. It will not get my name as well.",
+      "tr": "Su tohumu bozdu. Adımı ise alamayacak.",
+      "ar": "أفسد الماء البذور. أما اسمي فلن ينال منه.",
+      "kk": "Су тұқымды бүлдірді. Ал есімімді алмайды."
+    },
+    "emotionalMode": "relief",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "За 80 минут выпало 62 мм осадков, а датчик зафиксировал подъём воды с 0 до 31 см за одиннадцать минут.",
+          "en": "62 mm of rain fell in 80 minutes, and the sensor recorded the water rising from 0 to 31 cm in eleven minutes.",
+          "tr": "80 dakikada 62 mm yağış düştü ve sensör suyun on bir dakikada 0'dan 31 cm'ye yükseldiğini kaydetti.",
+          "ar": "هطل 62 ملم من الأمطار خلال 80 دقيقة، وسجّل المستشعر ارتفاع الماء من 0 إلى 31 سم في إحدى عشرة دقيقة.",
+          "kk": "80 минутта 62 мм жауын-шашын түскен, ал датчик судың он бір минутта 0-ден 31 см-ге көтерілгенін тіркеген."
+        },
+        "evidenceIds": [
+          "ev-meteo",
+          "ev-sensor"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "На фотографии мокрые только нижние ярусы, и уровень воды на снимке совпадает с отметкой датчика. Снимок сделан после пика, а не заранее.",
+          "en": "In the photo only the lower tiers are wet, and the water level in the frame matches the sensor reading. The picture was taken after the peak, not before it.",
+          "tr": "Fotoğrafta yalnızca alt raflar ıslak ve karedeki su seviyesi sensör değeriyle örtüşüyor. Fotoğraf zirveden sonra çekilmiş, önceden değil.",
+          "ar": "في الصورة الرفوف السفلية وحدها مبتلّة، ومستوى الماء في اللقطة يطابق قراءة المستشعر. التُقطت الصورة بعد الذروة لا قبلها.",
+          "kk": "Суретте тек төменгі сөрелер дымқыл, ал кадрдағы су деңгейі датчик көрсеткішіне сай. Сурет шыңнан кейін түсірілген, алдын ала емес."
+        },
+        "evidenceIds": [
+          "ev-photo"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Лаборатория подтверждает потерю всхожести только у намокших партий, номера мешков совпадают с закупкой, а счёт за откачку соответствует площади. Сухой товар в требование не включён.",
+          "en": "The lab confirms germination loss only in the soaked batches, the sack numbers match the purchase records, and the pump-out invoice fits the floor area. Dry stock is left out of the claim.",
+          "tr": "Laboratuvar yalnızca ıslanan partilerde çimlenme kaybını doğruluyor, çuval numaraları alım kayıtlarıyla eşleşiyor ve su tahliyesi faturası alana uyuyor. Kuru mal talebe dahil edilmemiş.",
+          "ar": "يؤكّد المختبر فقدان الإنبات في الدفعات المبلَّلة وحدها، وأرقام الأكياس تطابق مستندات الشراء، وفاتورة الضخّ تناسب المساحة. البضاعة الجافة غير مدرجة في المطالبة.",
+          "kk": "Зертхана өну қабілетінің жоғалуын тек суланған партияларда растайды, қап нөмірлері сатып алу құжаттарына сай, ал су сору шоты аумаққа сәйкес. Құрғақ тауар талапқа енгізілмеген."
+        },
+        "evidenceIds": [
+          "ev-seed",
+          "ev-invoice"
+        ]
+      }
+    ]
   }
 }

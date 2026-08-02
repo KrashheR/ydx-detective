@@ -176,5 +176,87 @@
       "Жарылыстан екі апта бұрын көзі түсіндірілмеген үш ірі қолма-қол салым.",
       "«Нейлон синтезі» заңсыз зертхананың желеуі болды. Талаптан бас тарту."
     ]
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "viktor_gromin",
+      "displayName": {
+        "ru": "Виктор Громин",
+        "en": "Viktor Gromin",
+        "tr": "Viktor Gromin",
+        "ar": "فيكتور غرومين",
+        "kk": "Виктор Громин"
+      },
+      "portraitState": "caught"
+    },
+    "finalLine": {
+      "ru": "Нейлон звучал безобиднее. Для школы — особенно.",
+      "en": "Nylon sounded more harmless. For a school, especially.",
+      "tr": "Naylon daha zararsız geliyordu. Hele bir okul için.",
+      "ar": "بدا النايلون أقلّ ضررًا. ولا سيّما في مدرسة.",
+      "kk": "Нейлон зиянсыздау естілді. Мектеп үшін — әсіресе."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Взрыв в лаборатории действительно произошёл, а помещение числится за школьным кабинетом химии.",
+          "en": "The laboratory explosion really happened, and the room is registered to the school chemistry class.",
+          "tr": "Laboratuvardaki patlama gerçekten oldu ve oda okulun kimya sınıfına kayıtlı.",
+          "ar": "وقع الانفجار في المختبر فعلًا، والغرفة مسجَّلة باسم صفّ الكيمياء المدرسي.",
+          "kk": "Зертханадағы жарылыс шынымен болған, ал үй-жай мектептің химия кабинетіне тіркелген."
+        },
+        "evidenceIds": [
+          "ev-witness"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Анализ остатков даёт состав контрафактного растворителя — к синтезу нейлона он отношения не имеет.",
+          "en": "Analysis of the residue gives the composition of a counterfeit solvent — nothing to do with nylon synthesis.",
+          "tr": "Kalıntı analizi sahte bir çözücünün bileşimini veriyor — naylon sentezleriyle ilgisi yok.",
+          "ar": "يعطي تحليل البقايا تركيب مذيب مقلَّد — لا علاقة له بتخليق النايلون.",
+          "kk": "Қалдықтарды талдау контрафактілі еріткіштің құрамын береді — нейлон синтезіне қатысы жоқ."
+        },
+        "evidenceIds": [
+          "ev-lab-analysis"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Уборщик видел канистры и ночные продажи, а на счёт за две недели до взрыва легли три крупных наличных пополнения сверх зарплаты.",
+          "en": "The cleaner saw canisters and night-time sales, and three large cash deposits above salary landed on the account two weeks before the blast.",
+          "tr": "Temizlikçi bidonları ve gece satışlarını gördü; patlamadan iki hafta önce hesaba maaş dışı üç büyük nakit yatırıldı.",
+          "ar": "رأى عامل النظافة العبوات والمبيعات الليلية، ووصلت إلى الحساب ثلاث إيداعات نقدية كبيرة تفوق الراتب قبل الانفجار بأسبوعين.",
+          "kk": "Тазалаушы канистрлер мен түнгі сатылымдарды көрген, ал жарылыстан екі апта бұрын шотқа жалақыдан тыс үш ірі қолма-қол түсім түскен."
+        },
+        "evidenceIds": [
+          "ev-witness",
+          "ev-bank"
+        ]
+      }
+    ]
   }
 }

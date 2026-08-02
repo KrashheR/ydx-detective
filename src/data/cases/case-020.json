@@ -456,5 +456,103 @@
       "progressTotal": 5
     },
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "orest_chernov",
+      "displayName": {
+        "ru": "Орест Чернов",
+        "en": "Orest Chernov",
+        "tr": "Orest Çernov",
+        "ar": "أوريست تشيرنوف",
+        "kk": "Орест Чернов"
+      },
+      "portraitState": "stubborn"
+    },
+    "finalLine": {
+      "ru": "Зато теперь в подвале тихо. Хоть что-то из моего плана сработало.",
+      "en": "At least the basement is quiet now. Something in my plan worked after all.",
+      "tr": "Hiç değilse bodrum artık sessiz. Planımdan bir şey işe yaramış demek ki.",
+      "ar": "على الأقل صار القبو هادئًا. شيء من خطّتي نجح إذًا.",
+      "kk": "Ең болмағанда жертөле тыныш болды. Жоспарымнан бірдеңе жұмыс істепті."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Коробки действительно вынесли через повреждённую боковую дверь в 02:04. Человек в серой ветровке клуба «Маяк» есть на записи.",
+          "en": "Boxes really were carried out through the damaged side door at 2:04 a.m. A figure in a grey “Mayak” club jacket is on the recording.",
+          "tr": "Kutular gerçekten 02.04'te hasarlı yan kapıdan çıkarıldı. Kayıtta gri “Mayak” kulüp montlu bir kişi var.",
+          "ar": "أُخرجت الصناديق فعلًا عبر الباب الجانبي المتضرّر عند 02:04. وفي التسجيل شخص يرتدي سترة نادي «ماياك» الرمادية.",
+          "kk": "Қораптар шынымен 02:04-те зақымдалған бүйір есіктен шығарылған. Жазбада «Маяк» клубының сұр желбегейін киген адам бар."
+        },
+        "evidenceIds": [
+          "ev-camera"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Пломбы на коробках у клуба совпали с партией, которую Чернов оплатил и отправил туда сам — до происшествия.",
+          "en": "The seals on the boxes found at the club match a batch Chernov paid for and sent there himself — before the incident.",
+          "tr": "Kulüpte bulunan kutulardaki mühürler, Çernov'un olaydan önce kendi ödeyip oraya gönderdiği partiyle eşleşiyor.",
+          "ar": "أختام الصناديق الموجودة عند النادي تطابق شحنة دفع ثمنها تشيرنوف وأرسلها بنفسه — قبل الحادث.",
+          "kk": "Клубтағы қораптардың пломбалары Черновтың өзі төлеп, сол жерге жіберген партиясымен сәйкес келді — оқиғаға дейін."
+        },
+        "evidenceIds": [
+          "ev-delivery-receipt"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Боковую дверь открыли изнутри его кодом, а фигура уехала на его служебном фургоне. Отказ клуба освободить подвал объясняет, зачем понадобилась чужая ветровка.",
+          "en": "The side door was opened from the inside with his own code, and the figure drove off in his company van. The club's refusal to give up the basement explains why someone else's jacket was needed.",
+          "tr": "Yan kapı içeriden onun koduyla açıldı ve kişi onun şirket minibüsüyle ayrıldı. Kulübün bodrumu bırakmayı reddetmesi, neden başkasının montunun gerektiğini açıklıyor.",
+          "ar": "فُتح الباب الجانبي من الداخل برمزه الخاص، وغادر الشخص بشاحنته الرسمية. ورفض النادي إخلاء القبو يفسّر الحاجة إلى سترة شخص آخر.",
+          "kk": "Бүйір есік іштен оның кодымен ашылған, ал әлгі адам оның қызметтік фургонымен кеткен. Клубтың жертөлені беруден бас тартуы бөтен желбегей неге керек болғанын түсіндіреді."
+        },
+        "evidenceIds": [
+          "ev-van-log",
+          "ev-landlord-chat"
+        ]
+      }
+    ],
+    "arcReveal": {
+      "title": {
+        "ru": "Шаблон заявления Чернова",
+        "en": "Chernov's Claim Template",
+        "tr": "Chernov'un Talep Şablonu",
+        "ar": "نموذج مطالبة تشيرنوف",
+        "kk": "Чернов қолданбасының үлгісі"
+      },
+      "text": {
+        "ru": "Неизвестный консультант отправил Чернову готовую формулировку заявления и смету 17-К. Адрес отправителя скрыт, письмо подписано одной буквой: К.",
+        "en": "An unknown consultant sent Chernov a ready-made claim and a 17-K estimate. The sender's address is hidden; the message is signed with a single letter: K.",
+        "tr": "Bilinmeyen bir danışman, Chernov'a hazır bir iddia ve 17-K tahmini gönderdi. Gönderenin adresi gizlidir; mesaj tek bir harfle imzalanmıştır: K.",
+        "ar": "أرسل مستشار غير معروف إلى تشيرنوف مطالبة جاهزة وتقديرًا قدره 17 ألفًا. عنوان المرسل مخفي. الرسالة موقعة بحرف واحد: K.",
+        "kk": "Белгісіз кеңесші Черновқа дайындалған мәлімдеме мен 17-К сметасын жіберген. Жіберушінің мекенжайы жасырылған, хатқа бір әріппен қол қойылған: К."
+      }
+    }
   }
 }

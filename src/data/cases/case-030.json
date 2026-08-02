@@ -552,5 +552,105 @@
       "progressTotal": 4
     },
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "deyan_markovich",
+      "displayName": {
+        "ru": "Деян Маркович",
+        "en": "Dejan Markovich",
+        "tr": "Dejan Markoviç",
+        "ar": "ديان ماركوفيتش",
+        "kk": "Деян Маркович"
+      },
+      "portraitState": "irritated"
+    },
+    "finalLine": {
+      "ru": "Вы должны были смотреть на вмятину. Зачем вам понадобилась пломба?",
+      "en": "You were supposed to look at the dent. What did you need the seal for?",
+      "tr": "Göçüğe bakmanız gerekiyordu. Mühür de neyinize?",
+      "ar": "كان عليكم النظر إلى الانبعاج. ما حاجتكم إلى الختم؟",
+      "kk": "Сіздер майысқан жерге қарауыңыз керек еді. Пломба сіздерге не үшін керек болды?"
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Столкновение реальное: повреждения соответствуют небольшому контролируемому удару, и в первичном протоколе Маркович признан виновным за дистанцию.",
+          "en": "The collision is real: the damage matches a small controlled impact, and the initial report already blames Markovich for the following distance.",
+          "tr": "Çarpışma gerçek: hasar küçük, kontrollü bir darbeye uyuyor ve ilk tutanakta Markoviç zaten takip mesafesinden kusurlu bulunmuş.",
+          "ar": "الاصطدام حقيقي: الأضرار تطابق ارتطامًا صغيرًا مضبوطًا، والمحضر الأوّلي يحمّل ماركوفيتش مسؤولية مسافة الأمان.",
+          "kk": "Соқтығысу шынайы: зақымдар шағын әрі бақыланатын соққыға сай, ал бастапқы хаттамада Маркович қашықтық үшін кінәлі деп танылған."
+        },
+        "evidenceIds": [
+          "ev-damage",
+          "ev-police"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Регистратор показывает намеренное ускорение, а детализация — звонки между «незнакомыми» водителями до аварии.",
+          "en": "The dashcam shows deliberate acceleration, and the call records show calls between the “strangers” before the crash.",
+          "tr": "Araç kamerası kasıtlı hızlanmayı, arama dökümü ise “yabancı” sürücüler arasında kazadan önceki görüşmeleri gösteriyor.",
+          "ar": "تُظهر كاميرا اللوحة تسارعًا متعمَّدًا، ويكشف سجل المكالمات اتصالات بين السائقَين «الغريبَين» قبل الحادث.",
+          "kk": "Тіркеуіш әдейі жеделдетуді көрсетеді, ал детализация «бейтаныс» жүргізушілер арасындағы апатқа дейінгі қоңырауларды көрсетеді."
+        },
+        "evidenceIds": [
+          "ev-cam",
+          "ev-phone"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Фрагменты пломбы грузового отсека не совпадают: пока оформляли аварию, заводскую пломбу заменили другой. Авария была прикрытием.",
+          "en": "The cargo-bay seal fragments do not match: while the crash was being documented, the factory seal was swapped for another. The collision was cover.",
+          "tr": "Kargo bölmesi mührünün parçaları uyuşmuyor: kaza tutanağı tutulurken fabrika mührü bir başkasıyla değiştirilmiş. Çarpışma bir paravandı.",
+          "ar": "شظايا ختم حجرة الشحن غير متطابقة: أثناء تحرير محضر الحادث استُبدل الختم المصنعي بآخر. كان الاصطدام غطاءً.",
+          "kk": "Жүк бөлімі пломбасының сынықтары сәйкес келмейді: апат ресімделіп жатқанда зауыттық пломба басқасына ауыстырылған. Соқтығысу — жамылғы."
+        },
+        "evidenceIds": [
+          "ev-sealcam",
+          "ev-bank"
+        ]
+      }
+    ],
+    "arcReveal": {
+      "title": {
+        "ru": "Подмена пломбы",
+        "en": "The Switched Seal",
+        "tr": "Anahtarlanmış Mühür",
+        "ar": "الختم المبدل",
+        "kk": "Толтырғышты ауыстыру"
+      },
+      "text": {
+        "ru": "Сеть применяет страховые происшествия как прикрытие для перемещения контейнеров.",
+        "en": "The network uses insured incidents as cover for moving containers.",
+        "tr": "Ağ, konteynerlerin taşınması için sigortalı olayları teminat olarak kullanıyor.",
+        "ar": "تستخدم الشبكة الحوادث المؤمن عليها كغطاء لنقل الحاويات.",
+        "kk": "Желі контейнерлерді жылжыту үшін сақтандыру оқиғаларын пайдаланады."
+      }
+    }
   }
 }

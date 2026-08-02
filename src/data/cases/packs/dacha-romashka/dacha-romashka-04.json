@@ -1,0 +1,518 @@
+{
+  "id": "dacha-romashka-04",
+  "type": "archive",
+  "difficulty": "medium",
+  "claimAmount": 210000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Баня, которую выбрала молния",
+    "en": "The Bathhouse Lightning Chose",
+    "tr": "Yıldırımın Seçtiği Hamam",
+    "ar": "الحمّام الذي اختارته الصاعقة",
+    "kk": "Найзағай таңдаған монша"
+  },
+  "claim": {
+    "person": {
+      "ru": "Вениамин Аркадьевич Лаптев, 57 лет",
+      "en": "Veniamin Arkadyevich Laptev, age 57",
+      "tr": "Veniamin Arkadyeviç Laptev, 57 yaşında",
+      "ar": "فينيامين أركاديفيتش لابتيف، 57 عامًا",
+      "kk": "Вениамин Аркадьевич Лаптев, 57 жаста"
+    },
+    "story": {
+      "ru": "В 01:10 молния ударила в баню. Питание было отключено с вечера, самодельных приборов внутри не было. Сгоревший щит установлен лицензированной фирмой. Прошу возместить щит и отделку.",
+      "en": "At 01:10 lightning struck the bathhouse. The power had been off since the evening and there were no home-made devices inside. The burnt panel was installed by a licensed company. I am claiming the panel and the interior finish.",
+      "tr": "Saat 01:10’da hamama yıldırım düştü. Elektrik akşamdan beri kapalıydı ve içeride ev yapımı cihaz yoktu. Yanan pano lisanslı bir firma tarafından takılmıştı. Pano ve iç kaplama için tazminat talep ediyorum.",
+      "ar": "في الساعة 01:10 ضربت صاعقة الحمّام. كانت الكهرباء مفصولة منذ المساء ولم تكن هناك أجهزة منزلية الصنع في الداخل. ركّبت اللوحَ المحترق شركةٌ مرخّصة. أطالب بتعويض اللوح والتشطيب.",
+      "kk": "Сағат 01:10-да моншаға найзағай түсті. Қуат кештен бері өшірулі болатын, ішінде қолдан жасалған аспап жоқ еді. Өртенген қалқанды лицензиясы бар фирма орнатқан. Қалқан мен әрлеу құнын өтеуді сұраймын."
+    }
+  },
+  "coverImage": "covers/packs/dacha-romashka-04.svg",
+  "personImage": "people/packs/dacha-romashka/veniamin_laptev.webp",
+  "client": {
+    "role": {
+      "ru": "Заявитель · член СНТ «Ромашка»",
+      "en": "Claimant · member of the Romashka garden association",
+      "tr": "Başvuru sahibi · Romashka bahçe kooperatifi üyesi",
+      "ar": "مقدم الطلب · عضو في جمعية «روماشكا» للبساتين",
+      "kk": "Өтініш беруші · «Ромашка» бақ серіктестігінің мүшесі"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Участок",
+          "en": "Plot",
+          "tr": "Parsel",
+          "ar": "القطعة",
+          "kk": "Учаске"
+        },
+        "v": {
+          "ru": "№4",
+          "en": "No. 4",
+          "tr": "No. 4",
+          "ar": "رقم 4",
+          "kk": "№4"
+        }
+      },
+      {
+        "k": {
+          "ru": "Сезон",
+          "en": "Season",
+          "tr": "Sezon",
+          "ar": "الموسم",
+          "kk": "Маусым"
+        },
+        "v": {
+          "ru": "Август",
+          "en": "August",
+          "tr": "Ağustos",
+          "ar": "أغسطس",
+          "kk": "Тамыз"
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "DA04-E1",
+      "order": 1,
+      "type": "usage_log",
+      "title": {
+        "ru": "Лог вводного счётчика",
+        "en": "Main Meter Log",
+        "tr": "Ana Sayaç Kaydı",
+        "ar": "سجل العداد الرئيسي",
+        "kk": "Кіріс есептегіш журналы"
+      },
+      "content": {
+        "ru": "00:40 — 0,4 кВт. 01:02 — 6,1 кВт. 01:08 — 9,6 кВт, срабатывание защиты. Отключений линии с вечера не зарегистрировано.",
+        "en": "00:40 — 0.4 kW. 01:02 — 6.1 kW. 01:08 — 9.6 kW, protection tripped. No disconnection of the line was registered from the evening onwards.",
+        "tr": "00:40 — 0,4 kW. 01:02 — 6,1 kW. 01:08 — 9,6 kW, koruma devreye girdi. Akşamdan itibaren hatta kesinti kaydı yok.",
+        "ar": "00:40 — 0.4 كيلوواط. 01:02 — 6.1 كيلوواط. 01:08 — 9.6 كيلوواط وتفعّلت الحماية. لم يُسجَّل أي فصل للخط منذ المساء.",
+        "kk": "00:40 — 0,4 кВт. 01:02 — 6,1 кВт. 01:08 — 9,6 кВт, қорғаныс іске қосылды. Кештен бері желінің өшірілгені тіркелмеген."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Линия всю ночь была под нагрузкой и росла до 9,6 кВт — питание бани никто не отключал.",
+        "en": "The line carried a growing load all night up to 9.6 kW — nobody switched the bathhouse power off.",
+        "tr": "Hat bütün gece yük altındaydı ve 9,6 kW’a çıktı; hamamın elektriğini kimse kapatmamış.",
+        "ar": "ظل الخط تحت حمل متزايد طوال الليل حتى 9.6 كيلوواط، فلم يفصل أحد كهرباء الحمّام.",
+        "kk": "Желі түні бойы жүктемеде болып, 9,6 кВт-қа дейін өскен — моншаның қуатын ешкім өшірмеген."
+      },
+      "statementLink": {
+        "statementId": "claim_power",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Линия всю ночь была под нагрузкой и росла до 9,6 кВт — питание бани никто не отключал.",
+          "en": "The line carried a growing load all night up to 9.6 kW — nobody switched the bathhouse power off.",
+          "tr": "Hat bütün gece yük altındaydı ve 9,6 kW’a çıktı; hamamın elektriğini kimse kapatmamış.",
+          "ar": "ظل الخط تحت حمل متزايد طوال الليل حتى 9.6 كيلوواط، فلم يفصل أحد كهرباء الحمّام.",
+          "kk": "Желі түні бойы жүктемеде болып, 9,6 кВт-қа дейін өскен — моншаның қуатын ешкім өшірмеген."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_power",
+        "reason": {
+          "ru": "Линия всю ночь была под нагрузкой и росла до 9,6 кВт — питание бани никто не отключал.",
+          "en": "The line carried a growing load all night up to 9.6 kW — nobody switched the bathhouse power off.",
+          "tr": "Hat bütün gece yük altındaydı ve 9,6 kW’a çıktı; hamamın elektriğini kimse kapatmamış.",
+          "ar": "ظل الخط تحت حمل متزايد طوال الليل حتى 9.6 كيلوواط، فلم يفصل أحد كهرباء الحمّام.",
+          "kk": "Желі түні бойы жүктемеде болып, 9,6 кВт-қа дейін өскен — моншаның қуатын ешкім өшірмеген."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da04-e1.webp",
+        "logPrompt": "main meter, plot 4"
+      }
+    },
+    {
+      "id": "DA04-E2",
+      "order": 2,
+      "type": "thermal_scan",
+      "title": {
+        "ru": "Тепловой осмотр таймера",
+        "en": "Thermal Inspection of the Timer",
+        "tr": "Zamanlayıcının Termal İncelemesi",
+        "ar": "الفحص الحراري للمؤقّت",
+        "kk": "Таймердің жылулық тексерісі"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Самая горячая точка — самодельный блок таймера с подписью владельца внутри щита; ввод и молниеотвод холодные, следов внешнего разряда нет.",
+        "en": "The hottest point is a home-made timer block signed by the owner inside the panel; the feed and the lightning rod are cold, with no trace of an external discharge.",
+        "tr": "En sıcak nokta, panonun içindeki sahibinin imzasını taşıyan ev yapımı zamanlayıcı bloğu; giriş ve paratoner soğuk, dış boşalma izi yok.",
+        "ar": "أسخن نقطة هي وحدة مؤقّت منزلية الصنع تحمل توقيع المالك داخل اللوح؛ أما المدخل ومانعة الصواعق فباردان بلا أثر تفريغ خارجي.",
+        "kk": "Ең ыстық нүкте — қалқан ішіндегі иесінің қолтаңбасы бар қолдан жасалған таймер блогы; кіріс пен найзағай қабылдағыш суық, сыртқы разряд ізі жоқ."
+      },
+      "statementLink": {
+        "statementId": "claim_cause",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Самая горячая точка — самодельный блок таймера с подписью владельца внутри щита; ввод и молниеотвод холодные, следов внешнего разряда нет.",
+          "en": "The hottest point is a home-made timer block signed by the owner inside the panel; the feed and the lightning rod are cold, with no trace of an external discharge.",
+          "tr": "En sıcak nokta, panonun içindeki sahibinin imzasını taşıyan ev yapımı zamanlayıcı bloğu; giriş ve paratoner soğuk, dış boşalma izi yok.",
+          "ar": "أسخن نقطة هي وحدة مؤقّت منزلية الصنع تحمل توقيع المالك داخل اللوح؛ أما المدخل ومانعة الصواعق فباردان بلا أثر تفريغ خارجي.",
+          "kk": "Ең ыстық нүкте — қалқан ішіндегі иесінің қолтаңбасы бар қолдан жасалған таймер блогы; кіріс пен найзағай қабылдағыш суық, сыртқы разряд ізі жоқ."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_cause",
+        "reason": {
+          "ru": "Самая горячая точка — самодельный блок таймера с подписью владельца внутри щита; ввод и молниеотвод холодные, следов внешнего разряда нет.",
+          "en": "The hottest point is a home-made timer block signed by the owner inside the panel; the feed and the lightning rod are cold, with no trace of an external discharge.",
+          "tr": "En sıcak nokta, panonun içindeki sahibinin imzasını taşıyan ev yapımı zamanlayıcı bloğu; giriş ve paratoner soğuk, dış boşalma izi yok.",
+          "ar": "أسخن نقطة هي وحدة مؤقّت منزلية الصنع تحمل توقيع المالك داخل اللوح؛ أما المدخل ومانعة الصواعق فباردان بلا أثر تفريغ خارجي.",
+          "kk": "Ең ыстық нүкте — қалқан ішіндегі иесінің қолтаңбасы бар қолдан жасалған таймер блогы; кіріс пен найзағай қабылдағыш суық, сыртқы разряд ізі жоқ."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "Щит сняли со стены через сорок минут после тушения. Корпус ещё держит тепло, наружная проводка холодная.",
+        "en": "The panel was taken off the wall forty minutes after the fire was put out. The casing still holds heat while the external wiring is cold.",
+        "tr": "Pano, yangın söndürüldükten kırk dakika sonra duvardan indirildi. Gövde hâlâ sıcak, dış tesisat ise soğuk.",
+        "ar": "أُنزل اللوح عن الجدار بعد أربعين دقيقة من إخماد الحريق. الهيكل ما زال يحتفظ بالحرارة بينما الأسلاك الخارجية باردة.",
+        "kk": "Қалқан өрт сөндірілгеннен кейін қырық минуттан соң қабырғадан алынды. Корпус әлі жылу ұстап тұр, сыртқы сым суық."
+      },
+      "instruction": {
+        "ru": "Включите тепловой режим и найдите самую горячую зону щита.",
+        "en": "Switch to thermal mode and find the hottest zone of the panel.",
+        "tr": "Termal moda geçin ve panonun en sıcak bölgesini bulun.",
+        "ar": "انتقل إلى الوضع الحراري وابحث عن أسخن منطقة في اللوح.",
+        "kk": "Жылулық режимді қосып, қалқанның ең ыстық аймағын табыңыз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/dacha-romashka/da04-e2.webp"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Молния оставила бы след на вводе снаружи; игрок сам проверяет, откуда на самом деле шло тепло.",
+          "en": "A lightning strike would leave its mark on the outside feed; the player checks for themselves where the heat actually came from.",
+          "tr": "Yıldırım izini dışarıdaki girişte bırakırdı; oyuncu ısının gerçekte nereden geldiğini kendisi kontrol eder.",
+          "ar": "كانت الصاعقة ستترك أثرها على المدخل الخارجي؛ يتحقق اللاعب بنفسه من مصدر الحرارة الحقيقي.",
+          "kk": "Найзағай сыртқы кірісте із қалдырар еді; ойыншы жылудың шын мәнінде қайдан шыққанын өзі тексереді."
+        },
+        "playerAction": {
+          "ru": "Включите тепловой режим и найдите самую горячую зону щита.",
+          "en": "Switch to thermal mode and find the hottest zone of the panel.",
+          "tr": "Termal moda geçin ve panonun en sıcak bölgesini bulun.",
+          "ar": "انتقل إلى الوضع الحراري وابحث عن أسخن منطقة في اللوح.",
+          "kk": "Жылулық режимді қосып, қалқанның ең ыстық аймағын табыңыз."
+        },
+        "conclusion": {
+          "ru": "Самая горячая точка — самодельный блок таймера с подписью владельца внутри щита; ввод и молниеотвод холодные, следов внешнего разряда нет.",
+          "en": "The hottest point is a home-made timer block signed by the owner inside the panel; the feed and the lightning rod are cold, with no trace of an external discharge.",
+          "tr": "En sıcak nokta, panonun içindeki sahibinin imzasını taşıyan ev yapımı zamanlayıcı bloğu; giriş ve paratoner soğuk, dış boşalma izi yok.",
+          "ar": "أسخن نقطة هي وحدة مؤقّت منزلية الصنع تحمل توقيع المالك داخل اللوح؛ أما المدخل ومانعة الصواعق فباردان بلا أثر تفريغ خارجي.",
+          "kk": "Ең ыстық нүкте — қалқан ішіндегі иесінің қолтаңбасы бар қолдан жасалған таймер блогы; кіріс пен найзағай қабылдағыш суық, сыртқы разряд ізі жоқ."
+        }
+      },
+      "data": {
+        "ambientTemperature": 19,
+        "observationTime": "02:04",
+        "claimedLastUseBefore": "21:00",
+        "elapsedSinceClaimedUseMinutes": 304,
+        "coolingReference": "Металлический корпус остывает примерно на 1 °C за 3 минуты",
+        "coolingReferenceEn": "A metal casing cools by roughly 1 °C every 3 minutes",
+        "initialMode": "normal",
+        "heatZones": [
+          {
+            "id": "homemade-timer",
+            "shape": "circle",
+            "x": 38,
+            "y": 54,
+            "width": 16,
+            "height": 16,
+            "temperature": 96,
+            "intensity": 0.9,
+            "label": "Самодельный блок таймера",
+            "labelEn": "Home-made timer block",
+            "isContradiction": true,
+            "isTarget": true
+          },
+          {
+            "id": "main-feed",
+            "shape": "circle",
+            "x": 72,
+            "y": 26,
+            "width": 14,
+            "height": 14,
+            "temperature": 24,
+            "intensity": 0.2,
+            "label": "Вводной кабель",
+            "labelEn": "Main feed cable"
+          },
+          {
+            "id": "lightning-rod",
+            "shape": "circle",
+            "x": 20,
+            "y": 22,
+            "width": 14,
+            "height": 14,
+            "temperature": 20,
+            "intensity": 0.1,
+            "label": "Спуск молниеотвода",
+            "labelEn": "Lightning rod down-conductor"
+          }
+        ],
+        "successCondition": {
+          "type": "select_any",
+          "zoneIds": [
+            "homemade-timer"
+          ]
+        }
+      }
+    },
+    {
+      "id": "DA04-E3",
+      "order": 3,
+      "type": "document",
+      "title": {
+        "ru": "Сводка грозовой сети",
+        "en": "Lightning Network Summary",
+        "tr": "Yıldırım Ağı Özeti",
+        "ar": "ملخص شبكة رصد الصواعق",
+        "kk": "Найзағай желісінің сводкасы"
+      },
+      "content": {
+        "ru": "Ближайший зарегистрированный разряд за ночь — 01:04, в 7,4 км к северо-западу, над полем. Разрядов ближе 5 км не было.",
+        "en": "The nearest registered discharge of the night was at 01:04, 7.4 km to the north-west over a field. No discharge occurred within 5 km.",
+        "tr": "Gecenin en yakın kayıtlı boşalması 01:04’te, kuzeybatıda 7,4 km ötede bir tarlanın üzerindeydi. 5 km içinde boşalma olmadı.",
+        "ar": "أقرب تفريغ مسجَّل تلك الليلة كان في 01:04 على بعد 7.4 كم شمال غرب فوق حقل. لم يقع أي تفريغ ضمن 5 كم.",
+        "kk": "Түндегі ең жақын тіркелген разряд — 01:04, солтүстік-батысқа қарай 7,4 км жердегі дала үстінде. 5 км ішінде разряд болмаған."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Сводка подтверждает, что молния была далеко, но окончательный вывод о причине даёт осмотр самого щита.",
+        "en": "The summary confirms the lightning was far away, though the conclusive finding about the cause comes from the panel inspection.",
+        "tr": "Özet, yıldırımın uzakta olduğunu doğruluyor ama nedene dair kesin bulgu pano incelemesinden geliyor.",
+        "ar": "يؤكد الملخص أن الصاعقة كانت بعيدة، لكن الحسم بشأن السبب يأتي من فحص اللوح نفسه.",
+        "kk": "Сводка найзағайдың алыс болғанын растайды, бірақ себеп туралы түпкілікті тұжырымды қалқанның өзін тексеру береді."
+      },
+      "statementLink": {
+        "statementId": "claim_cause",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Сводка подтверждает, что молния была далеко, но окончательный вывод о причине даёт осмотр самого щита.",
+          "en": "The summary confirms the lightning was far away, though the conclusive finding about the cause comes from the panel inspection.",
+          "tr": "Özet, yıldırımın uzakta olduğunu doğruluyor ama nedene dair kesin bulgu pano incelemesinden geliyor.",
+          "ar": "يؤكد الملخص أن الصاعقة كانت بعيدة، لكن الحسم بشأن السبب يأتي من فحص اللوح نفسه.",
+          "kk": "Сводка найзағайдың алыс болғанын растайды, бірақ себеп туралы түпкілікті тұжырымды қалқанның өзін тексеру береді."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da04-e3.webp"
+      }
+    },
+    {
+      "id": "DA04-E4",
+      "order": 4,
+      "type": "photo",
+      "title": {
+        "ru": "Фото удлинителя за баней",
+        "en": "Photo of the Extension Cord Behind the Bathhouse",
+        "tr": "Hamamın Arkasındaki Uzatma Kablosunun Fotoğrafı",
+        "ar": "صورة وصلة الكهرباء خلف الحمّام",
+        "kk": "Монша артындағы ұзартқыштың фотосы"
+      },
+      "content": {
+        "ru": "К линии бани подключена переносная зарядная станция геодезического оборудования. На корпусе инвентарная наклейка: «Р. В. Жуков, кадастр».",
+        "en": "A portable charging station for surveying equipment is plugged into the bathhouse line. An inventory sticker on it reads: \"R. V. Zhukov, cadastre\".",
+        "tr": "Hamamın hattına, ölçüm ekipmanı için taşınabilir bir şarj istasyonu bağlanmış. Üzerindeki envanter etiketinde: «R. V. Jukov, kadastro».",
+        "ar": "مُوصَّلة بخط الحمّام محطةُ شحن متنقلة لمعدات المساحة، وعليها ملصق جرد: «ر. ف. جوكوف، السجل العقاري».",
+        "kk": "Монша желісіне геодезиялық жабдықтың тасымалы зарядтау станциясы қосылған. Корпусында түгендеу жапсырмасы: «Р. В. Жуков, кадастр»."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Станция объясняет часть нагрузки и впервые связывает ночные работы с кадастровым инженером, но заявленных фраз напрямую не опровергает.",
+        "en": "The station explains part of the load and first links the night work to the cadastral engineer, yet it disproves none of the claim's sentences directly.",
+        "tr": "İstasyon yükün bir kısmını açıklıyor ve gece çalışmasını ilk kez kadastro mühendisine bağlıyor ama iddianın cümlelerini doğrudan çürütmüyor.",
+        "ar": "تفسّر المحطة جزءًا من الحمل وتربط لأول مرة العمل الليلي بمهندس المساحة، لكنها لا تدحض جمل الادعاء مباشرة.",
+        "kk": "Станция жүктеменің бір бөлігін түсіндіреді әрі түнгі жұмысты алғаш рет кадастр инженерімен байланыстырады, бірақ өтініш сөйлемдерін тікелей теріске шығармайды."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Станция объясняет часть нагрузки и впервые связывает ночные работы с кадастровым инженером, но заявленных фраз напрямую не опровергает.",
+          "en": "The station explains part of the load and first links the night work to the cadastral engineer, yet it disproves none of the claim's sentences directly.",
+          "tr": "İstasyon yükün bir kısmını açıklıyor ve gece çalışmasını ilk kez kadastro mühendisine bağlıyor ama iddianın cümlelerini doğrudan çürütmüyor.",
+          "ar": "تفسّر المحطة جزءًا من الحمل وتربط لأول مرة العمل الليلي بمهندس المساحة، لكنها لا تدحض جمل الادعاء مباشرة.",
+          "kk": "Станция жүктеменің бір бөлігін түсіндіреді әрі түнгі жұмысты алғаш рет кадастр инженерімен байланыстырады, бірақ өтініш сөйлемдерін тікелей теріске шығармайды."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da04-e4.webp",
+        "filename": "da04-e4.webp"
+      }
+    },
+    {
+      "id": "DA04-E5",
+      "order": 5,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания Лиды Соловьёвой",
+        "en": "Statement by Lida Solovyova",
+        "tr": "Lida Solovyova’nın İfadesi",
+        "ar": "إفادة ليدا سولوفيوفا",
+        "kk": "Лида Соловьёваның айғағы"
+      },
+      "content": {
+        "ru": "«Около полуночи Роман Вадимович попросил зарядить прибор „на десять минут“ и ушёл измерять границу. Свет в бане горел, я это точно помню».",
+        "en": "\"Around midnight Roman Vadimovich asked to charge his device 'for ten minutes' and went off to measure the boundary. The bathhouse light was on, I remember that clearly.\"",
+        "tr": "«Gece yarısı civarında Roman Vadimoviç cihazını „on dakikalığına“ şarj etmek istedi ve sınırı ölçmeye gitti. Hamamın ışığı yanıyordu, bunu net hatırlıyorum.»",
+        "ar": "«قرابة منتصف الليل طلب رومان فاديموفيتش شحن جهازه „لعشر دقائق“ ثم ذهب ليقيس الحد. كان ضوء الحمّام مضاءً، أتذكر ذلك جيدًا.»",
+        "kk": "«Түн ортасында Роман Вадимович аспабын „он минутқа“ зарядтауды сұрап, шекара өлшеуге кетті. Моншада жарық жанып тұрған, оны анық есімде»."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Показания подтверждают включённый свет и ночную зарядку, но точную причину и объём нагрузки даёт техника, а не память соседки.",
+        "en": "The statement supports the lit bathhouse and the night charging, but the exact cause and load come from the instruments, not a neighbour's memory.",
+        "tr": "İfade, hamamın ışığını ve gece şarjını destekliyor ama kesin neden ve yük, komşunun hafızasından değil cihazlardan geliyor.",
+        "ar": "تدعم الإفادة إضاءة الحمّام والشحن الليلي، لكن السبب الدقيق والحمل يأتيان من الأجهزة لا من ذاكرة الجارة.",
+        "kk": "Айғақ жарықтың жанып тұрғанын және түнгі зарядтауды растайды, бірақ нақты себеп пен жүктемені көршінің жады емес, аспап көрсетеді."
+      },
+      "statementLink": {
+        "statementId": "claim_power",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Показания подтверждают включённый свет и ночную зарядку, но точную причину и объём нагрузки даёт техника, а не память соседки.",
+          "en": "The statement supports the lit bathhouse and the night charging, but the exact cause and load come from the instruments, not a neighbour's memory.",
+          "tr": "İfade, hamamın ışığını ve gece şarjını destekliyor ama kesin neden ve yük, komşunun hafızasından değil cihazlardan geliyor.",
+          "ar": "تدعم الإفادة إضاءة الحمّام والشحن الليلي، لكن السبب الدقيق والحمل يأتيان من الأجهزة لا من ذاكرة الجارة.",
+          "kk": "Айғақ жарықтың жанып тұрғанын және түнгі зарядтауды растайды, бірақ нақты себеп пен жүктемені көршінің жады емес, аспап көрсетеді."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/dacha-romashka/da04-e5.webp"
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Счётчик показывает рост нагрузки до 9,6 кВт: линия всю ночь была включена.",
+      "Самая горячая точка щита — самодельный таймер владельца, следов внешнего разряда нет.",
+      "Ближайшая молния прошла в 7,4 км; причина пожара — перегрузка, а не стихия."
+    ],
+    "en": [
+      "The meter shows the load climbing to 9.6 kW: the line was live all night.",
+      "The hottest point in the panel is the owner's home-made timer, with no trace of an external discharge.",
+      "The nearest lightning was 7.4 km away; the fire came from overload, not from the storm."
+    ],
+    "tr": [
+      "Sayaç yükün 9,6 kW’a çıktığını gösteriyor: hat bütün gece açıktı.",
+      "Panonun en sıcak noktası sahibinin ev yapımı zamanlayıcısı; dış boşalma izi yok.",
+      "En yakın yıldırım 7,4 km ötedeydi; yangının nedeni aşırı yük, doğa olayı değil."
+    ],
+    "ar": [
+      "يُظهر العداد ارتفاع الحمل إلى 9.6 كيلوواط: كان الخط يعمل طوال الليل.",
+      "أسخن نقطة في اللوح هي مؤقّت المالك منزلي الصنع، بلا أثر لتفريغ خارجي.",
+      "أقرب صاعقة كانت على بعد 7.4 كم؛ سبب الحريق هو الحمل الزائد لا العاصفة."
+    ],
+    "kk": [
+      "Есептегіш жүктеменің 9,6 кВт-қа дейін өскенін көрсетеді: желі түні бойы қосулы болған.",
+      "Қалқандағы ең ыстық нүкте — иесінің қолдан жасаған таймері, сыртқы разряд ізі жоқ.",
+      "Ең жақын найзағай 7,4 км жерде болған; өрттің себебі — шамадан тыс жүктеме, дүлей күш емес."
+    ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "stampable": false,
+      "text": {
+        "ru": "Электрощит бани уничтожен ударом молнии, ущерб подлежит возмещению.",
+        "en": "The bathhouse panel was destroyed by a lightning strike and the loss is reimbursable.",
+        "tr": "Hamamın panosu yıldırım çarpmasıyla yok oldu ve kayıp tazmin edilmelidir.",
+        "ar": "دُمّر لوح الحمّام بضربة صاعقة والخسارة قابلة للتعويض.",
+        "kk": "Монша қалқанын найзағай құртқан, залал өтелуге тиіс."
+      }
+    },
+    {
+      "id": "claim_power",
+      "stampable": true,
+      "text": {
+        "ru": "Питание бани было отключено с вечера.",
+        "en": "The bathhouse power had been switched off since the evening.",
+        "tr": "Hamamın elektriği akşamdan beri kapalıydı.",
+        "ar": "كانت كهرباء الحمّام مفصولة منذ المساء.",
+        "kk": "Моншаның қуаты кештен бері өшірулі болды."
+      }
+    },
+    {
+      "id": "claim_cause",
+      "stampable": true,
+      "text": {
+        "ru": "Причина пожара — прямой удар молнии, самодельных приборов внутри не было.",
+        "en": "The fire was caused by a direct lightning strike; there were no home-made devices inside.",
+        "tr": "Yangının nedeni doğrudan yıldırım düşmesidir; içeride ev yapımı cihaz yoktu.",
+        "ar": "سبب الحريق ضربة صاعقة مباشرة، ولم تكن بالداخل أجهزة منزلية الصنع.",
+        "kk": "Өрттің себебі — найзағайдың тікелей соққысы, ішінде қолдан жасалған аспап болмаған."
+      }
+    }
+  ],
+  "contentVersion": "dacha-romashka-1.0",
+  "narrative": {
+    "preBrief": {
+      "ru": "Инженер уверен: виновата стихия. Стихия, впрочем, редко подписывает свои устройства.",
+      "en": "The engineer is sure the storm is to blame. Storms, however, rarely sign their devices.",
+      "tr": "Mühendis suçlunun fırtına olduğuna emin. Ne var ki fırtınalar cihazlarını pek imzalamaz.",
+      "ar": "المهندس واثق أن العاصفة هي السبب. غير أن العواصف نادرًا ما توقّع أجهزتها.",
+      "kk": "Инженер кінәлі — дүлей күш деп сенімді. Дегенмен дүлей күш өз аспаптарына қол қоя бермейді."
+    },
+    "postVerdictNote": {
+      "ru": "Молния хотя бы не оставляет визитку на зарядной станции.",
+      "en": "Lightning at least does not leave a business card on the charging station.",
+      "tr": "Yıldırım en azından şarj istasyonuna kartvizit bırakmaz.",
+      "ar": "الصاعقة على الأقل لا تترك بطاقة تعريف على محطة الشحن.",
+      "kk": "Найзағай кем дегенде зарядтау станциясына визитка қалдырмайды."
+    },
+    "nextCaseTeaser": {
+      "ru": "В погребе казначея всплывают банки — и не только они.",
+      "en": "In the treasurer's cellar the jars are floating — and not only the jars.",
+      "tr": "Saymanın kilerinde kavanozlar yüzüyor — hem de sadece kavanozlar değil.",
+      "ar": "في قبو أمينة الصندوق تطفو المرطبانات، وليس المرطبانات وحدها.",
+      "kk": "Қазынашының жертөлесінде банкалар қалқып жүр — тек банкалар ғана емес."
+    },
+    "seasonClue": {
+      "id": "zhukov-device",
+      "progressIndex": 4,
+      "progressTotal": 10,
+      "label": {
+        "ru": "Прибор кадастрового инженера",
+        "en": "The Cadastral Engineer's Device",
+        "tr": "Kadastro Mühendisinin Cihazı",
+        "ar": "جهاز مهندس المساحة",
+        "kk": "Кадастр инженерінің аспабы"
+      },
+      "description": {
+        "ru": "Жуков официально утверждает, что ночью межеванием не занимался. Его зарядная станция говорит обратное.",
+        "en": "Zhukov officially states he did no surveying at night. His charging station says otherwise.",
+        "tr": "Jukov resmen geceleri ölçüm yapmadığını söylüyor. Şarj istasyonu ise aksini söylüyor.",
+        "ar": "يؤكد جوكوف رسميًا أنه لم يقم بأعمال مساحة ليلًا. أما محطة شحنه فتقول العكس.",
+        "kk": "Жуков ресми түрде түнде жер өлшеумен айналыспадым дейді. Оның зарядтау станциясы керісінше дәлелдейді."
+      }
+    },
+    "epilogue": null
+  }
+}

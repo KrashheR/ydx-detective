@@ -26,13 +26,141 @@ const l = (
   kk: string,
 ): LocalizedString => ({ ru, en, tr, ar, kk });
 
+const packCaseIds = (packId: string, count: number): readonly string[] =>
+  Array.from({ length: count }, (_, index) => `${packId}-${String(index + 1).padStart(2, "0")}`);
+
 const ARCHIVE_CASE_IDS: Readonly<Record<string, readonly string[]>> = {
+  // Story packs currently on the archives shelf.
+  "dacha-romashka": packCaseIds("dacha-romashka", 10),
+  "night-train": packCaseIds("night-train", 10),
+  "sanatorium-priboy": packCaseIds("sanatorium-priboy", 10),
+  // Retired expert files — their case JSON still ships as campaign cases 39–50.
   "frontier-sector": ["case-040", "case-041", "case-042", "case-043"],
   "closed-collegium": ["case-044", "case-045", "case-046", "case-047"],
   "underground-department": ["case-048", "case-049", "case-050", "case-051"],
 };
 
+/**
+ * The premium story packs the archives screen lists, in shelf order.
+ *
+ * Only these are offered to the player. The three expert-file packs below in
+ * `RETIRED_THEMATIC_PACKS` stay in the codebase (and their cases stay in the
+ * standard campaign) so they can be brought back without re-authoring them.
+ */
 export const THEMATIC_PACKS: readonly ThematicPack[] = [
+  {
+    id: "dacha-romashka",
+    productId: "archive.dacha-romashka",
+    fallbackPriceRub: 299,
+    title: l(
+      "СНТ «Ромашка». Тайна тринадцатого участка",
+      "Romashka Gardens: The Secret of Plot 13",
+      "Romashka Bahçeleri: 13. Parselin Sırrı",
+      "بساتين روماشكا: سر القطعة 13",
+      "«Ромашка» серіктестігі: он үшінші учаскенің құпиясы",
+    ),
+    hook: l(
+      "Десять летних дел в дачном посёлке: разбитая теплица, украденный улей, сгоревшая баня и участок №13, у которого никогда не было хозяина.",
+      "Ten summer files in a garden association: a shattered greenhouse, a stolen hive, a burnt bathhouse — and plot No. 13, which never had an owner.",
+      "Bir bahçe kooperatifinde on yaz dosyası: kırılan sera, çalınan kovan, yanan hamam ve hiç sahibi olmamış 13 No.lu parsel.",
+      "عشرة ملفات صيفية في جمعية بساتين: دفيئة محطمة وخلية مسروقة وحمّام محترق، وقطعة رقم 13 التي لم يكن لها مالك قط.",
+      "Бақ серіктестігіндегі он жазғы іс: қираған жылыжай, ұрланған ұя, өртенген монша және иесі болмаған №13 учаске.",
+    ),
+    caseTitles: [],
+    skins: [
+      l("Папка с ромашковым корешком", "Daisy-spined folder", "Papatya sırtlı dosya", "ملف بكعب أقحواني", "Түймедақ түпті папка"),
+      l("Штамп правления СНТ", "Garden board stamp", "Kooperatif yönetim damgası", "ختم مجلس الجمعية", "Серіктестік басқармасының мөрі"),
+    ],
+    stampTitle: l(
+      "Штамп общего сада",
+      "Common Orchard Stamp",
+      "Ortak Bahçe Damgası",
+      "ختم البستان المشترك",
+      "Ортақ бақ мөрі",
+    ),
+    totalCases: 10,
+    openedCases: 1,
+    status: "ad_available",
+    accent: "polar",
+  },
+  {
+    id: "night-train",
+    productId: "archive.night-train",
+    fallbackPriceRub: 299,
+    title: l(
+      "Поезд №13. Билет до станции Тихая",
+      "Train No. 13: Ticket to Tikhaya",
+      "13 No.lu Tren: Tihaya’ya Bilet",
+      "القطار رقم 13: تذكرة إلى تيخايا",
+      "№13 пойыз: Тихая станциясына билет",
+    ),
+    hook: l(
+      "Десять дел за одну ночь в последнем рейсе «Северной звезды»: пропавший чемодан, разбитые часы, архивный ящик и билет до станции, закрытой в 1996 году.",
+      "Ten files in a single night aboard the Northern Star's last run: a missing suitcase, a broken watch, an archive crate and a ticket to a station closed in 1996.",
+      "«Kuzey Yıldızı»nın son seferinde tek gecede on dosya: kayıp bir bavul, kırık bir saat, bir arşiv sandığı ve 1996’da kapanan bir istasyona bilet.",
+      "عشرة ملفات في ليلة واحدة على متن آخر رحلة لـ«النجم الشمالي»: حقيبة مفقودة وساعة محطمة وصندوق أرشيف وتذكرة إلى محطة أُغلقت عام 1996.",
+      "«Солтүстік жұлдыздың» соңғы рейсіндегі бір түндегі он іс: жоғалған чемодан, сынған сағат, архив жәшігі және 1996 жылы жабылған станцияға дейінгі билет.",
+    ),
+    caseTitles: [],
+    skins: [
+      l("Папка с тёмно-синим корешком", "Night-blue folder spine", "Gece mavisi dosya sırtı", "كعب ملف أزرق ليلي", "Түнгі көк түпті папка"),
+      l("Служебный бланк поездной бригады", "Train crew service form", "Tren ekibi hizmet formu", "نموذج خدمة طاقم القطار", "Пойыз бригадасының қызметтік бланкі"),
+    ],
+    stampTitle: l(
+      "Штамп поездной бригады",
+      "Train Crew Stamp",
+      "Tren Ekibi Damgası",
+      "ختم طاقم القطار",
+      "Пойыз бригадасының мөрі",
+    ),
+    totalCases: 10,
+    openedCases: 1,
+    status: "ad_available",
+    accent: "cliff",
+  },
+  {
+    id: "sanatorium-priboy",
+    productId: "archive.sanatorium-priboy",
+    fallbackPriceRub: 299,
+    title: l(
+      "Санаторий «Прибой». Последняя смена",
+      "The Priboy Sanatorium: The Last Shift",
+      "«Priboy» Sanatoryumu: Son Vardiya",
+      "مصحة «بريبوي»: الوردية الأخيرة",
+      "«Прибой» санаторийі: соңғы ауысым",
+    ),
+    hook: l(
+      "Старый приморский санаторий продают под снос. Десять дел за последнюю смену: инсценированная кража, фиктивная поставка, замурованный номер 404 — и фотография 1998 года, с которой аккуратно вырезан один человек.",
+      "An old seaside sanatorium is being sold for demolition. Ten files in one last shift: a staged theft, a phantom delivery, the bricked-up room 404 — and a 1998 photograph with one person carefully cut out of it.",
+      "Eski bir deniz kenarı sanatoryumu yıkım için satılıyor. Son vardiyada on dosya: sahnelenmiş bir hırsızlık, hayali bir teslimat, örülmüş 404 numaralı oda ve içinden bir kişinin özenle kesildiği 1998 fotoğrafı.",
+      "مصحة قديمة على البحر تُباع للهدم. عشرة ملفات في وردية أخيرة: سرقة ممثَّلة وتوريد وهمي والغرفة 404 المسدودة، وصورة من 1998 قُصّ منها شخص بعناية.",
+      "Ескі теңіз жағасындағы санаторий бұзуға сатылып жатыр. Соңғы ауысымдағы он іс: қойылған ұрлық, жалған жеткізілім, бітелген 404 нөмір — және бір адам ұқыпты қиып алынған 1998 жылғы фотосурет.",
+    ),
+    caseTitles: [],
+    skins: [
+      l("Папка с морским корешком", "Sea-green folder spine", "Deniz yeşili dosya sırtı", "كعب ملف بلون البحر", "Теңіз түсті түпті папка"),
+      l("Санаторно-курортная книжка", "Sanatorium record book", "Sanatoryum kayıt defteri", "دفتر المصحة", "Санаторий-курорт кітапшасы"),
+    ],
+    stampTitle: l(
+      "Штамп «Дело не смоет»",
+      "The \"Tide Won't Wash It\" Stamp",
+      "«Dalga Silemez» Damgası",
+      "ختم «الموج لا يمحوه»",
+      "«Толқын шайып кетпейді» мөрі",
+    ),
+    totalCases: 10,
+    openedCases: 1,
+    status: "ad_available",
+    accent: "archive",
+  },
+];
+
+/**
+ * Expert-file packs taken off the archives shelf. Kept — with their case ids —
+ * so they can return later; nothing here is rendered while it is not in
+ * `THEMATIC_PACKS`.
+ */
+export const RETIRED_THEMATIC_PACKS: readonly ThematicPack[] = [
   {
     id: "frontier-sector",
     productId: "  ",
@@ -137,8 +265,38 @@ export const THEMATIC_PACKS: readonly ThematicPack[] = [
   },
 ];
 
+/**
+ * Every pack the game knows about, listed or retired. Purchase restore and
+ * ad-free checks must keep working for a pack that has left the shelf, so they
+ * resolve against this list rather than `THEMATIC_PACKS`.
+ */
+export const ALL_THEMATIC_PACKS: readonly ThematicPack[] = [
+  ...THEMATIC_PACKS,
+  ...RETIRED_THEMATIC_PACKS,
+];
+
 export function getThematicPackCaseIds(pack: ThematicPack): readonly string[] {
   return ARCHIVE_CASE_IDS[pack.id] ?? [];
+}
+
+/** The pack a product id belongs to, or null when it is not an archive product. */
+export function getThematicPackIdByProductId(productId: string): string | null {
+  const id = productId.trim();
+  if (!id) return null; // a pack with a blank productId is not on sale yet
+  return ALL_THEMATIC_PACKS.find((pack) => pack.productId.trim() === id)?.id ?? null;
+}
+
+/**
+ * True when the case sits inside an archive pack the player bought — buying a
+ * pack removes forced ads inside it (the promise made in the packs modal).
+ */
+export function isPurchasedArchiveCase(
+  caseId: string,
+  purchasedPackIds: readonly string[],
+): boolean {
+  return ALL_THEMATIC_PACKS.some(
+    (pack) => purchasedPackIds.includes(pack.id) && getThematicPackCaseIds(pack).includes(caseId),
+  );
 }
 
 export function getThematicPackCases(pack: ThematicPack): readonly CaseSummary[] {

@@ -173,5 +173,86 @@
       "Инспекция актісі ниет белгілерінсіз кездейсоқ мойынтірек бұзылуын растайды.",
       "Ноутбуктың сериялық нөмірі полиспен сәйкес; зақым жылулық. Талап шынайы, мақұлдаңыз."
     ]
+  },
+  "resolution": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "nikolay_koval",
+      "displayName": {
+        "ru": "Николай Коваль",
+        "en": "Nikolay Koval",
+        "tr": "Nikolay Koval",
+        "ar": "نيكولاي كوفال",
+        "kk": "Николай Коваль"
+      },
+      "portraitState": "tired_relief"
+    },
+    "finalLine": {
+      "ru": "Код восстановим. Ночь в серверной — вряд ли.",
+      "en": "The code can be restored. That night in the server room, hardly.",
+      "tr": "Kod geri getirilebilir. Sunucu odasındaki o gece ise pek değil.",
+      "ar": "يمكن استعادة الشيفرة. أما تلك الليلة في غرفة الخوادم فلا.",
+      "kk": "Кодты қалпына келтіруге болады. Сервер бөлмесіндегі түнді — екіталай."
+    },
+    "emotionalMode": "relief",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Журнал фиксирует рост температуры с 22 °C до 87 °C за 88 минут — типичная картина отказа охлаждения.",
+          "en": "The log records a rise from 22 °C to 87 °C over 88 minutes — the classic signature of a cooling failure.",
+          "tr": "Kayıt, 88 dakikada 22 °C'den 87 °C'ye çıkışı gösteriyor — soğutma arızasının tipik tablosu.",
+          "ar": "يسجّل السجل ارتفاعًا من 22 °م إلى 87 °م خلال 88 دقيقة — الصورة النمطية لعطل التبريد.",
+          "kk": "Журнал 88 минутта 22 °C-тан 87 °C-қа дейін өскенін тіркеген — салқындатудың істен шығуының тән көрінісі."
+        },
+        "evidenceIds": [
+          "ev-temp-log"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Чем это объясняется",
+          "en": "What explains it",
+          "tr": "Bunu açıklayan şey",
+          "ar": "ما يفسر ذلك",
+          "kk": "Мұны не түсіндіреді"
+        },
+        "text": {
+          "ru": "Инспекция нашла усталостное разрушение подшипника насоса №2 без признаков преднамеренного повреждения.",
+          "en": "The inspection found fatigue failure in the bearing of pump No. 2, with no signs of deliberate damage.",
+          "tr": "İnceleme, 2 numaralı pompanın rulmanında yorulma kırılması buldu; kasıtlı hasar izi yok.",
+          "ar": "وجد الفحص انهيارًا بالكلل في محمل المضخّة رقم 2، دون أي أثر لضرر متعمَّد.",
+          "kk": "Тексеру №2 сорғы мойынтірегінің шаршау бұзылуын тапты, әдейі зақымдау белгілері жоқ."
+        },
+        "evidenceIds": [
+          "ev-engineer"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Серийный номер оплавленного ноутбука совпадает с полисом, а характер повреждений — тепловой.",
+          "en": "The serial number of the melted laptop matches the policy, and the damage pattern is thermal.",
+          "tr": "Eriyen dizüstünün seri numarası poliçeyle örtüşüyor ve hasarın niteliği ısıl.",
+          "ar": "الرقم التسلسلي للحاسوب المنصهر يطابق البوليصة، وطبيعة الضرر حرارية.",
+          "kk": "Балқыған ноутбуктің сериялық нөмірі полиспен сәйкес, ал зақым сипаты — жылулық."
+        },
+        "evidenceIds": [
+          "ev-photo"
+        ]
+      }
+    ]
   }
 }

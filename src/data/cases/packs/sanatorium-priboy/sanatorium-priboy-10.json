@@ -1,0 +1,701 @@
+{
+  "id": "sanatorium-priboy-10",
+  "type": "archive",
+  "difficulty": "hard",
+  "claimAmount": 12000000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Последняя смена",
+    "en": "The Last Shift",
+    "tr": "Son Vardiya",
+    "ar": "الوردية الأخيرة",
+    "kk": "Соңғы ауысым"
+  },
+  "claim": {
+    "person": {
+      "ru": "Глеб Викторович Лебедев, 52 года",
+      "en": "Gleb Viktorovich Lebedev, age 52",
+      "tr": "Gleb Viktoroviç Lebedev, 52 yaşında",
+      "ar": "غليب فيكتوروفيتش ليبيديف، 52 عامًا",
+      "kk": "Глеб Викторович Лебедев, 52 жаста"
+    },
+    "story": {
+      "ru": "Перегрев вызван износом ветхой проводки — обычная авария старой сети. Я не входил в технический корпус и приехал уже после тревоги. Страховой договор стандартный, никакой выгоды от аварии у покупателя нет.",
+      "en": "The overheating was caused by worn-out old wiring — an ordinary failure of an ageing network. I did not enter the service block and arrived only after the alarm. The insurance contract is standard and the buyer gains nothing from an accident.",
+      "tr": "Aşırı ısınma, yıpranmış eski tesisattan kaynaklandı — eskiyen bir şebekenin olağan arızası. Teknik bloğa girmedim ve alarmdan sonra geldim. Sigorta sözleşmesi standarttır ve alıcının kazadan hiçbir çıkarı yok.",
+      "ar": "نتج التسخين المفرط عن تهالك الأسلاك القديمة — عطل عادي لشبكة متقادمة. لم أدخل المبنى الفني ووصلت بعد الإنذار. عقد التأمين قياسي ولا مصلحة للمشتري في وقوع حادث.",
+      "kk": "Қызып кету ескі сымдардың тозуынан болды — ескі желінің әдеттегі апаты. Техникалық корпусқа кірген жоқпын, дабылдан кейін ғана келдім. Сақтандыру шарты стандартты, апаттан сатып алушыға ешқандай пайда жоқ."
+    }
+  },
+  "coverImage": "covers/packs/sanatorium-priboy-10.svg",
+  "personImage": "people/packs/sanatorium-priboy/gleb_lebedev.webp",
+  "client": {
+    "role": {
+      "ru": "Заявитель · представитель покупателя «Горизонт Девелопмент»",
+      "en": "Claimant · representative of the buyer, Horizon Development",
+      "tr": "Talep sahibi · alıcı «Horizon Development» temsilcisi",
+      "ar": "مقدم الطلب · ممثل المشتري «هورايزن ديفلوبمنت»",
+      "kk": "Өтініш беруші · «Горизонт Девелопмент» сатып алушысының өкілі"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Смена",
+          "en": "Shift",
+          "tr": "Vardiya",
+          "ar": "الوردية",
+          "kk": "Ауысым"
+        },
+        "v": {
+          "ru": "Последняя смена, август 2026",
+          "en": "The last shift, August 2026",
+          "tr": "Son vardiya, Ağustos 2026",
+          "ar": "الوردية الأخيرة، أغسطس 2026",
+          "kk": "Соңғы ауысым, 2026 жылғы тамыз"
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "SP10-E1",
+      "order": 1,
+      "type": "thermal_scan",
+      "title": {
+        "ru": "Тепловой осмотр вводного контура",
+        "en": "Thermal Inspection of the Main Input Circuit",
+        "tr": "Giriş Devresinin Termal İncelemesi",
+        "ar": "الفحص الحراري لدائرة الدخول",
+        "kk": "Кіріс контурының жылулық тексерісі"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Старая магистраль холодная по всей длине. Греется только один вручную перемкнутый отрезок кабеля на клеммной колодке — нагрев создан искусственно.",
+        "en": "The old main line is cold along its whole length. Only one manually bridged length of cable at the terminal block is hot — the heating was created artificially.",
+        "tr": "Eski ana hat boyunca soğuk. Yalnızca klemens bloğundaki elle köprülenmiş tek bir kablo parçası ısınıyor; ısınma yapay olarak oluşturulmuş.",
+        "ar": "الخط الرئيسي القديم بارد على طوله. ولا يسخن سوى مقطع كابل واحد مُجسَّر يدويًا عند لوحة الأطراف؛ فالتسخين اصطناعي.",
+        "kk": "Ескі магистраль бойы салқын. Тек клемма тақтасындағы қолмен жалғанған бір кабель бөлігі қызып тұр — қызу жасанды түрде жасалған."
+      },
+      "statementLink": {
+        "statementId": "claim_wiring",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Старая магистраль холодная по всей длине. Греется только один вручную перемкнутый отрезок кабеля на клеммной колодке — нагрев создан искусственно.",
+          "en": "The old main line is cold along its whole length. Only one manually bridged length of cable at the terminal block is hot — the heating was created artificially.",
+          "tr": "Eski ana hat boyunca soğuk. Yalnızca klemens bloğundaki elle köprülenmiş tek bir kablo parçası ısınıyor; ısınma yapay olarak oluşturulmuş.",
+          "ar": "الخط الرئيسي القديم بارد على طوله. ولا يسخن سوى مقطع كابل واحد مُجسَّر يدويًا عند لوحة الأطراف؛ فالتسخين اصطناعي.",
+          "kk": "Ескі магистраль бойы салқын. Тек клемма тақтасындағы қолмен жалғанған бір кабель бөлігі қызып тұр — қызу жасанды түрде жасалған."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_wiring",
+        "reason": {
+          "ru": "Старая магистраль холодная по всей длине. Греется только один вручную перемкнутый отрезок кабеля на клеммной колодке — нагрев создан искусственно.",
+          "en": "The old main line is cold along its whole length. Only one manually bridged length of cable at the terminal block is hot — the heating was created artificially.",
+          "tr": "Eski ana hat boyunca soğuk. Yalnızca klemens bloğundaki elle köprülenmiş tek bir kablo parçası ısınıyor; ısınma yapay olarak oluşturulmuş.",
+          "ar": "الخط الرئيسي القديم بارد على طوله. ولا يسخن سوى مقطع كابل واحد مُجسَّر يدويًا عند لوحة الأطراف؛ فالتسخين اصطناعي.",
+          "kk": "Ескі магистраль бойы салқын. Тек клемма тақтасындағы қолмен жалғанған бір кабель бөлігі қызып тұр — қызу жасанды түрде жасалған."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "Щитовую сняли тепловизором через семь минут после отключения ввода. В кадре старая магистраль, новый кабель и клеммная колодка.",
+        "en": "The switch room was imaged seven minutes after the input was cut. The frame shows the old main line, the new cable and the terminal block.",
+        "tr": "Pano odası, giriş kesildikten yedi dakika sonra termal kamerayla görüntülendi. Karede eski ana hat, yeni kablo ve klemens bloğu var.",
+        "ar": "صُوّرت غرفة اللوحة بعد سبع دقائق من فصل الدخول. ويظهر في الكادر الخط الرئيسي القديم والكابل الجديد ولوحة الأطراف.",
+        "kk": "Қалқан бөлмесі кіріс өшірілгеннен жеті минут кейін жылу камерасымен түсірілді. Кадрда ескі магистраль, жаңа кабель және клемма тақтасы бар."
+      },
+      "instruction": {
+        "ru": "Включите тепловой режим и определите, какой именно участок грелся.",
+        "en": "Switch to thermal mode and determine which section was actually heating.",
+        "tr": "Termal moda geçin ve tam olarak hangi bölümün ısındığını belirleyin.",
+        "ar": "انتقل إلى الوضع الحراري وحدّد أي مقطع كان يسخن فعلًا.",
+        "kk": "Жылулық режимді қосып, нақты қай учаске қызғанын анықтаңыз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/sanatorium-priboy/sp10-e1.webp"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Износ сети грел бы всю магистраль равномерно: игрок сам отличает аварию от рукотворной перемычки.",
+          "en": "Network wear would heat the whole main line evenly: the player distinguishes an accident from a man-made jumper themselves.",
+          "tr": "Şebeke yıpranması ana hattı baştan sona eşit ısıtırdı: oyuncu kazayı elle yapılmış köprüden kendisi ayırır.",
+          "ar": "تهالك الشبكة كان سيُسخّن الخط الرئيسي كله بالتساوي: يميّز اللاعب بنفسه بين حادث وجسر مصنوع يدويًا.",
+          "kk": "Желінің тозуы бүкіл магистральды біркелкі қыздырар еді: ойыншы апатты қолдан жасалған жалғағыштан өзі ажыратады."
+        },
+        "playerAction": {
+          "ru": "Включите тепловой режим и определите, какой именно участок грелся.",
+          "en": "Switch to thermal mode and determine which section was actually heating.",
+          "tr": "Termal moda geçin ve tam olarak hangi bölümün ısındığını belirleyin.",
+          "ar": "انتقل إلى الوضع الحراري وحدّد أي مقطع كان يسخن فعلًا.",
+          "kk": "Жылулық режимді қосып, нақты қай учаске қызғанын анықтаңыз."
+        },
+        "conclusion": {
+          "ru": "Старая магистраль холодная по всей длине. Греется только один вручную перемкнутый отрезок кабеля на клеммной колодке — нагрев создан искусственно.",
+          "en": "The old main line is cold along its whole length. Only one manually bridged length of cable at the terminal block is hot — the heating was created artificially.",
+          "tr": "Eski ana hat boyunca soğuk. Yalnızca klemens bloğundaki elle köprülenmiş tek bir kablo parçası ısınıyor; ısınma yapay olarak oluşturulmuş.",
+          "ar": "الخط الرئيسي القديم بارد على طوله. ولا يسخن سوى مقطع كابل واحد مُجسَّر يدويًا عند لوحة الأطراف؛ فالتسخين اصطناعي.",
+          "kk": "Ескі магистраль бойы салқын. Тек клемма тақтасындағы қолмен жалғанған бір кабель бөлігі қызып тұр — қызу жасанды түрде жасалған."
+        }
+      },
+      "data": {
+        "ambientTemperature": 27,
+        "observationTime": "22:41",
+        "claimedLastUseBefore": "22:34",
+        "elapsedSinceClaimedUseMinutes": 7,
+        "coolingReference": "Равномерный износ сети даёт нагрев всей магистрали, а не одного отрезка",
+        "coolingReferenceEn": "Even network wear heats the entire main line, not a single length",
+        "initialMode": "normal",
+        "heatZones": [
+          {
+            "id": "manual-jumper",
+            "shape": "circle",
+            "x": 60,
+            "y": 48,
+            "width": 16,
+            "height": 16,
+            "temperature": 149,
+            "intensity": 0.95,
+            "label": "Вручную перемкнутый отрезок кабеля",
+            "labelEn": "Manually bridged length of cable",
+            "isContradiction": true,
+            "isTarget": true
+          },
+          {
+            "id": "old-main-line",
+            "shape": "circle",
+            "x": 26,
+            "y": 66,
+            "width": 16,
+            "height": 16,
+            "temperature": 29,
+            "intensity": 0.14,
+            "label": "Старая магистраль",
+            "labelEn": "Old main line"
+          },
+          {
+            "id": "terminal-block",
+            "shape": "circle",
+            "x": 78,
+            "y": 74,
+            "width": 14,
+            "height": 14,
+            "temperature": 33,
+            "intensity": 0.2,
+            "label": "Клеммная колодка",
+            "labelEn": "Terminal block"
+          }
+        ],
+        "successCondition": {
+          "type": "select_any",
+          "zoneIds": [
+            "manual-jumper"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SP10-E2",
+      "order": 2,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал доступа в электрощитовую",
+        "en": "Switch Room Access Log",
+        "tr": "Pano Odası Erişim Kaydı",
+        "ar": "سجل الدخول إلى غرفة اللوحة",
+        "kk": "Электр қалқаны бөлмесіне кіру журналы"
+      },
+      "content": {
+        "ru": "22:16 — дверь электрощитовой открыта гостевым пропуском G-002, оформленным на Г. В. Лебедева. 22:29 — дверь закрыта тем же пропуском. Пожарная тревога сработала в 22:34.",
+        "en": "22:16 — the switch room door opened with guest pass G-002, issued to G. V. Lebedev. 22:29 — closed with the same pass. The fire alarm went off at 22:34.",
+        "tr": "22:16 — pano odasının kapısı, G. V. Lebedev adına düzenlenen G-002 misafir kartıyla açıldı. 22:29 — aynı kartla kapatıldı. Yangın alarmı 22:34’te çaldı.",
+        "ar": "22:16 — فُتح باب غرفة اللوحة ببطاقة الزائر G-002 المسجلة باسم غ. ف. ليبيديف. 22:29 — أُغلق بالبطاقة نفسها. وانطلق إنذار الحريق في 22:34.",
+        "kk": "22:16 — электр қалқаны бөлмесінің есігі Г. В. Лебедевке ресімделген G-002 қонақ рұқсатнамасымен ашылды. 22:29 — сол рұқсатнамамен жабылды. Өрт дабылы 22:34-те қосылды."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Заявитель был внутри технического корпуса за восемнадцать минут до тревоги — утверждение о приезде после неё неверно.",
+        "en": "The claimant was inside the service block eighteen minutes before the alarm — the claim that he arrived afterwards is false.",
+        "tr": "Talep sahibi, alarmdan on sekiz dakika önce teknik bloğun içindeydi; sonradan geldiği iddiası yanlış.",
+        "ar": "كان مقدم الطلب داخل المبنى الفني قبل ثمانية عشر دقيقة من الإنذار، فادعاء وصوله بعده غير صحيح.",
+        "kk": "Өтініш беруші дабылдан он сегіз минут бұрын техникалық корпустың ішінде болған — кейін келдім деген мәлімдеме дұрыс емес."
+      },
+      "statementLink": {
+        "statementId": "claim_absent",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Заявитель был внутри технического корпуса за восемнадцать минут до тревоги — утверждение о приезде после неё неверно.",
+          "en": "The claimant was inside the service block eighteen minutes before the alarm — the claim that he arrived afterwards is false.",
+          "tr": "Talep sahibi, alarmdan on sekiz dakika önce teknik bloğun içindeydi; sonradan geldiği iddiası yanlış.",
+          "ar": "كان مقدم الطلب داخل المبنى الفني قبل ثمانية عشر دقيقة من الإنذار، فادعاء وصوله بعده غير صحيح.",
+          "kk": "Өтініш беруші дабылдан он сегіз минут бұрын техникалық корпустың ішінде болған — кейін келдім деген мәлімдеме дұрыс емес."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_absent",
+        "reason": {
+          "ru": "Заявитель был внутри технического корпуса за восемнадцать минут до тревоги — утверждение о приезде после неё неверно.",
+          "en": "The claimant was inside the service block eighteen minutes before the alarm — the claim that he arrived afterwards is false.",
+          "tr": "Talep sahibi, alarmdan on sekiz dakika önce teknik bloğun içindeydi; sonradan geldiği iddiası yanlış.",
+          "ar": "كان مقدم الطلب داخل المبنى الفني قبل ثمانية عشر دقيقة من الإنذار، فادعاء وصوله بعده غير صحيح.",
+          "kk": "Өтініш беруші дабылдан он сегіз минут бұрын техникалық корпустың ішінде болған — кейін келдім деген мәлімдеме дұрыс емес."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/sanatorium-priboy/sp10-e2.webp",
+        "logPrompt": "access control log, switch room"
+      }
+    },
+    {
+      "id": "SP10-E3",
+      "order": 3,
+      "type": "document",
+      "title": {
+        "ru": "Свежий страховой договор",
+        "en": "The New Insurance Contract",
+        "tr": "Yeni Sigorta Sözleşmesi",
+        "ar": "عقد التأمين الجديد",
+        "kk": "Жаңа сақтандыру шарты"
+      },
+      "content": {
+        "ru": "Договор подписан за сутки до передачи объекта. Выгодоприобретатель — ООО «Горизонт Девелопмент». Страховая сумма по корпусам и оборудованию увеличена с 3,4 до 12 млн ₽ без переоценки имущества.",
+        "en": "The contract was signed a day before the handover. Beneficiary: Horizon Development LLC. The sum insured for the buildings and equipment was raised from 3.4 to 12 million ₽ with no revaluation of the property.",
+        "tr": "Sözleşme, devirden bir gün önce imzalanmış. Lehtar: «Horizon Development» Ltd. Binalar ve ekipman için sigorta bedeli, mal varlığı yeniden değerlenmeden 3,4 milyondan 12 milyon ₽’ye çıkarılmış.",
+        "ar": "وُقّع العقد قبل يوم من تسليم المنشأة. المستفيد: شركة «هورايزن ديفلوبمنت». ورُفع مبلغ التأمين على المباني والمعدات من 3.4 إلى 12 مليون ₽ دون إعادة تقييم الممتلكات.",
+        "kk": "Шарт нысанды тапсырудан бір тәулік бұрын қол қойылған. Пайда алушы — «Горизонт Девелопмент» ЖШС. Корпустар мен жабдық бойынша сақтандыру сомасы мүлікті қайта бағаламай 3,4-тен 12 млн ₽-ге дейін ұлғайтылған."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Договор показывает, кто получит выплату, но сам по себе не устанавливает причину перегрева и не опровергает отсутствие заявителя.",
+        "en": "The contract shows who would receive the payout, yet on its own it establishes neither the cause of the overheating nor refutes the claimant's absence.",
+        "tr": "Sözleşme, ödemeyi kimin alacağını gösteriyor; ancak tek başına ne ısınmanın nedenini belirliyor ne de talep sahibinin yokluğunu çürütüyor.",
+        "ar": "يُظهر العقد من سيتلقى التعويض، لكنه وحده لا يحدد سبب التسخين ولا ينفي غياب مقدم الطلب.",
+        "kk": "Шарт төлемді кім алатынын көрсетеді, бірақ өздігінен қызудың себебін анықтамайды және өтініш берушінің болмағанын жоққа шығармайды."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Договор показывает, кто получит выплату, но сам по себе не устанавливает причину перегрева и не опровергает отсутствие заявителя.",
+          "en": "The contract shows who would receive the payout, yet on its own it establishes neither the cause of the overheating nor refutes the claimant's absence.",
+          "tr": "Sözleşme, ödemeyi kimin alacağını gösteriyor; ancak tek başına ne ısınmanın nedenini belirliyor ne de talep sahibinin yokluğunu çürütüyor.",
+          "ar": "يُظهر العقد من سيتلقى التعويض، لكنه وحده لا يحدد سبب التسخين ولا ينفي غياب مقدم الطلب.",
+          "kk": "Шарт төлемді кім алатынын көрсетеді, бірақ өздігінен қызудың себебін анықтамайды және өтініш берушінің болмағанын жоққа шығармайды."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/sanatorium-priboy/sp10-e3.webp"
+      }
+    },
+    {
+      "id": "SP10-E4",
+      "order": 4,
+      "type": "gps",
+      "title": {
+        "ru": "GPS автомобиля Лебедева",
+        "en": "Lebedev's Vehicle GPS",
+        "tr": "Lebedev’in Aracının GPS’i",
+        "ar": "نظام تحديد المواقع لمركبة ليبيديف",
+        "kk": "Лебедев көлігінің GPS-і"
+      },
+      "content": {
+        "ru": "21:58 — прибытие к техническому входу западного крыла. 22:33 — начало движения к главному подъезду, 300 метров. 22:41 — остановка у парадного входа, где заявитель зафиксирован камерой «только что приехавшим».",
+        "en": "21:58 — arrival at the west-wing service entrance. 22:33 — movement begins towards the main porch, 300 metres. 22:41 — stop at the front entrance, where the claimant is recorded on camera as having \"just arrived\".",
+        "tr": "21:58 — batı kanadının teknik girişine varış. 22:33 — ana girişe doğru 300 metrelik hareketin başlangıcı. 22:41 — talep sahibinin kamerada «yeni gelmiş» olarak kaydedildiği ön girişte duruş.",
+        "ar": "21:58 — الوصول إلى المدخل الفني للجناح الغربي. 22:33 — بدء التحرك نحو المدخل الرئيسي، 300 متر. 22:41 — التوقف عند المدخل الأمامي حيث سُجّل مقدم الطلب بالكاميرا وكأنه «وصل للتو».",
+        "kk": "21:58 — батыс қанаттың техникалық кірер тұсына келу. 22:33 — басты кірер тұсқа қарай 300 метр қозғалыстың басталуы. 22:41 — өтініш беруші камерада «жаңа ғана келген» болып тіркелген алдыңғы кірер тұстағы аялдама."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Трек показывает, что машина стояла у технического входа весь вечер, но не доказывает, кто именно был за рулём и кто вошёл в щитовую.",
+        "en": "The track shows the car stood at the service entrance all evening, yet it does not prove who was driving or who entered the switch room.",
+        "tr": "İz, aracın bütün akşam teknik girişte durduğunu gösteriyor ama direksiyonda kimin olduğunu ve pano odasına kimin girdiğini kanıtlamıyor.",
+        "ar": "يُظهر المسار أن السيارة وقفت عند المدخل الفني طوال المساء، لكنه لا يثبت من كان يقود ولا من دخل غرفة اللوحة.",
+        "kk": "Трек көліктің кеш бойы техникалық кірер тұста тұрғанын көрсетеді, бірақ рөлде кім отырғанын және қалқан бөлмесіне кім кіргенін дәлелдемейді."
+      },
+      "statementLink": {
+        "statementId": "claim_absent",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Трек показывает, что машина стояла у технического входа весь вечер, но не доказывает, кто именно был за рулём и кто вошёл в щитовую.",
+          "en": "The track shows the car stood at the service entrance all evening, yet it does not prove who was driving or who entered the switch room.",
+          "tr": "İz, aracın bütün akşam teknik girişte durduğunu gösteriyor ama direksiyonda kimin olduğunu ve pano odasına kimin girdiğini kanıtlamıyor.",
+          "ar": "يُظهر المسار أن السيارة وقفت عند المدخل الفني طوال المساء، لكنه لا يثبت من كان يقود ولا من دخل غرفة اللوحة.",
+          "kk": "Трек көліктің кеш бойы техникалық кірер тұста тұрғанын көрсетеді, бірақ рөлде кім отырғанын және қалқан бөлмесіне кім кіргенін дәлелдемейді."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/sanatorium-priboy/sp10-e4.webp",
+        "gpsFooter": {
+          "ru": "Трек автомобиля у технического входа",
+          "en": "Vehicle track by the service entrance",
+          "tr": "Teknik giriş yanındaki araç izi",
+          "ar": "مسار المركبة قرب المدخل الفني",
+          "kk": "Техникалық кірер тұстағы көлік тректі"
+        }
+      }
+    },
+    {
+      "id": "SP10-E5",
+      "order": 5,
+      "type": "surface_reveal",
+      "title": {
+        "ru": "Блок защиты под слоем копоти",
+        "en": "The Protection Unit Under Soot",
+        "tr": "Kurum Altındaki Koruma Bloğu",
+        "ar": "وحدة الحماية تحت السخام",
+        "kk": "Күйе астындағы қорғаныс блогы"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Под копотью — снятая заводская пломба и синяя дуга ручной перемычки поверх контактов защиты. Это подтверждает вмешательство, но причину нагрева устанавливает тепловой осмотр.",
+        "en": "Under the soot are a removed factory seal and the blue arc of a hand-made jumper across the protection contacts. This confirms tampering, though the thermal inspection is what establishes the cause of the heating.",
+        "tr": "Kurumun altında sökülmüş fabrika mührü ve koruma kontakları üzerinde elle yapılmış köprünün mavi yayı var. Bu, müdahaleyi doğrular; ancak ısınmanın nedenini termal inceleme belirler.",
+        "ar": "تحت السخام ختم مصنع منزوع وقوس أزرق لجسر يدوي فوق ملامسات الحماية. وهذا يؤكد العبث، أما سبب التسخين فيحدده الفحص الحراري.",
+        "kk": "Күйенің астында алынған зауыттық пломба және қорғаныс түйіспелерінің үстіндегі қолмен жасалған жалғағыштың көк доғасы бар. Бұл араласуды растайды, бірақ қызудың себебін жылулық тексеріс анықтайды."
+      },
+      "statementLink": {
+        "statementId": "claim_wiring",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Под копотью — снятая заводская пломба и синяя дуга ручной перемычки поверх контактов защиты. Это подтверждает вмешательство, но причину нагрева устанавливает тепловой осмотр.",
+          "en": "Under the soot are a removed factory seal and the blue arc of a hand-made jumper across the protection contacts. This confirms tampering, though the thermal inspection is what establishes the cause of the heating.",
+          "tr": "Kurumun altında sökülmüş fabrika mührü ve koruma kontakları üzerinde elle yapılmış köprünün mavi yayı var. Bu, müdahaleyi doğrular; ancak ısınmanın nedenini termal inceleme belirler.",
+          "ar": "تحت السخام ختم مصنع منزوع وقوس أزرق لجسر يدوي فوق ملامسات الحماية. وهذا يؤكد العبث، أما سبب التسخين فيحدده الفحص الحراري.",
+          "kk": "Күйенің астында алынған зауыттық пломба және қорғаныс түйіспелерінің үстіндегі қолмен жасалған жалғағыштың көк доғасы бар. Бұл араласуды растайды, бірақ қызудың себебін жылулық тексеріс анықтайды."
+        }
+      },
+      "evidenceTier": "supporting",
+      "description": {
+        "ru": "Блок тепловой защиты в новом щите покрыт слоем копоти от нагрева. Заводская маркировка не читается.",
+        "en": "The thermal protection unit in the new switchboard is covered with soot from the heating. The factory markings are illegible.",
+        "tr": "Yeni panodaki termal koruma bloğu, ısınmadan kaynaklanan kurumla kaplı. Fabrika işaretleri okunmuyor.",
+        "ar": "وحدة الحماية الحرارية في اللوحة الجديدة مغطاة بسخام ناتج عن التسخين، وعلامات المصنع غير مقروءة.",
+        "kk": "Жаңа қалқандағы жылулық қорғаныс блогы қызудан пайда болған күйемен жабылған. Зауыттық таңбалау оқылмайды."
+      },
+      "instruction": {
+        "ru": "Счистите копоть с блока и осмотрите пломбу и контакты.",
+        "en": "Wipe the soot off the unit and examine the seal and the contacts.",
+        "tr": "Bloktaki kurumu silin, mührü ve kontakları inceleyin.",
+        "ar": "امسح السخام عن الوحدة وافحص الختم والملامسات.",
+        "kk": "Блоктағы күйені сүртіп, пломба мен түйіспелерді қараңыз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/sanatorium-priboy/sp10-e5.webp",
+        "coverTexture": "shared/surface/soot.svg",
+        "revealMasks": [
+          "shared/surface/trace-mask.svg"
+        ],
+        "toolCursor": "shared/surface/cloth-cursor.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": false,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Игрок сам видит, что защиту снимали руками, а не что она отказала от старости.",
+          "en": "The player sees for themselves that the protection was removed by hand rather than having failed with age.",
+          "tr": "Oyuncu, korumanın yaşlılıktan arızalanmadığını, elle çıkarıldığını kendisi görür.",
+          "ar": "يرى اللاعب بنفسه أن الحماية أُزيلت يدويًا ولم تتعطل من القِدم.",
+          "kk": "Ойыншы қорғаныстың ескіліктен істен шықпағанын, қолмен алынғанын өзі көреді."
+        },
+        "playerAction": {
+          "ru": "Счистите копоть с блока и осмотрите пломбу и контакты.",
+          "en": "Wipe the soot off the unit and examine the seal and the contacts.",
+          "tr": "Bloktaki kurumu silin, mührü ve kontakları inceleyin.",
+          "ar": "امسح السخام عن الوحدة وافحص الختم والملامسات.",
+          "kk": "Блоктағы күйені сүртіп, пломба мен түйіспелерді қараңыз."
+        },
+        "conclusion": {
+          "ru": "Под копотью — снятая заводская пломба и синяя дуга ручной перемычки поверх контактов защиты. Это подтверждает вмешательство, но причину нагрева устанавливает тепловой осмотр.",
+          "en": "Under the soot are a removed factory seal and the blue arc of a hand-made jumper across the protection contacts. This confirms tampering, though the thermal inspection is what establishes the cause of the heating.",
+          "tr": "Kurumun altında sökülmüş fabrika mührü ve koruma kontakları üzerinde elle yapılmış köprünün mavi yayı var. Bu, müdahaleyi doğrular; ancak ısınmanın nedenini termal inceleme belirler.",
+          "ar": "تحت السخام ختم مصنع منزوع وقوس أزرق لجسر يدوي فوق ملامسات الحماية. وهذا يؤكد العبث، أما سبب التسخين فيحدده الفحص الحراري.",
+          "kk": "Күйенің астында алынған зауыттық пломба және қорғаныс түйіспелерінің үстіндегі қолмен жасалған жалғағыштың көк доғасы бар. Бұл араласуды растайды, бірақ қызудың себебін жылулық тексеріс анықтайды."
+        }
+      },
+      "data": {
+        "mode": "erase",
+        "coverType": "soot",
+        "brush": {
+          "radius": 42,
+          "hardness": 0.6,
+          "opacity": 0.88,
+          "spacing": 8
+        },
+        "completion": {
+          "type": "discover_any",
+          "requiredTraceIds": [
+            "broken-seal"
+          ]
+        },
+        "traces": [
+          {
+            "id": "broken-seal",
+            "label": "Снятая пломба и синяя перемычка",
+            "labelEn": "Removed seal and blue jumper",
+            "requiredRevealPercent": 52,
+            "mask": "shared/surface/trace-mask.svg",
+            "shape": "mask",
+            "isContradiction": false,
+            "conclusion": "Заводская пломба снята, поверх контактов защиты уложена синяя дуга ручной перемычки.",
+            "conclusionEn": "The factory seal has been removed and a blue hand-made jumper laid across the protection contacts."
+          }
+        ]
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Старая магистраль холодная — греется только вручную перемкнутый отрезок кабеля.",
+      "Гостевой пропуск Лебедева открыл электрощитовую за восемнадцать минут до тревоги.",
+      "Договор с выгодоприобретателем «Горизонт Девелопмент» подписан за сутки до сделки и увеличен до 12 млн ₽."
+    ],
+    "en": [
+      "The old main line is cold — only the manually bridged length of cable is heating.",
+      "Lebedev's guest pass opened the switch room eighteen minutes before the alarm.",
+      "The contract naming Horizon Development as beneficiary was signed a day before the sale and raised to 12 million ₽."
+    ],
+    "tr": [
+      "Eski ana hat soğuk; yalnızca elle köprülenmiş kablo parçası ısınıyor.",
+      "Lebedev’in misafir kartı, alarmdan on sekiz dakika önce pano odasını açtı.",
+      "Lehtarı «Horizon Development» olan sözleşme satıştan bir gün önce imzalanmış ve 12 milyon ₽’ye çıkarılmış."
+    ],
+    "ar": [
+      "الخط الرئيسي القديم بارد، ولا يسخن سوى مقطع الكابل المُجسَّر يدويًا.",
+      "فتحت بطاقة ليبيديف غرفة اللوحة قبل ثمانية عشر دقيقة من الإنذار.",
+      "وُقّع العقد الذي يجعل «هورايزن ديفلوبمنت» مستفيدًا قبل يوم من الصفقة ورُفع إلى 12 مليون ₽."
+    ],
+    "kk": [
+      "Ескі магистраль салқын — тек қолмен жалғанған кабель бөлігі қызып тұр.",
+      "Лебедевтің қонақ рұқсатнамасы электр қалқаны бөлмесін дабылдан он сегіз минут бұрын ашқан.",
+      "Пайда алушысы «Горизонт Девелопмент» болған шарт мәміледен бір тәулік бұрын қол қойылып, 12 млн ₽-ге ұлғайтылған."
+    ]
+  },
+  "investigationBudget": 5,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "stampable": false,
+      "text": {
+        "ru": "Перегрев — страховой случай из-за износа сети.",
+        "en": "The overheating is an insured event caused by network wear.",
+        "tr": "Aşırı ısınma, şebeke yıpranmasından kaynaklanan bir sigorta olayıdır.",
+        "ar": "التسخين المفرط حادث تأميني ناتج عن تهالك الشبكة.",
+        "kk": "Қызып кету — желінің тозуынан болған сақтандыру оқиғасы."
+      }
+    },
+    {
+      "id": "claim_wiring",
+      "stampable": true,
+      "text": {
+        "ru": "Перегрев вызван износом старой проводки.",
+        "en": "The overheating was caused by wear of the old wiring.",
+        "tr": "Aşırı ısınma, eski tesisatın yıpranmasından kaynaklandı.",
+        "ar": "نتج التسخين المفرط عن تهالك الأسلاك القديمة.",
+        "kk": "Қызып кету ескі сымдардың тозуынан болды."
+      }
+    },
+    {
+      "id": "claim_absent",
+      "stampable": true,
+      "text": {
+        "ru": "Я не входил в технический корпус и приехал после тревоги.",
+        "en": "I did not enter the service block and arrived after the alarm.",
+        "tr": "Teknik bloğa girmedim ve alarmdan sonra geldim.",
+        "ar": "لم أدخل المبنى الفني ووصلت بعد الإنذار.",
+        "kk": "Техникалық корпусқа кірген жоқпын, дабылдан кейін келдім."
+      }
+    }
+  ],
+  "contentVersion": "sanatorium-priboy-1.0",
+  "narrative": {
+    "preBrief": {
+      "ru": "До подписания сделки остаётся час. Свет гаснет, срабатывает пожарная тревога, гостей выводят к морю.",
+      "en": "An hour remains before the sale is signed. The lights go out, the fire alarm sounds, and the guests are led down to the sea.",
+      "tr": "Satışın imzalanmasına bir saat var. Işıklar sönüyor, yangın alarmı çalıyor ve konuklar denize doğru çıkarılıyor.",
+      "ar": "بقيت ساعة على توقيع الصفقة. تنطفئ الأنوار وينطلق إنذار الحريق ويُقتاد النزلاء نحو البحر.",
+      "kk": "Мәмілеге қол қоюға бір сағат қалды. Жарық сөнеді, өрт дабылы қосылады, қонақтар теңізге қарай шығарылады."
+    },
+    "postVerdictNote": {
+      "ru": "Рогов отключает ввод. Лебедева блокирует старый санаторный электрокар, за рулём которого Борис: «Номер вне программы, зато публика просила бис».",
+      "en": "Rogov cuts the mains. Lebedev is blocked in by the old sanatorium electric cart, driven by Boris: \"An act not in the programme — but the audience asked for an encore.\"",
+      "tr": "Rogov girişi kesiyor. Lebedev’i, direksiyonunda Boris’in olduğu eski sanatoryum elektrikli aracı engelliyor: «Programda olmayan bir numara, ama seyirci bis istedi.»",
+      "ar": "يفصل روغوف التيار. وتسدّ الطريقَ على ليبيديف عربةُ المصحة الكهربائية القديمة يقودها بوريس: «فقرة خارج البرنامج، لكن الجمهور طلب الإعادة.»",
+      "kk": "Рогов кірісті өшіреді. Лебедевті рөлінде Борис отырған ескі санаторий электрокары бөгейді: «Бағдарламадан тыс нөмір, бірақ көрермен бис сұрады»."
+    },
+    "nextCaseTeaser": {
+      "ru": "Последняя смена окончена.",
+      "en": "The last shift is over.",
+      "tr": "Son vardiya sona erdi.",
+      "ar": "انتهت الوردية الأخيرة.",
+      "kk": "Соңғы ауысым аяқталды."
+    },
+    "seasonClue": {
+      "id": "restored-photograph",
+      "progressIndex": 10,
+      "progressTotal": 10,
+      "label": {
+        "ru": "Восстановленная фотография",
+        "en": "The Restored Photograph",
+        "tr": "Onarılmış Fotoğraf",
+        "ar": "الصورة المستعادة",
+        "kk": "Қалпына келтірілген фотосурет"
+      },
+      "description": {
+        "ru": "Павел передаёт журнал следствию. Вера возвращает ему вырезанный фрагмент фотографии, который двадцать восемь лет хранила в брелоке ключа 214.",
+        "en": "Pavel hands the log to the investigators. Vera returns to him the cut-out fragment of the photograph she kept for twenty-eight years inside the fob of key 214.",
+        "tr": "Pavel defteri soruşturmaya teslim ediyor. Vera ise yirmi sekiz yıl 214 numaralı anahtarın askısında sakladığı kesik fotoğraf parçasını ona geri veriyor.",
+        "ar": "يسلّم بافيل السجل إلى التحقيق. وتعيد له فيرا الجزء المقصوص من الصورة الذي حفظته ثمانية وعشرين عامًا داخل ميدالية المفتاح 214.",
+        "kk": "Павел журналды тергеуге тапсырады. Вера оған жиырма сегіз жыл 214 кілттің брелогында сақтаған қиылған фото фрагментін қайтарады."
+      }
+    },
+    "epilogue": {
+      "ru": [
+        "Санаторий не возвращается к прежней жизни целиком. Восточный корпус становится небольшим отелем, питьевая галерея — музеем курортной истории, зимний сад восстанавливает Марина.",
+        "Вера остаётся администратором «на три месяца» и через год всё ещё командует стойкой. Павел помогает восстановить фотоархив; они с Мариной общаются неловко, но регулярно.",
+        "Последний кадр: групповая фотография 1998 года лежит рядом с новым снимком тех же людей. Борис моргнул, Нина смотрит не в камеру, Вера недовольна рассадкой. Идеального снимка не получилось — зато никто не вырезан."
+      ],
+      "en": [
+        "The sanatorium does not return to its old life in full. The east wing becomes a small hotel, the drinking gallery a museum of resort history, and Marina restores the winter garden.",
+        "Vera stays on as receptionist \"for three months\" and a year later still rules the desk. Pavel helps restore the photo archive; he and Marina talk awkwardly, but regularly.",
+        "The last frame: the 1998 group photograph lies beside a new picture of the same people. Boris blinked, Nina is looking away from the camera, Vera disapproves of the seating. The photograph did not come out perfect — but nobody has been cut out of it."
+      ],
+      "tr": [
+        "Sanatoryum eski hayatına bütünüyle dönmüyor. Doğu bloğu küçük bir otele, içme galerisi kaplıca tarihi müzesine dönüşüyor; kış bahçesini Marina onarıyor.",
+        "Vera «üç aylığına» resepsiyonist olarak kalıyor ve bir yıl sonra hâlâ bankoya hükmediyor. Pavel fotoğraf arşivinin onarımına yardım ediyor; Marina ile ilişkileri tuhaf ama düzenli.",
+        "Son kare: 1998 grup fotoğrafı, aynı insanların yeni bir fotoğrafının yanında duruyor. Boris gözünü kırpmış, Nina kameraya bakmıyor, Vera oturma düzeninden memnun değil. Fotoğraf kusursuz çıkmadı — ama kimse kesilip çıkarılmadı."
+      ],
+      "ar": [
+        "لا تعود المصحة إلى حياتها القديمة بالكامل. يصير الجناح الشرقي فندقًا صغيرًا، ورواق المياه متحفًا لتاريخ المصايف، وتستعيد مارينا الحديقة الشتوية.",
+        "تبقى فيرا موظفة استقبال «لثلاثة أشهر»، وبعد عام لا تزال تحكم المكتب. ويساعد بافيل في ترميم أرشيف الصور؛ وحديثه مع مارينا محرج لكنه منتظم.",
+        "اللقطة الأخيرة: صورة 1998 الجماعية بجوار صورة جديدة للأشخاص أنفسهم. بوريس أغمض عينيه، ونينا تنظر بعيدًا عن الكاميرا، وفيرا غير راضية عن ترتيب الجلوس. لم تخرج الصورة مثالية — لكن لم يُقصّ منها أحد."
+      ],
+      "kk": [
+        "Санаторий бұрынғы өміріне толық оралмайды. Шығыс корпус шағын қонақүйге, ішу галереясы курорт тарихының мұражайына айналады, қысқы бақты Марина қалпына келтіреді.",
+        "Вера «үш айға» әкімші болып қалады да, бір жылдан кейін де сөрені билеп отырады. Павел фотоархивті қалпына келтіруге көмектеседі; олар Маринамен ыңғайсыз, бірақ үнемі сөйлеседі.",
+        "Соңғы кадр: 1998 жылғы топтық фото сол адамдардың жаңа суретінің қасында жатыр. Борис көзін жұмып қалған, Нина камераға қарамайды, Вера отырғызуға наразы. Мінсіз сурет шықпады — бірақ ешкім қиып алынбаған."
+      ]
+    }
+  },
+  "finalSynthesis": {
+    "id": "sanatorium-priboy-finale",
+    "unlockAfter": "correct_verdict",
+    "arcEvidenceAccess": "post_verdict_free",
+    "skippableAfterAttempts": 3,
+    "analyticsEvent": "sanatorium_priboy_finale",
+    "title": {
+      "ru": "Закрыть дело «Прибоя»",
+      "en": "Closing the Priboy File",
+      "tr": "«Priboy» Dosyasını Kapatmak",
+      "ar": "إغلاق ملف «بريبوي»",
+      "kk": "«Прибой» ісін жабу"
+    },
+    "instruction": {
+      "ru": "Соедините три узла: кто превратил старую аферу в многолетнюю схему, как должна была исчезнуть последняя улика и зачем понадобилась авария.",
+      "en": "Connect three nodes: who turned an old fraud into a long-running scheme, how the last piece of evidence was meant to disappear, and why the accident was needed.",
+      "tr": "Üç düğümü birleştirin: eski bir dolandırıcılığı yıllara yayılan bir düzene kim çevirdi, son kanıt nasıl yok olacaktı ve kaza neden gerekliydi.",
+      "ar": "اربط ثلاث عُقد: من حوّل احتيالًا قديمًا إلى مخطط ممتد لسنوات، وكيف كان آخر دليل سيختفي، ولماذا لزم الحادث.",
+      "kk": "Үш торапты жалғаңыз: ескі алаяқтықты кім ұзақ жылғы схемаға айналдырды, соңғы дәлел қалай жойылуы керек еді және апат не үшін қажет болды."
+    },
+    "nodes": [
+      {
+        "id": "organiser",
+        "label": {
+          "ru": "Кто превратил аферу в схему",
+          "en": "Who turned the fraud into a scheme",
+          "tr": "Dolandırıcılığı düzene kim çevirdi",
+          "ar": "من حوّل الاحتيال إلى مخطط",
+          "kk": "Алаяқтықты схемаға кім айналдырды"
+        },
+        "evidenceIds": [
+          "SP06-E2",
+          "SP09-E5",
+          "SP03-E5"
+        ]
+      },
+      {
+        "id": "method",
+        "label": {
+          "ru": "Как должна была исчезнуть улика",
+          "en": "How the evidence was meant to disappear",
+          "tr": "Kanıt nasıl yok olacaktı",
+          "ar": "كيف كان الدليل سيختفي",
+          "kk": "Дәлел қалай жойылуы керек еді"
+        },
+        "evidenceIds": [
+          "SP10-E1",
+          "SP10-E5",
+          "SP08-E2"
+        ]
+      },
+      {
+        "id": "motive",
+        "label": {
+          "ru": "Зачем была нужна авария",
+          "en": "Why the accident was needed",
+          "tr": "Kaza neden gerekliydi",
+          "ar": "لماذا لزم الحادث",
+          "kk": "Апат не үшін қажет болды"
+        },
+        "evidenceIds": [
+          "SP10-E3",
+          "SP10-E2",
+          "SP08-E5"
+        ]
+      }
+    ],
+    "requiredLinks": [
+      [
+        "organiser",
+        "method"
+      ],
+      [
+        "method",
+        "motive"
+      ]
+    ],
+    "evidenceUnlockIds": [
+      "SP03-E5",
+      "SP06-E2",
+      "SP08-E2",
+      "SP09-E5"
+    ],
+    "successConclusion": {
+      "ru": "Организатор — Глеб Лебедев: в 1998 году он превратил единственную фиктивную заявку, спасавшую санаторий, в многолетнюю сеть выплат через фирму «Волна-98». Способ — ручная перемычка с отключённой защитой от перегрева: пожар должен был начаться уже после эвакуации гостей. Мотив — получить выплату по завышенному до 12 млн ₽ договору, уничтожить архив «Волны-98» вместе с журналом аварий и расчистить площадку перед сносом.",
+      "en": "The organiser is Gleb Lebedev: in 1998 he turned the single fake claim that had saved the sanatorium into a years-long network of payouts through the firm Volna-98. The method is a hand-made jumper with the overheat protection disabled: the fire was to start only after the guests had been evacuated. The motive is to collect on a contract inflated to 12 million ₽, destroy the Volna-98 archive together with the incident log, and clear the site before demolition.",
+      "tr": "Organizatör Gleb Lebedev: 1998’de sanatoryumu kurtaran tek sahte talebi, «Volna-98» şirketi üzerinden yıllara yayılan bir ödeme ağına çevirdi. Yöntem, aşırı ısınma koruması devre dışı bırakılmış elle yapılmış bir köprü: yangının, konuklar tahliye edildikten sonra başlaması gerekiyordu. Amaç, 12 milyon ₽’ye şişirilmiş sözleşmeden ödeme almak, «Volna-98» arşivini arıza defteriyle birlikte yok etmek ve yıkımdan önce alanı temizlemek.",
+      "ar": "المنظّم هو غليب ليبيديف: في 1998 حوّل المطالبة الوهمية الوحيدة التي أنقذت المصحة إلى شبكة دفعات امتدت سنوات عبر شركة «فولنا-98». والأسلوب جسر يدوي مع تعطيل حماية الحرارة الزائدة: كان الحريق سيبدأ بعد إخلاء النزلاء. والدافع تحصيل تعويض عقد ضُخّم إلى 12 مليون ₽، وإتلاف أرشيف «فولنا-98» مع سجل الأعطال، وتفريغ الموقع قبل الهدم.",
+      "kk": "Ұйымдастырушы — Глеб Лебедев: 1998 жылы ол санаторийді құтқарған жалғыз жалған өтінішті «Волна-98» фирмасы арқылы ұзақ жылғы төлемдер желісіне айналдырды. Тәсілі — қызып кетуден қорғанысы өшірілген қолмен жасалған жалғағыш: өрт қонақтар эвакуацияланғаннан кейін басталуы керек еді. Себебі — 12 млн ₽-ге дейін асырылған шарт бойынша төлем алу, «Волна-98» архивін апаттар журналымен бірге жою және бұзу алдында алаңды тазарту."
+    }
+  }
+}

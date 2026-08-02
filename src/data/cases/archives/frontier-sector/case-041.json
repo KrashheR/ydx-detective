@@ -15,11 +15,11 @@
   "claimAmount": 31600,
   "truth": "fraud",
   "title": {
-    "ru": "Перехватчик в ледяном каньоне",
-    "en": "The Interceptor in the Ice Canyon",
-    "tr": "Buz Kanyonundaki Durdurucu",
-    "ar": "المعترض في وادي الجليد",
-    "kk": "Мұз шатқалындағы тосқауыл"
+    "ru": "Грузовой борт в ледяном каньоне",
+    "en": "The Cargo Flight in the Ice Canyon",
+    "tr": "Buz Kanyonundaki Kargo Uçuşu",
+    "ar": "رحلة الشحن في وادي الجليد",
+    "kk": "Мұз шатқалындағы жүк рейсі"
   },
   "claim": {
     "person": {
@@ -30,20 +30,20 @@
       "kk": "Элиан Корд, 27 жаста"
     },
     "story": {
-      "ru": "Во время гуманитарного рейса мой экспериментальный перехватчик атаковали контрабандисты. Машина потеряла управление и разбилась в ледяном каньоне. Я выжил и прошу оплатить самолёт и лечение.",
-      "en": "During a humanitarian flight, smugglers attacked my experimental interceptor. The aircraft lost control and crashed in an ice canyon. I survived and am claiming the aircraft and medical costs.",
-      "tr": "İnsani bir uçuş sırasında kaçakçılar deneysel önleme aracıma saldırdı. Uçak kontrolü kaybetti ve bir buz kanyonuna düştü. Hayatta kaldım ve uçak ve tıbbi masrafları talep ediyorum.",
-      "ar": "خلال رحلة إنسانية، هاجم المهربون طائرتي الاعتراضية التجريبية. فقدت الطائرة السيطرة عليها وتحطمت في وادي جليدي. لقد نجوت وأطالب بتكاليف الطائرة والتكاليف الطبية.",
-      "kk": "Гуманитарлық ұшу кезінде менің тәжірибелік ұстағышыма контрабандашылар шабуыл жасады. Көлік басқаруды жоғалтып, мұзды шатқалға құлаған. Мен аман қалдым, ұшақ пен емнің ақысын сұраймын."
+      "ru": "Во время гуманитарного рейса мой лёгкий грузовой самолёт обстреляли неизвестные. Машина потеряла управление и разбилась в ледяном каньоне. Я выжил и прошу оплатить самолёт и лечение.",
+      "en": "During a humanitarian flight, unknown parties fired on my light cargo aircraft. The aircraft lost control and crashed in an ice canyon. I survived and am claiming the aircraft and medical costs.",
+      "tr": "İnsani bir uçuş sırasında kimliği belirsiz kişiler hafif kargo uçağıma ateş açtı. Uçak kontrolü kaybetti ve bir buz kanyonuna düştü. Hayatta kaldım ve uçak ve tıbbi masrafları talep ediyorum.",
+      "ar": "خلال رحلة إنسانية، أطلق مجهولون النار على طائرتي الشحن الخفيفة. فقدت الطائرة السيطرة عليها وتحطمت في وادي جليدي. لقد نجوت وأطالب بتكاليف الطائرة والتكاليف الطبية.",
+      "kk": "Гуманитарлық ұшу кезінде менің жеңіл жүк ұшағыма белгісіздер оқ жаудырды. Көлік басқаруды жоғалтып, мұзды шатқалға құлаған. Мен аман қалдым, ұшақ пен емнің ақысын сұраймын."
     }
   },
   "client": {
     "role": {
-      "ru": "Пилот пограничного перехватчика",
-      "en": "Frontier interceptor pilot",
-      "tr": "Sınır önleyici pilotu",
-      "ar": "طيار اعتراض حدودي",
-      "kk": "Шекара тосқауыл ұшқышы"
+      "ru": "Пилот грузовой авиации",
+      "en": "Cargo aviation pilot",
+      "tr": "Kargo havacılığı pilotu",
+      "ar": "طيار طيران شحن",
+      "kk": "Жүк авиациясының ұшқышы"
     },
     "meta": [
       {
@@ -392,7 +392,7 @@
   "correctDecision": "reject",
   "explanation": {
     "ru": [
-      "Перехватчик не был обстрелян: отверстия появились после крушения.",
+      "Самолёт не был обстрелян: отверстия появились после крушения.",
       "Корд перевозил тяжёлый незаявленный груз для GC-17 и отключил автоматический возврат.",
       "Под значением 240 кг проявляется исходная масса 920 кг; ведомость исправили перед гуманитарным рейсом.",
       "Причиной падения стали перегруз и опасный маршрут, а версия атаки создана для страховой выплаты. Следует отказать."
@@ -433,22 +433,22 @@
     {
       "id": "claim_main",
       "text": {
-        "ru": "Во время гуманитарного рейса мой экспериментальный перехватчик атаковали контрабандисты. Машина потеряла управление и разбилась в ледяном каньоне. Я выжил и прошу оплатить самолёт и лечение.",
-        "en": "During a humanitarian flight, smugglers attacked my experimental interceptor. The aircraft lost control and crashed in an ice canyon. I survived and am claiming the aircraft and medical costs.",
-        "tr": "İnsani bir uçuş sırasında kaçakçılar deneysel önleme aracıma saldırdı. Uçak kontrolü kaybetti ve bir buz kanyonuna düştü. Hayatta kaldım ve uçak ve tıbbi masrafları talep ediyorum.",
-        "ar": "خلال رحلة إنسانية، هاجم المهربون طائرتي الاعتراضية التجريبية. فقدت الطائرة السيطرة عليها وتحطمت في وادي جليدي. لقد نجوت وأطالب بتكاليف الطائرة والتكاليف الطبية.",
-        "kk": "Гуманитарлық ұшу кезінде менің тәжірибелік ұстағышыма контрабандашылар шабуыл жасады. Көлік басқаруды жоғалтып, мұзды шатқалға құлаған. Мен аман қалдым, ұшақ пен емнің ақысын сұраймын."
+        "ru": "Во время гуманитарного рейса мой лёгкий грузовой самолёт обстреляли неизвестные. Машина потеряла управление и разбилась в ледяном каньоне. Я выжил и прошу оплатить самолёт и лечение.",
+        "en": "During a humanitarian flight, unknown parties fired on my light cargo aircraft. The aircraft lost control and crashed in an ice canyon. I survived and am claiming the aircraft and medical costs.",
+        "tr": "İnsani bir uçuş sırasında kimliği belirsiz kişiler hafif kargo uçağıma ateş açtı. Uçak kontrolü kaybetti ve bir buz kanyonuna düştü. Hayatta kaldım ve uçak ve tıbbi masrafları talep ediyorum.",
+        "ar": "خلال رحلة إنسانية، أطلق مجهولون النار على طائرتي الشحن الخفيفة. فقدت الطائرة السيطرة عليها وتحطمت في وادي جليدي. لقد نجوت وأطالب بتكاليف الطائرة والتكاليف الطبية.",
+        "kk": "Гуманитарлық ұшу кезінде менің жеңіл жүк ұшағыма белгісіздер оқ жаудырды. Көлік басқаруды жоғалтып, мұзды шатқалға құлаған. Мен аман қалдым, ұшақ пен емнің ақысын сұраймын."
       },
       "stampable": false
     },
     {
       "id": "claim_attack",
       "text": {
-        "ru": "Перехватчик потерпел крушение после внешней атаки.",
-        "en": "The interceptor crashed after an external attack.",
-        "tr": "Önleyici, harici bir saldırının ardından düştü.",
-        "ar": "تحطمت الطائرة الاعتراضية بعد هجوم خارجي.",
-        "kk": "Ұстағыш сыртқы шабуылдан кейін апатқа ұшырады."
+        "ru": "Самолёт потерпел крушение после внешней атаки.",
+        "en": "The aircraft crashed after an external attack.",
+        "tr": "Uçak, dışarıdan gelen bir saldırının ardından düştü.",
+        "ar": "تحطمت الطائرة بعد هجوم خارجي.",
+        "kk": "Ұшақ сыртқы шабуылдан кейін апатқа ұшырады."
       },
       "stampable": true
     },
@@ -487,10 +487,10 @@
       "kk": "Корд шын мәнінде апаттан аман қалды. Бірақ мұзға тигеннен кейін корпуста оқ іздері қалды. Құлаудың себебін анықтаңыз. — В. Лебедева"
     },
     "postVerdictNote": {
-      "ru": "Северный терминал принимает грузы по воздуху. В маршрутном журнале следующей точкой значится закрытая Навигационная академия «Меридиан».",
-      "en": "The northern terminal receives cargo by air. The route log names the closed Meridian Navigation Academy as the next stop.",
-      "tr": "Kuzey terminali kargoyu hava yoluyla alıyor. Rota günlüğünde bir sonraki durak olarak kapalı Meridian Navigasyon Akademisi belirtiliyor.",
-      "ar": "تستقبل المحطة الشمالية البضائع عن طريق الجو. يسمي سجل الطريق أكاديمية ميريديان للملاحة المغلقة باعتبارها المحطة التالية.",
+      "ru": "Северный терминал принимает грузы по воздуху. В маршрутном журнале следующей точкой значится закрытый учебно-логистический комплекс «Меридиан».",
+      "en": "The northern terminal receives cargo by air. The route log names the closed Meridian training-and-logistics complex as the next stop.",
+      "tr": "Kuzey terminali kargoyu hava yoluyla alıyor. Rota günlüğünde bir sonraki durak olarak kapalı Meridian eğitim-lojistik tesisi belirtiliyor.",
+      "ar": "تستقبل المحطة الشمالية البضائع عن طريق الجو. يسمي سجل الطريق مجمّع ميريديان المغلق للتدريب واللوجستيات باعتبارها المحطة التالية.",
       "kk": "Солтүстік терминал жүктерді әуе арқылы қабылдайды. Маршрут журналында келесі нүкте жабық Меридиан навигация академиясы болып табылады."
     },
     "nextCaseTeaser": {
@@ -510,15 +510,114 @@
         "kk": "Меридианға баратын жол"
       },
       "description": {
-        "ru": "Серый конвой использует инфраструктуру закрытой навигационной академии.",
-        "en": "The Gray Convoy uses the infrastructure of a closed navigation academy.",
-        "tr": "Gri Konvoy, kapalı bir navigasyon akademisinin altyapısını kullanıyor.",
-        "ar": "تستخدم القافلة الرمادية البنية التحتية لأكاديمية الملاحة المغلقة.",
-        "kk": "Сұр колонна жабық навигациялық академияның инфрақұрылымын пайдаланады."
+        "ru": "Серый конвой использует инфраструктуру закрытого учебно-логистического комплекса «Меридиан».",
+        "en": "The Gray Convoy uses the infrastructure of a closed training-and-logistics complex.",
+        "tr": "Gri Konvoy, kapalı bir eğitim-lojistik tesisinin altyapısını kullanıyor.",
+        "ar": "تستخدم القافلة الرمادية البنية التحتية لمجمّع التدريب واللوجستيات المغلق.",
+        "kk": "Сұр колонна жабық оқу-логистикалық кешеннің инфрақұрылымын пайдаланады."
       },
       "progressIndex": 6,
       "progressTotal": 6
     },
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "elian_kord",
+      "displayName": {
+        "ru": "Элиан Корд",
+        "en": "Elian Kord",
+        "tr": "Elian Kord",
+        "ar": "إليان كورد",
+        "kk": "Элиан Корд"
+      },
+      "portraitState": "worn_out"
+    },
+    "finalLine": {
+      "ru": "Падение я пережил. С правдой, похоже, вышло хуже.",
+      "en": "I survived the crash. With the truth, it seems, I did worse.",
+      "tr": "Düşüşten sağ çıktım. Gerçekle ise galiba daha kötüsü oldu.",
+      "ar": "نجوت من السقوط. أما مع الحقيقة، فيبدو أن الأمر كان أسوأ.",
+      "kk": "Құлаудан аман қалдым. Ал шындықпен, байқасам, одан да жаман болды."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Крушение и травмы настоящие: спасатели нашли Корда у обломков. Следов преследования или второго судна они не зафиксировали.",
+          "en": "The crash and the injuries are real: rescuers found Kord by the wreckage. They recorded no signs of pursuit or of a second aircraft.",
+          "tr": "Düşüş ve yaralanmalar gerçek: kurtarma ekibi Kord'u enkazın yanında buldu. Takip ya da ikinci bir hava aracına dair iz kaydetmediler.",
+          "ar": "التحطّم والإصابات حقيقية: عثر رجال الإنقاذ على كورد قرب الحطام. ولم يسجّلوا أي أثر لمطاردة أو لطائرة ثانية.",
+          "kk": "Апат пен жарақаттар шынайы: құтқарушылар Кордты сынықтар жанынан тапқан. Қуғын не екінші әуе кемесінің ізін тіркемеген."
+        },
+        "evidenceIds": [
+          "ev-rescue"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Отверстия в обшивке созданы изнутри или уже после падения — обстрела не было.",
+          "en": "The holes in the skin were made from inside or after the crash — there was no gunfire.",
+          "tr": "Gövdedeki delikler içeriden ya da düşüşten sonra açılmış — ateş edilmemiş.",
+          "ar": "الثقوب في الهيكل أُحدثت من الداخل أو بعد السقوط — لم يكن هناك إطلاق نار.",
+          "kk": "Қаптамадағы тесіктер іштен немесе құлағаннан кейін жасалған — атыс болмаған."
+        },
+        "evidenceIds": [
+          "ev-crash"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Под значением 240 кг в ведомости проступает исходная масса 920 кг, а трек показывает отклонение к северному терминалу ниже безопасной высоты. Причина падения — перегруз и маршрут.",
+          "en": "Under the 240 kg entry in the manifest the original mass of 920 kg shows through, and the track shows a detour to the northern terminal below safe altitude. The cause was overload and route.",
+          "tr": "Yük belgesindeki 240 kg değerinin altından özgün 920 kg kütlesi çıkıyor; iz kaydı da güvenli irtifanın altında kuzey terminaline sapmayı gösteriyor. Nedeni aşırı yük ve rota.",
+          "ar": "تحت قيمة 240 كغ في البيان تظهر الكتلة الأصلية 920 كغ، ويُظهر المسار انحرافًا نحو المحطة الشمالية دون الارتفاع الآمن. السبب هو الحمولة الزائدة والمسار.",
+          "kk": "Ведомостьтегі 240 кг мәнінің астынан бастапқы 920 кг массасы шығады, ал трек қауіпсіз биіктіктен төмен солтүстік терминалға ауытқығанын көрсетеді. Құлау себебі — артық жүк пен маршрут."
+        },
+        "evidenceIds": [
+          "ev-manifest",
+          "ev-nav",
+          "ev-flight"
+        ]
+      }
+    ],
+    "arcReveal": {
+      "title": {
+        "ru": "Маршрут к «Меридиану»",
+        "en": "Route to Meridian",
+        "tr": "Meridian'a Giden Yol",
+        "ar": "الطريق إلى ميريديان",
+        "kk": "Меридианға баратын жол"
+      },
+      "text": {
+        "ru": "Серый конвой использует инфраструктуру закрытого учебно-логистического комплекса «Меридиан».",
+        "en": "The Gray Convoy uses the infrastructure of a closed training-and-logistics complex.",
+        "tr": "Gri Konvoy, kapalı bir eğitim-lojistik tesisinin altyapısını kullanıyor.",
+        "ar": "تستخدم القافلة الرمادية البنية التحتية لمجمّع التدريب واللوجستيات المغلق.",
+        "kk": "Сұр колонна жабық оқу-логистикалық кешеннің инфрақұрылымын пайдаланады."
+      }
+    }
   }
 }

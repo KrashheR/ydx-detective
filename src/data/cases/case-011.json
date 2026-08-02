@@ -448,5 +448,102 @@
       "progressTotal": 5
     },
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "beatris_koler",
+      "displayName": {
+        "ru": "Беатрис Колер",
+        "en": "Beatrice Koler",
+        "tr": "Beatris Koler",
+        "ar": "بياتريس كولر",
+        "kk": "Беатрис Колер"
+      },
+      "portraitState": "cold"
+    },
+    "finalLine": {
+      "ru": "Украшения всё-таки мои. Разве это совсем ничего не меняет?",
+      "en": "The jewellery is still mine. Does that really change nothing at all?",
+      "tr": "Mücevherler yine de benim. Bu gerçekten hiçbir şeyi değiştirmiyor mu?",
+      "ar": "المجوهرات ملكي على أي حال. أهذا لا يغيّر شيئًا بالمرّة؟",
+      "kk": "Әшекейлер бәрібір менікі. Бұл шынымен ештеңені өзгертпей ме?"
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Следов взлома нет, но эксперт допускает вход обычным ключом — один осмотр постороннего не исключает.",
+          "en": "There are no signs of forced entry, yet the examiner allows entry with an ordinary key — the inspection alone does not rule out an outsider.",
+          "tr": "Zorlama izi yok, ancak uzman sıradan bir anahtarla girişi mümkün görüyor — tek başına inceleme bir yabancıyı dışlamaz.",
+          "ar": "لا آثار اقتحام، لكن الخبير يجيز الدخول بمفتاح عادي — الفحص وحده لا يستبعد شخصًا خارجيًا.",
+          "kk": "Бұзып кіру ізі жоқ, бірақ сарапшы кәдімгі кілтпен кіруді жоққа шығармайды — тек тексеру бөгде адамды жоққа шығармайды."
+        },
+        "evidenceIds": [
+          "ev-forensic"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Журнал сигнализации фиксирует не обход системы, а корректное отключение личным кодом заявительницы.",
+          "en": "The alarm log records not a bypass but a correct disarm with the claimant's own personal code.",
+          "tr": "Alarm kaydı bir atlatmayı değil, başvurucunun kendi kişisel koduyla yapılmış düzgün bir devre dışı bırakmayı gösteriyor.",
+          "ar": "لا يسجّل نظام الإنذار التفافًا بل إيقافًا سليمًا برمز المدّعية الشخصي.",
+          "kk": "Дабыл журналы жүйені айналып өтуді емес, өтініш берушінің жеке кодымен дұрыс өшірілгенін тіркеген."
+        },
+        "evidenceIds": [
+          "ev-alarm"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Квитанция частного хранилища показывает: те же украшения были убраны туда за несколько часов до «кражи». Алиби человека — не алиби имущества.",
+          "en": "The private vault receipt shows the same jewellery was placed there hours before the “theft”. A person's alibi is not the property's alibi.",
+          "tr": "Özel kasa makbuzu, aynı mücevherlerin “hırsızlıktan” saatler önce oraya konduğunu gösteriyor. Bir kişinin tanıklığı, malın tanıklığı değildir.",
+          "ar": "يُظهر إيصال الخزنة الخاصة أن المجوهرات نفسها أُودعت هناك قبل «السرقة» بساعات. حجّة غياب الشخص ليست حجّة غياب الممتلكات.",
+          "kk": "Жеке сақтау қоймасының түбіртегі көрсетеді: сол әшекейлер «ұрлықтан» бірнеше сағат бұрын сонда салынған. Адамның алибиі — мүліктің алибиі емес."
+        },
+        "evidenceIds": [
+          "ev-vault"
+        ]
+      }
+    ],
+    "arcReveal": {
+      "title": {
+        "ru": "Копия формы 17-К",
+        "en": "Copy of Form 17-K",
+        "tr": "Form 17-K Kopyası",
+        "ar": "نسخة من النموذج 17-ك",
+        "kk": "17-К нысанының көшірмесі"
+      },
+      "text": {
+        "ru": "Одинаковая редкая ошибка подтверждает общий источник новых заявлений и старого внутреннего шаблона.",
+        "en": "The same unusual error confirms a common source for the new claims and the old internal template.",
+        "tr": "Aynı olağandışı hata, yeni iddialar ve eski dahili şablon için ortak bir kaynağı doğruluyor.",
+        "ar": "يؤكد نفس الخطأ غير المعتاد وجود مصدر مشترك للمطالبات الجديدة والقالب الداخلي القديم.",
+        "kk": "Дәл осындай сирек қате жаңа мәлімдемелердің жалпы көзін және ескі ішкі үлгіні растайды."
+      }
+    }
   }
 }

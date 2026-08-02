@@ -551,5 +551,94 @@
     },
     "seasonClue": null,
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "aigul_nurlanova",
+      "displayName": {
+        "ru": "Айгуль Нурланова",
+        "en": "Aigul Nurlanova",
+        "tr": "Aygül Nurlanova",
+        "ar": "أيغول نورلانوفا",
+        "kk": "Айгүл Нұрланова"
+      },
+      "portraitState": "relief"
+    },
+    "finalLine": {
+      "ru": "Звёздочка теперь смотрит на крышу только снизу. Я тоже.",
+      "en": "Zvyozdochka only looks at the roof from below now. So do I.",
+      "tr": "Zvyozdoçka artık çatıya yalnızca aşağıdan bakıyor. Ben de öyle.",
+      "ar": "صارت زفيوزدوتشكا تنظر إلى السطح من الأسفل فقط. وأنا كذلك.",
+      "kk": "Звёздочка енді төбеге тек төменнен қарайды. Мен де солай."
+    },
+    "emotionalMode": "humour",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "В 08:09 воздушный шар из-за сбоя горелки аварийно снизился до 18 метров прямо над фермой.",
+          "en": "At 8:09 a.m. a burner failure forced the balloon down to 18 metres directly above the farm.",
+          "tr": "08.09'da brülör arızası balonu çiftliğin tam üzerinde 18 metreye indirdi.",
+          "ar": "عند 08:09 أجبر عطل الموقد المنطاد على الهبوط إلى 18 مترًا فوق المزرعة مباشرة.",
+          "kk": "08:09-да оттық ақауынан аэростат ферманың тура үстінде 18 метрге дейін апаттық түрде төмендеді."
+        },
+        "evidenceIds": [
+          "ev-flight-log"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Влажные следы копыт ведут от загона к сеновалу и дальше к теплице — тем же маршрутом, по обвалившимся тюкам.",
+          "en": "Fresh hoof prints run from the pen to the hay barn and on to the greenhouse — the same route, up over the collapsed bales.",
+          "tr": "Taze toynak izleri ağıldan saman deposuna, oradan sera yönüne uzanıyor — çöken balyaların üstünden geçen aynı güzergâh.",
+          "ar": "تمتدّ آثار الحوافر الرطبة من الحظيرة إلى مخزن التبن ثم إلى الدفيئة — المسار نفسه فوق الأكوام المنهارة.",
+          "kk": "Дымқыл тұяқ іздері қоршаудан шөп қорасына, одан жылыжайға қарай кетеді — құлаған буларға көтерілген сол маршрутпен."
+        },
+        "evidenceIds": [
+          "ev-tracks"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Растяжение ноги, порезы стеклом и продавленная сверху вниз кровля соответствуют падению животного, а не подстроенному ущербу.",
+          "en": "The strained leg, the glass cuts and a roof crushed from above match a falling animal, not staged damage.",
+          "tr": "Burkulan bacak, cam kesikleri ve yukarıdan aşağıya ezilmiş çatı, düşen bir hayvana uyuyor; sahnelenmiş hasara değil.",
+          "ar": "الالتواء في الساق وجروح الزجاج والسقف المهشَّم من الأعلى إلى الأسفل تتوافق مع سقوط حيوان لا مع ضرر مُدبَّر.",
+          "kk": "Аяқтың созылуы, шыны кескен жаралар және жоғарыдан төмен майысқан шатыр — қойылған зиян емес, құлаған жануарға сәйкес келеді."
+        },
+        "evidenceIds": [
+          "ev-vet",
+          "ev-greenhouse"
+        ]
+      }
+    ],
+    "veraLine": {
+      "ru": "Невероятная история — не то же самое, что ложная. Проверяйте звенья, а не правдоподобие.",
+      "en": "An unbelievable story is not the same as a false one. Test the links, not the plausibility.",
+      "tr": "İnanılmaz bir hikâye, yalan bir hikâye demek değildir. Halkaları sınayın, inandırıcılığı değil.",
+      "ar": "الحكاية المذهلة ليست حكاية كاذبة. اختبر الحلقات لا مدى المعقولية.",
+      "kk": "Керемет оқиға — өтірік оқиға деген сөз емес. Сенімділікті емес, буындарды тексеріңіз."
+    }
   }
 }

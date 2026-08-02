@@ -435,5 +435,87 @@
     },
     "seasonClue": null,
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "gennady_bublikov",
+      "displayName": {
+        "ru": "Геннадий Бубликов",
+        "en": "Gennady Bublikov",
+        "tr": "Gennadi Bublikov",
+        "ar": "غينادي بوبليكوف",
+        "kk": "Геннадий Бубликов"
+      },
+      "portraitState": "shame"
+    },
+    "finalLine": {
+      "ru": "Барон тут ни при чём. Глупость целиком моя.",
+      "en": "Baron has nothing to do with it. The stupidity is entirely mine.",
+      "tr": "Baron'un bununla ilgisi yok. Aptallık tamamen bana ait.",
+      "ar": "بارون لا ذنب له. الغباء كلّه من نصيبي.",
+      "kk": "Баронның бұған қатысы жоқ. Ақымақтық түгелдей менікі."
+    },
+    "emotionalMode": "humour",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Рентген подтверждает: Барон действительно проглотил наручные часы.",
+          "en": "The X-ray confirms it: Baron really did swallow a wristwatch.",
+          "tr": "Röntgen doğruluyor: Baron gerçekten bir kol saati yutmuş.",
+          "ar": "تؤكّد الأشعة: ابتلع بارون ساعة يد فعلًا.",
+          "kk": "Рентген растайды: Барон шынымен қол сағатын жұтқан."
+        },
+        "evidenceIds": [
+          "ev-xray"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Клиника извлекла дешёвую сувенирную модель. В полисе — механические часы ручной сборки с гравировкой «Г. Б. · 1998» и номером N8-48217.",
+          "en": "The clinic removed a cheap souvenir model. The policy covers a hand-built mechanical watch engraved “G. B. · 1998”, serial N8-48217.",
+          "tr": "Klinik ucuz bir hediyelik model çıkardı. Poliçedeyse “G. B. · 1998” kazımalı, N8-48217 seri numaralı el yapımı mekanik saat var.",
+          "ar": "أخرجت العيادة نموذجًا تذكاريًا رخيصًا. أمّا البوليصة فتغطّي ساعة ميكانيكية يدوية الصنع منقوشًا عليها «غ. ب. · 1998» برقم N8-48217.",
+          "kk": "Клиника арзан кәдесый үлгісін алып шыққан. Полисте — «Г. Б. · 1998» ойма жазуы мен N8-48217 нөмірі бар қолдан жиналған механикалық сағат."
+        },
+        "evidenceIds": [
+          "ev-vet-act",
+          "ev-watch-policy"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Часы с этим номером выставлены на продажу и остались у владельца. Собака проглотила подмену.",
+          "en": "A watch with that serial is up for sale and never left the owner. The dog swallowed the stand-in.",
+          "tr": "O seri numaralı saat satışa çıkarılmış ve sahibinde kalmış. Köpek, yerine konan sahteyi yutmuş.",
+          "ar": "الساعة بهذا الرقم معروضة للبيع وبقيت لدى صاحبها. أمّا الكلب فابتلع البديل.",
+          "kk": "Сол нөмірлі сағат сатылымға қойылған және иесінде қалған. Ит алмастырылған сағатты жұтқан."
+        },
+        "evidenceIds": [
+          "ev-listing"
+        ]
+      }
+    ]
   }
 }

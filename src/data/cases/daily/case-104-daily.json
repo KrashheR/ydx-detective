@@ -201,5 +201,87 @@
       "Порт күзеті жүргізушісіз сүйретілген және қасақана батырылған машинаны көрді.",
       "Схема: сат → ұрлықты ойна → КАСКО жина. Талаптан бас тарту."
     ]
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "roman_taksidis",
+      "displayName": {
+        "ru": "Роман Таксидис",
+        "en": "Roman Taksidis",
+        "tr": "Roman Taksidis",
+        "ar": "رومان تاكسيديس",
+        "kk": "Роман Таксидис"
+      },
+      "portraitState": "resigned"
+    },
+    "finalLine": {
+      "ru": "Продать, утопить, заявить угон. На бумаге было элегантнее.",
+      "en": "Sell it, sink it, report it stolen. On paper it was more elegant.",
+      "tr": "Sat, batır, çalındı diye bildir. Kâğıt üzerinde daha zarifti.",
+      "ar": "أن تبيعها وتُغرقها وتبلّغ عن سرقتها. على الورق كان الأمر أنيق أكثر.",
+      "kk": "Сат, батыр, ұрланды деп мәлімде. Қағаз жүзінде әсемірек еді."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Автомобиль действительно оказался на дне гавани, и портовая охрана видела его в воде.",
+          "en": "The car really did end up at the bottom of the harbour, and port security saw it in the water.",
+          "tr": "Araç gerçekten limanın dibine indi ve liman güvenliği onu suda gördü.",
+          "ar": "استقرّت السيارة فعلًا في قاع الميناء، ورآها أمن الميناء في الماء.",
+          "kk": "Көлік шынымен айлақтың түбіне түскен, ал порт күзеті оны суда көрген."
+        },
+        "evidenceIds": [
+          "ev-harbor"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "GPS ставит машину на пункт металлолома в 01:15 — за два часа до заявления об угоне.",
+          "en": "GPS puts the car at the scrapyard at 01:15 — two hours before the theft was reported.",
+          "tr": "GPS aracı 01:15'te hurdalıkta gösteriyor — hırsızlık ihbarından iki saat önce.",
+          "ar": "يضع الـGPS السيارة في ساحة الخردة عند 01:15 — قبل الإبلاغ عن السرقة بساعتين.",
+          "kk": "GPS көлікті 01:15-те металл сынық қабылдау пунктінде көрсетеді — ұрлық туралы мәлімдеуден екі сағат бұрын."
+        },
+        "evidenceIds": [
+          "ev-gps"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Квитанция подтверждает: в 01:18 владелец лично сдал автомобиль за наличные и расписался. Машину отбуксировали и столкнули в воду уже после продажи.",
+          "en": "The receipt confirms it: at 01:18 the owner personally sold the car for cash and signed for it. The vehicle was towed and pushed into the water only after the sale.",
+          "tr": "Makbuz doğruluyor: saat 01:18'de sahibi aracı bizzat nakit karşılığı sattı ve imzaladı. Araç, satıştan sonra çekilip suya itildi.",
+          "ar": "يؤكّد الإيصال: عند 01:18 باع المالك السيارة نقدًا بنفسه ووقّع. ثم قُطرت ودُفعت إلى الماء بعد البيع.",
+          "kk": "Түбіртек растайды: 01:18-де иесі көлікті қолма-қол ақшаға өзі тапсырып, қол қойған. Көлікті сатылымнан кейін ғана сүйреп әкеліп, суға итерген."
+        },
+        "evidenceIds": [
+          "ev-receipt",
+          "ev-harbor"
+        ]
+      }
+    ]
   }
 }

@@ -1,0 +1,607 @@
+{
+  "case-006": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "eduard_vinogradov",
+      "displayName": {
+        "ru": "Эдуард Виноградов",
+        "en": "Eduard Vinogradov",
+        "tr": "Eduard Vinogradov",
+        "ar": "إدوارد فينوغرادوف",
+        "kk": "Эдуард Виноградов"
+      },
+      "portraitState": "grim_humour"
+    },
+    "finalLine": {
+      "ru": "Генератор спас вино. Меня, как видите, не спас.",
+      "en": "The generator saved the wine. Me, as you can see, it did not.",
+      "tr": "Jeneratör şarabı kurtardı. Gördüğünüz gibi beni kurtarmadı.",
+      "ar": "أنقذ المولّد النبيذ. أما أنا، فكما ترون، لم يُنقذني.",
+      "kk": "Генератор шарапты құтқарды. Мені, көріп тұрсыздар, құтқармады."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Отключение длилось с 18:07 пятницы до 20:54 понедельника и затронуло весь квартал. Авария подлинная.",
+          "en": "The outage ran from 6:07 p.m. Friday to 8:54 p.m. Monday and hit the whole block. The failure is genuine.",
+          "tr": "Kesinti cuma 18.07'den pazartesi 20.54'e kadar sürdü ve tüm mahalleyi etkiledi. Arıza gerçek.",
+          "ar": "استمرّ الانقطاع من 18:07 الجمعة حتى 20:54 الاثنين وطال الحيّ كلّه. العطل حقيقي.",
+          "kk": "Электр жұманың 18:07-нен дүйсенбінің 20:54-не дейін өшіп, бүкіл шағын ауданды қамтыған. Апат шынайы."
+        },
+        "evidenceIds": ["ev-utility"]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "Архив климатического датчика показывает: температура в погребе ни разу не вышла за безопасный диапазон.",
+          "en": "The climate sensor archive shows the cellar temperature never left the safe range.",
+          "tr": "İklim sensörü arşivi, mahzen sıcaklığının güvenli aralığın dışına hiç çıkmadığını gösteriyor.",
+          "ar": "يُظهر أرشيف مستشعر المناخ أن حرارة القبو لم تغادر النطاق الآمن قط.",
+          "kk": "Климаттық датчик мұрағаты жертөле температурасының қауіпсіз аралықтан бір рет те шықпағанын көрсетеді."
+        },
+        "evidenceIds": ["ev-temp"]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Чек и журнал резервного генератора объясняют почему: питание климатической системы не прерывалось. Порчи коллекции не было.",
+          "en": "The receipt and log of the backup generator explain why: power to the climate system never stopped. The collection was never spoiled.",
+          "tr": "Yedek jeneratörün fişi ve kaydı nedenini açıklıyor: iklim sistemine giden enerji hiç kesilmedi. Koleksiyon bozulmadı.",
+          "ar": "يفسّر إيصال المولّد الاحتياطي وسجلّه السبب: لم تنقطع التغذية عن نظام التبريد. لم تفسد المجموعة.",
+          "kk": "Резервтік генератордың чегі мен журналы себебін түсіндіреді: климаттық жүйенің қуаты үзілмеген. Коллекция бүлінген жоқ."
+        },
+        "evidenceIds": ["ev-generator"]
+      }
+    ],
+    "arcRevealFromSeasonClue": true
+  },
+
+  "case-008": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "deyan_kovach",
+      "displayName": {
+        "ru": "Деян Ковач",
+        "en": "Dejan Kovač",
+        "tr": "Dejan Kovaç",
+        "ar": "ديان كوفاتش",
+        "kk": "Деян Ковач"
+      },
+      "portraitState": "brazen"
+    },
+    "finalLine": {
+      "ru": "Неделя боли была настоящей. Остальные одиннадцать — просто убедительными.",
+      "en": "One week of pain was real. The other eleven were merely convincing.",
+      "tr": "Bir haftalık acı gerçekti. Diğer on bir hafta sadece inandırıcıydı.",
+      "ar": "أسبوع الألم كان حقيقيًا. أما الأحد عشر الباقية فكانت مقنعة فحسب.",
+      "kk": "Бір апталық ауырсыну шын болды. Қалған он бірі — тек сенімді ғана."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "10 марта приёмный покой зафиксировал растяжение поясничных мышц: травма настоящая, покой на 5–7 дней обоснован.",
+          "en": "On March 10 the emergency room recorded a lumbar muscle strain: the injury is real and 5–7 days of rest were justified.",
+          "tr": "10 Mart'ta acil servis bel kası zorlanması kaydetti: yaralanma gerçek ve 5–7 günlük istirahat yerinde.",
+          "ar": "في 10 مارس سجّل قسم الطوارئ شدًّا في عضلات أسفل الظهر: الإصابة حقيقية، والراحة 5–7 أيام مبرَّرة.",
+          "kk": "10 наурызда қабылдау бөлмесі бел бұлшықетінің созылуын тіркеген: жарақат шын, 5–7 күн тыныштық негізді."
+        },
+        "evidenceIds": ["ev-ernote"]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "Под белой плашкой в больничном читается исходная запись: «лёгкий труд разрешён после 7 дней». Фраза о полной нетрудоспособности дописана позже.",
+          "en": "Under the white patch on the sick note the original line reads: “light work permitted after 7 days”. The wording about total incapacity was added later.",
+          "tr": "Rapordaki beyaz kapamanın altında özgün satır okunuyor: “7 gün sonra hafif işe izin verilir”. Tam iş göremezlik ifadesi sonradan eklenmiş.",
+          "ar": "تحت الشريط الأبيض في الإجازة المرضية يظهر السطر الأصلي: «يُسمح بالعمل الخفيف بعد 7 أيام». وعبارة العجز الكامل أُضيفت لاحقًا.",
+          "kk": "Ауру парағындағы ақ жапсырманың астында бастапқы жазу оқылады: «7 күннен кейін жеңіл жұмысқа рұқсат». Толық еңбекке жарамсыздық туралы тіркес кейін қосылған."
+        },
+        "evidenceIds": ["ev-sickleave"]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Журнал пропусков и оплата смен показывают регулярную тяжёлую работу в те самые месяцы. Трёхмесячная нетрудоспособность не подтверждается.",
+          "en": "The gate log and the shift payments show regular heavy work in exactly those months. Three months of incapacity is not supported.",
+          "tr": "Giriş kayıtları ve vardiya ödemeleri, tam o aylarda düzenli ağır iş yapıldığını gösteriyor. Üç aylık iş göremezlik doğrulanmıyor.",
+          "ar": "يُظهر سجل الدخول ودفعات الورديات عملًا شاقًا منتظمًا في تلك الأشهر بالذات. عجز ثلاثة أشهر غير مدعوم.",
+          "kk": "Өткізу журналы мен ауысым төлемдері дәл сол айларда тұрақты ауыр жұмыс атқарылғанын көрсетеді. Үш айлық еңбекке жарамсыздық расталмайды."
+        },
+        "evidenceIds": ["ev-work-app", "ev-payment"]
+      }
+    ]
+  },
+
+  "case-010": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "mateus_ferreira",
+      "displayName": {
+        "ru": "Матеус Феррейра",
+        "en": "Mateus Ferreira",
+        "tr": "Mateus Ferreira",
+        "ar": "ماتيوس فيريرا",
+        "kk": "Матеус Феррейра"
+      },
+      "portraitState": "grateful"
+    },
+    "finalLine": {
+      "ru": "Лукас говорил, что вы докопаетесь до секунды. Он не шутил.",
+      "en": "Lucas said you would dig down to the exact second. He was not joking.",
+      "tr": "Lucas, saniyesine kadar kazacağınızı söylemişti. Şaka yapmıyormuş.",
+      "ar": "قال لوكاس إنكم ستنبشون حتى الثانية الواحدة. لم يكن يمزح.",
+      "kk": "Лукас секундына дейін қазып шығасыздар деген еді. Ол қалжыңдамапты."
+    },
+    "emotionalMode": "relief",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Регистратор показывает: машина полностью стоит у стоп-линии, через двадцать две секунды сзади без торможения приходит седан.",
+          "en": "The dashcam shows the car fully stopped at the line; twenty-two seconds later a sedan arrives from behind without braking.",
+          "tr": "Araç kamerası, otomobilin dur çizgisinde tamamen durduğunu gösteriyor; yirmi iki saniye sonra arkadan frensiz bir sedan geliyor.",
+          "ar": "تُظهر كاميرا اللوحة السيارة متوقّفة تمامًا عند خط الوقوف؛ وبعد اثنتين وعشرين ثانية يصل سيدان من الخلف دون كبح.",
+          "kk": "Тіркеуіш көрсетеді: көлік тоқтау сызығында толық тұрған, жиырма екі секундтан кейін артынан тежемей седан келеді."
+        },
+        "evidenceIds": ["ev-dashcam"]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "Тормозного пути перед машиной Феррейры нет, а второй водитель признал, что отвлёкся на навигатор.",
+          "en": "There are no skid marks in front of Ferreira's car, and the other driver admitted he was distracted by his navigation.",
+          "tr": "Ferreira'nın aracının önünde fren izi yok ve diğer sürücü navigasyona daldığını kabul etti.",
+          "ar": "لا توجد آثار كبح أمام سيارة فيريرا، وقد أقرّ السائق الآخر بأنه انشغل بجهاز الملاحة.",
+          "kk": "Феррейраның көлігі алдында тежеу ізі жоқ, ал екінші жүргізуші навигаторға алаңдағанын мойындады."
+        },
+        "evidenceIds": ["ev-police"]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Медицинская выписка через 67 минут и показания приехавшего брата совпадают по времени и характеру повреждений. Расхождений нет.",
+          "en": "The hospital record 67 minutes later and the statement of the brother who came to the scene agree on timing and on the nature of the injuries. Nothing conflicts.",
+          "tr": "67 dakika sonraki hastane kaydı ile olay yerine gelen kardeşin ifadesi, zaman ve yaralanmaların niteliği bakımından örtüşüyor. Çelişki yok.",
+          "ar": "يتّفق التقرير الطبي بعد 67 دقيقة مع إفادة الأخ الذي حضر إلى الموقع في التوقيت وطبيعة الإصابات. لا تعارض.",
+          "kk": "67 минуттан кейінгі медициналық үзінді мен оқиға орнына келген ағасының айғағы уақыты мен жарақат сипаты бойынша сәйкес келеді. Қайшылық жоқ."
+        },
+        "evidenceIds": ["ev-er", "ev-lucas"]
+      }
+    ],
+    "veraLine": {
+      "ru": "Запомните брата — Лукас Феррейра. Он говорит охотно и точно; такие свидетели встречаются реже, чем кажется.",
+      "en": "Remember the brother — Lucas Ferreira. He speaks readily and precisely; such witnesses are rarer than you would think.",
+      "tr": "Kardeşi aklınızda tutun — Lucas Ferreira. İstekli ve net konuşuyor; böyle tanıklar sanıldığından daha az bulunur.",
+      "ar": "تذكّر الأخ — لوكاس فيريرا. يتكلّم بسهولة ودقّة؛ وهذا النوع من الشهود أندر مما تظنّ.",
+      "kk": "Ағасын есте сақтаңыз — Лукас Феррейра. Ол ықыласпен әрі нақты сөйлейді; мұндай куәгерлер ойлағаннан сирек кездеседі."
+    }
+  },
+
+  "case-011": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "beatris_koler",
+      "displayName": {
+        "ru": "Беатрис Колер",
+        "en": "Beatrice Koler",
+        "tr": "Beatris Koler",
+        "ar": "بياتريس كولر",
+        "kk": "Беатрис Колер"
+      },
+      "portraitState": "cold"
+    },
+    "finalLine": {
+      "ru": "Украшения всё-таки мои. Разве это совсем ничего не меняет?",
+      "en": "The jewellery is still mine. Does that really change nothing at all?",
+      "tr": "Mücevherler yine de benim. Bu gerçekten hiçbir şeyi değiştirmiyor mu?",
+      "ar": "المجوهرات ملكي على أي حال. أهذا لا يغيّر شيئًا بالمرّة؟",
+      "kk": "Әшекейлер бәрібір менікі. Бұл шынымен ештеңені өзгертпей ме?"
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Следов взлома нет, но эксперт допускает вход обычным ключом — один осмотр постороннего не исключает.",
+          "en": "There are no signs of forced entry, yet the examiner allows entry with an ordinary key — the inspection alone does not rule out an outsider.",
+          "tr": "Zorlama izi yok, ancak uzman sıradan bir anahtarla girişi mümkün görüyor — tek başına inceleme bir yabancıyı dışlamaz.",
+          "ar": "لا آثار اقتحام، لكن الخبير يجيز الدخول بمفتاح عادي — الفحص وحده لا يستبعد شخصًا خارجيًا.",
+          "kk": "Бұзып кіру ізі жоқ, бірақ сарапшы кәдімгі кілтпен кіруді жоққа шығармайды — тек тексеру бөгде адамды жоққа шығармайды."
+        },
+        "evidenceIds": ["ev-forensic"]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "Журнал сигнализации фиксирует не обход системы, а корректное отключение личным кодом заявительницы.",
+          "en": "The alarm log records not a bypass but a correct disarm with the claimant's own personal code.",
+          "tr": "Alarm kaydı bir atlatmayı değil, başvurucunun kendi kişisel koduyla yapılmış düzgün bir devre dışı bırakmayı gösteriyor.",
+          "ar": "لا يسجّل نظام الإنذار التفافًا بل إيقافًا سليمًا برمز المدّعية الشخصي.",
+          "kk": "Дабыл журналы жүйені айналып өтуді емес, өтініш берушінің жеке кодымен дұрыс өшірілгенін тіркеген."
+        },
+        "evidenceIds": ["ev-alarm"]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Квитанция частного хранилища показывает: те же украшения были убраны туда за несколько часов до «кражи». Алиби человека — не алиби имущества.",
+          "en": "The private vault receipt shows the same jewellery was placed there hours before the “theft”. A person's alibi is not the property's alibi.",
+          "tr": "Özel kasa makbuzu, aynı mücevherlerin “hırsızlıktan” saatler önce oraya konduğunu gösteriyor. Bir kişinin tanıklığı, malın tanıklığı değildir.",
+          "ar": "يُظهر إيصال الخزنة الخاصة أن المجوهرات نفسها أُودعت هناك قبل «السرقة» بساعات. حجّة غياب الشخص ليست حجّة غياب الممتلكات.",
+          "kk": "Жеке сақтау қоймасының түбіртегі көрсетеді: сол әшекейлер «ұрлықтан» бірнеше сағат бұрын сонда салынған. Адамның алибиі — мүліктің алибиі емес."
+        },
+        "evidenceIds": ["ev-vault"]
+      }
+    ],
+    "arcRevealFromSeasonClue": true
+  },
+
+  "case-012": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "helga_novak",
+      "displayName": {
+        "ru": "Хельга Новак",
+        "en": "Helga Novak",
+        "tr": "Helga Novak",
+        "ar": "هيلغا نوفاك",
+        "kk": "Хельга Новак"
+      },
+      "portraitState": "dignity"
+    },
+    "finalLine": {
+      "ru": "Я не хотела побеждать страховую. Я хотела успеть лечиться.",
+      "en": "I did not want to beat the insurer. I wanted time enough to be treated.",
+      "tr": "Sigortayı yenmek istemedim. Tedavi olmaya yetişmek istedim.",
+      "ar": "لم أُرد أن أهزم شركة التأمين. أردت أن يتّسع الوقت للعلاج.",
+      "kk": "Мен сақтандыруды жеңгім келген жоқ. Емделуге үлгергім келді."
+    },
+    "emotionalMode": "grave",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Биопсия от 12 марта, операция 28 марта и гистология согласуются между собой. Диагноз подтверждён.",
+          "en": "The March 12 biopsy, the March 28 surgery and the histology agree with one another. The diagnosis is confirmed.",
+          "tr": "12 Mart biyopsisi, 28 Mart ameliyatı ve histoloji birbiriyle uyumlu. Tanı doğrulandı.",
+          "ar": "خزعة 12 مارس وجراحة 28 مارس ونتيجة النسيج متوافقة فيما بينها. التشخيص مؤكَّد.",
+          "kk": "12 наурыздағы биопсия, 28 наурыздағы операция және гистология өзара сәйкес. Диагноз расталды."
+        },
+        "evidenceIds": ["ev-diagnosis"]
+      },
+      {
+        "labelKey": "explained",
+        "text": {
+          "ru": "Онколог подтверждает: состояние отвечает определению критического заболевания в полисе, а журнал выдачи показывает три последовательных цикла терапии.",
+          "en": "The oncologist confirms the condition meets the policy's critical-illness definition, and the dispensing log shows three consecutive treatment cycles.",
+          "tr": "Onkolog, durumun poliçedeki kritik hastalık tanımına uyduğunu doğruluyor; ilaç kaydı da art arda üç tedavi döngüsünü gösteriyor.",
+          "ar": "يؤكّد طبيب الأورام أن الحالة تنطبق عليها تعريف المرض الحرج في البوليصة، ويُظهر سجل الصرف ثلاث دورات علاجية متتالية.",
+          "kk": "Онколог растайды: жағдай полистегі ауыр науқас анықтамасына сай, ал беру журналы қатарынан үш ем циклін көрсетеді."
+        },
+        "evidenceIds": ["ev-oncologist", "ev-pharmacy"]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Полис действует четырнадцать месяцев, взносы уплачены, период ожидания завершён до диагноза. Оснований для отказа нет.",
+          "en": "The policy has run for fourteen months, premiums are paid and the waiting period ended before the diagnosis. There are no grounds for refusal.",
+          "tr": "Poliçe on dört aydır yürürlükte, primler ödenmiş ve bekleme süresi tanıdan önce dolmuş. Reddetmek için gerekçe yok.",
+          "ar": "البوليصة سارية منذ أربعة عشر شهرًا، والأقساط مدفوعة، وفترة الانتظار انتهت قبل التشخيص. لا مسوّغ للرفض.",
+          "kk": "Полис он төрт ай жарамды, жарналар төленген, күту кезеңі диагнозға дейін аяқталған. Бас тартуға негіз жоқ."
+        },
+        "evidenceIds": ["ev-policy"]
+      }
+    ],
+    "veraLine": {
+      "ru": "Пять лет назад по такому же делу отказали. Основанием была страница условий, которой в полисе не существовало. Подпись под отказом — моя.",
+      "en": "Five years ago a case just like this was refused. The grounds were a page of terms that did not exist in the policy. The signature under that refusal is mine.",
+      "tr": "Beş yıl önce tıpkı böyle bir dosya reddedilmişti. Gerekçe, poliçede hiç bulunmayan bir şartlar sayfasıydı. O reddin altındaki imza benim.",
+      "ar": "قبل خمس سنوات رُفضت قضية مطابقة لهذه. وكان المسوّغ صفحة شروط لا وجود لها في البوليصة. التوقيع أسفل ذلك الرفض توقيعي أنا.",
+      "kk": "Бес жыл бұрын дәл осындай іс бойынша бас тартылған. Негіз ретінде полисте мүлде болмаған шарттар беті келтірілген. Сол бас тартудағы қол — менікі."
+    },
+    "arcRevealFromSeasonClue": true
+  },
+
+  "case-014": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "bolat_zhumabekov",
+      "displayName": {
+        "ru": "Болат Жумабеков",
+        "en": "Bolat Zhumabekov",
+        "tr": "Bolat Jumabekov",
+        "ar": "بولات جوماباييف",
+        "kk": "Болат Жұмабеков"
+      },
+      "portraitState": "principled"
+    },
+    "finalLine": {
+      "ru": "Град забрал половину поля. Вторую половину я ему не припишу.",
+      "en": "The hail took half the field. I will not credit it with the other half.",
+      "tr": "Dolu tarlanın yarısını aldı. Diğer yarısını ona yazmam.",
+      "ar": "أخذ البرد نصف الحقل. ولن أنسب إليه النصف الآخر.",
+      "kk": "Бұршақ егістің жартысын алды. Қалған жартысын оған жаппаймын."
+    },
+    "emotionalMode": "relief",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Радар фиксирует градовую ячейку шириной 1,8 км, прошедшую через участок в 16:22.",
+          "en": "Radar records a 1.8 km wide hail cell crossing the plot at 4:22 p.m.",
+          "tr": "Radar, 16.22'de araziden geçen 1,8 km genişliğinde bir dolu hücresi kaydediyor.",
+          "ar": "يسجّل الرادار خلية بَرَد عرضها 1.8 كم عبرت القطعة عند 16:22.",
+          "kk": "Радар 16:22-де телімнен өткен ені 1,8 км бұршақ ұяшығын тіркеген."
+        },
+        "evidenceIds": ["ev-weather"]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "Светлая полоса побитой пшеницы на снимке обрывается ровно по границе этой ячейки — повреждение совпадает с траекторией, а не с межой поля.",
+          "en": "The pale strip of beaten wheat in the image stops exactly at that cell's edge — the damage follows the storm track, not the field boundary.",
+          "tr": "Görüntüdeki ezilmiş buğdayın açık şeridi tam o hücrenin sınırında bitiyor — hasar tarla sınırını değil, fırtına rotasını izliyor.",
+          "ar": "يتوقّف الشريط الفاتح من القمح المتضرّر في الصورة عند حدّ تلك الخلية تمامًا — فالضرر يتبع مسار العاصفة لا حدود الحقل.",
+          "kk": "Суреттегі соғылған бидайдың ақшыл жолағы дәл сол ұяшықтың шекарасында үзіледі — зақым егіс шекарасына емес, дауыл жолына сәйкес."
+        },
+        "evidenceIds": ["ev-satellite"]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Агроном по сетке подтверждает гибель 46%, а договор поставки задаёт объём и цену. Заявленная сумма не превышает потерю.",
+          "en": "The agronomist's grid survey confirms a 46 % loss, and the supply contract fixes volume and price. The claimed sum does not exceed the loss.",
+          "tr": "Ziraat mühendisinin ızgara incelemesi %46 kaybı doğruluyor, tedarik sözleşmesi de hacim ve fiyatı belirliyor. Talep edilen tutar kaybı aşmıyor.",
+          "ar": "يؤكّد مسح المهندس الزراعي بالشبكة خسارة 46 %، ويحدّد عقد التوريد الكمية والسعر. المبلغ المطالب به لا يتجاوز الخسارة.",
+          "kk": "Агроном тор бойынша 46% шығынды растайды, ал жеткізу шарты көлем мен бағаны белгілейді. Мәлімделген сома шығыннан аспайды."
+        },
+        "evidenceIds": ["ev-agro", "ev-contract"]
+      }
+    ]
+  },
+
+  "case-015": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "rustam_beketov",
+      "displayName": {
+        "ru": "Рустам Бекетов",
+        "en": "Rustam Beketov",
+        "tr": "Rustam Beketov",
+        "ar": "رستم بيكيتوف",
+        "kk": "Рүстем Бекетов"
+      },
+      "portraitState": "bitter"
+    },
+    "finalLine": {
+      "ru": "От шторма я ушёл. От собственной жадности, выходит, нет.",
+      "en": "I outran the storm. My own greed, it turns out, I did not.",
+      "tr": "Fırtınadan kurtuldum. Ama kendi açgözlülüğümden kurtulamamışım.",
+      "ar": "نجوت من العاصفة. أما من جشعي، فيبدو أنني لم أنجُ.",
+      "kk": "Дауылдан құтылдым. Ал өз ашкөздігімнен, байқасам, құтылмаппын."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Штормовое предупреждение действовало, ветер доходил до 18 м/с, а спасатели сняли Бекетова с плота у обломков. Бедствие настоящее.",
+          "en": "A storm warning was in force with winds up to 18 m/s, and rescuers took Beketov off a raft beside the wreckage. The distress was real.",
+          "tr": "Fırtına uyarısı yürürlükteydi, rüzgâr 18 m/s'ye çıktı ve kurtarma ekibi Beketov'u enkazın yanındaki saldan aldı. Tehlike gerçekti.",
+          "ar": "كان تحذير العاصفة ساريًا والرياح تصل إلى 18 م/ث، وانتشل رجال الإنقاذ بيكيتوف من طوف قرب الحطام. الاستغاثة حقيقية.",
+          "kk": "Дауыл туралы ескерту күшінде болды, жел 18 м/с жетті, ал құтқарушылар Бекетовті сынықтар жанындағы саддан алды. Апат шынайы."
+        },
+        "evidenceIds": ["ev-weather", "ev-rescue"]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "Разрыв, волокна и серийный узор защитной полосы на поднятом обломке не совпадают с образцом застрахованной яхты.",
+          "en": "The tear, the fibres and the serial pattern of the rubbing strake on the recovered fragment do not match the insured yacht's sample.",
+          "tr": "Çıkarılan parçadaki koruma bandının yırtığı, lifleri ve seri deseni sigortalı yatın örneğiyle uyuşmuyor.",
+          "ar": "التمزّق والألياف ونمط التسلسل في الشريط الواقي على القطعة المنتشلة لا تطابق عيّنة اليخت المؤمَّن عليه.",
+          "kk": "Көтерілген сынықтағы қорғаныш жолағының жыртығы, талшықтары мен сериялық өрнегі сақтандырылған яхтаның үлгісімен сәйкес келмейді."
+        },
+        "evidenceIds": ["ev-hull"]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Накладная на перевозку показывает: застрахованное судно осталось целым и было заранее вывезено. Затонул арендованный катер.",
+          "en": "The transport waybill shows the insured vessel was intact and moved away in advance. What sank was a rented boat.",
+          "tr": "Nakliye irsaliyesi, sigortalı teknenin sağlam olduğunu ve önceden başka yere götürüldüğünü gösteriyor. Batan, kiralık bir tekneydi.",
+          "ar": "تُظهر بوليصة النقل أن السفينة المؤمَّنة سليمة ونُقلت مسبقًا. أما الذي غرق فكان قاربًا مستأجَرًا.",
+          "kk": "Тасымал жүкқұжаты көрсетеді: сақтандырылған кеме бүтін күйінде алдын ала әкетілген. Батқаны — жалға алынған катер."
+        },
+        "evidenceIds": ["ev-transport"]
+      }
+    ],
+    "arcRevealFromSeasonClue": true
+  },
+
+  "case-016": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "leila_karimova",
+      "displayName": {
+        "ru": "Лейла Каримова",
+        "en": "Leila Karimova",
+        "tr": "Leyla Kerimova",
+        "ar": "ليلى كريموفا",
+        "kk": "Ләйла Кәрімова"
+      },
+      "portraitState": "determined"
+    },
+    "finalLine": {
+      "ru": "Четыре дня без магазина — достаточно. Пятого не будет.",
+      "en": "Four days without the shop is enough. There will not be a fifth.",
+      "tr": "Dükkânsız dört gün yeter. Beşincisi olmayacak.",
+      "ar": "أربعة أيام بلا متجر تكفي. لن يكون هناك يوم خامس.",
+      "kk": "Дүкенсіз төрт күн — жетеді. Бесіншісі болмайды."
+    },
+    "emotionalMode": "relief",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "3 апреля в 06:48 водоканал зафиксировал разрыв магистрали напротив магазина; линию перекрыли только в 08:03.",
+          "en": "On April 3 at 6:48 a.m. the water utility logged a main burst opposite the shop; the line was shut off only at 8:03.",
+          "tr": "3 Nisan 06.48'de su idaresi dükkânın karşısında ana hat patlaması kaydetti; hat ancak 08.03'te kapatıldı.",
+          "ar": "في 3 أبريل الساعة 06:48 سجّلت شركة المياه انفجار خط رئيسي مقابل المتجر؛ ولم يُغلق الخط إلا عند 08:03.",
+          "kk": "3 сәуірде 06:48-де сумен жабдықтау қызметі дүкеннің қарсысындағы магистральдың жарылғанын тіркеді; желі тек 08:03-те жабылды."
+        },
+        "evidenceIds": ["ev-municipal"]
+      },
+      {
+        "labelKey": "explained",
+        "text": {
+          "ru": "Проявленная линия затопления проходит по нижним полкам, и номера повреждённых партий совпадают со складской описью.",
+          "en": "The revealed flood line runs along the lower shelves, and the batch numbers of the damaged goods match the stock inventory.",
+          "tr": "Ortaya çıkarılan su seviyesi çizgisi alt rafların hizasından geçiyor ve hasarlı partilerin numaraları depo envanteriyle örtüşüyor.",
+          "ar": "يمتدّ خط الغمر الذي أُظهر على طول الرفوف السفلية، وأرقام الدفعات المتضرّرة تطابق جرد المخزن.",
+          "kk": "Айқындалған су сызығы төменгі сөрелермен өтеді, ал зақымдалған партиялардың нөмірлері қойма тізімдемесіне сай."
+        },
+        "evidenceIds": ["ev-photos", "ev-stock"]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Кассовая книга показывает ровно четыре дня нулевых продаж, а средний доход взят по сопоставимым дням. Требование не завышено.",
+          "en": "The till book shows exactly four days of zero sales, with average revenue drawn from comparable days. The claim is not inflated.",
+          "tr": "Kasa defteri tam dört gün sıfır satış gösteriyor; ortalama gelir de benzer günlerden alınmış. Talep şişirilmemiş.",
+          "ar": "يُظهر دفتر الصندوق أربعة أيام بلا مبيعات بالضبط، ومتوسط الدخل مأخوذ من أيام مماثلة. المطالبة غير مضخَّمة.",
+          "kk": "Кассалық кітап дәл төрт күн нөлдік сатылымды көрсетеді, орташа табыс салыстырмалы күндер бойынша алынған. Талап асырылмаған."
+        },
+        "evidenceIds": ["ev-ledger"]
+      }
+    ]
+  },
+
+  "case-017": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "anatoly_stepanovich",
+      "displayName": {
+        "ru": "Анатолий Степанович",
+        "en": "Anatoly Stepanovich",
+        "tr": "Anatoli Stepanoviç",
+        "ar": "أناتولي ستيبانوفيتش",
+        "kk": "Анатолий Степанович"
+      },
+      "portraitState": "comic_summary"
+    },
+    "finalLine": {
+      "ru": "Орехи отменили. Ботинок вернули. Осталось объясниться с енотом.",
+      "en": "The nuts are cancelled. The boot is back. All that is left is a talk with the raccoon.",
+      "tr": "Cevizler iptal edildi. Bot geri geldi. Geriye bir tek rakunla konuşmak kaldı.",
+      "ar": "أُلغي طلب الجوز. وعاد الحذاء. لم يبقَ سوى حديث مع الراكون.",
+      "kk": "Жаңғақтар бас тартылды. Бәтеңке қайтарылды. Енді жанатпен түсінісу қалды."
+    },
+    "emotionalMode": "humour",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Клиника приняла Жорика ночью с опалёнными усами; на шерсти — частицы кожи и скорлупы грецкого ореха.",
+          "en": "The clinic admitted Zhorik at night with singed whiskers; his fur carried leather particles and walnut shell.",
+          "tr": "Klinik, Jorik'i gece bıyıkları yanmış hâlde kabul etti; tüylerinde deri parçacıkları ve ceviz kabuğu vardı.",
+          "ar": "استقبلت العيادة جوريك ليلًا بشوارب محترقة؛ وعلى فروه جزيئات جلد وقشر جوز.",
+          "kk": "Клиника Жорикті түнде мұрты күйген күйде қабылдаған; жүнінде тері мен грек жаңғағының қабығы бар."
+        },
+        "evidenceIds": ["ev-vet"]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "Журнал кухни: 02:13:47 нажат быстрый старт 800 Вт, через 22 секунды шум распознан как команда заказа, в 02:16:32 линия обесточена после замыкания.",
+          "en": "Kitchen log: 02:13:47 quick start at 800 W, 22 seconds later noise parsed as an order command, 02:16:32 the line cut out after a short.",
+          "tr": "Mutfak kaydı: 02:13:47 800 W hızlı başlatma, 22 saniye sonra gürültü sipariş komutu sanıldı, 02:16:32 kısa devre sonrası hat kesildi.",
+          "ar": "سجل المطبخ: 02:13:47 تشغيل سريع بقدرة 800 واط، وبعد 22 ثانية فُسِّرت الضوضاء كأمر طلب، وعند 02:16:32 انقطع الخط بعد تماس.",
+          "kk": "Ас үй журналы: 02:13:47-де 800 Вт жылдам іске қосу, 22 секундтан кейін шу тапсырыс командасы деп танылған, 02:16:32-де тұйықталудан кейін желі өшкен."
+        },
+        "evidenceIds": ["ev-speaker"]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Нагрет только сам прибор и зажатая кнопка; дополнительных очагов нет, а камера показывает, кто затащил ботинок в микроволновку. Умысла владельца нет.",
+          "en": "Only the appliance itself and the stuck button are hot; there is no second ignition point, and the camera shows who dragged the boot into the microwave. The owner had no intent.",
+          "tr": "Yalnızca cihazın kendisi ve sıkışan düğme ısınmış; ikinci bir odak yok ve kamera botu mikrodalgaya kimin soktuğunu gösteriyor. Sahibinin kastı yok.",
+          "ar": "الساخن هو الجهاز نفسه والزر العالق فقط؛ لا بؤرة ثانية، والكاميرا تُظهر من جرّ الحذاء إلى الميكروويف. لا نيّة لدى المالك.",
+          "kk": "Тек аспаптың өзі мен басылып қалған түйме қызған; қосымша ошақ жоқ, ал камера бәтеңкені микротолқынды пешке кім сүйрегенін көрсетеді. Иесінің қасақаналығы жоқ."
+        },
+        "evidenceIds": ["ev-photo", "ev-yardcam"]
+      }
+    ]
+  },
+
+  "case-022": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "mihail_ternov",
+      "displayName": {
+        "ru": "Михаил Тернов",
+        "en": "Mikhail Ternov",
+        "tr": "Mihail Ternov",
+        "ar": "ميخائيل تيرنوف",
+        "kk": "Михаил Тернов"
+      },
+      "portraitState": "worried"
+    },
+    "finalLine": {
+      "ru": "Хронометр жалко. Но за реестром они пришли не ради денег.",
+      "en": "I am sorry about the chronometer. But they did not come for the register because of money.",
+      "tr": "Kronometreye yazık oldu. Ama sicil defteri için gelmeleri para meselesi değildi.",
+      "ar": "يؤسفني أمر الكرونومتر. لكنهم لم يأتوا إلى السجل من أجل المال.",
+      "kk": "Хронометрді аяймын. Бірақ тізілім үшін олар ақшаның кесірінен келген жоқ."
+    },
+    "emotionalMode": "threat",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Сердцевина замка высверлена снаружи, стружка лежит внутри помещения, код сигнализации не вводился. Взлом внешний.",
+          "en": "The lock cylinder was drilled from outside, the shavings lie inside the room and no alarm code was entered. The break-in came from outside.",
+          "tr": "Kilit göbeği dışarıdan delinmiş, talaşlar içeride ve alarm kodu girilmemiş. Zorla giriş dışarıdan.",
+          "ar": "حُفرت أسطوانة القفل من الخارج، والبرادة داخل الغرفة، ولم يُدخل رمز الإنذار. الاقتحام خارجي.",
+          "kk": "Құлыптың өзегі сырттан бұрғыланған, жаңқа бөлме ішінде жатыр, дабыл коды енгізілмеген. Бұзып кіру сырттан."
+        },
+        "evidenceIds": ["ev-forensic"]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "Камера аптеки в 02:12 фиксирует двоих у серого фургона: они входят с инструментом и через шесть минут выносят архивный короб и футляр.",
+          "en": "At 2:12 a.m. the pharmacy camera catches two men at a grey van: they go in with tools and six minutes later carry out an archive box and a case.",
+          "tr": "Saat 02.12'de eczane kamerası gri bir minibüsün yanında iki kişiyi kaydediyor: aletlerle giriyorlar ve altı dakika sonra bir arşiv kutusu ile bir kılıf çıkarıyorlar.",
+          "ar": "عند 02:12 ترصد كاميرا الصيدلية رجلين قرب شاحنة رمادية: يدخلان بأدوات ويخرجان بعد ست دقائق بصندوق أرشيف وعلبة.",
+          "kk": "02:12-де дәріхана камерасы сұр фургон жанындағы екі адамды түсіреді: олар аспаппен кіріп, алты минуттан кейін мұрағат қорабы мен футлярды алып шығады."
+        },
+        "evidenceIds": ["ev-cctv"]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Хронометр и реестр были зарегистрированы и оценены до нападения. Ущерб реальный, инсценировки нет.",
+          "en": "The chronometer and the register were registered and appraised before the attack. The loss is real; nothing was staged.",
+          "tr": "Kronometre ve sicil, saldırıdan önce kayıtlı ve değerlenmişti. Zarar gerçek; sahneleme yok.",
+          "ar": "كان الكرونومتر والسجل مسجَّلين ومقيَّمين قبل الهجوم. الخسارة حقيقية ولا تمثيل فيها.",
+          "kk": "Хронометр мен тізілім шабуылға дейін тіркеліп, бағаланған. Шығын шынайы, қойылым жоқ."
+        },
+        "evidenceIds": ["ev-inventory"]
+      }
+    ],
+    "veraLine": {
+      "ru": "Резолюция доказывает участие в процессе, а не руководство им. Пока Карелин может быть и организатором, и проверяющим.",
+      "en": "The endorsement proves involvement in the process, not command of it. For now Karelin may be either the organiser or the auditor.",
+      "tr": "Bu şerh, sürece dahil olduğunu kanıtlar; onu yönettiğini değil. Şimdilik Karelin hem düzenleyici hem de denetçi olabilir.",
+      "ar": "التأشيرة تُثبت مشاركة في العملية لا قيادةً لها. حتى الآن قد يكون كاريلين المنظِّم أو المدقِّق.",
+      "kk": "Бұрыштама үдеріске қатысқанын дәлелдейді, оны басқарғанын емес. Әзірге Карелин ұйымдастырушы да, тексеруші де болуы мүмкін."
+    },
+    "arcRevealFromSeasonClue": true
+  }
+}

@@ -525,5 +525,112 @@
       "progressTotal": 6
     },
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "gennady_orlov",
+      "displayName": {
+        "ru": "Геннадий Орлов",
+        "en": "Gennady Orlov",
+        "tr": "Gennadi Orlov",
+        "ar": "غينادي أورلوف",
+        "kk": "Геннадий Орлов"
+      },
+      "portraitState": "relieved_guilt"
+    },
+    "finalLine": {
+      "ru": "Я трижды проверил защиту. Спасибо, что проверили её в четвёртый.",
+      "en": "I checked the guard three times. Thank you for checking it a fourth.",
+      "tr": "Koruyucuyu üç kez kontrol ettim. Dördüncü kez siz kontrol ettiğiniz için teşekkürler.",
+      "ar": "فحصت واقي الأمان ثلاث مرات. شكرًا لأنكم فحصتموه مرة رابعة.",
+      "kk": "Қорғанысты үш рет тексердім. Төртінші рет сіздер тексергеніңізге рақмет."
+    },
+    "emotionalMode": "grave",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Через 17 минут после аварии зафиксированы свежие переломы двух пястных костей и травма от сдавления.",
+          "en": "Seventeen minutes after the accident, fresh fractures of two metacarpal bones and a crush injury were recorded.",
+          "tr": "Kazadan on yedi dakika sonra iki metakarp kemiğinde taze kırık ve ezilme yaralanması kaydedildi.",
+          "ar": "بعد سبع عشرة دقيقة من الحادث سُجّلت كسور حديثة في عظمتين مشطيتين وإصابة سحق.",
+          "kk": "Оқиғадан он жеті минут өткенде екі алақан сүйегінің жаңа сынығы мен қысылу жарақаты тіркелген."
+        },
+        "evidenceIds": [
+          "ev-medical",
+          "ev-photo"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "PLC записал ложное срабатывание датчика педали без команды оператора; защитное реле цепь не разомкнуло.",
+          "en": "The PLC logged a false pedal-sensor trigger with no operator command; the safety relay failed to break the circuit.",
+          "tr": "PLC, operatör komutu olmadan hatalı bir pedal sensörü tetiklemesi kaydetti; emniyet rölesi devreyi kesmedi.",
+          "ar": "سجّل الـPLC تفعيلًا خاطئًا لمستشعر الدوّاسة دون أمر من المشغّل؛ ولم يقطع مُرحّل الأمان الدائرة.",
+          "kk": "PLC оператор командасынсыз педаль датчигінің жалған іске қосылуын жазған; қорғаныш релесі тізбекті ажыратпаған."
+        },
+        "evidenceIds": [
+          "ev-machine",
+          "ev-witness"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Шаг перфорации и рисунок волокон на пломбе реле не совпадают с заводскими. Оператор процедуру не нарушал — вина лежит на детали, а не на нём.",
+          "en": "The perforation pitch and fibre pattern on the relay seal do not match the factory sample. The operator broke no procedure — the fault lies with the part, not with him.",
+          "tr": "Röle mühründeki delik aralığı ve lif deseni fabrika örneğiyle uyuşmuyor. Operatör hiçbir prosedürü ihlal etmedi — kusur onda değil, parçada.",
+          "ar": "خطوة التثقيب ونمط الألياف على ختم المُرحّل لا يطابقان عيّنة المصنع. لم يخالف المشغّل أي إجراء — العيب في القطعة لا فيه.",
+          "kk": "Реле пломбасындағы тесік қадамы мен талшық өрнегі зауыттық үлгіге сай емес. Оператор рәсімді бұзған жоқ — кінә бөлшекте, онда емес."
+        },
+        "evidenceIds": [
+          "ev-relay",
+          "ev-safety"
+        ]
+      }
+    ],
+    "veraLine": {
+      "ru": "Происхождение детали не решает страховой вопрос. Выплата одобрена потому, что оператор не нарушил процедуру.",
+      "en": "Where the part came from does not settle the insurance question. The payout stands because the operator followed procedure.",
+      "tr": "Parçanın nereden geldiği sigorta sorusunu çözmez. Ödeme, operatör prosedüre uyduğu için geçerlidir.",
+      "ar": "مصدر القطعة لا يحسم مسألة التأمين. التعويض قائم لأن المشغّل التزم بالإجراء.",
+      "kk": "Бөлшектің шыққан жері сақтандыру мәселесін шешпейді. Төлем расталды, себебі оператор рәсімді бұзған жоқ."
+    },
+    "arcReveal": {
+      "title": {
+        "ru": "Поддельное реле GC-17",
+        "en": "Counterfeit GC-17 Relay",
+        "tr": "Sahte GC-17 Rölesi",
+        "ar": "التتابع GC-17 المزيف",
+        "kk": "Жалған реле GC-17"
+      },
+      "text": {
+        "ru": "Сеть перепродаёт опасные контрафактные детали, создавая реальные аварии.",
+        "en": "The network resells dangerous counterfeit parts, causing real accidents.",
+        "tr": "Ağ, tehlikeli sahte parçalar satarak gerçek kazalara neden oluyor.",
+        "ar": "تقوم الشبكة بإعادة بيع الأجزاء المقلدة الخطيرة، مما يتسبب في وقوع حوادث حقيقية.",
+        "kk": "Желі қауіпті жалған бөлшектерді қайта сатады, бұл нақты апаттарды тудырады."
+      }
+    }
   }
 }

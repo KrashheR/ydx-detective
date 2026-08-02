@@ -1,0 +1,585 @@
+{
+  "id": "night-train-01",
+  "type": "archive",
+  "difficulty": "easy",
+  "claimAmount": 400000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Чемодан, который вышел раньше",
+    "en": "The Suitcase That Left Early",
+    "tr": "Erken İnen Bavul",
+    "ar": "الحقيبة التي غادرت مبكرًا",
+    "kk": "Ертерек шыққан чемодан"
+  },
+  "claim": {
+    "person": {
+      "ru": "Ирина Марковна Левицкая, 58 лет",
+      "en": "Irina Markovna Levitskaya, age 58",
+      "tr": "Irina Markovna Levitskaya, 58 yaşında",
+      "ar": "إيرينا ماركوفنا ليفيتسكايا، 58 عامًا",
+      "kk": "Ирина Марковна Левицкая, 58 жаста"
+    },
+    "story": {
+      "ru": "Я поставила чемодан под нижнюю полку в 21:10 и заперла купе. До 22:00 дверь не открывала, чемодан никому не передавала. В нём были настоящие украшения стоимостью четыреста тысяч рублей.",
+      "en": "I put the suitcase under the lower berth at 21:10 and locked the compartment. I did not open the door until 22:00 and handed the suitcase to nobody. It held genuine jewellery worth four hundred thousand roubles.",
+      "tr": "Bavulu saat 21:10’da alt ranzanın altına koydum ve kompartımanı kilitledim. 22:00’ye kadar kapıyı açmadım ve bavulu kimseye vermedim. İçinde dört yüz bin ruble değerinde gerçek mücevher vardı.",
+      "ar": "وضعت الحقيبة تحت السرير السفلي في الساعة 21:10 وأقفلت المقصورة. لم أفتح الباب حتى 22:00 ولم أسلّم الحقيبة لأحد. كانت تحتوي مجوهرات حقيقية بقيمة أربعمائة ألف روبل.",
+      "kk": "Чемоданды 21:10-да төменгі сөренің астына қойып, купені құлыптадым. 22:00-ге дейін есікті ашпадым, чемоданды ешкімге бермедім. Ішінде төрт жүз мың рубльдік нағыз әшекейлер болды."
+    }
+  },
+  "coverImage": "covers/packs/night-train-01.svg",
+  "personImage": "people/packs/night-train/irina_levitskaya.webp",
+  "client": {
+    "role": {
+      "ru": "Заявитель · пассажир поезда №13",
+      "en": "Claimant · passenger of train No. 13",
+      "tr": "Talep sahibi · 13 No.lu trenin yolcusu",
+      "ar": "مقدم الطلب · راكب في القطار رقم 13",
+      "kk": "Өтініш беруші · №13 пойыз жолаушысы"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Вагон",
+          "en": "Car",
+          "tr": "Vagon",
+          "ar": "العربة",
+          "kk": "Вагон"
+        },
+        "v": {
+          "ru": "№5",
+          "en": "No. 5",
+          "tr": "No. 5",
+          "ar": "رقم 5",
+          "kk": "№5"
+        }
+      },
+      {
+        "k": {
+          "ru": "Рейс",
+          "en": "Service",
+          "tr": "Sefer",
+          "ar": "الرحلة",
+          "kk": "Рейс"
+        },
+        "v": {
+          "ru": "Поезд №13, ночной",
+          "en": "Train No. 13, night service",
+          "tr": "13 No.lu tren, gece seferi",
+          "ar": "القطار رقم 13، الرحلة الليلية",
+          "kk": "№13 пойыз, түнгі рейс"
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "TR01-E1",
+      "order": 1,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера вокзального перрона",
+        "en": "Station Platform Camera",
+        "tr": "Peron Kamerası",
+        "ar": "كاميرا رصيف المحطة",
+        "kk": "Вокзал перронының камерасы"
+      },
+      "content": {
+        "ru": "21:18 — заявительница сама выносит чемодан из вагона №5 и передаёт его помощнику организатора концерта, чтобы тот погрузил вещи в соседний вагон. Помощник уходит с чемоданом вдоль состава.",
+        "en": "21:18 — the claimant carries the suitcase out of car No. 5 herself and hands it to the concert organiser's assistant to load into the neighbouring car. The assistant walks off along the train with it.",
+        "tr": "21:18 — talep sahibi bavulu 5 No.lu vagondan kendisi çıkarıyor ve yandaki vagona yüklemesi için konser organizatörünün asistanına veriyor. Asistan bavulla trenin boyunca uzaklaşıyor.",
+        "ar": "21:18 — تخرج مقدمة الطلب الحقيبة من العربة رقم 5 بنفسها وتسلّمها لمساعد منظّم الحفل ليضعها في العربة المجاورة، فيبتعد المساعد بها بمحاذاة القطار.",
+        "kk": "21:18 — өтініш беруші чемоданды №5 вагоннан өзі алып шығып, көрші вагонға жүктеу үшін концерт ұйымдастырушысының көмекшісіне береді. Көмекші чемоданмен пойыз бойымен кетеді."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Чемодан покинул купе до отправления и был добровольно передан другому человеку — запертое купе и отсутствие передачи не соответствуют записи.",
+        "en": "The suitcase left the compartment before departure and was handed over voluntarily — the locked compartment and the denial of any handover do not match the recording.",
+        "tr": "Bavul kalkıştan önce kompartımanı terk etti ve gönüllü olarak devredildi; kilitli kompartıman ve devir olmadığı iddiası kayıtla örtüşmüyor.",
+        "ar": "غادرت الحقيبة المقصورة قبل الانطلاق وسُلّمت طوعًا، فادعاء المقصورة المقفلة وعدم التسليم لا يطابق التسجيل.",
+        "kk": "Чемодан жүріп кетер алдында купеден шыққан және ерікті түрде берілген — құлыптаулы купе мен беру болмағаны жазбаға сай емес."
+      },
+      "statementLink": {
+        "statementId": "claim_locked",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Чемодан покинул купе до отправления и был добровольно передан другому человеку — запертое купе и отсутствие передачи не соответствуют записи.",
+          "en": "The suitcase left the compartment before departure and was handed over voluntarily — the locked compartment and the denial of any handover do not match the recording.",
+          "tr": "Bavul kalkıştan önce kompartımanı terk etti ve gönüllü olarak devredildi; kilitli kompartıman ve devir olmadığı iddiası kayıtla örtüşmüyor.",
+          "ar": "غادرت الحقيبة المقصورة قبل الانطلاق وسُلّمت طوعًا، فادعاء المقصورة المقفلة وعدم التسليم لا يطابق التسجيل.",
+          "kk": "Чемодан жүріп кетер алдында купеден шыққан және ерікті түрде берілген — құлыптаулы купе мен беру болмағаны жазбаға сай емес."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_locked",
+        "reason": {
+          "ru": "Чемодан покинул купе до отправления и был добровольно передан другому человеку — запертое купе и отсутствие передачи не соответствуют записи.",
+          "en": "The suitcase left the compartment before departure and was handed over voluntarily — the locked compartment and the denial of any handover do not match the recording.",
+          "tr": "Bavul kalkıştan önce kompartımanı terk etti ve gönüllü olarak devredildi; kilitli kompartıman ve devir olmadığı iddiası kayıtla örtüşmüyor.",
+          "ar": "غادرت الحقيبة المقصورة قبل الانطلاق وسُلّمت طوعًا، فادعاء المقصورة المقفلة وعدم التسليم لا يطابق التسجيل.",
+          "kk": "Чемодан жүріп кетер алдында купеден шыққан және ерікті түрде берілген — құлыптаулы купе мен беру болмағаны жазбаға сай емес."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr01-e1.webp",
+        "cameraId": "PLATFORM-3",
+        "cameraModel": "StationEye 2"
+      }
+    },
+    {
+      "id": "TR01-E2",
+      "order": 2,
+      "type": "document_scan",
+      "title": {
+        "ru": "Страховая опись и чеки",
+        "en": "Insurance Inventory and Receipts",
+        "tr": "Sigorta Envanteri ve Fişler",
+        "ar": "قائمة التأمين والإيصالات",
+        "kk": "Сақтандыру тізімдемесі мен түбіртектер"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Под наклейкой читается «бижутерия, сценический реквизит»: комплект куплен за 8 700 ₽ в магазине театрального реквизита.",
+        "en": "Under the sticker it reads \"costume jewellery, stage props\": the set was bought for 8,700 ₽ at a theatrical props shop.",
+        "tr": "Etiketin altında «takı taklidi, sahne aksesuarı» yazıyor: set, tiyatro aksesuar mağazasından 8.700 ₽’ye alınmış.",
+        "ar": "تحت الملصق مكتوب «مجوهرات تقليدية، إكسسوارات مسرحية»: اشتُري الطقم بـ8700 ₽ من متجر إكسسوارات مسرحية.",
+        "kk": "Жапсырманың астында «бижутерия, сахналық реквизит» деп жазылған: жиынтық театр реквизиті дүкенінен 8 700 ₽-ге сатып алынған."
+      },
+      "statementLink": {
+        "statementId": "claim_value",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Под наклейкой читается «бижутерия, сценический реквизит»: комплект куплен за 8 700 ₽ в магазине театрального реквизита.",
+          "en": "Under the sticker it reads \"costume jewellery, stage props\": the set was bought for 8,700 ₽ at a theatrical props shop.",
+          "tr": "Etiketin altında «takı taklidi, sahne aksesuarı» yazıyor: set, tiyatro aksesuar mağazasından 8.700 ₽’ye alınmış.",
+          "ar": "تحت الملصق مكتوب «مجوهرات تقليدية، إكسسوارات مسرحية»: اشتُري الطقم بـ8700 ₽ من متجر إكسسوارات مسرحية.",
+          "kk": "Жапсырманың астында «бижутерия, сахналық реквизит» деп жазылған: жиынтық театр реквизиті дүкенінен 8 700 ₽-ге сатып алынған."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_value",
+        "reason": {
+          "ru": "Под наклейкой читается «бижутерия, сценический реквизит»: комплект куплен за 8 700 ₽ в магазине театрального реквизита.",
+          "en": "Under the sticker it reads \"costume jewellery, stage props\": the set was bought for 8,700 ₽ at a theatrical props shop.",
+          "tr": "Etiketin altında «takı taklidi, sahne aksesuarı» yazıyor: set, tiyatro aksesuar mağazasından 8.700 ₽’ye alınmış.",
+          "ar": "تحت الملصق مكتوب «مجوهرات تقليدية، إكسسوارات مسرحية»: اشتُري الطقم بـ8700 ₽ من متجر إكسسوارات مسرحية.",
+          "kk": "Жапсырманың астында «бижутерия, сахналық реквизит» деп жазылған: жиынтық театр реквизиті дүкенінен 8 700 ₽-ге сатып алынған."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "К описи подшит чек магазина. Одна строка заклеена свежей наклейкой поверх старой печатной надписи.",
+        "en": "A shop receipt is filed with the inventory. One line is covered by a fresh sticker over the original printed text.",
+        "tr": "Envantere bir mağaza fişi eklenmiş. Bir satır, orijinal baskı yazının üzerine yapıştırılmış yeni bir etiketle kapatılmış.",
+        "ar": "أُرفق بالقائمة إيصال متجر، وأحد السطور مغطى بملصق جديد فوق النص المطبوع الأصلي.",
+        "kk": "Тізімдемеге дүкен түбіртегі тіркелген. Бір жол баспа жазуының үстінен жаңа жапсырмамен жабылған."
+      },
+      "instruction": {
+        "ru": "Просветите чек и сверьте скрытую строку с суммой в описи.",
+        "en": "Back-light the receipt and compare the hidden line with the sum in the inventory.",
+        "tr": "Fişi arkadan aydınlatın ve gizli satırı envanterdeki tutarla karşılaştırın.",
+        "ar": "أضئ الإيصال من الخلف وقارن السطر المخفي بالمبلغ في القائمة.",
+        "kk": "Түбіртекті жарықпен көріп, жасырын жолды тізімдемедегі сомамен салыстырыңыз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/night-train/tr01-e2.webp"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Под наклейкой видно исходное описание товара: игрок сам устанавливает настоящую природу «украшений».",
+          "en": "The original product description shows through the sticker: the player establishes the true nature of the \"jewellery\" themselves.",
+          "tr": "Etiketin altından ürünün asıl tanımı görünüyor: oyuncu «mücevherlerin» gerçek niteliğini kendisi belirler.",
+          "ar": "يظهر تحت الملصق الوصف الأصلي للبضاعة: يحدد اللاعب بنفسه الطبيعة الحقيقية «للمجوهرات».",
+          "kk": "Жапсырманың астынан тауардың бастапқы сипаттамасы көрінеді: ойыншы «әшекейлердің» шын мәнін өзі анықтайды."
+        },
+        "playerAction": {
+          "ru": "Просветите чек и сверьте скрытую строку с суммой в описи.",
+          "en": "Back-light the receipt and compare the hidden line with the sum in the inventory.",
+          "tr": "Fişi arkadan aydınlatın ve gizli satırı envanterdeki tutarla karşılaştırın.",
+          "ar": "أضئ الإيصال من الخلف وقارن السطر المخفي بالمبلغ في القائمة.",
+          "kk": "Түбіртекті жарықпен көріп, жасырын жолды тізімдемедегі сомамен салыстырыңыз."
+        },
+        "conclusion": {
+          "ru": "Под наклейкой читается «бижутерия, сценический реквизит»: комплект куплен за 8 700 ₽ в магазине театрального реквизита.",
+          "en": "Under the sticker it reads \"costume jewellery, stage props\": the set was bought for 8,700 ₽ at a theatrical props shop.",
+          "tr": "Etiketin altında «takı taklidi, sahne aksesuarı» yazıyor: set, tiyatro aksesuar mağazasından 8.700 ₽’ye alınmış.",
+          "ar": "تحت الملصق مكتوب «مجوهرات تقليدية، إكسسوارات مسرحية»: اشتُري الطقم بـ8700 ₽ من متجر إكسسوارات مسرحية.",
+          "kk": "Жапсырманың астында «бижутерия, сахналық реквизит» деп жазылған: жиынтық театр реквизиті дүкенінен 8 700 ₽-ге сатып алынған."
+        }
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "backlight",
+          "uv"
+        ],
+        "anomalyZones": [
+          {
+            "id": "covered-line",
+            "mode": "backlight",
+            "x": 30,
+            "y": 44,
+            "width": 34,
+            "height": 12,
+            "label": "Строка под наклейкой: бижутерия, 8 700 ₽",
+            "labelEn": "Line under the sticker: costume jewellery, 8,700 ₽",
+            "isContradiction": true
+          },
+          {
+            "id": "shop-logo",
+            "mode": "uv",
+            "x": 18,
+            "y": 18,
+            "width": 22,
+            "height": 14,
+            "label": "Логотип магазина реквизита",
+            "labelEn": "Props shop logo",
+            "isContradiction": false
+          }
+        ],
+        "referenceFields": [
+          {
+            "id": "declared-value",
+            "label": "Сумма в страховой описи",
+            "labelEn": "Value in the insurance inventory",
+            "value": "400 000 ₽"
+          }
+        ],
+        "successCondition": {
+          "type": "select_then_compare",
+          "zoneId": "covered-line",
+          "referenceFieldId": "declared-value"
+        }
+      }
+    },
+    {
+      "id": "TR01-E3",
+      "order": 3,
+      "type": "photo",
+      "title": {
+        "ru": "Бирка камеры хранения",
+        "en": "Left-Luggage Tag",
+        "tr": "Emanet Etiketi",
+        "ar": "بطاقة مكتب الأمانات",
+        "kk": "Сақтау камерасының биркасы"
+      },
+      "content": {
+        "ru": "На ручке чемодана висит выцветшая двусторонняя бирка. На обороте типографским шрифтом: «Тихая, багажное окно №2».",
+        "en": "A faded double-sided tag hangs from the suitcase handle. On the back, in printed type: \"Tikhaya, luggage window No. 2\".",
+        "tr": "Bavulun sapında solmuş, çift taraflı bir etiket asılı. Arkasında matbaa harfleriyle: «Tihaya, bagaj gişesi No. 2».",
+        "ar": "على مقبض الحقيبة بطاقة باهتة ذات وجهين، وعلى ظهرها بحروف مطبعية: «تيخايا، شباك الأمتعة رقم 2».",
+        "kk": "Чемоданның сабында оңған екіжақты бирка ілініп тұр. Артында баспа қаріппен: «Тихая, №2 багаж терезесі»."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Бирка показывает, что на закрытой платформе когда-то работало багажное окно, но к передаче чемодана и его стоимости отношения не имеет.",
+        "en": "The tag shows the closed platform once had a luggage window, yet it bears on neither the handover nor the declared value.",
+        "tr": "Etiket, kapalı peronda bir zamanlar bagaj gişesi bulunduğunu gösteriyor ama ne devirle ne de beyan edilen değerle ilgili.",
+        "ar": "تُظهر البطاقة أن الرصيف المغلق كان فيه شباك أمتعة، لكنها لا تمس التسليم ولا القيمة المعلنة.",
+        "kk": "Бирка жабық платформада бір кезде багаж терезесі болғанын көрсетеді, бірақ чемоданды беру мен құнына қатысы жоқ."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Бирка показывает, что на закрытой платформе когда-то работало багажное окно, но к передаче чемодана и его стоимости отношения не имеет.",
+          "en": "The tag shows the closed platform once had a luggage window, yet it bears on neither the handover nor the declared value.",
+          "tr": "Etiket, kapalı peronda bir zamanlar bagaj gişesi bulunduğunu gösteriyor ama ne devirle ne de beyan edilen değerle ilgili.",
+          "ar": "تُظهر البطاقة أن الرصيف المغلق كان فيه شباك أمتعة، لكنها لا تمس التسليم ولا القيمة المعلنة.",
+          "kk": "Бирка жабық платформада бір кезде багаж терезесі болғанын көрсетеді, бірақ чемоданды беру мен құнына қатысы жоқ."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr01-e3.webp",
+        "filename": "tr01-e3.webp"
+      }
+    },
+    {
+      "id": "TR01-E4",
+      "order": 4,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания проводницы Тамары",
+        "en": "Statement by Conductor Tamara",
+        "tr": "Kondüktör Tamara’nın İfadesi",
+        "ar": "إفادة المضيفة تمارا",
+        "kk": "Кондуктор Тамараның айғағы"
+      },
+      "content": {
+        "ru": "«Помощник по ошибке оставил чемодан в служебном тамбуре вагона №7. Он там и стоит, целый. А потом пришёл пассажир в сером пальто и всё выспрашивал, не архивный ли это ящик».",
+        "en": "\"The assistant left the suitcase by mistake in the service vestibule of car No. 7. It is still standing there, intact. Then a passenger in a grey coat came and kept asking whether it was the archive crate.\"",
+        "tr": "«Asistan bavulu yanlışlıkla 7 No.lu vagonun servis sahanlığında bıraktı. Hâlâ orada, sapasağlam duruyor. Sonra gri paltolu bir yolcu gelip bunun arşiv sandığı olup olmadığını sorup durdu.»",
+        "ar": "«ترك المساعد الحقيبة خطأً في دهليز الخدمة بالعربة رقم 7، وما زالت هناك سليمة. ثم جاء راكب بمعطف رمادي وظل يسأل إن كانت صندوق الأرشيف.»",
+        "kk": "«Көмекші чемоданды қателесіп №7 вагонның қызметтік тамбурында қалдырған. Ол сонда бүтін тұр. Сосын сұр пальтолы жолаушы келіп, бұл архив жәшігі емес пе деп сұрай берді»."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Показания находят чемодан целым и вводят интерес пассажира к вагону №7, но передачу фиксирует камера перрона.",
+        "en": "The statement locates the suitcase intact and introduces a passenger's interest in car No. 7, while the platform camera records the handover.",
+        "tr": "İfade bavulu sağlam buluyor ve bir yolcunun 7 No.lu vagona ilgisini gösteriyor; devri ise peron kamerası kaydediyor.",
+        "ar": "تحدد الإفادة مكان الحقيبة سليمة وتكشف اهتمام راكب بالعربة رقم 7، أما التسليم فتوثقه كاميرا الرصيف.",
+        "kk": "Айғақ чемоданды бүтін күйде табады және жолаушының №7 вагонға қызығушылығын енгізеді, ал беруді перрон камерасы тіркейді."
+      },
+      "statementLink": {
+        "statementId": "claim_locked",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Показания находят чемодан целым и вводят интерес пассажира к вагону №7, но передачу фиксирует камера перрона.",
+          "en": "The statement locates the suitcase intact and introduces a passenger's interest in car No. 7, while the platform camera records the handover.",
+          "tr": "İfade bavulu sağlam buluyor ve bir yolcunun 7 No.lu vagona ilgisini gösteriyor; devri ise peron kamerası kaydediyor.",
+          "ar": "تحدد الإفادة مكان الحقيبة سليمة وتكشف اهتمام راكب بالعربة رقم 7، أما التسليم فتوثقه كاميرا الرصيف.",
+          "kk": "Айғақ чемоданды бүтін күйде табады және жолаушының №7 вагонға қызығушылығын енгізеді, ал беруді перрон камерасы тіркейді."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr01-e4.webp"
+      }
+    },
+    {
+      "id": "TR01-E5",
+      "order": 5,
+      "type": "surface_reveal",
+      "title": {
+        "ru": "Осмотр пола купе",
+        "en": "Examining the Compartment Floor",
+        "tr": "Kompartıman Zemininin İncelenmesi",
+        "ar": "فحص أرضية المقصورة",
+        "kk": "Купе еденін тексеру"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Слой пыли под полкой не нарушен: после отправления чемодан здесь не стоял.",
+        "en": "The dust layer under the berth is undisturbed: the suitcase did not stand here after departure.",
+        "tr": "Ranzanın altındaki toz tabakası bozulmamış: bavul kalkıştan sonra burada durmamış.",
+        "ar": "طبقة الغبار تحت السرير سليمة: لم تكن الحقيبة هنا بعد الانطلاق.",
+        "kk": "Сөре астындағы шаң қабаты бұзылмаған: жүріп кеткеннен кейін чемодан мұнда тұрмаған."
+      },
+      "statementLink": {
+        "statementId": "claim_locked",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Слой пыли под полкой не нарушен: после отправления чемодан здесь не стоял.",
+          "en": "The dust layer under the berth is undisturbed: the suitcase did not stand here after departure.",
+          "tr": "Ranzanın altındaki toz tabakası bozulmamış: bavul kalkıştan sonra burada durmamış.",
+          "ar": "طبقة الغبار تحت السرير سليمة: لم تكن الحقيبة هنا بعد الانطلاق.",
+          "kk": "Сөре астындағы шаң қабаты бұзылмаған: жүріп кеткеннен кейін чемодан мұнда тұрмаған."
+        }
+      },
+      "evidenceTier": "supporting",
+      "description": {
+        "ru": "Пол под нижней полкой не мыли с последнего рейса: на нём ровный слой дорожной пыли.",
+        "en": "The floor under the lower berth has not been washed since the previous service: it carries an even layer of travel dust.",
+        "tr": "Alt ranzanın altındaki zemin önceki seferden beri yıkanmamış: üzerinde eşit bir yol tozu tabakası var.",
+        "ar": "لم تُغسل الأرضية تحت السرير السفلي منذ الرحلة السابقة: عليها طبقة متساوية من غبار الطريق.",
+        "kk": "Төменгі сөренің астындағы еден өткен рейстен бері жуылмаған: үстінде біркелкі жол шаңы бар."
+      },
+      "instruction": {
+        "ru": "Снимите пыль и проверьте, стоял ли здесь чемодан после отправления.",
+        "en": "Clear the dust and check whether a suitcase stood here after departure.",
+        "tr": "Tozu temizleyin ve kalkıştan sonra burada bavul durup durmadığını kontrol edin.",
+        "ar": "أزل الغبار وتحقق مما إذا كانت حقيبة قد وُضعت هنا بعد الانطلاق.",
+        "kk": "Шаңды сүртіп, жүріп кеткеннен кейін мұнда чемодан тұрғанын тексеріңіз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/night-train/tr01-e5.webp",
+        "coverTexture": "shared/surface/dirt.svg",
+        "revealMasks": [
+          "shared/surface/trace-mask.svg"
+        ],
+        "toolCursor": "shared/surface/cloth-cursor.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": false,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Нетронутая пыль — простой физический тест: игрок сам убеждается, что вещь не находилась в купе.",
+          "en": "Undisturbed dust is a simple physical test: the player confirms for themselves that the item was never in the compartment.",
+          "tr": "Bozulmamış toz basit bir fiziksel testtir: oyuncu eşyanın kompartımanda hiç bulunmadığını kendisi doğrular.",
+          "ar": "الغبار غير المضطرب اختبار فيزيائي بسيط: يتأكد اللاعب بنفسه أن الشيء لم يكن في المقصورة.",
+          "kk": "Қозғалмаған шаң — қарапайым физикалық тест: ойыншы заттың купеде болмағанына өзі көз жеткізеді."
+        },
+        "playerAction": {
+          "ru": "Снимите пыль и проверьте, стоял ли здесь чемодан после отправления.",
+          "en": "Clear the dust and check whether a suitcase stood here after departure.",
+          "tr": "Tozu temizleyin ve kalkıştan sonra burada bavul durup durmadığını kontrol edin.",
+          "ar": "أزل الغبار وتحقق مما إذا كانت حقيبة قد وُضعت هنا بعد الانطلاق.",
+          "kk": "Шаңды сүртіп, жүріп кеткеннен кейін мұнда чемодан тұрғанын тексеріңіз."
+        },
+        "conclusion": {
+          "ru": "Слой пыли под полкой не нарушен: после отправления чемодан здесь не стоял.",
+          "en": "The dust layer under the berth is undisturbed: the suitcase did not stand here after departure.",
+          "tr": "Ranzanın altındaki toz tabakası bozulmamış: bavul kalkıştan sonra burada durmamış.",
+          "ar": "طبقة الغبار تحت السرير سليمة: لم تكن الحقيبة هنا بعد الانطلاق.",
+          "kk": "Сөре астындағы шаң қабаты бұзылмаған: жүріп кеткеннен кейін чемодан мұнда тұрмаған."
+        }
+      },
+      "data": {
+        "mode": "erase",
+        "coverType": "dust",
+        "brush": {
+          "radius": 42,
+          "hardness": 0.6,
+          "opacity": 0.84,
+          "spacing": 8
+        },
+        "completion": {
+          "type": "discover_any",
+          "requiredTraceIds": [
+            "untouched-dust"
+          ]
+        },
+        "traces": [
+          {
+            "id": "untouched-dust",
+            "label": "Нетронутый слой пыли под полкой",
+            "labelEn": "Undisturbed dust layer under the berth",
+            "requiredRevealPercent": 52,
+            "mask": "shared/surface/trace-mask.svg",
+            "shape": "mask",
+            "isContradiction": false,
+            "conclusion": "Слой пыли под полкой не нарушен: после отправления чемодан здесь не стоял.",
+            "conclusionEn": "The dust layer under the berth is undisturbed: the suitcase did not stand here after departure."
+          }
+        ]
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Камера перрона показывает добровольную передачу чемодана до отправления.",
+      "Под наклейкой в чеке — бижутерия за 8 700 ₽, а не украшения за 400 000 ₽.",
+      "Пыль под полкой не нарушена, а сам чемодан цел и стоит в служебном тамбуре вагона №7."
+    ],
+    "en": [
+      "The platform camera shows the suitcase handed over voluntarily before departure.",
+      "Under the sticker the receipt reads costume jewellery for 8,700 ₽, not 400,000 ₽ of real pieces.",
+      "The dust under the berth is undisturbed and the suitcase itself stands intact in the service vestibule of car No. 7."
+    ],
+    "tr": [
+      "Peron kamerası, bavulun kalkıştan önce gönüllü olarak devredildiğini gösteriyor.",
+      "Fişte etiketin altında 8.700 ₽’lik takı taklidi yazıyor, 400.000 ₽’lik gerçek mücevher değil.",
+      "Ranzanın altındaki toz bozulmamış ve bavul, 7 No.lu vagonun servis sahanlığında sapasağlam duruyor."
+    ],
+    "ar": [
+      "تُظهر كاميرا الرصيف تسليم الحقيبة طوعًا قبل الانطلاق.",
+      "تحت الملصق يذكر الإيصال مجوهرات تقليدية بـ8700 ₽ لا قطعًا حقيقية بـ400000 ₽.",
+      "الغبار تحت السرير سليم والحقيبة نفسها موجودة كاملة في دهليز خدمة العربة رقم 7."
+    ],
+    "kk": [
+      "Перрон камерасы чемоданның жүріп кетер алдында ерікті түрде берілгенін көрсетеді.",
+      "Түбіртектегі жапсырманың астында 8 700 ₽-лік бижутерия жазылған, 400 000 ₽-лік әшекей емес.",
+      "Сөре астындағы шаң бұзылмаған, ал чемоданның өзі №7 вагонның қызметтік тамбурында бүтін тұр."
+    ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "stampable": false,
+      "text": {
+        "ru": "Чемодан похищен из запертого купе, ущерб подлежит возмещению.",
+        "en": "The suitcase was stolen from a locked compartment and the loss is reimbursable.",
+        "tr": "Bavul kilitli kompartımandan çalındı ve kayıp tazmin edilmelidir.",
+        "ar": "سُرقت الحقيبة من مقصورة مقفلة والخسارة قابلة للتعويض.",
+        "kk": "Чемодан құлыптаулы купеден ұрланды, залал өтелуге тиіс."
+      }
+    },
+    {
+      "id": "claim_locked",
+      "stampable": true,
+      "text": {
+        "ru": "Купе было заперто, и чемодан я никому не передавала.",
+        "en": "The compartment was locked and I handed the suitcase to nobody.",
+        "tr": "Kompartıman kilitliydi ve bavulu kimseye vermedim.",
+        "ar": "كانت المقصورة مقفلة ولم أسلّم الحقيبة لأحد.",
+        "kk": "Купе құлыптаулы болды және чемоданды ешкімге бермедім."
+      }
+    },
+    {
+      "id": "claim_value",
+      "stampable": true,
+      "text": {
+        "ru": "В чемодане были настоящие украшения стоимостью 400 000 ₽.",
+        "en": "The suitcase held genuine jewellery worth 400,000 ₽.",
+        "tr": "Bavulda 400.000 ₽ değerinde gerçek mücevher vardı.",
+        "ar": "كانت الحقيبة تحوي مجوهرات حقيقية بقيمة 400000 ₽.",
+        "kk": "Чемоданда 400 000 ₽ тұратын нағыз әшекейлер болды."
+      }
+    }
+  ],
+  "contentVersion": "night-train-1.0",
+  "narrative": {
+    "preBrief": {
+      "ru": "Последний ночной рейс по старой ветке. Первое заявление приходит раньше первой остановки.",
+      "en": "The last night service on the old line. The first claim arrives before the first stop.",
+      "tr": "Eski hattaki son gece seferi. İlk talep, ilk duraktan önce geliyor.",
+      "ar": "آخر رحلة ليلية على الخط القديم. تصل أول مطالبة قبل أول محطة.",
+      "kk": "Ескі желідегі соңғы түнгі рейс. Алғашқы өтініш алғашқы аялдамадан бұрын келеді."
+    },
+    "postVerdictNote": {
+      "ru": "Чемодан не пропал. Он впервые за вечер точно знал, куда едет.",
+      "en": "The suitcase never went missing. For the first time that evening it knew exactly where it was going.",
+      "tr": "Bavul kaybolmadı. O akşam ilk kez nereye gittiğini tam olarak biliyordu.",
+      "ar": "لم تُفقد الحقيبة. بل عرفت لأول مرة تلك الليلة إلى أين تتجه بالضبط.",
+      "kk": "Чемодан жоғалған жоқ. Ол сол кеште алғаш рет қайда бара жатқанын нақты білді."
+    },
+    "nextCaseTeaser": {
+      "ru": "В соседнем купе разбились редкие часы — и у них слишком интересный номер.",
+      "en": "In the next compartment a rare watch has broken — and its serial number is far too interesting.",
+      "tr": "Yandaki kompartımanda nadir bir saat kırıldı ve seri numarası fazlasıyla ilginç.",
+      "ar": "في المقصورة المجاورة تحطمت ساعة نادرة، ورقمها التسلسلي مثير للاهتمام أكثر مما ينبغي.",
+      "kk": "Көрші купеде сирек сағат сынды — әрі оның нөмірі тым қызық."
+    },
+    "seasonClue": {
+      "id": "tikhaya-tag",
+      "progressIndex": 1,
+      "progressTotal": 10,
+      "label": {
+        "ru": "Багажная бирка «Тихая»",
+        "en": "The \"Tikhaya\" Luggage Tag",
+        "tr": "«Tihaya» Bagaj Etiketi",
+        "ar": "بطاقة أمتعة «تيخايا»",
+        "kk": "«Тихая» багаж биркасы"
+      },
+      "description": {
+        "ru": "На закрытой с 1996 года платформе когда-то работало багажное окно. Сегодня кто-то снова интересуется этим направлением.",
+        "en": "The platform, closed since 1996, once had a working luggage window. Tonight someone is interested in that direction again.",
+        "tr": "1996’dan beri kapalı olan peronda bir zamanlar bagaj gişesi çalışıyordu. Bu gece biri o yönle yeniden ilgileniyor.",
+        "ar": "الرصيف المغلق منذ 1996 كان فيه شباك أمتعة عامل. والليلة يهتم أحدهم بذلك الاتجاه من جديد.",
+        "kk": "1996 жылдан бері жабық платформада бір кезде багаж терезесі жұмыс істеген. Бүгін біреу сол бағытқа қайта қызығып жүр."
+      }
+    },
+    "epilogue": null
+  }
+}

@@ -517,5 +517,88 @@
     },
     "seasonClue": null,
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "nika_rein",
+      "displayName": {
+        "ru": "Ника Рейн",
+        "en": "Nika Rein",
+        "tr": "Nika Rein",
+        "ar": "نيكا راين",
+        "kk": "Ника Рейн"
+      },
+      "portraitState": "afraid"
+    },
+    "finalLine": {
+      "ru": "Старая травма уже отняла отбор. Я не хотела, чтобы она забрала всё.",
+      "en": "The old injury already took the trials from me. I did not want it to take everything.",
+      "tr": "Eski sakatlık seçmeleri zaten elimden aldı. Her şeyi de almasını istemedim.",
+      "ar": "الإصابة القديمة سلبتني التصفيات أصلًا. لم أرد أن تسلبني كل شيء.",
+      "kk": "Ескі жарақат іріктеуден-ақ айырды. Бәрін алып кетуін қаламадым."
+    },
+    "emotionalMode": "bittersweet",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Перелом на снимке настоящий — но он старый и не связан с заявленным событием.",
+          "en": "The fracture on the scan is real — but it is old and unconnected to the claimed event.",
+          "tr": "Filmdeki kırık gerçek — ama eski ve iddia edilen olayla ilgisi yok.",
+          "ar": "الكسر في الصورة حقيقي — لكنه قديم ولا صلة له بالحادث المزعوم.",
+          "kk": "Суреттегі сынық шын — бірақ ол ескі әрі мәлімделген оқиғаға қатысы жоқ."
+        },
+        "evidenceIds": [
+          "document-46"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Журнал основной линии не фиксирует отказа: заявительница спускалась по другой системе, а камера нижней площадки показывает безопасный постановочный дубль.",
+          "en": "The main line log records no failure: she descended on a different system, and the lower platform camera shows a safe staged take.",
+          "tr": "Ana hat kaydında arıza yok: başvurucu başka bir sistemle indi ve alt platform kamerası güvenli, sahnelenmiş bir çekim gösteriyor.",
+          "ar": "لا يسجّل دفتر الخط الرئيسي أي عطل: نزلت بنظام آخر، وكاميرا المنصّة السفلية تُظهر لقطة آمنة مُدبَّرة.",
+          "kk": "Негізгі желі журналы ақауды тіркемеген: өтініш беруші басқа жүйемен түскен, ал төменгі алаң камерасы қауіпсіз қойылым дублін көрсетеді."
+        },
+        "evidenceIds": [
+          "log-46",
+          "camera-46"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "На страховочной линии — бытовая лента, покрашенная в серый, а не материал GC-17. Показания ассистента подтверждают постановку.",
+          "en": "The safety line carries consumer tape painted grey, not GC-17 material. The assistant's statement confirms the staging.",
+          "tr": "Emniyet hattında GC-17 malzemesi değil, griye boyanmış sıradan bant var. Yardımcının ifadesi sahnelemeyi doğruluyor.",
+          "ar": "على خط الأمان شريط استهلاكي مطليّ بالرمادي لا مادة GC-17. وإفادة المساعد تؤكّد التمثيل.",
+          "kk": "Сақтандыру желісінде GC-17 материалы емес, сұрға боялған тұрмыстық таспа бар. Ассистент айғағы қойылымды растайды."
+        },
+        "evidenceIds": [
+          "photo-46",
+          "witness-46"
+        ]
+      }
+    ]
   }
 }

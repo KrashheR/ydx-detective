@@ -467,8 +467,8 @@
       "kk": "Gray Convoy өзі бірінші рет жабдықты алып, іздерді жою үшін сақтандыру шығындарын жасады. Желі енді тек алаяқтардың серіктесі емес."
     },
     "nextCaseTeaser": {
-      "ru": "Северный маршрут ведёт в ледяной каньон, где разбился экспериментальный перехватчик с незаявленным грузом.",
-      "en": "The northern route leads to an icy canyon where an experimental interceptor crashed with undeclared cargo.",
+      "ru": "Северный маршрут ведёт в ледяной каньон, где разбился лёгкий грузовой самолёт с незаявленным грузом.",
+      "en": "The northern route leads to an icy canyon where a light cargo aircraft crashed with undeclared cargo.",
       "tr": "Kuzey rotası, deneysel bir önleme aracının beyan edilmemiş kargoyla çarptığı buzlu bir kanyona gidiyor.",
       "ar": "يؤدي الطريق الشمالي إلى وادٍ جليدي حيث تحطمت طائرة اعتراضية تجريبية بحمولة غير معلنة.",
       "kk": "Солтүстік бағыт мұзды каньонға апарады, онда тәжірибелік ұстағыш декларацияланбаған жүкпен апатқа ұшырады."
@@ -493,5 +493,112 @@
       "progressTotal": 6
     },
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "miron_veil",
+      "displayName": {
+        "ru": "Мирон Вейл",
+        "en": "Miron Veil",
+        "tr": "Miron Veil",
+        "ar": "ميرون فيل",
+        "kk": "Мирон Вейл"
+      },
+      "portraitState": "wary_relief"
+    },
+    "finalLine": {
+      "ru": "Я боялся, вы увидите серый грузовик — и решите, что я всё придумал.",
+      "en": "I was afraid you would see the grey truck and decide I had made it all up.",
+      "tr": "Gri kamyonu görüp her şeyi uydurduğuma karar vereceğinizden korktum.",
+      "ar": "خشيت أن تروا الشاحنة الرمادية فتحكموا بأنني اختلقت كل شيء.",
+      "kk": "Сұр жүк көлігін көріп, бәрін ойдан шығардым деп шешесіздер деп қорықтым."
+    },
+    "emotionalMode": "threat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Пожар начался снаружи, а модули полива были закуплены и установлены на складе задолго до него.",
+          "en": "The fire started from outside, and the irrigation modules were bought and installed in the store long before it.",
+          "tr": "Yangın dışarıdan başladı ve sulama modülleri ondan çok önce alınıp depoya kurulmuştu.",
+          "ar": "بدأ الحريق من الخارج، وكانت وحدات الريّ قد اشتُريت ورُكّبت في المخزن قبله بوقت طويل.",
+          "kk": "Өрт сырттан басталған, ал суару модульдері одан әлдеқайда бұрын сатып алынып, қоймаға орнатылған."
+        },
+        "evidenceIds": [
+          "ev-inventory"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Волокна, пропитка и внутренняя сетка фитильной ленты совпадают с промышленным материалом, а ворота открыл клонированный сервисный пропуск — ключи Вейла не использовались.",
+          "en": "The fibres, impregnation and inner mesh of the fuse tape match an industrial material, and the gate was opened with a cloned service pass — Veil's keys were never used.",
+          "tr": "Fitil bandının lifleri, emprenyesi ve iç ağı endüstriyel bir malzemeyle eşleşiyor; kapı da klonlanmış bir servis kartıyla açılmış — Veil'in anahtarları hiç kullanılmamış.",
+          "ar": "ألياف شريط الفتيل وتشريبه وشبكته الداخلية تطابق مادة صناعية، وفُتحت البوابة ببطاقة خدمة مستنسَخة — ولم تُستخدم مفاتيح فيل إطلاقًا.",
+          "kk": "Білте таспасының талшықтары, сіңдірмесі және ішкі торы өнеркәсіптік материалмен сәйкес, ал қақпаны клондалған сервистік рұқсатнама ашқан — Вейлдің кілттері қолданылмаған."
+        },
+        "evidenceIds": [
+          "ev-photo",
+          "ev-access"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Всю ночь Вейл был в 190 км от фермы, а серый грузовик с похищенными блоками ушёл от неё к северному терминалу. Владелец здесь пострадавший.",
+          "en": "Veil spent the whole night 190 km from the farm, while the grey truck carrying the stolen units drove from it to the northern terminal. Here the owner is the victim.",
+          "tr": "Veil bütün geceyi çiftlikten 190 km uzakta geçirdi; çalınan üniteleri taşıyan gri kamyon ise oradan kuzey terminaline gitti. Burada sahibi mağdur.",
+          "ar": "قضى فيل الليل كلّه على بعد 190 كم من المزرعة، بينما اتّجهت الشاحنة الرمادية بالوحدات المسروقة منها إلى المحطة الشمالية. المالك هنا هو الضحية.",
+          "kk": "Вейл түні бойы фермадан 190 км жерде болған, ал ұрланған блоктары бар сұр жүк көлігі одан солтүстік терминалға кеткен. Мұнда иесі — зардап шеккен."
+        },
+        "evidenceIds": [
+          "ev-alibi",
+          "ev-camera",
+          "ev-route"
+        ]
+      }
+    ],
+    "veraLine": {
+      "ru": "Мы четыре акта учились подозревать владельца. Здесь эта привычка была бы ошибкой.",
+      "en": "For four acts we learned to suspect the owner. Here that habit would have been a mistake.",
+      "tr": "Dört perde boyunca sahibinden şüphelenmeyi öğrendik. Burada bu alışkanlık bir hata olurdu.",
+      "ar": "طوال أربعة فصول تعلّمنا الشكّ في المالك. وهنا كانت تلك العادة لتكون خطأ.",
+      "kk": "Төрт перде бойы иесіне күдіктенуді үйрендік. Мұнда бұл әдет қателік болар еді."
+    },
+    "arcReveal": {
+      "title": {
+        "ru": "Реальное нападение Серого конвоя",
+        "en": "A Real Gray Convoy Attack",
+        "tr": "Gerçek Bir Gri Konvoy Saldırısı",
+        "ar": "هجوم قافلة رمادية حقيقية",
+        "kk": "Сұр колоннаның нағыз шабуылы"
+      },
+      "text": {
+        "ru": "Сеть поджигает объекты и похищает оборудование без согласия владельцев.",
+        "en": "The network is setting fires and stealing equipment without the owners' consent.",
+        "tr": "Ağ, sahiplerinin izni olmadan yangın çıkarıyor ve ekipmanları çalıyor.",
+        "ar": "تقوم الشبكة بإشعال الحرائق وسرقة المعدات دون موافقة أصحابها.",
+        "kk": "Желі иелерінің келісімінсіз объектілерді өртеп, жабдықтарды ұрлайды."
+      }
+    }
   }
 }

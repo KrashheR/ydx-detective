@@ -1,0 +1,500 @@
+{
+  "id": "night-train-04",
+  "type": "archive",
+  "difficulty": "medium",
+  "claimAmount": 210000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Купе на двоих и ни одного алиби",
+    "en": "A Compartment for Two and Not One Alibi",
+    "tr": "İki Kişilik Kompartıman, Sıfır Mazeret",
+    "ar": "مقصورة لاثنين وبلا حجة غياب",
+    "kk": "Екеуге купе, бірақ бірде-бір алиби жоқ"
+  },
+  "claim": {
+    "person": {
+      "ru": "Анна Власова, 39 лет",
+      "en": "Anna Vlasova, age 39",
+      "tr": "Anna Vlasova, 39 yaşında",
+      "ar": "آنا فلاسوفا، 39 عامًا",
+      "kk": "Анна Власова, 39 жаста"
+    },
+    "story": {
+      "ru": "С 23:20 до полуночи мы оба были в вагоне-ресторане. Купе №6 оставалось запертым, запасного ключа у нас не было. Кто-то вскрыл дверь и забрал с верхней полки синий конверт с документами на квартиру.",
+      "en": "From 23:20 until midnight we were both in the restaurant car. Compartment No. 6 stayed locked and we had no spare key. Someone forced the door and took the blue envelope with the flat's documents from the upper berth.",
+      "tr": "Saat 23:20’den gece yarısına kadar ikimiz de restoran vagonundaydık. 6 No.lu kompartıman kilitli kaldı, yedek anahtarımız yoktu. Biri kapıyı zorlayıp üst ranzadan daire belgelerinin olduğu mavi zarfı aldı.",
+      "ar": "من 23:20 حتى منتصف الليل كنا كلانا في عربة المطعم. بقيت المقصورة رقم 6 مقفلة ولم يكن لدينا مفتاح احتياطي. اقتحم أحدهم الباب وأخذ الظرف الأزرق بأوراق الشقة من السرير العلوي.",
+      "kk": "23:20-ден түн ортасына дейін екеуміз де мейрамхана вагонында болдық. №6 купе құлыптаулы қалды, қосалқы кілтіміз болған жоқ. Біреу есікті бұзып, жоғарғы сөреден пәтер құжаттары салынған көк конвертті алып кеткен."
+    }
+  },
+  "coverImage": "covers/packs/night-train-04.svg",
+  "personImage": "people/packs/night-train/anna_vlasova.webp",
+  "client": {
+    "role": {
+      "ru": "Заявитель · пассажир поезда №13",
+      "en": "Claimant · passenger of train No. 13",
+      "tr": "Talep sahibi · 13 No.lu trenin yolcusu",
+      "ar": "مقدم الطلب · راكب في القطار رقم 13",
+      "kk": "Өтініш беруші · №13 пойыз жолаушысы"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Вагон",
+          "en": "Car",
+          "tr": "Vagon",
+          "ar": "العربة",
+          "kk": "Вагон"
+        },
+        "v": {
+          "ru": "№6",
+          "en": "No. 6",
+          "tr": "No. 6",
+          "ar": "رقم 6",
+          "kk": "№6"
+        }
+      },
+      {
+        "k": {
+          "ru": "Рейс",
+          "en": "Service",
+          "tr": "Sefer",
+          "ar": "الرحلة",
+          "kk": "Рейс"
+        },
+        "v": {
+          "ru": "Поезд №13, ночной",
+          "en": "Train No. 13, night service",
+          "tr": "13 No.lu tren, gece seferi",
+          "ar": "القطار رقم 13، الرحلة الليلية",
+          "kk": "№13 пойыз, түнгі рейс"
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "TR04-E1",
+      "order": 1,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал замка купе №6",
+        "en": "Lock Log of Compartment No. 6",
+        "tr": "6 No.lu Kompartımanın Kilit Kaydı",
+        "ar": "سجل قفل المقصورة رقم 6",
+        "kk": "№6 купе құлпының журналы"
+      },
+      "content": {
+        "ru": "23:37 — открытие пассажирской картой А. Власовой. 23:41 — закрытие той же картой. Аварийный ключ бригады не применялся, механических ошибок замка нет.",
+        "en": "23:37 — opened with A. Vlasova's passenger card. 23:41 — closed with the same card. The crew's emergency key was not used and the lock logged no mechanical faults.",
+        "tr": "23:37 — A. Vlasova’nın yolcu kartıyla açıldı. 23:41 — aynı kartla kapatıldı. Ekibin acil anahtarı kullanılmadı, kilitte mekanik hata yok.",
+        "ar": "23:37 — فُتح ببطاقة الراكبة أ. فلاسوفا. 23:41 — أُغلق بالبطاقة نفسها. لم يُستخدم مفتاح الطوارئ ولم يسجّل القفل أعطالًا ميكانيكية.",
+        "kk": "23:37 — А. Власованың жолаушы картасымен ашылды. 23:41 — сол картамен жабылды. Бригаданың апаттық кілті қолданылмаған, құлыпта механикалық ақау жоқ."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Дверь открывала её собственная карта в разгар заявленного алиби — ни отсутствия, ни взлома не было.",
+        "en": "Her own card opened the door in the middle of the claimed alibi — there was neither absence nor forced entry.",
+        "tr": "Kapıyı, beyan edilen mazeretin tam ortasında kendi kartı açtı; ne yokluk ne de zorla giriş var.",
+        "ar": "فتحت بطاقتها الباب في منتصف فترة الحجة المزعومة، فلا غياب ولا اقتحام.",
+        "kk": "Есікті мәлімделген алибидің дәл ортасында өз картасы ашқан — не болмау, не бұзып кіру болмаған."
+      },
+      "statementLink": {
+        "statementId": "claim_absence",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Дверь открывала её собственная карта в разгар заявленного алиби — ни отсутствия, ни взлома не было.",
+          "en": "Her own card opened the door in the middle of the claimed alibi — there was neither absence nor forced entry.",
+          "tr": "Kapıyı, beyan edilen mazeretin tam ortasında kendi kartı açtı; ne yokluk ne de zorla giriş var.",
+          "ar": "فتحت بطاقتها الباب في منتصف فترة الحجة المزعومة، فلا غياب ولا اقتحام.",
+          "kk": "Есікті мәлімделген алибидің дәл ортасында өз картасы ашқан — не болмау, не бұзып кіру болмаған."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_absence",
+        "reason": {
+          "ru": "Дверь открывала её собственная карта в разгар заявленного алиби — ни отсутствия, ни взлома не было.",
+          "en": "Her own card opened the door in the middle of the claimed alibi — there was neither absence nor forced entry.",
+          "tr": "Kapıyı, beyan edilen mazeretin tam ortasında kendi kartı açtı; ne yokluk ne de zorla giriş var.",
+          "ar": "فتحت بطاقتها الباب في منتصف فترة الحجة المزعومة، فلا غياب ولا اقتحام.",
+          "kk": "Есікті мәлімделген алибидің дәл ортасында өз картасы ашқан — не болмау, не бұзып кіру болмаған."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr04-e1.webp",
+        "logPrompt": "compartment 6 lock log"
+      }
+    },
+    {
+      "id": "TR04-E2",
+      "order": 2,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Камера коридора вагона №6",
+        "en": "Corridor Camera of Car No. 6",
+        "tr": "6 No.lu Vagonun Koridor Kamerası",
+        "ar": "كاميرا ممر العربة رقم 6",
+        "kk": "№6 вагон дәлізінің камерасы"
+      },
+      "content": {
+        "ru": "23:39 — заявительница выходит из купе с синим конвертом в руках, оглядывается и убирает его во внутренний чехол для пальто. 23:44 — возвращается в вагон-ресторан уже без конверта.",
+        "en": "23:39 — the claimant steps out of the compartment holding the blue envelope, looks around and slips it into the inner pocket of a coat bag. 23:44 — she returns to the restaurant car without it.",
+        "tr": "23:39 — talep sahibi elinde mavi zarfla kompartımandan çıkıyor, etrafına bakıyor ve zarfı palto kılıfının iç gözüne koyuyor. 23:44 — restoran vagonuna zarfsız dönüyor.",
+        "ar": "23:39 — تخرج مقدمة الطلب من المقصورة والظرف الأزرق بيدها، تنظر حولها ثم تضعه في الجيب الداخلي لكيس المعطف. 23:44 — تعود إلى عربة المطعم بدونه.",
+        "kk": "23:39 — өтініш беруші көк конвертті ұстап купеден шығады, жан-жағына қарап, оны пальто қабының ішкі қалтасына салады. 23:44 — мейрамхана вагонына конвертсіз оралады."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Конверт взяла сама заявительница — постороннего похитителя не существовало.",
+        "en": "The claimant took the envelope herself — no outside thief ever existed.",
+        "tr": "Zarfı talep sahibi kendisi aldı; dışarıdan bir hırsız hiç olmadı.",
+        "ar": "أخذت مقدمة الطلب الظرف بنفسها، ولم يوجد لص من الخارج.",
+        "kk": "Конвертті өтініш берушінің өзі алған — бөгде ұры болмаған."
+      },
+      "statementLink": {
+        "statementId": "claim_intruder",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Конверт взяла сама заявительница — постороннего похитителя не существовало.",
+          "en": "The claimant took the envelope herself — no outside thief ever existed.",
+          "tr": "Zarfı talep sahibi kendisi aldı; dışarıdan bir hırsız hiç olmadı.",
+          "ar": "أخذت مقدمة الطلب الظرف بنفسها، ولم يوجد لص من الخارج.",
+          "kk": "Конвертті өтініш берушінің өзі алған — бөгде ұры болмаған."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_intruder",
+        "reason": {
+          "ru": "Конверт взяла сама заявительница — постороннего похитителя не существовало.",
+          "en": "The claimant took the envelope herself — no outside thief ever existed.",
+          "tr": "Zarfı talep sahibi kendisi aldı; dışarıdan bir hırsız hiç olmadı.",
+          "ar": "أخذت مقدمة الطلب الظرف بنفسها، ولم يوجد لص من الخارج.",
+          "kk": "Конвертті өтініш берушінің өзі алған — бөгде ұры болмаған."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr04-e2.webp",
+        "cameraId": "CAR6-CORRIDOR",
+        "cameraModel": "RailEye 3"
+      }
+    },
+    {
+      "id": "TR04-E3",
+      "order": 3,
+      "type": "document",
+      "title": {
+        "ru": "Чек вагона-ресторана",
+        "en": "Restaurant Car Bill",
+        "tr": "Restoran Vagonu Fişi",
+        "ar": "فاتورة عربة المطعم",
+        "kk": "Мейрамхана вагонының чегі"
+      },
+      "content": {
+        "ru": "Стол №3, 23:42 — оплата одной картой С. Власова. В заказе два чая; второй стакан не тронут и убран полным в 00:05.",
+        "en": "Table 3, 23:42 — paid with S. Vlasov's card alone. The order lists two teas; the second glass was untouched and cleared away full at 00:05.",
+        "tr": "Masa 3, 23:42 — ödeme yalnızca S. Vlasov’un kartıyla. Siparişte iki çay var; ikinci bardağa dokunulmamış ve 00:05’te dolu olarak kaldırılmış.",
+        "ar": "الطاولة 3، 23:42 — الدفع ببطاقة س. فلاسوف وحده. يتضمن الطلب شايين، والكوب الثاني لم يُمس ورُفع ممتلئًا في 00:05.",
+        "kk": "№3 үстел, 23:42 — төлем тек С. Власовтың картасымен. Тапсырыста екі шай бар; екінші стақанға қол тимеген, 00:05-те толы күйінде жиналған."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Чек показывает, что за столом оставался один человек, но кто и когда открывал купе, устанавливают замок и камера.",
+        "en": "The bill shows only one person stayed at the table, while the lock and the camera establish who opened the compartment and when.",
+        "tr": "Fiş masada tek kişinin kaldığını gösteriyor; kompartımanı kimin ne zaman açtığını ise kilit ve kamera belirliyor.",
+        "ar": "تُظهر الفاتورة بقاء شخص واحد على الطاولة، أما من فتح المقصورة ومتى فيحدده القفل والكاميرا.",
+        "kk": "Чек үстелде бір адам қалғанын көрсетеді, ал купені кім, қашан ашқанын құлып пен камера анықтайды."
+      },
+      "statementLink": {
+        "statementId": "claim_absence",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Чек показывает, что за столом оставался один человек, но кто и когда открывал купе, устанавливают замок и камера.",
+          "en": "The bill shows only one person stayed at the table, while the lock and the camera establish who opened the compartment and when.",
+          "tr": "Fiş masada tek kişinin kaldığını gösteriyor; kompartımanı kimin ne zaman açtığını ise kilit ve kamera belirliyor.",
+          "ar": "تُظهر الفاتورة بقاء شخص واحد على الطاولة، أما من فتح المقصورة ومتى فيحدده القفل والكاميرا.",
+          "kk": "Чек үстелде бір адам қалғанын көрсетеді, ал купені кім, қашан ашқанын құлып пен камера анықтайды."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr04-e3.webp"
+      }
+    },
+    {
+      "id": "TR04-E4",
+      "order": 4,
+      "type": "surface_reveal",
+      "title": {
+        "ru": "Осмотр дверного ригеля",
+        "en": "Examining the Door Bolt",
+        "tr": "Kapı Sürgüsünün İncelenmesi",
+        "ar": "فحص مزلاج الباب",
+        "kk": "Есік ілгегін тексеру"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Следов инструмента нет вовсе, зато на кромке остались серые шерстяные волокна пальто человека, заглядывавшего в соседнее служебное купе.",
+        "en": "There are no tool marks at all, but grey woollen fibres remain on the edge — from the coat of someone peering into the neighbouring service compartment.",
+        "tr": "Hiç alet izi yok ama kenarda gri yün lifleri kalmış: yandaki servis kompartımanına bakan kişinin paltosundan.",
+        "ar": "لا توجد آثار أدوات إطلاقًا، لكن على الحافة ألياف صوفية رمادية من معطف شخص كان يتفحص مقصورة الخدمة المجاورة.",
+        "kk": "Аспап ізі мүлдем жоқ, бірақ жиегінде көрші қызметтік купеге үңілген адамның пальтосынан қалған сұр жүн талшықтары бар."
+      },
+      "statementLink": {
+        "statementId": "claim_intruder",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Следов инструмента нет вовсе, зато на кромке остались серые шерстяные волокна пальто человека, заглядывавшего в соседнее служебное купе.",
+          "en": "There are no tool marks at all, but grey woollen fibres remain on the edge — from the coat of someone peering into the neighbouring service compartment.",
+          "tr": "Hiç alet izi yok ama kenarda gri yün lifleri kalmış: yandaki servis kompartımanına bakan kişinin paltosundan.",
+          "ar": "لا توجد آثار أدوات إطلاقًا، لكن على الحافة ألياف صوفية رمادية من معطف شخص كان يتفحص مقصورة الخدمة المجاورة.",
+          "kk": "Аспап ізі мүлдем жоқ, бірақ жиегінде көрші қызметтік купеге үңілген адамның пальтосынан қалған сұр жүн талшықтары бар."
+        }
+      },
+      "evidenceTier": "supporting",
+      "description": {
+        "ru": "Ригель и наличник сняли для осмотра. Металл покрыт технической смазкой и дорожной пылью.",
+        "en": "The bolt and door frame were removed for examination. The metal is coated with grease and travel dust.",
+        "tr": "Sürgü ve kapı pervazı inceleme için söküldü. Metal, gres ve yol tozuyla kaplı.",
+        "ar": "أُزيل المزلاج وإطار الباب للفحص. المعدن مغطى بشحم وغبار الطريق.",
+        "kk": "Ілгек пен есік жақтауы тексеруге алынды. Металл техникалық май мен жол шаңына көмілген."
+      },
+      "instruction": {
+        "ru": "Очистите ригель и поищите следы инструмента или посторонние волокна.",
+        "en": "Clean the bolt and look for tool marks or foreign fibres.",
+        "tr": "Sürgüyü temizleyin ve alet izi veya yabancı lif arayın.",
+        "ar": "نظّف المزلاج وابحث عن آثار أدوات أو ألياف غريبة.",
+        "kk": "Ілгекті тазалап, аспап іздері мен бөгде талшықтарды іздеңіз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/night-train/tr04-e4.webp",
+        "coverTexture": "shared/surface/dirt.svg",
+        "revealMasks": [
+          "shared/surface/trace-mask.svg"
+        ],
+        "toolCursor": "shared/surface/cloth-cursor.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": false,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Отсутствие следов инструмента закрывает версию взлома, а найденные волокна открывают чужой интерес к служебному купе.",
+          "en": "The absence of tool marks closes the forced-entry theory, while the fibres found open up somebody's interest in the service compartment.",
+          "tr": "Alet izinin olmaması zorla giriş ihtimalini kapatır; bulunan lifler ise servis kompartımanına duyulan ilgiyi açar.",
+          "ar": "غياب آثار الأدوات يغلق فرضية الاقتحام، أما الألياف المكتشفة فتفتح باب الاهتمام بمقصورة الخدمة.",
+          "kk": "Аспап ізінің жоқтығы бұзып кіру нұсқасын жабады, ал табылған талшықтар қызметтік купеге деген бөгде қызығушылықты ашады."
+        },
+        "playerAction": {
+          "ru": "Очистите ригель и поищите следы инструмента или посторонние волокна.",
+          "en": "Clean the bolt and look for tool marks or foreign fibres.",
+          "tr": "Sürgüyü temizleyin ve alet izi veya yabancı lif arayın.",
+          "ar": "نظّف المزلاج وابحث عن آثار أدوات أو ألياف غريبة.",
+          "kk": "Ілгекті тазалап, аспап іздері мен бөгде талшықтарды іздеңіз."
+        },
+        "conclusion": {
+          "ru": "Следов инструмента нет вовсе, зато на кромке остались серые шерстяные волокна пальто человека, заглядывавшего в соседнее служебное купе.",
+          "en": "There are no tool marks at all, but grey woollen fibres remain on the edge — from the coat of someone peering into the neighbouring service compartment.",
+          "tr": "Hiç alet izi yok ama kenarda gri yün lifleri kalmış: yandaki servis kompartımanına bakan kişinin paltosundan.",
+          "ar": "لا توجد آثار أدوات إطلاقًا، لكن على الحافة ألياف صوفية رمادية من معطف شخص كان يتفحص مقصورة الخدمة المجاورة.",
+          "kk": "Аспап ізі мүлдем жоқ, бірақ жиегінде көрші қызметтік купеге үңілген адамның пальтосынан қалған сұр жүн талшықтары бар."
+        }
+      },
+      "data": {
+        "mode": "erase",
+        "coverType": "dirt",
+        "brush": {
+          "radius": 38,
+          "hardness": 0.6,
+          "opacity": 0.82,
+          "spacing": 8
+        },
+        "completion": {
+          "type": "discover_any",
+          "requiredTraceIds": [
+            "grey-fibres"
+          ]
+        },
+        "traces": [
+          {
+            "id": "grey-fibres",
+            "label": "Серые шерстяные волокна, следов инструмента нет",
+            "labelEn": "Grey woollen fibres, no tool marks",
+            "requiredRevealPercent": 52,
+            "mask": "shared/surface/trace-mask.svg",
+            "shape": "mask",
+            "isContradiction": false,
+            "conclusion": "Следов инструмента нет; на кромке остались серые шерстяные волокна пальто.",
+            "conclusionEn": "There are no tool marks; grey woollen coat fibres remain on the edge."
+          }
+        ]
+      }
+    },
+    {
+      "id": "TR04-E5",
+      "order": 5,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Запись журналиста Ракитина",
+        "en": "Journalist Rakitin's Footage",
+        "tr": "Gazeteci Rakitin’in Kaydı",
+        "ar": "تسجيل الصحفي راكيتين",
+        "kk": "Журналист Ракитиннің жазбасы"
+      },
+      "content": {
+        "ru": "Съёмка репортажа о последнем рейсе. На заднем плане пассажир в сером пальто последовательно проверяет номера купе и фотографирует служебную табличку «Архив. Вагон 7».",
+        "en": "Footage for a report on the last service. In the background a passenger in a grey coat checks compartment numbers one by one and photographs the service plate \"Archive. Car 7\".",
+        "tr": "Son sefer haberi için çekim. Arka planda gri paltolu bir yolcu kompartıman numaralarını sırayla kontrol ediyor ve «Arşiv. Vagon 7» servis levhasını fotoğraflıyor.",
+        "ar": "تصوير لتقرير عن الرحلة الأخيرة. في الخلفية راكب بمعطف رمادي يتفقد أرقام المقصورات واحدًا تلو الآخر ويصوّر لوحة الخدمة «الأرشيف. العربة 7».",
+        "kk": "Соңғы рейс туралы репортаж түсірілімі. Артқы жоспарда сұр пальтолы жолаушы купе нөмірлерін ретімен тексеріп, «Архив. 7-вагон» деген қызметтік тақтайшаны суретке түсіреді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Запись раскрывает интерес пассажира к архивному вагону, но кражу и алиби опровергают журнал замка и камера коридора.",
+        "en": "The footage reveals a passenger's interest in the archive car, while the lock log and the corridor camera disprove the theft and the alibi.",
+        "tr": "Kayıt, bir yolcunun arşiv vagonuna ilgisini ortaya koyuyor; hırsızlığı ve mazereti ise kilit kaydı ile koridor kamerası çürütüyor.",
+        "ar": "يكشف التسجيل اهتمام راكب بعربة الأرشيف، أما السرقة والحجة فيدحضهما سجل القفل وكاميرا الممر.",
+        "kk": "Жазба жолаушының архив вагонына қызығушылығын ашады, ал ұрлық пен алибиді құлып журналы мен дәліз камерасы теріске шығарады."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Запись раскрывает интерес пассажира к архивному вагону, но кражу и алиби опровергают журнал замка и камера коридора.",
+          "en": "The footage reveals a passenger's interest in the archive car, while the lock log and the corridor camera disprove the theft and the alibi.",
+          "tr": "Kayıt, bir yolcunun arşiv vagonuna ilgisini ortaya koyuyor; hırsızlığı ve mazereti ise kilit kaydı ile koridor kamerası çürütüyor.",
+          "ar": "يكشف التسجيل اهتمام راكب بعربة الأرشيف، أما السرقة والحجة فيدحضهما سجل القفل وكاميرا الممر.",
+          "kk": "Жазба жолаушының архив вагонына қызығушылығын ашады, ал ұрлық пен алибиді құлып журналы мен дәліз камерасы теріске шығарады."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr04-e5.webp",
+        "cameraId": "PRESS-CAM",
+        "cameraModel": "Handheld"
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Замок купе открывала пассажирская карта самой заявительницы в 23:37.",
+      "Камера коридора показывает, как она выносит синий конверт и прячет его.",
+      "Следов взлома нет; серые волокна на ригеле принадлежат пассажиру, искавшему архивный вагон."
+    ],
+    "en": [
+      "The compartment lock was opened at 23:37 by the claimant's own passenger card.",
+      "The corridor camera shows her carrying the blue envelope out and hiding it.",
+      "There are no signs of forced entry; the grey fibres on the bolt belong to the passenger searching for the archive car."
+    ],
+    "tr": [
+      "Kompartıman kilidi 23:37’de talep sahibinin kendi yolcu kartıyla açıldı.",
+      "Koridor kamerası, mavi zarfı dışarı çıkarıp sakladığını gösteriyor.",
+      "Zorla giriş izi yok; sürgüdeki gri lifler arşiv vagonunu arayan yolcuya ait."
+    ],
+    "ar": [
+      "فُتح قفل المقصورة في 23:37 ببطاقة الراكبة نفسها.",
+      "تُظهر كاميرا الممر أنها أخرجت الظرف الأزرق وأخفته.",
+      "لا أثر للاقتحام، والألياف الرمادية على المزلاج تعود للراكب الباحث عن عربة الأرشيف."
+    ],
+    "kk": [
+      "Купе құлпын 23:37-де өтініш берушінің өз жолаушы картасы ашқан.",
+      "Дәліз камерасы оның көк конвертті алып шығып, жасырғанын көрсетеді.",
+      "Бұзып кіру ізі жоқ; ілгектегі сұр талшықтар архив вагонын іздеген жолаушыға тиесілі."
+    ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "stampable": false,
+      "text": {
+        "ru": "Документы похищены из запертого купе, ущерб подлежит возмещению.",
+        "en": "The documents were stolen from a locked compartment and the loss is reimbursable.",
+        "tr": "Belgeler kilitli kompartımandan çalındı ve kayıp tazmin edilmelidir.",
+        "ar": "سُرقت الوثائق من مقصورة مقفلة والخسارة قابلة للتعويض.",
+        "kk": "Құжаттар құлыптаулы купеден ұрланды, залал өтелуге тиіс."
+      }
+    },
+    {
+      "id": "claim_absence",
+      "stampable": true,
+      "text": {
+        "ru": "С 23:20 до полуночи мы оба были в ресторане, а купе оставалось запертым.",
+        "en": "From 23:20 until midnight we were both in the restaurant car and the compartment stayed locked.",
+        "tr": "Saat 23:20’den gece yarısına kadar ikimiz de restorandaydık ve kompartıman kilitli kaldı.",
+        "ar": "من 23:20 حتى منتصف الليل كنا كلانا في المطعم وبقيت المقصورة مقفلة.",
+        "kk": "23:20-ден түн ортасына дейін екеуміз де мейрамханада болдық, купе құлыптаулы қалды."
+      }
+    },
+    {
+      "id": "claim_intruder",
+      "stampable": true,
+      "text": {
+        "ru": "Дверь вскрыл посторонний и унёс синий конверт.",
+        "en": "A stranger forced the door and carried off the blue envelope.",
+        "tr": "Kapıyı bir yabancı zorladı ve mavi zarfı götürdü.",
+        "ar": "اقتحم غريب الباب وأخذ الظرف الأزرق.",
+        "kk": "Есікті бөгде адам бұзып, көк конвертті алып кеткен."
+      }
+    }
+  ],
+  "contentVersion": "night-train-1.0",
+  "narrative": {
+    "preBrief": {
+      "ru": "Бывшие супруги едут в одном купе и спорят обо всём. Кроме того, где на самом деле конверт.",
+      "en": "A divorced couple share a compartment and argue about everything. Except where the envelope actually is.",
+      "tr": "Boşanmış bir çift aynı kompartımanı paylaşıyor ve her şeyi tartışıyor. Zarfın gerçekte nerede olduğu hariç.",
+      "ar": "زوجان سابقان يتشاركان مقصورة ويختلفان على كل شيء، إلا على مكان الظرف الحقيقي.",
+      "kk": "Бұрынғы жұбайлар бір купеде келе жатып бәрі туралы дауласады. Конверттің шын мәнінде қайда екенінен басқа."
+    },
+    "postVerdictNote": {
+      "ru": "В купе №6 пропало только доверие. Но оно в опись не входило.",
+      "en": "The only thing missing from compartment No. 6 is trust. And trust was not on the inventory.",
+      "tr": "6 No.lu kompartımanda kaybolan tek şey güven. Ve güven envanterde yoktu.",
+      "ar": "الشيء الوحيد المفقود في المقصورة رقم 6 هو الثقة، والثقة لم تكن في القائمة.",
+      "kk": "№6 купеде тек сенім жоғалды. Ал сенім тізімдемеде жоқ."
+    },
+    "nextCaseTeaser": {
+      "ru": "В дипломате поставщика вместо наличных обнаруживаются старые билетные бланки.",
+      "en": "The supplier's briefcase turns out to hold old ticket blanks instead of cash.",
+      "tr": "Tedarikçinin evrak çantasından nakit yerine eski bilet blankoları çıkıyor.",
+      "ar": "تبيّن أن حقيبة المورّد تحوي نماذج تذاكر قديمة بدل النقود.",
+      "kk": "Жеткізушінің дипломатынан қолма-қол ақшаның орнына ескі билет бланкілері шығады."
+    },
+    "seasonClue": {
+      "id": "grey-coat-fibre",
+      "progressIndex": 4,
+      "progressTotal": 10,
+      "label": {
+        "ru": "Серое волокно и фото таблички",
+        "en": "A Grey Fibre and a Photo of the Plate",
+        "tr": "Gri Lif ve Levha Fotoğrafı",
+        "ar": "ليف رمادي وصورة اللوحة",
+        "kk": "Сұр талшық және тақтайша фотосы"
+      },
+      "description": {
+        "ru": "Пассажир в сером пальто ищет не багаж, а точное место архивного ящика в вагоне №7.",
+        "en": "The passenger in the grey coat is not looking for luggage but for the exact location of the archive crate in car No. 7.",
+        "tr": "Gri paltolu yolcu bagaj değil, 7 No.lu vagondaki arşiv sandığının tam yerini arıyor.",
+        "ar": "الراكب ذو المعطف الرمادي لا يبحث عن أمتعة بل عن الموقع الدقيق لصندوق الأرشيف في العربة رقم 7.",
+        "kk": "Сұр пальтолы жолаушы багажды емес, №7 вагондағы архив жәшігінің нақты орнын іздеп жүр."
+      }
+    },
+    "epilogue": null
+  }
+}

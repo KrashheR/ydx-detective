@@ -1,0 +1,707 @@
+{
+  "id": "night-train-10",
+  "type": "archive",
+  "difficulty": "hard",
+  "claimAmount": 780000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Семь минут до Тихой",
+    "en": "Seven Minutes to Tikhaya",
+    "tr": "Tihaya’ya Yedi Dakika",
+    "ar": "سبع دقائق إلى تيخايا",
+    "kk": "Тихаяға дейін жеті минут"
+  },
+  "claim": {
+    "person": {
+      "ru": "Олег Андреевич Беляев, 62 года",
+      "en": "Oleg Andreyevich Belyaev, age 62",
+      "tr": "Oleg Andreyeviç Belyayev, 62 yaşında",
+      "ar": "أوليغ أندرييفيتش بيلاييف، 62 عامًا",
+      "kk": "Олег Андреевич Беляев, 62 жаста"
+    },
+    "story": {
+      "ru": "После 03:20 я не покидал купе №4, к вагону №7 не подходил, архивный ящик не открывал и с человеком у платформы не знаком. Моя поездка никак не связана с делом 1996 года.",
+      "en": "After 03:20 I did not leave compartment No. 4, did not go near car No. 7, did not open the archive crate and do not know the man by the platform. My journey has nothing to do with the 1996 case.",
+      "tr": "Saat 03:20’den sonra 4 No.lu kompartımandan çıkmadım, 7 No.lu vagona yaklaşmadım, arşiv sandığını açmadım ve perondaki adamı tanımıyorum. Yolculuğumun 1996 davasıyla hiçbir ilgisi yok.",
+      "ar": "بعد الساعة 03:20 لم أغادر المقصورة رقم 4 ولم أقترب من العربة رقم 7 ولم أفتح صندوق الأرشيف ولا أعرف الرجل عند الرصيف. ورحلتي لا علاقة لها بقضية 1996.",
+      "kk": "03:20-дан кейін №4 купеден шықпадым, №7 вагонға жақындамадым, архив жәшігін ашпадым және платформадағы адаммен таныс емеспін. Менің сапарымның 1996 жылғы іске қатысы жоқ."
+    }
+  },
+  "coverImage": "covers/packs/night-train-10.svg",
+  "personImage": "people/packs/night-train/oleg_belyaev.webp",
+  "client": {
+    "role": {
+      "ru": "Проверяемое лицо · пассажир купе №4",
+      "en": "Person under review · passenger of compartment No. 4",
+      "tr": "İncelenen kişi · 4 No.lu kompartıman yolcusu",
+      "ar": "شخص قيد التدقيق · راكب المقصورة رقم 4",
+      "kk": "Тексерілуші · №4 купе жолаушысы"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Вагон",
+          "en": "Car",
+          "tr": "Vagon",
+          "ar": "العربة",
+          "kk": "Вагон"
+        },
+        "v": {
+          "ru": "№5, купе №4",
+          "en": "No. 5, compartment 4",
+          "tr": "No. 5, kompartıman 4",
+          "ar": "رقم 5، المقصورة 4",
+          "kk": "№5, №4 купе"
+        }
+      },
+      {
+        "k": {
+          "ru": "Рейс",
+          "en": "Service",
+          "tr": "Sefer",
+          "ar": "الرحلة",
+          "kk": "Рейс"
+        },
+        "v": {
+          "ru": "Поезд №13, ночной",
+          "en": "Train No. 13, night service",
+          "tr": "13 No.lu tren, gece seferi",
+          "ar": "القطار رقم 13، الرحلة الليلية",
+          "kk": "№13 пойыз, түнгі рейс"
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "TR10-E1",
+      "order": 1,
+      "type": "gps",
+      "title": {
+        "ru": "GPS и шагомер планшета",
+        "en": "Tablet GPS and Step Counter",
+        "tr": "Tablet GPS ve Adımsayar",
+        "ar": "تتبع الجهاز اللوحي وعداد الخطى",
+        "kk": "Планшеттің GPS-і және қадам санағышы"
+      },
+      "content": {
+        "ru": "03:24 — устройство фиксирует переход из вагона №5 в вагон №7: 184 шага, три тамбура. 03:25–03:31 — неподвижно у служебного отсека с архивом. 03:33 — обратный путь.",
+        "en": "03:24 — the device records a walk from car No. 5 to car No. 7: 184 steps, three vestibules. 03:25–03:31 — stationary by the archive service section. 03:33 — the way back.",
+        "tr": "03:24 — cihaz, 5 No.lu vagondan 7 No.lu vagona geçişi kaydediyor: 184 adım, üç sahanlık. 03:25–03:31 — arşiv servis bölümünün yanında hareketsiz. 03:33 — dönüş.",
+        "ar": "03:24 — يسجّل الجهاز انتقالًا من العربة رقم 5 إلى العربة رقم 7: 184 خطوة وثلاثة دهاليز. 03:25–03:31 — ثابت قرب قسم الأرشيف. 03:33 — طريق العودة.",
+        "kk": "03:24 — құрылғы №5 вагоннан №7 вагонға өтуді тіркейді: 184 қадам, үш тамбур. 03:25–03:31 — архив бөлімінің қасында қозғалыссыз. 03:33 — кері жол."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Пассажир шесть минут находился у архивного отсека вагона №7 — заявление о непокинутом купе ложно.",
+        "en": "The passenger spent six minutes by the archive section of car No. 7 — the claim of never leaving the compartment is false.",
+        "tr": "Yolcu, 7 No.lu vagonun arşiv bölümünün yanında altı dakika geçirdi; kompartımandan çıkmadığı iddiası yalan.",
+        "ar": "أمضى الراكب ست دقائق قرب قسم الأرشيف في العربة رقم 7، فادعاء عدم مغادرة المقصورة كاذب.",
+        "kk": "Жолаушы №7 вагонның архив бөлімінің қасында алты минут болған — купеден шықпадым дегені жалған."
+      },
+      "statementLink": {
+        "statementId": "claim_compartment",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Пассажир шесть минут находился у архивного отсека вагона №7 — заявление о непокинутом купе ложно.",
+          "en": "The passenger spent six minutes by the archive section of car No. 7 — the claim of never leaving the compartment is false.",
+          "tr": "Yolcu, 7 No.lu vagonun arşiv bölümünün yanında altı dakika geçirdi; kompartımandan çıkmadığı iddiası yalan.",
+          "ar": "أمضى الراكب ست دقائق قرب قسم الأرشيف في العربة رقم 7، فادعاء عدم مغادرة المقصورة كاذب.",
+          "kk": "Жолаушы №7 вагонның архив бөлімінің қасында алты минут болған — купеден шықпадым дегені жалған."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_compartment",
+        "reason": {
+          "ru": "Пассажир шесть минут находился у архивного отсека вагона №7 — заявление о непокинутом купе ложно.",
+          "en": "The passenger spent six minutes by the archive section of car No. 7 — the claim of never leaving the compartment is false.",
+          "tr": "Yolcu, 7 No.lu vagonun arşiv bölümünün yanında altı dakika geçirdi; kompartımandan çıkmadığı iddiası yalan.",
+          "ar": "أمضى الراكب ست دقائق قرب قسم الأرشيف في العربة رقم 7، فادعاء عدم مغادرة المقصورة كاذب.",
+          "kk": "Жолаушы №7 вагонның архив бөлімінің қасында алты минут болған — купеден шықпадым дегені жалған."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr10-e1.webp",
+        "gpsFooter": {
+          "ru": "Трек планшета в составе",
+          "en": "Tablet track inside the train",
+          "tr": "Tren içi tablet izi",
+          "ar": "مسار الجهاز اللوحي داخل القطار",
+          "kk": "Құрам ішіндегі планшет тректі"
+        }
+      }
+    },
+    {
+      "id": "TR10-E2",
+      "order": 2,
+      "type": "surface_reveal",
+      "title": {
+        "ru": "Осмотр архивной пломбы",
+        "en": "Examining the Archive Seal",
+        "tr": "Arşiv Mührünün İncelenmesi",
+        "ar": "فحص ختم الأرشيف",
+        "kk": "Архив мөрін тексеру"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Под сургучом — отпечаток плоского съёмника из набора пассажира и серые шерстяные волокна его пальто: ящик вскрывал он.",
+        "en": "Under the wax are the imprint of a flat pry tool from the passenger's own kit and grey woollen fibres from his coat: he opened the crate.",
+        "tr": "Mumun altında yolcunun kendi takımındaki yassı sökücünün izi ve paltosunun gri yün lifleri var: sandığı o açtı.",
+        "ar": "تحت الشمع أثر أداة رفع مسطحة من عدّة الراكب وألياف صوفية رمادية من معطفه: هو من فتح الصندوق.",
+        "kk": "Сүргіштің астында жолаушының жинағындағы жалпақ ашқыштың ізі мен пальтосының сұр жүн талшықтары бар: жәшікті ол ашқан."
+      },
+      "statementLink": {
+        "statementId": "claim_crate",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Под сургучом — отпечаток плоского съёмника из набора пассажира и серые шерстяные волокна его пальто: ящик вскрывал он.",
+          "en": "Under the wax are the imprint of a flat pry tool from the passenger's own kit and grey woollen fibres from his coat: he opened the crate.",
+          "tr": "Mumun altında yolcunun kendi takımındaki yassı sökücünün izi ve paltosunun gri yün lifleri var: sandığı o açtı.",
+          "ar": "تحت الشمع أثر أداة رفع مسطحة من عدّة الراكب وألياف صوفية رمادية من معطفه: هو من فتح الصندوق.",
+          "kk": "Сүргіштің астында жолаушының жинағындағы жалпақ ашқыштың ізі мен пальтосының сұр жүн талшықтары бар: жәшікті ол ашқан."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_crate",
+        "reason": {
+          "ru": "Под сургучом — отпечаток плоского съёмника из набора пассажира и серые шерстяные волокна его пальто: ящик вскрывал он.",
+          "en": "Under the wax are the imprint of a flat pry tool from the passenger's own kit and grey woollen fibres from his coat: he opened the crate.",
+          "tr": "Mumun altında yolcunun kendi takımındaki yassı sökücünün izi ve paltosunun gri yün lifleri var: sandığı o açtı.",
+          "ar": "تحت الشمع أثر أداة رفع مسطحة من عدّة الراكب وألياف صوفية رمادية من معطفه: هو من فتح الصندوق.",
+          "kk": "Сүргіштің астында жолаушының жинағындағы жалпақ ашқыштың ізі мен пальтосының сұр жүн талшықтары бар: жәшікті ол ашқан."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "Пломбу сняли целиком вместе с сургучом и остатками пыли из служебного отсека.",
+        "en": "The seal was removed whole, together with the wax and the dust from the service section.",
+        "tr": "Mühür, mum ve servis bölümündeki tozla birlikte bütün hâlinde alındı.",
+        "ar": "أُزيل الختم كاملًا مع الشمع وبقايا الغبار من قسم الخدمة.",
+        "kk": "Мөр сүргішімен және қызметтік бөлімдегі шаң қалдығымен бірге тұтас алынды."
+      },
+      "instruction": {
+        "ru": "Снимите сургучную крошку и найдите след инструмента.",
+        "en": "Clear the wax crumbs and find the tool mark.",
+        "tr": "Mum kırıntılarını temizleyin ve alet izini bulun.",
+        "ar": "أزل فتات الشمع وابحث عن أثر الأداة.",
+        "kk": "Сүргіш қиқымын алып, аспап ізін табыңыз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/night-train/tr10-e2.webp",
+        "coverTexture": "shared/surface/dirt.svg",
+        "revealMasks": [
+          "shared/surface/trace-mask.svg"
+        ],
+        "toolCursor": "shared/surface/cloth-cursor.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": false,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "След инструмента и волокна связывают вскрытие с конкретным человеком, а не с абстрактным «кем-то в поезде».",
+          "en": "The tool mark and the fibres tie the opening to a specific person rather than an abstract \"someone on the train\".",
+          "tr": "Alet izi ve lifler, açma işlemini soyut bir «trendeki biri» yerine belirli bir kişiye bağlar.",
+          "ar": "يربط أثر الأداة والألياف عملية الفتح بشخص محدد لا بـ«أحدهم في القطار».",
+          "kk": "Аспап ізі мен талшықтар ашуды дерексіз «пойыздағы біреумен» емес, нақты адаммен байланыстырады."
+        },
+        "playerAction": {
+          "ru": "Снимите сургучную крошку и найдите след инструмента.",
+          "en": "Clear the wax crumbs and find the tool mark.",
+          "tr": "Mum kırıntılarını temizleyin ve alet izini bulun.",
+          "ar": "أزل فتات الشمع وابحث عن أثر الأداة.",
+          "kk": "Сүргіш қиқымын алып, аспап ізін табыңыз."
+        },
+        "conclusion": {
+          "ru": "Под сургучом — отпечаток плоского съёмника из набора пассажира и серые шерстяные волокна его пальто: ящик вскрывал он.",
+          "en": "Under the wax are the imprint of a flat pry tool from the passenger's own kit and grey woollen fibres from his coat: he opened the crate.",
+          "tr": "Mumun altında yolcunun kendi takımındaki yassı sökücünün izi ve paltosunun gri yün lifleri var: sandığı o açtı.",
+          "ar": "تحت الشمع أثر أداة رفع مسطحة من عدّة الراكب وألياف صوفية رمادية من معطفه: هو من فتح الصندوق.",
+          "kk": "Сүргіштің астында жолаушының жинағындағы жалпақ ашқыштың ізі мен пальтосының сұр жүн талшықтары бар: жәшікті ол ашқан."
+        }
+      },
+      "data": {
+        "mode": "erase",
+        "coverType": "dust",
+        "brush": {
+          "radius": 40,
+          "hardness": 0.6,
+          "opacity": 0.84,
+          "spacing": 8
+        },
+        "completion": {
+          "type": "discover_any",
+          "requiredTraceIds": [
+            "pry-tool-mark"
+          ]
+        },
+        "traces": [
+          {
+            "id": "pry-tool-mark",
+            "label": "След плоского съёмника и серые волокна",
+            "labelEn": "Flat pry-tool mark and grey fibres",
+            "requiredRevealPercent": 56,
+            "mask": "shared/surface/trace-mask.svg",
+            "shape": "mask",
+            "isContradiction": true,
+            "conclusion": "Под сургучом — отпечаток плоского съёмника из набора пассажира и серые шерстяные волокна его пальто.",
+            "conclusionEn": "Under the wax are the imprint of a flat pry tool from the passenger's kit and grey woollen fibres from his coat."
+          }
+        ]
+      }
+    },
+    {
+      "id": "TR10-E3",
+      "order": 3,
+      "type": "document_scan",
+      "title": {
+        "ru": "Оригинальная третья накладная 1996 года",
+        "en": "The Original Third Waybill of 1996",
+        "tr": "1996’nın Asıl Üçüncü İrsaliyesi",
+        "ar": "بوليصة الشحن الثالثة الأصلية لعام 1996",
+        "kk": "1996 жылғы түпнұсқа үшінші жүкқұжат"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Графа приёмки поезда пуста, вес ящика не внесён, а номера пломб выданы только следующим утром: часы в поезд не грузили. Это подтверждение схемы, а не отдельное противоречие заявлению.",
+        "en": "The train acceptance box is empty, the crate weight was never entered and the seal numbers were issued only the next morning: the watches were never loaded. This confirms the scheme rather than contradicting a separate sentence of the claim.",
+        "tr": "Tren teslim hanesi boş, sandık ağırlığı girilmemiş ve mühür numaraları ancak ertesi sabah verilmiş: saatler trene hiç yüklenmedi. Bu, iddianın ayrı bir cümlesini çürütmekten çok şemayı doğruluyor.",
+        "ar": "خانة استلام القطار فارغة ووزن الصندوق غير مدوَّن وأرقام الأختام صدرت في صباح اليوم التالي: لم تُحمَّل الساعات في القطار. وهذا تأكيد للمخطط لا دحض لجملة بعينها.",
+        "kk": "Пойызды қабылдау бағаны бос, жәшік салмағы енгізілмеген, ал мөр нөмірлері келесі таңда ғана берілген: сағаттар пойызға тиелмеген. Бұл — схеманы растау, өтініштің жеке тұжырымын теріске шығару емес."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Графа приёмки поезда пуста, вес ящика не внесён, а номера пломб выданы только следующим утром: часы в поезд не грузили. Это подтверждение схемы, а не отдельное противоречие заявлению.",
+          "en": "The train acceptance box is empty, the crate weight was never entered and the seal numbers were issued only the next morning: the watches were never loaded. This confirms the scheme rather than contradicting a separate sentence of the claim.",
+          "tr": "Tren teslim hanesi boş, sandık ağırlığı girilmemiş ve mühür numaraları ancak ertesi sabah verilmiş: saatler trene hiç yüklenmedi. Bu, iddianın ayrı bir cümlesini çürütmekten çok şemayı doğruluyor.",
+          "ar": "خانة استلام القطار فارغة ووزن الصندوق غير مدوَّن وأرقام الأختام صدرت في صباح اليوم التالي: لم تُحمَّل الساعات في القطار. وهذا تأكيد للمخطط لا دحض لجملة بعينها.",
+          "kk": "Пойызды қабылдау бағаны бос, жәшік салмағы енгізілмеген, ал мөр нөмірлері келесі таңда ғана берілген: сағаттар пойызға тиелмеген. Бұл — схеманы растау, өтініштің жеке тұжырымын теріске шығару емес."
+        }
+      },
+      "evidenceTier": "supporting",
+      "description": {
+        "ru": "Третий экземпляр накладной, оставшийся в архиве депо. Именно его не было в деле тридцать лет.",
+        "en": "The third copy of the waybill, left in the depot archive. This is the copy the case file lacked for thirty years.",
+        "tr": "Depo arşivinde kalan üçüncü irsaliye nüshası. Dava dosyasında otuz yıldır eksik olan tam da bu nüshaydı.",
+        "ar": "النسخة الثالثة من البوليصة التي بقيت في أرشيف المستودع، وهي التي غابت عن الملف ثلاثين عامًا.",
+        "kk": "Депо архивінде қалған жүкқұжаттың үшінші данасы. Дәл сол іс материалдарында отыз жыл бойы болмаған."
+      },
+      "instruction": {
+        "ru": "Осмотрите графу приёмки поезда и сверьте её с датой выдачи номеров пломб.",
+        "en": "Examine the train acceptance box and compare it with the date the seal numbers were issued.",
+        "tr": "Tren teslim alma hanesini inceleyin ve mühür numaralarının verildiği tarihle karşılaştırın.",
+        "ar": "افحص خانة استلام القطار وقارنها بتاريخ إصدار أرقام الأختام.",
+        "kk": "Пойызды қабылдау бағанын қарап, оны мөр нөмірлері берілген күнмен салыстырыңыз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/night-train/tr10-e3.webp"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Пустая графа приёмки объясняет всю схему 1996 года: игрок сам видит, что груз не принимали.",
+          "en": "The empty acceptance box explains the whole 1996 scheme: the player sees for themselves that the cargo was never accepted.",
+          "tr": "Boş teslim hanesi 1996 şemasının tamamını açıklar: oyuncu yükün hiç teslim alınmadığını kendisi görür.",
+          "ar": "تشرح خانة الاستلام الفارغة مخطط 1996 كله: يرى اللاعب بنفسه أن الحمولة لم تُستلم قط.",
+          "kk": "Бос қабылдау бағаны 1996 жылғы бүкіл схеманы түсіндіреді: ойыншы жүктің қабылданбағанын өзі көреді."
+        },
+        "playerAction": {
+          "ru": "Осмотрите графу приёмки поезда и сверьте её с датой выдачи номеров пломб.",
+          "en": "Examine the train acceptance box and compare it with the date the seal numbers were issued.",
+          "tr": "Tren teslim alma hanesini inceleyin ve mühür numaralarının verildiği tarihle karşılaştırın.",
+          "ar": "افحص خانة استلام القطار وقارنها بتاريخ إصدار أرقام الأختام.",
+          "kk": "Пойызды қабылдау бағанын қарап, оны мөр нөмірлері берілген күнмен салыстырыңыз."
+        },
+        "conclusion": {
+          "ru": "Графа приёмки поезда пуста, вес ящика не внесён, а номера пломб выданы только следующим утром: часы в поезд не грузили. Это подтверждение схемы, а не отдельное противоречие заявлению.",
+          "en": "The train acceptance box is empty, the crate weight was never entered and the seal numbers were issued only the next morning: the watches were never loaded. This confirms the scheme rather than contradicting a separate sentence of the claim.",
+          "tr": "Tren teslim hanesi boş, sandık ağırlığı girilmemiş ve mühür numaraları ancak ertesi sabah verilmiş: saatler trene hiç yüklenmedi. Bu, iddianın ayrı bir cümlesini çürütmekten çok şemayı doğruluyor.",
+          "ar": "خانة استلام القطار فارغة ووزن الصندوق غير مدوَّن وأرقام الأختام صدرت في صباح اليوم التالي: لم تُحمَّل الساعات في القطار. وهذا تأكيد للمخطط لا دحض لجملة بعينها.",
+          "kk": "Пойызды қабылдау бағаны бос, жәшік салмағы енгізілмеген, ал мөр нөмірлері келесі таңда ғана берілген: сағаттар пойызға тиелмеген. Бұл — схеманы растау, өтініштің жеке тұжырымын теріске шығару емес."
+        }
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "side_light",
+          "backlight"
+        ],
+        "anomalyZones": [
+          {
+            "id": "empty-acceptance",
+            "mode": "side_light",
+            "x": 28,
+            "y": 44,
+            "width": 34,
+            "height": 14,
+            "label": "Пустая графа приёмки поезда",
+            "labelEn": "Empty train acceptance box",
+            "isContradiction": true
+          },
+          {
+            "id": "missing-weight",
+            "mode": "backlight",
+            "x": 66,
+            "y": 44,
+            "width": 18,
+            "height": 14,
+            "label": "Вес ящика не внесён",
+            "labelEn": "Crate weight not entered",
+            "isContradiction": false
+          }
+        ],
+        "referenceFields": [
+          {
+            "id": "seal-issue-date",
+            "label": "Дата выдачи номеров пломб",
+            "labelEn": "Date the seal numbers were issued",
+            "value": "следующее утро"
+          }
+        ],
+        "successCondition": {
+          "type": "select_then_compare",
+          "zoneId": "empty-acceptance",
+          "referenceFieldId": "seal-issue-date"
+        }
+      }
+    },
+    {
+      "id": "TR10-E4",
+      "order": 4,
+      "type": "document",
+      "title": {
+        "ru": "Черновик письма Николая Зорина",
+        "en": "Draft Letter by Nikolai Zorin",
+        "tr": "Nikolay Zorin’in Mektup Taslağı",
+        "ar": "مسودة رسالة نيكولاي زورين",
+        "kk": "Николай Зориннің хат жобасы"
+      },
+      "content": {
+        "ru": "Ноябрь 1996 года, рукой приёмщика: несовпадение веса, отсутствие третьей накладной, чужой почерк в графе приёмки. Отдельной строкой — бухгалтер завода, принёсший исправленный лист уже после отправления состава.",
+        "en": "November 1996, in the receiving officer's hand: mismatched weight, a missing third waybill, another hand in the acceptance box. On a separate line — the factory accountant who brought a corrected sheet after the train had left.",
+        "tr": "Kasım 1996, teslim alma memurunun el yazısıyla: ağırlık uyuşmazlığı, üçüncü irsaliyenin yokluğu, teslim hanesinde başka bir el yazısı. Ayrı bir satırda: tren kalktıktan sonra düzeltilmiş sayfayı getiren fabrika muhasebecisi.",
+        "ar": "نوفمبر 1996، بخط موظف الاستلام: عدم تطابق الوزن، وغياب البوليصة الثالثة، وخط يد آخر في خانة الاستلام. وفي سطر مستقل: محاسب المصنع الذي أحضر ورقة مصححة بعد مغادرة القطار.",
+        "kk": "1996 жылғы қараша, қабылдаушының қолжазбасымен: салмақ сәйкессіздігі, үшінші жүкқұжаттың жоқтығы, қабылдау бағанындағы бөтен қолтаңба. Жеке жолда — құрам жүріп кеткеннен кейін түзетілген парақ әкелген зауыт бухгалтері."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Письмо называет человека, принёсшего подменённый лист, но локальные утверждения о купе и ящике опровергают планшет и осмотр пломбы.",
+        "en": "The letter names the man who brought the substituted sheet, while the tablet and the seal examination disprove the local claims about the compartment and the crate.",
+        "tr": "Mektup, değiştirilmiş sayfayı getiren kişiyi adlandırıyor; kompartıman ve sandıkla ilgili yerel iddiaları ise tablet ve mühür incelemesi çürütüyor.",
+        "ar": "تسمّي الرسالة من أحضر الورقة المستبدلة، أما ادعاءات المقصورة والصندوق فيدحضهما الجهاز اللوحي وفحص الختم.",
+        "kk": "Хат ауыстырылған парақты әкелген адамды атайды, ал купе мен жәшік туралы тұжырымдарды планшет пен мөр тексерісі теріске шығарады."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Письмо называет человека, принёсшего подменённый лист, но локальные утверждения о купе и ящике опровергают планшет и осмотр пломбы.",
+          "en": "The letter names the man who brought the substituted sheet, while the tablet and the seal examination disprove the local claims about the compartment and the crate.",
+          "tr": "Mektup, değiştirilmiş sayfayı getiren kişiyi adlandırıyor; kompartıman ve sandıkla ilgili yerel iddiaları ise tablet ve mühür incelemesi çürütüyor.",
+          "ar": "تسمّي الرسالة من أحضر الورقة المستبدلة، أما ادعاءات المقصورة والصندوق فيدحضهما الجهاز اللوحي وفحص الختم.",
+          "kk": "Хат ауыстырылған парақты әкелген адамды атайды, ал купе мен жәшік туралы тұжырымдарды планшет пен мөр тексерісі теріске шығарады."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr10-e4.webp"
+      }
+    },
+    {
+      "id": "TR10-E5",
+      "order": 5,
+      "type": "phone_records",
+      "title": {
+        "ru": "Синхронизация звонков и камеры платформы",
+        "en": "Call and Platform Camera Synchronisation",
+        "tr": "Aramaların ve Peron Kamerasının Senkronizasyonu",
+        "ar": "مزامنة المكالمات وكاميرا الرصيف",
+        "kk": "Қоңыраулар мен платформа камерасын синхрондау"
+      },
+      "content": {
+        "ru": "03:26, 03:29, 03:34 — три исходящих на номер водителя у платформы. Камера съезда в те же секунды показывает человека с переносным сигналом и пустой тележкой для архивного ящика.",
+        "en": "03:26, 03:29, 03:34 — three outgoing calls to the driver by the platform. At the same seconds the ramp camera shows a man with a portable signal lamp and an empty trolley sized for the archive crate.",
+        "tr": "03:26, 03:29, 03:34 — perondaki sürücüye üç giden arama. Aynı saniyelerde rampa kamerası, taşınabilir sinyal feneri ve arşiv sandığına uygun boş bir el arabası tutan bir adamı gösteriyor.",
+        "ar": "03:26 و03:29 و03:34 — ثلاث مكالمات صادرة إلى السائق عند الرصيف. وفي اللحظات نفسها تُظهر كاميرا المنحدر رجلًا يحمل فانوس إشارة متنقلًا وعربة فارغة بمقاس صندوق الأرشيف.",
+        "kk": "03:26, 03:29, 03:34 — платформадағы жүргізушінің нөміріне үш шыққан қоңырау. Дәл сол секундтарда съезд камерасы тасымалы сигналы мен архив жәшігіне арналған бос арбасы бар адамды көрсетеді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Звонки координируют человека у путей, но нахождение у архива и вскрытие пломбы доказывают планшет и осмотр.",
+        "en": "The calls coordinate the man by the track, while the tablet and the examination prove the presence at the archive and the opening of the seal.",
+        "tr": "Aramalar raydaki adamı yönlendiriyor; arşivin yanında bulunmayı ve mührün açılmasını ise tablet ile inceleme kanıtlıyor.",
+        "ar": "تنسّق المكالمات مع الرجل قرب السكة، أما التواجد عند الأرشيف وفتح الختم فيثبتهما الجهاز اللوحي والفحص.",
+        "kk": "Қоңыраулар жол жиегіндегі адаммен үйлестіреді, ал архив қасында болу мен мөрді ашуды планшет пен тексеру дәлелдейді."
+      },
+      "statementLink": {
+        "statementId": "claim_compartment",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Звонки координируют человека у путей, но нахождение у архива и вскрытие пломбы доказывают планшет и осмотр.",
+          "en": "The calls coordinate the man by the track, while the tablet and the examination prove the presence at the archive and the opening of the seal.",
+          "tr": "Aramalar raydaki adamı yönlendiriyor; arşivin yanında bulunmayı ve mührün açılmasını ise tablet ile inceleme kanıtlıyor.",
+          "ar": "تنسّق المكالمات مع الرجل قرب السكة، أما التواجد عند الأرشيف وفتح الختم فيثبتهما الجهاز اللوحي والفحص.",
+          "kk": "Қоңыраулар жол жиегіндегі адаммен үйлестіреді, ал архив қасында болу мен мөрді ашуды планшет пен тексеру дәлелдейді."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr10-e5.webp",
+        "phoneMask": "+7 ••• ••• 96 13"
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Планшет фиксирует переход в вагон №7 в 03:24 и шесть минут у архивного отсека.",
+      "Под сургучом пломбы — след съёмника из его набора и серые волокна его пальто.",
+      "Звонки водителю у платформы синхронны кадрам камеры с тележкой для архивного ящика."
+    ],
+    "en": [
+      "The tablet records the walk to car No. 7 at 03:24 and six minutes by the archive section.",
+      "Under the wax seal are a pry-tool mark from his own kit and grey fibres from his coat.",
+      "The calls to the driver by the platform are synchronous with camera frames showing a trolley sized for the archive crate."
+    ],
+    "tr": [
+      "Tablet, 03:24’te 7 No.lu vagona geçişi ve arşiv bölümünün yanında altı dakikayı kaydediyor.",
+      "Mührün mumunun altında kendi takımından bir sökücü izi ve paltosunun gri lifleri var.",
+      "Perondaki sürücüye yapılan aramalar, arşiv sandığına uygun el arabasını gösteren kamera kareleriyle eşzamanlı."
+    ],
+    "ar": [
+      "يسجّل الجهاز اللوحي الانتقال إلى العربة رقم 7 في 03:24 وست دقائق قرب قسم الأرشيف.",
+      "تحت شمع الختم أثر أداة من عدّته وألياف رمادية من معطفه.",
+      "المكالمات مع السائق عند الرصيف متزامنة مع لقطات الكاميرا التي تُظهر عربة بمقاس صندوق الأرشيف."
+    ],
+    "kk": [
+      "Планшет 03:24-те №7 вагонға өтуді және архив бөлімінің қасындағы алты минутты тіркейді.",
+      "Мөр сүргішінің астында өз жинағындағы ашқыштың ізі мен пальтосының сұр талшықтары бар.",
+      "Платформадағы жүргізушіге шалынған қоңыраулар архив жәшігіне арналған арбасы бар камера кадрларымен синхронды."
+    ]
+  },
+  "investigationBudget": 5,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "stampable": false,
+      "text": {
+        "ru": "Пассажир не причастен к вскрытию архива и к остановке у платформы.",
+        "en": "The passenger is not involved in opening the archive or in the stop by the platform.",
+        "tr": "Yolcunun arşivin açılmasıyla ve perondaki duruşla ilgisi yok.",
+        "ar": "الراكب غير متورط في فتح الأرشيف ولا في التوقف عند الرصيف.",
+        "kk": "Жолаушының архивті ашуға да, платформадағы аялдамаға да қатысы жоқ."
+      }
+    },
+    {
+      "id": "claim_compartment",
+      "stampable": true,
+      "text": {
+        "ru": "После 03:20 я не покидал купе №4 и к вагону №7 не подходил.",
+        "en": "After 03:20 I did not leave compartment No. 4 and did not go near car No. 7.",
+        "tr": "Saat 03:20’den sonra 4 No.lu kompartımandan çıkmadım ve 7 No.lu vagona yaklaşmadım.",
+        "ar": "بعد 03:20 لم أغادر المقصورة رقم 4 ولم أقترب من العربة رقم 7.",
+        "kk": "03:20-дан кейін №4 купеден шықпадым және №7 вагонға жақындамадым."
+      }
+    },
+    {
+      "id": "claim_crate",
+      "stampable": true,
+      "text": {
+        "ru": "Архивный ящик я не открывал.",
+        "en": "I did not open the archive crate.",
+        "tr": "Arşiv sandığını açmadım.",
+        "ar": "لم أفتح صندوق الأرشيف.",
+        "kk": "Архив жәшігін ашқан жоқпын."
+      }
+    }
+  ],
+  "contentVersion": "night-train-1.0",
+  "narrative": {
+    "preBrief": {
+      "ru": "Тёмная платформа за окном. Семь минут ещё не начались, но кто-то уже их потратил.",
+      "en": "A dark platform outside the window. The seven minutes have not begun, yet somebody has already spent them.",
+      "tr": "Pencerenin dışında karanlık bir peron. Yedi dakika henüz başlamadı ama biri onları çoktan harcadı.",
+      "ar": "رصيف مظلم خلف النافذة. لم تبدأ السبع دقائق بعد، لكن أحدهم أنفقها سلفًا.",
+      "kk": "Терезеден қараңғы платформа көрінеді. Жеті минут әлі басталған жоқ, бірақ біреу оны әлдеқашан жұмсап та қойған."
+    },
+    "postVerdictNote": {
+      "ru": "Тридцатилетняя бумага действительно ничего не меняет. Странно только, что ради неё останавливали поезд.",
+      "en": "A thirty-year-old paper really does change nothing. It is only odd that a train was stopped for it.",
+      "tr": "Otuz yıllık bir kâğıt gerçekten hiçbir şeyi değiştirmez. Tuhaf olan, onun için bir trenin durdurulmuş olması.",
+      "ar": "ورقة عمرها ثلاثون عامًا لا تغيّر شيئًا فعلًا. الغريب فقط أن قطارًا أُوقف من أجلها.",
+      "kk": "Отыз жылдық қағаз шынымен ештеңені өзгертпейді. Тек сол үшін пойызды тоқтатқаны таңқаларлық."
+    },
+    "nextCaseTeaser": {
+      "ru": "Поезд проходит мимо тёмной платформы. На станции Озёрная материалы передают полиции.",
+      "en": "The train rolls past the dark platform. At Ozyornaya station the materials are handed to the police.",
+      "tr": "Tren karanlık peronun önünden geçiyor. Ozyornaya istasyonunda materyaller polise teslim ediliyor.",
+      "ar": "يمر القطار بمحاذاة الرصيف المظلم. وفي محطة أوزيورنايا تُسلَّم المواد إلى الشرطة.",
+      "kk": "Пойыз қараңғы платформаның жанынан өтеді. Озёрная станциясында материалдар полицияға тапсырылады."
+    },
+    "seasonClue": {
+      "id": "original-waybill",
+      "progressIndex": 10,
+      "progressTotal": 10,
+      "label": {
+        "ru": "Накладная и письмо Зорина",
+        "en": "The Waybill and Zorin's Letter",
+        "tr": "İrsaliye ve Zorin’in Mektubu",
+        "ar": "البوليصة ورسالة زورين",
+        "kk": "Жүкқұжат және Зориннің хаты"
+      },
+      "description": {
+        "ru": "Груз никогда не принимали в поезд. Николай Зорин не был виновен, и теперь это подтверждено документом.",
+        "en": "The cargo was never accepted onto the train. Nikolai Zorin was not guilty, and now a document proves it.",
+        "tr": "Yük trene hiç teslim alınmadı. Nikolay Zorin suçlu değildi ve artık bunu bir belge kanıtlıyor.",
+        "ar": "لم تُستلم الحمولة في القطار قط. لم يكن نيكولاي زورين مذنبًا، وهذا ما تثبته الآن وثيقة.",
+        "kk": "Жүк пойызға ешқашан қабылданбаған. Николай Зорин кінәлі болмаған, енді мұны құжат растайды."
+      }
+    },
+    "epilogue": {
+      "ru": [
+        "Через полгода в старом вагоне открывают музей «Северной звезды». На одной полке лежат часы №17, на другой — билет до станции Тихая.",
+        "Ирина поёт на открытии без дорогой аппаратуры, Анна и Сергей приезжают отдельно и впервые не спорят, чей чемодан стоит у входа.",
+        "Тамара наливает Вере чай в тяжёлом подстаканнике: «Ну вот. Последний рейс всё-таки прибыл». — «Нет. Просто теперь у него правильная конечная»."
+      ],
+      "en": [
+        "Six months later a museum of the Northern Star opens inside the old car. On one shelf lies watch No. 17, on another the ticket to Tikhaya station.",
+        "Irina sings at the opening without expensive equipment; Anna and Sergey arrive separately and for the first time do not argue about whose suitcase stands by the door.",
+        "Tamara pours Vera tea in a heavy glass holder: \"Well then. The last service arrived after all.\" — \"No. It simply has the right terminus now.\""
+      ],
+      "tr": [
+        "Altı ay sonra eski vagonda «Kuzey Yıldızı» müzesi açılıyor. Bir rafta 17 numaralı saat, diğerinde Tihaya istasyonuna bilet duruyor.",
+        "Irina açılışta pahalı ekipman olmadan söylüyor; Anna ve Sergey ayrı ayrı geliyor ve ilk kez kapıdaki bavulun kimin olduğunu tartışmıyorlar.",
+        "Tamara, Vera’ya ağır bardaklıkta çay koyuyor: «İşte böyle. Son sefer sonunda vardı.» — «Hayır. Sadece artık doğru bir son durağı var.»"
+      ],
+      "ar": [
+        "بعد ستة أشهر يُفتتح متحف «النجم الشمالي» داخل العربة القديمة. على رفٍّ ساعة رقم 17، وعلى آخر تذكرة إلى محطة تيخايا.",
+        "تغني إيرينا في الافتتاح دون معدات باهظة، ويأتي آنا وسيرغي كلٌّ على حدة ولا يتجادلان لأول مرة حول صاحب الحقيبة عند المدخل.",
+        "تصبّ تمارا لفيرا شايًا في حامل ثقيل: «ها قد وصلت الرحلة الأخيرة أخيرًا.» — «لا، صار لها فقط محطة نهائية صحيحة.»"
+      ],
+      "kk": [
+        "Алты айдан кейін ескі вагонда «Солтүстік жұлдыз» мұражайы ашылады. Бір сөреде №17 сағат, екіншісінде Тихая станциясына дейінгі билет жатыр.",
+        "Ирина ашылуда қымбат аппаратурасыз ән салады, Анна мен Сергей бөлек келеді және алғаш рет есік алдындағы чемодан кімдікі екенін таласпайды.",
+        "Тамара Вераға ауыр стақан ұстағышпен шай құяды: «Міне. Соңғы рейс бәрібір жетті». — «Жоқ. Жай ғана енді оның соңғы аялдамасы дұрыс»."
+      ]
+    }
+  },
+  "finalSynthesis": {
+    "id": "night-train-finale",
+    "unlockAfter": "correct_verdict",
+    "arcEvidenceAccess": "post_verdict_free",
+    "skippableAfterAttempts": 3,
+    "analyticsEvent": "night_train_finale",
+    "title": {
+      "ru": "Билет до станции Тихая",
+      "en": "The Ticket to Tikhaya Station",
+      "tr": "Tihaya İstasyonuna Bilet",
+      "ar": "تذكرة إلى محطة تيخايا",
+      "kk": "Тихая станциясына дейінгі билет"
+    },
+    "instruction": {
+      "ru": "Соедините три узла: кто едет под чужим именем, что случилось с часами в 1996 году и зачем понадобилась остановка.",
+      "en": "Connect three nodes: who travels under a false name, what happened to the watches in 1996, and why the stop was needed.",
+      "tr": "Üç düğümü birleştirin: kim sahte adla seyahat ediyor, 1996’da saatlere ne oldu ve duruş neden gerekliydi.",
+      "ar": "اربط ثلاث عُقد: من يسافر باسم مستعار، وما الذي حدث للساعات عام 1996، ولماذا لزم التوقف.",
+      "kk": "Үш торапты жалғаңыз: кім бөтен есіммен жүр, 1996 жылы сағаттарға не болды және аялдама не үшін керек болды."
+    },
+    "nodes": [
+      {
+        "id": "identity",
+        "label": {
+          "ru": "Кто едет под чужим именем",
+          "en": "Who travels under a false name",
+          "tr": "Kim sahte adla seyahat ediyor",
+          "ar": "من يسافر باسم مستعار",
+          "kk": "Кім бөтен есіммен жүр"
+        },
+        "evidenceIds": [
+          "TR07-E1",
+          "TR07-E4",
+          "TR07-E5"
+        ]
+      },
+      {
+        "id": "old-fraud",
+        "label": {
+          "ru": "Что случилось в 1996 году",
+          "en": "What happened in 1996",
+          "tr": "1996’da ne oldu",
+          "ar": "ماذا حدث عام 1996",
+          "kk": "1996 жылы не болды"
+        },
+        "evidenceIds": [
+          "TR02-E3",
+          "TR10-E3",
+          "TR10-E4"
+        ]
+      },
+      {
+        "id": "the-stop",
+        "label": {
+          "ru": "Зачем нужна была остановка",
+          "en": "Why the stop was needed",
+          "tr": "Duruş neden gerekliydi",
+          "ar": "لماذا لزم التوقف",
+          "kk": "Аялдама не үшін керек болды"
+        },
+        "evidenceIds": [
+          "TR09-E3",
+          "TR10-E1",
+          "TR10-E5"
+        ]
+      }
+    ],
+    "requiredLinks": [
+      [
+        "identity",
+        "old-fraud"
+      ],
+      [
+        "old-fraud",
+        "the-stop"
+      ]
+    ],
+    "evidenceUnlockIds": [
+      "TR02-E3",
+      "TR07-E4",
+      "TR09-E3",
+      "TR10-E4"
+    ],
+    "successConclusion": {
+      "ru": "Под именем умершего Михаила Ветрова едет Олег Беляев, бухгалтер завода «Меридиан». В 1996 году ящик с часами не грузили в поезд: документы подменили ради страховой выплаты, а виновным сделали приёмщика Николая Зорина. Остановка на Тихой нужна была, чтобы передать сообщнику архивный ящик и уничтожить оригинальную накладную с письмом до прибытия в музей.",
+      "en": "Travelling under the name of the late Mikhail Vetrov is Oleg Belyaev, accountant of the Meridian factory. In 1996 the crate of watches was never loaded onto the train: the documents were substituted for the insurance payout and receiving officer Nikolai Zorin was made the culprit. The stop at Tikhaya was needed to hand the archive crate to an accomplice and destroy the original waybill and letter before the museum received them.",
+      "tr": "Merhum Mihail Vetrov adıyla seyahat eden kişi, «Meridian» fabrikasının muhasebecisi Oleg Belyayev. 1996’da saat sandığı trene hiç yüklenmedi: belgeler sigorta tazminatı için değiştirildi ve suç, teslim memuru Nikolay Zorin’in üzerine yıkıldı. Tihaya’daki duruş, arşiv sandığını suç ortağına vermek ve asıl irsaliye ile mektubu müzeye ulaşmadan yok etmek içindi.",
+      "ar": "يسافر باسم الراحل ميخائيل فيتروف أوليغُ بيلاييف محاسب مصنع «ميريديان». في 1996 لم يُحمَّل صندوق الساعات في القطار: استُبدلت الوثائق للحصول على تعويض التأمين وجُعل موظف الاستلام نيكولاي زورين مذنبًا. ولزم التوقف في تيخايا لتسليم صندوق الأرشيف إلى شريك وإتلاف البوليصة الأصلية والرسالة قبل وصولهما إلى المتحف.",
+      "kk": "Марқұм Михаил Ветровтың атымен «Меридиан» зауытының бухгалтері Олег Беляев жүр. 1996 жылы сағаттар салынған жәшік пойызға тиелмеген: сақтандыру төлемі үшін құжаттар ауыстырылып, кінәлі етіп қабылдаушы Николай Зорин көрсетілген. Тихаядағы аялдама архив жәшігін сыбайласына беру және түпнұсқа жүкқұжат пен хатты мұражайға жеткенше жою үшін керек болды."
+    }
+  }
+}

@@ -531,10 +531,10 @@
       "kk": "Біз енді мекенжай іздемейміз. Біз EY-17 секторының қақпасының сыртында не болып жатқанын тексеріп жатырмыз. — В. Лебедева"
     },
     "postVerdictNote": {
-      "ru": "На контейнерах за воротами стоит новая метка: GC-17. Восточный двор — только одна остановка. Дальше имущество уходит в сеть, которую в документах называют «Серым конвоем». Среди грузовых кодов впервые появляется закрытая Навигационная академия «Меридиан»; пока это только один пункт в длинном маршруте.",
-      "en": "The containers behind the gate bear a new mark: GC-17. Eastern Yard is only one stop. From there, the property enters a network the documents call the Gray Convoy. The closed Meridian Navigation Academy appears among the cargo codes for the first time; for now, it is only one point on a long route.",
-      "tr": "Kapının arkasındaki konteynerler yeni bir işaret taşıyor: GC-17. Doğu Yard sadece bir durak. Buradan mülk, belgelerde Gri Konvoy olarak adlandırılan bir ağa giriyor. Kapalı Meridian Navigasyon Akademisi ilk kez kargo kodları arasında yer alıyor; şimdilik uzun bir rotanın yalnızca bir noktası.",
-      "ar": "تحمل الحاويات الموجودة خلف البوابة علامة جديدة: GC-17. يقع Eastern Yard على بعد محطة واحدة فقط. ومن هناك، تدخل الخاصية إلى شبكة تسمى المستندات Gray Convoy. تظهر أكاديمية ميريديان للملاحة المغلقة بين رموز الشحن لأول مرة؛ وفي الوقت الحالي، فهي مجرد نقطة واحدة على طريق طويل.",
+      "ru": "На контейнерах за воротами стоит новая метка: GC-17. Восточный двор — только одна остановка. Дальше имущество уходит в сеть, которую в документах называют «Серым конвоем». Среди грузовых кодов впервые появляется закрытый учебно-логистический комплекс «Меридиан»; пока это только один пункт в длинном маршруте.",
+      "en": "The containers behind the gate bear a new mark: GC-17. Eastern Yard is only one stop. From there, the property enters a network the documents call the Gray Convoy. The closed Meridian training-and-logistics complex appears among the cargo codes for the first time; for now, it is only one point on a long route.",
+      "tr": "Kapının arkasındaki konteynerler yeni bir işaret taşıyor: GC-17. Doğu Yard sadece bir durak. Buradan mülk, belgelerde Gri Konvoy olarak adlandırılan bir ağa giriyor. Kapalı Meridian eğitim-lojistik tesisi ilk kez kargo kodları arasında yer alıyor; şimdilik uzun bir rotanın yalnızca bir noktası.",
+      "ar": "تحمل الحاويات الموجودة خلف البوابة علامة جديدة: GC-17. يقع Eastern Yard على بعد محطة واحدة فقط. ومن هناك، تدخل الخاصية إلى شبكة تسمى المستندات Gray Convoy. تظهر مجمّع ميريديان المغلق للتدريب واللوجستيات بين رموز الشحن لأول مرة؛ وفي الوقت الحالي، فهي مجرد نقطة واحدة على طريق طويل.",
       "kk": "Қақпа сыртындағы контейнерлерде жаңа белгі бар: GC-17. Шығыс аула бір ғана аялдама. Содан кейін мүлік желіге түседі, ол құжаттарда «Сұр конвой» деп аталады. Жүк кодтарының арасында жабық Меридиан навигация академиясы алғаш рет пайда болады; әзірге бұл ұзақ жолдағы бір ғана нүкте."
     },
     "nextCaseTeaser": {
@@ -564,5 +564,111 @@
       "progressTotal": 4
     },
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "timur_rasulov",
+      "displayName": {
+        "ru": "Тимур Расулов",
+        "en": "Timur Rasulov",
+        "tr": "Timur Rasulov",
+        "ar": "تيمور رسولوف",
+        "kk": "Тимур Расулов"
+      },
+      "portraitState": "doomed"
+    },
+    "finalLine": {
+      "ru": "Машину нашли. Жаль, что вместе с ней нашли и меня.",
+      "en": "The car was found. A pity that I was found along with it.",
+      "tr": "Araba bulundu. Yazık ki onunla birlikte ben de bulundum.",
+      "ar": "عُثر على السيارة. ومن سوء الحظ أنه عُثر عليّ معها.",
+      "kk": "Көлік табылды. Өкініштісі, онымен бірге мен де табылдым."
+    },
+    "emotionalMode": "threat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Автомобиль действительно покинул гараж ночью, а трекер показывает прямой маршрут к сектору EY-17.",
+          "en": "The vehicle really did leave the garage at night, and the tracker shows a direct route to sector EY-17.",
+          "tr": "Araç gerçekten gece garajdan çıktı ve takip cihazı EY-17 sektörüne doğrudan bir güzergâh gösteriyor.",
+          "ar": "غادرت السيارة المرآب ليلًا فعلًا، ويُظهر جهاز التتبّع مسارًا مباشرًا إلى القطاع EY-17.",
+          "kk": "Көлік шынымен түнде гараждан шыққан, ал трекер EY-17 секторына тікелей маршрутты көрсетеді."
+        },
+        "evidenceIds": [
+          "ev-gps"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Журнал доступа фиксирует открытие штатным ключом владельца, а в черновике заявления под затиркой читается «ключ №2 у меня».",
+          "en": "The access log records opening with the owner's own factory key, and under the correction in the draft claim the line reads “key No. 2 is with me”.",
+          "tr": "Erişim kaydı, aracın sahibinin orijinal anahtarıyla açıldığını gösteriyor; başvurunun taslağındaki silinti altında ise “2 numaralı anahtar bende” yazıyor.",
+          "ar": "يسجّل نظام الدخول فتحًا بمفتاح المالك الأصلي، وتحت الطمس في مسوّدة الطلب يظهر سطر: «المفتاح رقم 2 معي».",
+          "kk": "Қатынау журналы иесінің зауыттық кілтімен ашылғанын тіркеген, ал өтініш жобасындағы өшірілген жердің астында «№2 кілт менде» деп оқылады."
+        },
+        "evidenceIds": [
+          "ev-keylog",
+          "ev-police"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Камера въезда показывает, кто пригнал машину, а оплата за комплектующие приходит владельцу. Угон инсценирован.",
+          "en": "The gate camera shows who drove the car in, and the payment for parts goes to the owner. The theft was staged.",
+          "tr": "Giriş kamerası aracı kimin getirdiğini gösteriyor ve parça bedeli sahibine ödeniyor. Hırsızlık sahnelenmiş.",
+          "ar": "تُظهر كاميرا البوابة من قاد السيارة إلى الداخل، وثمن القطع يذهب إلى المالك. السرقة مُدبَّرة.",
+          "kk": "Кіреберіс камерасы көлікті кім әкелгенін көрсетеді, ал бөлшектер ақысы иесіне түседі. Ұрлық қойылған."
+        },
+        "evidenceIds": [
+          "ev-cam",
+          "ev-parts"
+        ]
+      }
+    ],
+    "veraLine": {
+      "ru": "«Проверяйте маршрут имущества» — это его правило. Сегодня оно работает против системы, которую он построил.",
+      "en": "“Trace the route of the property” — that is his rule. Today it works against the system he built.",
+      "tr": "“Malın güzergâhını izleyin” — bu onun kuralı. Bugün bu kural, kurduğu sistemin aleyhine işliyor.",
+      "ar": "«تتبّع مسار الممتلكات» — تلك قاعدته. واليوم تعمل ضدّ النظام الذي بناه.",
+      "kk": "«Мүліктің маршрутын тексер» — бұл оның ережесі. Бүгін ол өзі құрған жүйеге қарсы жұмыс істеп тұр."
+    },
+    "arcReveal": {
+      "title": {
+        "ru": "Маркировка GC-17",
+        "en": "GC-17 Marking",
+        "tr": "GC-17 İşaretlemesi",
+        "ar": "علامة GC-17",
+        "kk": "GC-17 белгісі"
+      },
+      "text": {
+        "ru": "За Восточным двором обнаружена транспортная сеть «Серый конвой», перемещающая имущество после инсценированных страховых событий.",
+        "en": "Beyond Eastern Yard lies the Gray Convoy transport network, moving property after staged insured events.",
+        "tr": "Eastern Yard'ın ötesinde, aşamalı sigortalı olaylardan sonra mülkleri taşıyan Gri Konvoy ulaşım ağı yatıyor.",
+        "ar": "تقع خلف Eastern Yard شبكة النقل Gray Convoy، التي تنقل الممتلكات بعد تنظيم الأحداث المؤمنة.",
+        "kk": "Шығыс ауланың артында сатылған сақтандыру оқиғаларынан кейін мүлікті жылжытатын Gray Convoy көлік желісі табылды."
+      }
+    }
   }
 }

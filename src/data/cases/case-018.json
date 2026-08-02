@@ -417,5 +417,87 @@
     },
     "seasonClue": null,
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "anatoly_stepanovich",
+      "displayName": {
+        "ru": "Анатолий Степанович",
+        "en": "Anatoly Stepanovich",
+        "tr": "Anatoli Stepanoviç",
+        "ar": "أناتولي ستيبانوفيتش",
+        "kk": "Анатолий Степанович"
+      },
+      "portraitState": "warm"
+    },
+    "finalLine": {
+      "ru": "Если кольцо найдётся — Жорику его больше не показывайте.",
+      "en": "If the ring ever turns up, do not let Zhorik see it again.",
+      "tr": "Yüzük bulunursa Jorik'e bir daha göstermeyin.",
+      "ar": "إن عُثر على الخاتم، فلا تُروه لجوريك مرّة أخرى.",
+      "kk": "Егер сақина табылса, оны Жорикке қайтып көрсетпеңіз."
+    },
+    "emotionalMode": "humour",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Кадр соседской камеры показывает кольцо на правой стойке шасси дрона — и енота, вцепившегося в корпус.",
+          "en": "The neighbour's camera frame shows the ring on the drone's right landing strut — and a raccoon clinging to the body.",
+          "tr": "Komşunun kamera karesinde yüzük dronun sağ iniş ayağında, gövdeye tutunmuş bir rakun da görülüyor.",
+          "ar": "تُظهر لقطة كاميرا الجار الخاتم على الحامل الأيمن للطائرة المسيّرة، وراكونًا متشبّثًا بالهيكل.",
+          "kk": "Көршінің камера кадрында сақина дронның оң шассиінде, ал корпусқа жабысқан жанат көрінеді."
+        },
+        "evidenceIds": [
+          "ev-camera"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Полётный журнал фиксирует рост нагрузки на 1,8 кг в 23:00:25 и неуправляемый дрейф к реке через шестнадцать секунд.",
+          "en": "The flight log records a 1.8 kg load spike at 23:00:25 and an uncontrolled drift towards the river sixteen seconds later.",
+          "tr": "Uçuş kaydı 23:00:25'te 1,8 kg'lık yük artışını ve on altı saniye sonra nehre doğru kontrolsüz sürüklenmeyi gösteriyor.",
+          "ar": "يسجّل دفتر الطيران زيادة حمل قدرها 1.8 كغ عند 23:00:25 وانجرافًا غير منضبط نحو النهر بعد ست عشرة ثانية.",
+          "kk": "Ұшу журналы 23:00:25-те 1,8 кг жүктеме өскенін және он алты секундтан кейін өзенге қарай бақылаусыз ығысқанын тіркеген."
+        },
+        "evidenceIds": [
+          "ev-flight-log"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Свидетель видел, как с шасси сорвалось что-то блестящее, а поиск в указанных координатах ничего не дал. Утрата подтверждена независимо.",
+          "en": "The witness saw something bright come off the strut, and the search at those coordinates found nothing. The loss is independently confirmed.",
+          "tr": "Tanık, ayaktan parlak bir şeyin koptuğunu gördü; belirtilen koordinatlardaki arama sonuç vermedi. Kayıp bağımsız olarak doğrulandı.",
+          "ar": "رأى الشاهد شيئًا لامعًا ينفصل عن الحامل، ولم يُسفر البحث في تلك الإحداثيات عن شيء. الفقد مؤكَّد باستقلال.",
+          "kk": "Куә шассиден жалтыраған бірдеңенің үзіліп кеткенін көрген, ал көрсетілген координаттардағы іздеу нәтиже бермеді. Жоғалту тәуелсіз түрде расталды."
+        },
+        "evidenceIds": [
+          "ev-witness",
+          "ev-search"
+        ]
+      }
+    ]
   }
 }

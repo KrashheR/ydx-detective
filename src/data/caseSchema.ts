@@ -13,6 +13,7 @@ import { z } from 'zod';
 import {
   SUPPORTED_LANGUAGES,
   type Case,
+  type CaseResolution,
   type ClientInfo,
   type ClientMetaRow,
   type Evidence,
@@ -43,7 +44,7 @@ const localizedContent = localizedShape(
 /*  Enums                                                                     */
 /* -------------------------------------------------------------------------- */
 
-const caseType = z.enum(['standard', 'daily']);
+const caseType = z.enum(['standard', 'daily', 'archive']);
 const difficulty = z.enum(['easy', 'medium', 'hard']);
 const truth = z.enum(['valid', 'fraud']);
 const decision = z.enum(['approve', 'reject']);
@@ -252,6 +253,44 @@ export const clientInfoSchema = z
 
 type _ClientInfoCheck = AssertAssignable<ClientInfo, z.infer<typeof clientInfoSchema>>;
 
+/* -------------------------------------------------------------------------- */
+/*  Case resolution — the human closing of a case                             */
+/* -------------------------------------------------------------------------- */
+
+const resolutionMood = z.enum(['relief', 'humour', 'bittersweet', 'defeat', 'grave', 'threat']);
+
+const resolutionSchema = z
+  .object({
+    verdict: decision,
+    speaker: z
+      .object({
+        characterId: z.string().min(1),
+        displayName: localizedString,
+        portraitState: z.string().min(1).optional(),
+      })
+      .strict(),
+    finalLine: localizedString,
+    emotionalMode: resolutionMood,
+    // Three links at most: the разбор must stay compact enough to read at a glance.
+    reasoningChain: z
+      .array(
+        z
+          .object({ label: localizedString, text: localizedString, evidenceIds: z.array(z.string().min(1)) })
+          .strict(),
+      )
+      .min(1)
+      .max(3)
+      .optional(),
+    veraLine: localizedString.optional(),
+    arcReveal: z
+      .object({ title: localizedString, text: localizedString, evidenceIds: z.array(z.string().min(1)).optional() })
+      .strict()
+      .optional(),
+  })
+  .strict();
+
+type _CaseResolutionCheck = AssertAssignable<CaseResolution, z.infer<typeof resolutionSchema>>;
+
 export const caseSchema = z
   .object({
     id: z.string().min(1),
@@ -294,6 +333,7 @@ export const caseSchema = z
       arcEvidenceAccess: z.literal('post_verdict_free'), successConclusion: localizedString,
       skippableAfterAttempts: z.number().int().positive(), analyticsEvent: z.string(),
     }).strict().optional(),
+    resolution: resolutionSchema.optional(),
   })
   .strict()
   // Cross-field invariant: evidence ids must be unique within a case so the
@@ -338,6 +378,29 @@ export const caseSchema = z
         if (link && !statementIds.has(link.statementId)) ctx.addIssue({ code: z.ZodIssueCode.custom, message: `Unknown statement link "${link.statementId}"`, path: ['evidences', index, 'statementLink'] });
         if (link?.relation === 'contradicts' !== ev.isContradiction) ctx.addIssue({ code: z.ZodIssueCode.custom, message: 'relation/isContradiction mismatch', path: ['evidences', index] });
         if (link?.relation === 'contradicts' && !data.claimStatements.find((s) => s.id === link.statementId)?.stampable) ctx.addIssue({ code: z.ZodIssueCode.custom, message: 'Contradiction must target a stampable statement', path: ['evidences', index] });
+      }
+    }
+    if (data.resolution) {
+      // The final line is only ever shown after a *correct* verdict, so a
+      // resolution written for the opposite decision would leak the answer.
+      if (data.resolution.verdict !== data.correctDecision) {
+        ctx.addIssue({ code: z.ZodIssueCode.custom, message: 'Resolution verdict must match correctDecision', path: ['resolution', 'verdict'] });
+      }
+      const refs: { path: (string | number)[]; ids: readonly string[] }[] = [
+        ...(data.resolution.reasoningChain ?? []).map((link, index) => ({
+          path: ['resolution', 'reasoningChain', index, 'evidenceIds'],
+          ids: link.evidenceIds,
+        })),
+        ...(data.resolution.arcReveal?.evidenceIds
+          ? [{ path: ['resolution', 'arcReveal', 'evidenceIds'], ids: data.resolution.arcReveal.evidenceIds }]
+          : []),
+      ];
+      for (const ref of refs) {
+        for (const evidenceId of ref.ids) {
+          if (!ids.has(evidenceId)) {
+            ctx.addIssue({ code: z.ZodIssueCode.custom, message: `Resolution references unknown evidence "${evidenceId}"`, path: ref.path });
+          }
+        }
       }
     }
     if (data.truth === 'valid' && data.evidences.some((ev) => ev.isContradiction)) ctx.addIssue({ code: z.ZodIssueCode.custom, message: 'Valid case cannot contain contradictions', path: ['evidences'] });

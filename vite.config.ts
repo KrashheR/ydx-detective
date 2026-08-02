@@ -73,6 +73,9 @@ function caseSummariesPlugin(): Plugin {
 export default defineConfig({
   base: './',
   plugins: [caseSummariesPlugin(), react()],
+  // Bind IPv4 explicitly: without this Vite can end up listening only on ::1,
+  // and Chrome resolving `localhost` to 127.0.0.1 then gets ERR_CONNECTION_REFUSED.
+  server: { host: '127.0.0.1', port: 5173 },
   build: {
     rollupOptions: {
       output: {

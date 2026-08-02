@@ -19,6 +19,7 @@ import {
   type CaseUnlockInfo,
 } from './engine/caseUnlockEngine';
 import { evaluateDailyAvailability } from './engine/rewardEngine';
+import { evaluateInterstitial } from './engine/adPolicyEngine';
 import {
   getServerTimeMs,
   fetchLeaderboard,
@@ -29,13 +30,19 @@ import {
   requestReview,
   notifyGameplayStart,
   notifyGameplayStop,
+  isPaymentsAvailable,
+  fetchPaymentsCatalog,
+  purchaseProduct,
+  restorePurchasedProductIds,
   type LeaderboardRow,
+  type PaymentsProduct,
 } from './services/platformAdapter';
 import { GOAL, getAnalyticsActiveTotalMs, trackEvent, trackGoal } from './services/metrica';
 import { GAME_CONFIG } from './config/gameConfig';
 import { RTL_LANGUAGES, t } from './i18n/ui';
 import type { CaseSummary } from './types';
-import { THEMATIC_PACKS, getThematicPackCaseIds } from './data/thematicPacks';
+import { THEMATIC_PACKS, getThematicPackCaseIds, isPurchasedArchiveCase } from './data/thematicPacks';
+import { getAdPolicyConfig } from './services/remoteConfig';
 import { LeftSidebar } from './components/LeftSidebar';
 import { RightSidebar } from './components/RightSidebar';
 import { CaseFile } from './components/CaseFile';
@@ -43,7 +50,13 @@ import { CaseSelect } from './components/CaseSelect';
 import { MobileDeskMenu } from './components/MobileDeskMenu';
 import { StampModal } from './components/StampModal';
 import { ResultSheet } from './components/ResultSheet';
+import { CaseResolutionSheet } from './components/CaseResolutionSheet';
 import { AchievementsModal } from './components/AchievementsModal';
+import { StampShopModal } from './components/StampShopModal';
+import { SpecialArchivesEntry } from './components/SpecialArchivesEntry';
+import { ThematicPacksModal } from './components/ThematicPacksModal';
+import type { ThematicPack } from './data/thematicPacks';
+import type { StampText } from './data/stampTexts';
 import { RatingModal } from './components/RatingModal';
 import { EvidenceLinkBoard } from './components/EvidenceLinkBoard';
 import { formatCountdown } from './components/icons';
@@ -64,14 +77,25 @@ export default function App() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [modalEvidenceId, setModalEvidenceId] = useState<string | null>(null);
   const [resultDismissed, setResultDismissed] = useState(false);
+  /** The human-reaction card gates the reward sheet until acknowledged. */
+  const [resolutionAcknowledged, setResolutionAcknowledged] = useState(false);
   const [showAchievements, setShowAchievements] = useState(false);
+  const [showStampShop, setShowStampShop] = useState(false);
+  const [showArchives, setShowArchives] = useState(false);
+  /** Live Yandex prices, keyed by product id. Empty until the shop is opened. */
+  const [paymentsCatalog, setPaymentsCatalog] = useState<Record<string, PaymentsProduct>>({});
   const [leaderboard, setLeaderboard] = useState<LeaderboardRow[] | null>(null);
   const [toast, setToast] = useState<string | null>(null);
   const [rewardDoubled, setRewardDoubled] = useState(false);
   const [lowBalanceOfferDismissed, setLowBalanceOfferDismissed] = useState(false);
   const [showRating, setShowRating] = useState(false);
   const [showFinalSynthesis, setShowFinalSynthesis] = useState(false);
-  const lastInterstitialActiveMsRef = useRef(0);
+  /** Active-time stamp of the last interstitial that was *actually shown*. */
+  const lastShownInterstitialActiveMsRef = useRef<number | null>(null);
+  /** Cases finished since that ad (or since the session started). */
+  const casesSinceLastInterstitialRef = useRef(0);
+  /** Last case id already counted into the gap above (guards double counting). */
+  const countedCaseIdRef = useRef<string | null>(null);
   // Gate: show rating modal at most once per session.
   const ratingShownRef = useRef(false);
   // Gate: fire `reject_blocked` at most once per case investigation.
@@ -132,6 +156,7 @@ export default function App() {
   useEffect(() => {
     if (lastResult) {
       setResultDismissed(false);
+      setResolutionAcknowledged(false);
       setRewardDoubled(false);
       if (lastResult.total > 0) trackAdOffer('rewarded', 'double_reward');
       resultOpenedAtRef.current = Date.now();
@@ -440,6 +465,91 @@ export default function App() {
     if (adDailyCase) store.unlockDailyViaAd(adDailyCase.id);
   };
 
+  /* ------------------------- Stamp workshop (IAP) ------------------------- */
+
+  const openStampShop = () => {
+    setShowStampShop(true);
+    // Live prices are localized/currency-correct; the fallback rubles are only
+    // a placeholder when the catalog is unreachable.
+    void fetchPaymentsCatalog().then((products) => {
+      if (products.length === 0) return;
+      setPaymentsCatalog(
+        Object.fromEntries(products.map((product) => [product.id, product])),
+      );
+    });
+    trackGoal(GOAL.shopView, { shop: 'stamp_texts' });
+  };
+
+  const handlePurchaseStampText = async (stamp: StampText): Promise<boolean> => {
+    if (!stamp.productId) return false;
+    const ok = await purchaseProduct(stamp.productId);
+    if (ok) store.grantStampTextPurchase(stamp.id);
+    return ok;
+  };
+
+  /* ----------------------- Special archives (IAP) ------------------------ */
+
+  const openArchives = () => {
+    setShowArchives(true);
+    void fetchPaymentsCatalog().then((products) => {
+      if (products.length === 0) return;
+      setPaymentsCatalog(
+        Object.fromEntries(products.map((product) => [product.id, product])),
+      );
+    });
+    trackGoal(GOAL.shopView, { shop: 'special_archives' });
+  };
+
+  const handlePurchasePack = async (pack: ThematicPack): Promise<boolean> => {
+    if (!pack.productId.trim()) return false;
+    const ok = await purchaseProduct(pack.productId);
+    if (ok) store.grantArchivePurchase(pack.id);
+    return ok;
+  };
+
+  const handleRestorePurchases = async (): Promise<number> => {
+    const productIds = await restorePurchasedProductIds();
+    store.applyRestoredPurchases(productIds);
+    return productIds.length;
+  };
+
+  /**
+   * The single forced-ad gate. Both exits from a finished case (next case /
+   * back to desk) run through it: it counts the case that just ended, asks the
+   * pacing policy, and — only when the ad is *actually shown* — restarts the
+   * cooldown from that moment. A missing SDK or an ad error therefore never
+   * costs the player their next eligible ad.
+   */
+  const closeFinishedCaseWithAdGate = (finishedCaseId: string | null, transition: () => void) => {
+    // Count the case, not the click: both exits can fire for the same finished
+    // case (e.g. synthesis → desk), and a double count would make ads *more*
+    // frequent than "one per two cases".
+    if (finishedCaseId === null || countedCaseIdRef.current !== finishedCaseId) {
+      countedCaseIdRef.current = finishedCaseId;
+      casesSinceLastInterstitialRef.current += 1;
+    }
+    const decision = evaluateInterstitial({
+      completedCasesTotal: stats.completedCaseIds.length,
+      activeMs: getAnalyticsActiveTotalMs(),
+      lastShownActiveMs: lastShownInterstitialActiveMsRef.current,
+      casesSinceLastAd: casesSinceLastInterstitialRef.current,
+      noAds: stats.noAdsPurchased,
+      archiveAdFree: finishedCaseId
+        ? isPurchasedArchiveCase(finishedCaseId, stats.archivePurchasedPackIds)
+        : false,
+      config: getAdPolicyConfig(),
+    });
+    if (!decision.show) {
+      transition();
+      return;
+    }
+    showFullscreenAd(transition, 'verdict', () => {
+      lastShownInterstitialActiveMsRef.current = getAnalyticsActiveTotalMs();
+      casesSinceLastInterstitialRef.current = 0;
+      store.recordInterstitialShown();
+    });
+  };
+
   const goToNextCase = () => {
     const next = getNextAvailableCase(standardCaseUnlocks, selectedId);
     trackEvent('result_action', {
@@ -455,14 +565,7 @@ export default function App() {
       }
       handleSelectCase(next);
     });
-    const activeMs = getAnalyticsActiveTotalMs();
-    if (
-      stats.completedCaseIds.length >= GAME_CONFIG.advertising.interstitialMinCompletedCases &&
-      activeMs - lastInterstitialActiveMsRef.current >= GAME_CONFIG.advertising.interstitialMinActiveMs
-    ) {
-      lastInterstitialActiveMsRef.current = activeMs;
-      showFullscreenAd(transition, 'verdict', () => store.recordInterstitialShown());
-    } else transition();
+    closeFinishedCaseWithAdGate(lastResult?.caseId ?? selectedId, transition);
   };
 
   const handleResultNext = () => {
@@ -500,15 +603,12 @@ export default function App() {
     setResultDismissed(true);
     setSelectedId(null);
     const transition = () => void store.closeCase();
-    const activeMs = getAnalyticsActiveTotalMs();
-    if (
-      lastResult &&
-      stats.completedCaseIds.length >= GAME_CONFIG.advertising.interstitialMinCompletedCases &&
-      activeMs - lastInterstitialActiveMsRef.current >= GAME_CONFIG.advertising.interstitialMinActiveMs
-    ) {
-      lastInterstitialActiveMsRef.current = activeMs;
-      showFullscreenAd(transition, 'verdict', () => store.recordInterstitialShown());
-    } else transition();
+    // Leaving without a verdict (abandoning an investigation) never shows an ad.
+    if (!lastResult) {
+      transition();
+      return;
+    }
+    closeFinishedCaseWithAdGate(lastResult.caseId, transition);
   };
 
   const gate = selectedCase
@@ -524,7 +624,17 @@ export default function App() {
   const modalEvidence =
     selectedCase?.evidences.find((e) => e.id === modalEvidenceId) ?? null;
 
-  const showResult = !!lastResult && !resultDismissed && !!selectedCase;
+  // The person reacts before the numbers. Only a *correct* verdict earns the
+  // canonical closing line — several of them contain an indirect confession.
+  const showResolution =
+    !!lastResult &&
+    !resultDismissed &&
+    !resolutionAcknowledged &&
+    lastResult.verdictCorrect &&
+    !!selectedCase?.resolution;
+
+  const showResult =
+    !!lastResult && !resultDismissed && !!selectedCase && !showResolution;
 
   if (!isHydrated) {
     return (
@@ -557,6 +667,17 @@ export default function App() {
             onSelect={handleSelectCase}
             onDailyLocked={onDailyLocked}
             onLanguage={store.setLanguage}
+            activeStampTextId={stats.activeStampTextId}
+            onOpenStampShop={openStampShop}
+            archivesSlot={
+              <SpecialArchivesEntry
+                lang={lang}
+                stats={stats}
+                caseUnlocks={standardCaseUnlocks}
+                onOpen={openArchives}
+                compact
+              />
+            }
           />
         </div>
       )}
@@ -595,6 +716,7 @@ export default function App() {
               opensRemaining={gate.opensRemaining}
               budgetExhausted={gate.budgetExhausted}
               balance={stats.balance}
+              stampTextId={stats.activeStampTextId}
               onOpenEvidence={handleOpenEvidence}
               onBuyHint={(kind, targetEvidenceId) =>
                 store.buyHint(selectedCase, kind, targetEvidenceId)
@@ -631,7 +753,17 @@ export default function App() {
             perfectStreak={stats.perfectCaseStreakCount}
             unlockedAchievementIds={stats.unlockedAchievementIds}
             onOpenAchievements={() => setShowAchievements(true)}
+            activeStampTextId={stats.activeStampTextId}
+            onOpenStampShop={openStampShop}
             leaderboard={leaderboard}
+            archivesSlot={
+              <SpecialArchivesEntry
+                lang={lang}
+                stats={stats}
+                caseUnlocks={standardCaseUnlocks}
+                onOpen={openArchives}
+              />
+            }
           />
         </div>
       </div>
@@ -642,6 +774,7 @@ export default function App() {
         lang={lang}
         stamped={session?.selectedEvidenceIds.includes(modalEvidenceId ?? '') ?? false}
         revealed={session?.revealedEvidenceIds.includes(modalEvidenceId ?? '') ?? false}
+        stampTextId={stats.activeStampTextId}
         interactiveProgress={modalEvidence && selectedCase
           ? stats.interactiveEvidenceProgress?.[`${selectedCase.id}/${modalEvidence.id}`]
           : undefined}
@@ -654,6 +787,17 @@ export default function App() {
         onToggle={() => modalEvidenceId && selectedCase && store.toggleEvidenceStamp(modalEvidenceId, selectedCase)}
         onClose={handleCloseEvidence}
       />
+
+      {/* Human reaction — layer 1 of the case ending, before any reward */}
+      <AnimatePresence>
+        {showResolution && selectedCase && (
+          <CaseResolutionSheet
+            caseData={selectedCase}
+            lang={lang}
+            onContinue={() => setResolutionAcknowledged(true)}
+          />
+        )}
+      </AnimatePresence>
 
       {/* Result sheet */}
       <AnimatePresence>
@@ -694,6 +838,44 @@ export default function App() {
           }}
         />
       )}
+
+      {/* Stamp workshop — cosmetic caption IAP */}
+      <AnimatePresence>
+        {showStampShop && (
+          <StampShopModal
+            lang={lang}
+            ownedStampTextIds={stats.ownedStampTextIds}
+            activeStampTextId={stats.activeStampTextId}
+            paymentsAvailable={isPaymentsAvailable()}
+            catalogByProductId={paymentsCatalog}
+            onPurchase={handlePurchaseStampText}
+            onEquip={store.setActiveStampText}
+            onRestore={handleRestorePurchases}
+            onClose={() => setShowStampShop(false)}
+          />
+        )}
+      </AnimatePresence>
+
+      {/* Special archives — premium story packs */}
+      <AnimatePresence>
+        {showArchives && (
+          <ThematicPacksModal
+            lang={lang}
+            stats={stats}
+            caseUnlocks={standardCaseUnlocks}
+            paymentsAvailable={isPaymentsAvailable()}
+            catalogByProductId={paymentsCatalog}
+            onSelectCase={(summary) => {
+              setShowArchives(false);
+              void openCase(summary, { skipStandardGate: true, sourceSurface: 'archive' });
+            }}
+            onPurchasePack={handlePurchasePack}
+            onRestorePurchases={handleRestorePurchases}
+            onUnlockCaseWithAd={store.unlockArchiveCaseViaAd}
+            onClose={() => setShowArchives(false)}
+          />
+        )}
+      </AnimatePresence>
 
       {/* Achievements archive */}
       <AnimatePresence>

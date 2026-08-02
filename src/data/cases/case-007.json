@@ -55,11 +55,11 @@
           "kk": "Жасы"
         },
         "v": {
-          "ru": "35 лет",
-          "en": "35 years old",
-          "tr": "35 yaşında",
-          "ar": "35 عامًا",
-          "kk": "35 жаста"
+          "ru": "29 лет",
+          "en": "29 years old",
+          "tr": "29 yaşında",
+          "ar": "29 عامًا",
+          "kk": "29 жаста"
         }
       },
       {
@@ -718,5 +718,112 @@
     },
     "skippableAfterAttempts": 3,
     "analyticsEvent": "campaign_final_synthesis_completed"
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "lucas_ferreira",
+      "displayName": {
+        "ru": "Лукас Феррейра",
+        "en": "Lucas Ferreira",
+        "tr": "Lucas Ferreira",
+        "ar": "لوكاس فيريرا",
+        "kk": "Лукас Феррейра"
+      },
+      "portraitState": "fear_and_guilt"
+    },
+    "finalLine": {
+      "ru": "Матеус всегда был плохим лжецом. Я надеялся, что ради меня научится.",
+      "en": "Mateus was always a poor liar. I hoped he would learn, for my sake.",
+      "tr": "Mateus hep kötü bir yalancıydı. Benim için öğrenir diye ummuştum.",
+      "ar": "كان ماتيوس دائمًا كاذبًا رديئًا. كنت آمل أن يتعلّم من أجلي.",
+      "kk": "Матеус әрқашан нашар өтірікші еді. Мен үшін үйренер деп үміттенгенмін."
+    },
+    "emotionalMode": "grave",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Лукас действительно летел этим рейсом и сдал один чемодан: номер бирки совпадает с заявлением.",
+          "en": "Lucas really was on that flight and checked one suitcase: the tag number matches the claim.",
+          "tr": "Lucas gerçekten o uçuştaydı ve bir bavul teslim etti: etiket numarası başvuruyla aynı.",
+          "ar": "كان لوكاس على متن تلك الرحلة فعلًا وسلّم حقيبة واحدة: رقم البطاقة يطابق المطالبة.",
+          "kk": "Лукас шынымен сол рейспен ұшқан және бір чемодан тапсырған: бирка нөмірі өтінішпен сәйкес."
+        },
+        "evidenceIds": [
+          "ev-boarding"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Журнал показывает снятие багажа с ленты по разовой заявке, а камера гаража Матеуса — тот же чемодан после рейса: потёртость ручки, внутренняя бирка и ремонт колеса совпадают.",
+          "en": "The log shows the bag pulled off the belt on a one-off request, and Mateus's garage camera shows the same case after the flight: the worn handle, the inner tag and the repaired wheel all match.",
+          "tr": "Kayıt, bavulun tek seferlik bir talep üzerine banttan alındığını gösteriyor; Mateus'un garaj kamerası da uçuş sonrası aynı bavulu gösteriyor: yıpranmış sap, iç etiket ve onarılmış teker örtüşüyor.",
+          "ar": "يُظهر السجل سحب الحقيبة من السير بطلب استثنائي، وكاميرا مرآب ماتيوس تُظهر الحقيبة نفسها بعد الرحلة: المقبض المهترئ والبطاقة الداخلية والعجلة المُصلَحة كلها متطابقة.",
+          "kk": "Журнал жүктің біржолғы өтінішпен таспадан алынғанын көрсетеді, ал Матеустің гараж камерасы рейстен кейінгі сол чемоданды көрсетеді: тұтқаның мүжілуі, ішкі бирка және дөңгелек жөндеуі сәйкес."
+        },
+        "evidenceIds": [
+          "ev-tracking",
+          "ev-garage",
+          "ev-suitcase-seal"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Серийные номера часов и камеры в объявлениях совпадают с чеками из требования. Заявленные утраченными вещи целы и выставлены на продажу.",
+          "en": "The watch and camera serials in the listings match the receipts attached to the claim. The items reported lost are intact and up for sale.",
+          "tr": "İlanlardaki saat ve kamera seri numaraları, başvuruya eklenen fişlerle örtüşüyor. Kayıp bildirilen eşyalar sağlam ve satışta.",
+          "ar": "أرقام الساعة والكاميرا في الإعلانات تطابق الإيصالات المرفقة بالمطالبة. الأغراض المُبلَّغ عن فقدها سليمة ومعروضة للبيع.",
+          "kk": "Хабарландырулардағы сағат пен камераның сериялық нөмірлері талапқа тіркелген чектермен сәйкес. Жоғалды деп мәлімделген заттар бүтін әрі сатылымға қойылған."
+        },
+        "evidenceIds": [
+          "ev-listing",
+          "ev-payment"
+        ]
+      }
+    ],
+    "veraLine": {
+      "ru": "Страховое дело закрыто. Осталась вторая задача: доказать, кто управлял сетью — а не просто написал её форму.",
+      "en": "The insurance case is closed. A second task remains: to prove who ran the network — not merely who wrote its form.",
+      "tr": "Sigorta dosyası kapandı. İkinci bir görev kaldı: şebekeyi kimin yönettiğini kanıtlamak — formunu kimin yazdığını değil.",
+      "ar": "أُغلق ملف التأمين. وبقيت مهمة ثانية: إثبات من كان يدير الشبكة — لا من كتب استمارتها فحسب.",
+      "kk": "Сақтандыру ісі жабылды. Екінші міндет қалды: желіні кім басқарғанын дәлелдеу — оның формасын кім жазғанын емес."
+    },
+    "arcReveal": {
+      "title": {
+        "ru": "Константин Карелин",
+        "en": "Konstantin Karelin",
+        "tr": "Konstantin Karelin",
+        "ar": "كونستانتين كارلين",
+        "kk": "Константин Карелин"
+      },
+      "text": {
+        "ru": "Бывший руководитель отдела и наставник Веры Лебедевой создал Архив №17 и управлял Серым конвоем.",
+        "en": "The former department head and Vera Lebedeva's mentor created Archive No. 17 and ran the Gray Convoy.",
+        "tr": "Eski bölüm başkanı ve Vera Lebedeva'nın akıl hocası, 17 No'lu Arşivi oluşturdu ve Gri Konvoy'u yönetti.",
+        "ar": "أنشأ رئيس القسم السابق ومعلم فيرا ليبيديفا الأرشيف رقم 17 وأدار القافلة الرمادية.",
+        "kk": "Бұрынғы бөлім меңгерушісі әрі тәлімгер Вера Лебедева №17 мұрағатты құрып, «Сұр колоннаны» басқарды."
+      }
+    }
   }
 }

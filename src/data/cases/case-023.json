@@ -442,5 +442,87 @@
     },
     "seasonClue": null,
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "rustam_nazarov",
+      "displayName": {
+        "ru": "Рустам Назаров",
+        "en": "Rustam Nazarov",
+        "tr": "Rustam Nazarov",
+        "ar": "رستم نازاروف",
+        "kk": "Рүстем Назаров"
+      },
+      "portraitState": "sarcastic"
+    },
+    "finalLine": {
+      "ru": "Я был за границей. Карта, видимо, зажила своей жизнью.",
+      "en": "I was abroad. The card, apparently, took on a life of its own.",
+      "tr": "Ben yurt dışındaydım. Kart da anlaşılan kendi hayatını yaşamış.",
+      "ar": "كنت في الخارج. ويبدو أن البطاقة عاشت حياتها الخاصة.",
+      "kk": "Мен шетелде болдым. Карта, шамасы, өз бетінше өмір сүріп кетіпті."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Билеты и пограничные отметки подтверждают: с 10 по 17 марта Назаров был за границей.",
+          "en": "Tickets and border stamps confirm Nazarov was abroad from March 10 to 17.",
+          "tr": "Biletler ve sınır damgaları, Nazarov'un 10–17 Mart arasında yurt dışında olduğunu doğruluyor.",
+          "ar": "تؤكّد التذاكر وأختام الحدود أن نازاروف كان خارج البلاد من 10 إلى 17 مارس.",
+          "kk": "Билеттер мен шекара белгілері растайды: 10-нан 17 наурызға дейін Назаров шетелде болған."
+        },
+        "evidenceIds": [
+          "ev-travel"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Операции выполнены оригинальной картой, а не копией, и камера у дома показывает передачу конверта до отъезда.",
+          "en": "The transactions were made with the original card, not a clone, and the door camera shows an envelope handed over before departure.",
+          "tr": "İşlemler kopya değil, orijinal kartla yapılmış; kapı kamerası da yolculuktan önce bir zarfın verildiğini gösteriyor.",
+          "ar": "أُجريت العمليات بالبطاقة الأصلية لا بنسخة، وكاميرا الباب تُظهر تسليم ظرف قبل السفر.",
+          "kk": "Операциялар көшірмемен емес, түпнұсқа картамен жасалған, ал үй камерасы жол жүрер алдында конверт берілгенін көрсетеді."
+        },
+        "evidenceIds": [
+          "ev-bank",
+          "ev-doorcam"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Часть снятых денег вернулась на счёт самого заявителя, а отдельный перевод оплачивает услугу. Это согласованная инсценировка, а не кража.",
+          "en": "Part of the withdrawn money came back to the claimant's own account, and a separate transfer pays for the service. This is an agreed staging, not a theft.",
+          "tr": "Çekilen paranın bir kısmı başvurucunun kendi hesabına döndü ve ayrı bir havale hizmetin bedelini ödüyor. Bu, hırsızlık değil, üzerinde anlaşılmış bir sahneleme.",
+          "ar": "عاد جزء من المبالغ المسحوبة إلى حساب المدّعي نفسه، وحوالة منفصلة تدفع أجر الخدمة. هذا ترتيب متّفق عليه لا سرقة.",
+          "kk": "Алынған ақшаның бір бөлігі өтініш берушінің өз шотына қайтқан, ал бөлек аударым қызмет ақысын төлейді. Бұл ұрлық емес, келісілген қойылым."
+        },
+        "evidenceIds": [
+          "ev-transfer"
+        ]
+      }
+    ]
   }
 }

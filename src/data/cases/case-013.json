@@ -431,5 +431,102 @@
       "ar": "لقد أثبتت ليس فقط الضرر، ولكن الجهاز الذي تم تبديله",
       "kk": "Мен заттың бүлінуін ғана емес, ауыстырғанын дәлелдедім"
     }
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "timur_ashirov",
+      "displayName": {
+        "ru": "Тимур Аширов",
+        "en": "Timur Ashirov",
+        "tr": "Timur Aşirov",
+        "ar": "تيمور أشيروف",
+        "kk": "Тимур Әшіров"
+      },
+      "portraitState": "annoyed"
+    },
+    "finalLine": {
+      "ru": "Четыре цифры в конце. Надо же было провалиться именно на них.",
+      "en": "Four digits at the end. Of all things, that is what gave me away.",
+      "tr": "Sondaki dört rakam. İnsan da tam orada yakalanır işte.",
+      "ar": "أربعة أرقام في النهاية. ومن بين كل شيء، هي التي فضحتني.",
+      "kk": "Соңындағы төрт сан. Дәл соған сүрініп қалғанымды қарашы."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "В воду действительно попал телефон: индикаторы влаги сработали, внутри следы короткого замыкания.",
+          "en": "A phone really did go into the water: the moisture indicators tripped and there are short-circuit traces inside.",
+          "tr": "Suya gerçekten bir telefon düştü: nem göstergeleri tetiklendi, içeride kısa devre izleri var.",
+          "ar": "سقط هاتف في الماء فعلًا: مؤشّرات الرطوبة تغيّرت وداخل الجهاز آثار تماس كهربائي.",
+          "kk": "Суға шынымен телефон түскен: ылғал индикаторлары іске қосылған, ішінде қысқа тұйықталу ізі бар."
+        },
+        "evidenceIds": [
+          "ev-service-photo"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "На плате окончание IMEI «7373» нанесено поверх исходного «1841». Утопленный аппарат — не тот, что в полисе.",
+          "en": "On the board the IMEI ending “7373” is written over the original “1841”. The drowned handset is not the insured one.",
+          "tr": "Kartta IMEI'nin “7373” sonu, özgün “1841” üzerine yazılmış. Suya düşen cihaz poliçedeki değil.",
+          "ar": "على اللوحة، كُتبت نهاية الرقم «7373» فوق الأصلي «1841». الجهاز الغارق ليس المؤمَّن عليه.",
+          "kk": "Тақтада IMEI-дің «7373» соңы бастапқы «1841» үстіне жазылған. Суға түскен құрылғы полистегі емес."
+        },
+        "evidenceIds": [
+          "ev-service-act"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Застрахованный номер продолжал звонить и передавать данные уже после происшествия. Утраты застрахованного имущества не было.",
+          "en": "The insured handset kept placing calls and using data after the incident. The insured property was never lost.",
+          "tr": "Sigortalı cihaz olaydan sonra da arama yapmayı ve veri kullanmayı sürdürdü. Sigortalı mal hiç kaybolmadı.",
+          "ar": "استمرّ الجهاز المؤمَّن في إجراء المكالمات ونقل البيانات بعد الحادث. لم تُفقد الممتلكات المؤمَّنة.",
+          "kk": "Сақтандырылған құрылғы оқиғадан кейін де қоңырау шалып, дерек жіберіп тұрды. Сақтандырылған мүлік жоғалған жоқ."
+        },
+        "evidenceIds": [
+          "ev-operator-log"
+        ]
+      }
+    ],
+    "arcReveal": {
+      "title": {
+        "ru": "Второй документ 17-К",
+        "en": "A Second 17-K Document",
+        "tr": "İkinci Bir 17-K Belgesi",
+        "ar": "وثيقة ثانية 17 ك",
+        "kk": "Екінші құжат 17-К"
+      },
+      "text": {
+        "ru": "В заявлении о телефоне используется тот же шаблон предварительной оценки, что и в деле Семёнова. Даже ошибка в слове «амортизация» совпадает.",
+        "en": "The phone claim uses the same preliminary-assessment template as Semyonov's case. Even the misspelling of ‘depreciation’ is identical.",
+        "tr": "Telefon talebi Semyonov'un davasıyla aynı ön değerlendirme şablonunu kullanıyor. 'Amortismanın' yanlış yazımı bile aynıdır.",
+        "ar": "تستخدم المطالبة الهاتفية نفس نموذج التقييم الأولي المستخدم في قضية سيميونوف. وحتى الخطأ الإملائي في عبارة \"الاستهلاك\" متطابق.",
+        "kk": "Телефондық қосымшада Семенов ісіндегідей алдын ала бағалау үлгісі қолданылады. Тіпті «амортизация» деген сөздің қате жазылуы да бірдей."
+      }
+    }
   }
 }

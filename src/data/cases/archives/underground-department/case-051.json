@@ -705,5 +705,111 @@
       "progressTotal": 7
     },
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "roman_dray",
+      "displayName": {
+        "ru": "Роман Драй",
+        "en": "Roman Dray",
+        "tr": "Roman Dray",
+        "ar": "رومان دراي",
+        "kk": "Роман Драй"
+      },
+      "portraitState": "irritated_defeat"
+    },
+    "finalLine": {
+      "ru": "Я придумал нападение. А вы раскрыли меня по аккуратно сложенным ремням.",
+      "en": "I invented an ambush. And you caught me by the neatly folded straps.",
+      "tr": "Bir saldırı uydurdum. Siz de beni özenle katlanmış kemerlerden yakaladınız.",
+      "ar": "اختلقت هجومًا. وكشفتموني من الأحزمة المطويّة بعناية.",
+      "kk": "Мен шабуылды ойлап таптым. Ал сіздер мені ұқыпты бүктелген белдіктерден таныдыңыздар."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Партия сенсоров существовала и стоила заявленную сумму: серийные номера зарегистрированы.",
+          "en": "The sensor batch existed and was worth the claimed sum: the serial numbers are on record.",
+          "tr": "Sensör partisi vardı ve talep edilen değere sahipti: seri numaraları kayıtlı.",
+          "ar": "كانت دفعة المستشعرات موجودة وبقيمة المطالبة: الأرقام التسلسلية مسجَّلة.",
+          "kk": "Сенсорлар партиясы болған және мәлімделген сомаға тұрған: сериялық нөмірлер тіркелген."
+        },
+        "evidenceIds": [
+          "document-51"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "В кузове ремни аккуратно сложены, крепления целы, коробки не смещены, а на дверях нет следов насильственного открытия. Ограбления не было.",
+          "en": "In the cargo bay the straps are neatly folded, the fastenings intact, the boxes unshifted, and the doors bear no forced-entry marks. There was no robbery.",
+          "tr": "Kasada kemerler özenle katlanmış, bağlantılar sağlam, kutular kaymamış ve kapılarda zorlama izi yok. Soygun olmamış.",
+          "ar": "في حجرة الشحن الأحزمة مطويّة بعناية، والتثبيتات سليمة، والصناديق لم تنزلق، والأبواب بلا آثار فتح عنوة. لم تقع سرقة.",
+          "kk": "Кузовта белдіктер ұқыпты бүктелген, бекітпелер бүтін, қораптар ығыспаған, ал есіктерде күшпен ашу ізі жоқ. Тонау болмаған."
+        },
+        "evidenceIds": [
+          "photo-51"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Трекер отключили, но фургон продолжал работать в обычном режиме, камера рампы фиксирует добровольный въезд, а комиссионер оплатил партию. Груз продан.",
+          "en": "The tracker was switched off, yet the van kept running normally; the ramp camera records a voluntary entry and the broker paid for the batch. The cargo was sold.",
+          "tr": "Takip cihazı kapatılmış ama minibüs normal çalışmayı sürdürmüş; rampa kamerası gönüllü girişi kaydediyor ve komisyoncu partinin bedelini ödemiş. Yük satılmış.",
+          "ar": "أُطفئ جهاز التتبّع، لكن الشاحنة واصلت العمل بشكل طبيعي؛ وكاميرا المنحدر تسجّل دخولًا طوعيًا، ودفع الوسيط ثمن الدفعة. البضاعة بيعت.",
+          "kk": "Трекер өшірілген, бірақ фургон қалыпты режимде жұмысын жалғастырған; рампа камерасы ерікті кіруді тіркейді, ал комиссионер партияны төлеген. Жүк сатылған."
+        },
+        "evidenceIds": [
+          "log-51",
+          "camera-51",
+          "bank-51"
+        ]
+      }
+    ],
+    "veraLine": {
+      "ru": "Сравните фотографию пропуска с карточкой свидетеля из дела о ДТП. Это тот самый человек, который два года назад вызвал помощь брату.",
+      "en": "Compare the pass photograph with the witness card from the road-accident case. This is the same man who two years ago called help for his brother.",
+      "tr": "Kart fotoğrafını, trafik kazası dosyasındaki tanık kartıyla karşılaştırın. Bu, iki yıl önce kardeşine yardım çağıran adamın ta kendisi.",
+      "ar": "قارن صورة التصريح ببطاقة الشاهد في قضية حادث الطريق. إنه الرجل نفسه الذي استدعى النجدة لأخيه قبل عامين.",
+      "kk": "Рұқсатнама фотосын ЖКО ісіндегі куәгер карточкасымен салыстырыңыз. Бұл — екі жыл бұрын ағасына көмек шақырған сол адам."
+    },
+    "arcReveal": {
+      "title": {
+        "ru": "Курьер Лукас Феррейра",
+        "en": "Courier Lucas Ferreira",
+        "tr": "Kurye Lucas Ferreira",
+        "ar": "الساعي لوكاس فيريرا",
+        "kk": "Курьер Лукас Феррейра"
+      },
+      "text": {
+        "ru": "Знакомый свидетель оказался последним курьером сети. Его багажный маршрут связан с ангаром B-17.",
+        "en": "A familiar witness is the network's final courier. His baggage route is linked to Hangar B-17.",
+        "tr": "Tanıdık bir tanık, ağın son kuryesidir. Bagaj rotası B-17 Hangarına bağlı.",
+        "ar": "الشاهد المألوف هو الساعي الأخير للشبكة. طريق أمتعته مرتبط بـ Hangar B-17.",
+        "kk": "Таныс куәгер желінің соңғы курьері болып шықты. Оның жүк тасымалдау бағыты B-17 ангарына қосылған."
+      }
+    }
   }
 }

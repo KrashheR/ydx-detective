@@ -6,7 +6,10 @@
 
 ```bash
 npm install
-npm run dev        # Vite dev-сервер. SDK авто-фолбэк на LocalStorage вне Yandex.
+npm run dev        # Vite dev-сервер на http://127.0.0.1:5173/ (host/port заданы в
+                   # vite.config.ts: без явного IPv4-бинда Vite может слушать только
+                   # ::1, и браузер на `localhost` получает ERR_CONNECTION_REFUSED).
+                   # SDK авто-фолбэк на LocalStorage вне Yandex.
 npm run build      # прод-бандл → dist/ (base './', готов к ZIP для Yandex)
 npm run typecheck  # tsc --noEmit — статический гейт; гонять перед «готово»
 npm test           # vitest run — полный прогон

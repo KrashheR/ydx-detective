@@ -46,6 +46,9 @@ export function makeDefaultStats(): PlayerStats {
     weeklyProgress: null,
     collectibleStampIds: [],
     archivePurchasedPackIds: [],
+    noAdsPurchased: false,
+    ownedStampTextIds: [],
+    activeStampTextId: null,
     archiveUnlockedCaseIds: [],
     archiveAdUnlockServerDayByPack: {},
     interactiveEvidenceProgress: {},
@@ -73,6 +76,13 @@ export function makeDefaultSnapshot(): PersistedState {
  *   • v7 → v8 — bankruptcy is no longer a gate: force `isBankrupt: false` so
  *     players stuck on the old blocking screen are freed; adds
  *     `interstitialsSeenTotal` (backfilled to 0 by the defaults spread).
+ *   • v9 → v10 — adds `noAdsPurchased` (the permanent ad-free IAP), backfilled
+ *     to false by the defaults spread; the entitlement is re-granted from the
+ *     platform on restore, so no data can be lost by the backfill. Same version
+ *     adds `ownedStampTextIds` / `activeStampTextId` (the stamp-caption shop):
+ *     an empty list + `null` means the free `classic` caption, which is exactly
+ *     what every pre-v10 profile was printing, and purchases are likewise
+ *     re-granted from the platform on restore.
  */
 function migrate(raw: unknown): PersistedState | null {
   if (!raw || typeof raw !== 'object') return null;

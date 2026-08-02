@@ -500,5 +500,104 @@
       "progressTotal": 4
     },
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "eduard_kravets",
+      "displayName": {
+        "ru": "Эдуард Кравец",
+        "en": "Eduard Kravets",
+        "tr": "Eduard Kravets",
+        "ar": "إدوارد كرافيتس",
+        "kk": "Эдуард Кравец"
+      },
+      "portraitState": "arrogant"
+    },
+    "finalLine": {
+      "ru": "Часы мои. Деньги тоже мои. А дата, выходит, уже ваша.",
+      "en": "The watch is mine. The money is mine too. The date, it seems, is now yours.",
+      "tr": "Saat benim. Para da benim. Tarih ise anlaşılan artık sizin.",
+      "ar": "الساعة لي. والمال لي أيضًا. أما التاريخ، فقد صار لكم على ما يبدو.",
+      "kk": "Сағат менікі. Ақша да менікі. Ал күн, байқасам, енді сіздікі."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Полиция зарегистрировала заявление о пропаже, а страховой сертификат подлинный: часы существуют, номер и гравировка подтверждены.",
+          "en": "The police registered the loss report and the insurance certificate is genuine: the watch exists, its serial and engraving verified.",
+          "tr": "Polis kayıp ihbarını kaydetti ve sigorta sertifikası gerçek: saat var, seri numarası ve kazıma doğrulandı.",
+          "ar": "سجّلت الشرطة بلاغ الفقد، وشهادة التأمين أصلية: الساعة موجودة ورقمها ونقشها مؤكَّدان.",
+          "kk": "Полиция жоғалу туралы өтінішті тіркеген, ал сақтандыру сертификаты түпнұсқа: сағат бар, нөмірі мен ойма жазуы расталған."
+        },
+        "evidenceIds": [
+          "ev-police",
+          "ev-appraisal"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Фотография с закрытого приёма показывает те же уникальные признаки на запястье владельца уже после заявленной кражи.",
+          "en": "A photo from a private reception shows the same unique marks on the owner's wrist after the claimed theft.",
+          "tr": "Özel bir davetten gelen fotoğraf, iddia edilen hırsızlıktan sonra sahibinin bileğinde aynı benzersiz izleri gösteriyor.",
+          "ar": "تُظهر صورة من حفل خاص العلامات المميّزة نفسها على معصم المالك بعد السرقة المزعومة.",
+          "kk": "Жабық қабылдаудағы сурет мәлімделген ұрлықтан кейін иесінің білегінде сол бірегей белгілерді көрсетеді."
+        },
+        "evidenceIds": [
+          "ev-photo"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "В акте аукционной передачи под напечатанным «18 марта» проявляется исходное «11 марта» — за день до «кражи», и аванс поступил ещё раньше. Продажа готовилась заранее.",
+          "en": "In the auction handover act the printed “March 18” conceals an original “March 11” — the day before the “theft”, and the advance arrived earlier still. The sale was arranged in advance.",
+          "tr": "Müzayede teslim tutanağında basılı “18 Mart”, altındaki özgün “11 Mart”ı gizliyor — yani “hırsızlıktan” bir gün önce; avans ise daha da erken gelmiş. Satış önceden ayarlanmış.",
+          "ar": "في محضر التسليم للمزاد يُخفي تاريخ «18 مارس» المطبوع تاريخًا أصليًا هو «11 مارس» — أي قبل «السرقة» بيوم، والدفعة المقدَّمة وصلت قبل ذلك. البيع رُتِّب مسبقًا.",
+          "kk": "Аукционға беру актісінде басылған «18 наурыз» астында бастапқы «11 наурыз» айқындалады — «ұрлықтан» бір күн бұрын, ал аванс одан да ерте түскен. Сатылым алдын ала дайындалған."
+        },
+        "evidenceIds": [
+          "ev-auction",
+          "ev-bank"
+        ]
+      }
+    ],
+    "arcReveal": {
+      "title": {
+        "ru": "Аукционный канал",
+        "en": "The Auction Channel",
+        "tr": "Açık Artırma Kanalı",
+        "ar": "قناة المزاد",
+        "kk": "Аукцион арнасы"
+      },
+      "text": {
+        "ru": "Склад служит перевалочным пунктом для застрахованных ценностей, тайно проданных владельцами.",
+        "en": "The warehouse serves as a transfer point for insured valuables secretly sold by their owners.",
+        "tr": "Depo, sahipleri tarafından gizlice satılan sigortalı değerli eşyaların transfer noktası olarak hizmet veriyor.",
+        "ar": "يعمل المستودع كنقطة نقل للأشياء الثمينة المؤمن عليها والتي يبيعها أصحابها سرًا.",
+        "kk": "Қойма иелері жасырын сатқан сақтандырылған құндылықтарды өткізу орны ретінде қызмет етеді."
+      }
+    }
   }
 }

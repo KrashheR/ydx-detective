@@ -57,6 +57,10 @@ public/covers, public/people   # обложки папок и портреты �
   вычисляемые против пост-кейс статов. Метаданные (i18n + бонусы) — в `data/achievements.ts`.
 - **`engine/caseUnlockEngine.ts`** — гейтинг кампании: уровень-требование + строгая
   последовательность для стандартных дел; чистые селекторы статуса (available/locked/completed).
+- **`engine/adPolicyEngine.ts`** — темп forced-рекламы: `evaluateInterstitial` решает, можно
+  ли показать интерстишл на выходе из завершённого дела (права → warm-up → кулдаун + дела).
+- **`services/remoteConfig.ts`** — удалённая конфигурация (Yandex flags) поверх
+  `GAME_CONFIG.advertising`; до ответа сети отдаёт локальные дефолты, ничего не персистит.
 - **`services/persistence.ts`** — *где* лежит снапшот и *когда* он пишется. Не знает про
   дела/награды. Владеет миграцией версий сейва.
 - **`services/yandexSDK.ts`** — **единственное** место, трогающее `window.YaGames`. Движок

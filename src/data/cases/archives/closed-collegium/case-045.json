@@ -493,5 +493,104 @@
       "progressTotal": 7
     },
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "bruno_stern",
+      "displayName": {
+        "ru": "Бруно Стерн",
+        "en": "Bruno Stern",
+        "tr": "Bruno Stern",
+        "ar": "برونو شتيرن",
+        "kk": "Бруно Стерн"
+      },
+      "portraitState": "indignant_relief"
+    },
+    "finalLine": {
+      "ru": "Я ключи не путал. Запишите, пожалуйста. И подчеркните.",
+      "en": "I did not mix up any keys. Write that down, please. And underline it.",
+      "tr": "Anahtarları karıştırmadım. Lütfen bunu yazın. Bir de altını çizin.",
+      "ar": "لم أخلط بين المفاتيح. دوّنوا هذا من فضلكم. وضعوا تحته خطًّا.",
+      "kk": "Кілттерді шатастырғаным жоқ. Мынаны жазып қойыңыз. Астын да сызыңыз."
+    },
+    "emotionalMode": "relief",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Кубок зарегистрирован и оценён до происшествия; после реставрации 2021 года у него полый цоколь.",
+          "en": "The cup was registered and valued before the incident; since the 2021 restoration it has a hollow base.",
+          "tr": "Kupa olaydan önce kayıtlı ve değerlenmişti; 2021 restorasyonundan beri kaidesi içi boş.",
+          "ar": "كان الكأس مسجَّلًا ومقيَّمًا قبل الحادث؛ ومنذ ترميم 2021 صارت قاعدته مجوَّفة.",
+          "kk": "Кубок оқиғаға дейін тіркеліп, бағаланған; 2021 жылғы қалпына келтіруден кейін оның қуыс табаны бар."
+        },
+        "evidenceIds": [
+          "document-45"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Петлю витрины приподняли сверху тонким инструментом, а купольный люк открыт клонированным сервисным ключом той же серии, что и на «Лунном склоне».",
+          "en": "The display hinge was lifted from above with a thin tool, and the dome hatch was opened with a cloned service key from the same series as at “Moon Slope”.",
+          "tr": "Vitrin menteşesi ince bir aletle yukarıdan kaldırılmış ve kubbe kapağı, “Ay Yamacı”ndakiyle aynı seriden klonlanmış bir servis anahtarıyla açılmış.",
+          "ar": "رُفع مفصل الفاترينة من الأعلى بأداة رفيعة، وفُتحت فتحة القبة بمفتاح خدمة مستنسَخ من السلسلة نفسها المستخدمة في «منحدر القمر».",
+          "kk": "Витрина топсасы жоғарыдан жіңішке аспаппен көтерілген, ал күмбез люгі «Ай беткейіндегімен» бір сериялы клондалған сервистік кілтпен ашылған."
+        },
+        "evidenceIds": [
+          "photo-45",
+          "log-45"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Камера галереи фиксирует постороннего в технической страховке, а проверка не находит у Стерна ни продаж, ни долгов, ни необычных переводов. Кража внешняя.",
+          "en": "The gallery camera shows an outsider in climbing gear, and the check finds no sales, debts or unusual transfers on Stern's side. The theft came from outside.",
+          "tr": "Galeri kamerası teknik emniyet donanımlı bir yabancıyı gösteriyor ve inceleme Stern'de ne satış, ne borç, ne de olağandışı havale buluyor. Hırsızlık dışarıdan.",
+          "ar": "تُظهر كاميرا الرواق شخصًا غريبًا بمعدّات تأمين فنّية، ولم يجد الفحص لدى شتيرن مبيعات أو ديونًا أو تحويلات غير معتادة. السرقة خارجية.",
+          "kk": "Галерея камерасы техникалық сақтандырғышы бар бөгде адамды түсірген, ал тексеру Стерннен сатылым да, қарыз да, әдеттен тыс аударым да таппады. Ұрлық сырттан."
+        },
+        "evidenceIds": [
+          "camera-45",
+          "bank-45"
+        ]
+      }
+    ],
+    "arcReveal": {
+      "title": {
+        "ru": "Резервный маршрутный ключ",
+        "en": "Backup Route Key",
+        "tr": "Yedek Rota Anahtarı",
+        "ar": "مفتاح الطريق الاحتياطي",
+        "kk": "Резервтік маршрут кілті"
+      },
+      "text": {
+        "ru": "Сеть похитила кубок ради ключа, открывающего закрытые транспортные маршруты академии.",
+        "en": "The network stole the cup for a key that unlocks the academy's restricted transport routes.",
+        "tr": "Ağ, akademinin sınırlı ulaşım yollarının kilidini açacak bir anahtar için kupayı çaldı.",
+        "ar": "سرقت الشبكة الكأس للحصول على مفتاح يفتح طرق النقل المحظورة في الأكاديمية.",
+        "kk": "Желі Академияның жабық көлік жолдарын ашатын кілтке арналған шыныаяқты ұрлады."
+      }
+    }
   }
 }

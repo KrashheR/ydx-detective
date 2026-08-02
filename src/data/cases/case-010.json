@@ -412,5 +412,94 @@
     },
     "seasonClue": null,
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "mateus_ferreira",
+      "displayName": {
+        "ru": "Матеус Феррейра",
+        "en": "Mateus Ferreira",
+        "tr": "Mateus Ferreira",
+        "ar": "ماتيوس فيريرا",
+        "kk": "Матеус Феррейра"
+      },
+      "portraitState": "grateful"
+    },
+    "finalLine": {
+      "ru": "Лукас говорил, что вы докопаетесь до секунды. Он не шутил.",
+      "en": "Lucas said you would dig down to the exact second. He was not joking.",
+      "tr": "Lucas, saniyesine kadar kazacağınızı söylemişti. Şaka yapmıyormuş.",
+      "ar": "قال لوكاس إنكم ستنبشون حتى الثانية الواحدة. لم يكن يمزح.",
+      "kk": "Лукас секундына дейін қазып шығасыздар деген еді. Ол қалжыңдамапты."
+    },
+    "emotionalMode": "relief",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Регистратор показывает: машина полностью стоит у стоп-линии, через двадцать две секунды сзади без торможения приходит седан.",
+          "en": "The dashcam shows the car fully stopped at the line; twenty-two seconds later a sedan arrives from behind without braking.",
+          "tr": "Araç kamerası, otomobilin dur çizgisinde tamamen durduğunu gösteriyor; yirmi iki saniye sonra arkadan frensiz bir sedan geliyor.",
+          "ar": "تُظهر كاميرا اللوحة السيارة متوقّفة تمامًا عند خط الوقوف؛ وبعد اثنتين وعشرين ثانية يصل سيدان من الخلف دون كبح.",
+          "kk": "Тіркеуіш көрсетеді: көлік тоқтау сызығында толық тұрған, жиырма екі секундтан кейін артынан тежемей седан келеді."
+        },
+        "evidenceIds": [
+          "ev-dashcam"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Тормозного пути перед машиной Феррейры нет, а второй водитель признал, что отвлёкся на навигатор.",
+          "en": "There are no skid marks in front of Ferreira's car, and the other driver admitted he was distracted by his navigation.",
+          "tr": "Ferreira'nın aracının önünde fren izi yok ve diğer sürücü navigasyona daldığını kabul etti.",
+          "ar": "لا توجد آثار كبح أمام سيارة فيريرا، وقد أقرّ السائق الآخر بأنه انشغل بجهاز الملاحة.",
+          "kk": "Феррейраның көлігі алдында тежеу ізі жоқ, ал екінші жүргізуші навигаторға алаңдағанын мойындады."
+        },
+        "evidenceIds": [
+          "ev-police"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Медицинская выписка через 67 минут и показания приехавшего брата совпадают по времени и характеру повреждений. Расхождений нет.",
+          "en": "The hospital record 67 minutes later and the statement of the brother who came to the scene agree on timing and on the nature of the injuries. Nothing conflicts.",
+          "tr": "67 dakika sonraki hastane kaydı ile olay yerine gelen kardeşin ifadesi, zaman ve yaralanmaların niteliği bakımından örtüşüyor. Çelişki yok.",
+          "ar": "يتّفق التقرير الطبي بعد 67 دقيقة مع إفادة الأخ الذي حضر إلى الموقع في التوقيت وطبيعة الإصابات. لا تعارض.",
+          "kk": "67 минуттан кейінгі медициналық үзінді мен оқиға орнына келген ағасының айғағы уақыты мен жарақат сипаты бойынша сәйкес келеді. Қайшылық жоқ."
+        },
+        "evidenceIds": [
+          "ev-er",
+          "ev-lucas"
+        ]
+      }
+    ],
+    "veraLine": {
+      "ru": "Запомните брата — Лукас Феррейра. Он говорит охотно и точно; такие свидетели встречаются реже, чем кажется.",
+      "en": "Remember the brother — Lucas Ferreira. He speaks readily and precisely; such witnesses are rarer than you would think.",
+      "tr": "Kardeşi aklınızda tutun — Lucas Ferreira. İstekli ve net konuşuyor; böyle tanıklar sanıldığından daha az bulunur.",
+      "ar": "تذكّر الأخ — لوكاس فيريرا. يتكلّم بسهولة ودقّة؛ وهذا النوع من الشهود أندر مما تظنّ.",
+      "kk": "Ағасын есте сақтаңыз — Лукас Феррейра. Ол ықыласпен әрі нақты сөйлейді; мұндай куәгерлер ойлағаннан сирек кездеседі."
+    }
   }
 }

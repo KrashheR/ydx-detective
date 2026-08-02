@@ -452,5 +452,103 @@
       "progressTotal": 5
     },
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "rustam_beketov",
+      "displayName": {
+        "ru": "Рустам Бекетов",
+        "en": "Rustam Beketov",
+        "tr": "Rustam Beketov",
+        "ar": "رستم بيكيتوف",
+        "kk": "Рүстем Бекетов"
+      },
+      "portraitState": "bitter"
+    },
+    "finalLine": {
+      "ru": "От шторма я ушёл. От собственной жадности, выходит, нет.",
+      "en": "I outran the storm. My own greed, it turns out, I did not.",
+      "tr": "Fırtınadan kurtuldum. Ama kendi açgözlülüğümden kurtulamamışım.",
+      "ar": "نجوت من العاصفة. أما من جشعي، فيبدو أنني لم أنجُ.",
+      "kk": "Дауылдан құтылдым. Ал өз ашкөздігімнен, байқасам, құтылмаппын."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Штормовое предупреждение действовало, ветер доходил до 18 м/с, а спасатели сняли Бекетова с плота у обломков. Бедствие настоящее.",
+          "en": "A storm warning was in force with winds up to 18 m/s, and rescuers took Beketov off a raft beside the wreckage. The distress was real.",
+          "tr": "Fırtına uyarısı yürürlükteydi, rüzgâr 18 m/s'ye çıktı ve kurtarma ekibi Beketov'u enkazın yanındaki saldan aldı. Tehlike gerçekti.",
+          "ar": "كان تحذير العاصفة ساريًا والرياح تصل إلى 18 م/ث، وانتشل رجال الإنقاذ بيكيتوف من طوف قرب الحطام. الاستغاثة حقيقية.",
+          "kk": "Дауыл туралы ескерту күшінде болды, жел 18 м/с жетті, ал құтқарушылар Бекетовті сынықтар жанындағы саддан алды. Апат шынайы."
+        },
+        "evidenceIds": [
+          "ev-weather",
+          "ev-rescue"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Разрыв, волокна и серийный узор защитной полосы на поднятом обломке не совпадают с образцом застрахованной яхты.",
+          "en": "The tear, the fibres and the serial pattern of the rubbing strake on the recovered fragment do not match the insured yacht's sample.",
+          "tr": "Çıkarılan parçadaki koruma bandının yırtığı, lifleri ve seri deseni sigortalı yatın örneğiyle uyuşmuyor.",
+          "ar": "التمزّق والألياف ونمط التسلسل في الشريط الواقي على القطعة المنتشلة لا تطابق عيّنة اليخت المؤمَّن عليه.",
+          "kk": "Көтерілген сынықтағы қорғаныш жолағының жыртығы, талшықтары мен сериялық өрнегі сақтандырылған яхтаның үлгісімен сәйкес келмейді."
+        },
+        "evidenceIds": [
+          "ev-hull"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Накладная на перевозку показывает: застрахованное судно осталось целым и было заранее вывезено. Затонул арендованный катер.",
+          "en": "The transport waybill shows the insured vessel was intact and moved away in advance. What sank was a rented boat.",
+          "tr": "Nakliye irsaliyesi, sigortalı teknenin sağlam olduğunu ve önceden başka yere götürüldüğünü gösteriyor. Batan, kiralık bir tekneydi.",
+          "ar": "تُظهر بوليصة النقل أن السفينة المؤمَّنة سليمة ونُقلت مسبقًا. أما الذي غرق فكان قاربًا مستأجَرًا.",
+          "kk": "Тасымал жүкқұжаты көрсетеді: сақтандырылған кеме бүтін күйінде алдын ала әкетілген. Батқаны — жалға алынған катер."
+        },
+        "evidenceIds": [
+          "ev-transport"
+        ]
+      }
+    ],
+    "arcReveal": {
+      "title": {
+        "ru": "Комплекс «Восточный двор»",
+        "en": "Eastern Yard Complex",
+        "tr": "Doğu Yard Kompleksi",
+        "ar": "مجمع الساحة الشرقية",
+        "kk": "«Шығыс аула» кешені"
+      },
+      "text": {
+        "ru": "Застрахованное имущество перевозят на один склад до подачи заявления об утрате.",
+        "en": "Insured property is being moved to the same warehouse before loss claims are filed.",
+        "tr": "Sigortalı mülk, hasar tazminat talepleri açılmadan önce aynı depoya taşınıyor.",
+        "ar": "يتم نقل الممتلكات المؤمن عليها إلى نفس المستودع قبل تقديم مطالبات الخسارة.",
+        "kk": "Сақтандырылған мүлік залал туралы талап арыз берілгенге дейін бір қоймаға тасымалданады."
+      }
+    }
   }
 }

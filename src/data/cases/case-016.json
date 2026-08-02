@@ -492,5 +492,87 @@
     },
     "seasonClue": null,
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "leila_karimova",
+      "displayName": {
+        "ru": "Лейла Каримова",
+        "en": "Leila Karimova",
+        "tr": "Leyla Kerimova",
+        "ar": "ليلى كريموفا",
+        "kk": "Ләйла Кәрімова"
+      },
+      "portraitState": "determined"
+    },
+    "finalLine": {
+      "ru": "Четыре дня без магазина — достаточно. Пятого не будет.",
+      "en": "Four days without the shop is enough. There will not be a fifth.",
+      "tr": "Dükkânsız dört gün yeter. Beşincisi olmayacak.",
+      "ar": "أربعة أيام بلا متجر تكفي. لن يكون هناك يوم خامس.",
+      "kk": "Дүкенсіз төрт күн — жетеді. Бесіншісі болмайды."
+    },
+    "emotionalMode": "relief",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "3 апреля в 06:48 водоканал зафиксировал разрыв магистрали напротив магазина; линию перекрыли только в 08:03.",
+          "en": "On April 3 at 6:48 a.m. the water utility logged a main burst opposite the shop; the line was shut off only at 8:03.",
+          "tr": "3 Nisan 06.48'de su idaresi dükkânın karşısında ana hat patlaması kaydetti; hat ancak 08.03'te kapatıldı.",
+          "ar": "في 3 أبريل الساعة 06:48 سجّلت شركة المياه انفجار خط رئيسي مقابل المتجر؛ ولم يُغلق الخط إلا عند 08:03.",
+          "kk": "3 сәуірде 06:48-де сумен жабдықтау қызметі дүкеннің қарсысындағы магистральдың жарылғанын тіркеді; желі тек 08:03-те жабылды."
+        },
+        "evidenceIds": [
+          "ev-municipal"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Чем это объясняется",
+          "en": "What explains it",
+          "tr": "Bunu açıklayan şey",
+          "ar": "ما يفسر ذلك",
+          "kk": "Мұны не түсіндіреді"
+        },
+        "text": {
+          "ru": "Проявленная линия затопления проходит по нижним полкам, и номера повреждённых партий совпадают со складской описью.",
+          "en": "The revealed flood line runs along the lower shelves, and the batch numbers of the damaged goods match the stock inventory.",
+          "tr": "Ortaya çıkarılan su seviyesi çizgisi alt rafların hizasından geçiyor ve hasarlı partilerin numaraları depo envanteriyle örtüşüyor.",
+          "ar": "يمتدّ خط الغمر الذي أُظهر على طول الرفوف السفلية، وأرقام الدفعات المتضرّرة تطابق جرد المخزن.",
+          "kk": "Айқындалған су сызығы төменгі сөрелермен өтеді, ал зақымдалған партиялардың нөмірлері қойма тізімдемесіне сай."
+        },
+        "evidenceIds": [
+          "ev-photos",
+          "ev-stock"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Кассовая книга показывает ровно четыре дня нулевых продаж, а средний доход взят по сопоставимым дням. Требование не завышено.",
+          "en": "The till book shows exactly four days of zero sales, with average revenue drawn from comparable days. The claim is not inflated.",
+          "tr": "Kasa defteri tam dört gün sıfır satış gösteriyor; ortalama gelir de benzer günlerden alınmış. Talep şişirilmemiş.",
+          "ar": "يُظهر دفتر الصندوق أربعة أيام بلا مبيعات بالضبط، ومتوسط الدخل مأخوذ من أيام مماثلة. المطالبة غير مضخَّمة.",
+          "kk": "Кассалық кітап дәл төрт күн нөлдік сатылымды көрсетеді, орташа табыс салыстырмалы күндер бойынша алынған. Талап асырылмаған."
+        },
+        "evidenceIds": [
+          "ev-ledger"
+        ]
+      }
+    ]
   }
 }

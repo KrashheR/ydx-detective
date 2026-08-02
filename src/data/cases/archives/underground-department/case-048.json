@@ -511,5 +511,89 @@
     },
     "seasonClue": null,
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "marko_lin",
+      "displayName": {
+        "ru": "Марко Лин",
+        "en": "Marko Lin",
+        "tr": "Marko Lin",
+        "ar": "ماركو لين",
+        "kk": "Марко Лин"
+      },
+      "portraitState": "brazen"
+    },
+    "finalLine": {
+      "ru": "Новый шкаф, старый шкаф… После разгрома они ведь выглядят одинаково.",
+      "en": "New cabinet, old cabinet… after a wrecking they all look the same, don't they.",
+      "tr": "Yeni dolap, eski dolap… Dağıtıldıktan sonra hepsi aynı görünüyor zaten.",
+      "ar": "خزانة جديدة، خزانة قديمة… بعد التحطيم تبدو كلها متشابهة، أليس كذلك.",
+      "kk": "Жаңа шкаф, ескі шкаф… Қиратылғаннан кейін бәрі бірдей көрінеді ғой."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Разгром в помещении реален, и курьер ночной смены действительно видел людей внутри после закрытия.",
+          "en": "The wrecking inside is real, and the night-shift courier did see people in there after closing.",
+          "tr": "İçerideki tahribat gerçek ve gece vardiyası kuryesi kapanıştan sonra orada insanlar gördü.",
+          "ar": "الخراب في المكان حقيقي، ورأى مندوب المناوبة الليلية أشخاصًا في الداخل بعد الإغلاق فعلًا.",
+          "kk": "Үй-жайдағы қирау шынайы, ал түнгі ауысым курьері жабылғаннан кейін ішінде адамдарды шынымен көрген."
+        },
+        "evidenceIds": [
+          "witness-48"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Под свежей вмятиной лежит слой старой коррозии: уничтоженный шкаф был сильно изношен задолго до ночи, а камера служебного лифта показывает, как новое оборудование вывозят.",
+          "en": "Under the fresh dent lies a layer of old corrosion: the destroyed cabinet was badly worn long before that night, and the service-lift camera shows the new equipment being taken out.",
+          "tr": "Taze göçüğün altında eski bir korozyon katmanı var: imha edilen dolap o geceden çok önce iyice yıpranmıştı ve servis asansörü kamerası yeni ekipmanın çıkarıldığını gösteriyor.",
+          "ar": "تحت الانبعاج الحديث طبقة تآكل قديم: كانت الخزانة المدمَّرة بالية قبل تلك الليلة بوقت طويل، وكاميرا مصعد الخدمة تُظهر إخراج المعدّات الجديدة.",
+          "kk": "Жаңа майысқан жердің астында ескі коррозия қабаты жатыр: қиратылған шкаф сол түннен әлдеқайда бұрын қатты тозған, ал қызметтік лифт камерасы жаңа жабдықтың шығарылғанын көрсетеді."
+        },
+        "evidenceIds": [
+          "photo-48",
+          "camera-48"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "На счёте номер Лина напечатан поверх данных соседнего ресторана, а слепую зону создала его собственная учётная запись. Уничтожили подменённое имущество.",
+          "en": "On the invoice Lin's number is printed over a neighbouring restaurant's details, and the blind spot was created by his own account. What was destroyed was substituted property.",
+          "tr": "Faturada Lin'in numarası, komşu restoranın bilgileri üzerine basılmış ve kör nokta onun kendi hesabıyla oluşturulmuş. İmha edilen, yerine konmuş maldı.",
+          "ar": "على الفاتورة طُبع رقم لين فوق بيانات مطعم مجاور، والنقطة العمياء أُنشئت بحسابه هو. ما دُمِّر كان ممتلكات مُستبدَلة.",
+          "kk": "Шотта Линнің нөмірі көрші мейрамхананың деректерінің үстіне басылған, ал соқыр аймақты оның өз есептік жазбасы жасаған. Қиратылғаны — алмастырылған мүлік."
+        },
+        "evidenceIds": [
+          "document-48",
+          "log-48",
+          "bank-48"
+        ]
+      }
+    ]
   }
 }

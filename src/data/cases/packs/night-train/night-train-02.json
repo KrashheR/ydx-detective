@@ -1,0 +1,505 @@
+{
+  "id": "night-train-02",
+  "type": "archive",
+  "difficulty": "easy",
+  "claimAmount": 260000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Часы, которые спешили на тридцать лет",
+    "en": "The Watch That Ran Thirty Years Fast",
+    "tr": "Otuz Yıl İleri Giden Saat",
+    "ar": "الساعة التي سبقت بثلاثين عامًا",
+    "kk": "Отыз жылға асыққан сағат"
+  },
+  "claim": {
+    "person": {
+      "ru": "Аркадий Львович Минин, 66 лет",
+      "en": "Arkady Lvovich Minin, age 66",
+      "tr": "Arkadiy Lvoviç Minin, 66 yaşında",
+      "ar": "أركادي لفوفيتش مينين، 66 عامًا",
+      "kk": "Аркадий Львович Минин, 66 жаста"
+    },
+    "story": {
+      "ru": "В 22:26 поезд резко затормозил, часы «Полярис» упали со столика и остановились. Они принадлежали мне с момента выпуска в 1996 году, никогда не ремонтировались и перед поездкой шли точно.",
+      "en": "At 22:26 the train braked sharply, the Polaris watch fell from the table and stopped. It has been mine since it was made in 1996, was never repaired, and kept perfect time before the journey.",
+      "tr": "Saat 22:26’da tren sert fren yaptı, «Polaris» saat masadan düştü ve durdu. 1996’daki üretiminden beri bana ait, hiç tamir görmedi ve yolculuk öncesinde tam çalışıyordu.",
+      "ar": "في الساعة 22:26 كبح القطار بعنف فسقطت ساعة «بولاريس» عن الطاولة وتوقفت. إنها ملكي منذ صنعها عام 1996، ولم تُصلَّح قط، وكانت مضبوطة قبل الرحلة.",
+      "kk": "Сағат 22:26-да пойыз кілт тежеді, «Полярис» сағаты үстелден құлап, тоқтап қалды. Ол 1996 жылы шыққаннан бері маған тиесілі, ешқашан жөнделмеген және сапарға дейін дәл жүрді."
+    }
+  },
+  "coverImage": "covers/packs/night-train-02.svg",
+  "personImage": "people/packs/night-train/arkady_minin.webp",
+  "client": {
+    "role": {
+      "ru": "Заявитель · пассажир поезда №13",
+      "en": "Claimant · passenger of train No. 13",
+      "tr": "Talep sahibi · 13 No.lu trenin yolcusu",
+      "ar": "مقدم الطلب · راكب في القطار رقم 13",
+      "kk": "Өтініш беруші · №13 пойыз жолаушысы"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Вагон",
+          "en": "Car",
+          "tr": "Vagon",
+          "ar": "العربة",
+          "kk": "Вагон"
+        },
+        "v": {
+          "ru": "№5",
+          "en": "No. 5",
+          "tr": "No. 5",
+          "ar": "رقم 5",
+          "kk": "№5"
+        }
+      },
+      {
+        "k": {
+          "ru": "Рейс",
+          "en": "Service",
+          "tr": "Sefer",
+          "ar": "الرحلة",
+          "kk": "Рейс"
+        },
+        "v": {
+          "ru": "Поезд №13, ночной",
+          "en": "Train No. 13, night service",
+          "tr": "13 No.lu tren, gece seferi",
+          "ar": "القطار رقم 13، الرحلة الليلية",
+          "kk": "№13 пойыз, түнгі рейс"
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "TR02-E1",
+      "order": 1,
+      "type": "usage_log",
+      "title": {
+        "ru": "Телеметрия локомотива",
+        "en": "Locomotive Telemetry",
+        "tr": "Lokomotif Telemetrisi",
+        "ar": "قياسات القاطرة",
+        "kk": "Локомотив телеметриясы"
+      },
+      "content": {
+        "ru": "22:00–22:40 — скорость 84→79→82 км/ч, изменения плавные. Экстренное торможение не применялось, продольных толчков и срабатываний тормозной магистрали не зафиксировано.",
+        "en": "22:00–22:40 — speed 84→79→82 km/h, all changes gradual. No emergency braking was applied and no longitudinal jolts or brake-line activations were recorded.",
+        "tr": "22:00–22:40 — hız 84→79→82 km/s, tüm değişimler kademeli. Acil fren uygulanmadı; boyuna sarsıntı veya fren hattı tetiklenmesi kaydedilmedi.",
+        "ar": "22:00–22:40 — السرعة 84→79→82 كم/س بتغيّرات تدريجية. لم يُستخدم الكبح الطارئ ولم تُسجَّل هزات طولية أو تفعيل لخط الفرامل.",
+        "kk": "22:00–22:40 — жылдамдық 84→79→82 км/сағ, өзгерістер бірқалыпты. Апаттық тежеу қолданылмаған, бойлық соққылар мен тежеу магистралінің іске қосылуы тіркелмеген."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Резкого торможения в заявленное время не было — часы не могли упасть по названной причине.",
+        "en": "There was no sharp braking at the stated time — the watch cannot have fallen for the reason given.",
+        "tr": "Belirtilen saatte sert fren yapılmadı; saat, gösterilen nedenle düşemez.",
+        "ar": "لم يحدث كبح عنيف في الوقت المذكور، فلا يمكن أن تكون الساعة سقطت للسبب المعلن.",
+        "kk": "Мәлімделген уақытта кілт тежеу болмаған — сағат аталған себеппен құлай алмайды."
+      },
+      "statementLink": {
+        "statementId": "claim_braking",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Резкого торможения в заявленное время не было — часы не могли упасть по названной причине.",
+          "en": "There was no sharp braking at the stated time — the watch cannot have fallen for the reason given.",
+          "tr": "Belirtilen saatte sert fren yapılmadı; saat, gösterilen nedenle düşemez.",
+          "ar": "لم يحدث كبح عنيف في الوقت المذكور، فلا يمكن أن تكون الساعة سقطت للسبب المعلن.",
+          "kk": "Мәлімделген уақытта кілт тежеу болмаған — сағат аталған себеппен құлай алмайды."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_braking",
+        "reason": {
+          "ru": "Резкого торможения в заявленное время не было — часы не могли упасть по названной причине.",
+          "en": "There was no sharp braking at the stated time — the watch cannot have fallen for the reason given.",
+          "tr": "Belirtilen saatte sert fren yapılmadı; saat, gösterilen nedenle düşemez.",
+          "ar": "لم يحدث كبح عنيف في الوقت المذكور، فلا يمكن أن تكون الساعة سقطت للسبب المعلن.",
+          "kk": "Мәлімделген уақытта кілт тежеу болмаған — сағат аталған себеппен құлай алмайды."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr02-e1.webp",
+        "logPrompt": "locomotive telemetry"
+      }
+    },
+    {
+      "id": "TR02-E2",
+      "order": 2,
+      "type": "document",
+      "title": {
+        "ru": "Квитанция часовой мастерской",
+        "en": "Watch Workshop Receipt",
+        "tr": "Saat Atölyesi Makbuzu",
+        "ar": "إيصال ورشة الساعات",
+        "kk": "Сағат шеберханасының түбіртегі"
+      },
+      "content": {
+        "ru": "Приём от 29 июля, за четыре дня до рейса. Владелец — Минин А. Л. Диагноз мастера: «разбит баланс, ось сломана, ремонт нерентабелен». Отметка о выдаче без ремонта.",
+        "en": "Intake dated 29 July, four days before the journey. Owner: A. L. Minin. The watchmaker's note: \"balance shattered, staff broken, repair not viable.\" Marked as returned unrepaired.",
+        "tr": "29 Temmuz tarihli kabul, seferden dört gün önce. Sahibi: A. L. Minin. Ustanın notu: «balans kırık, mil kopmuş, onarım ekonomik değil». Onarılmadan teslim edildiği işaretli.",
+        "ar": "استلام بتاريخ 29 يوليو، أي قبل الرحلة بأربعة أيام. المالك: أ. ل. مينين. ملاحظة الحرفي: «الميزان محطم والمحور مكسور والإصلاح غير مجدٍ». ومؤشَّر أنها سُلّمت دون إصلاح.",
+        "kk": "29 шілдедегі қабылдау, рейстен төрт күн бұрын. Иесі — Минин А. Л. Шебердің қорытындысы: «баланс сынған, білік үзілген, жөндеу тиімсіз». Жөндеусіз берілгені белгіленген."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Механизм был разбит ещё до поездки, и часы уже сдавали в мастерскую — «никогда не ремонтировались и шли точно» неверно.",
+        "en": "The movement was already shattered before the journey and the watch had been taken to a workshop — \"never repaired and keeping perfect time\" is false.",
+        "tr": "Mekanizma yolculuktan önce zaten kırıktı ve saat atölyeye götürülmüştü; «hiç tamir görmedi ve tam çalışıyordu» yanlış.",
+        "ar": "كانت الآلية محطمة قبل الرحلة وسبق أن أُخذت الساعة إلى ورشة، فادعاء «لم تُصلَّح وكانت مضبوطة» غير صحيح.",
+        "kk": "Механизм сапарға дейін-ақ сынған және сағат шеберханаға тапсырылған — «ешқашан жөнделмеген әрі дәл жүрді» дегені жалған."
+      },
+      "statementLink": {
+        "statementId": "claim_history",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Механизм был разбит ещё до поездки, и часы уже сдавали в мастерскую — «никогда не ремонтировались и шли точно» неверно.",
+          "en": "The movement was already shattered before the journey and the watch had been taken to a workshop — \"never repaired and keeping perfect time\" is false.",
+          "tr": "Mekanizma yolculuktan önce zaten kırıktı ve saat atölyeye götürülmüştü; «hiç tamir görmedi ve tam çalışıyordu» yanlış.",
+          "ar": "كانت الآلية محطمة قبل الرحلة وسبق أن أُخذت الساعة إلى ورشة، فادعاء «لم تُصلَّح وكانت مضبوطة» غير صحيح.",
+          "kk": "Механизм сапарға дейін-ақ сынған және сағат шеберханаға тапсырылған — «ешқашан жөнделмеген әрі дәл жүрді» дегені жалған."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_history",
+        "reason": {
+          "ru": "Механизм был разбит ещё до поездки, и часы уже сдавали в мастерскую — «никогда не ремонтировались и шли точно» неверно.",
+          "en": "The movement was already shattered before the journey and the watch had been taken to a workshop — \"never repaired and keeping perfect time\" is false.",
+          "tr": "Mekanizma yolculuktan önce zaten kırıktı ve saat atölyeye götürülmüştü; «hiç tamir görmedi ve tam çalışıyordu» yanlış.",
+          "ar": "كانت الآلية محطمة قبل الرحلة وسبق أن أُخذت الساعة إلى ورشة، فادعاء «لم تُصلَّح وكانت مضبوطة» غير صحيح.",
+          "kk": "Механизм сапарға дейін-ақ сынған және сағат шеберханаға тапсырылған — «ешқашан жөнделмеген әрі дәл жүрді» дегені жалған."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr02-e2.webp"
+      }
+    },
+    {
+      "id": "TR02-E3",
+      "order": 3,
+      "type": "photo",
+      "title": {
+        "ru": "Макрофото задней крышки",
+        "en": "Macro Photo of the Case Back",
+        "tr": "Arka Kapağın Makro Fotoğrafı",
+        "ar": "صورة مكبّرة لظهر الساعة",
+        "kk": "Артқы қақпақтың макрофотосы"
+      },
+      "content": {
+        "ru": "На крышке выгравирован номер `P-96-017`. Тот же номер значится в перечне часов из партии, официально пропавшей при перевозке в 1996 году.",
+        "en": "The case back is engraved `P-96-017`. The same number appears in the list of watches from the consignment officially lost in transit in 1996.",
+        "tr": "Arka kapakta `P-96-017` numarası kazınmış. Aynı numara, 1996’da taşıma sırasında resmen kaybolan partideki saatlerin listesinde geçiyor.",
+        "ar": "على الظهر نُقش الرقم `P-96-017`. ويرد الرقم نفسه في قائمة ساعات الشحنة التي فُقدت رسميًا أثناء النقل عام 1996.",
+        "kk": "Қақпаққа `P-96-017` нөмірі ойылған. Сол нөмір 1996 жылы тасымал кезінде ресми жоғалған партиядағы сағаттар тізімінде тұр."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Номер связывает часы со старым делом о пропавшем грузе, но заявленные причину и историю опровергают телеметрия и квитанция.",
+        "en": "The number ties the watch to the old lost-consignment case, while the telemetry and the receipt disprove the stated cause and history.",
+        "tr": "Numara, saati eski kayıp yük davasına bağlıyor; beyan edilen nedeni ve geçmişi ise telemetri ile makbuz çürütüyor.",
+        "ar": "يربط الرقم الساعة بقضية الشحنة المفقودة القديمة، أما السبب والتاريخ المعلنان فتدحضهما القياسات والإيصال.",
+        "kk": "Нөмір сағатты жоғалған жүк туралы ескі іспен байланыстырады, ал мәлімделген себеп пен тарихты телеметрия мен түбіртек теріске шығарады."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Номер связывает часы со старым делом о пропавшем грузе, но заявленные причину и историю опровергают телеметрия и квитанция.",
+          "en": "The number ties the watch to the old lost-consignment case, while the telemetry and the receipt disprove the stated cause and history.",
+          "tr": "Numara, saati eski kayıp yük davasına bağlıyor; beyan edilen nedeni ve geçmişi ise telemetri ile makbuz çürütüyor.",
+          "ar": "يربط الرقم الساعة بقضية الشحنة المفقودة القديمة، أما السبب والتاريخ المعلنان فتدحضهما القياسات والإيصال.",
+          "kk": "Нөмір сағатты жоғалған жүк туралы ескі іспен байланыстырады, ал мәлімделген себеп пен тарихты телеметрия мен түбіртек теріске шығарады."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr02-e3.webp",
+        "filename": "tr02-e3.webp"
+      }
+    },
+    {
+      "id": "TR02-E4",
+      "order": 4,
+      "type": "bank_statement",
+      "title": {
+        "ru": "Выписка комиссионного магазина",
+        "en": "Second-Hand Shop Statement",
+        "tr": "Konsinye Mağaza Ekstresi",
+        "ar": "كشف متجر السلع المستعملة",
+        "kk": "Комиссиялық дүкен үзіндісі"
+      },
+      "content": {
+        "ru": "12 июля, 15:40 — «Антиквар-Часы, комиссия»: 34 000 ₽, покупатель Минин А. Л. В описании позиции: «Полярис, состояние на запчасти».",
+        "en": "12 July, 15:40 — \"Antikvar-Chasy, consignment\": 34,000 ₽, buyer A. L. Minin. Item description: \"Polaris, condition: for parts\".",
+        "tr": "12 Temmuz, 15:40 — «Antikvar-Çası, konsinye»: 34.000 ₽, alıcı A. L. Minin. Ürün açıklaması: «Polaris, durumu: parça için».",
+        "ar": "12 يوليو، 15:40 — «أنتيكفار-تشاسي، بيع بالعمولة»: 34000 ₽، المشتري أ. ل. مينين. وصف الصنف: «بولاريس، الحالة: لقطع الغيار».",
+        "kk": "12 шілде, 15:40 — «Антиквар-Часы, комиссия»: 34 000 ₽, сатып алушы Минин А. Л. Тауар сипаттамасы: «Полярис, қосалқы бөлшекке»."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Часы куплены три недели назад уже неисправными; это подтверждает ложность истории владения, установленную квитанцией мастерской.",
+        "en": "The watch was bought three weeks ago already broken; this backs up the false ownership history the workshop receipt establishes.",
+        "tr": "Saat üç hafta önce zaten bozuk olarak alınmış; bu, atölye makbuzunun ortaya koyduğu sahiplik yalanını destekliyor.",
+        "ar": "اشتُريت الساعة قبل ثلاثة أسابيع وهي معطلة أصلًا، ما يدعم كذب تاريخ الملكية الذي أثبته إيصال الورشة.",
+        "kk": "Сағат үш апта бұрын әлдеқашан бұзылған күйде сатып алынған; бұл шеберхана түбіртегі анықтаған иелік тарихының жалғандығын растайды."
+      },
+      "statementLink": {
+        "statementId": "claim_history",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Часы куплены три недели назад уже неисправными; это подтверждает ложность истории владения, установленную квитанцией мастерской.",
+          "en": "The watch was bought three weeks ago already broken; this backs up the false ownership history the workshop receipt establishes.",
+          "tr": "Saat üç hafta önce zaten bozuk olarak alınmış; bu, atölye makbuzunun ortaya koyduğu sahiplik yalanını destekliyor.",
+          "ar": "اشتُريت الساعة قبل ثلاثة أسابيع وهي معطلة أصلًا، ما يدعم كذب تاريخ الملكية الذي أثبته إيصال الورشة.",
+          "kk": "Сағат үш апта бұрын әлдеқашан бұзылған күйде сатып алынған; бұл шеберхана түбіртегі анықтаған иелік тарихының жалғандығын растайды."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr02-e4.webp",
+        "bankName": {
+          "ru": "Северный банк",
+          "en": "Severny Bank",
+          "tr": "Severnıy Bank",
+          "ar": "بنك سيفيرني",
+          "kk": "Солтүстік банк"
+        },
+        "accountMask": "•••• 8802"
+      }
+    },
+    {
+      "id": "TR02-E5",
+      "order": 5,
+      "type": "surface_reveal",
+      "title": {
+        "ru": "Осмотр футляра",
+        "en": "Examining the Watch Case",
+        "tr": "Saat Kutusunun İncelenmesi",
+        "ar": "فحص علبة الساعة",
+        "kk": "Сағат қорабын тексеру"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Под новой тканью — штамп завода «Меридиан» и номер ящика `24-П`, из которого часы официально не выезжали.",
+        "en": "Under the new fabric are the Meridian factory stamp and crate number `24-P`, from which the watch officially never left.",
+        "tr": "Yeni kumaşın altında «Meridian» fabrika damgası ve saatin resmen hiç çıkmadığı `24-P` sandık numarası var.",
+        "ar": "تحت القماش الجديد ختم مصنع «ميريديان» ورقم الصندوق `24-P` الذي لم تغادره الساعة رسميًا.",
+        "kk": "Жаңа матаның астында «Меридиан» зауытының мөрі мен сағат ресми түрде шықпаған `24-П` жәшік нөмірі бар."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Под новой тканью — штамп завода «Меридиан» и номер ящика `24-П`, из которого часы официально не выезжали.",
+          "en": "Under the new fabric are the Meridian factory stamp and crate number `24-P`, from which the watch officially never left.",
+          "tr": "Yeni kumaşın altında «Meridian» fabrika damgası ve saatin resmen hiç çıkmadığı `24-P` sandık numarası var.",
+          "ar": "تحت القماش الجديد ختم مصنع «ميريديان» ورقم الصندوق `24-P` الذي لم تغادره الساعة رسميًا.",
+          "kk": "Жаңа матаның астында «Меридиан» зауытының мөрі мен сағат ресми түрде шықпаған `24-П` жәшік нөмірі бар."
+        }
+      },
+      "evidenceTier": "supporting",
+      "description": {
+        "ru": "Футляр переклеен новой тканью, но подкладка на дне осталась старой и покрыта пылью.",
+        "en": "The case has been re-covered with new fabric, though the lining at the bottom is still the original one and is coated in dust.",
+        "tr": "Kutu yeni kumaşla kaplanmış ama tabandaki astar hâlâ eski ve toz içinde.",
+        "ar": "أُعيد تغليف العلبة بقماش جديد، لكن البطانة في القاع ما زالت الأصلية ومغطاة بالغبار.",
+        "kk": "Қорап жаңа матамен қапталған, бірақ түбіндегі астар ескі күйінде қалып, шаңға көмілген."
+      },
+      "instruction": {
+        "ru": "Очистите дно футляра и найдите заводскую маркировку.",
+        "en": "Clean the bottom of the case and find the factory marking.",
+        "tr": "Kutunun tabanını temizleyin ve fabrika işaretini bulun.",
+        "ar": "نظّف قاع العلبة وابحث عن علامة المصنع.",
+        "kk": "Қораптың түбін тазалап, зауыт таңбасын табыңыз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/night-train/tr02-e5.webp",
+        "coverTexture": "shared/surface/dirt.svg",
+        "revealMasks": [
+          "shared/surface/trace-mask.svg"
+        ],
+        "toolCursor": "shared/surface/cloth-cursor.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": false,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Штамп завода и номер ящика превращают частный спор в след старого груза: игрок сам открывает связь.",
+          "en": "The factory stamp and crate number turn a private dispute into a trace of the old consignment: the player uncovers the link themselves.",
+          "tr": "Fabrika damgası ve sandık numarası, özel bir anlaşmazlığı eski yükün izine dönüştürür: bağlantıyı oyuncu kendisi bulur.",
+          "ar": "يحوّل ختم المصنع ورقم الصندوق نزاعًا خاصًا إلى أثر للشحنة القديمة: يكتشف اللاعب الصلة بنفسه.",
+          "kk": "Зауыт мөрі мен жәшік нөмірі жеке дауды ескі жүктің ізіне айналдырады: байланысты ойыншы өзі ашады."
+        },
+        "playerAction": {
+          "ru": "Очистите дно футляра и найдите заводскую маркировку.",
+          "en": "Clean the bottom of the case and find the factory marking.",
+          "tr": "Kutunun tabanını temizleyin ve fabrika işaretini bulun.",
+          "ar": "نظّف قاع العلبة وابحث عن علامة المصنع.",
+          "kk": "Қораптың түбін тазалап, зауыт таңбасын табыңыз."
+        },
+        "conclusion": {
+          "ru": "Под новой тканью — штамп завода «Меридиан» и номер ящика `24-П`, из которого часы официально не выезжали.",
+          "en": "Under the new fabric are the Meridian factory stamp and crate number `24-P`, from which the watch officially never left.",
+          "tr": "Yeni kumaşın altında «Meridian» fabrika damgası ve saatin resmen hiç çıkmadığı `24-P` sandık numarası var.",
+          "ar": "تحت القماش الجديد ختم مصنع «ميريديان» ورقم الصندوق `24-P` الذي لم تغادره الساعة رسميًا.",
+          "kk": "Жаңа матаның астында «Меридиан» зауытының мөрі мен сағат ресми түрде шықпаған `24-П` жәшік нөмірі бар."
+        }
+      },
+      "data": {
+        "mode": "erase",
+        "coverType": "dust",
+        "brush": {
+          "radius": 40,
+          "hardness": 0.58,
+          "opacity": 0.84,
+          "spacing": 8
+        },
+        "completion": {
+          "type": "discover_any",
+          "requiredTraceIds": [
+            "factory-stamp"
+          ]
+        },
+        "traces": [
+          {
+            "id": "factory-stamp",
+            "label": "Штамп завода «Меридиан» и номер ящика 24-П",
+            "labelEn": "Meridian factory stamp and crate number 24-P",
+            "requiredRevealPercent": 52,
+            "mask": "shared/surface/trace-mask.svg",
+            "shape": "mask",
+            "isContradiction": false,
+            "conclusion": "Под новой тканью — штамп завода «Меридиан» и номер ящика 24-П.",
+            "conclusionEn": "Under the new fabric are the Meridian factory stamp and crate number 24-P."
+          }
+        ]
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Телеметрия не знает экстренного торможения в 22:26: скорость менялась плавно.",
+      "Часы приняли в мастерскую с разбитым балансом за четыре дня до рейса.",
+      "Куплены они три недели назад в комиссионном, а номер P-96-017 значится в пропавшей партии 1996 года."
+    ],
+    "en": [
+      "The telemetry knows no emergency braking at 22:26: the speed changed gradually.",
+      "The workshop took the watch in with a shattered balance four days before the journey.",
+      "It was bought three weeks ago second-hand, and number P-96-017 belongs to the consignment lost in 1996."
+    ],
+    "tr": [
+      "Telemetri 22:26’da acil fren tanımıyor: hız kademeli değişti.",
+      "Atölye, saati seferden dört gün önce kırık balansla teslim almış.",
+      "Saat üç hafta önce konsinye mağazadan alınmış ve P-96-017 numarası 1996’da kaybolan partiye ait."
+    ],
+    "ar": [
+      "لا تعرف القياسات أي كبح طارئ عند 22:26: تغيّرت السرعة تدريجيًا.",
+      "استلمت الورشة الساعة بميزان محطم قبل الرحلة بأربعة أيام.",
+      "اشتُريت قبل ثلاثة أسابيع من متجر مستعمل، والرقم P-96-017 يخص شحنة 1996 المفقودة."
+    ],
+    "kk": [
+      "Телеметрия 22:26-дағы апаттық тежеуді білмейді: жылдамдық бірқалыпты өзгерген.",
+      "Шеберхана сағатты рейстен төрт күн бұрын сынған балансымен қабылдаған.",
+      "Ол үш апта бұрын комиссиялық дүкеннен алынған, ал P-96-017 нөмірі 1996 жылы жоғалған партияда тұр."
+    ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "stampable": false,
+      "text": {
+        "ru": "Часы повреждены в поездке, стоимость подлежит возмещению.",
+        "en": "The watch was damaged during the journey and its value is reimbursable.",
+        "tr": "Saat yolculuk sırasında zarar gördü ve değeri tazmin edilmelidir.",
+        "ar": "تضررت الساعة أثناء الرحلة وقيمتها قابلة للتعويض.",
+        "kk": "Сағат сапар кезінде зақымданды, құны өтелуге тиіс."
+      }
+    },
+    {
+      "id": "claim_braking",
+      "stampable": true,
+      "text": {
+        "ru": "В 22:26 поезд резко затормозил, и часы упали со столика.",
+        "en": "At 22:26 the train braked sharply and the watch fell from the table.",
+        "tr": "Saat 22:26’da tren sert fren yaptı ve saat masadan düştü.",
+        "ar": "في الساعة 22:26 كبح القطار بعنف فسقطت الساعة عن الطاولة.",
+        "kk": "22:26-да пойыз кілт тежеді де, сағат үстелден құлады."
+      }
+    },
+    {
+      "id": "claim_history",
+      "stampable": true,
+      "text": {
+        "ru": "Часы мои с 1996 года, никогда не ремонтировались и шли точно.",
+        "en": "The watch has been mine since 1996, was never repaired and kept perfect time.",
+        "tr": "Saat 1996’dan beri benim, hiç tamir görmedi ve tam çalışıyordu.",
+        "ar": "الساعة ملكي منذ 1996، لم تُصلَّح قط وكانت مضبوطة.",
+        "kk": "Сағат 1996 жылдан бері меніқі, ешқашан жөнделмеген және дәл жүрді."
+      }
+    }
+  ],
+  "contentVersion": "night-train-1.0",
+  "narrative": {
+    "preBrief": {
+      "ru": "Шахматист умеет строить красивые комбинации. Даже из чужой истории.",
+      "en": "A chess teacher knows how to build elegant combinations. Even out of somebody else's history.",
+      "tr": "Satranç öğretmeni zarif kombinezonlar kurmayı bilir. Başkasının geçmişinden bile.",
+      "ar": "يجيد مدرّس الشطرنج بناء تركيبات أنيقة، حتى من تاريخ شخص آخر.",
+      "kk": "Шахмат ұстазы әдемі комбинация құруды біледі. Тіпті бөгде тарихтан да."
+    },
+    "postVerdictNote": {
+      "ru": "Поезд идёт по расписанию. Часы просто отстали на тридцать лет.",
+      "en": "The train runs on schedule. The watch is simply thirty years behind.",
+      "tr": "Tren tarifesine uyuyor. Saat ise sadece otuz yıl geride.",
+      "ar": "القطار يسير وفق الجدول. أما الساعة فمتأخرة ثلاثين عامًا فحسب.",
+      "kk": "Пойыз кесте бойынша жүреді. Сағат тек отыз жылға қалып қойған."
+    },
+    "nextCaseTeaser": {
+      "ru": "В третьем купе кипяток уничтожил договор, которого, возможно, ещё не существовало.",
+      "en": "In the third compartment boiling water destroyed a contract that may not have existed yet.",
+      "tr": "Üçüncü kompartımanda kaynar su, henüz var olmamış olabilecek bir sözleşmeyi yok etti.",
+      "ar": "في المقصورة الثالثة أتلف الماء المغلي عقدًا ربما لم يكن قد وُجد بعد.",
+      "kk": "Үшінші купеде қайнаған су әлі болмаған шығар шартты жойды."
+    },
+    "seasonClue": {
+      "id": "polaris-17",
+      "progressIndex": 2,
+      "progressTotal": 10,
+      "label": {
+        "ru": "Часы «Полярис» №17",
+        "en": "Polaris Watch No. 17",
+        "tr": "«Polaris» Saat No. 17",
+        "ar": "ساعة «بولاريس» رقم 17",
+        "kk": "«Полярис» сағаты №17"
+      },
+      "description": {
+        "ru": "Предмет из партии, пропавшей в поезде №13 тридцать лет назад, спокойно лежит в комиссионном магазине. Значит, груз мог никогда не ехать.",
+        "en": "An item from the consignment lost on train No. 13 thirty years ago sits calmly in a second-hand shop. Which means the cargo may never have travelled.",
+        "tr": "Otuz yıl önce 13 No.lu trende kaybolan partiden bir parça, konsinye mağazada sakince duruyor. Demek ki yük hiç yola çıkmamış olabilir.",
+        "ar": "قطعة من الشحنة التي فُقدت في القطار رقم 13 قبل ثلاثين عامًا تقبع بهدوء في متجر مستعمل، ما يعني أن الحمولة ربما لم تسافر أصلًا.",
+        "kk": "Отыз жыл бұрын №13 пойызда жоғалған партиядағы зат комиссиялық дүкенде тыныш жатыр. Демек, жүк мүлдем жолға шықпаған болуы мүмкін."
+      }
+    },
+    "epilogue": null
+  }
+}

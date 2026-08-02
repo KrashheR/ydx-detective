@@ -533,5 +533,109 @@
       "progressTotal": 5
     },
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "lev_sokolov",
+      "displayName": {
+        "ru": "Лев Аркадьевич Соколов",
+        "en": "Lev Arkadyevich Sokolov",
+        "tr": "Lev Arkadyeviç Sokolov",
+        "ar": "ليف أركاديفيتش سوكولوف",
+        "kk": "Лев Аркадьевич Соколов"
+      },
+      "portraitState": "guilty_sad"
+    },
+    "finalLine": {
+      "ru": "Отказ переживу. Только ребятам не говорите, что я их подвёл.",
+      "en": "I will survive the refusal. Just do not tell the kids that I let them down.",
+      "tr": "Redde dayanırım. Yeter ki çocuklara onları yüzüstü bıraktığımı söylemeyin.",
+      "ar": "سأتحمّل الرفض. فقط لا تخبروا الصبية أنني خذلتهم.",
+      "kk": "Бас тартуға шыдаймын. Тек балаларға оларды жерге қаратқанымды айтпаңыздар."
+    },
+    "emotionalMode": "bittersweet",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Труба действительно лопнула и затопила мастерскую. Давление было в норме, а коррозия сама по себе разрыв не объясняет.",
+          "en": "The pipe really did burst and flood the workshop. Pressure was normal, and corrosion alone does not explain the rupture.",
+          "tr": "Boru gerçekten patladı ve atölyeyi su bastı. Basınç normaldi ve korozyon tek başına yırtılmayı açıklamıyor.",
+          "ar": "انفجر الأنبوب فعلًا وأغرق الورشة. كان الضغط طبيعيًا، والتآكل وحده لا يفسّر التمزّق.",
+          "kk": "Құбыр шынымен жарылып, шеберхананы су басқан. Қысым қалыпты болған, ал коррозия жарылысты өздігінен түсіндірмейді."
+        },
+        "evidenceIds": [
+          "ev-utility"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Под налётом на вмятине — свежая дугообразная царапина и синяя краска моторизованного колеса клубной платформы.",
+          "en": "Under the deposit on the dent: a fresh arc-shaped scratch and blue paint from the motorised wheel of the club's platform.",
+          "tr": "Göçüğün üzerindeki tabakanın altında taze yay biçimli bir çizik ve kulüp platformunun motorlu tekerleğinden mavi boya var.",
+          "ar": "تحت الترسّبات على الانبعاج: خدش قوسي حديث وطلاء أزرق من العجلة المُحرَّكة لمنصّة النادي.",
+          "kk": "Майысқан жердегі қақтың астында — жаңа доға тәрізді сызат және клуб платформасының моторлы дөңгелегінен қалған көк бояу."
+        },
+        "evidenceIds": [
+          "ev-pipe-photo"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Переписка показывает: Соколов знал о причине. Утверждение, что рядом не велось никаких работ, ложно — мотив объясняет ложь, но не отменяет её.",
+          "en": "The chat shows Sokolov knew the cause. The claim that no work was going on nearby is false — the motive explains the lie, it does not undo it.",
+          "tr": "Yazışmalar Sokolov'un nedeni bildiğini gösteriyor. Yakında hiçbir çalışma yapılmadığı iddiası yanlış; gerekçe yalanı açıklar ama ortadan kaldırmaz.",
+          "ar": "تُظهر المراسلات أن سوكولوف كان يعرف السبب. والادّعاء بعدم وجود أعمال قريبة كاذب — الدافع يفسّر الكذبة ولا يلغيها.",
+          "kk": "Хат алмасу көрсетеді: Соколов себепті білген. Маңайда ешқандай жұмыс жүрмеді деген тұжырым жалған — уәж өтірікті түсіндіреді, бірақ жоймайды."
+        },
+        "evidenceIds": [
+          "ev-club-chat"
+        ]
+      }
+    ],
+    "veraLine": {
+      "ru": "Сочувствие объясняет ложь. Но не делает её правдой.",
+      "en": "Sympathy explains a lie. It does not make it true.",
+      "tr": "Şefkat yalanı açıklar. Ama onu doğru yapmaz.",
+      "ar": "التعاطف يفسّر الكذبة. لكنه لا يجعلها حقيقة.",
+      "kk": "Жанашырлық өтірікті түсіндіреді. Бірақ оны шындыққа айналдырмайды."
+    },
+    "arcReveal": {
+      "title": {
+        "ru": "Голос консультанта К.",
+        "en": "The Voice of Consultant K.",
+        "tr": "Danışman K.'nin Sesi",
+        "ar": "صوت المستشار ك.",
+        "kk": "Кеңесші К."
+      },
+      "text": {
+        "ru": "Неизвестный не просто оформляет документы. Он объясняет заявителям, какую часть происшествия нужно скрыть, и получает долю после выплаты.",
+        "en": "The unknown consultant does more than prepare documents. He tells claimants which part of an incident to conceal and takes a cut after the payout.",
+        "tr": "Bilinmeyen danışman belge hazırlamaktan fazlasını yapar. Davacılara olayın hangi kısmının gizlenmesi gerektiğini söyler ve ödemeden sonra kesinti yapar.",
+        "ar": "يقوم المستشار المجهول بأكثر من مجرد إعداد المستندات. يخبر المطالبين أي جزء من الحادث يجب إخفاءه ويأخذ حصة بعد الدفع.",
+        "kk": "Белгісіз адам қағаз толтырып қана қоймайды. Талапкерлерге оқиғаның қандай бөлігін жасыру керектігін түсіндіреді және төлемнен кейін үлесін алады."
+      }
+    }
   }
 }

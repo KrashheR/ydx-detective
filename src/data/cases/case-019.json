@@ -417,5 +417,87 @@
     },
     "seasonClue": null,
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "anatoly_stepanovich",
+      "displayName": {
+        "ru": "Анатолий Степанович",
+        "en": "Anatoly Stepanovich",
+        "tr": "Anatoli Stepanoviç",
+        "ar": "أناتولي ستيبانوفيتش",
+        "kk": "Анатолий Степанович"
+      },
+      "portraitState": "tired_humour"
+    },
+    "finalLine": {
+      "ru": "Камеру поставил. Осталось поставить замок. И поймать Жорика.",
+      "en": "The camera is up. Now I only need a lock. And to catch Zhorik.",
+      "tr": "Kamerayı taktım. Geriye kilit takmak kaldı. Bir de Jorik'i yakalamak.",
+      "ar": "ركّبت الكاميرا. بقي أن أركّب قفلًا. وأن أمسك بجوريك.",
+      "kk": "Камераны қойдым. Енді құлып қою қалды. Бір де Жорикті ұстау."
+    },
+    "emotionalMode": "humour",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Газонокосилка действительно застряла в нижней секции соседской теплицы, смета соответствует повреждениям.",
+          "en": "The mower really did end up in the lower section of the neighbour's greenhouse, and the estimate matches the damage.",
+          "tr": "Çim biçme makinesi gerçekten komşunun serasının alt bölümüne saplandı; keşif bedeli hasara uyuyor.",
+          "ar": "انحشرت الجزّازة فعلًا في القسم السفلي من دفيئة الجار، والتقدير يطابق الأضرار.",
+          "kk": "Шөп шапқыш шынымен көршінің жылыжайының төменгі бөлігіне тығылып қалған, смета зақымға сай."
+        },
+        "evidenceIds": [
+          "ev-neighbor"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "В 03:39:54 журнал принял команду разблокировки с зарегистрированного пульта, затем — движение вперёд на полном отклонении джойстика.",
+          "en": "At 03:39:54 the log accepted an unlock command from the registered remote, then full-throttle forward motion.",
+          "tr": "03:39:54'te kayıt, kayıtlı kumandadan gelen kilit açma komutunu aldı; ardından joystick sonuna kadar itilmiş hâlde ileri hareket.",
+          "ar": "عند 03:39:54 استقبل السجل أمر فتح القفل من جهاز التحكّم المسجَّل، ثم حركة أمامية بأقصى دفع.",
+          "kk": "03:39:54-те журнал тіркелген пульттен бұғаттан шығару командасын қабылдаған, содан соң джойстик толық ауытқыған күйде алға қозғалыс."
+        },
+        "evidenceIds": [
+          "ev-mower-log"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Пульт нашли в развилке сливы: на кнопке и джойстике — грязные следы лап, а камера показывает, кто его туда унёс. Умысла владельца нет.",
+          "en": "The remote turned up in the plum tree: muddy paw marks on the button and stick, and the camera shows who carried it there. There is no intent on the owner's part.",
+          "tr": "Kumanda erik ağacının çatalında bulundu: düğmede ve joystickte çamurlu pati izleri var, kamera da onu oraya kimin taşıdığını gösteriyor. Sahibinin kastı yok.",
+          "ar": "عُثر على جهاز التحكّم في شجرة البرقوق: آثار مخالب موحلة على الزر والعصا، والكاميرا تُظهر من حمله إلى هناك. لا نيّة من جانب المالك.",
+          "kk": "Пульт өріктің айырында табылды: түймеде де, джойстикте де балшықты табан іздері бар, ал камера оны сонда кім апарғанын көрсетеді. Иесінің қасақаналығы жоқ."
+        },
+        "evidenceIds": [
+          "ev-remote-photo",
+          "ev-camera"
+        ]
+      }
+    ]
   }
 }

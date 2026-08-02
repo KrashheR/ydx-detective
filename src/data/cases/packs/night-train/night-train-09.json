@@ -1,0 +1,612 @@
+{
+  "id": "night-train-09",
+  "type": "archive",
+  "difficulty": "hard",
+  "claimAmount": 180000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Остановка вне расписания",
+    "en": "A Stop Outside the Timetable",
+    "tr": "Tarife Dışı Duruş",
+    "ar": "توقف خارج الجدول",
+    "kk": "Кестеден тыс аялдама"
+  },
+  "claim": {
+    "person": {
+      "ru": "Надежда Петровна Соколова, 52 года",
+      "en": "Nadezhda Petrovna Sokolova, age 52",
+      "tr": "Nadejda Petrovna Sokolova, 52 yaşında",
+      "ar": "ناديجدا بيتروفنا سوكولوفا، 52 عامًا",
+      "kk": "Надежда Петровна Соколова, 52 жаста"
+    },
+    "story": {
+      "ru": "В 03:31 тяговое питание отключилось из-за неисправности локомотива. Морозильная камера остановилась, продукты на 180 тысяч рублей испорчены. Никакого внешнего сигнала или заранее согласованной остановки не было.",
+      "en": "At 03:31 the traction power cut out because of a locomotive fault. The freezer stopped and 180 thousand roubles of food was spoiled. There was no external signal and no pre-arranged stop.",
+      "tr": "Saat 03:31’de lokomotif arızası yüzünden çekiş gücü kesildi. Dondurucu durdu ve 180 bin ruble değerinde gıda bozuldu. Hiçbir dış sinyal ya da önceden kararlaştırılmış duruş yoktu.",
+      "ar": "في الساعة 03:31 انقطعت طاقة الجر بسبب عطل في القاطرة، فتوقف المجمّد وتلفت أطعمة بقيمة 180 ألف روبل. لم يكن هناك أي إشارة خارجية ولا توقف متفق عليه مسبقًا.",
+      "kk": "Сағат 03:31-де локомотив ақауынан тарту қуаты өшті. Мұздатқыш тоқтап, 180 мың рубльдік азық-түлік бүлінді. Ешқандай сыртқы сигнал да, алдын ала келісілген аялдама да болған жоқ."
+    }
+  },
+  "coverImage": "covers/packs/night-train-09.svg",
+  "personImage": "people/packs/night-train/nadezhda_sokolova.webp",
+  "client": {
+    "role": {
+      "ru": "Заявитель · заведующая вагоном-рестораном",
+      "en": "Claimant · restaurant car manager",
+      "tr": "Talep sahibi · restoran vagonu sorumlusu",
+      "ar": "مقدمة الطلب · مديرة عربة المطعم",
+      "kk": "Өтініш беруші · мейрамхана вагонының меңгерушісі"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Вагон",
+          "en": "Car",
+          "tr": "Vagon",
+          "ar": "العربة",
+          "kk": "Вагон"
+        },
+        "v": {
+          "ru": "Вагон-ресторан",
+          "en": "Restaurant car",
+          "tr": "Restoran vagonu",
+          "ar": "عربة المطعم",
+          "kk": "Мейрамхана вагоны"
+        }
+      },
+      {
+        "k": {
+          "ru": "Рейс",
+          "en": "Service",
+          "tr": "Sefer",
+          "ar": "الرحلة",
+          "kk": "Рейс"
+        },
+        "v": {
+          "ru": "Поезд №13, ночной",
+          "en": "Train No. 13, night service",
+          "tr": "13 No.lu tren, gece seferi",
+          "ar": "القطار رقم 13، الرحلة الليلية",
+          "kk": "№13 пойыз, түнгі рейс"
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "TR09-E1",
+      "order": 1,
+      "type": "thermal_scan",
+      "title": {
+        "ru": "Тепловой осмотр морозильной камеры",
+        "en": "Thermal Inspection of the Freezer",
+        "tr": "Dondurucunun Termal İncelemesi",
+        "ar": "الفحص الحراري للمجمّد",
+        "kk": "Мұздатқыштың жылулық тексерісі"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Компрессор перегрет и изношен: по журналу он держит температуру выше нормы уже девять дней, продукты испортились до этого рейса.",
+        "en": "The compressor is overheated and worn: its log shows it has been running above the limit for nine days, and the food spoiled before this journey.",
+        "tr": "Kompresör aşırı ısınmış ve yıpranmış: kaydına göre dokuz gündür sınırın üzerinde çalışıyor ve gıdalar bu seferden önce bozulmuş.",
+        "ar": "الضاغط محموم ومهترئ: يُظهر سجله تشغيلًا فوق الحد منذ تسعة أيام، وقد تلفت الأطعمة قبل هذه الرحلة.",
+        "kk": "Компрессор қызып, тозған: журналы бойынша ол тоғыз күн бойы нормадан жоғары температура ұстап тұр, азық-түлік осы рейске дейін бүлінген."
+      },
+      "statementLink": {
+        "statementId": "claim_freezer",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Компрессор перегрет и изношен: по журналу он держит температуру выше нормы уже девять дней, продукты испортились до этого рейса.",
+          "en": "The compressor is overheated and worn: its log shows it has been running above the limit for nine days, and the food spoiled before this journey.",
+          "tr": "Kompresör aşırı ısınmış ve yıpranmış: kaydına göre dokuz gündür sınırın üzerinde çalışıyor ve gıdalar bu seferden önce bozulmuş.",
+          "ar": "الضاغط محموم ومهترئ: يُظهر سجله تشغيلًا فوق الحد منذ تسعة أيام، وقد تلفت الأطعمة قبل هذه الرحلة.",
+          "kk": "Компрессор қызып, тозған: журналы бойынша ол тоғыз күн бойы нормадан жоғары температура ұстап тұр, азық-түлік осы рейске дейін бүлінген."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_freezer",
+        "reason": {
+          "ru": "Компрессор перегрет и изношен: по журналу он держит температуру выше нормы уже девять дней, продукты испортились до этого рейса.",
+          "en": "The compressor is overheated and worn: its log shows it has been running above the limit for nine days, and the food spoiled before this journey.",
+          "tr": "Kompresör aşırı ısınmış ve yıpranmış: kaydına göre dokuz gündür sınırın üzerinde çalışıyor ve gıdalar bu seferden önce bozulmuş.",
+          "ar": "الضاغط محموم ومهترئ: يُظهر سجله تشغيلًا فوق الحد منذ تسعة أيام، وقد تلفت الأطعمة قبل هذه الرحلة.",
+          "kk": "Компрессор қызып, тозған: журналы бойынша ол тоғыз күн бойы нормадан жоғары температура ұстап тұр, азық-түлік осы рейске дейін бүлінген."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "Камеру осмотрели через двадцать минут после восстановления питания. Полки и компрессорный отсек снимали одновременно.",
+        "en": "The unit was examined twenty minutes after power was restored. The shelves and the compressor bay were imaged at the same time.",
+        "tr": "Ünite, elektrik geldikten yirmi dakika sonra incelendi. Raflar ve kompresör bölmesi aynı anda görüntülendi.",
+        "ar": "فُحصت الوحدة بعد عشرين دقيقة من عودة الطاقة، وصُوّرت الرفوف وحجرة الضاغط في الوقت نفسه.",
+        "kk": "Камера қуат қалпына келгеннен кейін жиырма минуттан соң тексерілді. Сөрелер мен компрессор бөлігі бір мезгілде түсірілді."
+      },
+      "instruction": {
+        "ru": "Включите тепловой режим и найдите узел, который грелся не из-за ночного отключения.",
+        "en": "Switch to thermal mode and find the unit that was heating up for reasons other than the night power cut.",
+        "tr": "Termal moda geçin ve gece kesintisinden bağımsız olarak ısınan parçayı bulun.",
+        "ar": "انتقل إلى الوضع الحراري وابحث عن الجزء الذي كان يسخن لسبب غير انقطاع الليلة.",
+        "kk": "Жылулық режимді қосып, түнгі өшуден емес, басқа себептен қызып тұрған торапты табыңыз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/night-train/tr09-e1.webp"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Изношенный компрессор греется постоянно: игрок сам отличает старую неисправность от ночного события.",
+          "en": "A worn compressor runs hot all the time: the player distinguishes an old fault from tonight's event themselves.",
+          "tr": "Yıpranmış kompresör sürekli ısınır: oyuncu eski arızayı bu geceki olaydan kendisi ayırır.",
+          "ar": "الضاغط المهترئ يسخن باستمرار: يميّز اللاعب بنفسه بين عطل قديم وحدث هذه الليلة.",
+          "kk": "Тозған компрессор үнемі қызады: ойыншы ескі ақауды бүгінгі оқиғадан өзі ажыратады."
+        },
+        "playerAction": {
+          "ru": "Включите тепловой режим и найдите узел, который грелся не из-за ночного отключения.",
+          "en": "Switch to thermal mode and find the unit that was heating up for reasons other than the night power cut.",
+          "tr": "Termal moda geçin ve gece kesintisinden bağımsız olarak ısınan parçayı bulun.",
+          "ar": "انتقل إلى الوضع الحراري وابحث عن الجزء الذي كان يسخن لسبب غير انقطاع الليلة.",
+          "kk": "Жылулық режимді қосып, түнгі өшуден емес, басқа себептен қызып тұрған торапты табыңыз."
+        },
+        "conclusion": {
+          "ru": "Компрессор перегрет и изношен: по журналу он держит температуру выше нормы уже девять дней, продукты испортились до этого рейса.",
+          "en": "The compressor is overheated and worn: its log shows it has been running above the limit for nine days, and the food spoiled before this journey.",
+          "tr": "Kompresör aşırı ısınmış ve yıpranmış: kaydına göre dokuz gündür sınırın üzerinde çalışıyor ve gıdalar bu seferden önce bozulmuş.",
+          "ar": "الضاغط محموم ومهترئ: يُظهر سجله تشغيلًا فوق الحد منذ تسعة أيام، وقد تلفت الأطعمة قبل هذه الرحلة.",
+          "kk": "Компрессор қызып, тозған: журналы бойынша ол тоғыз күн бойы нормадан жоғары температура ұстап тұр, азық-түлік осы рейске дейін бүлінген."
+        }
+      },
+      "data": {
+        "ambientTemperature": 16,
+        "observationTime": "04:02",
+        "claimedLastUseBefore": "03:31",
+        "elapsedSinceClaimedUseMinutes": 31,
+        "coolingReference": "Исправный компрессор остывает до +25 °C за 12 минут после остановки",
+        "coolingReferenceEn": "A sound compressor cools to +25 °C within 12 minutes of stopping",
+        "initialMode": "normal",
+        "heatZones": [
+          {
+            "id": "worn-compressor",
+            "shape": "circle",
+            "x": 64,
+            "y": 62,
+            "width": 16,
+            "height": 16,
+            "temperature": 78,
+            "intensity": 0.88,
+            "label": "Изношенный компрессор",
+            "labelEn": "Worn compressor",
+            "isContradiction": true,
+            "isTarget": true
+          },
+          {
+            "id": "door-seal",
+            "shape": "circle",
+            "x": 28,
+            "y": 40,
+            "width": 14,
+            "height": 14,
+            "temperature": 18,
+            "intensity": 0.15,
+            "label": "Уплотнитель двери",
+            "labelEn": "Door seal"
+          },
+          {
+            "id": "shelf-goods",
+            "shape": "circle",
+            "x": 40,
+            "y": 74,
+            "width": 14,
+            "height": 14,
+            "temperature": 12,
+            "intensity": 0.1,
+            "label": "Продукты на полке",
+            "labelEn": "Goods on the shelf"
+          }
+        ],
+        "successCondition": {
+          "type": "select_any",
+          "zoneIds": [
+            "worn-compressor"
+          ]
+        }
+      }
+    },
+    {
+      "id": "TR09-E2",
+      "order": 2,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Видеорегистратор локомотива",
+        "en": "Locomotive Dashcam",
+        "tr": "Lokomotif Kayıt Cihazı",
+        "ar": "كاميرا القاطرة الأمامية",
+        "kk": "Локомотивтің бейнетіркегіші"
+      },
+      "content": {
+        "ru": "03:29 — в свете прожектора у пути виден переносной красный фонарь на треноге. 03:31 — машинист снижает скорость по сигналу. Телеметрия: тяговое питание в норме, отказов оборудования нет.",
+        "en": "03:29 — a portable red lamp on a tripod appears by the track in the headlight beam. 03:31 — the driver slows down in response to the signal. Telemetry: traction power normal, no equipment faults.",
+        "tr": "03:29 — farın ışığında rayın kenarında üç ayaklı taşınabilir kırmızı bir fener görünüyor. 03:31 — makinist sinyale uyarak hız düşürüyor. Telemetri: çekiş gücü normal, ekipman arızası yok.",
+        "ar": "03:29 — يظهر في ضوء الكشاف فانوس أحمر متنقل على حامل ثلاثي بجانب السكة. 03:31 — يخفض السائق السرعة استجابة للإشارة. القياسات: طاقة الجر طبيعية ولا أعطال في المعدات.",
+        "kk": "03:29 — прожектор жарығында жол жиегінде үшаяққа қойылған тасымалы қызыл шам көрінеді. 03:31 — машинист сигналға сәйкес жылдамдықты азайтады. Телеметрия: тарту қуаты қалыпты, жабдық ақауы жоқ."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Питание не отключалось, а поезд замедлился из-за выставленного вручную красного сигнала — заявленной неисправности локомотива не было.",
+        "en": "The power never cut out and the train slowed because of a manually placed red signal — the claimed locomotive fault never happened.",
+        "tr": "Elektrik hiç kesilmedi ve tren, elle konulmuş kırmızı sinyal yüzünden yavaşladı; beyan edilen lokomotif arızası yaşanmadı.",
+        "ar": "لم تنقطع الطاقة وأبطأ القطار بسبب إشارة حمراء وُضعت يدويًا، فعطل القاطرة المزعوم لم يقع.",
+        "kk": "Қуат өшпеген, пойыз қолмен қойылған қызыл сигналдан баяулаған — мәлімделген локомотив ақауы болмаған."
+      },
+      "statementLink": {
+        "statementId": "claim_signal",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Питание не отключалось, а поезд замедлился из-за выставленного вручную красного сигнала — заявленной неисправности локомотива не было.",
+          "en": "The power never cut out and the train slowed because of a manually placed red signal — the claimed locomotive fault never happened.",
+          "tr": "Elektrik hiç kesilmedi ve tren, elle konulmuş kırmızı sinyal yüzünden yavaşladı; beyan edilen lokomotif arızası yaşanmadı.",
+          "ar": "لم تنقطع الطاقة وأبطأ القطار بسبب إشارة حمراء وُضعت يدويًا، فعطل القاطرة المزعوم لم يقع.",
+          "kk": "Қуат өшпеген, пойыз қолмен қойылған қызыл сигналдан баяулаған — мәлімделген локомотив ақауы болмаған."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_signal",
+        "reason": {
+          "ru": "Питание не отключалось, а поезд замедлился из-за выставленного вручную красного сигнала — заявленной неисправности локомотива не было.",
+          "en": "The power never cut out and the train slowed because of a manually placed red signal — the claimed locomotive fault never happened.",
+          "tr": "Elektrik hiç kesilmedi ve tren, elle konulmuş kırmızı sinyal yüzünden yavaşladı; beyan edilen lokomotif arızası yaşanmadı.",
+          "ar": "لم تنقطع الطاقة وأبطأ القطار بسبب إشارة حمراء وُضعت يدويًا، فعطل القاطرة المزعوم لم يقع.",
+          "kk": "Қуат өшпеген, пойыз қолмен қойылған қызыл сигналдан баяулаған — мәлімделген локомотив ақауы болмаған."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr09-e2.webp",
+        "cameraId": "LOCO-DVR",
+        "cameraModel": "RailEye Front"
+      }
+    },
+    {
+      "id": "TR09-E3",
+      "order": 3,
+      "type": "document_scan",
+      "title": {
+        "ru": "Скан служебной телеграммы",
+        "en": "Scan of the Service Telegram",
+        "tr": "Servis Telgrafının Taraması",
+        "ar": "مسح البرقية الخدمية",
+        "kk": "Қызметтік телеграмманың сканы"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Номер сообщения принадлежит бланку, отменённому в 1996 году, а маршрутный код Тихой напечатан поверх другого текста.",
+        "en": "The message number belongs to a form withdrawn in 1996, and Tikhaya's routing code was printed over other text.",
+        "tr": "Mesaj numarası 1996’da iptal edilen bir forma ait ve Tihaya’nın güzergâh kodu başka bir metnin üzerine basılmış.",
+        "ar": "رقم الرسالة يخص نموذجًا أُلغي عام 1996، ورمز مسار تيخايا طُبع فوق نص آخر.",
+        "kk": "Хабарлама нөмірі 1996 жылы күші жойылған бланкіге тиесілі, ал Тихаяның бағыт коды басқа мәтіннің үстіне басылған."
+      },
+      "statementLink": {
+        "statementId": "claim_signal",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Номер сообщения принадлежит бланку, отменённому в 1996 году, а маршрутный код Тихой напечатан поверх другого текста.",
+          "en": "The message number belongs to a form withdrawn in 1996, and Tikhaya's routing code was printed over other text.",
+          "tr": "Mesaj numarası 1996’da iptal edilen bir forma ait ve Tihaya’nın güzergâh kodu başka bir metnin üzerine basılmış.",
+          "ar": "رقم الرسالة يخص نموذجًا أُلغي عام 1996، ورمز مسار تيخايا طُبع فوق نص آخر.",
+          "kk": "Хабарлама нөмірі 1996 жылы күші жойылған бланкіге тиесілі, ал Тихаяның бағыт коды басқа мәтіннің үстіне басылған."
+        }
+      },
+      "evidenceTier": "supporting",
+      "description": {
+        "ru": "Телеграмма о технической остановке пришла на бланке старого образца. Строка маршрутного кода выглядит плотнее остального текста.",
+        "en": "The telegram about a technical stop arrived on an old-style form. The routing-code line looks denser than the rest of the text.",
+        "tr": "Teknik duruş telgrafı eski tip bir formda geldi. Güzergâh kodu satırı, metnin geri kalanından daha yoğun görünüyor.",
+        "ar": "وصلت برقية التوقف الفني على نموذج قديم الطراز، ويبدو سطر رمز المسار أكثر كثافة من بقية النص.",
+        "kk": "Техникалық аялдама туралы телеграмма ескі үлгідегі бланкіде келді. Бағыт коды жолы қалған мәтіннен қоюлау көрінеді."
+      },
+      "instruction": {
+        "ru": "Просветите бланк и сверьте номер сообщения с реестром действующих форм.",
+        "en": "Back-light the form and compare the message number with the register of valid forms.",
+        "tr": "Formu arkadan aydınlatın ve mesaj numarasını geçerli formlar kaydıyla karşılaştırın.",
+        "ar": "أضئ النموذج من الخلف وقارن رقم الرسالة بسجل النماذج السارية.",
+        "kk": "Бланкіні жарықпен қарап, хабарлама нөмірін қолданыстағы нысандар тізілімімен салыстырыңыз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/night-train/tr09-e3.webp"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Наложение текста видно только на просвет: игрок сам понимает, что телеграмму собрали из старого бланка.",
+          "en": "The overlaid text is visible only against the light: the player realises for themselves that the telegram was built from an old form.",
+          "tr": "Üst üste binen metin yalnızca ışığa tutunca görünür: oyuncu telgrafın eski bir formdan üretildiğini kendisi anlar.",
+          "ar": "لا يظهر النص المتراكب إلا أمام الضوء: يدرك اللاعب بنفسه أن البرقية صُنعت من نموذج قديم.",
+          "kk": "Үстіне басылған мәтін тек жарыққа қарағанда көрінеді: ойыншы телеграмманың ескі бланкіден жасалғанын өзі түсінеді."
+        },
+        "playerAction": {
+          "ru": "Просветите бланк и сверьте номер сообщения с реестром действующих форм.",
+          "en": "Back-light the form and compare the message number with the register of valid forms.",
+          "tr": "Formu arkadan aydınlatın ve mesaj numarasını geçerli formlar kaydıyla karşılaştırın.",
+          "ar": "أضئ النموذج من الخلف وقارن رقم الرسالة بسجل النماذج السارية.",
+          "kk": "Бланкіні жарықпен қарап, хабарлама нөмірін қолданыстағы нысандар тізілімімен салыстырыңыз."
+        },
+        "conclusion": {
+          "ru": "Номер сообщения принадлежит бланку, отменённому в 1996 году, а маршрутный код Тихой напечатан поверх другого текста.",
+          "en": "The message number belongs to a form withdrawn in 1996, and Tikhaya's routing code was printed over other text.",
+          "tr": "Mesaj numarası 1996’da iptal edilen bir forma ait ve Tihaya’nın güzergâh kodu başka bir metnin üzerine basılmış.",
+          "ar": "رقم الرسالة يخص نموذجًا أُلغي عام 1996، ورمز مسار تيخايا طُبع فوق نص آخر.",
+          "kk": "Хабарлама нөмірі 1996 жылы күші жойылған бланкіге тиесілі, ал Тихаяның бағыт коды басқа мәтіннің үстіне басылған."
+        }
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "backlight",
+          "contrast"
+        ],
+        "anomalyZones": [
+          {
+            "id": "route-code",
+            "mode": "backlight",
+            "x": 40,
+            "y": 46,
+            "width": 28,
+            "height": 14,
+            "label": "Маршрутный код поверх другого текста",
+            "labelEn": "Routing code printed over other text",
+            "isContradiction": true
+          },
+          {
+            "id": "form-number",
+            "mode": "contrast",
+            "x": 16,
+            "y": 20,
+            "width": 24,
+            "height": 12,
+            "label": "Номер отменённого бланка",
+            "labelEn": "Number of a withdrawn form",
+            "isContradiction": false
+          }
+        ],
+        "referenceFields": [
+          {
+            "id": "valid-forms",
+            "label": "Реестр действующих бланков",
+            "labelEn": "Register of valid forms",
+            "value": "1996 — отменён"
+          }
+        ],
+        "successCondition": {
+          "type": "select_then_compare",
+          "zoneId": "route-code",
+          "referenceFieldId": "valid-forms"
+        }
+      }
+    },
+    {
+      "id": "TR09-E4",
+      "order": 4,
+      "type": "gps",
+      "title": {
+        "ru": "GPS автомобиля у платформы",
+        "en": "GPS of the Vehicle by the Platform",
+        "tr": "Peron Yanındaki Aracın GPS Verisi",
+        "ar": "تتبع المركبة قرب الرصيف",
+        "kk": "Платформа маңындағы көліктің GPS деректері"
+      },
+      "content": {
+        "ru": "03:13 — автомобиль сворачивает на грунтовую дорогу к платформе Тихая. 03:14–04:00 — стоянка у грузового съезда. Номер связан с абонентом, которому звонили из поезда в 22:14 и 00:41.",
+        "en": "03:13 — the vehicle turns onto the dirt road towards Tikhaya platform. 03:14–04:00 — parked by the freight ramp. The number is linked to the subscriber called from the train at 22:14 and 00:41.",
+        "tr": "03:13 — araç, Tihaya peronuna giden toprak yola sapıyor. 03:14–04:00 — yük rampasının yanında park hâlinde. Numara, trenden 22:14 ve 00:41’de aranan aboneyle bağlantılı.",
+        "ar": "03:13 — تنعطف المركبة إلى الطريق الترابي نحو رصيف تيخايا. 03:14–04:00 — متوقفة عند منحدر الشحن. الرقم مرتبط بالمشترك الذي اتُّصل به من القطار في 22:14 و00:41.",
+        "kk": "03:13 — көлік Тихая платформасына апарар топырақ жолға бұрылады. 03:14–04:00 — жүк түсіру аймағында тұрақта. Нөмір пойыздан 22:14 пен 00:41-де қоңырау шалынған абонентпен байланысты."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "У платформы кто-то ждёт поезд заранее, но отсутствие аварии и наличие сигнала доказывают регистратор и тепловой осмотр.",
+        "en": "Someone is waiting for the train by the platform in advance, though the dashcam and the thermal inspection are what prove the absence of a failure and the presence of a signal.",
+        "tr": "Peronun yanında biri treni önceden bekliyor; arızanın olmadığını ve sinyalin varlığını ise kayıt cihazı ile termal inceleme kanıtlıyor.",
+        "ar": "ينتظر أحدهم القطار مسبقًا قرب الرصيف، أما غياب العطل ووجود الإشارة فتثبتهما الكاميرا والفحص الحراري.",
+        "kk": "Платформа маңында біреу пойызды алдын ала күтіп тұр, ал апаттың жоқтығы мен сигналдың болғанын тіркегіш пен жылулық тексеру дәлелдейді."
+      },
+      "statementLink": {
+        "statementId": "claim_signal",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "У платформы кто-то ждёт поезд заранее, но отсутствие аварии и наличие сигнала доказывают регистратор и тепловой осмотр.",
+          "en": "Someone is waiting for the train by the platform in advance, though the dashcam and the thermal inspection are what prove the absence of a failure and the presence of a signal.",
+          "tr": "Peronun yanında biri treni önceden bekliyor; arızanın olmadığını ve sinyalin varlığını ise kayıt cihazı ile termal inceleme kanıtlıyor.",
+          "ar": "ينتظر أحدهم القطار مسبقًا قرب الرصيف، أما غياب العطل ووجود الإشارة فتثبتهما الكاميرا والفحص الحراري.",
+          "kk": "Платформа маңында біреу пойызды алдын ала күтіп тұр, ал апаттың жоқтығы мен сигналдың болғанын тіркегіш пен жылулық тексеру дәлелдейді."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr09-e4.webp",
+        "gpsFooter": {
+          "ru": "Трек автомобиля у платформы",
+          "en": "Vehicle track by the platform",
+          "tr": "Peron yanındaki araç izi",
+          "ar": "مسار المركبة قرب الرصيف",
+          "kk": "Платформа маңындағы көлік тректі"
+        }
+      }
+    },
+    {
+      "id": "TR09-E5",
+      "order": 5,
+      "type": "document",
+      "title": {
+        "ru": "Журнал переговоров с диспетчером",
+        "en": "Dispatcher Communication Log",
+        "tr": "Dispeçer Görüşme Kaydı",
+        "ar": "سجل الاتصال مع المراقب",
+        "kk": "Диспетчермен келіссөз журналы"
+      },
+      "content": {
+        "ru": "03:33 — диспетчер: «Остановка у платформы Тихая не назначалась, телеграмма с таким номером не выпускалась. После проверки пути следовать до Озёрной без остановок».",
+        "en": "03:33 — dispatcher: \"No stop at Tikhaya platform was scheduled and no telegram with that number was issued. After the track check, proceed to Ozyornaya without stopping.\"",
+        "tr": "03:33 — dispeçer: «Tihaya peronunda duruş planlanmadı ve bu numarayla telgraf çıkarılmadı. Yol kontrolünden sonra durmadan Ozyornaya’ya devam edin.»",
+        "ar": "03:33 — المراقب: «لم يُقرَّر أي توقف عند رصيف تيخايا ولم تصدر برقية بهذا الرقم. بعد فحص المسار تابعوا إلى أوزيورنايا دون توقف.»",
+        "kk": "03:33 — диспетчер: «Тихая платформасында аялдама тағайындалмаған, ондай нөмірмен телеграмма шығарылмаған. Жолды тексергеннен кейін Озёрнаяға дейін аялдамай жүріңіз»."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Диспетчер подтверждает, что остановки не было в плане, но причину замедления и состояние камеры устанавливают регистратор и осмотр.",
+        "en": "The dispatcher confirms the stop was never planned, while the dashcam and the inspection establish the cause of the slowdown and the freezer's condition.",
+        "tr": "Dispeçer duruşun planlanmadığını doğruluyor; yavaşlamanın nedenini ve dondurucunun durumunu ise kayıt cihazı ile inceleme belirliyor.",
+        "ar": "يؤكد المراقب أن التوقف لم يكن مخططًا، أما سبب التباطؤ وحالة المجمّد فيحددهما التسجيل والفحص.",
+        "kk": "Диспетчер аялдаманың жоспарда болмағанын растайды, ал баяулау себебі мен мұздатқыш күйін тіркегіш пен тексеру анықтайды."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Диспетчер подтверждает, что остановки не было в плане, но причину замедления и состояние камеры устанавливают регистратор и осмотр.",
+          "en": "The dispatcher confirms the stop was never planned, while the dashcam and the inspection establish the cause of the slowdown and the freezer's condition.",
+          "tr": "Dispeçer duruşun planlanmadığını doğruluyor; yavaşlamanın nedenini ve dondurucunun durumunu ise kayıt cihazı ile inceleme belirliyor.",
+          "ar": "يؤكد المراقب أن التوقف لم يكن مخططًا، أما سبب التباطؤ وحالة المجمّد فيحددهما التسجيل والفحص.",
+          "kk": "Диспетчер аялдаманың жоспарда болмағанын растайды, ал баяулау себебі мен мұздатқыш күйін тіркегіш пен тексеру анықтайды."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr09-e5.webp"
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Компрессор морозильной камеры перегрет и неисправен уже девять дней — ущерб возник до рейса.",
+      "Тяговое питание не отключалось: машинист снизил скорость по переносному красному сигналу у пути.",
+      "Телеграмма об остановке собрана на отменённом бланке 1996 года, а диспетчер остановку не назначал."
+    ],
+    "en": [
+      "The freezer's compressor has been overheated and faulty for nine days — the damage predates this journey.",
+      "Traction power never cut out: the driver slowed for a portable red signal by the track.",
+      "The stop telegram was built on a form withdrawn in 1996, and the dispatcher scheduled no stop."
+    ],
+    "tr": [
+      "Dondurucunun kompresörü dokuz gündür aşırı ısınmış ve arızalı; zarar bu seferden önce oluştu.",
+      "Çekiş gücü hiç kesilmedi: makinist, rayın kenarındaki taşınabilir kırmızı sinyal için yavaşladı.",
+      "Duruş telgrafı 1996’da iptal edilmiş bir formdan üretilmiş ve dispeçer duruş planlamadı."
+    ],
+    "ar": [
+      "ضاغط المجمّد محموم ومعطّل منذ تسعة أيام، فالضرر سابق لهذه الرحلة.",
+      "لم تنقطع طاقة الجر: أبطأ السائق بسبب إشارة حمراء متنقلة بجانب السكة.",
+      "صُنعت برقية التوقف على نموذج أُلغي عام 1996، والمراقب لم يقرر أي توقف."
+    ],
+    "kk": [
+      "Мұздатқыш компрессоры тоғыз күн бойы қызып, ақаулы — залал рейске дейін пайда болған.",
+      "Тарту қуаты өшпеген: машинист жол жиегіндегі тасымалы қызыл сигналға байланысты баяулаған.",
+      "Аялдама туралы телеграмма 1996 жылы күші жойылған бланкіде жасалған, ал диспетчер аялдама тағайындамаған."
+    ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "stampable": false,
+      "text": {
+        "ru": "Продукты испорчены из-за аварии в поездке, ущерб подлежит возмещению.",
+        "en": "The food was spoiled by a failure during the journey and the loss is reimbursable.",
+        "tr": "Gıdalar yolculuk sırasındaki bir arıza yüzünden bozuldu ve zarar tazmin edilmelidir.",
+        "ar": "تلفت الأطعمة بسبب عطل أثناء الرحلة والخسارة قابلة للتعويض.",
+        "kk": "Азық-түлік сапар кезіндегі ақаудан бүлінді, залал өтелуге тиіс."
+      }
+    },
+    {
+      "id": "claim_freezer",
+      "stampable": true,
+      "text": {
+        "ru": "Морозильная камера остановилась в 03:31 из-за отключения питания.",
+        "en": "The freezer stopped at 03:31 because of the power cut.",
+        "tr": "Dondurucu, elektrik kesintisi nedeniyle 03:31’de durdu.",
+        "ar": "توقف المجمّد في 03:31 بسبب انقطاع الطاقة.",
+        "kk": "Мұздатқыш қуат өшуіне байланысты 03:31-де тоқтады."
+      }
+    },
+    {
+      "id": "claim_signal",
+      "stampable": true,
+      "text": {
+        "ru": "Поезд замедлился из-за неисправности локомотива, внешнего сигнала не было.",
+        "en": "The train slowed because of a locomotive fault; there was no external signal.",
+        "tr": "Tren, lokomotif arızası yüzünden yavaşladı; dış sinyal yoktu.",
+        "ar": "أبطأ القطار بسبب عطل في القاطرة ولم تكن هناك إشارة خارجية.",
+        "kk": "Пойыз локомотив ақауынан баяулады, сыртқы сигнал болмаған."
+      }
+    }
+  ],
+  "contentVersion": "night-train-1.0",
+  "narrative": {
+    "preBrief": {
+      "ru": "До Тихой остаётся несколько километров. Кто-то очень хочет, чтобы поезд там постоял.",
+      "en": "Tikhaya is a few kilometres away. Somebody very much wants the train to stand there for a while.",
+      "tr": "Tihaya’ya birkaç kilometre kaldı. Biri trenin orada durmasını çok istiyor.",
+      "ar": "بقيت بضعة كيلومترات على تيخايا. أحدهم يريد بشدة أن يتوقف القطار هناك.",
+      "kk": "Тихаяға бірнеше шақырым қалды. Біреу пойыздың сонда тұрғанын қатты қалайды."
+    },
+    "postVerdictNote": {
+      "ru": "Поезд исправен. Неисправно чужое желание назначать ему остановки.",
+      "en": "The train is sound. What is faulty is somebody else's wish to schedule its stops.",
+      "tr": "Tren sağlam. Bozuk olan, başkasının ona duruş yazma isteği.",
+      "ar": "القطار سليم. المعطوب هو رغبة أحدهم في تحديد محطات توقفه.",
+      "kk": "Пойыз ақаусыз. Ақаулы — бөгде біреудің оған аялдама тағайындағысы келуі."
+    },
+    "nextCaseTeaser": {
+      "ru": "Состав стоит перед тёмной платформой, а в служебном купе находят вскрытый архивный ящик.",
+      "en": "The train stands before the dark platform, and in the service compartment the archive crate is found opened.",
+      "tr": "Tren karanlık peronun önünde duruyor ve servis kompartımanında arşiv sandığı açılmış bulunuyor.",
+      "ar": "يقف القطار أمام الرصيف المظلم، ويُعثر في مقصورة الخدمة على صندوق الأرشيف مفتوحًا.",
+      "kk": "Құрам қараңғы платформаның алдында тұр, ал қызметтік купеден ашылған архив жәшігі табылады."
+    },
+    "seasonClue": {
+      "id": "red-lamp",
+      "progressIndex": 9,
+      "progressTotal": 10,
+      "label": {
+        "ru": "Красный сигнал и автомобиль",
+        "en": "The Red Signal and the Vehicle",
+        "tr": "Kırmızı Sinyal ve Araç",
+        "ar": "الإشارة الحمراء والمركبة",
+        "kk": "Қызыл сигнал және көлік"
+      },
+      "description": {
+        "ru": "План запущен: поезд замедлен искусственно, а у грузового съезда уже сорок минут ждёт машина.",
+        "en": "The plan is in motion: the train was slowed artificially and a car has been waiting by the freight ramp for forty minutes.",
+        "tr": "Plan işliyor: tren yapay olarak yavaşlatıldı ve yük rampasında kırk dakikadır bir araç bekliyor.",
+        "ar": "بدأت الخطة: أُبطئ القطار اصطناعيًا وسيارة تنتظر عند منحدر الشحن منذ أربعين دقيقة.",
+        "kk": "Жоспар іске қосылды: пойыз жасанды түрде баяулатылды, ал жүк түсіру аймағында көлік қырық минуттан бері күтіп тұр."
+      }
+    },
+    "epilogue": null
+  }
+}

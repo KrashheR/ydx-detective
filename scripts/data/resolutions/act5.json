@@ -1,0 +1,692 @@
+{
+  "case-043": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "ilar_roun",
+      "displayName": {
+        "ru": "Илар Роун",
+        "en": "Ilar Roun",
+        "tr": "Ilar Roun",
+        "ar": "إيلار روون",
+        "kk": "Илар Роун"
+      },
+      "portraitState": "controlling"
+    },
+    "finalLine": {
+      "ru": "Он был моим стажёром. Я имел право решать, когда он может уйти.",
+      "en": "He was my trainee. It was mine to decide when he could leave.",
+      "tr": "O benim stajyerimdi. Ne zaman gidebileceğine karar vermek benim hakkımdı.",
+      "ar": "كان متدرّبي. وكان من حقّي أن أقرّر متى يمكنه الرحيل.",
+      "kk": "Ол менің тәлімгерлігімдегі тағылымдамашы еді. Қашан кетуге болатынын шешу менің құқығым болатын."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Илья действительно исчез из академии, и расходы на поиск были реально понесены.",
+          "en": "Ilya really did vanish from the academy, and the search costs were genuinely incurred.",
+          "tr": "İlya akademiden gerçekten kayboldu ve arama masrafları gerçekten yapıldı.",
+          "ar": "اختفى إيليا من الأكاديمية فعلًا، وتكاليف البحث صُرفت حقًا.",
+          "kk": "Илья шынымен академиядан жоғалған, ал іздеу шығындары нақты жұмсалған."
+        },
+        "evidenceIds": [
+          "corridor-cam"
+        ]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "Шлюз открыт его собственной картой, сумка собрана заранее, а у станции найден подготовленный им тайник. Уход добровольный.",
+          "en": "The airlock was opened with his own card, the bag was packed in advance, and a cache he prepared was found by the station. He left of his own accord.",
+          "tr": "Geçiş kapısı kendi kartıyla açılmış, çanta önceden hazırlanmış ve istasyonun yanında onun hazırladığı bir zula bulunmuş. Ayrılış gönüllü.",
+          "ar": "فُتحت البوابة ببطاقته الخاصة، والحقيبة مُعدّة سلفًا، ووُجدت قرب المحطة مخبأة جهّزها بنفسه. الرحيل طوعي.",
+          "kk": "Шлюз оның өз картасымен ашылған, сөмке алдын ала жиналған, ал станция маңынан оның дайындаған тайнигі табылған. Кету ерікті."
+        },
+        "evidenceIds": [
+          "exit-pass",
+          "cache-photo"
+        ]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Защищённое сообщение после ухода показывает: стажёр жив и действует осознанно, а оценки в протоколе занижены задним числом и подписаны Роуном. Похищения не было.",
+          "en": "A secure message sent afterwards shows the trainee is alive and acting deliberately, while the exam marks were lowered retroactively and signed by Roun. There was no abduction.",
+          "tr": "Sonrasında gönderilen güvenli mesaj, stajyerin hayatta olduğunu ve bilinçli davrandığını gösteriyor; sınav notları ise geriye dönük düşürülmüş ve Roun tarafından imzalanmış. Kaçırılma yok.",
+          "ar": "تُظهر رسالة مؤمَّنة أُرسلت لاحقًا أن المتدرّب حيّ ويتصرّف بوعي، فيما خُفّضت الدرجات بأثر رجعي ووقّعها روون. لا وجود لاختطاف.",
+          "kk": "Кейін жіберілген қорғалған хабарлама тағылымдамашының тірі әрі саналы әрекет етіп жүргенін көрсетеді, ал хаттамадағы бағалар кейінгі күнмен төмендетіліп, Роун қол қойған. Ұрлау болмаған."
+        },
+        "evidenceIds": [
+          "phone-detail",
+          "protocol"
+        ]
+      }
+    ],
+    "arcRevealFromSeasonClue": true
+  },
+  "case-044": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "evelina_morn",
+      "displayName": {
+        "ru": "Эвелина Морн",
+        "en": "Evelina Morn",
+        "tr": "Evelina Morn",
+        "ar": "إيفلينا مورن",
+        "kk": "Эвелина Морн"
+      },
+      "portraitState": "cynical_calm"
+    },
+    "finalLine": {
+      "ru": "Серую ленту теперь боятся больше огня. Я на это и рассчитывала.",
+      "en": "People fear grey tape more than fire now. That is exactly what I counted on.",
+      "tr": "Artık gri bandı yangından çok korkuyorlar. Ben de tam buna güvendim.",
+      "ar": "صاروا يخافون الشريط الرمادي أكثر من النار. وعلى هذا راهنت.",
+      "kk": "Сұр таспадан енді оттан да көп қорқады. Мен дәл соған сенген едім."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Пожар в теплице реальный, а за день до него комиссия забраковала партию: уничтожать растения владелице пришлось бы за свой счёт.",
+          "en": "The greenhouse fire is real, and the day before it a commission condemned the batch: destroying the plants would have been the owner's own expense.",
+          "tr": "Seradaki yangın gerçek ve bir gün önce komisyon partiyi reddetmişti: bitkileri imha etmek sahibinin kendi cebinden olacaktı.",
+          "ar": "حريق الدفيئة حقيقي، وقبله بيوم أدانت اللجنة الدفعة: وكان إتلاف النباتات سيقع على نفقة المالكة.",
+          "kk": "Жылыжайдағы өрт шынайы, ал одан бір күн бұрын комиссия партияны жарамсыз деп таныған: өсімдіктерді жою иесінің өз есебінен болар еді."
+        },
+        "evidenceIds": [
+          "document-44"
+        ]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "Тепловой осмотр показывает единственную горячую точку — металлическую чашу на отключённом нагревателе. Воздух и грядки были холоднее порога возгорания.",
+          "en": "The thermal survey shows a single hot spot — a metal bowl on a switched-off heater. Air and beds were below the ignition threshold.",
+          "tr": "Termal inceleme tek bir sıcak nokta gösteriyor: kapalı bir ısıtıcının üzerindeki metal kâse. Hava ve tarhlar tutuşma eşiğinin altındaydı.",
+          "ar": "يُظهر المسح الحراري بؤرة ساخنة واحدة: وعاء معدني فوق مدفأة مطفأة. أما الهواء والأحواض فكانت دون عتبة الاشتعال.",
+          "kk": "Жылу тексеруі жалғыз ыстық нүктені көрсетеді — өшірілген жылытқыштағы металл ыдыс. Ауа мен жүйектер жану шегінен төмен болған."
+        },
+        "evidenceIds": [
+          "photo-44",
+          "log-44"
+        ]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Клей серой ленты не совпадает с упаковкой GC-17: она бытовая и куплена в местном магазине. След сети подброшен, а концентрат оплачен наличными за несколько часов до пожара.",
+          "en": "The grey tape's adhesive does not match GC-17 packaging: it is a consumer product from a local shop. The network's trace was planted, and the accelerant was paid for in cash hours before the fire.",
+          "tr": "Gri bandın yapıştırıcısı GC-17 ambalajıyla uyuşmuyor: yerel bir dükkândan alınmış tüketici ürünü. Şebekenin izi yerleştirilmiş; hızlandırıcı da yangından saatler önce nakit ödenmiş.",
+          "ar": "لاصق الشريط الرمادي لا يطابق تغليف GC-17: إنه منتج استهلاكي من متجر محلي. أثر الشبكة مدسوس، والمُسرّع دُفع ثمنه نقدًا قبل الحريق بساعات.",
+          "kk": "Сұр таспаның желімі GC-17 қаптамасымен сәйкес келмейді: ол жергілікті дүкенде сатылатын тұрмыстық өнім. Желі ізі әдейі тасталған, ал концентрат өрттен бірнеше сағат бұрын қолма-қол төленген."
+        },
+        "evidenceIds": [
+          "tape-44",
+          "bank-44"
+        ]
+      }
+    ],
+    "veraLine": {
+      "ru": "Серый след сам по себе не означает Серый конвой. Известность сети сделала её удобным прикрытием для одиночек.",
+      "en": "A grey trace by itself does not mean the Grey Convoy. The network's notoriety has made it a convenient cover for loners.",
+      "tr": "Gri bir iz tek başına Gri Konvoy demek değildir. Şebekenin ünü, onu tek başına çalışanlar için elverişli bir paravana çevirdi.",
+      "ar": "الأثر الرمادي بذاته لا يعني «القافلة الرمادية». فشهرة الشبكة جعلتها غطاءً مريحًا للمنفردين.",
+      "kk": "Сұр із өздігінен Сұр керуенді білдірмейді. Желінің әйгілілігі оны жалғыз әрекет етушілер үшін ыңғайлы жамылғыға айналдырды."
+    },
+    "arcRevealFromSeasonClue": true
+  },
+  "case-045": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "bruno_stern",
+      "displayName": {
+        "ru": "Бруно Стерн",
+        "en": "Bruno Stern",
+        "tr": "Bruno Stern",
+        "ar": "برونو شتيرن",
+        "kk": "Бруно Стерн"
+      },
+      "portraitState": "indignant_relief"
+    },
+    "finalLine": {
+      "ru": "Я ключи не путал. Запишите, пожалуйста. И подчеркните.",
+      "en": "I did not mix up any keys. Write that down, please. And underline it.",
+      "tr": "Anahtarları karıştırmadım. Lütfen bunu yazın. Bir de altını çizin.",
+      "ar": "لم أخلط بين المفاتيح. دوّنوا هذا من فضلكم. وضعوا تحته خطًّا.",
+      "kk": "Кілттерді шатастырғаным жоқ. Мынаны жазып қойыңыз. Астын да сызыңыз."
+    },
+    "emotionalMode": "relief",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Кубок зарегистрирован и оценён до происшествия; после реставрации 2021 года у него полый цоколь.",
+          "en": "The cup was registered and valued before the incident; since the 2021 restoration it has a hollow base.",
+          "tr": "Kupa olaydan önce kayıtlı ve değerlenmişti; 2021 restorasyonundan beri kaidesi içi boş.",
+          "ar": "كان الكأس مسجَّلًا ومقيَّمًا قبل الحادث؛ ومنذ ترميم 2021 صارت قاعدته مجوَّفة.",
+          "kk": "Кубок оқиғаға дейін тіркеліп, бағаланған; 2021 жылғы қалпына келтіруден кейін оның қуыс табаны бар."
+        },
+        "evidenceIds": [
+          "document-45"
+        ]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "Петлю витрины приподняли сверху тонким инструментом, а купольный люк открыт клонированным сервисным ключом той же серии, что и на «Лунном склоне».",
+          "en": "The display hinge was lifted from above with a thin tool, and the dome hatch was opened with a cloned service key from the same series as at “Moon Slope”.",
+          "tr": "Vitrin menteşesi ince bir aletle yukarıdan kaldırılmış ve kubbe kapağı, “Ay Yamacı”ndakiyle aynı seriden klonlanmış bir servis anahtarıyla açılmış.",
+          "ar": "رُفع مفصل الفاترينة من الأعلى بأداة رفيعة، وفُتحت فتحة القبة بمفتاح خدمة مستنسَخ من السلسلة نفسها المستخدمة في «منحدر القمر».",
+          "kk": "Витрина топсасы жоғарыдан жіңішке аспаппен көтерілген, ал күмбез люгі «Ай беткейіндегімен» бір сериялы клондалған сервистік кілтпен ашылған."
+        },
+        "evidenceIds": [
+          "photo-45",
+          "log-45"
+        ]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Камера галереи фиксирует постороннего в технической страховке, а проверка не находит у Стерна ни продаж, ни долгов, ни необычных переводов. Кража внешняя.",
+          "en": "The gallery camera shows an outsider in climbing gear, and the check finds no sales, debts or unusual transfers on Stern's side. The theft came from outside.",
+          "tr": "Galeri kamerası teknik emniyet donanımlı bir yabancıyı gösteriyor ve inceleme Stern'de ne satış, ne borç, ne de olağandışı havale buluyor. Hırsızlık dışarıdan.",
+          "ar": "تُظهر كاميرا الرواق شخصًا غريبًا بمعدّات تأمين فنّية، ولم يجد الفحص لدى شتيرن مبيعات أو ديونًا أو تحويلات غير معتادة. السرقة خارجية.",
+          "kk": "Галерея камерасы техникалық сақтандырғышы бар бөгде адамды түсірген, ал тексеру Стерннен сатылым да, қарыз да, әдеттен тыс аударым да таппады. Ұрлық сырттан."
+        },
+        "evidenceIds": [
+          "camera-45",
+          "bank-45"
+        ]
+      }
+    ],
+    "arcRevealFromSeasonClue": true
+  },
+  "case-046": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "nika_rein",
+      "displayName": {
+        "ru": "Ника Рейн",
+        "en": "Nika Rein",
+        "tr": "Nika Rein",
+        "ar": "نيكا راين",
+        "kk": "Ника Рейн"
+      },
+      "portraitState": "afraid"
+    },
+    "finalLine": {
+      "ru": "Старая травма уже отняла отбор. Я не хотела, чтобы она забрала всё.",
+      "en": "The old injury already took the trials from me. I did not want it to take everything.",
+      "tr": "Eski sakatlık seçmeleri zaten elimden aldı. Her şeyi de almasını istemedim.",
+      "ar": "الإصابة القديمة سلبتني التصفيات أصلًا. لم أرد أن تسلبني كل شيء.",
+      "kk": "Ескі жарақат іріктеуден-ақ айырды. Бәрін алып кетуін қаламадым."
+    },
+    "emotionalMode": "bittersweet",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Перелом на снимке настоящий — но он старый и не связан с заявленным событием.",
+          "en": "The fracture on the scan is real — but it is old and unconnected to the claimed event.",
+          "tr": "Filmdeki kırık gerçek — ama eski ve iddia edilen olayla ilgisi yok.",
+          "ar": "الكسر في الصورة حقيقي — لكنه قديم ولا صلة له بالحادث المزعوم.",
+          "kk": "Суреттегі сынық шын — бірақ ол ескі әрі мәлімделген оқиғаға қатысы жоқ."
+        },
+        "evidenceIds": [
+          "document-46"
+        ]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "Журнал основной линии не фиксирует отказа: заявительница спускалась по другой системе, а камера нижней площадки показывает безопасный постановочный дубль.",
+          "en": "The main line log records no failure: she descended on a different system, and the lower platform camera shows a safe staged take.",
+          "tr": "Ana hat kaydında arıza yok: başvurucu başka bir sistemle indi ve alt platform kamerası güvenli, sahnelenmiş bir çekim gösteriyor.",
+          "ar": "لا يسجّل دفتر الخط الرئيسي أي عطل: نزلت بنظام آخر، وكاميرا المنصّة السفلية تُظهر لقطة آمنة مُدبَّرة.",
+          "kk": "Негізгі желі журналы ақауды тіркемеген: өтініш беруші басқа жүйемен түскен, ал төменгі алаң камерасы қауіпсіз қойылым дублін көрсетеді."
+        },
+        "evidenceIds": [
+          "log-46",
+          "camera-46"
+        ]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "На страховочной линии — бытовая лента, покрашенная в серый, а не материал GC-17. Показания ассистента подтверждают постановку.",
+          "en": "The safety line carries consumer tape painted grey, not GC-17 material. The assistant's statement confirms the staging.",
+          "tr": "Emniyet hattında GC-17 malzemesi değil, griye boyanmış sıradan bant var. Yardımcının ifadesi sahnelemeyi doğruluyor.",
+          "ar": "على خط الأمان شريط استهلاكي مطليّ بالرمادي لا مادة GC-17. وإفادة المساعد تؤكّد التمثيل.",
+          "kk": "Сақтандыру желісінде GC-17 материалы емес, сұрға боялған тұрмыстық таспа бар. Ассистент айғағы қойылымды растайды."
+        },
+        "evidenceIds": [
+          "photo-46",
+          "witness-46"
+        ]
+      }
+    ]
+  },
+  "case-047": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "adelia_varn",
+      "displayName": {
+        "ru": "Аделия Варн",
+        "en": "Adelia Varn",
+        "tr": "Adelia Varn",
+        "ar": "أديليا فارن",
+        "kk": "Аделия Варн"
+      },
+      "portraitState": "quiet_dignity"
+    },
+    "finalLine": {
+      "ru": "Я не сбегала. Спасибо, что спросили меня, а не решили за меня.",
+      "en": "I did not run away. Thank you for asking me instead of deciding for me.",
+      "tr": "Kaçmadım. Benim adıma karar vermek yerine bana sorduğunuz için teşekkürler.",
+      "ar": "لم أهرب. شكرًا لأنكم سألتموني بدل أن تقرّروا عنّي.",
+      "kk": "Мен қашқан жоқпын. Мен үшін шешпей, менен сұрағандарыңызға рақмет."
+    },
+    "emotionalMode": "grave",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Телефон и личные деньги остались в комнате, переводов и покупок, готовящих побег, нет.",
+          "en": "The phone and personal money stayed in the room; there are no transfers or purchases preparing a runaway.",
+          "tr": "Telefon ve kişisel para odada kaldı; kaçışa hazırlık gösteren havale ya da alışveriş yok.",
+          "ar": "بقي الهاتف والمال الشخصي في الغرفة؛ ولا تحويلات أو مشتريات تمهّد لهروب.",
+          "kk": "Телефон мен жеке ақша бөлмеде қалған; қашуға дайындық көрсететін аударым да, сатып алу да жоқ."
+        },
+        "evidenceIds": [
+          "bank-47"
+        ]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "Оконная защёлка отжата снаружи, а свет на этаже отключён внешним сервисным ключом той же серии, что и при краже кубка. Карта Аделии не применялась.",
+          "en": "The window latch was forced from outside, and the floor's lighting was cut with an external service key from the same series used in the cup theft. Adelia's card was never used.",
+          "tr": "Pencere mandalı dışarıdan zorlanmış ve kattaki ışık, kupa hırsızlığındakiyle aynı seriden harici bir servis anahtarıyla kesilmiş. Adelia'nın kartı kullanılmamış.",
+          "ar": "فُتح مزلاج النافذة عنوةً من الخارج، وقُطعت الإضاءة عن الطابق بمفتاح خدمة خارجي من السلسلة نفسها المستخدمة في سرقة الكأس. ولم تُستخدم بطاقة أديليا.",
+          "kk": "Терезе ілгегі сырттан ашылған, ал қабаттағы жарық кубок ұрлығындағымен бір сериялы сыртқы сервистік кілтпен өшірілген. Аделияның картасы қолданылмаған."
+        },
+        "evidenceIds": [
+          "photo-47",
+          "log-47"
+        ]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Камера показывает двух посторонних и дезориентированную Аделию без вещей; осмотр фиксирует небольшую дозу седативного. Её искали не ради неё самой, а ради Ильи.",
+          "en": "The camera shows two outsiders and a disoriented Adelia carrying nothing; the examination finds a small dose of a sedative. She was sought not for herself, but for Ilya.",
+          "tr": "Kamera iki yabancıyı ve elinde hiçbir şey olmayan, yönünü şaşırmış Adelia'yı gösteriyor; muayenede küçük dozda sakinleştirici bulunuyor. Onu kendisi için değil, İlya için aradılar.",
+          "ar": "تُظهر الكاميرا شخصين غريبين وأديليا مشوّشة لا تحمل شيئًا؛ ويكشف الفحص جرعة صغيرة من مهدّئ. لم يبحثوا عنها هي، بل عن إيليا.",
+          "kk": "Камера екі бөгде адамды және ештеңе ұстамаған, есеңгіреген Аделияны көрсетеді; тексеру аз мөлшердегі тыныштандырғышты анықтайды. Оны өзі үшін емес, Илья үшін іздеген."
+        },
+        "evidenceIds": [
+          "camera-47",
+          "document-47",
+          "witness-47"
+        ]
+      }
+    ],
+    "veraLine": {
+      "ru": "Пять лет назад я подписала отказ, не проверив основание. Илья прав, что не доверял мне. Теперь пусть проверит меня по делам, а не по словам.",
+      "en": "Five years ago I signed a refusal without checking its grounds. Ilya was right not to trust me. Let him judge me now by cases, not by words.",
+      "tr": "Beş yıl önce gerekçesini denetlemeden bir ret imzaladım. İlya bana güvenmemekte haklıydı. Bırakın beni artık sözlerle değil, dosyalarla tartsın.",
+      "ar": "قبل خمس سنوات وقّعت رفضًا دون التحقّق من مسوّغه. كان إيليا محقًّا في ألّا يثق بي. فليحكم عليّ الآن بالقضايا لا بالأقوال.",
+      "kk": "Бес жыл бұрын негізін тексермей бас тартуға қол қойдым. Илья маған сенбегені дұрыс. Енді мені сөзбен емес, іспен өлшесін."
+    },
+    "arcRevealFromSeasonClue": true
+  },
+  "case-048": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "marko_lin",
+      "displayName": {
+        "ru": "Марко Лин",
+        "en": "Marko Lin",
+        "tr": "Marko Lin",
+        "ar": "ماركو لين",
+        "kk": "Марко Лин"
+      },
+      "portraitState": "brazen"
+    },
+    "finalLine": {
+      "ru": "Новый шкаф, старый шкаф… После разгрома они ведь выглядят одинаково.",
+      "en": "New cabinet, old cabinet… after a wrecking they all look the same, don't they.",
+      "tr": "Yeni dolap, eski dolap… Dağıtıldıktan sonra hepsi aynı görünüyor zaten.",
+      "ar": "خزانة جديدة، خزانة قديمة… بعد التحطيم تبدو كلها متشابهة، أليس كذلك.",
+      "kk": "Жаңа шкаф, ескі шкаф… Қиратылғаннан кейін бәрі бірдей көрінеді ғой."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Разгром в помещении реален, и курьер ночной смены действительно видел людей внутри после закрытия.",
+          "en": "The wrecking inside is real, and the night-shift courier did see people in there after closing.",
+          "tr": "İçerideki tahribat gerçek ve gece vardiyası kuryesi kapanıştan sonra orada insanlar gördü.",
+          "ar": "الخراب في المكان حقيقي، ورأى مندوب المناوبة الليلية أشخاصًا في الداخل بعد الإغلاق فعلًا.",
+          "kk": "Үй-жайдағы қирау шынайы, ал түнгі ауысым курьері жабылғаннан кейін ішінде адамдарды шынымен көрген."
+        },
+        "evidenceIds": [
+          "witness-48"
+        ]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "Под свежей вмятиной лежит слой старой коррозии: уничтоженный шкаф был сильно изношен задолго до ночи, а камера служебного лифта показывает, как новое оборудование вывозят.",
+          "en": "Under the fresh dent lies a layer of old corrosion: the destroyed cabinet was badly worn long before that night, and the service-lift camera shows the new equipment being taken out.",
+          "tr": "Taze göçüğün altında eski bir korozyon katmanı var: imha edilen dolap o geceden çok önce iyice yıpranmıştı ve servis asansörü kamerası yeni ekipmanın çıkarıldığını gösteriyor.",
+          "ar": "تحت الانبعاج الحديث طبقة تآكل قديم: كانت الخزانة المدمَّرة بالية قبل تلك الليلة بوقت طويل، وكاميرا مصعد الخدمة تُظهر إخراج المعدّات الجديدة.",
+          "kk": "Жаңа майысқан жердің астында ескі коррозия қабаты жатыр: қиратылған шкаф сол түннен әлдеқайда бұрын қатты тозған, ал қызметтік лифт камерасы жаңа жабдықтың шығарылғанын көрсетеді."
+        },
+        "evidenceIds": [
+          "photo-48",
+          "camera-48"
+        ]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "На счёте номер Лина напечатан поверх данных соседнего ресторана, а слепую зону создала его собственная учётная запись. Уничтожили подменённое имущество.",
+          "en": "On the invoice Lin's number is printed over a neighbouring restaurant's details, and the blind spot was created by his own account. What was destroyed was substituted property.",
+          "tr": "Faturada Lin'in numarası, komşu restoranın bilgileri üzerine basılmış ve kör nokta onun kendi hesabıyla oluşturulmuş. İmha edilen, yerine konmuş maldı.",
+          "ar": "على الفاتورة طُبع رقم لين فوق بيانات مطعم مجاور، والنقطة العمياء أُنشئت بحسابه هو. ما دُمِّر كان ممتلكات مُستبدَلة.",
+          "kk": "Шотта Линнің нөмірі көрші мейрамхананың деректерінің үстіне басылған, ал соқыр аймақты оның өз есептік жазбасы жасаған. Қиратылғаны — алмастырылған мүлік."
+        },
+        "evidenceIds": [
+          "document-48",
+          "log-48",
+          "bank-48"
+        ]
+      }
+    ]
+  },
+  "case-049": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "german_kross",
+      "displayName": {
+        "ru": "Герман Кросс",
+        "en": "German Kross",
+        "tr": "German Kross",
+        "ar": "غيرمان كروس",
+        "kk": "Герман Кросс"
+      },
+      "portraitState": "professional_annoyance"
+    },
+    "finalLine": {
+      "ru": "Никто не полез бы через вентиляцию. Именно поэтому версия казалась хорошей.",
+      "en": "Nobody would ever crawl through the ventilation. That is precisely why the story looked good.",
+      "tr": "Kimse havalandırmadan girmezdi. Senaryonun iyi görünmesinin sebebi de tam buydu.",
+      "ar": "ما كان أحد ليزحف عبر التهوية. ولهذا بالذات بدت الرواية جيدة.",
+      "kk": "Ешкім желдеткіш арқылы кірмес еді. Нұсқаның жақсы көрінген себебі де дәл сол."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Контейнер M-7 действительно покинул морозильный сейф, и партия имела реальную стоимость.",
+          "en": "Container M-7 really did leave the freezer safe, and the batch had genuine value.",
+          "tr": "M-7 konteyneri gerçekten dondurucu kasadan çıktı ve parti gerçek bir değere sahipti.",
+          "ar": "غادرت الحاوية M-7 الخزنة المجمَّدة فعلًا، وكانت الدفعة ذات قيمة حقيقية.",
+          "kk": "M-7 контейнері мұздатқыш сейфтен шынымен шыққан, ал партияның нақты құны болған."
+        },
+        "evidenceIds": [
+          "camera-49"
+        ]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "Под инеем — полосы волочения к передней дверце, а металл у вентиляции без царапин и следов инструмента. Техник видел решётку целой утром: её сняли позже.",
+          "en": "Under the frost run drag marks towards the front door, while the metal by the vent bears no scratches or tool traces. The technician saw the grille intact that morning: it was removed later.",
+          "tr": "Kırağının altında ön kapıya doğru sürükleme izleri var; havalandırmanın yanındaki metalde ise çizik ya da alet izi yok. Teknisyen o sabah ızgarayı sağlam gördü: sonradan sökülmüş.",
+          "ar": "تحت الصقيع آثار جرّ نحو الباب الأمامي، بينما المعدن قرب فتحة التهوية بلا خدوش أو آثار أدوات. رأى الفنيّ الشبكة سليمة صباحًا: أُزيلت لاحقًا.",
+          "kk": "Қырауүстінде алдыңғы есікке қарай сүйреу іздері бар, ал желдеткіш маңындағы металда сызат та, аспап ізі де жоқ. Техник таңертең торды бүтін көрген: оны кейін шешкен."
+        },
+        "evidenceIds": [
+          "photo-49",
+          "witness-49"
+        ]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Журнал сейфа не знает несанкционированного доступа, партию вывели из официального оборота до «кражи», а аванс поступил с назначением «M-7».",
+          "en": "The safe log knows no unauthorised access, the batch was taken off the official register before the “theft”, and the advance came in referencing “M-7”.",
+          "tr": "Kasa kaydında yetkisiz erişim yok, parti “hırsızlıktan” önce resmî kayıttan düşülmüş ve avans “M-7” açıklamasıyla gelmiş.",
+          "ar": "لا يعرف سجل الخزنة أي دخول غير مصرَّح، وأُخرجت الدفعة من السجل الرسمي قبل «السرقة»، ووصلت الدفعة المقدَّمة بوصف «M-7».",
+          "kk": "Сейф журналы рұқсатсыз қатынауды білмейді, партия «ұрлықтан» бұрын ресми айналымнан шығарылған, ал аванс «M-7» тағайындауымен түскен."
+        },
+        "evidenceIds": [
+          "log-49",
+          "document-49",
+          "bank-49"
+        ]
+      }
+    ],
+    "arcRevealFromSeasonClue": true
+  },
+  "case-050": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "mihail_ternov",
+      "displayName": {
+        "ru": "Михаил Тернов",
+        "en": "Mikhail Ternov",
+        "tr": "Mihail Ternov",
+        "ar": "ميخائيل تيرنوف",
+        "kk": "Михаил Тернов"
+      },
+      "portraitState": "calm_resolve"
+    },
+    "finalLine": {
+      "ru": "Архив сгорел не весь. Значит, и мы ещё не закончили.",
+      "en": "The archive did not burn entirely. Which means we are not finished either.",
+      "tr": "Arşiv tamamen yanmadı. Demek ki biz de bitmedik.",
+      "ar": "لم يحترق الأرشيف كلّه. إذًا نحن أيضًا لم ننتهِ بعد.",
+      "kk": "Мұрағат түгел жанған жоқ. Демек, біз де әлі бітірген жоқпыз."
+    },
+    "emotionalMode": "threat",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Оборудование, приборы и архив зарегистрированы задолго до пожара, и после первого налёта Тернов страховую сумму не увеличивал.",
+          "en": "The equipment, instruments and archive were registered long before the fire, and after the first raid Ternov never raised his cover.",
+          "tr": "Ekipman, cihazlar ve arşiv yangından çok önce kayıtlıydı ve ilk baskından sonra Ternov teminatını hiç artırmadı.",
+          "ar": "سُجّلت المعدّات والأجهزة والأرشيف قبل الحريق بوقت طويل، ولم يرفع تيرنوف مبلغ التأمين بعد الغارة الأولى.",
+          "kk": "Жабдық, аспаптар мен мұрағат өрттен әлдеқайда бұрын тіркелген, ал алғашқы шабуылдан кейін Тернов сақтандыру сомасын арттырмаған."
+        },
+        "evidenceIds": [
+          "document-50"
+        ]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "Внутренняя сетка, пропитка и край разрыва фитиля совпадают с перехваченной промышленной партией, а камера переулка показывает двоих из серого фургона с канистрой.",
+          "en": "The inner mesh, impregnation and tear edge of the fuse match an intercepted industrial batch, and the alley camera shows two men from a grey van with a jerrycan.",
+          "tr": "Fitilin iç ağı, emprenyesi ve yırtık kenarı ele geçirilmiş endüstriyel bir partiyle eşleşiyor; ara sokak kamerası da gri bir minibüsten inen bidonlu iki kişiyi gösteriyor.",
+          "ar": "تتطابق الشبكة الداخلية والتشريب وحافة تمزّق الفتيل مع دفعة صناعية مضبوطة، وكاميرا الزقاق تُظهر رجلين من شاحنة رمادية يحملان جالونًا.",
+          "kk": "Білтенің ішкі торы, сіңдірмесі мен жыртық жиегі ұсталған өнеркәсіптік партиямен сәйкес, ал тар көше камерасы сұр фургоннан шыққан канистрлі екі адамды көрсетеді."
+        },
+        "evidenceIds": [
+          "photo-50",
+          "camera-50"
+        ]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Тернов не отключал датчики, вызов ушёл автоматически через 11 секунд, а он выводил ученика, а не спасал имущество. Поджог внешний.",
+          "en": "Ternov disabled no sensors, the call went out automatically after 11 seconds, and he was getting his apprentice out rather than saving property. The arson came from outside.",
+          "tr": "Ternov hiçbir sensörü kapatmadı, ihbar 11 saniye içinde otomatik gitti ve o, malı değil çırağını kurtarıyordu. Kundaklama dışarıdan.",
+          "ar": "لم يُعطّل تيرنوف أي مستشعر، وانطلق البلاغ آليًا بعد 11 ثانية، وكان يُخرج تلميذه لا ينقذ الممتلكات. الحريق العمد جاء من الخارج.",
+          "kk": "Тернов датчиктерді өшірмеген, шақыру 11 секундтан кейін автоматты кеткен, ал ол мүлікті емес, шәкіртін алып шыққан. Өрт сырттан қойылған."
+        },
+        "evidenceIds": [
+          "log-50",
+          "witness-50"
+        ]
+      }
+    ],
+    "arcRevealFromSeasonClue": true
+  },
+  "case-051": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "roman_dray",
+      "displayName": {
+        "ru": "Роман Драй",
+        "en": "Roman Dray",
+        "tr": "Roman Dray",
+        "ar": "رومان دراي",
+        "kk": "Роман Драй"
+      },
+      "portraitState": "irritated_defeat"
+    },
+    "finalLine": {
+      "ru": "Я придумал нападение. А вы раскрыли меня по аккуратно сложенным ремням.",
+      "en": "I invented an ambush. And you caught me by the neatly folded straps.",
+      "tr": "Bir saldırı uydurdum. Siz de beni özenle katlanmış kemerlerden yakaladınız.",
+      "ar": "اختلقت هجومًا. وكشفتموني من الأحزمة المطويّة بعناية.",
+      "kk": "Мен шабуылды ойлап таптым. Ал сіздер мені ұқыпты бүктелген белдіктерден таныдыңыздар."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Партия сенсоров существовала и стоила заявленную сумму: серийные номера зарегистрированы.",
+          "en": "The sensor batch existed and was worth the claimed sum: the serial numbers are on record.",
+          "tr": "Sensör partisi vardı ve talep edilen değere sahipti: seri numaraları kayıtlı.",
+          "ar": "كانت دفعة المستشعرات موجودة وبقيمة المطالبة: الأرقام التسلسلية مسجَّلة.",
+          "kk": "Сенсорлар партиясы болған және мәлімделген сомаға тұрған: сериялық нөмірлер тіркелген."
+        },
+        "evidenceIds": [
+          "document-51"
+        ]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "В кузове ремни аккуратно сложены, крепления целы, коробки не смещены, а на дверях нет следов насильственного открытия. Ограбления не было.",
+          "en": "In the cargo bay the straps are neatly folded, the fastenings intact, the boxes unshifted, and the doors bear no forced-entry marks. There was no robbery.",
+          "tr": "Kasada kemerler özenle katlanmış, bağlantılar sağlam, kutular kaymamış ve kapılarda zorlama izi yok. Soygun olmamış.",
+          "ar": "في حجرة الشحن الأحزمة مطويّة بعناية، والتثبيتات سليمة، والصناديق لم تنزلق، والأبواب بلا آثار فتح عنوة. لم تقع سرقة.",
+          "kk": "Кузовта белдіктер ұқыпты бүктелген, бекітпелер бүтін, қораптар ығыспаған, ал есіктерде күшпен ашу ізі жоқ. Тонау болмаған."
+        },
+        "evidenceIds": [
+          "photo-51"
+        ]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Трекер отключили, но фургон продолжал работать в обычном режиме, камера рампы фиксирует добровольный въезд, а комиссионер оплатил партию. Груз продан.",
+          "en": "The tracker was switched off, yet the van kept running normally; the ramp camera records a voluntary entry and the broker paid for the batch. The cargo was sold.",
+          "tr": "Takip cihazı kapatılmış ama minibüs normal çalışmayı sürdürmüş; rampa kamerası gönüllü girişi kaydediyor ve komisyoncu partinin bedelini ödemiş. Yük satılmış.",
+          "ar": "أُطفئ جهاز التتبّع، لكن الشاحنة واصلت العمل بشكل طبيعي؛ وكاميرا المنحدر تسجّل دخولًا طوعيًا، ودفع الوسيط ثمن الدفعة. البضاعة بيعت.",
+          "kk": "Трекер өшірілген, бірақ фургон қалыпты режимде жұмысын жалғастырған; рампа камерасы ерікті кіруді тіркейді, ал комиссионер партияны төлеген. Жүк сатылған."
+        },
+        "evidenceIds": [
+          "log-51",
+          "camera-51",
+          "bank-51"
+        ]
+      }
+    ],
+    "veraLine": {
+      "ru": "Сравните фотографию пропуска с карточкой свидетеля из дела о ДТП. Это тот самый человек, который два года назад вызвал помощь брату.",
+      "en": "Compare the pass photograph with the witness card from the road-accident case. This is the same man who two years ago called help for his brother.",
+      "tr": "Kart fotoğrafını, trafik kazası dosyasındaki tanık kartıyla karşılaştırın. Bu, iki yıl önce kardeşine yardım çağıran adamın ta kendisi.",
+      "ar": "قارن صورة التصريح ببطاقة الشاهد في قضية حادث الطريق. إنه الرجل نفسه الذي استدعى النجدة لأخيه قبل عامين.",
+      "kk": "Рұқсатнама фотосын ЖКО ісіндегі куәгер карточкасымен салыстырыңыз. Бұл — екі жыл бұрын ағасына көмек шақырған сол адам."
+    },
+    "arcRevealFromSeasonClue": true
+  },
+  "case-417": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "lucas_ferreira",
+      "displayName": {
+        "ru": "Лукас Феррейра",
+        "en": "Lucas Ferreira",
+        "tr": "Lucas Ferreira",
+        "ar": "لوكاس فيريرا",
+        "kk": "Лукас Феррейра"
+      },
+      "portraitState": "fear_and_guilt"
+    },
+    "finalLine": {
+      "ru": "Матеус всегда был плохим лжецом. Я надеялся, что ради меня научится.",
+      "en": "Mateus was always a poor liar. I hoped he would learn, for my sake.",
+      "tr": "Mateus hep kötü bir yalancıydı. Benim için öğrenir diye ummuştum.",
+      "ar": "كان ماتيوس دائمًا كاذبًا رديئًا. كنت آمل أن يتعلّم من أجلي.",
+      "kk": "Матеус әрқашан нашар өтірікші еді. Мен үшін үйренер деп үміттенгенмін."
+    },
+    "emotionalMode": "grave",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Лукас действительно летел этим рейсом и сдал один чемодан: номер бирки совпадает с заявлением.",
+          "en": "Lucas really was on that flight and checked one suitcase: the tag number matches the claim.",
+          "tr": "Lucas gerçekten o uçuştaydı ve bir bavul teslim etti: etiket numarası başvuruyla aynı.",
+          "ar": "كان لوكاس على متن تلك الرحلة فعلًا وسلّم حقيبة واحدة: رقم البطاقة يطابق المطالبة.",
+          "kk": "Лукас шынымен сол рейспен ұшқан және бір чемодан тапсырған: бирка нөмірі өтінішпен сәйкес."
+        },
+        "evidenceIds": [
+          "ev-boarding"
+        ]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "Журнал показывает снятие багажа с ленты по разовой заявке, а камера гаража Матеуса — тот же чемодан после рейса: потёртость ручки, внутренняя бирка и ремонт колеса совпадают.",
+          "en": "The log shows the bag pulled off the belt on a one-off request, and Mateus's garage camera shows the same case after the flight: the worn handle, the inner tag and the repaired wheel all match.",
+          "tr": "Kayıt, bavulun tek seferlik bir talep üzerine banttan alındığını gösteriyor; Mateus'un garaj kamerası da uçuş sonrası aynı bavulu gösteriyor: yıpranmış sap, iç etiket ve onarılmış teker örtüşüyor.",
+          "ar": "يُظهر السجل سحب الحقيبة من السير بطلب استثنائي، وكاميرا مرآب ماتيوس تُظهر الحقيبة نفسها بعد الرحلة: المقبض المهترئ والبطاقة الداخلية والعجلة المُصلَحة كلها متطابقة.",
+          "kk": "Журнал жүктің біржолғы өтінішпен таспадан алынғанын көрсетеді, ал Матеустің гараж камерасы рейстен кейінгі сол чемоданды көрсетеді: тұтқаның мүжілуі, ішкі бирка және дөңгелек жөндеуі сәйкес."
+        },
+        "evidenceIds": [
+          "ev-tracking",
+          "ev-garage",
+          "ev-suitcase-seal"
+        ]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Серийные номера часов и камеры в объявлениях совпадают с чеками из требования. Заявленные утраченными вещи целы и выставлены на продажу.",
+          "en": "The watch and camera serials in the listings match the receipts attached to the claim. The items reported lost are intact and up for sale.",
+          "tr": "İlanlardaki saat ve kamera seri numaraları, başvuruya eklenen fişlerle örtüşüyor. Kayıp bildirilen eşyalar sağlam ve satışta.",
+          "ar": "أرقام الساعة والكاميرا في الإعلانات تطابق الإيصالات المرفقة بالمطالبة. الأغراض المُبلَّغ عن فقدها سليمة ومعروضة للبيع.",
+          "kk": "Хабарландырулардағы сағат пен камераның сериялық нөмірлері талапқа тіркелген чектермен сәйкес. Жоғалды деп мәлімделген заттар бүтін әрі сатылымға қойылған."
+        },
+        "evidenceIds": [
+          "ev-listing",
+          "ev-payment"
+        ]
+      }
+    ],
+    "veraLine": {
+      "ru": "Страховое дело закрыто. Осталась вторая задача: доказать, кто управлял сетью — а не просто написал её форму.",
+      "en": "The insurance case is closed. A second task remains: to prove who ran the network — not merely who wrote its form.",
+      "tr": "Sigorta dosyası kapandı. İkinci bir görev kaldı: şebekeyi kimin yönettiğini kanıtlamak — formunu kimin yazdığını değil.",
+      "ar": "أُغلق ملف التأمين. وبقيت مهمة ثانية: إثبات من كان يدير الشبكة — لا من كتب استمارتها فحسب.",
+      "kk": "Сақтандыру ісі жабылды. Екінші міндет қалды: желіні кім басқарғанын дәлелдеу — оның формасын кім жазғанын емес."
+    },
+    "arcRevealFromSeasonClue": true
+  }
+}

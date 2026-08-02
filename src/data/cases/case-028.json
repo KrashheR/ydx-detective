@@ -506,5 +506,103 @@
       "progressTotal": 4
     },
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "damir_askarov",
+      "displayName": {
+        "ru": "Дамир Аскаров",
+        "en": "Damir Askarov",
+        "tr": "Damir Askarov",
+        "ar": "دامير أسكاروف",
+        "kk": "Дамир Асқаров"
+      },
+      "portraitState": "cynical"
+    },
+    "finalLine": {
+      "ru": "Даже пустой склад стоит денег. Я просто посчитал его дважды.",
+      "en": "Even an empty warehouse is worth money. I merely counted it twice.",
+      "tr": "Boş bir depo bile para eder. Ben sadece onu iki kez saydım.",
+      "ar": "حتى المستودع الفارغ يساوي مالًا. أنا فقط حسبته مرتين.",
+      "kk": "Бос қойманың да құны бар. Мен оны жай ғана екі рет санадым."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Пожар на складе действительно был, а просроченные кредиты создают понятный мотив. Сам по себе он ничего не доказывает.",
+          "en": "There really was a warehouse fire, and the overdue loans provide an obvious motive. On its own that proves nothing.",
+          "tr": "Depoda gerçekten yangın çıktı ve gecikmiş krediler bariz bir gerekçe sunuyor. Bu tek başına hiçbir şey kanıtlamaz.",
+          "ar": "وقع حريق المستودع فعلًا، والقروض المتأخّرة تمنح دافعًا واضحًا. لكن ذلك وحده لا يُثبت شيئًا.",
+          "kk": "Қоймада шынымен өрт болған, ал мерзімі өткен несиелер айқын уәж береді. Бұл өздігінен ештеңе дәлелдемейді."
+        },
+        "evidenceIds": [
+          "ev-debt"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Пломбы вывезенных палет совпали по разрыву и волокнам с товаром из страховой описи: груз покинул склад до огня.",
+          "en": "The seals from the removed pallets match the insured inventory by tear line and fibre: the goods left the warehouse before the fire.",
+          "tr": "Çıkarılan paletlerin mühürleri, yırtık hattı ve lif bakımından sigorta envanteriyle eşleşiyor: mallar yangından önce depodan çıkmış.",
+          "ar": "تتطابق أختام المنصّات المُخرَجة مع جرد التأمين في خط التمزّق والألياف: غادرت البضاعة المستودع قبل الحريق.",
+          "kk": "Шығарылған паллеттердің пломбалары жыртық сызығы мен талшығы бойынша сақтандыру тізімдемесімен сәйкес келді: жүк өрттен бұрын қоймадан кеткен."
+        },
+        "evidenceIds": [
+          "ev-cam"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Сигнализацию не обошли — её последовательно отключили доступом владельца, а экспертиза нашла два подготовленных очага. Горел пустой склад.",
+          "en": "The alarm was not bypassed — it was switched off step by step with the owner's access, and the examination found two prepared ignition points. What burned was an empty warehouse.",
+          "tr": "Alarm atlatılmadı — sahibin erişimiyle adım adım kapatıldı ve inceleme iki hazırlanmış odak buldu. Yanan, boş bir depoydu.",
+          "ar": "لم يُلتفّ على الإنذار — بل أُطفئ تدريجيًا بصلاحية المالك، ووجد الفحص بؤرتين مُعدَّتين. ما احترق كان مستودعًا فارغًا.",
+          "kk": "Дабылды айналып өткен жоқ — оны иесінің қатынауымен кезекпен өшірген, ал сараптама екі дайындалған ошақ тапқан. Жанғаны — бос қойма."
+        },
+        "evidenceIds": [
+          "ev-alarm",
+          "ev-fire"
+        ]
+      }
+    ],
+    "arcReveal": {
+      "title": {
+        "ru": "Пропуск EY-17",
+        "en": "EY-17 Access Pass",
+        "tr": "EY-17 Erişim Kartı",
+        "ar": "تصريح الدخول EY-17",
+        "kk": "EY-17 өту"
+      },
+      "text": {
+        "ru": "Застрахованные активы поступают в закрытый сектор Восточного двора до инсценированных утрат.",
+        "en": "Insured assets enter Eastern Yard's restricted sector before their losses are staged.",
+        "tr": "Sigortalı varlıklar, zararları ortaya çıkmadan önce Eastern Yard'ın kısıtlı sektörüne girer.",
+        "ar": "تدخل الأصول المؤمن عليها إلى القطاع المحظور في Eastern Yard قبل أن يتم تنظيم خسائرها.",
+        "kk": "Сақтандырылған активтер шығыс сотының жабық секторына залалдарды жоюға дейін беріледі."
+      }
+    }
   }
 }

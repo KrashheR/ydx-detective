@@ -85,6 +85,15 @@ export type UIKey =
   | "includedCases"
   | "includedSkins"
   | "collectibleStamp"
+  | "stampShop"
+  | "stampShopSubtitle"
+  | "stampShopNote"
+  | "stampClassicName"
+  | "stampInkPreview"
+  | "stampEquip"
+  | "stampEquipped"
+  | "stampPurchaseUnavailable"
+  | "stampPurchaseFailed"
   | "restorePurchases"
   | "department"
   | "casesInWork"
@@ -226,7 +235,17 @@ export type UIKey =
     | "departmentEffectFree"
     | "departmentMaxed"
     | "upgradeDepartment"
-    | "departmentUpgradeUnavailable";
+    | "departmentUpgradeUnavailable"
+    | "resolutionWhy"
+    | "resolutionChainTitle"
+    | "resolutionContinue"
+    | "resolutionVeraLabel"
+    | "resolutionArchiveEntry"
+    | "resolutionStampApproved"
+    | "resolutionStampRejected"
+    | "chainLabelTruth"
+    | "chainLabelCrack"
+    | "chainLabelVerdict";
 
 export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
   approve: {
@@ -715,6 +734,69 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     tr: "Koleksiyon damgası",
     ar: "ختم قابل للجمع",
     kk: "Коллекциялық мөр",
+  },
+  stampShop: {
+    ru: "Мастерская штампов",
+    en: "Stamp workshop",
+    tr: "Damga atölyesi",
+    ar: "ورشة الأختام",
+    kk: "Мөр шеберханасы",
+  },
+  stampShopSubtitle: {
+    ru: "Формулировка на печати противоречия",
+    en: "The wording on your contradiction stamp",
+    tr: "Çelişki damganızdaki ifade",
+    ar: "الصياغة على ختم التناقض",
+    kk: "Қайшылық мөріндегі тұжырым",
+  },
+  stampShopNote: {
+    ru: "Только оформление: на награду и точность не влияет.",
+    en: "Cosmetic only: it changes no reward and no scoring.",
+    tr: "Yalnızca görsel: ödülü ve puanlamayı etkilemez.",
+    ar: "شكلي فقط: لا يؤثر على المكافأة ولا على الدقة.",
+    kk: "Тек безендіру: сыйақыға да, дәлдікке де әсер етпейді.",
+  },
+  stampClassicName: {
+    ru: "Классический",
+    en: "Classic",
+    tr: "Klasik",
+    ar: "كلاسيكي",
+    kk: "Классикалық",
+  },
+  stampInkPreview: {
+    ru: "Оттиск",
+    en: "Ink preview",
+    tr: "Mürekkep önizleme",
+    ar: "معاينة الختم",
+    kk: "Мөр таңбасы",
+  },
+  stampEquip: {
+    ru: "Поставить на печать",
+    en: "Ink this one",
+    tr: "Bunu kullan",
+    ar: "استخدم هذا",
+    kk: "Мөрге қою",
+  },
+  stampEquipped: {
+    ru: "На печати",
+    en: "In use",
+    tr: "Kullanımda",
+    ar: "قيد الاستخدام",
+    kk: "Қолданыста",
+  },
+  stampPurchaseUnavailable: {
+    ru: "Покупки сейчас недоступны",
+    en: "Purchases are unavailable right now",
+    tr: "Satın alma şu anda kullanılamıyor",
+    ar: "الشراء غير متاح حاليًا",
+    kk: "Сатып алу қазір қолжетімсіз",
+  },
+  stampPurchaseFailed: {
+    ru: "Покупка не завершена",
+    en: "Purchase not completed",
+    tr: "Satın alma tamamlanmadı",
+    ar: "لم تكتمل عملية الشراء",
+    kk: "Сатып алу аяқталмады",
   },
   restorePurchases: {
     ru: "Восстановить покупки",
@@ -1496,6 +1578,76 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     tr: "Birim yükseltmesi şu anda yok.",
     ar: "ترقية القسم غير متاحة الآن.",
     kk: "Бөлімді жақсарту қазір қолжетімсіз.",
+  },
+  resolutionWhy: {
+    ru: "Почему такое решение?",
+    en: "Why this decision?",
+    tr: "Neden bu karar?",
+    ar: "لماذا هذا القرار؟",
+    kk: "Неге бұлай шешілді?",
+  },
+  resolutionChainTitle: {
+    ru: "Логика расследования",
+    en: "Investigation Logic",
+    tr: "Soruşturmanın Mantığı",
+    ar: "منطق التحقيق",
+    kk: "Тергеу логикасы",
+  },
+  resolutionContinue: {
+    ru: "Продолжить",
+    en: "Continue",
+    tr: "Devam",
+    ar: "متابعة",
+    kk: "Жалғастыру",
+  },
+  resolutionVeraLabel: {
+    ru: "В. Лебедева",
+    en: "V. Lebedeva",
+    tr: "V. Lebedeva",
+    ar: "ف. ليبيديفا",
+    kk: "В. Лебедева",
+  },
+  resolutionArchiveEntry: {
+    ru: "Новая запись в Архиве №17",
+    en: "New Entry in Archive No. 17",
+    tr: "17 No'lu Arşivde Yeni Kayıt",
+    ar: "قيد جديد في الأرشيف رقم 17",
+    kk: "№17 мұрағаттағы жаңа жазба",
+  },
+  resolutionStampApproved: {
+    ru: "ОДОБРЕНО",
+    en: "APPROVED",
+    tr: "ONAYLANDI",
+    ar: "تمت الموافقة",
+    kk: "МАҚҰЛДАНДЫ",
+  },
+  resolutionStampRejected: {
+    ru: "ОТКАЗАНО",
+    en: "REJECTED",
+    tr: "REDDEDİLDİ",
+    ar: "مرفوض",
+    kk: "БАС ТАРТЫЛДЫ",
+  },
+  chainLabelTruth: {
+    ru: "Что было правдой",
+    en: "What was true",
+    tr: "Doğru olan ne",
+    ar: "ما كان صحيحًا",
+    kk: "Не рас болды",
+  },
+  chainLabelCrack: {
+    ru: "Что не совпало",
+    en: "What did not match",
+    tr: "Ne uyuşmadı",
+    ar: "ما لم يتطابق",
+    kk: "Не сәйкес келмеді",
+  },
+  chainLabelVerdict: {
+    ru: "Почему этого достаточно",
+    en: "Why that is enough",
+    tr: "Bu neden yeterli",
+    ar: "لماذا هذا يكفي",
+    kk: "Неге бұл жеткілікті",
   },
 };
 

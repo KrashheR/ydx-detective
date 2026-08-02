@@ -1,0 +1,423 @@
+{
+  "id": "night-train-06",
+  "type": "archive",
+  "difficulty": "medium",
+  "claimAmount": 390000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Голос из вагона-ресторана",
+    "en": "A Voice from the Restaurant Car",
+    "tr": "Restoran Vagonundan Bir Ses",
+    "ar": "صوت من عربة المطعم",
+    "kk": "Мейрамхана вагонынан шыққан дауыс"
+  },
+  "claim": {
+    "person": {
+      "ru": "Ирина Марковна Левицкая, 58 лет",
+      "en": "Irina Markovna Levitskaya, age 58",
+      "tr": "Irina Markovna Levitskaya, 58 yaşında",
+      "ar": "إيرينا ماركوفنا ليفيتسكايا، 58 عامًا",
+      "kk": "Ирина Марковна Левицкая, 58 жаста"
+    },
+    "story": {
+      "ru": "В 00:46 свет погас, система получила скачок напряжения и сама удалила единственный мастер-файл новой песни. До поездки оборудование было новым и полностью исправным. Прошу возместить комплект и утраченную запись.",
+      "en": "At 00:46 the lights went out, the system took a voltage surge and deleted the only master file of the new song by itself. Before the journey the equipment was new and fully sound. I am claiming the set and the lost recording.",
+      "tr": "Saat 00:46’da ışıklar söndü, sistem gerilim dalgalanmasına maruz kaldı ve yeni şarkının tek master dosyasını kendiliğinden sildi. Yolculuktan önce ekipman yeni ve tamamen sağlamdı. Setin ve kaybolan kaydın bedelini talep ediyorum.",
+      "ar": "في الساعة 00:46 انطفأ الضوء وتعرّض النظام لارتفاع في الجهد فحذف من تلقاء نفسه الملف الرئيسي الوحيد للأغنية الجديدة. كانت المعدات جديدة وسليمة تمامًا قبل الرحلة. أطالب بقيمة الطقم والتسجيل المفقود.",
+      "kk": "Сағат 00:46-да жарық сөніп, жүйеге кернеу секірісі келіп, жаңа әннің жалғыз мастер-файлын өзі жойып жіберді. Сапарға дейін жабдық жаңа әрі толық жарамды болатын. Жиынтық пен жоғалған жазбаны өтеуді сұраймын."
+    }
+  },
+  "coverImage": "covers/packs/night-train-06.svg",
+  "personImage": "people/packs/night-train/irina_levitskaya.webp",
+  "client": {
+    "role": {
+      "ru": "Заявитель · пассажир поезда №13",
+      "en": "Claimant · passenger of train No. 13",
+      "tr": "Talep sahibi · 13 No.lu trenin yolcusu",
+      "ar": "مقدم الطلب · راكب في القطار رقم 13",
+      "kk": "Өтініш беруші · №13 пойыз жолаушысы"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Вагон",
+          "en": "Car",
+          "tr": "Vagon",
+          "ar": "العربة",
+          "kk": "Вагон"
+        },
+        "v": {
+          "ru": "№5",
+          "en": "No. 5",
+          "tr": "No. 5",
+          "ar": "رقم 5",
+          "kk": "№5"
+        }
+      },
+      {
+        "k": {
+          "ru": "Рейс",
+          "en": "Service",
+          "tr": "Sefer",
+          "ar": "الرحلة",
+          "kk": "Рейс"
+        },
+        "v": {
+          "ru": "Поезд №13, ночной",
+          "en": "Train No. 13, night service",
+          "tr": "13 No.lu tren, gece seferi",
+          "ar": "القطار رقم 13، الرحلة الليلية",
+          "kk": "№13 пойыз, түнгі рейс"
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "TR06-E1",
+      "order": 1,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал питания вагона-ресторана",
+        "en": "Restaurant Car Power Log",
+        "tr": "Restoran Vagonu Enerji Kaydı",
+        "ar": "سجل تغذية عربة المطعم",
+        "kk": "Мейрамхана вагонының қуат журналы"
+      },
+      "content": {
+        "ru": "00:30–01:10 — напряжение 219–221 В без отклонений, защита не срабатывала. 00:44 — яркость освещения снижена вручную с панели у входа в вагон.",
+        "en": "00:30–01:10 — voltage 219–221 V with no deviations; protection never tripped. 00:44 — lighting dimmed by hand from the panel at the car entrance.",
+        "tr": "00:30–01:10 — gerilim 219–221 V, sapma yok; koruma hiç devreye girmedi. 00:44 — aydınlatma, vagon girişindeki panelden elle kısıldı.",
+        "ar": "00:30–01:10 — الجهد 219–221 فولت بلا انحرافات ولم تعمل الحماية. 00:44 — خُفّتت الإضاءة يدويًا من اللوحة عند مدخل العربة.",
+        "kk": "00:30–01:10 — кернеу 219–221 В, ауытқусыз, қорғаныс іске қосылмаған. 00:44 — жарық вагон кірер тұстағы панельден қолмен әлсіретілген."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Скачка напряжения не было, а свет приглушили вручную — заявленная авария не существовала.",
+        "en": "There was no voltage surge and the lights were dimmed by hand — the alleged failure never happened.",
+        "tr": "Gerilim dalgalanması olmadı ve ışıklar elle kısıldı; iddia edilen arıza hiç yaşanmadı.",
+        "ar": "لم يحدث ارتفاع في الجهد وخُفّتت الإضاءة يدويًا، فالعطل المزعوم لم يقع.",
+        "kk": "Кернеу секірісі болмаған, жарықты қолмен әлсіреткен — мәлімделген апат болмаған."
+      },
+      "statementLink": {
+        "statementId": "claim_surge",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Скачка напряжения не было, а свет приглушили вручную — заявленная авария не существовала.",
+          "en": "There was no voltage surge and the lights were dimmed by hand — the alleged failure never happened.",
+          "tr": "Gerilim dalgalanması olmadı ve ışıklar elle kısıldı; iddia edilen arıza hiç yaşanmadı.",
+          "ar": "لم يحدث ارتفاع في الجهد وخُفّتت الإضاءة يدويًا، فالعطل المزعوم لم يقع.",
+          "kk": "Кернеу секірісі болмаған, жарықты қолмен әлсіреткен — мәлімделген апат болмаған."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_surge",
+        "reason": {
+          "ru": "Скачка напряжения не было, а свет приглушили вручную — заявленная авария не существовала.",
+          "en": "There was no voltage surge and the lights were dimmed by hand — the alleged failure never happened.",
+          "tr": "Gerilim dalgalanması olmadı ve ışıklar elle kısıldı; iddia edilen arıza hiç yaşanmadı.",
+          "ar": "لم يحدث ارتفاع في الجهد وخُفّتت الإضاءة يدويًا، فالعطل المزعوم لم يقع.",
+          "kk": "Кернеу секірісі болмаған, жарықты қолмен әлсіреткен — мәлімделген апат болмаған."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr06-e1.webp",
+        "logPrompt": "restaurant car power log"
+      }
+    },
+    {
+      "id": "TR06-E2",
+      "order": 2,
+      "type": "usage_log",
+      "title": {
+        "ru": "Облачный журнал аудиоредактора",
+        "en": "Audio Editor Cloud Log",
+        "tr": "Ses Editörü Bulut Kaydı",
+        "ar": "سجل محرر الصوت السحابي",
+        "kk": "Аудиоредактордың бұлттық журналы"
+      },
+      "content": {
+        "ru": "00:39 — команда `delete_take` выполнена вручную из аккаунта заявительницы, устройство — её планшет. 00:39 — автоматическая резервная копия создана и по-прежнему доступна. Системных сбоев за сутки нет.",
+        "en": "00:39 — the `delete_take` command was executed manually from the claimant's account on her own tablet. 00:39 — an automatic backup was created and is still available. No system faults in 24 hours.",
+        "tr": "00:39 — `delete_take` komutu, talep sahibinin hesabından kendi tabletiyle elle çalıştırıldı. 00:39 — otomatik yedek oluşturuldu ve hâlâ erişilebilir. 24 saatte sistem hatası yok.",
+        "ar": "00:39 — نُفّذ أمر `delete_take` يدويًا من حساب مقدمة الطلب عبر جهازها اللوحي. 00:39 — أُنشئت نسخة احتياطية تلقائية وما زالت متاحة. لا أعطال نظام خلال 24 ساعة.",
+        "kk": "00:39 — `delete_take` командасы өтініш берушінің тіркелгісінен, өз планшетімен қолмен орындалған. 00:39 — автоматты сақтық көшірме жасалып, әлі қолжетімді. Тәулік ішінде жүйелік ақау жоқ."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Файл удалила сама заявительница за семь минут до «аварии», и резервная копия цела — единственного утраченного мастер-файла не существует.",
+        "en": "The claimant deleted the file herself seven minutes before the \"failure\", and the backup is intact — there is no single lost master file.",
+        "tr": "Dosyayı «arızadan» yedi dakika önce talep sahibi kendisi sildi ve yedek sağlam; kaybolmuş tek bir master dosya yok.",
+        "ar": "حذفت مقدمة الطلب الملف بنفسها قبل «العطل» بسبع دقائق، والنسخة الاحتياطية سليمة، فلا وجود لملف رئيسي وحيد مفقود.",
+        "kk": "Файлды «апаттан» жеті минут бұрын өтініш берушінің өзі жойған, ал сақтық көшірме бүтін — жоғалған жалғыз мастер-файл жоқ."
+      },
+      "statementLink": {
+        "statementId": "claim_autodelete",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Файл удалила сама заявительница за семь минут до «аварии», и резервная копия цела — единственного утраченного мастер-файла не существует.",
+          "en": "The claimant deleted the file herself seven minutes before the \"failure\", and the backup is intact — there is no single lost master file.",
+          "tr": "Dosyayı «arızadan» yedi dakika önce talep sahibi kendisi sildi ve yedek sağlam; kaybolmuş tek bir master dosya yok.",
+          "ar": "حذفت مقدمة الطلب الملف بنفسها قبل «العطل» بسبع دقائق، والنسخة الاحتياطية سليمة، فلا وجود لملف رئيسي وحيد مفقود.",
+          "kk": "Файлды «апаттан» жеті минут бұрын өтініш берушінің өзі жойған, ал сақтық көшірме бүтін — жоғалған жалғыз мастер-файл жоқ."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_autodelete",
+        "reason": {
+          "ru": "Файл удалила сама заявительница за семь минут до «аварии», и резервная копия цела — единственного утраченного мастер-файла не существует.",
+          "en": "The claimant deleted the file herself seven minutes before the \"failure\", and the backup is intact — there is no single lost master file.",
+          "tr": "Dosyayı «arızadan» yedi dakika önce talep sahibi kendisi sildi ve yedek sağlam; kaybolmuş tek bir master dosya yok.",
+          "ar": "حذفت مقدمة الطلب الملف بنفسها قبل «العطل» بسبع دقائق، والنسخة الاحتياطية سليمة، فلا وجود لملف رئيسي وحيد مفقود.",
+          "kk": "Файлды «апаттан» жеті минут бұрын өтініш берушінің өзі жойған, ал сақтық көшірме бүтін — жоғалған жалғыз мастер-файл жоқ."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr06-e2.webp",
+        "logPrompt": "audio editor cloud log"
+      }
+    },
+    {
+      "id": "TR06-E3",
+      "order": 3,
+      "type": "document",
+      "title": {
+        "ru": "Чек на микрофонный комплект",
+        "en": "Receipt for the Microphone Set",
+        "tr": "Mikrofon Seti Fişi",
+        "ar": "إيصال طقم الميكروفون",
+        "kk": "Микрофон жиынтығының түбіртегі"
+      },
+      "content": {
+        "ru": "Комплект приобретён шесть лет назад за 128 000 ₽. В заявлении та же модель оценена в 390 000 ₽ как новая; текущая цена аналога на вторичном рынке — 41 000 ₽.",
+        "en": "The set was bought six years ago for 128,000 ₽. The claim values the same model at 390,000 ₽ as new; a comparable second-hand unit now sells for 41,000 ₽.",
+        "tr": "Set altı yıl önce 128.000 ₽’ye alınmış. Talepte aynı model yeni gibi 390.000 ₽ değerlenmiş; ikinci elde benzeri şu an 41.000 ₽.",
+        "ar": "اشتُري الطقم قبل ست سنوات بـ128000 ₽. وفي المطالبة قُدّر الطراز نفسه بـ390000 ₽ كأنه جديد، بينما سعر المماثل المستعمل اليوم 41000 ₽.",
+        "kk": "Жиынтық алты жыл бұрын 128 000 ₽-ге алынған. Өтініште сол модель жаңадай 390 000 ₽ деп бағаланған; қазір ұқсас жабдықтың екінші нарықтағы бағасы — 41 000 ₽."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Оборудование не новое и оценено втрое дороже, но заявленные скачок и автоудаление опровергают журналы.",
+        "en": "The equipment is not new and is valued three times too high, though it is the logs that disprove the surge and the auto-deletion.",
+        "tr": "Ekipman yeni değil ve üç kat fazla değerlenmiş; ancak dalgalanmayı ve otomatik silmeyi çürüten şey kayıtlar.",
+        "ar": "المعدات ليست جديدة وقُدّرت بثلاثة أضعاف قيمتها، أما الارتفاع والحذف التلقائي فتدحضهما السجلات.",
+        "kk": "Жабдық жаңа емес әрі үш есе қымбат бағаланған, бірақ мәлімделген секіріс пен өздігінен жоюды журналдар теріске шығарады."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Оборудование не новое и оценено втрое дороже, но заявленные скачок и автоудаление опровергают журналы.",
+          "en": "The equipment is not new and is valued three times too high, though it is the logs that disprove the surge and the auto-deletion.",
+          "tr": "Ekipman yeni değil ve üç kat fazla değerlenmiş; ancak dalgalanmayı ve otomatik silmeyi çürüten şey kayıtlar.",
+          "ar": "المعدات ليست جديدة وقُدّرت بثلاثة أضعاف قيمتها، أما الارتفاع والحذف التلقائي فتدحضهما السجلات.",
+          "kk": "Жабдық жаңа емес әрі үш есе қымбат бағаланған, бірақ мәлімделген секіріс пен өздігінен жоюды журналдар теріске шығарады."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr06-e3.webp"
+      }
+    },
+    {
+      "id": "TR06-E4",
+      "order": 4,
+      "type": "camera_recording",
+      "title": {
+        "ru": "Запись камеры ресторана",
+        "en": "Restaurant Car Camera Recording",
+        "tr": "Restoran Vagonu Kamera Kaydı",
+        "ar": "تسجيل كاميرا عربة المطعم",
+        "kk": "Мейрамхана камерасының жазбасы"
+      },
+      "content": {
+        "ru": "Микрофон камеры сохранил разговор у кухонной двери в 00:41: «На Тихой будет семь минут. Красный фонарь выставят у грузового съезда». Говорит пассажир в сером пальто.",
+        "en": "The camera microphone captured a conversation by the kitchen door at 00:41: \"There will be seven minutes at Tikhaya. The red lamp goes up by the freight ramp.\" The speaker is the passenger in the grey coat.",
+        "tr": "Kamera mikrofonu, 00:41’de mutfak kapısındaki konuşmayı kaydetmiş: «Tihaya’da yedi dakika olacak. Kırmızı fener yük rampasına konacak.» Konuşan, gri paltolu yolcu.",
+        "ar": "التقط ميكروفون الكاميرا حديثًا عند باب المطبخ في 00:41: «سيكون هناك سبع دقائق في تيخايا. سيوضع الفانوس الأحمر عند منحدر الشحن.» المتحدث هو الراكب ذو المعطف الرمادي.",
+        "kk": "Камера микрофоны 00:41-де ас үй есігінің қасындағы әңгімені сақтаған: «Тихаяда жеті минут болады. Қызыл шам жүк түсіретін жерге қойылады». Сөйлеп тұрған — сұр пальтолы жолаушы."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Фраза превращает Тихую в точку запланированной остановки, но к скачку напряжения и удалению файла отношения не имеет.",
+        "en": "The line turns Tikhaya into a planned stop, yet it has nothing to do with the voltage surge or the deleted file.",
+        "tr": "Bu cümle Tihaya’yı planlanmış bir durağa dönüştürüyor ama gerilim dalgalanması veya silinen dosyayla ilgisi yok.",
+        "ar": "تحوّل العبارة تيخايا إلى محطة توقف مخططة، لكنها لا تمس ارتفاع الجهد ولا الملف المحذوف.",
+        "kk": "Бұл сөз Тихаяны жоспарланған аялдамаға айналдырады, бірақ кернеу секірісі мен файлдың жойылуына қатысы жоқ."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Фраза превращает Тихую в точку запланированной остановки, но к скачку напряжения и удалению файла отношения не имеет.",
+          "en": "The line turns Tikhaya into a planned stop, yet it has nothing to do with the voltage surge or the deleted file.",
+          "tr": "Bu cümle Tihaya’yı planlanmış bir durağa dönüştürüyor ama gerilim dalgalanması veya silinen dosyayla ilgisi yok.",
+          "ar": "تحوّل العبارة تيخايا إلى محطة توقف مخططة، لكنها لا تمس ارتفاع الجهد ولا الملف المحذوف.",
+          "kk": "Бұл сөз Тихаяны жоспарланған аялдамаға айналдырады, бірақ кернеу секірісі мен файлдың жойылуына қатысы жоқ."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr06-e4.webp",
+        "cameraId": "DINER-CAM",
+        "cameraModel": "RailEye 3"
+      }
+    },
+    {
+      "id": "TR06-E5",
+      "order": 5,
+      "type": "witness_statement",
+      "title": {
+        "ru": "Показания Надежды Соколовой",
+        "en": "Statement by Nadezhda Sokolova",
+        "tr": "Nadejda Sokolova’nın İfadesi",
+        "ar": "إفادة ناديجدا سوكولوفا",
+        "kk": "Надежда Соколованың айғағы"
+      },
+      "content": {
+        "ru": "«Пассажир в сером пальто попросил сделать свет потише — сказал, мешает отражение в окне. Потом стоял у закрытой двери кухни и кому-то звонил, коротко и по делу».",
+        "en": "\"The passenger in the grey coat asked me to dim the lights — said the reflection in the window bothered him. Then he stood by the closed kitchen door making a call, short and to the point.\"",
+        "tr": "«Gri paltolu yolcu ışığı kısmamı istedi; camdaki yansımanın rahatsız ettiğini söyledi. Sonra kapalı mutfak kapısının önünde durup kısa ve öz bir telefon görüşmesi yaptı.»",
+        "ar": "«طلب مني الراكب ذو المعطف الرمادي أن أخفّف الإضاءة، وقال إن الانعكاس في النافذة يزعجه. ثم وقف عند باب المطبخ المغلق يجري مكالمة قصيرة ومباشرة.»",
+        "kk": "«Сұр пальтолы жолаушы жарықты бәсеңдетуді өтінді — терезедегі шағылысу кедергі келтіреді деді. Сосын жабық ас үй есігінің қасында тұрып, қысқа әрі нақты сөйлесті»."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Показания объясняют, почему в вагоне стало темнее, но подтверждает отсутствие аварии именно журнал питания.",
+        "en": "The statement explains why the car went darker, though it is the power log that confirms no failure occurred.",
+        "tr": "İfade vagonun neden karardığını açıklıyor; arıza olmadığını doğrulayan ise enerji kaydı.",
+        "ar": "تشرح الإفادة سبب خفوت الإضاءة، أما تأكيد عدم وقوع عطل فيأتي من سجل التغذية.",
+        "kk": "Айғақ вагонның неге қараңғыланғанын түсіндіреді, ал апаттың болмағанын қуат журналы растайды."
+      },
+      "statementLink": {
+        "statementId": "claim_surge",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Показания объясняют, почему в вагоне стало темнее, но подтверждает отсутствие аварии именно журнал питания.",
+          "en": "The statement explains why the car went darker, though it is the power log that confirms no failure occurred.",
+          "tr": "İfade vagonun neden karardığını açıklıyor; arıza olmadığını doğrulayan ise enerji kaydı.",
+          "ar": "تشرح الإفادة سبب خفوت الإضاءة، أما تأكيد عدم وقوع عطل فيأتي من سجل التغذية.",
+          "kk": "Айғақ вагонның неге қараңғыланғанын түсіндіреді, ал апаттың болмағанын қуат журналы растайды."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/night-train/tr06-e5.webp"
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Напряжение в вагоне не отклонялось: свет приглушили вручную с панели.",
+      "Мастер-файл удалён командой из аккаунта заявительницы за семь минут до «аварии», резервная копия цела.",
+      "Комплекту шесть лет, а его стоимость завышена втрое."
+    ],
+    "en": [
+      "The voltage in the car never deviated: the lights were dimmed by hand from the panel.",
+      "The master file was deleted by a command from the claimant's account seven minutes before the \"failure\"; the backup is intact.",
+      "The set is six years old and its value is inflated threefold."
+    ],
+    "tr": [
+      "Vagondaki gerilim hiç sapmadı: ışıklar panelden elle kısıldı.",
+      "Master dosya, «arızadan» yedi dakika önce talep sahibinin hesabındaki bir komutla silindi; yedek sağlam.",
+      "Set altı yaşında ve değeri üç kat şişirilmiş."
+    ],
+    "ar": [
+      "لم ينحرف الجهد في العربة: خُفّتت الإضاءة يدويًا من اللوحة.",
+      "حُذف الملف الرئيسي بأمر من حساب مقدمة الطلب قبل «العطل» بسبع دقائق، والنسخة الاحتياطية سليمة.",
+      "عمر الطقم ست سنوات وقيمته مضخّمة ثلاثة أضعاف."
+    ],
+    "kk": [
+      "Вагондағы кернеу ауытқымаған: жарықты панельден қолмен әлсіреткен.",
+      "Мастер-файл «апаттан» жеті минут бұрын өтініш берушінің тіркелгісінен командамен жойылған, сақтық көшірме бүтін.",
+      "Жиынтыққа алты жыл, ал құны үш есе асырылған."
+    ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "stampable": false,
+      "text": {
+        "ru": "Оборудование и запись утрачены из-за аварии в сети поезда, ущерб подлежит возмещению.",
+        "en": "The equipment and the recording were lost to a failure in the train's power network and the loss is reimbursable.",
+        "tr": "Ekipman ve kayıt, trenin şebekesindeki bir arıza yüzünden kayboldu ve zarar tazmin edilmelidir.",
+        "ar": "فُقدت المعدات والتسجيل بسبب عطل في شبكة القطار والخسارة قابلة للتعويض.",
+        "kk": "Жабдық пен жазба пойыз желісіндегі ақаудан жойылды, залал өтелуге тиіс."
+      }
+    },
+    {
+      "id": "claim_surge",
+      "stampable": true,
+      "text": {
+        "ru": "В 00:46 свет погас и произошёл скачок напряжения.",
+        "en": "At 00:46 the lights went out and a voltage surge occurred.",
+        "tr": "Saat 00:46’da ışıklar söndü ve gerilim dalgalanması oldu.",
+        "ar": "في الساعة 00:46 انطفأ الضوء وحدث ارتفاع في الجهد.",
+        "kk": "00:46-да жарық сөніп, кернеу секірісі болды."
+      }
+    },
+    {
+      "id": "claim_autodelete",
+      "stampable": true,
+      "text": {
+        "ru": "Система сама удалила единственный мастер-файл.",
+        "en": "The system deleted the only master file on its own.",
+        "tr": "Sistem tek master dosyayı kendiliğinden sildi.",
+        "ar": "حذف النظام الملف الرئيسي الوحيد من تلقاء نفسه.",
+        "kk": "Жүйе жалғыз мастер-файлды өзі жойды."
+      }
+    }
+  ],
+  "contentVersion": "night-train-1.0",
+  "narrative": {
+    "preBrief": {
+      "ru": "Ночная репетиция в пустом ресторане. Микрофон записал больше, чем рассчитывала певица.",
+      "en": "A night rehearsal in an empty restaurant car. The microphone recorded more than the singer intended.",
+      "tr": "Boş restoran vagonunda gece provası. Mikrofon, şarkıcının umduğundan fazlasını kaydetti.",
+      "ar": "بروفة ليلية في عربة مطعم خالية. سجّل الميكروفون أكثر مما توقعت المغنية.",
+      "kk": "Бос мейрамханадағы түнгі репетиция. Микрофон әншінің ойлағанынан көбірек жазып алды."
+    },
+    "postVerdictNote": {
+      "ru": "Семи минут достаточно, чтобы снять ящик. Недостаточно, чтобы объяснить остановку диспетчеру.",
+      "en": "Seven minutes is enough to take a crate off. Not enough to explain the stop to the dispatcher.",
+      "tr": "Yedi dakika bir sandığı indirmeye yeter. Duruşu dispeçere açıklamaya yetmez.",
+      "ar": "سبع دقائق تكفي لإنزال صندوق. لكنها لا تكفي لتبرير التوقف أمام المراقب.",
+      "kk": "Жеті минут жәшікті түсіруге жетеді. Аялдаманы диспетчерге түсіндіруге жетпейді."
+    },
+    "nextCaseTeaser": {
+      "ru": "У пассажира в сером пальто оказываются два билета — и один из них до станции, которой нет.",
+      "en": "The passenger in the grey coat turns out to have two tickets — one of them to a station that does not exist.",
+      "tr": "Gri paltolu yolcuda iki bilet çıkıyor ve biri var olmayan bir istasyona.",
+      "ar": "يتبيّن أن لدى الراكب ذي المعطف الرمادي تذكرتين، إحداهما إلى محطة غير موجودة.",
+      "kk": "Сұр пальтолы жолаушыда екі билет бар болып шығады — бірі жоқ станцияға."
+    },
+    "seasonClue": {
+      "id": "seven-minutes",
+      "progressIndex": 6,
+      "progressTotal": 10,
+      "label": {
+        "ru": "Фраза «семь минут на Тихой»",
+        "en": "The Line \"Seven Minutes at Tikhaya\"",
+        "tr": "«Tihaya’da yedi dakika» Sözü",
+        "ar": "عبارة «سبع دقائق في تيخايا»",
+        "kk": "«Тихаяда жеті минут» деген сөз"
+      },
+      "description": {
+        "ru": "Закрытая платформа превращается из атмосферной странности в точку запланированной остановки. До неё чуть больше трёх часов.",
+        "en": "The closed platform turns from an atmospheric oddity into a planned stop. It is a little over three hours away.",
+        "tr": "Kapalı peron, atmosferik bir tuhaflıktan planlanmış bir durağa dönüşüyor. Oraya üç saatten biraz fazla var.",
+        "ar": "يتحول الرصيف المغلق من غرابة في الأجواء إلى محطة توقف مخططة، وتفصلنا عنه ثلاث ساعات ونيّف.",
+        "kk": "Жабық платформа әсерлі оғаштықтан жоспарланған аялдамаға айналады. Оған үш сағаттан сәл астам уақыт қалды."
+      }
+    },
+    "epilogue": null
+  }
+}

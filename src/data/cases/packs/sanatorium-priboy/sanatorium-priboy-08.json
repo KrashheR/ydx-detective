@@ -1,0 +1,584 @@
+{
+  "id": "sanatorium-priboy-08",
+  "type": "archive",
+  "difficulty": "hard",
+  "claimAmount": 900000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Ключ от закрытого номера",
+    "en": "The Key to the Sealed Room",
+    "tr": "Kapalı Odanın Anahtarı",
+    "ar": "مفتاح الغرفة المغلقة",
+    "kk": "Жабық нөмірдің кілті"
+  },
+  "claim": {
+    "person": {
+      "ru": "Глеб Викторович Лебедев, 52 года",
+      "en": "Gleb Viktorovich Lebedev, age 52",
+      "tr": "Gleb Viktoroviç Lebedev, 52 yaşında",
+      "ar": "غليب فيكتوروفيتش ليبيديف، 52 عامًا",
+      "kk": "Глеб Викторович Лебедев, 52 жаста"
+    },
+    "story": {
+      "ru": "Номер 404 не существует с 1999 года: после ремонта проём заложен, помещение исключено из плана. Всё имущество внутри уничтожено водой при старом затоплении, доступ невозможен и опасен. Найденные документы следует оформить как погибшие.",
+      "en": "Room 404 has not existed since 1999: after the refurbishment the opening was bricked up and the space removed from the plan. All property inside was destroyed by water in the old flooding; access is impossible and dangerous. The documents found should be written off as lost.",
+      "tr": "404 numaralı oda 1999’dan beri yok: tadilattan sonra açıklık örülmüş ve mekân plandan çıkarılmış. İçerideki tüm eşya eski su baskınında yok olmuş; erişim imkânsız ve tehlikeli. Bulunan belgeler zayi olarak kaydedilmeli.",
+      "ar": "الغرفة 404 غير موجودة منذ 1999: بعد الترميم سُدّت الفتحة وأُزيل المكان من المخطط. وقد أتلف الماء كل ما بداخلها في الفيضان القديم، والوصول مستحيل وخطر. وينبغي قيد الوثائق المكتشفة كتالفة.",
+      "kk": "404 нөмір 1999 жылдан бері жоқ: жөндеуден кейін ойық бітеліп, бөлме жоспардан шығарылған. Ішіндегі бүкіл мүлік ескі су басу кезінде жойылған, кіру мүмкін емес әрі қауіпті. Табылған құжаттарды жойылған деп ресімдеу керек."
+    }
+  },
+  "coverImage": "covers/packs/sanatorium-priboy-08.svg",
+  "personImage": "people/packs/sanatorium-priboy/gleb_lebedev.webp",
+  "client": {
+    "role": {
+      "ru": "Заявитель · представитель покупателя «Горизонт Девелопмент»",
+      "en": "Claimant · representative of the buyer, Horizon Development",
+      "tr": "Talep sahibi · alıcı «Horizon Development» temsilcisi",
+      "ar": "مقدم الطلب · ممثل المشتري «هورايزن ديفلوبمنت»",
+      "kk": "Өтініш беруші · «Горизонт Девелопмент» сатып алушысының өкілі"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Смена",
+          "en": "Shift",
+          "tr": "Vardiya",
+          "ar": "الوردية",
+          "kk": "Ауысым"
+        },
+        "v": {
+          "ru": "Последняя смена, август 2026",
+          "en": "The last shift, August 2026",
+          "tr": "Son vardiya, Ağustos 2026",
+          "ar": "الوردية الأخيرة، أغسطس 2026",
+          "kk": "Соңғы ауысым, 2026 жылғы тамыз"
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "SP08-E1",
+      "order": 1,
+      "type": "thermal_scan",
+      "title": {
+        "ru": "Тепловая карта фальшстены",
+        "en": "Thermal Map of the False Wall",
+        "tr": "Sahte Duvarın Termal Haritası",
+        "ar": "الخريطة الحرارية للجدار الوهمي",
+        "kk": "Жалған қабырғаның жылу картасы"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "За стеной круглосуточно работает бытовой осушитель воздуха: помещение сухое, и имущество внутри водой не уничтожено.",
+        "en": "A domestic dehumidifier runs behind the wall around the clock: the room is dry and the property inside was not destroyed by water.",
+        "tr": "Duvarın arkasında bir ev tipi nem alma cihazı yirmi dört saat çalışıyor: mekân kuru ve içindeki eşya su nedeniyle yok olmamış.",
+        "ar": "خلف الجدار يعمل مزيل رطوبة منزلي على مدار الساعة: المكان جاف ولم يتلف الماء ما بداخله.",
+        "kk": "Қабырға артында тұрмыстық ауа құрғатқыш тәулік бойы жұмыс істейді: бөлме құрғақ, ішіндегі мүлік сумен жойылмаған."
+      },
+      "statementLink": {
+        "statementId": "claim_destroyed",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "За стеной круглосуточно работает бытовой осушитель воздуха: помещение сухое, и имущество внутри водой не уничтожено.",
+          "en": "A domestic dehumidifier runs behind the wall around the clock: the room is dry and the property inside was not destroyed by water.",
+          "tr": "Duvarın arkasında bir ev tipi nem alma cihazı yirmi dört saat çalışıyor: mekân kuru ve içindeki eşya su nedeniyle yok olmamış.",
+          "ar": "خلف الجدار يعمل مزيل رطوبة منزلي على مدار الساعة: المكان جاف ولم يتلف الماء ما بداخله.",
+          "kk": "Қабырға артында тұрмыстық ауа құрғатқыш тәулік бойы жұмыс істейді: бөлме құрғақ, ішіндегі мүлік сумен жойылмаған."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_destroyed",
+        "reason": {
+          "ru": "За стеной круглосуточно работает бытовой осушитель воздуха: помещение сухое, и имущество внутри водой не уничтожено.",
+          "en": "A domestic dehumidifier runs behind the wall around the clock: the room is dry and the property inside was not destroyed by water.",
+          "tr": "Duvarın arkasında bir ev tipi nem alma cihazı yirmi dört saat çalışıyor: mekân kuru ve içindeki eşya su nedeniyle yok olmamış.",
+          "ar": "خلف الجدار يعمل مزيل رطوبة منزلي على مدار الساعة: المكان جاف ولم يتلف الماء ما بداخله.",
+          "kk": "Қабырға артында тұрмыстық ауа құрғатқыш тәулік бойы жұмыс істейді: бөлме құрғақ, ішіндегі мүлік сумен жойылмаған."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "description": {
+        "ru": "Стену, за которой находится бывший номер 404, сняли тепловизором с коридора западного крыла.",
+        "en": "The wall behind which the former room 404 lies was imaged with a thermal camera from the west-wing corridor.",
+        "tr": "Eski 404 numaralı odanın arkasında kaldığı duvar, batı kanadı koridorundan termal kamerayla görüntülendi.",
+        "ar": "صُوّر الجدار الذي تقع خلفه الغرفة 404 سابقًا بكاميرا حرارية من ممر الجناح الغربي.",
+        "kk": "Бұрынғы 404 нөмір орналасқан қабырға батыс қанаттың дәлізінен жылу камерасымен түсірілді."
+      },
+      "instruction": {
+        "ru": "Включите тепловой режим и найдите за стеной источник постоянного тепла.",
+        "en": "Switch to thermal mode and find the source of steady heat behind the wall.",
+        "tr": "Termal moda geçin ve duvarın arkasındaki sürekli ısı kaynağını bulun.",
+        "ar": "انتقل إلى الوضع الحراري وابحث خلف الجدار عن مصدر حرارة ثابت.",
+        "kk": "Жылулық режимді қосып, қабырға артындағы тұрақты жылу көзін табыңыз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/sanatorium-priboy/sp08-e1.webp"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Затопленное и брошенное помещение не может содержать работающую технику: игрок сам это устанавливает.",
+          "en": "A flooded, abandoned space cannot contain working equipment: the player establishes this themselves.",
+          "tr": "Su basmış ve terk edilmiş bir mekânda çalışan cihaz olamaz: oyuncu bunu kendisi saptar.",
+          "ar": "المكان المغمور والمهجور لا يمكن أن يضم أجهزة عاملة: يثبت اللاعب ذلك بنفسه.",
+          "kk": "Су басқан, тасталған бөлмеде жұмыс істейтін техника болуы мүмкін емес: ойыншы мұны өзі анықтайды."
+        },
+        "playerAction": {
+          "ru": "Включите тепловой режим и найдите за стеной источник постоянного тепла.",
+          "en": "Switch to thermal mode and find the source of steady heat behind the wall.",
+          "tr": "Termal moda geçin ve duvarın arkasındaki sürekli ısı kaynağını bulun.",
+          "ar": "انتقل إلى الوضع الحراري وابحث خلف الجدار عن مصدر حرارة ثابت.",
+          "kk": "Жылулық режимді қосып, қабырға артындағы тұрақты жылу көзін табыңыз."
+        },
+        "conclusion": {
+          "ru": "За стеной круглосуточно работает бытовой осушитель воздуха: помещение сухое, и имущество внутри водой не уничтожено.",
+          "en": "A domestic dehumidifier runs behind the wall around the clock: the room is dry and the property inside was not destroyed by water.",
+          "tr": "Duvarın arkasında bir ev tipi nem alma cihazı yirmi dört saat çalışıyor: mekân kuru ve içindeki eşya su nedeniyle yok olmamış.",
+          "ar": "خلف الجدار يعمل مزيل رطوبة منزلي على مدار الساعة: المكان جاف ولم يتلف الماء ما بداخله.",
+          "kk": "Қабырға артында тұрмыстық ауа құрғатқыш тәулік бойы жұмыс істейді: бөлме құрғақ, ішіндегі мүлік сумен жойылмаған."
+        }
+      },
+      "data": {
+        "ambientTemperature": 21,
+        "observationTime": "23:40",
+        "claimedLastUseBefore": "1999",
+        "elapsedSinceClaimedUseMinutes": 0,
+        "coolingReference": "Заброшенное помещение имеет температуру стен коридора, +21 °C",
+        "coolingReferenceEn": "An abandoned space matches the corridor wall temperature, +21 °C",
+        "initialMode": "normal",
+        "heatZones": [
+          {
+            "id": "dehumidifier",
+            "shape": "circle",
+            "x": 58,
+            "y": 56,
+            "width": 17,
+            "height": 17,
+            "temperature": 44,
+            "intensity": 0.86,
+            "label": "Работающий осушитель",
+            "labelEn": "Running dehumidifier",
+            "isContradiction": true,
+            "isTarget": true
+          },
+          {
+            "id": "cold-plaster",
+            "shape": "circle",
+            "x": 24,
+            "y": 30,
+            "width": 14,
+            "height": 14,
+            "temperature": 21,
+            "intensity": 0.1,
+            "label": "Штукатурка фальшстены",
+            "labelEn": "False-wall plaster"
+          },
+          {
+            "id": "floor-joint",
+            "shape": "circle",
+            "x": 46,
+            "y": 84,
+            "width": 14,
+            "height": 14,
+            "temperature": 20,
+            "intensity": 0.08,
+            "label": "Стык пола и стены",
+            "labelEn": "Floor-to-wall joint"
+          }
+        ],
+        "successCondition": {
+          "type": "select_any",
+          "zoneIds": [
+            "dehumidifier"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SP08-E2",
+      "order": 2,
+      "type": "usage_log",
+      "title": {
+        "ru": "Лог электросчётчика",
+        "en": "Electricity Meter Log",
+        "tr": "Elektrik Sayacı Kaydı",
+        "ar": "سجل عداد الكهرباء",
+        "kk": "Электр есептегішінің логі"
+      },
+      "content": {
+        "ru": "Линия 404 значится в щите как отключённая. Фактическое потребление: 0,6–0,9 кВт·ч каждую ночь с 23:00 до 06:00 на протяжении последних четырнадцати месяцев. Днём потребление нулевое.",
+        "en": "Line 404 is marked in the switchboard as disconnected. Actual consumption: 0.6–0.9 kWh every night from 23:00 to 06:00 over the past fourteen months. Daytime consumption is zero.",
+        "tr": "404 hattı panoda «kesik» olarak işaretli. Gerçek tüketim: son on dört aydır her gece 23:00–06:00 arasında 0,6–0,9 kWh. Gündüz tüketim sıfır.",
+        "ar": "الخط 404 مسجل في اللوحة على أنه مفصول. الاستهلاك الفعلي: 0.6–0.9 كيلوواط ساعة كل ليلة من 23:00 حتى 06:00 على مدى الأشهر الأربعة عشر الماضية. أما نهارًا فالاستهلاك صفر.",
+        "kk": "404 желісі қалқанда ажыратылған деп белгіленген. Нақты тұтыну: соңғы он төрт айда әр түні 23:00-ден 06:00-ге дейін 0,6–0,9 кВт·сағ. Күндіз тұтыну нөлге тең."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Замурованное помещение не может потреблять электричество по ночному графику — номер существует и регулярно используется.",
+        "en": "A bricked-up space cannot draw electricity on a nightly schedule — the room exists and is in regular use.",
+        "tr": "Örülmüş bir mekân gecelik bir programla elektrik çekemez; oda mevcut ve düzenli olarak kullanılıyor.",
+        "ar": "المكان المسدود لا يمكن أن يستهلك كهرباء وفق جدول ليلي، فالغرفة موجودة وتُستخدم بانتظام.",
+        "kk": "Бітелген бөлме түнгі кесте бойынша ток тұтына алмайды — нөмір бар және үнемі пайдаланылады."
+      },
+      "statementLink": {
+        "statementId": "claim_sealed",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Замурованное помещение не может потреблять электричество по ночному графику — номер существует и регулярно используется.",
+          "en": "A bricked-up space cannot draw electricity on a nightly schedule — the room exists and is in regular use.",
+          "tr": "Örülmüş bir mekân gecelik bir programla elektrik çekemez; oda mevcut ve düzenli olarak kullanılıyor.",
+          "ar": "المكان المسدود لا يمكن أن يستهلك كهرباء وفق جدول ليلي، فالغرفة موجودة وتُستخدم بانتظام.",
+          "kk": "Бітелген бөлме түнгі кесте бойынша ток тұтына алмайды — нөмір бар және үнемі пайдаланылады."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_sealed",
+        "reason": {
+          "ru": "Замурованное помещение не может потреблять электричество по ночному графику — номер существует и регулярно используется.",
+          "en": "A bricked-up space cannot draw electricity on a nightly schedule — the room exists and is in regular use.",
+          "tr": "Örülmüş bir mekân gecelik bir programla elektrik çekemez; oda mevcut ve düzenli olarak kullanılıyor.",
+          "ar": "المكان المسدود لا يمكن أن يستهلك كهرباء وفق جدول ليلي، فالغرفة موجودة وتُستخدم بانتظام.",
+          "kk": "Бітелген бөлме түнгі кесте бойынша ток тұтына алмайды — нөмір бар және үнемі пайдаланылады."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/sanatorium-priboy/sp08-e2.webp",
+        "logPrompt": "electricity meter log, line 404"
+      }
+    },
+    {
+      "id": "SP08-E3",
+      "order": 3,
+      "type": "document",
+      "title": {
+        "ru": "План реконструкции 1999 года",
+        "en": "1999 Reconstruction Plan",
+        "tr": "1999 Yeniden Yapılanma Planı",
+        "ar": "مخطط إعادة الإعمار لعام 1999",
+        "kk": "1999 жылғы қайта жаңарту жоспары"
+      },
+      "content": {
+        "ru": "На листе 4 показана фальшстена в коридоре западного крыла. За ней обозначен сервисный проход шириной 70 см с ревизионной дверцей — он сохранён «для доступа к стоякам» и в поздние планы не перенесён.",
+        "en": "Sheet 4 shows the false wall in the west-wing corridor. Behind it a 70 cm service passage with an inspection hatch is marked — retained \"for access to the risers\" and never carried over into later plans.",
+        "tr": "Sayfa 4, batı kanadı koridorundaki sahte duvarı gösteriyor. Arkasında denetim kapaklı 70 cm’lik bir servis geçidi işaretli; «kolonlara erişim için» korunmuş ve sonraki planlara aktarılmamış.",
+        "ar": "تُظهر الورقة 4 الجدار الوهمي في ممر الجناح الغربي. وخلفه مرسوم ممر خدمة بعرض 70 سم مع باب تفتيش، أُبقي «للوصول إلى المواسير» ولم يُنقل إلى المخططات اللاحقة.",
+        "kk": "4-парақта батыс қанаттың дәлізіндегі жалған қабырға көрсетілген. Оның артында тексеру есікшесі бар 70 см қызметтік өтпе белгіленген — ол «тік құбырларға қол жеткізу үшін» сақталған және кейінгі жоспарларға көшірілмеген."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "План показывает, что физический доступ существует, но не доказывает, что им пользовались и что имущество уцелело.",
+        "en": "The plan shows physical access exists, yet it proves neither that it was used nor that the property survived.",
+        "tr": "Plan, fiziksel erişimin bulunduğunu gösteriyor ama ne kullanıldığını ne de eşyanın sağlam kaldığını kanıtlıyor.",
+        "ar": "يُظهر المخطط وجود منفذ مادي، لكنه لا يثبت أنه استُخدم ولا أن الممتلكات سلمت.",
+        "kk": "Жоспар физикалық кірудің бар екенін көрсетеді, бірақ оның пайдаланылғанын да, мүліктің аман қалғанын да дәлелдемейді."
+      },
+      "statementLink": {
+        "statementId": "claim_sealed",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "План показывает, что физический доступ существует, но не доказывает, что им пользовались и что имущество уцелело.",
+          "en": "The plan shows physical access exists, yet it proves neither that it was used nor that the property survived.",
+          "tr": "Plan, fiziksel erişimin bulunduğunu gösteriyor ama ne kullanıldığını ne de eşyanın sağlam kaldığını kanıtlıyor.",
+          "ar": "يُظهر المخطط وجود منفذ مادي، لكنه لا يثبت أنه استُخدم ولا أن الممتلكات سلمت.",
+          "kk": "Жоспар физикалық кірудің бар екенін көрсетеді, бірақ оның пайдаланылғанын да, мүліктің аман қалғанын да дәлелдемейді."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/sanatorium-priboy/sp08-e3.webp"
+      }
+    },
+    {
+      "id": "SP08-E4",
+      "order": 4,
+      "type": "surface_reveal",
+      "title": {
+        "ru": "Табличка под штукатурной пылью",
+        "en": "The Plaque Under Plaster Dust",
+        "tr": "Sıva Tozu Altındaki Levha",
+        "ar": "اللوحة تحت غبار الجص",
+        "kk": "Сылақ шаңының астындағы тақтайша"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Под пылью — эмалированная табличка «404» и свежие царапины вокруг личинки замка: дверью пользовались недавно и неоднократно.",
+        "en": "Under the dust is an enamel plaque reading \"404\" and fresh scratches around the lock cylinder: the door has been used recently and repeatedly.",
+        "tr": "Tozun altında «404» yazılı emaye bir levha ve kilit göbeğinin çevresinde taze çizikler var: kapı yakın zamanda ve defalarca kullanılmış.",
+        "ar": "تحت الغبار لوحة مطلية بالمينا كُتب عليها «404» وخدوش حديثة حول أسطوانة القفل: استُخدم الباب مؤخرًا ومرارًا.",
+        "kk": "Шаңның астында «404» деген эмальді тақтайша және құлып өзегінің айналасында жаңа сызаттар: есік жақында әрі бірнеше рет пайдаланылған."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Под пылью — эмалированная табличка «404» и свежие царапины вокруг личинки замка: дверью пользовались недавно и неоднократно.",
+          "en": "Under the dust is an enamel plaque reading \"404\" and fresh scratches around the lock cylinder: the door has been used recently and repeatedly.",
+          "tr": "Tozun altında «404» yazılı emaye bir levha ve kilit göbeğinin çevresinde taze çizikler var: kapı yakın zamanda ve defalarca kullanılmış.",
+          "ar": "تحت الغبار لوحة مطلية بالمينا كُتب عليها «404» وخدوش حديثة حول أسطوانة القفل: استُخدم الباب مؤخرًا ومرارًا.",
+          "kk": "Шаңның астында «404» деген эмальді тақтайша және құлып өзегінің айналасында жаңа сызаттар: есік жақында әрі бірнеше рет пайдаланылған."
+        }
+      },
+      "evidenceTier": "supporting",
+      "description": {
+        "ru": "В глубине сервисного прохода на двери закреплена номерная табличка, засыпанная строительной пылью.",
+        "en": "Deep in the service passage a number plaque is fixed to a door, buried under construction dust.",
+        "tr": "Servis geçidinin derinliğinde bir kapıya numara levhası tutturulmuş ve inşaat tozuyla kaplanmış.",
+        "ar": "في عمق ممر الخدمة تُثبَّت لوحة رقم على باب، مغطاة بغبار البناء.",
+        "kk": "Қызметтік өтпенің тереңінде есікке құрылыс шаңы басқан нөмір тақтайшасы бекітілген."
+      },
+      "instruction": {
+        "ru": "Счистите пыль с таблички и осмотрите область вокруг замка.",
+        "en": "Wipe the dust off the plaque and examine the area around the lock.",
+        "tr": "Levhadaki tozu silin ve kilidin çevresini inceleyin.",
+        "ar": "امسح الغبار عن اللوحة وافحص المنطقة حول القفل.",
+        "kk": "Тақтайшадағы шаңды сүртіп, құлып маңын қараңыз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/sanatorium-priboy/sp08-e4.webp",
+        "coverTexture": "shared/surface/dirt.svg",
+        "revealMasks": [
+          "shared/surface/trace-mask.svg"
+        ],
+        "toolCursor": "shared/surface/cloth-cursor.svg"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": false,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Игрок сам подтверждает, что за фальшстеной действительно номер 404 и что им пользуются.",
+          "en": "The player confirms for themselves that room 404 really lies behind the false wall and that it is in use.",
+          "tr": "Oyuncu, sahte duvarın arkasında gerçekten 404 numaralı odanın bulunduğunu ve kullanıldığını kendisi doğrular.",
+          "ar": "يؤكد اللاعب بنفسه أن الغرفة 404 تقع فعلًا خلف الجدار الوهمي وأنها مستخدمة.",
+          "kk": "Ойыншы жалған қабырға артында шынымен 404 нөмір бар екенін және оның пайдаланылатынын өзі растайды."
+        },
+        "playerAction": {
+          "ru": "Счистите пыль с таблички и осмотрите область вокруг замка.",
+          "en": "Wipe the dust off the plaque and examine the area around the lock.",
+          "tr": "Levhadaki tozu silin ve kilidin çevresini inceleyin.",
+          "ar": "امسح الغبار عن اللوحة وافحص المنطقة حول القفل.",
+          "kk": "Тақтайшадағы шаңды сүртіп, құлып маңын қараңыз."
+        },
+        "conclusion": {
+          "ru": "Под пылью — эмалированная табличка «404» и свежие царапины вокруг личинки замка: дверью пользовались недавно и неоднократно.",
+          "en": "Under the dust is an enamel plaque reading \"404\" and fresh scratches around the lock cylinder: the door has been used recently and repeatedly.",
+          "tr": "Tozun altında «404» yazılı emaye bir levha ve kilit göbeğinin çevresinde taze çizikler var: kapı yakın zamanda ve defalarca kullanılmış.",
+          "ar": "تحت الغبار لوحة مطلية بالمينا كُتب عليها «404» وخدوش حديثة حول أسطوانة القفل: استُخدم الباب مؤخرًا ومرارًا.",
+          "kk": "Шаңның астында «404» деген эмальді тақтайша және құлып өзегінің айналасында жаңа сызаттар: есік жақында әрі бірнеше рет пайдаланылған."
+        }
+      },
+      "data": {
+        "mode": "erase",
+        "coverType": "dust",
+        "brush": {
+          "radius": 40,
+          "hardness": 0.6,
+          "opacity": 0.85,
+          "spacing": 8
+        },
+        "completion": {
+          "type": "discover_any",
+          "requiredTraceIds": [
+            "plaque-404"
+          ]
+        },
+        "traces": [
+          {
+            "id": "plaque-404",
+            "label": "Табличка «404» и свежие царапины",
+            "labelEn": "Plaque \"404\" and fresh scratches",
+            "requiredRevealPercent": 52,
+            "mask": "shared/surface/trace-mask.svg",
+            "shape": "mask",
+            "isContradiction": false,
+            "conclusion": "Под пылью читается номер 404, а вокруг замка — свежие царапины от ключа.",
+            "conclusionEn": "Under the dust the number 404 is legible, and around the lock are fresh key scratches."
+          }
+        ]
+      }
+    },
+    {
+      "id": "SP08-E5",
+      "order": 5,
+      "type": "gps",
+      "title": {
+        "ru": "GPS автомобиля Лебедева",
+        "en": "Lebedev's Vehicle GPS",
+        "tr": "Lebedev’in Aracının GPS’i",
+        "ar": "نظام تحديد المواقع لمركبة ليبيديف",
+        "kk": "Лебедев көлігінің GPS-і"
+      },
+      "content": {
+        "ru": "За последние два месяца — одиннадцать ночных остановок у технического входа западного крыла, все между 23:20 и 01:40, длительностью от 25 до 50 минут.",
+        "en": "Over the past two months — eleven night stops at the west-wing service entrance, all between 23:20 and 01:40, lasting from 25 to 50 minutes.",
+        "tr": "Son iki ayda — batı kanadının teknik girişinde on bir gece duruşu, hepsi 23:20 ile 01:40 arasında, 25–50 dakika süreyle.",
+        "ar": "خلال الشهرين الماضيين — إحدى عشرة وقفة ليلية عند المدخل الفني للجناح الغربي، جميعها بين 23:20 و01:40، بمدة 25 إلى 50 دقيقة.",
+        "kk": "Соңғы екі айда — батыс қанаттың техникалық кірер тұсында он бір түнгі аялдама, бәрі 23:20 бен 01:40 аралығында, 25–50 минут ұзақтықта."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Регулярность визитов совпадает с ночным потреблением линии 404, но трек не показывает, кто входил внутрь и что там находится.",
+        "en": "The regularity of the visits matches the night consumption on line 404, yet the track does not show who went inside or what is there.",
+        "tr": "Ziyaretlerin düzenliliği 404 hattının gece tüketimiyle örtüşüyor; ancak iz, içeri kimin girdiğini ve orada ne olduğunu göstermiyor.",
+        "ar": "يتوافق انتظام الزيارات مع الاستهلاك الليلي للخط 404، لكن المسار لا يبيّن من دخل ولا ما يوجد هناك.",
+        "kk": "Сапарлардың жүйелілігі 404 желісінің түнгі тұтынуымен сәйкес келеді, бірақ трек ішке кім кіргенін және онда не барын көрсетпейді."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Регулярность визитов совпадает с ночным потреблением линии 404, но трек не показывает, кто входил внутрь и что там находится.",
+          "en": "The regularity of the visits matches the night consumption on line 404, yet the track does not show who went inside or what is there.",
+          "tr": "Ziyaretlerin düzenliliği 404 hattının gece tüketimiyle örtüşüyor; ancak iz, içeri kimin girdiğini ve orada ne olduğunu göstermiyor.",
+          "ar": "يتوافق انتظام الزيارات مع الاستهلاك الليلي للخط 404، لكن المسار لا يبيّن من دخل ولا ما يوجد هناك.",
+          "kk": "Сапарлардың жүйелілігі 404 желісінің түнгі тұтынуымен сәйкес келеді, бірақ трек ішке кім кіргенін және онда не барын көрсетпейді."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/sanatorium-priboy/sp08-e5.webp",
+        "gpsFooter": {
+          "ru": "Трек автомобиля Г. Лебедева",
+          "en": "Track of G. Lebedev's vehicle",
+          "tr": "G. Lebedev’in aracının izi",
+          "ar": "مسار مركبة غ. ليبيديف",
+          "kk": "Г. Лебедев көлігінің тректі"
+        }
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "За фальшстеной круглосуточно работает осушитель — помещение сухое, водой имущество не уничтожено.",
+      "Линия 404 каждую ночь потребляет электричество, хотя числится отключённой с 1999 года.",
+      "На двери за сервисным проходом сохранилась табличка «404» со свежими царапинами у замка."
+    ],
+    "en": [
+      "A dehumidifier runs behind the false wall around the clock — the space is dry and nothing was destroyed by water.",
+      "Line 404 draws electricity every night although it is listed as disconnected since 1999.",
+      "The door beyond the service passage still carries the plaque \"404\" with fresh scratches by the lock."
+    ],
+    "tr": [
+      "Sahte duvarın arkasında bir nem alma cihazı sürekli çalışıyor; mekân kuru ve hiçbir şey su nedeniyle yok olmamış.",
+      "404 hattı, 1999’dan beri kesik görünmesine rağmen her gece elektrik çekiyor.",
+      "Servis geçidinin ardındaki kapıda hâlâ «404» levhası ve kilidin yanında taze çizikler var."
+    ],
+    "ar": [
+      "خلف الجدار الوهمي يعمل مزيل رطوبة على مدار الساعة؛ المكان جاف ولم يتلف الماء شيئًا.",
+      "يستهلك الخط 404 الكهرباء كل ليلة رغم تسجيله مفصولًا منذ 1999.",
+      "وعلى الباب خلف ممر الخدمة لا تزال لوحة «404» وخدوش حديثة قرب القفل."
+    ],
+    "kk": [
+      "Жалған қабырға артында құрғатқыш тәулік бойы жұмыс істейді — бөлме құрғақ, мүлік сумен жойылмаған.",
+      "404 желісі 1999 жылдан бері ажыратылған деп саналса да, әр түні ток тұтынады.",
+      "Қызметтік өтпе артындағы есікте «404» тақтайшасы және құлып қасында жаңа сызаттар сақталған."
+    ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "stampable": false,
+      "text": {
+        "ru": "Имущество номера 404 подлежит списанию как уничтоженное.",
+        "en": "The property of room 404 should be written off as destroyed.",
+        "tr": "404 numaralı odanın eşyası yok olmuş sayılarak silinmelidir.",
+        "ar": "ينبغي شطب ممتلكات الغرفة 404 باعتبارها تالفة.",
+        "kk": "404 нөмірдің мүлкі жойылған деп есептен шығарылуға тиіс."
+      }
+    },
+    {
+      "id": "claim_sealed",
+      "stampable": true,
+      "text": {
+        "ru": "Номер 404 замурован с 1999 года, доступ в него невозможен.",
+        "en": "Room 404 has been bricked up since 1999 and cannot be entered.",
+        "tr": "404 numaralı oda 1999’dan beri örülü ve içine girilemez.",
+        "ar": "الغرفة 404 مسدودة منذ 1999 ولا يمكن دخولها.",
+        "kk": "404 нөмір 1999 жылдан бері бітелген, оған кіру мүмкін емес."
+      }
+    },
+    {
+      "id": "claim_destroyed",
+      "stampable": true,
+      "text": {
+        "ru": "Всё имущество внутри уничтожено водой.",
+        "en": "All the property inside was destroyed by water.",
+        "tr": "İçerideki tüm eşya su nedeniyle yok olmuştur.",
+        "ar": "كل ما بداخلها أتلفه الماء.",
+        "kk": "Ішіндегі бүкіл мүлік сумен жойылған."
+      }
+    }
+  ],
+  "contentVersion": "sanatorium-priboy-1.0",
+  "narrative": {
+    "preBrief": {
+      "ru": "В архиве нашли ключ от номера, которого по документам не существует уже двадцать семь лет.",
+      "en": "A key has turned up in the archive — to a room that on paper has not existed for twenty-seven years.",
+      "tr": "Arşivde, kâğıt üzerinde yirmi yedi yıldır var olmayan bir odanın anahtarı bulundu.",
+      "ar": "وُجد في الأرشيف مفتاح لغرفة لم تعد موجودة على الورق منذ سبعة وعشرين عامًا.",
+      "kk": "Архивтен құжат бойынша жиырма жеті жыл бұрын жоғалған нөмірдің кілті табылды."
+    },
+    "postVerdictNote": {
+      "ru": "Рогов разглядывает счета: «Номер не существовал двадцать семь лет. Коммунальные платежи были менее внушаемы».",
+      "en": "Rogov studies the bills: \"The room did not exist for twenty-seven years. The utility payments were less suggestible.\"",
+      "tr": "Rogov faturalara bakıyor: «Oda yirmi yedi yıl var olmadı. Faturalar ise daha az telkine gelirmiş.»",
+      "ar": "يتفحص روغوف الفواتير: «الغرفة لم توجد سبعة وعشرين عامًا. أما فواتير المرافق فكانت أقل قابلية للإيحاء.»",
+      "kk": "Рогов шоттарды қарайды: «Нөмір жиырма жеті жыл болмаған. Ал коммуналдық төлемдер онша сенгіш болмаған»."
+    },
+    "nextCaseTeaser": {
+      "ru": "В закрытом номере кто-то пил чай десять минут назад.",
+      "en": "Somebody was drinking tea in the sealed room ten minutes ago.",
+      "tr": "Kapalı odada biri on dakika önce çay içiyordu.",
+      "ar": "قبل عشر دقائق كان أحدهم يشرب الشاي في الغرفة المغلقة.",
+      "kk": "Жабық нөмірде біреу он минут бұрын шай ішкен."
+    },
+    "seasonClue": {
+      "id": "dry-archive-404",
+      "progressIndex": 8,
+      "progressTotal": 10,
+      "label": {
+        "ru": "Сухой архив в номере 404",
+        "en": "The Dry Archive in Room 404",
+        "tr": "404 Numaralı Odadaki Kuru Arşiv",
+        "ar": "الأرشيف الجاف في الغرفة 404",
+        "kk": "404 нөмірдегі құрғақ архив"
+      },
+      "description": {
+        "ru": "Внутри — доска со страховыми агентами, копии паспортов и пустое место от журнала. На столе свежая чашка и половина той самой фотографии 1998 года.",
+        "en": "Inside is a board of insurance agents, passport copies and an empty space where a logbook stood. On the table sit a fresh cup and half of that very 1998 photograph.",
+        "tr": "İçeride sigorta acentelerinin panosu, pasaport kopyaları ve bir kayıt defterinin boş yeri var. Masada taze bir fincan ve o 1998 fotoğrafının yarısı duruyor.",
+        "ar": "في الداخل لوحة بأسماء وكلاء تأمين ونسخ جوازات ومكان خالٍ كان يشغله سجل. وعلى الطاولة فنجان طازج ونصف تلك الصورة من 1998.",
+        "kk": "Ішінде сақтандыру агенттерінің тақтасы, паспорт көшірмелері және журналдың бос орны бар. Үстелде жаңа тостаған және сол 1998 жылғы фотосуреттің жартысы жатыр."
+      }
+    },
+    "epilogue": null
+  }
+}

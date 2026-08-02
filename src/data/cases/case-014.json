@@ -544,5 +544,87 @@
     },
     "seasonClue": null,
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "bolat_zhumabekov",
+      "displayName": {
+        "ru": "Болат Жумабеков",
+        "en": "Bolat Zhumabekov",
+        "tr": "Bolat Jumabekov",
+        "ar": "بولات جوماباييف",
+        "kk": "Болат Жұмабеков"
+      },
+      "portraitState": "principled"
+    },
+    "finalLine": {
+      "ru": "Град забрал половину поля. Вторую половину я ему не припишу.",
+      "en": "The hail took half the field. I will not credit it with the other half.",
+      "tr": "Dolu tarlanın yarısını aldı. Diğer yarısını ona yazmam.",
+      "ar": "أخذ البرد نصف الحقل. ولن أنسب إليه النصف الآخر.",
+      "kk": "Бұршақ егістің жартысын алды. Қалған жартысын оған жаппаймын."
+    },
+    "emotionalMode": "relief",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Радар фиксирует градовую ячейку шириной 1,8 км, прошедшую через участок в 16:22.",
+          "en": "Radar records a 1.8 km wide hail cell crossing the plot at 4:22 p.m.",
+          "tr": "Radar, 16.22'de araziden geçen 1,8 km genişliğinde bir dolu hücresi kaydediyor.",
+          "ar": "يسجّل الرادار خلية بَرَد عرضها 1.8 كم عبرت القطعة عند 16:22.",
+          "kk": "Радар 16:22-де телімнен өткен ені 1,8 км бұршақ ұяшығын тіркеген."
+        },
+        "evidenceIds": [
+          "ev-weather"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Светлая полоса побитой пшеницы на снимке обрывается ровно по границе этой ячейки — повреждение совпадает с траекторией, а не с межой поля.",
+          "en": "The pale strip of beaten wheat in the image stops exactly at that cell's edge — the damage follows the storm track, not the field boundary.",
+          "tr": "Görüntüdeki ezilmiş buğdayın açık şeridi tam o hücrenin sınırında bitiyor — hasar tarla sınırını değil, fırtına rotasını izliyor.",
+          "ar": "يتوقّف الشريط الفاتح من القمح المتضرّر في الصورة عند حدّ تلك الخلية تمامًا — فالضرر يتبع مسار العاصفة لا حدود الحقل.",
+          "kk": "Суреттегі соғылған бидайдың ақшыл жолағы дәл сол ұяшықтың шекарасында үзіледі — зақым егіс шекарасына емес, дауыл жолына сәйкес."
+        },
+        "evidenceIds": [
+          "ev-satellite"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Агроном по сетке подтверждает гибель 46%, а договор поставки задаёт объём и цену. Заявленная сумма не превышает потерю.",
+          "en": "The agronomist's grid survey confirms a 46 % loss, and the supply contract fixes volume and price. The claimed sum does not exceed the loss.",
+          "tr": "Ziraat mühendisinin ızgara incelemesi %46 kaybı doğruluyor, tedarik sözleşmesi de hacim ve fiyatı belirliyor. Talep edilen tutar kaybı aşmıyor.",
+          "ar": "يؤكّد مسح المهندس الزراعي بالشبكة خسارة 46 %، ويحدّد عقد التوريد الكمية والسعر. المبلغ المطالب به لا يتجاوز الخسارة.",
+          "kk": "Агроном тор бойынша 46% шығынды растайды, ал жеткізу шарты көлем мен бағаны белгілейді. Мәлімделген сома шығыннан аспайды."
+        },
+        "evidenceIds": [
+          "ev-agro",
+          "ev-contract"
+        ]
+      }
+    ]
   }
 }

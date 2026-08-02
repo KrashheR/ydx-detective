@@ -493,5 +493,112 @@
       "progressTotal": 7
     },
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "adelia_varn",
+      "displayName": {
+        "ru": "Аделия Варн",
+        "en": "Adelia Varn",
+        "tr": "Adelia Varn",
+        "ar": "أديليا فارن",
+        "kk": "Аделия Варн"
+      },
+      "portraitState": "quiet_dignity"
+    },
+    "finalLine": {
+      "ru": "Я не сбегала. Спасибо, что спросили меня, а не решили за меня.",
+      "en": "I did not run away. Thank you for asking me instead of deciding for me.",
+      "tr": "Kaçmadım. Benim adıma karar vermek yerine bana sorduğunuz için teşekkürler.",
+      "ar": "لم أهرب. شكرًا لأنكم سألتموني بدل أن تقرّروا عنّي.",
+      "kk": "Мен қашқан жоқпын. Мен үшін шешпей, менен сұрағандарыңызға рақмет."
+    },
+    "emotionalMode": "grave",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Телефон и личные деньги остались в комнате, переводов и покупок, готовящих побег, нет.",
+          "en": "The phone and personal money stayed in the room; there are no transfers or purchases preparing a runaway.",
+          "tr": "Telefon ve kişisel para odada kaldı; kaçışa hazırlık gösteren havale ya da alışveriş yok.",
+          "ar": "بقي الهاتف والمال الشخصي في الغرفة؛ ولا تحويلات أو مشتريات تمهّد لهروب.",
+          "kk": "Телефон мен жеке ақша бөлмеде қалған; қашуға дайындық көрсететін аударым да, сатып алу да жоқ."
+        },
+        "evidenceIds": [
+          "bank-47"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Оконная защёлка отжата снаружи, а свет на этаже отключён внешним сервисным ключом той же серии, что и при краже кубка. Карта Аделии не применялась.",
+          "en": "The window latch was forced from outside, and the floor's lighting was cut with an external service key from the same series used in the cup theft. Adelia's card was never used.",
+          "tr": "Pencere mandalı dışarıdan zorlanmış ve kattaki ışık, kupa hırsızlığındakiyle aynı seriden harici bir servis anahtarıyla kesilmiş. Adelia'nın kartı kullanılmamış.",
+          "ar": "فُتح مزلاج النافذة عنوةً من الخارج، وقُطعت الإضاءة عن الطابق بمفتاح خدمة خارجي من السلسلة نفسها المستخدمة في سرقة الكأس. ولم تُستخدم بطاقة أديليا.",
+          "kk": "Терезе ілгегі сырттан ашылған, ал қабаттағы жарық кубок ұрлығындағымен бір сериялы сыртқы сервистік кілтпен өшірілген. Аделияның картасы қолданылмаған."
+        },
+        "evidenceIds": [
+          "photo-47",
+          "log-47"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Камера показывает двух посторонних и дезориентированную Аделию без вещей; осмотр фиксирует небольшую дозу седативного. Её искали не ради неё самой, а ради Ильи.",
+          "en": "The camera shows two outsiders and a disoriented Adelia carrying nothing; the examination finds a small dose of a sedative. She was sought not for herself, but for Ilya.",
+          "tr": "Kamera iki yabancıyı ve elinde hiçbir şey olmayan, yönünü şaşırmış Adelia'yı gösteriyor; muayenede küçük dozda sakinleştirici bulunuyor. Onu kendisi için değil, İlya için aradılar.",
+          "ar": "تُظهر الكاميرا شخصين غريبين وأديليا مشوّشة لا تحمل شيئًا؛ ويكشف الفحص جرعة صغيرة من مهدّئ. لم يبحثوا عنها هي، بل عن إيليا.",
+          "kk": "Камера екі бөгде адамды және ештеңе ұстамаған, есеңгіреген Аделияны көрсетеді; тексеру аз мөлшердегі тыныштандырғышты анықтайды. Оны өзі үшін емес, Илья үшін іздеген."
+        },
+        "evidenceIds": [
+          "camera-47",
+          "document-47",
+          "witness-47"
+        ]
+      }
+    ],
+    "veraLine": {
+      "ru": "Пять лет назад я подписала отказ, не проверив основание. Илья прав, что не доверял мне. Теперь пусть проверит меня по делам, а не по словам.",
+      "en": "Five years ago I signed a refusal without checking its grounds. Ilya was right not to trust me. Let him judge me now by cases, not by words.",
+      "tr": "Beş yıl önce gerekçesini denetlemeden bir ret imzaladım. İlya bana güvenmemekte haklıydı. Bırakın beni artık sözlerle değil, dosyalarla tartsın.",
+      "ar": "قبل خمس سنوات وقّعت رفضًا دون التحقّق من مسوّغه. كان إيليا محقًّا في ألّا يثق بي. فليحكم عليّ الآن بالقضايا لا بالأقوال.",
+      "kk": "Бес жыл бұрын негізін тексермей бас тартуға қол қойдым. Илья маған сенбегені дұрыс. Енді мені сөзбен емес, іспен өлшесін."
+    },
+    "arcReveal": {
+      "title": {
+        "ru": "Сеть ищет Илью",
+        "en": "The Network Is Hunting Ilya",
+        "tr": "Ağ İlya'yı Avlıyor",
+        "ar": "الشبكة تطارد إيليا",
+        "kk": "Желі Ильяны іздеп жатыр"
+      },
+      "text": {
+        "ru": "Серый конвой знает о свидетеле и атакует людей, которые могут вывести на него.",
+        "en": "The Gray Convoy knows about the witness and attacks people who may lead to him.",
+        "tr": "Gri Konvoy, tanığı biliyor ve ona ulaşabilecek kişilere saldırıyor.",
+        "ar": "تعرف القافلة الرمادية بأمر الشاهد وتهاجم الأشخاص الذين قد يقودون إليه.",
+        "kk": "Сұр колонна куәгер туралы біледі және оған жете алатын адамдарға шабуыл жасайды."
+      }
+    }
   }
 }

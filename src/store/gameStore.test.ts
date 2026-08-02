@@ -20,8 +20,12 @@ const sdk = vi.hoisted(() => ({
   fetchPaymentsCatalog: vi.fn(async () => []),
   purchaseProduct: vi.fn(async () => false),
   restorePurchasedProductIds: vi.fn(async () => []),
-  // Inspector Note now runs behind a fullscreen ad; offline/dev grants `onDone`.
-  showFullscreenAd: vi.fn((onDone?: () => void) => onDone?.()),
+  // Mirrors the real SDK order: `onShown` (from `onOpen`), then `onDone`.
+  showFullscreenAd: vi.fn((onDone?: () => void, _placement?: string, onShown?: () => void) => {
+    onShown?.();
+    onDone?.();
+  }),
+  getRemoteFlags: vi.fn(async (): Promise<Record<string, string>> => ({})),
   trackAdOffer: vi.fn(), getAnalyticsUserId: vi.fn(() => null),
   submitLeaderboardScore: vi.fn(async () => undefined),
 }));
@@ -66,7 +70,12 @@ beforeEach(() => {
   sdk.getServerTimeMs.mockReturnValue(0);
   sdk.getYandexLang.mockReturnValue(null);
   sdk.showRewardedAd.mockImplementation((cb: () => void) => cb());
-  sdk.showFullscreenAd.mockImplementation((onDone?: () => void) => onDone?.());
+  sdk.showFullscreenAd.mockImplementation(
+    (onDone?: () => void, _placement?: string, onShown?: () => void) => {
+      onShown?.();
+      onDone?.();
+    },
+  );
   persist.loadSnapshot.mockResolvedValue({
     snapshot: { version: GAME_CONFIG.saveVersion, stats: makeDefaultStats(), session: null },
     isNew: true,
@@ -471,19 +480,88 @@ describe('archive unlocks', () => {
     ]);
   });
 
+  it('maps restored product ids onto pack + No Ads entitlements', () => {
+    store().applyRestoredPurchases([
+      'archive.closed-collegium',
+      GAME_CONFIG.advertising.noAdsProductId,
+      'unknown.product',
+    ]);
+    expect(store().stats.archivePurchasedPackIds).toEqual(['closed-collegium']);
+    expect(store().stats.noAdsPurchased).toBe(true);
+  });
+
+  it('leaves No Ads untouched when it was not among the restored products', () => {
+    store().applyRestoredPurchases(['archive.closed-collegium']);
+    expect(store().stats.noAdsPurchased).toBe(false);
+  });
+
+  it('grants No Ads once and persists it', () => {
+    store().grantNoAds();
+    store().grantNoAds();
+    expect(store().stats.noAdsPurchased).toBe(true);
+    expect(persist.flushSync).toHaveBeenCalled();
+  });
+
   it('unlocks one archive case via rewarded ad and records the server day', () => {
     sdk.getServerTimeMs.mockReturnValue(2 * GAME_CONFIG.daily.cooldownMs);
-    const ok = store().unlockArchiveCaseViaAd('closed-collegium', 'case-045');
+    const ok = store().unlockArchiveCaseViaAd('night-train', 'night-train-02');
     expect(ok).toBe(true);
-    expect(store().stats.archiveUnlockedCaseIds).toContain('case-045');
-    expect(store().stats.archiveAdUnlockServerDayByPack['closed-collegium']).toBe(2);
+    expect(store().stats.archiveUnlockedCaseIds).toContain('night-train-02');
+    expect(store().stats.archiveAdUnlockServerDayByPack['night-train']).toBe(2);
   });
 
   it('refuses a second rewarded unlock from the same pack on the same day', () => {
     sdk.getServerTimeMs.mockReturnValue(3 * GAME_CONFIG.daily.cooldownMs);
-    expect(store().unlockArchiveCaseViaAd('closed-collegium', 'case-045')).toBe(true);
-    expect(store().unlockArchiveCaseViaAd('closed-collegium', 'case-046')).toBe(false);
-    expect(store().stats.archiveUnlockedCaseIds).toEqual(['case-045']);
+    expect(store().unlockArchiveCaseViaAd('night-train', 'night-train-02')).toBe(true);
+    expect(store().unlockArchiveCaseViaAd('night-train', 'night-train-03')).toBe(false);
+    expect(store().stats.archiveUnlockedCaseIds).toEqual(['night-train-02']);
+  });
+});
+
+describe('stamp captions (cosmetic IAP)', () => {
+  it('grants a bought caption and inks it immediately', () => {
+    store().grantStampTextPurchase('storyteller');
+    expect(store().stats.ownedStampTextIds).toEqual(['storyteller']);
+    expect(store().stats.activeStampTextId).toBe('storyteller');
+  });
+
+  it('ignores an unknown or free caption id', () => {
+    store().grantStampTextPurchase('classic');
+    store().grantStampTextPurchase('nope');
+    expect(store().stats.ownedStampTextIds).toEqual([]);
+    expect(store().stats.activeStampTextId).toBeNull();
+  });
+
+  it('refuses to ink a caption the player does not own', () => {
+    store().setActiveStampText('smells-fishy');
+    expect(store().stats.activeStampTextId).toBeNull();
+  });
+
+  it('inks an owned caption and falls back to the free default on null', () => {
+    useGameStore.setState({
+      stats: makeStats({ ownedStampTextIds: ['smells-fishy'] }),
+    });
+    store().setActiveStampText('smells-fishy');
+    expect(store().stats.activeStampTextId).toBe('smells-fishy');
+    store().setActiveStampText(null);
+    expect(store().stats.activeStampTextId).toBeNull();
+  });
+
+  it('restores captions from product ids without inking or duplicating them', () => {
+    useGameStore.setState({
+      stats: makeStats({ ownedStampTextIds: ['storyteller'] }),
+    });
+    store().applyRestoredPurchases([
+      'stamp.storyteller',
+      'stamp.doesnt-add-up',
+      'unknown.product',
+    ]);
+    expect(store().stats.ownedStampTextIds).toEqual([
+      'storyteller',
+      'doesnt-add-up',
+    ]);
+    // Restore is a silent entitlement sync — it never changes what is inked.
+    expect(store().stats.activeStampTextId).toBeNull();
   });
 });
 

@@ -97,6 +97,11 @@ function getArchiveCaseStatus(
   index: number,
   unlockByCaseId: UnlockByCaseId,
 ): ArchiveCaseStatus {
+  // Story-pack cases (`type: "archive"`) are outside the standard campaign, so
+  // they never appear in `unlockByCaseId` — their completion lives only in the
+  // store's completed list.
+  if (stats.completedCaseIds.includes(caseId)) return "completed";
+
   const unlock = unlockByCaseId.get(caseId);
   if (unlock) {
     if (unlock.status === "completed") return "completed";

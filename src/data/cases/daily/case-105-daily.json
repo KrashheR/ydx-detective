@@ -140,5 +140,86 @@
       "Көрші Кріпердің тәуелсіз өтінімі күні, уақыты және апат сипаттамасы бойынша сәйкес.",
       "ПК-дегі инвентарлық жапсырма полиспен сәйкес; зақым сипаты — жарылыс толқыны. Талап шынайы, мақұлдаңыз."
     ]
+  },
+  "resolution": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "stepan_mirov",
+      "displayName": {
+        "ru": "Степан Миров",
+        "en": "Stepan Mirov",
+        "tr": "Stepan Mirov",
+        "ar": "ستيبان ميروف",
+        "kk": "Степан Миров"
+      },
+      "portraitState": "wry_relief"
+    },
+    "finalLine": {
+      "ru": "Сосед взорвал квартиру, а вы спасли мою студию. Странная неделя.",
+      "en": "My neighbour blew up his flat and you saved my studio. Strange week.",
+      "tr": "Komşum dairesini havaya uçurdu, siz de stüdyomu kurtardınız. Tuhaf bir hafta.",
+      "ar": "فجّر جاري شقّته وأنقذتم أنتم استوديوهي. أسبوع غريب.",
+      "kk": "Көршім пәтерін жарып жіберді, ал сіздер студиямды құтқардыңыздар. Оғаш апта."
+    },
+    "emotionalMode": "humour",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Акт газовой службы подтверждает разрыв трубы в квартире 18 и распространение разрушений на квартиру 19.",
+          "en": "The gas service report confirms a pipe rupture in flat 18 and the spread of damage into flat 19.",
+          "tr": "Gaz idaresi raporu, 18 numaralı dairedeki boru patlamasını ve hasarın 19 numaraya yayılmasını doğruluyor.",
+          "ar": "يؤكّد تقرير خدمة الغاز انفجار أنبوب في الشقة 18 وامتداد الأضرار إلى الشقة 19.",
+          "kk": "Газ қызметінің актісі 18-пәтердегі құбырдың жарылғанын және қирау 19-пәтерге таралғанын растайды."
+        },
+        "evidenceIds": [
+          "ev-gas-report"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Чем это объясняется",
+          "en": "What explains it",
+          "tr": "Bunu açıklayan şey",
+          "ar": "ما يفسر ذلك",
+          "kk": "Мұны не түсіндіреді"
+        },
+        "text": {
+          "ru": "Независимое заявление соседа совпадает по дате, времени и характеру аварии.",
+          "en": "The neighbour's independent claim agrees on date, time and the nature of the accident.",
+          "tr": "Komşunun bağımsız başvurusu tarih, saat ve kazanın niteliği bakımından örtüşüyor.",
+          "ar": "مطالبة الجار المستقلّة تتوافق في التاريخ والوقت وطبيعة الحادث.",
+          "kk": "Көршінің тәуелсіз өтініші күні, уақыты және апат сипаты бойынша сәйкес келеді."
+        },
+        "evidenceIds": [
+          "ev-neighbor-claim"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Инвентарный стикер на уцелевшем фрагменте корпуса совпадает с полисом, а повреждения соответствуют взрывной волне.",
+          "en": "The inventory sticker on the surviving fragment of the case matches the policy, and the damage matches a blast wave.",
+          "tr": "Kasanın kurtulan parçasındaki envanter etiketi poliçeyle örtüşüyor ve hasar patlama dalgasına uyuyor.",
+          "ar": "ملصق الجرد على الجزء الباقي من الهيكل يطابق البوليصة، والأضرار تتوافق مع موجة انفجار.",
+          "kk": "Корпустың аман қалған бөлігіндегі түгендеу жапсырмасы полиспен сәйкес, ал зақымдар жарылыс толқынына сай."
+        },
+        "evidenceIds": [
+          "ev-photo"
+        ]
+      }
+    ]
   }
 }

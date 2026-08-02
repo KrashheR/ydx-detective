@@ -1,0 +1,522 @@
+{
+  "id": "sanatorium-priboy-04",
+  "type": "archive",
+  "difficulty": "medium",
+  "claimAmount": 260000,
+  "truth": "fraud",
+  "title": {
+    "ru": "Чемодан без отдыхающего",
+    "en": "A Suitcase Without a Guest",
+    "tr": "Konuksuz Bavul",
+    "ar": "حقيبة بلا نزيل",
+    "kk": "Демалушысыз чемодан"
+  },
+  "claim": {
+    "person": {
+      "ru": "Юрий Тарасович Кольцов, 44 года",
+      "en": "Yuri Tarasovich Koltsov, age 44",
+      "tr": "Yuri Tarasoviç Kolstov, 44 yaşında",
+      "ar": "يوري تاراسوفيتش كولتسوف، 44 عامًا",
+      "kk": "Юрий Тарасович Кольцов, 44 жаста"
+    },
+    "story": {
+      "ru": "Я оставлял в ячейке камеры хранения только спортивную сумку. Чужой чемодан с полисами и санаторными книжками вижу впервые, ключ от ячейки никому не передавал и сам её после заезда не открывал.",
+      "en": "I left only a sports bag in my left-luggage locker. I am seeing this stranger's suitcase with policies and sanatorium record books for the first time; I gave the locker key to nobody and never opened it after check-in.",
+      "tr": "Emanet dolabına yalnızca bir spor çantası bıraktım. Poliçeler ve sanatoryum kayıt defterleriyle dolu bu yabancı bavulu ilk kez görüyorum; dolap anahtarını kimseye vermedim ve girişten sonra dolabı hiç açmadım.",
+      "ar": "تركتُ في خزانة الأمانات حقيبة رياضية فقط. أرى للمرة الأولى هذه الحقيبة الغريبة المليئة بالوثائق ودفاتر المصحة، ولم أسلّم مفتاح الخزانة لأحد ولم أفتحها بعد تسجيل الوصول.",
+      "kk": "Сақтау камерасының ұяшығына тек спорт сөмкесін қалдырдым. Полистер мен санаторий кітапшалары салынған бөтен чемоданды алғаш рет көріп тұрмын, ұяшық кілтін ешкімге бермедім және кіргеннен кейін оны ашпадым."
+    }
+  },
+  "coverImage": "covers/packs/sanatorium-priboy-04.svg",
+  "personImage": "people/packs/sanatorium-priboy/yuri_koltsov.webp",
+  "client": {
+    "role": {
+      "ru": "Заявитель · отдыхающий санатория «Прибой»",
+      "en": "Claimant · guest of the Priboy sanatorium",
+      "tr": "Talep sahibi · «Priboy» sanatoryumu konuğu",
+      "ar": "مقدم الطلب · نزيل مصحة «بريبوي»",
+      "kk": "Өтініш беруші · «Прибой» санаторийінің демалушысы"
+    },
+    "meta": [
+      {
+        "k": {
+          "ru": "Номер",
+          "en": "Room",
+          "tr": "Oda",
+          "ar": "الغرفة",
+          "kk": "Нөмір"
+        },
+        "v": {
+          "ru": "№118",
+          "en": "No. 118",
+          "tr": "No. 118",
+          "ar": "رقم 118",
+          "kk": "№118"
+        }
+      },
+      {
+        "k": {
+          "ru": "Смена",
+          "en": "Shift",
+          "tr": "Vardiya",
+          "ar": "الوردية",
+          "kk": "Ауысым"
+        },
+        "v": {
+          "ru": "Последняя смена, август 2026",
+          "en": "The last shift, August 2026",
+          "tr": "Son vardiya, Ağustos 2026",
+          "ar": "الوردية الأخيرة، أغسطس 2026",
+          "kk": "Соңғы ауысым, 2026 жылғы тамыз"
+        }
+      }
+    ]
+  },
+  "evidences": [
+    {
+      "id": "SP04-E1",
+      "order": 1,
+      "type": "usage_log",
+      "title": {
+        "ru": "Журнал камеры хранения",
+        "en": "Left-Luggage Log",
+        "tr": "Emanet Kaydı",
+        "ar": "سجل مكتب الأمانات",
+        "kk": "Сақтау камерасының журналы"
+      },
+      "content": {
+        "ru": "Ячейка 27, ключ №27. 26 июля 14:05 — чемодан помещён. Далее открытия: 27 июля 09:12, 28 июля 21:40, 30 июля 08:03 — все ключом №27, закреплённым за Кольцовым.",
+        "en": "Cell 27, key No. 27. 26 July 14:05 — suitcase placed inside. Subsequent openings: 27 July 09:12, 28 July 21:40, 30 July 08:03 — all with key No. 27, issued to Koltsov.",
+        "tr": "Dolap 27, anahtar No. 27. 26 Temmuz 14:05 — bavul yerleştirildi. Sonraki açılışlar: 27 Temmuz 09:12, 28 Temmuz 21:40, 30 Temmuz 08:03 — hepsi Kolstov’a verilen 27 numaralı anahtarla.",
+        "ar": "الخزانة 27، المفتاح رقم 27. 26 يوليو 14:05 — وُضعت الحقيبة. ثم عمليات فتح: 27 يوليو 09:12، 28 يوليو 21:40، 30 يوليو 08:03 — جميعها بالمفتاح رقم 27 المسجل باسم كولتسوف.",
+        "kk": "27-ұяшық, №27 кілт. 26 шілде 14:05 — чемодан салынды. Одан кейінгі ашулар: 27 шілде 09:12, 28 шілде 21:40, 30 шілде 08:03 — барлығы Кольцовқа тіркелген №27 кілтпен."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "После помещения чемодана ячейка открывалась трижды его собственным ключом — заявление о том, что он её не открывал, неверно.",
+        "en": "After the suitcase was placed inside, the locker was opened three times with his own key — the claim that he never opened it is false.",
+        "tr": "Bavul yerleştirildikten sonra dolap, kendi anahtarıyla üç kez açılmış; hiç açmadığı iddiası yanlış.",
+        "ar": "بعد وضع الحقيبة فُتحت الخزانة ثلاث مرات بمفتاحه هو، فادعاء أنه لم يفتحها غير صحيح.",
+        "kk": "Чемодан салынғаннан кейін ұяшық өз кілтімен үш рет ашылған — оны ашпадым деген мәлімдеме дұрыс емес."
+      },
+      "statementLink": {
+        "statementId": "claim_key",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "После помещения чемодана ячейка открывалась трижды его собственным ключом — заявление о том, что он её не открывал, неверно.",
+          "en": "After the suitcase was placed inside, the locker was opened three times with his own key — the claim that he never opened it is false.",
+          "tr": "Bavul yerleştirildikten sonra dolap, kendi anahtarıyla üç kez açılmış; hiç açmadığı iddiası yanlış.",
+          "ar": "بعد وضع الحقيبة فُتحت الخزانة ثلاث مرات بمفتاحه هو، فادعاء أنه لم يفتحها غير صحيح.",
+          "kk": "Чемодан салынғаннан кейін ұяшық өз кілтімен үш рет ашылған — оны ашпадым деген мәлімдеме дұрыс емес."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_key",
+        "reason": {
+          "ru": "После помещения чемодана ячейка открывалась трижды его собственным ключом — заявление о том, что он её не открывал, неверно.",
+          "en": "After the suitcase was placed inside, the locker was opened three times with his own key — the claim that he never opened it is false.",
+          "tr": "Bavul yerleştirildikten sonra dolap, kendi anahtarıyla üç kez açılmış; hiç açmadığı iddiası yanlış.",
+          "ar": "بعد وضع الحقيبة فُتحت الخزانة ثلاث مرات بمفتاحه هو، فادعاء أنه لم يفتحها غير صحيح.",
+          "kk": "Чемодан салынғаннан кейін ұяшық өз кілтімен үш рет ашылған — оны ашпадым деген мәлімдеме дұрыс емес."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/sanatorium-priboy/sp04-e1.webp",
+        "logPrompt": "left-luggage locker log, cell 27"
+      }
+    },
+    {
+      "id": "SP04-E2",
+      "order": 2,
+      "type": "phone_records",
+      "title": {
+        "ru": "Телефонный биллинг Кольцова",
+        "en": "Koltsov's Call Records",
+        "tr": "Kolstov’un Arama Kayıtları",
+        "ar": "سجل مكالمات كولتسوف",
+        "kk": "Кольцовтың телефон биллингі"
+      },
+      "content": {
+        "ru": "27 июля 09:14, 28 июля 21:43, 30 июля 08:06 — исходящие на один и тот же номер, зарегистрированный на Г. В. Лебедева. Каждый звонок начинается в течение трёх минут после открытия ячейки; длительность 40–70 секунд.",
+        "en": "27 July 09:14, 28 July 21:43, 30 July 08:06 — outgoing calls to one and the same number registered to G. V. Lebedev. Each call begins within three minutes of a locker opening; duration 40–70 seconds.",
+        "tr": "27 Temmuz 09:14, 28 Temmuz 21:43, 30 Temmuz 08:06 — hepsi G. V. Lebedev adına kayıtlı aynı numaraya giden aramalar. Her arama, dolabın açılmasından sonraki üç dakika içinde başlıyor; süre 40–70 saniye.",
+        "ar": "27 يوليو 09:14، 28 يوليو 21:43، 30 يوليو 08:06 — مكالمات صادرة إلى الرقم نفسه المسجل باسم غ. ف. ليبيديف. تبدأ كل مكالمة خلال ثلاث دقائق من فتح الخزانة، ومدتها 40–70 ثانية.",
+        "kk": "27 шілде 09:14, 28 шілде 21:43, 30 шілде 08:06 — Г. В. Лебедевке тіркелген бір нөмірге шыққан қоңыраулар. Әр қоңырау ұяшық ашылғаннан кейін үш минут ішінде басталады; ұзақтығы 40–70 секунд."
+      },
+      "isContradiction": true,
+      "contradictionExplanation": {
+        "ru": "Каждое открытие ячейки сопровождается докладом одному и тому же адресату — заявитель знал, что лежит в чемодане, и отчитывался за него.",
+        "en": "Every opening of the locker is followed by a report to the same recipient — the claimant knew what was in the suitcase and answered for it.",
+        "tr": "Dolabın her açılışının ardından aynı kişiye rapor veriliyor; talep sahibi bavulda ne olduğunu biliyor ve hesabını veriyordu.",
+        "ar": "يعقب كل فتح للخزانة تقريرٌ للمستلم نفسه، فمقدم الطلب كان يعرف ما في الحقيبة ويقدّم عنها حسابًا.",
+        "kk": "Ұяшықтың әр ашылуынан кейін сол бір адресатқа хабар беріледі — өтініш беруші чемоданда не бар екенін білген және ол үшін есеп берген."
+      },
+      "statementLink": {
+        "statementId": "claim_unknown",
+        "relation": "contradicts",
+        "reason": {
+          "ru": "Каждое открытие ячейки сопровождается докладом одному и тому же адресату — заявитель знал, что лежит в чемодане, и отчитывался за него.",
+          "en": "Every opening of the locker is followed by a report to the same recipient — the claimant knew what was in the suitcase and answered for it.",
+          "tr": "Dolabın her açılışının ardından aynı kişiye rapor veriliyor; talep sahibi bavulda ne olduğunu biliyor ve hesabını veriyordu.",
+          "ar": "يعقب كل فتح للخزانة تقريرٌ للمستلم نفسه، فمقدم الطلب كان يعرف ما في الحقيبة ويقدّم عنها حسابًا.",
+          "kk": "Ұяшықтың әр ашылуынан кейін сол бір адресатқа хабар беріледі — өтініш беруші чемоданда не бар екенін білген және ол үшін есеп берген."
+        }
+      },
+      "contradictionTarget": {
+        "statementId": "claim_unknown",
+        "reason": {
+          "ru": "Каждое открытие ячейки сопровождается докладом одному и тому же адресату — заявитель знал, что лежит в чемодане, и отчитывался за него.",
+          "en": "Every opening of the locker is followed by a report to the same recipient — the claimant knew what was in the suitcase and answered for it.",
+          "tr": "Dolabın her açılışının ardından aynı kişiye rapor veriliyor; talep sahibi bavulda ne olduğunu biliyor ve hesabını veriyordu.",
+          "ar": "يعقب كل فتح للخزانة تقريرٌ للمستلم نفسه، فمقدم الطلب كان يعرف ما في الحقيبة ويقدّم عنها حسابًا.",
+          "kk": "Ұяшықтың әр ашылуынан кейін сол бір адресатқа хабар беріледі — өтініш беруші чемоданда не бар екенін білген және ол үшін есеп берген."
+        }
+      },
+      "evidenceTier": "core",
+      "requiredForVerdict": true,
+      "rewardWeight": 1,
+      "meta": {
+        "imageUrl": "evidence/packs/sanatorium-priboy/sp04-e2.webp",
+        "phoneMask": "+7 ••• ••• 41 07",
+        "carrierName": {
+          "ru": "Приморская связь",
+          "en": "Primorsky Telecom",
+          "tr": "Primorskiy Telekom",
+          "ar": "بريمورسكي تيليكوم",
+          "kk": "Приморье байланысы"
+        }
+      }
+    },
+    {
+      "id": "SP04-E3",
+      "order": 3,
+      "type": "document",
+      "title": {
+        "ru": "Полисы из чемодана",
+        "en": "Policies from the Suitcase",
+        "tr": "Bavuldaki Poliçeler",
+        "ar": "وثائق التأمين من الحقيبة",
+        "kk": "Чемодандағы полистер"
+      },
+      "content": {
+        "ru": "Пять полисов, оформленных в 2004, 2009, 2013, 2018 и 2022 годах. Номер бланка у всех одинаковый — ПР-0416, различаются только две последние цифры, дописанные от руки.",
+        "en": "Five policies issued in 2004, 2009, 2013, 2018 and 2022. All carry the same form number — PR-0416 — differing only in the last two digits, added by hand.",
+        "tr": "2004, 2009, 2013, 2018 ve 2022’de düzenlenmiş beş poliçe. Hepsinde aynı form numarası var — PR-0416 — yalnızca elle eklenen son iki hane farklı.",
+        "ar": "خمس وثائق صدرت في 2004 و2009 و2013 و2018 و2022. جميعها تحمل رقم النموذج نفسه PR-0416، ولا تختلف إلا في آخر رقمين المضافين يدويًا.",
+        "kk": "2004, 2009, 2013, 2018 және 2022 жылдары ресімделген бес полис. Бәрінің бланк нөмірі бірдей — ПР-0416, тек қолмен жазылған соңғы екі цифры ғана өзгеше."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Документы явно поддельные, но сами по себе не показывают, кто их хранил и кто ими пользовался.",
+        "en": "The documents are plainly forged, yet by themselves they do not show who kept them or who used them.",
+        "tr": "Belgeler açıkça sahte; ancak tek başlarına onları kimin sakladığını ya da kullandığını göstermiyor.",
+        "ar": "الوثائق مزوّرة بوضوح، لكنها وحدها لا تبيّن من احتفظ بها ولا من استخدمها.",
+        "kk": "Құжаттар анық жалған, бірақ өздігінен оларды кім сақтағанын және кім пайдаланғанын көрсетпейді."
+      },
+      "statementLink": {
+        "statementId": "claim_unknown",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Документы явно поддельные, но сами по себе не показывают, кто их хранил и кто ими пользовался.",
+          "en": "The documents are plainly forged, yet by themselves they do not show who kept them or who used them.",
+          "tr": "Belgeler açıkça sahte; ancak tek başlarına onları kimin sakladığını ya da kullandığını göstermiyor.",
+          "ar": "الوثائق مزوّرة بوضوح، لكنها وحدها لا تبيّن من احتفظ بها ولا من استخدمها.",
+          "kk": "Құжаттар анық жалған, бірақ өздігінен оларды кім сақтағанын және кім пайдаланғанын көрсетпейді."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/sanatorium-priboy/sp04-e3.webp"
+      }
+    },
+    {
+      "id": "SP04-E4",
+      "order": 4,
+      "type": "gps",
+      "title": {
+        "ru": "GPS служебного фургона",
+        "en": "Service Van GPS",
+        "tr": "Servis Minibüsü GPS’i",
+        "ar": "نظام تحديد المواقع لشاحنة الخدمة",
+        "kk": "Қызметтік фургонның GPS-і"
+      },
+      "content": {
+        "ru": "Повторяющийся маршрут: архивное крыло — камера хранения — старый склад на выезде из посёлка. Три ночных рейса за неделю, стоянки по 8–14 минут в каждой точке.",
+        "en": "A repeating route: the archive wing — the left-luggage room — the old warehouse on the edge of the village. Three night runs in a week, with 8–14 minute stops at each point.",
+        "tr": "Tekrar eden güzergâh: arşiv bloğu — emanet — köy çıkışındaki eski depo. Bir haftada üç gece seferi, her noktada 8–14 dakikalık duruşlar.",
+        "ar": "مسار متكرر: جناح الأرشيف — مكتب الأمانات — المستودع القديم عند مخرج القرية. ثلاث رحلات ليلية في أسبوع، بتوقفات من 8 إلى 14 دقيقة عند كل نقطة.",
+        "kk": "Қайталанатын бағыт: архив қанаты — сақтау камерасы — ауыл шетіндегі ескі қойма. Бір аптада үш түнгі рейс, әр нүктеде 8–14 минуттық аялдама."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Маршрут связывает архив с ячейкой, но не показывает, кто именно сидел за рулём и что перевозили.",
+        "en": "The route links the archive to the locker, yet it does not show who was driving or what was carried.",
+        "tr": "Güzergâh arşivi dolapla ilişkilendiriyor ama direksiyonda kimin olduğunu ve ne taşındığını göstermiyor.",
+        "ar": "يربط المسار الأرشيف بالخزانة، لكنه لا يبيّن من كان يقود ولا ما الذي كان يُنقل.",
+        "kk": "Бағыт архивті ұяшықпен байланыстырады, бірақ рөлде кім отырғанын және не тасылғанын көрсетпейді."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "contextualizes",
+        "reason": {
+          "ru": "Маршрут связывает архив с ячейкой, но не показывает, кто именно сидел за рулём и что перевозили.",
+          "en": "The route links the archive to the locker, yet it does not show who was driving or what was carried.",
+          "tr": "Güzergâh arşivi dolapla ilişkilendiriyor ama direksiyonda kimin olduğunu ve ne taşındığını göstermiyor.",
+          "ar": "يربط المسار الأرشيف بالخزانة، لكنه لا يبيّن من كان يقود ولا ما الذي كان يُنقل.",
+          "kk": "Бағыт архивті ұяшықпен байланыстырады, бірақ рөлде кім отырғанын және не тасылғанын көрсетпейді."
+        }
+      },
+      "evidenceTier": "supporting",
+      "meta": {
+        "imageUrl": "evidence/packs/sanatorium-priboy/sp04-e4.webp",
+        "gpsFooter": {
+          "ru": "Трек служебного фургона санатория",
+          "en": "Track of the sanatorium service van",
+          "tr": "Sanatoryum servis minibüsünün izi",
+          "ar": "مسار شاحنة خدمة المصحة",
+          "kk": "Санаторийдің қызметтік фургонының тректі"
+        }
+      }
+    },
+    {
+      "id": "SP04-E5",
+      "order": 5,
+      "type": "document_scan",
+      "title": {
+        "ru": "УФ-скан санаторной книжки",
+        "en": "UV Scan of a Sanatorium Record Book",
+        "tr": "Sanatoryum Kayıt Defterinin UV Taraması",
+        "ar": "مسح فوق بنفسجي لدفتر المصحة",
+        "kk": "Санаторий кітапшасының УК-сканы"
+      },
+      "content": {
+        "ru": "Материал доступен для интерактивной экспертизы. Результат не показывается до завершения анализа.",
+        "en": "This evidence is available for interactive examination. The result stays hidden until the analysis is complete.",
+        "tr": "Bu kanıt interaktif inceleme için mevcuttur. Sonuç, analiz tamamlanana kadar gizli kalır.",
+        "ar": "هذا الدليل متاح للفحص التفاعلي. تبقى النتيجة مخفية حتى اكتمال التحليل.",
+        "kk": "Материал интерактивті сараптамаға қолжетімді. Талдау аяқталмайынша нәтиже көрсетілмейді."
+      },
+      "isContradiction": false,
+      "contradictionExplanation": {
+        "ru": "Под именем нового владельца — данные отдыхающего 1998 года: Орлов Павел Андреевич. На последней странице штамп «выбыл 31.08.98» — на день позже его официальной смерти.",
+        "en": "Beneath the new owner's name are the details of a 1998 guest: Orlov, Pavel Andreyevich. The last page bears the stamp \"departed 31.08.98\" — a day after his official death.",
+        "tr": "Yeni sahibin adının altında 1998 konuğunun bilgileri var: Orlov Pavel Andreyeviç. Son sayfada «ayrıldı 31.08.98» kaşesi — resmî ölümünden bir gün sonra.",
+        "ar": "تحت اسم المالك الجديد بيانات نزيل من 1998: أورلوف بافيل أندرييفيتش. وعلى الصفحة الأخيرة ختم «غادر 31.08.98» — بعد يوم من وفاته الرسمية.",
+        "kk": "Жаңа иенің атының астында 1998 жылғы демалушының деректері: Орлов Павел Андреевич. Соңғы бетте «шықты 31.08.98» мөртабаны — ресми қайтыс болған күнінен бір күн кейін."
+      },
+      "statementLink": {
+        "statementId": "claim_main",
+        "relation": "reveals_season_clue",
+        "reason": {
+          "ru": "Под именем нового владельца — данные отдыхающего 1998 года: Орлов Павел Андреевич. На последней странице штамп «выбыл 31.08.98» — на день позже его официальной смерти.",
+          "en": "Beneath the new owner's name are the details of a 1998 guest: Orlov, Pavel Andreyevich. The last page bears the stamp \"departed 31.08.98\" — a day after his official death.",
+          "tr": "Yeni sahibin adının altında 1998 konuğunun bilgileri var: Orlov Pavel Andreyeviç. Son sayfada «ayrıldı 31.08.98» kaşesi — resmî ölümünden bir gün sonra.",
+          "ar": "تحت اسم المالك الجديد بيانات نزيل من 1998: أورلوف بافيل أندرييفيتش. وعلى الصفحة الأخيرة ختم «غادر 31.08.98» — بعد يوم من وفاته الرسمية.",
+          "kk": "Жаңа иенің атының астында 1998 жылғы демалушының деректері: Орлов Павел Андреевич. Соңғы бетте «шықты 31.08.98» мөртабаны — ресми қайтыс болған күнінен бір күн кейін."
+        }
+      },
+      "evidenceTier": "supporting",
+      "description": {
+        "ru": "Одна из книжек в чемодане переоформлена: имя владельца впечатано поверх вытравленного слоя.",
+        "en": "One of the books in the suitcase has been reissued: the owner's name is printed over an erased layer.",
+        "tr": "Bavuldaki defterlerden biri yeniden düzenlenmiş: sahibinin adı, silinmiş bir katmanın üzerine basılmış.",
+        "ar": "أُعيد إصدار أحد الدفاتر في الحقيبة: اسم المالك مطبوع فوق طبقة ممحوّة.",
+        "kk": "Чемодандағы кітапшалардың бірі қайта ресімделген: иесінің аты өшірілген қабаттың үстіне басылған."
+      },
+      "instruction": {
+        "ru": "Включите ультрафиолет и прочитайте данные под именем нового владельца.",
+        "en": "Switch on the ultraviolet and read the details beneath the new owner's name.",
+        "tr": "Morötesini açın ve yeni sahibin adının altındaki bilgileri okuyun.",
+        "ar": "شغّل الأشعة فوق البنفسجية واقرأ البيانات تحت اسم المالك الجديد.",
+        "kk": "Ультракүлгінді қосып, жаңа иенің атының астындағы деректерді оқыңыз."
+      },
+      "assets": {
+        "baseImage": "evidence/packs/sanatorium-priboy/sp04-e5.webp"
+      },
+      "uiHints": {
+        "showReset": true,
+        "allowZoom": true,
+        "highlightAfterHint": true
+      },
+      "interactiveDesign": {
+        "why": {
+          "ru": "Игрок сам обнаруживает, что чемодан хранит личности отдыхающих 1998 года.",
+          "en": "The player discovers for themselves that the suitcase stores the identities of 1998 guests.",
+          "tr": "Oyuncu, bavulun 1998 konuklarının kimliklerini sakladığını kendisi keşfeder.",
+          "ar": "يكتشف اللاعب بنفسه أن الحقيبة تحفظ هويات نزلاء عام 1998.",
+          "kk": "Ойыншы чемоданда 1998 жылғы демалушылардың жеке деректері сақталғанын өзі анықтайды."
+        },
+        "playerAction": {
+          "ru": "Включите ультрафиолет и прочитайте данные под именем нового владельца.",
+          "en": "Switch on the ultraviolet and read the details beneath the new owner's name.",
+          "tr": "Morötesini açın ve yeni sahibin adının altındaki bilgileri okuyun.",
+          "ar": "شغّل الأشعة فوق البنفسجية واقرأ البيانات تحت اسم المالك الجديد.",
+          "kk": "Ультракүлгінді қосып, жаңа иенің атының астындағы деректерді оқыңыз."
+        },
+        "conclusion": {
+          "ru": "Под именем нового владельца — данные отдыхающего 1998 года: Орлов Павел Андреевич. На последней странице штамп «выбыл 31.08.98» — на день позже его официальной смерти.",
+          "en": "Beneath the new owner's name are the details of a 1998 guest: Orlov, Pavel Andreyevich. The last page bears the stamp \"departed 31.08.98\" — a day after his official death.",
+          "tr": "Yeni sahibin adının altında 1998 konuğunun bilgileri var: Orlov Pavel Andreyeviç. Son sayfada «ayrıldı 31.08.98» kaşesi — resmî ölümünden bir gün sonra.",
+          "ar": "تحت اسم المالك الجديد بيانات نزيل من 1998: أورلوف بافيل أندرييفيتش. وعلى الصفحة الأخيرة ختم «غادر 31.08.98» — بعد يوم من وفاته الرسمية.",
+          "kk": "Жаңа иенің атының астында 1998 жылғы демалушының деректері: Орлов Павел Андреевич. Соңғы бетте «шықты 31.08.98» мөртабаны — ресми қайтыс болған күнінен бір күн кейін."
+        }
+      },
+      "data": {
+        "initialMode": "normal",
+        "modes": [
+          "normal",
+          "uv",
+          "side_light"
+        ],
+        "anomalyZones": [
+          {
+            "id": "erased-owner",
+            "mode": "uv",
+            "x": 28,
+            "y": 36,
+            "width": 38,
+            "height": 14,
+            "label": "Вытравленное имя: Орлов П. А., заезд 1998",
+            "labelEn": "Erased name: Orlov P. A., admitted 1998",
+            "isContradiction": false
+          },
+          {
+            "id": "departure-stamp",
+            "mode": "side_light",
+            "x": 46,
+            "y": 72,
+            "width": 30,
+            "height": 12,
+            "label": "Штамп «выбыл 31.08.98»",
+            "labelEn": "Stamp \"departed 31.08.98\"",
+            "isContradiction": false
+          }
+        ],
+        "referenceFields": [
+          {
+            "id": "official-death",
+            "label": "Официальная дата гибели",
+            "labelEn": "Official date of death",
+            "value": "30.08.1998"
+          }
+        ],
+        "successCondition": {
+          "type": "select_then_compare",
+          "zoneId": "departure-stamp",
+          "referenceFieldId": "official-death"
+        }
+      }
+    }
+  ],
+  "correctDecision": "reject",
+  "explanation": {
+    "ru": [
+      "Журнал показывает три открытия ячейки ключом Кольцова уже после того, как чемодан туда поместили.",
+      "Каждое открытие сопровождается звонком Лебедеву в течение трёх минут.",
+      "В чемодане — поддельные полисы с одним номером бланка и санаторные книжки чужих людей."
+    ],
+    "en": [
+      "The log shows three openings of the locker with Koltsov's key after the suitcase was placed inside.",
+      "Each opening is followed within three minutes by a call to Lebedev.",
+      "The suitcase holds forged policies sharing one form number and other people's sanatorium record books."
+    ],
+    "tr": [
+      "Kayıt, bavul yerleştirildikten sonra dolabın Kolstov’un anahtarıyla üç kez açıldığını gösteriyor.",
+      "Her açılışın ardından üç dakika içinde Lebedev aranıyor.",
+      "Bavulda aynı form numaralı sahte poliçeler ve başkalarının sanatoryum defterleri var."
+    ],
+    "ar": [
+      "يُظهر السجل ثلاث عمليات فتح للخزانة بمفتاح كولتسوف بعد وضع الحقيبة فيها.",
+      "ويعقب كل فتح اتصالٌ بليبيديف خلال ثلاث دقائق.",
+      "وفي الحقيبة وثائق مزوّرة تحمل رقم نموذج واحد ودفاتر مصحة تخص أشخاصًا آخرين."
+    ],
+    "kk": [
+      "Журнал чемодан салынғаннан кейін ұяшықтың Кольцовтың кілтімен үш рет ашылғанын көрсетеді.",
+      "Әр ашудан кейін үш минут ішінде Лебедевке қоңырау шалынады.",
+      "Чемоданда бір бланк нөмірі бар жалған полистер мен бөтен адамдардың санаторий кітапшалары жатыр."
+    ]
+  },
+  "investigationBudget": 4,
+  "claimStatements": [
+    {
+      "id": "claim_main",
+      "stampable": false,
+      "text": {
+        "ru": "Ответственности за чужой чемодан я не несу.",
+        "en": "I bear no responsibility for a stranger's suitcase.",
+        "tr": "Yabancı bir bavuldan sorumlu değilim.",
+        "ar": "لا أتحمل مسؤولية حقيبة غريبة.",
+        "kk": "Бөтен чемодан үшін жауап бермеймін."
+      }
+    },
+    {
+      "id": "claim_unknown",
+      "stampable": true,
+      "text": {
+        "ru": "Чужой чемодан я вижу впервые и к его содержимому отношения не имею.",
+        "en": "I am seeing the stranger's suitcase for the first time and have nothing to do with its contents.",
+        "tr": "Yabancı bavulu ilk kez görüyorum ve içeriğiyle hiçbir ilgim yok.",
+        "ar": "أرى الحقيبة الغريبة لأول مرة ولا علاقة لي بمحتواها.",
+        "kk": "Бөтен чемоданды алғаш рет көріп тұрмын, ішіндегісіне қатысым жоқ."
+      }
+    },
+    {
+      "id": "claim_key",
+      "stampable": true,
+      "text": {
+        "ru": "После заезда я ячейку не открывал и ключ никому не передавал.",
+        "en": "After check-in I never opened the locker and gave the key to nobody.",
+        "tr": "Girişten sonra dolabı açmadım ve anahtarı kimseye vermedim.",
+        "ar": "بعد تسجيل الوصول لم أفتح الخزانة ولم أعطِ المفتاح لأحد.",
+        "kk": "Кіргеннен кейін ұяшықты ашқан жоқпын, кілтті ешкімге бермедім."
+      }
+    }
+  ],
+  "contentVersion": "sanatorium-priboy-1.0",
+  "narrative": {
+    "preBrief": {
+      "ru": "В камере хранения нашли чемодан, у которого нет владельца, но есть очень аккуратный распорядок.",
+      "en": "A suitcase with no owner but a very tidy schedule has turned up in the left-luggage room.",
+      "tr": "Emanette sahibi olmayan ama çok düzenli bir programı olan bir bavul bulundu.",
+      "ar": "وُجدت في مكتب الأمانات حقيبة بلا مالك لكن بجدول منظم للغاية.",
+      "kk": "Сақтау камерасынан иесі жоқ, бірақ өте ұқыпты кестесі бар чемодан табылды."
+    },
+    "postVerdictNote": {
+      "ru": "Вера подводит итог: «Чемодан ничей. Зато желающих получить за него деньги — полный пансион».",
+      "en": "Vera sums it up: \"The suitcase belongs to nobody. Those wanting money for it, however, are full board.\"",
+      "tr": "Vera özetliyor: «Bavul kimsenin değil. Ama onun için para isteyenler tam pansiyon.»",
+      "ar": "تلخّص فيرا: «الحقيبة ليست لأحد. أما الراغبون في المال مقابلها فإقامة كاملة.»",
+      "kk": "Вера қорытады: «Чемодан ешкімдікі емес. Ал ол үшін ақша алғысы келетіндер — толық пансион»."
+    },
+    "nextCaseTeaser": {
+      "ru": "Погибший выбыл из санатория на следующий день после смерти.",
+      "en": "The dead man checked out of the sanatorium the day after his death.",
+      "tr": "Ölen kişi, ölümünden bir gün sonra sanatoryumdan ayrılmış.",
+      "ar": "غادر المتوفى المصحة في اليوم التالي لوفاته.",
+      "kk": "Қайтыс болған адам өлімінен кейінгі күні санаторийден шыққан."
+    },
+    "seasonClue": {
+      "id": "orlov-record-book",
+      "progressIndex": 4,
+      "progressTotal": 10,
+      "label": {
+        "ru": "Санаторная книжка Павла Орлова",
+        "en": "Pavel Orlov's Record Book",
+        "tr": "Pavel Orlov’un Kayıt Defteri",
+        "ar": "دفتر بافيل أورلوف",
+        "kk": "Павел Орловтың санаторий кітапшасы"
+      },
+      "description": {
+        "ru": "Штамп «выбыл 31.08.98» стоит на день позже официальной даты гибели. Кто-то оформлял его выезд, когда он уже считался мёртвым.",
+        "en": "The stamp \"departed 31.08.98\" is dated a day after the official death. Someone processed his check-out while he was already considered dead.",
+        "tr": "«Ayrıldı 31.08.98» kaşesi, resmî ölüm tarihinden bir gün sonrasına ait. Biri, o çoktan ölü sayılırken çıkışını işlemiş.",
+        "ar": "ختم «غادر 31.08.98» مؤرخ بعد يوم من الوفاة الرسمية. أحدهم أنهى إجراءات مغادرته وهو يُعدّ ميتًا بالفعل.",
+        "kk": "«Шықты 31.08.98» мөртабаны ресми қаза күнінен бір күн кейін қойылған. Біреу оны өлі саналып қойған кезде шығарып жіберген."
+      }
+    },
+    "epilogue": null
+  }
+}

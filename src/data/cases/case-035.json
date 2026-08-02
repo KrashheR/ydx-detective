@@ -499,5 +499,88 @@
     },
     "seasonClue": null,
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "arkady_egorov",
+      "displayName": {
+        "ru": "Аркадий Егоров",
+        "en": "Arkady Egorov",
+        "tr": "Arkadi Yegorov",
+        "ar": "أركادي يغوروف",
+        "kk": "Аркадий Егоров"
+      },
+      "portraitState": "absurd_pride"
+    },
+    "finalLine": {
+      "ru": "Признаю: разгромить зал фургоном было эффектнее, чем умнее.",
+      "en": "I admit it: wrecking the hall with a van was more spectacular than it was clever.",
+      "tr": "İtiraf ediyorum: salonu minibüsle dağıtmak akıllıcadan çok gösterişliydi.",
+      "ar": "أعترف: تحطيم القاعة بشاحنة كان مبهرًا أكثر مما كان ذكيًا.",
+      "kk": "Мойындаймын: залды фургонмен қиратқаным ақылдыдан гөрі әсерлі болды."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Разгром зала настоящий, а администратор действительно не видел момент повреждения — Егоров настоял на работе без персонала.",
+          "en": "The wrecked hall is real, and the manager genuinely did not see the moment of damage — Egorov insisted on working without staff.",
+          "tr": "Dağıtılmış salon gerçek ve müdür hasar anını gerçekten görmedi — Yegorov personelsiz çalışmakta ısrar etmişti.",
+          "ar": "الخراب في القاعة حقيقي، والمدير لم يرَ فعلًا لحظة الضرر — إذ أصرّ يغوروف على العمل دون موظفين.",
+          "kk": "Залдың қирағаны шын, ал әкімші зақым сәтін шынымен көрмеген — Егоров қызметкерсіз жұмыс істеуді талап еткен."
+        },
+        "evidenceIds": [
+          "ev-admin"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "В зал по служебной карте въезжал только его фургон, и рисунок протектора на паркете совпадает с его шинами.",
+          "en": "Only his van entered the hall on a service card, and the tread pattern on the parquet matches its tyres.",
+          "tr": "Salona hizmet kartıyla yalnızca onun minibüsü girdi ve parkedeki diş deseni onun lastikleriyle eşleşiyor.",
+          "ar": "لم تدخل القاعة ببطاقة الخدمة سوى شاحنته، ونمط المداس على الباركيه يطابق إطاراتها.",
+          "kk": "Залға қызметтік картамен тек оның фургоны кірген, ал паркеттегі протектор өрнегі оның дөңгелектерімен сәйкес."
+        },
+        "evidenceIds": [
+          "ev-camera",
+          "ev-tyres"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Сервисный реестр показывает: части заявленного оборудования в указанном составе не существовало, а трек фургона фиксирует, что вмятину увеличили уже после происшествия.",
+          "en": "The service register shows part of the claimed equipment never existed in that configuration, and the van's track shows the dent was enlarged after the incident.",
+          "tr": "Servis kaydı, talep edilen ekipmanın bir kısmının o bileşimde hiç var olmadığını gösteriyor; minibüsün izi de göçüğün olaydan sonra büyütüldüğünü ortaya koyuyor.",
+          "ar": "يُظهر سجل الصيانة أن جزءًا من المعدّات المطالَب بها لم يوجد قط بذلك التكوين، ويُظهر مسار الشاحنة أن الانبعاج وُسِّع بعد الحادث.",
+          "kk": "Сервистік тізілім көрсетеді: мәлімделген жабдықтың бір бөлігі көрсетілген құрамда мүлде болмаған, ал фургон тректері майысқан жердің оқиғадан кейін ұлғайтылғанын тіркеген."
+        },
+        "evidenceIds": [
+          "ev-sprayers",
+          "ev-gps"
+        ]
+      }
+    ]
   }
 }

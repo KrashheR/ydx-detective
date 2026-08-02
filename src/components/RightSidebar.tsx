@@ -5,6 +5,7 @@ import type { LeaderboardRow } from '../services/platformAdapter';
 import { evaluateRank } from '../engine/rankEngine';
 import { formatInvestigatorLevel, t } from '../i18n/ui';
 import { ACHIEVEMENTS } from '../data/achievements';
+import { getStampCaption } from '../data/stampTexts';
 import { useCountUp } from '../hooks/useCountUp';
 
 interface Props {
@@ -23,8 +24,14 @@ interface Props {
   /** Ids of unlocked achievements — drives the archive button count. */
   unlockedAchievementIds: string[];
   onOpenAchievements: () => void;
+  /** Caption currently inked on the contradiction stamp; `null` = default. */
+  activeStampTextId: string | null;
+  /** Opens the cosmetic stamp-caption shop. */
+  onOpenStampShop: () => void;
   /** Real Yandex leaderboard rows, or null when unavailable (offline/dev). */
   leaderboard: LeaderboardRow[] | null;
+  /** Special-archives entry card, injected by `App.tsx` (omit to hide it). */
+  archivesSlot?: React.ReactNode;
 }
 
 /** Local fallback shown when the Yandex leaderboard is unavailable. */
@@ -46,7 +53,10 @@ export function RightSidebar({
   perfectStreak,
   unlockedAchievementIds,
   onOpenAchievements,
+  activeStampTextId,
+  onOpenStampShop,
   leaderboard,
+  archivesSlot,
 }: Props) {
   const rank = evaluateRank(xp);
   const levelTitle = formatInvestigatorLevel(rank.level, lang);
@@ -174,6 +184,8 @@ export function RightSidebar({
         </Card>
       )}
 
+      {archivesSlot}
+
       {/* Achievements archive button */}
       <motion.button
         type="button"
@@ -188,6 +200,23 @@ export function RightSidebar({
         </span>
         <span className="font-mono text-text-dim">
           {unlockedAchievementIds.length} / {ACHIEVEMENTS.length}
+        </span>
+      </motion.button>
+
+      {/* Stamp workshop — cosmetic caption shop */}
+      <motion.button
+        type="button"
+        onClick={onOpenStampShop}
+        whileTap={{ scale: 0.97 }}
+        transition={{ duration: 0.12, ease: 'easeOut' }}
+        className="flex items-center justify-between rounded-[10px] border border-border bg-surface-2 px-3.5 py-3 text-left text-sm text-text-light transition-colors hover:border-black/15"
+      >
+        <span className="flex items-center gap-2">
+          <span aria-hidden>🖋</span>
+          {t('stampShop', lang)}
+        </span>
+        <span className="max-w-[110px] truncate font-mono text-[11px] text-text-dim">
+          {getStampCaption(activeStampTextId, lang)}
         </span>
       </motion.button>
 

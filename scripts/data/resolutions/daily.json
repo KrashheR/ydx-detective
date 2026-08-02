@@ -1,0 +1,349 @@
+{
+  "case-002-daily": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "viktor_gromin",
+      "displayName": {
+        "ru": "Виктор Громин",
+        "en": "Viktor Gromin",
+        "tr": "Viktor Gromin",
+        "ar": "فيكتور غرومين",
+        "kk": "Виктор Громин"
+      },
+      "portraitState": "caught"
+    },
+    "finalLine": {
+      "ru": "Нейлон звучал безобиднее. Для школы — особенно.",
+      "en": "Nylon sounded more harmless. For a school, especially.",
+      "tr": "Naylon daha zararsız geliyordu. Hele bir okul için.",
+      "ar": "بدا النايلون أقلّ ضررًا. ولا سيّما في مدرسة.",
+      "kk": "Нейлон зиянсыздау естілді. Мектеп үшін — әсіресе."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Взрыв в лаборатории действительно произошёл, а помещение числится за школьным кабинетом химии.",
+          "en": "The laboratory explosion really happened, and the room is registered to the school chemistry class.",
+          "tr": "Laboratuvardaki patlama gerçekten oldu ve oda okulun kimya sınıfına kayıtlı.",
+          "ar": "وقع الانفجار في المختبر فعلًا، والغرفة مسجَّلة باسم صفّ الكيمياء المدرسي.",
+          "kk": "Зертханадағы жарылыс шынымен болған, ал үй-жай мектептің химия кабинетіне тіркелген."
+        },
+        "evidenceIds": ["ev-witness"]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "Анализ остатков даёт состав контрафактного растворителя — к синтезу нейлона он отношения не имеет.",
+          "en": "Analysis of the residue gives the composition of a counterfeit solvent — nothing to do with nylon synthesis.",
+          "tr": "Kalıntı analizi sahte bir çözücünün bileşimini veriyor — naylon sentezleriyle ilgisi yok.",
+          "ar": "يعطي تحليل البقايا تركيب مذيب مقلَّد — لا علاقة له بتخليق النايلون.",
+          "kk": "Қалдықтарды талдау контрафактілі еріткіштің құрамын береді — нейлон синтезіне қатысы жоқ."
+        },
+        "evidenceIds": ["ev-lab-analysis"]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Уборщик видел канистры и ночные продажи, а на счёт за две недели до взрыва легли три крупных наличных пополнения сверх зарплаты.",
+          "en": "The cleaner saw canisters and night-time sales, and three large cash deposits above salary landed on the account two weeks before the blast.",
+          "tr": "Temizlikçi bidonları ve gece satışlarını gördü; patlamadan iki hafta önce hesaba maaş dışı üç büyük nakit yatırıldı.",
+          "ar": "رأى عامل النظافة العبوات والمبيعات الليلية، ووصلت إلى الحساب ثلاث إيداعات نقدية كبيرة تفوق الراتب قبل الانفجار بأسبوعين.",
+          "kk": "Тазалаушы канистрлер мен түнгі сатылымдарды көрген, ал жарылыстан екі апта бұрын шотқа жалақыдан тыс үш ірі қолма-қол түсім түскен."
+        },
+        "evidenceIds": ["ev-witness", "ev-bank"]
+      }
+    ]
+  },
+
+  "case-101-daily": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "nikolay_koval",
+      "displayName": {
+        "ru": "Николай Коваль",
+        "en": "Nikolay Koval",
+        "tr": "Nikolay Koval",
+        "ar": "نيكولاي كوفال",
+        "kk": "Николай Коваль"
+      },
+      "portraitState": "tired_relief"
+    },
+    "finalLine": {
+      "ru": "Код восстановим. Ночь в серверной — вряд ли.",
+      "en": "The code can be restored. That night in the server room, hardly.",
+      "tr": "Kod geri getirilebilir. Sunucu odasındaki o gece ise pek değil.",
+      "ar": "يمكن استعادة الشيفرة. أما تلك الليلة في غرفة الخوادم فلا.",
+      "kk": "Кодты қалпына келтіруге болады. Сервер бөлмесіндегі түнді — екіталай."
+    },
+    "emotionalMode": "relief",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Журнал фиксирует рост температуры с 22 °C до 87 °C за 88 минут — типичная картина отказа охлаждения.",
+          "en": "The log records a rise from 22 °C to 87 °C over 88 minutes — the classic signature of a cooling failure.",
+          "tr": "Kayıt, 88 dakikada 22 °C'den 87 °C'ye çıkışı gösteriyor — soğutma arızasının tipik tablosu.",
+          "ar": "يسجّل السجل ارتفاعًا من 22 °م إلى 87 °م خلال 88 دقيقة — الصورة النمطية لعطل التبريد.",
+          "kk": "Журнал 88 минутта 22 °C-тан 87 °C-қа дейін өскенін тіркеген — салқындатудың істен шығуының тән көрінісі."
+        },
+        "evidenceIds": ["ev-temp-log"]
+      },
+      {
+        "labelKey": "explained",
+        "text": {
+          "ru": "Инспекция нашла усталостное разрушение подшипника насоса №2 без признаков преднамеренного повреждения.",
+          "en": "The inspection found fatigue failure in the bearing of pump No. 2, with no signs of deliberate damage.",
+          "tr": "İnceleme, 2 numaralı pompanın rulmanında yorulma kırılması buldu; kasıtlı hasar izi yok.",
+          "ar": "وجد الفحص انهيارًا بالكلل في محمل المضخّة رقم 2، دون أي أثر لضرر متعمَّد.",
+          "kk": "Тексеру №2 сорғы мойынтірегінің шаршау бұзылуын тапты, әдейі зақымдау белгілері жоқ."
+        },
+        "evidenceIds": ["ev-engineer"]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Серийный номер оплавленного ноутбука совпадает с полисом, а характер повреждений — тепловой.",
+          "en": "The serial number of the melted laptop matches the policy, and the damage pattern is thermal.",
+          "tr": "Eriyen dizüstünün seri numarası poliçeyle örtüşüyor ve hasarın niteliği ısıl.",
+          "ar": "الرقم التسلسلي للحاسوب المنصهر يطابق البوليصة، وطبيعة الضرر حرارية.",
+          "kk": "Балқыған ноутбуктің сериялық нөмірі полиспен сәйкес, ал зақым сипаты — жылулық."
+        },
+        "evidenceIds": ["ev-photo"]
+      }
+    ]
+  },
+
+  "case-102-daily": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "alexey_krasin",
+      "displayName": {
+        "ru": "Алексей Красин",
+        "en": "Alexey Krasin",
+        "tr": "Aleksey Krasin",
+        "ar": "أليكسي كراسين",
+        "kk": "Алексей Красин"
+      },
+      "portraitState": "exposed"
+    },
+    "finalLine": {
+      "ru": "Стажёр был удобной версией. Пока вы не открыли журнал.",
+      "en": "The intern was a convenient version. Until you opened the log.",
+      "tr": "Stajyer elverişli bir versiyondu. Siz kaydı açana kadar.",
+      "ar": "كان المتدرّب رواية مريحة. إلى أن فتحتم السجل.",
+      "kk": "Тағылымдамашы ыңғайлы нұсқа еді. Сіздер журналды ашқанша."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Вентиляция действительно была отключена, и пожар с уничтожением архива реален.",
+          "en": "The ventilation really was shut down, and the fire that destroyed the archive is real.",
+          "tr": "Havalandırma gerçekten kapatıldı ve arşivi yok eden yangın gerçek.",
+          "ar": "أُوقفت التهوية فعلًا، والحريق الذي أتلف الأرشيف حقيقي.",
+          "kk": "Желдету шынымен өшірілген, ал мұрағатты жойған өрт нақты."
+        },
+        "evidenceIds": ["ev-access-log"]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "У вентшахты Б-7 за десять минут до отключения фиксируется только карта Красина; начальник смены опровергает версию о стажёре.",
+          "en": "Ten minutes before the shutdown only Krasin's card is logged at shaft B-7; the shift supervisor rejects the intern story.",
+          "tr": "Kapanmadan on dakika önce B-7 bacasında yalnızca Krasin'in kartı kayıtlı; vardiya amiri stajyer hikâyesini çürütüyor.",
+          "ar": "قبل الإيقاف بعشر دقائق لا تُسجَّل عند العمود B-7 سوى بطاقة كراسين؛ ورئيس الوردية يدحض رواية المتدرّب.",
+          "kk": "Өшірілуден он минут бұрын Б-7 шахтасында тек Красиннің картасы тіркелген; ауысым бастығы тағылымдамашы туралы нұсқаны жоққа шығарады."
+        },
+        "evidenceIds": ["ev-access-log", "ev-witness"]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Внутренний аудит показывает системное перенаправление средств за три месяца до пожара. Уничтоженный архив хранил именно эти документы.",
+          "en": "The internal audit shows funds systematically diverted over the three months before the fire. The destroyed archive held exactly those records.",
+          "tr": "İç denetim, yangından önceki üç ayda fonların sistematik olarak yönlendirildiğini gösteriyor. Yok edilen arşiv tam da bu belgeleri tutuyordu.",
+          "ar": "يُظهر التدقيق الداخلي تحويلًا منهجيًا للأموال خلال الأشهر الثلاثة السابقة للحريق. والأرشيف المُتلَف كان يحفظ تلك المستندات بالذات.",
+          "kk": "Ішкі аудит өрттен үш ай бұрын қаражаттың жүйелі түрде бағытталғанын көрсетеді. Жойылған мұрағатта дәл сол құжаттар сақталған."
+        },
+        "evidenceIds": ["ev-audit"]
+      }
+    ]
+  },
+
+  "case-103-daily": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "anton_belyarov",
+      "displayName": {
+        "ru": "Антон Беляров",
+        "en": "Anton Belyarov",
+        "tr": "Anton Belyarov",
+        "ar": "أنطون بيليَاروف",
+        "kk": "Антон Беляров"
+      },
+      "portraitState": "sheepish"
+    },
+    "finalLine": {
+      "ru": "В кино мост выглядел ниже. И страховка — проще.",
+      "en": "In the movies the bridge looked lower. And the insurance simpler.",
+      "tr": "Filmlerde köprü daha alçak görünüyordu. Sigorta da daha kolay.",
+      "ar": "في الأفلام بدا الجسر أقلّ ارتفاعًا. والتأمين أبسط.",
+      "kk": "Кинода көпір аласарақ көрінген. Сақтандыру да оңайырақ."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Автомобиль действительно упал с моста, и повреждения реальны.",
+          "en": "The car really did go off the bridge, and the damage is real.",
+          "tr": "Araç gerçekten köprüden düştü ve hasar gerçek.",
+          "ar": "سقطت السيارة من الجسر فعلًا، والأضرار حقيقية.",
+          "kk": "Көлік шынымен көпірден құлаған, зақымдар нақты."
+        },
+        "evidenceIds": ["ev-witness"]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "Охранник моста не видел никакого второго автомобиля, а GPS фиксирует заезд от развлекательного центра и умышленное ускорение.",
+          "en": "The bridge guard saw no second vehicle at all, and GPS records a run from the entertainment centre and a deliberate acceleration.",
+          "tr": "Köprü görevlisi ikinci bir araç görmedi; GPS ise eğlence merkezinden gelen bir sürüş ve kasıtlı hızlanma kaydediyor.",
+          "ar": "لم يرَ حارس الجسر أي سيارة ثانية، ويسجّل الـGPS انطلاقًا من مركز الترفيه وتسارعًا متعمَّدًا.",
+          "kk": "Көпір күзетшісі ешқандай екінші көлікті көрмеген, ал GPS ойын-сауық орталығынан шыққан жүріс пен әдейі жеделдетуді тіркеген."
+        },
+        "evidenceIds": ["ev-witness", "ev-gps"]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "За три минуты до падения он звонит и обещает «сделать кое-что невероятное». Это трюк, а не погоня.",
+          "en": "Three minutes before the fall he calls and promises to “do something incredible”. That is a stunt, not a chase.",
+          "tr": "Düşüşten üç dakika önce arayıp “inanılmaz bir şey yapacağını” söylüyor. Bu bir gösteri, kovalamaca değil.",
+          "ar": "قبل السقوط بثلاث دقائق يتّصل واعدًا بأن «يفعل شيئًا لا يُصدَّق». هذه حركة استعراضية لا مطاردة.",
+          "kk": "Құлаудан үш минут бұрын ол қоңырау шалып, «керемет бірдеңе жасаймын» деп уәде береді. Бұл — трюк, қуғын емес."
+        },
+        "evidenceIds": ["ev-phone"]
+      }
+    ]
+  },
+
+  "case-104-daily": {
+    "verdict": "reject",
+    "speaker": {
+      "characterId": "roman_taksidis",
+      "displayName": {
+        "ru": "Роман Таксидис",
+        "en": "Roman Taksidis",
+        "tr": "Roman Taksidis",
+        "ar": "رومان تاكسيديس",
+        "kk": "Роман Таксидис"
+      },
+      "portraitState": "resigned"
+    },
+    "finalLine": {
+      "ru": "Продать, утопить, заявить угон. На бумаге было элегантнее.",
+      "en": "Sell it, sink it, report it stolen. On paper it was more elegant.",
+      "tr": "Sat, batır, çalındı diye bildir. Kâğıt üzerinde daha zarifti.",
+      "ar": "أن تبيعها وتُغرقها وتبلّغ عن سرقتها. على الورق كان الأمر أنيق أكثر.",
+      "kk": "Сат, батыр, ұрланды деп мәлімде. Қағаз жүзінде әсемірек еді."
+    },
+    "emotionalMode": "defeat",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Автомобиль действительно оказался на дне гавани, и портовая охрана видела его в воде.",
+          "en": "The car really did end up at the bottom of the harbour, and port security saw it in the water.",
+          "tr": "Araç gerçekten limanın dibine indi ve liman güvenliği onu suda gördü.",
+          "ar": "استقرّت السيارة فعلًا في قاع الميناء، ورآها أمن الميناء في الماء.",
+          "kk": "Көлік шынымен айлақтың түбіне түскен, ал порт күзеті оны суда көрген."
+        },
+        "evidenceIds": ["ev-harbor"]
+      },
+      {
+        "labelKey": "crack",
+        "text": {
+          "ru": "GPS ставит машину на пункт металлолома в 01:15 — за два часа до заявления об угоне.",
+          "en": "GPS puts the car at the scrapyard at 01:15 — two hours before the theft was reported.",
+          "tr": "GPS aracı 01:15'te hurdalıkta gösteriyor — hırsızlık ihbarından iki saat önce.",
+          "ar": "يضع الـGPS السيارة في ساحة الخردة عند 01:15 — قبل الإبلاغ عن السرقة بساعتين.",
+          "kk": "GPS көлікті 01:15-те металл сынық қабылдау пунктінде көрсетеді — ұрлық туралы мәлімдеуден екі сағат бұрын."
+        },
+        "evidenceIds": ["ev-gps"]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Квитанция подтверждает: в 01:18 владелец лично сдал автомобиль за наличные и расписался. Машину отбуксировали и столкнули в воду уже после продажи.",
+          "en": "The receipt confirms it: at 01:18 the owner personally sold the car for cash and signed for it. The vehicle was towed and pushed into the water only after the sale.",
+          "tr": "Makbuz doğruluyor: saat 01:18'de sahibi aracı bizzat nakit karşılığı sattı ve imzaladı. Araç, satıştan sonra çekilip suya itildi.",
+          "ar": "يؤكّد الإيصال: عند 01:18 باع المالك السيارة نقدًا بنفسه ووقّع. ثم قُطرت ودُفعت إلى الماء بعد البيع.",
+          "kk": "Түбіртек растайды: 01:18-де иесі көлікті қолма-қол ақшаға өзі тапсырып, қол қойған. Көлікті сатылымнан кейін ғана сүйреп әкеліп, суға итерген."
+        },
+        "evidenceIds": ["ev-receipt", "ev-harbor"]
+      }
+    ]
+  },
+
+  "case-105-daily": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "stepan_mirov",
+      "displayName": {
+        "ru": "Степан Миров",
+        "en": "Stepan Mirov",
+        "tr": "Stepan Mirov",
+        "ar": "ستيبان ميروف",
+        "kk": "Степан Миров"
+      },
+      "portraitState": "wry_relief"
+    },
+    "finalLine": {
+      "ru": "Сосед взорвал квартиру, а вы спасли мою студию. Странная неделя.",
+      "en": "My neighbour blew up his flat and you saved my studio. Strange week.",
+      "tr": "Komşum dairesini havaya uçurdu, siz de stüdyomu kurtardınız. Tuhaf bir hafta.",
+      "ar": "فجّر جاري شقّته وأنقذتم أنتم استوديوهي. أسبوع غريب.",
+      "kk": "Көршім пәтерін жарып жіберді, ал сіздер студиямды құтқардыңыздар. Оғаш апта."
+    },
+    "emotionalMode": "humour",
+    "reasoningChain": [
+      {
+        "labelKey": "truth",
+        "text": {
+          "ru": "Акт газовой службы подтверждает разрыв трубы в квартире 18 и распространение разрушений на квартиру 19.",
+          "en": "The gas service report confirms a pipe rupture in flat 18 and the spread of damage into flat 19.",
+          "tr": "Gaz idaresi raporu, 18 numaralı dairedeki boru patlamasını ve hasarın 19 numaraya yayılmasını doğruluyor.",
+          "ar": "يؤكّد تقرير خدمة الغاز انفجار أنبوب في الشقة 18 وامتداد الأضرار إلى الشقة 19.",
+          "kk": "Газ қызметінің актісі 18-пәтердегі құбырдың жарылғанын және қирау 19-пәтерге таралғанын растайды."
+        },
+        "evidenceIds": ["ev-gas-report"]
+      },
+      {
+        "labelKey": "explained",
+        "text": {
+          "ru": "Независимое заявление соседа совпадает по дате, времени и характеру аварии.",
+          "en": "The neighbour's independent claim agrees on date, time and the nature of the accident.",
+          "tr": "Komşunun bağımsız başvurusu tarih, saat ve kazanın niteliği bakımından örtüşüyor.",
+          "ar": "مطالبة الجار المستقلّة تتوافق في التاريخ والوقت وطبيعة الحادث.",
+          "kk": "Көршінің тәуелсіз өтініші күні, уақыты және апат сипаты бойынша сәйкес келеді."
+        },
+        "evidenceIds": ["ev-neighbor-claim"]
+      },
+      {
+        "labelKey": "verdict",
+        "text": {
+          "ru": "Инвентарный стикер на уцелевшем фрагменте корпуса совпадает с полисом, а повреждения соответствуют взрывной волне.",
+          "en": "The inventory sticker on the surviving fragment of the case matches the policy, and the damage matches a blast wave.",
+          "tr": "Kasanın kurtulan parçasındaki envanter etiketi poliçeyle örtüşüyor ve hasar patlama dalgasına uyuyor.",
+          "ar": "ملصق الجرد على الجزء الباقي من الهيكل يطابق البوليصة، والأضرار تتوافق مع موجة انفجار.",
+          "kk": "Корпустың аман қалған бөлігіндегі түгендеу жапсырмасы полиспен сәйкес, ал зақымдар жарылыс толқынына сай."
+        },
+        "evidenceIds": ["ev-photo"]
+      }
+    ]
+  }
+}

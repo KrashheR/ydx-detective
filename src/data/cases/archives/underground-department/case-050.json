@@ -493,5 +493,104 @@
       "progressTotal": 7
     },
     "epilogue": null
+  },
+  "resolution": {
+    "verdict": "approve",
+    "speaker": {
+      "characterId": "mihail_ternov",
+      "displayName": {
+        "ru": "Михаил Тернов",
+        "en": "Mikhail Ternov",
+        "tr": "Mihail Ternov",
+        "ar": "ميخائيل تيرنوف",
+        "kk": "Михаил Тернов"
+      },
+      "portraitState": "calm_resolve"
+    },
+    "finalLine": {
+      "ru": "Архив сгорел не весь. Значит, и мы ещё не закончили.",
+      "en": "The archive did not burn entirely. Which means we are not finished either.",
+      "tr": "Arşiv tamamen yanmadı. Demek ki biz de bitmedik.",
+      "ar": "لم يحترق الأرشيف كلّه. إذًا نحن أيضًا لم ننتهِ بعد.",
+      "kk": "Мұрағат түгел жанған жоқ. Демек, біз де әлі бітірген жоқпыз."
+    },
+    "emotionalMode": "threat",
+    "reasoningChain": [
+      {
+        "label": {
+          "ru": "Что было правдой",
+          "en": "What was true",
+          "tr": "Doğru olan",
+          "ar": "ما كان صحيحًا",
+          "kk": "Не рас болды"
+        },
+        "text": {
+          "ru": "Оборудование, приборы и архив зарегистрированы задолго до пожара, и после первого налёта Тернов страховую сумму не увеличивал.",
+          "en": "The equipment, instruments and archive were registered long before the fire, and after the first raid Ternov never raised his cover.",
+          "tr": "Ekipman, cihazlar ve arşiv yangından çok önce kayıtlıydı ve ilk baskından sonra Ternov teminatını hiç artırmadı.",
+          "ar": "سُجّلت المعدّات والأجهزة والأرشيف قبل الحريق بوقت طويل، ولم يرفع تيرنوف مبلغ التأمين بعد الغارة الأولى.",
+          "kk": "Жабдық, аспаптар мен мұрағат өрттен әлдеқайда бұрын тіркелген, ал алғашқы шабуылдан кейін Тернов сақтандыру сомасын арттырмаған."
+        },
+        "evidenceIds": [
+          "document-50"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Что не совпало",
+          "en": "What did not match",
+          "tr": "Uyuşmayan şey",
+          "ar": "ما لم يتطابق",
+          "kk": "Не сәйкес келмеді"
+        },
+        "text": {
+          "ru": "Внутренняя сетка, пропитка и край разрыва фитиля совпадают с перехваченной промышленной партией, а камера переулка показывает двоих из серого фургона с канистрой.",
+          "en": "The inner mesh, impregnation and tear edge of the fuse match an intercepted industrial batch, and the alley camera shows two men from a grey van with a jerrycan.",
+          "tr": "Fitilin iç ağı, emprenyesi ve yırtık kenarı ele geçirilmiş endüstriyel bir partiyle eşleşiyor; ara sokak kamerası da gri bir minibüsten inen bidonlu iki kişiyi gösteriyor.",
+          "ar": "تتطابق الشبكة الداخلية والتشريب وحافة تمزّق الفتيل مع دفعة صناعية مضبوطة، وكاميرا الزقاق تُظهر رجلين من شاحنة رمادية يحملان جالونًا.",
+          "kk": "Білтенің ішкі торы, сіңдірмесі мен жыртық жиегі ұсталған өнеркәсіптік партиямен сәйкес, ал тар көше камерасы сұр фургоннан шыққан канистрлі екі адамды көрсетеді."
+        },
+        "evidenceIds": [
+          "photo-50",
+          "camera-50"
+        ]
+      },
+      {
+        "label": {
+          "ru": "Почему этого достаточно",
+          "en": "Why that is enough",
+          "tr": "Bu neden yeterli",
+          "ar": "لماذا هذا يكفي",
+          "kk": "Неге бұл жеткілікті"
+        },
+        "text": {
+          "ru": "Тернов не отключал датчики, вызов ушёл автоматически через 11 секунд, а он выводил ученика, а не спасал имущество. Поджог внешний.",
+          "en": "Ternov disabled no sensors, the call went out automatically after 11 seconds, and he was getting his apprentice out rather than saving property. The arson came from outside.",
+          "tr": "Ternov hiçbir sensörü kapatmadı, ihbar 11 saniye içinde otomatik gitti ve o, malı değil çırağını kurtarıyordu. Kundaklama dışarıdan.",
+          "ar": "لم يُعطّل تيرنوف أي مستشعر، وانطلق البلاغ آليًا بعد 11 ثانية، وكان يُخرج تلميذه لا ينقذ الممتلكات. الحريق العمد جاء من الخارج.",
+          "kk": "Тернов датчиктерді өшірмеген, шақыру 11 секундтан кейін автоматты кеткен, ал ол мүлікті емес, шәкіртін алып шыққан. Өрт сырттан қойылған."
+        },
+        "evidenceIds": [
+          "log-50",
+          "witness-50"
+        ]
+      }
+    ],
+    "arcReveal": {
+      "title": {
+        "ru": "Аэропортовый маршрут",
+        "en": "Airport Route",
+        "tr": "Havaalanı Güzergahı",
+        "ar": "طريق المطار",
+        "kk": "Әуежай бағыты"
+      },
+      "text": {
+        "ru": "Последний узел Серого конвоя связан с грузовым терминалом и багажными службами аэропорта.",
+        "en": "The Gray Convoy's final hub is linked to the airport cargo terminal and baggage services.",
+        "tr": "Gri Konvoy'un son merkezi, havaalanı kargo terminali ve bagaj hizmetleriyle bağlantılıdır.",
+        "ar": "يرتبط المحور الأخير لـ Gray Convoy بمحطة الشحن بالمطار وخدمات الأمتعة.",
+        "kk": "Сұр колоннаның соңғы түйіні әуежайдың жүк терминалы мен багаж қызметтеріне қосылған."
+      }
+    }
   }
 }
