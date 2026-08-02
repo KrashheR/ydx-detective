@@ -64,7 +64,9 @@ export function SpecialArchivesEntry({
       transition={{ duration: 0.18, ease: "easeOut" }}
       // `shrink-0`: the promo is the tallest card in a scrolling flex column and
       // would otherwise be squeezed down to its cover strip.
-      className="relative mt-2 block w-full shrink-0 overflow-hidden rounded-[5px] border border-bureau-gold-dim bg-gradient-to-br from-bureau-2 to-bureau text-center text-white shadow-folder"
+      // No `shadow-folder` here: the deep 40px halo read as a glow around the
+      // promo in the analytics column — a flat card shadow keeps it paper-like.
+      className="relative mt-2 block w-full shrink-0 overflow-hidden rounded-[5px] border border-bureau-gold-dim bg-gradient-to-br from-bureau-2 to-bureau text-center text-white shadow-card"
     >
       <span
         className="pointer-events-none absolute inset-[7px] border border-bureau-gold/30"

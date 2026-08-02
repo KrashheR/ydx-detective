@@ -42,6 +42,7 @@ Paths are stable. Read the matching doc for *why*, then the source for *how*.
 | Achievement unlock predicates | `src/engine/achievementsEngine.ts` (catalog: `src/data/achievements.ts`) |
 | Case unlock / sequence / level gating | `src/engine/caseUnlockEngine.ts` |
 | Forced-ad (interstitial) pacing | `src/engine/adPolicyEngine.ts` |
+| Which IAP product id / price is offered right now (offer eligibility) | `src/engine/offerEngine.ts` |
 | Remote configuration (Yandex flags → ad pacing) | `src/services/remoteConfig.ts` |
 | All economy/tuning constants (reward split, ranks, streak, hints, saveVersion) | `src/config/gameConfig.ts` |
 | Persistence: where/when snapshot is written + save migration | `src/services/persistence.ts` |

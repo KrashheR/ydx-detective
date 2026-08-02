@@ -1,12 +1,31 @@
 import { getCaseSummaryById } from "./caseLoader";
+import type { Offer } from "../engine/offerEngine";
 import type { CaseSummary, LocalizedString } from "../types";
 
 export type ThematicPackStatus = "preview" | "free_available" | "ad_available";
+
+/** Regular sticker price of a single archive pack, in rubles. */
+export const ARCHIVE_PACK_PRICE_RUB = 149;
+
+/**
+ * Introductory price of a player's *first* archive, in rubles. Yandex prices
+ * are fixed per product id, so this is a second product per pack rather than a
+ * discount applied to the first one — see `src/engine/offerEngine.ts`.
+ */
+export const ARCHIVE_PACK_INTRO_PRICE_RUB = 99;
+
+const ARCHIVE_PACK_INTRO_OFFER = (packId: string): Offer => ({
+  productId: `archive.${packId}.intro`,
+  fallbackPriceRub: ARCHIVE_PACK_INTRO_PRICE_RUB,
+  rule: "first_archive",
+});
 
 export interface ThematicPack {
   readonly id: string;
   readonly productId: string;
   readonly fallbackPriceRub: number;
+  /** Cheaper alternative product, sold while its rule holds. */
+  readonly offer?: Offer;
   readonly title: LocalizedString;
   readonly hook: LocalizedString;
   readonly caseTitles: readonly LocalizedString[];
@@ -63,7 +82,8 @@ export const THEMATIC_PACKS: readonly ThematicPack[] = [
   {
     id: "dacha-romashka",
     productId: "archive.dacha-romashka",
-    fallbackPriceRub: 299,
+    fallbackPriceRub: ARCHIVE_PACK_PRICE_RUB,
+    offer: ARCHIVE_PACK_INTRO_OFFER("dacha-romashka"),
     title: l(
       "СНТ «Ромашка». Тайна тринадцатого участка",
       "Romashka Gardens: The Secret of Plot 13",
@@ -108,7 +128,8 @@ export const THEMATIC_PACKS: readonly ThematicPack[] = [
   {
     id: "night-train",
     productId: "archive.night-train",
-    fallbackPriceRub: 299,
+    fallbackPriceRub: ARCHIVE_PACK_PRICE_RUB,
+    offer: ARCHIVE_PACK_INTRO_OFFER("night-train"),
     title: l(
       "Поезд №13. Билет до станции Тихая",
       "Train No. 13: Ticket to Tikhaya",
@@ -153,7 +174,8 @@ export const THEMATIC_PACKS: readonly ThematicPack[] = [
   {
     id: "sanatorium-priboy",
     productId: "archive.sanatorium-priboy",
-    fallbackPriceRub: 299,
+    fallbackPriceRub: ARCHIVE_PACK_PRICE_RUB,
+    offer: ARCHIVE_PACK_INTRO_OFFER("sanatorium-priboy"),
     title: l(
       "Санаторий «Прибой». Последняя смена",
       "The Priboy Sanatorium: The Last Shift",
@@ -321,11 +343,19 @@ export function getThematicPackCaseIds(pack: ThematicPack): readonly string[] {
   return ARCHIVE_CASE_IDS[pack.id] ?? [];
 }
 
-/** The pack a product id belongs to, or null when it is not an archive product. */
+/**
+ * The pack a product id belongs to, or null when it is not an archive product.
+ * The intro-offer id counts: it is a different price for the same entitlement,
+ * so a restore must grant the pack whichever of the two the player paid for.
+ */
 export function getThematicPackIdByProductId(productId: string): string | null {
   const id = productId.trim();
   if (!id) return null; // a pack with a blank productId is not on sale yet
-  return ALL_THEMATIC_PACKS.find((pack) => pack.productId.trim() === id)?.id ?? null;
+  return (
+    ALL_THEMATIC_PACKS.find(
+      (pack) => pack.productId.trim() === id || pack.offer?.productId === id,
+    )?.id ?? null
+  );
 }
 
 /**

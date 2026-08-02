@@ -12,6 +12,7 @@
  */
 import { THEMATIC_PACKS } from "./thematicPacks";
 import { PURCHASABLE_STAMP_TEXTS } from "./stampTexts";
+import type { Offer } from "../engine/offerEngine";
 import type { UIKey } from "../i18n/ui";
 
 export interface Bundle {
@@ -20,6 +21,8 @@ export interface Bundle {
   readonly productId: string;
   /** Shown when the payments catalog is unreachable (offline / dev). */
   readonly fallbackPriceRub: number;
+  /** Cheaper alternative product, sold while its rule holds. */
+  readonly offer?: Offer;
   /** Archive pack ids the purchase unlocks. */
   readonly packIds: readonly string[];
   /** Stamp-caption ids the purchase unlocks. */
@@ -32,6 +35,8 @@ const ALL_STAMP_TEXT_IDS = PURCHASABLE_STAMP_TEXTS.map((stamp) => stamp.id);
 
 /** Every novelty caption in one purchase — sold inside the stamp workshop. */
 export const STAMP_BUNDLE_ID = "bundle.stamps";
+/** The three archives on their own — "набор из трёх расследований". */
+export const ARCHIVES_BUNDLE_ID = "bundle.archives";
 /** All three archives plus every caption — the Bureau's headline offer. */
 export const COMPLETE_BUNDLE_ID = "bundle.complete";
 
@@ -45,9 +50,32 @@ export const BUNDLES: readonly Bundle[] = [
     titleKey: "bundleStampsTitle",
   },
   {
+    id: ARCHIVES_BUNDLE_ID,
+    productId: ARCHIVES_BUNDLE_ID,
+    fallbackPriceRub: 299,
+    // Earned attention, not a launch discount: a player who has closed several
+    // cases has shown they want more of them, so that is when the three-archive
+    // set drops to its offer price.
+    offer: {
+      productId: "bundle.archives.offer",
+      fallbackPriceRub: 149,
+      rule: "after_cases",
+    },
+    packIds: ALL_PACK_IDS,
+    stampTextIds: [],
+    titleKey: "bundleArchivesTitle",
+  },
+  {
     id: COMPLETE_BUNDLE_ID,
     productId: COMPLETE_BUNDLE_ID,
-    fallbackPriceRub: 899,
+    fallbackPriceRub: 399,
+    // A day-two win-back on the top tier — never available on day one, so it
+    // cannot undercut the full price the player is seeing for the first time.
+    offer: {
+      productId: "bundle.complete.offer",
+      fallbackPriceRub: 199,
+      rule: "next_day",
+    },
     packIds: ALL_PACK_IDS,
     stampTextIds: ALL_STAMP_TEXT_IDS,
     titleKey: "bundleHeroTitle",
@@ -58,8 +86,15 @@ export function getBundle(id: string): Bundle | undefined {
   return BUNDLES.find((bundle) => bundle.id === id);
 }
 
+/**
+ * The bundle a product id belongs to. The offer id counts: it buys the same
+ * contents at a different price, so a restore must grant them either way.
+ */
 export function getBundleByProductId(productId: string): Bundle | undefined {
-  return BUNDLES.find((bundle) => bundle.productId === productId);
+  return BUNDLES.find(
+    (bundle) =>
+      bundle.productId === productId || bundle.offer?.productId === productId,
+  );
 }
 
 /**

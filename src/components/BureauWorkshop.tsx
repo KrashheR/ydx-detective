@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {
   DEFAULT_STAMP_TEXT_ID,
+  PACK_STAMP_TEXTS,
   STAMP_INKS,
   STAMP_TEXTS,
   getStampCaption,
@@ -18,15 +19,21 @@ import type { Language } from "../types";
 interface Props {
   lang: Language;
   ownedStampTextIds: string[];
+  /** Archives the player owns — what unlocks the pack captions. */
+  purchasedPackIds: readonly string[];
   activeStampTextId: string | null;
   activeStampInkId: string | null;
   paymentsAvailable: boolean;
   priceLabel: (stamp: StampText) => string;
   bundlePriceLabel: (bundleId: string) => string;
+  /** Localized archive title, for the "only in …" note on a locked caption. */
+  packTitle: (packId: string) => string;
   busyId: string | null;
   onPurchase: (stamp: StampText) => void;
   onEquip: (stampTextId: string | null) => void;
   onPickInk: (stampInkId: string | null) => void;
+  /** Sends the player to that archive's page, where it can be bought. */
+  onOpenPack: (packId: string, stampTextId: string) => void;
   onPurchaseBundle: (bundleId: string) => void;
 }
 
@@ -38,18 +45,29 @@ interface Props {
 export function BureauWorkshop({
   lang,
   ownedStampTextIds,
+  purchasedPackIds,
   activeStampTextId,
   activeStampInkId,
   paymentsAvailable,
   priceLabel,
   bundlePriceLabel,
+  packTitle,
   busyId,
   onPurchase,
   onEquip,
   onPickInk,
+  onOpenPack,
   onPurchaseBundle,
 }: Props) {
-  const owned = new Set([DEFAULT_STAMP_TEXT_ID, ...ownedStampTextIds]);
+  // Pack captions are never recorded in `ownedStampTextIds` — owning the
+  // archive is what grants them, so the shelf derives them every render.
+  const owned = new Set([
+    DEFAULT_STAMP_TEXT_ID,
+    ...ownedStampTextIds,
+    ...PACK_STAMP_TEXTS.filter(
+      (stamp) => stamp.packId != null && purchasedPackIds.includes(stamp.packId),
+    ).map((stamp) => stamp.id),
+  ]);
   const equippedId = activeStampTextId ?? DEFAULT_STAMP_TEXT_ID;
   // What the paper shows: the equipped caption until the player tries another on.
   const [previewId, setPreviewId] = useState<string | null>(null);
@@ -161,12 +179,23 @@ export function BureauWorkshop({
               const isPreviewing = !isEquipped && previewId === stamp.id;
               const busy = busyId === stamp.id;
               const label = getStampCaption(stamp.id, lang);
+              // A caption that ships with an archive the player has not bought:
+              // it is not for sale here, the tile is a doorway to the archive.
+              const lockedPackId =
+                !isOwned && stamp.packId != null ? stamp.packId : null;
+              // Only the caption actually on the die is cut in the chosen ink —
+              // otherwise picking a colour repaints the whole catalogue at once.
+              const inked = isEquipped || isPreviewing;
               return (
                 <button
                   key={stamp.id}
                   type="button"
                   disabled={busy}
                   onClick={() => {
+                    if (lockedPackId) {
+                      onOpenPack(lockedPackId, stamp.id);
+                      return;
+                    }
                     if (isOwned) {
                       setPreviewId(null);
                       onEquip(stamp.id === DEFAULT_STAMP_TEXT_ID ? null : stamp.id);
@@ -198,13 +227,21 @@ export function BureauWorkshop({
                   <span
                     className={`-rotate-[6deg] whitespace-nowrap border-[3px] border-double px-2 py-2 font-mono text-[10px] font-black uppercase ${
                       isOwned ? "" : "opacity-45"
-                    }`}
-                    style={{ borderColor: inkColor, color: inkColor }}
+                    } ${inked ? "" : "border-current text-ink/55"}`}
+                    style={inked ? { borderColor: inkColor, color: inkColor } : undefined}
                     aria-hidden
                   >
                     {label}
                   </span>
                   <b className="text-[11px] font-bold">{label}</b>
+                  {lockedPackId && (
+                    <small className="px-1 text-[9px] font-medium leading-tight text-ink/65">
+                      {t("stampLockedInPack", lang).replace(
+                        "{pack}",
+                        packTitle(lockedPackId),
+                      )}
+                    </small>
+                  )}
                   <small
                     className={`font-mono text-[9px] font-bold ${
                       isEquipped ? "text-success" : "text-bureau-copper"
@@ -212,11 +249,13 @@ export function BureauWorkshop({
                   >
                     {busy
                       ? "…"
-                      : isEquipped
-                        ? t("workshopStampInUse", lang)
-                        : isOwned
-                          ? t("stampEquip", lang)
-                          : `${t("buyAction", lang)} · ${priceLabel(stamp)}`}
+                      : lockedPackId
+                        ? `${t("stampOpenPack", lang)} →`
+                        : isEquipped
+                          ? t("workshopStampInUse", lang)
+                          : isOwned
+                            ? t("stampEquip", lang)
+                            : `${t("buyAction", lang)} · ${priceLabel(stamp)}`}
                   </small>
                 </button>
               );

@@ -14,8 +14,18 @@ import type { Language, LocalizedString } from "../types";
 
 export interface StampText {
   readonly id: string;
-  /** Yandex IAP product id; `null` for the free default. */
+  /**
+   * Yandex IAP product id; `null` for the free default *and* for the captions
+   * that come with an archive pack — those are never sold on their own.
+   */
   readonly productId: string | null;
+  /**
+   * Archive pack that grants this caption. Set only on pack captions: ownership
+   * is derived from `PlayerStats.archivePurchasedPackIds`, never persisted into
+   * `ownedStampTextIds`, so buying the pack (or a bundle containing it) is the
+   * single source of truth.
+   */
+  readonly packId?: string;
   /** Shown when the payments catalog is unavailable (offline / dev). */
   readonly fallbackPriceRub: number;
   /**
@@ -27,6 +37,14 @@ export interface StampText {
 
 /** Free caption every player owns; never purchasable, never removable. */
 export const DEFAULT_STAMP_TEXT_ID = "classic";
+
+/**
+ * Sticker price of every paid caption, in rubles. Captions are the Bureau's
+ * cheapest impulse buy — they are primarily earned as a bundle bonus, and only
+ * secondarily sold one at a time — so they all carry the same low price rather
+ * than being individually tiered.
+ */
+export const STAMP_TEXT_PRICE_RUB = 49;
 
 const l = (
   ru: string,
@@ -46,7 +64,7 @@ export const STAMP_TEXTS: readonly StampText[] = [
   {
     id: "storyteller",
     productId: "stamp.storyteller",
-    fallbackPriceRub: 79,
+    fallbackPriceRub: STAMP_TEXT_PRICE_RUB,
     caption: l(
       "СКАЗОЧНИК",
       "STORYTELLER",
@@ -58,7 +76,7 @@ export const STAMP_TEXTS: readonly StampText[] = [
   {
     id: "cardboard-alibi",
     productId: "stamp.cardboard-alibi",
-    fallbackPriceRub: 79,
+    fallbackPriceRub: STAMP_TEXT_PRICE_RUB,
     caption: l(
       "АЛИБИ ИЗ КАРТОНА",
       "CARDBOARD ALIBI",
@@ -70,7 +88,7 @@ export const STAMP_TEXTS: readonly StampText[] = [
   {
     id: "well-well",
     productId: "stamp.well-well",
-    fallbackPriceRub: 79,
+    fallbackPriceRub: STAMP_TEXT_PRICE_RUB,
     caption: l(
       "НУ-НУ…",
       "SURE, SURE…",
@@ -82,7 +100,7 @@ export const STAMP_TEXTS: readonly StampText[] = [
   {
     id: "smells-fishy",
     productId: "stamp.smells-fishy",
-    fallbackPriceRub: 79,
+    fallbackPriceRub: STAMP_TEXT_PRICE_RUB,
     caption: l(
       "ПАХНЕТ ЖАРЕНЫМ",
       "SMELLS FISHY",
@@ -94,13 +112,77 @@ export const STAMP_TEXTS: readonly StampText[] = [
   {
     id: "doesnt-add-up",
     productId: "stamp.doesnt-add-up",
-    fallbackPriceRub: 79,
+    fallbackPriceRub: STAMP_TEXT_PRICE_RUB,
     caption: l(
       "НЕ СХОДИТСЯ",
       "DOESN'T ADD UP",
       "HESAP TUTMUYOR",
       "لا يستقيم",
       "СӘЙКЕС ЕМЕС",
+    ),
+  },
+  {
+    id: "gotcha",
+    productId: "stamp.gotcha",
+    fallbackPriceRub: STAMP_TEXT_PRICE_RUB,
+    caption: l(
+      "ПОПАЛСЯ",
+      "GOTCHA",
+      "YAKALANDIN",
+      "أمسكتك",
+      "ҰСТАЛДЫҢ",
+    ),
+  },
+  {
+    id: "oops",
+    productId: "stamp.oops",
+    fallbackPriceRub: STAMP_TEXT_PRICE_RUB,
+    caption: l(
+      "ОПАНЬКИ",
+      "OOPSIE",
+      "HOPPALA",
+      "أوبس",
+      "ОЙПЫРМАЙ",
+    ),
+  },
+  /* ---- Pack captions: no price of their own, unlocked with the archive ---- */
+  {
+    id: "pack-dacha-romashka",
+    productId: null,
+    packId: "dacha-romashka",
+    fallbackPriceRub: 0,
+    caption: l(
+      "СОСЕДИ ВИДЕЛИ",
+      "THE NEIGHBOURS SAW",
+      "KOMŞULAR GÖRDÜ",
+      "الجيران رأوا",
+      "КӨРШІЛЕР КӨРДІ",
+    ),
+  },
+  {
+    id: "pack-night-train",
+    productId: null,
+    packId: "night-train",
+    fallbackPriceRub: 0,
+    caption: l(
+      "БИЛЕТ НЕ ТОТ",
+      "WRONG TICKET",
+      "BİLET YANLIŞ",
+      "التذكرة خاطئة",
+      "БИЛЕТ БАСҚА",
+    ),
+  },
+  {
+    id: "pack-sanatorium-priboy",
+    productId: null,
+    packId: "sanatorium-priboy",
+    fallbackPriceRub: 0,
+    caption: l(
+      "ДЕЛО НЕ СМОЕТ",
+      "THE TIDE WON'T WASH IT",
+      "DALGA SİLEMEZ",
+      "الموج لا يمحوه",
+      "ТОЛҚЫН ШАЙМАЙДЫ",
     ),
   },
 ];
@@ -145,10 +227,36 @@ export function getStampInkColor(id: string | null | undefined): string {
   return getStampInk(id).color;
 }
 
-/** Purchasable entries only — the shop shelf. */
+/**
+ * Purchasable entries only — the shop shelf, and the contents `bundles.ts`
+ * prices. Pack captions carry no `productId`, so they stay out of every bundle
+ * and can never inflate an advertised discount.
+ */
 export const PURCHASABLE_STAMP_TEXTS: readonly StampText[] = STAMP_TEXTS.filter(
   (stamp) => stamp.productId !== null,
 );
+
+/** Captions that come with an archive pack rather than with a price. */
+export const PACK_STAMP_TEXTS: readonly StampText[] = STAMP_TEXTS.filter(
+  (stamp) => stamp.packId !== undefined,
+);
+
+/**
+ * Whether a caption may be inked. Free default → always; pack caption → only
+ * with the pack bought; everything else → only when purchased. Kept here so the
+ * store guard and the workshop grid can never disagree about ownership.
+ */
+export function isStampTextUnlocked(
+  stampTextId: string,
+  ownedStampTextIds: readonly string[],
+  purchasedPackIds: readonly string[],
+): boolean {
+  if (stampTextId === DEFAULT_STAMP_TEXT_ID) return true;
+  const stamp = STAMP_TEXTS.find((entry) => entry.id === stampTextId);
+  if (!stamp) return false;
+  if (stamp.packId !== undefined) return purchasedPackIds.includes(stamp.packId);
+  return ownedStampTextIds.includes(stampTextId);
+}
 
 export function getStampText(id: string | null | undefined): StampText {
   return (

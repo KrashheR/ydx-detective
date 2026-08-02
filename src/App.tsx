@@ -19,6 +19,7 @@ import {
   type CaseUnlockInfo,
 } from './engine/caseUnlockEngine';
 import { evaluateDailyAvailability } from './engine/rewardEngine';
+import { resolvePrice, type OfferContext } from './engine/offerEngine';
 import { evaluateInterstitial } from './engine/adPolicyEngine';
 import {
   getServerTimeMs,
@@ -42,6 +43,12 @@ import { GAME_CONFIG } from './config/gameConfig';
 import { RTL_LANGUAGES, t } from './i18n/ui';
 import type { CaseSummary } from './types';
 import { THEMATIC_PACKS, getThematicPackCaseIds, isPurchasedArchiveCase } from './data/thematicPacks';
+import {
+  getArchivePackForCase,
+  getNextArchiveCase,
+  indexUnlocksByCaseId,
+  listArchiveCases,
+} from './engine/archiveAccessEngine';
 import { getAdPolicyConfig } from './services/remoteConfig';
 import { LeftSidebar } from './components/LeftSidebar';
 import { RightSidebar } from './components/RightSidebar';
@@ -57,7 +64,11 @@ import { TopBar } from './components/TopBar';
 import { BureauScreen, type BureauTab } from './components/BureauScreen';
 import type { ThematicPack } from './data/thematicPacks';
 import type { StampText } from './data/stampTexts';
-import { getStampInkColor } from './data/stampTexts';
+import {
+  DEFAULT_STAMP_INK_ID,
+  DEFAULT_STAMP_TEXT_ID,
+  getStampInkColor,
+} from './data/stampTexts';
 import { getBundle } from './data/bundles';
 import { RatingModal } from './components/RatingModal';
 import { EvidenceLinkBoard } from './components/EvidenceLinkBoard';
@@ -305,6 +316,19 @@ export default function App() {
   const formatLockedCaseMessage = (info: CaseUnlockInfo<CaseSummary>): string =>
     formatCaseLockMessage(info, lang);
 
+  /* --------------------- Archive (story pack) context -------------------- */
+
+  const unlockByCaseId = useMemo(
+    () => indexUnlocksByCaseId(standardCaseUnlocks),
+    [standardCaseUnlocks],
+  );
+  /** The story pack the open case belongs to — `null` on the standard desk. */
+  const activePack = selectedId ? getArchivePackForCase(selectedId) : null;
+  const activePackCases = useMemo(
+    () => (activePack ? listArchiveCases(stats, activePack, unlockByCaseId) : []),
+    [activePack, stats, unlockByCaseId],
+  );
+
   const openCase = async (
     summary: CaseSummary,
     opts?: { skipStandardGate?: boolean; sourceSurface?: string },
@@ -314,6 +338,21 @@ export default function App() {
       const isResumingActiveCase = session?.caseId === summary.id;
       if (unlock && !isCaseUnlocked(unlock) && !isResumingActiveCase) {
         flashToast(formatLockedCaseMessage(unlock));
+        return;
+      }
+    }
+
+    // Archive cases are reachable from the desk column now, not only from the
+    // Bureau — so the paywall has to be enforced here too, or a locked file
+    // would open for free from the left column.
+    const pack = getArchivePackForCase(summary.id);
+    if (pack) {
+      const entry = listArchiveCases(stats, pack, unlockByCaseId).find(
+        (item) => item.caseData.id === summary.id,
+      );
+      if (entry?.status === 'locked' && session?.caseId !== summary.id) {
+        flashToast(t('archiveCaseLockedToast', lang));
+        openBureau('archives');
         return;
       }
     }
@@ -502,16 +541,51 @@ export default function App() {
   const openArchives = () => openBureau('archives');
   const openStampShop = () => openBureau('stamps');
 
+  /**
+   * One place where a paid click is reported. The SDK already fires the raw
+   * `purchase_*` goals per product id; this adds *what was bought* (kind + item)
+   * and — unlike the SDK — also records the attempts that never reach the
+   * payments API at all (offline / no catalog).
+   */
+  const trackPurchaseAttempt = async (
+    kind: 'archive' | 'stamp' | 'bundle' | 'noads',
+    itemId: string,
+    productId: string,
+    buy: () => Promise<boolean>,
+  ): Promise<boolean> => {
+    const payload = { kind, itemId, productId };
+    trackEvent('purchase_intent', {
+      ...payload,
+      paymentsAvailable: isPaymentsAvailable(),
+    });
+    const ok = await buy();
+    trackEvent('purchase_result', { ...payload, ok });
+    return ok;
+  };
+
   const handlePurchaseStampText = async (stamp: StampText): Promise<boolean> => {
     if (!stamp.productId) return false;
-    const ok = await purchaseProduct(stamp.productId);
+    const productId = stamp.productId;
+    const ok = await trackPurchaseAttempt('stamp', stamp.id, productId, () =>
+      purchaseProduct(productId),
+    );
     if (ok) store.grantStampTextPurchase(stamp.id);
     return ok;
   };
 
+  /**
+   * What the player is charged right now. A running offer is a *separate*
+   * Yandex product at a lower price — the same entitlement — so the buy call
+   * has to follow the same id the Bureau just printed on the button.
+   */
+  const offerContext: OfferContext = { stats, serverDay };
+
   const handlePurchasePack = async (pack: ThematicPack): Promise<boolean> => {
     if (!pack.productId.trim()) return false;
-    const ok = await purchaseProduct(pack.productId);
+    const productId = resolvePrice(pack, offerContext).productId;
+    const ok = await trackPurchaseAttempt('archive', pack.id, productId, () =>
+      purchaseProduct(productId),
+    );
     if (ok) store.grantArchivePurchase(pack.id);
     return ok;
   };
@@ -519,16 +593,30 @@ export default function App() {
   const handlePurchaseBundle = async (bundleId: string): Promise<boolean> => {
     const bundle = getBundle(bundleId);
     if (!bundle) return false;
-    const ok = await purchaseProduct(bundle.productId);
+    const productId = resolvePrice(bundle, offerContext).productId;
+    const ok = await trackPurchaseAttempt('bundle', bundle.id, productId, () =>
+      purchaseProduct(productId),
+    );
     // The bundle grants its contents — a restore later re-grants them the same
     // way, so nothing about it is a one-off side effect of this click.
     if (ok) store.grantBundlePurchase(bundle.id);
     return ok;
   };
 
+  const handlePurchaseNoAds = async (): Promise<boolean> => {
+    const productId = GAME_CONFIG.advertising.noAdsProductId;
+    const ok = await trackPurchaseAttempt('noads', 'no_ads', productId, () =>
+      purchaseProduct(productId),
+    );
+    if (ok) store.grantNoAds();
+    return ok;
+  };
+
   const handleRestorePurchases = async (): Promise<number> => {
+    trackEvent('purchase_restore_click', { paymentsAvailable: isPaymentsAvailable() });
     const productIds = await restorePurchasedProductIds();
     store.applyRestoredPurchases(productIds);
+    trackEvent('purchase_restore_result', { count: productIds.length, productIds });
     return productIds.length;
   };
 
@@ -570,16 +658,27 @@ export default function App() {
   };
 
   const goToNextCase = () => {
-    const next = getNextAvailableCase(standardCaseUnlocks, selectedId);
+    // Inside an archive, "next case" stays inside that archive. Falling back to
+    // the campaign would silently drop the player out of the dossier they paid
+    // for — the pack is the unit of play once you are in it.
+    const next = activePack
+      ? getNextArchiveCase(stats, activePack, selectedId, unlockByCaseId)
+      : getNextAvailableCase(standardCaseUnlocks, selectedId);
     trackEvent('result_action', {
       caseId: lastResult?.caseId, action: 'next_case',
       resultDwellMs: resultOpenedAtRef.current == null ? null : Date.now() - resultOpenedAtRef.current,
       nextCaseAvailable: Boolean(next),
+      packId: activePack?.id ?? null,
     });
     setResultDismissed(true);
+    const packWhenFinished = activePack;
     const transition = () => void store.closeCase().then(() => {
       if (!next) {
         setSelectedId(null);
+        // An exhausted archive leads to the Bureau, not the campaign desk:
+        // whatever is left in this pack is behind the paywall, and that is
+        // where it is opened.
+        if (packWhenFinished) openBureau('archives');
         return;
       }
       handleSelectCase(next);
@@ -723,9 +822,35 @@ export default function App() {
               onPurchasePack={handlePurchasePack}
               onPurchaseStampText={handlePurchaseStampText}
               onPurchaseBundle={handlePurchaseBundle}
-              onEquipStampText={store.setActiveStampText}
-              onPickStampInk={store.setActiveStampInk}
+              onPurchaseNoAds={handlePurchaseNoAds}
+              onEquipStampText={(stampTextId) => {
+                trackEvent('stamp_equip', {
+                  stampTextId: stampTextId ?? DEFAULT_STAMP_TEXT_ID,
+                });
+                store.setActiveStampText(stampTextId);
+              }}
+              onPickStampInk={(stampInkId) => {
+                trackEvent('stamp_ink_pick', { inkId: stampInkId ?? DEFAULT_STAMP_INK_ID });
+                store.setActiveStampInk(stampInkId);
+              }}
               onUnlockCaseWithAd={store.unlockArchiveCaseViaAd}
+              onTabSwitch={(from, to) => {
+                trackGoal(GOAL.tabSwitch, { surface: 'bureau', from, to });
+                trackGoal(GOAL.shopView, {
+                  shop: to === 'stamps' ? 'stamp_texts' : to === 'bundles' ? 'bundles' : 'special_archives',
+                });
+              }}
+              onViewPack={(packId, source) =>
+                trackGoal(GOAL.productView, {
+                  kind: 'archive',
+                  packId,
+                  source,
+                  purchased: stats.archivePurchasedPackIds.includes(packId),
+                })
+              }
+              onLockedStampClick={(stampTextId, packId) =>
+                trackEvent('stamp_pack_locked_click', { stampTextId, packId })
+              }
               onClose={() => setBureauTab(null)}
             />
           </div>
@@ -777,7 +902,11 @@ export default function App() {
             selectedId={selectedId}
             lang={lang}
             xp={stats.xp}
+            archivePack={activePack}
+            archiveCases={activePackCases}
             onSelectStandardCase={handleSelectStandardCase}
+            onSelectArchiveCase={(entry) => handleSelectCase(entry.caseData)}
+            onLeaveArchive={backToDesk}
             onSelect={handleSelectCase}
             onDailyLocked={onDailyLocked}
             onLanguage={store.setLanguage}

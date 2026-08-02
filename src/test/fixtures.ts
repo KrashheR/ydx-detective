@@ -153,6 +153,7 @@ export function makeStats(overrides: Partial<PlayerStats> = {}): PlayerStats {
     interactiveEvidenceProgress: {},
     finalSynthesisProgress: {},
     metaUnlocked: true,
+    firstSeenServerDay: 0,
     ...overrides,
   };
 }

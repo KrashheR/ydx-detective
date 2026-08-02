@@ -500,6 +500,21 @@ describe('archive unlocks', () => {
     expect(store().stats.noAdsPurchased).toBe(true);
   });
 
+  it('grants the pack when the restored id is the cheaper intro-offer product', () => {
+    const pack = THEMATIC_PACKS[0]!;
+    // An offer is a *second* product id for the same entitlement — restoring it
+    // must unlock the archive, or a discounted purchase is lost on reinstall.
+    store().applyRestoredPurchases([pack.offer!.productId]);
+    expect(store().stats.archivePurchasedPackIds).toEqual([pack.id]);
+  });
+
+  it('grants a bundle when the restored id is its offer product', () => {
+    const bundle = getBundle(COMPLETE_BUNDLE_ID)!;
+    store().applyRestoredPurchases([bundle.offer!.productId]);
+    expect(store().stats.purchasedBundleIds).toEqual([bundle.id]);
+    expect(store().stats.archivePurchasedPackIds).toHaveLength(THEMATIC_PACKS.length);
+  });
+
   it('leaves No Ads untouched when it was not among the restored products', () => {
     store().applyRestoredPurchases(['archive.closed-collegium']);
     expect(store().stats.noAdsPurchased).toBe(false);
@@ -633,6 +648,23 @@ describe('bundles (IAP)', () => {
       expect((list - bundle.fallbackPriceRub) / list).toBeGreaterThanOrEqual(
         advertised / 100,
       );
+    }
+  });
+
+  it('keeps the offer price below the regular one and above zero', () => {
+    // The shelf prints one saving derived from the *resolved* price, so an
+    // offer that is not actually cheaper would advertise a negative discount.
+    for (const bundle of BUNDLES) {
+      if (!bundle.offer) continue;
+      expect(bundle.offer.fallbackPriceRub).toBeGreaterThan(0);
+      expect(bundle.offer.fallbackPriceRub).toBeLessThan(bundle.fallbackPriceRub);
+      expect(bundle.offer.fallbackPriceRub).toBeLessThan(
+        getBundleListPriceRub(bundle),
+      );
+    }
+    for (const pack of THEMATIC_PACKS) {
+      if (!pack.offer) continue;
+      expect(pack.offer.fallbackPriceRub).toBeLessThan(pack.fallbackPriceRub);
     }
   });
 });

@@ -1,14 +1,17 @@
 import { describe, it, expect } from "vitest";
 import { SUPPORTED_LANGUAGES } from "../types";
 import { t } from "../i18n/ui";
+import { THEMATIC_PACKS } from "./thematicPacks";
 import {
   DEFAULT_STAMP_TEXT_ID,
+  PACK_STAMP_TEXTS,
   PURCHASABLE_STAMP_TEXTS,
   STAMP_TEXTS,
   getStampCaption,
   getStampSubline,
   getStampText,
   getStampTextByProductId,
+  isStampTextUnlocked,
 } from "./stampTexts";
 
 describe("stamp caption catalog", () => {
@@ -49,6 +52,37 @@ describe("stamp caption catalog", () => {
     expect(getStampTextByProductId("stamp.storyteller")?.id).toBe("storyteller");
     expect(getStampTextByProductId("noads.forever")).toBeUndefined();
     expect(getStampText("storyteller").productId).toBe("stamp.storyteller");
+  });
+
+  it("keeps pack captions out of every priced shelf", () => {
+    expect(PACK_STAMP_TEXTS.length).toBeGreaterThan(0);
+    for (const stamp of PACK_STAMP_TEXTS) {
+      expect(stamp.productId).toBeNull();
+      // A pack caption must map onto a real archive, or nothing can unlock it.
+      expect(THEMATIC_PACKS.some((pack) => pack.id === stamp.packId)).toBe(true);
+      expect(
+        PURCHASABLE_STAMP_TEXTS.some((entry) => entry.id === stamp.id),
+      ).toBe(false);
+      for (const lang of SUPPORTED_LANGUAGES) {
+        expect(getStampCaption(stamp.id, lang).trim().length).toBeGreaterThan(0);
+      }
+    }
+  });
+
+  it("unlocks a pack caption with the archive, not with a purchase", () => {
+    const packStamp = PACK_STAMP_TEXTS[0]!;
+    const packId = packStamp.packId!;
+    expect(isStampTextUnlocked(packStamp.id, [], [])).toBe(false);
+    // Listing it as "owned" must not be enough — the archive is the entitlement.
+    expect(isStampTextUnlocked(packStamp.id, [packStamp.id], [])).toBe(false);
+    expect(isStampTextUnlocked(packStamp.id, [], [packId])).toBe(true);
+  });
+
+  it("unlocks bought captions and the default, and nothing unknown", () => {
+    expect(isStampTextUnlocked(DEFAULT_STAMP_TEXT_ID, [], [])).toBe(true);
+    expect(isStampTextUnlocked("storyteller", [], [])).toBe(false);
+    expect(isStampTextUnlocked("storyteller", ["storyteller"], [])).toBe(true);
+    expect(isStampTextUnlocked("gone", ["gone"], [])).toBe(false);
   });
 
   it("never sells the free default", () => {

@@ -56,6 +56,7 @@ export function makeDefaultStats(): PlayerStats {
     interactiveEvidenceProgress: {},
     finalSynthesisProgress: {},
     metaUnlocked: false,
+    firstSeenServerDay: null,
   };
 }
 
@@ -91,6 +92,12 @@ export function makeDefaultSnapshot(): PersistedState {
  *     ink is exactly the archive red every pre-v11 profile printed, and an
  *     empty bundle list loses nothing because bundles re-grant their contents
  *     through `applyRestoredPurchases`.
+ *   • v11 → v12 — adds `firstSeenServerDay`, the day-one marker behind "next
+ *     day" store offers. The defaults spread backfills it to `null`, and the
+ *     store stamps it on the first boot after the upgrade — so a returning
+ *     player's next-day offer opens a day after that boot rather than
+ *     retroactively. That is deliberate: the alternative would be to fabricate
+ *     a first-seen day the profile never recorded.
  */
 function migrate(raw: unknown): PersistedState | null {
   if (!raw || typeof raw !== 'object') return null;
@@ -187,25 +194,55 @@ export async function loadSnapshot(): Promise<{
 
 let debounceTimer: ReturnType<typeof setTimeout> | null = null;
 let pendingSnapshot: PersistedState | null = null;
-let inFlight = false;
+let inFlight: Promise<void> | null = null;
 
 /**
- * Push the latest pending snapshot to the cloud, guarding against overlapping
- * writes. LocalStorage is always already up to date by the time we get here.
+ * Write queued snapshots to the cloud one at a time until the queue is empty.
+ *
+ * The loop (rather than a single write) is what makes a burst of flushes safe:
+ * one IAP grant fans out into several `flushSync` calls in the same tick (a
+ * bundle grants packs, then captions, then itself), and the *last* snapshot is
+ * the only complete one. Dropping it while an earlier write was in flight lost
+ * the purchase on the next boot, because `loadSnapshot` prefers cloud over the
+ * (correct) LocalStorage copy.
  */
-async function pushToCloud(): Promise<void> {
-  if (inFlight || !pendingSnapshot || !canUseCloud()) return;
-  const snapshot = pendingSnapshot;
-  pendingSnapshot = null;
-  inFlight = true;
-  try {
-    await cloudSet(snapshot);
-  } catch {
-    // Re-queue so the next tick retries; never drop the most recent state.
-    pendingSnapshot = snapshot;
-  } finally {
-    inFlight = false;
+async function drainToCloud(): Promise<void> {
+  while (pendingSnapshot && canUseCloud()) {
+    const snapshot = pendingSnapshot;
+    pendingSnapshot = null;
+    try {
+      await cloudSet(snapshot);
+    } catch {
+      // Re-queue for a later retry — but never clobber a snapshot that was
+      // queued while this write was failing; that one is newer.
+      pendingSnapshot ??= snapshot;
+      armRetry();
+      return;
+    }
   }
+}
+
+/**
+ * Start the drain, or join the one already running. Callers get a promise that
+ * resolves once the queue they added to has been worked off, so `flushSync` can
+ * honestly await its own snapshot reaching the cloud.
+ */
+function pushToCloud(): Promise<void> {
+  if (inFlight) return inFlight;
+  const run = drainToCloud().finally(() => {
+    inFlight = null;
+  });
+  inFlight = run;
+  return run;
+}
+
+/** Re-arm the debounce so a failed write is retried without a new edit. */
+function armRetry(): void {
+  if (debounceTimer) return;
+  debounceTimer = setTimeout(() => {
+    debounceTimer = null;
+    void pushToCloud();
+  }, GAME_CONFIG.sync.debounceMs);
 }
 
 /**
@@ -216,12 +253,7 @@ async function pushToCloud(): Promise<void> {
 export function scheduleSync(snapshot: PersistedState): void {
   localWrite(snapshot);
   pendingSnapshot = snapshot;
-
-  if (debounceTimer) return; // a write is already scheduled within the window
-  debounceTimer = setTimeout(() => {
-    debounceTimer = null;
-    void pushToCloud();
-  }, GAME_CONFIG.sync.debounceMs);
+  armRetry(); // a write already scheduled within the window covers this edit too
 }
 
 /**

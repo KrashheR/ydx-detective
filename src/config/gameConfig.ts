@@ -4,7 +4,7 @@
  */
 export const GAME_CONFIG = {
   /** Schema version of the persisted runtime snapshot. Bump on shape changes. */
-  saveVersion: 11,
+  saveVersion: 12,
 
   reward: {
     /** Fixed payout by difficulty; claimAmount remains a narrative stake. */
@@ -268,6 +268,22 @@ export const GAME_CONFIG = {
     minCasesBetweenInterstitials: 2,
     /** Yandex IAP product granting a permanent ad-free experience. */
     noAdsProductId: 'noads.forever',
+    /** Sticker price of that product when the payments catalog is unreachable. */
+    noAdsFallbackPriceRub: 99,
+  },
+
+  /**
+   * When a cheaper alternative product id may be shown instead of the regular
+   * one. Yandex prices are fixed per product, so an "offer" is a second product
+   * — these thresholds only decide *which* id the Bureau sells. Eligibility is
+   * evaluated by `src/engine/offerEngine.ts`; the ids and prices themselves live
+   * next to the item they discount (`data/thematicPacks.ts`, `data/bundles.ts`).
+   */
+  offers: {
+    /** Completed cases before the archives bundle drops to its offer price. */
+    bundleMinCompletedCases: 5,
+    /** Server-days after the first session before a "next day" offer opens. */
+    nextDayOfferAfterDays: 1,
   },
 
   analytics: {

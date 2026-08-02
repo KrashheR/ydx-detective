@@ -97,6 +97,7 @@ describe('loadSnapshot', () => {
         interactiveEvidenceProgress: {},
         finalSynthesisProgress: {},
         metaUnlocked: true,
+        firstSeenServerDay: 0,
       },
       session: null,
     };
@@ -258,6 +259,7 @@ describe('sync (debounce + flush)', () => {
       interactiveEvidenceProgress: {},
       finalSynthesisProgress: {},
       metaUnlocked: true,
+      firstSeenServerDay: 0,
     },
     session: null,
   });
@@ -300,6 +302,37 @@ describe('sync (debounce + flush)', () => {
     // No additional write when the (cancelled) debounce window elapses.
     await vi.advanceTimersByTimeAsync(GAME_CONFIG.sync.debounceMs);
     expect(sdk.cloudSet).toHaveBeenCalledTimes(1);
+  });
+
+  it('never strands a snapshot written while a cloud write is in flight', async () => {
+    sdk.canUseCloud.mockReturnValue(true);
+    let release: () => void = () => undefined;
+    sdk.cloudSet.mockImplementationOnce(
+      () => new Promise<undefined>((resolve) => { release = () => resolve(undefined); }),
+    );
+    const { flushSync } = await freshPersistence();
+
+    // A single IAP grant fans out into several flushes in the same tick.
+    const first = flushSync(snap(1));
+    const second = flushSync(snap(2));
+    release();
+    await Promise.all([first, second]);
+
+    expect(sdk.cloudSet).toHaveBeenCalledTimes(2);
+    expect(sdk.cloudSet).toHaveBeenLastCalledWith(snap(2));
+  });
+
+  it('retries a failed cloud write without losing a newer snapshot', async () => {
+    vi.useFakeTimers();
+    sdk.canUseCloud.mockReturnValue(true);
+    sdk.cloudSet.mockRejectedValueOnce(new Error('network'));
+    const { flushSync, scheduleSync } = await freshPersistence();
+
+    await flushSync(snap(1)); // fails → re-queued
+    scheduleSync(snap(2)); // newer state must win the retry
+    await vi.advanceTimersByTimeAsync(GAME_CONFIG.sync.debounceMs);
+
+    expect(sdk.cloudSet).toHaveBeenLastCalledWith(snap(2));
   });
 
   it('swallows a LocalStorage quota error without throwing', async () => {

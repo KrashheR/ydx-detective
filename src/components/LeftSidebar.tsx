@@ -1,5 +1,7 @@
 import type { CaseSummary, Language } from "../types";
 import type { CaseUnlockInfo } from "../engine/caseUnlockEngine";
+import type { ArchiveCaseEntry } from "../engine/archiveAccessEngine";
+import type { ThematicPack } from "../data/thematicPacks";
 import { summarizeCaseUnlocks } from "../engine/caseUnlockEngine";
 import { formatInvestigatorLevel, loc, t } from "../i18n/ui";
 import {
@@ -21,8 +23,19 @@ interface Props {
   lang: Language;
   /** Cumulative career XP — drives the investigator progress card. */
   xp: number;
+  /**
+   * The archive being played, if any. While it is set the column lists that
+   * pack's own files instead of the campaign — a player inside an archive is
+   * working one company's dossier, and the standard case list is a distraction
+   * (and a way to fall out of the archive by accident).
+   */
+  archivePack?: ThematicPack | null;
+  archiveCases?: readonly ArchiveCaseEntry[];
   onSelect: (c: CaseSummary) => void;
   onSelectStandardCase: (info: CaseUnlockInfo<CaseSummary>) => void;
+  onSelectArchiveCase?: (entry: ArchiveCaseEntry) => void;
+  /** Leave the archive and go back to the campaign desk. */
+  onLeaveArchive?: () => void;
   onDailyLocked: () => void;
   onLanguage: (lang: Language) => void;
 }
@@ -36,14 +49,33 @@ export function LeftSidebar({
   selectedId,
   lang,
   xp,
+  archivePack = null,
+  archiveCases = [],
   onSelect,
   onSelectStandardCase,
+  onSelectArchiveCase,
+  onLeaveArchive,
   onDailyLocked,
   onLanguage,
 }: Props) {
   const rank = evaluateRank(xp);
   const levelTitle = formatInvestigatorLevel(rank.level, lang);
   const unlockSummary = summarizeCaseUnlocks(standardCaseUnlocks);
+  const inArchive = archivePack !== null && archiveCases.length > 0;
+  const archiveOpened = archiveCases.filter(
+    (entry) => entry.status !== "locked",
+  ).length;
+  // The footer counter follows whichever list is on screen, so it never
+  // reports campaign progress next to a column of archive files.
+  const progressLine = t("unlockedCases", lang)
+    .replace(
+      "{unlocked}",
+      String(inArchive ? archiveOpened : unlockSummary.unlocked),
+    )
+    .replace(
+      "{total}",
+      String(inArchive ? archiveCases.length : unlockSummary.total),
+    );
 
   return (
     <aside className="flex h-full w-full flex-col rounded-xl border border-border bg-surface p-4 md:p-[18px]">
@@ -64,13 +96,82 @@ export function LeftSidebar({
 
       <div className="mt-[15px] shrink-0 border-t border-border" />
       <div className="mt-[15px] shrink-0 text-[11px] font-semibold tracking-[1.5px] text-text-dim">
-        {t("casesInWork", lang)}
+        {inArchive ? loc(archivePack.title, lang) : t("casesInWork", lang)}
       </div>
+      {inArchive && onLeaveArchive && (
+        <button
+          type="button"
+          onClick={onLeaveArchive}
+          className="mt-1.5 shrink-0 self-start text-[11px] font-semibold text-accent underline-offset-2 hover:underline"
+        >
+          ← {t("backToCampaign", lang)}
+        </button>
+      )}
 
       {/* Scrollable case list — keeps daily card from being crushed by flex shrink */}
       <div className="mt-[15px] flex min-h-0 max-h-[600px] flex-1 flex-col gap-[15px] overflow-y-auto md:max-h-none pr-4">
+        {inArchive &&
+          archiveCases.map((entry) => {
+            const c = entry.caseData;
+            const active = c.id === selectedId;
+            const done = entry.status === "completed";
+            const locked = entry.status === "locked";
+            return (
+              <button
+                key={c.id}
+                type="button"
+                onClick={() => onSelectArchiveCase?.(entry)}
+                aria-disabled={locked}
+                className={`block w-full shrink-0 rounded-[9px] border bg-surface-2 p-3 text-left transition-colors ${
+                  active
+                    ? "border-accent"
+                    : locked
+                      ? "border-border opacity-[0.55]"
+                      : "border-border hover:border-black/15"
+                }`}
+              >
+                <div className="flex items-center justify-between gap-2">
+                  <span className="truncate text-[13px] font-semibold text-text-light">
+                    {loc(c.title, lang)}
+                  </span>
+                  {active ? (
+                    <span
+                      className="h-[7px] w-[7px] shrink-0 rounded-full bg-accent"
+                      aria-hidden
+                    />
+                  ) : done ? (
+                    <span
+                      className="inline-flex h-[7px] w-[7px] shrink-0 items-center justify-center text-[12px] font-bold leading-none text-success"
+                      aria-hidden
+                    >
+                      ✓
+                    </span>
+                  ) : locked ? (
+                    <span className="shrink-0 font-mono text-[10px] text-text-dim">
+                      {t("lockedStatus", lang)}
+                    </span>
+                  ) : null}
+                </div>
+                <div className="mt-[3px] text-[11px] font-medium text-text-dim">
+                  {t("archiveCaseNumber", lang).replace(
+                    "{n}",
+                    String(entry.index + 1),
+                  )}{" "}
+                  ·{" "}
+                  {locked
+                    ? t("archiveCaseLocked", lang)
+                    : active
+                      ? t("active", lang)
+                      : done
+                        ? t("completedCase", lang)
+                        : tDifficulty(c.difficulty, lang)}
+                </div>
+              </button>
+            );
+          })}
+
         {/* Daily case — gold URGENT stamp */}
-        {dailyCase && (
+        {!inArchive && dailyCase && (
           <Tooltip
             className="block shrink-0"
             side="bottom"
@@ -117,7 +218,7 @@ export function LeftSidebar({
           </Tooltip>
         )}
 
-        {standardCaseUnlocks.map((info) => {
+        {!inArchive && standardCaseUnlocks.map((info) => {
           const c = info.caseData;
           const active = c.id === selectedId;
           const done = info.status === "completed";
@@ -199,18 +300,14 @@ export function LeftSidebar({
             : `${rank.xpIntoRank} / ${rank.xpForNext} ${t("xpToPromote", lang)}`}
         </div>
         <div className="mt-1 text-[10px] font-medium text-text-dim">
-          {t("unlockedCases", lang)
-            .replace("{unlocked}", String(unlockSummary.unlocked))
-            .replace("{total}", String(unlockSummary.total))}
+          {progressLine}
         </div>
       </div>
 
       {/* Campaign unlock count — desktop, below case list */}
       <div className="mt-[15px] hidden shrink-0 rounded-[9px] border border-border bg-surface-2 p-[13px] md:block">
         <div className="text-[10px] font-medium text-text-dim">
-          {t("unlockedCases", lang)
-            .replace("{unlocked}", String(unlockSummary.unlocked))
-            .replace("{total}", String(unlockSummary.total))}
+          {progressLine}
         </div>
       </div>
     </aside>

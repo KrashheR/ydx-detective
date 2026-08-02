@@ -19,6 +19,27 @@
 а подписи штампа не влияют ни на награду, ни на точность — только на текст оттиска. Детали
 продуктов и restore — [06-yandex-platform.md](06-yandex-platform.md).
 
+### Прайс-лист IAP и офферы
+
+| Товар | Обычная цена | Оффер | Условие оффера |
+| ----- | ------------ | ----- | -------------- |
+| Отключение обязательной рекламы (`noads.forever`) | 99 | — | — |
+| Один архив (`archive.<pack>`) | 149 | 99 (`archive.<pack>.intro`) | у игрока ещё нет ни одного купленного архива |
+| Три расследования (`bundle.archives`) | 299 | 149 (`bundle.archives.offer`) | закрыто ≥ `offers.bundleMinCompletedCases` (5) дел |
+| Полный архив (`bundle.complete`) | 399 | 199 (`bundle.complete.offer`) | со следующего серверного дня после первой сессии |
+| Все подписи штампа (`bundle.stamps`) | 199 | — | — |
+| Одна подпись штампа (`stamp.<id>`) | 49 | — | — |
+
+Цена продукта в Yandex **фиксирована на product id** — «скидку» нельзя применить к тому же
+товару. Поэтому оффер — это **второй product id** с той же выдачей, а игра лишь решает, какой
+из двух показать и списать. Решение принимает `src/engine/offerEngine.ts` (`resolvePrice`);
+пороги живут в `GAME_CONFIG.offers`, сами id и `fallbackPriceRub` — рядом с товаром
+(`data/thematicPacks.ts`, `data/bundles.ts`, `data/stampTexts.ts`).
+
+Правило `next_day` считает дни от `stats.firstSeenServerDay` — маркер первой сессии,
+проставляемый один раз при загрузке по **серверному** времени. Оба product id одного товара
+маппятся на одно и то же право, иначе покупка по офферу терялась бы при restore.
+
 ## Формула награды (`evaluateReward`)
 
 `BaseReward = difficultyBase × (daily ? 1.25 : 1)`, где easy = `1 200`, medium = `2 500`,

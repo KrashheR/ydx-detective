@@ -91,6 +91,8 @@ export type UIKey =
   | "stampClassicName"
   | "stampInkPreview"
   | "stampEquip"
+  | "stampLockedInPack"
+  | "stampOpenPack"
   | "stampEquipped"
   | "stampPurchaseUnavailable"
   | "stampPurchaseFailed"
@@ -314,6 +316,18 @@ export type UIKey =
     | "bundleHeroCta"
     | "bundleSavings"
     | "bundleOwned"
+    | "backToCampaign"
+    | "archiveCaseNumber"
+    | "archiveCaseLocked"
+    | "archiveCaseLockedToast"
+    | "bundleArchivesTitle"
+    | "bundleArchivesLead"
+    | "bundleArchivesCta"
+    | "offerBadge"
+    | "noAdsTitle"
+    | "noAdsLead"
+    | "noAdsCta"
+    | "noAdsOwned"
     | "purchaseNotCompleted";
 
 export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
@@ -845,6 +859,20 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     tr: "Bunu kullan",
     ar: "استخدم هذا",
     kk: "Мөрге қою",
+  },
+  stampLockedInPack: {
+    ru: "Только в наборе «{pack}»",
+    en: "Only in the “{pack}” archive",
+    tr: "Yalnızca «{pack}» arşivinde",
+    ar: "متاح فقط في أرشيف «{pack}»",
+    kk: "Тек «{pack}» жинағында",
+  },
+  stampOpenPack: {
+    ru: "Открыть набор",
+    en: "Open the archive",
+    tr: "Arşivi aç",
+    ar: "افتح الأرشيف",
+    kk: "Жинақты ашу",
   },
   stampEquipped: {
     ru: "На печати",
@@ -2184,6 +2212,90 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     tr: "Her şey zaten açık",
     ar: "كل شيء مفتوح بالفعل",
     kk: "Бәрі ашылған",
+  },
+  backToCampaign: {
+    ru: "К обычным делам",
+    en: "Back to regular cases",
+    tr: "Normal dosyalara dön",
+    ar: "العودة إلى القضايا العادية",
+    kk: "Қарапайым істерге оралу",
+  },
+  archiveCaseNumber: {
+    ru: "Дело {n}",
+    en: "File {n}",
+    tr: "Dosya {n}",
+    ar: "الملف {n}",
+    kk: "{n}-іс",
+  },
+  archiveCaseLockedToast: {
+    ru: "Дело закрыто — откройте архив в Бюро",
+    en: "This file is sealed — open the archive in the Bureau",
+    tr: "Bu dosya kapalı — arşivi Büro'da açın",
+    ar: "هذا الملف مغلق — افتح الأرشيف في المكتب",
+    kk: "Іс жабық — архивті Бюрода ашыңыз",
+  },
+  archiveCaseLocked: {
+    ru: "Закрыто",
+    en: "Sealed",
+    tr: "Kapalı",
+    ar: "مغلق",
+    kk: "Жабық",
+  },
+  bundleArchivesTitle: {
+    ru: "Три расследования",
+    en: "Three investigations",
+    tr: "Üç soruşturma",
+    ar: "ثلاثة تحقيقات",
+    kk: "Үш тергеу",
+  },
+  bundleArchivesLead: {
+    ru: "Все три архива Бюро — тридцать дел без единой блокировки.",
+    en: "All three Bureau archives — thirty files with nothing locked.",
+    tr: "Büronun üç arşivi de — kilitsiz otuz dosya.",
+    ar: "أرشيفات المكتب الثلاثة — ثلاثون ملفًا بلا أي قفل.",
+    kk: "Бюроның үш архиві — құлыпсыз отыз іс.",
+  },
+  bundleArchivesCta: {
+    ru: "Взять три архива",
+    en: "Take all three archives",
+    tr: "Üç arşivi de al",
+    ar: "خذ الأرشيفات الثلاثة",
+    kk: "Үш архивті алу",
+  },
+  offerBadge: {
+    ru: "Спецпредложение",
+    en: "Special offer",
+    tr: "Özel teklif",
+    ar: "عرض خاص",
+    kk: "Арнайы ұсыныс",
+  },
+  noAdsTitle: {
+    ru: "Отключение обязательной рекламы",
+    en: "Turn off forced ads",
+    tr: "Zorunlu reklamları kapat",
+    ar: "إيقاف الإعلانات الإجبارية",
+    kk: "Міндетті жарнаманы өшіру",
+  },
+  noAdsLead: {
+    ru: "Полноэкранная реклама между делами больше не появится. Ролики за награду остаются — их вы включаете сами.",
+    en: "No more fullscreen ads between cases. Rewarded videos stay — those you start yourself.",
+    tr: "Dosyalar arasında tam ekran reklam yok. Ödüllü videolar kalır — onları siz başlatırsınız.",
+    ar: "لا مزيد من الإعلانات بملء الشاشة بين القضايا. تبقى الفيديوهات المكافِئة — وأنت من يشغّلها.",
+    kk: "Істер арасында толық экранды жарнама болмайды. Сыйақылы роликтер қалады — оларды өзіңіз қосасыз.",
+  },
+  noAdsCta: {
+    ru: "Отключить рекламу",
+    en: "Turn off ads",
+    tr: "Reklamları kapat",
+    ar: "إيقاف الإعلانات",
+    kk: "Жарнаманы өшіру",
+  },
+  noAdsOwned: {
+    ru: "Реклама отключена",
+    en: "Ads are off",
+    tr: "Reklamlar kapalı",
+    ar: "الإعلانات موقوفة",
+    kk: "Жарнама өшірілген",
   },
 };
 

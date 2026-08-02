@@ -598,6 +598,12 @@ export interface PlayerStats {
   finalSynthesisProgress: Record<string, FinalSynthesisProgress>;
   /** Fresh-player prologue gate; old profiles are migrated to unlocked. */
   metaUnlocked: boolean;
+  /**
+   * Server-day index of the player's first session — stamped once, never
+   * rewritten. The only thing it drives is "next day" store offers
+   * (`src/engine/offerEngine.ts`), which must not be satisfiable on day one.
+   */
+  firstSeenServerDay: number | null;
 }
 
 /**

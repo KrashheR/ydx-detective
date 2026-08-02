@@ -1,16 +1,18 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { THEMATIC_PACKS, type ThematicPack } from "../data/thematicPacks";
-import {
-  BUNDLES,
-  getBundle,
-  getMaxBundleDiscountPercent,
-} from "../data/bundles";
+import { getBundle, getMaxBundleDiscountPercent } from "../data/bundles";
 import { STAMP_TEXTS, type StampText } from "../data/stampTexts";
 import { indexUnlocksByCaseId } from "../engine/archiveAccessEngine";
-import { t } from "../i18n/ui";
-import { getServerTimeMs, type PaymentsProduct } from "../services/platformAdapter";
+import {
+  resolvePrice,
+  toServerDay,
+  type Offer,
+  type OfferContext,
+} from "../engine/offerEngine";
 import { GAME_CONFIG } from "../config/gameConfig";
+import { loc, t } from "../i18n/ui";
+import { getServerTimeMs, type PaymentsProduct } from "../services/platformAdapter";
 import type { CaseUnlockInfo } from "../engine/caseUnlockEngine";
 import type { CaseSummary, Language, PlayerStats } from "../types";
 import { BureauArchiveDetail, BureauArchiveShelf } from "./BureauArchives";
@@ -31,9 +33,16 @@ interface Props {
   onPurchasePack: (pack: ThematicPack) => Promise<boolean>;
   onPurchaseStampText: (stamp: StampText) => Promise<boolean>;
   onPurchaseBundle: (bundleId: string) => Promise<boolean>;
+  onPurchaseNoAds: () => Promise<boolean>;
   onEquipStampText: (stampTextId: string | null) => void;
   onPickStampInk: (stampInkId: string | null) => void;
   onUnlockCaseWithAd: (packId: string, caseId: string) => boolean;
+  /* --- Analytics hooks: the Bureau reports, `App.tsx` owns the adapter --- */
+  onTabSwitch?: (from: BureauTab, to: BureauTab) => void;
+  /** An archive's own page was opened, from wherever. */
+  onViewPack?: (packId: string, source: "shelf" | "stamp_lock") => void;
+  /** A pack-gated caption was tapped while still locked. */
+  onLockedStampClick?: (stampTextId: string, packId: string) => void;
   onClose: () => void;
 }
 
@@ -62,9 +71,13 @@ export function BureauScreen({
   onPurchasePack,
   onPurchaseStampText,
   onPurchaseBundle,
+  onPurchaseNoAds,
   onEquipStampText,
   onPickStampInk,
   onUnlockCaseWithAd,
+  onTabSwitch,
+  onViewPack,
+  onLockedStampClick,
   onClose,
 }: Props) {
   const [tab, setTab] = useState<BureauTab>(initialTab);
@@ -108,21 +121,42 @@ export function BureauScreen({
       maximumFractionDigits: 0,
     }).format(value);
 
-  const packPriceLabel = (pack: ThematicPack): string =>
-    catalogByProductId[pack.productId]?.price ??
-    formatRub(pack.fallbackPriceRub);
+  // One rewarded archive unlock per pack per server day — same rule the store
+  // enforces; mirrored here only so the button can explain itself.
+  const today = toServerDay(getServerTimeMs());
+  const offerContext: OfferContext = { stats, serverDay: today };
+
+  /**
+   * A catalog entry's live price label. Offers are a *different product id*, so
+   * the label has to follow the id the player would actually be charged for —
+   * showing the regular product's price next to an offer button would lie.
+   */
+  const priceLabelFor = (entry: {
+    productId: string;
+    fallbackPriceRub: number;
+    offer?: Offer;
+  }): string => {
+    const price = resolvePrice(entry, offerContext);
+    return (
+      catalogByProductId[price.productId]?.price ??
+      formatRub(price.fallbackPriceRub)
+    );
+  };
+
+  const packPriceLabel = (pack: ThematicPack): string => priceLabelFor(pack);
 
   const stampPriceLabel = (stamp: StampText): string =>
     (stamp.productId ? catalogByProductId[stamp.productId]?.price : undefined) ??
     formatRub(stamp.fallbackPriceRub);
 
+  const packTitle = (packId: string): string => {
+    const pack = THEMATIC_PACKS.find((entry) => entry.id === packId);
+    return pack ? loc(pack.title, lang) : "";
+  };
+
   const bundlePriceLabel = (bundleId: string): string => {
     const bundle = getBundle(bundleId);
-    if (!bundle) return "";
-    return (
-      catalogByProductId[bundle.productId]?.price ??
-      formatRub(bundle.fallbackPriceRub)
-    );
+    return bundle ? priceLabelFor(bundle) : "";
   };
 
   const runPurchase = async (id: string, purchase: () => Promise<boolean>) => {
@@ -139,9 +173,6 @@ export function BureauScreen({
     setNotice(ok ? t("purchased", lang) : t("purchaseNotCompleted", lang));
   };
 
-  // One rewarded archive unlock per pack per server day — same rule the store
-  // enforces; mirrored here only so the button can explain itself.
-  const today = Math.floor(getServerTimeMs() / GAME_CONFIG.daily.cooldownMs);
   const rewardedSpentToday =
     openPack != null &&
     stats.archiveAdUnlockServerDayByPack[openPack.id] === today;
@@ -239,6 +270,7 @@ export function BureauScreen({
                   role="tab"
                   aria-selected={tab === entry.id}
                   onClick={() => {
+                    if (entry.id !== tab) onTabSwitch?.(tab, entry.id);
                     setTab(entry.id);
                     setOpenPackId(null);
                   }}
@@ -268,7 +300,10 @@ export function BureauScreen({
                 stats={stats}
                 unlockByCaseId={unlockByCaseId}
                 priceLabel={packPriceLabel}
-                onOpenPack={setOpenPackId}
+                onOpenPack={(packId) => {
+                  onViewPack?.(packId, "shelf");
+                  setOpenPackId(packId);
+                }}
               />
             )}
 
@@ -276,12 +311,22 @@ export function BureauScreen({
               <BureauWorkshop
                 lang={lang}
                 ownedStampTextIds={stats.ownedStampTextIds}
+                purchasedPackIds={stats.archivePurchasedPackIds}
                 activeStampTextId={stats.activeStampTextId}
                 activeStampInkId={stats.activeStampInkId}
                 paymentsAvailable={paymentsAvailable}
                 priceLabel={stampPriceLabel}
                 bundlePriceLabel={bundlePriceLabel}
+                packTitle={packTitle}
                 busyId={busyId}
+                onOpenPack={(packId, stampTextId) => {
+                  // The caption is not sold here — the archive that carries it
+                  // is, so the tile hands the player over to its page.
+                  onLockedStampClick?.(stampTextId, packId);
+                  onViewPack?.(packId, "stamp_lock");
+                  setTab("archives");
+                  setOpenPackId(packId);
+                }}
                 onPurchase={(stamp) =>
                   void runPurchase(stamp.id, () => onPurchaseStampText(stamp))
                 }
@@ -300,9 +345,21 @@ export function BureauScreen({
                 paymentsAvailable={paymentsAvailable}
                 busy={busyId !== null}
                 bundlePriceLabel={bundlePriceLabel}
+                noAdsPriceLabel={
+                  catalogByProductId[GAME_CONFIG.advertising.noAdsProductId]
+                    ?.price ??
+                  formatRub(GAME_CONFIG.advertising.noAdsFallbackPriceRub)
+                }
                 formatRub={formatRub}
+                offerContext={offerContext}
                 onPurchaseBundle={(bundleId) =>
                   void runPurchase(bundleId, () => onPurchaseBundle(bundleId))
+                }
+                onPurchaseNoAds={() =>
+                  void runPurchase(
+                    GAME_CONFIG.advertising.noAdsProductId,
+                    onPurchaseNoAds,
+                  )
                 }
               />
             )}
@@ -321,6 +378,3 @@ export function BureauScreen({
     </motion.div>
   );
 }
-
-/** Every bundle product id — the payments catalog request needs them upfront. */
-export const BUNDLE_PRODUCT_IDS = BUNDLES.map((bundle) => bundle.productId);

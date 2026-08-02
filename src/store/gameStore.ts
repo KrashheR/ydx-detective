@@ -31,6 +31,7 @@ import { evaluatePerfectCaseStreak, evaluateStreak } from '../engine/streakEngin
 import { evaluateNewUnlocks } from '../engine/achievementsEngine';
 import { bestMastery, evaluateMastery } from '../engine/masteryEngine';
 import { updateWeeklyProgress } from '../engine/weeklyEngine';
+import { toServerDay } from '../engine/offerEngine';
 import {
   flushSync,
   loadSnapshot,
@@ -47,8 +48,9 @@ import {
   STAMP_INKS,
   STAMP_TEXTS,
   getStampTextByProductId,
+  isStampTextUnlocked,
 } from '../data/stampTexts';
-import { getBundle, getBundleByProductId } from '../data/bundles';
+import { BUNDLES, getBundle, getBundleByProductId } from '../data/bundles';
 import { initRemoteConfig } from '../services/remoteConfig';
 import {
   getServerTimeMs,
@@ -56,6 +58,7 @@ import {
   getYandexLang,
   initYandex,
   onPauseChange,
+  restorePurchasedProductIds,
   showRewardedAd,
   trackAdOffer,
   submitLeaderboardScore,
@@ -309,11 +312,30 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         if (detected) stats = { ...stats, language: detected };
       }
 
+      // Stamp day one, once. "Next day" store offers compare against it, so it
+      // must come from server time (invariant #3) and must never be rewritten —
+      // otherwise the offer would keep sliding out of reach.
+      if (stats.firstSeenServerDay === null) {
+        stats = { ...stats, firstSeenServerDay: toServerDay(getServerTimeMs()) };
+      }
+
       set({
         stats,
         session: snapshot.session,
         isHydrated: true,
       });
+      // Day one is only useful if it survives the session that recorded it.
+      if (snapshot.stats.firstSeenServerDay === null) persist();
+
+      // 5) Entitlements are platform-authoritative, not save-authoritative. The
+      //    save can be lost (wiped storage, a failed cloud write, a new device
+      //    before the first sync) but a paid product never can, so every boot
+      //    re-grants what the platform says was bought. Fire-and-forget: it must
+      //    never delay the first frame, and off-Yandex it resolves to an empty
+      //    list, leaving the hydrated state untouched.
+      void restorePurchasedProductIds()
+        .then((productIds) => get().applyRestoredPurchases(productIds))
+        .catch(() => undefined);
 
       // Analytics is deliberately outside the boot path. Yield after hydration
       // so the game can paint before Metrica starts its network request; neither
@@ -1145,8 +1167,16 @@ export const useGameStore = create<GameStoreState>((set, get) => {
     },
 
     setActiveStampText(stampTextId) {
-      // Only an owned caption can be inked; `null` always falls back to free.
-      if (stampTextId !== null && !get().stats.ownedStampTextIds.includes(stampTextId)) return;
+      // Only an unlocked caption can be inked; `null` always falls back to free.
+      // Pack captions are unlocked by owning the archive, not by a purchase of
+      // their own, so ownership is asked of the shared catalog helper.
+      const { ownedStampTextIds, archivePurchasedPackIds } = get().stats;
+      if (
+        stampTextId !== null &&
+        !isStampTextUnlocked(stampTextId, ownedStampTextIds, archivePurchasedPackIds)
+      ) {
+        return;
+      }
       set((s) => ({ stats: { ...s.stats, activeStampTextId: stampTextId } }));
       persist(true);
     },
@@ -1214,21 +1244,29 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       const balance = opts?.balance ?? 9_999_999;
       const xp = opts?.xp ?? topXp;
 
+      // Payments are dead off-Yandex, so every paid surface is otherwise
+      // untestable: grant the whole catalog, not just the currency. Real YAN
+      // cannot be minted, so "buy everything" is expressed as owning
+      // everything — the same end state a full purchase run produces.
       set((s) => ({
         stats: {
           ...s.stats,
           balance,
           xp,
           isBankrupt: balance <= GAME_CONFIG.economy.bankruptcyThreshold,
-          // Payments are dead off-Yandex, so the shop is otherwise untestable.
           ownedStampTextIds: STAMP_TEXTS.filter((stamp) => stamp.productId !== null).map(
             (stamp) => stamp.id,
           ),
+          archivePurchasedPackIds: THEMATIC_PACKS.map((pack) => pack.id),
+          purchasedBundleIds: BUNDLES.map((bundle) => bundle.id),
+          noAdsPurchased: true,
         },
       }));
       persist(true);
       // eslint-disable-next-line no-console
-      console.info(`[devCheat] balance=${balance} xp=${xp} +all stamp captions`);
+      console.info(
+        `[devCheat] balance=${balance} xp=${xp} +all archives, bundles, stamp captions, no-ads`,
+      );
     },
 
     dismissRating() {
