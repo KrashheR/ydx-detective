@@ -114,7 +114,8 @@ trackEvent(name, params)  // частая телеметрия через params
 - `case_complete`;
 - `daily_complete`;
 - `rewarded_complete`;
-- `purchase_success`;
+- `purchase_success` (как выручку считать **только** без параметра `source`: `source:
+  'already_owned'` — это повторная выдача ранее оплаченного права, платежа не было);
 - `rating_success`;
 - основные onboarding milestones;
 - критические технические ошибки при необходимости.

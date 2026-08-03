@@ -65,7 +65,7 @@ const sdk = vi.hoisted(() => ({
   isPaymentsAvailable: vi.fn(() => false),
   fetchPaymentsCatalog: vi.fn(async () => []),
   purchaseProduct: vi.fn(async () => false),
-  restorePurchasedProductIds: vi.fn(async () => []),
+  restorePurchases: vi.fn(async () => ({ ok: false, productIds: [] })),
   canUseCloud: vi.fn(() => false),
   cloudGet: vi.fn(async () => null),
   cloudSet: vi.fn(async () => undefined),

@@ -41,7 +41,7 @@ interface Props {
   onTabSwitch?: (from: BureauTab, to: BureauTab) => void;
   /** An archive's own page was opened, from wherever. */
   onViewPack?: (packId: string, source: "shelf" | "stamp_lock") => void;
-  /** A pack-gated caption was tapped while still locked. */
+  /** The action button was pressed on a still-locked, pack-gated caption. */
   onLockedStampClick?: (stampTextId: string, packId: string) => void;
   onClose: () => void;
 }
@@ -132,13 +132,13 @@ export function BureauScreen({
    * showing the regular product's price next to an offer button would lie.
    */
   const priceLabelFor = (entry: {
-    productId: string;
+    productId: string | null;
     fallbackPriceRub: number;
     offer?: Offer;
   }): string => {
     const price = resolvePrice(entry, offerContext);
     return (
-      catalogByProductId[price.productId]?.price ??
+      (price.productId ? catalogByProductId[price.productId]?.price : undefined) ??
       formatRub(price.fallbackPriceRub)
     );
   };
@@ -321,7 +321,7 @@ export function BureauScreen({
                 busyId={busyId}
                 onOpenPack={(packId, stampTextId) => {
                   // The caption is not sold here — the archive that carries it
-                  // is, so the tile hands the player over to its page.
+                  // is, so the action button hands the player over to its page.
                   onLockedStampClick?.(stampTextId, packId);
                   onViewPack?.(packId, "stamp_lock");
                   setTab("archives");

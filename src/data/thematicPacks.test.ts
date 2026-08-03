@@ -45,12 +45,13 @@ describe("thematic packs", () => {
   });
 
   it("maps a product id back to its pack, ignoring blank ids", () => {
-    expect(getThematicPackIdByProductId("archive.night-train")).toBe("night-train");
+    expect(getThematicPackIdByProductId("archive_night_train")).toBe("night-train");
     // A retired pack still resolves so an old purchase keeps restoring.
-    expect(getThematicPackIdByProductId("archive.closed-collegium")).toBe("closed-collegium");
-    expect(getThematicPackIdByProductId("noads.forever")).toBeNull();
-    // One pack ships a placeholder productId — it must never match.
+    expect(getThematicPackIdByProductId("archive_closed_collegium")).toBe("closed-collegium");
+    expect(getThematicPackIdByProductId("noads_forever")).toBeNull();
+    // Packs off the shelf carry no product id, so nothing blank may resolve.
     expect(getThematicPackIdByProductId("  ")).toBeNull();
+    expect(getThematicPackIdByProductId("")).toBeNull();
   });
 
   it("recognizes cases inside a purchased pack (forced ads are off there)", () => {

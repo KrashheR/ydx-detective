@@ -39,8 +39,10 @@ interface Props {
 
 /**
  * The workshop bench: a real claim form on the left with the stamp printed on
- * it, the caption catalogue on the right. Selecting a caption the player does
- * not own only changes the preview — it never counts as owning it.
+ * it, the caption catalogue on the right. A tile only ever *selects* a caption
+ * — the single action button under the bench is what equips, buys, or hands the
+ * player over to the archive that carries it. Selecting a caption the player
+ * does not own only changes the preview — it never counts as owning it.
  */
 export function BureauWorkshop({
   lang,
@@ -75,10 +77,39 @@ export function BureauWorkshop({
   const inkColor = getStampInkColor(activeStampInkId);
   const caption = getStampCaption(shownId, lang);
 
+  // The one caption the action button below the bench acts on.
+  const selected = STAMP_TEXTS.find((stamp) => stamp.id === shownId);
+  const selectedOwned = selected != null && owned.has(selected.id);
+  const selectedEquipped = shownId === equippedId;
+  // A caption that ships with an archive the player has not bought: it is not
+  // for sale here, so the button becomes a doorway to that archive instead.
+  const selectedLockedPackId =
+    selected != null && !selectedOwned && selected.packId != null
+      ? selected.packId
+      : null;
+  const selectedBusy = selected != null && busyId === selected.id;
+  const canBuySelected =
+    selected != null && !selectedOwned && selectedLockedPackId == null;
+
   const stampBundle = getBundle(STAMP_BUNDLE_ID);
   const bundleOwned =
     stampBundle != null &&
     stampBundle.stampTextIds.every((id) => owned.has(id));
+
+  const handleAction = () => {
+    if (selected == null) return;
+    if (selectedEquipped) return;
+    if (selectedLockedPackId) {
+      onOpenPack(selectedLockedPackId, selected.id);
+      return;
+    }
+    if (selectedOwned) {
+      setPreviewId(null);
+      onEquip(selected.id === DEFAULT_STAMP_TEXT_ID ? null : selected.id);
+      return;
+    }
+    onPurchase(selected);
+  };
 
   return (
     <div className="mx-auto grid max-w-[1500px] grid-cols-1 gap-6 px-4 pb-14 pt-7 md:px-[5vw] lg:grid-cols-[minmax(0,.82fr)_minmax(0,1.18fr)]">
@@ -149,6 +180,40 @@ export function BureauWorkshop({
           <span className="ms-1 font-mono text-[9px] text-text-muted">
             {t("workshopInkColor", lang)}
           </span>
+
+          {/* The single verb for the selected caption: use / in use / buy /
+              open the archive that carries it. */}
+          {selected && (
+            <button
+              type="button"
+              onClick={handleAction}
+              disabled={
+                selectedEquipped ||
+                busyId !== null ||
+                (canBuySelected && !paymentsAvailable)
+              }
+              title={
+                canBuySelected && !paymentsAvailable
+                  ? t("stampPurchaseUnavailable", lang)
+                  : undefined
+              }
+              className={`min-h-11 w-full shrink-0 rounded-[3px] px-4 text-[11px] font-black uppercase sm:ms-auto sm:w-auto ${
+                selectedEquipped
+                  ? "bg-transparent text-text-muted shadow-[inset_0_0_0_1px_#9C8C6C] disabled:opacity-100"
+                  : "bg-bureau-copper text-white disabled:cursor-not-allowed disabled:opacity-55"
+              }`}
+            >
+              {selectedBusy
+                ? "…"
+                : selectedEquipped
+                  ? t("workshopStampInUse", lang)
+                  : selectedLockedPackId
+                    ? `${t("stampOpenPack", lang)} →`
+                    : selectedOwned
+                      ? t("stampEquip", lang)
+                      : `${t("buyAction", lang)} · ${priceLabel(selected)}`}
+            </button>
+          )}
         </div>
       </section>
 
@@ -180,7 +245,8 @@ export function BureauWorkshop({
               const busy = busyId === stamp.id;
               const label = getStampCaption(stamp.id, lang);
               // A caption that ships with an archive the player has not bought:
-              // it is not for sale here, the tile is a doorway to the archive.
+              // it is not for sale here — selecting it points the action button
+              // at the archive instead.
               const lockedPackId =
                 !isOwned && stamp.packId != null ? stamp.packId : null;
               // Only the caption actually on the die is cut in the chosen ink —
@@ -191,20 +257,10 @@ export function BureauWorkshop({
                   key={stamp.id}
                   type="button"
                   disabled={busy}
-                  onClick={() => {
-                    if (lockedPackId) {
-                      onOpenPack(lockedPackId, stamp.id);
-                      return;
-                    }
-                    if (isOwned) {
-                      setPreviewId(null);
-                      onEquip(stamp.id === DEFAULT_STAMP_TEXT_ID ? null : stamp.id);
-                      return;
-                    }
-                    // Not owned: first tap tries it on, second tap buys it.
-                    if (previewId === stamp.id) onPurchase(stamp);
-                    else setPreviewId(stamp.id);
-                  }}
+                  aria-pressed={isEquipped || isPreviewing}
+                  // Tiles only select — every purchase, equip and archive jump
+                  // goes through the action button under the bench.
+                  onClick={() => setPreviewId(stamp.id)}
                   className={`relative flex min-h-[142px] flex-col items-center justify-center gap-2.5 p-3 text-center shadow-card transition-transform hover:-translate-y-[3px] disabled:cursor-wait ${
                     isEquipped
                       ? "bg-[#F5EAD3] shadow-[inset_0_0_0_2px_#8D412D,0_7px_13px_rgba(50,35,18,.22)]"
@@ -247,6 +303,7 @@ export function BureauWorkshop({
                       isEquipped ? "text-success" : "text-bureau-copper"
                     }`}
                   >
+                    {/* Status/price only — the verb lives on the action button */}
                     {busy
                       ? "…"
                       : lockedPackId
@@ -254,8 +311,8 @@ export function BureauWorkshop({
                         : isEquipped
                           ? t("workshopStampInUse", lang)
                           : isOwned
-                            ? t("stampEquip", lang)
-                            : `${t("buyAction", lang)} · ${priceLabel(stamp)}`}
+                            ? t("purchased", lang)
+                            : priceLabel(stamp)}
                   </small>
                 </button>
               );

@@ -201,8 +201,10 @@ id дописывается в `revealedEvidenceIds`, поэтому раскр�
 ### Наборы (bundles)
 
 `src/data/bundles.ts` описывает три bundle-покупки: `bundle.stamps` (все шуточные подписи),
-`bundle.archives` (три архива) и `bundle.complete` (три архива + все подписи). Bundle не
-является отдельной сущностью прогресса —
+`bundle.archives` (три архива) и `bundle.complete` (три архива + все подписи). Это **внутренние
+id** — именно они пишутся в сейв; в консоли Яндекса тем же наборам соответствуют product id
+`bundle_stamps` / `bundle_archives` / `bundle_complete` ([10-iap-catalog.md](10-iap-catalog.md)).
+Bundle не является отдельной сущностью прогресса —
 он **выдаёт содержимое** (`grantBundlePurchase` → `grantArchivePurchases` + `grantStampTextPurchases`)
 и пишет id в `stats.purchasedBundleIds`. Цена «до» и процент скидки всегда **выводятся** из
 `fallbackPriceRub` содержимого (`getBundleListPriceRub` / `getBundleDiscountPercent`, floor), поэтому

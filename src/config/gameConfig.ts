@@ -267,7 +267,7 @@ export const GAME_CONFIG = {
     /** Finished cases between two *shown* interstitials. */
     minCasesBetweenInterstitials: 2,
     /** Yandex IAP product granting a permanent ad-free experience. */
-    noAdsProductId: 'noads.forever',
+    noAdsProductId: 'noads_forever',
     /** Sticker price of that product when the payments catalog is unreachable. */
     noAdsFallbackPriceRub: 99,
   },

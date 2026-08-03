@@ -7,7 +7,7 @@ const yandex = vi.hoisted(() => ({
   onPauseChange: vi.fn(() => () => undefined), trackAdOffer: vi.fn(), canReview: vi.fn(async () => false),
   requestReview: vi.fn(async () => false), isPaymentsAvailable: vi.fn(() => false),
   fetchPaymentsCatalog: vi.fn(async () => []), purchaseProduct: vi.fn(async () => false),
-  restorePurchasedProductIds: vi.fn(async () => []), submitLeaderboardScore: vi.fn(async () => undefined),
+  restorePurchases: vi.fn(async () => ({ ok: true, productIds: [] })), submitLeaderboardScore: vi.fn(async () => undefined),
   fetchLeaderboard: vi.fn(async () => null),
 }));
 vi.mock('./yandexSDK', () => yandex);

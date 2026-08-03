@@ -187,16 +187,9 @@ export function initYandex(): Promise<void> {
       } catch {
         leaderboards = null;
       }
-      try {
-        // Purchases are fulfilled and restored entirely in this client. Signed
-        // responses contain only an encrypted signature and require a server to
-        // validate them, so they cannot restore product IDs here.
-        payments = sdk.getPayments
-          ? await sdk.getPayments({ signed: false })
-          : null;
-      } catch {
-        payments = null;
-      }
+      // Warm the payments handle up, but never block the first frame on it and
+      // never treat a failure here as final — see `ensurePayments`.
+      void ensurePayments();
     } catch {
       sdk = null;
       player = null;
@@ -455,14 +448,79 @@ function getPurchasedProductId(purchase: YandexPurchase): string | null {
   return purchase.productID ?? purchase.productId ?? null;
 }
 
+/**
+ * Ceiling for the platform calls a *blocked UI* waits on (the handshake and the
+ * ownership read). The Bureau disables its whole shelf while a purchase is in
+ * flight, so a promise that never settles would leave the shop spinning until a
+ * reload. `purchase()` itself is deliberately exempt — the player may sit in the
+ * payment dialog for as long as they like.
+ */
+const PAYMENTS_TIMEOUT_MS = 8_000;
+
+function withTimeout<T>(promise: Promise<T>, ms = PAYMENTS_TIMEOUT_MS): Promise<T> {
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  return Promise.race([
+    promise,
+    new Promise<T>((_, reject) => {
+      timer = setTimeout(() => reject(new Error('payments_timeout')), ms);
+    }),
+  ]).finally(() => {
+    if (timer) clearTimeout(timer);
+  });
+}
+
+/** In-flight `getPayments()` handshake, so parallel callers share one attempt. */
+let paymentsHandshake: Promise<YandexPayments | null> | null = null;
+
+/**
+ * The payments handle, obtained on demand.
+ *
+ * `getPayments()` rejects for a player who is not signed in — and on Yandex the
+ * sign-in prompt is raised by the payment flow itself, so a failure at boot is
+ * never final. Every payments call therefore re-attempts the handshake; only a
+ * *successful* handle is cached, a failed attempt merely clears the way for the
+ * next try. Purchases are fulfilled and restored entirely in this client, so the
+ * responses stay unsigned: a signed response carries only an encrypted signature
+ * that needs a server to validate, and could not restore product ids here.
+ */
+async function ensurePayments(): Promise<YandexPayments | null> {
+  if (payments) return payments;
+  if (!sdk?.getPayments) return null;
+  paymentsHandshake ??= withTimeout(sdk.getPayments({ signed: false }))
+    .then((api) => {
+      payments = api;
+      return api;
+    })
+    .catch(() => null)
+    .finally(() => {
+      paymentsHandshake = null;
+    });
+  return paymentsHandshake;
+}
+
+/** Product ids the platform says this player owns. Untracked — see `restorePurchases`. */
+async function readPurchasedProductIds(api: YandexPayments): Promise<string[]> {
+  return normalizePurchases(await withTimeout(api.getPurchases()))
+    .map(getPurchasedProductId)
+    .filter((productId): productId is string => Boolean(productId));
+}
+
+/**
+ * Whether a purchase is worth *offering*. Deliberately optimistic: the handle
+ * may still be missing only because the player has not signed in yet, and that
+ * prompt appears exclusively when they press Buy — disabling the button on a
+ * missing handle would lock every anonymous player out of the whole shop. Only
+ * a missing SDK (offline, or a build without the payments API) is a hard no.
+ */
 export function isPaymentsAvailable(): boolean {
-  return payments !== null;
+  return payments !== null || typeof sdk?.getPayments === 'function';
 }
 
 export async function fetchPaymentsCatalog(): Promise<PaymentsProduct[]> {
-  if (!payments) return [];
+  const api = await ensurePayments();
+  if (!api) return [];
   try {
-    return normalizeCatalogProducts(await payments.getCatalog()).map((product) => ({
+    return normalizeCatalogProducts(await api.getCatalog()).map((product) => ({
       id: product.id,
       title: product.title ?? product.id,
       price: product.price ?? null,
@@ -475,29 +533,61 @@ export async function fetchPaymentsCatalog(): Promise<PaymentsProduct[]> {
 }
 
 export async function purchaseProduct(productId: string): Promise<boolean> {
-  if (!payments) return false;
+  const api = await ensurePayments();
+  if (!api) return false;
   trackGoal(GOAL.purchaseStart, { productId });
   try {
-    await payments.purchase({ id: productId });
+    const purchase = await api.purchase({ id: productId });
+    // The SDK answers with the purchase it actually made. A different id means
+    // the player was charged for something else — never grant on that.
+    const boughtProductId = getPurchasedProductId(purchase);
+    if (boughtProductId !== null && boughtProductId !== productId) {
+      trackGoal(GOAL.purchaseError, {
+        productId,
+        error: `product_mismatch:${boughtProductId}`,
+      });
+      return false;
+    }
     trackGoal(GOAL.purchaseSuccess, { productId });
     return true;
   } catch (error) {
+    // Nothing here is consumable, so a product stays in `getPurchases()` for
+    // good and buying it a second time throws. That is not a failed sale: the
+    // player owns it already, and refusing the grant is exactly how a paid
+    // entitlement goes missing. Let the platform settle it.
+    try {
+      if ((await readPurchasedProductIds(api)).includes(productId)) {
+        trackGoal(GOAL.purchaseSuccess, { productId, source: 'already_owned' });
+        return true;
+      }
+    } catch {
+      /* Platform unreachable — fall through to the honest failure. */
+    }
     trackGoal(GOAL.purchaseError, { productId, error: String(error) });
     return false;
   }
 }
 
-export async function restorePurchasedProductIds(): Promise<string[]> {
-  if (!payments) return [];
+/**
+ * Outcome of a restore. `ok: false` means the payments API could not be reached
+ * at all — which is **not** the same as "this player owns nothing", and the two
+ * must never reach the player as one message.
+ */
+export interface RestoreResult {
+  readonly ok: boolean;
+  readonly productIds: readonly string[];
+}
+
+export async function restorePurchases(): Promise<RestoreResult> {
+  const api = await ensurePayments();
+  if (!api) return { ok: false, productIds: [] };
   try {
-    const ids = normalizePurchases(await payments.getPurchases())
-      .map(getPurchasedProductId)
-      .filter((productId): productId is string => Boolean(productId));
-    trackGoal(GOAL.purchaseRestore, { count: ids.length, productIds: ids });
-    return ids;
+    const productIds = await readPurchasedProductIds(api);
+    trackGoal(GOAL.purchaseRestore, { count: productIds.length, productIds });
+    return { ok: true, productIds };
   } catch (error) {
     trackGoal(GOAL.purchaseError, { source: 'restore', error: String(error) });
-    return [];
+    return { ok: false, productIds: [] };
   }
 }
 

@@ -19,7 +19,7 @@ const sdk = vi.hoisted(() => ({
   isPaymentsAvailable: vi.fn(() => false),
   fetchPaymentsCatalog: vi.fn(async () => []),
   purchaseProduct: vi.fn(async () => false),
-  restorePurchasedProductIds: vi.fn(async () => []),
+  restorePurchases: vi.fn(async () => ({ ok: true, productIds: [] })),
   // Mirrors the real SDK order: `onShown` (from `onOpen`), then `onDone`.
   showFullscreenAd: vi.fn((onDone?: () => void, _placement?: string, onShown?: () => void) => {
     onShown?.();
@@ -492,7 +492,7 @@ describe('archive unlocks', () => {
 
   it('maps restored product ids onto pack + No Ads entitlements', () => {
     store().applyRestoredPurchases([
-      'archive.closed-collegium',
+      'archive_closed_collegium',
       GAME_CONFIG.advertising.noAdsProductId,
       'unknown.product',
     ]);
@@ -515,8 +515,20 @@ describe('archive unlocks', () => {
     expect(store().stats.archivePurchasedPackIds).toHaveLength(THEMATIC_PACKS.length);
   });
 
+  it('writes nothing when a restore repeats what the player already owns', () => {
+    // Every boot re-grants the platform's list, so the steady state is a restore
+    // that changes nothing — it must not spend a cloud write on an identical save.
+    const bundle = getBundle(COMPLETE_BUNDLE_ID)!;
+    store().applyRestoredPurchases([bundle.productId]);
+    persist.flushSync.mockClear();
+
+    store().applyRestoredPurchases([bundle.productId]);
+    expect(persist.flushSync).not.toHaveBeenCalled();
+    expect(store().stats.purchasedBundleIds).toEqual([bundle.id]);
+  });
+
   it('leaves No Ads untouched when it was not among the restored products', () => {
-    store().applyRestoredPurchases(['archive.closed-collegium']);
+    store().applyRestoredPurchases(['archive_closed_collegium']);
     expect(store().stats.noAdsPurchased).toBe(false);
   });
 
@@ -577,8 +589,8 @@ describe('stamp captions (cosmetic IAP)', () => {
       stats: makeStats({ ownedStampTextIds: ['storyteller'] }),
     });
     store().applyRestoredPurchases([
-      'stamp.storyteller',
-      'stamp.doesnt-add-up',
+      'stamp_storyteller',
+      'stamp_doesnt_add_up',
       'unknown.product',
     ]);
     expect(store().stats.ownedStampTextIds).toEqual([

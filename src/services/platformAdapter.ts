@@ -1,8 +1,8 @@
 /** Portal-neutral boundary used by the game runtime. */
 import * as yandex from './yandexSDK';
-import type { AdPlacement, LeaderboardRow, PaymentsProduct } from './yandexSDK';
+import type { AdPlacement, LeaderboardRow, PaymentsProduct, RestoreResult } from './yandexSDK';
 
-export type { AdPlacement, LeaderboardRow, PaymentsProduct } from './yandexSDK';
+export type { AdPlacement, LeaderboardRow, PaymentsProduct, RestoreResult } from './yandexSDK';
 
 type CrazyCallbacks = {
   adStarted?: () => void;
@@ -134,6 +134,7 @@ export const requestReview = () => onYandex() ? yandex.requestReview() : Promise
 export const isPaymentsAvailable = () => onYandex() && yandex.isPaymentsAvailable();
 export const fetchPaymentsCatalog = (): Promise<PaymentsProduct[]> => onYandex() ? yandex.fetchPaymentsCatalog() : Promise.resolve([]);
 export const purchaseProduct = (id: string) => onYandex() ? yandex.purchaseProduct(id) : Promise.resolve(false);
-export const restorePurchasedProductIds = () => onYandex() ? yandex.restorePurchasedProductIds() : Promise.resolve([]);
+export const restorePurchases = (): Promise<RestoreResult> =>
+  onYandex() ? yandex.restorePurchases() : Promise.resolve({ ok: false, productIds: [] });
 export const submitLeaderboardScore = (score: number) => onYandex() ? yandex.submitLeaderboardScore(score) : Promise.resolve();
 export const fetchLeaderboard = (): Promise<LeaderboardRow[] | null> => onYandex() ? yandex.fetchLeaderboard() : Promise.resolve(null);

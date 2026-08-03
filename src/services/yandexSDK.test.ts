@@ -24,7 +24,11 @@ interface MockAdv {
   showRewardedVideo: ReturnType<typeof vi.fn>;
 }
 
-async function freshOnline(opts?: { mode?: 'lite' | '' }) {
+async function freshOnline(opts?: {
+  mode?: 'lite' | '';
+  /** Override the payments handshake — e.g. to refuse an anonymous player. */
+  getPayments?: ReturnType<typeof vi.fn>;
+}) {
   vi.resetModules();
   const adv: MockAdv = {
     showFullscreenAdv: vi.fn(),
@@ -42,12 +46,13 @@ async function freshOnline(opts?: { mode?: 'lite' | '' }) {
   const payments = {
     getCatalog: vi.fn(async () => []),
     getPurchases: vi.fn(async () => []),
-    purchase: vi.fn(async () => ({ productID: 'archive.frontier-sector' })),
+    // The real API answers with the purchase it made — echo the requested id.
+    purchase: vi.fn(async ({ id }: { id: string }) => ({ productID: id })),
   };
   const mockSdk = {
     getPlayer: vi.fn(async () => player),
     getLeaderboards: vi.fn(async () => leaderboards),
-    getPayments: vi.fn(async () => payments),
+    getPayments: opts?.getPayments ?? vi.fn(async () => payments),
     environment: { i18n: { lang: 'en' } },
     serverTime: vi.fn(() => 1_700_000_000_000),
     adv,
@@ -119,8 +124,8 @@ describe('offline mode (no SDK present)', () => {
     const mod = await freshOffline();
     expect(mod.isPaymentsAvailable()).toBe(false);
     await expect(mod.fetchPaymentsCatalog()).resolves.toEqual([]);
-    await expect(mod.restorePurchasedProductIds()).resolves.toEqual([]);
-    await expect(mod.purchaseProduct('archive.frontier-sector')).resolves.toBe(false);
+    await expect(mod.restorePurchases()).resolves.toEqual({ ok: false, productIds: [] });
+    await expect(mod.purchaseProduct('archive_frontier_sector')).resolves.toBe(false);
   });
 });
 
@@ -165,33 +170,95 @@ describe('online mode (mocked SDK)', () => {
   it('exposes the payments catalog and restore surface when available', async () => {
     const { mod, payments } = await freshOnline();
     payments.getCatalog.mockResolvedValueOnce([
-      { id: 'archive.frontier-sector', title: 'Frontier', price: '₽299' },
+      { id: 'archive_frontier_sector', title: 'Frontier', price: '₽299' },
     ] as any);
     payments.getPurchases.mockResolvedValueOnce([
-      { productID: 'archive.frontier-sector' },
-      { productId: 'archive.closed-collegium' },
+      { productID: 'archive_frontier_sector' },
+      { productId: 'archive_closed_collegium' },
     ] as any);
 
     expect(mod.isPaymentsAvailable()).toBe(true);
     await expect(mod.fetchPaymentsCatalog()).resolves.toEqual([
       {
-        id: 'archive.frontier-sector',
+        id: 'archive_frontier_sector',
         title: 'Frontier',
         price: '₽299',
         priceValue: null,
         priceCurrencyCode: null,
       },
     ]);
-    await expect(mod.restorePurchasedProductIds()).resolves.toEqual([
-      'archive.frontier-sector',
-      'archive.closed-collegium',
-    ]);
+    await expect(mod.restorePurchases()).resolves.toEqual({
+      ok: true,
+      productIds: ['archive_frontier_sector', 'archive_closed_collegium'],
+    });
   });
 
   it('runs a product purchase through the payments API', async () => {
     const { mod, payments } = await freshOnline();
-    await expect(mod.purchaseProduct('archive.frontier-sector')).resolves.toBe(true);
-    expect(payments.purchase).toHaveBeenCalledWith({ id: 'archive.frontier-sector' });
+    await expect(mod.purchaseProduct('archive_frontier_sector')).resolves.toBe(true);
+    expect(payments.purchase).toHaveBeenCalledWith({ id: 'archive_frontier_sector' });
+  });
+
+  it('separates "owns nothing" from "payments unreachable" on restore', async () => {
+    const { mod, payments } = await freshOnline();
+    await expect(mod.restorePurchases()).resolves.toEqual({ ok: true, productIds: [] });
+
+    payments.getPurchases.mockRejectedValueOnce(new Error('network'));
+    await expect(mod.restorePurchases()).resolves.toEqual({ ok: false, productIds: [] });
+  });
+
+  it('retries the payments handshake instead of staying dead for the session', async () => {
+    // An anonymous player is refused at boot; signing in during the session must
+    // bring the shop back, or every purchase is lost until a reload.
+    const { mod, mockSdk, payments } = await freshOnline({
+      getPayments: vi.fn(async () => {
+        throw new Error('not authorized');
+      }),
+    });
+    // Still offered — the sign-in prompt only appears if the player may press Buy.
+    expect(mod.isPaymentsAvailable()).toBe(true);
+    await expect(mod.purchaseProduct('archive_night_train')).resolves.toBe(false);
+
+    mockSdk.getPayments.mockImplementation(async () => payments);
+    await expect(mod.purchaseProduct('archive_night_train')).resolves.toBe(true);
+    expect(payments.purchase).toHaveBeenCalledWith({ id: 'archive_night_train' });
+  });
+
+  it('grants an already-owned product when a repeat purchase throws', async () => {
+    const { mod, payments } = await freshOnline();
+    payments.purchase.mockRejectedValueOnce(new Error('already purchased'));
+    payments.getPurchases.mockResolvedValueOnce([
+      { productID: 'archive_night_train' },
+    ] as any);
+
+    await expect(mod.purchaseProduct('archive_night_train')).resolves.toBe(true);
+  });
+
+  it('refuses the grant when the purchase fails and the platform disowns it', async () => {
+    const { mod, payments } = await freshOnline();
+    payments.purchase.mockRejectedValueOnce(new Error('cancelled'));
+
+    await expect(mod.purchaseProduct('archive_night_train')).resolves.toBe(false);
+  });
+
+  it('gives up on a payments call that never settles', async () => {
+    // The Bureau disables its whole shelf while a purchase is in flight, so a
+    // promise that never resolves would strand the shop on its spinner.
+    const { mod, payments } = await freshOnline();
+    vi.useFakeTimers();
+    payments.getPurchases.mockReturnValueOnce(new Promise(() => {}) as any);
+
+    const pending = mod.restorePurchases();
+    await vi.advanceTimersByTimeAsync(9_000);
+    await expect(pending).resolves.toEqual({ ok: false, productIds: [] });
+    vi.useRealTimers();
+  });
+
+  it('refuses a purchase that resolved with a different product', async () => {
+    const { mod, payments } = await freshOnline();
+    payments.purchase.mockResolvedValueOnce({ productID: 'bundle_complete' } as any);
+
+    await expect(mod.purchaseProduct('archive_night_train')).resolves.toBe(false);
   });
 });
 

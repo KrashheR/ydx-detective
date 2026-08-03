@@ -14,15 +14,24 @@ export const ARCHIVE_PACK_PRICE_RUB = 149;
  */
 export const ARCHIVE_PACK_INTRO_PRICE_RUB = 99;
 
+/**
+ * Console-facing product id of a pack. The Yandex catalog rejects dots in a
+ * product id, so ids are `[a-z0-9_]` only — the pack's own dashed id stays
+ * internal and is slugified here rather than being renamed everywhere.
+ */
+const packProductId = (packId: string): string =>
+  `archive_${packId.replace(/-/g, "_")}`;
+
 const ARCHIVE_PACK_INTRO_OFFER = (packId: string): Offer => ({
-  productId: `archive.${packId}.intro`,
+  productId: `${packProductId(packId)}_intro`,
   fallbackPriceRub: ARCHIVE_PACK_INTRO_PRICE_RUB,
   rule: "first_archive",
 });
 
 export interface ThematicPack {
   readonly id: string;
-  readonly productId: string;
+  /** Yandex IAP product id, or `null` for a pack that is not on sale. */
+  readonly productId: string | null;
   readonly fallbackPriceRub: number;
   /** Cheaper alternative product, sold while its rule holds. */
   readonly offer?: Offer;
@@ -37,7 +46,8 @@ export interface ThematicPack {
   readonly accent: "archive" | "polar" | "cliff";
   /**
    * Shelf artwork for the Bureau, relative to `public/`. Optional because the
-   * retired expert-file packs in `RETIRED_THEMATIC_PACKS` were never given
+   * retired expert-file packs in `RETIRED_THEMATIC_PACKS` (which carry no
+   * `productId` at all, being off the shelf) were never given
    * cover art — the shelf falls back to the folder-spine look for those.
    */
   readonly coverImage?: string;
@@ -81,7 +91,7 @@ const ARCHIVE_CASE_IDS: Readonly<Record<string, readonly string[]>> = {
 export const THEMATIC_PACKS: readonly ThematicPack[] = [
   {
     id: "dacha-romashka",
-    productId: "archive.dacha-romashka",
+    productId: "archive_dacha_romashka",
     fallbackPriceRub: ARCHIVE_PACK_PRICE_RUB,
     offer: ARCHIVE_PACK_INTRO_OFFER("dacha-romashka"),
     title: l(
@@ -127,7 +137,7 @@ export const THEMATIC_PACKS: readonly ThematicPack[] = [
   },
   {
     id: "night-train",
-    productId: "archive.night-train",
+    productId: "archive_night_train",
     fallbackPriceRub: ARCHIVE_PACK_PRICE_RUB,
     offer: ARCHIVE_PACK_INTRO_OFFER("night-train"),
     title: l(
@@ -173,7 +183,7 @@ export const THEMATIC_PACKS: readonly ThematicPack[] = [
   },
   {
     id: "sanatorium-priboy",
-    productId: "archive.sanatorium-priboy",
+    productId: "archive_sanatorium_priboy",
     fallbackPriceRub: ARCHIVE_PACK_PRICE_RUB,
     offer: ARCHIVE_PACK_INTRO_OFFER("sanatorium-priboy"),
     title: l(
@@ -227,7 +237,7 @@ export const THEMATIC_PACKS: readonly ThematicPack[] = [
 export const RETIRED_THEMATIC_PACKS: readonly ThematicPack[] = [
   {
     id: "frontier-sector",
-    productId: "  ",
+    productId: null,
     fallbackPriceRub: 299,
     title: l(
       "Архив Пограничного Сектора",
@@ -261,7 +271,7 @@ export const RETIRED_THEMATIC_PACKS: readonly ThematicPack[] = [
   },
   {
     id: "closed-collegium",
-    productId: "archive.closed-collegium",
+    productId: "archive_closed_collegium",
     fallbackPriceRub: 299,
     title: l(
       "Архив Закрытого Коллегиума",
@@ -295,7 +305,7 @@ export const RETIRED_THEMATIC_PACKS: readonly ThematicPack[] = [
   },
   {
     id: "underground-department",
-    productId: "archive.underground-department",
+    productId: "archive_underground_department",
     fallbackPriceRub: 299,
     title: l(
       "Архив Подземного Отдела",
@@ -350,10 +360,10 @@ export function getThematicPackCaseIds(pack: ThematicPack): readonly string[] {
  */
 export function getThematicPackIdByProductId(productId: string): string | null {
   const id = productId.trim();
-  if (!id) return null; // a pack with a blank productId is not on sale yet
+  if (!id) return null; // an empty id can never be a product
   return (
     ALL_THEMATIC_PACKS.find(
-      (pack) => pack.productId.trim() === id || pack.offer?.productId === id,
+      (pack) => pack.productId === id || pack.offer?.productId === id,
     )?.id ?? null
   );
 }

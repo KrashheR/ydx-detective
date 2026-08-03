@@ -58,7 +58,7 @@ import {
   getYandexLang,
   initYandex,
   onPauseChange,
-  restorePurchasedProductIds,
+  restorePurchases,
   showRewardedAd,
   trackAdOffer,
   submitLeaderboardScore,
@@ -333,8 +333,8 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       //    re-grants what the platform says was bought. Fire-and-forget: it must
       //    never delay the first frame, and off-Yandex it resolves to an empty
       //    list, leaving the hydrated state untouched.
-      void restorePurchasedProductIds()
-        .then((productIds) => get().applyRestoredPurchases(productIds))
+      void restorePurchases()
+        .then((result) => get().applyRestoredPurchases(result.productIds))
         .catch(() => undefined);
 
       // Analytics is deliberately outside the boot path. Yield after hydration
@@ -1107,27 +1107,24 @@ export const useGameStore = create<GameStoreState>((set, get) => {
     },
 
     grantArchivePurchase(packId) {
+      if (get().stats.archivePurchasedPackIds.includes(packId)) return;
       set((s) => ({
         stats: {
           ...s.stats,
-          archivePurchasedPackIds: s.stats.archivePurchasedPackIds.includes(packId)
-            ? s.stats.archivePurchasedPackIds
-            : [...s.stats.archivePurchasedPackIds, packId],
+          archivePurchasedPackIds: [...s.stats.archivePurchasedPackIds, packId],
         },
       }));
       persist(true);
     },
 
+    // Every boot re-grants what the platform reports, so this runs constantly
+    // with nothing new to say. Writing anyway would spend a cloud write (and a
+    // slice of the SDK's rate limit) on an identical snapshot.
     grantArchivePurchases(packIds) {
-      if (packIds.length === 0) return;
-      set((s) => ({
-        stats: {
-          ...s.stats,
-          archivePurchasedPackIds: Array.from(
-            new Set([...s.stats.archivePurchasedPackIds, ...packIds]),
-          ),
-        },
-      }));
+      const owned = get().stats.archivePurchasedPackIds;
+      const merged = Array.from(new Set([...owned, ...packIds]));
+      if (merged.length === owned.length) return;
+      set((s) => ({ stats: { ...s.stats, archivePurchasedPackIds: merged } }));
       persist(true);
     },
 
@@ -1154,15 +1151,10 @@ export const useGameStore = create<GameStoreState>((set, get) => {
     },
 
     grantStampTextPurchases(stampTextIds) {
-      if (stampTextIds.length === 0) return;
-      set((s) => ({
-        stats: {
-          ...s.stats,
-          ownedStampTextIds: Array.from(
-            new Set([...s.stats.ownedStampTextIds, ...stampTextIds]),
-          ),
-        },
-      }));
+      const owned = get().stats.ownedStampTextIds;
+      const merged = Array.from(new Set([...owned, ...stampTextIds]));
+      if (merged.length === owned.length) return; // nothing new — see above
+      set((s) => ({ stats: { ...s.stats, ownedStampTextIds: merged } }));
       persist(true);
     },
 
@@ -1195,18 +1187,19 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       const bundle = getBundle(bundleId);
       if (!bundle) return;
       // A bundle owns nothing itself — it grants its contents, which is what the
-      // rest of the game reads. Recording the id keeps the shelf honest ("already
-      // yours") and lets a future bundle add contents retroactively.
+      // rest of the game reads. The contents go first so that a bundle whose
+      // record already exists (every boot after the purchase) still backfills
+      // anything added to it since; recording the id keeps the shelf honest
+      // ("already yours").
+      get().grantArchivePurchases(bundle.packIds);
+      get().grantStampTextPurchases(bundle.stampTextIds);
+      if (get().stats.purchasedBundleIds.includes(bundle.id)) return;
       set((s) => ({
         stats: {
           ...s.stats,
-          purchasedBundleIds: s.stats.purchasedBundleIds.includes(bundle.id)
-            ? s.stats.purchasedBundleIds
-            : [...s.stats.purchasedBundleIds, bundle.id],
+          purchasedBundleIds: [...s.stats.purchasedBundleIds, bundle.id],
         },
       }));
-      get().grantArchivePurchases(bundle.packIds);
-      get().grantStampTextPurchases(bundle.stampTextIds);
       persist(true);
     },
 

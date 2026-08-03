@@ -80,7 +80,8 @@ export function isOfferActive(offer: Offer, ctx: OfferContext): boolean {
  * when its rule is satisfied, the regular price otherwise.
  */
 export interface ResolvedPrice {
-  readonly productId: string;
+  /** The id to charge, or `null` when the entry is not on sale at all. */
+  readonly productId: string | null;
   readonly fallbackPriceRub: number;
   /** The struck-through "before" price — `null` when no offer is running. */
   readonly baseFallbackPriceRub: number | null;
@@ -89,7 +90,7 @@ export interface ResolvedPrice {
 
 export function resolvePrice(
   entry: {
-    readonly productId: string;
+    readonly productId: string | null;
     readonly fallbackPriceRub: number;
     readonly offer?: Offer;
   },

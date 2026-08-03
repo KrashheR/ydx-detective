@@ -137,23 +137,43 @@ module-state ровно одну сессию.
 
 ## In-app purchases
 
-`yandexSDK.ts` поднимает `payments` best-effort через `getPayments({ signed: false })`.
+`yandexSDK.ts` поднимает `payments` **лениво**, через `ensurePayments()`:
+`getPayments({ signed: false })` пробуется на бусте (fire-and-forget, буст не ждёт) и
+**повторяется при каждом следующем платёжном вызове**, пока не отдаст хэндл. Это обязательно:
+у неавторизованного игрока `getPayments()` реджектится, а окно логина Яндекс показывает сам
+платёжный флоу — кэшировать первый отказ значит убить магазин для всей сессии.
 Права на постоянные архивы обрабатываются на клиенте, поэтому нужны открытые `productId` в
 ответе SDK; `signed: true` допустим только при отдельной серверной проверке подписи.
-Если payments API недоступен, витрина архивов остаётся browse-only: каталог можно открыть,
-но покупка и restore уходят в no-op UI без блокировки геймплея.
+
+`isPaymentsAvailable()` намеренно **оптимистичен**: `true`, пока в SDK вообще есть
+`getPayments` — иначе кнопка «Купить» была бы заблокирована ровно у тех игроков, которым
+нужен логин. Жёсткое `false` — только офлайн / вне Yandex / SDK-сборка без payments; тогда
+витрина остаётся browse-only без блокировки геймплея.
 
 - `fetchPaymentsCatalog()` — читает каталог продуктов и цену для кнопки покупки архива.
-- `purchaseProduct(productId)` — инициирует покупку полного архива; после успешного ответа UI
-  пишет entitlement в `stats.archivePurchasedPackIds`.
-- `restorePurchasedProductIds()` — читает уже купленные продукты платформы; App отдаёт список в
+- `purchaseProduct(productId)` — инициирует покупку. Успех засчитывается, только если SDK
+  вернул **тот же** product id (иначе `purchase_error: product_mismatch`). При ошибке
+  вызывается `getPurchases()`: непотребляемый товар навсегда остаётся в списке покупок, и
+  повторная покупка бросает — если платформа подтверждает владение, право всё равно выдаётся
+  (гол `purchase_success` с `source: already_owned`). Без этого оплаченный товар пропадал бы.
+- `restorePurchases()` → `{ ok, productIds }`. `ok: false` означает «до payments API не
+  достучались», и это **не** то же самое, что «покупок нет»: UI обязан различать их
+  (`platformUnavailable` vs `purchaseRestoreEmpty`). App отдаёт список в
   `store.applyRestoredPurchases(productIds)` — **единственное** место маппинга product id →
   право (архивные паки, `GAME_CONFIG.advertising.noAdsProductId` → `noAdsPurchased`, штампы).
-  Маппинг принимает **и офферный id** товара (`archive.<pack>.intro`, `bundle.*.offer`) — это
+  Маппинг принимает **и офферный id** товара (`archive_<pack>_intro`, `bundle_*_offer`) — это
   та же выдача по другой цене.
 
+**Перед списанием всегда спрашиваем платформу.** Каждый `handlePurchase*` в `App.tsx` сперва
+зовёт `claimIfAlreadyOwned(...)`: если `restorePurchases()` подтверждает, что право уже
+оплачено — выдаём его и **не** открываем платёжное окно (гол `purchase_already_owned`).
+Без этого возможен двойной платёж: провалившийся restore оставляет `archivePurchasedPackIds`
+пустым, из-за чего снова активируется интро-оффер, а у оффера **другой product id** — SDK-шная
+защита «уже куплено» сравнивает id и такой случай не ловит. Сопоставление ведётся по правам
+(`getThematicPackIdByProductId` / `getBundleByProductId`), а не по строке id.
+
 **Права платформо-авторитетны, а не сейв-авторитетны.** `store.init()` после гидрации
-fire-and-forget вызывает `restorePurchasedProductIds() → applyRestoredPurchases(...)`. Сейв
+fire-and-forget вызывает `restorePurchases() → applyRestoredPurchases(...)`. Сейв
 можно потерять (очищенное хранилище, упавшая облачная запись, новое устройство до первой
 синхронизации), купленный продукт — нет, поэтому каждый запуск перевыдаёт то, что платформа
 считает оплаченным. Вне Yandex вызов возвращает пустой список и ничего не трогает.
@@ -165,8 +185,13 @@ fire-and-forget вызывает `restorePurchasedProductIds() → applyRestored
 именно последний, полный снапшот раньше застревал в очереди навсегда. LocalStorage при этом
 всегда был прав, но `loadSnapshot` предпочитает облако — и покупка терялась на перезапуске.
 
+**Выдача идемпотентна.** `grantArchivePurchase(s)`, `grantStampTextPurchases`, `grantNoAds` и
+`grantBundlePurchase` выходят рано, если состав прав не изменился. Стабильное состояние —
+restore на каждом бусте, который ничего не меняет; писать при этом облако значит тратить
+лимит `player.setData` на идентичный снапшот.
+
 **No Ads.** Постоянное право «без рекламы» — продукт `GAME_CONFIG.advertising.noAdsProductId`
-(`noads.forever`; id должен совпадать с созданным в консоли Yandex). Право хранится в
+(`noads_forever`; id должен совпадать с созданным в консоли Yandex). Право хранится в
 `stats.noAdsPurchased`, выдаётся через `grantNoAds()` (покупка) или restore и снимает **всю**
 forced-рекламу; rewarded-видео по желанию игрока (удвоение награды, restore funds) остаётся.
 
@@ -272,7 +297,7 @@ contradiction), а также `result_view`/`result_action`. Это позвол
 | `rating_action` | `dismissRating` / `suppressRating` / `App.tsx` (onRate) | action (`dismiss`/`never`/`rate`), dismissals |
 | `ad_offer`, `ad_accept`, `ad_open`, `ad_close`, `ad_reward`, `ad_error` | UI + `yandexSDK.ts` | kind, placement, wasShown, rewarded, error; `ad_open` дополнительно несёт сессионные агрегаты `adsPerSession`/`verdictsSinceLastAd` (см. ниже) |
 | `service_view`, `service_select`, `service_buy`, `service_use` | `App.tsx` / `buyHint` | service, caseId, cost, balanceBefore/After |
-| `shop_view`, `product_view`, `purchase_start`, `purchase_success`, `purchase_error`, `purchase_restore` | `BureauScreen` (через `App.tsx`) + `yandexSDK.ts` | productId, archiveId, price, error; `shop_view` несёт `shop: 'special_archives' \| 'stamp_texts' \| 'bundles'` по открытой вкладке Бюро |
+| `shop_view`, `product_view`, `purchase_start`, `purchase_success`, `purchase_error`, `purchase_restore`, `purchase_already_owned` | `BureauScreen` (через `App.tsx`) + `yandexSDK.ts` | productId, archiveId, price, error; `shop_view` несёт `shop: 'special_archives' \| 'stamp_texts' \| 'bundles'` по открытой вкладке Бюро. ⚠️ `purchase_success` **не равен выручке**: с `source: 'already_owned'` он означает выдачу ранее оплаченного права без нового платежа — при подсчёте конверсии фильтруй по отсутствию `source`. `purchase_error` может нести `error: 'product_mismatch:<id>'` (SDK вернул другой товар) и `'payments_timeout'` (платформа не ответила за 8 с). `purchase_already_owned` — клик по кнопке товара, который платформа уже подтвердила как купленный (списания не было) |
 | `reject_blocked` | `App.tsx` (`handleReject`, при попытке отклонить без штампов; 1 раз за открытое дело) | caseId, viewedCount, stampedCount |
 | `budget_exhausted` | `App.tsx` (`handleOpenEvidence`, когда `markEvidenceAsViewed` отказывает) | caseId, budget, opensUsed |
 | `locked_case_click` | `App.tsx` (`handleSelectStandardCase`, клик по замкнутой карточке) | caseId, `lockReason: 'level' \| 'sequence'`, campaignPosition |

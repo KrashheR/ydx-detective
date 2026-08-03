@@ -14,8 +14,13 @@ interface Props {
   bureauHasNews: boolean;
   onOpenInvestigation: () => void;
   onOpenBureau: () => void;
-  onRestorePurchases: () => Promise<number>;
-  /** False off-Yandex or when the Payments API failed to init. */
+  /**
+   * Runs a restore. `ok` is false only when the payments API could not be
+   * reached at all — a player who simply owns nothing gets `ok: true, count: 0`,
+   * and the two must not read the same.
+   */
+  onRestorePurchases: () => Promise<{ ok: boolean; count: number }>;
+  /** False off-Yandex or on an SDK build without the payments API. */
   paymentsAvailable: boolean;
 }
 
@@ -63,10 +68,14 @@ export function TopBar({
 
   const handleRestore = async () => {
     setBusy(true);
-    const restored = await onRestorePurchases();
+    const { ok, count } = await onRestorePurchases();
     setBusy(false);
     setNotice(
-      restored > 0 ? t("purchaseRestored", lang) : t("platformUnavailable", lang),
+      !ok
+        ? t("platformUnavailable", lang)
+        : count > 0
+          ? t("purchaseRestored", lang)
+          : t("purchaseRestoreEmpty", lang),
     );
   };
 

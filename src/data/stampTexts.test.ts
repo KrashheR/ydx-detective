@@ -49,9 +49,9 @@ describe("stamp caption catalog", () => {
   });
 
   it("maps a platform product id back onto its caption", () => {
-    expect(getStampTextByProductId("stamp.storyteller")?.id).toBe("storyteller");
-    expect(getStampTextByProductId("noads.forever")).toBeUndefined();
-    expect(getStampText("storyteller").productId).toBe("stamp.storyteller");
+    expect(getStampTextByProductId("stamp_storyteller")?.id).toBe("storyteller");
+    expect(getStampTextByProductId("noads_forever")).toBeUndefined();
+    expect(getStampText("storyteller").productId).toBe("stamp_storyteller");
   });
 
   it("keeps pack captions out of every priced shelf", () => {

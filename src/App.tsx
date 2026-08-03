@@ -34,7 +34,7 @@ import {
   isPaymentsAvailable,
   fetchPaymentsCatalog,
   purchaseProduct,
-  restorePurchasedProductIds,
+  restorePurchases,
   type LeaderboardRow,
   type PaymentsProduct,
 } from './services/platformAdapter';
@@ -42,7 +42,12 @@ import { GOAL, getAnalyticsActiveTotalMs, trackEvent, trackGoal } from './servic
 import { GAME_CONFIG } from './config/gameConfig';
 import { RTL_LANGUAGES, t } from './i18n/ui';
 import type { CaseSummary } from './types';
-import { THEMATIC_PACKS, getThematicPackCaseIds, isPurchasedArchiveCase } from './data/thematicPacks';
+import {
+  THEMATIC_PACKS,
+  getThematicPackCaseIds,
+  getThematicPackIdByProductId,
+  isPurchasedArchiveCase,
+} from './data/thematicPacks';
 import {
   getArchivePackForCase,
   getNextArchiveCase,
@@ -69,7 +74,7 @@ import {
   DEFAULT_STAMP_TEXT_ID,
   getStampInkColor,
 } from './data/stampTexts';
-import { getBundle } from './data/bundles';
+import { getBundle, getBundleByProductId } from './data/bundles';
 import { RatingModal } from './components/RatingModal';
 import { EvidenceLinkBoard } from './components/EvidenceLinkBoard';
 import { formatCountdown } from './components/icons';
@@ -563,9 +568,33 @@ export default function App() {
     return ok;
   };
 
+  /**
+   * Nothing is ever charged before the platform has been asked who owns what.
+   *
+   * A restore can fail (offline boot, a player who signs in only now), and then
+   * the shelf still shows an owned item as unowned — at the *intro* price, whose
+   * product id differs from the one they actually bought. The SDK's already-owned
+   * guard compares ids, so it cannot catch that: the second purchase would go
+   * through and charge for an entitlement the player has. Ownership is resolved
+   * here, where product id → entitlement is known.
+   *
+   * `false` means "not proven owned" — including when the platform is silent, in
+   * which case the purchase proceeds normally.
+   */
+  const claimIfAlreadyOwned = async (
+    owns: (productIds: readonly string[]) => boolean,
+  ): Promise<boolean> => {
+    const { ok, productIds } = await restorePurchases();
+    if (!ok || !owns(productIds)) return false;
+    store.applyRestoredPurchases(productIds);
+    trackEvent('purchase_already_owned', { productIds });
+    return true;
+  };
+
   const handlePurchaseStampText = async (stamp: StampText): Promise<boolean> => {
     if (!stamp.productId) return false;
     const productId = stamp.productId;
+    if (await claimIfAlreadyOwned((ids) => ids.includes(productId))) return true;
     const ok = await trackPurchaseAttempt('stamp', stamp.id, productId, () =>
       purchaseProduct(productId),
     );
@@ -581,8 +610,14 @@ export default function App() {
   const offerContext: OfferContext = { stats, serverDay };
 
   const handlePurchasePack = async (pack: ThematicPack): Promise<boolean> => {
-    if (!pack.productId.trim()) return false;
+    // A pack off the shelf carries no product id — there is nothing to charge.
     const productId = resolvePrice(pack, offerContext).productId;
+    if (!productId) return false;
+    // Any id that maps to this pack counts — regular or intro.
+    const owned = await claimIfAlreadyOwned((ids) =>
+      ids.some((id) => getThematicPackIdByProductId(id) === pack.id),
+    );
+    if (owned) return true;
     const ok = await trackPurchaseAttempt('archive', pack.id, productId, () =>
       purchaseProduct(productId),
     );
@@ -594,6 +629,11 @@ export default function App() {
     const bundle = getBundle(bundleId);
     if (!bundle) return false;
     const productId = resolvePrice(bundle, offerContext).productId;
+    if (!productId) return false;
+    const owned = await claimIfAlreadyOwned((ids) =>
+      ids.some((id) => getBundleByProductId(id)?.id === bundle.id),
+    );
+    if (owned) return true;
     const ok = await trackPurchaseAttempt('bundle', bundle.id, productId, () =>
       purchaseProduct(productId),
     );
@@ -605,6 +645,7 @@ export default function App() {
 
   const handlePurchaseNoAds = async (): Promise<boolean> => {
     const productId = GAME_CONFIG.advertising.noAdsProductId;
+    if (await claimIfAlreadyOwned((ids) => ids.includes(productId))) return true;
     const ok = await trackPurchaseAttempt('noads', 'no_ads', productId, () =>
       purchaseProduct(productId),
     );
@@ -612,12 +653,17 @@ export default function App() {
     return ok;
   };
 
-  const handleRestorePurchases = async (): Promise<number> => {
+  /**
+   * `ok` distinguishes "the platform answered, and this player owns nothing"
+   * from "we never reached the platform" — reporting both as "0 restored" is
+   * what makes a player with real purchases believe they lost them.
+   */
+  const handleRestorePurchases = async (): Promise<{ ok: boolean; count: number }> => {
     trackEvent('purchase_restore_click', { paymentsAvailable: isPaymentsAvailable() });
-    const productIds = await restorePurchasedProductIds();
+    const { ok, productIds } = await restorePurchases();
     store.applyRestoredPurchases(productIds);
-    trackEvent('purchase_restore_result', { count: productIds.length, productIds });
-    return productIds.length;
+    trackEvent('purchase_restore_result', { ok, count: productIds.length, productIds });
+    return { ok, count: productIds.length };
   };
 
   /**

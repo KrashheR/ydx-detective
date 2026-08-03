@@ -74,6 +74,7 @@ export type UIKey =
   | "nextUnlockTomorrow"
   | "adUnavailableTryLater"
   | "purchaseRestored"
+  | "purchaseRestoreEmpty"
   | "tryDeskSkin"
   | "availableUntilEndOfDay"
   | "purchasedArchivesNoForcedAds"
@@ -740,6 +741,15 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     tr: "Satın alma geri yüklendi",
     ar: "تمت استعادة الشراء",
     kk: "Сатып алу қалпына келді",
+  },
+  // The platform answered and this account owns nothing — said plainly, so it is
+  // never confused with "we could not reach the store".
+  purchaseRestoreEmpty: {
+    ru: "Покупок на этом аккаунте не найдено",
+    en: "No purchases found on this account",
+    tr: "Bu hesapta satın alma bulunamadı",
+    ar: "لم يتم العثور على مشتريات في هذا الحساب",
+    kk: "Бұл аккаунтта сатып алулар табылмады",
   },
   tryDeskSkin: {
     ru: "Примерить оформление",

@@ -33,6 +33,14 @@ export interface Bundle {
 const ALL_PACK_IDS = THEMATIC_PACKS.map((pack) => pack.id);
 const ALL_STAMP_TEXT_IDS = PURCHASABLE_STAMP_TEXTS.map((stamp) => stamp.id);
 
+/*
+ * Bundle ids are *runtime* values — `grantBundlePurchase` persists them into
+ * `PlayerStats.purchasedBundleIds`, so they must never change without a save
+ * migration. The Yandex product ids below are a separate, console-facing axis:
+ * the store rejects dots, so every product id is `[a-z0-9_]` only. Keeping the
+ * two apart is why renaming for the console needed no `saveVersion` bump.
+ */
+
 /** Every novelty caption in one purchase — sold inside the stamp workshop. */
 export const STAMP_BUNDLE_ID = "bundle.stamps";
 /** The three archives on their own — "набор из трёх расследований". */
@@ -43,7 +51,7 @@ export const COMPLETE_BUNDLE_ID = "bundle.complete";
 export const BUNDLES: readonly Bundle[] = [
   {
     id: STAMP_BUNDLE_ID,
-    productId: STAMP_BUNDLE_ID,
+    productId: "bundle_stamps",
     fallbackPriceRub: 199,
     packIds: [],
     stampTextIds: ALL_STAMP_TEXT_IDS,
@@ -51,13 +59,13 @@ export const BUNDLES: readonly Bundle[] = [
   },
   {
     id: ARCHIVES_BUNDLE_ID,
-    productId: ARCHIVES_BUNDLE_ID,
+    productId: "bundle_archives",
     fallbackPriceRub: 299,
     // Earned attention, not a launch discount: a player who has closed several
     // cases has shown they want more of them, so that is when the three-archive
     // set drops to its offer price.
     offer: {
-      productId: "bundle.archives.offer",
+      productId: "bundle_archives_offer",
       fallbackPriceRub: 149,
       rule: "after_cases",
     },
@@ -67,12 +75,12 @@ export const BUNDLES: readonly Bundle[] = [
   },
   {
     id: COMPLETE_BUNDLE_ID,
-    productId: COMPLETE_BUNDLE_ID,
+    productId: "bundle_complete",
     fallbackPriceRub: 399,
     // A day-two win-back on the top tier — never available on day one, so it
     // cannot undercut the full price the player is seeing for the first time.
     offer: {
-      productId: "bundle.complete.offer",
+      productId: "bundle_complete_offer",
       fallbackPriceRub: 199,
       rule: "next_day",
     },

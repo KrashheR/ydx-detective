@@ -63,7 +63,7 @@ export const STAMP_TEXTS: readonly StampText[] = [
   },
   {
     id: "storyteller",
-    productId: "stamp.storyteller",
+    productId: "stamp_storyteller",
     fallbackPriceRub: STAMP_TEXT_PRICE_RUB,
     caption: l(
       "СКАЗОЧНИК",
@@ -75,7 +75,7 @@ export const STAMP_TEXTS: readonly StampText[] = [
   },
   {
     id: "cardboard-alibi",
-    productId: "stamp.cardboard-alibi",
+    productId: "stamp_cardboard_alibi",
     fallbackPriceRub: STAMP_TEXT_PRICE_RUB,
     caption: l(
       "АЛИБИ ИЗ КАРТОНА",
@@ -87,7 +87,7 @@ export const STAMP_TEXTS: readonly StampText[] = [
   },
   {
     id: "well-well",
-    productId: "stamp.well-well",
+    productId: "stamp_well_well",
     fallbackPriceRub: STAMP_TEXT_PRICE_RUB,
     caption: l(
       "НУ-НУ…",
@@ -99,7 +99,7 @@ export const STAMP_TEXTS: readonly StampText[] = [
   },
   {
     id: "smells-fishy",
-    productId: "stamp.smells-fishy",
+    productId: "stamp_smells_fishy",
     fallbackPriceRub: STAMP_TEXT_PRICE_RUB,
     caption: l(
       "ПАХНЕТ ЖАРЕНЫМ",
@@ -111,7 +111,7 @@ export const STAMP_TEXTS: readonly StampText[] = [
   },
   {
     id: "doesnt-add-up",
-    productId: "stamp.doesnt-add-up",
+    productId: "stamp_doesnt_add_up",
     fallbackPriceRub: STAMP_TEXT_PRICE_RUB,
     caption: l(
       "НЕ СХОДИТСЯ",
@@ -123,7 +123,7 @@ export const STAMP_TEXTS: readonly StampText[] = [
   },
   {
     id: "gotcha",
-    productId: "stamp.gotcha",
+    productId: "stamp_gotcha",
     fallbackPriceRub: STAMP_TEXT_PRICE_RUB,
     caption: l(
       "ПОПАЛСЯ",
@@ -135,7 +135,7 @@ export const STAMP_TEXTS: readonly StampText[] = [
   },
   {
     id: "oops",
-    productId: "stamp.oops",
+    productId: "stamp_oops",
     fallbackPriceRub: STAMP_TEXT_PRICE_RUB,
     caption: l(
       "ОПАНЬКИ",
