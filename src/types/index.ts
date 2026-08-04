@@ -363,6 +363,11 @@ export interface Case {
   readonly client?: ClientInfo;
   readonly evidences: readonly Evidence[];
   readonly correctDecision: Decision;
+  /**
+   * Legacy authoring field — kept for the archive of existing cases, but no
+   * longer rendered: the merged `ResultSheet` explains a case through
+   * `resolution.reasoningChain`, not a restated "truth" block.
+   */
   readonly explanation: LocalizedLines;
   /**
    * Maximum number of evidence cards the player may *open* before they must

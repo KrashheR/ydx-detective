@@ -62,7 +62,6 @@ import { CaseSelect } from './components/CaseSelect';
 import { MobileDeskMenu } from './components/MobileDeskMenu';
 import { StampModal } from './components/StampModal';
 import { ResultSheet } from './components/ResultSheet';
-import { CaseResolutionSheet } from './components/CaseResolutionSheet';
 import { AchievementsModal } from './components/AchievementsModal';
 import { SpecialArchivesEntry } from './components/SpecialArchivesEntry';
 import { TopBar } from './components/TopBar';
@@ -95,8 +94,6 @@ export default function App() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [modalEvidenceId, setModalEvidenceId] = useState<string | null>(null);
   const [resultDismissed, setResultDismissed] = useState(false);
-  /** The human-reaction card gates the reward sheet until acknowledged. */
-  const [resolutionAcknowledged, setResolutionAcknowledged] = useState(false);
   const [showAchievements, setShowAchievements] = useState(false);
   /** Which Bureau tab is open, or `null` when the desk is showing. */
   const [bureauTab, setBureauTab] = useState<BureauTab | null>(null);
@@ -186,7 +183,6 @@ export default function App() {
   useEffect(() => {
     if (lastResult) {
       setResultDismissed(false);
-      setResolutionAcknowledged(false);
       setRewardDoubled(false);
       if (lastResult.total > 0) trackAdOffer('rewarded', 'double_reward');
       resultOpenedAtRef.current = Date.now();
@@ -788,17 +784,9 @@ export default function App() {
   const modalEvidence =
     selectedCase?.evidences.find((e) => e.id === modalEvidenceId) ?? null;
 
-  // The person reacts before the numbers. Only a *correct* verdict earns the
-  // canonical closing line — several of them contain an indirect confession.
-  const showResolution =
-    !!lastResult &&
-    !resultDismissed &&
-    !resolutionAcknowledged &&
-    lastResult.verdictCorrect &&
-    !!selectedCase?.resolution;
-
-  const showResult =
-    !!lastResult && !resultDismissed && !!selectedCase && !showResolution;
+  // One sheet closes a case: reaction, разбор and reward together. The closing
+  // line inside it stays behind a *correct* verdict — several confess indirectly.
+  const showResult = !!lastResult && !resultDismissed && !!selectedCase;
 
   if (!isHydrated) {
     return (
@@ -849,9 +837,12 @@ export default function App() {
       />
 
       {/* The Bureau takes over the whole workspace below the letterhead — it is
-          a destination the top bar links to, not a modal over the case. */}
-      <AnimatePresence mode="wait">
-        {bureauOpen && (
+          a destination the top bar links to, not a modal over the case.
+          Deliberately NOT wrapped in <AnimatePresence>: the desk below is
+          revealed the instant `bureauOpen` flips, so an exiting Bureau would
+          still hold its full height in this column for the length of the fade
+          and then collapse — the whole investigation screen would jump up. */}
+      {bureauOpen && (
           <div className="min-h-0 flex-1 overflow-y-auto">
             <BureauScreen
               key="bureau"
@@ -900,8 +891,7 @@ export default function App() {
               onClose={() => setBureauTab(null)}
             />
           </div>
-        )}
-      </AnimatePresence>
+      )}
 
       <div className={bureauOpen ? 'hidden' : 'contents'}>
       {/* Mobile-only grouped desk menu (replaces sidebar + folder grid on small screens) */}
@@ -1045,18 +1035,7 @@ export default function App() {
         onClose={handleCloseEvidence}
       />
 
-      {/* Human reaction — layer 1 of the case ending, before any reward */}
-      <AnimatePresence>
-        {showResolution && selectedCase && (
-          <CaseResolutionSheet
-            caseData={selectedCase}
-            lang={lang}
-            onContinue={() => setResolutionAcknowledged(true)}
-          />
-        )}
-      </AnimatePresence>
-
-      {/* Result sheet */}
+      {/* The single closing sheet: reaction, разбор and reward in one modal */}
       <AnimatePresence>
         {showResult && lastResult && selectedCase && (
           <ResultSheet

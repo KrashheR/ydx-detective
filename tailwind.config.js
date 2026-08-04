@@ -60,6 +60,15 @@ export default {
         'topbar-chip-border': '#3A423C',
         'topbar-ink': '#F4E6C8',
         'topbar-muted': '#B9AA8E',
+        // Segmented nav rail in the letterhead: a sunken slot holding the two
+        // top-level destinations, so neither reads as a button or a banner.
+        'topbar-rail': '#101514',
+        'topbar-tab-hover': '#1A211F',
+        'topbar-tab-on': '#282F2C', // selected tab, gradient top
+        'topbar-tab-on-2': '#222825', // selected tab, gradient bottom
+        'topbar-tab-ink': '#918D82', // idle tab label
+        'topbar-tab-sub': '#777A71', // idle tab second line
+        'topbar-tab-mark': '#BDA06C', // dossier card / wax seal glyph
         bureau: '#17201F', // Bureau screen background
         'bureau-2': '#222C29', // raised panel on the Bureau background
         'bureau-3': '#202724', // locked case tile

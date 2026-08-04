@@ -1,18 +1,59 @@
+/**
+ * The single closing sheet of a case — story and receipt in one modal.
+ *
+ * One sheet, read top to bottom (see docs/03-gameplay.md):
+ *   1. the verdict stamp — one stamp, four outcomes;
+ *   2. the human reaction — portrait, closing line, Vera's note (a *correct*
+ *      verdict only: several closing lines contain an indirect confession);
+ *   3. the receipt — payout, XP, mastery, double-or-nothing. It sits directly
+ *      under the reaction so neither the money nor the rewarded-ad CTA can be
+ *      scrolled past on a phone;
+ *   4. the accuracy breakdown, or what was missed;
+ *   5. «Почему?» — the compact разбор, on demand, on a win *and* on a loss;
+ *   6. the archive entry, promotion and achievements, then the pinned actions.
+ *
+ * There is no second sheet: rewards used to live here and the reaction in a
+ * separate `CaseResolutionSheet`, which made every case end twice.
+ */
 import {
   useEffect,
+  useId,
   useRef,
   useState,
   type KeyboardEvent as ReactKeyboardEvent,
 } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import type { Case, Language, RewardBreakdown } from "../types";
 import { GAME_CONFIG } from "../config/gameConfig";
 import { ACHIEVEMENTS_BY_ID } from "../data/achievements";
 import { formatInvestigatorLevel, loc, t } from "../i18n/ui";
 import { useCountUp } from "../hooks/useCountUp";
+import { asset } from "../utils/asset";
 
 const FOCUSABLE_SELECTOR =
   'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+
+/** Portrait framing per emotional mode — grave cases get no playful tilt. */
+const MOOD_TILT: Record<string, number> = {
+  relief: -1.2,
+  humour: -2.4,
+  bittersweet: -1,
+  defeat: 1.4,
+  grave: 0,
+  threat: 0.8,
+};
+
+/**
+ * One reveal ladder for the whole sheet. Merging two modals merged two
+ * timelines; without a single ladder every beat would fire at once.
+ */
+const BEAT = {
+  stamp: 0.1,
+  story: 0.34,
+  payout: 0.5,
+  ledger: 0.78,
+  spoils: 1.15,
+} as const;
 
 interface Props {
   result: RewardBreakdown & {
@@ -95,6 +136,28 @@ export function ResultSheet({
       ? t("fraudMissed", lang)
       : t("investigatorError", lang);
 
+  const accent = win ? "#15803d" : "#b4231f";
+
+  /* ── The human layer. Never on a wrong verdict: several closing lines
+        contain an indirect confession and would hand over the answer. ── */
+  const resolution = caseData.resolution ?? null;
+  const story = win ? resolution : null;
+  const grave = resolution?.emotionalMode === "grave";
+  const tilt = MOOD_TILT[resolution?.emotionalMode ?? ""] ?? 0;
+  const storyBeat = grave ? BEAT.story + 0.16 : BEAT.story;
+  /** The разбор is authored per case and explains the verdict — useful either way. */
+  const chain = resolution?.reasoningChain?.length ? resolution.reasoningChain : null;
+  /**
+   * Archive/pack cases carry no `resolution`, so their разбор falls back to the
+   * authored `explanation` lines — on demand, never as a standing "truth" block.
+   */
+  const fallbackLines = chain ? null : loc(caseData.explanation, lang);
+  const hasDebrief = !!chain || (fallbackLines?.length ?? 0) > 0;
+  // Both post-mortems are drawers, closed by default: the sheet opens on the
+  // outcome and the money, and the player pulls out the analysis when ready.
+  const [chainOpen, setChainOpen] = useState(false);
+  const [missedOpen, setMissedOpen] = useState(false);
+
   const base = GAME_CONFIG.reward.baseByDifficulty[caseData.difficulty] * result.dailyMultiplierApplied || 1;
   const verdictPct = Math.round((result.verdictComponent / base) * 100);
   const proofPct = Math.round((result.proofComponent / base) * 100);
@@ -103,15 +166,21 @@ export function ResultSheet({
 
   const [barFill, setBarFill] = useState(0);
   useEffect(() => {
-    const id = window.setTimeout(() => setBarFill(rewardPct), 110);
+    const id = window.setTimeout(() => setBarFill(rewardPct), BEAT.ledger * 1000);
     return () => window.clearTimeout(id);
   }, [rewardPct]);
 
   const fmt = (n: number) => n.toLocaleString("ru-RU");
-  const sign = (n: number) => (n >= 0 ? "+" : "−");
 
+  // The count-up must start when the payout band appears, not on mount —
+  // otherwise most of it is spent behind an opacity-0 section.
+  const [payoutArmed, setPayoutArmed] = useState(false);
+  useEffect(() => {
+    const id = window.setTimeout(() => setPayoutArmed(true), BEAT.payout * 1000);
+    return () => window.clearTimeout(id);
+  }, []);
   const displayPayout = useCountUp(
-    win ? Math.abs(result.total) : caseData.claimAmount,
+    payoutArmed ? (win ? Math.abs(result.total) : caseData.claimAmount) : 0,
     900,
     0,
   );
@@ -164,25 +233,29 @@ export function ResultSheet({
       ? Math.round(proofPct / allContradictions.length)
       : 0;
 
+  const divider = `1px solid ${win ? "#e7ddc9" : "#ecddd6"}`;
+
   return (
     <motion.div
       className="fixed inset-0 z-50 flex items-center justify-center p-[16px]"
       style={{ background: "rgba(8,11,17,.86)" }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
     >
-      {/* Neutral wrapper: the cream result sheet stands on its own without a dark frame. */}
+      {/* The sheet is a column: one scrolling body, one pinned action row.
+          A merged sheet is long — the verdict must never be a scroll hunt. */}
       <motion.div
         ref={dialogRef}
         role="dialog"
         aria-modal="true"
         aria-labelledby={resultTitleId}
         aria-describedby={resultDescId}
-        className="relative max-h-full w-full max-w-[430px] overflow-auto focus:outline-none"
+        className="relative flex max-h-full w-full max-w-[430px] flex-col focus:outline-none"
         style={{
-          background: "transparent",
+          background: "#f5f1e8",
           borderRadius: 11,
-          padding: 0,
+          overflow: "hidden",
           boxShadow: "0 24px 60px rgba(0,0,0,.5)",
         }}
         initial={{ y: 16, opacity: 0, scale: 0.985 }}
@@ -191,19 +264,11 @@ export function ResultSheet({
         tabIndex={-1}
         onKeyDown={handleDialogKeyDown}
       >
-        {/* Inner cream card */}
-        <div
-          style={{
-            background: "#f5f1e8",
-            borderRadius: 11,
-            overflow: "hidden",
-            boxShadow: "0 1px 0 rgba(255,255,255,.5) inset",
-          }}
-        >
+        <div className="min-h-0 flex-1 overflow-y-auto">
           {/* ── Hero / stamp section ─────────────────────────────── */}
           <div
             style={{
-              padding: "28px 24px 22px",
+              padding: "26px 24px 20px",
               textAlign: "center",
               background: win
                 ? "linear-gradient(#f7f3ea,#f1ece0)"
@@ -214,10 +279,12 @@ export function ResultSheet({
             <motion.span
               id={resultTitleId}
               style={{
-                display: "inline-block",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
                 transform: "rotate(-7deg)",
-                border: `3.5px solid ${win ? "#15803d" : "#b4231f"}`,
-                color: win ? "#15803d" : "#b4231f",
+                border: `3.5px solid ${accent}`,
+                color: accent,
                 fontFamily: "'IBM Plex Mono', monospace",
                 fontSize: 16,
                 fontWeight: 700,
@@ -231,8 +298,10 @@ export function ResultSheet({
               }}
               initial={{ scale: 2.1, opacity: 0, rotate: -7 }}
               animate={{ scale: 1, opacity: 0.94, rotate: -7 }}
-              transition={{ type: "spring", stiffness: 380, damping: 18, delay: 0.1 }}
+              transition={{ type: "spring", stiffness: 380, damping: 18, delay: BEAT.stamp }}
             >
+              {/* Shape + glyph + text: never colour alone (a11y). */}
+              <span aria-hidden>{win ? "✓" : "✕"}</span>
               {stampText}
             </motion.span>
             <div
@@ -262,13 +331,94 @@ export function ResultSheet({
             </div>
           </div>
 
+          {/* ── The person and their closing line (correct verdict only) ── */}
+          {story && (
+            <motion.div
+              style={{
+                display: "flex",
+                gap: 14,
+                padding: "18px 24px 14px",
+                alignItems: "flex-start",
+              }}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: storyBeat, duration: 0.3 }}
+            >
+              {caseData.personImage && (
+                <img
+                  src={asset(caseData.personImage)}
+                  alt=""
+                  style={{
+                    width: 82,
+                    height: 82,
+                    flexShrink: 0,
+                    objectFit: "cover",
+                    border: "4px solid #fffdf8",
+                    borderRadius: 3,
+                    boxShadow: "0 3px 10px rgba(0,0,0,.22)",
+                    transform: `rotate(${tilt}deg)`,
+                    filter: grave ? "saturate(.85)" : undefined,
+                  }}
+                />
+              )}
+              <div style={{ minWidth: 0, flex: 1 }}>
+                <div
+                  style={{
+                    fontFamily: "'Inter', sans-serif",
+                    fontSize: 13,
+                    fontWeight: 700,
+                    color: "#3a3024",
+                  }}
+                >
+                  {loc(story.speaker.displayName, lang)}
+                </div>
+                {/* Transcript card, not a cartoon speech bubble. */}
+                <div
+                  style={{
+                    marginTop: 7,
+                    background: "#fffdf8",
+                    borderLeft: `3px solid ${accent}`,
+                    borderRadius: 4,
+                    padding: "11px 13px",
+                    fontFamily: "'IBM Plex Serif', serif",
+                    fontSize: 14,
+                    lineHeight: 1.5,
+                    color: "#3a3024",
+                  }}
+                >
+                  «{loc(story.finalLine, lang)}»
+                </div>
+                {story.veraLine && (
+                  <div
+                    style={{
+                      marginTop: 9,
+                      fontFamily: "'Inter', sans-serif",
+                      fontSize: 12,
+                      lineHeight: 1.45,
+                      color: "#7a6c54",
+                    }}
+                  >
+                    <span style={{ fontWeight: 700, color: "#5d5240" }}>
+                      {t("resolutionVeraLabel", lang)}:
+                    </span>{" "}
+                    {loc(story.veraLine, lang)}
+                  </div>
+                )}
+              </div>
+            </motion.div>
+          )}
+
           {/* ── Payout / loss hero ───────────────────────────────── */}
-          <div
+          <motion.div
             style={{
-              padding: "22px 24px 20px",
+              padding: "20px 24px 18px",
               textAlign: "center",
-              borderBottom: `1px solid ${win ? "#e7ddc9" : "#ecddd6"}`,
+              borderTop: divider,
+              borderBottom: divider,
             }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: BEAT.payout, duration: 0.28 }}
           >
             <div
               style={{
@@ -287,7 +437,7 @@ export function ResultSheet({
                 fontSize: 36,
                 fontWeight: 700,
                 lineHeight: 1,
-                color: win ? "#15803d" : "#b4231f",
+                color: accent,
                 marginTop: 8,
                 letterSpacing: -0.5,
               }}
@@ -296,124 +446,161 @@ export function ResultSheet({
               {fmt(displayPayout)} ₽
             </div>
 
-            {result.mastery !== "none" && (
-              <div className="mx-auto mt-3 w-fit rotate-[-2deg] border-2 border-folder-edge px-3 py-1 font-mono text-xs font-bold uppercase tracking-[.18em] text-folder-edge">
-                {t("mastery", lang)} · {t(
-                  result.mastery === "gold"
-                    ? "masteryGold"
-                    : result.mastery === "silver"
-                      ? "masterySilver"
-                      : "masteryBronze",
-                  lang,
+            {/* One chip row carries everything the payout earned: XP always,
+                mastery and the ideal-case bonus when they exist. */}
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "center",
+                gap: 8,
+                marginTop: 14,
+              }}
+            >
+              <Chip
+                label={t("xpLabel", lang)}
+                value={`+${xpGained}`}
+                color={win ? "#2f8f83" : "#9a8c70"}
+                border={win ? "#cfe0dc" : "#e3d9d5"}
+              />
+              {result.mastery !== "none" && (
+                <Chip
+                  label={t("mastery", lang)}
+                  value={t(
+                    result.mastery === "gold"
+                      ? "masteryGold"
+                      : result.mastery === "silver"
+                        ? "masterySilver"
+                        : "masteryBronze",
+                    lang,
+                  )}
+                  color="#8a6515"
+                  border="rgba(199,154,58,.5)"
+                />
+              )}
+              {win && result.bonusComponent > 0 && (
+                <Chip
+                  label={`★ ${t("bonusIdealCase", lang)}`}
+                  value={`×${(1 + result.bonusPct / 100).toFixed(2)}`}
+                  color="#8a6515"
+                  border="rgba(199,154,58,.5)"
+                />
+              )}
+            </div>
+
+            {/* Double or nothing lives with the payout — it is the one CTA
+                that must never be scrolled past. */}
+            {win && result.total > 0 && (
+              <div style={{ marginTop: 14 }}>
+                {rewardDoubled ? (
+                  <div
+                    style={{
+                      height: 50,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      borderRadius: 12,
+                      border: "1px solid rgba(21,128,61,.4)",
+                      background: "rgba(21,128,61,.08)",
+                      fontFamily: "'Inter', sans-serif",
+                      fontSize: 13,
+                      fontWeight: 600,
+                      color: "#15803d",
+                    }}
+                  >
+                    {t("rewardDoubled", lang)}
+                  </div>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={onDoubleReward}
+                    style={{
+                      width: "100%",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 13,
+                      padding: "13px 14px",
+                      border: "1.5px dashed #2f8f83",
+                      borderRadius: 12,
+                      background: "rgba(47,143,131,.07)",
+                      cursor: "pointer",
+                      textAlign: "left",
+                    }}
+                  >
+                    <span
+                      style={{
+                        width: 40,
+                        height: 40,
+                        flexShrink: 0,
+                        borderRadius: "50%",
+                        background: "#2f8f83",
+                        color: "#fff",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        fontSize: 15,
+                        paddingLeft: 2,
+                      }}
+                    >
+                      ▶
+                    </span>
+                    <div style={{ flex: 1 }}>
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: 8,
+                          flexWrap: "wrap",
+                        }}
+                      >
+                        <span
+                          style={{
+                            fontFamily: "'Inter', sans-serif",
+                            fontSize: 14,
+                            fontWeight: 700,
+                            color: "#2a6b62",
+                          }}
+                        >
+                          {t("doubleReward", lang)}
+                        </span>
+                        <span
+                          style={{
+                            fontFamily: "'IBM Plex Mono', monospace",
+                            fontSize: 14,
+                            fontWeight: 700,
+                            color: "#15803d",
+                          }}
+                        >
+                          +{fmt(Math.abs(result.total))} ₽
+                        </span>
+                        <span
+                          style={{
+                            fontFamily: "'Inter', sans-serif",
+                            fontSize: 12,
+                            fontWeight: 700,
+                            letterSpacing: 0.8,
+                            color: "#7a6c54",
+                            background: "#e7ddc9",
+                            padding: "2px 6px",
+                            borderRadius: 4,
+                            flexShrink: 0,
+                          }}
+                        >
+                          {t("watchAd", lang)}
+                        </span>
+                      </div>
+                    </div>
+                    <span style={{ color: "#2f8f83", fontSize: 16, flexShrink: 0 }}>
+                      →
+                    </span>
+                  </button>
                 )}
               </div>
             )}
-
-            {/* Bonus badge (win + bonus) */}
-            {win && result.bonusComponent > 0 && (
-              <div
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 6,
-                  marginTop: 11,
-                  padding: "4px 11px",
-                  background: "rgba(199,154,58,.16)",
-                  border: "1px solid rgba(199,154,58,.5)",
-                  borderRadius: 20,
-                }}
-              >
-                <span style={{ color: "#a9781f", fontSize: 11 }}>★</span>
-                <span
-                  style={{
-                    fontFamily: "'Inter', sans-serif",
-                    fontSize: 12,
-                    fontWeight: 600,
-                    color: "#8a6515",
-                  }}
-                >
-                  {t("bonusIdealCase", lang)} · ×{(1 + result.bonusPct / 100).toFixed(2)}
-                </span>
-              </div>
-            )}
-
-            {/* Sub-tiles: budget/fee + XP */}
-            <div style={{ display: "flex", gap: 9, marginTop: 16 }}>
-              <div
-                style={{
-                  flex: 1,
-                  padding: "9px 8px",
-                  background: win ? "#fffdf8" : "#fffaf8",
-                  border: `1px solid ${win ? "#ebe2cf" : "#efd9d2"}`,
-                  borderRadius: 9,
-                }}
-              >
-                <div
-                  style={{
-                    fontFamily: "'Inter', sans-serif",
-                    fontSize: 12,
-                    fontWeight: 500,
-                    color: win ? "#8a7c64" : "#a98379",
-                  }}
-                >
-                  {win ? t("budgetSaved", lang) : t("fee", lang)}
-                </div>
-                <div
-                  style={{
-                    fontFamily: "'IBM Plex Mono', monospace",
-                    fontSize: 13,
-                    fontWeight: 700,
-                    color: win ? "#15803d" : "#9a6a60",
-                    marginTop: 2,
-                  }}
-                >
-                  {win
-                    ? `+${fmt(caseData.claimAmount)} ₽`
-                    : `0 ₽`}
-                </div>
-              </div>
-              <div
-                style={{
-                  flexShrink: 0,
-                  width: 84,
-                  padding: "9px 8px",
-                  background: win ? "#fffdf8" : "#fffaf8",
-                  border: `1px solid ${win ? "#ebe2cf" : "#efd9d2"}`,
-                  borderRadius: 9,
-                }}
-              >
-                <div
-                  style={{
-                    fontFamily: "'Inter', sans-serif",
-                    fontSize: 12,
-                    fontWeight: 500,
-                    color: win ? "#8a7c64" : "#a98379",
-                  }}
-                >
-                  {t("xpLabel", lang)}
-                </div>
-                <div
-                  style={{
-                    fontFamily: "'IBM Plex Mono', monospace",
-                    fontSize: 13,
-                    fontWeight: 700,
-                    color: win ? "#2f8f83" : "#9a8c70",
-                    marginTop: 2,
-                  }}
-                >
-                  +{xpGained} XP
-                </div>
-              </div>
-            </div>
-          </div>
+          </motion.div>
 
           {/* ── Accuracy section ─────────────────────────────────── */}
-          <div
-            style={{
-              padding: "18px 24px 20px",
-              borderBottom: `1px solid ${win ? "#e7ddc9" : "#ecddd6"}`,
-            }}
-          >
+          <div style={{ padding: "18px 24px 20px" }}>
             <div
               style={{
                 display: "flex",
@@ -436,7 +623,7 @@ export function ResultSheet({
                   fontFamily: "'IBM Plex Mono', monospace",
                   fontSize: 18,
                   fontWeight: 700,
-                  color: win ? "#15803d" : "#b4231f",
+                  color: accent,
                 }}
               >
                 {rewardPct}
@@ -479,7 +666,7 @@ export function ResultSheet({
                 animate="visible"
                 variants={{
                   hidden: {},
-                  visible: { transition: { staggerChildren: 0.09, delayChildren: 0.15 } },
+                  visible: { transition: { staggerChildren: 0.09, delayChildren: BEAT.ledger } },
                 }}
               >
                 {/* Verdict row */}
@@ -515,167 +702,227 @@ export function ResultSheet({
                 )}
               </motion.div>
             )}
+
+            {/* ── What you missed (lose only) — a drawer, closed by default.
+                  The loss lands as one number; the post-mortem is opened when
+                  the player is ready for it, not pushed at them. ── */}
+            {!win && (
+              <div style={{ marginTop: 16 }}>
+                <Drawer
+                  label={t("whatYouMissed", lang)}
+                  tracking={1.5}
+                  open={missedOpen}
+                  onToggle={() => setMissedOpen((v) => !v)}
+                  tone={{
+                    border: "#d9a49b",
+                    text: "#b4231f",
+                    openBg: "rgba(180,35,31,.05)",
+                  }}
+                >
+                  <div style={{ display: "flex", flexDirection: "column", gap: 11 }}>
+                    {/* Missed contradiction evidences */}
+                    {missedContradictions.map((e) => (
+                      <MissedRow
+                        key={e.id}
+                        title={loc(e.title, lang)}
+                        desc={loc(e.contradictionExplanation, lang)}
+                        pct={missedEvidencePct}
+                      />
+                    ))}
+                    {/* Wrong verdict row */}
+                    <MissedRow
+                      title={t("verdictItem", lang)}
+                      desc={t("resultLoseSub", lang)}
+                      pct={verdictPct}
+                    />
+                  </div>
+                </Drawer>
+              </div>
+            )}
           </div>
 
-          {/* ── What you missed (lose only) ───────────────────────── */}
-          {!win && (
-            <div
-              style={{
-                padding: "18px 24px 16px",
-                borderBottom: "1px solid #ecddd6",
-              }}
-            >
-              <div
-                style={{
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: 12,
-                  fontWeight: 600,
-                  letterSpacing: 1.5,
-                  color: "#a98379",
-                  marginBottom: 11,
+          {/* ── The разбор, on demand — right where the player asks «почему?».
+                On a loss it follows "what you missed"; it is the only
+                explanation of the case that a wrong verdict now gets. ── */}
+          {hasDebrief && (
+            <div style={{ padding: "0 24px 16px" }}>
+              <Drawer
+                label={t("resolutionWhy", lang)}
+                open={chainOpen}
+                onToggle={() => setChainOpen((v) => !v)}
+                tone={{
+                  border: win ? "#d6c9ad" : "#d3b0a8",
+                  text: win ? "#5d5240" : "#8a4b42",
+                  openBg: win ? "rgba(58,48,36,.04)" : "rgba(180,35,31,.04)",
                 }}
               >
-                {t("whatYouMissed", lang)}
-              </div>
-              <div
-                style={{ display: "flex", flexDirection: "column", gap: 11 }}
-              >
-                {/* Missed contradiction evidences */}
-                {missedContradictions.map((e) => (
-                  <MissedRow
-                    key={e.id}
-                    title={loc(e.title, lang)}
-                    desc={loc(e.contradictionExplanation, lang)}
-                    pct={missedEvidencePct}
-                  />
-                ))}
-                {/* Wrong verdict row */}
-                <MissedRow
-                  title={t("verdictItem", lang)}
-                  desc={t("resultLoseSub", lang)}
-                  pct={verdictPct}
-                />
-              </div>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 9 }}>
+                    {chain
+                      ? chain.map((link, index) => (
+                          <div
+                            key={index}
+                            style={{
+                              background: "#fffdf8",
+                              border: "1px solid #e7ddc9",
+                              borderRadius: 5,
+                              padding: "10px 12px",
+                            }}
+                          >
+                            <div
+                              style={{
+                                fontFamily: "'IBM Plex Mono', monospace",
+                                fontSize: 12,
+                                fontWeight: 700,
+                                letterSpacing: 0.6,
+                                textTransform: "uppercase",
+                                color: accent,
+                              }}
+                            >
+                              {index + 1}. {loc(link.label, lang)}
+                            </div>
+                            <div
+                              style={{
+                                marginTop: 3,
+                                fontFamily: "'IBM Plex Serif', serif",
+                                fontSize: 13,
+                                lineHeight: 1.5,
+                                color: "#3a3024",
+                              }}
+                            >
+                              {loc(link.text, lang)}
+                            </div>
+                            {link.evidenceIds.length > 0 && (
+                              <div
+                                style={{
+                                  marginTop: 6,
+                                  display: "flex",
+                                  flexWrap: "wrap",
+                                  gap: 6,
+                                }}
+                              >
+                                {link.evidenceIds.map((evidenceId) => {
+                                  const ev = caseData.evidences.find((e) => e.id === evidenceId);
+                                  if (!ev) return null;
+                                  return (
+                                    <span
+                                      key={evidenceId}
+                                      style={{
+                                        fontFamily: "'Inter', sans-serif",
+                                        fontSize: 12,
+                                        color: "#7a6c54",
+                                        background: "#f0e9d8",
+                                        borderRadius: 4,
+                                        padding: "2px 7px",
+                                      }}
+                                    >
+                                      {loc(ev.title, lang)}
+                                    </span>
+                                  );
+                                })}
+                              </div>
+                            )}
+                          </div>
+                        ))
+                      : /* Cases without an authored chain (archive packs) fall
+                           back to their `explanation` lines — same place, same
+                           on-demand behaviour, никакой отдельной «истины». */
+                        fallbackLines?.map((line, index) => (
+                          <div
+                            key={index}
+                            style={{
+                              background: "#fffdf8",
+                              border: "1px solid #e7ddc9",
+                              borderRadius: 5,
+                              padding: "10px 12px",
+                              display: "flex",
+                              gap: 10,
+                            }}
+                          >
+                            <span
+                              style={{
+                                fontFamily: "'IBM Plex Mono', monospace",
+                                fontSize: 12,
+                                fontWeight: 700,
+                                color: accent,
+                                flexShrink: 0,
+                              }}
+                            >
+                              {index + 1}.
+                            </span>
+                            <span
+                              style={{
+                                fontFamily: "'IBM Plex Serif', serif",
+                                fontSize: 13,
+                                lineHeight: 1.5,
+                                color: "#3a3024",
+                              }}
+                            >
+                              {line}
+                            </span>
+                          </div>
+                        ))}
+                  </div>
+              </Drawer>
             </div>
           )}
 
-          {/* ── Double or nothing (win only) ──────────────────────── */}
-          {win && result.total > 0 && (
-            <div
-              style={{
-                padding: "16px 24px 18px",
-                borderBottom: "1px solid #e7ddc9",
-              }}
+          {/* ── The arc discovery, visually its own thing ─────────── */}
+          {story?.arcReveal && (
+            <motion.div
+              style={{ padding: "0 24px 16px" }}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: BEAT.spoils, duration: 0.3 }}
             >
-              {rewardDoubled ? (
+              <div
+                style={{
+                  border: "1px dashed #9a8c70",
+                  borderRadius: 6,
+                  background: "rgba(58,48,36,.05)",
+                  padding: "12px 14px",
+                }}
+              >
                 <div
                   style={{
-                    height: 50,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    borderRadius: 12,
-                    border: "1px solid rgba(21,128,61,.4)",
-                    background: "rgba(21,128,61,.08)",
+                    fontFamily: "'IBM Plex Mono', monospace",
+                    fontSize: 12,
+                    fontWeight: 700,
+                    letterSpacing: 1.2,
+                    textTransform: "uppercase",
+                    color: "#7a6c54",
+                  }}
+                >
+                  {t("resolutionArchiveEntry", lang)}
+                </div>
+                <div
+                  style={{
+                    marginTop: 5,
                     fontFamily: "'Inter', sans-serif",
                     fontSize: 13,
-                    fontWeight: 600,
-                    color: "#15803d",
+                    fontWeight: 700,
+                    color: "#3a3024",
                   }}
                 >
-                  {t("rewardDoubled", lang)}
+                  {loc(story.arcReveal.title, lang)}
                 </div>
-              ) : (
-                <button
-                  type="button"
-                  onClick={onDoubleReward}
+                <div
                   style={{
-                    width: "100%",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 13,
-                    padding: "13px 14px",
-                    border: "1.5px dashed #2f8f83",
-                    borderRadius: 12,
-                    background: "rgba(47,143,131,.07)",
-                    cursor: "pointer",
-                    textAlign: "left",
+                    marginTop: 3,
+                    fontFamily: "'IBM Plex Serif', serif",
+                    fontSize: 13,
+                    lineHeight: 1.5,
+                    color: "#4a4030",
                   }}
                 >
-                  <span
-                    style={{
-                      width: 40,
-                      height: 40,
-                      flexShrink: 0,
-                      borderRadius: "50%",
-                      background: "#2f8f83",
-                      color: "#fff",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontSize: 15,
-                      paddingLeft: 2,
-                    }}
-                  >
-                    ▶
-                  </span>
-                  <div style={{ flex: 1 }}>
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: 8,
-                        flexWrap: "wrap",
-                      }}
-                    >
-                      <span
-                        style={{
-                          fontFamily: "'Inter', sans-serif",
-                          fontSize: 14,
-                          fontWeight: 700,
-                          color: "#2a6b62",
-                        }}
-                      >
-                        {t("doubleReward", lang)}
-                      </span>
-                      <span
-                        style={{
-                          fontFamily: "'IBM Plex Mono', monospace",
-                          fontSize: 14,
-                          fontWeight: 700,
-                          color: "#15803d",
-                        }}
-                      >
-                        +{fmt(Math.abs(result.total))} ₽
-                      </span>
-                      <span
-                        style={{
-                          fontFamily: "'Inter', sans-serif",
-                          fontSize: 12,
-                          fontWeight: 700,
-                          letterSpacing: 0.8,
-                          color: "#7a6c54",
-                          background: "#e7ddc9",
-                          padding: "2px 6px",
-                          borderRadius: 4,
-                          flexShrink: 0,
-                        }}
-                      >
-                        {t("watchAd", lang)}
-                      </span>
-                    </div>
-                  </div>
-                  <span style={{ color: "#2f8f83", fontSize: 16, flexShrink: 0 }}>
-                    →
-                  </span>
-                </button>
-              )}
-            </div>
+                  {loc(story.arcReveal.text, lang)}
+                </div>
+              </div>
+            </motion.div>
           )}
 
           {/* ── Promotion banner ─────────────────────────────────── */}
           {promotedToLevel && (
-            <div style={{ padding: "10px 24px 0" }}>
+            <div style={{ padding: "0 24px 14px" }}>
               <motion.div
                 style={{
                   display: "flex",
@@ -683,7 +930,7 @@ export function ResultSheet({
                 }}
                 initial={{ scale: 1.3, opacity: 0, rotate: -3 }}
                 animate={{ scale: 1, opacity: 1, rotate: -3 }}
-                transition={{ type: "spring", stiffness: 380, damping: 18, delay: 0.6 }}
+                transition={{ type: "spring", stiffness: 380, damping: 18, delay: BEAT.spoils }}
               >
                 <span
                   style={{
@@ -709,7 +956,12 @@ export function ResultSheet({
 
           {/* ── Achievements ─────────────────────────────────────── */}
           {unlocked.length > 0 && (
-            <div style={{ padding: "10px 24px 0", display: "flex", flexDirection: "column", gap: 8 }}>
+            <motion.div
+              style={{ padding: "0 24px 16px", display: "flex", flexDirection: "column", gap: 8 }}
+              initial={{ opacity: 0, y: 6 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: BEAT.spoils, duration: 0.3 }}
+            >
               {unlocked.map((a) => (
                 <div
                   key={a.id}
@@ -765,147 +1017,38 @@ export function ResultSheet({
                   </span>
                 </div>
               ))}
-            </div>
+            </motion.div>
           )}
+        </div>
 
-          {/* ── Truth / case outcome ─────────────────────────────── */}
-          <div style={{ padding: "18px 24px 14px" }}>
-            <div
-              style={{
-                fontFamily: "'Inter', sans-serif",
-                fontSize: 12,
-                fontWeight: 600,
-                letterSpacing: 1.5,
-                color: "#9a8c70",
-                marginBottom: 9,
-              }}
-            >
-              {!win ? t("howItWas", lang) : t("truthOfCase", lang)}
-            </div>
-            <div
-              style={{
-                background: "#fffdf8",
-                borderLeft: `3px solid ${win ? "#15803d" : "#b4231f"}`,
-                borderRadius: 5,
-                padding: "13px 15px",
-                display: "flex",
-                flexDirection: "column",
-                gap: 9,
-              }}
-            >
-              {loc(caseData.explanation, lang).map((line, i) => (
-                <div key={i} style={{ display: "flex", gap: 10 }}>
-                  <span
-                    style={{
-                      fontFamily: "'IBM Plex Mono', monospace",
-                      fontSize: 12,
-                      fontWeight: 700,
-                      color: win ? "#15803d" : "#b4231f",
-                      flexShrink: 0,
-                    }}
-                  >
-                    {i + 1}.
-                  </span>
-                  <span
-                    style={{
-                      fontFamily: "'IBM Plex Serif', serif",
-                      fontSize: 13,
-                      lineHeight: 1.5,
-                      color: "#3a3024",
-                    }}
-                  >
-                    {line}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* ── Action buttons ───────────────────────────────────── */}
-          {/* Win: [← desk] [next case]. Loss: the two real choices side by side —
-              re-run the same case, or move on — with the desk as a quiet link. */}
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: 10,
-              padding: "6px 24px 22px",
-            }}
-          >
-            <div style={{ display: "flex", gap: 10 }}>
-              {win && !hideBack && (
-                <button
-                  type="button"
-                  onClick={onBackToDesk}
-                  style={{
-                    flexShrink: 0,
-                    padding: "0 18px",
-                    height: 50,
-                    border: "1.5px solid #d6c9ad",
-                    borderRadius: 10,
-                    background: "transparent",
-                    color: "#7a6c54",
-                    fontFamily: "'Inter', sans-serif",
-                    fontSize: 13,
-                    fontWeight: 600,
-                    cursor: "pointer",
-                  }}
-                >
-                  ← {t("backToDesk", lang)}
-                </button>
-              )}
-              {!win && (
-                <button
-                  type="button"
-                  onClick={onReplay}
-                  style={{
-                    flex: 1,
-                    height: 50,
-                    padding: "0 12px",
-                    border: "none",
-                    borderRadius: 10,
-                    background: "#b4231f",
-                    color: "#fff",
-                    fontFamily: "'Inter', sans-serif",
-                    fontSize: 14,
-                    fontWeight: 700,
-                    letterSpacing: 0.3,
-                    cursor: "pointer",
-                  }}
-                >
-                  {t("replayCase", lang)}
-                </button>
-              )}
-              <button
-                type="button"
-                onClick={onNext}
-                style={{
-                  flex: 1,
-                  height: 50,
-                  padding: "0 12px",
-                  border: win ? "none" : "1.5px solid #d3b0a8",
-                  borderRadius: 10,
-                  background: win ? "#3a3024" : "transparent",
-                  color: win ? "#fff" : "#8a4b42",
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: win ? 16 : 14,
-                  fontWeight: 700,
-                  letterSpacing: 0.3,
-                  cursor: "pointer",
-                }}
-              >
-                {t("nextCase", lang)} →
-              </button>
-            </div>
-            {!win && !hideBack && (
+        {/* ── Action row — pinned, never scrolled past ──────────── */}
+        {/* Win: [← desk] [next case]. Loss: the two real choices side by side —
+            re-run the same case, or move on — with the desk as a quiet link. */}
+        <div
+          style={{
+            flexShrink: 0,
+            display: "flex",
+            flexDirection: "column",
+            gap: 8,
+            padding: "14px 24px 16px",
+            background: "#f5f1e8",
+            borderTop: divider,
+            boxShadow: "0 -8px 18px -14px rgba(58,48,36,.7)",
+          }}
+        >
+          <div style={{ display: "flex", gap: 10 }}>
+            {win && !hideBack && (
               <button
                 type="button"
                 onClick={onBackToDesk}
                 style={{
-                  height: 34,
-                  border: "none",
+                  flexShrink: 0,
+                  padding: "0 18px",
+                  height: 50,
+                  border: "1.5px solid #d6c9ad",
+                  borderRadius: 10,
                   background: "transparent",
-                  color: "#a98379",
+                  color: "#7a6c54",
                   fontFamily: "'Inter', sans-serif",
                   fontSize: 13,
                   fontWeight: 600,
@@ -915,10 +1058,213 @@ export function ResultSheet({
                 ← {t("backToDesk", lang)}
               </button>
             )}
+            {!win && (
+              <button
+                type="button"
+                onClick={onReplay}
+                style={{
+                  flex: 1,
+                  height: 50,
+                  padding: "0 12px",
+                  border: "none",
+                  borderRadius: 10,
+                  background: "#b4231f",
+                  color: "#fff",
+                  fontFamily: "'Inter', sans-serif",
+                  fontSize: 14,
+                  fontWeight: 700,
+                  letterSpacing: 0.3,
+                  cursor: "pointer",
+                }}
+              >
+                {t("replayCase", lang)}
+              </button>
+            )}
+            <button
+              type="button"
+              onClick={onNext}
+              style={{
+                flex: 1,
+                height: 50,
+                padding: "0 12px",
+                border: win ? "none" : "1.5px solid #d3b0a8",
+                borderRadius: 10,
+                background: win ? "#3a3024" : "transparent",
+                color: win ? "#fff" : "#8a4b42",
+                fontFamily: "'Inter', sans-serif",
+                fontSize: win ? 16 : 14,
+                fontWeight: 700,
+                letterSpacing: 0.3,
+                cursor: "pointer",
+              }}
+            >
+              {t("nextCase", lang)} →
+            </button>
           </div>
+          {!win && !hideBack && (
+            <button
+              type="button"
+              onClick={onBackToDesk}
+              style={{
+                height: 34,
+                border: "none",
+                background: "transparent",
+                color: "#a98379",
+                fontFamily: "'Inter', sans-serif",
+                fontSize: 13,
+                fontWeight: 600,
+                cursor: "pointer",
+              }}
+            >
+              ← {t("backToDesk", lang)}
+            </button>
+          )}
         </div>
       </motion.div>
     </motion.div>
+  );
+}
+
+/**
+ * A closed drawer on the sheet: one 44px row that opens and closes in place.
+ * The header never disappears, so whatever the player opened they can shut.
+ */
+function Drawer({
+  label,
+  open,
+  onToggle,
+  tone,
+  tracking = 0.3,
+  children,
+}: {
+  label: string;
+  open: boolean;
+  onToggle: () => void;
+  tone: { border: string; text: string; openBg: string };
+  tracking?: number;
+  children: React.ReactNode;
+}) {
+  const panelRef = useRef<HTMLDivElement>(null);
+  const panelId = useId();
+
+  return (
+    <div
+      style={{
+        border: `1.5px solid ${tone.border}`,
+        borderRadius: 10,
+        overflow: "hidden",
+      }}
+    >
+      <button
+        type="button"
+        onClick={onToggle}
+        aria-expanded={open}
+        aria-controls={panelId}
+        style={{
+          width: "100%",
+          minHeight: 44,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: 10,
+          padding: "0 14px",
+          border: "none",
+          background: open ? tone.openBg : "transparent",
+          color: tone.text,
+          fontFamily: "'Inter', sans-serif",
+          fontSize: 13,
+          fontWeight: 600,
+          letterSpacing: tracking,
+          textAlign: "left",
+          cursor: "pointer",
+        }}
+      >
+        <span>{label}</span>
+        <span
+          aria-hidden
+          style={{
+            flexShrink: 0,
+            fontSize: 11,
+            lineHeight: 1,
+            transform: open ? "rotate(180deg)" : "none",
+            transition: "transform .2s ease-out",
+          }}
+        >
+          ▼
+        </span>
+      </button>
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div
+            ref={panelRef}
+            id={panelId}
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.24, ease: "easeOut" }}
+            style={{ overflow: "hidden" }}
+            // The drawers sit at the bottom of the scrolling sheet, so an opened
+            // panel would otherwise unfold below the fold: the player taps, the
+            // chevron flips and nothing appears. `nearest` never jumps a panel
+            // that is already fully visible.
+            onAnimationComplete={() => {
+              if (!open) return;
+              panelRef.current?.scrollIntoView?.({ block: "nearest", behavior: "smooth" });
+            }}
+          >
+            <div style={{ padding: "13px 14px 15px" }}>{children}</div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
+/** Compact label+value pill — the payout's earned extras, one row, no tiles. */
+function Chip({
+  label,
+  value,
+  color,
+  border,
+}: {
+  label: string;
+  value: string;
+  color: string;
+  border: string;
+}) {
+  return (
+    <span
+      style={{
+        display: "inline-flex",
+        alignItems: "baseline",
+        gap: 6,
+        padding: "5px 11px",
+        background: "#fffdf8",
+        border: `1px solid ${border}`,
+        borderRadius: 20,
+      }}
+    >
+      <span
+        style={{
+          fontFamily: "'Inter', sans-serif",
+          fontSize: 12,
+          fontWeight: 500,
+          color: "#8a7c64",
+        }}
+      >
+        {label}
+      </span>
+      <span
+        style={{
+          fontFamily: "'IBM Plex Mono', monospace",
+          fontSize: 13,
+          fontWeight: 700,
+          color,
+        }}
+      >
+        {value}
+      </span>
+    </span>
   );
 }
 

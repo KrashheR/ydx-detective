@@ -62,9 +62,7 @@ export function PackCover({
  */
 export function getFanPacks(): readonly ThematicPack[] {
   if (THEMATIC_PACKS.length === 0) return [];
-  return [0, 1, 2].map(
-    (slot) => THEMATIC_PACKS[slot % THEMATIC_PACKS.length]!,
-  );
+  return [0, 1, 2].map((slot) => THEMATIC_PACKS[slot % THEMATIC_PACKS.length]!);
 }
 
 /** Rotation/offset of each fan slot — shared by the desk promo and the bundle. */
@@ -99,7 +97,6 @@ export function BureauArchiveShelf({
                 onOpenPack(pack.id);
               }
             }}
-            whileHover={{ y: -5 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
             className="group relative cursor-pointer rounded-[2px] border border-bureau-gold/45 bg-bureau-paper text-ink shadow-folder focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-4 focus-visible:outline-bureau-gold"
           >
@@ -109,7 +106,10 @@ export function BureauArchiveShelf({
               aria-hidden
             />
             <div className="relative aspect-square overflow-hidden">
-              <PackCover pack={pack} className="h-full w-full group-hover:scale-[1.025]" />
+              <PackCover
+                pack={pack}
+                className="h-full w-full group-hover:scale-[1.025]"
+              />
               <span
                 className="pointer-events-none absolute inset-0 shadow-[inset_0_-45px_55px_rgba(11,11,9,.55)]"
                 aria-hidden
@@ -312,7 +312,10 @@ export function BureauArchiveDetail({
           </p>
 
           <div className="mt-6 grid grid-cols-3 gap-2 md:flex md:gap-3.5">
-            <Feature value={String(cases.length)} label={t("archiveDetailFeatureCases", lang)} />
+            <Feature
+              value={String(cases.length)}
+              label={t("archiveDetailFeatureCases", lang)}
+            />
             <Feature
               value={`${pack.evidenceCount ?? cases.length * 3}+`}
               label={t("archiveDetailFeatureEvidence", lang)}
@@ -475,7 +478,10 @@ function IncludedItem({
 }) {
   return (
     <div className="relative min-h-[92px] overflow-hidden bg-bureau-paper px-3 py-3 text-ink shadow-card">
-      <span className="absolute end-3 top-0 h-1.5 w-9 bg-bureau-gold-dim" aria-hidden />
+      <span
+        className="absolute end-3 top-0 h-1.5 w-9 bg-bureau-gold-dim"
+        aria-hidden
+      />
       <div className="font-mono text-[7px] font-black uppercase tracking-[.1em] text-bureau-copper">
         {kicker}
       </div>

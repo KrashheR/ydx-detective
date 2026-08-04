@@ -24,7 +24,7 @@
 | `personImage` | string? | опц. портрет WebP, напр. `people/<firstname>.webp` |
 | `evidences` | Evidence[] | улики |
 | `correctDecision` | `approve \| reject` | `reject` если fraud, `approve` если valid |
-| `explanation` | LocalizedLines | ровно 3 коротких вывода для ResultSheet (массив строк, 5 языков) |
+| `explanation` | LocalizedLines | ровно 3 коротких вывода (массив строк, 5 языков). **Больше нигде не отображается** — обязателен по схеме, но дело объясняет `resolution.reasoningChain` на `ResultSheet` |
 | `investigationBudget` | number? | если задан — бюджетное дело (см. ниже) |
 | `resolution` | CaseResolution? | реакция человека после верного вердикта (см. ниже) |
 

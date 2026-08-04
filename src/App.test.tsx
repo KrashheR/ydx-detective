@@ -386,15 +386,11 @@ describe('verdict gating', () => {
     expect(rejectBtn).toBeEnabled();
     fireEvent.click(rejectBtn);
 
-    // The person reacts first: the reward sheet stays behind the resolution card.
+    // One sheet closes the case: the person reacts *and* the reward is paid in
+    // the same modal — no «Продолжить» step in between.
     const resolution = getStandardCases()[0]!.resolution!;
     expect(await screen.findByText(new RegExp(loc(resolution.finalLine, 'ru')))).toBeInTheDocument();
-    expect(screen.queryByText(RU('accuracyBreakdown'))).toBeNull();
-
-    // Continue hands over to the reward sheet.
-    fireEvent.click(screen.getByRole('button', { name: RU('resolutionContinue') }));
-
-    expect(await screen.findByText(RU('accuracyBreakdown'))).toBeInTheDocument();
+    expect(screen.getByText(RU('accuracyBreakdown'))).toBeInTheDocument();
     expect(useGameStore.getState().lastResult).not.toBeNull();
   });
 });

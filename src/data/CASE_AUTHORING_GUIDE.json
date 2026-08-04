@@ -24,7 +24,7 @@
       "personImage": "people/<firstname>.webp",
       "evidences": "Evidence[]",
       "correctDecision": "approve | reject",
-      "explanation": "LocalizedString[] — 3 коротких вывода для ResultSheet"
+      "explanation": "LocalizedString[] — 3 коротких вывода. Обязателен по схеме, но НЕ отображается: дело объясняет resolution.reasoningChain на ResultSheet"
     },
     "evidence": {
       "id": "string — уникален внутри дела",

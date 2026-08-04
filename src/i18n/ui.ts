@@ -254,7 +254,11 @@ export type UIKey =
     | "brandShort"
     | "brandTagline"
     | "navInvestigation"
+    | "navInvestigationSub"
+    | "navInvestigationShort"
     | "navBureau"
+    | "navBureauSub"
+    | "navBureauShort"
     | "settings"
     | "region"
     | "bureauEyebrow"
@@ -1781,12 +1785,40 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     ar: "التحقيق",
     kk: "Тергеу",
   },
+  navInvestigationSub: {
+    ru: "Текущее дело",
+    en: "Current case",
+    tr: "Güncel dosya",
+    ar: "القضية الحالية",
+    kk: "Ағымдағы іс",
+  },
+  navInvestigationShort: {
+    ru: "Дело",
+    en: "Case",
+    tr: "Dosya",
+    ar: "قضية",
+    kk: "Іс",
+  },
   navBureau: {
     ru: "Бюро особых дел",
     en: "Bureau of Special Cases",
     tr: "Özel Dosyalar Bürosu",
     ar: "مكتب القضايا الخاصة",
     kk: "Ерекше істер бюросы",
+  },
+  navBureauSub: {
+    ru: "Архивы · Штампы · Наборы",
+    en: "Archives · Stamps · Bundles",
+    tr: "Arşivler · Damgalar · Setler",
+    ar: "الأرشيف · الأختام · الحزم",
+    kk: "Мұрағаттар · Мөрлер · Жинақтар",
+  },
+  navBureauShort: {
+    ru: "Бюро",
+    en: "Bureau",
+    tr: "Büro",
+    ar: "المكتب",
+    kk: "Бюро",
   },
   settings: {
     ru: "Настройки",

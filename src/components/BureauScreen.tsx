@@ -204,7 +204,8 @@ export function BureauScreen({
       className="relative min-h-full bg-bureau text-bureau-ink"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      // No `exit`: leaving the Bureau must free its space in the app column
+      // immediately, or the desk underneath jumps up when the fade ends.
       transition={{ duration: 0.2, ease: "easeOut" }}
       role="region"
       aria-label={t("navBureau", lang)}
