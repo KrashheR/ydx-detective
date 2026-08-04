@@ -28,6 +28,7 @@ Index: **[docs/README.md](docs/README.md)**. Each doc starts with a "Ключе�
 | [docs/08-build-test-deploy.md](docs/08-build-test-deploy.md) | Build, test, verify, deploy, devCheat |
 | [docs/09-synthetic-playtesting.md](docs/09-synthetic-playtesting.md) | Synthetic personas, browser playtest runner, report artifacts |
 | [docs/10-iap-catalog.md](docs/10-iap-catalog.md) | Every Yandex IAP product id / title / price to create in the console |
+| [docs/11-economy-rework-plan.md](docs/11-economy-rework-plan.md) | Planned economy rework: dead-currency diagnosis, case retainer, department redesign, new rewarded placements |
 
 ### 🗺️ Key file map (jump here, don't grep)
 
