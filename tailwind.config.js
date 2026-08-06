@@ -75,12 +75,35 @@ export default {
         'bureau-line': '#494B43',
         'bureau-gold': '#D2A451',
         'bureau-gold-dim': '#A9863F',
+        // Lit edge of the archive CTA / stamped highlights — the one value
+        // brighter than `bureau-gold`, used for gradients and accented words.
+        'bureau-gold-lit': '#F0CB79',
         'bureau-copper': '#8D432D',
         'bureau-ink': '#F2E5CA', // primary text on the Bureau background
         'bureau-muted': '#BDB3A0',
         'bureau-dim': '#928979',
         'bureau-paper': '#E9DEC3', // paper card sitting on the Bureau background
         'bureau-paper-2': '#D8C7A3', // workshop bench paper
+        // --- Closing sheet (case result) ---
+        // The folder-on-the-desk palette of the redesigned result modal:
+        // green = confirmed verdict & money kept, red = error & damage, gold =
+        // the rewarded opportunity only, navy = the primary "next case" CTA.
+        'result-paper': '#F3EDDF',
+        'result-paper-hi': '#FFFAF0',
+        'result-line': '#D1C4AE',
+        'result-tab': '#D7C7AA',
+        'result-ink': '#22293A',
+        'result-muted': '#7A746B',
+        'result-green': '#147A4A',
+        'result-green-deep': '#0E5B39',
+        'result-red': '#BD2925',
+        'result-red-deep': '#821E21',
+        'result-gold': '#B8822D',
+        'result-gold-edge': '#A67B2A',
+        'result-gold-lit': '#FFF4BD',
+        'result-gold-dim': '#ECD47C',
+        'result-navy': '#263650',
+        'result-navy-deep': '#152136',
         toast: '#2B2018',
         'toast-ink': '#FEE2E2',
         'modal-backdrop': 'rgb(8 11 17 / 0.8)',

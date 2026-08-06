@@ -41,6 +41,9 @@ vi.mock('framer-motion', async () => {
     motion,
     AnimatePresence: ({ children }: { children?: React.ReactNode }) =>
       React.createElement(React.Fragment, null, children),
+    // Components branch on this; the flattened mock always renders the
+    // full-motion path, matching the stripped animation props above.
+    useReducedMotion: () => false,
   };
 });
 
@@ -364,7 +367,7 @@ describe('verdict gating', () => {
     expect(useGameStore.getState().lastResult).toBeNull();
   });
 
-  it('completes a stamp → reject → result-sheet flow', async () => {
+  it('a right verdict without the mandatory proof leaves the case open', async () => {
     await renderHydrated();
 
     const main = screen.getByRole('main');
@@ -386,12 +389,29 @@ describe('verdict gating', () => {
     expect(rejectBtn).toBeEnabled();
     fireEvent.click(rejectBtn);
 
-    // One sheet closes the case: the person reacts *and* the reward is paid in
-    // the same modal — no «Продолжить» step in between.
-    const resolution = getStandardCases()[0]!.resolution!;
-    expect(await screen.findByText(new RegExp(loc(resolution.finalLine, 'ru')))).toBeInTheDocument();
-    expect(screen.getByText(RU('accuracyBreakdown'))).toBeInTheDocument();
+    // The verdict is right, but case-001 carries two mandatory contradictions
+    // and only one was stamped — so the case is *not* closed. This is the
+    // "insufficient evidence" state, not a failure and not a win.
+    expect(await screen.findByText(RU('resultTitleIncomplete'))).toBeInTheDocument();
     expect(useGameStore.getState().lastResult).not.toBeNull();
+    expect(useGameStore.getState().lastResult!.verdictCorrect).toBe(true);
+    expect(useGameStore.getState().lastResult!.success.solved).toBe(false);
+
+    // The gate: an unclosed case never advances the campaign, and never enters
+    // the completed list that `caseUnlockEngine` reads.
+    expect(
+      screen.queryByRole('button', { name: `${RU('nextCase')} →` }),
+    ).not.toBeInTheDocument();
+    expect(screen.getByText(RU('resultNextLockedTitle'))).toBeInTheDocument();
+    expect(useGameStore.getState().stats.completedCaseIds).not.toContain(
+      getStandardCases()[0]!.id,
+    );
+
+    // The closing line confesses indirectly — it stays sealed on an open case.
+    const resolution = getStandardCases()[0]!.resolution!;
+    expect(
+      screen.queryByText(new RegExp(loc(resolution.finalLine, 'ru'))),
+    ).not.toBeInTheDocument();
   });
 });
 

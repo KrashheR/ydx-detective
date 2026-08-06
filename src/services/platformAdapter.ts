@@ -38,7 +38,12 @@ export interface PlatformAdapter {
   cloudGet(): Promise<unknown | null>;
   cloudSet(snapshot: unknown): Promise<void>;
   showFullscreenAd(done?: () => void, placement?: AdPlacement, onShown?: () => void): void;
-  showRewardedAd(reward: () => void, placement?: AdPlacement): void;
+  /**
+   * `reward` fires only on a fully-watched video. `onFail` is the settle signal
+   * for everything else (cancel / error / no-fill) — the closing sheet needs it
+   * to leave its loading state. Exactly one of the two fires, at most once.
+   */
+  showRewardedAd(reward: () => void, placement?: AdPlacement, onFail?: () => void): void;
 }
 
 const CRAZY_SAVE_KEY = 'claimDetectiveSave';
@@ -60,7 +65,7 @@ const yandexAdapter: PlatformAdapter = {
   cloudGet() { return yandex.cloudGet(); },
   cloudSet(snapshot) { return yandex.cloudSet(snapshot); },
   showFullscreenAd(done, placement, onShown) { yandex.showFullscreenAd(done, placement, onShown); },
-  showRewardedAd(reward, placement) { yandex.showRewardedAd(reward, placement); },
+  showRewardedAd(reward, placement, onFail) { yandex.showRewardedAd(reward, placement, onFail); },
 };
 
 const crazyAdapter: PlatformAdapter = {
@@ -85,13 +90,14 @@ const crazyAdapter: PlatformAdapter = {
       adError: () => { emitCrazyPause(false); done?.(); },
     });
   },
-  showRewardedAd(reward) {
+  showRewardedAd(reward, _placement, onFail) {
     const request = crazySdk()?.ad?.requestAd;
     if (!request) { reward(); return; }
     emitCrazyPause(true);
+    let settled = false;
     request('rewarded', {
-      adFinished: () => { emitCrazyPause(false); reward(); },
-      adError: () => emitCrazyPause(false),
+      adFinished: () => { emitCrazyPause(false); if (settled) return; settled = true; reward(); },
+      adError: () => { emitCrazyPause(false); if (settled) return; settled = true; onFail?.(); },
     });
   },
 };
@@ -114,8 +120,8 @@ export const cloudGet = () => getPlatformAdapter().cloudGet();
 export const cloudSet = (snapshot: unknown) => getPlatformAdapter().cloudSet(snapshot);
 export const showFullscreenAd = (done?: () => void, placement?: AdPlacement, onShown?: () => void) =>
   getPlatformAdapter().showFullscreenAd(done, placement, onShown);
-export const showRewardedAd = (reward: () => void, placement?: AdPlacement) =>
-  getPlatformAdapter().showRewardedAd(reward, placement);
+export const showRewardedAd = (reward: () => void, placement?: AdPlacement, onFail?: () => void) =>
+  getPlatformAdapter().showRewardedAd(reward, placement, onFail);
 export function onPauseChange(listener: (paused: boolean) => void): () => void {
   if (getPlatformAdapter().id !== 'crazygames') return yandex.onPauseChange(listener);
   crazyPauseListeners.add(listener);

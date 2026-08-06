@@ -152,6 +152,7 @@ export function makeStats(overrides: Partial<PlayerStats> = {}): PlayerStats {
     archiveAdUnlockServerDayByPack: {},
     interactiveEvidenceProgress: {},
     finalSynthesisProgress: {},
+    caseClueReveals: {},
     metaUnlocked: true,
     firstSeenServerDay: 0,
     ...overrides,

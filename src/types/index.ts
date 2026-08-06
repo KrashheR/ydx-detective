@@ -601,6 +601,13 @@ export interface PlayerStats {
   interactiveEvidenceProgress: Record<string, InteractiveEvidenceProgress>;
   /** Post-verdict synthesis progress, keyed by stable case id. */
   finalSynthesisProgress: Record<string, FinalSynthesisProgress>;
+  /**
+   * caseId → evidenceId of the missed contradiction a rewarded video opened on
+   * the failure sheet. Lives in `stats`, not the session: the whole point is
+   * that the hint survives «Повторить», which starts a brand-new session. The
+   * card is pre-revealed when that case is started again.
+   */
+  caseClueReveals: Record<string, string>;
   /** Fresh-player prologue gate; old profiles are migrated to unlocked. */
   metaUnlocked: boolean;
   /**

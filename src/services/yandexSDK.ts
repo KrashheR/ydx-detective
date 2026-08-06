@@ -301,6 +301,8 @@ export type AdPlacement =
   | 'double_reward'
   | 'restore_funds'
   | 'witness_canvass'
+  /** The failure sheet's "open the missed clue" video. */
+  | 'result_clue'
   | 'daily_unlock'
   | 'archive_unlock'
   | 'unknown';
@@ -347,8 +349,17 @@ export function showFullscreenAd(
 /**
  * Show a rewarded video. `onReward` fires only when the player earned the
  * reward (e.g. "restore funds"). Pause is managed automatically.
+ *
+ * `onFail` is the settle signal for a video that never paid out — cancel,
+ * error or no-fill. Yandex can fire `onError` *and* `onClose` for the same
+ * attempt, so both branches go through one `settled` latch: exactly one of
+ * `onReward` / `onFail` runs, and never more than once.
  */
-export function showRewardedAd(onReward: () => void, placement: AdPlacement = 'unknown'): void {
+export function showRewardedAd(
+  onReward: () => void,
+  placement: AdPlacement = 'unknown',
+  onFail?: () => void,
+): void {
   trackGoal(GOAL.adAccept, { kind: 'rewarded', placement });
   if (!sdk) {
     // Offline / no SDK: in dev we grant the reward so the game stays playable.
@@ -358,6 +369,18 @@ export function showRewardedAd(onReward: () => void, placement: AdPlacement = 'u
     return;
   }
   let rewarded = false;
+  let settled = false;
+  const settle = (granted: boolean) => {
+    if (settled) return;
+    settled = true;
+    if (granted) {
+      onReward();
+      trackGoal(GOAL.adReward, { kind: 'rewarded', placement });
+      trackGoal(GOAL.rewardedComplete, { placement });
+    } else {
+      onFail?.();
+    }
+  };
   sdk.adv.showRewardedVideo({
     callbacks: {
       onOpen: () => {
@@ -372,16 +395,13 @@ export function showRewardedAd(onReward: () => void, placement: AdPlacement = 'u
         broadcastPause(false);
         setAnalyticsAdPaused(false);
         trackGoal(GOAL.adClose, { kind: 'rewarded', placement, wasShown, rewarded });
-        if (rewarded) {
-          onReward();
-          trackGoal(GOAL.adReward, { kind: 'rewarded', placement });
-          trackGoal(GOAL.rewardedComplete, { placement });
-        }
+        settle(rewarded);
       },
       onError: (error) => {
         broadcastPause(false);
         setAnalyticsAdPaused(false);
         trackGoal(GOAL.adError, { kind: 'rewarded', placement, error: String(error) });
+        settle(false);
       },
     },
   });

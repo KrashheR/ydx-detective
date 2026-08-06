@@ -378,6 +378,53 @@ describe('submitVerdict', () => {
     expect(store().stats.perfectCaseStreakCount).toBe(2);
   });
 
+  it('pays an unclosed case once, not once per retry', () => {
+    // A correct verdict without the mandatory stamps leaves the case open and
+    // still pays. «Повторить» then starts a fresh session — so without the
+    // first-look/closing-attempt rule this pair prints money.
+    const base = makeCase({
+      id: 'case-farm',
+      claimAmount: 1000,
+      correctDecision: 'reject',
+      contradictions: 2,
+      cleanCards: 1,
+    });
+    const c = {
+      ...base,
+      evidences: base.evidences.map((e) =>
+        e.isContradiction ? { ...e, requiredForVerdict: true } : e,
+      ),
+    };
+
+    // 1st attempt: right verdict, no proof — paid, but the case stays open.
+    store().startCase(c);
+    const first = store().submitVerdict(c, 'reject');
+    expect(first.total).toBeGreaterThan(0);
+    expect(store().lastResult?.success.solved).toBe(false);
+    expect(store().stats.completedCaseIds).not.toContain(c.id);
+
+    // 2nd identical attempt: free practice, no second payout, no XP.
+    const balanceAfterFirst = store().stats.balance;
+    const xpAfterFirst = store().stats.xp;
+    store().startCase(c);
+    expect(store().submitVerdict(c, 'reject').total).toBe(0);
+    expect(store().stats.balance).toBe(balanceAfterFirst);
+    expect(store().stats.xp).toBe(xpAfterFirst);
+
+    // The attempt that actually closes the case pays again — once.
+    store().startCase(c);
+    contradictionIds(c).forEach((id) => store().toggleEvidenceStamp(id));
+    expect(store().submitVerdict(c, 'reject').total).toBeGreaterThan(0);
+    expect(store().stats.completedCaseIds).toContain(c.id);
+
+    // And a replay of a closed case is training, as it always was.
+    const balanceAfterClosing = store().stats.balance;
+    store().startCase(c);
+    contradictionIds(c).forEach((id) => store().toggleEvidenceStamp(id));
+    expect(store().submitVerdict(c, 'reject').total).toBe(0);
+    expect(store().stats.balance).toBe(balanceAfterClosing);
+  });
+
   it('detects a rank promotion across an XP threshold', () => {
     // level_02 starts at 10 XP; a fresh player earning a clean easy case (+10)
     // crosses from level_01 into level_02.

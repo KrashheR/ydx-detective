@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Где ложь? — финал дела V2</title>
+  <style>
+    :root{
+      --night:#0d1521;--night-2:#172235;--paper:#f3eddf;--paper-hi:#fffaf0;
+      --ink:#22293a;--muted:#7a746b;--line:#d1c4ae;--green:#147a4a;--green-2:#0e5b39;
+      --red:#bd2925;--red-2:#821e21;--gold:#b8822d;--ease:cubic-bezier(.2,.8,.2,1)
+    }
+    *{box-sizing:border-box}html,body{height:100%}
+    body{margin:0;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--night)}
+    button{font:inherit}.stage{min-height:100%;position:relative;overflow:hidden;background:
+      radial-gradient(circle at 50% 38%,rgba(164,136,83,.12),transparent 30%),
+      linear-gradient(140deg,#202c3e,#101824 62%,#182537)}
+    .stage:before{content:"";position:absolute;inset:70px 5% 5%;border:1px solid rgba(207,217,228,.10);border-radius:12px;background:
+      linear-gradient(90deg,transparent 25%,rgba(255,255,255,.025) 25.2%,transparent 25.4%,transparent 75%,rgba(255,255,255,.025) 75.2%,transparent 75.4%),
+      repeating-linear-gradient(0deg,transparent 0 62px,rgba(255,255,255,.025) 63px 64px)}
+    .fake-top{height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;color:#d9dfeb;border-bottom:1px solid rgba(255,255,255,.09);background:#101824;font-weight:750}
+    .brand{display:flex;align-items:center;gap:12px}.brand-mark{width:35px;height:35px;border:1px solid #ad8b4e;display:grid;place-items:center;color:#c7a76c;font:800 12px Georgia,serif}.brand small{display:block;margin-top:2px;color:#697487;font:700 8px monospace;letter-spacing:.18em;text-transform:uppercase}
+    .resources{display:flex;gap:10px;color:#9eabbc;font:700 12px monospace}.resources span{padding:10px 13px;border:1px solid rgba(255,255,255,.08);border-radius:8px}
+    .overlay{position:absolute;inset:0;display:grid;place-items:center;padding:78px 18px 20px;background:rgba(4,8,15,.76);backdrop-filter:blur(2px)}
+    .tabs{position:fixed;z-index:5;top:16px;left:50%;transform:translateX(-50%);display:flex;gap:4px;padding:4px;border:1px solid rgba(255,255,255,.13);border-radius:13px;background:rgba(7,12,21,.92);box-shadow:0 12px 30px #0008}
+    .tabs button{height:38px;padding:0 17px;border:0;border-radius:9px;color:#8792a3;background:transparent;font-weight:800;cursor:pointer}.tabs button[aria-selected=true]{color:#fff;background:#344158}
+    .sheet{display:none;width:min(520px,calc(100vw - 28px));max-height:calc(100dvh - 100px);overflow:auto;position:relative;border:1px solid #d8cdbb;border-radius:14px;background:
+      radial-gradient(circle at 20% 12%,rgba(92,68,34,.05) 0 1px,transparent 1.3px) 0 0/8px 8px,
+      linear-gradient(145deg,rgba(255,255,255,.55),transparent 38%),var(--paper);
+      box-shadow:0 30px 90px rgba(0,0,0,.58),0 2px 0 #fff8 inset;animation:sheet-in .36s var(--ease) both;scrollbar-width:thin}
+    .sheet.active{display:block}.sheet:before{content:"";position:absolute;inset:9px;border:1px solid rgba(107,84,53,.13);border-radius:9px;pointer-events:none}
+    .case-tab{position:absolute;top:0;left:26px;padding:7px 14px 8px;border-radius:0 0 7px 7px;background:#d7c7aa;color:#655b4d;font:800 10px/1 monospace;letter-spacing:.11em;text-transform:uppercase}
+    .close{position:absolute;z-index:2;top:16px;right:16px;width:36px;height:36px;border:1px solid #cfc1aa;border-radius:50%;background:#f8f2e6;color:#716b62;font-size:20px;cursor:pointer}
+    .head{padding:42px 34px 17px;text-align:left;border-bottom:1px dashed #cbbda7}
+    .status-line{display:flex;align-items:flex-start;gap:14px;padding-right:42px}.status-line>div:last-child{min-width:0}.status-icon{flex:0 0 50px;height:50px;display:grid;place-items:center;border:2px solid currentColor;border-radius:50%;font-size:24px;font-weight:950;transform:rotate(-4deg)}
+    .success .status-icon{color:var(--green)}.failure .status-icon{color:var(--red)}
+    .kicker{margin:2px 0 7px;color:var(--muted);font:800 10px/1 monospace;letter-spacing:.14em;text-transform:uppercase}
+    h1{max-width:100%;margin:0;font:900 23px/1.1 Georgia,"Times New Roman",serif;letter-spacing:-.025em;overflow-wrap:anywhere;text-wrap:balance}.success h1{color:var(--green-2)}.failure h1{color:var(--red-2)}
+    .case-name{max-width:100%;margin:8px 0 0;color:#69665f;font:650 12px/1.35 Georgia,serif;overflow-wrap:anywhere}
+    .stamp{display:inline-block;margin:12px 0 0 64px;padding:5px 9px 4px;border:2px solid currentColor;border-radius:3px;opacity:.72;font:900 10px/1 monospace;letter-spacing:.09em;text-transform:uppercase;transform:rotate(-3deg)}.success .stamp{color:var(--green)}.failure .stamp{color:var(--red);transform:rotate(3deg)}
+    .outcome{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;margin:20px 34px 0;padding:16px 18px;border:1px solid var(--line);border-radius:11px;background:rgba(255,255,255,.36)}
+    .outcome-label{color:#716d65;font-size:11px;font-weight:800}.outcome-value{margin-top:3px;font:900 31px/1 Georgia,serif;letter-spacing:-.035em}.success .outcome-value{color:var(--green)}.failure .outcome-value{color:var(--red)}
+    .rank{display:grid;place-items:center;min-width:72px;padding:9px 10px;border-left:1px solid var(--line);color:#745a28}.rank b{font:900 15px Georgia,serif}.rank small{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.11em}
+    .progress{margin:15px 34px 0}.progress-head{display:flex;justify-content:space-between;color:#5c5b58;font-size:11px;font-weight:800}.progress-head b{color:var(--green)}.failure .progress-head b{color:var(--red)}
+    .track{height:7px;margin-top:7px;overflow:hidden;border-radius:10px;background:#dfd5c5}.track i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--green),#2ea56c)}.failure .track i{width:0!important;background:var(--red)}
+    .evidence{position:relative;margin:17px 34px 0;padding:15px 20px 15px 52px;border:1px solid #c9bca6;border-radius:10px;background:#fffaf0;box-shadow:0 2px 8px rgba(70,49,21,.05)}
+    .evidence:before{content:"";position:absolute;left:16px;top:16px;width:22px;height:28px;border:1px solid currentColor;border-radius:3px;background:repeating-linear-gradient(0deg,transparent 0 5px,currentColor 6px 6px);opacity:.55}.success .evidence{color:var(--green-2)}.failure .evidence{color:var(--red-2);border-color:#dfa49b;background:#fff4ed}
+    .evidence-label{font:900 10px/1 monospace;letter-spacing:.12em;text-transform:uppercase}.evidence p{max-width:100%;margin:7px 0 0;color:#383c43;font:650 13px/1.48 Georgia,serif;overflow-wrap:anywhere}
+    .reward-row{display:flex;align-items:center;gap:8px;margin:13px 34px 0;color:#65635e;font-size:11px;font-weight:800;flex-wrap:wrap}.pill{padding:7px 10px;border:1px solid #d2c5b0;border-radius:99px;background:#f9f4e9}.pill b{color:var(--green)}
+    .ad-offer{width:calc(100% - 68px);min-height:56px;margin:11px 34px 0;padding:8px 10px 8px 12px;display:grid;grid-template-columns:38px minmax(0,1fr) auto;align-items:center;gap:10px;border:1px solid #a67b2a;border-radius:11px;color:#25301f;background:linear-gradient(180deg,#fff4bd,#ecd47c);box-shadow:0 3px 0 #9a7225,0 1px 0 #fff inset;cursor:pointer;text-align:left;transition:.15s ease}.ad-offer:hover{filter:brightness(1.04);transform:translateY(-1px)}.ad-offer:active{transform:translateY(2px);box-shadow:0 1px 0 #9a7225}.ad-play{width:36px;height:36px;display:grid;place-items:center;border-radius:50%;color:#fff;background:#166342;box-shadow:0 2px 0 #0b412b;font-size:14px}.ad-copy{min-width:0}.ad-copy b{display:block;font-size:13px;line-height:1.15}.ad-copy small{display:block;margin-top:3px;color:#6a5b2d;font-size:9px;font-weight:800}.ad-bonus{padding:7px 9px;border-radius:8px;color:#fff;background:#166342;font-size:12px;font-weight:950;white-space:nowrap}
+    details{margin:13px 34px 0;border-top:1px solid #cfc2ae;border-bottom:1px solid #cfc2ae}summary{min-height:44px;display:flex;align-items:center;list-style:none;color:#54545a;font-size:11px;font-weight:850;cursor:pointer}summary::-webkit-details-marker{display:none}summary:after{content:"＋";margin-left:auto;font-size:17px;font-weight:400;color:#867e72}details[open] summary:after{content:"−"}.explain{margin:-2px 0 13px;color:#626169;font:600 12px/1.5 Georgia,serif}
+    .unlock{margin:12px 34px 0;color:#6e674f;font-size:10px;font-weight:800}.unlock:before{content:"◆";margin-right:7px;color:var(--gold)}
+    .foot{display:grid;grid-template-columns:1fr 2.15fr;gap:10px;margin-top:17px;padding:16px 34px 24px;border-top:1px solid rgba(125,105,76,.2);background:rgba(221,209,190,.34)}
+    .btn{min-height:50px;border-radius:9px;font-weight:900;cursor:pointer;transition:.15s ease}.primary{border:0;color:#fff;background:linear-gradient(#263650,#152136);box-shadow:0 3px 0 #09111e,0 1px 0 #ffffff24 inset}.primary:hover{filter:brightness(1.12);transform:translateY(-1px)}.primary:active{transform:translateY(2px);box-shadow:0 1px 0 #09111e}.secondary{border:1px solid #c9b99d;color:#676055;background:#f8f2e6}.failure .foot{grid-template-columns:2.15fr 1fr}.failure .primary{background:linear-gradient(#ad302f,#841f22);box-shadow:0 3px 0 #591416}.failure .secondary{font-size:11px}
+    .hint{text-align:center;margin:9px 0 0;color:#8a8378;font-size:9px}.failure .reward-row{margin-top:12px}
+    @keyframes sheet-in{from{opacity:0;transform:translateY(15px) scale(.985)}to{opacity:1;transform:none}}
+    @media(max-width:560px){.overlay{padding:66px 9px 10px;align-items:end}.sheet{width:100%;max-height:calc(100dvh - 78px);border-radius:14px 14px 8px 8px}.head{padding:39px 22px 16px}.status-line{padding-right:32px}.outcome,.progress,.evidence,.reward-row,details,.unlock{margin-left:22px;margin-right:22px}.ad-offer{width:calc(100% - 44px);margin-left:22px;margin-right:22px}.foot{padding:14px 22px 21px}.status-icon{flex-basis:44px;height:44px}.stamp{margin-left:58px}h1{font-size:20px}.outcome-value{font-size:28px}}
+    @media(max-width:390px){.foot,.failure .foot{grid-template-columns:1fr}.secondary{order:2}.sheet{max-height:calc(100dvh - 72px)}.evidence{padding-right:16px}.ad-offer{grid-template-columns:34px minmax(0,1fr) auto;gap:8px}.ad-play{width:32px;height:32px}.ad-copy b{font-size:12px}.ad-bonus{padding:6px 7px;font-size:11px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <main class="stage">
+    <div class="fake-top"><div class="brand"><span class="brand-mark">НЛ</span><div>Найди ложь!<small>детективные дела</small></div></div><div class="resources"><span>★ 2 870</span><span>₽ 10 019 424</span></div></div>
+    <nav class="tabs" aria-label="Превью состояния"><button data-open="success" aria-selected="true">Успех</button><button data-open="failure" aria-selected="false">Провал</button></nav>
+    <div class="overlay">
+      <section class="sheet success active" id="success" role="dialog" aria-modal="true" aria-labelledby="success-title">
+        <span class="case-tab">Дело №17 · Закрыто</span><button class="close" aria-label="Закрыть">×</button>
+        <header class="head"><div class="status-line"><div class="status-icon">✓</div><div><p class="kicker">Вердикт подтверждён</p><h1 id="success-title">Мошенник разоблачён</h1><p class="case-name">«Восточный двор» · Выплата отклонена</p></div></div><span class="stamp">обосновано</span></header>
+        <div class="outcome"><div><div class="outcome-label">Компания сохранила</div><div class="outcome-value">+4 950 ₽</div></div><div class="rank"><small>Ранг</small><b>Бронза</b></div></div>
+        <div class="progress"><div class="progress-head"><span>Точность расследования</span><b>73%</b></div><div class="track"><i style="width:73%"></i></div></div>
+        <article class="evidence"><div class="evidence-label">Ключевая улика</div><p>Маршрут яхты не совпал с заявлением. Вердикт подтверждён тремя уликами из четырёх.</p></article>
+        <div class="reward-row"><span class="pill">Опыт <b>+26</b></span><span class="pill">Серия <b>×3</b></span></div>
+        <button class="ad-offer" aria-label="Посмотреть рекламу и получить ещё 4 950 рублей"><span class="ad-play">▶</span><span class="ad-copy"><b>Удвоить награду</b><small>Посмотреть короткую рекламу</small></span><span class="ad-bonus">+4 950 ₽</span></button>
+        <details><summary>Короткий разбор решения</summary><p class="explain">Не отмечено расхождение времени между чеком и записью камеры — поэтому точность ниже 100%.</p></details>
+        <div class="unlock">В архив добавлен профиль: «Восточный двор»</div>
+        <footer class="foot"><button class="btn secondary">К столу</button><button class="btn primary">Следующее дело →</button></footer>
+      </section>
+
+      <section class="sheet failure" id="failure" role="dialog" aria-modal="true" aria-labelledby="failure-title">
+        <span class="case-tab">Дело №17 · Ошибка</span><button class="close" aria-label="Закрыть">×</button>
+        <header class="head"><div class="status-line"><div class="status-icon">×</div><div><p class="kicker">Вердикт отменён</p><h1 id="failure-title">Мошенник получил выплату</h1><p class="case-name">«Карта, оставшаяся дома»</p></div></div><span class="stamp">дело не раскрыто</span></header>
+        <div class="outcome"><div><div class="outcome-label">Ущерб бюджету компании</div><div class="outcome-value">−3 500 ₽</div></div><div class="rank"><small>Опыт</small><b>+2</b></div></div>
+        <article class="evidence"><div class="evidence-label">Что вы упустили</div><p>Карта находилась дома, хотя заявитель утверждал, что расплачивался ею в поездке.</p></article>
+        <div class="progress"><div class="progress-head"><span>Точность расследования</span><b>0%</b></div><div class="track"><i></i></div></div>
+        <details><summary>Как прийти к верному решению</summary><p class="explain">Сопоставьте геолокацию карты, время операции и показания заявителя. Совпадения только по сумме недостаточно.</p></details>
+        <footer class="foot"><button class="btn primary">↻ Расследовать заново</button><button class="btn secondary">Следующее →</button></footer>
+        <p class="hint">Повтор не расходует энергию</p>
+      </section>
+    </div>
+  </main>
+  <script>
+    const tabs=[...document.querySelectorAll('[data-open]')];
+    function openState(id){
+      tabs.forEach(t=>t.setAttribute('aria-selected',String(t.dataset.open===id)));
+      document.querySelectorAll('.sheet').forEach(s=>s.classList.toggle('active',s.id===id));
+    }
+    tabs.forEach(t=>t.addEventListener('click',()=>openState(t.dataset.open)));
+    document.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight')openState(document.querySelector('.sheet.active').id==='success'?'failure':'success')});
+  </script>
+</body>
+</html>

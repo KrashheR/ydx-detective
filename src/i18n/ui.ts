@@ -333,7 +333,64 @@ export type UIKey =
     | "noAdsLead"
     | "noAdsCta"
     | "noAdsOwned"
-    | "purchaseNotCompleted";
+    | "purchaseNotCompleted"
+    /* --- Archive page (premium archive redesign) --- */
+    | "archiveSecretStamp"
+    | "archivePurchaseCardLabel"
+    | "archivePurchaseBadgeOnce"
+    | "archivePerkNoAds"
+    | "archivePerkForever"
+    | "archiveDetailPlayFreeFirst"
+    | "archiveProgressEyebrow"
+    | "archiveCaseFreeRibbon"
+    | "archiveFinalCaseRibbon"
+    | "archiveCaseSolvedLabel"
+    | "archiveModalStamp"
+    | "archiveModalEyebrow"
+    | "archiveModalTitle"
+    | "archiveModalBody"
+    | "archiveModalBenefitCases"
+    | "archiveModalCta"
+    | "archiveModalUnlockThisWithAd"
+    | "archiveModalLegal"
+    // --- Closing sheet redesign (success / failure / insufficient evidence) ---
+    | "caseTabClosed"
+    | "caseTabNotClosed"
+    | "resultKickerConfirmed"
+    | "resultKickerWrong"
+    | "resultKickerIncomplete"
+    | "resultTitleFraudExposed"
+    | "resultTitleCaseClosed"
+    | "resultTitleWrong"
+    | "resultTitleIncomplete"
+    | "resultStampJustified"
+    | "resultCompanySaved"
+    | "resultDamageLabel"
+    | "resultAccuracy"
+    | "resultKeyEvidence"
+    | "resultProofCount"
+    | "resultMissedIntro"
+    | "resultIncompleteIntro"
+    | "resultProofProgress"
+    | "resultDebrief"
+    | "resultAdDoubleTitle"
+    | "resultAdWatchShort"
+    | "resultAdBadge"
+    | "resultAdLoading"
+    | "resultAdFailed"
+    | "resultClueLockedLabel"
+    | "resultClueLockedTitle"
+    | "resultClueLockedCopy"
+    | "resultClueRevealedLabel"
+    | "resultClueOpen"
+    | "resultRetryNoHint"
+    | "resultRetryWithHint"
+    | "resultNextLockedTitle"
+    | "resultNextLockedCopy"
+    | "resultBackToDeskLink"
+    | "resultUnfinishedNotice"
+    | "resultPayoutRejected"
+    | "resultPayoutApproved";
 
 export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
   approve: {
@@ -2338,6 +2395,381 @@ export const UI_STRINGS: Record<UIKey, Record<Language, string>> = {
     tr: "Reklamlar kapalı",
     ar: "الإعلانات موقوفة",
     kk: "Жарнама өшірілген",
+  },
+
+  /* --- Archive page (premium archive redesign) --- */
+  archiveSecretStamp: {
+    ru: "СЕКРЕТНО",
+    en: "CLASSIFIED",
+    tr: "GİZLİ",
+    ar: "سري",
+    kk: "ҚҰПИЯ",
+  },
+  archivePurchaseCardLabel: {
+    ru: "Полный доступ к {total} делам",
+    en: "Full access to all {total} cases",
+    tr: "{total} dosyanın tamamına erişim",
+    ar: "وصول كامل إلى {total} قضية",
+    kk: "{total} істің бәріне толық қолжетімділік",
+  },
+  archivePurchaseBadgeOnce: {
+    ru: "Один платёж",
+    en: "One payment",
+    tr: "Tek ödeme",
+    ar: "دفعة واحدة",
+    kk: "Бір төлем",
+  },
+  archivePerkNoAds: {
+    ru: "Без рекламы",
+    en: "No ads",
+    tr: "Reklamsız",
+    ar: "بلا إعلانات",
+    kk: "Жарнамасыз",
+  },
+  archivePerkForever: {
+    ru: "Доступ навсегда",
+    en: "Yours forever",
+    tr: "Kalıcı erişim",
+    ar: "وصول دائم",
+    kk: "Мәңгілік қолжетімділік",
+  },
+  archiveDetailPlayFreeFirst: {
+    ru: "Сначала сыграть первое дело бесплатно",
+    en: "Play the first case free first",
+    tr: "Önce ilk dosyayı ücretsiz oyna",
+    ar: "العب القضية الأولى مجانًا أولًا",
+    kk: "Алдымен бірінші істі тегін ойнау",
+  },
+  archiveProgressEyebrow: {
+    ru: "Ваше расследование",
+    en: "Your investigation",
+    tr: "Soruşturmanız",
+    ar: "تحقيقك",
+    kk: "Сіздің тергеуіңіз",
+  },
+  archiveCaseFreeRibbon: {
+    ru: "Бесплатно",
+    en: "Free",
+    tr: "Ücretsiz",
+    ar: "مجانًا",
+    kk: "Тегін",
+  },
+  archiveFinalCaseRibbon: {
+    ru: "Финал архива",
+    en: "Archive finale",
+    tr: "Arşiv finali",
+    ar: "ختام الأرشيف",
+    kk: "Архив финалы",
+  },
+  archiveCaseSolvedLabel: {
+    ru: "Дело закрыто",
+    en: "Case closed",
+    tr: "Dosya kapandı",
+    ar: "أُغلقت القضية",
+    kk: "Іс жабылды",
+  },
+  archiveModalStamp: {
+    ru: "Доступ разрешён",
+    en: "Access granted",
+    tr: "Erişim verildi",
+    ar: "سُمح بالدخول",
+    kk: "Рұқсат берілді",
+  },
+  archiveModalEyebrow: {
+    ru: "Подтверждение покупки",
+    en: "Purchase confirmation",
+    tr: "Satın alma onayı",
+    ar: "تأكيد الشراء",
+    kk: "Сатып алуды растау",
+  },
+  archiveModalTitle: {
+    ru: "Открыть закрытый архив?",
+    en: "Unlock the sealed archive?",
+    tr: "Kapalı arşiv açılsın mı?",
+    ar: "هل تفتح الأرشيف المغلق؟",
+    kk: "Жабық архивті ашасыз ба?",
+  },
+  archiveModalBody: {
+    ru: "Вы получите все {total} дел архива, новые улики и коллекционный штамп — {stamp}. Доступ останется навсегда.",
+    en: "You get all {total} cases of the archive, new evidence and a collector’s stamp — {stamp}. Access stays yours forever.",
+    tr: "Arşivdeki {total} dosyanın tamamını, yeni delilleri ve bir koleksiyon damgasını alırsınız — {stamp}. Erişim kalıcıdır.",
+    ar: "ستحصل على كل قضايا الأرشيف البالغة {total}، وأدلة جديدة، وختمًا تذكاريًا — {stamp}. يبقى الوصول لك إلى الأبد.",
+    kk: "Архивтегі {total} істің бәрін, жаңа дәлелдерді және коллекциялық мөрді аласыз — {stamp}. Қолжетімділік мәңгілік сақталады.",
+  },
+  archiveModalBenefitCases: {
+    ru: "{total} дел",
+    en: "{total} cases",
+    tr: "{total} dosya",
+    ar: "{total} قضية",
+    kk: "{total} іс",
+  },
+  archiveModalCta: {
+    ru: "Открыть архив за {price}",
+    en: "Unlock the archive for {price}",
+    tr: "Arşivi {price} karşılığında aç",
+    ar: "افتح الأرشيف مقابل {price}",
+    kk: "Архивті {price} үшін ашу",
+  },
+  archiveModalUnlockThisWithAd: {
+    ru: "Открыть это дело за рекламу",
+    en: "Unlock this case with an ad",
+    tr: "Bu dosyayı reklamla aç",
+    ar: "افتح هذه القضية بإعلان",
+    kk: "Бұл істі жарнамамен ашу",
+  },
+  archiveModalLegal: {
+    ru: "Оплата будет подтверждена в окне платёжного сервиса",
+    en: "Payment is confirmed in the payment service window",
+    tr: "Ödeme, ödeme servisi penceresinde onaylanır",
+    ar: "يتم تأكيد الدفع في نافذة خدمة الدفع",
+    kk: "Төлем төлем қызметінің терезесінде расталады",
+  },
+
+  /* ── Closing sheet: the folder tab ────────────────────────────────────── */
+  caseTabClosed: {
+    ru: "Закрыто", en: "Closed", tr: "Kapandı", ar: "مغلقة", kk: "Жабылды",
+  },
+  caseTabNotClosed: {
+    ru: "Не закрыто", en: "Not closed", tr: "Kapanmadı", ar: "غير مغلقة", kk: "Жабылмады",
+  },
+
+  /* ── Closing sheet: status line ───────────────────────────────────────── */
+  resultKickerConfirmed: {
+    ru: "Вердикт подтверждён",
+    en: "Verdict confirmed",
+    tr: "Karar onaylandı",
+    ar: "تأكد الحكم",
+    kk: "Шешім расталды",
+  },
+  resultKickerWrong: {
+    ru: "Вердикт неверный",
+    en: "Verdict incorrect",
+    tr: "Karar hatalı",
+    ar: "الحكم غير صحيح",
+    kk: "Шешім қате",
+  },
+  resultKickerIncomplete: {
+    ru: "Доказательств недостаточно",
+    en: "Not enough proof",
+    tr: "Kanıt yetersiz",
+    ar: "الأدلة غير كافية",
+    kk: "Дәлел жеткіліксіз",
+  },
+  resultTitleFraudExposed: {
+    ru: "Мошенник разоблачён",
+    en: "Fraudster exposed",
+    tr: "Dolandırıcı ortaya çıktı",
+    ar: "كُشف المحتال",
+    kk: "Алаяқ әшкереленді",
+  },
+  resultTitleCaseClosed: {
+    ru: "Дело закрыто",
+    en: "Case closed",
+    tr: "Dosya kapandı",
+    ar: "أُغلقت القضية",
+    kk: "Іс жабылды",
+  },
+  resultTitleWrong: {
+    ru: "Решение не принято",
+    en: "Decision rejected",
+    tr: "Karar kabul edilmedi",
+    ar: "لم يُقبل القرار",
+    kk: "Шешім қабылданбады",
+  },
+  resultTitleIncomplete: {
+    ru: "Решение верное, доказательств недостаточно",
+    en: "Right call, not enough proof",
+    tr: "Karar doğru, kanıt yetersiz",
+    ar: "القرار صحيح، لكن الأدلة غير كافية",
+    kk: "Шешім дұрыс, бірақ дәлел жеткіліксіз",
+  },
+  resultStampJustified: {
+    ru: "Обосновано", en: "Justified", tr: "Gerekçeli", ar: "مُبرَّر", kk: "Негізделген",
+  },
+
+  /* ── Closing sheet: money, accuracy, key evidence ─────────────────────── */
+  resultCompanySaved: {
+    ru: "Компания сохранила",
+    en: "The company saved",
+    tr: "Şirketin tasarrufu",
+    ar: "وفّرت الشركة",
+    kk: "Компания үнемдеді",
+  },
+  resultDamageLabel: {
+    ru: "Ущерб бюджету компании",
+    en: "Damage to the company budget",
+    tr: "Şirket bütçesine zarar",
+    ar: "ضرر على ميزانية الشركة",
+    kk: "Компания бюджетіне зиян",
+  },
+  resultAccuracy: {
+    ru: "Точность расследования",
+    en: "Investigation accuracy",
+    tr: "Soruşturma doğruluğu",
+    ar: "دقة التحقيق",
+    kk: "Тергеу дәлдігі",
+  },
+  resultKeyEvidence: {
+    ru: "Ключевая улика", en: "Key evidence", tr: "Kilit kanıt", ar: "الدليل الأساسي", kk: "Негізгі дәлел",
+  },
+  resultProofCount: {
+    ru: "Вердикт подтверждён уликами: {n} из {total}.",
+    en: "Verdict backed by {n} of {total} pieces of evidence.",
+    tr: "Karar {total} kanıttan {n} tanesiyle destekleniyor.",
+    ar: "الحكم مدعوم بـ {n} من {total} من الأدلة.",
+    kk: "Шешім {total} дәлелдің {n} дәлелімен расталды.",
+  },
+  resultProofProgress: {
+    ru: "Обязательные улики: {n} из {total}",
+    en: "Required evidence: {n} of {total}",
+    tr: "Zorunlu kanıt: {total} içinden {n}",
+    ar: "الأدلة المطلوبة: {n} من {total}",
+    kk: "Міндетті дәлелдер: {total} ішінен {n}",
+  },
+  resultMissedIntro: {
+    ru: "Вы упустили важное противоречие. Можно открыть одну ключевую улику или повторить дело самостоятельно.",
+    en: "You missed an important contradiction. Open one key piece of evidence, or run the case again on your own.",
+    tr: "Önemli bir çelişkiyi kaçırdınız. Bir kilit kanıtı açabilir ya da dosyayı kendiniz yeniden inceleyebilirsiniz.",
+    ar: "فاتك تناقض مهم. يمكنك فتح دليل أساسي واحد أو إعادة القضية بنفسك.",
+    kk: "Сіз маңызды қайшылықты жіберіп алдыңыз. Бір негізгі дәлелді ашуға немесе істі өзіңіз қайта қарауға болады.",
+  },
+  resultIncompleteIntro: {
+    ru: "Вердикт верный, но обязательные противоречия не отмечены штампом. Дело останется открытым, пока они не найдены.",
+    en: "The verdict is right, but the required contradictions are not stamped. The case stays open until they are found.",
+    tr: "Karar doğru, ancak zorunlu çelişkiler damgalanmadı. Bunlar bulunana kadar dosya açık kalır.",
+    ar: "الحكم صحيح، لكن التناقضات المطلوبة لم تُختم. تبقى القضية مفتوحة حتى يتم العثور عليها.",
+    kk: "Шешім дұрыс, бірақ міндетті қайшылықтар мөрленбеген. Олар табылмайынша іс ашық қалады.",
+  },
+  resultDebrief: {
+    ru: "Короткий разбор решения",
+    en: "Short debrief",
+    tr: "Kısa değerlendirme",
+    ar: "تحليل موجز للقرار",
+    kk: "Шешімнің қысқаша талдауы",
+  },
+
+  /* ── Closing sheet: rewarded video ────────────────────────────────────── */
+  resultAdDoubleTitle: {
+    ru: "Удвоить награду",
+    en: "Double the reward",
+    tr: "Ödülü ikiye katla",
+    ar: "ضاعف المكافأة",
+    kk: "Сыйақыны екі еселеу",
+  },
+  resultAdWatchShort: {
+    ru: "Посмотреть короткую рекламу",
+    en: "Watch a short ad",
+    tr: "Kısa bir reklam izleyin",
+    ar: "شاهد إعلانًا قصيرًا",
+    kk: "Қысқа жарнаманы көру",
+  },
+  resultAdBadge: {
+    ru: "За рекламу", en: "For an ad", tr: "Reklam karşılığı", ar: "مقابل إعلان", kk: "Жарнама үшін",
+  },
+  resultAdLoading: {
+    ru: "Загружаем рекламу…",
+    en: "Loading the ad…",
+    tr: "Reklam yükleniyor…",
+    ar: "جارٍ تحميل الإعلان…",
+    kk: "Жарнама жүктелуде…",
+  },
+  resultAdFailed: {
+    ru: "Реклама не загрузилась. Попробуйте ещё раз.",
+    en: "The ad did not load. Please try again.",
+    tr: "Reklam yüklenmedi. Lütfen tekrar deneyin.",
+    ar: "لم يُحمَّل الإعلان. حاول مرة أخرى.",
+    kk: "Жарнама жүктелмеді. Қайталап көріңіз.",
+  },
+
+  /* ── Closing sheet: the locked clue ───────────────────────────────────── */
+  resultClueLockedLabel: {
+    ru: "Пропущенная улика",
+    en: "Missed evidence",
+    tr: "Kaçırılan kanıt",
+    ar: "دليل فائت",
+    kk: "Жіберіп алған дәлел",
+  },
+  resultClueLockedTitle: {
+    ru: "Содержание скрыто",
+    en: "Contents hidden",
+    tr: "İçerik gizli",
+    ar: "المحتوى مخفي",
+    kk: "Мазмұны жасырылған",
+  },
+  resultClueLockedCopy: {
+    ru: "Подсказка укажет, какие факты нужно сопоставить, но не выдаст готовый вердикт.",
+    en: "The hint points at the facts to compare — it never hands over the verdict.",
+    tr: "İpucu hangi olguları karşılaştıracağınızı gösterir, hazır kararı vermez.",
+    ar: "يشير التلميح إلى الحقائق التي يجب مقارنتها، ولا يمنحك الحكم جاهزًا.",
+    kk: "Кеңес қандай фактілерді салыстыру керегін көрсетеді, бірақ дайын шешім бермейді.",
+  },
+  resultClueRevealedLabel: {
+    ru: "Ключевая улика открыта",
+    en: "Key evidence unlocked",
+    tr: "Kilit kanıt açıldı",
+    ar: "فُتح الدليل الأساسي",
+    kk: "Негізгі дәлел ашылды",
+  },
+  resultClueOpen: {
+    ru: "Открыть улику", en: "Open the evidence", tr: "Kanıtı aç", ar: "افتح الدليل", kk: "Дәлелді ашу",
+  },
+  resultRetryNoHint: {
+    ru: "Повторить без подсказки",
+    en: "Retry without a hint",
+    tr: "İpucusuz tekrar dene",
+    ar: "أعد المحاولة بلا تلميح",
+    kk: "Кеңессіз қайталау",
+  },
+  resultRetryWithHint: {
+    ru: "Вернуться к делу с подсказкой",
+    en: "Return to the case with the hint",
+    tr: "İpucuyla dosyaya dön",
+    ar: "عد إلى القضية مع التلميح",
+    kk: "Кеңеспен іске оралу",
+  },
+
+  /* ── Closing sheet: progression lock + exit ───────────────────────────── */
+  resultNextLockedTitle: {
+    ru: "Следующее дело пока закрыто",
+    en: "The next case is still locked",
+    tr: "Sonraki dosya henüz kapalı",
+    ar: "القضية التالية ما زالت مغلقة",
+    kk: "Келесі іс әзірге жабық",
+  },
+  resultNextLockedCopy: {
+    ru: "Оно откроется после верного вердикта и обязательных улик.",
+    en: "It opens after a correct verdict and the required evidence.",
+    tr: "Doğru karar ve zorunlu kanıtlardan sonra açılır.",
+    ar: "تُفتح بعد حكم صحيح والأدلة المطلوبة.",
+    kk: "Ол дұрыс шешім мен міндетті дәлелдерден кейін ашылады.",
+  },
+  resultBackToDeskLink: {
+    ru: "Вернуться к столу",
+    en: "Back to the desk",
+    tr: "Masaya dön",
+    ar: "العودة إلى المكتب",
+    kk: "Үстелге оралу",
+  },
+  resultPayoutRejected: {
+    ru: "Выплата отклонена",
+    en: "Payout rejected",
+    tr: "Ödeme reddedildi",
+    ar: "رُفض الدفع",
+    kk: "Төлем қабылданбады",
+  },
+  resultPayoutApproved: {
+    ru: "Выплата одобрена",
+    en: "Payout approved",
+    tr: "Ödeme onaylandı",
+    ar: "تمت الموافقة على الدفع",
+    kk: "Төлем мақұлданды",
+  },
+  resultUnfinishedNotice: {
+    ru: "Дело останется незавершённым",
+    en: "The case will stay unfinished",
+    tr: "Dosya tamamlanmamış kalacak",
+    ar: "ستبقى القضية غير مكتملة",
+    kk: "Іс аяқталмаған күйде қалады",
   },
 };
 

@@ -4,7 +4,19 @@
  */
 export const GAME_CONFIG = {
   /** Schema version of the persisted runtime snapshot. Bump on shape changes. */
-  saveVersion: 12,
+  saveVersion: 13,
+
+  /**
+   * When a case counts as *closed* — the predicate `caseSuccessEngine` applies
+   * and the only thing that unlocks the next dossier. Rewarded video is never
+   * part of it: ads buy a hint, never progression.
+   */
+  caseSuccess: {
+    /** Every `isContradiction && requiredForVerdict` card must be stamped. */
+    requireMandatoryContradictions: true,
+    /** How many wrong stamps a closed case tolerates before it is a failure. */
+    maxFalseStamps: 1,
+  },
 
   reward: {
     /** Fixed payout by difficulty; claimAmount remains a narrative stake. */

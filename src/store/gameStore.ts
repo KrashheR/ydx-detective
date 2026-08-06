@@ -30,6 +30,10 @@ import { evaluateRank, evaluateXpGain } from '../engine/rankEngine';
 import { evaluatePerfectCaseStreak, evaluateStreak } from '../engine/streakEngine';
 import { evaluateNewUnlocks } from '../engine/achievementsEngine';
 import { bestMastery, evaluateMastery } from '../engine/masteryEngine';
+import {
+  evaluateCaseSuccess,
+  type CaseSuccessEvaluation,
+} from '../engine/caseSuccessEngine';
 import { updateWeeklyProgress } from '../engine/weeklyEngine';
 import { toServerDay } from '../engine/offerEngine';
 import {
@@ -110,6 +114,15 @@ export type VerdictOutcome = RewardBreakdown & {
   /** Evidence IDs the player stamped as contradictions (for the result breakdown). */
   stampedEvidenceIds: string[];
   mastery: 'none' | 'bronze' | 'silver' | 'gold';
+  /**
+   * Did this attempt actually *close* the case? Verdict alone is not enough —
+   * see `caseSuccessEngine`. Only a solved case enters `completedCaseIds`, so
+   * this is what the closing sheet reads to decide between "next case" and
+   * "retry".
+   */
+  success: CaseSuccessEvaluation;
+  /** Guards the rewarded double against a second credit for the same verdict. */
+  rewardDoubled: boolean;
 };
 
 /**
@@ -218,6 +231,13 @@ export interface GameStoreState {
   /* ---- ad-linked rewards ---- */
   /** Add the total of the last verdict again to balance (rewarded-video double). */
   doubleLastReward: () => void;
+  /**
+   * Record that a rewarded video opened the missed contradiction of a failed
+   * case. Persisted in `stats`, so «Повторить с подсказкой» re-opens the case
+   * with that card already revealed. Idempotent: the first reveal wins, a
+   * second ad for the same case can never move the hint to another card.
+   */
+  revealMissedClue: (caseId: string, evidenceId: string) => void;
 
   /* ---- pause guard (also driven by SDK callbacks) ---- */
   setPaused: (paused: boolean) => void;
@@ -412,13 +432,17 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         });
       }
 
+      // A clue opened by a rewarded video on the failure sheet is carried into
+      // the retry: the card starts already revealed, which is what «Вернуться к
+      // делу с подсказкой» promises.
+      const revealedClueId = get().stats.caseClueReveals[caseData.id];
       set({
         session: {
           caseId: caseData.id,
           selectedEvidenceIds: [],
           stamps: [],
           viewedEvidenceIds: [],
-          revealedEvidenceIds: [],
+          revealedEvidenceIds: revealedClueId ? [revealedClueId] : [],
           selectedService: null,
           hintsUsed: 0,
           extraOpens: 0,
@@ -773,8 +797,6 @@ export const useGameStore = create<GameStoreState>((set, get) => {
 
     submitVerdict(caseData, decision) {
       const { session, stats } = get();
-      const isReplay = stats.completedCaseIds.includes(caseData.id);
-      const rewardEligible = !isReplay;
       const selected = session?.selectedEvidenceIds ?? [];
       const scoringStamps = (session?.stamps ?? []).map((stamp) => {
         if (stamp.statementId !== 'claim_main') return stamp;
@@ -788,6 +810,31 @@ export const useGameStore = create<GameStoreState>((set, get) => {
       const total = totalContradictions(caseData);
       const { correct, falseStamps } = classifyStamps(caseData, selected, scoringStamps);
       const proofRatio = total === 0 ? 1 : correct / total;
+
+      // Was the case actually closed? Verdict + mandatory contradictions + no
+      // critical false stamps — the single predicate progression reads. It only
+      // needs the verdict, which is a plain comparison, so it is settled before
+      // the payout: reward eligibility depends on it.
+      const caseSuccess = evaluateCaseSuccess(caseData, {
+        verdictCorrect: decision === caseData.correctDecision,
+        stampedEvidenceIds: selected,
+        falseStamps,
+      });
+
+      /**
+       * A case pays on the player's first look at it and on the attempt that
+       * finally closes it — never in between, and never again afterwards.
+       *
+       * Before the closing-sheet rework every verdict marked the case completed,
+       * so a second attempt was automatically unpaid training. Now a correct-but-
+       * unproven verdict leaves the case open *and* pays, and «Повторить» starts
+       * a fresh session — without this rule that pair is an unbounded money loop.
+       */
+      const alreadySolved = stats.completedCaseIds.includes(caseData.id);
+      const attemptedBefore = stats.results[caseData.id] != null;
+      const isReplay = alreadySolved || (attemptedBefore && !caseSuccess.solved);
+      const rewardEligible = !isReplay;
+
       const mastery = evaluateMastery(caseData, decision, scoringSession);
       const perfectStreak = evaluatePerfectCaseStreak(
         stats.perfectCaseStreakCount,
@@ -851,7 +898,7 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         : stats.weeklyProgress;
       const standardCompleted = new Set([
         ...stats.completedCaseIds.filter((id) => !id.endsWith('-daily')),
-        ...(caseData.type === 'standard' ? [caseData.id] : []),
+        ...(caseData.type === 'standard' && caseSuccess.solved ? [caseData.id] : []),
       ]).size;
       const weeklyEarned = weeklyProgress != null &&
         standardCompleted >= GAME_CONFIG.weekly.unlockAfterStandardCases &&
@@ -872,9 +919,14 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         streakCount: streak.streak,
         lastPlayedServerDay: nowServerDay,
         perfectCaseStreakCount: perfectStreak.streak,
-        completedCaseIds: stats.completedCaseIds.includes(caseData.id)
-          ? stats.completedCaseIds
-          : [...stats.completedCaseIds, caseData.id],
+        // A case enters the completed list only when it was actually *closed*
+        // (see caseSuccessEngine) — that list is what gates the next dossier.
+        // A failed attempt leaves it untouched, so the retry stays reward-
+        // eligible and the campaign does not advance past an unsolved case.
+        completedCaseIds:
+          !caseSuccess.solved || stats.completedCaseIds.includes(caseData.id)
+            ? stats.completedCaseIds
+            : [...stats.completedCaseIds, caseData.id],
         results: { ...stats.results, [caseData.id]: result },
         weeklyProgress: finalWeekly,
         collectibleStampIds: weeklyStampId
@@ -924,6 +976,8 @@ export const useGameStore = create<GameStoreState>((set, get) => {
           newAchievementIds: unlocks.map((a) => a.id),
           stampedEvidenceIds: [...selected],
           mastery: result.mastery,
+          success: caseSuccess,
+          rewardDoubled: false,
         },
       });
 
@@ -1030,7 +1084,10 @@ export const useGameStore = create<GameStoreState>((set, get) => {
 
     doubleLastReward() {
       const { lastResult, stats } = get();
-      if (!lastResult || lastResult.total <= 0) return;
+      // The guard lives here, not in the sheet: a double-click during ad load,
+      // a duplicate SDK callback and a re-mounted modal all funnel through this
+      // one action, and none of them may credit the payout twice.
+      if (!lastResult || lastResult.total <= 0 || lastResult.rewardDoubled) return;
       const bonus = lastResult.total;
       const newBalance = stats.balance + bonus;
       set((s) => ({
@@ -1039,6 +1096,7 @@ export const useGameStore = create<GameStoreState>((set, get) => {
           balance: newBalance,
           isBankrupt: newBalance <= GAME_CONFIG.economy.bankruptcyThreshold,
         },
+        lastResult: s.lastResult ? { ...s.lastResult, rewardDoubled: true } : s.lastResult,
       }));
       persist(true);
       trackGoal(GOAL.rewardDouble, {
@@ -1047,6 +1105,18 @@ export const useGameStore = create<GameStoreState>((set, get) => {
         balanceAfter: newBalance,
       });
       reportUserParams(get().stats);
+    },
+
+    revealMissedClue(caseId, evidenceId) {
+      if (get().stats.caseClueReveals[caseId]) return;
+      set((s) => ({
+        stats: {
+          ...s.stats,
+          caseClueReveals: { ...s.stats.caseClueReveals, [caseId]: evidenceId },
+        },
+      }));
+      persist(true);
+      trackGoal(GOAL.hintBuy, { caseId, evidenceId, kind: 'result_clue', source: 'rewarded' });
     },
 
     isDailyUnlocked() {

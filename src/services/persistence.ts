@@ -55,6 +55,7 @@ export function makeDefaultStats(): PlayerStats {
     archiveAdUnlockServerDayByPack: {},
     interactiveEvidenceProgress: {},
     finalSynthesisProgress: {},
+    caseClueReveals: {},
     metaUnlocked: false,
     firstSeenServerDay: null,
   };
@@ -130,6 +131,11 @@ function migrate(raw: unknown): PersistedState | null {
   // v8 removed the hard bankruptcy gate — un-stick anyone saved mid-block.
   if (fromVersion < 8) stats.isBankrupt = false;
   if (fromVersion < 9) stats.metaUnlocked = true;
+  // v13 added the rewarded clue ledger. Older saves have no reveals; the spread
+  // above already seeded `{}`, this only repairs a corrupted/partial field.
+  if (fromVersion < 13 || typeof stats.caseClueReveals !== 'object' || stats.caseClueReveals == null) {
+    stats.caseClueReveals = {};
+  }
 
   return {
     version: GAME_CONFIG.saveVersion,

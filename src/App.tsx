@@ -62,6 +62,7 @@ import { CaseSelect } from './components/CaseSelect';
 import { MobileDeskMenu } from './components/MobileDeskMenu';
 import { StampModal } from './components/StampModal';
 import { ResultSheet } from './components/ResultSheet';
+import { clueEvidenceFor } from './engine/caseSuccessEngine';
 import { AchievementsModal } from './components/AchievementsModal';
 import { SpecialArchivesEntry } from './components/SpecialArchivesEntry';
 import { TopBar } from './components/TopBar';
@@ -504,15 +505,54 @@ export default function App() {
     return true;
   };
 
-  const handleDoubleReward = () => {
+  /**
+   * Both rewarded placements on the closing sheet share one shape: the sheet
+   * asks for an ad and gets exactly one settle callback. Nothing is credited
+   * before `onReward` fires, and a cancel / error / no-fill settles `false` so
+   * the sheet can restore its button instead of hanging on "loading".
+   */
+  const handleDoubleReward = (settle: (granted: boolean) => void) => {
     trackEvent('result_action', {
       caseId: lastResult?.caseId, action: 'double_reward',
       resultDwellMs: resultOpenedAtRef.current == null ? null : Date.now() - resultOpenedAtRef.current,
     });
-    showRewardedAd(() => {
-      store.doubleLastReward();
-      setRewardDoubled(true);
-    }, 'double_reward');
+    showRewardedAd(
+      () => {
+        store.doubleLastReward();
+        setRewardDoubled(true);
+        settle(true);
+      },
+      'double_reward',
+      () => settle(false),
+    );
+  };
+
+  /**
+   * The failure sheet's rewarded hint: one missed contradiction, opened for the
+   * current case only. It never closes the case and never unlocks the next one
+   * — the reveal is carried into the retry by `startCase`.
+   */
+  const handleRevealClue = (settle: (granted: boolean) => void) => {
+    if (!selectedCase || !lastResult) return;
+    const clue = clueEvidenceFor(
+      selectedCase,
+      lastResult.success,
+      lastResult.stampedEvidenceIds,
+    );
+    if (!clue) { settle(false); return; }
+    const caseId = selectedCase.id;
+    trackEvent('result_action', {
+      caseId, action: 'reveal_clue',
+      resultDwellMs: resultOpenedAtRef.current == null ? null : Date.now() - resultOpenedAtRef.current,
+    });
+    showRewardedAd(
+      () => {
+        store.revealMissedClue(caseId, clue.id);
+        settle(true);
+      },
+      'result_clue',
+      () => settle(false),
+    );
   };
 
   const onDailyLocked = () => {
@@ -1045,9 +1085,12 @@ export default function App() {
             xpGained={lastResult.xpGained}
             promotedToLevel={lastResult.promotedToLevel}
             newAchievementIds={lastResult.newAchievementIds}
+            streakCount={stats.streakCount}
             onMounted={() => undefined}
             onDoubleReward={handleDoubleReward}
-            rewardDoubled={rewardDoubled}
+            rewardDoubled={rewardDoubled || lastResult.rewardDoubled}
+            onRevealClue={handleRevealClue}
+            clueRevealed={Boolean(stats.caseClueReveals[selectedCase.id])}
             onNext={handleResultNext}
             onReplay={handleReplayCase}
             onBackToDesk={backToDesk}

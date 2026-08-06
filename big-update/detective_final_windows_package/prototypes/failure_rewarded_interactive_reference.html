@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Где ложь? — ошибка и rewarded-подсказка</title>
+  <style>
+    :root{
+      --night:#0a111c;--night-2:#162236;--paper:#f4eddf;--paper-hi:#fffaf0;
+      --ink:#20283a;--muted:#756f66;--line:#d2c4ab;--red:#bd302b;--red-dark:#84211f;
+      --navy:#1c2c46;--navy-dark:#0d182a;--gold:#e3b64d;--gold-hi:#ffe594;
+      --green:#176a49;--ease:cubic-bezier(.2,.8,.2,1)
+    }
+    *{box-sizing:border-box}html,body{min-height:100%}
+    body{margin:0;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--night)}
+    button{font:inherit}.stage{min-height:100dvh;position:relative;overflow:hidden;background:
+      radial-gradient(circle at 50% 45%,rgba(168,134,77,.13),transparent 26%),
+      linear-gradient(140deg,#202c3e,#0d1521 62%,#182537)}
+    .stage:before{content:"";position:absolute;inset:68px 5% 5%;border:1px solid rgba(207,217,228,.08);border-radius:12px;background:repeating-linear-gradient(0deg,transparent 0 62px,rgba(255,255,255,.022) 63px 64px)}
+    .top{height:68px;position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;padding:0 28px;color:#d9dfeb;border-bottom:1px solid rgba(255,255,255,.09);background:#101824;font-weight:800}
+    .brand{display:flex;align-items:center;gap:12px}.mark{width:36px;height:36px;display:grid;place-items:center;border:1px solid #ad8b4e;color:#c7a76c;font:900 12px Georgia,serif}.brand small{display:block;margin-top:3px;color:#6f7a8d;font:700 8px monospace;letter-spacing:.17em;text-transform:uppercase}
+    .wallet{padding:9px 12px;border:1px solid rgba(255,255,255,.09);border-radius:8px;color:#9eabbc;font:750 12px monospace}
+    .overlay{position:absolute;inset:0;display:grid;place-items:center;padding:86px 16px 18px;background:rgba(3,7,13,.77);backdrop-filter:blur(2px)}
+    .modal{width:min(492px,calc(100vw - 28px));max-height:calc(100dvh - 104px);overflow:auto;position:relative;border:1px solid #d8cbb6;border-radius:15px;background:
+      radial-gradient(circle at 18% 12%,rgba(89,62,27,.045) 0 1px,transparent 1.2px) 0 0/8px 8px,
+      linear-gradient(145deg,rgba(255,255,255,.58),transparent 38%),var(--paper);
+      box-shadow:0 34px 95px rgba(0,0,0,.62),0 2px 0 rgba(255,255,255,.8) inset;animation:enter .38s var(--ease) both;scrollbar-width:thin}
+    .modal:before{content:"";position:absolute;inset:9px;border:1px solid rgba(107,84,53,.13);border-radius:10px;pointer-events:none}
+    .case-tab{position:absolute;top:0;left:25px;padding:8px 14px 9px;border-radius:0 0 7px 7px;background:#d9c9aa;color:#655b4d;font:850 10px/1 monospace;letter-spacing:.1em;text-transform:uppercase}
+    .close{position:absolute;z-index:2;top:15px;right:15px;width:38px;height:38px;border:1px solid #cdbda3;border-radius:50%;background:#faf4e8;color:#756d62;font-size:21px;cursor:pointer}
+    .head{padding:44px 32px 17px;border-bottom:1px dashed #c9b99f}
+    .status{display:flex;gap:13px;align-items:flex-start;padding-right:38px}.icon{flex:0 0 48px;height:48px;display:grid;place-items:center;border:2px solid var(--red);border-radius:50%;color:var(--red);font-size:27px;font-weight:950;transform:rotate(-4deg)}
+    .kicker{margin:2px 0 6px;color:#857d71;font:850 10px/1 monospace;letter-spacing:.14em;text-transform:uppercase}
+    h1{margin:0;color:var(--red-dark);font:900 24px/1.08 Georgia,"Times New Roman",serif;letter-spacing:-.02em;text-wrap:balance}
+    .case-name{margin:7px 0 0;color:#6f6a62;font:650 12px/1.35 Georgia,serif}
+    .consequence{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:17px 32px 0;padding:13px 16px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.36)}
+    .consequence span{color:#716c63;font-size:10px;font-weight:850}.consequence b{color:var(--red);font:900 24px/1 Georgia,serif;white-space:nowrap}
+    .intro{margin:15px 32px 0;color:#3f434b;font:700 13px/1.45 Georgia,serif;text-align:center}
+    .clue{position:relative;margin:13px 32px 0;padding:17px;border:1px solid #bea45e;border-radius:12px;background:linear-gradient(150deg,#fff8d9,#eee0ae);box-shadow:0 4px 15px rgba(78,54,10,.10),0 1px 0 #fff inset;text-align:center;overflow:hidden}
+    .clue:before{content:"";position:absolute;inset:0;opacity:.2;background:repeating-linear-gradient(-45deg,transparent 0 12px,#b29145 13px 14px)}
+    .clue>*{position:relative}.lock{width:44px;height:44px;margin:0 auto 8px;display:grid;place-items:center;border:1px solid #a17b25;border-radius:50%;color:#7b5818;background:#fff7d4;font-size:21px;box-shadow:0 2px 0 #b38d39}
+    .clue-label{color:#6d4c12;font:900 10px/1 monospace;letter-spacing:.13em;text-transform:uppercase}.clue h2{margin:7px 0 4px;color:#342b1e;font:900 18px/1.15 Georgia,serif}.clue p{max-width:330px;margin:0 auto;color:#716348;font-size:11px;line-height:1.42}
+    .watch{width:100%;min-height:55px;margin-top:14px;display:grid;grid-template-columns:36px minmax(0,1fr) auto;align-items:center;gap:9px;padding:7px 10px;border:1px solid #85641d;border-radius:9px;color:#172218;background:linear-gradient(#ffe99c,#dfb84e);box-shadow:0 4px 0 #8e6b1d,0 1px 0 #fff8d6 inset;cursor:pointer;text-align:left;transition:.16s var(--ease)}
+    .watch:hover{filter:brightness(1.04);transform:translateY(-1px)}.watch:active{transform:translateY(3px);box-shadow:0 1px 0 #8e6b1d}.watch:disabled{cursor:wait;filter:saturate(.65);transform:none}
+    .play{width:34px;height:34px;display:grid;place-items:center;border-radius:50%;color:#fff;background:var(--green);box-shadow:0 2px 0 #0c402b;font-size:13px}.watch-copy{min-width:0}.watch-copy b{display:block;font-size:13px;line-height:1.15}.watch-copy small{display:block;margin-top:3px;color:#66511d;font-size:9px;font-weight:800}.reward{padding:7px 9px;border-radius:7px;color:#fff;background:#6a5119;font-size:10px;font-weight:950;white-space:nowrap}
+    .or{display:flex;align-items:center;gap:10px;margin:14px 32px;color:#988f81;font-size:9px;font-weight:800;text-transform:uppercase}.or:before,.or:after{content:"";height:1px;flex:1;background:#d4c6af}
+    .retry{width:calc(100% - 64px);min-height:51px;margin:0 32px;border:0;border-radius:9px;color:#fff;background:linear-gradient(#293b59,#17243a);box-shadow:0 3px 0 #09111e,0 1px 0 rgba(255,255,255,.18) inset;font-weight:900;cursor:pointer;transition:.16s var(--ease)}.retry:hover{filter:brightness(1.12);transform:translateY(-1px)}.retry:active{transform:translateY(2px);box-shadow:0 1px 0 #09111e}
+    .progress-lock{display:flex;gap:10px;align-items:center;margin:15px 32px 0;padding:11px 13px;border:1px solid #d0c2aa;border-radius:9px;background:rgba(225,214,195,.52);color:#6a655e}.progress-lock .mini{flex:0 0 30px;height:30px;display:grid;place-items:center;border-radius:50%;background:#e4d9c7;font-size:14px}.progress-lock b{display:block;color:#4e4d4b;font-size:10px}.progress-lock small{display:block;margin-top:2px;font-size:9px;line-height:1.35}
+    .foot{padding:13px 32px 21px;text-align:center}.desk{border:0;background:transparent;color:#7d756b;font-size:10px;font-weight:800;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+    .revealed .clue{border-color:#93bba6;background:linear-gradient(150deg,#f1fbf5,#d9ede1)}.revealed .clue:before{display:none}.revealed .lock{color:#fff;border-color:#176a49;background:#176a49;box-shadow:0 2px 0 #0c402b}.revealed .clue-label{color:#176a49}.revealed .clue h2{font-size:15px;line-height:1.28}.revealed .clue p{font:650 12px/1.45 Georgia,serif;color:#3d4b42}.revealed .watch{display:none}
+    .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);z-index:4;padding:11px 15px;border:1px solid rgba(255,255,255,.15);border-radius:9px;color:#fff;background:#111b2b;box-shadow:0 12px 35px #0008;font-size:11px;font-weight:800;opacity:0;pointer-events:none;transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}
+    @keyframes enter{from{opacity:0;transform:translateY(16px) scale(.985)}to{opacity:1;transform:none}}
+    @media(max-width:520px){.top{padding:0 16px}.wallet{display:none}.overlay{align-items:end;padding:67px 8px 8px}.modal{width:100%;max-height:calc(100dvh - 75px);border-radius:15px 15px 8px 8px}.head{padding:42px 22px 15px}.consequence,.intro,.clue,.or,.progress-lock{margin-left:22px;margin-right:22px}.retry{width:calc(100% - 44px);margin-left:22px;margin-right:22px}.foot{padding-left:22px;padding-right:22px}h1{font-size:21px}.status{gap:11px}.icon{flex-basis:43px;height:43px}.consequence b{font-size:21px}}
+    @media(max-width:380px){.watch{grid-template-columns:32px minmax(0,1fr);}.reward{grid-column:2;justify-self:start;padding:5px 7px}.play{width:31px;height:31px}.clue{padding:15px 13px}.intro{font-size:12px}.progress-lock{align-items:flex-start}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <main class="stage">
+    <header class="top"><div class="brand"><span class="mark">НЛ</span><div>Найди ложь!<small>детективные дела</small></div></div><div class="wallet">₽ 10 019 424</div></header>
+    <div class="overlay">
+      <section class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="title">
+        <span class="case-tab">Дело №17 · Не закрыто</span><button class="close" aria-label="Закрыть">×</button>
+        <header class="head">
+          <div class="status"><div class="icon">×</div><div><p class="kicker">Вердикт неверный</p><h1 id="title">Решение не принято</h1><p class="case-name">«Карта, оставшаяся дома»</p></div></div>
+        </header>
+        <div class="consequence"><span>Ущерб бюджету компании</span><b>−3 500 ₽</b></div>
+        <p class="intro">Вы упустили важное противоречие. Можно открыть одну ключевую улику или повторить дело самостоятельно.</p>
+        <article class="clue" aria-live="polite">
+          <div class="lock" id="lock">🔒</div><div class="clue-label" id="clue-label">Пропущенная улика</div>
+          <h2 id="clue-title">Содержание скрыто</h2>
+          <p id="clue-copy">Подсказка укажет, какие факты нужно сопоставить, но не выдаст готовый вердикт.</p>
+          <button class="watch" id="watch"><span class="play">▶</span><span class="watch-copy"><b>Открыть улику</b><small>Посмотреть короткую рекламу</small></span><span class="reward">REWARDED</span></button>
+        </article>
+        <div class="or">или</div>
+        <button class="retry" id="retry">↻ Повторить без подсказки</button>
+        <div class="progress-lock"><span class="mini">🔒</span><span><b>Следующее дело пока закрыто</b><small>Оно откроется после верного вердикта и обязательных улик.</small></span></div>
+        <footer class="foot"><button class="desk">Вернуться к столу</button></footer>
+      </section>
+    </div>
+    <div class="toast" id="toast" role="status">Возвращаемся к расследованию…</div>
+  </main>
+  <script>
+    const modal=document.querySelector('#modal');
+    const watch=document.querySelector('#watch');
+    const retry=document.querySelector('#retry');
+    const toast=document.querySelector('#toast');
+    const showToast=(text)=>{toast.textContent=text;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1500)};
+    watch.addEventListener('click',()=>{
+      watch.disabled=true;watch.querySelector('b').textContent='Загружаем рекламу…';
+      setTimeout(()=>{
+        modal.classList.add('revealed');
+        document.querySelector('#lock').textContent='✓';
+        document.querySelector('#clue-label').textContent='Ключевая улика открыта';
+        document.querySelector('#clue-title').textContent='Где находилась карта?';
+        document.querySelector('#clue-copy').textContent='Карта оставалась дома в момент операции. Сопоставьте это с показаниями заявителя о поездке.';
+        retry.textContent='↻ Вернуться к делу с подсказкой';
+      },900);
+    });
+    retry.addEventListener('click',()=>showToast(modal.classList.contains('revealed')?'Подсказка добавлена в материалы дела':'Повтор без подсказки'));
+    document.querySelector('.desk').addEventListener('click',()=>showToast('Дело останется незавершённым'));
+  </script>
+</body>
+</html>
